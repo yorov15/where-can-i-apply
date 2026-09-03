@@ -1,6 +1,62 @@
 import unittest
 
-from tools.review import approve, empty_fields, field_changes, sign_absence
+from tools.review import approve, empty_fields, field_changes, merge_proposed, sign_absence
+
+SIGNED = {
+    "noLimit": True,
+    "evidence": None,
+    "checkedBy": "human",
+    "checkedAt": "2026-09-03",
+    "note": "смотрел страницу",
+}
+
+
+class TestMergeProposed(unittest.TestCase):
+    def test_model_silence_does_not_erase_a_human_signature(self):
+        # Ровно тот случай, который review предложил сделать 3 сентября:
+        # стереть три подписи, потому что модель вернула null.
+        current = {"eligibility": {"age": SIGNED}}
+        proposed = {"eligibility": {"age": None}}
+        merged = merge_proposed(current, proposed)
+        self.assertEqual(merged["eligibility"]["age"], SIGNED)
+
+    def test_model_silence_does_not_erase_a_quoted_rule(self):
+        rule = {"min": 11, "evidence": "x"}
+        current = {"eligibility": {"schoolYears": rule}}
+        merged = merge_proposed(current, {"eligibility": {"schoolYears": None}})
+        self.assertEqual(merged["eligibility"]["schoolYears"], rule)
+
+    def test_new_rule_still_replaces_the_old_one(self):
+        current = {"eligibility": {"age": {"max": 21, "evidence": "старая"}}}
+        proposed = {"eligibility": {"age": {"max": 22, "evidence": "новая"}}}
+        merged = merge_proposed(current, proposed)
+        self.assertEqual(merged["eligibility"]["age"]["max"], 22)
+
+    def test_first_time_record_survives_the_merge(self):
+        proposed = {"eligibility": {"age": {"max": 21, "evidence": "x"}}}
+        merged = merge_proposed(None, proposed)
+        self.assertEqual(merged["eligibility"]["age"]["max"], 21)
+
+    def test_nothing_is_invented_where_both_are_empty(self):
+        merged = merge_proposed({"eligibility": {}}, {"eligibility": {"age": None}})
+        self.assertIsNone(merged["eligibility"]["age"])
+
+    def test_inputs_are_not_mutated(self):
+        current = {"eligibility": {"age": SIGNED}}
+        proposed = {"eligibility": {"age": None}}
+        merge_proposed(current, proposed)
+        self.assertIsNone(proposed["eligibility"]["age"])
+        self.assertEqual(current["eligibility"]["age"], SIGNED)
+
+    def test_merged_record_reports_no_changes(self):
+        # Следствие, ради которого всё делалось: повторный прогон на той же
+        # записи больше ничего не предлагает.
+        current = {"eligibility": {f: None for f in (
+            "citizenship", "schoolCountry", "schoolYears",
+            "graduationYear", "age", "gpa", "language")}}
+        current["eligibility"]["age"] = SIGNED
+        proposed = {"eligibility": {"age": None}}
+        self.assertEqual(field_changes(current, merge_proposed(current, proposed)), [])
 
 
 class TestEmptyFields(unittest.TestCase):

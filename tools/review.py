@@ -31,6 +31,29 @@ def field_changes(current, proposed) -> list[dict]:
     return changes
 
 
+def merge_proposed(current, proposed: dict) -> dict:
+    """Накладывает предложение модели на утверждённую запись.
+
+    null в предложении означает «модель ничего не нашла», а не «здесь
+    ничего не должно быть»: extract.py прямо велит возвращать null, когда
+    поля нет в тексте явно. Трактовать это как «убрать» — значит молча
+    предлагать откат чужой работы, в том числе подписей человека, которых
+    модель поставить не может в принципе.
+
+    Убрать правило можно, отредактировав запись руками. Побочным эффектом
+    того, что модель промолчала, — нельзя.
+    """
+    merged = copy.deepcopy(proposed)
+    current_rules = (current or {}).get("eligibility") or {}
+    merged.setdefault("eligibility", {})
+
+    for field in FIELDS:
+        if merged["eligibility"].get(field) is None and current_rules.get(field) is not None:
+            merged["eligibility"][field] = copy.deepcopy(current_rules[field])
+
+    return merged
+
+
 def empty_fields(program: dict) -> list[str]:
     """Поля, про которые в записи ничего нет.
 
@@ -99,6 +122,7 @@ def main() -> int:
         target = programs_dir / f"{program_id}.json"
         current = json.loads(target.read_text(encoding="utf-8")) if target.exists() else None
 
+        proposed = merge_proposed(current, proposed)
         changes = field_changes(current, proposed)
         empty = empty_fields(proposed)
 
@@ -137,17 +161,20 @@ def main() -> int:
                     continue
                 proposed = sign_absence(proposed, field, today, note)
 
-            problems = validate_program(proposed, text)
-            if problems:
-                print("\nПосле подписей запись перестала проходить проверку:")
-                for problem in problems:
-                    print("  -", problem)
-                print("Ничего не записано.")
-                continue
-
             if not changes and not field_changes(current, proposed):
                 print(f"{program_id}: ничего не подписано, запись не тронута")
                 continue
+
+        # Проверяем то, что действительно запишется: после слияния с
+        # утверждённой записью и после подписей. Перенесённое правило могло
+        # опираться на цитату, которой в новом снимке уже нет.
+        problems = validate_program(proposed, text)
+        if problems:
+            print(f"\n{program_id}: итоговая запись не проходит проверку:")
+            for problem in problems:
+                print("  -", problem)
+            print("Ничего не записано.")
+            continue
 
         approved = approve(
             proposed,
