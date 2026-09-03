@@ -11,6 +11,7 @@
 // которая это подтверждает, — такой объект даёт pass.
 
 import { ageAt } from './lib/dates.js';
+import { toPercent } from './lib/scales.js';
 
 const r = (status, message = '') => ({ status, message });
 
@@ -83,6 +84,28 @@ export function checkAge(profile, rule, ctx) {
   }
   if (rule.min != null && age < rule.min) {
     return r('fail', `На дату приёма тебе будет ${age}, программа берёт с ${rule.min}`);
+  }
+  return r('pass');
+}
+
+// Полоса неопределённости в процентных пунктах. Внутри неё движок
+// отказывается давать точный ответ, потому что точного ответа там нет:
+// перевод шкал приблизителен, а балл за четверть не равен баллу аттестата.
+export const GPA_BAND = 5;
+
+export function checkGpa(profile, rule, ctx) {
+  if (!rule) return r('unknown', 'Программа не указывает требование к среднему баллу');
+  if (!profile.gpa || profile.gpa.value == null) return r('unknown', 'Ты не указал средний балл');
+  if (rule.min == null) return r('pass');
+
+  const mine = toPercent(profile.gpa.value, profile.gpa.scale);
+  const need = toPercent(rule.min, rule.scale);
+
+  if (Math.abs(mine - need) <= GPA_BAND) {
+    return r('unknown', 'Твой балл близко к порогу программы, а шкалы разные — проверь на сайте программы');
+  }
+  if (mine < need) {
+    return r('fail', `Программа требует ${rule.min} по шкале ${rule.scale}, твой балл ниже`);
   }
   return r('pass');
 }
