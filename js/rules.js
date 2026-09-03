@@ -73,9 +73,26 @@ export function checkGraduationYear(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает, в каком году нужно окончить школу');
   if (noLimit(rule)) return r('pass');
   if (profile.graduationYear == null) return r('unknown', 'Ты не указал год выпуска');
+
   if (rule.min != null && profile.graduationYear < rule.min) {
     return r('fail', `Программа берёт выпускников не раньше ${rule.min} года, у тебя ${profile.graduationYear}`);
   }
+
+  // «Окончи школу к году подачи» — правило почти всех стипендий, и оно
+  // привязано к циклу, а не к числу. Записанное числом, оно устаревает
+  // через год и врёт молча: заявка на 2028 год сверялась бы с 2027-м.
+  if (rule.maxRelative === 'applicationYear') {
+    const closes = ctx?.deadline?.closes;
+    if (!closes) {
+      return r('unknown', 'Год приёма неизвестен, поэтому крайний год выпуска не посчитать');
+    }
+    const max = Number(closes.slice(0, 4));
+    if (profile.graduationYear > max) {
+      return r('fail', `Программа берёт тех, кто оканчивает школу к году подачи — к ${max}, у тебя ${profile.graduationYear}`);
+    }
+    return r('pass');
+  }
+
   if (rule.max != null && profile.graduationYear > rule.max) {
     return r('fail', `Программа берёт выпускников не позже ${rule.max} года, у тебя ${profile.graduationYear}`);
   }
@@ -87,18 +104,37 @@ export function checkAge(profile, rule, ctx) {
   if (noLimit(rule)) return r('pass');
   if (!profile.birthDate) return r('unknown', 'Ты не указал дату рождения');
 
-  const on = rule.asOf === 'deadline' ? ctx?.deadline?.closes : rule.asOf;
+  // Источник часто не говорит, на какой момент считается возраст.
+  // Придумывать дату нельзя, но и молчать необязательно: если ответ
+  // одинаков при любой правдоподобной дате, он не «неизвестен».
+  const asOf = rule.asOf ?? 'deadline';
+  const on = asOf === 'deadline' ? ctx?.deadline?.closes : asOf;
   if (!on) return r('unknown', 'Дата, на которую программа считает возраст, неизвестна');
 
   const age = ageAt(profile.birthDate, on);
-  const shaky = ctx?.deadline?.confidence !== 'confirmed' && rule.asOf === 'deadline';
 
-  if (rule.max != null) {
-    if (shaky && Math.abs(age - rule.max) <= 1) {
-      return r('unknown', `На дату приёма тебе будет около ${age}, предел программы ${rule.max}, но дата приёма ещё не подтверждена — проверь на сайте`);
+  // Дата отсчёта шаткая, когда приём ещё не подтверждён или когда
+  // источник вообще не сказал, на какой момент считать. В обоих случаях
+  // ошибиться можно самое большее на год.
+  const shaky =
+    asOf === 'deadline' &&
+    (ctx?.deadline?.confidence !== 'confirmed' || rule.asOf == null);
+
+  // maxExclusive записывает «under 21» как есть. В max пришлось бы писать
+  // 20 при цитате «21» — и первый же читатель принял бы это за опечатку.
+  const maxInclusive = rule.maxExclusive != null ? rule.maxExclusive - 1 : rule.max;
+
+  if (maxInclusive != null) {
+    if (shaky && Math.abs(age - maxInclusive) <= 1) {
+      const why = rule.asOf == null
+        ? 'источник не говорит, на какой момент считается возраст'
+        : 'дата приёма ещё не подтверждена';
+      return r('unknown', `На дату приёма тебе будет около ${age} при пределе ${maxInclusive}, а ${why} — проверь на сайте`);
     }
-    if (age > rule.max) {
-      return r('fail', `На дату приёма тебе будет ${age}, программа берёт до ${rule.max}`);
+    if (age > maxInclusive) {
+      return r('fail', rule.maxExclusive != null
+        ? `На дату приёма тебе будет ${age}, программа берёт младше ${rule.maxExclusive}`
+        : `На дату приёма тебе будет ${age}, программа берёт до ${rule.max}`);
     }
   }
   if (rule.min != null && age < rule.min) {

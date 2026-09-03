@@ -35,7 +35,14 @@ def is_country_code(value) -> bool:
 # Ключи, в которых живут значения требования. Правило с подписью
 # человека («требования нет») не имеет права содержать ни одного из них:
 # ручаться можно за отсутствие ограничения, но никогда за число.
-VALUE_KEYS = frozenset({"min", "max", "allow", "deny", "anyOf", "scale", "asOf"})
+VALUE_KEYS = frozenset(
+    {"min", "max", "maxExclusive", "maxRelative", "allow", "deny", "anyOf", "scale", "asOf"}
+)
+
+# Границы, которые считаются из цикла приёма, а не записаны числом.
+# «Окончи школу к году подачи» есть почти у каждой стипендии; записанное
+# числом, оно устаревает через год и врёт молча.
+RELATIVE_BOUNDS = frozenset({"applicationYear"})
 
 
 def absence_rule(today: str, note: str) -> dict:

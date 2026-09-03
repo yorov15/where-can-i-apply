@@ -5,7 +5,14 @@
 требование, не может придумать к нему цитату, которая там найдётся.
 """
 
-from tools.schema import FIELDS, REQUIRED_FIELDS, SCALES, VALUE_KEYS, is_country_code
+from tools.schema import (
+    FIELDS,
+    RELATIVE_BOUNDS,
+    REQUIRED_FIELDS,
+    SCALES,
+    VALUE_KEYS,
+    is_country_code,
+)
 from tools.snapshot import normalize
 
 MIN_AGE = 15
@@ -90,15 +97,34 @@ def _check_rule_shape(field: str, rule: dict) -> list[str]:
                 problems.append(f"{field}: неверный код страны — {code!r}")
 
     if field == "age":
-        for bound in ("min", "max"):
+        for bound in ("min", "max", "maxExclusive"):
             value = rule.get(bound)
             if value is not None and not (MIN_AGE <= value <= MAX_AGE):
                 problems.append(
                     f"age: возраст {value} вне разумных границ {MIN_AGE}-{MAX_AGE}"
                 )
+        if rule.get("max") is not None and rule.get("maxExclusive") is not None:
+            problems.append(
+                "age: max и maxExclusive вместе — верхняя граница должна быть одна"
+            )
+        # asOf разрешено не указывать: источник часто не говорит, на какой
+        # момент считается возраст, а придумывать дату нельзя. Движок тогда
+        # считает на дату закрытия приёма и честно отмечает пограничные случаи.
         as_of = rule.get("asOf")
-        if as_of != "deadline" and not _is_iso_date(as_of):
-            problems.append("age: asOf должно быть 'deadline' или датой ГГГГ-ММ-ДД")
+        if as_of is not None and as_of != "deadline" and not _is_iso_date(as_of):
+            problems.append("age: asOf должно быть 'deadline', датой ГГГГ-ММ-ДД или отсутствовать")
+
+    if field == "graduationYear":
+        relative = rule.get("maxRelative")
+        if relative is not None:
+            if relative not in RELATIVE_BOUNDS:
+                problems.append(
+                    f"graduationYear: неизвестная относительная граница — {relative!r}"
+                )
+            if rule.get("max") is not None:
+                problems.append(
+                    "graduationYear: max и maxRelative вместе — граница должна быть одна"
+                )
 
     if field == "gpa":
         scale = rule.get("scale")

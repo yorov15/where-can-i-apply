@@ -143,6 +143,98 @@ class TestAbsence(unittest.TestCase):
         self.assertEqual(validate_program(program, SNAPSHOT), [])
 
 
+class TestRelativeAndExclusive(unittest.TestCase):
+    def test_max_exclusive_passes(self):
+        program = good_program()
+        program["eligibility"]["age"] = {
+            "min": None,
+            "maxExclusive": 21,
+            "evidence": "under 21 years old",
+        }
+        self.assertEqual(validate_program(program, SNAPSHOT), [])
+
+    def test_two_upper_bounds_at_once_is_caught(self):
+        program = good_program()
+        program["eligibility"]["age"] = {
+            "max": 21,
+            "maxExclusive": 21,
+            "evidence": "under 21 years old",
+        }
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("граница должна быть одна" in p for p in problems))
+
+    def test_absurd_exclusive_age_is_caught(self):
+        program = good_program()
+        program["eligibility"]["age"] = {
+            "maxExclusive": 200,
+            "evidence": "under 21 years old",
+        }
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("вне разумных границ" in p for p in problems))
+
+    def test_missing_as_of_is_allowed(self):
+        # Источник часто не говорит, на какой момент считается возраст.
+        program = good_program()
+        program["eligibility"]["age"] = {
+            "maxExclusive": 21,
+            "evidence": "under 21 years old",
+        }
+        self.assertEqual(validate_program(program, SNAPSHOT), [])
+
+    def test_garbage_as_of_is_still_caught(self):
+        program = good_program()
+        program["eligibility"]["age"] = {
+            "maxExclusive": 21,
+            "asOf": "когда-нибудь",
+            "evidence": "under 21 years old",
+        }
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("asOf" in p for p in problems))
+
+    def test_relative_graduation_year_passes(self):
+        program = good_program()
+        program["eligibility"]["graduationYear"] = {
+            "min": None,
+            "maxRelative": "applicationYear",
+            "evidence": "graduated before 2025 are not eligible",
+        }
+        self.assertEqual(validate_program(program, SNAPSHOT), [])
+
+    def test_unknown_relative_bound_is_caught(self):
+        program = good_program()
+        program["eligibility"]["graduationYear"] = {
+            "maxRelative": "когда захочется",
+            "evidence": "graduated before 2025 are not eligible",
+        }
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("неизвестная относительная граница" in p for p in problems))
+
+    def test_relative_together_with_number_is_caught(self):
+        program = good_program()
+        program["eligibility"]["graduationYear"] = {
+            "max": 2027,
+            "maxRelative": "applicationYear",
+            "evidence": "graduated before 2025 are not eligible",
+        }
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("граница должна быть одна" in p for p in problems))
+
+    def test_new_keys_cannot_hide_under_a_signature(self):
+        # Подпись человека остаётся только под отсутствием ограничения:
+        # новые ключи со значениями не должны стать лазейкой.
+        program = good_program()
+        program["eligibility"]["age"] = {
+            "noLimit": True,
+            "maxExclusive": 21,
+            "evidence": None,
+            "checkedBy": "human",
+            "checkedAt": "2026-09-03",
+            "note": "смотрел",
+        }
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("maxExclusive" in p for p in problems))
+
+
 class TestCoherence(unittest.TestCase):
     def test_closes_before_opens_is_caught(self):
         program = good_program()
