@@ -1,0 +1,22 @@
+{
+  "id": "dyrjavaya",
+  "status": "published",
+  "name": { "ru": "Выдуманная программа с дырами", "orig": "Fixture Incomplete" },
+  "hostCountry": "XX",
+  "level": "bachelor",
+  "coverage": { "tuition": true, "living": null, "travel": null, "note": { "ru": "Выдумано" } },
+  "eligibility": {
+    "citizenship": { "allow": "*", "deny": [], "evidence": "выдумано" },
+    "schoolCountry": null,
+    "schoolYears": null,
+    "graduationYear": { "min": 2025, "max": null, "evidence": "выдумано" },
+    "age": { "min": null, "max": 18, "asOf": "deadline", "evidence": "выдумано" },
+    "gpa": null,
+    "language": null
+  },
+  "textConditions": [],
+  "deadline": { "opens": null, "closes": "2027-02-20", "recurring": "annual", "confidence": "expected" },
+  "applyUrl": "https://example.invalid/",
+  "coversInstitutions": { "kind": "chosen-in-application", "approxCount": 12, "note": { "ru": "Выдумано" } },
+  "source": { "url": "https://example.invalid/", "lastVerified": "2026-09-03", "contentHash": "sha256:0", "humanChecked": false }
+}
