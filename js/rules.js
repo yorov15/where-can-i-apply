@@ -109,3 +109,29 @@ export function checkGpa(profile, rule, ctx) {
   }
   return r('pass');
 }
+
+// Сертификата нет — unknown, а не fail: экзамен можно сдать, и человеку
+// нужно видеть, какие двери откроются после него. fail только когда
+// сертификат есть и результат ниже порога.
+export function checkLanguage(profile, rule, ctx) {
+  if (!rule) return r('unknown', 'Программа не указывает требование к языку');
+  const need = rule.anyOf ?? [];
+  if (need.length === 0) return r('pass');
+
+  const mine = profile.languageTests ?? [];
+  let sawEmpty = false;
+  let sawBelow = false;
+
+  for (const req of need) {
+    const got = mine.find((x) => x.test === req.test);
+    if (!got) continue;
+    if (got.score == null) { sawEmpty = true; continue; }
+    if (got.score >= req.min) return r('pass');
+    sawBelow = true;
+  }
+
+  const list = need.map((x) => `${x.test} ${x.min}`).join(' или ');
+  if (sawEmpty) return r('unknown', `Ты отметил экзамен без результата. Нужен ${list}`);
+  if (sawBelow) return r('fail', `Нужен ${list}, твой результат ниже`);
+  return r('unknown', `Нужен ${list}. Сертификата у тебя пока нет — экзамен можно сдать`);
+}
