@@ -25,6 +25,12 @@ class TestNormalize(unittest.TestCase):
     def test_dashes_flattened(self):
         self.assertEqual(normalize("18–25"), "18-25")
 
+    def test_non_breaking_hyphen_flattened(self):
+        # Настоящий случай с ntc.tj: «синфи 11‑ум» набрано неразрывным
+        # дефисом. Человек, копирующий цитату, наберёт обычный, и без
+        # этой замены проверка цитаты не нашла бы верную фразу.
+        self.assertEqual(normalize("синфи 11‑ум"), "синфи 11-ум")
+
     def test_nbsp_becomes_space(self):
         # Экранированный код, а не сам символ: неразрывный пробел
         # в исходнике неотличим от обычного, и тест молча стал бы пустым.
