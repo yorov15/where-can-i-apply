@@ -38,3 +38,25 @@ export function checkSchoolCountry(profile, rule, ctx) {
     notInList: 'Твоей страны школы нет в списке программы',
   });
 }
+
+export function checkSchoolYears(profile, rule, ctx) {
+  if (!rule) return r('unknown', 'Программа не указывает, сколько лет школы нужно');
+  if (profile.schoolYears == null) return r('unknown', 'Ты не указал, сколько лет учился в школе');
+  if (rule.min == null) return r('pass');
+  if (profile.schoolYears < rule.min) {
+    return r('fail', `Программа требует ${rule.min} лет школы, у тебя ${profile.schoolYears}`);
+  }
+  return r('pass');
+}
+
+export function checkGraduationYear(profile, rule, ctx) {
+  if (!rule) return r('unknown', 'Программа не указывает, в каком году нужно окончить школу');
+  if (profile.graduationYear == null) return r('unknown', 'Ты не указал год выпуска');
+  if (rule.min != null && profile.graduationYear < rule.min) {
+    return r('fail', `Программа берёт выпускников не раньше ${rule.min} года, у тебя ${profile.graduationYear}`);
+  }
+  if (rule.max != null && profile.graduationYear > rule.max) {
+    return r('fail', `Программа берёт выпускников не позже ${rule.max} года, у тебя ${profile.graduationYear}`);
+  }
+  return r('pass');
+}
