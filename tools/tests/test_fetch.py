@@ -60,6 +60,67 @@ class TestSaveSnapshots(unittest.TestCase):
         self.assertNotIn("<p>", text)
         self.assertIn("Текст", text)
 
+    def test_counter_change_does_not_change_hash(self):
+        # Настоящий случай с ntc.tj: счётчик просмотров растёт при каждом
+        # заходе. Без чистки слежение сообщало бы об изменении требований
+        # после каждой проверки, и на него перестали бы смотреть.
+        volatile = [r"Просмотров: \d+"]
+        first = save_snapshots(
+            self.root,
+            "primer",
+            ["https://a.gov/1"],
+            "2026-09-03",
+            lambda url: "<p>Правила Просмотров: 41 конец</p>",
+            volatile,
+        )
+        second = save_snapshots(
+            self.root,
+            "primer",
+            ["https://a.gov/1"],
+            "2026-09-04",
+            lambda url: "<p>Правила Просмотров: 42 конец</p>",
+            volatile,
+        )
+        self.assertEqual(
+            first["pages"][0]["contentHash"], second["pages"][0]["contentHash"]
+        )
+
+    def test_real_change_still_changes_hash(self):
+        volatile = [r"Просмотров: \d+"]
+        first = save_snapshots(
+            self.root,
+            "primer",
+            ["https://a.gov/1"],
+            "2026-09-03",
+            lambda url: "<p>Возраст до 21 Просмотров: 41</p>",
+            volatile,
+        )
+        second = save_snapshots(
+            self.root,
+            "primer",
+            ["https://a.gov/1"],
+            "2026-09-04",
+            lambda url: "<p>Возраст до 22 Просмотров: 41</p>",
+            volatile,
+        )
+        self.assertNotEqual(
+            first["pages"][0]["contentHash"], second["pages"][0]["contentHash"]
+        )
+
+    def test_saved_text_keeps_the_volatile_part(self):
+        # В файле текст сохраняется целиком: по нему проверяются цитаты,
+        # и вырезать из него куски нельзя.
+        save_snapshots(
+            self.root,
+            "primer",
+            ["https://a.gov/1"],
+            "2026-09-03",
+            lambda url: "<p>Правила Просмотров: 41</p>",
+            [r"Просмотров: \d+"],
+        )
+        text = (self.root / "raw" / "primer" / "2026-09-03" / "00.txt").read_text("utf-8")
+        self.assertIn("Просмотров: 41", text)
+
     def test_same_content_gives_same_hash_on_rerun(self):
         first = save_snapshots(
             self.root, "primer", ["https://a.gov/1"], "2026-09-03", self.fake_fetcher

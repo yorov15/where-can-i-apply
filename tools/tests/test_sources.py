@@ -34,6 +34,17 @@ class TestCheckSources(unittest.TestCase):
         problems = check_sources({"a-b": entry(approvedAt="03.09.2026")})
         self.assertTrue(any("дата утверждения" in p for p in problems))
 
+    def test_volatile_is_optional(self):
+        self.assertEqual(check_sources({"a-b": entry()}), [])
+
+    def test_valid_volatile_pattern_passes(self):
+        problems = check_sources({"a-b": entry(volatile=[r"Диданд: \d+"])})
+        self.assertEqual(problems, [])
+
+    def test_broken_volatile_pattern_is_caught(self):
+        problems = check_sources({"a-b": entry(volatile=["Диданд: [\\d+"])})
+        self.assertTrue(any("volatile" in p for p in problems))
+
     def test_missing_field_is_reported(self):
         broken = entry()
         del broken["approvedBy"]

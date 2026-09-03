@@ -10,7 +10,8 @@ from datetime import date, timedelta
 from pathlib import Path
 
 from tools.fetch import http_fetch
-from tools.snapshot import html_to_text, sha256_of_text
+from tools.snapshot import html_to_text, sha256_of_text, strip_volatile
+from tools.sources import load_sources
 
 INTERVAL_DAYS = {"daily": 1, "weekly": 7, "monthly": 30}
 
@@ -51,6 +52,9 @@ def main() -> int:
     today = date.today().isoformat()
     stale = []
 
+    # Изменчивые куски описаны там же, где источники: их объявляет человек.
+    sources = load_sources(root / "tools" / "sources.toml")
+
     paths = sorted(programs_dir.glob("*.json"))
     if not paths:
         print("Программ пока нет.")
@@ -68,7 +72,10 @@ def main() -> int:
             continue
 
         checked += 1
-        fresh_hash = sha256_of_text(html_to_text(http_fetch(url)))
+        volatile = sources.get(program["id"], {}).get("volatile", [])
+        fresh_hash = sha256_of_text(
+            strip_volatile(html_to_text(http_fetch(url)), volatile)
+        )
         if fresh_hash == program["source"].get("contentHash"):
             program["source"]["lastVerified"] = today
             path.write_text(

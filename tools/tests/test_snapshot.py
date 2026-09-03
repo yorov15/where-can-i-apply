@@ -1,6 +1,6 @@
 import unittest
 
-from tools.snapshot import html_to_text, normalize, sha256_of_text
+from tools.snapshot import html_to_text, normalize, sha256_of_text, strip_volatile
 
 
 class TestHtmlToText(unittest.TestCase):
@@ -29,6 +29,37 @@ class TestNormalize(unittest.TestCase):
         # Экранированный код, а не сам символ: неразрывный пробел
         # в исходнике неотличим от обычного, и тест молча стал бы пустым.
         self.assertEqual(normalize("18\u00a0лет"), "18 лет")
+
+
+class TestZeroWidth(unittest.TestCase):
+    def test_bom_at_start_is_removed(self):
+        # BOM пробелом не считается, поэтому схлопывание пробелов его не
+        # уберёт — а цитата, начинающаяся с него, не найдётся никогда.
+        self.assertEqual(normalize("\ufeffТекст"), "Текст")
+
+    def test_zero_width_space_inside_word_is_removed(self):
+        self.assertEqual(normalize("Текст\u200bдалее"), "Текстдалее")
+
+
+class TestStripVolatile(unittest.TestCase):
+    def test_view_counter_is_removed(self):
+        text = "Требования Диданд: 48745 Дальше текст"
+        self.assertEqual(
+            strip_volatile(text, [r"Диданд: \d+"]), "Требования Дальше текст"
+        )
+
+    def test_same_page_with_different_counter_gives_same_result(self):
+        patterns = [r"Диданд: \d+"]
+        first = strip_volatile("Правила Диданд: 1 конец", patterns)
+        second = strip_volatile("Правила Диданд: 999999 конец", patterns)
+        self.assertEqual(first, second)
+
+    def test_requirements_survive_the_cleaning(self):
+        text = "Диданд: 48745 Возраст до 21 года"
+        self.assertIn("до 21 года", strip_volatile(text, [r"Диданд: \d+"]))
+
+    def test_no_patterns_changes_nothing_but_spaces(self):
+        self.assertEqual(strip_volatile("а  б", []), "а б")
 
 
 class TestHash(unittest.TestCase):

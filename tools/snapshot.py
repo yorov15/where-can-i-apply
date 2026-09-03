@@ -53,6 +53,25 @@ def normalize(text: str) -> str:
     }
     for src, dst in replacements.items():
         text = text.replace(src, dst)
+    # BOM и прочие нулевой ширины: пробелами не считаются, поэтому
+    # re.sub ниже их не уберёт, а в начале цитаты они всё ломают.
+    text = re.sub(r"[\ufeff\u200b\u200c\u200d\u2060]", "", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def strip_volatile(text: str, patterns) -> str:
+    """Убирает куски, которые меняются сами по себе.
+
+    На странице ntc.tj стоит счётчик просмотров: он растёт при каждом
+    заходе, и хеш страницы меняется без единой правки требований. Без
+    этой чистки слежение кричало бы «страница изменилась» каждый раз, а
+    механизм, который врёт всегда, хуже отсутствующего.
+
+    Что считать изменчивым, решает человек в tools/sources.toml — не
+    робот и не догадка по виду текста.
+    """
+    for pattern in patterns or ():
+        text = re.sub(pattern, "", text)
     return re.sub(r"\s+", " ", text).strip()
 
 

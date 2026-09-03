@@ -9,6 +9,11 @@ import re
 import tomllib
 from pathlib import Path
 
+# Необязательный ключ volatile — список регулярных выражений для кусков,
+# которые меняются сами по себе: счётчики просмотров, даты «сегодня»,
+# номера сессий. Хеш считается без них, иначе слежение кричит о правках
+# требований там, где просто выросла цифра счётчика.
+
 SLUG = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 REQUIRED_KEYS = ("name", "urls", "approvedBy", "approvedAt")
@@ -38,4 +43,11 @@ def check_sources(raw: dict) -> list[str]:
         approved_at = entry.get("approvedAt", "")
         if approved_at and not ISO_DATE.match(approved_at):
             problems.append(f"{program_id}: дата утверждения не в формате ГГГГ-ММ-ДД")
+        for pattern in entry.get("volatile", []):
+            try:
+                re.compile(pattern)
+            except re.error as error:
+                problems.append(
+                    f"{program_id}: volatile — не регулярное выражение {pattern!r}: {error}"
+                )
     return problems
