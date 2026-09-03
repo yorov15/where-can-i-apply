@@ -5,7 +5,7 @@
 требование, не может придумать к нему цитату, которая там найдётся.
 """
 
-from tools.schema import FIELDS, REQUIRED_FIELDS, SCALES, is_country_code
+from tools.schema import FIELDS, REQUIRED_FIELDS, SCALES, VALUE_KEYS, is_country_code
 from tools.snapshot import normalize
 
 MIN_AGE = 15
@@ -30,6 +30,10 @@ def validate_program(program: dict, snapshot_text: str) -> list[str]:
                 )
             continue
 
+        if rule.get("noLimit") is True:
+            problems.extend(_check_absence(field, rule))
+            continue
+
         evidence = rule.get("evidence")
         if not evidence:
             problems.append(f"{field}: нет цитаты из источника")
@@ -39,6 +43,35 @@ def validate_program(program: dict, snapshot_text: str) -> list[str]:
         problems.extend(_check_rule_shape(field, rule))
 
     problems.extend(_check_deadline(program.get("deadline") or {}))
+    return problems
+
+
+def _check_absence(field: str, rule: dict) -> list[str]:
+    """Проверяет правило, которым человек ручается за отсутствие требования.
+
+    Цитаты тут нет и быть не может, поэтому вместо неё требуется подпись:
+    кто и когда смотрел. И ни одного значения — ручаться можно только за
+    отсутствие ограничения. Как только появляется число, работает обычный
+    путь с обязательной цитатой, и соврать «возраст до 25, я проверил»
+    этим способом нельзя.
+    """
+    problems = []
+
+    present = sorted(VALUE_KEYS & set(rule))
+    if present:
+        problems.append(
+            f"{field}: noLimit не может стоять вместе со значениями "
+            f"({', '.join(present)}) — за число нужна цитата"
+        )
+    if rule.get("evidence") is not None:
+        problems.append(f"{field}: при noLimit цитата должна быть null")
+    if rule.get("checkedBy") != "human":
+        problems.append(f"{field}: noLimit требует checkedBy = human")
+    if not _is_iso_date(rule.get("checkedAt")):
+        problems.append(f"{field}: noLimit требует checkedAt в формате ГГГГ-ММ-ДД")
+    if not rule.get("note"):
+        problems.append(f"{field}: noLimit требует note — что именно смотрели")
+
     return problems
 
 

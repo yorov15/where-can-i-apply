@@ -18,6 +18,17 @@ const DEADLINE_TEXT = {
 
 const ORDER = { no: 0, check: 1, yes: 2 };
 
+// Как называть поля профиля в тексте карточки.
+const FIELD_NAMES = {
+  citizenship: 'гражданство',
+  schoolCountry: 'страну школы',
+  schoolYears: 'годы школы',
+  graduationYear: 'год выпуска',
+  age: 'возраст',
+  gpa: 'средний балл',
+  language: 'язык',
+};
+
 export function renderResults(node, profile, programs, today) {
   node.textContent = '';
 
@@ -77,6 +88,17 @@ function card({ program, verdict, deadline }) {
       list.append(li);
     }
     el.append(list);
+  }
+
+  // За этой строкой стоит подпись человека, а не цитата из источника,
+  // поэтому формулировка про страницу, а не про программу: «не сказано»,
+  // а не «нет ограничений».
+  if (verdict.attested?.length) {
+    const names = verdict.attested.map((field) => FIELD_NAMES[field] ?? field);
+    const note = document.createElement('p');
+    note.className = 'attested';
+    note.textContent = `На странице программы не сказано ничего про ${names.join(', ')}`;
+    el.append(note);
   }
 
   return el;

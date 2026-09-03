@@ -15,10 +15,16 @@ from tools.schema import FIELDS
 MAX_INDEX_BYTES = 100 * 1024
 
 
+# Что не едет в индекс: цитата и заметка человека. Обе нужны только когда
+# кто-то проверяет запись, и обе — основная масса байтов. Флаг noLimit
+# остаётся: без него движок не отличит «требования нет» от «не знаем».
+STRIPPED_FROM_INDEX = ("evidence", "note")
+
+
 def _rule_without_evidence(rule):
     if rule is None:
         return None
-    return {key: value for key, value in rule.items() if key != "evidence"}
+    return {key: value for key, value in rule.items() if key not in STRIPPED_FROM_INDEX}
 
 
 def index_entry(program: dict) -> dict:

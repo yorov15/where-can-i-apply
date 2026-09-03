@@ -15,8 +15,24 @@ import { toPercent } from './lib/scales.js';
 
 const r = (status, message = '') => ({ status, message });
 
+// Третье состояние правила помимо «есть требование» и null.
+//
+// null означает «в источнике этого нет» — мы не смотрели или не нашли.
+// noLimit означает «человек прочитал страницу и требования там нет».
+// Без него почти каждая запись выходила жёлтой: на страницах программ
+// обычно нет абзаца «возрастных ограничений не установлено», отсутствие
+// требования подтверждает человек, а не фраза.
+//
+// Ручаться так можно только за отсутствие ограничения. Как только
+// появляется число, валидатор снова требует дословную цитату — соврать
+// «возраст до 25, я проверил» этим нельзя.
+function noLimit(rule) {
+  return rule.noLimit === true;
+}
+
 function countryRule(value, rule, labels) {
   if (!rule) return r('unknown', labels.noRule);
+  if (noLimit(rule)) return r('pass');
   if (!value) return r('unknown', labels.noValue);
   if (Array.isArray(rule.deny) && rule.deny.includes(value)) return r('fail', labels.denied);
   if (rule.allow === '*') return r('pass');
@@ -44,6 +60,7 @@ export function checkSchoolCountry(profile, rule, ctx) {
 
 export function checkSchoolYears(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает, сколько лет школы нужно');
+  if (noLimit(rule)) return r('pass');
   if (profile.schoolYears == null) return r('unknown', 'Ты не указал, сколько лет учился в школе');
   if (rule.min == null) return r('pass');
   if (profile.schoolYears < rule.min) {
@@ -54,6 +71,7 @@ export function checkSchoolYears(profile, rule, ctx) {
 
 export function checkGraduationYear(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает, в каком году нужно окончить школу');
+  if (noLimit(rule)) return r('pass');
   if (profile.graduationYear == null) return r('unknown', 'Ты не указал год выпуска');
   if (rule.min != null && profile.graduationYear < rule.min) {
     return r('fail', `Программа берёт выпускников не раньше ${rule.min} года, у тебя ${profile.graduationYear}`);
@@ -66,6 +84,7 @@ export function checkGraduationYear(profile, rule, ctx) {
 
 export function checkAge(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает ограничение по возрасту');
+  if (noLimit(rule)) return r('pass');
   if (!profile.birthDate) return r('unknown', 'Ты не указал дату рождения');
 
   const on = rule.asOf === 'deadline' ? ctx?.deadline?.closes : rule.asOf;
@@ -95,6 +114,7 @@ export const GPA_BAND = 5;
 
 export function checkGpa(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает требование к среднему баллу');
+  if (noLimit(rule)) return r('pass');
   if (!profile.gpa || profile.gpa.value == null) return r('unknown', 'Ты не указал средний балл');
   if (rule.min == null) return r('pass');
 
@@ -115,6 +135,7 @@ export function checkGpa(profile, rule, ctx) {
 // сертификат есть и результат ниже порога.
 export function checkLanguage(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает требование к языку');
+  if (noLimit(rule)) return r('pass');
   const need = rule.anyOf ?? [];
   if (need.length === 0) return r('pass');
 

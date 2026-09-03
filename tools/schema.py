@@ -32,6 +32,28 @@ def is_country_code(value) -> bool:
     return isinstance(value, str) and bool(_COUNTRY.match(value))
 
 
+# Ключи, в которых живут значения требования. Правило с подписью
+# человека («требования нет») не имеет права содержать ни одного из них:
+# ручаться можно за отсутствие ограничения, но никогда за число.
+VALUE_KEYS = frozenset({"min", "max", "allow", "deny", "anyOf", "scale", "asOf"})
+
+
+def absence_rule(today: str, note: str) -> dict:
+    """Правило, которым человек ручается: требования на странице нет.
+
+    Цитаты здесь быть не может: отсутствие требования не подтверждается
+    фразой — на страницах программ обычно нет абзаца «ограничений не
+    установлено». Его подтверждает человек, прочитавший страницу.
+    """
+    return {
+        "noLimit": True,
+        "evidence": None,
+        "checkedBy": "human",
+        "checkedAt": today,
+        "note": note,
+    }
+
+
 def empty_program(program_id: str, name: str) -> dict:
     return {
         "id": program_id,

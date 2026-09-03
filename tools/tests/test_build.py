@@ -55,6 +55,22 @@ class TestIndexEntry(unittest.TestCase):
     def test_source_is_not_in_index(self):
         self.assertNotIn("source", index_entry(PROGRAM))
 
+    def test_no_limit_flag_survives_but_note_does_not(self):
+        # Без флага движок не отличит «человек проверил, требования нет»
+        # от «не знаем» — и карточка снова станет жёлтой.
+        program = json.loads(json.dumps(PROGRAM))
+        program["eligibility"]["age"] = {
+            "noLimit": True,
+            "evidence": None,
+            "checkedBy": "human",
+            "checkedAt": "2026-09-03",
+            "note": "длинная заметка человека",
+        }
+        entry = index_entry(program)
+        self.assertIs(entry["eligibility"]["age"]["noLimit"], True)
+        self.assertEqual(entry["eligibility"]["age"]["checkedAt"], "2026-09-03")
+        self.assertNotIn("note", entry["eligibility"]["age"])
+
 
 class TestBuildIndex(unittest.TestCase):
     def test_drafts_are_not_published(self):

@@ -88,6 +88,61 @@ class TestRequired(unittest.TestCase):
         self.assertEqual(validate_program(program, SNAPSHOT), [])
 
 
+class TestAbsence(unittest.TestCase):
+    def absence(self, **over):
+        rule = {
+            "noLimit": True,
+            "evidence": None,
+            "checkedBy": "human",
+            "checkedAt": "2026-09-03",
+            "note": "На утверждённых страницах требования нет",
+        }
+        rule.update(over)
+        return rule
+
+    def test_signed_absence_passes_without_a_quote(self):
+        program = good_program()
+        program["eligibility"]["age"] = self.absence()
+        self.assertEqual(validate_program(program, SNAPSHOT), [])
+
+    def test_absence_with_a_value_is_caught(self):
+        # Главная защита: ручаться можно за отсутствие ограничения,
+        # но никогда за число. «Возраст до 25, я проверил» не пройдёт.
+        program = good_program()
+        program["eligibility"]["age"] = self.absence(max=25)
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("не может стоять вместе со значениями" in p for p in problems))
+
+    def test_absence_without_human_signature_is_caught(self):
+        program = good_program()
+        program["eligibility"]["age"] = self.absence(checkedBy="model")
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("checkedBy" in p for p in problems))
+
+    def test_absence_without_date_is_caught(self):
+        program = good_program()
+        program["eligibility"]["age"] = self.absence(checkedAt=None)
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("checkedAt" in p for p in problems))
+
+    def test_absence_without_note_is_caught(self):
+        program = good_program()
+        program["eligibility"]["age"] = self.absence(note="")
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("note" in p for p in problems))
+
+    def test_absence_with_invented_quote_is_caught(self):
+        program = good_program()
+        program["eligibility"]["age"] = self.absence(evidence="must be under 30")
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("цитата должна быть null" in p for p in problems))
+
+    def test_required_field_can_be_signed_absent(self):
+        program = good_program()
+        program["eligibility"]["graduationYear"] = self.absence()
+        self.assertEqual(validate_program(program, SNAPSHOT), [])
+
+
 class TestCoherence(unittest.TestCase):
     def test_closes_before_opens_is_caught(self):
         program = good_program()

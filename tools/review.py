@@ -11,7 +11,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from tools.schema import FIELDS
+from tools.schema import FIELDS, absence_rule
 from tools.validate import validate_program
 
 
@@ -29,6 +29,26 @@ def field_changes(current, proposed) -> list[dict]:
             continue
         changes.append({"field": field, "before": before, "after": after})
     return changes
+
+
+def empty_fields(program: dict) -> list[str]:
+    """Поля, про которые в записи ничего нет.
+
+    Каждое такое поле красит карточку в жёлтый с текстом «программа не
+    указывает». Иногда это правда — мы не смотрели. А иногда человек
+    страницу читал и требования там действительно нет. Второе надо уметь
+    сказать, иначе жёлтыми становятся почти все записи и цвет перестаёт
+    что-либо значить.
+    """
+    rules = program.get("eligibility", {})
+    return [field for field in FIELDS if rules.get(field) is None]
+
+
+def sign_absence(program: dict, field: str, today: str, note: str) -> dict:
+    """Ставит подпись человека под отсутствием требования. Вход не меняет."""
+    signed = copy.deepcopy(program)
+    signed.setdefault("eligibility", {})[field] = absence_rule(today, note)
+    return signed
 
 
 def approve(program: dict, today: str, source_url: str, content_hash: str) -> dict:
@@ -80,18 +100,54 @@ def main() -> int:
         current = json.loads(target.read_text(encoding="utf-8")) if target.exists() else None
 
         changes = field_changes(current, proposed)
-        if not changes:
+        empty = empty_fields(proposed)
+
+        # Пустые поля — повод зайти, даже когда правила не менялись:
+        # запись могла быть утверждена раньше, а подписи под отсутствием
+        # требований ещё не поставлены.
+        if not changes and not empty:
             print(f"{program_id}: изменений нет")
             continue
 
-        print(f"\n{program_id}: изменений {len(changes)}")
-        for change in changes:
-            _show(change)
+        if changes:
+            print(f"\n{program_id}: изменений {len(changes)}")
+            for change in changes:
+                _show(change)
 
-        answer = input("\nУтвердить эту запись целиком? [да/нет] ").strip().lower()
-        if answer not in ("да", "y", "yes"):
-            print("пропущено")
-            continue
+            answer = input("\nУтвердить эту запись целиком? [да/нет] ").strip().lower()
+            if answer not in ("да", "y", "yes"):
+                print("пропущено")
+                continue
+        else:
+            print(f"\n{program_id}: правила не менялись, но есть пустые поля")
+
+        if empty:
+            print(f"\nОсталось {len(empty)} пустых полей.")
+            print("Пустое поле красит карточку в жёлтый: «программа не указывает».")
+            print("Если ты открывал страницу и требования там правда нет — скажи да,")
+            print("и поле перестанет краснить выдачу. Подпись будет твоя, не модели.")
+            today = date.today().isoformat()
+            for field in empty:
+                reply = input(f"  {field}: требования на странице нет? [да/нет] ")
+                if reply.strip().lower() not in ("да", "y", "yes"):
+                    continue
+                note = input("     чем именно ручаешься (одной строкой): ").strip()
+                if not note:
+                    print("     без пояснения подпись не ставится, пропускаю")
+                    continue
+                proposed = sign_absence(proposed, field, today, note)
+
+            problems = validate_program(proposed, text)
+            if problems:
+                print("\nПосле подписей запись перестала проходить проверку:")
+                for problem in problems:
+                    print("  -", problem)
+                print("Ничего не записано.")
+                continue
+
+            if not changes and not field_changes(current, proposed):
+                print(f"{program_id}: ничего не подписано, запись не тронута")
+                continue
 
         approved = approve(
             proposed,
