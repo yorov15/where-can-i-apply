@@ -51,7 +51,13 @@ def main() -> int:
     today = date.today().isoformat()
     stale = []
 
-    for path in sorted(programs_dir.glob("*.json")):
+    paths = sorted(programs_dir.glob("*.json"))
+    if not paths:
+        print("Программ пока нет.")
+        return 0
+
+    checked = 0
+    for path in paths:
         program = json.loads(path.read_text(encoding="utf-8"))
         if not is_due(program, today):
             continue
@@ -61,6 +67,7 @@ def main() -> int:
             print(f"{program['id']}: нет адреса источника")
             continue
 
+        checked += 1
         fresh_hash = sha256_of_text(html_to_text(http_fetch(url)))
         if fresh_hash == program["source"].get("contentHash"):
             program["source"]["lastVerified"] = today
@@ -76,6 +83,9 @@ def main() -> int:
         print("\nУстарели: " + ", ".join(stale))
         print("Дальше: python -m tools.fetch, потом extract, потом review.")
         return 1
+
+    if checked == 0:
+        print(f"Проверять нечего: у всех {len(paths)} программ срок проверки ещё не подошёл.")
     return 0
 
 
