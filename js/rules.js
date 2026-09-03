@@ -10,6 +10,8 @@
 // «ограничения нет» записывается объектом с пустыми значениями и цитатой,
 // которая это подтверждает, — такой объект даёт pass.
 
+import { ageAt } from './lib/dates.js';
+
 const r = (status, message = '') => ({ status, message });
 
 function countryRule(value, rule, labels) {
@@ -57,6 +59,30 @@ export function checkGraduationYear(profile, rule, ctx) {
   }
   if (rule.max != null && profile.graduationYear > rule.max) {
     return r('fail', `Программа берёт выпускников не позже ${rule.max} года, у тебя ${profile.graduationYear}`);
+  }
+  return r('pass');
+}
+
+export function checkAge(profile, rule, ctx) {
+  if (!rule) return r('unknown', 'Программа не указывает ограничение по возрасту');
+  if (!profile.birthDate) return r('unknown', 'Ты не указал дату рождения');
+
+  const on = rule.asOf === 'deadline' ? ctx?.deadline?.closes : rule.asOf;
+  if (!on) return r('unknown', 'Дата, на которую программа считает возраст, неизвестна');
+
+  const age = ageAt(profile.birthDate, on);
+  const shaky = ctx?.deadline?.confidence !== 'confirmed' && rule.asOf === 'deadline';
+
+  if (rule.max != null) {
+    if (shaky && Math.abs(age - rule.max) <= 1) {
+      return r('unknown', `На дату приёма тебе будет около ${age}, предел программы ${rule.max}, но дата приёма ещё не подтверждена — проверь на сайте`);
+    }
+    if (age > rule.max) {
+      return r('fail', `На дату приёма тебе будет ${age}, программа берёт до ${rule.max}`);
+    }
+  }
+  if (rule.min != null && age < rule.min) {
+    return r('fail', `На дату приёма тебе будет ${age}, программа берёт с ${rule.min}`);
   }
   return r('pass');
 }
