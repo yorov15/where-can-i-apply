@@ -32,9 +32,21 @@
           "min": null,
           "max": null
         },
-        "age": null,
-        "gpa": null,
-        "language": null
+        "age": {
+          "noLimit": true,
+          "checkedBy": "human",
+          "checkedAt": "2026-09-03"
+        },
+        "gpa": {
+          "noLimit": true,
+          "checkedBy": "human",
+          "checkedAt": "2026-09-03"
+        },
+        "language": {
+          "noLimit": true,
+          "checkedBy": "human",
+          "checkedAt": "2026-09-03"
+        }
       },
       "deadline": {
         "opens": null,

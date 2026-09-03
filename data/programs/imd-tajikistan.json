@@ -37,9 +37,27 @@
       "max": null,
       "evidence": "хатмкарда ё хатмкунандаи муассисаҳои таълимии таҳсилоти умумии асосӣ (синфи 9-ум), миёнаи умумӣ (синфи 11-ум)"
     },
-    "age": null,
-    "gpa": null,
-    "language": null
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-03",
+      "note": "по поиску в снимке: возраст только про паспорт с 16 лет и льготы сиротам до 22, ограничения допуска нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-03",
+      "note": "по поиску в снимке: средний балл не упоминается ни разу на обеих страницах"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-03",
+      "note": "по поиску в снимке: сертификат не требуется, язык выбирается только для сдачи экзамена"
+    }
   },
   "textConditions": [
     {

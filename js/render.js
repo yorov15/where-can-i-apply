@@ -93,7 +93,10 @@ function card({ program, verdict, deadline }) {
   // За этой строкой стоит подпись человека, а не цитата из источника,
   // поэтому формулировка про страницу, а не про программу: «не сказано»,
   // а не «нет ограничений».
-  if (verdict.attested?.length) {
+  //
+  // На красной карточке её нет: человеку, который не проходит, важна
+  // причина отказа, а не перечень того, о чём страница молчит.
+  if (verdict.status !== 'no' && verdict.attested?.length) {
     const names = verdict.attested.map((field) => FIELD_NAMES[field] ?? field);
     const note = document.createElement('p');
     note.className = 'attested';
