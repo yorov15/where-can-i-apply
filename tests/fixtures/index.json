@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-09-03",
+  "programs": [
+    {
+      "id": "otkrytaya",
+      "name": { "ru": "Выдуманная открытая программа", "orig": "Fixture Open" },
+      "hostCountry": "XX",
+      "level": "bachelor",
+      "coverage": { "tuition": true, "living": true, "travel": false },
+      "eligibility": {
+        "citizenship": { "allow": "*", "deny": [] },
+        "schoolCountry": { "allow": "*", "deny": [] },
+        "schoolYears": { "min": 11 },
+        "graduationYear": { "min": 2025, "max": 2028 },
+        "age": { "min": null, "max": 25, "asOf": "deadline" },
+        "gpa": { "min": 70, "scale": "PERCENT" },
+        "language": { "anyOf": [{ "test": "IELTS", "min": 6.0 }] }
+      },
+      "deadline": { "opens": "2027-01-10", "closes": "2027-02-20", "recurring": "annual", "confidence": "confirmed" }
+    },
+    {
+      "id": "zakrytaya",
+      "name": { "ru": "Выдуманная закрытая программа", "orig": "Fixture Closed" },
+      "hostCountry": "XX",
+      "level": "bachelor",
+      "coverage": { "tuition": true, "living": false, "travel": false },
+      "eligibility": {
+        "citizenship": { "allow": "*", "deny": ["TJ"] },
+        "schoolCountry": { "allow": "*", "deny": [] },
+        "schoolYears": { "min": 12 },
+        "graduationYear": { "min": 2025, "max": 2028 },
+        "age": { "min": null, "max": 25, "asOf": "deadline" },
+        "gpa": { "min": 70, "scale": "PERCENT" },
+        "language": { "anyOf": [{ "test": "IELTS", "min": 6.0 }] }
+      },
+      "deadline": { "opens": "2027-01-10", "closes": "2027-02-20", "recurring": "annual", "confidence": "confirmed" }
+    },
+    {
+      "id": "dyrjavaya",
+      "name": { "ru": "Выдуманная программа с дырами", "orig": "Fixture Incomplete" },
+      "hostCountry": "XX",
+      "level": "bachelor",
+      "coverage": { "tuition": true, "living": null, "travel": null },
+      "eligibility": {
+        "citizenship": { "allow": "*", "deny": [] },
+        "schoolCountry": null,
+        "schoolYears": null,
+        "graduationYear": { "min": 2025, "max": null },
+        "age": { "min": null, "max": 18, "asOf": "deadline" },
+        "gpa": null,
+        "language": null
+      },
+      "deadline": { "opens": null, "closes": "2027-02-20", "recurring": "annual", "confidence": "expected" }
+    }
+  ]
+}

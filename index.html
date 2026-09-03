@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Куда я могу подать документы</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>Куда я могу подать документы</h1>
+  <p class="lead">Заполни анкету — увидишь, в какие программы тебя пускают, а в какие нет и почему. Данные остаются в твоём телефоне и никуда не отправляются.</p>
+</header>
+
+<main>
+  <form id="profile" autocomplete="off">
+    <fieldset>
+      <legend>О тебе</legend>
+
+      <label>Гражданство
+        <select name="citizenship">
+          <option value="">не выбрано</option>
+          <option value="TJ">Таджикистан</option>
+          <option value="UZ">Узбекистан</option>
+          <option value="KG">Кыргызстан</option>
+          <option value="KZ">Казахстан</option>
+          <option value="TM">Туркменистан</option>
+        </select>
+      </label>
+
+      <label>В какой стране оканчиваешь школу
+        <select name="schoolCountry">
+          <option value="">не выбрано</option>
+          <option value="TJ">Таджикистан</option>
+          <option value="UZ">Узбекистан</option>
+          <option value="KG">Кыргызстан</option>
+          <option value="KZ">Казахстан</option>
+          <option value="TM">Туркменистан</option>
+          <option value="RU">Россия</option>
+        </select>
+      </label>
+
+      <label>Сколько лет длится школа
+        <select name="schoolYears">
+          <option value="">не выбрано</option>
+          <option value="11">11 лет</option>
+          <option value="12">12 лет</option>
+        </select>
+      </label>
+
+      <label>Год выпуска
+        <input type="number" name="graduationYear" min="2020" max="2035" inputmode="numeric" placeholder="2027">
+      </label>
+
+      <label>Дата рождения
+        <input type="date" name="birthDate">
+        <small>Возраст программы считают на дату приёма, а не на сегодня — поэтому нужна именно дата.</small>
+      </label>
+
+      <label>Средний балл за последнюю четверть
+        <input type="number" name="gpaValue" step="0.1" min="0" max="100" inputmode="decimal" placeholder="4.8">
+        <select name="gpaScale">
+          <option value="TJ_5">по пятибалльной</option>
+          <option value="PERCENT">в процентах</option>
+          <option value="GPA_4">по шкале 4.0</option>
+          <option value="GPA_4_5">по шкале 4.5</option>
+        </select>
+        <small>Итоговый балл аттестата может отличаться, и решает именно он.</small>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Языковые экзамены</legend>
+      <p class="hint">Если экзамен ещё не сдан — оставь балл пустым, но отметь галочку. Программа тогда не отсеется: её покажет жёлтым с подписью, какой балл нужен.</p>
+
+      <label class="row"><input type="checkbox" name="has-IELTS"> IELTS
+        <input type="number" name="score-IELTS" step="0.5" min="0" max="9" inputmode="decimal" placeholder="балл">
+      </label>
+      <label class="row"><input type="checkbox" name="has-TOEFL_IBT"> TOEFL iBT
+        <input type="number" name="score-TOEFL_IBT" step="1" min="0" max="120" inputmode="numeric" placeholder="балл">
+      </label>
+    </fieldset>
+  </form>
+
+  <section id="results" aria-live="polite"></section>
+</main>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

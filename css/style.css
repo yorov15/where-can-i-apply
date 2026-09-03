@@ -1,0 +1,62 @@
+/* Мобильный вперёд. Системные шрифты: подключаемые стоят трафика,
+   которого у аудитории нет. */
+:root {
+  --fg: #16181d;
+  --muted: #5b6472;
+  --bg: #ffffff;
+  --line: #dfe3ea;
+  --yes: #1a7f47;
+  --no: #b3261e;
+  --check: #8a6100;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 1rem;
+  max-width: 40rem;
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+h1 { font-size: 1.4rem; margin: 0 0 .5rem; }
+.lead, .hint, small { color: var(--muted); font-size: .875rem; }
+
+fieldset { border: 1px solid var(--line); border-radius: .5rem; margin: 0 0 1rem; padding: .75rem; }
+legend { font-weight: 600; padding: 0 .25rem; }
+
+label { display: block; margin: 0 0 .875rem; font-weight: 500; }
+label small { display: block; font-weight: 400; margin-top: .25rem; }
+label.row { display: flex; align-items: center; gap: .5rem; font-weight: 400; }
+
+input, select {
+  display: block;
+  width: 100%;
+  margin-top: .25rem;
+  padding: .5rem;
+  font: inherit;
+  color: inherit;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: .375rem;
+}
+label.row input { display: inline-block; width: auto; margin-top: 0; }
+input[type="checkbox"] { width: 1.1rem; height: 1.1rem; }
+
+.card { border: 1px solid var(--line); border-left-width: 4px; border-radius: .5rem; padding: .75rem; margin: 0 0 .75rem; }
+.card.yes { border-left-color: var(--yes); }
+.card.no { border-left-color: var(--no); }
+.card.check { border-left-color: var(--check); }
+.card.closed { opacity: .6; }
+
+.card h3 { margin: 0 0 .25rem; font-size: 1rem; }
+.verdict { font-weight: 600; }
+.card.yes .verdict { color: var(--yes); }
+.card.no .verdict { color: var(--no); }
+.card.check .verdict { color: var(--check); }
+
+.reasons { margin: .5rem 0 0; padding-left: 1.1rem; }
+.reasons li { margin-bottom: .25rem; }
+.empty { color: var(--muted); }

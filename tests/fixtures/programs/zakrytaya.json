@@ -1,0 +1,24 @@
+{
+  "id": "zakrytaya",
+  "status": "published",
+  "name": { "ru": "Выдуманная закрытая программа", "orig": "Fixture Closed" },
+  "hostCountry": "XX",
+  "level": "bachelor",
+  "coverage": { "tuition": true, "living": false, "travel": false, "note": { "ru": "Выдумано" } },
+  "eligibility": {
+    "citizenship": { "allow": "*", "deny": ["TJ"], "evidence": "выдумано" },
+    "schoolCountry": { "allow": "*", "deny": [], "evidence": "выдумано" },
+    "schoolYears": { "min": 12, "evidence": "выдумано" },
+    "graduationYear": { "min": 2025, "max": 2028, "evidence": "выдумано" },
+    "age": { "min": null, "max": 25, "asOf": "deadline", "evidence": "выдумано" },
+    "gpa": { "min": 70, "scale": "PERCENT", "evidence": "выдумано" },
+    "language": { "anyOf": [{ "test": "IELTS", "min": 6.0 }], "evidence": "выдумано" }
+  },
+  "textConditions": [
+    { "ru": "Выдуманное условие, которое инструмент не считает", "evidence": "выдумано" }
+  ],
+  "deadline": { "opens": "2027-01-10", "closes": "2027-02-20", "recurring": "annual", "confidence": "confirmed" },
+  "applyUrl": "https://example.invalid/",
+  "coversInstitutions": { "kind": "list", "approxCount": 1, "note": { "ru": "Выдумано" } },
+  "source": { "url": "https://example.invalid/", "lastVerified": "2026-09-03", "contentHash": "sha256:0", "humanChecked": false }
+}
