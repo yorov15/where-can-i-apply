@@ -1,4 +1,47 @@
 {
   "generatedAt": "2026-09-03",
-  "programs": []
+  "programs": [
+    {
+      "id": "imd-tajikistan",
+      "name": {
+        "ru": "Централизованные вступительные экзамены Таджикистана (ЦВЭ)",
+        "orig": "Имтиҳонҳои марказонидаи дохилшавӣ (ИМД)"
+      },
+      "hostCountry": "TJ",
+      "level": "bachelor",
+      "coverage": {
+        "tuition": null,
+        "living": null,
+        "travel": null
+      },
+      "eligibility": {
+        "citizenship": {
+          "allow": [
+            "TJ"
+          ],
+          "deny": []
+        },
+        "schoolCountry": {
+          "allow": "*",
+          "deny": []
+        },
+        "schoolYears": {
+          "min": 11
+        },
+        "graduationYear": {
+          "min": null,
+          "max": null
+        },
+        "age": null,
+        "gpa": null,
+        "language": null
+      },
+      "deadline": {
+        "opens": null,
+        "closes": null,
+        "recurring": "annual",
+        "confidence": "expected"
+      }
+    }
+  ]
 }
