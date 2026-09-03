@@ -54,6 +54,57 @@
         "recurring": "annual",
         "confidence": "expected"
       }
+    },
+    {
+      "id": "turkiye-burslari",
+      "name": {
+        "ru": "Türkiye Bursları — государственная стипендия Турции",
+        "orig": "Türkiye Scholarships"
+      },
+      "hostCountry": "TR",
+      "level": "bachelor",
+      "coverage": {
+        "tuition": true,
+        "living": true,
+        "travel": true
+      },
+      "eligibility": {
+        "citizenship": {
+          "allow": "*",
+          "deny": [
+            "TR"
+          ]
+        },
+        "schoolCountry": {
+          "noLimit": true,
+          "checkedBy": "human",
+          "checkedAt": "2026-09-03"
+        },
+        "schoolYears": null,
+        "graduationYear": {
+          "min": null,
+          "maxRelative": "applicationYear"
+        },
+        "age": {
+          "min": null,
+          "maxExclusive": 21
+        },
+        "gpa": {
+          "min": 70,
+          "scale": "PERCENT"
+        },
+        "language": {
+          "noLimit": true,
+          "checkedBy": "human",
+          "checkedAt": "2026-09-03"
+        }
+      },
+      "deadline": {
+        "opens": "2027-01-10",
+        "closes": "2027-02-20",
+        "recurring": "annual",
+        "confidence": "expected"
+      }
     }
   ]
 }

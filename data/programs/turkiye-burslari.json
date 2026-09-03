@@ -1,0 +1,91 @@
+{
+  "id": "turkiye-burslari",
+  "status": "published",
+  "name": {
+    "ru": "Türkiye Bursları — государственная стипендия Турции",
+    "orig": "Türkiye Scholarships"
+  },
+  "hostCountry": "TR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Обучение, ежемесячная стипендия 4500 лир для бакалавриата, проживание, медстраховка, годовой курс турецкого языка и перелёт в обе стороны — в начале учёбы и при выпуске"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "TR"
+      ],
+      "evidence": "Eligible Groups: Citizens of all countries Graduates or those who will graduate at the end of the current academic year (before August) Researchers and academics Ineligible Groups: Turkish citizens and individuals who have lost Turkish citizenship"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-03",
+      "note": "на утверждённых страницах страна окончания школы не упоминается"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "min": null,
+      "maxRelative": "applicationYear",
+      "evidence": "Graduates or those who will graduate at the end of the current academic year (before August)"
+    },
+    "age": {
+      "min": null,
+      "maxExclusive": 21,
+      "evidence": "For associate and bachelor's degree programmes: Under 21 years of age."
+    },
+    "gpa": {
+      "min": 70,
+      "scale": "PERCENT",
+      "evidence": "For associate and bachelor's degree candidates %70"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-03",
+      "note": "на утверждённых страницах языковой сертификат не требуется"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Нельзя подавать, если уже учишься в турецком вузе на той же ступени образования.",
+      "evidence": "Individuals who are currently enrolled in programs in Turkish universities at the level of education will apply."
+    },
+    {
+      "ru": "Для медицины, стоматологии и фармации порог по баллу выше — 90%. Инструмент считает по общему порогу 70% и области обучения не различает.",
+      "evidence": "For candidates of Health Sciences (Medicine, Dentistry and Pharmacy): 90%"
+    },
+    {
+      "ru": "Окно подачи повторяется каждый год: 10 января — 20 февраля. Год в записи выведен из этого правила, официального объявления на следующий цикл ещё нет.",
+      "evidence": "which is the application period every year"
+    }
+  ],
+  "deadline": {
+    "opens": "2027-01-10",
+    "closes": "2027-02-20",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://turkiyeburslari.gov.tr/",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": null,
+    "note": {
+      "ru": "Вузы и специальности выбираются внутри одной заявки через систему TBBS; количество на утверждённых страницах не названо"
+    }
+  },
+  "source": {
+    "url": "https://turkiyeburslari.gov.tr/scholarshipsprograms",
+    "lastVerified": "2026-09-03",
+    "contentHash": "sha256:d1d0e5f79eaba0bdda471456b5cc3c3a063ff7d482813564b47c57c8926f4fc4",
+    "humanChecked": true
+  }
+}
