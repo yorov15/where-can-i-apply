@@ -17,7 +17,9 @@ from pathlib import Path
 from tools.snapshot import html_to_text, sha256_of_text
 from tools.sources import check_sources, load_sources
 
-USER_AGENT = "eligibility-tool/0.1 (учебный проект; сбор требований программ)"
+# Только ASCII: значения заголовков HTTP кодируются в latin-1, и кириллица
+# роняет запрос в http.client ещё до отправки, с UnicodeEncodeError.
+USER_AGENT = "eligibility-tool/0.1 (educational project; collecting admission requirements)"
 TIMEOUT_SECONDS = 30
 
 

@@ -3,7 +3,15 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.fetch import save_snapshots
+from tools.fetch import USER_AGENT, save_snapshots
+
+
+class TestUserAgent(unittest.TestCase):
+    def test_is_encodable_as_latin1(self):
+        # Значения заголовков HTTP кодируются в latin-1. Кириллица в
+        # User-Agent роняет запрос ещё до отправки — так и случилось
+        # на первом же настоящем скачивании.
+        USER_AGENT.encode("latin-1")
 
 
 class TestSaveSnapshots(unittest.TestCase):
