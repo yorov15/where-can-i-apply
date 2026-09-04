@@ -34,7 +34,7 @@ def field_changes(current, proposed) -> list[dict]:
 
 # Эти поля review проставляет сам при утверждении, показывать их как
 # изменения незачем.
-SET_BY_REVIEW = frozenset({"eligibility", "source", "status"})
+SET_BY_REVIEW = frozenset({"eligibility", "source", "status", "leftEmpty"})
 
 
 def other_changes(current, proposed: dict) -> list[dict]:
@@ -76,6 +76,36 @@ def merge_proposed(current, proposed: dict) -> dict:
             merged["eligibility"][field] = copy.deepcopy(current_rules[field])
 
     return merged
+
+
+def unasked_fields(program: dict, current, content_hash: str) -> list[str]:
+    """Пустые поля, о которых человека ещё не спрашивали на этом снимке.
+
+    Отказ «нет, требование может быть, просто не на этой странице» —
+    такое же решение, как подпись, и переспрашивать его каждый прогон
+    вредно: на шестой раз человек начинает жать вслепую, а тогда он
+    подпишет и то, чего не проверял.
+
+    Отказ запоминается вместе с хешем снимка. Изменился текст источника —
+    спрашиваем снова: на новом тексте ответ может быть другим.
+    """
+    declined = (current or {}).get("leftEmpty") or {}
+    return [
+        field
+        for field in empty_fields(program)
+        if declined.get(field) != content_hash
+    ]
+
+
+def remember_declined(program: dict, fields, content_hash: str) -> dict:
+    """Записывает, что человек осознанно оставил поля пустыми."""
+    remembered = copy.deepcopy(program)
+    declined = dict(remembered.get("leftEmpty") or {})
+    for field in fields:
+        declined[field] = content_hash
+    if declined:
+        remembered["leftEmpty"] = declined
+    return remembered
 
 
 def empty_fields(program: dict) -> list[str]:
@@ -186,9 +216,10 @@ def main() -> int:
         target = programs_dir / f"{program_id}.json"
         current = json.loads(target.read_text(encoding="utf-8")) if target.exists() else None
 
+        content_hash = meta["pages"][0]["contentHash"]
         proposed = merge_proposed(current, proposed)
         changes = field_changes(current, proposed) + other_changes(current, proposed)
-        empty = empty_fields(proposed)
+        empty = unasked_fields(proposed, current, content_hash)
 
         # Пустые поля — повод зайти, даже когда правила не менялись:
         # запись могла быть утверждена раньше, а подписи под отсутствием
@@ -215,9 +246,11 @@ def main() -> int:
             print("Если ты открывал страницу и требования там правда нет — скажи да,")
             print("и поле перестанет желтить выдачу. Подпись будет твоя, не модели.")
             today = date.today().isoformat()
+            declined = []
             for field in empty:
                 reply = input(f"  {field}: требования на странице нет? [да/нет] ")
                 if reply.strip().lower() not in ("да", "y", "yes"):
+                    declined.append(field)
                     continue
                 note = input("     чем именно ручаешься (одной строкой): ").strip()
                 if not note:
@@ -225,7 +258,12 @@ def main() -> int:
                     continue
                 proposed = sign_absence(proposed, field, today, note)
 
-            if not changes and not field_changes(current, proposed):
+            # Отказ запоминается вместе с хешем снимка: пока источник не
+            # изменился, второй раз не спросим.
+            if declined:
+                proposed = remember_declined(proposed, declined, content_hash)
+
+            if not changes and not field_changes(current, proposed) and not declined:
                 print(f"{program_id}: ничего не подписано, запись не тронута")
                 continue
 

@@ -7,8 +7,65 @@ from tools.review import (
     field_changes,
     merge_proposed,
     other_changes,
+    remember_declined,
     sign_absence,
+    unasked_fields,
 )
+
+
+class TestDeclinedMemory(unittest.TestCase):
+    def program(self, **rules):
+        base = {f: None for f in (
+            "citizenship", "schoolCountry", "schoolYears",
+            "graduationYear", "age", "gpa", "language")}
+        base.update(rules)
+        return {"eligibility": base}
+
+    def test_first_time_asks_about_everything(self):
+        got = unasked_fields(self.program(), None, "sha256:1")
+        self.assertIn("schoolYears", got)
+
+    def test_declined_field_is_not_asked_again(self):
+        # Переспрашивать отказ каждый прогон вредно: на шестой раз человек
+        # начинает жать вслепую, и тогда подпишет непроверенное.
+        current = {"leftEmpty": {"schoolYears": "sha256:1"}}
+        got = unasked_fields(self.program(), current, "sha256:1")
+        self.assertNotIn("schoolYears", got)
+
+    def test_new_snapshot_asks_again(self):
+        # На изменившемся тексте ответ может быть другим.
+        current = {"leftEmpty": {"schoolYears": "sha256:1"}}
+        got = unasked_fields(self.program(), current, "sha256:2")
+        self.assertIn("schoolYears", got)
+
+    def test_other_empty_fields_are_still_asked(self):
+        current = {"leftEmpty": {"schoolYears": "sha256:1"}}
+        got = unasked_fields(self.program(), current, "sha256:1")
+        self.assertIn("gpa", got)
+
+    def test_filled_field_is_never_asked(self):
+        program = self.program(schoolYears={"min": 12, "evidence": "x"})
+        self.assertNotIn("schoolYears", unasked_fields(program, None, "sha256:1"))
+
+    def test_remembering_keeps_the_snapshot_hash(self):
+        got = remember_declined({"eligibility": {}}, ["schoolYears"], "sha256:9")
+        self.assertEqual(got["leftEmpty"], {"schoolYears": "sha256:9"})
+
+    def test_remembering_does_not_mutate_input(self):
+        program = {"eligibility": {}}
+        remember_declined(program, ["gpa"], "sha256:9")
+        self.assertNotIn("leftEmpty", program)
+
+    def test_remembering_adds_to_what_was_there(self):
+        program = {"eligibility": {}, "leftEmpty": {"gpa": "sha256:1"}}
+        got = remember_declined(program, ["schoolYears"], "sha256:2")
+        self.assertEqual(got["leftEmpty"], {"gpa": "sha256:1", "schoolYears": "sha256:2"})
+
+    def test_memory_is_not_shown_as_a_change(self):
+        # Его ставит сам review — показывать как изменение незачем.
+        before = {"leftEmpty": {}}
+        after = {"leftEmpty": {"schoolYears": "sha256:1"}}
+        self.assertEqual(other_changes(before, after), [])
 
 
 class TestShowList(unittest.TestCase):

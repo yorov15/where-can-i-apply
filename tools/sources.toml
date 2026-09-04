@@ -95,8 +95,11 @@ approvedAt = "2026-09-03"
 #
 # Домен education-in-russia.com утверждён человеком. Источник ручной:
 # портал рисуется JavaScript-ом и отдаёт программе ноль символов текста.
-# Человек открывает страницы сам и печатает их в PDF — печать снимает то,
-# что нарисовано на экране, в отличие от «сохранить как».
+#
+# Сохранять надо через «Веб-страница, полностью» (Ctrl+S), а не печатью в
+# PDF. Проверено 4 сентября 2026: страница построена на сворачивающихся
+# блоках, печать сняла одни заголовки — 519 символов вместо восьми тысяч.
+# Сохранение разметки берёт и свёрнутое тоже.
 #
 # Портал висит с пометкой «работает в режиме опытной эксплуатации».
 # Требований к возрасту и баллу на нём нет вовсе: их определяет отбор в
@@ -105,8 +108,8 @@ approvedAt = "2026-09-03"
 [russia-quota]
 name = "Квота Правительства Российской Федерации"
 files = [
-  { path = "manual/russia-quota/admission-process.pdf", url = "https://education-in-russia.com/how-to-proceed/admission-process" },
-  { path = "manual/russia-quota/recognition.pdf", url = "https://education-in-russia.com/how-to-proceed/recognition-of-education" },
+  { path = "manual/russia-quota/admission-process.html", url = "https://education-in-russia.com/how-to-proceed/admission-process" },
+  { path = "manual/russia-quota/recognition.html", url = "https://education-in-russia.com/how-to-proceed/recognition-of-education" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-04"
