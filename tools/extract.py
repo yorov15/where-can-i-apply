@@ -9,6 +9,7 @@ import json
 import sys
 from pathlib import Path
 
+from tools.fetch import latest_snapshot
 from tools.schema import empty_program
 
 RULES = """\
@@ -56,11 +57,10 @@ def main() -> int:
     for program_dir in sorted(raw_root.iterdir()):
         if not program_dir.is_dir():
             continue
-        snapshots = sorted(p for p in program_dir.iterdir() if p.is_dir())
-        if not snapshots:
-            print(f"{program_dir.name}: снимков нет, пропускаю")
+        latest = latest_snapshot(root, program_dir.name)
+        if latest is None:
+            print(f"{program_dir.name}: законченного снимка нет, пропускаю")
             continue
-        latest = snapshots[-1]
         text = "\n\n".join(
             path.read_text(encoding="utf-8") for path in sorted(latest.glob("*.txt"))
         )

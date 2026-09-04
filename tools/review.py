@@ -11,6 +11,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from tools.fetch import latest_snapshot
 from tools.schema import FIELDS, absence_rule
 from tools.validate import validate_program
 
@@ -106,7 +107,10 @@ def main() -> int:
         program_id = path.stem
         proposed = json.loads(path.read_text(encoding="utf-8"))
 
-        snapshot_dir = sorted((root / "raw" / program_id).iterdir())[-1]
+        snapshot_dir = latest_snapshot(root, program_id)
+        if snapshot_dir is None:
+            print(f"{program_id}: законченного снимка нет, сначала python -m tools.fetch")
+            continue
         meta = json.loads((snapshot_dir / "meta.json").read_text(encoding="utf-8"))
         text = "\n\n".join(
             p.read_text(encoding="utf-8") for p in sorted(snapshot_dir.glob("*.txt"))

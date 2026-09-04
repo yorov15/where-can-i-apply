@@ -9,7 +9,9 @@ fetcher передаётся аргументом, а не берётся из u
 """
 
 import json
+import shutil
 import sys
+import time
 import urllib.request
 from datetime import date
 from pathlib import Path
@@ -45,6 +47,50 @@ def page_to_text(raw: bytes) -> str:
     if kind_of(raw) == "pdf":
         return pdf_to_text(raw)
     return html_to_text(raw.decode("utf-8", errors="replace"))
+
+
+RETRIES = 3
+RETRY_PAUSE_SECONDS = 3
+
+
+def with_retries(fetcher, attempts: int = RETRIES, pause: float = RETRY_PAUSE_SECONDS, sleep=time.sleep):
+    """Повторяет скачивание несколько раз, прежде чем сдаться.
+
+    Связь рвётся не только у нас: она рвётся у всех, кто сидит на
+    мобильном интернете, а это вся аудитория инструмента. Одна неудачная
+    попытка не повод бросать работу.
+    """
+    def fetch(url):
+        last = None
+        for attempt in range(1, attempts + 1):
+            try:
+                return fetcher(url)
+            except Exception as error:
+                last = error
+                if attempt < attempts:
+                    print(f"   попытка {attempt} не удалась ({type(error).__name__}), повтор")
+                    sleep(pause)
+        raise last
+
+    return fetch
+
+
+def latest_snapshot(root, program_id: str):
+    """Последний снимок, доведённый до конца.
+
+    Признак законченности — meta.json: он пишется после всех страниц.
+    Папка без него осталась от прерванного скачивания, и брать её за
+    снимок нельзя: цитаты проверялись бы по обрубку текста.
+    """
+    folder = Path(root) / "raw" / program_id
+    if not folder.exists():
+        return None
+    finished = [
+        path
+        for path in sorted(folder.iterdir())
+        if path.is_dir() and (path / "meta.json").exists()
+    ]
+    return finished[-1] if finished else None
 
 
 def snapshot_paths(root, program_id: str, today: str) -> Path:
@@ -107,16 +153,27 @@ def main() -> int:
         return 1
 
     today = date.today().isoformat()
+    fetcher = with_retries(http_fetch)
+    failed = []
+
     for program_id, entry in raw.items():
-        meta = save_snapshots(
-            root,
-            program_id,
-            entry["urls"],
-            today,
-            http_fetch,
-            entry.get("volatile", []),
-        )
-        print(f"{program_id}: снято страниц {len(meta['pages'])}")
+        try:
+            meta = save_snapshots(
+                root, program_id, entry["urls"], today, fetcher, entry.get("volatile", [])
+            )
+            print(f"{program_id}: снято страниц {len(meta['pages'])}")
+        except Exception as error:
+            # Одна недоступная страница не повод бросать остальные
+            # программы. Незаконченную папку убираем: без meta.json она
+            # обрубок, и следующий шаг не должен принять её за снимок.
+            failed.append(program_id)
+            shutil.rmtree(snapshot_paths(root, program_id, today), ignore_errors=True)
+            print(f"{program_id}: НЕ СНЯТО — {error}")
+
+    if failed:
+        print("\nНе снято: " + ", ".join(failed))
+        print("Прошлые снимки этих программ целы, работать можно на них.")
+        return 1
     return 0
 
 

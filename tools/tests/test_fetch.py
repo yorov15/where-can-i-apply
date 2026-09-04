@@ -3,7 +3,14 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.fetch import USER_AGENT, kind_of, page_to_text, save_snapshots
+from tools.fetch import (
+    USER_AGENT,
+    kind_of,
+    latest_snapshot,
+    page_to_text,
+    save_snapshots,
+    with_retries,
+)
 from tools.tests.test_pdf import make_pdf
 
 
@@ -30,6 +37,71 @@ class TestUserAgent(unittest.TestCase):
         # User-Agent роняет запрос ещё до отправки — так и случилось
         # на первом же настоящем скачивании.
         USER_AGENT.encode("latin-1")
+
+
+class TestRetries(unittest.TestCase):
+    def test_gives_up_only_after_all_attempts(self):
+        calls = []
+
+        def flaky(url):
+            calls.append(url)
+            if len(calls) < 3:
+                raise TimeoutError("связь оборвалась")
+            return b"<p>ok</p>"
+
+        fetch = with_retries(flaky, attempts=3, sleep=lambda _: None)
+        self.assertEqual(fetch("https://a.gov/1"), b"<p>ok</p>")
+        self.assertEqual(len(calls), 3)
+
+    def test_raises_the_last_error_when_all_attempts_fail(self):
+        def broken(url):
+            raise TimeoutError("связь оборвалась")
+
+        fetch = with_retries(broken, attempts=2, sleep=lambda _: None)
+        with self.assertRaises(TimeoutError):
+            fetch("https://a.gov/1")
+
+    def test_success_does_not_retry(self):
+        calls = []
+        fetch = with_retries(lambda url: calls.append(url) or b"x", sleep=lambda _: None)
+        fetch("https://a.gov/1")
+        self.assertEqual(len(calls), 1)
+
+
+class TestLatestSnapshot(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def make(self, day: str, finished: bool):
+        folder = self.root / "raw" / "primer" / day
+        folder.mkdir(parents=True)
+        (folder / "00.txt").write_text("текст", encoding="utf-8")
+        if finished:
+            (folder / "meta.json").write_text("{}", encoding="utf-8")
+        return folder
+
+    def test_no_snapshots_at_all(self):
+        self.assertIsNone(latest_snapshot(self.root, "primer"))
+
+    def test_unfinished_snapshot_is_ignored(self):
+        # Папка без meta.json осталась от прерванного скачивания. Взять её
+        # за снимок значит проверять цитаты по обрубку текста.
+        self.make("2026-09-04", finished=False)
+        self.assertIsNone(latest_snapshot(self.root, "primer"))
+
+    def test_newer_unfinished_does_not_hide_older_finished(self):
+        good = self.make("2026-09-03", finished=True)
+        self.make("2026-09-04", finished=False)
+        self.assertEqual(latest_snapshot(self.root, "primer"), good)
+
+    def test_newest_finished_wins(self):
+        self.make("2026-09-03", finished=True)
+        newer = self.make("2026-09-04", finished=True)
+        self.assertEqual(latest_snapshot(self.root, "primer"), newer)
 
 
 class TestSaveSnapshots(unittest.TestCase):
