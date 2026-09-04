@@ -81,3 +81,14 @@ def strip_volatile(text: str, patterns) -> str:
 
 def sha256_of_text(text: str) -> str:
     return "sha256:" + hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def source_fingerprint(pages) -> str:
+    """Один хеш на весь источник — по хешам всех его страниц.
+
+    Раньше запись помнила хеш только первой страницы. У Венгрии правила
+    допуска лежат в третьей, в PDF «Call for Applications», и её подмена
+    проходила незаметно: слежение говорило «без изменений», а выдача
+    считала по прошлогоднему порогу возраста.
+    """
+    return sha256_of_text("\n".join(page["contentHash"] for page in pages))

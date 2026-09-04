@@ -81,8 +81,10 @@ def empty_program(program_id: str, name: str) -> dict:
         "coversInstitutions": {"kind": "list", "approxCount": None, "note": {"ru": ""}},
         "source": {
             "url": None,
+            # Все страницы источника со своими хешами: следить надо за
+            # каждой, требования часто лежат не на первой.
+            "pages": [],
             "lastVerified": None,
-            "contentHash": None,
             "humanChecked": False,
         },
     }

@@ -1,6 +1,8 @@
 import unittest
 
-from tools.check import days_until, frequency_for, is_due
+from tools.check import compare_pages, days_until, frequency_for, is_due
+from tools.fetch import page_to_text
+from tools.snapshot import sha256_of_text, strip_volatile
 
 
 def deadline(closes):
@@ -58,3 +60,71 @@ class TestIsDue(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+def page(url, text):
+    return {"url": url, "contentHash": sha256_of_text(text)}
+
+
+def serving(pages_by_url):
+    """Поддельная качалка: отдаёт заранее заданный текст или падает."""
+    def fetcher(url):
+        value = pages_by_url[url]
+        if isinstance(value, Exception):
+            raise value
+        return value.encode("utf-8")
+    return fetcher
+
+
+class TestComparePages(unittest.TestCase):
+    def test_unchanged_source_reports_nothing(self):
+        pages = [page("https://a.gov/1", "aaa"), page("https://a.gov/2", "bbb")]
+        changed, gone = compare_pages(
+            pages, [], serving({"https://a.gov/1": "aaa", "https://a.gov/2": "bbb"})
+        )
+        self.assertEqual((changed, gone), ([], []))
+
+    def test_change_on_the_last_page_is_caught(self):
+        # Ровно то, что раньше проходило молча: у Венгрии правила допуска
+        # лежат в третьем источнике, в PDF, а следили за первым.
+        pages = [
+            page("https://a.gov/apply", "aaa"),
+            page("https://a.gov/partners", "bbb"),
+            page("https://a.gov/call.pdf", "порог возраста 25"),
+        ]
+        changed, gone = compare_pages(pages, [], serving({
+            "https://a.gov/apply": "aaa",
+            "https://a.gov/partners": "bbb",
+            "https://a.gov/call.pdf": "порог возраста 23",
+        }))
+        self.assertEqual(changed, ["https://a.gov/call.pdf"])
+        self.assertEqual(gone, [])
+
+    def test_names_every_changed_page(self):
+        pages = [page("https://a.gov/1", "aaa"), page("https://a.gov/2", "bbb")]
+        changed, _ = compare_pages(
+            pages, [], serving({"https://a.gov/1": "ccc", "https://a.gov/2": "ddd"})
+        )
+        self.assertEqual(changed, ["https://a.gov/1", "https://a.gov/2"])
+
+    def test_missing_page_does_not_stop_the_rest(self):
+        pages = [page("https://a.gov/1", "aaa"), page("https://a.gov/2", "bbb")]
+        changed, gone = compare_pages(pages, [], serving({
+            "https://a.gov/1": TimeoutError("нет связи"),
+            "https://a.gov/2": "ccc",
+        }))
+        self.assertEqual(changed, ["https://a.gov/2"])
+        self.assertEqual([url for url, _ in gone], ["https://a.gov/1"])
+
+    def test_volatile_noise_is_not_a_change(self):
+        # Счётчик просмотров на ntc.tj растёт при каждом заходе. Без этого
+        # слежение вопило бы об изменении требований каждый день.
+        volatile = ["Диданд: [0-9]+"]
+        stored = sha256_of_text(
+            strip_volatile(page_to_text("текст Диданд: 1".encode("utf-8")), volatile)
+        )
+        pages = [{"url": "https://a.gov/1", "contentHash": stored}]
+        changed, gone = compare_pages(
+            pages, volatile, serving({"https://a.gov/1": "текст Диданд: 48745"})
+        )
+        self.assertEqual((changed, gone), ([], []))

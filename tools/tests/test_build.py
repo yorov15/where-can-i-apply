@@ -30,8 +30,8 @@ PROGRAM = {
     "coversInstitutions": {"kind": "list", "approxCount": 1, "note": {"ru": ""}},
     "source": {
         "url": "https://example.gov/rules",
+        "pages": [{"url": "https://example.gov/rules", "contentHash": "sha256:0"}],
         "lastVerified": "2026-09-03",
-        "contentHash": "sha256:0",
         "humanChecked": True,
     },
 }
@@ -110,6 +110,35 @@ class TestBuildIndex(unittest.TestCase):
         second = dict(PROGRAM, id="alpha")
         index = build_index([PROGRAM, second], "2026-09-03")
         self.assertEqual([p["id"] for p in index["programs"]], ["alpha", "primer"])
+
+
+class TestSourceWithoutPages(unittest.TestCase):
+    """Запись, за источником которой никто не следит, публиковать нельзя."""
+
+    def program(self, **source):
+        copy = json.loads(json.dumps(PROGRAM))
+        copy["source"] = source
+        return copy
+
+    def test_record_without_pages_is_not_published(self):
+        # Иначе устаревшие требования выдавались бы уверенно и бессрочно:
+        # check.py такую запись пропускает, а сайт её показывает.
+        index = build_index(
+            [self.program(url="https://example.gov/rules", humanChecked=True)],
+            "2026-09-04",
+        )
+        self.assertEqual(index["programs"], [])
+
+    def test_empty_page_list_counts_as_none(self):
+        index = build_index(
+            [self.program(url="https://example.gov/rules", pages=[], humanChecked=True)],
+            "2026-09-04",
+        )
+        self.assertEqual(index["programs"], [])
+
+    def test_record_with_pages_is_published(self):
+        index = build_index([json.loads(json.dumps(PROGRAM))], "2026-09-04")
+        self.assertEqual([p["id"] for p in index["programs"]], [PROGRAM["id"]])
 
 
 if __name__ == "__main__":

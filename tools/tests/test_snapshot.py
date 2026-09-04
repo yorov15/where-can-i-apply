@@ -1,6 +1,12 @@
 import unittest
 
-from tools.snapshot import html_to_text, normalize, sha256_of_text, strip_volatile
+from tools.snapshot import (
+    html_to_text,
+    normalize,
+    sha256_of_text,
+    source_fingerprint,
+    strip_volatile,
+)
 
 
 class TestHtmlToText(unittest.TestCase):
@@ -76,6 +82,40 @@ class TestHash(unittest.TestCase):
 
     def test_different_text_different_hash(self):
         self.assertNotEqual(sha256_of_text("abc"), sha256_of_text("abd"))
+
+
+class TestSourceFingerprint(unittest.TestCase):
+    """Отпечаток всего источника, а не одной его страницы."""
+
+    def pages(self, *hashes):
+        return [
+            {"url": f"https://a.gov/{n}", "contentHash": value}
+            for n, value in enumerate(hashes)
+        ]
+
+    def test_same_pages_give_the_same_fingerprint(self):
+        self.assertEqual(
+            source_fingerprint(self.pages("sha256:1", "sha256:2")),
+            source_fingerprint(self.pages("sha256:1", "sha256:2")),
+        )
+
+    def test_change_on_the_last_page_changes_the_fingerprint(self):
+        self.assertNotEqual(
+            source_fingerprint(self.pages("sha256:1", "sha256:2", "sha256:3")),
+            source_fingerprint(self.pages("sha256:1", "sha256:2", "sha256:9")),
+        )
+
+    def test_order_matters(self):
+        self.assertNotEqual(
+            source_fingerprint(self.pages("sha256:1", "sha256:2")),
+            source_fingerprint(self.pages("sha256:2", "sha256:1")),
+        )
+
+    def test_added_page_changes_the_fingerprint(self):
+        self.assertNotEqual(
+            source_fingerprint(self.pages("sha256:1")),
+            source_fingerprint(self.pages("sha256:1", "sha256:2")),
+        )
 
 
 if __name__ == "__main__":

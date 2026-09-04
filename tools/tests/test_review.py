@@ -269,28 +269,52 @@ class TestFieldChanges(unittest.TestCase):
         self.assertIsNone(changes[0]["after"])
 
 
+PAGES = [
+    {"url": "https://a.gov/x", "contentHash": "sha256:1", "file": "00.txt"},
+    {"url": "https://a.gov/rules.pdf", "contentHash": "sha256:2", "file": "01.txt"},
+]
+
+
 class TestApprove(unittest.TestCase):
     def test_marks_human_checked_and_published(self):
         program = {"status": "draft", "source": {"humanChecked": False}}
-        got = approve(program, "2026-09-03", "https://a.gov/x", "sha256:1")
+        got = approve(program, "2026-09-03", PAGES)
         self.assertTrue(got["source"]["humanChecked"])
         self.assertEqual(got["status"], "published")
 
     def test_records_source_and_date(self):
         program = {"status": "draft", "source": {"humanChecked": False}}
-        got = approve(program, "2026-09-03", "https://a.gov/x", "sha256:1")
+        got = approve(program, "2026-09-03", PAGES)
         self.assertEqual(got["source"]["url"], "https://a.gov/x")
         self.assertEqual(got["source"]["lastVerified"], "2026-09-03")
-        self.assertEqual(got["source"]["contentHash"], "sha256:1")
+
+    def test_records_every_page_not_just_the_first(self):
+        # Пока запись помнила одну первую страницу, изменение правил в
+        # PDF Венгрии проходило незаметно.
+        got = approve({"status": "draft", "source": {}}, "2026-09-03", PAGES)
+        self.assertEqual(
+            got["source"]["pages"],
+            [
+                {"url": "https://a.gov/x", "contentHash": "sha256:1"},
+                {"url": "https://a.gov/rules.pdf", "contentHash": "sha256:2"},
+            ],
+        )
+
+    def test_page_list_carries_nothing_but_url_and_hash(self):
+        got = approve({"status": "draft", "source": {}}, "2026-09-03", PAGES)
+        self.assertNotIn("file", got["source"]["pages"][0])
+
+    def test_old_single_hash_field_is_dropped(self):
+        program = {"status": "draft", "source": {"contentHash": "sha256:старое"}}
+        got = approve(program, "2026-09-03", PAGES)
+        self.assertNotIn("contentHash", got["source"])
 
     def test_does_not_mutate_input(self):
         program = {"status": "draft", "source": {"humanChecked": False}}
-        approve(program, "2026-09-03", "https://a.gov/x", "sha256:1")
+        approve(program, "2026-09-03", PAGES)
         self.assertEqual(program["status"], "draft")
+        self.assertNotIn("pages", program["source"])
 
-
-if __name__ == "__main__":
-    unittest.main()
 
 
 class TestDeclinedSurvives(unittest.TestCase):
@@ -322,7 +346,11 @@ class TestDeclinedSurvives(unittest.TestCase):
 
     def test_approve_keeps_the_refusal(self):
         program = {"id": "x", "eligibility": self.blank(), "leftEmpty": {"gpa": "sha256:1"}}
-        approved = approve(program, "2026-09-04", "https://example.org", "sha256:1")
+        approved = approve(
+            program,
+            "2026-09-04",
+            [{"url": "https://example.org", "contentHash": "sha256:1"}],
+        )
         self.assertEqual(approved["leftEmpty"], {"gpa": "sha256:1"})
 
     def test_merge_does_not_invent_the_field(self):
@@ -365,3 +393,7 @@ class TestPruneDeclined(unittest.TestCase):
         program = {"eligibility": self.blank(), "leftEmpty": {"gpa": "sha256:1"}}
         prune_declined(program)
         self.assertEqual(program["leftEmpty"], {"gpa": "sha256:1"})
+
+
+if __name__ == "__main__":
+    unittest.main()

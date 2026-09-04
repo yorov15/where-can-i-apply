@@ -55,11 +55,15 @@ def index_entry(program: dict) -> dict:
 
 
 def build_index(programs: list[dict], generated_at: str) -> dict:
+    # Запись без списка страниц публиковать нельзя: за таким источником
+    # слежение не работает, и устаревшие требования выдавались бы
+    # уверенно и бессрочно.
     publishable = [
         program
         for program in programs
         if program.get("status") == "published"
         and (program.get("source") or {}).get("humanChecked") is True
+        and (program.get("source") or {}).get("pages")
     ]
     publishable.sort(key=lambda program: program["id"])
     return {
@@ -81,6 +85,14 @@ def main() -> int:
     )
 
     index = build_index(programs, date.today().isoformat())
+
+    # Молча выкинуть утверждённую программу из выдачи хуже, чем не собрать
+    # индекс вовсе: человек считает, что она на сайте.
+    published = {program["id"] for program in index["programs"]}
+    for program in programs:
+        if program.get("status") == "published" and program["id"] not in published:
+            print(f"{program['id']}: утверждена, но в индекс не пошла — проверь source")
+
     text = json.dumps(index, ensure_ascii=False, indent=2) + "\n"
 
     size = len(text.encode("utf-8"))

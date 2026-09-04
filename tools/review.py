@@ -13,6 +13,7 @@ from pathlib import Path
 
 from tools.fetch import latest_snapshot
 from tools.schema import FIELDS, absence_rule
+from tools.snapshot import source_fingerprint
 from tools.validate import validate_program
 
 
@@ -159,13 +160,22 @@ def sign_absence(program: dict, field: str, today: str, note: str) -> dict:
     return signed
 
 
-def approve(program: dict, today: str, source_url: str, content_hash: str) -> dict:
+def approve(program: dict, today: str, pages: list[dict]) -> dict:
+    """Утверждает запись и записывает все страницы источника с хешами.
+
+    Страницы записываются целиком, а не одной первой: у половины программ
+    правила допуска лежат не на ней. Пока запись помнила только первую,
+    слежение молча пропускало изменения во всех остальных.
+    """
     approved = prune_declined(program)
     approved["status"] = "published"
     approved.setdefault("source", {})
-    approved["source"]["url"] = source_url
+    approved["source"]["url"] = pages[0]["url"]
+    approved["source"]["pages"] = [
+        {"url": page["url"], "contentHash": page["contentHash"]} for page in pages
+    ]
     approved["source"]["lastVerified"] = today
-    approved["source"]["contentHash"] = content_hash
+    approved["source"].pop("contentHash", None)
     approved["source"]["humanChecked"] = True
     return approved
 
@@ -247,7 +257,10 @@ def main() -> int:
         target = programs_dir / f"{program_id}.json"
         current = json.loads(target.read_text(encoding="utf-8")) if target.exists() else None
 
-        content_hash = meta["pages"][0]["contentHash"]
+        # Отказы привязываются к отпечатку всего источника: человек
+        # отвечает, глядя на объединённый текст всех страниц, значит и
+        # переспрашивать надо при изменении любой из них.
+        content_hash = source_fingerprint(meta["pages"])
         proposed = merge_proposed(current, proposed)
         changes = field_changes(current, proposed) + other_changes(current, proposed)
         empty = unasked_fields(proposed, current, content_hash)
@@ -309,12 +322,7 @@ def main() -> int:
             print("Ничего не записано.")
             continue
 
-        approved = approve(
-            proposed,
-            date.today().isoformat(),
-            meta["pages"][0]["url"],
-            meta["pages"][0]["contentHash"],
-        )
+        approved = approve(proposed, date.today().isoformat(), meta["pages"])
         target.write_text(
             json.dumps(approved, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )

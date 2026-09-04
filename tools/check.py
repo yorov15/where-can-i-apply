@@ -42,6 +42,27 @@ def is_due(program: dict, today: str) -> bool:
     return date.fromisoformat(today) >= due_on
 
 
+def compare_pages(pages, volatile, fetcher):
+    """Сверяет каждую страницу источника с записанным хешем.
+
+    Отдельная функция, потому что это и есть всё содержание слежения:
+    пока сравнение жило внутри main, проверить его можно было только
+    руками, и оно полгода смотрело на одну первую страницу.
+
+    Возвращает (изменившиеся адреса, недоступные с их ошибками).
+    """
+    changed, gone = [], []
+    for page in pages:
+        try:
+            fresh = sha256_of_text(strip_volatile(page_to_text(fetcher(page["url"])), volatile))
+        except Exception as error:
+            gone.append((page["url"], error))
+            continue
+        if fresh != page.get("contentHash"):
+            changed.append(page["url"])
+    return changed, gone
+
+
 def main() -> int:
     root = Path(__file__).resolve().parent.parent
     programs_dir = root / "data" / "programs"
@@ -68,10 +89,12 @@ def main() -> int:
         if not is_due(program, today):
             continue
 
-        url = (program.get("source") or {}).get("url")
-        if not url:
-            print(f"{program['id']}: нет адреса источника")
+        source = program.get("source") or {}
+        pages = source.get("pages") or []
+        if not pages:
+            print(f"{program['id']}: в записи нет страниц источника — перезапиши через review")
             continue
+        url = source.get("url") or pages[0]["url"]
 
         # Ручной источник перекачать нельзя — его и брали руками потому,
         # что программе он недоступен. Слежение всё равно работает: срок
@@ -88,24 +111,29 @@ def main() -> int:
         # Источник может исчезнуть, и для PDF это не исключение, а норма:
         # адрес «Call for Applications 2026/2027» через год отдаёт 404.
         # Падать на этом нельзя — остальные программы тоже надо проверить.
-        try:
-            raw = http_fetch(url)
-            fresh_hash = sha256_of_text(strip_volatile(page_to_text(raw), volatile))
-        except Exception as error:
-            missing.append(program["id"])
-            print(f"{program['id']}: ИСТОЧНИК НЕДОСТУПЕН — {error}")
-            print(f"   {url}")
-            continue
+        # Каждая страница проверяется отдельно, и адрес изменившейся
+        # называется вслух: «что-то изменилось» по программе из трёх
+        # источников означает перечитывать все три заново.
+        changed, gone = compare_pages(pages, volatile, http_fetch)
 
-        if fresh_hash == program["source"].get("contentHash"):
+        if gone:
+            missing.append(program["id"])
+            for page_url, error in gone:
+                print(f"{program['id']}: ИСТОЧНИК НЕДОСТУПЕН — {error}")
+                print(f"   {page_url}")
+
+        if changed:
+            stale.append(program["id"])
+            print(f"{program['id']}: СТРАНИЦА ИЗМЕНИЛАСЬ — перепроверить требования")
+            for page_url in changed:
+                print(f"   {page_url}")
+
+        if not gone and not changed:
             program["source"]["lastVerified"] = today
             path.write_text(
                 json.dumps(program, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
             )
             print(f"{program['id']}: без изменений")
-        else:
-            stale.append(program["id"])
-            print(f"{program['id']}: СТРАНИЦА ИЗМЕНИЛАСЬ — перепроверить требования")
 
     if manual:
         print("\nЖдут ручного обновления: " + ", ".join(manual))
