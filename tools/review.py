@@ -109,10 +109,44 @@ def approve(program: dict, today: str, source_url: str, content_hash: str) -> di
     return approved
 
 
+BRIEF_LIMIT = 400
+
+
+def _brief(value) -> str:
+    text = json.dumps(value, ensure_ascii=False)
+    return text if len(text) <= BRIEF_LIMIT else text[:BRIEF_LIMIT] + " …"
+
+
+def _show_list(before, after) -> None:
+    """Показывает, что в списке добавилось и что убыло.
+
+    Печатать список целиком «было» и «станет» бесполезно: шесть текстовых
+    условий против пяти — две стены текста, отличающиеся одним элементом.
+    Человек подтверждает, не имея возможности прочитать, а это то же
+    самое, что не показывать вовсе.
+    """
+    removed = [item for item in before if item not in after]
+    added = [item for item in after if item not in before]
+
+    if not removed and not added:
+        print("  изменился только порядок")
+        return
+    for item in removed:
+        print("  убрать:   ", _brief(item))
+    for item in added:
+        print("  добавить: ", _brief(item))
+
+
 def _show(change: dict) -> None:
     print(f"\n=== {change['field']} ===")
-    print("было:  ", json.dumps(change["before"], ensure_ascii=False))
-    print("станет:", json.dumps(change["after"], ensure_ascii=False))
+    before, after = change["before"], change["after"]
+
+    if isinstance(before, list) or isinstance(after, list):
+        _show_list(before or [], after or [])
+        return
+
+    print("было:  ", _brief(before))
+    print("станет:", _brief(after))
 
 
 def main() -> int:

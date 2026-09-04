@@ -1,6 +1,7 @@
 import unittest
 
 from tools.review import (
+    _brief,
     approve,
     empty_fields,
     field_changes,
@@ -8,6 +9,45 @@ from tools.review import (
     other_changes,
     sign_absence,
 )
+
+
+class TestShowList(unittest.TestCase):
+    def diff(self, before, after):
+        removed = [item for item in before if item not in after]
+        added = [item for item in after if item not in before]
+        return removed, added
+
+    def test_only_the_new_item_is_singled_out(self):
+        # Настоящий случай: пять текстовых условий стало шесть. Печатать
+        # оба списка целиком — значит не показать ничего.
+        before = [{"ru": f"условие {n}"} for n in range(5)]
+        after = before + [{"ru": "новое условие"}]
+        removed, added = self.diff(before, after)
+        self.assertEqual(removed, [])
+        self.assertEqual(added, [{"ru": "новое условие"}])
+
+    def test_removal_is_visible_too(self):
+        before = [{"ru": "первое"}, {"ru": "второе"}]
+        after = [{"ru": "первое"}]
+        removed, added = self.diff(before, after)
+        self.assertEqual(removed, [{"ru": "второе"}])
+        self.assertEqual(added, [])
+
+    def test_replacement_shows_both_sides(self):
+        removed, added = self.diff([{"ru": "старое"}], [{"ru": "новое"}])
+        self.assertEqual(removed, [{"ru": "старое"}])
+        self.assertEqual(added, [{"ru": "новое"}])
+
+
+class TestBrief(unittest.TestCase):
+    def test_short_value_is_untouched(self):
+        self.assertEqual(_brief({"ru": "коротко"}), '{"ru": "коротко"}')
+
+    def test_long_value_is_cut_with_a_mark(self):
+        long = {"ru": "я" * 1000}
+        got = _brief(long)
+        self.assertTrue(got.endswith("…"))
+        self.assertLess(len(got), 500)
 
 
 class TestOtherChanges(unittest.TestCase):
