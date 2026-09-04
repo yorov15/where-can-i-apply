@@ -47,3 +47,42 @@ test('отсутствие правила даёт unknown', () => {
   const me = { languageTests: [{ test: 'IELTS', score: 7.0 }] };
   assert.equal(checkLanguage(me, null).status, 'unknown');
 });
+
+// KAIST публикует таблицу под заголовком «Recommended Score», а требует
+// лишь сам факт сертификата. Красная карточка на таких числах запрещала
+// бы подавать документы тому, кому подавать можно.
+const advisory = {
+  anyOf: [{ test: 'IELTS', min: 6.5 }, { test: 'TOEFL_IBT', min: 83 }],
+  advisory: true,
+  evidence: 'x',
+};
+
+test('рекомендованный балл: недобор не отказ, а проверка', () => {
+  const me = { languageTests: [{ test: 'IELTS', score: 6.0 }] };
+  const got = checkLanguage(me, advisory);
+  assert.equal(got.status, 'unknown');
+  assert.match(got.message, /не отказ/);
+});
+
+test('рекомендованный балл: перебор всё равно проходит', () => {
+  const me = { languageTests: [{ test: 'IELTS', score: 7.0 }] };
+  assert.equal(checkLanguage(me, advisory).status, 'pass');
+});
+
+test('рекомендованный балл: без сертификата это проверка', () => {
+  const got = checkLanguage({ languageTests: [] }, advisory);
+  assert.equal(got.status, 'unknown');
+  assert.match(got.message, /Сертификат нужен/);
+});
+
+test('обычный порог по-прежнему отказ, флаг ничего не ломает', () => {
+  const me = { languageTests: [{ test: 'IELTS', score: 5.0 }] };
+  assert.equal(checkLanguage(me, need).status, 'fail');
+});
+
+test('рекомендованный балл: экзамен отмечен без результата — тоже рекомендация', () => {
+  const me = { languageTests: [{ test: 'IELTS', score: null }] };
+  const got = checkLanguage(me, advisory);
+  assert.equal(got.status, 'unknown');
+  assert.match(got.message, /Рекомендовано/);
+});

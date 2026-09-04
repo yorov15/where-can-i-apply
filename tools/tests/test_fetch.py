@@ -5,6 +5,7 @@ from pathlib import Path
 
 from tools.fetch import (
     USER_AGENT,
+    chosen,
     kind_of,
     latest_snapshot,
     page_to_text,
@@ -302,6 +303,27 @@ class TestSaveSnapshots(unittest.TestCase):
         self.assertEqual(
             first["pages"][0]["contentHash"], second["pages"][0]["contentHash"]
         )
+
+
+class TestChosen(unittest.TestCase):
+    RAW = {"kaist": {"urls": []}, "mext-japan": {"urls": []}}
+
+    def test_no_names_means_everything(self):
+        picked, unknown = chosen(self.RAW, [])
+        self.assertEqual(set(picked), {"kaist", "mext-japan"})
+        self.assertEqual(unknown, [])
+
+    def test_one_name_picks_one(self):
+        picked, unknown = chosen(self.RAW, ["kaist"])
+        self.assertEqual(list(picked), ["kaist"])
+        self.assertEqual(unknown, [])
+
+    def test_typo_is_reported_not_ignored(self):
+        # Молча снять ноль страниц по опечатке — худший исход: выглядит
+        # как успех, а работа не сделана.
+        picked, unknown = chosen(self.RAW, ["kaisT"])
+        self.assertEqual(picked, {})
+        self.assertEqual(unknown, ["kaisT"])
 
 
 if __name__ == "__main__":

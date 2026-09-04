@@ -242,7 +242,21 @@ export function checkLanguage(profile, rule, ctx) {
   }
 
   const list = need.map((x) => `${x.test} ${x.min}`).join(' или ');
-  if (sawEmpty) return r('unknown', `Ты отметил экзамен без результата. Нужен ${list}`);
-  if (sawBelow) return r('fail', `Нужен ${list}, твой результат ниже`);
+  if (sawEmpty) {
+    const what = rule.advisory === true ? 'Рекомендовано' : 'Нужен';
+    return r('unknown', `Ты отметил экзамен без результата. ${what} ${list}`);
+  }
+  if (sawBelow) {
+    // Часть программ публикует не порог, а рекомендацию: KAIST пишет над
+    // своей таблицей «Recommended Score». Красная карточка на таких
+    // числах — прямая ложь: подавать документы человеку не запрещено.
+    if (rule.advisory === true) {
+      return r('unknown', `Рекомендовано ${list}, у тебя ниже. Это не отказ — программа называет балл рекомендацией, решает отбор`);
+    }
+    return r('fail', `Нужен ${list}, твой результат ниже`);
+  }
+  if (rule.advisory === true) {
+    return r('unknown', `Сертификат нужен, рекомендовано ${list}. Сдать экзамен ещё можно`);
+  }
   return r('unknown', `Нужен ${list}. Сертификата у тебя пока нет — экзамен можно сдать`);
 }

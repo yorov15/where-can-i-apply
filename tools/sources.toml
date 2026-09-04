@@ -140,3 +140,30 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-04"
+
+# KAIST — Корейский институт передовых технологий.
+#
+# Это НЕ Global Korea Scholarship: KAIST набирает иностранцев напрямую,
+# своей заявкой и в свои сроки. Стипендия тоже своя — покрывает всю плату
+# за обучение на четыре года плюс ежемесячные выплаты.
+#
+# Домен admission.kaist.ac.kr утверждён человеком 4 сентября 2026.
+# Четыре источника, потому что правила разнесены по разделам:
+#   /before/sub02  — кто вообще допускается: гражданство, срок выпуска
+#   /support       — что покрывает стипендия и сколько остаётся платить
+#   .../ApplicationTimeline — сроки цикла 2027
+#   PDF            — «Admissions Guide», полные правила, включая язык
+#
+# ВНИМАНИЕ: адрес PDF содержит номер цикла (2027) и через год перестанет
+# существовать — как у Венгрии. Это норма: check.py скажет «источник
+# недоступен», новый адрес впишет человек.
+[kaist]
+name = "KAIST International Undergraduate Admissions"
+urls = [
+  "https://admission.kaist.ac.kr/intl-undergraduate/before/sub02",
+  "https://admission.kaist.ac.kr/intl-undergraduate/support",
+  "https://admission.kaist.ac.kr/intl-undergraduate/application/ApplicationGuide/ApplicationTimeline",
+  "https://admission.kaist.ac.kr/wz/api/common/files/download/intl-undergraduate/pdf/Admissions_Guide_for_2027_admission.pdf",
+]
+approvedBy = "human"
+approvedAt = "2026-09-04"

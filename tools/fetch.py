@@ -147,7 +147,20 @@ def http_fetch(url: str) -> bytes:
         return response.read()
 
 
-def main() -> int:
+def chosen(raw: dict, wanted) -> tuple[dict, list[str]]:
+    """Оставляет только названные программы. Возвращает их и незнакомые имена."""
+    if not wanted:
+        return raw, []
+    unknown = [name for name in wanted if name not in raw]
+    return {name: raw[name] for name in wanted if name in raw}, unknown
+
+
+def main(argv=None) -> int:
+    # Качать все семь программ, чтобы добавить одну, — это лишние два
+    # десятка обращений к чужим серверам и новые снимки там, где ничего
+    # не менялось.
+    wanted = [arg for arg in (argv if argv is not None else sys.argv[1:]) if not arg.startswith("-")]
+
     root = Path(__file__).resolve().parent.parent
     raw = load_sources(root / "tools" / "sources.toml")
 
@@ -159,6 +172,11 @@ def main() -> int:
 
     if not raw:
         print("В tools/sources.toml нет ни одного источника. Вписывать их — работа человека.")
+        return 1
+
+    raw, unknown = chosen(raw, wanted)
+    if unknown:
+        print("Нет таких программ в tools/sources.toml: " + ", ".join(unknown))
         return 1
 
     today = date.today().isoformat()
