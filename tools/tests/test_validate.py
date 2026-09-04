@@ -78,6 +78,31 @@ class TestRequired(unittest.TestCase):
         problems = validate_program(program, SNAPSHOT)
         self.assertTrue(any("обязательное поле" in p for p in problems))
 
+    def test_required_check_can_be_deferred(self):
+        # До подписей обязательные поля не требуются: подпись — ровно то,
+        # чем пустое поле заполняется, и отвергать запись раньше значит
+        # не дать её заполнить вообще.
+        program = good_program()
+        program["eligibility"]["graduationYear"] = None
+        self.assertEqual(validate_program(program, SNAPSHOT, check_required=False), [])
+
+    def test_deferring_does_not_hide_other_problems(self):
+        program = good_program()
+        program["eligibility"]["graduationYear"] = None
+        program["eligibility"]["age"] = {
+            "max": 21,
+            "asOf": "deadline",
+            "evidence": "выдуманная цитата",
+        }
+        problems = validate_program(program, SNAPSHOT, check_required=False)
+        self.assertTrue(any("цитата не найдена" in p for p in problems))
+
+    def test_full_check_still_demands_required_fields(self):
+        program = good_program()
+        program["eligibility"]["graduationYear"] = None
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("обязательное поле" in p for p in problems))
+
     def test_explicit_no_limit_is_allowed(self):
         program = good_program()
         program["eligibility"]["graduationYear"] = {

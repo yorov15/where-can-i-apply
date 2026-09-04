@@ -19,7 +19,14 @@ MIN_AGE = 15
 MAX_AGE = 60
 
 
-def validate_program(program: dict, snapshot_text: str) -> list[str]:
+def validate_program(program: dict, snapshot_text: str, check_required: bool = True) -> list[str]:
+    """Проверяет запись. С check_required=False не требует обязательных полей.
+
+    Так проверяют предложение модели до того, как человек поставил подписи:
+    пустое обязательное поле на этом шаге ещё можно заполнить, и отвергать
+    из-за него всю запись — значит не дать её заполнить вообще. Перед
+    записью на диск проверка идёт полная.
+    """
     problems = []
     haystack = normalize(snapshot_text)
     eligibility = program.get("eligibility") or {}
@@ -30,7 +37,7 @@ def validate_program(program: dict, snapshot_text: str) -> list[str]:
     for field in FIELDS:
         rule = eligibility.get(field)
         if rule is None:
-            if field in REQUIRED_FIELDS:
+            if field in REQUIRED_FIELDS and check_required:
                 problems.append(
                     f"{field}: обязательное поле, null запрещён — "
                     "нужно правило или явное «ограничения нет» с цитатой"

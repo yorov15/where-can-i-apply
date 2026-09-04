@@ -112,7 +112,10 @@ def main() -> int:
             p.read_text(encoding="utf-8") for p in sorted(snapshot_dir.glob("*.txt"))
         )
 
-        problems = validate_program(proposed, text)
+        # Обязательные поля здесь не требуем: их ещё можно заполнить
+        # подписью ниже, а отвергнуть запись до этого — значит не дать
+        # её заполнить вообще.
+        problems = validate_program(proposed, text, check_required=False)
         if problems:
             print(f"\n{program_id}: запись не прошла проверку, утверждать нечего:")
             for problem in problems:
