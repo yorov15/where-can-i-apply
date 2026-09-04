@@ -9,8 +9,8 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
-from tools.fetch import http_fetch
-from tools.snapshot import html_to_text, sha256_of_text, strip_volatile
+from tools.fetch import http_fetch, page_to_text
+from tools.snapshot import sha256_of_text, strip_volatile
 from tools.sources import load_sources
 
 INTERVAL_DAYS = {"daily": 1, "weekly": 7, "monthly": 30}
@@ -51,6 +51,7 @@ def main() -> int:
 
     today = date.today().isoformat()
     stale = []
+    missing = []
 
     # Изменчивые куски описаны там же, где источники: их объявляет человек.
     sources = load_sources(root / "tools" / "sources.toml")
@@ -73,9 +74,19 @@ def main() -> int:
 
         checked += 1
         volatile = sources.get(program["id"], {}).get("volatile", [])
-        fresh_hash = sha256_of_text(
-            strip_volatile(html_to_text(http_fetch(url)), volatile)
-        )
+
+        # Источник может исчезнуть, и для PDF это не исключение, а норма:
+        # адрес «Call for Applications 2026/2027» через год отдаёт 404.
+        # Падать на этом нельзя — остальные программы тоже надо проверить.
+        try:
+            raw = http_fetch(url)
+            fresh_hash = sha256_of_text(strip_volatile(page_to_text(raw), volatile))
+        except Exception as error:
+            missing.append(program["id"])
+            print(f"{program['id']}: ИСТОЧНИК НЕДОСТУПЕН — {error}")
+            print(f"   {url}")
+            continue
+
         if fresh_hash == program["source"].get("contentHash"):
             program["source"]["lastVerified"] = today
             path.write_text(
@@ -86,9 +97,15 @@ def main() -> int:
             stale.append(program["id"])
             print(f"{program['id']}: СТРАНИЦА ИЗМЕНИЛАСЬ — перепроверить требования")
 
+    if missing:
+        print("\nИсточник недоступен: " + ", ".join(missing))
+        print("Если адрес изменился навсегда — впиши новый в tools/sources.toml.")
+
     if stale:
         print("\nУстарели: " + ", ".join(stale))
         print("Дальше: python -m tools.fetch, потом extract, потом review.")
+
+    if stale or missing:
         return 1
 
     if checked == 0:

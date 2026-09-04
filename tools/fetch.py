@@ -14,6 +14,7 @@ import urllib.request
 from datetime import date
 from pathlib import Path
 
+from tools.pdf import pdf_to_text
 from tools.snapshot import html_to_text, sha256_of_text, strip_volatile
 from tools.sources import check_sources, load_sources
 
@@ -21,6 +22,29 @@ from tools.sources import check_sources, load_sources
 # роняет запрос в http.client ещё до отправки, с UnicodeEncodeError.
 USER_AGENT = "eligibility-tool/0.1 (educational project; collecting admission requirements)"
 TIMEOUT_SECONDS = 30
+
+PDF_MAGIC = b"%PDF-"
+
+
+def kind_of(raw: bytes) -> str:
+    """Что нам прислали — страницу или PDF.
+
+    Тип определяется по самому файлу, а не по адресу и не по заголовку
+    ответа: ссылка без .pdf в конце может отдавать PDF, и наоборот.
+    """
+    return "pdf" if raw[: len(PDF_MAGIC)] == PDF_MAGIC else "html"
+
+
+def page_to_text(raw: bytes) -> str:
+    """Превращает скачанное в текст, откуда бы оно ни пришло.
+
+    После этого шага PDF перестаёт быть особенным: проверка цитат,
+    подписи человека и слежение работают с ним ровно так же, как со
+    страницей.
+    """
+    if kind_of(raw) == "pdf":
+        return pdf_to_text(raw)
+    return html_to_text(raw.decode("utf-8", errors="replace"))
 
 
 def snapshot_paths(root, program_id: str, today: str) -> Path:
@@ -40,11 +64,19 @@ def save_snapshots(root, program_id: str, urls, today: str, fetcher, volatile=()
 
     pages = []
     for number, url in enumerate(urls):
-        text = html_to_text(fetcher(url))
+        raw = fetcher(url)
+        text = page_to_text(raw)
         name = f"{number:02d}.txt"
         (folder / name).write_text(text, encoding="utf-8")
         stable = strip_volatile(text, volatile)
-        pages.append({"url": url, "file": name, "contentHash": sha256_of_text(stable)})
+        pages.append(
+            {
+                "url": url,
+                "file": name,
+                "kind": kind_of(raw),
+                "contentHash": sha256_of_text(stable),
+            }
+        )
 
     meta = {"programId": program_id, "fetchedAt": today, "pages": pages}
     (folder / "meta.json").write_text(
@@ -53,11 +85,11 @@ def save_snapshots(root, program_id: str, urls, today: str, fetcher, volatile=()
     return meta
 
 
-def http_fetch(url: str) -> str:
+def http_fetch(url: str) -> bytes:
+    """Отдаёт байты, а не строку: в строку PDF не помещается."""
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(request, timeout=TIMEOUT_SECONDS) as response:
-        raw = response.read()
-    return raw.decode("utf-8", errors="replace")
+        return response.read()
 
 
 def main() -> int:
