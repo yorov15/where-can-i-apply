@@ -107,6 +107,21 @@ class TestComparePages(unittest.TestCase):
         )
         self.assertEqual(changed, ["https://a.gov/1", "https://a.gov/2"])
 
+    def test_a_flaky_page_is_reported_once_not_per_attempt(self):
+        # compare_pages не повторяет сама: повторы навешивает вызывающий
+        # (with_retries), иначе одна и та же страница попала бы в список
+        # недоступных трижды.
+        calls = []
+
+        def counting(url):
+            calls.append(url)
+            raise TimeoutError("нет связи")
+
+        pages = [page("https://a.gov/1", "aaa")]
+        changed, gone = compare_pages(pages, [], counting)
+        self.assertEqual(len(gone), 1)
+        self.assertEqual(calls, ["https://a.gov/1"])
+
     def test_missing_page_does_not_stop_the_rest(self):
         pages = [page("https://a.gov/1", "aaa"), page("https://a.gov/2", "bbb")]
         changed, gone = compare_pages(pages, [], serving({

@@ -9,7 +9,7 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
-from tools.fetch import http_fetch, page_to_text
+from tools.fetch import http_fetch, page_to_text, with_retries
 from tools.snapshot import sha256_of_text, strip_volatile
 from tools.sources import load_sources
 
@@ -63,7 +63,13 @@ def compare_pages(pages, volatile, fetcher):
     return changed, gone
 
 
-def main() -> int:
+def main(argv=None) -> int:
+    # Без принудительного запуска слежение нельзя проверить иначе как
+    # ожиданием: сразу после review все записи свежие, и check честно
+    # отвечает «срок не подошёл». Проверять инструмент ожиданием — значит
+    # не проверять его вовсе.
+    force = "--now" in (argv if argv is not None else sys.argv[1:])
+
     root = Path(__file__).resolve().parent.parent
     programs_dir = root / "data" / "programs"
     if not programs_dir.exists():
@@ -86,7 +92,7 @@ def main() -> int:
     checked = 0
     for path in paths:
         program = json.loads(path.read_text(encoding="utf-8"))
-        if not is_due(program, today):
+        if not force and not is_due(program, today):
             continue
 
         source = program.get("source") or {}
@@ -114,7 +120,10 @@ def main() -> int:
         # Каждая страница проверяется отдельно, и адрес изменившейся
         # называется вслух: «что-то изменилось» по программе из трёх
         # источников означает перечитывать все три заново.
-        changed, gone = compare_pages(pages, volatile, http_fetch)
+        # С повторами, как в fetch: одна оборванная связь не повод
+        # объявить источник исчезнувшим. Без этого слежение по расписанию
+        # поднимало бы ложную тревогу почти каждый запуск.
+        changed, gone = compare_pages(pages, volatile, with_retries(http_fetch))
 
         if gone:
             missing.append(program["id"])
@@ -152,6 +161,7 @@ def main() -> int:
 
     if checked == 0:
         print(f"Проверять нечего: у всех {len(paths)} программ срок проверки ещё не подошёл.")
+        print("Проверить всё равно: python -m tools.check --now")
     return 0
 
 
