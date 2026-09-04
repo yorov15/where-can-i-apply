@@ -23,8 +23,15 @@ export const FIELDS = [
 // если недостающая часть — это гражданство, любые проценты равны нулю.
 // textConditions в цвет не входят: они есть почти у каждой программы, и
 // если каждое красит в жёлтый, светофор перестаёт различать.
-export function evaluate(profile, program) {
-  const ctx = { deadline: program.deadline ?? null };
+// today нужен одному правилу — возрасту, и только когда программа не
+// объявила дат приёма. Считать возраст не на чем, а «сегодня» ошибается
+// не больше чем на год, что правило и учитывает.
+//
+// Относительная граница по году выпуска такой подмены не делает
+// намеренно: год подачи может отличаться от текущего, и ошибка там
+// отсеяла бы человека молча.
+export function evaluate(profile, program, today = null) {
+  const ctx = { deadline: program.deadline ?? null, today };
   const results = FIELDS.map(([field, fn]) => ({
     field,
     ...fn(profile, program.eligibility?.[field] ?? null, ctx),

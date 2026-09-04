@@ -107,18 +107,25 @@ export function checkAge(profile, rule, ctx) {
   // Источник часто не говорит, на какой момент считается возраст.
   // Придумывать дату нельзя, но и молчать необязательно: если ответ
   // одинаков при любой правдоподобной дате, он не «неизвестен».
+  // Программы редко публикуют точные даты за год вперёд: их дали Türkiye
+  // Bursları, но не ЦВЭ и не GKS. Без даты возраст посчитать не на чем,
+  // поэтому в крайнем случае считаем на сегодня — с оговоркой ниже.
   const asOf = rule.asOf ?? 'deadline';
-  const on = asOf === 'deadline' ? ctx?.deadline?.closes : asOf;
+  const on = asOf === 'deadline'
+    ? (ctx?.deadline?.closes ?? ctx?.today ?? null)
+    : asOf;
   if (!on) return r('unknown', 'Дата, на которую программа считает возраст, неизвестна');
 
   const age = ageAt(profile.birthDate, on);
 
-  // Дата отсчёта шаткая, когда приём ещё не подтверждён или когда
-  // источник вообще не сказал, на какой момент считать. В обоих случаях
-  // ошибиться можно самое большее на год.
+  // Дата отсчёта шаткая, когда её нет вовсе, когда приём не подтверждён
+  // или когда источник не сказал, на какой момент считать. Во всех трёх
+  // случаях ошибиться можно самое большее на год — столько и допускаем.
   const shaky =
     asOf === 'deadline' &&
-    (ctx?.deadline?.confidence !== 'confirmed' || rule.asOf == null);
+    (!ctx?.deadline?.closes ||
+      ctx?.deadline?.confidence !== 'confirmed' ||
+      rule.asOf == null);
 
   // maxExclusive записывает «under 21» как есть. В max пришлось бы писать
   // 20 при цитате «21» — и первый же читатель принял бы это за опечатку.
@@ -126,9 +133,11 @@ export function checkAge(profile, rule, ctx) {
 
   if (maxInclusive != null) {
     if (shaky && Math.abs(age - maxInclusive) <= 1) {
-      const why = rule.asOf == null
-        ? 'источник не говорит, на какой момент считается возраст'
-        : 'дата приёма ещё не подтверждена';
+      const why = !ctx?.deadline?.closes
+        ? 'даты приёма ещё не объявлены'
+        : rule.asOf == null
+          ? 'источник не говорит, на какой момент считается возраст'
+          : 'дата приёма ещё не подтверждена';
       return r('unknown', `На дату приёма тебе будет около ${age} при пределе ${maxInclusive}, а ${why} — проверь на сайте`);
     }
     if (age > maxInclusive) {

@@ -42,7 +42,7 @@ export function renderResults(node, profile, programs, today) {
 
   const rows = programs.map((program) => ({
     program,
-    verdict: evaluate(profile, program),
+    verdict: evaluate(profile, program, today),
     deadline: deadlineState(program.deadline, today),
   }));
 
