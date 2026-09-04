@@ -16,7 +16,16 @@ from pathlib import Path
 
 SLUG = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-REQUIRED_KEYS = ("name", "urls", "approvedBy", "approvedAt")
+REQUIRED_KEYS = ("name", "approvedBy", "approvedAt")
+
+# Часть источников недоступна программе, но доступна человеку: сайт
+# рисуется JavaScript-ом, отдаёт 412 автоматическим клиентам или прячет
+# документ за формой. Тогда человек сохраняет файл сам, обычным
+# браузером, и кладёт путь сюда. Это не обход защиты: страницу открывает
+# человек, конвейер лишь разбирает то, что уже получено.
+#
+# У каждого файла обязателен адрес, откуда он сохранён: без него запись
+# невозможно перепроверить, а это главное обещание проекта.
 
 
 def load_sources(path) -> dict:
@@ -35,11 +44,27 @@ def check_sources(raw: dict) -> list[str]:
             if key not in entry:
                 problems.append(f"{program_id}: нет поля {key}")
         urls = entry.get("urls", [])
-        if not urls:
+        files = entry.get("files", [])
+        if not urls and not files:
             problems.append(f"{program_id}: нет ни одного адреса")
         for url in urls:
             if not url.startswith("https://"):
                 problems.append(f"{program_id}: адрес не по https — {url}")
+
+        for number, item in enumerate(files):
+            if not isinstance(item, dict):
+                problems.append(f"{program_id}: files[{number}] должен быть таблицей с path и url")
+                continue
+            if not item.get("path"):
+                problems.append(f"{program_id}: files[{number}] без path")
+            origin = item.get("url", "")
+            if not origin:
+                problems.append(
+                    f"{program_id}: files[{number}] без url — "
+                    "без адреса источника запись нельзя перепроверить"
+                )
+            elif not origin.startswith("https://"):
+                problems.append(f"{program_id}: files[{number}] адрес не по https — {origin}")
         approved_at = entry.get("approvedAt", "")
         if approved_at and not ISO_DATE.match(approved_at):
             problems.append(f"{program_id}: дата утверждения не в формате ГГГГ-ММ-ДД")

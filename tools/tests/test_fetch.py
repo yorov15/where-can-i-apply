@@ -231,6 +231,67 @@ class TestSaveSnapshots(unittest.TestCase):
         )
         self.assertEqual(meta["pages"][0]["kind"], "html")
 
+    def test_manual_file_goes_through_the_same_path(self):
+        saved = self.root / "manual" / "primer.html"
+        saved.parent.mkdir(parents=True)
+        saved.write_text("<p>Возраст до 21 года</p>", encoding="utf-8")
+
+        def refuses(url):
+            raise AssertionError("ручной источник не должен скачиваться")
+
+        meta = save_snapshots(
+            self.root,
+            "primer",
+            [],
+            "2026-09-04",
+            refuses,
+            (),
+            [{"path": "manual/primer.html", "url": "https://a.gov/blocked"}],
+        )
+        self.assertEqual(meta["pages"][0]["origin"], "manual")
+        self.assertEqual(meta["pages"][0]["url"], "https://a.gov/blocked")
+        text = (self.root / "raw" / "primer" / "2026-09-04" / "00.txt").read_text("utf-8")
+        self.assertIn("Возраст до 21 года", text)
+
+    def test_manual_pdf_is_extracted_too(self):
+        saved = self.root / "manual" / "rules.pdf"
+        saved.parent.mkdir(parents=True)
+        saved.write_bytes(make_pdf([["Under 25 years of age"]]))
+        meta = save_snapshots(
+            self.root,
+            "primer",
+            [],
+            "2026-09-04",
+            lambda url: b"",
+            (),
+            [{"path": "manual/rules.pdf", "url": "https://a.gov/rules.pdf"}],
+        )
+        self.assertEqual(meta["pages"][0]["kind"], "pdf")
+        text = (self.root / "raw" / "primer" / "2026-09-04" / "00.txt").read_text("utf-8")
+        self.assertIn("Under 25 years of age", text)
+
+    def test_web_and_manual_mix_in_one_program(self):
+        saved = self.root / "manual" / "extra.html"
+        saved.parent.mkdir(parents=True)
+        saved.write_text("<p>Из файла</p>", encoding="utf-8")
+        meta = save_snapshots(
+            self.root,
+            "primer",
+            ["https://a.gov/1"],
+            "2026-09-04",
+            self.fake_fetcher,
+            (),
+            [{"path": "manual/extra.html", "url": "https://a.gov/blocked"}],
+        )
+        self.assertEqual([p["origin"] for p in meta["pages"]], ["web", "manual"])
+        self.assertEqual([p["file"] for p in meta["pages"]], ["00.txt", "01.txt"])
+
+    def test_web_pages_are_marked_as_such(self):
+        meta = save_snapshots(
+            self.root, "primer", ["https://a.gov/1"], "2026-09-04", self.fake_fetcher
+        )
+        self.assertEqual(meta["pages"][0]["origin"], "web")
+
     def test_same_content_gives_same_hash_on_rerun(self):
         first = save_snapshots(
             self.root, "primer", ["https://a.gov/1"], "2026-09-03", self.fake_fetcher

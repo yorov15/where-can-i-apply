@@ -52,6 +52,7 @@ def main() -> int:
     today = date.today().isoformat()
     stale = []
     missing = []
+    manual = []
 
     # Изменчивые куски описаны там же, где источники: их объявляет человек.
     sources = load_sources(root / "tools" / "sources.toml")
@@ -70,6 +71,15 @@ def main() -> int:
         url = (program.get("source") or {}).get("url")
         if not url:
             print(f"{program['id']}: нет адреса источника")
+            continue
+
+        # Ручной источник перекачать нельзя — его и брали руками потому,
+        # что программе он недоступен. Слежение всё равно работает: срок
+        # считается так же, а пересохранить файл человек должен сам.
+        if sources.get(program["id"], {}).get("files"):
+            manual.append(program["id"])
+            print(f"{program['id']}: источник ручной — пересохрани файл и запусти fetch")
+            print(f"   {url}")
             continue
 
         checked += 1
@@ -97,6 +107,10 @@ def main() -> int:
             stale.append(program["id"])
             print(f"{program['id']}: СТРАНИЦА ИЗМЕНИЛАСЬ — перепроверить требования")
 
+    if manual:
+        print("\nЖдут ручного обновления: " + ", ".join(manual))
+        print("Открой адрес сам, пересохрани файл в manual/, потом python -m tools.fetch")
+
     if missing:
         print("\nИсточник недоступен: " + ", ".join(missing))
         print("Если адрес изменился навсегда — впиши новый в tools/sources.toml.")
@@ -105,7 +119,7 @@ def main() -> int:
         print("\nУстарели: " + ", ".join(stale))
         print("Дальше: python -m tools.fetch, потом extract, потом review.")
 
-    if stale or missing:
+    if stale or missing or manual:
         return 1
 
     if checked == 0:

@@ -34,6 +34,32 @@ class TestCheckSources(unittest.TestCase):
         problems = check_sources({"a-b": entry(approvedAt="03.09.2026")})
         self.assertTrue(any("дата утверждения" in p for p in problems))
 
+    def test_file_only_entry_is_allowed(self):
+        # Часть источников программе недоступна: JavaScript, 412, форма.
+        # Человек сохраняет файл сам — это не обход, страницу открывает он.
+        entry_with_file = entry(urls=[], files=[{"path": "manual/a.html", "url": "https://a.gov/x"}])
+        self.assertEqual(check_sources({"a-b": entry_with_file}), [])
+
+    def test_file_without_origin_url_is_caught(self):
+        # Без адреса запись нельзя перепроверить, а это главное обещание.
+        broken = entry(urls=[], files=[{"path": "manual/a.html"}])
+        problems = check_sources({"a-b": broken})
+        self.assertTrue(any("нельзя перепроверить" in p for p in problems))
+
+    def test_file_without_path_is_caught(self):
+        broken = entry(urls=[], files=[{"url": "https://a.gov/x"}])
+        problems = check_sources({"a-b": broken})
+        self.assertTrue(any("без path" in p for p in problems))
+
+    def test_file_origin_must_be_https(self):
+        broken = entry(urls=[], files=[{"path": "manual/a.html", "url": "http://a.gov/x"}])
+        problems = check_sources({"a-b": broken})
+        self.assertTrue(any("не по https" in p for p in problems))
+
+    def test_neither_urls_nor_files_is_caught(self):
+        problems = check_sources({"a-b": entry(urls=[])})
+        self.assertTrue(any("нет ни одного адреса" in p for p in problems))
+
     def test_volatile_is_optional(self):
         self.assertEqual(check_sources({"a-b": entry()}), [])
 

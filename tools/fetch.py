@@ -97,7 +97,9 @@ def snapshot_paths(root, program_id: str, today: str) -> Path:
     return Path(root) / "raw" / program_id / today
 
 
-def save_snapshots(root, program_id: str, urls, today: str, fetcher, volatile=()) -> dict:
+def save_snapshots(
+    root, program_id: str, urls, today: str, fetcher, volatile=(), files=()
+) -> dict:
     """Сохраняет текст страниц и считает их хеши.
 
     Текст сохраняется целиком: по нему проверяются цитаты. Хеш же
@@ -108,9 +110,15 @@ def save_snapshots(root, program_id: str, urls, today: str, fetcher, volatile=()
     folder = snapshot_paths(root, program_id, today)
     folder.mkdir(parents=True, exist_ok=True)
 
+    # Сначала то, что скачивается, потом то, что человек сохранил сам.
+    # Дальше по конвейеру разницы нет: тот же текст, тот же хеш, та же
+    # проверка цитат — источник помечен только для слежения.
+    incoming = [(url, None) for url in urls]
+    incoming += [(item["url"], Path(root) / item["path"]) for item in files]
+
     pages = []
-    for number, url in enumerate(urls):
-        raw = fetcher(url)
+    for number, (url, path) in enumerate(incoming):
+        raw = path.read_bytes() if path is not None else fetcher(url)
         text = page_to_text(raw)
         name = f"{number:02d}.txt"
         (folder / name).write_text(text, encoding="utf-8")
@@ -120,6 +128,7 @@ def save_snapshots(root, program_id: str, urls, today: str, fetcher, volatile=()
                 "url": url,
                 "file": name,
                 "kind": kind_of(raw),
+                "origin": "manual" if path is not None else "web",
                 "contentHash": sha256_of_text(stable),
             }
         )
@@ -159,7 +168,13 @@ def main() -> int:
     for program_id, entry in raw.items():
         try:
             meta = save_snapshots(
-                root, program_id, entry["urls"], today, fetcher, entry.get("volatile", [])
+                root,
+                program_id,
+                entry.get("urls", []),
+                today,
+                fetcher,
+                entry.get("volatile", []),
+                entry.get("files", []),
             )
             print(f"{program_id}: снято страниц {len(meta['pages'])}")
         except Exception as error:
