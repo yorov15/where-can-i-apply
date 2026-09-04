@@ -7,6 +7,7 @@ from tools.review import (
     field_changes,
     merge_proposed,
     other_changes,
+    prune_declined,
     remember_declined,
     sign_absence,
     unasked_fields,
@@ -290,3 +291,77 @@ class TestApprove(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestDeclinedSurvives(unittest.TestCase):
+    """Отказ должен пережить следующую запись, иначе память бесполезна."""
+
+    def blank(self):
+        return {f: None for f in (
+            "citizenship", "schoolCountry", "schoolYears",
+            "graduationYear", "age", "gpa", "language")}
+
+    def test_merge_carries_declined_forward(self):
+        current = {"eligibility": self.blank(), "leftEmpty": {"schoolYears": "sha256:1"}}
+        proposed = {"eligibility": self.blank()}
+        merged = merge_proposed(current, proposed)
+        self.assertEqual(merged["leftEmpty"], {"schoolYears": "sha256:1"})
+
+    def test_carried_declined_still_silences_the_question(self):
+        current = {"eligibility": self.blank(), "leftEmpty": {"schoolYears": "sha256:1"}}
+        merged = merge_proposed(current, {"eligibility": self.blank()})
+        self.assertNotIn("schoolYears", unasked_fields(merged, current, "sha256:1"))
+
+    def test_second_refusal_does_not_erase_the_first(self):
+        current = {"eligibility": self.blank(), "leftEmpty": {"schoolYears": "sha256:1"}}
+        merged = merge_proposed(current, {"eligibility": self.blank()})
+        remembered = remember_declined(merged, ["gpa"], "sha256:1")
+        self.assertEqual(
+            remembered["leftEmpty"], {"schoolYears": "sha256:1", "gpa": "sha256:1"}
+        )
+
+    def test_approve_keeps_the_refusal(self):
+        program = {"id": "x", "eligibility": self.blank(), "leftEmpty": {"gpa": "sha256:1"}}
+        approved = approve(program, "2026-09-04", "https://example.org", "sha256:1")
+        self.assertEqual(approved["leftEmpty"], {"gpa": "sha256:1"})
+
+    def test_merge_does_not_invent_the_field(self):
+        merged = merge_proposed({"eligibility": self.blank()}, {"eligibility": self.blank()})
+        self.assertNotIn("leftEmpty", merged)
+
+    def test_merge_does_not_mutate_current(self):
+        current = {"eligibility": self.blank(), "leftEmpty": {"gpa": "sha256:1"}}
+        merged = merge_proposed(current, {"eligibility": self.blank()})
+        merged["leftEmpty"]["gpa"] = "sha256:2"
+        self.assertEqual(current["leftEmpty"]["gpa"], "sha256:1")
+
+
+class TestPruneDeclined(unittest.TestCase):
+    def blank(self):
+        return {f: None for f in (
+            "citizenship", "schoolCountry", "schoolYears",
+            "graduationYear", "age", "gpa", "language")}
+
+    def test_filled_field_loses_its_mark(self):
+        rules = self.blank()
+        rules["gpa"] = {"min": 70, "scale": "percent", "evidence": "70%"}
+        program = {"eligibility": rules, "leftEmpty": {"gpa": "sha256:1"}}
+        self.assertNotIn("leftEmpty", prune_declined(program))
+
+    def test_still_empty_field_keeps_its_mark(self):
+        program = {"eligibility": self.blank(), "leftEmpty": {"gpa": "sha256:1"}}
+        self.assertEqual(prune_declined(program)["leftEmpty"], {"gpa": "sha256:1"})
+
+    def test_signed_absence_counts_as_filled(self):
+        program = {"eligibility": self.blank(), "leftEmpty": {"gpa": "sha256:1"}}
+        signed = sign_absence(program, "gpa", "2026-09-04", "смотрел раздел требований")
+        self.assertNotIn("leftEmpty", prune_declined(signed))
+
+    def test_empty_dict_is_removed(self):
+        program = {"eligibility": self.blank(), "leftEmpty": {}}
+        self.assertNotIn("leftEmpty", prune_declined(program))
+
+    def test_does_not_mutate_input(self):
+        program = {"eligibility": self.blank(), "leftEmpty": {"gpa": "sha256:1"}}
+        prune_declined(program)
+        self.assertEqual(program["leftEmpty"], {"gpa": "sha256:1"})

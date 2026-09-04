@@ -75,6 +75,14 @@ def merge_proposed(current, proposed: dict) -> dict:
         if merged["eligibility"].get(field) is None and current_rules.get(field) is not None:
             merged["eligibility"][field] = copy.deepcopy(current_rules[field])
 
+    # Отказы человека переносятся по той же причине, что и правила: их
+    # ставит review, а предложение модели про них не знает. Без переноса
+    # память об отказах стиралась бы при первой же следующей записи, и
+    # вопросы возвращались бы все разом.
+    declined = (current or {}).get("leftEmpty")
+    if declined:
+        merged["leftEmpty"] = copy.deepcopy(declined)
+
     return merged
 
 
@@ -108,6 +116,29 @@ def remember_declined(program: dict, fields, content_hash: str) -> dict:
     return remembered
 
 
+def prune_declined(program: dict) -> dict:
+    """Убирает отметки об отказе с полей, у которых правило уже появилось.
+
+    Отметка живёт только затем, чтобы не переспрашивать про пустое поле.
+    Как только поле заполнено — подписью или новым правилом из источника —
+    она ничего не значит и только вводит в заблуждение того, кто откроет
+    запись руками.
+    """
+    pruned = copy.deepcopy(program)
+    declined = pruned.get("leftEmpty")
+    if not declined:
+        pruned.pop("leftEmpty", None)
+        return pruned
+
+    empty = set(empty_fields(pruned))
+    kept = {field: value for field, value in declined.items() if field in empty}
+    if kept:
+        pruned["leftEmpty"] = kept
+    else:
+        pruned.pop("leftEmpty", None)
+    return pruned
+
+
 def empty_fields(program: dict) -> list[str]:
     """Поля, про которые в записи ничего нет.
 
@@ -129,7 +160,7 @@ def sign_absence(program: dict, field: str, today: str, note: str) -> dict:
 
 
 def approve(program: dict, today: str, source_url: str, content_hash: str) -> dict:
-    approved = copy.deepcopy(program)
+    approved = prune_declined(program)
     approved["status"] = "published"
     approved.setdefault("source", {})
     approved["source"]["url"] = source_url
