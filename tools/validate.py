@@ -5,6 +5,8 @@
 требование, не может придумать к нему цитату, которая там найдётся.
 """
 
+import re
+
 from tools.schema import (
     FIELDS,
     RELATIVE_BOUNDS,
@@ -17,6 +19,8 @@ from tools.snapshot import normalize
 
 MIN_AGE = 15
 MAX_AGE = 60
+
+MONTH_DAY = re.compile(r"^(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$")
 
 
 def validate_program(program: dict, snapshot_text: str, check_required: bool = True) -> list[str]:
@@ -54,6 +58,10 @@ def validate_program(program: dict, snapshot_text: str, check_required: bool = T
         elif normalize(evidence) not in haystack:
             problems.append(f"{field}: цитата не найдена в тексте источника — {evidence!r}")
 
+        if rule.get("definedBy") is not None:
+            problems.extend(_check_delegated(field, rule))
+            continue
+
         problems.extend(_check_rule_shape(field, rule))
 
     problems.extend(_check_deadline(program.get("deadline") or {}))
@@ -85,7 +93,33 @@ def _check_absence(field: str, rule: dict) -> list[str]:
         problems.append(f"{field}: noLimit требует checkedAt в формате ГГГГ-ММ-ДД")
     if not rule.get("note"):
         problems.append(f"{field}: noLimit требует note — что именно смотрели")
+    if rule.get("definedBy") is not None:
+        problems.append(f"{field}: noLimit и definedBy вместе — это разные утверждения")
 
+    return problems
+
+
+def _check_delegated(field: str, rule: dict) -> list[str]:
+    """Правило, которое отсылает к принимающему вузу.
+
+    Цитата здесь обязательна, в отличие от подписи человека: это не
+    утверждение об отсутствии требования, а пересказ того, что написано
+    в источнике. И значений быть не может — если бы порог был известен,
+    он бы и записывался, а не отсылка.
+    """
+    problems = []
+
+    if rule.get("definedBy") != "institution":
+        problems.append(
+            f"{field}: definedBy знает только значение 'institution', "
+            f"а не {rule.get('definedBy')!r}"
+        )
+    present = sorted(VALUE_KEYS & set(rule))
+    if present:
+        problems.append(
+            f"{field}: definedBy не может стоять вместе со значениями "
+            f"({', '.join(present)}) — либо порог известен, либо его задаёт вуз"
+        )
     return problems
 
 
@@ -117,9 +151,7 @@ def _check_rule_shape(field: str, rule: dict) -> list[str]:
         # asOf разрешено не указывать: источник часто не говорит, на какой
         # момент считается возраст, а придумывать дату нельзя. Движок тогда
         # считает на дату закрытия приёма и честно отмечает пограничные случаи.
-        as_of = rule.get("asOf")
-        if as_of is not None and as_of != "deadline" and not _is_iso_date(as_of):
-            problems.append("age: asOf должно быть 'deadline', датой ГГГГ-ММ-ДД или отсутствовать")
+        problems.extend(_check_as_of(rule.get("asOf")))
 
     if field == "graduationYear":
         relative = rule.get("maxRelative")
@@ -144,6 +176,35 @@ def _check_rule_shape(field: str, rule: dict) -> list[str]:
                 problems.append("language: в требовании нет test или min")
 
     return problems
+
+
+def _check_as_of(as_of) -> list[str]:
+    """На какой момент считается возраст.
+
+    Кроме отсутствия, 'deadline' и явной даты есть четвёртая форма:
+    дата, считаемая из года приёма. Венгрия меряет возраст на 31 августа
+    года заезда, MEXT — на 1 апреля; записанные числом, такие даты
+    устаревают через цикл и молча ошибаются на пограничных людях.
+    """
+    if as_of is None or as_of == "deadline" or _is_iso_date(as_of):
+        return []
+
+    if isinstance(as_of, dict):
+        problems = []
+        if as_of.get("relativeTo") != "applicationYear":
+            problems.append(
+                "age: asOf.relativeTo знает только 'applicationYear', "
+                f"а не {as_of.get('relativeTo')!r}"
+            )
+        month_day = as_of.get("monthDay")
+        if not isinstance(month_day, str) or not MONTH_DAY.match(month_day):
+            problems.append(f"age: asOf.monthDay должно быть ММ-ДД, а не {month_day!r}")
+        return problems
+
+    return [
+        "age: asOf должно быть 'deadline', датой ГГГГ-ММ-ДД, "
+        "объектом с relativeTo и monthDay или отсутствовать"
+    ]
 
 
 def _check_deadline(deadline: dict) -> list[str]:

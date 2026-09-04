@@ -30,9 +30,33 @@ function noLimit(rule) {
   return rule.noLimit === true;
 }
 
+// Четвёртое состояние: требование есть, но устанавливает его принимающий
+// вуз, а не программа. Написать сюда null было бы враньём — карточка
+// сказала бы «программа не указывает», хотя она указывает и прямо
+// отсылает к вузу. Человек прочёл бы «не указывает» и решил, что не
+// спросят.
+function delegated(rule) {
+  return rule.definedBy === 'institution';
+}
+
+// Дата отсчёта, привязанная к циклу приёма, а не записанная числом.
+// «18 лет на 31 августа 2026» в следующем цикле означает 31 августа 2027;
+// записанное числом, правило начнёт молча ошибаться на пограничных людях.
+function resolveAsOf(asOf, deadline) {
+  if (asOf == null || asOf === 'deadline') return deadline?.closes ?? null;
+  if (typeof asOf === 'string') return asOf;
+  if (asOf.relativeTo === 'applicationYear' && asOf.monthDay) {
+    const closes = deadline?.closes;
+    if (!closes) return null;
+    return `${closes.slice(0, 4)}-${asOf.monthDay}`;
+  }
+  return null;
+}
+
 function countryRule(value, rule, labels) {
   if (!rule) return r('unknown', labels.noRule);
   if (noLimit(rule)) return r('pass');
+  if (delegated(rule)) return r('unknown', labels.byInstitution);
   if (!value) return r('unknown', labels.noValue);
   if (Array.isArray(rule.deny) && rule.deny.includes(value)) return r('fail', labels.denied);
   if (rule.allow === '*') return r('pass');
@@ -46,6 +70,7 @@ export function checkCitizenship(profile, rule, ctx) {
     noValue: 'Ты не указал гражданство',
     denied: 'Программа не принимает граждан твоей страны',
     notInList: 'Твоего гражданства нет в списке стран программы',
+    byInstitution: 'Кого принимают по гражданству, решает принимающий вуз — смотри условия программы',
   });
 }
 
@@ -55,12 +80,14 @@ export function checkSchoolCountry(profile, rule, ctx) {
     noValue: 'Ты не указал, в какой стране окончил школу',
     denied: 'Программа не принимает аттестаты твоей страны',
     notInList: 'Твоей страны школы нет в списке программы',
+    byInstitution: 'Какие аттестаты принимают, решает принимающий вуз — смотри условия программы',
   });
 }
 
 export function checkSchoolYears(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает, сколько лет школы нужно');
   if (noLimit(rule)) return r('pass');
+  if (delegated(rule)) return r('unknown', 'Сколько лет школы нужно, решает принимающий вуз — смотри условия программы');
   if (profile.schoolYears == null) return r('unknown', 'Ты не указал, сколько лет учился в школе');
   if (rule.min == null) return r('pass');
   if (profile.schoolYears < rule.min) {
@@ -72,6 +99,7 @@ export function checkSchoolYears(profile, rule, ctx) {
 export function checkGraduationYear(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает, в каком году нужно окончить школу');
   if (noLimit(rule)) return r('pass');
+  if (delegated(rule)) return r('unknown', 'Требование к году выпуска устанавливает принимающий вуз — смотри условия программы');
   if (profile.graduationYear == null) return r('unknown', 'Ты не указал год выпуска');
 
   if (rule.min != null && profile.graduationYear < rule.min) {
@@ -102,6 +130,7 @@ export function checkGraduationYear(profile, rule, ctx) {
 export function checkAge(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает ограничение по возрасту');
   if (noLimit(rule)) return r('pass');
+  if (delegated(rule)) return r('unknown', 'Ограничение по возрасту устанавливает принимающий вуз — смотри условия программы');
   if (!profile.birthDate) return r('unknown', 'Ты не указал дату рождения');
 
   // Источник часто не говорит, на какой момент считается возраст.
@@ -110,19 +139,19 @@ export function checkAge(profile, rule, ctx) {
   // Программы редко публикуют точные даты за год вперёд: их дали Türkiye
   // Bursları, но не ЦВЭ и не GKS. Без даты возраст посчитать не на чем,
   // поэтому в крайнем случае считаем на сегодня — с оговоркой ниже.
-  const asOf = rule.asOf ?? 'deadline';
-  const on = asOf === 'deadline'
-    ? (ctx?.deadline?.closes ?? ctx?.today ?? null)
-    : asOf;
+  const fromDeadline = rule.asOf == null || rule.asOf === 'deadline';
+  const on =
+    resolveAsOf(rule.asOf, ctx?.deadline) ?? (fromDeadline ? ctx?.today ?? null : null);
   if (!on) return r('unknown', 'Дата, на которую программа считает возраст, неизвестна');
 
   const age = ageAt(profile.birthDate, on);
 
   // Дата отсчёта шаткая, когда её нет вовсе, когда приём не подтверждён
-  // или когда источник не сказал, на какой момент считать. Во всех трёх
-  // случаях ошибиться можно самое большее на год — столько и допускаем.
+  // или когда источник не сказал, на какой момент считать. Дата,
+  // посчитанная из года приёма, шатается вместе с самим приёмом.
+  const computedFromCycle = typeof rule.asOf === 'object' && rule.asOf !== null;
   const shaky =
-    asOf === 'deadline' &&
+    (fromDeadline || computedFromCycle) &&
     (!ctx?.deadline?.closes ||
       ctx?.deadline?.confidence !== 'confirmed' ||
       rule.asOf == null);
@@ -131,7 +160,7 @@ export function checkAge(profile, rule, ctx) {
   // 20 при цитате «21» — и первый же читатель принял бы это за опечатку.
   const maxInclusive = rule.maxExclusive != null ? rule.maxExclusive - 1 : rule.max;
 
-  const usingToday = asOf === 'deadline' && !ctx?.deadline?.closes;
+  const usingToday = fromDeadline && !ctx?.deadline?.closes;
 
   if (maxInclusive != null) {
     // Когда считаем на сегодня, к подаче возраст может только вырасти —
@@ -171,6 +200,7 @@ export const GPA_BAND = 5;
 export function checkGpa(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает требование к среднему баллу');
   if (noLimit(rule)) return r('pass');
+  if (delegated(rule)) return r('unknown', 'Порог по среднему баллу устанавливает принимающий вуз — смотри условия программы');
   if (!profile.gpa || profile.gpa.value == null) return r('unknown', 'Ты не указал средний балл');
   if (rule.min == null) return r('pass');
 
@@ -195,6 +225,7 @@ export function checkGpa(profile, rule, ctx) {
 export function checkLanguage(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает требование к языку');
   if (noLimit(rule)) return r('pass');
+  if (delegated(rule)) return r('unknown', 'Язык знать нужно, но уровень устанавливает принимающий вуз — смотри условия программы');
   const need = rule.anyOf ?? [];
   if (need.length === 0) return r('pass');
 

@@ -260,6 +260,82 @@ class TestRelativeAndExclusive(unittest.TestCase):
         self.assertTrue(any("maxExclusive" in p for p in problems))
 
 
+class TestDelegated(unittest.TestCase):
+    def delegated(self, **over):
+        rule = {"definedBy": "institution", "evidence": "citizens of eligible countries"}
+        rule.update(over)
+        return rule
+
+    def test_reference_to_the_host_institution_passes(self):
+        program = good_program()
+        program["eligibility"]["language"] = self.delegated()
+        self.assertEqual(validate_program(program, SNAPSHOT), [])
+
+    def test_quote_is_still_required(self):
+        # В отличие от подписи человека: это пересказ источника, а не
+        # утверждение об отсутствии требования.
+        program = good_program()
+        program["eligibility"]["language"] = {"definedBy": "institution"}
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("нет цитаты" in p for p in problems))
+
+    def test_invented_quote_is_caught(self):
+        program = good_program()
+        program["eligibility"]["language"] = self.delegated(evidence="как решит вуз")
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("цитата не найдена" in p for p in problems))
+
+    def test_value_alongside_is_caught(self):
+        program = good_program()
+        program["eligibility"]["gpa"] = self.delegated(min=80, scale="PERCENT")
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("либо порог известен" in p for p in problems))
+
+    def test_unknown_delegate_is_caught(self):
+        program = good_program()
+        program["eligibility"]["language"] = self.delegated(definedBy="somebody")
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("definedBy" in p for p in problems))
+
+    def test_cannot_be_combined_with_a_signature(self):
+        program = good_program()
+        program["eligibility"]["language"] = self.delegated(noLimit=True)
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("разные утверждения" in p for p in problems))
+
+
+class TestRelativeAsOf(unittest.TestCase):
+    def with_as_of(self, as_of):
+        program = good_program()
+        program["eligibility"]["age"] = {
+            "min": 18,
+            "asOf": as_of,
+            "evidence": "under 21 years old",
+        }
+        return program
+
+    def test_relative_date_passes(self):
+        rule = {"relativeTo": "applicationYear", "monthDay": "08-31"}
+        self.assertEqual(validate_program(self.with_as_of(rule), SNAPSHOT), [])
+
+    def test_bad_month_day_is_caught(self):
+        rule = {"relativeTo": "applicationYear", "monthDay": "31-08"}
+        problems = validate_program(self.with_as_of(rule), SNAPSHOT)
+        self.assertTrue(any("monthDay" in p for p in problems))
+
+    def test_unknown_anchor_is_caught(self):
+        rule = {"relativeTo": "moonPhase", "monthDay": "08-31"}
+        problems = validate_program(self.with_as_of(rule), SNAPSHOT)
+        self.assertTrue(any("relativeTo" in p for p in problems))
+
+    def test_plain_date_still_works(self):
+        self.assertEqual(validate_program(self.with_as_of("2026-08-31"), SNAPSHOT), [])
+
+    def test_garbage_is_still_caught(self):
+        problems = validate_program(self.with_as_of("когда-нибудь"), SNAPSHOT)
+        self.assertTrue(any("asOf" in p for p in problems))
+
+
 class TestCoherence(unittest.TestCase):
     def test_closes_before_opens_is_caught(self):
         program = good_program()
