@@ -1,6 +1,58 @@
 {
-  "generatedAt": "2026-09-03",
+  "generatedAt": "2026-09-04",
   "programs": [
+    {
+      "id": "gks-korea",
+      "name": {
+        "ru": "Global Korea Scholarship — государственная стипендия Кореи",
+        "orig": "Global Korea Scholarship (GKS)"
+      },
+      "hostCountry": "KR",
+      "level": "bachelor",
+      "coverage": {
+        "tuition": true,
+        "living": true,
+        "travel": true
+      },
+      "eligibility": {
+        "citizenship": {
+          "allow": "*",
+          "deny": [
+            "KR"
+          ]
+        },
+        "schoolCountry": {
+          "noLimit": true,
+          "checkedBy": "human",
+          "checkedAt": "2026-09-04"
+        },
+        "schoolYears": null,
+        "graduationYear": {
+          "noLimit": true,
+          "checkedBy": "human",
+          "checkedAt": "2026-09-04"
+        },
+        "age": {
+          "min": null,
+          "maxExclusive": 25
+        },
+        "gpa": {
+          "min": 80,
+          "scale": "PERCENT"
+        },
+        "language": {
+          "noLimit": true,
+          "checkedBy": "human",
+          "checkedAt": "2026-09-04"
+        }
+      },
+      "deadline": {
+        "opens": null,
+        "closes": null,
+        "recurring": "annual",
+        "confidence": "expected"
+      }
+    },
     {
       "id": "imd-tajikistan",
       "name": {

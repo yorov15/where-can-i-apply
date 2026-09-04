@@ -1,0 +1,93 @@
+{
+  "id": "gks-korea",
+  "status": "published",
+  "name": {
+    "ru": "Global Korea Scholarship — государственная стипендия Кореи",
+    "orig": "Global Korea Scholarship (GKS)"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Перелёт, обучение, оплата языковой подготовки и стипендия на проживание. Бакалавриат идёт 4-6 лет плюс год корейского языка"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "Nationality: Applicant and both parents must hold non-Korean citizenship"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-04",
+      "note": "на утверждённой странице страна окончания школы не упоминается"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-04",
+      "note": "страница требует только окончить школу, года выпуска не называет"
+    },
+    "age": {
+      "min": null,
+      "maxExclusive": 25,
+      "evidence": "Age: Under 25 years old as of applicable year"
+    },
+    "gpa": {
+      "min": 80,
+      "scale": "PERCENT",
+      "evidence": "Academic Performance: Cumulative GPA of 80% or higher in the most recent educational program"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-04",
+      "note": "на утверждённой странице языковой сертификат не требуется"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Не только сам абитуриент, но и оба родителя не должны иметь корейского гражданства. В анкете такого вопроса нет — проверь сам.",
+      "evidence": "Nationality: Applicant and both parents must hold non-Korean citizenship"
+    },
+    {
+      "ru": "Заявки подаются в сентябре — октябре. Точных чисел источник не называет, поэтому даты приёма в карточке пустые.",
+      "evidence": "Application Submission Embassy University September - October"
+    },
+    {
+      "ru": "Подавать можно двумя путями — через посольство Кореи или напрямую в вуз. Это разные конкурсы с разными квотами; выбрать нужно один.",
+      "evidence": "Application Tracks Embassy Track"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.studyinkorea.go.kr/en/plan/scholarship.do",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": 80,
+    "note": {
+      "ru": "Более 80 вузов по всей стране; конкретный вуз и специальность выбираются в заявке"
+    }
+  },
+  "source": {
+    "url": "https://www.studyinkorea.go.kr/en/plan/scholarship.do",
+    "lastVerified": "2026-09-04",
+    "contentHash": "sha256:1a231300178034705fd8e2aa75d1cfec2d407d281ad9e866b934556e171d5e3e",
+    "humanChecked": true
+  }
+}

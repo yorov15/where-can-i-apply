@@ -109,6 +109,29 @@ test('без дат приёма явно старший всё равно от�
   assert.equal(checkAge(me, rule, noDates('2026-09-03')).status, 'fail');
 });
 
+test('без дат приёма перешагнувший предел на год — уже отказ', () => {
+  // Возраст к подаче может только вырасти. Кто сегодня старше предела,
+  // не пройдёт наверняка, и говорить ему «проверь» — отнимать время.
+  const me = { birthDate: '2001-06-01' }; // сегодня 25 при пределе 24
+  const rule = { min: null, maxExclusive: 25, evidence: 'x' };
+  assert.equal(checkAge(me, rule, noDates('2026-09-03')).status, 'fail');
+});
+
+test('без дат приёма ровно на пределе — сомнение', () => {
+  const me = { birthDate: '2002-06-01' }; // сегодня 24 при пределе 24
+  const rule = { min: null, maxExclusive: 25, evidence: 'x' };
+  const got = checkAge(me, rule, noDates('2026-09-03'));
+  assert.equal(got.status, 'unknown');
+  assert.match(got.message, /может стать больше/);
+});
+
+test('без дат приёма на год младше предела — уже проходит', () => {
+  // К подаче станет ровно предел, то есть всё ещё в границах.
+  const me = { birthDate: '2003-06-01' }; // сегодня 23 при пределе 24
+  const rule = { min: null, maxExclusive: 25, evidence: 'x' };
+  assert.equal(checkAge(me, rule, noDates('2026-09-03')).status, 'pass');
+});
+
 test('дата приёма важнее сегодняшней, когда она есть', () => {
   const me = { birthDate: '2008-08-09' };
   const rule = { min: null, maxExclusive: 19, evidence: 'x' };

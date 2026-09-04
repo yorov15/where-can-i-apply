@@ -75,7 +75,9 @@ function card({ program, verdict, deadline }) {
   when.textContent = DEADLINE_TEXT[deadline];
   if (deadline !== 'unknown' && program.deadline?.closes) {
     when.textContent += ` — до ${program.deadline.closes}`;
-    if (program.deadline.confidence !== 'confirmed') when.textContent += ' (дата по прошлому году)';
+    // Не «по прошлому году»: у многих программ окно просто повторяется
+    // каждый год, а объявления на новый цикл ещё нет.
+    if (program.deadline.confidence !== 'confirmed') when.textContent += ' (дата пока не подтверждена)';
   }
   el.append(when);
 

@@ -131,10 +131,21 @@ export function checkAge(profile, rule, ctx) {
   // 20 при цитате «21» — и первый же читатель принял бы это за опечатку.
   const maxInclusive = rule.maxExclusive != null ? rule.maxExclusive - 1 : rule.max;
 
+  const usingToday = asOf === 'deadline' && !ctx?.deadline?.closes;
+
   if (maxInclusive != null) {
-    if (shaky && Math.abs(age - maxInclusive) <= 1) {
-      const why = !ctx?.deadline?.closes
-        ? 'даты приёма ещё не объявлены'
+    // Когда считаем на сегодня, к подаче возраст может только вырасти —
+    // и самое большее на год. Значит сомнение возникает ровно на пределе:
+    // кто уже старше, не пройдёт наверняка, и говорить ему «проверь» —
+    // отнимать время. Когда дата есть, но шаткая, она может сдвинуться в
+    // обе стороны, и полоса симметричная.
+    const uncertain = usingToday
+      ? age === maxInclusive
+      : shaky && Math.abs(age - maxInclusive) <= 1;
+
+    if (uncertain) {
+      const why = usingToday
+        ? 'даты приёма ещё не объявлены, и к подаче тебе может стать больше'
         : rule.asOf == null
           ? 'источник не говорит, на какой момент считается возраст'
           : 'дата приёма ещё не подтверждена';
