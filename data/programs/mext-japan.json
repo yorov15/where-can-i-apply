@@ -1,0 +1,102 @@
+{
+  "id": "mext-japan",
+  "status": "published",
+  "name": {
+    "ru": "MEXT — государственная стипендия Японии",
+    "orig": "Japanese Government (Monbukagakusho/MEXT) Scholarship"
+  },
+  "hostCountry": "JP",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Обучение бесплатное, стипендия 117 000 иен в месяц для бакалавриата, перелёт в обе стороны. Учёба идёт пять лет: год японского языка плюс четыре года программы"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-04",
+      "note": "на утверждённой странице требования к гражданству не названо, отбор идёт через посольство своей страны"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-04",
+      "note": "на утверждённой странице страна окончания школы не ограничивается"
+    },
+    "schoolYears": {
+      "min": 12,
+      "evidence": "have completed 12 years of school education"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-04",
+      "note": "года выпуска страница не называет, засчитываются и те, кто оканчивает школу сейчас"
+    },
+    "age": {
+      "min": null,
+      "maxExclusive": 25,
+      "evidence": "Undergraduate students You must be under 25 years of age"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-04",
+      "note": "на утверждённой странице порога по среднему баллу нет"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-04",
+      "note": "знание японского заранее не требуется, первый год обучения — языковая подготовка"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Двенадцать лет школы — не единственный путь: засчитывается и обучение, признанное сопоставимым с японской старшей школой. Что именно засчитают, решает посольство — с одиннадцатилетним аттестатом идти спрашивать туда.",
+      "evidence": "or have completed courses in a school comparable to a Japanese high school"
+    },
+    {
+      "ru": "Подать можно двумя путями: по рекомендации посольства Японии в своей стране или по рекомендации японского вуза. Это разные отборы с разными сроками.",
+      "evidence": "required to apply in one of two ways: embassy recommendation or university recommendation"
+    },
+    {
+      "ru": "Главный документ — гайдлайны конкретного набора, их выдаёт посольство. Сайт прямо предупреждает: если требования на нём расходятся с гайдлайнами, верны гайдлайны.",
+      "evidence": "If the application qualifications differ from the application guidelines, the contents of the guidelines should be followed."
+    },
+    {
+      "ru": "Бакалавриат идёт пять лет: первый год — японский язык, дальше четыре года программы. Для медицины, стоматологии, фармации и ветеринарии — семь лет.",
+      "evidence": "5 years including Japanese language training"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": null,
+    "note": {
+      "ru": "Стипендия даётся на обучение в японском вузе; конкретный вуз определяется в ходе отбора — через посольство или по рекомендации самого вуза"
+    }
+  },
+  "source": {
+    "url": "https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/",
+    "lastVerified": "2026-09-04",
+    "contentHash": "sha256:a5d288bbfc8c0672cc1820438a529178153ae2d29fe19eb394a45d07f5c0a298",
+    "humanChecked": true
+  }
+}
