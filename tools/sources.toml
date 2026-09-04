@@ -75,3 +75,26 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-03"
+
+# Stipendium Hungaricum — государственная стипендия Венгрии.
+#
+# Домен stipendiumhungaricum.hu утверждён человеком. Три источника:
+#   /apply/    — сроки и порядок подачи
+#   /partners/ — страны-партнёры и доступные им направления. Таджикистану
+#                открыт в том числе Computer Science and Information
+#                Technology; без партнёрства подать нельзя вообще
+#   PDF        — «Call for Applications», настоящие правила допуска.
+#                На сайте их нет: ни возраста, ни языка, ни ограничений.
+#
+# ВНИМАНИЕ: адрес PDF содержит номер цикла (2026_27) и через год
+# перестанет существовать. Это не поломка, а норма для PDF: check.py
+# скажет «источник недоступен», и новый адрес впишет человек.
+[stipendium-hungaricum]
+name = "Stipendium Hungaricum"
+urls = [
+  "https://stipendiumhungaricum.hu/apply/",
+  "https://stipendiumhungaricum.hu/partners/",
+  "https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf",
+]
+approvedBy = "human"
+approvedAt = "2026-09-04"
