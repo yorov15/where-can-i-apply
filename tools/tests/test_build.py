@@ -55,6 +55,24 @@ class TestIndexEntry(unittest.TestCase):
     def test_source_is_not_in_index(self):
         self.assertNotIn("source", index_entry(PROGRAM))
 
+    def test_text_conditions_reach_the_site(self):
+        # Они собраны, проверены цитатами — и до карточки не доезжали.
+        # Красная карточка MEXT говорила «нужно 12 лет школы» и молчала
+        # о том, что засчитывается сопоставимое образование.
+        entry = index_entry(PROGRAM)
+        self.assertEqual([c["ru"] for c in entry["textConditions"]], ["условие"])
+
+    def test_text_condition_quotes_stay_behind(self):
+        # Цитата нужна тому, кто проверяет запись, а не тому, кто читает
+        # карточку. В индексе это лишние байты на мобильном интернете.
+        entry = index_entry(PROGRAM)
+        self.assertNotIn("evidence", json.dumps(entry, ensure_ascii=False))
+
+    def test_program_without_conditions_gets_an_empty_list(self):
+        program = json.loads(json.dumps(PROGRAM))
+        del program["textConditions"]
+        self.assertEqual(index_entry(program)["textConditions"], [])
+
     def test_no_limit_flag_survives_but_note_does_not(self):
         # Без флага движок не отличит «человек проверил, требования нет»
         # от «не знаем» — и карточка снова станет жёлтой.

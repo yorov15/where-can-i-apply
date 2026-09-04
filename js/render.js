@@ -106,5 +106,26 @@ function card({ program, verdict, deadline }) {
     el.append(note);
   }
 
+  // То, что инструмент посчитать не умеет, но человеку знать обязан:
+  // обходные пути, вторая заявка в ведомство своей страны, запреты,
+  // которых нет в анкете. Показывается на любой карточке, включая
+  // красную: именно там чаще всего и лежит обходной путь.
+  const conditions = (program.textConditions ?? []).filter((c) => c.ru);
+  if (conditions.length) {
+    const title = document.createElement('p');
+    title.className = 'conditions-title';
+    title.textContent = 'Проверь сам — это инструмент не считает:';
+    el.append(title);
+
+    const list = document.createElement('ul');
+    list.className = 'conditions';
+    for (const condition of conditions) {
+      const li = document.createElement('li');
+      li.textContent = condition.ru;
+      list.append(li);
+    }
+    el.append(list);
+  }
+
   return el;
 }

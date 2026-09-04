@@ -44,6 +44,13 @@ def index_entry(program: dict) -> dict:
             for field in FIELDS
         },
         "deadline": program.get("deadline"),
+        # Текстовые условия едут на сайт: это то, что инструмент не умеет
+        # посчитать, но человеку знать обязан. Цитаты из них снимаются —
+        # они нужны при проверке записи, а не в карточке.
+        "textConditions": [
+            {"ru": (condition.get("ru") or "")}
+            for condition in program.get("textConditions") or []
+        ],
     }
 
 
