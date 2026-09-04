@@ -1,0 +1,103 @@
+{
+  "id": "stipendium-hungaricum",
+  "status": "published",
+  "name": {
+    "ru": "Stipendium Hungaricum — государственная стипендия Венгрии",
+    "orig": "Stipendium Hungaricum"
+  },
+  "hostCountry": "HU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Обучение бесплатное, ежемесячная стипендия 43 700 форинтов, место в общежитии или 40 000 форинтов на жильё, медстраховка. Программа сама предупреждает, что это вклад в расходы, а не полное покрытие. Про перелёт источники молчат"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "HU"
+      ],
+      "evidence": "Hungarian citizen s (including those with dual citizenships)"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-04",
+      "note": "на утверждённых источниках страна окончания школы не ограничивается"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-04",
+      "note": "источники не называют года выпуска, требуется только оконченная школа"
+    },
+    "age": {
+      "min": 18,
+      "asOf": {
+        "relativeTo": "applicationYear",
+        "monthDay": "08-31"
+      },
+      "evidence": "Applicants born after 31 August 2008 (= applicants under 18 years old as of 31 August 2026"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-04",
+      "note": "источники не называют порога по среднему баллу"
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "Students shall have a level of proficiency in the language of education as required by the Host Institution."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать можно только через партнёра своей страны: гражданство должно совпадать со страной, через которую идёт заявка. Таджикистан в списке партнёров есть, и бакалавриат ему открыт в том числе по Computer Science and Information Technology.",
+      "evidence": "Applicants with citizenship different from the sending country/territory."
+    },
+    {
+      "ru": "Заявку надо подать дважды: в систему DreamApply и отдельно в ведомство своей страны. У партнёра могут быть свои сроки и свои требования — уточняй у него.",
+      "evidence": "Applications shall also be submitted to the responsible authority of the sending partner."
+    },
+    {
+      "ru": "Выбрать можно только две программы из более чем девятисот.",
+      "evidence": "but only 2 choices are allowed"
+    },
+    {
+      "ru": "Деньги покрывают не всё: программа прямо предупреждает, что стипендия и вклад в жильё — это помощь с расходами, а не полное содержание.",
+      "evidence": "these provisions are only a contribution to the living expenses of the Scholarship Holders"
+    },
+    {
+      "ru": "Даты в записи — от цикла 2026/2027. Призыв на следующий цикл на момент проверки не опубликован, но окно подачи из года в год приходится на середину января.",
+      "evidence": "15th January 2026, 2 pm (CET) APPLICATION DEADLINE"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-01-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://stipendiumhungaricum.hu/apply/",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": 30,
+    "note": {
+      "ru": "Тридцать вузов и колледжей, более девятисот программ; выбрать в заявке можно только две"
+    }
+  },
+  "source": {
+    "url": "https://stipendiumhungaricum.hu/apply/",
+    "lastVerified": "2026-09-04",
+    "contentHash": "sha256:04c7e323578a663d6e9256fb2ada85e22299bed1c2e9a0cd190451ee1aca059e",
+    "humanChecked": true
+  }
+}

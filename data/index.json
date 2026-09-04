@@ -108,6 +108,60 @@
       }
     },
     {
+      "id": "stipendium-hungaricum",
+      "name": {
+        "ru": "Stipendium Hungaricum — государственная стипендия Венгрии",
+        "orig": "Stipendium Hungaricum"
+      },
+      "hostCountry": "HU",
+      "level": "bachelor",
+      "coverage": {
+        "tuition": true,
+        "living": true,
+        "travel": null
+      },
+      "eligibility": {
+        "citizenship": {
+          "allow": "*",
+          "deny": [
+            "HU"
+          ]
+        },
+        "schoolCountry": {
+          "noLimit": true,
+          "checkedBy": "human",
+          "checkedAt": "2026-09-04"
+        },
+        "schoolYears": null,
+        "graduationYear": {
+          "noLimit": true,
+          "checkedBy": "human",
+          "checkedAt": "2026-09-04"
+        },
+        "age": {
+          "min": 18,
+          "asOf": {
+            "relativeTo": "applicationYear",
+            "monthDay": "08-31"
+          }
+        },
+        "gpa": {
+          "noLimit": true,
+          "checkedBy": "human",
+          "checkedAt": "2026-09-04"
+        },
+        "language": {
+          "definedBy": "institution"
+        }
+      },
+      "deadline": {
+        "opens": null,
+        "closes": "2026-01-15",
+        "recurring": "annual",
+        "confidence": "confirmed"
+      }
+    },
+    {
       "id": "turkiye-burslari",
       "name": {
         "ru": "Türkiye Bursları — государственная стипендия Турции",

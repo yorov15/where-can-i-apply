@@ -1,6 +1,49 @@
 import unittest
 
-from tools.review import approve, empty_fields, field_changes, merge_proposed, sign_absence
+from tools.review import (
+    approve,
+    empty_fields,
+    field_changes,
+    merge_proposed,
+    other_changes,
+    sign_absence,
+)
+
+
+class TestOtherChanges(unittest.TestCase):
+    def test_text_conditions_are_shown(self):
+        # Раньше они записывались молча: человек утверждал «запись
+        # целиком», а видел только семь правил допуска.
+        current = {"textConditions": []}
+        proposed = {"textConditions": [{"ru": "новое условие", "evidence": "x"}]}
+        changes = other_changes(current, proposed)
+        self.assertEqual([c["field"] for c in changes], ["textConditions"])
+
+    def test_deadline_change_is_shown(self):
+        current = {"deadline": {"closes": "2026-01-15"}}
+        proposed = {"deadline": {"closes": "2027-01-15"}}
+        self.assertEqual([c["field"] for c in other_changes(current, proposed)], ["deadline"])
+
+    def test_eligibility_is_left_to_the_other_function(self):
+        current = {"eligibility": {"age": None}}
+        proposed = {"eligibility": {"age": {"max": 21}}}
+        self.assertEqual(other_changes(current, proposed), [])
+
+    def test_fields_review_sets_itself_are_not_noise(self):
+        current = {"status": "published", "source": {"humanChecked": True}}
+        proposed = {"status": "draft", "source": {"humanChecked": False}}
+        self.assertEqual(other_changes(current, proposed), [])
+
+    def test_nothing_changed_means_nothing_shown(self):
+        record = {"name": {"ru": "Пример"}, "deadline": {"closes": None}}
+        self.assertEqual(other_changes(record, dict(record)), [])
+
+    def test_first_time_record_lists_its_fields(self):
+        proposed = {"name": {"ru": "Пример"}, "hostCountry": "TR"}
+        self.assertEqual(
+            sorted(c["field"] for c in other_changes(None, proposed)),
+            ["hostCountry", "name"],
+        )
 
 SIGNED = {
     "noLimit": True,

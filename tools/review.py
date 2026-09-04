@@ -32,6 +32,29 @@ def field_changes(current, proposed) -> list[dict]:
     return changes
 
 
+# Эти поля review проставляет сам при утверждении, показывать их как
+# изменения незачем.
+SET_BY_REVIEW = frozenset({"eligibility", "source", "status"})
+
+
+def other_changes(current, proposed: dict) -> list[dict]:
+    """Что меняется помимо семи правил допуска.
+
+    Раньше review показывал только правила, а название, покрытие, сроки и
+    текстовые условия записывались молча. Человек утверждал «запись
+    целиком», а видел треть — и подписывался под тем, чего не читал.
+    """
+    before = current or {}
+    changes = []
+    for key in sorted(set(before) | set(proposed)):
+        if key in SET_BY_REVIEW:
+            continue
+        if before.get(key) == proposed.get(key):
+            continue
+        changes.append({"field": key, "before": before.get(key), "after": proposed.get(key)})
+    return changes
+
+
 def merge_proposed(current, proposed: dict) -> dict:
     """Накладывает предложение модели на утверждённую запись.
 
@@ -130,7 +153,7 @@ def main() -> int:
         current = json.loads(target.read_text(encoding="utf-8")) if target.exists() else None
 
         proposed = merge_proposed(current, proposed)
-        changes = field_changes(current, proposed)
+        changes = field_changes(current, proposed) + other_changes(current, proposed)
         empty = empty_fields(proposed)
 
         # Пустые поля — повод зайти, даже когда правила не менялись:
