@@ -3,6 +3,7 @@ import unittest
 from tools.review import (
     _brief,
     ask,
+    show_new,
     approve,
     empty_fields,
     field_changes,
@@ -431,6 +432,59 @@ class TestAsk(unittest.TestCase):
 
     def test_end_of_input_is_a_refusal_not_a_hang(self):
         self.assertFalse(ask("?", replies()))
+
+
+class TestShowNew(unittest.TestCase):
+    """Новую запись показывают карточкой, а не диффом против пустоты."""
+
+    def record(self):
+        return {
+            "id": "primer",
+            "name": {"ru": "Пример"},
+            "hostCountry": "KR",
+            "level": "bachelor",
+            "coverage": {"tuition": True, "living": False, "travel": None,
+                         "note": {"ru": "пояснение"}},
+            "deadline": {"opens": "2026-11-10", "closes": "2027-01-14",
+                         "confidence": "confirmed"},
+            "applyUrl": "https://a.gov/apply",
+            "eligibility": {
+                "citizenship": {"allow": "*", "deny": ["KR"], "evidence": "длинная цитата"},
+                "schoolCountry": None, "schoolYears": None,
+                "graduationYear": None, "age": None, "gpa": None, "language": None,
+            },
+            "textConditions": [{"ru": "первое", "evidence": "x"}],
+        }
+
+    def lines(self):
+        return "\n".join(show_new(self.record()))
+
+    def test_names_every_rule_including_empty_ones(self):
+        text = self.lines()
+        for field in ("citizenship", "schoolCountry", "age", "gpa", "language"):
+            self.assertIn(field, text)
+
+    def test_empty_rule_says_so_in_words(self):
+        self.assertIn("пусто", self.lines())
+
+    def test_evidence_is_not_printed(self):
+        # Цитаты — основная масса букв, и они не то, что человек решает.
+        self.assertNotIn("длинная цитата", self.lines())
+
+    def test_text_conditions_are_shown_in_russian(self):
+        self.assertIn("первое", self.lines())
+
+    def test_coverage_is_words_not_json(self):
+        text = self.lines()
+        self.assertIn("обучение да", text)
+        self.assertIn("проживание нет", text)
+        self.assertIn("дорога не сказано", text)
+
+    def test_points_at_the_full_record(self):
+        self.assertIn("proposed/primer.json", self.lines())
+
+    def test_deadline_is_shown(self):
+        self.assertIn("2027-01-14", self.lines())
 
 
 if __name__ == "__main__":

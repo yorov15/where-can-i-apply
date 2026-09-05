@@ -234,6 +234,62 @@ def _show_list(before, after) -> None:
         print("  добавить: ", _brief(item))
 
 
+def _one_line(value) -> str:
+    """Значение в одну строку, без цитат и заметок — они и есть вся масса."""
+    if value is None:
+        return "пусто"
+    if isinstance(value, dict):
+        short = {k: v for k, v in value.items() if k not in ("evidence", "note")}
+        return _brief(short)
+    return _brief(value)
+
+
+def show_new(program: dict) -> list[str]:
+    """Как показать запись, которой ещё нет.
+
+    Диффом новую запись показывать бессмысленно: «было null, станет ...»
+    повторяется двенадцать раз и хоронит вопрос об утверждении под стеной
+    JSON. Человек перестаёт читать — а чтение здесь и есть вся работа,
+    ради которой шаг существует.
+    """
+    lines = []
+    name = (program.get("name") or {}).get("ru") or program.get("id")
+    lines.append(f"  {name}")
+    lines.append(f"  {program.get('hostCountry')}, {program.get('level')}")
+
+    coverage = program.get("coverage") or {}
+    words = {True: "да", False: "нет", None: "не сказано"}
+    lines.append(
+        "  покрытие: обучение "
+        f"{words.get(coverage.get('tuition'), '?')}"
+        f", проживание {words.get(coverage.get('living'), '?')}"
+        f", дорога {words.get(coverage.get('travel'), '?')}"
+    )
+    note = (coverage.get("note") or {}).get("ru")
+    if note:
+        lines.append(f"    {note}")
+
+    deadline = program.get("deadline") or {}
+    lines.append(
+        f"  приём: {deadline.get('opens')} — {deadline.get('closes')}"
+        f" ({deadline.get('confidence')})"
+    )
+    lines.append(f"  подача: {program.get('applyUrl')}")
+
+    lines.append("  правила допуска:")
+    rules = program.get("eligibility") or {}
+    for field in FIELDS:
+        lines.append(f"    {field:<15} {_one_line(rules.get(field))}")
+
+    conditions = program.get("textConditions") or []
+    lines.append(f"  условия текстом ({len(conditions)}):")
+    for number, condition in enumerate(conditions, 1):
+        lines.append(f"    {number}. {(condition.get('ru') or '')}")
+
+    lines.append(f"  запись целиком, с цитатами: proposed/{program.get('id')}.json")
+    return lines
+
+
 def _show(change: dict) -> None:
     print(f"\n=== {change['field']} ===")
     before, after = change["before"], change["after"]
@@ -299,9 +355,14 @@ def main() -> int:
             continue
 
         if changes:
-            print(f"\n{program_id}: изменений {len(changes)}")
-            for change in changes:
-                _show(change)
+            if current is None:
+                print(f"\n{program_id}: новая запись, такой ещё нет")
+                for line in show_new(proposed):
+                    print(line)
+            else:
+                print(f"\n{program_id}: изменений {len(changes)}")
+                for change in changes:
+                    _show(change)
 
             if not ask("\nУтвердить эту запись целиком? [да/нет] "):
                 print("пропущено")
