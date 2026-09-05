@@ -68,10 +68,18 @@ approvedAt = "2026-09-03"
 # Точных дат приёма страница не даёт — только «September - October».
 # Записывать выдуманные числа нельзя, поэтому даты остаются пустыми, а
 # окно уходит в текстовое условие.
+#
+# Вторая страница — не сайт программы, а FAQ Министерства образования
+# Кореи. Исключение сделано осознанно: министерство устанавливает общее
+# требование к иностранцам («more than twelve years of elementary to
+# secondary education»), которого нет ни на одной странице самой
+# программы. Для выпускника 11-летней школы это единственное, что может
+# закрыть поступление, и молчать об этом хуже, чем расширить источник.
 [gks-korea]
 name = "Global Korea Scholarship (GKS)"
 urls = [
   "https://www.studyinkorea.go.kr/en/plan/scholarship.do",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-03"
@@ -157,6 +165,13 @@ approvedAt = "2026-09-04"
 # ВНИМАНИЕ: адрес PDF содержит номер цикла (2027) и через год перестанет
 # существовать — как у Венгрии. Это норма: check.py скажет «источник
 # недоступен», новый адрес впишет человек.
+#
+# Вторая страница — не сайт программы, а FAQ Министерства образования
+# Кореи. Исключение сделано осознанно: министерство устанавливает общее
+# требование к иностранцам («more than twelve years of elementary to
+# secondary education»), которого нет ни на одной странице самой
+# программы. Для выпускника 11-летней школы это единственное, что может
+# закрыть поступление, и молчать об этом хуже, чем расширить источник.
 [kaist]
 name = "KAIST International Undergraduate Admissions"
 urls = [
@@ -164,6 +179,7 @@ urls = [
   "https://admission.kaist.ac.kr/intl-undergraduate/support",
   "https://admission.kaist.ac.kr/intl-undergraduate/application/ApplicationGuide/ApplicationTimeline",
   "https://admission.kaist.ac.kr/wz/api/common/files/download/intl-undergraduate/pdf/Admissions_Guide_for_2027_admission.pdf",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-04"
