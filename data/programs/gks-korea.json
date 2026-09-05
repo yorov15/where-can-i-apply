@@ -68,6 +68,14 @@
     {
       "ru": "Подавать можно двумя путями — через посольство Кореи или напрямую в вуз. Это разные конкурсы с разными квотами; выбрать нужно один.",
       "evidence": "Application Tracks Embassy Track"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцать. Но закон мягче: постановление о признании образования засчитывает «окончил школу за рубежом» и отдельно — «программу, признанную министром равной двенадцати годам». То есть аттестат сам по себе дорогу не закрывает, а решение принимает вуз.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly"
     }
   ],
   "deadline": {
@@ -92,10 +100,14 @@
       {
         "url": "https://www.studyinkorea.go.kr/en/plan/scholarship.do",
         "contentHash": "sha256:1a231300178034705fd8e2aa75d1cfec2d407d281ad9e866b934556e171d5e3e"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
       }
     ]
   },
   "leftEmpty": {
-    "schoolYears": "sha256:6cb52e450e85d20fcc6570b5151d416f59f76bdd2afd643a8d78e618fc7f860c"
+    "schoolYears": "sha256:8017974be4a5696045619b642a0045abf6004c6a7e2a333b4960ba45f65908a8"
   }
 }
