@@ -2,6 +2,7 @@ import unittest
 
 from tools.review import (
     _brief,
+    ask,
     approve,
     empty_fields,
     field_changes,
@@ -393,6 +394,43 @@ class TestPruneDeclined(unittest.TestCase):
         program = {"eligibility": self.blank(), "leftEmpty": {"gpa": "sha256:1"}}
         prune_declined(program)
         self.assertEqual(program["leftEmpty"], {"gpa": "sha256:1"})
+
+
+def replies(*answers):
+    """Поддельный ввод: отдаёт заготовленные ответы по одному."""
+    queue = list(answers)
+    def reader(_question):
+        if not queue:
+            raise EOFError
+        return queue.pop(0)
+    return reader
+
+
+class TestAsk(unittest.TestCase):
+    def test_yes_is_yes(self):
+        self.assertTrue(ask("?", replies("да")))
+
+    def test_no_is_no(self):
+        self.assertFalse(ask("?", replies("нет")))
+
+    def test_case_and_spaces_do_not_matter(self):
+        self.assertTrue(ask("?", replies("  ДА  ")))
+
+    def test_latin_answers_work_too(self):
+        self.assertTrue(ask("?", replies("y")))
+        self.assertFalse(ask("?", replies("n")))
+
+    def test_empty_enter_asks_again_instead_of_refusing(self):
+        # Из-за молчаливого отказа на Enter пропала уже утверждённая
+        # запись: человек согласился, а инструмент понял наоборот и
+        # ничего не сказал.
+        self.assertTrue(ask("?", replies("", "да")))
+
+    def test_gibberish_asks_again(self):
+        self.assertFalse(ask("?", replies("ага", "нет")))
+
+    def test_end_of_input_is_a_refusal_not_a_hang(self):
+        self.assertFalse(ask("?", replies()))
 
 
 if __name__ == "__main__":

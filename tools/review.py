@@ -160,6 +160,32 @@ def sign_absence(program: dict, field: str, today: str, note: str) -> dict:
     return signed
 
 
+YES = ("да", "д", "y", "yes")
+NO = ("нет", "н", "n", "no")
+
+
+def ask(question: str, reader=input) -> bool:
+    """Спрашивает, пока не получит внятный ответ.
+
+    Раньше распознавалось только «да», а всё остальное молча считалось
+    отказом — включая пустой Enter. Подсказка [да/нет] выглядит так,
+    будто Enter соглашается, и человек, нажавший его, терял всю работу
+    без единого слова об этом. Молчаливый отказ на согласие — худший вид
+    ошибки: выглядит как успех.
+    """
+    while True:
+        try:
+            answer = reader(question).strip().lower()
+        except EOFError:
+            print("ввод закончился, считаю за отказ")
+            return False
+        if answer in YES:
+            return True
+        if answer in NO:
+            return False
+        print("   не понял. Напиши «да» или «нет»")
+
+
 def approve(program: dict, today: str, pages: list[dict]) -> dict:
     """Утверждает запись и записывает все страницы источника с хешами.
 
@@ -277,8 +303,7 @@ def main() -> int:
             for change in changes:
                 _show(change)
 
-            answer = input("\nУтвердить эту запись целиком? [да/нет] ").strip().lower()
-            if answer not in ("да", "y", "yes"):
+            if not ask("\nУтвердить эту запись целиком? [да/нет] "):
                 print("пропущено")
                 continue
         else:
@@ -291,9 +316,9 @@ def main() -> int:
             print("и поле перестанет желтить выдачу. Подпись будет твоя, не модели.")
             today = date.today().isoformat()
             declined = []
+            print(f"Проверить самому: python -m tools.look {program_id} <слово>")
             for field in empty:
-                reply = input(f"  {field}: требования на странице нет? [да/нет] ")
-                if reply.strip().lower() not in ("да", "y", "yes"):
+                if not ask(f"  {field}: требования на странице нет? [да/нет] "):
                     declined.append(field)
                     continue
                 note = input("     чем именно ручаешься (одной строкой): ").strip()
