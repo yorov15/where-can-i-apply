@@ -183,3 +183,30 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-04"
+
+# Lester B. Pearson International Scholarships — Университет Торонто.
+#
+# Покрывает обучение, книги, сборы и общежитие на четыре года. Отбор
+# начинается не с абитуриента: школа выдвигает одного человека в год, и
+# без выдвижения подать нельзя вообще.
+#
+# Домен future.utoronto.ca утверждён человеком 5 сентября 2026.
+# Три источника:
+#   /pearson-scholarships               — кто допускается, сроки, покрытие
+#   /english-language-requirements      — пороги по языку, у самого вуза
+#   /international-high-school-requirements-country?page=6
+#                                       — что принимают от Таджикистана
+#
+# ВНИМАНИЕ: последний адрес содержит номер страницы списка. Страны идут
+# по алфавиту постранично; добавят новую страну — Таджикистан уедет на
+# соседнюю страницу, и слежение скажет «страница изменилась». Это не
+# поломка, а честный сигнал перепроверить.
+[utoronto-pearson]
+name = "Lester B. Pearson International Scholarships"
+urls = [
+  "https://future.utoronto.ca/pearson-scholarships",
+  "https://future.utoronto.ca/english-language-requirements",
+  "https://future.utoronto.ca/international-high-school-requirements-country?page=6",
+]
+approvedBy = "human"
+approvedAt = "2026-09-05"
