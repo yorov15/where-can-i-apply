@@ -210,3 +210,32 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-05"
+
+# HKUST — Гонконгский университет науки и технологий.
+#
+# Приём иностранцев идёт напрямую в вуз, стипендию отдельно не просят:
+# на неё рассматривают всех поступающих. Но она не гарантирована —
+# «may fully or partially waive tuition fees».
+#
+# Домен join.hkust.edu.hk утверждён человеком 5 сентября 2026.
+# Четыре источника:
+#   ?general_requirement=46180 — общие требования, сроки, английский
+#   ?general_requirement=46728 — что принимают именно от Таджикистана
+#   /university-admissions-scholarship-for-other-qualifications-holders
+#                              — размер стипендии и как её дают
+#   /fees-and-scholarships     — сколько стоит без стипендии
+#
+# ВНИМАНИЕ: номера в general_requirement — внутренние номера страниц в
+# их системе. Перестроят сайт — адреса умрут, слежение скажет «источник
+# недоступен». Иначе к странице про Таджикистан не подобраться: она
+# отдаётся только по этому номеру.
+[hkust]
+name = "HKUST — приём по международным аттестатам"
+urls = [
+  "https://join.hkust.edu.hk/admissions/international-qualifications?general_requirement=46180",
+  "https://join.hkust.edu.hk/admissions/international-qualifications?general_requirement=46728",
+  "https://join.hkust.edu.hk/university-admissions-scholarship-for-other-qualifications-holders",
+  "https://join.hkust.edu.hk/fees-and-scholarships",
+]
+approvedBy = "human"
+approvedAt = "2026-09-05"

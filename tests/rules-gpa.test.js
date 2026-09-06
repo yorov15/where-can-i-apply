@@ -51,3 +51,27 @@ test('отсутствие правила даёт unknown', () => {
 test('незаполненный балл даёт unknown', () => {
   assert.equal(checkGpa({}, need(70)).status, 'unknown');
 });
+
+// HKUST печатает «Overall average of 4.5 or above» под заголовком
+// «Reference Information to Reflect the Intake Quality» — это описание
+// поступивших, а не отсечка. Красная карточка на таком числе запрещала
+// бы подавать тому, кому подавать можно.
+const advisoryGpa = { min: 4.5, scale: 'TJ_5', advisory: true, evidence: 'x' };
+
+test('справочный балл: недобор не отказ, а проверка', () => {
+  const me = { gpa: { value: 3.5, scale: 'TJ_5' } };
+  const got = checkGpa(me, advisoryGpa);
+  assert.equal(got.status, 'unknown');
+  assert.match(got.message, /не порог/);
+});
+
+test('справочный балл: перебор всё равно проходит', () => {
+  const me = { gpa: { value: 4.8, scale: 'TJ_5' } };
+  assert.equal(checkGpa(me, advisoryGpa).status, 'pass');
+});
+
+test('обычный порог по среднему баллу по-прежнему отказ', () => {
+  const strict = { min: 4.5, scale: 'TJ_5', evidence: 'x' };
+  const me = { gpa: { value: 3.5, scale: 'TJ_5' } };
+  assert.equal(checkGpa(me, strict).status, 'fail');
+});
