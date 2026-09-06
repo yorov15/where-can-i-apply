@@ -239,3 +239,30 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-05"
+
+# UBC International Scholars Program — Университет Британской Колумбии.
+#
+# Стипендия по нужде, а не по заслугам: вуз оценивает, сколько тебе не
+# хватает, и покрывает это. Требует выдвижения школой и документов о
+# доходах семьи. Размер не назван нигде — он у каждого свой.
+#
+# Домен you.ubc.ca утверждён человеком 5 сентября 2026.
+# Три источника:
+#   /international-scholars/        — правила программы, сроки, отбор
+#   /english-language-competency/   — пороги по языку
+#   /international-high-schools/    — список стран; Таджикистана в нём
+#                                     нет, применяются базовые требования
+#
+# ВНИМАНИЕ: на третьей странице сами требования подгружаются скриптом и
+# в снимок не попадают — виден только список стран. Этого достаточно для
+# одного: убедиться, что Таджикистана в списке нет. За самими
+# требованиями надо идти в браузер.
+[ubc-scholars]
+name = "UBC International Scholars Program"
+urls = [
+  "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+  "https://you.ubc.ca/applying-ubc/requirements/english-language-competency/",
+  "https://you.ubc.ca/applying-ubc/requirements/international-high-schools/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-05"
