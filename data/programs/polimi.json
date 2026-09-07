@@ -1,0 +1,123 @@
+{
+  "id": "polimi",
+  "status": "published",
+  "name": {
+    "ru": "Политехнический университет Милана, бакалавриат",
+    "orig": "Politecnico di Milano — Bachelor of Science"
+  },
+  "hostCountry": "IT",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Деньги здесь не от вуза, а от области Ломбардия: региональная поддержка по достатку семьи назначается отдельной заявкой и на этих страницах не описана. Проверять надо у регионального фонда, а не у университета"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "regardless of their nationality or place of residence"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-07",
+      "note": "страна школы не ограничена"
+    },
+    "schoolYears": {
+      "min": 12,
+      "evidence": "you must hold a secondary school qualification obtained after a minimum of 12/13 years of schooling, overall"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-07",
+      "note": "года выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-07",
+      "note": "возраст не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-07",
+      "note": "минимального балла нет, есть вступительный тест"
+    },
+    "language": null
+  },
+  "textConditions": [
+    {
+      "ru": "Двенадцать лет школы — жёсткое требование, а не пожелание. В Таджикистане школа одиннадцать, значит прямая дорога закрыта. Выход есть: университет засчитывает подготовительный курс длиной не меньше учебного года.",
+      "evidence": "Politecnico di Milano accepts the successful passing of a foundation course of at least one academic year"
+    },
+    {
+      "ru": "Бакалавриат по инженерии идёт на итальянском. Нужен сертификат уровня B2 от CLIQ — либо аттестат, полученный на итальянском. Английский на этом уровне не помогает: он начинается в магистратуре.",
+      "evidence": "have an appropriate B2 level certification of proficiency in the Italian language issued by the CLIQ"
+    },
+    {
+      "ru": "Вступительный тест обязателен, но вместо итальянского TOL можно сдать SAT — его принимают напрямую и проводят на английском. Есть ещё CEnT-S на английском.",
+      "evidence": "SAT (provided by The College Board www.collegeboard.org), test administered in English"
+    },
+    {
+      "ru": "Иностранцам выделяют отдельные места, число которых устанавливают каждый год. То есть конкурс идёт не со всеми подряд, а внутри своей квоты — это может быть и легче, и тяжелее.",
+      "evidence": "Certain categories of international students are allocated a specific number of places, referred to as RESERVED PLACES."
+    },
+    {
+      "ru": "Правила для иностранных аттестатов устанавливает не университет, а министерство, и переиздаёт их каждый год отдельным документом. Значит перед подачей надо смотреть свежую редакцию, а не прошлогодние пересказы.",
+      "evidence": "issued each year by the Ministry of University and Research"
+    },
+    {
+      "ru": "Документы: табели за три последних года школы с печатью и подписью, плюс аттестат или справка о том, что ты в выпускном классе. Проверяет их отдельная служба, и до её проверки зачисление не считается завершённым.",
+      "evidence": "report cards from the last three years of secondary school, stamped and signed by the competent authority/office"
+    },
+    {
+      "ru": "Даты сессий вступительного теста на этих страницах не выводятся — они лежат за раскрывающимися блоками, которые инструмент не читает. Сроки смотри на сайте.",
+      "evidence": "When to register for the tests"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/students-with-a-foreign-degree",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Политехнический в Милане, кампусы в Милане и пяти городах Италии"
+    }
+  },
+  "source": {
+    "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/students-with-a-foreign-degree",
+    "lastVerified": "2026-09-07",
+    "humanChecked": true,
+    "pages": [
+      {
+        "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/students-with-a-foreign-degree",
+        "contentHash": "sha256:4c7c6824de0d62a7388172df2855a21e01579c0f50e08bb25bec52a68e0da819"
+      },
+      {
+        "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/requirements-to-participate-in-the-admission-test",
+        "contentHash": "sha256:20bd01c734d3fa39cf2e84432bf2d4bf89190751b93babfec884115f79ab9b2f"
+      },
+      {
+        "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/engineering",
+        "contentHash": "sha256:3054763103f83f1d22d943e03b77216e0336d2a7dac49569dcf0fe54ec3e9973"
+      }
+    ]
+  },
+  "leftEmpty": {
+    "language": "sha256:865f50754c09f097d1b468528e1c0534b615293906c9b572e556920153b7fddb"
+  }
+}
