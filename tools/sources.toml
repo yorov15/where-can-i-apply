@@ -266,3 +266,32 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-05"
+
+# NYU Abu Dhabi — кампус Нью-Йоркского университета в ОАЭ.
+#
+# Помощь только по нужде и только через CSS Profile — платную анкету
+# американского College Board. Размер не назван: считают, сколько семья
+# может заплатить, остальное закрывают.
+#
+# Домены nyuad.nyu.edu и www.nyu.edu утверждены человеком 7 сентября
+# 2026. Пять источников:
+#   /apply/key-dates-and-deadlines — три волны подачи и сроки CSS Profile
+#   /apply/entry-requirements      — возраст, экзамены, состав заявки
+#   /apply/early-decision          — что означает обязывающая волна
+#   /scholarships-and-financial-aid — как считают помощь
+#   nyu.edu/.../english-language-testing — баллы по языку
+#
+# Последний адрес — на домене самого NYU, а не абу-дабийского кампуса:
+# кампус ссылается на него как на своё требование, отдельной страницы у
+# него нет.
+[nyuad]
+name = "NYU Abu Dhabi"
+urls = [
+  "https://nyuad.nyu.edu/en/apply/undergraduate/apply/key-dates-and-deadlines.html",
+  "https://nyuad.nyu.edu/en/apply/undergraduate/apply/entry-requirements.html",
+  "https://nyuad.nyu.edu/en/apply/undergraduate/apply/early-decision.html",
+  "https://nyuad.nyu.edu/en/apply/undergraduate/scholarships-and-financial-aid.html",
+  "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/standardized-tests/english-language-testing.html",
+]
+approvedBy = "human"
+approvedAt = "2026-09-07"
