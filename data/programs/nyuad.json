@@ -1,0 +1,153 @@
+{
+  "id": "nyuad",
+  "status": "published",
+  "name": {
+    "ru": "NYU Abu Dhabi",
+    "orig": "New York University Abu Dhabi"
+  },
+  "hostCountry": "AE",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Размер не назван: помощь считают от нужды семьи по анкете CSS Profile и закрывают разницу. Гражданам ОАЭ стипендию дают всем поступившим автоматически, остальным — только по нужде"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "NYU Abu Dhabi accepts applications for financial support from all students, regardless of citizenship."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-07",
+      "note": "страна школы не ограничена"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-07",
+      "note": "числа лет школы нет"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-07",
+      "note": "года выпуска нет, важен возраст 17 к августу"
+    },
+    "age": {
+      "min": 17,
+      "asOf": {
+        "relativeTo": "applicationYear",
+        "monthDay": "08-01"
+      },
+      "evidence": "Students must be 17 years old by August 1 of the year they plan to enroll"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-07",
+      "note": "минимального балла нет, отбор целостный"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7.5
+        }
+      ],
+      "advisory": true,
+      "evidence": "7.5 and above on the IELTS Academic"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Порога по языку нет вовсе — вуз пишет это прямо. Названные баллы описывают тех, кто проходит конкурс: IELTS 7,5, TOEFL 5 по новой шкале, Duolingo 135. Это выше, чем у Торонто и Гонконга, но формально ниже подавать не запрещено.",
+      "evidence": "We don't have minimum score requirements, but competitive applicants will receive"
+    },
+    {
+      "ru": "SAT и ACT не нужны: тестонезависимая политика продлена на весь цикл 2027-2028. Твой цикл она покрывает целиком.",
+      "evidence": "NYU will remain test-optional through the 2027-2028 application cycle."
+    },
+    {
+      "ru": "Три волны: обязывающая ранняя до 1 ноября 2026, обязывающая вторая до 1 января 2027 и обычная до 5 января 2027. Анкета CSS Profile сдаётся отдельно и позже: 10 ноября, 10 января и 1 февраля соответственно.",
+      "evidence": "Early Decision I November 1 December 15 Early Decision II January 1 February 15 Regular Decision January 5 April 1"
+    },
+    {
+      "ru": "Ранняя волна связывает по рукам. Получил приглашение с достаточной помощью — обязан отозвать все остальные заявки за две-три недели и новых не подавать. Для тебя это значит отказ от Торонто, UBC, KAIST и Гонконга разом.",
+      "evidence": "the student must withdraw any previously submitted applications and accept NYUAD's admission offer"
+    },
+    {
+      "ru": "И хуже: отказ в ранней волне закрывает NYU на весь год. Подать заново во вторую волну или в обычную будет нельзя — ни сюда, ни в нью-йоркский кампус.",
+      "evidence": "Early Decision I applicants who are not offered admission may not re-apply as Early Decision II or Regular Decision applicants in the same application cycle"
+    },
+    {
+      "ru": "Единственная страховка: если помощи не хватит на учёбу, от обязательства освободят. Вуз сам пишет — не подавай в раннюю волну, если деньги для тебя вопрос.",
+      "evidence": "Do not feel pressure to apply Early Decision if finances are a concern."
+    },
+    {
+      "ru": "Помощь считают только по CSS Profile — платной анкете американского College Board. Если родители в разводе, анкету заполняет каждый отдельно. Не сдал вовремя — помощи не будет, а без неё учёба здесь не по карману.",
+      "evidence": "Financial Aid at NYUAD is based on a student's and family's demonstrated financial need."
+    },
+    {
+      "ru": "Гражданам ОАЭ стипендию дают всем поступившим и без заявки. Всем остальным — только по нужде. Это не дискриминация, а разные источники денег, но конкурс для тебя от этого не легче.",
+      "evidence": "the Abu Dhabi government provides scholarships to all admitted UAE nationals"
+    },
+    {
+      "ru": "Подача идёт через Common Application — общую американскую систему. Нужны школьные документы, одно рекомендательное письмо и отдельная анкета NYUAD.",
+      "evidence": "The Common Application Academic records One letter of recommendation"
+    },
+    {
+      "ru": "Математику смотрят особо: вуз прямо советует пройти в школе курс матанализа, иначе на технических направлениях будет тяжело с первого дня.",
+      "evidence": "Building a strong foundation in calculus in high school"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-05",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://nyuad.nyu.edu/en/apply/undergraduate/apply.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — кампус NYU в Абу-Даби, диплом Нью-Йоркского университета"
+    }
+  },
+  "source": {
+    "url": "https://nyuad.nyu.edu/en/apply/undergraduate/apply/key-dates-and-deadlines.html",
+    "lastVerified": "2026-09-07",
+    "humanChecked": true,
+    "pages": [
+      {
+        "url": "https://nyuad.nyu.edu/en/apply/undergraduate/apply/key-dates-and-deadlines.html",
+        "contentHash": "sha256:3816204a04b69c5355852405089ab9d7203507c816849b0efbc10a92fc214194"
+      },
+      {
+        "url": "https://nyuad.nyu.edu/en/apply/undergraduate/apply/entry-requirements.html",
+        "contentHash": "sha256:3df130d7d34e5eed1f22620c375df7d6750b9b8eba9f91c3da07d5a28e1d1b51"
+      },
+      {
+        "url": "https://nyuad.nyu.edu/en/apply/undergraduate/apply/early-decision.html",
+        "contentHash": "sha256:3bfdd24560e026c451d6cbdbfbefa73eafe575e35ade6ec9bfaffc959d88dbfa"
+      },
+      {
+        "url": "https://nyuad.nyu.edu/en/apply/undergraduate/scholarships-and-financial-aid.html",
+        "contentHash": "sha256:6be490972613a70ec6b99499635bb4b627a0071c5a821d95b284741d8481c6ef"
+      },
+      {
+        "url": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/standardized-tests/english-language-testing.html",
+        "contentHash": "sha256:b52874ae218d3b485c56a3bdc412a1de2de8fc9afe622ad88611f644fa234d3e"
+      }
+    ]
+  }
+}
