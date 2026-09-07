@@ -295,3 +295,26 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-07"
+
+# Politecnico di Milano — бакалавриат инженерных направлений.
+#
+# Записан не потому, что подходит, а потому, что не подходит и это надо
+# знать заранее: минимум 12 лет школы и обучение на итальянском. Для
+# выпускника таджикской одиннадцатилетки обе двери закрыты, пока он не
+# пройдёт подготовительный год.
+#
+# Домен polimi.it утверждён человеком 7 сентября 2026. Три источника:
+#   /students-with-a-foreign-degree — порядок для иностранных аттестатов
+#   /requirements-to-participate-in-the-admission-test — сколько лет школы
+#   /engineering                    — вступительный тест и язык
+#
+# Сайт подписан GEANT, и до починки TLS сборщик его вовсе не видел.
+[polimi]
+name = "Politecnico di Milano — Bachelor of Science"
+urls = [
+  "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/students-with-a-foreign-degree",
+  "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/requirements-to-participate-in-the-admission-test",
+  "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/engineering",
+]
+approvedBy = "human"
+approvedAt = "2026-09-07"
