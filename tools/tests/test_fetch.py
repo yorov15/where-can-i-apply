@@ -10,6 +10,7 @@ from tools.fetch import (
     latest_snapshot,
     page_to_text,
     save_snapshots,
+    tls_context,
     with_retries,
 )
 from tools.tests.test_pdf import make_pdf
@@ -324,6 +325,23 @@ class TestChosen(unittest.TestCase):
         picked, unknown = chosen(self.RAW, ["kaisT"])
         self.assertEqual(picked, {})
         self.assertEqual(unknown, ["kaisT"])
+
+
+class TestTlsContext(unittest.TestCase):
+    """Проверка сертификатов не отключается ни при каких условиях."""
+
+    def test_verification_stays_on(self):
+        # Единственная настройка, которую нельзя ослаблять молча: без неё
+        # инструмент начнёт принимать подменённые страницы за источник.
+        import ssl
+        ctx = tls_context()
+        self.assertEqual(ctx.verify_mode, ssl.CERT_REQUIRED)
+
+    def test_hostname_is_checked(self):
+        self.assertTrue(tls_context().check_hostname)
+
+    def test_context_has_root_certificates(self):
+        self.assertGreater(len(tls_context().get_ca_certs()), 0)
 
 
 if __name__ == "__main__":

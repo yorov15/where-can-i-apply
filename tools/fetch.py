@@ -10,6 +10,7 @@ fetcher передаётся аргументом, а не берётся из u
 
 import json
 import shutil
+import ssl
 import sys
 import time
 import urllib.request
@@ -140,10 +141,31 @@ def save_snapshots(
     return meta
 
 
+def tls_context():
+    """Проверка сертификатов с полным набором корневых, если он есть.
+
+    Windows подтягивает корневые сертификаты по требованию, и браузер это
+    делает, а Python — нет. Из-за этого сайты европейских университетов,
+    подписанные GEANT, для сборщика просто не существовали: он честно
+    говорил «источник недоступен» там, где источник открывается в
+    браузере с первого раза.
+
+    Проверка не отключается ни при каких условиях. Если набора нет,
+    берётся системный — хуже, но безопасно.
+    """
+    try:
+        import certifi
+    except ImportError:
+        return ssl.create_default_context()
+    return ssl.create_default_context(cafile=certifi.where())
+
+
 def http_fetch(url: str) -> bytes:
     """Отдаёт байты, а не строку: в строку PDF не помещается."""
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=TIMEOUT_SECONDS) as response:
+    with urllib.request.urlopen(
+        request, timeout=TIMEOUT_SECONDS, context=tls_context()
+    ) as response:
         return response.read()
 
 
