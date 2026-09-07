@@ -1,0 +1,140 @@
+{
+  "id": "ubc-scholars",
+  "status": "published",
+  "name": {
+    "ru": "UBC International Scholars, Ванкувер",
+    "orig": "UBC International Scholars Program"
+  },
+  "hostCountry": "CA",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Размер не назван нигде: вуз считает, сколько тебе не хватает после всех твоих ресурсов, и покрывает эту сумму. Поэтому у каждого своя. Программа именно для тех, кто без неё учиться не смог бы"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "CA"
+      ],
+      "evidence": "You are an international student who will be studying in Canada on a Canadian study permit."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-07",
+      "note": "страны школы не ограничивают"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-07",
+      "note": "числа лет школы нет"
+    },
+    "graduationYear": {
+      "min": 2026,
+      "evidence": "must have graduated from high school no earlier than June 2026"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-07",
+      "note": "возраст не упоминается"
+    },
+    "gpa": null,
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5
+        }
+      ],
+      "evidence": "6.5, with no part less than 6.0"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Это стипендия по нужде, а не по успехам. Придётся показать документы о доходах семьи, имуществе и расходах, и доказать, что без помощи учиться не получится. Инструмент денег не считает и посчитать не может — по этой программе его зелёный цвет ничего не обещает.",
+      "evidence": "You can prove a significant level of financial need."
+    },
+    {
+      "ru": "Нужны двое из школы: тот, кто выдвигает, и учитель-рекомендатель, и это должны быть разные люди. Школа выдвигает до двух человек на кампус в Ванкувере и одного в Оканагане.",
+      "evidence": "You'll need one nominator (guidance counsellor, principal, administrator, etc.) and one teacher referee."
+    },
+    {
+      "ru": "Срок — 15 ноября 2026. Формы от выдвигающего и учителя должны быть сданы за несколько дней до этого, иначе твою заявку нельзя даже дописать: без обеих форм она не открывается.",
+      "evidence": "The International Scholars Program application is due November 15."
+    },
+    {
+      "ru": "Выбирать придётся один раз и навсегда: подал на эту программу — на стипендии за успехи тебя рассматривать не будут. Обратно переиграть нельзя.",
+      "evidence": "Applicants may only be considered for either our merit-based or financial need-based award program."
+    },
+    {
+      "ru": "Академическое требование сформулировано без цифр: «все пятёрки или равный уровень». Инструмент такое не считает, поэтому поле среднего балла оставлено пустым — не потому, что требования нет.",
+      "evidence": "You demonstrate superior academic achievement (achieve all As or equivalent standard)."
+    },
+    {
+      "ru": "Таджикистана нет в списке стран UBC — там есть Казахстан, Россия, Украина, Азербайджан, но не он. Значит применяются базовые требования «если твоей страны нет в списке», и что именно в них входит, надо смотреть на сайте: эта часть страницы рисуется скриптом и в проверку не попадает.",
+      "evidence": "Basic requirements (if your country is not listed)"
+    },
+    {
+      "ru": "Страница противоречит сама себе: в одном месте написано, что приём на 2027 год открывается в сентябре 2026, в другом — что в начале октября. Ориентируйся на раннюю дату и проверяй сам.",
+      "evidence": "Applications for the September 2027 intake will open in early October 2026."
+    },
+    {
+      "ru": "Не подходит для медсестринского дела, стоматологической гигиены, медицинских лабораторных наук, совместных и двойных программ. Для информатики ограничений нет.",
+      "evidence": "The following degrees are not eligible for UBC International Scholars Program awards"
+    },
+    {
+      "ru": "Если английского на прямое поступление не хватает, есть Vantage College — год языковой подготовки со своей стипендией. Это не отказ, а другая дверь.",
+      "evidence": "you may be eligible for Vantage College and the Vantage One Excellence Award"
+    },
+    {
+      "ru": "Могут позвать на видеоинтервью в январе-марте, на запись даётся неделя. Документы об образовании присылают до 31 января, а не к общему сроку.",
+      "evidence": "Applicants may be invited to complete a video interview."
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-11-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — UBC, кампусы в Ванкувере и Оканагане"
+    }
+  },
+  "source": {
+    "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+    "lastVerified": "2026-09-07",
+    "humanChecked": true,
+    "pages": [
+      {
+        "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+        "contentHash": "sha256:6c77acd22be2433e528ad22c18476f154769a1758d5f0f06fd1b48ebc97f0453"
+      },
+      {
+        "url": "https://you.ubc.ca/applying-ubc/requirements/english-language-competency/",
+        "contentHash": "sha256:3900ce541d0b0305878acc83429f91ecd79c0a8a87801e92b73811eb7098af47"
+      },
+      {
+        "url": "https://you.ubc.ca/applying-ubc/requirements/international-high-schools/",
+        "contentHash": "sha256:fbd5b32a7dd2f88adc9b70e7cb8b3f444b30ac736ba70658f640bda55bbfda23"
+      }
+    ]
+  },
+  "leftEmpty": {
+    "gpa": "sha256:89d02de2879eacc3d41b2d12bd843e8a2069a96fbc8a864a5b86642dab4075f7"
+  }
+}
