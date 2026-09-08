@@ -30,7 +30,10 @@
       "checkedAt": "2026-09-04",
       "note": "на утверждённых источниках страна окончания школы не ограничивается"
     },
-    "schoolYears": null,
+    "schoolYears": {
+      "definedBy": "institution",
+      "evidence": "it is always the Host Institutions' decision whether a professional preparation year is necessary"
+    },
     "graduationYear": {
       "noLimit": true,
       "evidence": null,
@@ -60,6 +63,10 @@
   },
   "textConditions": [
     {
+      "ru": "Срок взят по прошлому циклу и потому помечен неподтверждённым. Утверждённый документ, который мы читаем, — это призыв на 2026/27, и его срок 15 января 2026 уже прошёл. Призыв на 2027/28 выходит осенью 2026 отдельным PDF, и дата в нём может сдвинуться.",
+      "evidence": "The deadline for submitting the complete application: 15 January 2026, 2 p.m. (Central European Time)"
+    },
+    {
       "ru": "Подавать можно только через партнёра своей страны: гражданство должно совпадать со страной, через которую идёт заявка. Таджикистан в списке партнёров есть, и бакалавриат ему открыт в том числе по Computer Science and Information Technology.",
       "evidence": "Applicants with citizenship different from the sending country/territory."
     },
@@ -86,9 +93,9 @@
   ],
   "deadline": {
     "opens": null,
-    "closes": "2026-01-15",
+    "closes": "2027-01-15",
     "recurring": "annual",
-    "confidence": "confirmed"
+    "confidence": "expected"
   },
   "applyUrl": "https://stipendiumhungaricum.hu/apply/",
   "coversInstitutions": {
@@ -116,8 +123,5 @@
         "contentHash": "sha256:d076b9643c5237e086f56456ccb872a3bf01481281bfc9e000973bc66a4f56ea"
       }
     ]
-  },
-  "leftEmpty": {
-    "schoolYears": "sha256:705aae113c79e5466b150fa6a92db8d4fbc68f311cd03ee8ee804d34fe9a59bd"
   }
 }

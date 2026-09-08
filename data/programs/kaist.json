@@ -30,7 +30,10 @@
       "checkedAt": "2026-09-05",
       "note": "страна школы не ограничена"
     },
-    "schoolYears": null,
+    "schoolYears": {
+      "definedBy": "institution",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly"
+    },
     "graduationYear": {
       "maxRelative": "applicationYear",
       "evidence": "Candidates who have graduated or will graduate from his or her high school by August 31st, 2027."
@@ -57,7 +60,7 @@
         }
       ],
       "advisory": true,
-      "evidence": "all applicants must submit at least one of the following English Proficiency test (EPT) scores"
+      "evidence": "IELTS 6.5 TOEIC 720 TEPS 326"
     }
   },
   "textConditions": [
@@ -150,8 +153,5 @@
         "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
       }
     ]
-  },
-  "leftEmpty": {
-    "schoolYears": "sha256:2500a1969c0a5d6de51533cc46b31f2f112a50643e4bc5b2516f9d35eb121dac"
   }
 }

@@ -30,7 +30,10 @@
       "checkedAt": "2026-09-04",
       "note": "на утверждённой странице страна окончания школы не упоминается"
     },
-    "schoolYears": null,
+    "schoolYears": {
+      "definedBy": "institution",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly"
+    },
     "graduationYear": {
       "noLimit": true,
       "evidence": null,
@@ -106,8 +109,5 @@
         "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
       }
     ]
-  },
-  "leftEmpty": {
-    "schoolYears": "sha256:8017974be4a5696045619b642a0045abf6004c6a7e2a333b4960ba45f65908a8"
   }
 }

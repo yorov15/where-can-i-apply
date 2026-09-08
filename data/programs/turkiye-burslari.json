@@ -30,7 +30,13 @@
       "checkedAt": "2026-09-03",
       "note": "на утверждённых страницах страна окончания школы не упоминается"
     },
-    "schoolYears": null,
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-08",
+      "note": "требования к числу лет школы нет, нужно окончить школу до августа"
+    },
     "graduationYear": {
       "min": null,
       "maxRelative": "applicationYear",
@@ -100,8 +106,5 @@
         "contentHash": "sha256:c2e10806ded5398f2b986d368726887421921de847da3f1d897ce1314fdc3152"
       }
     ]
-  },
-  "leftEmpty": {
-    "schoolYears": "sha256:9039eb358bb491bf88cafa08eda3bcb6f356f037b019b121a3aa252e69cf8f7e"
   }
 }

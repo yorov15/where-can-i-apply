@@ -26,7 +26,9 @@
           "checkedBy": "human",
           "checkedAt": "2026-09-04"
         },
-        "schoolYears": null,
+        "schoolYears": {
+          "definedBy": "institution"
+        },
         "graduationYear": {
           "noLimit": true,
           "checkedBy": "human",
@@ -246,7 +248,9 @@
           "checkedBy": "human",
           "checkedAt": "2026-09-05"
         },
-        "schoolYears": null,
+        "schoolYears": {
+          "definedBy": "institution"
+        },
         "graduationYear": {
           "maxRelative": "applicationYear"
         },
@@ -603,7 +607,9 @@
           "checkedBy": "human",
           "checkedAt": "2026-09-07"
         },
-        "language": null
+        "language": {
+          "notMeasured": true
+        }
       },
       "deadline": {
         "opens": null,
@@ -738,7 +744,9 @@
           "checkedBy": "human",
           "checkedAt": "2026-09-04"
         },
-        "schoolYears": null,
+        "schoolYears": {
+          "definedBy": "institution"
+        },
         "graduationYear": {
           "noLimit": true,
           "checkedBy": "human",
@@ -762,11 +770,14 @@
       },
       "deadline": {
         "opens": null,
-        "closes": "2026-01-15",
+        "closes": "2027-01-15",
         "recurring": "annual",
-        "confidence": "confirmed"
+        "confidence": "expected"
       },
       "textConditions": [
+        {
+          "ru": "Срок взят по прошлому циклу и потому помечен неподтверждённым. Утверждённый документ, который мы читаем, — это призыв на 2026/27, и его срок 15 января 2026 уже прошёл. Призыв на 2027/28 выходит осенью 2026 отдельным PDF, и дата в нём может сдвинуться."
+        },
         {
           "ru": "Подавать можно только через партнёра своей страны: гражданство должно совпадать со страной, через которую идёт заявка. Таджикистан в списке партнёров есть, и бакалавриат ему открыт в том числе по Computer Science and Information Technology."
         },
@@ -812,7 +823,11 @@
           "checkedBy": "human",
           "checkedAt": "2026-09-03"
         },
-        "schoolYears": null,
+        "schoolYears": {
+          "noLimit": true,
+          "checkedBy": "human",
+          "checkedAt": "2026-09-08"
+        },
         "graduationYear": {
           "min": null,
           "maxRelative": "applicationYear"
@@ -887,7 +902,9 @@
           "checkedBy": "human",
           "checkedAt": "2026-09-07"
         },
-        "gpa": null,
+        "gpa": {
+          "notMeasured": true
+        },
         "language": {
           "anyOf": [
             {
@@ -917,7 +934,7 @@
           "ru": "Выбирать придётся один раз и навсегда: подал на эту программу — на стипендии за успехи тебя рассматривать не будут. Обратно переиграть нельзя."
         },
         {
-          "ru": "Академическое требование сформулировано без цифр: «все пятёрки или равный уровень». Инструмент такое не считает, поэтому поле среднего балла оставлено пустым — не потому, что требования нет."
+          "ru": "Академическое требование сформулировано без цифр: «все пятёрки или равный уровень». Инструмент такое не считает и честно пишет об этом в поле среднего балла — это не значит, что требования нет."
         },
         {
           "ru": "Таджикистана нет в списке стран UBC — там есть Казахстан, Россия, Украина, Азербайджан, но не он. Значит применяются базовые требования «если твоей страны нет в списке», и что именно в них входит, надо смотреть на сайте: эта часть страницы рисуется скриптом и в проверку не попадает."

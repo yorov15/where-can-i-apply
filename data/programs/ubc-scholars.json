@@ -48,7 +48,10 @@
       "checkedAt": "2026-09-07",
       "note": "возраст не упоминается"
     },
-    "gpa": null,
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "You demonstrate superior academic achievement (achieve all As or equivalent standard)."
+    },
     "language": {
       "anyOf": [
         {
@@ -77,7 +80,7 @@
       "evidence": "Applicants may only be considered for either our merit-based or financial need-based award program."
     },
     {
-      "ru": "Академическое требование сформулировано без цифр: «все пятёрки или равный уровень». Инструмент такое не считает, поэтому поле среднего балла оставлено пустым — не потому, что требования нет.",
+      "ru": "Академическое требование сформулировано без цифр: «все пятёрки или равный уровень». Инструмент такое не считает и честно пишет об этом в поле среднего балла — это не значит, что требования нет.",
       "evidence": "You demonstrate superior academic achievement (achieve all As or equivalent standard)."
     },
     {
@@ -133,8 +136,5 @@
         "contentHash": "sha256:fbd5b32a7dd2f88adc9b70e7cb8b3f444b30ac736ba70658f640bda55bbfda23"
       }
     ]
-  },
-  "leftEmpty": {
-    "gpa": "sha256:89d02de2879eacc3d41b2d12bd843e8a2069a96fbc8a864a5b86642dab4075f7"
   }
 }

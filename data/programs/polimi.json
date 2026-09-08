@@ -52,7 +52,10 @@
       "checkedAt": "2026-09-07",
       "note": "минимального балла нет, есть вступительный тест"
     },
-    "language": null
+    "language": {
+      "notMeasured": true,
+      "evidence": "have an appropriate B2 level certification of proficiency in the Italian language issued by the CLIQ"
+    }
   },
   "textConditions": [
     {
@@ -116,8 +119,5 @@
         "contentHash": "sha256:3054763103f83f1d22d943e03b77216e0336d2a7dac49569dcf0fe54ec3e9973"
       }
     ]
-  },
-  "leftEmpty": {
-    "language": "sha256:865f50754c09f097d1b468528e1c0534b615293906c9b572e556920153b7fddb"
   }
 }
