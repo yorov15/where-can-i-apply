@@ -318,3 +318,31 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-07"
+
+# MIT — приём на бакалавриат.
+#
+# Гражданство не влияет ни на порядок подачи, ни на размер помощи, а
+# помощь закрывает нужду целиком. Для выпускника из Таджикистана это
+# редкий случай: деньги не отдельный конкурс, а следствие поступления.
+#
+# Домен mitadmissions.org утверждён человеком 7 сентября 2026.
+# Четыре источника:
+#   /deadlines-requirements — что подавать и до какого числа
+#   /international          — что значит «иностранец» и как это влияет
+#   /tests-scores           — минимальные баллы по языку
+#   /afford                 — сколько закрывают деньгами
+#
+# volatile: наверху каждой страницы висит объявление о том, что офис
+# закрыт в такой-то день. Оно меняется, и без чистки слежение сообщало
+# бы об изменении требований после каждого праздника.
+[mit]
+name = "MIT — first-year admissions"
+urls = [
+  "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
+  "https://mitadmissions.org/apply/firstyear/international/",
+  "https://mitadmissions.org/apply/firstyear/tests-scores/",
+  "https://mitadmissions.org/afford/",
+]
+volatile = ['Please note: The MIT Welcome Center[^.]*\.']
+approvedBy = "human"
+approvedAt = "2026-09-07"
