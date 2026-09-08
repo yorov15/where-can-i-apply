@@ -54,6 +54,28 @@ def index_entry(program: dict) -> dict:
     }
 
 
+def stale_deadlines(programs, today: str) -> list[str]:
+    """Программы, у которых срок уже прошёл, а дата помечена подтверждённой.
+
+    Так гниёт запись: цикл сменился, страница осталась прежней, слежение
+    молчит — оно следит за текстом, а не за календарём. Карточка при этом
+    говорит «приём закрыт», и человек решает, что программа для него
+    кончилась, хотя приём просто идёт в следующем году.
+
+    Дату следующего цикла берут по прошлому и помечают expected. Тогда
+    карточка честно скажет «дата пока не подтверждена».
+    """
+    late = []
+    for program in programs:
+        deadline = program.get("deadline") or {}
+        closes = deadline.get("closes")
+        if not closes or closes >= today:
+            continue
+        if deadline.get("confidence") == "confirmed":
+            late.append(f"{program['id']}: срок {closes} прошёл, а помечен подтверждённым")
+    return late
+
+
 def build_index(programs: list[dict], generated_at: str) -> dict:
     # Запись без списка страниц публиковать нельзя: за таким источником
     # слежение не работает, и устаревшие требования выдавались бы
@@ -88,6 +110,10 @@ def main() -> int:
 
     # Молча выкинуть утверждённую программу из выдачи хуже, чем не собрать
     # индекс вовсе: человек считает, что она на сайте.
+    for warning in stale_deadlines(programs, date.today().isoformat()):
+        print("ВНИМАНИЕ:", warning)
+        print("   Дату следующего цикла берут по прошлому и помечают expected.")
+
     published = {program["id"] for program in index["programs"]}
     for program in programs:
         if program.get("status") == "published" and program["id"] not in published:

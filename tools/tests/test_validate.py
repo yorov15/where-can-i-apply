@@ -307,8 +307,10 @@ class TestDelegated(unittest.TestCase):
 class TestRelativeAsOf(unittest.TestCase):
     def with_as_of(self, as_of):
         program = good_program()
+        # Порог и цитата должны сходиться: раньше здесь стояло min 18 под
+        # цитатой про 21, и это годами никого не смущало.
         program["eligibility"]["age"] = {
-            "min": 18,
+            "max": 21,
             "asOf": as_of,
             "evidence": "under 21 years old",
         }

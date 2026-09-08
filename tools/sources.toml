@@ -343,6 +343,12 @@ urls = [
   "https://mitadmissions.org/apply/firstyear/tests-scores/",
   "https://mitadmissions.org/afford/",
 ]
-volatile = ['Please note: The MIT Welcome Center[^.]*\.']
+volatile = [
+  'Please note: The MIT Welcome Center[^.]*\.',
+  # Карусель «Related blogs» тасует случайные записи блога при каждом
+  # заходе. Проверено 8 сентября: страница /afford/ разошлась со снимком
+  # только этим, требования не менялись ни словом.
+  'Related blogs[\s\S]*?More posts tagged[^\n]*',
+]
 approvedBy = "human"
 approvedAt = "2026-09-07"

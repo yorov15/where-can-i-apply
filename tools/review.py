@@ -56,6 +56,29 @@ def other_changes(current, proposed: dict) -> list[dict]:
     return changes
 
 
+def changed_pages(current, pages) -> list[str]:
+    """Адреса страниц, чей текст разошёлся с записанным.
+
+    Нужно, потому что источник может измениться, не меняя ни одного
+    правила: у MIT перетасовалась карусель блога, у HKUST добавили абзац
+    с определением. Цитаты при этом сходятся, предлагать человеку нечего,
+    и review молча говорил «изменений нет» — а хеши в записи оставались
+    прежними. Слежение после этого кричало бы об изменении вечно, и на
+    него перестали бы смотреть.
+    """
+    stored = {
+        page["url"]: page.get("contentHash")
+        for page in ((current or {}).get("source") or {}).get("pages") or []
+    }
+    if not stored:
+        return []
+    return [
+        page["url"]
+        for page in pages
+        if stored.get(page["url"]) != page["contentHash"]
+    ]
+
+
 def merge_proposed(current, proposed: dict) -> dict:
     """Накладывает предложение модели на утверждённую запись.
 
@@ -386,9 +409,19 @@ def main(argv=None) -> int:
         # Пустые поля — повод зайти, даже когда правила не менялись:
         # запись могла быть утверждена раньше, а подписи под отсутствием
         # требований ещё не поставлены.
+        drifted = changed_pages(current, meta["pages"])
         if not changes and not empty:
-            print(f"{program_id}: изменений нет")
-            continue
+            if not drifted:
+                print(f"{program_id}: изменений нет")
+                continue
+            # Правила прежние, цитаты сходятся — иначе проверка выше
+            # не пропустила бы запись. Меняется только текст вокруг.
+            print(f"\n{program_id}: источник изменился, но правила и цитаты прежние")
+            for url in drifted:
+                print("  ", url)
+            if not ask("\nОбновить отметку о проверке? [да/нет] "):
+                print("пропущено")
+                continue
 
         if changes:
             if current is None:

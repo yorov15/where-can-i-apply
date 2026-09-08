@@ -1,7 +1,7 @@
 import json
 import unittest
 
-from tools.build import build_index, index_entry
+from tools.build import build_index, index_entry, stale_deadlines
 
 PROGRAM = {
     "id": "primer",
@@ -139,6 +139,32 @@ class TestSourceWithoutPages(unittest.TestCase):
     def test_record_with_pages_is_published(self):
         index = build_index([json.loads(json.dumps(PROGRAM))], "2026-09-04")
         self.assertEqual([p["id"] for p in index["programs"]], [PROGRAM["id"]])
+
+
+class TestStaleDeadlines(unittest.TestCase):
+    """Запись гниёт молча: цикл сменился, а страница осталась прежней."""
+
+    def program(self, closes, confidence):
+        return {"id": "primer", "deadline": {"closes": closes, "confidence": confidence}}
+
+    def test_past_confirmed_date_is_reported(self):
+        got = stale_deadlines([self.program("2026-01-15", "confirmed")], "2026-09-08")
+        self.assertEqual(len(got), 1)
+        self.assertIn("2026-01-15", got[0])
+
+    def test_expected_date_is_not_reported(self):
+        # По прошлому году — это и есть предусмотренный способ жить до
+        # объявления нового цикла, а не ошибка.
+        self.assertEqual(stale_deadlines([self.program("2026-01-15", "expected")], "2026-09-08"), [])
+
+    def test_future_date_is_not_reported(self):
+        self.assertEqual(stale_deadlines([self.program("2027-01-15", "confirmed")], "2026-09-08"), [])
+
+    def test_today_itself_is_still_open(self):
+        self.assertEqual(stale_deadlines([self.program("2026-09-08", "confirmed")], "2026-09-08"), [])
+
+    def test_missing_date_is_not_reported(self):
+        self.assertEqual(stale_deadlines([self.program(None, "expected")], "2026-09-08"), [])
 
 
 if __name__ == "__main__":

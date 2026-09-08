@@ -3,6 +3,7 @@ import unittest
 from tools.review import (
     _brief,
     ask,
+    changed_pages,
     forget_declined,
     show_new,
     approve,
@@ -517,6 +518,37 @@ class TestForgetDeclined(unittest.TestCase):
 
     def test_record_without_marks_survives(self):
         self.assertEqual(forget_declined({"id": "x"}, ["gpa"]), {"id": "x"})
+
+
+class TestChangedPages(unittest.TestCase):
+    """Источник может измениться, не тронув ни одного правила."""
+
+    def record(self, *pairs):
+        return {"source": {"pages": [{"url": u, "contentHash": h} for u, h in pairs]}}
+
+    def pages(self, *pairs):
+        return [{"url": u, "contentHash": h} for u, h in pairs]
+
+    def test_same_text_means_nothing_to_do(self):
+        got = changed_pages(self.record(("a", "sha256:1")), self.pages(("a", "sha256:1")))
+        self.assertEqual(got, [])
+
+    def test_names_the_page_that_drifted(self):
+        got = changed_pages(
+            self.record(("a", "sha256:1"), ("b", "sha256:2")),
+            self.pages(("a", "sha256:1"), ("b", "sha256:9")),
+        )
+        self.assertEqual(got, ["b"])
+
+    def test_new_record_has_nothing_to_compare(self):
+        self.assertEqual(changed_pages(None, self.pages(("a", "sha256:1"))), [])
+
+    def test_added_page_counts_as_drift(self):
+        got = changed_pages(self.record(("a", "sha256:1")), self.pages(("a", "sha256:1"), ("b", "sha256:2")))
+        self.assertEqual(got, ["b"])
+
+    def test_record_of_old_shape_is_not_a_crash(self):
+        self.assertEqual(changed_pages({"source": {"url": "a"}}, self.pages(("a", "sha256:1"))), [])
 
 
 if __name__ == "__main__":

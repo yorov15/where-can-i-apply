@@ -66,9 +66,56 @@ def validate_program(program: dict, snapshot_text: str, check_required: bool = T
             problems.extend(_check_not_measured(field, rule))
             continue
 
+        problems.extend(_check_numbers_have_evidence(field, rule))
         problems.extend(_check_rule_shape(field, rule))
 
     problems.extend(_check_deadline(program.get("deadline") or {}))
+    return problems
+
+
+NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
+
+
+def _numbers_in(text: str) -> set:
+    found = set()
+    for raw in NUMBER.findall(text or ""):
+        value = raw.replace(",", ".")
+        found.add(value)
+        found.add(value.rstrip("0").rstrip("."))
+    return found
+
+
+def _check_numbers_have_evidence(field: str, rule: dict) -> list[str]:
+    """Порог обязан стоять в той же цитате, что его подтверждает.
+
+    Иначе получается правило, которое выглядит проверенным и не является
+    им. У KAIST под требованием «IELTS 6.5» стояла цитата «нужно сдать
+    один из экзаменов»: она доказывает, что сертификат нужен, и ничего
+    не говорит про 6.5. Само число при этом взялось из соседней таблицы —
+    в тот раз верное, но проверка его не видела, и следующее могло
+    оказаться выдуманным.
+    """
+    evidence = rule.get("evidence")
+    if not evidence:
+        return []
+
+    known = _numbers_in(evidence)
+    problems = []
+
+    def check(name, value):
+        if value is None:
+            return
+        text = str(value)
+        if text not in known and text.rstrip("0").rstrip(".") not in known:
+            problems.append(
+                f"{field}: {name} = {value}, но этого числа нет в цитате — "
+                f"порог должен подтверждаться той же цитатой, {evidence!r}"
+            )
+
+    for key in ("min", "max", "maxExclusive"):
+        check(key, rule.get(key))
+    for requirement in rule.get("anyOf") or []:
+        check(f"{requirement.get('test')} min", requirement.get("min"))
     return problems
 
 
