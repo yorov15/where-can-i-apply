@@ -140,6 +140,27 @@ def prune_declined(program: dict) -> dict:
     return pruned
 
 
+def forget_declined(program: dict, fields) -> dict:
+    """Снимает отметку «не спрашивать» с названных полей.
+
+    Нужно, когда про поле узнали что-то новое уже после отказа. Отказ
+    ставился по тогдашнему знанию, и держать его дальше — значит молча
+    хоронить находку: источник не менялся, поэтому сам по себе вопрос
+    больше не всплывёт никогда.
+
+    Снимает только память о вопросе. Подписи и правила не трогает.
+    """
+    remembered = copy.deepcopy(program)
+    declined = dict(remembered.get("leftEmpty") or {})
+    for field in fields:
+        declined.pop(field, None)
+    if declined:
+        remembered["leftEmpty"] = declined
+    else:
+        remembered.pop("leftEmpty", None)
+    return remembered
+
+
 def empty_fields(program: dict) -> list[str]:
     """Поля, про которые в записи ничего нет.
 
@@ -302,7 +323,14 @@ def _show(change: dict) -> None:
     print("станет:", _brief(after))
 
 
-def main() -> int:
+def main(argv=None) -> int:
+    # --ask-again снимает отметки «не спрашивать» и задаёт вопросы
+    # заново. Без него находка, сделанная после отказа, не имеет
+    # способа дойти до человека.
+    args = list(argv if argv is not None else sys.argv[1:])
+    ask_again = "--ask-again" in args
+    only = [a for a in args if not a.startswith("-")]
+
     root = Path(__file__).resolve().parent.parent
     proposed_dir = root / "proposed"
     programs_dir = root / "data" / "programs"
@@ -312,6 +340,12 @@ def main() -> int:
     if not candidates:
         print("В proposed/ нет ни одной записи. Сначала tools.fetch и tools.extract.")
         return 1
+
+    if only:
+        candidates = [p for p in candidates if p.stem in only]
+        if not candidates:
+            print("Нет таких записей в proposed/: " + ", ".join(only))
+            return 1
 
     for path in candidates:
         program_id = path.stem
@@ -338,6 +372,8 @@ def main() -> int:
 
         target = programs_dir / f"{program_id}.json"
         current = json.loads(target.read_text(encoding="utf-8")) if target.exists() else None
+        if ask_again and current is not None:
+            current = forget_declined(current, FIELDS)
 
         # Отказы привязываются к отпечатку всего источника: человек
         # отвечает, глядя на объединённый текст всех страниц, значит и

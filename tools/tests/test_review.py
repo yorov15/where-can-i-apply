@@ -3,6 +3,7 @@ import unittest
 from tools.review import (
     _brief,
     ask,
+    forget_declined,
     show_new,
     approve,
     empty_fields,
@@ -485,6 +486,37 @@ class TestShowNew(unittest.TestCase):
 
     def test_deadline_is_shown(self):
         self.assertIn("2027-01-14", self.lines())
+
+
+class TestForgetDeclined(unittest.TestCase):
+    """Отказ можно снять, когда про поле узнали новое."""
+
+    def test_named_field_is_asked_again(self):
+        # Источник не менялся, значит сам по себе вопрос не всплывёт
+        # никогда — и находка, сделанная после отказа, умрёт молча.
+        program = {"leftEmpty": {"schoolYears": "sha256:1", "gpa": "sha256:1"}}
+        got = forget_declined(program, ["schoolYears"])
+        self.assertEqual(got["leftEmpty"], {"gpa": "sha256:1"})
+
+    def test_last_mark_removes_the_field_itself(self):
+        got = forget_declined({"leftEmpty": {"gpa": "sha256:1"}}, ["gpa"])
+        self.assertNotIn("leftEmpty", got)
+
+    def test_signatures_are_not_touched(self):
+        program = {
+            "leftEmpty": {"gpa": "sha256:1"},
+            "eligibility": {"age": {"noLimit": True, "checkedBy": "human"}},
+        }
+        got = forget_declined(program, ["gpa", "age"])
+        self.assertEqual(got["eligibility"]["age"]["noLimit"], True)
+
+    def test_does_not_mutate_input(self):
+        program = {"leftEmpty": {"gpa": "sha256:1"}}
+        forget_declined(program, ["gpa"])
+        self.assertEqual(program["leftEmpty"], {"gpa": "sha256:1"})
+
+    def test_record_without_marks_survives(self):
+        self.assertEqual(forget_declined({"id": "x"}, ["gpa"]), {"id": "x"})
 
 
 if __name__ == "__main__":

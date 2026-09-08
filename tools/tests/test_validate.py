@@ -377,5 +377,59 @@ class TestCoherence(unittest.TestCase):
         self.assertTrue(any("лишнее поле" in p for p in problems))
 
 
+class TestNotMeasured(unittest.TestCase):
+    """Требование есть, но инструмент его не считает."""
+
+    TEXT = "Italian B2 certification issued by the CLIQ is required"
+
+    def program(self, **rule):
+        return {
+            "eligibility": {"language": rule},
+            "deadline": {"opens": None, "closes": None,
+                         "recurring": "annual", "confidence": "expected"},
+        }
+
+    def test_quote_is_still_required(self):
+        # Без цитаты пометка стала бы отговоркой: требованием можно было
+        # бы объявить что угодно, не показав ни строчки источника.
+        problems = validate_program(
+            self.program(notMeasured=True), self.TEXT, check_required=False
+        )
+        self.assertTrue(any("цитаты" in p for p in problems), problems)
+
+    def test_passes_with_a_real_quote(self):
+        problems = validate_program(
+            self.program(notMeasured=True, evidence="issued by the CLIQ"),
+            self.TEXT,
+            check_required=False,
+        )
+        self.assertEqual(problems, [])
+
+    def test_numbers_must_be_written_as_numbers(self):
+        problems = validate_program(
+            self.program(notMeasured=True, evidence="issued by the CLIQ",
+                         anyOf=[{"test": "IELTS", "min": 6}]),
+            self.TEXT,
+            check_required=False,
+        )
+        self.assertTrue(any("число записывается числом" in p for p in problems), problems)
+
+    def test_cannot_claim_absence_and_presence_at_once(self):
+        problems = validate_program(
+            self.program(notMeasured=True, noLimit=True, evidence="issued by the CLIQ"),
+            self.TEXT,
+            check_required=False,
+        )
+        self.assertTrue(any("противоположные" in p for p in problems), problems)
+
+    def test_only_true_is_accepted(self):
+        problems = validate_program(
+            self.program(notMeasured="yes", evidence="issued by the CLIQ"),
+            self.TEXT,
+            check_required=False,
+        )
+        self.assertTrue(any("только значение true" in p for p in problems), problems)
+
+
 if __name__ == "__main__":
     unittest.main()

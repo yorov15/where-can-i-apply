@@ -39,6 +39,18 @@ function delegated(rule) {
   return rule.definedBy === 'institution';
 }
 
+// Пятое состояние: требование есть, названо в источнике, но инструмент
+// его не считает — потому что в анкете нет такого поля и не будет.
+// Итальянский B2 у Полимеха, «все пятёрки» у UBC, документы о доходах.
+//
+// Раньше такое поле оставляли пустым, и карточка говорила «программа не
+// указывает требование к языку». Это прямая ложь: программа указывает,
+// и очень громко. Пустота означает «мы не смотрели», а здесь смотрели и
+// нашли — просто посчитать нечем.
+function notMeasured(rule) {
+  return rule.notMeasured === true;
+}
+
 // Дата отсчёта, привязанная к циклу приёма, а не записанная числом.
 // «18 лет на 31 августа 2026» в следующем цикле означает 31 августа 2027;
 // записанное числом, правило начнёт молча ошибаться на пограничных людях.
@@ -57,6 +69,7 @@ function countryRule(value, rule, labels) {
   if (!rule) return r('unknown', labels.noRule);
   if (noLimit(rule)) return r('pass');
   if (delegated(rule)) return r('unknown', labels.byInstitution);
+  if (notMeasured(rule)) return r('unknown', labels.notMeasured);
   if (!value) return r('unknown', labels.noValue);
   if (Array.isArray(rule.deny) && rule.deny.includes(value)) return r('fail', labels.denied);
   if (rule.allow === '*') return r('pass');
@@ -71,6 +84,7 @@ export function checkCitizenship(profile, rule, ctx) {
     denied: 'Программа не принимает граждан твоей страны',
     notInList: 'Твоего гражданства нет в списке стран программы',
     byInstitution: 'Кого принимают по гражданству, решает принимающий вуз — смотри условия программы',
+    notMeasured: 'Требование к гражданству есть, но инструмент его не считает — читай условия ниже',
   });
 }
 
@@ -81,6 +95,7 @@ export function checkSchoolCountry(profile, rule, ctx) {
     denied: 'Программа не принимает аттестаты твоей страны',
     notInList: 'Твоей страны школы нет в списке программы',
     byInstitution: 'Какие аттестаты принимают, решает принимающий вуз — смотри условия программы',
+    notMeasured: 'Требование к школе есть, но инструмент его не считает — читай условия ниже',
   });
 }
 
@@ -88,6 +103,7 @@ export function checkSchoolYears(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает, сколько лет школы нужно');
   if (noLimit(rule)) return r('pass');
   if (delegated(rule)) return r('unknown', 'Сколько лет школы нужно, решает принимающий вуз — смотри условия программы');
+  if (notMeasured(rule)) return r('unknown', 'Требование к школьному образованию есть, но числом его не выразить — читай условия ниже');
   if (profile.schoolYears == null) return r('unknown', 'Ты не указал, сколько лет учился в школе');
   if (rule.min == null) return r('pass');
   if (profile.schoolYears < rule.min) {
@@ -100,6 +116,7 @@ export function checkGraduationYear(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает, в каком году нужно окончить школу');
   if (noLimit(rule)) return r('pass');
   if (delegated(rule)) return r('unknown', 'Требование к году выпуска устанавливает принимающий вуз — смотри условия программы');
+  if (notMeasured(rule)) return r('unknown', 'Требование к году выпуска есть, но инструмент его не считает — читай условия ниже');
   if (profile.graduationYear == null) return r('unknown', 'Ты не указал год выпуска');
 
   if (rule.min != null && profile.graduationYear < rule.min) {
@@ -131,6 +148,7 @@ export function checkAge(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает ограничение по возрасту');
   if (noLimit(rule)) return r('pass');
   if (delegated(rule)) return r('unknown', 'Ограничение по возрасту устанавливает принимающий вуз — смотри условия программы');
+  if (notMeasured(rule)) return r('unknown', 'Требование к возрасту есть, но инструмент его не считает — читай условия ниже');
   if (!profile.birthDate) return r('unknown', 'Ты не указал дату рождения');
 
   // Источник часто не говорит, на какой момент считается возраст.
@@ -201,6 +219,7 @@ export function checkGpa(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает требование к среднему баллу');
   if (noLimit(rule)) return r('pass');
   if (delegated(rule)) return r('unknown', 'Порог по среднему баллу устанавливает принимающий вуз — смотри условия программы');
+  if (notMeasured(rule)) return r('unknown', 'Требование к успеваемости есть, но оно не число — читай условия ниже');
   if (!profile.gpa || profile.gpa.value == null) return r('unknown', 'Ты не указал средний балл');
   if (rule.min == null) return r('pass');
 
@@ -233,6 +252,7 @@ export function checkLanguage(profile, rule, ctx) {
   if (!rule) return r('unknown', 'Программа не указывает требование к языку');
   if (noLimit(rule)) return r('pass');
   if (delegated(rule)) return r('unknown', 'Язык знать нужно, но уровень устанавливает принимающий вуз — смотри условия программы');
+  if (notMeasured(rule)) return r('unknown', 'Требование к языку есть, но инструмент его не считает — читай условия ниже');
   const need = rule.anyOf ?? [];
   if (need.length === 0) return r('pass');
 

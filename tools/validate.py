@@ -62,6 +62,10 @@ def validate_program(program: dict, snapshot_text: str, check_required: bool = T
             problems.extend(_check_delegated(field, rule))
             continue
 
+        if rule.get("notMeasured") is not None:
+            problems.extend(_check_not_measured(field, rule))
+            continue
+
         problems.extend(_check_rule_shape(field, rule))
 
     problems.extend(_check_deadline(program.get("deadline") or {}))
@@ -95,6 +99,11 @@ def _check_absence(field: str, rule: dict) -> list[str]:
         problems.append(f"{field}: noLimit требует note — что именно смотрели")
     if rule.get("definedBy") is not None:
         problems.append(f"{field}: noLimit и definedBy вместе — это разные утверждения")
+    if rule.get("notMeasured") is not None:
+        problems.append(
+            f"{field}: noLimit и notMeasured вместе — это противоположные утверждения: "
+            "первое говорит «требования нет», второе «требование есть»"
+        )
 
     return problems
 
@@ -120,6 +129,35 @@ def _check_delegated(field: str, rule: dict) -> list[str]:
             f"{field}: definedBy не может стоять вместе со значениями "
             f"({', '.join(present)}) — либо порог известен, либо его задаёт вуз"
         )
+    return problems
+
+
+def _check_not_measured(field: str, rule: dict) -> list[str]:
+    """Требование есть, но инструмент его не считает.
+
+    Цитата обязательна, и это главное: пометка говорит «требование
+    названо в источнике», значит источник должен его называть. Без этой
+    проверки состояние превратилось бы в удобную отговорку — им можно
+    было бы объявить требованием что угодно, не показав ни строчки.
+
+    Значений быть не может: если требование выражается числом, его надо
+    записать числом, а не прятать за пометкой.
+    """
+    problems = []
+
+    if rule.get("notMeasured") is not True:
+        problems.append(
+            f"{field}: notMeasured знает только значение true, "
+            f"а не {rule.get('notMeasured')!r}"
+        )
+    present = sorted(VALUE_KEYS & set(rule))
+    if present:
+        problems.append(
+            f"{field}: notMeasured не может стоять вместе со значениями "
+            f"({', '.join(present)}) — число записывается числом"
+        )
+    if rule.get("noLimit") is not None:
+        problems.append(f"{field}: notMeasured и noLimit вместе — это противоположные утверждения")
     return problems
 
 
