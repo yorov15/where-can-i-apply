@@ -1,0 +1,143 @@
+{
+  "id": "mit",
+  "status": "published",
+  "name": {
+    "ru": "MIT — приём на бакалавриат",
+    "orig": "Massachusetts Institute of Technology"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Помощь закрывает нужду целиком, а не частично. При доходе семьи ниже 100 000 долларов родители не платят ничего. Гражданство на размер помощи не влияет — это редкость, обычно иностранцам дают меньше или не дают вовсе"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "does not impact when or how you apply, or the financial aid you are offered"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-08",
+      "note": "страна школы не ограничена"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-08",
+      "note": "числа лет школы нет"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-08",
+      "note": "года выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-08",
+      "note": "возраста нет, только «обычно 17-19»"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "human",
+      "checkedAt": "2026-09-08",
+      "note": "проходного балла нет, оценивают в контексте"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7
+        }
+      ],
+      "evidence": "IELTS Minimum: 7"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "SAT или ACT обязательны — здесь, в отличие от Абу-Даби и Торонто, без них не подать. Сдать надо до 30 ноября для ранней волны и до 31 декабря для обычной.",
+      "evidence": "We require the SAT or ACT."
+    },
+    {
+      "ru": "По языку два числа: минимум IELTS 7 и рекомендованный 7,5. Минимум — настоящий, вуз пишет, что он поставлен ради уровня. Это самая высокая планка из всех программ в базе.",
+      "evidence": "We do have minimum and recommended scores for our English language tests."
+    },
+    {
+      "ru": "Сам экзамен по языку требуют не от всех: его настоятельно советуют тем, кто пользуется английским меньше пяти лет или не говорит на нём дома и в школе. Для таджикской школы это твой случай.",
+      "evidence": "strongly recommend providing the results of an English proficiency exam"
+    },
+    {
+      "ru": "Два письма от учителей обязательны, и они хотят разных: одно от математика или естественника, другое от гуманитария или языковика. Просить их надо заранее — через систему подачи.",
+      "evidence": "We recommend one letter from a math or science teacher, and one from a humanities, social science, or language teacher."
+    },
+    {
+      "ru": "Ранняя волна закрывается 1 ноября, обычная — 4 января. Подать можно только в одну: дважды за год нельзя.",
+      "evidence": "You're only allowed to apply once per entry year in either the Early Action (EA) or the Regular Action (RA) cycle"
+    },
+    {
+      "ru": "Заявка на деньги подаётся отдельно от заявки на поступление и позже неё: до 30 ноября для ранней волны и до 15 февраля для обычной. Пропустишь — поступление останется, денег не будет.",
+      "evidence": "Financial aid applications are managed separately from admissions applications"
+    },
+    {
+      "ru": "Взнос 75 долларов, но есть освобождение. Просить его не стыдно — это отдельная предусмотренная процедура, а не одолжение.",
+      "evidence": "Application fee of $75 (or fee waiver )"
+    },
+    {
+      "ru": "Проходного балла по SAT и ACT нет: баллы смотрят внутри твоего контекста, а не по общей шкале. Это значит, что балл из таджикской школы сравнивают с таджикскими, а не с американскими.",
+      "evidence": "We do not have cutoff or recommended scores for the ACT or SAT as scores are evaluated within an applicant's context."
+    },
+    {
+      "ru": "Могут позвать на собеседование с выпускником MIT в твоём городе. Если такого выпускника рядом нет, собеседование просто отменяют и заявке это не вредит.",
+      "evidence": "If MIT is unable to offer you an interview with an EC, your interview will be waived"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-04",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — MIT, Кембридж, штат Массачусетс"
+    }
+  },
+  "source": {
+    "url": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
+    "lastVerified": "2026-09-08",
+    "humanChecked": true,
+    "pages": [
+      {
+        "url": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
+        "contentHash": "sha256:b6b901e7a540f69cc11fb96cb30db4278321d8506b88e0815c1cc59a60b0cfae"
+      },
+      {
+        "url": "https://mitadmissions.org/apply/firstyear/international/",
+        "contentHash": "sha256:3619abbc5f62af9abefb349fe46d3e9055e0383cd3f8d267eb4cdc983f95c0c6"
+      },
+      {
+        "url": "https://mitadmissions.org/apply/firstyear/tests-scores/",
+        "contentHash": "sha256:1cff45d92cfd1868702efa7ac5d08224caf114c55a3eb87a85cdce2291c31747"
+      },
+      {
+        "url": "https://mitadmissions.org/afford/",
+        "contentHash": "sha256:70eee4dd41d8e5d46b947c03e75f2baf22752d34621c61fa1e64afd0f2b89b5c"
+      }
+    ]
+  }
+}

@@ -3,10 +3,12 @@
 import { evaluate } from './verdict.js';
 import { deadlineState } from './lib/deadline.js';
 
+// «Подходишь» обещает то, чего инструмент не знает: возьмут или нет,
+// решает отбор. Он отвечает на другой вопрос — пустят ли подавать.
 const VERDICT_TEXT = {
-  yes: 'Подходишь',
-  no: 'Не подходишь',
-  check: 'Надо проверить самому',
+  yes: 'Можешь подавать',
+  no: 'Подать не получится',
+  check: 'Можешь подавать, но проверь сам',
 };
 
 const DEADLINE_TEXT = {
@@ -28,6 +30,13 @@ const FIELD_NAMES = {
   gpa: 'средний балл',
   language: 'язык',
 };
+
+// Отдельной функцией, потому что это единственная фраза на карточке,
+// которую легко написать так, что она будет означать обратное.
+export function notLimitedLine(fields) {
+  const names = fields.map((field) => FIELD_NAMES[field] ?? field);
+  return `Программа не ограничивает: ${names.join(', ')} — проверено по её страницам`;
+}
 
 export function renderResults(node, profile, programs, today) {
   node.textContent = '';
@@ -92,29 +101,18 @@ function card({ program, verdict, deadline }) {
     el.append(list);
   }
 
-  // За этой строкой стоит подпись человека, а не цитата из источника,
-  // поэтому формулировка про страницу, а не про программу: «не сказано»,
-  // а не «нет ограничений».
+  // Главное содержание карточки, а не примечание. Семь полей анкеты
+  // отвечают на вопрос «пустят ли подавать», и у большинства программ
+  // ответ «да» — а настоящая работа описана здесь: экзамены, выдвижение
+  // школой, документы о доходах, отдельные заявки и сроки.
   //
-  // На красной карточке её нет: человеку, который не проходит, важна
-  // причина отказа, а не перечень того, о чём страница молчит.
-  if (verdict.status !== 'no' && verdict.attested?.length) {
-    const names = verdict.attested.map((field) => FIELD_NAMES[field] ?? field);
-    const note = document.createElement('p');
-    note.className = 'attested';
-    note.textContent = `На странице программы не сказано ничего про ${names.join(', ')}`;
-    el.append(note);
-  }
-
-  // То, что инструмент посчитать не умеет, но человеку знать обязан:
-  // обходные пути, вторая заявка в ведомство своей страны, запреты,
-  // которых нет в анкете. Показывается на любой карточке, включая
-  // красную: именно там чаще всего и лежит обходной путь.
+  // Показывается на любой карточке, включая красную: именно там чаще
+  // всего и лежит обходной путь.
   const conditions = (program.textConditions ?? []).filter((c) => c.ru);
   if (conditions.length) {
     const title = document.createElement('p');
     title.className = 'conditions-title';
-    title.textContent = 'Проверь сам — это инструмент не считает:';
+    title.textContent = 'Что потребуется помимо анкеты:';
     el.append(title);
 
     const list = document.createElement('ul');
@@ -125,6 +123,21 @@ function card({ program, verdict, deadline }) {
       list.append(li);
     }
     el.append(list);
+  }
+
+  // Раньше здесь стояло «на странице не сказано ничего про...». Формально
+  // верно, читается как «данных нет» — и на большинстве карточек это была
+  // единственная строка между вердиктом и списком условий. Но за ней
+  // стоит проверка человека, и означает она обратное: перечисленное не
+  // мешает. Так и написано теперь.
+  //
+  // На красной карточке её нет: человеку, который не проходит, важна
+  // причина отказа, а не перечень того, что ему не мешает.
+  if (verdict.status !== 'no' && verdict.attested?.length) {
+    const note = document.createElement('p');
+    note.className = 'attested';
+    note.textContent = notLimitedLine(verdict.attested);
+    el.append(note);
   }
 
   return el;
