@@ -1,7 +1,13 @@
 import json
 import unittest
 
-from tools.build import build_index, index_entry, stale_deadlines
+from tools.build import (
+    MAX_INDEX_WIRE_BYTES,
+    build_index,
+    index_entry,
+    stale_deadlines,
+    wire_size,
+)
 
 PROGRAM = {
     "id": "primer",
@@ -165,6 +171,35 @@ class TestStaleDeadlines(unittest.TestCase):
 
     def test_missing_date_is_not_reported(self):
         self.assertEqual(stale_deadlines([self.program(None, "expected")], "2026-09-08"), [])
+
+
+class TestWireSize(unittest.TestCase):
+    """Предел стоит на том, за что человек платит."""
+
+    def test_compressed_is_smaller_than_the_file(self):
+        # Ради этого предел и переносили: считая по файлу, сборка
+        # отказалась бы работать до цели в 25-30 программ — ради
+        # экономии, которой нет.
+        text = json.dumps([PROGRAM] * 20, ensure_ascii=False, indent=2)
+        self.assertLess(wire_size(text), len(text.encode("utf-8")))
+
+    def test_repetition_compresses_hard(self):
+        one = wire_size(json.dumps(PROGRAM, ensure_ascii=False))
+        ten = wire_size(json.dumps([PROGRAM] * 10, ensure_ascii=False))
+        self.assertLess(ten, one * 10)
+
+    def test_empty_index_is_tiny(self):
+        self.assertLess(wire_size('{"programs": []}'), 100)
+
+    def test_limit_leaves_room_for_the_target(self):
+        # 25-30 программ — цель первой версии. Предел обязан их вмещать
+        # с запасом, иначе он снова окажется не там.
+        self.assertGreater(MAX_INDEX_WIRE_BYTES, 30 * 1024)
+
+    def test_russian_text_counts_in_bytes_not_letters(self):
+        text = "условие " * 500
+        self.assertGreater(len(text.encode("utf-8")), len(text))
+        self.assertLess(wire_size(text), len(text.encode("utf-8")))
 
 
 if __name__ == "__main__":
