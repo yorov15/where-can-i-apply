@@ -1,0 +1,37 @@
+# Тесты на каждую отправку в main.
+#
+# Локально их можно забыть прогнать, и забывают ровно тогда, когда
+# правка кажется мелкой. Робот не забывает.
+name: Тесты
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Поставить зависимости сборщика
+        run: pip install -r requirements.txt
+
+      - name: Тесты сборщика
+        run: python -m unittest discover -s tools/tests -t .
+
+      - name: Тесты движка
+        run: node --test
+
+      - name: Индекс собирается и влезает в предел
+        run: python -m tools.build

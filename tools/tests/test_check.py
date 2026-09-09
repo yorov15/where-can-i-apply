@@ -1,6 +1,6 @@
 import unittest
 
-from tools.check import compare_pages, days_until, frequency_for, is_due
+from tools.check import compare_pages, days_until, exit_code, frequency_for, is_due
 from tools.fetch import page_to_text
 from tools.snapshot import sha256_of_text, strip_volatile
 
@@ -143,3 +143,24 @@ class TestComparePages(unittest.TestCase):
             pages, volatile, serving({"https://a.gov/1": "текст Диданд: 48745"})
         )
         self.assertEqual((changed, gone), ([], []))
+
+
+class TestExitCode(unittest.TestCase):
+    """Чем робот по расписанию должен считать тревогой."""
+
+    def test_quiet_run_is_success(self):
+        self.assertEqual(exit_code([], [], []), 0)
+
+    def test_changed_page_is_an_alarm(self):
+        self.assertEqual(exit_code(["kaist"], [], []), 1)
+
+    def test_missing_page_is_an_alarm(self):
+        self.assertEqual(exit_code([], ["stipendium-hungaricum"], []), 1)
+
+    def test_manual_source_alone_is_not_an_alarm(self):
+        # Иначе робот краснеет каждый день из-за российской квоты, и на
+        # его тревоги перестают смотреть вместе с настоящими.
+        self.assertEqual(exit_code([], [], ["russia-quota"]), 0)
+
+    def test_manual_does_not_hide_a_real_alarm(self):
+        self.assertEqual(exit_code(["mit"], [], ["russia-quota"]), 1)

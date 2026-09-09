@@ -63,6 +63,20 @@ def compare_pages(pages, volatile, fetcher):
     return changed, gone
 
 
+def exit_code(stale, missing, manual) -> int:
+    """Чем робот по расписанию должен считать тревогой.
+
+    Ручной источник — постоянное состояние, а не событие: портал
+    российской квоты рисуется скриптом и программе недоступен всегда.
+    Роняя на нём прогон, робот краснел бы каждый день, и на его тревоги
+    перестали бы смотреть — вместе с настоящими.
+
+    Настоящие две: страница изменилась (требования могли поехать) и
+    страница исчезла (адрес умер, а он у PDF умирает каждый цикл).
+    """
+    return 1 if stale or missing else 0
+
+
 def main(argv=None) -> int:
     # Без принудительного запуска слежение нельзя проверить иначе как
     # ожиданием: сразу после review все записи свежие, и check честно
@@ -156,7 +170,7 @@ def main(argv=None) -> int:
         print("\nУстарели: " + ", ".join(stale))
         print("Дальше: python -m tools.fetch, потом extract, потом review.")
 
-    if stale or missing or manual:
+    if exit_code(stale, missing, manual):
         return 1
 
     if checked == 0:
