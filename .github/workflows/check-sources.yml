@@ -25,9 +25,9 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -50,4 +50,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/programs
           git commit -m "Слежение: источники проверены $(date -u +%Y-%m-%d)"
-          git push
+          # Не роняем прогон, если записать не дали: цвет прогона должен
+          # означать «требования изменились», и ничего больше. Иначе он
+          # краснеет каждый день и перестаёт что-либо значить.
+          git push || echo "ЗАПИСАТЬ ДАТЫ НЕ ВЫШЛО. Settings -> Actions -> General -> Workflow permissions -> Read and write."
+
