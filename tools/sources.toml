@@ -352,3 +352,27 @@ volatile = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-07"
+
+# Назарбаев Университет, Казахстан — бакалавриат.
+#
+# Ближайший к аудитории серьёзный вуз: обучение на английском, приём
+# иностранцев напрямую. Записан по региональному приоритету — им
+# воспользуется больше школьников Центральной Азии, чем всеми
+# американскими программами вместе.
+#
+# Домен nu.edu.kz утверждён человеком 10 сентября 2026. Две страницы:
+#   /regular-admissions            — требования, сроки, плата, жизнь
+#   /financial-aid-end-scholarships — конкурс на грант и его пороги
+#
+# volatile: на каждой странице висит лента новостей с датами. Она
+# меняется сама по себе, и без чистки слежение сообщало бы об изменении
+# требований после каждой новости университета.
+[nazarbayev]
+name = "Nazarbayev University — Foundation & Undergraduate"
+urls = [
+  "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
+  "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/financial-aid-end-scholarships/",
+]
+volatile = ['Announcements see more[\s\S]*?(?=Useful information)']
+approvedBy = "human"
+approvedAt = "2026-09-10"
