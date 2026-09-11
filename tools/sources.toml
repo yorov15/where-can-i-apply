@@ -315,6 +315,16 @@ urls = [
   "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/students-with-a-foreign-degree",
   "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/requirements-to-participate-in-the-admission-test",
   "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/engineering",
+  # Какой английский нужен для программ на английском: страница
+  # инженерии только отсылает сюда. Без неё карточка решила, что
+  # английского на бакалавриате нет вовсе.
+  "https://www.polimi.it/en/students/language-requirements",
+  # Деньги. Раньше покрытие описывалось без источника — ни одна из трёх
+  # страниц выше про плату и стипендии не говорит.
+  "https://www.polimi.it/en/prospective-students/how-much-does-it-cost/scholarships",
+  "https://www.polimi.it/en/prospective-students/how-much-does-it-cost/laurea-laurea-magistrale-and-single-cycle-programmes",
+  # Конкурс Platinum/Gold 2026-27 сюда не входит: он только для
+  # магистратуры, бакалавриату от него ничего не положено.
 ]
 approvedBy = "human"
 approvedAt = "2026-09-07"

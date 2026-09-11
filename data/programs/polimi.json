@@ -12,7 +12,7 @@
     "living": null,
     "travel": null,
     "note": {
-      "ru": "Деньги здесь не от вуза, а от области Ломбардия: региональная поддержка по достатку семьи назначается отдельной заявкой и на этих страницах не описана. Проверять надо у регионального фонда, а не у университета"
+      "ru": "Полного покрытия бакалаврам вуз не обещает. Плата зависит от дохода семьи: от 157 до 3 943 евро в год. Бакалаврам положены стипендии DSU по доходу и успехам, по ежегодному конкурсу, но размер на этих страницах не назван. Отдельные стипендии для иностранцев есть только на двух программах, в Кремоне и Пьяченце. Про дорогу страницы не говорят"
     }
   },
   "eligibility": {
@@ -63,8 +63,12 @@
       "evidence": "Politecnico di Milano accepts the successful passing of a foundation course of at least one academic year"
     },
     {
-      "ru": "Бакалавриат по инженерии идёт на итальянском. Нужен сертификат уровня B2 от CLIQ — либо аттестат, полученный на итальянском. Английский на этом уровне не помогает: он начинается в магистратуре.",
+      "ru": "Язык зависит от того, на каком языке идёт программа. На итальянском нужен итальянский уровня B2 — сертификат CLIQ или аттестат, полученный на итальянском. Английский при поступлении на такую программу не требуют, но без него диплом не закончить.",
       "evidence": "have an appropriate B2 level certification of proficiency in the Italian language issued by the CLIQ"
+    },
+    {
+      "ru": "Бакалавриат на английском тоже есть. На такие программы английский нужен до зачисления — сертификат из списка университета или аттестат на английском, а итальянский B2 надо получить до выпуска. Какой балл нужен, страница прячет в раскрывающийся блок: смотри раздел языковых требований на сайте.",
+      "evidence": "In order to be admitted to Bachelor of Science programmes held in English, you must demonstrate: proficiency in English prior to enrolment."
     },
     {
       "ru": "Вступительный тест обязателен, но вместо итальянского TOL можно сдать SAT — его принимают напрямую и проводят на английском. Есть ещё CEnT-S на английском.",
@@ -85,6 +89,22 @@
     {
       "ru": "Даты сессий вступительного теста на этих страницах не выводятся — они лежат за раскрывающимися блоками, которые инструмент не читает. Сроки смотри на сайте.",
       "evidence": "When to register for the tests"
+    },
+    {
+      "ru": "Плата за бакалавриат зависит от дохода семьи. При низком доходе (показатель ISEE до 22 000 евро) — 157 евро в год, дальше она растёт до максимума 3 943 евро. Правило «иностранцы платят максимум» касается только магистратуры.",
+      "evidence": "an ISEE of up to € 22,000, the amount is € 157.04"
+    },
+    {
+      "ru": "Бакалаврам положены стипендии DSU — по доходу и по успехам, по конкурсу, который объявляют каждый год. Размер на этих страницах не назван.",
+      "evidence": "Students admitted to a Bachelor of Science programme can apply for Diritto allo Studio (DSU) Scholarships: financial and merit-based scholarships assigned after a Call for Grant"
+    },
+    {
+      "ru": "Отдельные стипендии для иностранцев на бакалавриате есть только на двух программах: технологическая инженерия в Кремоне и промышленная инженерия в Пьяченце.",
+      "evidence": "BSc in Process Engineering at Cremona Campus BSc in Industrial Engineering at Piacenza Campus"
+    },
+    {
+      "ru": "Крупные стипендии для иностранцев — с освобождением от платы и выплатой до 10 000 евро в год — дают только поступившим в магистратуру. Бакалавриату они не положены.",
+      "evidence": "merit based scholarships to the most talented international candidates admitted to a Master of Science programme"
     }
   ],
   "deadline": {
@@ -103,21 +123,34 @@
   },
   "source": {
     "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/students-with-a-foreign-degree",
-    "lastVerified": "2026-09-08",
-    "humanChecked": true,
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
     "pages": [
       {
         "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/students-with-a-foreign-degree",
-        "contentHash": "sha256:4c7c6824de0d62a7388172df2855a21e01579c0f50e08bb25bec52a68e0da819"
+        "contentHash": "sha256:56a4d7440f2447d3f12f57d6556efbc3ce4046b8f321c4a6e9aa79df9b68d68f"
       },
       {
         "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/requirements-to-participate-in-the-admission-test",
-        "contentHash": "sha256:20bd01c734d3fa39cf2e84432bf2d4bf89190751b93babfec884115f79ab9b2f"
+        "contentHash": "sha256:7c939b03b5d7f22d0d53ca6a533a63bf61024e5765c14378ab4bdbcd420f1d2e"
       },
       {
         "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/engineering",
-        "contentHash": "sha256:3054763103f83f1d22d943e03b77216e0336d2a7dac49569dcf0fe54ec3e9973"
+        "contentHash": "sha256:9056d765800b7f4ab455587a3f1774518efe3bc5764f68e26bf83b3da518651a"
+      },
+      {
+        "url": "https://www.polimi.it/en/students/language-requirements",
+        "contentHash": "sha256:0985e7de4227b0734ae327d09e4c1c8d8076d081344c8f41df44f4c17ef0ae38"
+      },
+      {
+        "url": "https://www.polimi.it/en/prospective-students/how-much-does-it-cost/scholarships",
+        "contentHash": "sha256:aa89700d0805a940917a05a4ec580dc377e12a292ef1051f670f8e94338283c2"
+      },
+      {
+        "url": "https://www.polimi.it/en/prospective-students/how-much-does-it-cost/laurea-laurea-magistrale-and-single-cycle-programmes",
+        "contentHash": "sha256:d2b737cfc474b05543953a0755100c3c26ab0be9fac17640354632ebec1418b0"
       }
-    ]
+    ],
+    "approvedBy": "assistant"
   }
 }

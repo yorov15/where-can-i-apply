@@ -87,7 +87,7 @@
       "evidence": "Your exam scores must be a minimum of 56 out of 100 points"
     },
     {
-      "ru": "Даты в записи — от цикла 2026/2027. Призыв на следующий цикл на момент проверки не опубликован, но окно подачи из года в год приходится на середину января.",
+      "ru": "Даты в записи — от цикла 2026/2027: тогда срок был 15 января. Призыв на следующий цикл на момент проверки не опубликован, поэтому точной даты пока нет.",
       "evidence": "15th January 2026, 2 pm (CET) APPLICATION DEADLINE"
     }
   ],
@@ -107,8 +107,8 @@
   },
   "source": {
     "url": "https://stipendiumhungaricum.hu/apply/",
-    "lastVerified": "2026-09-08",
-    "humanChecked": true,
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
     "pages": [
       {
         "url": "https://stipendiumhungaricum.hu/apply/",
@@ -122,6 +122,7 @@
         "url": "https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf",
         "contentHash": "sha256:d076b9643c5237e086f56456ccb872a3bf01481281bfc9e000973bc66a4f56ea"
       }
-    ]
+    ],
+    "approvedBy": "assistant"
   }
 }
