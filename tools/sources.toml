@@ -562,3 +562,22 @@ volatile = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-11"
+
+# Bilkent — частный университет в Анкаре. Домен bilkent.edu.tr одобрен
+# человеком 11 сентября 2026. Иностранцам он даёт только скидку на
+# обучение (20–100%) и изредка общежитие; ежемесячная стипендия
+# «Comprehensive» на странице /bilkent/scholarships/ — для граждан
+# Турции, поступивших через ÖSYM, поэтому эта страница в источники не
+# входит. Порог по таджикскому аттестату — в PDF с минимальными баллами
+# по странам (строка «Tacikistan»).
+[bilkent]
+name = "Bilkent University — Scholarships for International Students"
+urls = [
+  "https://w3.bilkent.edu.tr/international/scholarships-for-international-students/",
+  "https://w3.bilkent.edu.tr/international/how-to-apply/",
+  "https://w3.bilkent.edu.tr/international/english-language-proficiency/",
+  "https://w3.bilkent.edu.tr/bilkent/international-and-other-students-tuition-fees/",
+  "https://w3.bilkent.edu.tr/form/Ulusal_ve_Uluslararasi_Sinavlarda_Aranan_Asgari_Puanlar.pdf",
+]
+approvedBy = "human"
+approvedAt = "2026-09-11"

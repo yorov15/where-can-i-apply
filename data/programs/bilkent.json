@@ -1,0 +1,172 @@
+{
+  "id": "bilkent",
+  "status": "published",
+  "name": {
+    "ru": "Bilkent (Анкара) — скидка на обучение для иностранцев",
+    "orig": "Bilkent University — Scholarships for International Students"
+  },
+  "hostCountry": "TR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Иностранцам дают только скидку на обучение — 20, 40, 60, 80 или 100% от 18 400 долларов в год (цена для поступивших в 2026). Какую ступень дадут, заранее не известно. Бесплатное общежитие получают лишь немногие лучшие из тех, у кого скидка 100%. Денег на жизнь и дорогу страница для иностранцев не называет"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "TR"
+      ],
+      "evidence": "Applicants and students, who previously had or already have Turkish citizenship are not eligible for international student scholarships."
+    },
+    "schoolCountry": {
+      "notMeasured": true,
+      "evidence": "Bilkent University accepts international qualifications listed below and a wide range of national qualifications listed here for study in our undergraduate programs."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "числа лет школы страницы не называют: нужен аттестат из списка стран (таджикский в нём есть) или международный экзамен"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "возраст на страницах Bilkent для иностранцев не упоминается"
+    },
+    "gpa": {
+      "min": 3.5,
+      "scale": "TJ_5",
+      "advisory": true,
+      "evidence": "Tacikistan Attestat En az %70 veya 5 üzerinden en az 3,5 veya 10 üzerinden en az 7"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5
+        }
+      ],
+      "advisory": true,
+      "evidence": "IELTS - 6.5 overall, with a minimum of 5.5 on each section"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Скидку рассматривают только у тех, кто при подаче попросил финансовую помощь. Смотрят оценки школы, результаты национальных и международных экзаменов, выбранную программу и другие академические показатели.",
+      "evidence": "Prospective students who apply for financial assistance are evaluated according to their high school grades, their national and/or international exam scores, their program choices, and other relevant academic criteria."
+    },
+    {
+      "ru": "Скидка — одна из пяти ступеней: 20, 40, 60, 80 или 100% платы за обучение. Какую дадут, решает вуз; порога, гарантирующего полную, страница не называет.",
+      "evidence": "Tuition waiver scholarships are awarded at five levels, ranging from 20% to 100% in increments of 20%."
+    },
+    {
+      "ru": "Даже скидка 100% покрывает только обучение. Бесплатное общежитие могут дать лишь ограниченному числу лучших из тех, у кого полная скидка.",
+      "evidence": "Accommodation scholarships may be available for a limited number of top students who are on full tuition waiver scholarship."
+    },
+    {
+      "ru": "Для поступивших в 2026 году обучение стоит 18 400 долларов в год (с НДС 10%). Платят двумя равными частями — перед осенним и весенним семестром. Цена растёт с каждым набором: поступившие в 2025-м платят 17 600.",
+      "evidence": "For students admitted in 2026 is 18,400 USD"
+    },
+    {
+      "ru": "С таджикским аттестатом подать можно, если средний балл не ниже 3,5 из 5 (или 70%, или 7 из 10). Это порог для подачи, а не для скидки.",
+      "evidence": "Tacikistan Attestat En az %70 veya 5 üzerinden en az 3,5 veya 10 üzerinden en az 7"
+    },
+    {
+      "ru": "Вместо аттестата можно подать международный результат: SAT от 1000 из 1600, IB от 28 из 45, три A-level не ниже C или медаль международной олимпиады. Поэтому балл аттестата инструмент считает ориентиром, а не запретом.",
+      "evidence": "A minimum score of 1000 out of 1600 in \"Math\" and \"Critical Reading\" sections."
+    },
+    {
+      "ru": "Минимальные баллы только позволяют подать: поступление они не гарантируют.",
+      "evidence": "Meeting these minimum qualifications does not guarantee admission to a program."
+    },
+    {
+      "ru": "Учат на английском. Нужен IELTS от 6.5 (каждая часть не ниже 5.5) или TOEFL iBT от 87. Сертификат должен быть действителен на момент регистрации — два года со сдачи.",
+      "evidence": "TOEFL iBT - 87 in total"
+    },
+    {
+      "ru": "Без сертификата не отказывают: по приезде можно сдать собственный экзамен Bilkent (PAE), а не сдавшим — учиться на подготовительном английском. Поэтому IELTS инструмент считает ориентиром.",
+      "evidence": "Students who cannot meet proficiency requirements are required to attend the English Language Preparatory Program."
+    },
+    {
+      "ru": "Скидка действует до 4 семестров подготовительного английского и до 10 семестров бакалавриата.",
+      "evidence": "up to 4 semesters in the English Preparatory Program and up to 10 semesters in 4-year undergraduate programs"
+    },
+    {
+      "ru": "Чтобы сохранить скидку, каждый семестр бери не меньше минимальной нагрузки своей программы и держи годовой GPA от 2.00 из 4. Иначе скидку снизят на одну-две ступени — и не вернут, даже если потом начнёшь учиться лучше.",
+      "evidence": "Scholarships of students who fail to meet these conditions will be decreased one or two levels and cannot be restored even if the students improve their performance."
+    },
+    {
+      "ru": "Для бесплатного общежития нужен годовой GPA от 2.50; ниже — общежитие отнимают.",
+      "evidence": "Students on accommodation scholarship are required to maintain a minimum Annual-GPA of 2.50/4.00."
+    },
+    {
+      "ru": "Ходить на все занятия обязательно, даже если преподаватель не отмечает: за пропуски скидку могут приостановить в любой момент.",
+      "evidence": "In case of poor attendance, scholarships may be temporarily suspended any time."
+    },
+    {
+      "ru": "Частичную скидку можно поднять по итогам года: нужен годовой GPA от 3.30 и место в лучших 5% студентов программы.",
+      "evidence": "attained an annual grade point average of 3.30 or above, as well as being in the top 5% of all the non-scholarship students in their program"
+    },
+    {
+      "ru": "В прошлом цикле подача шла со 2 февраля по 12 июля 2026. Даты на 2027 год вуз ещё не вывесил, поэтому срок в карточке — по прошлому году и помечен неподтверждённым.",
+      "evidence": "Undergraduate applications for the 2026-2027 academic year fall semester will be open between 2 February - 12 July 2026"
+    }
+  ],
+  "deadline": {
+    "opens": "2027-02-02",
+    "closes": "2027-07-12",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://w3.bilkent.edu.tr/international/how-to-apply/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Bilkent University в Анкаре"
+    }
+  },
+  "source": {
+    "url": "https://w3.bilkent.edu.tr/international/scholarships-for-international-students/",
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://w3.bilkent.edu.tr/international/scholarships-for-international-students/",
+        "contentHash": "sha256:93ebce7e7e60a06800c41aa65024af59deac94de6096444989766b6819e597e5"
+      },
+      {
+        "url": "https://w3.bilkent.edu.tr/international/how-to-apply/",
+        "contentHash": "sha256:00dce03d6bd8da77686f7bdf4f9a8d083a6418fd1b55a8f8b65ce110f78c9ca7"
+      },
+      {
+        "url": "https://w3.bilkent.edu.tr/international/english-language-proficiency/",
+        "contentHash": "sha256:2e01c1c06902730a2a0a416ae3cbe27c52b993ca28ff0704319b1338d8577925"
+      },
+      {
+        "url": "https://w3.bilkent.edu.tr/bilkent/international-and-other-students-tuition-fees/",
+        "contentHash": "sha256:e5262c0b990d2945e46cafcb97beb940c86a8334f99f51f9dcc622c6341bcc5a"
+      },
+      {
+        "url": "https://w3.bilkent.edu.tr/form/Ulusal_ve_Uluslararasi_Sinavlarda_Aranan_Asgari_Puanlar.pdf",
+        "contentHash": "sha256:1b4e3a96e9deb2dd4db634ded72f4b51b34e79a70242a3151a78d3c090be3982"
+      }
+    ]
+  }
+}
