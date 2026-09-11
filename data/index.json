@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09",
+  "generatedAt": "2026-09-11",
   "programs": [
     {
       "id": "gks-korea",
@@ -24,7 +24,8 @@
         "schoolCountry": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "на утверждённой странице страна окончания школы не упоминается"
         },
         "schoolYears": {
           "definedBy": "institution"
@@ -32,7 +33,8 @@
         "graduationYear": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "страница требует только окончить школу, года выпуска не называет"
         },
         "age": {
           "min": null,
@@ -45,7 +47,8 @@
         "language": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "на утверждённой странице языковой сертификат не требуется"
         }
       },
       "deadline": {
@@ -89,27 +92,32 @@
         "citizenship": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-06"
+          "checkedAt": "2026-09-06",
+          "note": "гражданство нигде не упоминается, важен только статус визы"
         },
         "schoolCountry": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-06"
+          "checkedAt": "2026-09-06",
+          "note": "таджикский аттестат назван в таблице по странам"
         },
         "schoolYears": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-06"
+          "checkedAt": "2026-09-06",
+          "note": "числа лет нет, аттестат принят по названию"
         },
         "graduationYear": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-06"
+          "checkedAt": "2026-09-06",
+          "note": "года выпуска нет, нужно окончить школу к поступлению"
         },
         "age": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-06"
+          "checkedAt": "2026-09-06",
+          "note": "возраст не упоминается"
         },
         "gpa": {
           "min": 4.5,
@@ -192,17 +200,20 @@
         "age": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-03"
+          "checkedAt": "2026-09-03",
+          "note": "по поиску в снимке: возраст только про паспорт с 16 лет и льготы сиротам до 22, ограничения допуска нет"
         },
         "gpa": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-03"
+          "checkedAt": "2026-09-03",
+          "note": "по поиску в снимке: средний балл не упоминается ни разу на обеих страницах"
         },
         "language": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-03"
+          "checkedAt": "2026-09-03",
+          "note": "по поиску в снимке: сертификат не требуется, язык выбирается только для сдачи экзамена"
         }
       },
       "deadline": {
@@ -246,7 +257,8 @@
         "schoolCountry": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-05"
+          "checkedAt": "2026-09-05",
+          "note": "страна школы не ограничена"
         },
         "schoolYears": {
           "definedBy": "institution"
@@ -257,12 +269,14 @@
         "age": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-05"
+          "checkedAt": "2026-09-05",
+          "note": "возраст нигде не упоминается"
         },
         "gpa": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-05"
+          "checkedAt": "2026-09-05",
+          "note": "минимального балла не"
         },
         "language": {
           "anyOf": [
@@ -336,12 +350,14 @@
         "citizenship": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "на утверждённой странице требования к гражданству не названо, отбор идёт через посольство своей страны"
         },
         "schoolCountry": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "на утверждённой странице страна окончания школы не ограничивается"
         },
         "schoolYears": {
           "min": 12
@@ -349,7 +365,8 @@
         "graduationYear": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "года выпуска страница не называет, засчитываются и те, кто оканчивает школу сейчас"
         },
         "age": {
           "min": null,
@@ -358,12 +375,14 @@
         "gpa": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "на утверждённой странице порога по среднему баллу нет"
         },
         "language": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "знание японского заранее не требуется, первый год обучения — языковая подготовка"
         }
       },
       "deadline": {
@@ -407,27 +426,32 @@
         "schoolCountry": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-08"
+          "checkedAt": "2026-09-08",
+          "note": "страна школы не ограничена"
         },
         "schoolYears": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-08"
+          "checkedAt": "2026-09-08",
+          "note": "числа лет школы нет"
         },
         "graduationYear": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-08"
+          "checkedAt": "2026-09-08",
+          "note": "года выпуска нет"
         },
         "age": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-08"
+          "checkedAt": "2026-09-08",
+          "note": "возраста нет, только «обычно 17-19»"
         },
         "gpa": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-08"
+          "checkedAt": "2026-09-08",
+          "note": "проходного балла нет, оценивают в контексте"
         },
         "language": {
           "anyOf": [
@@ -494,17 +518,20 @@
         "schoolCountry": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-07"
+          "checkedAt": "2026-09-07",
+          "note": "страна школы не ограничена"
         },
         "schoolYears": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-07"
+          "checkedAt": "2026-09-07",
+          "note": "числа лет школы нет"
         },
         "graduationYear": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-07"
+          "checkedAt": "2026-09-07",
+          "note": "года выпуска нет, важен возраст 17 к августу"
         },
         "age": {
           "min": 17,
@@ -516,7 +543,8 @@
         "gpa": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-07"
+          "checkedAt": "2026-09-07",
+          "note": "минимального балла нет, отбор целостный"
         },
         "language": {
           "anyOf": [
@@ -587,7 +615,8 @@
         "schoolCountry": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-07"
+          "checkedAt": "2026-09-07",
+          "note": "страна школы не ограничена"
         },
         "schoolYears": {
           "min": 12
@@ -595,17 +624,20 @@
         "graduationYear": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-07"
+          "checkedAt": "2026-09-07",
+          "note": "года выпуска нет"
         },
         "age": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-07"
+          "checkedAt": "2026-09-07",
+          "note": "возраст не упоминается"
         },
         "gpa": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-07"
+          "checkedAt": "2026-09-07",
+          "note": "минимального балла нет, есть вступительный тест"
         },
         "language": {
           "notMeasured": true
@@ -664,32 +696,38 @@
         "schoolCountry": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "портал не ограничивает страну окончания школы, нужен только перевод и признание документа"
         },
         "schoolYears": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "портал не называет требуемого числа лет школы"
         },
         "graduationYear": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "портал не называет года выпуска"
         },
         "age": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "возраст на портале не упоминается ни разу"
         },
         "gpa": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "порога по среднему баллу на портале нет, отбор идёт по результатам испытаний в своей стране"
         },
         "language": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "языкового сертификата портал не требует, при необходимости даётся год изучения русского"
         }
       },
       "deadline": {
@@ -742,7 +780,8 @@
         "schoolCountry": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "на утверждённых источниках страна окончания школы не ограничивается"
         },
         "schoolYears": {
           "definedBy": "institution"
@@ -750,7 +789,8 @@
         "graduationYear": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "источники не называют года выпуска, требуется только оконченная школа"
         },
         "age": {
           "min": 18,
@@ -762,7 +802,8 @@
         "gpa": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-04"
+          "checkedAt": "2026-09-04",
+          "note": "источники не называют порога по среднему баллу"
         },
         "language": {
           "definedBy": "institution"
@@ -821,12 +862,14 @@
         "schoolCountry": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-03"
+          "checkedAt": "2026-09-03",
+          "note": "на утверждённых страницах страна окончания школы не упоминается"
         },
         "schoolYears": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-08"
+          "checkedAt": "2026-09-08",
+          "note": "требования к числу лет школы нет, нужно окончить школу до августа"
         },
         "graduationYear": {
           "min": null,
@@ -843,7 +886,8 @@
         "language": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-03"
+          "checkedAt": "2026-09-03",
+          "note": "на утверждённых страницах языковой сертификат не требуется"
         }
       },
       "deadline": {
@@ -887,12 +931,14 @@
         "schoolCountry": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-07"
+          "checkedAt": "2026-09-07",
+          "note": "страны школы не ограничивают"
         },
         "schoolYears": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-07"
+          "checkedAt": "2026-09-07",
+          "note": "числа лет школы нет"
         },
         "graduationYear": {
           "min": 2026
@@ -900,7 +946,8 @@
         "age": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-07"
+          "checkedAt": "2026-09-07",
+          "note": "возраст не упоминается"
         },
         "gpa": {
           "notMeasured": true
@@ -976,12 +1023,14 @@
         "schoolCountry": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-05"
+          "checkedAt": "2026-09-05",
+          "note": "страна школы не ограничена, аттестат Таджикистана в списке"
         },
         "schoolYears": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-05"
+          "checkedAt": "2026-09-05",
+          "note": "числа лет школы нет, аттестат принят по названию"
         },
         "graduationYear": {
           "min": 2026,
@@ -990,12 +1039,14 @@
         "age": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-05"
+          "checkedAt": "2026-09-05",
+          "note": "возраст не упоминается"
         },
         "gpa": {
           "noLimit": true,
           "checkedBy": "human",
-          "checkedAt": "2026-09-05"
+          "checkedAt": "2026-09-05",
+          "note": "общего минимума нет, требования задаёт факультет"
         },
         "language": {
           "anyOf": [

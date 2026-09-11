@@ -31,11 +31,30 @@ const FIELD_NAMES = {
   language: 'язык',
 };
 
-// Отдельной функцией, потому что это единственная фраза на карточке,
-// которую легко написать так, что она будет означать обратное.
-export function notLimitedLine(fields) {
-  const names = fields.map((field) => FIELD_NAMES[field] ?? field);
-  return `Программа не ограничивает: ${names.join(', ')} — проверено по её страницам`;
+// В именительном падеже — для строк вида «Страна школы: ...».
+const FIELD_TITLES = {
+  citizenship: 'Гражданство',
+  schoolCountry: 'Страна школы',
+  schoolYears: 'Годы школы',
+  graduationYear: 'Год выпуска',
+  age: 'Возраст',
+  gpa: 'Средний балл',
+  language: 'Язык',
+};
+
+// По строке на каждое поле, со словами человека, который проверял.
+//
+// Раньше это была одна строка «не ограничивает: страну школы, годы
+// школы, возраст», а заметки из подписей вырезались ещё при сборке. В
+// заметках и лежала информация — «таджикский аттестат назван в таблице
+// по странам», «японский заранее не нужен» — и человек, не видя её,
+// читал карточку как «данных нет».
+export function notLimitedItems(program, fields) {
+  return fields.map((field) => {
+    const title = FIELD_TITLES[field] ?? field;
+    const note = program.eligibility?.[field]?.note;
+    return note ? `${title}: ${note}` : `${title}: не ограничено`;
+  });
 }
 
 export function renderResults(node, profile, programs, today) {
@@ -134,10 +153,19 @@ function card({ program, verdict, deadline }) {
   // На красной карточке её нет: человеку, который не проходит, важна
   // причина отказа, а не перечень того, что ему не мешает.
   if (verdict.status !== 'no' && verdict.attested?.length) {
-    const note = document.createElement('p');
-    note.className = 'attested';
-    note.textContent = notLimitedLine(verdict.attested);
-    el.append(note);
+    const head = document.createElement('p');
+    head.className = 'attested-title';
+    head.textContent = 'Не ограничивает — проверено по страницам программы:';
+    el.append(head);
+
+    const list = document.createElement('ul');
+    list.className = 'attested';
+    for (const line of notLimitedItems(program, verdict.attested)) {
+      const li = document.createElement('li');
+      li.textContent = line;
+      list.append(li);
+    }
+    el.append(list);
   }
 
   return el;

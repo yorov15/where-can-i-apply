@@ -79,7 +79,7 @@ class TestIndexEntry(unittest.TestCase):
         del program["textConditions"]
         self.assertEqual(index_entry(program)["textConditions"], [])
 
-    def test_no_limit_flag_survives_but_note_does_not(self):
+    def test_no_limit_flag_and_note_both_reach_the_site(self):
         # Без флага движок не отличит «человек проверил, требования нет»
         # от «не знаем» — и карточка снова станет жёлтой.
         program = json.loads(json.dumps(PROGRAM))
@@ -93,7 +93,9 @@ class TestIndexEntry(unittest.TestCase):
         entry = index_entry(program)
         self.assertIs(entry["eligibility"]["age"]["noLimit"], True)
         self.assertEqual(entry["eligibility"]["age"]["checkedAt"], "2026-09-03")
-        self.assertNotIn("note", entry["eligibility"]["age"])
+        # Заметка — это и есть информация: без неё карточка говорила
+        # «не ограничивает: возраст», и человек читал это как «данных нет».
+        self.assertEqual(entry["eligibility"]["age"]["note"], "длинная заметка человека")
 
 
 class TestBuildIndex(unittest.TestCase):

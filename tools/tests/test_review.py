@@ -3,6 +3,7 @@ import unittest
 from tools.review import (
     _brief,
     ask,
+    forget_signatures,
     changed_pages,
     forget_declined,
     show_new,
@@ -549,6 +550,34 @@ class TestChangedPages(unittest.TestCase):
 
     def test_record_of_old_shape_is_not_a_crash(self):
         self.assertEqual(changed_pages({"source": {"url": "a"}}, self.pages(("a", "sha256:1"))), [])
+
+
+class TestForgetSignatures(unittest.TestCase):
+    """Подпись можно переписать, когда заметка обрезалась."""
+
+    def record(self):
+        return {"eligibility": {
+            "gpa": {"noLimit": True, "checkedBy": "human", "note": "минимального балла не"},
+            "language": {"anyOf": [{"test": "IELTS", "min": 6.5}], "evidence": "IELTS 6.5"},
+        }}
+
+    def test_named_signature_is_cleared(self):
+        # Обрезанная заметка теперь видна на сайте, а подписанное поле
+        # review больше не спрашивал — исправить было нечем.
+        self.assertIsNone(forget_signatures(self.record(), ["gpa"])["eligibility"]["gpa"])
+
+    def test_quoted_rule_is_never_touched(self):
+        # Правило с цитатой меняет источник, а не человек.
+        got = forget_signatures(self.record(), ["language"])
+        self.assertEqual(got["eligibility"]["language"]["anyOf"][0]["min"], 6.5)
+
+    def test_does_not_mutate_input(self):
+        record = self.record()
+        forget_signatures(record, ["gpa"])
+        self.assertTrue(record["eligibility"]["gpa"]["noLimit"])
+
+    def test_unknown_field_is_ignored(self):
+        self.assertEqual(forget_signatures(self.record(), ["nope"]), self.record())
 
 
 if __name__ == "__main__":

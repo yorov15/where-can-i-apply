@@ -184,6 +184,24 @@ def forget_declined(program: dict, fields) -> dict:
     return remembered
 
 
+def forget_signatures(program: dict, fields) -> dict:
+    """Снимает подпись «ограничения нет» с названных полей.
+
+    Подпись теперь уходит на сайт вместе с заметкой, и заметка читается
+    людьми. Обрезанная — «минимального балла не» — видна всем, а
+    исправить её было нечем: подписанное поле review больше не спрашивал.
+
+    Снимает только подписи. Правила с цитатами не трогает: их меняет
+    источник, а не человек.
+    """
+    cleared = copy.deepcopy(program)
+    rules = cleared.get("eligibility") or {}
+    for field in fields:
+        if (rules.get(field) or {}).get("noLimit") is True:
+            rules[field] = None
+    return cleared
+
+
 def empty_fields(program: dict) -> list[str]:
     """Поля, про которые в записи ничего нет.
 
@@ -352,6 +370,15 @@ def main(argv=None) -> int:
     # способа дойти до человека.
     args = list(argv if argv is not None else sys.argv[1:])
     ask_again = "--ask-again" in args
+    # --resign=gpa,age — переподписать поля заново, например когда
+    # заметка обрезалась на полуслове.
+    resign = [
+        field
+        for arg in args
+        if arg.startswith("--resign=")
+        for field in arg.split("=", 1)[1].split(",")
+        if field
+    ]
     only = [a for a in args if not a.startswith("-")]
 
     root = Path(__file__).resolve().parent.parent
@@ -397,6 +424,8 @@ def main(argv=None) -> int:
         current = json.loads(target.read_text(encoding="utf-8")) if target.exists() else None
         if ask_again and current is not None:
             current = forget_declined(current, FIELDS)
+        if resign and current is not None:
+            current = forget_signatures(current, resign)
 
         # Отказы привязываются к отпечатку всего источника: человек
         # отвечает, глядя на объединённый текст всех страниц, значит и
