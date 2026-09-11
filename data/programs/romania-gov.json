@@ -1,0 +1,163 @@
+{
+  "id": "romania-gov",
+  "status": "published",
+  "name": {
+    "ru": "Стипендия Правительства Румынии для граждан стран вне ЕС",
+    "orig": "Romanian Government Scholarships for non-EU citizens (MFA)"
+  },
+  "hostCountry": "RO",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Оплачивают обучение, включая подготовительный год румынского, платят ежемесячную стипендию и дают общежитие, если есть места. Сумму стипендии платформа не называет — только «по действующему законодательству». Визу оформляешь и оплачиваешь сам; про дорогу платформа не говорит"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "RO"
+      ],
+      "evidence": "Foreign citizens from all non-EU countries"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "страну школы не ограничивают: нужны документы аккредитованного или признанного учебного заведения той страны, где они выданы"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "числа лет школы не называют: бакалавриат — для окончивших школу с аттестатом о среднем образовании или равным ему документом"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Copy of the certificate proving the passing of the baccalaureate, bachelor's or master's exam, as the case may be, for graduates who do not hold yet the diploma"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "возраст не ограничен: FAQ платформы прямо отвечает, что возрастного предела нет; до 18 лет нужно нотариальное согласие родителей"
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "an average of the study years, for the last graduated school, of at least 7 (seven) corresponding to the scoring system in Romania or the Good score"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "языковой сертификат для подачи не нужен: кто не знает румынского, год учит его на подготовительном курсе за счёт стипендии"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Бакалавриат по этой стипендии — только на румынском. Кто не знает языка, сначала год учит румынский на подготовительном курсе, и его тоже оплачивают.",
+      "evidence": "For candidates who do not speak Romanian, a preparatory year is granted for the study of the Romanian language prior to the actual university studies"
+    },
+    {
+      "ru": "Подготовительный год можно пропустить, если при поступлении сдашь тест по румынскому или покажешь сертификат румынского не ниже B1.",
+      "evidence": "present a certificate of linguistic competence in Romanian, minimum level B1"
+    },
+    {
+      "ru": "Медицину, стоматологию и фармацию эта стипендия не оплачивает.",
+      "evidence": "scholarships are NOT awarded in the fields of MEDICINE, DENTAL MEDICINE and PHARMACY"
+    },
+    {
+      "ru": "Средний балл за годы учёбы в последней оконченной школе — не ниже 7 по румынской 10-балльной шкале или «хорошо». Как пересчитывают таджикский аттестат, платформа не пишет, поэтому балл инструмент не проверяет.",
+      "evidence": "an average of the study years, for the last graduated school, of at least 7 (seven) corresponding to the scoring system in Romania or the Good score"
+    },
+    {
+      "ru": "Подают только с оконченной школой: к концу приёма нужен аттестат или справка о сданных выпускных экзаменах. Если к концу приёма у тебя нет ни того ни другого, в этом цикле подать не получится — только в следующем.",
+      "evidence": "Copy of the certificate proving the passing of the baccalaureate, bachelor's or master's exam, as the case may be, for graduates who do not hold yet the diploma"
+    },
+    {
+      "ru": "Документы: аттестат, оценки за годы учёбы, свидетельство о рождении, первые три страницы паспорта и резюме; переводы — на английский, французский, испанский или румынский. Документы об учёбе нужно апостилировать или заверить в министерстве образования своей страны.",
+      "evidence": "All study documents must be apostilled under the Hague Convention or authenticated by the relevant authorities in the home country"
+    },
+    {
+      "ru": "Возрастного предела нет. Если к началу занятий тебе не будет 18, нужно нотариальное согласие родителей.",
+      "evidence": "Copy of the notarized declaration of parental consent in the case of candidates who have not reached the age of 18 by the date of commencement of the courses"
+    },
+    {
+      "ru": "Подают только через платформу Study in Romania. Заявки по почте, через посольства или в министерства не рассматривают.",
+      "evidence": "The scholarship application can be sent ONLY through the Study in Romania platform."
+    },
+    {
+      "ru": "Заявка одна на цикл, и после отправки её нельзя ни изменить, ни дополнить — проверь всё до отправки.",
+      "evidence": "You can only submit one application during each programme."
+    },
+    {
+      "ru": "Ежемесячную стипендию платят и на подготовительном году, и на бакалавриате, но не дольше срока программы. Сумму платформа не называет — только «по действующему законодательству».",
+      "evidence": "granting a monthly financial aid, in accordance with the legislation in force"
+    },
+    {
+      "ru": "Общежитие дают только при наличии мест; условия проживания узнаёшь у своего вуза.",
+      "evidence": "accommodation will be provided to the extent of available places"
+    },
+    {
+      "ru": "Визу оформляешь и оплачиваешь сам.",
+      "evidence": "to bear all costs inherent to a visa application"
+    },
+    {
+      "ru": "Если выбранный вуз не получится, министерство может предложить другой вуз того же направления. Сменить направление или вуз потом нельзя.",
+      "evidence": "Subsequent requests for a change of the field of study, respectively/or of the university, will not be taken into consideration."
+    },
+    {
+      "ru": "Стипендию отнимают за отчисление, смену направления или нарушение договора с вузом — и уже не возвращают. За пропуски и недобор кредитов тоже лишают, но её можно вернуть, если в следующем году наверстаешь.",
+      "evidence": "The scholarship for foreign citizens cannot be reinstated after it has been lost under the conditions set out in points c)-f)."
+    },
+    {
+      "ru": "Отложить стипендию на следующий год нельзя.",
+      "evidence": "The scholarship awarded cannot be suspended or transferred for the next academic year."
+    },
+    {
+      "ru": "Не могут подать: граждане стран ЕС, люди румынского происхождения (для них другие программы), получившие защиту в Румынии, лица без гражданства с признанным пребыванием в Румынии, семьи дипломатов и сотрудников международных организаций в Румынии и те, у кого уже есть румынская госстипендия на ту же ступень.",
+      "evidence": "citizens of Romanian origin or who are part of the Romanian historical communities in the proximity of Romania (entitled to different scholarship programmes)"
+    },
+    {
+      "ru": "Прошлый цикл: подача с 16 февраля по 31 марта 2026, результаты — около 15 июля. Стипендии дают каждый год, но даты на 2027 ещё не объявлены, поэтому срок в карточке — по прошлому году и помечен неподтверждённым.",
+      "evidence": "Applications can be submitted only via the online platform, between 16 February 2026 and 31 March 2026, with the selection results being announced around 15 July 2026."
+    }
+  ],
+  "deadline": {
+    "opens": "2027-02-16",
+    "closes": "2027-03-31",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://scholarships.studyinromania.gov.ro/",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": null,
+    "note": {
+      "ru": "Аккредитованные вузы Румынии; вуз и направление указываешь в заявке, но министерство может предложить другой вуз того же направления"
+    }
+  },
+  "source": {
+    "url": "https://scholarships.studyinromania.gov.ro/scholarship-about",
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://scholarships.studyinromania.gov.ro/scholarship-about",
+        "contentHash": "sha256:817eaf54ac7a2d6192fb9eb72e70ee33a27ca9ac7c71e7f579fdc4101881952c"
+      },
+      {
+        "url": "https://scholarships.studyinromania.gov.ro/scholarship-faq",
+        "contentHash": "sha256:24e780bd38ea13ad6ae71f97a5bb23d0898a3b23ee3a40680d425fa0ed9a047c"
+      }
+    ]
+  }
+}

@@ -581,3 +581,20 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-11"
+
+# Стипендия Правительства Румынии для граждан стран вне ЕС (через МИД).
+# Домен studyinromania.gov.ro одобрен человеком 11 сентября 2026. Это
+# государственная платформа подачи, её ведёт UEFISCDI при Министерстве
+# образования. Страницы МИД (mae.ro) на момент добавления отдают 503 —
+# поэтому источник — сама платформа: описание программы и FAQ.
+[romania-gov]
+name = "Romanian Government Scholarships for non-EU citizens (MFA)"
+urls = [
+  "https://scholarships.studyinromania.gov.ro/scholarship-about",
+  "https://scholarships.studyinromania.gov.ro/scholarship-faq",
+]
+# Внизу каждой страницы сервер печатает время генерации — «[T: 0.2495,
+# O: 99]». Оно разное при каждом запросе.
+volatile = ['\[T: [^\]]*\]']
+approvedBy = "human"
+approvedAt = "2026-09-11"
