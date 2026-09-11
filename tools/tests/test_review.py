@@ -15,6 +15,7 @@ from tools.review import (
     prune_declined,
     remember_declined,
     sign_absence,
+    sign_from_notes,
     unasked_fields,
 )
 
@@ -319,6 +320,48 @@ class TestApprove(unittest.TestCase):
         approve(program, "2026-09-03", PAGES)
         self.assertEqual(program["status"], "draft")
         self.assertNotIn("pages", program["source"])
+
+    def test_human_approval_is_recorded_as_human(self):
+        got = approve({"status": "draft", "source": {}}, "2026-09-03", PAGES)
+        self.assertEqual(got["source"]["approvedBy"], "human")
+
+    def test_assistant_approval_is_not_passed_off_as_human(self):
+        # Запись, утверждённая ассистентом, не должна нести humanChecked:
+        # иначе любая будущая проверка «смотрел ли человек» соврёт.
+        got = approve({"status": "draft", "source": {}}, "2026-09-03", PAGES, "assistant")
+        self.assertEqual(got["source"]["approvedBy"], "assistant")
+        self.assertFalse(got["source"]["humanChecked"])
+        self.assertEqual(got["status"], "published")
+
+    def test_unknown_approver_is_refused(self):
+        with self.assertRaises(ValueError):
+            approve({"status": "draft", "source": {}}, "2026-09-03", PAGES, "model")
+
+
+class TestSignFromNotes(unittest.TestCase):
+    def test_signs_fields_that_have_a_note(self):
+        program = {"eligibility": {"age": None}}
+        signed, declined = sign_from_notes(
+            program, ["age"], {"age": "возраст не упоминается"}, "2026-09-11", "assistant"
+        )
+        self.assertEqual(signed["eligibility"]["age"]["checkedBy"], "assistant")
+        self.assertEqual(signed["eligibility"]["age"]["note"], "возраст не упоминается")
+        self.assertEqual(declined, [])
+
+    def test_field_without_a_note_stays_empty(self):
+        # Нет заметки — нет подписи. Иначе пустое поле молча превращалось
+        # бы в «ограничения нет», которого никто не проверял.
+        program = {"eligibility": {"age": None, "gpa": None}}
+        signed, declined = sign_from_notes(
+            program, ["age", "gpa"], {"age": "не упоминается", "gpa": "  "}, "2026-09-11", "assistant"
+        )
+        self.assertIsNone(signed["eligibility"]["gpa"])
+        self.assertEqual(declined, ["gpa"])
+
+    def test_does_not_mutate_input(self):
+        program = {"eligibility": {"age": None}}
+        sign_from_notes(program, ["age"], {"age": "не упоминается"}, "2026-09-11", "assistant")
+        self.assertIsNone(program["eligibility"]["age"])
 
 
 

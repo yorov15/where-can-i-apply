@@ -12,6 +12,7 @@ from tools.schema import (
     RELATIVE_BOUNDS,
     REQUIRED_FIELDS,
     SCALES,
+    SIGNERS,
     VALUE_KEYS,
     is_country_code,
 )
@@ -138,8 +139,8 @@ def _check_absence(field: str, rule: dict) -> list[str]:
         )
     if rule.get("evidence") is not None:
         problems.append(f"{field}: при noLimit цитата должна быть null")
-    if rule.get("checkedBy") != "human":
-        problems.append(f"{field}: noLimit требует checkedBy = human")
+    if rule.get("checkedBy") not in SIGNERS:
+        problems.append(f"{field}: noLimit требует checkedBy — одно из {', '.join(SIGNERS)}")
     if not _is_iso_date(rule.get("checkedAt")):
         problems.append(f"{field}: noLimit требует checkedAt в формате ГГГГ-ММ-ДД")
     if not rule.get("note"):

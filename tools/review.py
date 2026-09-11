@@ -12,7 +12,7 @@ from datetime import date
 from pathlib import Path
 
 from tools.fetch import latest_snapshot
-from tools.schema import FIELDS, absence_rule
+from tools.schema import FIELDS, SIGNERS, absence_rule
 from tools.snapshot import source_fingerprint
 from tools.validate import validate_program
 
@@ -215,11 +215,36 @@ def empty_fields(program: dict) -> list[str]:
     return [field for field in FIELDS if rules.get(field) is None]
 
 
-def sign_absence(program: dict, field: str, today: str, note: str) -> dict:
-    """Ставит подпись человека под отсутствием требования. Вход не меняет."""
+def sign_absence(program: dict, field: str, today: str, note: str, by: str = "human") -> dict:
+    """Ставит подпись под отсутствием требования. Вход не меняет."""
     signed = copy.deepcopy(program)
-    signed.setdefault("eligibility", {})[field] = absence_rule(today, note)
+    signed.setdefault("eligibility", {})[field] = absence_rule(today, note, by)
     return signed
+
+
+def sign_from_notes(program: dict, fields, notes: dict, today: str, by: str):
+    """Подписывает пустые поля заметками из файла, без диалога.
+
+    Так работает ассистент: заметки он пишет заранее, в
+    proposed/<id>.signatures.json, прочитав страницы через tools.look.
+    Поле без заметки не подписывается — возвращается в списке отказов, и
+    на карточке остаётся честным «не указано», а не выдуманным «нет».
+    """
+    signed = program
+    declined = []
+    for field in fields:
+        note = (notes.get(field) or "").strip()
+        if not note:
+            declined.append(field)
+            continue
+        signed = sign_absence(signed, field, today, note, by)
+    return signed, declined
+
+
+def say_yes(question: str) -> bool:
+    """Ответ ассистента на вопрос review — вслух, чтобы было видно в выводе."""
+    print(question + "да (ассистент)")
+    return True
 
 
 YES = ("да", "д", "y", "yes")
@@ -248,14 +273,21 @@ def ask(question: str, reader=input) -> bool:
         print("   не понял. Напиши «да» или «нет»")
 
 
-def approve(program: dict, today: str, pages: list[dict]) -> dict:
+def approve(program: dict, today: str, pages: list[dict], by: str = "human") -> dict:
     """Утверждает запись и записывает все страницы источника с хешами.
 
     Страницы записываются целиком, а не одной первой: у половины программ
     правила допуска лежат не на ней. Пока запись помнила только первую,
     слежение молча пропускало изменения во всех остальных.
+
+    Кто утвердил, записывается как есть: humanChecked ставится только
+    человеку, у ассистента — approvedBy = assistant.
     """
+    if by not in SIGNERS:
+        raise ValueError(f"неизвестный подписант: {by}")
     approved = prune_declined(program)
+    approved["source"] = dict(approved.get("source") or {})
+    approved["source"]["approvedBy"] = by
     approved["status"] = "published"
     approved.setdefault("source", {})
     approved["source"]["url"] = pages[0]["url"]
@@ -264,7 +296,7 @@ def approve(program: dict, today: str, pages: list[dict]) -> dict:
     ]
     approved["source"]["lastVerified"] = today
     approved["source"].pop("contentHash", None)
-    approved["source"]["humanChecked"] = True
+    approved["source"]["humanChecked"] = by == "human"
     return approved
 
 
@@ -380,13 +412,23 @@ def main(argv=None) -> int:
         if field
     ]
     only = [a for a in args if not a.startswith("-")]
+    # --by-assistant — утверждает ассистент: вопросов не задаёт, подписи
+    # берёт из proposed/<id>.signatures.json и записывает их своими.
+    by = "assistant" if "--by-assistant" in args else "human"
+    confirm = say_yes if by == "assistant" else ask
 
     root = Path(__file__).resolve().parent.parent
     proposed_dir = root / "proposed"
     programs_dir = root / "data" / "programs"
     programs_dir.mkdir(parents=True, exist_ok=True)
 
-    candidates = sorted(proposed_dir.glob("*.json")) if proposed_dir.exists() else []
+    # Точка в имени — служебный файл при записи (nazarbayev.signatures.json),
+    # а не запись.
+    candidates = (
+        sorted(p for p in proposed_dir.glob("*.json") if "." not in p.stem)
+        if proposed_dir.exists()
+        else []
+    )
     if not candidates:
         print("В proposed/ нет ни одной записи. Сначала tools.fetch и tools.extract.")
         return 1
@@ -448,7 +490,7 @@ def main(argv=None) -> int:
             print(f"\n{program_id}: источник изменился, но правила и цитаты прежние")
             for url in drifted:
                 print("  ", url)
-            if not ask("\nОбновить отметку о проверке? [да/нет] "):
+            if not confirm("\nОбновить отметку о проверке? [да/нет] "):
                 print("пропущено")
                 continue
 
@@ -462,13 +504,33 @@ def main(argv=None) -> int:
                 for change in changes:
                     _show(change)
 
-            if not ask("\nУтвердить эту запись целиком? [да/нет] "):
+            if not confirm("\nУтвердить эту запись целиком? [да/нет] "):
                 print("пропущено")
                 continue
         else:
             print(f"\n{program_id}: правила не менялись, но есть пустые поля")
 
-        if empty:
+        if empty and by == "assistant":
+            notes_path = proposed_dir / f"{program_id}.signatures.json"
+            notes = (
+                json.loads(notes_path.read_text(encoding="utf-8"))
+                if notes_path.exists()
+                else {}
+            )
+            proposed, declined = sign_from_notes(
+                proposed, empty, notes, date.today().isoformat(), by
+            )
+            for field in empty:
+                if field in declined:
+                    print(f"  {field}: заметки нет, оставлено пустым")
+                else:
+                    print(f"  {field}: подписано ассистентом — {notes[field].strip()}")
+            if declined:
+                proposed = remember_declined(proposed, declined, content_hash)
+            if not changes and not field_changes(current, proposed) and not declined:
+                print(f"{program_id}: ничего не подписано, запись не тронута")
+                continue
+        elif empty:
             print(f"\nОсталось {len(empty)} пустых полей.")
             print("Пустое поле красит карточку в жёлтый: «программа не указывает».")
             print("Если ты открывал страницу и требования там правда нет — скажи да,")
@@ -506,7 +568,7 @@ def main(argv=None) -> int:
             print("Ничего не записано.")
             continue
 
-        approved = approve(proposed, date.today().isoformat(), meta["pages"])
+        approved = approve(proposed, date.today().isoformat(), meta["pages"], by)
         target.write_text(
             json.dumps(approved, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )

@@ -49,11 +49,16 @@ const FIELD_TITLES = {
 // заметках и лежала информация — «таджикский аттестат назван в таблице
 // по странам», «японский заранее не нужен» — и человек, не видя её,
 // читал карточку как «данных нет».
+//
+// Подпись ассистента помечается прямо в строке. Человек, решающий по
+// карточке, вправе знать, что страницу читала модель, а не человек, —
+// иначе доверие к строке было бы взято взаймы.
 export function notLimitedItems(program, fields) {
   return fields.map((field) => {
     const title = FIELD_TITLES[field] ?? field;
-    const note = program.eligibility?.[field]?.note;
-    return note ? `${title}: ${note}` : `${title}: не ограничено`;
+    const rule = program.eligibility?.[field];
+    const line = rule?.note ? `${title}: ${rule.note}` : `${title}: не ограничено`;
+    return rule?.checkedBy === 'assistant' ? `${line} (проверил ассистент)` : line;
   });
 }
 

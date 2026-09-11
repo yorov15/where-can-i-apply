@@ -48,9 +48,9 @@
     "gpa": {
       "noLimit": true,
       "evidence": null,
-      "checkedBy": "human",
-      "checkedAt": "2026-09-05",
-      "note": "минимального балла не"
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "минимального балла ни на одной из пяти страниц нет; школьную выписку смотрят вместе с тестами и остальными документами"
     },
     "language": {
       "anyOf": [
@@ -129,8 +129,9 @@
   },
   "source": {
     "url": "https://admission.kaist.ac.kr/intl-undergraduate/before/sub02",
-    "lastVerified": "2026-09-08",
-    "humanChecked": true,
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
+    "approvedBy": "assistant",
     "pages": [
       {
         "url": "https://admission.kaist.ac.kr/intl-undergraduate/before/sub02",

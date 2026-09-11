@@ -110,6 +110,19 @@ class TestBuildIndex(unittest.TestCase):
         index = build_index([PROGRAM, sneaky], "2026-09-03")
         self.assertEqual([p["id"] for p in index["programs"]], ["primer"])
 
+    def test_assistant_approved_programs_are_published(self):
+        by_assistant = dict(PROGRAM, id="by-assistant")
+        by_assistant["source"] = dict(
+            PROGRAM["source"], humanChecked=False, approvedBy="assistant"
+        )
+        index = build_index([by_assistant], "2026-09-11")
+        self.assertEqual([p["id"] for p in index["programs"]], ["by-assistant"])
+
+    def test_unknown_approver_is_not_published(self):
+        sneaky = dict(PROGRAM, id="sneaky")
+        sneaky["source"] = dict(PROGRAM["source"], humanChecked=False, approvedBy="model")
+        self.assertEqual(build_index([sneaky], "2026-09-11")["programs"], [])
+
     def test_generated_at_is_recorded(self):
         index = build_index([PROGRAM], "2026-09-03")
         self.assertEqual(index["generatedAt"], "2026-09-03")

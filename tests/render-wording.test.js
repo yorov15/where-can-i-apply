@@ -39,6 +39,21 @@ test('не говорит про нехватку данных', () => {
   }
 });
 
+test('подпись ассистента помечена прямо в строке', () => {
+  const signed = {
+    eligibility: {
+      age: { noLimit: true, checkedBy: 'assistant', note: 'возраст на страницах не упоминается' },
+    },
+  };
+  assert.deepEqual(notLimitedItems(signed, ['age']), [
+    'Возраст: возраст на страницах не упоминается (проверил ассистент)',
+  ]);
+});
+
+test('подпись человека не помечается', () => {
+  assert.doesNotMatch(notLimitedItems(program, ['schoolCountry'])[0], /ассистент/);
+});
+
 test('незнакомое поле не роняет строку и не теряется', () => {
   assert.match(notLimitedItems({ eligibility: {} }, ['somethingNew'])[0], /somethingNew/);
 });

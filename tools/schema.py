@@ -45,20 +45,42 @@ VALUE_KEYS = frozenset(
 RELATIVE_BOUNDS = frozenset({"applicationYear"})
 
 
-def absence_rule(today: str, note: str) -> dict:
-    """Правило, которым человек ручается: требования на странице нет.
+# Кто может поставить подпись под отсутствием требования. Ассистент —
+# с 11 сентября 2026: владелец проекта отдал ему ввод данных, потому что
+# ручная подпись съедала больше времени, чем сбор. Подпись ассистента
+# остаётся подписью ассистента — сайт так её и показывает, выдавать её за
+# человеческую значило бы соврать тому, кто на карточку полагается.
+SIGNERS = ("human", "assistant")
+
+
+def absence_rule(today: str, note: str, by: str = "human") -> dict:
+    """Правило, которым проверявший ручается: требования на странице нет.
 
     Цитаты здесь быть не может: отсутствие требования не подтверждается
     фразой — на страницах программ обычно нет абзаца «ограничений не
-    установлено». Его подтверждает человек, прочитавший страницу.
+    установлено». Его подтверждает тот, кто прочитал страницу.
     """
+    if by not in SIGNERS:
+        raise ValueError(f"неизвестный подписант: {by}")
     return {
         "noLimit": True,
         "evidence": None,
-        "checkedBy": "human",
+        "checkedBy": by,
         "checkedAt": today,
         "note": note,
     }
+
+
+def approved_by(program: dict):
+    """Кто утвердил запись: human, assistant или никто (None).
+
+    Записи до 11 сентября 2026 знают только humanChecked — их утверждал
+    человек, так их и читаем.
+    """
+    source = program.get("source") or {}
+    if source.get("approvedBy") in SIGNERS:
+        return source["approvedBy"]
+    return "human" if source.get("humanChecked") is True else None
 
 
 def empty_program(program_id: str, name: str) -> dict:

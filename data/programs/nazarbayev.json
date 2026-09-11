@@ -1,0 +1,138 @@
+{
+  "id": "nazarbayev",
+  "status": "published",
+  "name": {
+    "ru": "Назарбаев Университет, Астана",
+    "orig": "Nazarbayev University — Foundation & Undergraduate"
+  },
+  "hostCountry": "KZ",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Два пути с разной ценой. Обычный приём платный: 15 000 долларов в год, и для местных, и для иностранцев. Отдельно идёт конкурс на государственный грант, и иностранцев на него допускают — у них свой срок. Что именно покрывает грант, эти страницы не говорят"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "International applicants from countries eligible for visa issuance before arrival"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "страну школы не называют и не ограничивают: нужен аттестат с оценками или справка из школы о выпускном классе"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "числа лет школы не требуют; подготовительный год необязателен — можно поступать сразу на бакалавриат"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "подают и из выпускного класса, и уже окончившие школу — года выпуска не ограничивают"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "возраст на страницах приёма не упоминается"
+    },
+    "gpa": {
+      "min": 4.0,
+      "scale": "TJ_5",
+      "evidence": "4.0 out of 5.0"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0
+        }
+      ],
+      "evidence": "IELTS: Overall 6.0"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Путей два, и сроки у них разные. Платный приём для иностранцев идёт до 17 июля. Конкурс на грант закрывается 10 февраля — на пять месяцев раньше. Если деньги для тебя вопрос, твой срок февральский, и июльский тебя не спасёт.",
+      "evidence": "International Applicants (Undergraduate programs only and International SAT/ACT applicants for NUFYP): September 27- February 10, 2026"
+    },
+    {
+      "ru": "Без гранта год стоит 15 000 долларов, подготовительный — 12 000. Цена одинаковая для казахстанцев и иностранцев, скидок по гражданству нет.",
+      "evidence": "The tuition fee for undergraduate programs is $15,000 for the 2026/2027 academic year for both local and international students."
+    },
+    {
+      "ru": "Подготовительный год необязателен — можно поступать сразу на бакалавриат. Числа лет школы страницы не называют, так что вопрос, который у Италии и Японии закрывает дорогу, здесь не возникает.",
+      "evidence": "Admission to NUFYP after high school/college is optional. Applicants can enroll directly in the undergraduate program."
+    },
+    {
+      "ru": "Грант привязан к вступительному экзамену NUET: нужно 120 баллов из 240 и не меньше 50 в каждом из двух предметов. NUET сдают очно в городах Казахстана — значит придётся ехать.",
+      "evidence": "Minimum passing score to be eligible for a state grant - 120 in total for two subjects"
+    },
+    {
+      "ru": "Общежитие иностранцам гарантируют, и жизнь недорогая: около 400 долларов в месяц вместе с едой, транспортом и прачечной. Само общежитие — около 55 долларов.",
+      "evidence": "Accommodation is guaranteed for international students."
+    },
+    {
+      "ru": "От IELTS освобождают, если школа была на английском. Для таджикской школы это не сработает, но проверить стоит: некоторые лицеи ведут предметы на английском.",
+      "evidence": "where English is the language of instruction are exempt from submitting IELTS/TOEFL results"
+    },
+    {
+      "ru": "Подавать можно из выпускного класса, а не только с аттестатом на руках. Допускают также тех, кто уже учится в вузе или окончил его.",
+      "evidence": "Individuals who are students in the final year of secondary education institutions"
+    },
+    {
+      "ru": "Осторожно с числами на их странице: IELTS 6.5 и SAT 1150 относятся к non-degree study — платному варианту без диплома. Требования бакалавриата ниже, но и диплом там настоящий. Не перепутай.",
+      "evidence": "the education is offered exclusively on a fee-paying basis"
+    },
+    {
+      "ru": "Даты на странице — от цикла 2026 года, поэтому срок в карточке помечен неподтверждённым. Приём на следующий год открывается 27 сентября, а свежие числа университет вывешивает осенью.",
+      "evidence": "Citizens of Kazakhstan: September 27 - August 17, 2026 (2 p.m. Astana time)"
+    },
+    {
+      "ru": "IELTS и TOEFL надо сдавать очно в центре: домашние и онлайн-версии не засчитывают, и пересдачу одной части тоже.",
+      "evidence": "IELTS/TOEFL tests must be taken in person at the test center (not remotely)"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-02-10",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/financial-aid-end-scholarships/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Назарбаев Университет в Астане"
+    }
+  },
+  "source": {
+    "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
+        "contentHash": "sha256:5c5f238753b318b3bd13ab7680d47bcbef839493759310c92db2499c947c498f"
+      },
+      {
+        "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/financial-aid-end-scholarships/",
+        "contentHash": "sha256:cc235ff661c414bd740b37b5789f655ee1e5cebfd7abff95c862c0a9bc0b4888"
+      }
+    ]
+  }
+}

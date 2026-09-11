@@ -130,6 +130,17 @@ class TestAbsence(unittest.TestCase):
         program["eligibility"]["age"] = self.absence()
         self.assertEqual(validate_program(program, SNAPSHOT), [])
 
+    def test_assistant_signature_passes(self):
+        program = good_program()
+        program["eligibility"]["age"] = self.absence(checkedBy="assistant")
+        self.assertEqual(validate_program(program, SNAPSHOT), [])
+
+    def test_assistant_still_cannot_vouch_for_a_number(self):
+        program = good_program()
+        program["eligibility"]["age"] = self.absence(checkedBy="assistant", max=25)
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("не может стоять вместе со значениями" in p for p in problems))
+
     def test_absence_with_a_value_is_caught(self):
         # Главная защита: ручаться можно за отсутствие ограничения,
         # но никогда за число. «Возраст до 25, я проверил» не пройдёт.

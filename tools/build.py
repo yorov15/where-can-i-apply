@@ -11,7 +11,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from tools.schema import FIELDS
+from tools.schema import FIELDS, SIGNERS, approved_by
 
 # Предел ставится на то, за что человек платит, — на сжатый размер.
 #
@@ -111,7 +111,7 @@ def build_index(programs: list[dict], generated_at: str) -> dict:
         program
         for program in programs
         if program.get("status") == "published"
-        and (program.get("source") or {}).get("humanChecked") is True
+        and approved_by(program) in SIGNERS
         and (program.get("source") or {}).get("pages")
     ]
     publishable.sort(key=lambda program: program["id"])
