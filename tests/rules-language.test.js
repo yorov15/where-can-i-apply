@@ -80,6 +80,46 @@ test('обычный порог по-прежнему отказ, флаг ни�
   assert.equal(checkLanguage(me, need).status, 'fail');
 });
 
+// С 21 января 2026 года TOEFL iBT считается по шкале 1–6. Программы
+// публикуют два порога, и для движка это два разных экзамена.
+const toefl = {
+  anyOf: [
+    { test: 'IELTS', min: 6.5 },
+    { test: 'TOEFL_IBT', min: 90 },
+    { test: 'TOEFL_IBT_2026', min: 4.5 },
+  ],
+  evidence: 'x',
+};
+
+test('TOEFL по новой шкале сравнивается с порогом новой шкалы', () => {
+  const pass = { languageTests: [{ test: 'TOEFL_IBT_2026', score: 5 }] };
+  const below = { languageTests: [{ test: 'TOEFL_IBT_2026', score: 4 }] };
+  assert.equal(checkLanguage(pass, toefl).status, 'pass');
+  assert.equal(checkLanguage(below, toefl).status, 'fail');
+});
+
+test('старая шкала не сравнивается с порогом новой', () => {
+  const onlyNew = { anyOf: [{ test: 'IELTS', min: 6.5 }, { test: 'TOEFL_IBT_2026', min: 4.5 }], evidence: 'x' };
+  const me = { languageTests: [{ test: 'TOEFL_IBT', score: 110 }] };
+  const got = checkLanguage(me, onlyNew);
+  assert.equal(got.status, 'unknown');
+  assert.match(got.message, /не называет/);
+  assert.match(got.message, /старая шкала 0–120/);
+});
+
+test('сданный экзамен, которого программа не называет, — не «сертификата нет»', () => {
+  const onlyIelts = { anyOf: [{ test: 'IELTS', min: 6.0 }], evidence: 'x' };
+  const got = checkLanguage({ languageTests: [{ test: 'TOEFL_IBT_2026', score: 5 }] }, onlyIelts);
+  assert.equal(got.status, 'unknown');
+  assert.doesNotMatch(got.message, /пока нет/);
+});
+
+test('в сообщении экзамены названы по-человечески', () => {
+  const got = checkLanguage({ languageTests: [] }, toefl);
+  assert.match(got.message, /TOEFL iBT \(новая шкала 1–6\) 4\.5/);
+  assert.doesNotMatch(got.message, /TOEFL_IBT/);
+});
+
 test('рекомендованный балл: экзамен отмечен без результата — тоже рекомендация', () => {
   const me = { languageTests: [{ test: 'IELTS', score: null }] };
   const got = checkLanguage(me, advisory);

@@ -53,6 +53,11 @@
         {
           "test": "IELTS",
           "min": 6.0
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 78,
+          "evidence": "TOEFL should be 78 overall with a minimum of 17 in Writing"
         }
       ],
       "evidence": "IELTS score from 6.0 and above (writing 5.0)"

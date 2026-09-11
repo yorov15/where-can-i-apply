@@ -61,6 +61,16 @@
         {
           "test": "IELTS",
           "min": 6.5
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 89,
+          "evidence": "the minimum requirement is a total score of 89 with 22 in each of Speaking and Writing"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "evidence": "The minimum requirement is an overall score of 4.5 with 4.5 in Writing and 4.0 in Speaking."
         }
       ],
       "evidence": "The minimum requirement is an overall band of 6.5, with no band below 6.0."
@@ -121,7 +131,7 @@
   "source": {
     "url": "https://future.utoronto.ca/pearson-scholarships",
     "lastVerified": "2026-09-11",
-    "humanChecked": true,
+    "humanChecked": false,
     "pages": [
       {
         "url": "https://future.utoronto.ca/pearson-scholarships",
@@ -135,6 +145,7 @@
         "url": "https://future.utoronto.ca/international-high-school-requirements-country?page=6",
         "contentHash": "sha256:1dd358eeb532b4eb4a0b31dda717dafd789ea5966675b4868f337209690ad74b"
       }
-    ]
+    ],
+    "approvedBy": "assistant"
   }
 }

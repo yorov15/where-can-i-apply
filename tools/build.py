@@ -51,7 +51,14 @@ STRIPPED_FROM_INDEX = ("evidence",)
 def _rule_without_evidence(rule):
     if rule is None:
         return None
-    return {key: value for key, value in rule.items() if key not in STRIPPED_FROM_INDEX}
+    clean = {key: value for key, value in rule.items() if key not in STRIPPED_FROM_INDEX}
+    # У порогов экзаменов бывают свои цитаты — они тоже для проверяющего.
+    if isinstance(clean.get("anyOf"), list):
+        clean["anyOf"] = [
+            {key: value for key, value in item.items() if key not in STRIPPED_FROM_INDEX}
+            for item in clean["anyOf"]
+        ]
+    return clean
 
 
 def index_entry(program: dict) -> dict:

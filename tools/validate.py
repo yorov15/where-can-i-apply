@@ -9,6 +9,7 @@ import re
 
 from tools.schema import (
     FIELDS,
+    LANGUAGE_TESTS,
     RELATIVE_BOUNDS,
     REQUIRED_FIELDS,
     SCALES,
@@ -59,6 +60,17 @@ def validate_program(program: dict, snapshot_text: str, check_required: bool = T
         elif normalize(evidence) not in haystack:
             problems.append(f"{field}: цитата не найдена в тексте источника — {evidence!r}")
 
+        # У порога экзамена может быть своя цитата: IELTS и TOEFL часто
+        # стоят в разных строках таблицы, и одной фразой их не накрыть.
+        # Проверяется она так же, как цитата правила.
+        for requirement in rule.get("anyOf") or []:
+            own = requirement.get("evidence")
+            if own and normalize(own) not in haystack:
+                problems.append(
+                    f"{field}: цитата к {requirement.get('test')} не найдена "
+                    f"в тексте источника — {own!r}"
+                )
+
         if rule.get("definedBy") is not None:
             problems.extend(_check_delegated(field, rule))
             continue
@@ -100,23 +112,29 @@ def _check_numbers_have_evidence(field: str, rule: dict) -> list[str]:
     if not evidence:
         return []
 
-    known = _numbers_in(evidence)
     problems = []
 
-    def check(name, value):
+    def check(name, value, quote):
         if value is None:
             return
+        known = _numbers_in(quote)
         text = str(value)
         if text not in known and text.rstrip("0").rstrip(".") not in known:
             problems.append(
                 f"{field}: {name} = {value}, но этого числа нет в цитате — "
-                f"порог должен подтверждаться той же цитатой, {evidence!r}"
+                f"порог должен подтверждаться той же цитатой, {quote!r}"
             )
 
     for key in ("min", "max", "maxExclusive"):
-        check(key, rule.get(key))
+        check(key, rule.get(key), evidence)
+    # Порог со своей цитатой проверяется по ней, а не по цитате правила:
+    # иначе число могло бы «подтвердиться» соседней строкой таблицы.
     for requirement in rule.get("anyOf") or []:
-        check(f"{requirement.get('test')} min", requirement.get("min"))
+        check(
+            f"{requirement.get('test')} min",
+            requirement.get("min"),
+            requirement.get("evidence") or evidence,
+        )
     return problems
 
 
@@ -260,6 +278,11 @@ def _check_rule_shape(field: str, rule: dict) -> list[str]:
         for requirement in rule.get("anyOf") or []:
             if "test" not in requirement or "min" not in requirement:
                 problems.append("language: в требовании нет test или min")
+            elif requirement["test"] not in LANGUAGE_TESTS:
+                problems.append(
+                    f"language: экзамена {requirement['test']!r} анкета не знает — "
+                    f"одно из {', '.join(sorted(LANGUAGE_TESTS))}"
+                )
 
     return problems
 

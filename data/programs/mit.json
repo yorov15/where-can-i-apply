@@ -60,6 +60,16 @@
         {
           "test": "IELTS",
           "min": 7
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "evidence": "TOEFL (Taken before 1/21/26) Minimum: 90"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "for more information. Minimum: 5 Recommended: 5.5"
         }
       ],
       "evidence": "IELTS Minimum: 7"
@@ -119,8 +129,8 @@
   },
   "source": {
     "url": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
-    "lastVerified": "2026-09-08",
-    "humanChecked": true,
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
     "pages": [
       {
         "url": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
@@ -138,6 +148,7 @@
         "url": "https://mitadmissions.org/afford/",
         "contentHash": "sha256:5a000e25f42119737556be2bb2b8d6e537f49542402337fd757b3a2d5ff35ac5"
       }
-    ]
+    ],
+    "approvedBy": "assistant"
   }
 }

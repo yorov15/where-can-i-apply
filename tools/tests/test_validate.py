@@ -39,6 +39,69 @@ def good_program():
     return program
 
 
+LANGUAGE_SNAPSHOT = SNAPSHOT + (
+    " IELTS - 6.5 overall, with a minimum of 5.5 on each section."
+    " TOEFL iBT - 90 in total."
+)
+
+
+def with_language(rule):
+    program = good_program()
+    program["eligibility"]["language"] = rule
+    return program
+
+
+class TestLanguageTests(unittest.TestCase):
+    def test_threshold_with_its_own_quote_passes(self):
+        program = with_language({
+            "anyOf": [
+                {"test": "IELTS", "min": 6.5},
+                {"test": "TOEFL_IBT", "min": 90, "evidence": "TOEFL iBT - 90 in total"},
+            ],
+            "evidence": "IELTS - 6.5 overall",
+        })
+        self.assertEqual(validate_program(program, LANGUAGE_SNAPSHOT), [])
+
+    def test_invented_threshold_quote_is_caught(self):
+        program = with_language({
+            "anyOf": [
+                {"test": "IELTS", "min": 6.5},
+                {"test": "TOEFL_IBT", "min": 80, "evidence": "TOEFL iBT - 80 in total"},
+            ],
+            "evidence": "IELTS - 6.5 overall",
+        })
+        problems = validate_program(program, LANGUAGE_SNAPSHOT)
+        self.assertTrue(any("цитата к TOEFL_IBT не найдена" in p for p in problems))
+
+    def test_threshold_is_checked_against_its_own_quote(self):
+        # Число из цитаты правила не должно подтверждать чужой порог.
+        program = with_language({
+            "anyOf": [
+                {"test": "IELTS", "min": 6.5},
+                {"test": "TOEFL_IBT", "min": 6.5, "evidence": "TOEFL iBT - 90 in total"},
+            ],
+            "evidence": "IELTS - 6.5 overall",
+        })
+        problems = validate_program(program, LANGUAGE_SNAPSHOT)
+        self.assertTrue(any("TOEFL_IBT min = 6.5" in p for p in problems))
+
+    def test_threshold_without_own_quote_uses_rule_quote(self):
+        program = with_language({
+            "anyOf": [{"test": "IELTS", "min": 6.5}, {"test": "TOEFL_IBT", "min": 90}],
+            "evidence": "IELTS - 6.5 overall",
+        })
+        problems = validate_program(program, LANGUAGE_SNAPSHOT)
+        self.assertTrue(any("TOEFL_IBT min = 90" in p for p in problems))
+
+    def test_unknown_test_is_caught(self):
+        program = with_language({
+            "anyOf": [{"test": "TOEFL", "min": 90, "evidence": "TOEFL iBT - 90 in total"}],
+            "evidence": "IELTS - 6.5 overall",
+        })
+        problems = validate_program(program, LANGUAGE_SNAPSHOT)
+        self.assertTrue(any("анкета не знает" in p for p in problems))
+
+
 class TestEvidence(unittest.TestCase):
     def test_clean_program_passes(self):
         self.assertEqual(validate_program(good_program(), SNAPSHOT), [])

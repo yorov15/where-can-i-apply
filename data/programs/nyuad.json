@@ -61,6 +61,16 @@
         {
           "test": "IELTS",
           "min": 7.5
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "100 and above on the TOEFL iBT taken on or before January 20, 2026"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "5 or above (overall score and subscores) on the TOEFL iBT taken on or after January 21, 2026"
         }
       ],
       "advisory": true,
@@ -125,8 +135,8 @@
   },
   "source": {
     "url": "https://nyuad.nyu.edu/en/apply/undergraduate/apply/key-dates-and-deadlines.html",
-    "lastVerified": "2026-09-08",
-    "humanChecked": true,
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
     "pages": [
       {
         "url": "https://nyuad.nyu.edu/en/apply/undergraduate/apply/key-dates-and-deadlines.html",
@@ -148,6 +158,7 @@
         "url": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/standardized-tests/english-language-testing.html",
         "contentHash": "sha256:b52874ae218d3b485c56a3bdc412a1de2de8fc9afe622ad88611f644fa234d3e"
       }
-    ]
+    ],
+    "approvedBy": "assistant"
   }
 }

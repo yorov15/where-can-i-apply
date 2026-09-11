@@ -15,6 +15,17 @@ import { toPercent } from './lib/scales.js';
 
 const r = (status, message = '') => ({ status, message });
 
+// Названия экзаменов для человека. TOEFL iBT с 21 января 2026 года
+// считается по шкале 1–6, и программы публикуют для старой и новой шкалы
+// отдельные пороги. Поэтому для движка это два экзамена, и в тексте их
+// надо различать: «TOEFL_IBT 90» человеку ничего не скажет.
+const TEST_NAMES = {
+  IELTS: 'IELTS',
+  TOEFL_IBT: 'TOEFL iBT (старая шкала 0–120)',
+  TOEFL_IBT_2026: 'TOEFL iBT (новая шкала 1–6)',
+};
+const testName = (test) => TEST_NAMES[test] ?? test;
+
 // Третье состояние правила помимо «есть требование» и null.
 //
 // null означает «в источнике этого нет» — мы не смотрели или не нашли.
@@ -268,7 +279,7 @@ export function checkLanguage(profile, rule, ctx) {
     sawBelow = true;
   }
 
-  const list = need.map((x) => `${x.test} ${x.min}`).join(' или ');
+  const list = need.map((x) => `${testName(x.test)} ${x.min}`).join(' или ');
   if (sawEmpty) {
     const what = rule.advisory === true ? 'Рекомендовано' : 'Нужен';
     return r('unknown', `Ты отметил экзамен без результата. ${what} ${list}`);
@@ -281,6 +292,15 @@ export function checkLanguage(profile, rule, ctx) {
       return r('unknown', `Рекомендовано ${list}, у тебя ниже. Это не отказ — программа называет балл рекомендацией, решает отбор`);
     }
     return r('fail', `Нужен ${list}, твой результат ниже`);
+  }
+  // Экзамен сдан, но программа его не называет — чаще всего TOEFL по
+  // новой шкале там, где опубликован только старый порог. «Сертификата
+  // у тебя нет» здесь было бы неправдой, а отказ — выдумкой.
+  const other = mine.filter((x) => x.score != null);
+  if (other.length) {
+    const names = other.map((x) => testName(x.test)).join(', ');
+    const what = rule.advisory === true ? 'рекомендует' : 'требует';
+    return r('unknown', `Твой ${names} программа не называет, она ${what} ${list} — уточни, примут ли твой экзамен`);
   }
   if (rule.advisory === true) {
     return r('unknown', `Сертификат нужен, рекомендовано ${list}. Сдать экзамен ещё можно`);

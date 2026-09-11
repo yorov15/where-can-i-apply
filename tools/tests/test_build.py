@@ -48,6 +48,24 @@ class TestIndexEntry(unittest.TestCase):
         entry = index_entry(PROGRAM)
         self.assertNotIn("evidence", json.dumps(entry, ensure_ascii=False))
 
+    def test_threshold_quotes_are_stripped_too(self):
+        # У порогов экзаменов свои цитаты; на сайт они не едут, а сами
+        # пороги едут.
+        program = json.loads(json.dumps(PROGRAM))
+        program["eligibility"]["language"] = {
+            "anyOf": [
+                {"test": "IELTS", "min": 6.5},
+                {"test": "TOEFL_IBT", "min": 90, "evidence": "TOEFL iBT - 90 in total"},
+            ],
+            "evidence": "IELTS - 6.5 overall",
+        }
+        entry = index_entry(program)
+        self.assertNotIn("evidence", json.dumps(entry, ensure_ascii=False))
+        self.assertEqual(
+            entry["eligibility"]["language"]["anyOf"],
+            [{"test": "IELTS", "min": 6.5}, {"test": "TOEFL_IBT", "min": 90}],
+        )
+
     def test_rules_survive_without_quotes(self):
         entry = index_entry(PROGRAM)
         self.assertEqual(entry["eligibility"]["graduationYear"]["min"], 2025)

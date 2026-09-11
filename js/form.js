@@ -2,7 +2,10 @@
 // профиль в той же форме, что описана в js/profile.js.
 import { emptyProfile } from './profile.js';
 
-const LANG_TESTS = ['IELTS', 'TOEFL_IBT'];
+// TOEFL_IBT — старая шкала 0–120 (сдан до 21 января 2026), TOEFL_IBT_2026 —
+// новая шкала 1–6. Сохранённые раньше профили знают только первый, и
+// это верно: до этой правки анкета принимала лишь баллы 0–120.
+const LANG_TESTS = ['IELTS', 'TOEFL_IBT', 'TOEFL_IBT_2026'];
 
 const num = (v) => (v === '' || v == null ? null : Number(v));
 

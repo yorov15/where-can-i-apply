@@ -57,6 +57,16 @@
         {
           "test": "IELTS",
           "min": 6.5
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "evidence": "Internet based test (1-120): Overall score: 90"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "evidence": "Internet based test (1-6): Overall score: 4.5"
         }
       ],
       "evidence": "6.5, with no part less than 6.0"
@@ -120,8 +130,8 @@
   },
   "source": {
     "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
-    "lastVerified": "2026-09-08",
-    "humanChecked": true,
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
     "pages": [
       {
         "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
@@ -135,6 +145,7 @@
         "url": "https://you.ubc.ca/applying-ubc/requirements/international-high-schools/",
         "contentHash": "sha256:fbd5b32a7dd2f88adc9b70e7cb8b3f444b30ac736ba70658f640bda55bbfda23"
       }
-    ]
+    ],
+    "approvedBy": "assistant"
   }
 }
