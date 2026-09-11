@@ -532,3 +532,33 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-11"
+
+# «Дурахшандагон» — международная стипендия Президента Таджикистана на
+# учёбу за рубежом. Домены khovar.tj, asiaplus.news и base.spinform.ru
+# одобрены человеком 11 сентября 2026.
+#
+# Сайт самой программы (edu-cip.tj) отдаёт просроченный сертификат, и
+# проверку сертификатов сборщик не отключает. Поэтому источники такие:
+# объявления Центра международных программ в госагентстве «Ховар»,
+# статья Asia-Plus, где цитируется сам Центр о цикле 2026/27, и правила
+# отбора (постановление №208 от 2009, «Действует») из базы
+# законодательства СНГ — единственное место, где названы возраст и балл.
+[durakshondagon]
+name = "Durakhshandagon — International Scholarship of the President of Tajikistan"
+urls = [
+  "https://asiaplus.news/tg/2026/08/06/tahsili-rojgon-dar-horija-hujjatsupory-baroi-daryofti-stipendiya-i-durahshandagon-oghoz-shud/",
+  "https://khovar.tj/rus/2026/02/priyom-dokumentov-dlya-uchastiya-v-mezhdunarodnoj-stipendii-durahshandagon-prodlitsya-do-1-aprelya/",
+  "https://khovar.tj/2025/10/abuli-u-at-o-baroi-ishtirok-dar-stipendiyai-bajnalmilalii-durahshandagon-o-oz-gardid/",
+  "https://base.spinform.ru/show_doc.fwx?rgn=84092",
+]
+# Новостные сайты окружают статью лентами, которые меняются каждый день,
+# а база законов — счётчиком обновлений. Без этих вырезок слежение
+# кричало бы об изменении ежедневно.
+volatile = [
+  'Мавод ба ин забонҳо дастрас аст[\s\S]*',
+  'Другие новости этой рубрики[\s\S]*',
+  'Хабарҳои дигари ин бахш[\s\S]*',
+  'Дата обновления БД:[\s\S]*?Подробная статистика',
+]
+approvedBy = "human"
+approvedAt = "2026-09-11"
