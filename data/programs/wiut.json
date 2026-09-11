@@ -1,0 +1,161 @@
+{
+  "id": "wiut",
+  "status": "published",
+  "name": {
+    "ru": "Westminster International University in Tashkent (WIUT) — через подготовительный год",
+    "orig": "Westminster International University in Tashkent — Foundation & Undergraduate"
+  },
+  "hostCountry": "UZ",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Для иностранцев учёба платная: около 4 484 долларов в год и на подготовительном курсе, и на бакалавриате (54 600 000 сумов по курсу на 7 апреля 2026). Стипендия вуза — полное освобождение от платы — только для граждан Узбекистана. Иностранцу остаётся скидка 15% за попадание в список лучших студентов декана. Про жильё и дорогу эти страницы не говорят"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "The course aims to meet the needs of students from the local environment in Uzbekistan as well as international students"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "страну школы не ограничивают: нужен аттестат, равный британскому GCSE O Level, а узбекский приведён лишь как пример"
+    },
+    "schoolYears": {
+      "min": 11,
+      "evidence": "Applicants who have recently completed 11th grade at school or lyceum can apply directly to the Certificate of International Foundation Studies course."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "года выпуска не называют; подготовительный курс рассчитан на недавно окончивших одиннадцатый класс"
+    },
+    "age": {
+      "notMeasured": true,
+      "evidence": "Applicants will normally have to be 17 years of age at the start of the academic year."
+    },
+    "gpa": {
+      "min": 70,
+      "scale": "PERCENT",
+      "advisory": true,
+      "evidence": "normally with an overall average mark of 70%"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0
+        }
+      ],
+      "evidence": "IELTS score from 6.0 and above (writing 5.0)"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "После 11 классов на бакалавриат напрямую не берут: сначала год подготовительного курса CIFS, и только после него — бакалавриат. Напрямую на бакалавриат принимают с A-level, IB или переводом из другого вуза.",
+      "evidence": "hold internationally recognized certificates such as Cambridge A level or an IB Diploma"
+    },
+    {
+      "ru": "Подготовительный курс длится год. Успешное окончание открывает переход на бакалавриат WIUT.",
+      "evidence": "The successful completion of this first-year course allows students to progress to their degree courses."
+    },
+    {
+      "ru": "Английский: IELTS от 6.0, письмо не ниже 5.0. TOEFL тоже принимают — от 78, письмо не ниже 17, и только очный: домашнюю версию не засчитывают.",
+      "evidence": "TOEFL should be 78 overall with a minimum of 17 in Writing"
+    },
+    {
+      "ru": "Математику надо подтвердить отдельно: сдать вступительный экзамен WIUT по математике или показать SAT по математике от 570.",
+      "evidence": "SAT Mathematics component 570"
+    },
+    {
+      "ru": "Экзамен WIUT по математике платный — 300 000 сумов.",
+      "evidence": "pay the examination fee of UZS 300,000"
+    },
+    {
+      "ru": "Средний балл аттестата — обычно от 70%. Вуз пишет «обычно», поэтому это ориентир, а не жёсткий порог, и может добавить собеседование.",
+      "evidence": "The university reserves the right to introduce other admission processes including for example, an Interview."
+    },
+    {
+      "ru": "По возрасту — обычно не младше 17 лет к началу учебного года, а он начинается в сентябре. «Обычно» значит, что исключения возможны, поэтому инструмент этот возраст не считает.",
+      "evidence": "Start Date September (each academic year)"
+    },
+    {
+      "ru": "Срок подачи на подготовительный курс — 15 июля, на бакалавриат напрямую — 17 августа. Это даты цикла 2026/27; новые вуз вывешивает к следующему циклу, поэтому срок в карточке помечен неподтверждённым.",
+      "evidence": "Certificate of International Foundation Studies - Wednesday, July 15, 2026"
+    },
+    {
+      "ru": "Для иностранцев год подготовительного курса стоит 54 600 000 сумов — около 4 484 долларов по курсу на 7 апреля 2026. Столько же стоит год бакалавриата. Местные платят меньше: 38 820 000 сумов.",
+      "evidence": "Certificate in International Foundation Studies 54,600,000 UZS 4 484 USD per academic year"
+    },
+    {
+      "ru": "Стипендия WIUT — полное освобождение от платы — только для граждан Узбекистана. Гражданину Таджикистана она не положена.",
+      "evidence": "a 100% fee waiver offered to citizens of the Republic of Uzbekistan accepted at the Certificate in International Foundation Studies (CIFS)"
+    },
+    {
+      "ru": "Иностранцу остаётся одна скидка — 15% за попадание в список лучших студентов декана, в том числе за окончание подготовительного курса с отличием.",
+      "evidence": "15% discount is available to self-financed students who manage to be in the Dean's List"
+    },
+    {
+      "ru": "Документы: аттестат с оценками, паспорт, сертификат по английскому и результат по математике.",
+      "evidence": "Math proficiency certificate or WIUT Math exam results"
+    },
+    {
+      "ru": "Все программы идут полностью на английском, дипломы подтверждает Вестминстерский университет в Великобритании.",
+      "evidence": "all academic programmes are delivered entirely in English and validated by the University of Westminster"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-07-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admission.wiut.uz/Manual/OverView",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — WIUT в Ташкенте"
+    }
+  },
+  "source": {
+    "url": "https://www.wiut.uz/certificate-international-foundation-studies",
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.wiut.uz/certificate-international-foundation-studies",
+        "contentHash": "sha256:f74a58113ede29eb2724b15dfe2009df9690df904aa28cb1f21728fd6c23f4eb"
+      },
+      {
+        "url": "https://wiut.uz/direct-entry-transfer",
+        "contentHash": "sha256:7f1ef75ced4480fda892fca94274aa46880bb0a4dacfedd64edce698dc6b1841"
+      },
+      {
+        "url": "https://admission.wiut.uz/Manual/OverView",
+        "contentHash": "sha256:6843e62b18e56e37ec82eefa47fb290b6a2c51d78cd89a22802b37ff3f16f19d"
+      },
+      {
+        "url": "https://www.wiut.uz/scholarship",
+        "contentHash": "sha256:38c8e75023293c1ec582d678d8d1717a07385cba098dbb46b1b2f44a7dfc0b9e"
+      },
+      {
+        "url": "https://www.wiut.uz/tuition-fees-international",
+        "contentHash": "sha256:3587e7cee54288915a3452cf05e6590b1c824d66c5305dc8092c28d54bb35b20"
+      },
+      {
+        "url": "https://www.wiut.uz/undergraduate",
+        "contentHash": "sha256:4602b946e1048658cde5e39ee19b846846c0e7c1d7ce0e5657ce2c4986b995b9"
+      }
+    ]
+  }
+}

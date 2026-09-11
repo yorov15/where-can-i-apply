@@ -417,3 +417,22 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-11"
+
+# Westminster International University in Tashkent — бакалавриат.
+# Домен wiut.uz одобрен человеком 11 сентября 2026.
+#
+# Для выпускника одиннадцатилетней школы дорога лежит через
+# подготовительный год CIFS, а не прямо на бакалавриат, — поэтому
+# страницы подготовительного года и прямого поступления нужны обе.
+[wiut]
+name = "Westminster International University in Tashkent — Foundation & Undergraduate"
+urls = [
+  "https://www.wiut.uz/certificate-international-foundation-studies",
+  "https://wiut.uz/direct-entry-transfer",
+  "https://admission.wiut.uz/Manual/OverView",
+  "https://www.wiut.uz/scholarship",
+  "https://www.wiut.uz/tuition-fees-international",
+  "https://www.wiut.uz/undergraduate",
+]
+approvedBy = "human"
+approvedAt = "2026-09-11"
