@@ -1,0 +1,157 @@
+{
+  "id": "inha",
+  "status": "published",
+  "name": {
+    "ru": "Университет Инха в Ташкенте (IUT) — приём иностранцев",
+    "orig": "Inha University in Tashkent — Undergraduate (international admission)"
+  },
+  "hostCountry": "UZ",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "При поступлении иностранцу денег не дают: учёба платная, 4 000 долларов в год. Дальше скидку можно заработать учёбой — полную или половинную оплату семестра за высокий GPA. Государственный грант Узбекистана даётся по национальному экзамену DTM; открыт ли он иностранцам, страница не говорит. Про жильё и дорогу эти страницы не говорят"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "An applicant who holds a foreign passport can apply for IUT as an international student."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "страну школы не ограничивают: подходят и узбекские, и иностранные школы, лицеи и колледжи"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "числа лет школы не называют: принимают выпускников школы, лицея или колледжа"
+    },
+    "graduationYear": {
+      "maxRelative": "applicationYear",
+      "evidence": "lyceum, college or high school graduates or graduates-to-be in the first half of the year 2026"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "возраст не ограничен: вуз прямо пишет, что принимает абитуриентов любого возраста"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "минимального балла аттестата для приёма иностранцев не называют; средний балл важен только для стипендий уже во время учёбы"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5.0
+        }
+      ],
+      "evidence": "IELTS : 5.0 or higher / TOEFL iBT : 50 or higher"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцы поступают по отдельному приёму. Вступительного экзамена в перечне для них нет — подают документы: аттестат с оценками, сертификат по английскому, мотивационное письмо, учебный план и рекомендательное письмо. Заявка — на сайте foreign-admissions.inha.uz, документы отправляют почтой.",
+      "evidence": "Official English Proficiency Test Certificate (IELTS/ TOEFL iBT) or an official letter issued by the secondary or higher education that certifies their students were taught in English; Personal Statement; Study Plan; Recommendation letter."
+    },
+    {
+      "ru": "Подача для иностранцев — в три волны: с 13 апреля по 8 мая, с 11 мая по 5 июня и с 8 июня по 16 июля. Это даты цикла 2026/27; на следующий год вуз вывесит новые, поэтому срок в карточке помечен неподтверждённым.",
+      "evidence": "Online Application & Counseling 1st round : Apr 13 (Mon) ~ May 8 (Fri)"
+    },
+    {
+      "ru": "После заявки — собеседование. В прошлом цикле оно шло по волнам: 21–22 мая, 18–19 июня и 23–24 июля.",
+      "evidence": "Intewiew date 1st round : May 21 (Thu) ~ May 22 (Fri)"
+    },
+    {
+      "ru": "Английский зависит от факультета: на компьютерную инженерию — IELTS от 5.0 или TOEFL от 50, на бизнес и логистику — IELTS от 5.5 или TOEFL от 71. Инструмент считает по меньшему порогу.",
+      "evidence": "SBL (School of Business and Logistics) IELTS : 5.5 or higher / TOEFL iBT : 71 or higher"
+    },
+    {
+      "ru": "Сертификат по английскому можно донести позже заявки — в прошлом цикле до 21 августа.",
+      "evidence": "Submission deadline for Official English Proficiency Test Certificate: Aug 21, 2026 (Fri)"
+    },
+    {
+      "ru": "Освобождение от сертификата страница описывает по-разному: в одном месте — только за вуз на английском, в другом — за письмо о преподавании на английском из школы или вуза. Если школа была на английском, уточняй у приёмной комиссии до подачи.",
+      "evidence": "those who have completed higher education (University) taught in English in the country that uses English as their native or legal official language"
+    },
+    {
+      "ru": "Прошедшим надо сразу внести 25% годовой платы, чтобы закрепить место. В прошлом цикле на это давали около десяти дней после объявления результатов.",
+      "evidence": "Registration for the successful candidates 1st round : June 2 (Tue) ~ June 12 (Fri)"
+    },
+    {
+      "ru": "Для иностранцев год стоит 4 000 долларов на любом факультете, платят в долларах. Годом раньше было 5 000 и 5 250 — цену меняют каждый год.",
+      "evidence": "SOCIE 40 400 000 UZS 4 000$ SBL 42 300 000 UZS 4 000$"
+    },
+    {
+      "ru": "Все 700 мест — платные, по контракту: 450 на компьютерную инженерию, по 125 на бизнес и на логистику.",
+      "evidence": "Division Contract-based School of Computer and Information Engineering (SOCIE) 450"
+    },
+    {
+      "ru": "Государственный грант — полная оплата учёбы на четыре года — выдаёт министерство Узбекистана тем, кто уже поступил по контракту и осенью сдал национальный экзамен DTM. Доступен ли он иностранцу, страница не говорит.",
+      "evidence": "The national exam (DTM) must be taken in September-October."
+    },
+    {
+      "ru": "Скидку можно заработать учёбой: каждый семестр лучшим по GPA оплачивают семестр полностью или наполовину — на компьютерной инженерии 4 полных и 6 половинных, на бизнесе и логистике 2 и 3. Для полной нужен GPA от 4.0, для половинной — от 3.7.",
+      "evidence": "At least 16 academic credits earned in the previous semester GPA: 4.0 or above - 100% scholarship"
+    },
+    {
+      "ru": "Подавать можно до окончания школы, если выпуск — в первой половине года поступления. Но учиться начнёшь, только получив аттестат.",
+      "evidence": "will be allowed to enter IUT only after obtaining their diploma"
+    },
+    {
+      "ru": "Учатся только на английском. Корейский не обязателен — его можно взять по выбору.",
+      "evidence": "the courses offered at IUT are taught only in English"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-07-16",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://inha.uz/prospective-students/admissions/application-guideline/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Инха в Ташкенте"
+    }
+  },
+  "source": {
+    "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+        "contentHash": "sha256:26d805c8450cabf2bc7a12ad9af48fdef1d231a34a921e6754bab9e69746131e"
+      },
+      {
+        "url": "https://inha.uz/prospective-students/admissions/tuitions/",
+        "contentHash": "sha256:d5d23e1a75bd31f3981ef1afdc51d909c83f5833f53c81ff69f6ee2766019dd2"
+      },
+      {
+        "url": "https://inha.uz/prospective-students/admissions/faq/",
+        "contentHash": "sha256:b78e23d46028b2031e8e4d4ea3ba367c07c34265815ab6f0280da53e60b0fc77"
+      },
+      {
+        "url": "https://inha.uz/prospective-students/admissions/scholarships/",
+        "contentHash": "sha256:3f5ec08bd7840620322ec80192c63f8512e343c53d547d9f5742ac57f98009b7"
+      }
+    ]
+  }
+}

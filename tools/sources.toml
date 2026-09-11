@@ -436,3 +436,24 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-11"
+
+# Inha University in Tashkent — бакалавриат, приём иностранцев.
+# Домен inha.uz одобрен человеком 11 сентября 2026.
+#
+# Требования к английскому разные у двух школ вуза, а плата для
+# иностранцев — в долларах и отдельной строкой: нужны и правила приёма,
+# и страница платы. FAQ — единственное место, где прямо сказано про
+# возраст и про приём иностранцев.
+[inha]
+name = "Inha University in Tashkent — Undergraduate (international admission)"
+urls = [
+  "https://inha.uz/prospective-students/admissions/application-guideline/",
+  "https://inha.uz/prospective-students/admissions/tuitions/",
+  "https://inha.uz/prospective-students/admissions/faq/",
+  # Стипендии здесь даются уже студентам, по баллу за семестр, — при
+  # поступлении денег нет. Без этой страницы карточка не смогла бы
+  # сказать это прямо.
+  "https://inha.uz/prospective-students/admissions/scholarships/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-11"
