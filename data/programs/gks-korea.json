@@ -21,7 +21,7 @@
       "deny": [
         "KR"
       ],
-      "evidence": "Nationality: Applicant and both parents must hold non-Korean citizenship"
+      "evidence": "Nationality: Applicants and both of their parents must hold non-Korean citizenship"
     },
     "schoolCountry": {
       "noLimit": true,
@@ -44,12 +44,13 @@
     "age": {
       "min": null,
       "maxExclusive": 25,
-      "evidence": "Age: Under 25 years old as of applicable year"
+      "evidence": "Age: Applicants must be under 25 years of age as of the applicable year"
     },
     "gpa": {
       "min": 80,
       "scale": "PERCENT",
-      "evidence": "Academic Performance: Cumulative GPA of 80% or higher in the most recent educational program"
+      "advisory": true,
+      "evidence": "such as a cumulative score of 80% or higher, ranking within the top 20% of their class, or meeting the required CGPA threshold"
     },
     "language": {
       "noLimit": true,
@@ -62,15 +63,19 @@
   "textConditions": [
     {
       "ru": "Не только сам абитуриент, но и оба родителя не должны иметь корейского гражданства. В анкете такого вопроса нет — проверь сам.",
-      "evidence": "Nationality: Applicant and both parents must hold non-Korean citizenship"
+      "evidence": "Nationality: Applicants and both of their parents must hold non-Korean citizenship"
     },
     {
-      "ru": "Заявки подаются в сентябре — октябре. Точных чисел источник не называет, поэтому даты приёма в карточке пустые.",
-      "evidence": "Application Submission Embassy University September - October"
+      "ru": "Объявление NIIED выходит в сентябре. Заявки по посольскому пути подают в сентябре, через вуз — с сентября по ноябрь; отбор идёт в октябре — декабре, итоги — в декабре. Точных чисел источник не называет, поэтому даты приёма в карточке пустые.",
+      "evidence": "Application Submission Embassy University Embassy Track: September / University Track: September - November"
     },
     {
-      "ru": "Подавать можно двумя путями — через посольство Кореи или напрямую в вуз. Это разные конкурсы со своими квотами: по посольскому пути 150 мест, по вузовскому — 130, из них 30 на двухлетние программы колледжей.",
-      "evidence": "Application Tracks Embassy Track"
+      "ru": "Подавать можно двумя путями — через посольство Кореи или напрямую в вуз, и у каждого свои квоты. По посольскому пути 156 мест: 88 общих, 61 по программе R-GKS для студентов из развивающихся стран и 7 для зарубежных корейцев. Через вуз — 130: 100 на инженерные и научные программы UIC и 30 на двухлетние программы колледжей.",
+      "evidence": "Selection Quota Embassy Track General 88 Overseas Koreans 7 R-GKS 61 Subtotal 156 University Track UIC 100 Associate Degree 30 Subtotal 130 Total 286"
+    },
+    {
+      "ru": "Балл 80% — не единственный путь: подходит и место в лучших 20% класса, или нужный средний балл по шкале CGPA. Поэтому балл аттестата инструмент считает ориентиром, а не запретом.",
+      "evidence": "such as a cumulative score of 80% or higher, ranking within the top 20% of their class, or meeting the required CGPA threshold"
     },
     {
       "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцать. Но закон мягче: постановление о признании образования засчитывает «окончил школу за рубежом» и отдельно — «программу, признанную министром равной двенадцати годам». То есть аттестат сам по себе дорогу не закрывает, а решение принимает вуз.",
@@ -102,7 +107,7 @@
     "pages": [
       {
         "url": "https://www.studyinkorea.go.kr/en/plan/scholarship.do",
-        "contentHash": "sha256:1a231300178034705fd8e2aa75d1cfec2d407d281ad9e866b934556e171d5e3e"
+        "contentHash": "sha256:e5ca0f5526b649efe0bfa7f1027ddc5cf3ac514c5331691cc06264b5c1bc304e"
       },
       {
         "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
