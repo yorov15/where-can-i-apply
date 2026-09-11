@@ -1,0 +1,133 @@
+{
+  "id": "germany-public",
+  "status": "published",
+  "name": {
+    "ru": "Бакалавриат в государственных вузах Германии — без стипендии",
+    "orig": "Bachelor at German public universities (no scholarship) — DAAD"
+  },
+  "hostCountry": "DE",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Это не стипендия, а обычное поступление. За бакалавриат в государственных вузах обычно не платят; исключения — Баден-Вюртемберг (1 500 евро за семестр для граждан не из ЕС) и часть вузов Баварии. Семестровый взнос — от 70 до 430 евро. На жизнь нужно 900–1 200 евро в месяц, и для визы надо показать 992 евро на каждый месяц"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "гражданство не ограничивают: для граждан не из ЕС меняется только плата в Баден-Вюртемберге и Баварии"
+    },
+    "schoolCountry": {
+      "notMeasured": true,
+      "evidence": "Not all foreign school-leaving certificates are recognised as university entrance qualifications"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Without the HZB, it is not possible to enter directly into the German university system."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "года выпуска страницы DAAD не называют; сроки подачи задаёт каждый вуз"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "возраст на страницах DAAD не упоминается"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "the final decision on admission always lies with the higher education institution"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "offering preparatory courses that give students general, specialised and linguistic competencies that are necessary for successful studies at a German university"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Главный вопрос — признают ли таджикский аттестат для прямого поступления. Ответ по каждой стране даёт база требований DAAD: выбери там Tajikistan. Инструмент эту базу прочесть не может — ответ она показывает только в браузере, — поэтому сам за неё не решает.",
+      "evidence": "Information regarding the country-specific evaluation of foreign school-leaving certificates and degrees can be found on the DAAD admission database"
+    },
+    {
+      "ru": "Если аттестат для прямого поступления не годится, путь — Studienkolleg: подготовительные курсы с экзаменом Feststellungsprüfung в конце. Сдал его — можно учиться в любом вузе Германии.",
+      "evidence": "If your school-leaving certificate does not entitle you to directly start studying in Germany, you can apply for a place at a Studienkolleg that has a final assessment test"
+    },
+    {
+      "ru": "Studienkolleg выбирают по будущей специальности: курс T — для математических, естественных и технических направлений, W — для экономики и социальных наук, M — для медицины, биологии и фармации.",
+      "evidence": "T courses - for mathematical-scientific or technical courses of study"
+    },
+    {
+      "ru": "Даже ответ базы DAAD — только ориентир: окончательно решает вуз. Сроки подачи и требования к языку у каждого вуза свои.",
+      "evidence": "The information is for guidance only, as the final decision on admission always lies with the higher education institution."
+    },
+    {
+      "ru": "За бакалавриат в государственных вузах Германии обычно не платят.",
+      "evidence": "There are generally no fees for Bachelor's courses or most Master's courses at state higher education institutions."
+    },
+    {
+      "ru": "Исключение — Баден-Вюртемберг: с граждан не из ЕС там берут 1 500 евро за семестр.",
+      "evidence": "The Federal State of Baden-Württemberg charges non-EU citizens tuition fees of EUR 1,500 per semester"
+    },
+    {
+      "ru": "В Баварии вузы сами решают, брать ли плату с иностранцев не из ЕС, и она может доходить до нескольких тысяч евро за семестр — проверяй для своей программы.",
+      "evidence": "Tuition fees for international students from outside the EU/EEA may also apply in Bavaria."
+    },
+    {
+      "ru": "Семестровый взнос платят все студенты: от 70 до 430 евро за семестр, при зачислении и перед каждым новым семестром. Часто в него входит проездной.",
+      "evidence": "The semester contribution varies between higher education institutions and comes to between 70 and 430 EUR."
+    },
+    {
+      "ru": "На жизнь нужно 900–1 200 евро в месяц, в зависимости от города; главная статья — жильё.",
+      "evidence": "you will need between 900 and 1,200 Euros per month"
+    },
+    {
+      "ru": "Для студенческой визы надо доказать, что у тебя есть 992 евро на каждый месяц: доходом родителей, деньгами на блокированном счёте (Sperrkonto) или признанной стипендией.",
+      "evidence": "must prove that they have 992 euros available per month"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.daad.de/en/studying-in-germany/requirements/admission-database/",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": null,
+    "note": {
+      "ru": "Государственные вузы Германии; в каждый поступают отдельно, со своими сроками и требованиями"
+    }
+  },
+  "source": {
+    "url": "https://www.daad.de/en/studying-in-germany/living-in-germany/finances/",
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.daad.de/en/studying-in-germany/living-in-germany/finances/",
+        "contentHash": "sha256:c778912169630803796e8d1676106d408d54ac020894b8df6fd732d553fb4fa9"
+      },
+      {
+        "url": "https://www.daad.de/en/studying-in-germany/requirements/studienkollegs/",
+        "contentHash": "sha256:c7462f4e40c4d83213f143e9343e06b19c26ca3a8499e68e0548f9a5b07d7c92"
+      },
+      {
+        "url": "https://www.daad.de/en/studying-in-germany/requirements/admission-database/",
+        "contentHash": "sha256:ba5540b816711fac040fb0cfd63e38ae80cf10b7fc17495439101b65ef877242"
+      }
+    ]
+  }
+}

@@ -513,3 +513,22 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-11"
+
+# Бакалавриат в государственных вузах Германии — без стипендии.
+# Домен daad.de одобрен человеком 11 сентября 2026.
+#
+# DAAD не финансирует полный бакалавриат, поэтому карточка не про
+# стипендию, а про почти бесплатное обучение. Главный вопрос — признают
+# ли таджикский аттестат для прямого поступления — отвечает база
+# требований DAAD, но ответ по стране она подгружает скриптом, и
+# сборщик его не видит (ни страница, ни код приложения не отдают адрес
+# данных). Поэтому карточка этого не утверждает, а отсылает к базе.
+[germany-public]
+name = "Bachelor at German public universities (no scholarship) — DAAD"
+urls = [
+  "https://www.daad.de/en/studying-in-germany/living-in-germany/finances/",
+  "https://www.daad.de/en/studying-in-germany/requirements/studienkollegs/",
+  "https://www.daad.de/en/studying-in-germany/requirements/admission-database/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-11"
