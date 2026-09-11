@@ -457,3 +457,20 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-11"
+
+# Стипендия правительства Китая — канал через посольство КНР в
+# Таджикистане. Домен tj.china-embassy.gov.cn одобрен человеком
+# 11 сентября 2026.
+#
+# Сайт самой CSC (campuschina.org) с машины сборщика не открывается:
+# его имя не находится DNS, а csc.edu.cn отвечает 412 роботам. Берём
+# объявление посольства: оно официальное и написано именно для граждан
+# Таджикистана — отбор, экзамен и сроки идут через него. Текст на
+# китайском, цитаты тоже будут китайскими.
+[csc-china]
+name = "Chinese Government Scholarship — via the Chinese Embassy in Tajikistan"
+urls = [
+  "https://tj.china-embassy.gov.cn/sgzc/202511/t20251124_11759137.htm",
+]
+approvedBy = "human"
+approvedAt = "2026-09-11"
