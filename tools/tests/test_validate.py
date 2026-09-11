@@ -102,6 +102,29 @@ class TestLanguageTests(unittest.TestCase):
         self.assertTrue(any("анкета не знает" in p for p in problems))
 
 
+class TestTextConditions(unittest.TestCase):
+    def test_condition_with_real_quote_passes(self):
+        program = good_program()
+        program["textConditions"] = [
+            {"ru": "Моложе 21 года на момент подачи.", "evidence": "under 21 years old"}
+        ]
+        self.assertEqual(validate_program(program, SNAPSHOT), [])
+
+    def test_condition_with_invented_quote_is_caught(self):
+        program = good_program()
+        program["textConditions"] = [
+            {"ru": "Моложе 25 лет.", "evidence": "under 25 years old"}
+        ]
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("условие 1: цитата не найдена" in p for p in problems))
+
+    def test_condition_without_quote_is_caught(self):
+        program = good_program()
+        program["textConditions"] = [{"ru": "Что-то важное.", "evidence": ""}]
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("условие 1: нет цитаты" in p for p in problems))
+
+
 class TestEvidence(unittest.TestCase):
     def test_clean_program_passes(self):
         self.assertEqual(validate_program(good_program(), SNAPSHOT), [])

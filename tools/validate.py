@@ -82,6 +82,20 @@ def validate_program(program: dict, snapshot_text: str, check_required: bool = T
         problems.extend(_check_numbers_have_evidence(field, rule))
         problems.extend(_check_rule_shape(field, rule))
 
+    # Условия текстом доезжают до карточки так же, как правила, и их
+    # цитаты проверяются тем же способом. Долго не проверялись вовсе — и
+    # прогон по всем карточкам нашёл две цитаты, которых в снимке нет
+    # дословно: в одной запятая стояла не там, в другой была точка,
+    # которой на странице нет.
+    for number, condition in enumerate(program.get("textConditions") or [], 1):
+        quote = condition.get("evidence")
+        if not quote:
+            problems.append(f"условие {number}: нет цитаты из источника")
+        elif normalize(quote) not in haystack:
+            problems.append(
+                f"условие {number}: цитата не найдена в тексте источника — {quote!r}"
+            )
+
     problems.extend(_check_deadline(program.get("deadline") or {}))
     return problems
 
