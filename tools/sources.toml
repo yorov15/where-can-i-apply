@@ -372,6 +372,10 @@ name = "Nazarbayev University — Foundation & Undergraduate"
 urls = [
   "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
   "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/financial-aid-end-scholarships/",
+  # Что получают иностранцы: стипендия Абая Кунанбаева названа только
+  # здесь. Без этой страницы карточка гадала, допускают ли иностранцев
+  # к государственному гранту, — страница финпомощи этого не говорит.
+  "https://nu.edu.kz/admissions/international-admission/international-admission_general/",
 ]
 volatile = ['Announcements see more[\s\S]*?(?=Useful information)']
 approvedBy = "human"

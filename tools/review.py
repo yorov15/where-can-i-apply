@@ -202,6 +202,35 @@ def forget_signatures(program: dict, fields) -> dict:
     return cleared
 
 
+def forget_rules(program: dict, fields) -> dict:
+    """Снимает с названных полей любое правило — и с цитатой тоже.
+
+    Нужно, когда правило оказалось не от того пути поступления. У
+    Назарбаева порог 4.0 стоял в таблице платного приёма, а карточка вела
+    в конкурс на финпомощь, где балла аттестата нет вовсе, — и человеку
+    с 3.9 карточка отказывала зря. Убрать такое правило было нечем:
+    merge_proposed переносит утверждённое правило, когда предложение о
+    поле молчит.
+    """
+    cleared = copy.deepcopy(program)
+    rules = cleared.get("eligibility") or {}
+    for field in fields:
+        if field in rules:
+            rules[field] = None
+    return cleared
+
+
+def _listed(args, flag: str) -> list[str]:
+    """Поля из флага вида --resign=gpa,age."""
+    return [
+        field
+        for arg in args
+        if arg.startswith(flag + "=")
+        for field in arg.split("=", 1)[1].split(",")
+        if field
+    ]
+
+
 def empty_fields(program: dict) -> list[str]:
     """Поля, про которые в записи ничего нет.
 
@@ -404,13 +433,10 @@ def main(argv=None) -> int:
     ask_again = "--ask-again" in args
     # --resign=gpa,age — переподписать поля заново, например когда
     # заметка обрезалась на полуслове.
-    resign = [
-        field
-        for arg in args
-        if arg.startswith("--resign=")
-        for field in arg.split("=", 1)[1].split(",")
-        if field
-    ]
+    resign = _listed(args, "--resign")
+    # --drop=gpa — снять правило целиком, даже с цитатой. Для случая,
+    # когда цитата верная, но относится к другому пути поступления.
+    drop = _listed(args, "--drop")
     only = [a for a in args if not a.startswith("-")]
     # --by-assistant — утверждает ассистент: вопросов не задаёт, подписи
     # берёт из proposed/<id>.signatures.json и записывает их своими.
@@ -468,6 +494,12 @@ def main(argv=None) -> int:
             current = forget_declined(current, FIELDS)
         if resign and current is not None:
             current = forget_signatures(current, resign)
+        if drop and current is not None:
+            for field in drop:
+                before = (current.get("eligibility") or {}).get(field)
+                if before is not None:
+                    print(f"{program_id}: {field} — правило снято: {_brief(before)}")
+            current = forget_rules(current, drop)
 
         # Отказы привязываются к отпечатку всего источника: человек
         # отвечает, глядя на объединённый текст всех страниц, значит и

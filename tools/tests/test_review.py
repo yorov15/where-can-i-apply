@@ -4,6 +4,7 @@ from tools.review import (
     _brief,
     ask,
     forget_signatures,
+    forget_rules,
     changed_pages,
     forget_declined,
     show_new,
@@ -336,6 +337,21 @@ class TestApprove(unittest.TestCase):
     def test_unknown_approver_is_refused(self):
         with self.assertRaises(ValueError):
             approve({"status": "draft", "source": {}}, "2026-09-03", PAGES, "model")
+
+
+class TestForgetRules(unittest.TestCase):
+    def test_drops_a_quoted_rule(self):
+        program = {"eligibility": {"gpa": {"min": 4.0, "scale": "TJ_5", "evidence": "4.0 out of 5.0"}}}
+        self.assertIsNone(forget_rules(program, ["gpa"])["eligibility"]["gpa"])
+
+    def test_leaves_other_fields_alone(self):
+        program = {"eligibility": {"gpa": {"min": 4.0}, "age": {"max": 25}}}
+        self.assertEqual(forget_rules(program, ["gpa"])["eligibility"]["age"], {"max": 25})
+
+    def test_does_not_mutate_input(self):
+        program = {"eligibility": {"gpa": {"min": 4.0}}}
+        forget_rules(program, ["gpa"])
+        self.assertEqual(program["eligibility"]["gpa"], {"min": 4.0})
 
 
 class TestSignFromNotes(unittest.TestCase):

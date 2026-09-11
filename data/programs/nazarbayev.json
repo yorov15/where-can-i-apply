@@ -8,11 +8,11 @@
   "hostCountry": "KZ",
   "level": "bachelor",
   "coverage": {
-    "tuition": null,
-    "living": null,
+    "tuition": true,
+    "living": true,
     "travel": null,
     "note": {
-      "ru": "Два пути с разной ценой. Обычный приём платный: 15 000 долларов в год, и для местных, и для иностранцев. Отдельно идёт конкурс на государственный грант, и иностранцев на него допускают — у них свой срок. Что именно покрывает грант, эти страницы не говорят"
+      "ru": "Два пути с разной ценой. Платный приём — 15 000 долларов в год, скидок по гражданству нет. В конкурсе на финпомощь иностранцам вуз называет стипендию Абая Кунанбаева: обучение, медицинская страховка и ежемесячная стипендия. Её дают лучшим иностранным кандидатам по рекомендации приёмной комиссии, так что это конкурс, а не гарантия. Про оплату дороги страницы не говорят"
     }
   },
   "eligibility": {
@@ -49,9 +49,11 @@
       "note": "возраст на страницах приёма не упоминается"
     },
     "gpa": {
-      "min": 4.0,
-      "scale": "TJ_5",
-      "evidence": "4.0 out of 5.0"
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "в конкурсе на финпомощь балла аттестата не требуют — вместо него NUET, SAT/ACT, IB или A-level; порог по баллу есть только в платном приёме, он в условиях ниже"
     },
     "language": {
       "anyOf": [
@@ -60,32 +62,52 @@
           "min": 6.0
         }
       ],
-      "evidence": "IELTS: Overall 6.0"
+      "evidence": "IELTS - 6.0; writing -6.0; reading & listening & speaking - 5.5"
     }
   },
   "textConditions": [
     {
-      "ru": "Путей два, и сроки у них разные. Платный приём для иностранцев идёт до 17 июля. Конкурс на грант закрывается 10 февраля — на пять месяцев раньше. Если деньги для тебя вопрос, твой срок февральский, и июльский тебя не спасёт.",
+      "ru": "Самый ранний срок — ноябрьский. В конкурсе на финпомощь через экзамен NUET подают до 20 ноября, и иностранцев этот путь тоже касается. Дата на странице — от прошлого цикла; новые даты университет вывешивает осенью, приём открывается 27 сентября.",
+      "evidence": "NUET Applicants (NUFYP and Undergraduate programs, including international): September 27-November 20, 2025"
+    },
+    {
+      "ru": "Остальные категории конкурса на финпомощь закрываются позже: SAT/ACT, IB, A-level и победители олимпиад — до 28 января, отдельная категория для иностранцев — до 10 февраля. Какие требования у категории для иностранцев, страница не расписывает.",
       "evidence": "International Applicants (Undergraduate programs only and International SAT/ACT applicants for NUFYP): September 27- February 10, 2026"
     },
     {
-      "ru": "Без гранта год стоит 15 000 долларов, подготовительный — 12 000. Цена одинаковая для казахстанцев и иностранцев, скидок по гражданству нет.",
-      "evidence": "The tuition fee for undergraduate programs is $15,000 for the 2026/2027 academic year for both local and international students."
+      "ru": "Для финпомощи NUET не обязателен: вместо него принимают Digital SAT от 1240 или ACT от 26. Где сдают NUET, страница не говорит — город выбирают в анкете.",
+      "evidence": "SAT/ACT applicants Digital SAT Reasoning Test - 1240 OR ACT - 26 composite score"
+    },
+    {
+      "ru": "Порог NUET для государственного гранта — 120 баллов из 240 и не меньше 50 по каждому из двух предметов. Кому этот грант положен — только гражданам Казахстана или и иностранцам, — страница финпомощи не говорит. Иностранцам вуз отдельно называет стипендию Абая Кунанбаева.",
+      "evidence": "Minimum passing score to be eligible for a state grant - 120 in total for two subjects"
+    },
+    {
+      "ru": "Стипендия Абая Кунанбаева покрывает обучение, медицинскую страховку и ежемесячную стипендию. Для какого уровня — бакалавриата или магистратуры — страница для иностранцев не уточняет.",
+      "evidence": "This scholarship covers the tuition fee, medical insurance, and a monthly stipend."
+    },
+    {
+      "ru": "Её дают по заслугам лучшим иностранным кандидатам, по рекомендации приёмной комиссии каждой школы университета. Подать документы — ещё не значит её получить.",
+      "evidence": "merit-based Abay Kunanbayev scholarships available for top international candidates, as recommended by the admissions committee of each school"
+    },
+    {
+      "ru": "Обычный приём — платный: 15 000 долларов в год, подготовительный год — 12 000. Цена одинаковая для казахстанцев и иностранцев. Для иностранцев из стран, где визу оформляют заранее, платный приём идёт до 17 июля.",
+      "evidence": "regular admissions is classified as a full tuition-based category, implying fee-paying study"
+    },
+    {
+      "ru": "Балл аттестата — 4,0 из 5 — требуют только в платном приёме. В конкурсе на финпомощь его место занимают NUET, SAT/ACT, IB или A-level, поэтому балл ниже четырёх подачу на финпомощь не закрывает.",
+      "evidence": "GPA or equivalent and/or UNT in English *** 4.0 out of 5.0"
     },
     {
       "ru": "Подготовительный год необязателен — можно поступать сразу на бакалавриат. Числа лет школы страницы не называют, так что вопрос, который у Италии и Японии закрывает дорогу, здесь не возникает.",
       "evidence": "Admission to NUFYP after high school/college is optional. Applicants can enroll directly in the undergraduate program."
     },
     {
-      "ru": "Грант привязан к вступительному экзамену NUET: нужно 120 баллов из 240 и не меньше 50 в каждом из двух предметов. NUET сдают очно в городах Казахстана — значит придётся ехать.",
-      "evidence": "Minimum passing score to be eligible for a state grant - 120 in total for two subjects"
-    },
-    {
-      "ru": "Общежитие иностранцам гарантируют, и жизнь недорогая: около 400 долларов в месяц вместе с едой, транспортом и прачечной. Само общежитие — около 55 долларов.",
+      "ru": "Общежитие иностранцам гарантируют, и жизнь недорогая: около 400 долларов в месяц вместе с едой, транспортом и прачечной.",
       "evidence": "Accommodation is guaranteed for international students."
     },
     {
-      "ru": "От IELTS освобождают, если школа была на английском. Для таджикской школы это не сработает, но проверить стоит: некоторые лицеи ведут предметы на английском.",
+      "ru": "От IELTS освобождают, если школа была на английском. Для обычной таджикской школы это не сработает, но некоторые лицеи ведут предметы на английском — тогда стоит спросить.",
       "evidence": "where English is the language of instruction are exempt from submitting IELTS/TOEFL results"
     },
     {
@@ -93,15 +115,11 @@
       "evidence": "Individuals who are students in the final year of secondary education institutions"
     },
     {
-      "ru": "Осторожно с числами на их странице: IELTS 6.5 и SAT 1150 относятся к non-degree study — платному варианту без диплома. Требования бакалавриата ниже, но и диплом там настоящий. Не перепутай.",
+      "ru": "Осторожно с числами на их странице: IELTS 6.5 и SAT 1150 относятся к non-degree study — платному варианту без диплома. Не перепутай с требованиями бакалавриата.",
       "evidence": "the education is offered exclusively on a fee-paying basis"
     },
     {
-      "ru": "Даты на странице — от цикла 2026 года, поэтому срок в карточке помечен неподтверждённым. Приём на следующий год открывается 27 сентября, а свежие числа университет вывешивает осенью.",
-      "evidence": "Citizens of Kazakhstan: September 27 - August 17, 2026 (2 p.m. Astana time)"
-    },
-    {
-      "ru": "IELTS и TOEFL надо сдавать очно в центре: домашние и онлайн-версии не засчитывают, и пересдачу одной части тоже.",
+      "ru": "IELTS и TOEFL надо сдавать очно в центре: домашние и онлайн-версии не засчитывают, баллы по частям из разных попыток не складывают.",
       "evidence": "IELTS/TOEFL tests must be taken in person at the test center (not remotely)"
     }
   ],
@@ -132,6 +150,10 @@
       {
         "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/financial-aid-end-scholarships/",
         "contentHash": "sha256:cc235ff661c414bd740b37b5789f655ee1e5cebfd7abff95c862c0a9bc0b4888"
+      },
+      {
+        "url": "https://nu.edu.kz/admissions/international-admission/international-admission_general/",
+        "contentHash": "sha256:ab065e28007dbc75e5ba2ce1fcb7f48785fbbd765f51c451dd28025f680a4dfb"
       }
     ]
   }
