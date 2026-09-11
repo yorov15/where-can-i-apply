@@ -491,3 +491,25 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-11"
+
+# University of Central Asia — бакалавриат, кампусы в Хороге и Нарыне.
+# Домен ucentralasia.org (вместе с admissions.ucentralasia.org) одобрен
+# человеком 11 сентября 2026.
+#
+# Этапы отбора и деньги описаны на сайте приёма, а требования к
+# абитуриенту — в FAQ бакалавриата на основном сайте; общий FAQ туда
+# только отсылает. Пакет на финпомощь — PDF «для студентов из всех
+# стран»: в нём условия помощи, которых на страницах нет.
+[uca]
+name = "University of Central Asia — Undergraduate (Khorog, Naryn)"
+urls = [
+  "https://admissions.ucentralasia.org/apply/admission-overview/",
+  "https://admissions.ucentralasia.org/apply/stage-1/",
+  "https://admissions.ucentralasia.org/apply/stage-2/",
+  "https://admissions.ucentralasia.org/apply/stage-4/",
+  "https://ucentralasia.org/schools/school-of-arts-and-sciences/undergraduate-programme/frequently-asked-questions",
+  "https://ucentralasia.org/admissions/undergraduate/how-to-applyeur",
+  "https://admissions.ucentralasia.org/wp-content/uploads/2026/04/UCA-FA-Application-Package-INT-for-2026-27.pdf",
+]
+approvedBy = "human"
+approvedAt = "2026-09-11"
