@@ -598,3 +598,19 @@ urls = [
 volatile = ['\[T: [^\]]*\]']
 approvedBy = "human"
 approvedAt = "2026-09-11"
+
+# Стипендия правительства Брунея для иностранцев (BDGS). Домен
+# mfa.gov.bn одобрен человеком 11 сентября 2026. Страница — официальное
+# объявление МИД Брунея на сессию 2026/2027; на следующую сессию МИД
+# обычно обновляет её же. Сайт отвечает медленно (7–17 секунд), но в
+# тайм-аут сборщика укладывается.
+[brunei-bdgs]
+name = "Government of Brunei Darussalam Scholarship for Foreign Students (BDGS)"
+urls = [
+  "https://www.mfa.gov.bn/pages/online-bdgs.aspx",
+]
+# Наверху каждой страницы МИД — лента объявлений с датами, она меняется
+# с каждой новостью и к стипендии отношения не имеет.
+volatile = ['Announcement [\s\S]*?(?=online-bdgs Home)']
+approvedBy = "human"
+approvedAt = "2026-09-11"

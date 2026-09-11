@@ -1,0 +1,169 @@
+{
+  "id": "brunei-bdgs",
+  "status": "published",
+  "name": {
+    "ru": "Стипендия правительства Брунея для иностранцев (BDGS)",
+    "orig": "Government of Brunei Darussalam Scholarship for Foreign Students (BDGS)"
+  },
+  "hostCountry": "BN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Освобождают от платы за обучение и всех сборов, дают авиабилет эконом-класса туда перед учёбой и обратно после, 500 брунейских долларов в месяц на личные расходы и 150 на питание, 600 в год на книги, место в общежитии вуза, страховку и до 500 брунейских долларов на отправку вещей домой"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "BN"
+      ],
+      "evidence": "Bruneians, Brunei Permanent Residents and international students studying/who have studied in Brunei tertiary institutions are NOT eligible."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "страну школы объявление не ограничивает; не могут подать только те, кто учится или учился в вузах Брунея"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "числа лет школы объявление не называет; требования к аттестату — у каждого вуза в описании программ"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "года выпуска объявление не называет"
+    },
+    "age": {
+      "max": 25,
+      "asOf": {
+        "relativeTo": "applicationYear",
+        "monthDay": "07-01"
+      },
+      "evidence": "Not exceed the age of 25, for Undergraduate and Diploma programmes, and the age of 35, for Postgraduate Master's Degree programmes, on the first day of July on the year when the course/programme starts."
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "Please read all information regarding the courses/programmes that you are applying thoroughly, before submitting your application form."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0
+        }
+      ],
+      "evidence": "an IELTS score of 6.0 or a TOEFL minimum score of 550"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Учиться можно в одном из пяти вузов Брунея: Universiti Brunei Darussalam (UBD), UNISSA, Universiti Teknologi Brunei (UTB), KUPU SB или Politeknik Brunei.",
+      "evidence": "Universiti Brunei Darussalam (UBD), Universiti Islam Sultan Sharif Ali (UNISSA), Universiti Teknologi Brunei (UTB), Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB) and Politeknik Brunei (PB)"
+    },
+    {
+      "ru": "Стипендия — для тех, кто едет учиться в Бруней впервые. Не могут подать граждане и постоянные жители Брунея, а также те, кто уже учится или учился в вузе Брунея.",
+      "evidence": "Bruneians, Brunei Permanent Residents and international students studying/who have studied in Brunei tertiary institutions are NOT eligible."
+    },
+    {
+      "ru": "На бакалавриат берут, если на 1 июля года начала учёбы тебе не больше 25.",
+      "evidence": "Not exceed the age of 25, for Undergraduate and Diploma programmes, and the age of 35, for Postgraduate Master's Degree programmes, on the first day of July on the year when the course/programme starts."
+    },
+    {
+      "ru": "Английский: IELTS от 6.0 или TOEFL от 550 — какую версию TOEFL имеют в виду, объявление не уточняет. Подходят и английский в O Level на Credit 6, и IGCSE на C. Заявки без нужного уровня отклоняют.",
+      "evidence": "Be proficient in English with a Credit 6 at GCE 'O' Level Examination"
+    },
+    {
+      "ru": "Могут вызвать на собеседование и на письменный экзамен по английскому, малайскому или арабскому — смотря по программе.",
+      "evidence": "An applicant may be required to appear for an interview at such place(s) as may be determined by the institutions offering the programmes"
+    },
+    {
+      "ru": "Требования к оценкам у каждого вуза свои — читай описание своей программы до подачи.",
+      "evidence": "Please read all information regarding the courses/programmes that you are applying thoroughly, before submitting your application form."
+    },
+    {
+      "ru": "Документы: удостоверение личности, заверенные копии аттестата, оценок и грамот, заверенные копии свидетельства о рождении и паспорта, две рекомендации (формы C1 и C2). Всё, что не на английском, — с заверенным переводом на английский.",
+      "evidence": "Certified English translations of supporting documents must be submitted for documents that are not in English."
+    },
+    {
+      "ru": "Подают через онлайн-форму BDGS на сайте МИД Брунея. Для UBD и UTB нужна ещё отдельная заявка на сайте самого вуза.",
+      "evidence": "Applicants applying to Universiti Brunei Darussalam (UBD) must also complete an online application through"
+    },
+    {
+      "ru": "Каждый месяц платят 500 брунейских долларов на личные расходы и 150 на питание, на книги — 600 в год.",
+      "evidence": "a monthly personal allowance of BND$500.00; a monthly meals allowance of BND$150.00; an annual book allowance of BND$600.00"
+    },
+    {
+      "ru": "Совмещать с другой стипендией, грантом или кредитом без письменного разрешения МИД нельзя — иначе стипендию отзовут сразу.",
+      "evidence": "This scholarship may be terminated or revoked immediately should the scholarship recipient be found holding another scholarship, fellowship, grant or loan without prior written approval of the Ministry."
+    },
+    {
+      "ru": "Работать за деньги во время учёбы нельзя.",
+      "evidence": "A scholarship recipient is not permitted to undertake any paid employment"
+    },
+    {
+      "ru": "Семью брать не советуют: доплат на супруга и детей нет, и жильё им не дают.",
+      "evidence": "No marriage allowance nor child allowance is payable to the scholarship recipient"
+    },
+    {
+      "ru": "Нужно уважать обычаи, культуру и официальную религию Брунея и не заниматься политикой.",
+      "evidence": "respect the customs, culture and official religion of Brunei Darussalam"
+    },
+    {
+      "ru": "После окончания учёбы нужно сразу уехать из Брунея.",
+      "evidence": "Upon completion of the programme, the scholarship recipient will be required to leave Brunei Darussalam with immediate effect."
+    },
+    {
+      "ru": "Решение об отборе окончательное: споры и вопросы о нём не рассматривают.",
+      "evidence": "Any disputes or enquiries pertaining to the decision made will not be entertained."
+    },
+    {
+      "ru": "Полные условия стипендии присылают только после одобрения; принимая её, подписываешь согласие с ними.",
+      "evidence": "The full listing of the terms and conditions of the scholarship will be provided to the applicant once the application is successful and a scholarship is offered."
+    },
+    {
+      "ru": "На сессию 2026/2027 приём открылся 15 декабря 2025.",
+      "evidence": "for the academic session 2026 / 2027 will open on 15 December 2025"
+    },
+    {
+      "ru": "Закрылся он 15 февраля 2026. Объявления на 2027/2028 ещё нет, поэтому срок в карточке — по прошлому году и помечен неподтверждённым.",
+      "evidence": "The closing date for application of the Scholarship is 15 February 2026."
+    }
+  ],
+  "deadline": {
+    "opens": "2026-12-15",
+    "closes": "2027-02-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.mfa.gov.bn/pages/online-bdgs.aspx",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 5,
+    "note": {
+      "ru": "Пять вузов Брунея: UBD, UNISSA, UTB, KUPU SB и Politeknik Brunei; вуз и программу выбираешь в заявке"
+    }
+  },
+  "source": {
+    "url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx",
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx",
+        "contentHash": "sha256:9effa12dad8fa067ba496d655338872ee974b37a84b7d24fd5ba55260705b005"
+      }
+    ]
+  }
+}
