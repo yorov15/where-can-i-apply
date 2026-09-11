@@ -1,0 +1,135 @@
+{
+  "id": "kazakhstan-grant",
+  "status": "published",
+  "name": {
+    "ru": "Государственная стипендия Казахстана для иностранцев — бакалавриат",
+    "orig": "Kazakhstan Scholarship Program for Foreign Citizens — Bachelor"
+  },
+  "hostCountry": "KZ",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Что именно покрывает стипендия, опубликованные страницы оператора не говорят: договор со стипендиатом выложен сканом, из которого текст не извлекается, а правила программы на adilet.zan.kz сборщику недоступны. Известно только, что стипендию дают на весь срок обучения"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KZ"
+      ],
+      "evidence": "scholarship program for foreign students, including Kazakhs without Kazakhstani citizenship"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "страну школы не ограничивают: нужен документ о среднем образовании с нотариальным переводом на казахский, русский или английский"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "числа лет школы не называют: для бакалавриата нужен документ о среднем образовании"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "A document on the previous level of education with a transcript and attachment (if available) and a notarized translation into Kazakh or Russian or English"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "возраст на страницах программы не упоминается"
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "the average score of the document confirming secondary education with a grade of at least"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-11",
+      "note": "языкового сертификата для бакалавриата не требуют — он в списке только у магистратуры; заявку заполняют на казахском, русском или английском"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Приём заявок в 2026 году шёл с 30 марта по 31 мая, онлайн через портал studyin.kz. Даты на следующий год ещё не объявлены, поэтому срок в карточке помечен неподтверждённым.",
+      "evidence": "Applicants can apply online from 30 March to 31 May 2026 until 23:59 Astana time"
+    },
+    {
+      "ru": "При подаче нужен уже полученный документ о среднем образовании с оценками и нотариальным переводом, а справки о выпускном классе в списке нет. Приём заканчивается 31 мая: если аттестат выдают позже, подать в год выпуска, похоже, не получится — уточняй у оператора.",
+      "evidence": "A document on the previous level of education with a transcript and attachment (if available) and a notarized translation into Kazakh or Russian or English"
+    },
+    {
+      "ru": "Средний балл аттестата должен быть не ниже «хорошо».",
+      "evidence": "the average score of the document confirming secondary education with a grade of at least"
+    },
+    {
+      "ru": "На бакалавриат — 490 стипендий на всех иностранцев сразу, на магистратуру — 50, на докторантуру — 10.",
+      "evidence": "Bachelor's degree - 490"
+    },
+    {
+      "ru": "Стипендия — только на первое образование этого уровня: кто уже получил степень бакалавра, на бакалавриат по ней не подаёт.",
+      "evidence": "The applicant is eligible for the scholarship if each education level is pursued for the first time"
+    },
+    {
+      "ru": "Документы: мотивационное эссе и одно рекомендательное письмо от школы или работодателя — на казахском, русском или английском, медицинская справка для выезжающих на учёбу и справка об отсутствии ВИЧ из своей страны.",
+      "evidence": "Motivational essay in Kazakh or Russian or English"
+    },
+    {
+      "ru": "Приглашение от казахстанского вуза не обязательно, но если оно есть, его прикладывают.",
+      "evidence": "letter of invitation from the Kazakhstan university (if available)"
+    },
+    {
+      "ru": "Список вузов и специальностей виден только на портале Study In во время приёма заявок — заранее его на этих страницах нет.",
+      "evidence": "The list of universities participating in the scholarship program, as well as the available fields of study, is available on the Study In portal during the application process."
+    },
+    {
+      "ru": "Программу ведёт АО «Центр международных программ»; вопросы — на info@bolashak.gov.kz.",
+      "evidence": "The operator of the Scholarship Program is JSC"
+    }
+  ],
+  "deadline": {
+    "opens": "2027-03-30",
+    "closes": "2027-05-31",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://bolashak.gov.kz/en/scholarship-program",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": null,
+    "note": {
+      "ru": "Казахстанские вузы, участвующие в программе; вуз и специальность выбирают на портале Study In во время приёма. Число вузов на страницах оператора не названо"
+    }
+  },
+  "source": {
+    "url": "https://bolashak.gov.kz/en/scholarship-program",
+    "lastVerified": "2026-09-11",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://bolashak.gov.kz/en/scholarship-program",
+        "contentHash": "sha256:72bc33db625719f02ba1cc1ca5d6a553adcd9b272b3efb19a9829eb6e20cf37c"
+      },
+      {
+        "url": "https://bolashak.gov.kz/en/scholarship-program/requirements-bachelors-degree",
+        "contentHash": "sha256:0f42fa5fabd33fcbdaf4e7a767ed5e44f7aa93dbd4aeb6278a363ca31fddefe6"
+      },
+      {
+        "url": "https://bolashak.gov.kz/en/allnews/application-process-has-begun-scholarship-program-foreign-students-including-kazakhs-without-kazakhstani-citizenship-study-higher-andor-postgraduate-education-institutions",
+        "contentHash": "sha256:57d8986f9921f62b2113df6e96c54a0094869c541f3e29b44d5a06c171f245a5"
+      }
+    ]
+  }
+}

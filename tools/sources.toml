@@ -474,3 +474,20 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-11"
+
+# Стипендиальная программа Казахстана для иностранцев — бакалавриат.
+# Домены bolashak.gov.kz и studyin.kz одобрены человеком 11 сентября 2026.
+#
+# Оператор — АО «Центр международных программ» (bolashak.gov.kz). Страница
+# грантов на studyin.kz не взята: там сроки 2024 года. Договор со
+# стипендиатом на bolashak.gov.kz выложен сканом без текста — извлечь из
+# него покрытие нельзя.
+[kazakhstan-grant]
+name = "Kazakhstan Scholarship Program for Foreign Citizens — Bachelor"
+urls = [
+  "https://bolashak.gov.kz/en/scholarship-program",
+  "https://bolashak.gov.kz/en/scholarship-program/requirements-bachelors-degree",
+  "https://bolashak.gov.kz/en/allnews/application-process-has-begun-scholarship-program-foreign-students-including-kazakhs-without-kazakhstani-citizenship-study-higher-andor-postgraduate-education-institutions",
+]
+approvedBy = "human"
+approvedAt = "2026-09-11"
