@@ -390,3 +390,30 @@ urls = [
 volatile = ['Announcements see more[\s\S]*?(?=Useful information)']
 approvedBy = "human"
 approvedAt = "2026-09-10"
+
+# AUCA, Бишкек — бакалавриат. Домены auca.kg и americancouncils.org
+# одобрены человеком 11 сентября 2026.
+#
+# Деньги для таджикских абитуриентов идут двумя путями, и оба нужны:
+# помощь по нужде от самого вуза (для СНГ) и US-CAEF — полная стипендия
+# для граждан Центральной Азии, которую ведёт American Councils. Без её
+# страницы карточка не сказала бы про главный источник денег.
+[auca]
+name = "American University of Central Asia — Undergraduate"
+urls = [
+  "https://www.auca.kg/en/freshman_applicants/",
+  "https://www.auca.kg/en/apply_international/",
+  "https://www.auca.kg/en/admissions/",
+  "https://auca.kg/en/p6088598350/",
+  "https://www.auca.kg/en/merit-based/",
+  # need-based и tuition_fees_payment проверены и не взяты: первая —
+  # одно меню без текста, вторая — про летнюю школу, не про бакалавриат.
+  "https://uzbekistan.americancouncils.org/us-caef-en",
+  "https://www.americancouncils.org/programs/us-caef-fellowships",
+  # Объявление цикла 2025/26 — свежее на одобренных доменах нет. Даёт
+  # направления, срок прошлого цикла и то, что подача в US-CAEF и в сам
+  # вуз — две отдельные заявки.
+  "https://auca.kg/en/auca_news/6375/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-11"
