@@ -7,6 +7,11 @@
 export function deadlineState(deadline, today) {
   if (!deadline || !deadline.closes) return 'unknown';
   if (today > deadline.closes) return 'closed';
-  if (deadline.opens && today < deadline.opens) return 'upcoming';
+  // Без даты открытия известен только срок. Раньше это считалось «приём
+  // идёт», и карточка HKUST писала так в сентябре, когда система подачи
+  // открывалась лишь в октябре. «Приём идёт» — утверждение, и делать его
+  // можно только зная, когда приём начался.
+  if (!deadline.opens) return 'due';
+  if (today < deadline.opens) return 'upcoming';
   return 'open';
 }

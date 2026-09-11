@@ -14,6 +14,7 @@ const VERDICT_TEXT = {
 const DEADLINE_TEXT = {
   open: 'Приём идёт',
   upcoming: 'Приём ещё не начался',
+  due: 'Срок подачи',
   closed: 'Приём закрыт',
   unknown: 'Даты приёма неизвестны',
 };
