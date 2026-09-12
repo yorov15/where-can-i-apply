@@ -706,6 +706,28 @@ approvedAt = "2026-09-12"
 # заявка на неё не влияет на решение о приёме. Четыре страницы, потому
 # что правила разнесены: условия для иностранцев, как считают помощь,
 # сроки туров и состав заявки.
+# Эстония. Домен studyinestonia.ee одобрен человеком 12 сентября 2026:
+# это официальный портал государственного агентства Harno.
+#
+# Карточка не про стипендию, а про цену вопроса: англоязычный
+# бакалавриат платный, а государственная стипендия бакалаврам положена
+# только на направления, связанные с эстонским языком и культурой.
+#
+# Пять страниц: цены, общие требования, порядок подачи, стипендии
+# бакалавриата и расходы на жизнь.
+[estonia-study]
+name = "Study in Estonia — English-taught bachelor programmes"
+urls = [
+  "https://www.studyinestonia.ee/study/admission",
+  "https://www.studyinestonia.ee/tuition-fees",
+  "https://www.studyinestonia.ee/general-requirements",
+  "https://www.studyinestonia.ee/how-apply",
+  "https://www.studyinestonia.ee/bachelor-degree-scholarships",
+  "https://www.studyinestonia.ee/living/living-costs",
+]
+approvedBy = "human"
+approvedAt = "2026-09-12"
+
 # Университет Катара. Домен qu.edu.qa одобрен человеком 12 сентября 2026.
 #
 # Карточка заведомо красная для таджикского выпускника: вуз требует
