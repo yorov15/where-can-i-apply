@@ -1,0 +1,156 @@
+{
+  "id": "azerbaijan-aliyev",
+  "status": "published",
+  "name": {
+    "ru": "Грант имени Гейдара Алиева — стипендия Правительства Азербайджана",
+    "orig": "Heydar Aliyev International Education Grant Program"
+  },
+  "hostCountry": "AZ",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Оплачивают обучение и языковые подготовительные курсы, дают перелёт эконом-классом в обе стороны раз в год, платят 800 манатов в месяц (около 470 долларов) десять месяцев в году — кроме июля и августа — и 200 манатов в год на лечение и лекарства. Визу и регистрацию тоже оплачивают"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "notMeasured": true,
+      "evidence": "The citizens of the following countries are eligible to participate in the program: • Member states of the Organization of Islamic Cooperation; • Member states of the Non-Aligned Movement; • Small Island Developing States; • Countries sharing common cultural, ethnic and historical ties with Azerbaijan."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "страну школы объявление не ограничивает: нужен аттестат и транскрипт прежней учёбы, заверенные и при необходимости переведённые"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "числа лет школы объявление не называет: нужен аттестат о среднем образовании с оценками"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "года выпуска объявление не называет: ограничение только по возрасту — младше 35 лет на 15 сентября"
+    },
+    "age": {
+      "maxExclusive": 35,
+      "asOf": {
+        "relativeTo": "applicationYear",
+        "monthDay": "09-15"
+      },
+      "evidence": "Undergraduate and general medicine programs - foreign nationals below 35 years as of 15.09.2026"
+    },
+    "gpa": {
+      "min": 70,
+      "scale": "PERCENT",
+      "evidence": "must not be less than 70 (on a scale of 0 to 100 or 7 on a scale of 10 or equivalent) of the relevant marking system"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 40
+        }
+      ],
+      "advisory": true,
+      "evidence": "for undergraduate programs minimum IELTS 5 (TOEFL 40)"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подача идёт в два этапа. Сначала документы подают в ведомство своей страны — министерство или посольство Азербайджана, — и оно выдвигает кандидата: в прошлом цикле с 16 февраля по 15 апреля. Прошедших первый этап регистрируют на портале SIACAS с 1 по 10 июня.",
+      "evidence": "Submission of applications (first stage) to the relevant government authorities of the applicant's country (Ministries, Embassies, etc.) From Feb 16 to April 15, 2026"
+    },
+    {
+      "ru": "Без официального выдвижения своей страной заявку дальше не рассматривают — самому подать на портале нельзя.",
+      "evidence": "Only the applications that were nominated by their respective countries in the first stage will go through the evaluation process for the Scholarship program."
+    },
+    {
+      "ru": "Подать могут граждане стран из четырёх групп: члены Организации исламского сотрудничества, члены Движения неприсоединения, малые островные развивающиеся государства и страны с общими культурными, этническими и историческими связями с Азербайджаном. Сам список стран — приложение к объявлению, и на сайте его нет. Поэтому инструмент по гражданству не решает: уточняй в Министерстве образования Таджикистана или в посольстве Азербайджана.",
+      "evidence": "The citizens of the following countries are eligible to participate in the program: • Member states of the Organization of Islamic Cooperation; • Member states of the Non-Aligned Movement; • Small Island Developing States; • Countries sharing common cultural, ethnic and historical ties with Azerbaijan."
+    },
+    {
+      "ru": "Граждане Азербайджана и те, кто отказался от азербайджанского гражданства, участвовать не могут.",
+      "evidence": "Citizens of the Republic of Azerbaijan or individuals whose citizenship in the Republic of Azerbaijan have been terminated will not be considered for a Scholarship"
+    },
+    {
+      "ru": "Возраст считают на 15 сентября года заезда: на бакалавриат берут младше 35 лет.",
+      "evidence": "Undergraduate and general medicine programs - foreign nationals below 35 years as of 15.09.2026"
+    },
+    {
+      "ru": "Средний балл прежней учёбы должен быть не ниже 70 из 100 — это 7 из 10 или столько же по своей шкале.",
+      "evidence": "must not be less than 70 (on a scale of 0 to 100 or 7 on a scale of 10 or equivalent) of the relevant marking system"
+    },
+    {
+      "ru": "Язык зависит от того, на каком учиться. Для английских программ нужен IELTS от 5 или TOEFL от 40 либо прежняя учёба на английском. Для русских, турецких и азербайджанских — подтверждение языка или прежняя учёба на нём. Поэтому баллы английского инструмент считает ориентиром: русскоязычная программа их не требует.",
+      "evidence": "Applicants willing to study in Russian - proof of language proficiency or the language of study of the previous education must be Russian"
+    },
+    {
+      "ru": "Сколько платят: 800 манатов в месяц на жильё, повседневные расходы и учебные материалы — десять месяцев в году, кроме июля и августа.",
+      "evidence": "MONTHLY ALLOWANCE : Monthly allowance of 800 AZN (470 USD)* for accommodation, daily expenses, educational materials (10 months each year, except July and August)"
+    },
+    {
+      "ru": "Нужна медицинская справка с анализами на ВИЧ и гепатиты B и C, выданная не раньше чем за три месяца до подачи.",
+      "evidence": "Candidates must submit a medical certificate (including HIV/AIDS, Hepatitis B and C tests) from the relevant clinics in the country of residence."
+    },
+    {
+      "ru": "Документы принимают на азербайджанском, турецком, английском или русском и заверенные нотариусом. На других языках нужен нотариальный перевод на английский.",
+      "evidence": "Documents must be in one of the following languages: Azerbaijani, Turkish, English and Russian languages and have to be notarized"
+    },
+    {
+      "ru": "Мест немного: 100 в год на все уровни сразу — бакалавриат, магистратуру, медицину и докторантуру.",
+      "evidence": "Annually 100 international students will benefit from the Scholarship."
+    },
+    {
+      "ru": "Решение отборочной комиссии окончательное, обжаловать его нельзя.",
+      "evidence": "All decisions made during the selection process are final and not subject to appeal."
+    },
+    {
+      "ru": "Карточка сделана по объявлению на 2026/27 учебный год. На новый цикл объявление выпускают заново, и даты могут сдвинуться — поэтому срок в карточке помечен неподтверждённым.",
+      "evidence": "2026-2027 CALL FOR NOMINATIONS SCHOLARSHIP PROGRAM FOR FOREIGNERS FUNDED BY THE GOVERNMENT OF AZERBAIJAN"
+    }
+  ],
+  "deadline": {
+    "opens": "2027-02-16",
+    "closes": "2027-04-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://studyinazerbaijan.edu.az/financial-support",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": null,
+    "note": {
+      "ru": "Вузы Азербайджана из списка программы; выбираешь их на портале SIACAS на втором этапе"
+    }
+  },
+  "source": {
+    "url": "https://studyinazerbaijan.edu.az/financial-support",
+    "lastVerified": "2026-09-12",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://studyinazerbaijan.edu.az/financial-support",
+        "contentHash": "sha256:e2bdefd01933f5e4e44a5401b65985b52c21ab4671ec00c0245c1b4140389e40"
+      },
+      {
+        "url": "https://studyinazerbaijan.edu.az/H.Aliyev_IEG_CALL_18.04.pdf",
+        "contentHash": "sha256:1e7261800c40b14e49ccb56ea0ef821fa3877f63d8147efac0d4aca50f6df9b9"
+      }
+    ]
+  }
+}
