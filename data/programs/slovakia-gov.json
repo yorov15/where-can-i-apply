@@ -1,0 +1,203 @@
+{
+  "id": "slovakia-gov",
+  "status": "published",
+  "name": {
+    "ru": "Стипендия Правительства Словакии",
+    "orig": "Scholarships of the Government of the Slovak Republic"
+  },
+  "hostCountry": "SK",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Платят ежемесячную стипендию — и на десятимесячном языковом курсе, и потом на учёбе. Суммы министерство публикует отдельным файлом Word, сборщик его не читает, поэтому цифр в карточке нет: смотри «Information on Current Financial Terms» на сайте программы. Стипендия поддерживает только бесплатные программы государственных вузов; платные, например медицину, не покрывает. Про дорогу источники не говорят"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": [
+        "AF",
+        "AL",
+        "AR",
+        "AM",
+        "AZ",
+        "BY",
+        "BA",
+        "BR",
+        "CA",
+        "HR",
+        "CU",
+        "ET",
+        "GE",
+        "GB",
+        "HU",
+        "IN",
+        "ID",
+        "IQ",
+        "JO",
+        "KZ",
+        "KE",
+        "XK",
+        "KG",
+        "LB",
+        "MD",
+        "MN",
+        "MK",
+        "PS",
+        "PL",
+        "RO",
+        "RS",
+        "SD",
+        "SE",
+        "CH",
+        "SY",
+        "TJ",
+        "TZ",
+        "TN",
+        "UA",
+        "US",
+        "UZ",
+        "VN"
+      ],
+      "evidence": "If your country is not on the list, you may not apply for the provision of scholarship. Continent: - Africa America Antarctica Asia Australia Europe Country: - Afghanistan Albania Argentina Armenia Azerbaijan Belarus Bosnia and Herzegovina Brazil Canada Croatia Cuba Ethiopia Georgia Great Britain Hungary India Indonesia Iraq Jordan Kazakhstan Kenya Kosovo Kyrgyzstan Lebanon Moldova Mongolia North Macedonia Palestine Poland Romania Serbia Sudan Sweden Switzerland Syria Tajikistan Tanzania Tunisia Ukraine USA Uzbekistan Vietnam"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "страну школы не ограничивают: нужен аттестат любой страны, но с заверением подписи и печати школы и заверенным переводом"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "числа лет школы страницы не называют: нужен аттестат о среднем образовании и оценки за все годы школы"
+    },
+    "graduationYear": {
+      "maxRelative": "applicationYear",
+      "evidence": "The document can be attached until 31 August - only applicable for students who have not yet completed education at the time of applying for the scholarship."
+    },
+    "age": {
+      "min": 18,
+      "max": 26,
+      "asOf": {
+        "relativeTo": "applicationYear",
+        "monthDay": "09-01"
+      },
+      "evidence": "the applicant must be at least 18 years old and not older than 26"
+    },
+    "gpa": {
+      "min": 80,
+      "scale": "PERCENT",
+      "evidence": "Proof of academic performance during the entire previous secondary or higher education, with a minimum grade of 80%."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "A prerequisite for admission to a university is proficiency in the Slovak language at the B2 level"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Учиться придётся на словацком: программы этой стипендии идут на словацком, иногда пополам с английским. Английский сертификат тут не нужен, нужен словацкий.",
+      "evidence": "The study at university under this scholarship programme is conducted in the Slovak language."
+    },
+    {
+      "ru": "Словацкого можно не знать: получившим стипендию дают десятимесячный языковой и подготовительный курс с сентября, и на нём тоже платят стипендию.",
+      "evidence": "they are required to complete a 10-month language and professional training program before beginning their university studies, during which they will receive a scholarship"
+    },
+    {
+      "ru": "Языковой курс не гарантирует место в вузе: после него всё равно проходишь обычный отбор выбранного университета.",
+      "evidence": "Admission is therefore not automatic."
+    },
+    {
+      "ru": "Для поступления в словацкий вуз нужен словацкий на уровне B2. Инструмент этого не проверяет: в анкете есть только английские экзамены.",
+      "evidence": "A prerequisite for admission to a university is proficiency in the Slovak language at the B2 level"
+    },
+    {
+      "ru": "Стипендия покрывает только бесплатные программы. Медицину, где платят за год обучения, она не покрывает.",
+      "evidence": "For example, Medicine requires payment of annual tuition fees and is therefore not covered by the scholarship."
+    },
+    {
+      "ru": "Направление нужно выбирать из тех, что поддержаны именно для твоей страны. Какие это для Таджикистана, министерство публикует отдельным файлом Excel — сборщик его не читает, смотри список на сайте министерства.",
+      "evidence": "Selection of a field of study that is supported for the given country."
+    },
+    {
+      "ru": "Подать заявку мало: нужно ещё поступить в государственный вуз Словакии и пройти его отбор на очную форму.",
+      "evidence": "Successful admission to a public university in the Slovak Republic."
+    },
+    {
+      "ru": "Возраст считают на 1 сентября года подачи. Если тебе к этому дню 17 или уже 27 — на бакалавриат подать нельзя.",
+      "evidence": "(if a student is by 1st of September 27 years or 17 years old, he/she cannot apply for bachelor's and master's degrees)"
+    },
+    {
+      "ru": "Аттестат нужно заверить: подпись и печать школы подтверждает государственный орган, плюс заверенный перевод на английский, словацкий, чешский, французский или испанский.",
+      "evidence": "A certified translation is required of this document into English, Slovak, Czech, French or Spanish."
+    },
+    {
+      "ru": "Ещё документы: оценки за все годы школы, свидетельство о рождении, фото, резюме и мотивационное письмо, копия паспорта и подписанная распечатка заявки. Плюс две рекомендации от школьных учителей.",
+      "evidence": "If you are applying for bachelor degree, you should attach two recommendations from secondary (high) school teachers"
+    },
+    {
+      "ru": "Выпускникам этого года: аттестат и оценки за последний год можно донести до 31 августа, уже после подачи.",
+      "evidence": "you can attach results (transcript of records) from the last year until the 31 August"
+    },
+    {
+      "ru": "SAT сдавать не нужно.",
+      "evidence": "No, the SAT is not required to apply for a Governmental Scholarship."
+    },
+    {
+      "ru": "Сколько платят, страницы не пишут: суммы лежат в отдельном файле «Information on Current Financial Terms» в разделе документов.",
+      "evidence": "download Information on Current Financial Terms"
+    },
+    {
+      "ru": "В прошлом цикле сайт подачи открылся 23 марта, а срок подачи на 2026/27 учебный год был 25 мая 2026. Даты на следующий цикл ещё не объявлены, поэтому срок в карточке — по прошлому году и помечен неподтверждённым.",
+      "evidence": "the webpage will be active from 23 March, 2026), for the Government scholarships of the SR for the academic year 2026/2027 is 25 May, 2026"
+    }
+  ],
+  "deadline": {
+    "opens": "2027-03-23",
+    "closes": "2027-05-25",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.vladnestipendia.sk/en/",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": null,
+    "note": {
+      "ru": "Государственные вузы Словакии: вуз и программу выбираешь сам и проходишь его отбор"
+    }
+  },
+  "source": {
+    "url": "https://www.vladnestipendia.sk/en/wizard",
+    "lastVerified": "2026-09-12",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.vladnestipendia.sk/en/wizard",
+        "contentHash": "sha256:89109651e4835d4b3206e2779a5122557d7675806349073ad013f0208f31d7ab"
+      },
+      {
+        "url": "https://www.vladnestipendia.sk/en/selection-criteria",
+        "contentHash": "sha256:d6a0114adf7cd364bd0811a901b36e3d48f5e0292f023256e40d99e6fda3231f"
+      },
+      {
+        "url": "https://www.vladnestipendia.sk/en/faq",
+        "contentHash": "sha256:c0c291195eeb659ee34a65f12f950b9d5a4aec85f10916004b95a43ad0a9cafb"
+      },
+      {
+        "url": "https://www.vladnestipendia.sk/en/required-documents",
+        "contentHash": "sha256:2117c50dea75baf8f27446b4a16981f9e10604810d03b8a00d522223ba8e7b9c"
+      },
+      {
+        "url": "https://www.minedu.sk/scholarships-of-the-government-of-the-slovak-republic/",
+        "contentHash": "sha256:42a92e924bc97fb9dcf3922f8e8311418602b94d52ef31c6e45b0f3d96d592e2"
+      }
+    ]
+  }
+}

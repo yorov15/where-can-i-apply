@@ -614,3 +614,23 @@ urls = [
 volatile = ['Announcement [\s\S]*?(?=online-bdgs Home)']
 approvedBy = "human"
 approvedAt = "2026-09-11"
+
+# Стипендия Правительства Словакии для граждан стран-партнёров помощи.
+# Домены vladnestipendia.sk (официальная платформа подачи) и minedu.sk
+# (Министерство образования) одобрены человеком 12 сентября 2026.
+#
+# Суммы стипендии министерство публикует только файлом Word, а список
+# стипендий по странам — файлом Excel. Сборщик из них текста не получит,
+# поэтому цифры денег в карточку не идут: подтвердить их цитатой нельзя.
+# Страны берём со страницы мастера подачи — там список выведен текстом.
+[slovakia-gov]
+name = "Scholarships of the Government of the Slovak Republic"
+urls = [
+  "https://www.vladnestipendia.sk/en/wizard",
+  "https://www.vladnestipendia.sk/en/selection-criteria",
+  "https://www.vladnestipendia.sk/en/faq",
+  "https://www.vladnestipendia.sk/en/required-documents",
+  "https://www.minedu.sk/scholarships-of-the-government-of-the-slovak-republic/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-12"
