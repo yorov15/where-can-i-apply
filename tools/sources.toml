@@ -698,3 +698,21 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-12"
+
+# Гарвардский колледж. Домен college.harvard.edu одобрен человеком
+# 12 сентября 2026.
+#
+# Это не стипендия, а помощь по нужде: размер считают от дохода семьи, и
+# заявка на неё не влияет на решение о приёме. Четыре страницы, потому
+# что правила разнесены: условия для иностранцев, как считают помощь,
+# сроки туров и состав заявки.
+[harvard-college]
+name = "Harvard College — need-based financial aid"
+urls = [
+  "https://college.harvard.edu/admissions/apply/international-applicants",
+  "https://college.harvard.edu/financial-aid/how-aid-works",
+  "https://college.harvard.edu/admissions/apply/application-timeline",
+  "https://college.harvard.edu/admissions/apply/application-requirements",
+]
+approvedBy = "human"
+approvedAt = "2026-09-12"

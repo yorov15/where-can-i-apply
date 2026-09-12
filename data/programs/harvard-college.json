@@ -1,0 +1,158 @@
+{
+  "id": "harvard-college",
+  "status": "published",
+  "name": {
+    "ru": "Гарвардский колледж — помощь по нужде",
+    "orig": "Harvard College — need-based financial aid"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Это не стипендия за успехи, а помощь по доходу семьи. При доходе меньше 100 000 долларов в год родители не платят ничего; при доходе до 200 000 покрывают как минимум всё обучение. В помощь входит и дорога: получающим её добавляют деньги на перелёт. Полная стоимость года по счетам вуза на 2026/27 — 91 634 доллара, и помощь считают от неё"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Our admissions and financial aid processes are the same for all applicants - regardless of nationality or citizenship."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "страну школы не ограничивают: требования к заявке одинаковы, окончил ты школу в США или за их пределами"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "года выпуска страницы не называют; не берут только тех, у кого уже есть оконченный бакалавриат"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "возраст на страницах приёма не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "порога по среднему баллу нет: страницы приёма не называют ни минимального балла, ни процента"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "отдельного порога по английскому нет: TOEFL, IELTS и Duolingo вместо SAT не засчитывают, но и минимального балла по ним не требуют"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство не влияет ни на приём, ни на помощь: правила одинаковы для всех.",
+      "evidence": "Our admissions and financial aid processes are the same for all applicants - regardless of nationality or citizenship."
+    },
+    {
+      "ru": "Требования к заявке одинаковы независимо от того, где ты учился — в США или за их пределами.",
+      "evidence": "The application requirements are the same for all applicants whether a student attends high school inside or outside the U.S."
+    },
+    {
+      "ru": "Помощь считают от дохода семьи: при доходе ниже 100 000 долларов в год взнос родителей нулевой, при доходе до 200 000 помощь покрывает как минимум всю плату за обучение. Выше 200 000 — по обстоятельствам.",
+      "evidence": "For families with annual incomes below $100,000, the expected parent contribution is zero. For families with incomes up to $200,000, financial aid will cover at least the full cost of tuition."
+    },
+    {
+      "ru": "Дорога входит в помощь: всем, кто её получает, включая иностранцев, добавляют средства на перелёт до Кембриджа и обратно.",
+      "evidence": "All students, American and international, who are on financial aid have a travel allowance included in their financial aid award to help cover the cost of travel to and from Cambridge."
+    },
+    {
+      "ru": "Нужен SAT или ACT. Заменить их можно только в исключительных случаях — результатами AP, IB, GCSE и A-level или национальных выпускных экзаменов, если сдать SAT негде или не на что.",
+      "evidence": "Harvard requires the SAT or ACT to meet its standardized testing requirement."
+    },
+    {
+      "ru": "Математику смотрят целиком, без обязательного списка курсов: калькулюс для поступления не требуется. Вуз прямо признаёт, что у школ разные возможности.",
+      "evidence": "Students' math records are viewed holistically, and no specific course is required. Specifically, calculus is not a requirement for admission to Harvard."
+    },
+    {
+      "ru": "TOEFL, IELTS и Duolingo вместо SAT не засчитывают. Приложить их можно, но требование по экзаменам они не закрывают.",
+      "evidence": "English language proficiency examinations such as the TOEFL, IELTS and Duolingo cannot be used to meet the standardized testing requirement"
+    },
+    {
+      "ru": "Подают через Common Application, она открывается 1 августа. Ранний тур — до 1 ноября, ответ в середине декабря. Обычный — до 1 января, ответ в конце марта.",
+      "evidence": "Restrictive Early Action candidates apply by November 1 and receive notification by mid-December . Regular Decision candidates apply by January 1 and receive notification by the end of March ."
+    },
+    {
+      "ru": "Ранний тур не обязывает поступать, но связывает руки: подав в него, нельзя подавать в ранние туры других частных вузов.",
+      "evidence": "If you are applying to Harvard under Restrictive Early Action, you may not apply to any other private institution under an Early Decision, Early Action, or Restrictive Early Action plan"
+    },
+    {
+      "ru": "Ответ на приглашение можно дать до 1 мая — есть время сравнить предложения других вузов по деньгам.",
+      "evidence": "have until May 1 to reply to our offer of admission"
+    },
+    {
+      "ru": "Если плата за подачу тяжела для семьи, попроси освобождение от неё: на решение по заявке это не влияет.",
+      "evidence": "Requesting a fee waiver will not disadvantage your application in any way."
+    },
+    {
+      "ru": "Из чего складывается год: обучение 62 226 долларов, сборы 6 216, жильё 14 250, питание 8 942 — по счетам вуза выходит 91 634 доллара.",
+      "evidence": "Tuition $62,226 Fees $6,216 Housing $14,250 Food $8,942 Subtotal - billed costs $91,634"
+    },
+    {
+      "ru": "С уже оконченным бакалавриатом в Гарвардский колледж не берут.",
+      "evidence": "If you already have a bachelor's degree, you are not eligible for admission to Harvard College."
+    }
+  ],
+  "deadline": {
+    "opens": "2026-08-01",
+    "closes": "2027-01-01",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://college.harvard.edu/admissions/apply/international-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Гарвардский колледж в Кембридже, штат Массачусетс"
+    }
+  },
+  "source": {
+    "url": "https://college.harvard.edu/admissions/apply/international-applicants",
+    "lastVerified": "2026-09-12",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://college.harvard.edu/admissions/apply/international-applicants",
+        "contentHash": "sha256:b6c56d09e1f237dd7f21603bbfc77bce99927e2662068bec815ff872b6ee4752"
+      },
+      {
+        "url": "https://college.harvard.edu/financial-aid/how-aid-works",
+        "contentHash": "sha256:c2ad5756db8ab29628d0896191afe2d00636031d378e7e58693e0934b54a69b7"
+      },
+      {
+        "url": "https://college.harvard.edu/admissions/apply/application-timeline",
+        "contentHash": "sha256:e23442062b0b5d775c2273b564446053f58c88823cdfc8efd517809a1109b9ad"
+      },
+      {
+        "url": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "contentHash": "sha256:c53031b2afcccf244271e8ba7fa9b4e026c767006291f5a3e1ae6c42fe3c2e94"
+      }
+    ]
+  }
+}
