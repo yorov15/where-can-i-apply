@@ -19,7 +19,11 @@ const DEADLINE_TEXT = {
   unknown: 'Даты приёма неизвестны',
 };
 
-const ORDER = { no: 0, check: 1, yes: 2 };
+// Сначала то, куда подать можно: сайт отвечает на вопрос «куда я могу
+// подать документы», и человек с тридцатью пятью карточками не должен
+// пролистывать стену отказов, чтобы дойти до своих программ. Отказы
+// нужны — но после, как ответ на «а почему не сюда».
+const ORDER = { yes: 0, check: 1, no: 2 };
 
 // Как называть поля профиля в тексте карточки.
 const FIELD_NAMES = {
@@ -63,6 +67,28 @@ export function notLimitedItems(program, fields) {
   });
 }
 
+// Порядок выдачи: сначала открытые программы, куда подать можно, и
+// внутри — по близости срока. Вынесено из renderResults, чтобы порядок
+// проверялся тестом, а не глазами.
+//
+// Закрытый приём уезжает вниз, но не краснеет: опоздать и не пройти по
+// возрасту — разные вещи с разными действиями. Программы без даты идут
+// после тех, у кого срок известен: торопить нечем.
+export function sortRows(rows) {
+  return rows.sort((a, b) => {
+    const closed = (a.deadline === 'closed') - (b.deadline === 'closed');
+    if (closed !== 0) return closed;
+
+    const verdict = ORDER[a.verdict.status] - ORDER[b.verdict.status];
+    if (verdict !== 0) return verdict;
+
+    const left = a.program.deadline?.closes ?? '';
+    const right = b.program.deadline?.closes ?? '';
+    if (left && right) return left < right ? -1 : left > right ? 1 : 0;
+    return (left ? 0 : 1) - (right ? 0 : 1);
+  });
+}
+
 export function renderResults(node, profile, programs, today) {
   node.textContent = '';
 
@@ -80,13 +106,7 @@ export function renderResults(node, profile, programs, today) {
     deadline: deadlineState(program.deadline, today),
   }));
 
-  // Закрытый приём уезжает вниз, но не краснеет: опоздать и не пройти
-  // по возрасту — разные вещи с разными действиями.
-  rows.sort((a, b) => {
-    const closed = (a.deadline === 'closed') - (b.deadline === 'closed');
-    if (closed !== 0) return closed;
-    return ORDER[a.verdict.status] - ORDER[b.verdict.status];
-  });
+  sortRows(rows);
 
   for (const row of rows) node.append(card(row));
 }
