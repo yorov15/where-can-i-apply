@@ -706,6 +706,22 @@ approvedAt = "2026-09-12"
 # заявка на неё не влияет на решение о приёме. Четыре страницы, потому
 # что правила разнесены: условия для иностранцев, как считают помощь,
 # сроки туров и состав заявки.
+# Принстон. Домен admission.princeton.edu одобрен человеком
+# 12 сентября 2026. Как и Гарвард, это не стипендия, а помощь по нужде.
+# Пять страниц: условия для иностранцев, как считают помощь, сроки
+# туров, правила по экзаменам и состав заявки.
+[princeton]
+name = "Princeton University — need-based financial aid"
+urls = [
+  "https://admission.princeton.edu/apply/international-students",
+  "https://admission.princeton.edu/cost-aid",
+  "https://admission.princeton.edu/apply/application-dates-deadlines",
+  "https://admission.princeton.edu/apply/standardized-testing",
+  "https://admission.princeton.edu/apply/application-checklist",
+]
+approvedBy = "human"
+approvedAt = "2026-09-12"
+
 [czech-public]
 name = "Study in Czechia — tuition-free study in Czech at public universities"
 urls = [

@@ -1,0 +1,163 @@
+{
+  "id": "princeton",
+  "status": "published",
+  "name": {
+    "ru": "Принстон — помощь по нужде",
+    "orig": "Princeton University — need-based financial aid"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Помощь только по нужде: стипендий за успехи и за спорт вуз не даёт вовсе. Всем принятым закрывают посчитанную нужду целиком, и не кредитом, а грантом — его не возвращают. По таблице вуза при доходе семьи 150 000 долларов в год взнос семьи нулевой. Год обучения стоит 68 140 долларов, а вместе с жильём и питанием — около 90 574. Про отдельные деньги на дорогу страницы не говорят"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "We review all applications in the same manner, regardless of citizenship or country of residence."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "страну школы не ограничивают: заявку оценивают в контексте твоей системы образования, преимущества у какой-то одной страны нет"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "возраст на страницах приёма не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "порога по среднему баллу нет: вуз прямо пишет, что не ждёт пересчёта оценок в GPA, если в твоей школе так не принято"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "you must take the Test of English as a Foreign Language (TOEFL), the International English Language Testing System Academic (IELTS Academic), the Duolingo English Test (DET) or the Pearson Test of English Academic (PTE Academic)"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство и страна проживания на рассмотрение не влияют: заявки читают одинаково.",
+      "evidence": "We review all applications in the same manner, regardless of citizenship or country of residence."
+    },
+    {
+      "ru": "Просьба о помощи не вредит заявке: отбор идёт без оглядки на то, нужны тебе деньги или нет.",
+      "evidence": "Princeton admission is need-blind - there is no disadvantage in the admission process for financial aid applicants."
+    },
+    {
+      "ru": "Иностранцам нужду закрывают так же, как американцам, — полностью.",
+      "evidence": "The full need of all admitted international students is met the same as it is for students from the United States."
+    },
+    {
+      "ru": "Помощь дают грантом, а не кредитом: возвращать её не нужно. Стипендий за успехи и за спорт здесь нет вообще.",
+      "evidence": "Princeton does not offer academic or athletic merit scholarships."
+    },
+    {
+      "ru": "Ориентир по взносу семьи из таблицы вуза: при доходе 150 000 долларов в год — ноль, при 200 000 — 12 500, при 250 000 — 25 000. Оговорка самого вуза: расчёт для семей с активами меньше 175 000, живущих в США и с одним ребёнком в вузе. Для семьи из Таджикистана считать будут отдельно.",
+      "evidence": "Income Total Family Contribution* 150,000 0 200,000 12,500 250,000 25,000"
+    },
+    {
+      "ru": "Сколько стоит без помощи: обучение 68 140 долларов в 2026/27 году, а с жильём, питанием и сборами — около 90 574.",
+      "evidence": "$68,140 is the tuition for the 2026-27 academic year"
+    },
+    {
+      "ru": "Про SAT и ACT: сейчас они не обязательны, но вуз возвращает это требование с цикла 2027-28 — для тех, кто поступает осенью 2028 года. Если поступаешь раньше, требование тебя не касается.",
+      "evidence": "Princeton will return to requiring standardized testing for undergraduate admission beginning with the 2027-28 admission cycle."
+    },
+    {
+      "ru": "Английский: если он не родной и школа была не на английском, нужен TOEFL, IELTS Academic, Duolingo или PTE Academic. Минимального балла страницы не называют.",
+      "evidence": "you must take the Test of English as a Foreign Language (TOEFL), the International English Language Testing System Academic (IELTS Academic), the Duolingo English Test (DET) or the Pearson Test of English Academic (PTE Academic)"
+    },
+    {
+      "ru": "Сроки: заявку раннего тура ждут 1 ноября, обычного — 1 января; решение раннего тура объявляют в середине декабря. Ответить вузу можно до 1 мая.",
+      "evidence": "Jan. 1 Application with Princeton-specific Questions Due"
+    },
+    {
+      "ru": "Ранний тур не обязывает поступать, но закрывает ранние туры других частных вузов США. Это выбор: подал сюда — не подаёшь рано никуда больше.",
+      "evidence": "If you apply single-choice early action on Nov. 1, you may not apply to an early program at any other private college or university within the United States."
+    },
+    {
+      "ru": "Заявку на финансовую помощь ждут отдельно и позже самой заявки: в раннем туре к 9 ноября, в обычном — к 1 февраля.",
+      "evidence": "Nov. 9 Princeton Financial Aid Application Due"
+    },
+    {
+      "ru": "Что собрать: школьный отчёт с транскриптом, письмо школьного консультанта, две формы от учителей и проверенную письменную работу.",
+      "evidence": "School Report, School Counselor Letter and Transcript Teacher Evaluation Form 1 Teacher Evaluation Form 2"
+    },
+    {
+      "ru": "Транскрипт читают в контексте твоей школьной системы. Пересчитывать оценки в американский GPA не требуют, если у вас так не принято.",
+      "evidence": "We also do not expect you or your school to provide a conversion or grade-point average (GPA) if this is not a standard practice provided by your school or education system."
+    },
+    {
+      "ru": "Плату за подачу можно не платить: освобождение просят через Common Application или прямо у вуза.",
+      "evidence": "Application Fee or Fee Waiver."
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-01",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://admission.princeton.edu/apply/international-students",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Принстонский университет в штате Нью-Джерси"
+    }
+  },
+  "source": {
+    "url": "https://admission.princeton.edu/apply/international-students",
+    "lastVerified": "2026-09-12",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://admission.princeton.edu/apply/international-students",
+        "contentHash": "sha256:6828469e7ebec444ff3735439333ee342688f5da3bd09cf6a9d384293ed6852a"
+      },
+      {
+        "url": "https://admission.princeton.edu/cost-aid",
+        "contentHash": "sha256:f50aa294a8305c164e7b62f3336d4cce64efe166d92e895960d4a23eb55a1af0"
+      },
+      {
+        "url": "https://admission.princeton.edu/apply/application-dates-deadlines",
+        "contentHash": "sha256:d22493c48a63a642b949c4af20eb2864623b2849deed06de88a82e5b0520ad2f"
+      },
+      {
+        "url": "https://admission.princeton.edu/apply/standardized-testing",
+        "contentHash": "sha256:88f7f6416f26a9d242f46a35932f641249214a2d764808804a6364d914b1b3e5"
+      },
+      {
+        "url": "https://admission.princeton.edu/apply/application-checklist",
+        "contentHash": "sha256:2081ef19baf6db7c5b44dac1fb8a5513e9e13a28538ce95f24bc6b33faaff54a"
+      }
+    ]
+  }
+}
