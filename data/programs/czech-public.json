@@ -1,0 +1,141 @@
+{
+  "id": "czech-public",
+  "status": "published",
+  "name": {
+    "ru": "Бесплатное обучение в государственных вузах Чехии — на чешском",
+    "orig": "Study in Czechia — tuition-free degree programmes taught in Czech"
+  },
+  "hostCountry": "CZ",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": false,
+    "travel": null,
+    "note": {
+      "ru": "Это не стипендия, а бесплатное обучение: программы на чешском в государственных вузах не стоят ничего, независимо от гражданства. Но платят за тебя только учёбу. Английские программы платные — обычно 0–6 000 евро в год, медицина и искусство 8 000–25 000. Жизнь целиком на тебе: еда 150–230 евро в месяц, общежитие 160–450, комната в съёмной квартире 250–500"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Public and state higher education institutions in Czechia offer tuition-free degree programmes taught in Czech, regardless of nationality."
+    },
+    "schoolCountry": {
+      "notMeasured": true,
+      "evidence": "prepare your documents and start the recognition process if needed"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "числа лет школы портал не называет: требования к предыдущему образованию ставит каждый вуз"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "года выпуска портал не называет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "возраст на страницах портала не упоминается"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "Each university and faculty is responsible for its own admission procedure."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Many Czech-taught degree programmes require at least B2 level Czech."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Бесплатно — только на чешском языке. Программы на чешском в государственных вузах не стоят ничего, и гражданство тут не важно.",
+      "evidence": "Public and state higher education institutions in Czechia offer tuition-free degree programmes taught in Czech, regardless of nationality."
+    },
+    {
+      "ru": "Путь такой: сначала учишь чешский — на языковом курсе или подготовительной программе, потом доводишь его до нужного уровня, подаёшь на чешскоязычную программу, и вуз сам проверяет, хватает ли языка.",
+      "evidence": "Step 1 - Learn Czech Take a Czech language course or join a foundation programme."
+    },
+    {
+      "ru": "Уровень языка обычно нужен B2. Инструмент чешский не проверяет: в анкете есть только английские экзамены.",
+      "evidence": "Many Czech-taught degree programmes require at least B2 level Czech."
+    },
+    {
+      "ru": "Программы на английском платные: обычно от 0 до 6 000 евро в год, а медицина, искусство и отдельные специальности — от 8 000 до 25 000.",
+      "evidence": "most programmes: 0-6,000 EUR per year medicine, arts and some specialised fields: 8,000-25,000 EUR per year"
+    },
+    {
+      "ru": "Даже на бесплатной программе есть расходы: вступительный взнос при подаче, а если учиться дольше стандартного срока, могут начислить плату.",
+      "evidence": "you will usually pay an admission fee additional fees may apply if you exceed the standard length of study"
+    },
+    {
+      "ru": "Частные вузы к этому правилу отношения не имеют: они сами назначают плату.",
+      "evidence": "private universities set their own tuition fees"
+    },
+    {
+      "ru": "Единого приёма нет: требования, экзамены и сроки устанавливает каждый вуз и даже факультет отдельно.",
+      "evidence": "Each university and faculty is responsible for its own admission procedure."
+    },
+    {
+      "ru": "Ориентир по срокам: много дедлайнов приходится на февраль — апрель, вступительные экзамены и собеседования идут весной и в начале лета, результаты объявляют в июне и июле.",
+      "evidence": "February to April: many application deadlines for the next academic year"
+    },
+    {
+      "ru": "Аттестат нужно признать в Чехии, и это долго: портал советует начинать за шесть-девять месяцев до учёбы.",
+      "evidence": "6 to 9 months before studies: prepare your documents and start the recognition process if needed"
+    },
+    {
+      "ru": "Денег на жизнь никто не даёт. Общежитие стоит 160–330 евро в месяц за место в комнате на двоих и 250–450 за одноместную; комната в съёмной квартире — 250–500.",
+      "evidence": "student dormitory (shared room): 160 - 330 EUR student dormitory (single room): 250 - 450 EUR"
+    },
+    {
+      "ru": "На еду уходит примерно 150–230 евро в месяц, студенческий проездной на год стоит 50–100 евро.",
+      "evidence": "A yearly student public transport pass can cost roughly 50-100 EUR"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.studyin.cz/plan-your-studies/how-to-apply/",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": null,
+    "note": {
+      "ru": "Государственные и общественные вузы Чехии; в каждый подаёшь отдельно, со своими сроками и экзаменами"
+    }
+  },
+  "source": {
+    "url": "https://www.studyin.cz/plan-your-studies/learn-czech-study-tuition-free/",
+    "lastVerified": "2026-09-12",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.studyin.cz/plan-your-studies/learn-czech-study-tuition-free/",
+        "contentHash": "sha256:e375bdd29162d95ef335e5fc7383bcd153314643a1d0da8ebf7eb083245e0ef2"
+      },
+      {
+        "url": "https://www.studyin.cz/plan-your-studies/scholarships-and-finances/",
+        "contentHash": "sha256:fac6c49d803f24b9249e5611f7b1e74594b2dc6595252c7b19bd600789f0e1e9"
+      },
+      {
+        "url": "https://www.studyin.cz/plan-your-studies/how-to-apply/",
+        "contentHash": "sha256:c0f5f9b5f9285550bb416194faf558db1b0b99d26dbe09870574fd03d38ecb40"
+      },
+      {
+        "url": "https://www.studyin.cz/get-ready-for-czechia/living-costs/",
+        "contentHash": "sha256:154cd9dede95d97d214b6a8583b3a4a5812a61b3bb809fab0c76462610965392"
+      }
+    ]
+  }
+}

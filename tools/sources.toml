@@ -706,6 +706,17 @@ approvedAt = "2026-09-12"
 # заявка на неё не влияет на решение о приёме. Четыре страницы, потому
 # что правила разнесены: условия для иностранцев, как считают помощь,
 # сроки туров и состав заявки.
+[czech-public]
+name = "Study in Czechia — tuition-free study in Czech at public universities"
+urls = [
+  "https://www.studyin.cz/plan-your-studies/learn-czech-study-tuition-free/",
+  "https://www.studyin.cz/plan-your-studies/scholarships-and-finances/",
+  "https://www.studyin.cz/plan-your-studies/how-to-apply/",
+  "https://www.studyin.cz/get-ready-for-czechia/living-costs/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-12"
+
 [harvard-college]
 name = "Harvard College — need-based financial aid"
 urls = [
