@@ -120,6 +120,20 @@ test('в сообщении экзамены названы по-человеч�
   assert.doesNotMatch(got.message, /TOEFL_IBT/);
 });
 
+// Duolingo сдают из дома и он дешевле остальных — для наших
+// абитуриентов это часто единственный доступный экзамен.
+const det = { anyOf: [{ test: 'IELTS', min: 7 }, { test: 'DUOLINGO', min: 120 }], evidence: 'x' };
+
+test('Duolingo сравнивается со своим порогом', () => {
+  assert.equal(checkLanguage({ languageTests: [{ test: 'DUOLINGO', score: 125 }] }, det).status, 'pass');
+  assert.equal(checkLanguage({ languageTests: [{ test: 'DUOLINGO', score: 110 }] }, det).status, 'fail');
+});
+
+test('Duolingo назван по-человечески', () => {
+  const got = checkLanguage({ languageTests: [] }, det);
+  assert.match(got.message, /Duolingo \(DET\) 120/);
+});
+
 test('рекомендованный балл: экзамен отмечен без результата — тоже рекомендация', () => {
   const me = { languageTests: [{ test: 'IELTS', score: null }] };
   const got = checkLanguage(me, advisory);

@@ -23,6 +23,7 @@ const TEST_NAMES = {
   IELTS: 'IELTS',
   TOEFL_IBT: 'TOEFL iBT (старая шкала 0–120)',
   TOEFL_IBT_2026: 'TOEFL iBT (новая шкала 1–6)',
+  DUOLINGO: 'Duolingo (DET)',
 };
 const testName = (test) => TEST_NAMES[test] ?? test;
 

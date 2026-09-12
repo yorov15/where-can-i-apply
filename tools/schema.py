@@ -28,7 +28,7 @@ SCALES = frozenset({"PERCENT", "TJ_5", "GPA_4", "GPA_4_5"})
 # шкалы отдельные пороги (KAIST: «83 (Taken before Jan 21, 2026) / 4.5»).
 # Для движка это два разных экзамена: сравнить 90 из 120 с порогом 4.5
 # значило бы выдать ответ, которого программа не давала.
-LANGUAGE_TESTS = frozenset({"IELTS", "TOEFL_IBT", "TOEFL_IBT_2026"})
+LANGUAGE_TESTS = frozenset({"IELTS", "TOEFL_IBT", "TOEFL_IBT_2026", "DUOLINGO"})
 
 # Форма, а не список: списка стран в стандартной библиотеке нет, а форма
 # ловит реальные опечатки — TJK, tj, «Таджикистан».
