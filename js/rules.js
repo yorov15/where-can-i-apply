@@ -261,7 +261,13 @@ export function checkGpa(profile, rule, ctx) {
   const mine = toPercent(profile.gpa.value, profile.gpa.scale);
   const need = toPercent(rule.min, rule.scale);
 
-  if (Math.abs(mine - need) <= GPA_BAND) {
+  // Полоса сомнения нужна только там, где балл пересчитан из чужой
+  // шкалы: 4,8 по пятибалльной и 94% — это разные системы оценивания, и
+  // пересчёт в них приблизителен. Когда шкала одна и та же, сравнение
+  // точное, и говорить «шкалы разные» — врать: у Университета Халифы
+  // порог 4,0 по пятибалльной, и балл 4,2 проходит его прямо.
+  const sameScale = profile.gpa.scale === rule.scale;
+  if (!sameScale && Math.abs(mine - need) <= GPA_BAND) {
     return r('unknown', 'Твой балл близко к порогу программы, а шкалы разные — проверь на сайте программы');
   }
   if (mine < need) {

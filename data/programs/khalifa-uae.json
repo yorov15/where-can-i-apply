@@ -1,0 +1,151 @@
+{
+  "id": "khalifa-uae",
+  "status": "published",
+  "name": {
+    "ru": "Университет Халифы (Абу-Даби) — стипендии иностранцам",
+    "orig": "Khalifa University — Scholarships for International Students"
+  },
+  "hostCountry": "AE",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": false,
+    "travel": null,
+    "note": {
+      "ru": "Иностранцам дают скидку на обучение по пяти ступеням: полная оплата, 75, 50, 25 процентов или только учебники. Какую дадут — решает вуз при приёме. Год бакалавриата стоит около 81 250 дирхамов (2 500 за кредит). Бесплатное жильё и транспорт обещаны только гражданам ОАЭ: в ступенях для иностранцев их нет, общежитие стоит 20 000 дирхамов за семестр в одноместной комнате и 10 000 в двухместной. Денег на жизнь и на дорогу нет"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "The scholarship supports UAE National and International students pursuing a Bachelor's degree at Khalifa University."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "страну школы не ограничивают: в таблице требований перечислены системы образования разных стран, включая российскую и равные ей"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "числа лет школы прямо не называют: для российской и равных ей систем последним считается одиннадцатый класс"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Applicants must have graduated from high school within the last two years."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "возраста страницы приёма не называют: ограничение только по свежести аттестата — школа окончена не раньше чем за два года до подачи"
+    },
+    "gpa": {
+      "min": 4.0,
+      "scale": "TJ_5",
+      "evidence": "Applicants must achieve a minimum score of 4.0 in the final year (grade 11)."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 79
+        }
+      ],
+      "evidence": "Mandatory English Proficiency Test Score IELTS Academic 6.0 OR TOEFL iBT 79"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Отдельной заявки на стипендию нет: её решают вместе с приёмом, и в письме о зачислении будет написано, какую дали. Мест по стипендиям ограниченное число.",
+      "evidence": "Scholarship eligibility is assessed as part of the admission process and applicants are not required to submit a separate scholarship application. The number of available scholarship slots is limited."
+    },
+    {
+      "ru": "Для иностранцев пять ступеней: первая — полная оплата обучения и учебники, вторая — скидка 75%, третья — 50%, четвёртая — 25%, пятая — только учебники. На какую попадёшь, зависит от успеваемости и приоритетов вуза.",
+      "evidence": "Tier I Full coverage of tuition fees. Textbooks provided by the University. Tier II Partial waiver of 75% of tuition fees."
+    },
+    {
+      "ru": "Бесплатное общежитие и транспорт вуз обещает гражданам ОАЭ и детям эмиратских матерей. В ступенях для иностранцев жилья нет — считай его своим расходом.",
+      "evidence": "Scholarship for UAE National and Children of Emirati Mothers Full coverage of tuition fees. Free University accommodation for eligible students."
+    },
+    {
+      "ru": "Соответствие минимальным требованиям стипендию не гарантирует — так вуз пишет прямо.",
+      "evidence": "Meeting the minimum eligibility criteria does not guarantee a scholarship award."
+    },
+    {
+      "ru": "Английский обязателен: IELTS Academic 6.0 или TOEFL iBT 79. Без сертификата заявку не рассматривают.",
+      "evidence": "Mandatory English Proficiency Test Score IELTS Academic 6.0 OR TOEFL iBT 79"
+    },
+    {
+      "ru": "Школу нужно было окончить не раньше чем за два года до подачи: для цикла осени 2026 — не раньше 2024 года. Инструмент это не считает: даты цикла 2027 ещё не объявлены. На той же странице ниже стоит другое число — «не раньше 2023»; страница сама себе противоречит, ориентируйся на строгий вариант и уточняй в приёмной комиссии.",
+      "evidence": "Applicants must have graduated from high school within the last two years. For this admission cycle (i.e., not before 2024)."
+    },
+    {
+      "ru": "В последнем классе обязательны математика и один естественно-научный предмет — физика, биология или химия; какой именно, зависит от программы.",
+      "evidence": "Applicants must complete Mathematics as a mandatory subject, along with one science subject (Physics, Biology, or Chemistry)"
+    },
+    {
+      "ru": "Таджикский аттестат инструмент считает по строке «российская или равная ей система»: там требуется средний балл не ниже 4,0 за последний, одиннадцатый класс. Своей строки для Таджикистана в таблице нет — если приёмная комиссия отнесёт аттестат к строке «прочие», условия могут отличаться.",
+      "evidence": "Applicants must achieve a minimum score of 4.0 in the final year (grade 11)."
+    },
+    {
+      "ru": "Аттестат нужно признать: требуется сертификат об эквивалентности от Министерства образования ОАЭ.",
+      "evidence": "The certificate must be recognized, and applicants must submit an equivalency certificate issued by the UAE Ministry of Education."
+    },
+    {
+      "ru": "Приём конкурсный: минимальные требования не гарантируют зачисление, решают выбранная программа и наличие мест.",
+      "evidence": "Admissions to the university is competitive, and meeting the minimum eligibility criteria does not guarantee final admission."
+    },
+    {
+      "ru": "SAT по математике от 700 и экзамены AP не обязательны, но, по словам вуза, усиливают заявку.",
+      "evidence": "Preferable Test (Strengthens Application) Score Math SAT 700"
+    },
+    {
+      "ru": "Приём на осень 2026 закрыт, а даты на осень 2027 вуз ещё не вывесил — поэтому срок в карточке пустой. Следи за страницей приёма.",
+      "evidence": "Undergraduate admissions for Fall 2026 are closed."
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.ku.ac.ae/undergraduate-admissions",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Халифы в Абу-Даби"
+    }
+  },
+  "source": {
+    "url": "https://www.ku.ac.ae/undergraduate-admissions",
+    "lastVerified": "2026-09-12",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.ku.ac.ae/undergraduate-admissions",
+        "contentHash": "sha256:d3ec67c9e092583e90eda6081b49f10380b2653477bfb3ea67e4f0736c4b6d92"
+      },
+      {
+        "url": "https://www.ku.ac.ae/undergraduate-scholarships",
+        "contentHash": "sha256:bd4e4864385062b33a8d993a29f13de8c0643f70fcb330b6c03d2e49123a96dc"
+      },
+      {
+        "url": "https://www.ku.ac.ae/tuition-fees",
+        "contentHash": "sha256:67885e8b999982ab4a9615df9c70379375cc9e358445c7d3de118be2ef2a4423"
+      }
+    ]
+  }
+}

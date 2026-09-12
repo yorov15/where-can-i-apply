@@ -678,3 +678,23 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-12"
+
+# Университет Халифы в Абу-Даби — инженерия и компьютерные науки на
+# английском. Домен ku.ac.ae одобрен человеком 12 сентября 2026.
+#
+# Три страницы: правила приёма на бакалавриат (требования к аттестату,
+# предметам, английскому и срокам выпуска), ступени стипендий отдельно
+# для граждан ОАЭ и для иностранцев, и цены.
+#
+# Требования к таджикскому аттестату берём из строки «Russian or
+# equivalent»: это единственная строка таблицы про одиннадцатилетнюю
+# школу с пятибалльными оценками.
+[khalifa-uae]
+name = "Khalifa University — undergraduate scholarships"
+urls = [
+  "https://www.ku.ac.ae/undergraduate-admissions",
+  "https://www.ku.ac.ae/undergraduate-scholarships",
+  "https://www.ku.ac.ae/tuition-fees",
+]
+approvedBy = "human"
+approvedAt = "2026-09-12"
