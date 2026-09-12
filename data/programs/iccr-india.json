@@ -1,0 +1,149 @@
+{
+  "id": "iccr-india",
+  "status": "published",
+  "name": {
+    "ru": "Стипендии ICCR — государственная программа Индии",
+    "orig": "ICCR Scholarships (Indian Council for Cultural Relations)"
+  },
+  "hostCountry": "IN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Оплачивают положенные платежи вуза за весь срок учёбы и платят 18 000 рупий в месяц на бакалавриате плюс на жильё: 6 500 рупий в городах первой категории и 5 500 в остальных, и ещё 5 000 рупий в год на расходы. Перелёт по общим правилам не оплачивают — только если это прямо предусмотрено конкретной схемой. Первые два-три месяца денег не будет, пока идут формальности: правила советуют привезти с собой около 1500 долларов"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "IN"
+      ],
+      "evidence": "prescribed by ICCR for foreign students for the award of scholarship under various courses"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "страну школы правила не ограничивают: нужны документы об образовании со школы и заверенный перевод на английский, если они на другом языке"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "числа лет школы правила не называют: для бакалавриата нужен транскрипт и программа школьного курса"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-12",
+      "note": "года выпуска правила не называют: ограничение только по возрасту — 18–35 лет на 1 июля"
+    },
+    "age": {
+      "min": 18,
+      "max": 35,
+      "asOf": {
+        "relativeTo": "applicationYear",
+        "monthDay": "07-01"
+      },
+      "evidence": "18 Years - Minimum Age for any level of courses 35 Years - Maximum Age for UG, PG, Certificate and Diploma level courses"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "Indian Universities/educational institutes are autonomous and independent bodies and have their own eligibility criteria."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "the mandatory submission of an essay of 500 words in English on one of the topics/subjects listed on the A2A Portal"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подают только через портал A2A. Заявки, отправленные другим способом — в посольство Индии, в ICCR или прямо в вуз, — не принимают.",
+      "evidence": "Application sent through any other mode to the Indian Mission/ICCR/University will not be accepted."
+    },
+    {
+      "ru": "Заявка одна на учебный год. Если подать несколько, отклонят все — в том числе уже после присуждения стипендии и даже после начала учёбы.",
+      "evidence": "Multiple applications during a single academic year will lead to rejection of all the applications at any point in time during the application/selection process."
+    },
+    {
+      "ru": "Учат на английском. Сертификат не обязателен, но эссе на 500 слов по одной из тем портала — обязательно. TOEFL или IELTS можно приложить по желанию, а достаточность английского оценивает посольство Индии.",
+      "evidence": "the mandatory submission of an essay of 500 words in English on one of the topics/subjects listed on the A2A Portal"
+    },
+    {
+      "ru": "Возраст считают на 1 июля: не меньше 18 лет и не больше 35 для бакалавриата. У самого вуза могут быть свои возрастные требования.",
+      "evidence": "Applicants may note that Universities/Institutions have their own age criteria"
+    },
+    {
+      "ru": "Паспорт должен быть действителен ещё минимум два года на 1 июля года подачи.",
+      "evidence": "Applicants must note that the Passport should have a minimum validity of two years as on 1 July 2026."
+    },
+    {
+      "ru": "Не финансируют медицину и парамедицинские специальности — сестринское дело, физиотерапию, анестезиологию, лаборантов, — а также право и пятилетние совмещённые программы вроде BALLB.",
+      "evidence": "no scholarships are provided to study courses in the fields of Medical Science; Para-medical courses like Nursing, Physiotherapy, anaesthesia, Lab technicians, etc., Law, Integrated courses such as BALLB (5 Years)"
+    },
+    {
+      "ru": "Учиться можно только в вузах из списка ICCR. В заявке выбираешь до пяти вузов и программ по приоритету; после присуждения стипендии сменить вуз или программу нельзя.",
+      "evidence": "Applicants have the choice to opt maximum of 5 Universities/Institutes and Courses in order of priority."
+    },
+    {
+      "ru": "Сколько платят на бакалавриате: 18 000 рупий в месяц, на жильё 6 500 в городах первой категории и 5 500 в остальных, плюс 5 000 рупий в год на расходы.",
+      "evidence": "UG INR 18000 INR 6500 INR 5500 INR 5000"
+    },
+    {
+      "ru": "Перелёт в общие правила не входит: его оплачивают, только если это прямо предусмотрено конкретной схемой стипендии.",
+      "evidence": "Airfare and other related travel expenses are not covered unless specifically stated under the scholarship scheme."
+    },
+    {
+      "ru": "Первые деньги придут не сразу: пока идут формальности и открытие счёта — два-три месяца, — стипендию не платят. Правила советуют привезти с собой около 1500 долларов.",
+      "evidence": "students are advised to carry self-financial support of around USD 1500"
+    },
+    {
+      "ru": "Провалил учебный год — стипендию приостанавливают, и повторный год ты оплачиваешь сам. Провалил его снова — стипендию снимают совсем.",
+      "evidence": "In case the student fails again in the repeat academic year, his/her scholarship will stand terminated"
+    },
+    {
+      "ru": "Отбор ведёт посольство Индии в твоей стране. Оно и ICCR могут отклонить заявку на любом этапе и не обязаны объяснять почему.",
+      "evidence": "Indian Mission and ICCR reserve their rights to accept or reject any application at any stage without assigning any reason whatsoever."
+    },
+    {
+      "ru": "Порога по среднему баллу у самой стипендии нет: требования к приёму ставит вуз, и решение о зачислении тоже за ним.",
+      "evidence": "Decision on admission is solely that of the respective University/Institute"
+    },
+    {
+      "ru": "Карточка сделана по правилам на 2026/27 учебный год: пороги возраста и паспорта в них считаются на 1 июля 2026. На новый цикл ICCR выпускает новый документ, и даты подачи объявляет посольство Индии — поэтому срок в карточке пустой.",
+      "evidence": "ICCR Scholarships Academic Year 2026-27 Guidelines/Rules for Foreign Students"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://a2ascholarships.iccr.gov.in",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": null,
+    "note": {
+      "ru": "Вузы из списка ICCR: в одной заявке выбираешь до пяти вузов и программ по приоритету"
+    }
+  },
+  "source": {
+    "url": "https://a2ascholarships.iccr.gov.in/assets/site/docs/Policy_Guidelines.pdf",
+    "lastVerified": "2026-09-12",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://a2ascholarships.iccr.gov.in/assets/site/docs/Policy_Guidelines.pdf",
+        "contentHash": "sha256:2d1a35151250c50da99a48c026ebf143d0a6b34737318c893cbebb9b5e4f572e"
+      }
+    ]
+  }
+}

@@ -62,15 +62,29 @@ function notMeasured(rule) {
   return rule.notMeasured === true;
 }
 
+// Ближайшее такое число, начиная с сегодняшнего дня.
+function nextMonthDay(monthDay, today) {
+  if (!today) return null;
+  const year = Number(today.slice(0, 4));
+  const candidate = `${year}-${monthDay}`;
+  return candidate >= today ? candidate : `${year + 1}-${monthDay}`;
+}
+
 // Дата отсчёта, привязанная к циклу приёма, а не записанная числом.
 // «18 лет на 31 августа 2026» в следующем цикле означает 31 августа 2027;
 // записанное числом, правило начнёт молча ошибаться на пограничных людях.
-function resolveAsOf(asOf, deadline) {
+function resolveAsOf(asOf, deadline, today) {
   if (asOf == null || asOf === 'deadline') return deadline?.closes ?? null;
   if (typeof asOf === 'string') return asOf;
   if (asOf.relativeTo === 'applicationYear' && asOf.monthDay) {
     const closes = deadline?.closes;
-    if (!closes) return null;
+    // Программа может не публиковать дат приёма вовсе — так у стипендий
+    // ICCR: возраст считается на 1 июля, а когда подача, объявляет
+    // посольство. Тогда год берём по ближайшему такому числу впереди.
+    // Ответ помечается шатким, но это лучше молчания: без даты правило
+    // не срабатывало ни для кого, и семнадцатилетний не узнавал, что к
+    // подаче ему исполнится восемнадцать.
+    if (!closes) return nextMonthDay(asOf.monthDay, today);
     return `${closes.slice(0, 4)}-${asOf.monthDay}`;
   }
   return null;
@@ -170,7 +184,8 @@ export function checkAge(profile, rule, ctx) {
   // поэтому в крайнем случае считаем на сегодня — с оговоркой ниже.
   const fromDeadline = rule.asOf == null || rule.asOf === 'deadline';
   const on =
-    resolveAsOf(rule.asOf, ctx?.deadline) ?? (fromDeadline ? ctx?.today ?? null : null);
+    resolveAsOf(rule.asOf, ctx?.deadline, ctx?.today) ??
+    (fromDeadline ? ctx?.today ?? null : null);
   if (!on) return r('unknown', 'Дата, на которую программа считает возраст, неизвестна');
 
   const age = ageAt(profile.birthDate, on);
@@ -191,6 +206,14 @@ export function checkAge(profile, rule, ctx) {
 
   const usingToday = fromDeadline && !ctx?.deadline?.closes;
 
+  const why = usingToday
+    ? 'даты приёма ещё не объявлены, и к подаче тебе может стать больше'
+    : !ctx?.deadline?.closes
+      ? 'даты приёма ещё не объявлены, и год цикла взят по ближайшему такому числу'
+      : rule.asOf == null
+        ? 'источник не говорит, на какой момент считается возраст'
+        : 'дата приёма ещё не подтверждена';
+
   if (maxInclusive != null) {
     // Когда считаем на сегодня, к подаче возраст может только вырасти —
     // и самое большее на год. Значит сомнение возникает ровно на пределе:
@@ -202,11 +225,6 @@ export function checkAge(profile, rule, ctx) {
       : shaky && Math.abs(age - maxInclusive) <= 1;
 
     if (uncertain) {
-      const why = usingToday
-        ? 'даты приёма ещё не объявлены, и к подаче тебе может стать больше'
-        : rule.asOf == null
-          ? 'источник не говорит, на какой момент считается возраст'
-          : 'дата приёма ещё не подтверждена';
       return r('unknown', `На дату приёма тебе будет около ${age} при пределе ${maxInclusive}, а ${why} — проверь на сайте`);
     }
     if (age > maxInclusive) {
@@ -216,6 +234,12 @@ export function checkAge(profile, rule, ctx) {
     }
   }
   if (rule.min != null && age < rule.min) {
+    // К подаче возраст подрастёт, а дата отсчёта шаткая — у самой
+    // границы это сомнение, а не отказ. Иначе семнадцатилетнему
+    // выпускнику закрывали бы почти всё, куда он подаст следующим летом.
+    if (shaky && age >= rule.min - 1) {
+      return r('unknown', `На дату приёма тебе будет около ${age} при нижней границе ${rule.min}, а ${why} — проверь на сайте`);
+    }
     return r('fail', `На дату приёма тебе будет ${age}, программа берёт с ${rule.min}`);
   }
   return r('pass');

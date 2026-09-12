@@ -634,3 +634,23 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-12"
+
+# ICCR — государственные стипендии Индии для иностранцев. Домен
+# iccr.gov.in одобрен человеком 12 сентября 2026.
+#
+# Источник ручной, как у российской квоты, но по другой причине: с этой
+# машины индийские государственные сайты не открываются вообще —
+# a2ascholarships.iccr.gov.in, iccr.gov.in и eoidushanbe.gov.in отдают
+# таймаут на каждой попытке. Сам файл правил при этом открыт всем: он
+# скачан по официальному адресу и лежит в manual/.
+#
+# ВНИМАНИЕ: правила выпускают на каждый цикл заново. Этот файл — на
+# 2026/27, и пороги в нём считаются на 1 июля 2026. Когда ICCR выложит
+# правила следующего цикла, файл надо пересохранить и перечитать запись.
+[iccr-india]
+name = "ICCR Scholarships (Government of India)"
+files = [
+  { path = "manual/iccr-india/Policy_Guidelines_2026_27.pdf", url = "https://a2ascholarships.iccr.gov.in/assets/site/docs/Policy_Guidelines.pdf" },
+]
+approvedBy = "human"
+approvedAt = "2026-09-12"

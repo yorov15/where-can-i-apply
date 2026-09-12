@@ -36,12 +36,29 @@ test('родившийся на день раньше проходит уже с
   assert.equal(checkAge(me, rule, deadline('2026-01-15')).status, 'pass');
 });
 
-test('без даты приёма относительную дату не посчитать', () => {
+// Раньше без дат приёма правило молчало вовсе. Так карточка ICCR не
+// проверяла возраст ни у кого: подачу там объявляет посольство, а
+// возраст считается на 1 июля.
+test('без дат приёма год берётся по ближайшему такому числу', () => {
+  // Сегодня 4 сентября 2026, значит ближайшее 31 августа — в 2027.
   const me = { birthDate: '2008-09-01' };
+  const rule = { min: 18, asOf: august31, evidence: 'x' };
+  assert.equal(checkAge(me, rule, deadline(null, 'expected')).status, 'pass');
+});
+
+test('без дат приёма у нижней границы — сомнение, а не отказ', () => {
+  // На 31 августа 2027 ему 17, но цикл может сдвинуться на год.
+  const me = { birthDate: '2009-09-01' };
   const rule = { min: 18, asOf: august31, evidence: 'x' };
   const got = checkAge(me, rule, deadline(null, 'expected'));
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /неизвестна/);
+  assert.match(got.message, /нижней границе 18/);
+});
+
+test('намного младше — отказ даже без дат приёма', () => {
+  const me = { birthDate: '2013-01-01' };
+  const rule = { min: 18, asOf: august31, evidence: 'x' };
+  assert.equal(checkAge(me, rule, deadline(null, 'expected')).status, 'fail');
 });
 
 test('на неподтверждённом приёме пограничный возраст даёт сомнение', () => {
