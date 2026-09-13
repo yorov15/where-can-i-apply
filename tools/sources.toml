@@ -767,6 +767,21 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-12"
 
+# Йель. Домен admissions.yale.edu одобрен человеком 13 сентября 2026.
+# Помощь по нужде, как у Гарварда и Принстона. Пять страниц: условия для
+# иностранцев, как считают помощь, сроки туров, состав заявки и экзамены.
+[yale-college]
+name = "Yale College — need-based financial aid"
+urls = [
+  "https://admissions.yale.edu/international",
+  "https://admissions.yale.edu/affordability",
+  "https://admissions.yale.edu/timelines",
+  "https://admissions.yale.edu/requirements",
+  "https://admissions.yale.edu/standardized-testing",
+]
+approvedBy = "human"
+approvedAt = "2026-09-13"
+
 # Принстон. Домен admission.princeton.edu одобрен человеком
 # 12 сентября 2026. Как и Гарвард, это не стипендия, а помощь по нужде.
 # Пять страниц: условия для иностранцев, как считают помощь, сроки
