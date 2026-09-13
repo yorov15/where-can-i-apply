@@ -1,0 +1,182 @@
+{
+  "id": "bowdoin-college",
+  "status": "published",
+  "name": {
+    "ru": "Боудин — помощь по нужде",
+    "orig": "Bowdoin College — need-based financial aid"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Деньги семьи при отборе не смотрят, иностранцам тоже. Принятым закрывают всю посчитанную нужду грантами, без кредитов, с небольшой обязательной подработкой в кампусе. Помощь идёт на обучение, жильё и питание. Отдельно про дорогу эти страницы не говорят. Стоимость года 2026/27 до помощи: от 97 900 долларов"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Bowdoin welcomes students from all over the world."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "страну школы не ограничивают: приёмная комиссия читает заявки из любых школьных систем в контексте страны"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "числа лет школы не называют: обязательной школьной программы и числа курсов колледж не требует"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "года выпуска страницы не называют; не берут только тех, у кого уже есть оконченный бакалавриат"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "возраст на страницах приёма не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "порога по среднему баллу нет: на вопрос о минимальном балле для подачи колледж отвечает, что его нет"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "сертификат по английскому необязателен и минимального балла нет, но английский нужен уверенный: языковых курсов в колледже нет"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "При отборе иностранцев не смотрят, может ли семья платить.",
+      "evidence": "That means your family's ability to pay is not a factor or barrier to admission."
+    },
+    {
+      "ru": "Принятым иностранцам закрывают всю посчитанную нужду: грантами и небольшой обязательной подработкой в кампусе, без кредитов.",
+      "evidence": "Bowdoin meets all admitted international students' full demonstrated need with a small on-campus work expectation and scholarships."
+    },
+    {
+      "ru": "Стипендий за успехи, спорт или творчество нет, только помощь по нужде.",
+      "evidence": "Bowdoin College does not offer special scholarships based solely on academic, athletic, or artistic achievement."
+    },
+    {
+      "ru": "Сколько стоит год 2026/27 до помощи: обучение 74 268 долларов, сборы 700, жильё 10 106, питание 10 326, книги 840, личные расходы 1 660, плюс дорога. Всего от 97 900.",
+      "evidence": "Total Cost of Attendance $97,900+"
+    },
+    {
+      "ru": "Документы на помощь иностранцы подают только после зачисления, и сдать их надо в течение семи дней после решения о приёме.",
+      "evidence": "Admitted students should expect to submit all financial aid materials within seven days of your admission offer."
+    },
+    {
+      "ru": "Для помощи нужна анкета CSS Profile, код Боудина 3089. Если её плата тяжела для семьи, после зачисления напиши в офис помощи: sao@bowdoin.edu.",
+      "evidence": "If you are unable to submit the CSS Profile or paying the fee would present a financial burden, you should contact the Student Aid Office after you have been admitted to Bowdoin at sao@bowdoin.edu ."
+    },
+    {
+      "ru": "Сертификат по английскому необязателен и минимального балла нет. Но языковых курсов в колледже нет, так что английский нужен уверенный, на уровне вуза.",
+      "evidence": "Bowdoin does not have a minimum qualifying EPT score."
+    },
+    {
+      "ru": "SAT и ACT не требуются: колледж не требует их больше 50 лет. Если сдал, можно попросить учесть результат.",
+      "evidence": "ACT or SAT scores are not required for the purpose of admission."
+    },
+    {
+      "ru": "Минимального балла аттестата, IB или A-level для подачи нет: успехи смотрят в контексте твоей школы.",
+      "evidence": "We do not have a minimum qualifying score to apply."
+    },
+    {
+      "ru": "Если в стране есть национальный вступительный экзамен в вузы, нужны его официальные результаты. ЦВЭ в Таджикистане под это описание подходит, поэтому уточни у приёмной комиссии, нужен ли он тебе и к какому сроку.",
+      "evidence": "Students from countries with national university entrance exams (such as but not limited to: WASSCE, EGSE, KCSE, CAPE, IGCSE, ISC, SLC) are required to submit official results."
+    },
+    {
+      "ru": "Транскрипт переводят на английский, лучше через школу или заверяющего сотрудника. Нужны оценки за 9, 10 и 11 классы, а перед зачислением ещё и итоговые оценки с датой выпуска.",
+      "evidence": "Your transcript should be translated into English, and we prefer a translation from a school or a certifying official."
+    },
+    {
+      "ru": "Нужны три рекомендации: от школьного консультанта, учителя основного предмета из последних двух классов и ещё одного человека. Если консультанта в школе нет, этот раздел может заполнить учитель или директор.",
+      "evidence": "You may have a teacher or your principal complete the counselor section of your application."
+    },
+    {
+      "ru": "Сроки: подача открывается 1 августа. Первый ранний тур до 15 ноября, ответ в середине декабря; второй ранний тур до 5 января, ответ в начале февраля; обычный тур до 5 января, ответ в середине марта.",
+      "evidence": "Applications open on August 1. The Early Decision 1 deadline is November 15; Early Decision 2 and Regular Decision applications are due January 5."
+    },
+    {
+      "ru": "Оба ранних тура обязывающие: они для тех, у кого Боудин на первом месте.",
+      "evidence": "A binding application program designed for students who believe that Bowdoin is their top choice."
+    },
+    {
+      "ru": "Плату за подачу, 70 долларов, отменяют автоматически, если просишь финансовую помощь. Просить отдельно не нужно.",
+      "evidence": "Bowdoin automatically waives the $70 application fee for students who are applying for financial aid and/or are first-generation-to-college students"
+    },
+    {
+      "ru": "Собеседование необязательно. Иностранцы сначала подают заявку, потом просят собеседование. Можно вместо него прислать независимое интервью InitialView, Vericant или встроенное в Duolingo, но тогда собеседование с колледжем уже не назначат.",
+      "evidence": "Please note that if you plan to submit an independent interview, you may not register for a Bowdoin interview."
+    },
+    {
+      "ru": "С уже оконченным бакалавриатом не принимают.",
+      "evidence": "Students who have already obtained a bachelor's degree are ineligible for admission to Bowdoin."
+    }
+  ],
+  "deadline": {
+    "opens": "2026-08-01",
+    "closes": "2027-01-05",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.bowdoin.edu/admissions/apply/international-students/index.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Боудин-колледж в Брансуике, штат Мэн"
+    }
+  },
+  "source": {
+    "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+    "lastVerified": "2026-09-13",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+        "contentHash": "sha256:8c93f00ebe9e2e87eb9168c148ffff916f50dda0e683aa6f26e41562ddda567b"
+      },
+      {
+        "url": "https://www.bowdoin.edu/admissions/apply/dates-deadlines/index.html",
+        "contentHash": "sha256:01397eb720843ed64bc3d0c4828df9abf695cd4584000c7e6a2cd012b1ce0f3e"
+      },
+      {
+        "url": "https://www.bowdoin.edu/admissions/apply/international-students/index.html",
+        "contentHash": "sha256:724306d9bfdb7a09104c58890c5c29408ab13b27606c6319238d6711464f295b"
+      },
+      {
+        "url": "https://www.bowdoin.edu/admissions/costs-and-aid/index.html",
+        "contentHash": "sha256:275274f5dcefbbbd379200735768be1976d5996943d00115e96b0ac516e235ee"
+      },
+      {
+        "url": "https://www.bowdoin.edu/student-aid/apply-for-aid/international-students.html",
+        "contentHash": "sha256:097d178d63b1325488cd4d560d751bf171fbe123ccf4c4b883d483092f7599c1"
+      },
+      {
+        "url": "https://www.bowdoin.edu/student-aid/apply-for-aid/index.html",
+        "contentHash": "sha256:eb2ccf52dc137854236ced4283a771cae75d627b6ad5fd0c8f99ef365d61e92e"
+      }
+    ]
+  }
+}

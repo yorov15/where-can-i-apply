@@ -767,6 +767,23 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-12"
 
+# Боудин. Домен bowdoin.edu одобрен человеком 13 сентября 2026
+# (предложен как admissions.bowdoin.edu, страницы живут на www.bowdoin.edu).
+# Шесть страниц: заявка, сроки туров, условия для иностранцев, стоимость и
+# политика помощи, помощь иностранцам, сроки подачи на помощь.
+[bowdoin-college]
+name = "Bowdoin College — need-based financial aid"
+urls = [
+  "https://www.bowdoin.edu/admissions/apply/index.html",
+  "https://www.bowdoin.edu/admissions/apply/dates-deadlines/index.html",
+  "https://www.bowdoin.edu/admissions/apply/international-students/index.html",
+  "https://www.bowdoin.edu/admissions/costs-and-aid/index.html",
+  "https://www.bowdoin.edu/student-aid/apply-for-aid/international-students.html",
+  "https://www.bowdoin.edu/student-aid/apply-for-aid/index.html",
+]
+approvedBy = "human"
+approvedAt = "2026-09-13"
+
 # Дьюк. Домен admissions.duke.edu одобрен человеком 13 сентября 2026.
 # Три страницы: требования к заявке (включая английский и правила для
 # иностранцев), финансовая помощь и сроки цикла 2026-2027.
