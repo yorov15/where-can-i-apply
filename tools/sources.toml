@@ -767,6 +767,26 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-12"
 
+# GIST — Кванджуский институт науки и технологий (Корея). Домен
+# gist.ac.kr выбран 13 сентября 2026 по поручению человека взять «самые
+# правильные и проверенные» из предложенного им списка. Раздел для
+# иностранных бакалавров /iuadm: кто может подать, правила, подача,
+# стипендия, FAQ и PDF-гайд приёма.
+#
+# ВНИМАНИЕ: в имени PDF год набора; на новый набор адрес сменится.
+[gist-korea]
+name = "GIST — international undergraduate admissions and scholarship"
+urls = [
+  "https://www.gist.ac.kr/iuadm/html/sub02/0201.html",
+  "https://www.gist.ac.kr/iuadm/html/sub02/0202.html",
+  "https://www.gist.ac.kr/iuadm/html/sub02/0206.html",
+  "https://www.gist.ac.kr/iuadm/html/sub03/0301.html",
+  "https://www.gist.ac.kr/iuadm/html/sub04/0402.html",
+  "https://www.gist.ac.kr/iuadm/img/main/2026_Undergraduate_Guide_for_Ebook_single.pdf",
+]
+approvedBy = "human"
+approvedAt = "2026-09-13"
+
 # ADA University (Баку). Домен ada.edu.az одобрен человеком 13 сентября
 # 2026. Четыре страницы: бакалавриат, иностранцы, финансовая помощь,
 # стоимость.

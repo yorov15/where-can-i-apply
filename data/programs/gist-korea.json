@@ -1,0 +1,160 @@
+{
+  "id": "gist-korea",
+  "status": "published",
+  "name": {
+    "ru": "GIST (Кванджу, Корея) — бесплатный бакалавриат для иностранцев",
+    "orig": "GIST — international undergraduate admissions and scholarship"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Плату за обучение отменяют всем иностранцам на все 8 семестров, без условий. Каждый месяц платят до 530 000 вон: на питание, личные расходы и международную надбавку, но часть выплат зависит от кредитов и среднего балла. Разово дают 200 000 вон на обустройство и оплачивают билет в одну сторону. Общежитие, около 106 000 вон в месяц, в стипендию не входит"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "Korean citizens with dual or multiple citizenship are not eligible to apply."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "страну школы не ограничивают; только международные школы в самой Корее не считаются иностранными"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "maxRelative": "applicationYear",
+      "evidence": "Applicants who have graduated from high school by August 31st, 2026"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "возраст на страницах приёма не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "порога по среднему баллу страницы не называют: оценивают транскрипт, экзамены, рекомендацию и интервью"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "There is no minimum score requirement for EPT."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Плату за обучение отменяют всем иностранным бакалаврам без отдельной заявки и без условий, на 8 семестров.",
+      "evidence": "Tuition fees are fully waived for 8 semesters, and there are monthly allowances, settlement subsidy and flight reimbursement."
+    },
+    {
+      "ru": "Ежемесячно: 130 000 вон на личные расходы и 270 000 на питание, если в прошлом семестре набрал не меньше 11 кредитов и не был на испытательном сроке; ещё 130 000 международной надбавки при среднем балле от 3.0 из 4.5.",
+      "evidence": "Achieved a GPA of at least 3.0 out of the 4.5 scale in the previous semester"
+    },
+    {
+      "ru": "Общежитие в стипендию не входит: около 106 000 вон в месяц, еда в кампусе 4 000–7 000 вон. Медстраховку платишь сам, но вуз возвращает её полностью.",
+      "evidence": "However, dorm fee is not included in GIST Scholarship."
+    },
+    {
+      "ru": "Мест мало: в прошлом наборе около 15 иностранцев. Квот по странам нет.",
+      "evidence": "Approximately 15 students will be selected."
+    },
+    {
+      "ru": "Сертификат по английскому обязателен для всех, кроме носителей языка, но минимального балла нет. Подходят TOEFL, IELTS, TEPS, TOEIC, Cambridge, PTE Academic и Duolingo, сданные не раньше чем за два года до срока подачи.",
+      "evidence": "Only tests taken within 2 years prior to the deadline of the online application are valid."
+    },
+    {
+      "ru": "Нужен хотя бы один стандартный экзамен: SAT, ACT, A-level, IB, AP, диплом международной олимпиады или выпускной или вступительный экзамен своей страны. SAT, ACT, A-level, IB или AP настоятельно рекомендуют. Если подаёшь национальный экзамен, приложи описание процедуры, конкурса и результатов.",
+      "evidence": "At least one of the above official test score reports should be submitted."
+    },
+    {
+      "ru": "Национальные олимпиады вместо экзамена не засчитывают.",
+      "evidence": "National Olympiad Certificate is not acceptable."
+    },
+    {
+      "ru": "Все прошедшие отбор документов проходят интервью по математике и одному естественному предмету на выбор: физике, химии или биологии.",
+      "evidence": "All applicants who pass the document screening will be asked math and science subject during the interview."
+    },
+    {
+      "ru": "Школу нужно окончить к 31 августа, а апостилированный аттестат прислать к сроку регистрации. Поэтому кто оканчивает школу позже начала июля, подать не может.",
+      "evidence": "Therefore, those whose graduation date is after early July can not apply."
+    },
+    {
+      "ru": "Документы: анкета, одна рекомендация (её загружает сам рекомендатель через систему GIST), транскрипты за все годы старшей школы с описанием системы оценок, аттестат или справка о выпуске, сертификаты, паспорта твой и обоих родителей. Всё на английском или с нотариальным переводом.",
+      "evidence": "All documents must be submitted in English. Any document in different language should be accompanied by a notarized English translation."
+    },
+    {
+      "ru": "Платы за подачу нет. Подают только онлайн.",
+      "evidence": "We do not charge any application fee."
+    },
+    {
+      "ru": "Учат в основном на английском, но для выпуска иностранцы проходят несколько курсов корейского. Первый год без специальности, выбор из 10 направлений, включая Electrical Engineering and Computer Science и AI Convergence.",
+      "evidence": "International students are required to take some Korean courses for their graduation."
+    },
+    {
+      "ru": "Прошлый цикл: подача с 24 ноября 2025 по 23 января 2026, итоги 30 апреля, учёба с осени 2026. Даты нового цикла на сайте ещё не объявлены, поэтому срок в карточке по прошлому году и помечен неподтверждённым.",
+      "evidence": "Online Application Nov. 24(Mon), 2025 ~ Jan. 23(Fri), 2026"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-11-24",
+    "closes": "2027-01-23",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.gist.ac.kr/iuadm/html/sub02/0201.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Gwangju Institute of Science and Technology в Кванджу"
+    }
+  },
+  "source": {
+    "url": "https://www.gist.ac.kr/iuadm/html/sub02/0201.html",
+    "lastVerified": "2026-09-13",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.gist.ac.kr/iuadm/html/sub02/0201.html",
+        "contentHash": "sha256:5b48d1632145da1440b24a0103dbb965de74432408dc856c899a62269363178d"
+      },
+      {
+        "url": "https://www.gist.ac.kr/iuadm/html/sub02/0202.html",
+        "contentHash": "sha256:3cc47671bd170ae520d0e4ee235b206b5937b929e46b13695d1be0a30ebaeb3b"
+      },
+      {
+        "url": "https://www.gist.ac.kr/iuadm/html/sub02/0206.html",
+        "contentHash": "sha256:622c5aaa8b5cd59a60c5a05204bd58de4c4b56496fcb97fd2d298fb8d693ddda"
+      },
+      {
+        "url": "https://www.gist.ac.kr/iuadm/html/sub03/0301.html",
+        "contentHash": "sha256:498f519beb8e1231338129bffb5128742754246e8e3e05e18ea3c93db23f500a"
+      },
+      {
+        "url": "https://www.gist.ac.kr/iuadm/html/sub04/0402.html",
+        "contentHash": "sha256:d32a1827662f644e7bdf3969327bc05e23d234428026fc1191674a066d4efbdf"
+      },
+      {
+        "url": "https://www.gist.ac.kr/iuadm/img/main/2026_Undergraduate_Guide_for_Ebook_single.pdf",
+        "contentHash": "sha256:51050b095fec440e0984a09f3e599b4dadf96c9f35de1d5d1e87a18914eaf7ac"
+      }
+    ]
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:e6300ffd43ffac90ab9ccd1a946595e4aec77561a0ee69f3361be537fc3d6e79"
+  }
+}
