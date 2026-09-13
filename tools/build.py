@@ -21,10 +21,12 @@ from tools.schema import FIELDS, SIGNERS, approved_by
 # то есть до цели в 25-30, — и отказалась бы ради экономии, которой на
 # самом деле нет.
 #
-# 40 КБ по проводу — это примерно 45 программ. Предел не снят, он
-# перенесён туда, где цена настоящая: аудитория сидит на дорогом
-# мобильном интернете, и следить за ростом всё равно надо.
-MAX_INDEX_WIRE_BYTES = 40 * 1024
+# 40 КБ кончились на 37-й программе, а не на 45-й: текстовые условия
+# росли быстрее, чем число карточек. 13 сентября 2026 человек поднял
+# предел до 64 КБ — это примерно 60 программ, меньше одной фотографии за
+# заход. Предел не снят: аудитория сидит на дорогом мобильном интернете,
+# и следить за ростом всё равно надо.
+MAX_INDEX_WIRE_BYTES = 64 * 1024
 
 # Уровень сжатия берём средний, а не максимальный: сервер жмёт примерно
 # так же, и лучше ошибиться в сторону большего числа, чем меньшего.
@@ -128,6 +130,19 @@ def build_index(programs: list[dict], generated_at: str) -> dict:
     }
 
 
+def index_text(index: dict) -> str:
+    """Индекс без отступов, но по программе на строку.
+
+    Отступы съедали пять процентов сжатого размера. Совсем в одну строку
+    нельзя: индекс лежит в git, и тогда любой diff показывал бы, что
+    изменилось всё.
+    """
+    compact = {"separators": (",", ":"), "ensure_ascii": False}
+    programs = ",\n".join(json.dumps(program, **compact) for program in index["programs"])
+    head = json.dumps(index["generatedAt"], **compact)
+    return f'{{"generatedAt":{head},"programs":[\n{programs}\n]}}\n'
+
+
 def main() -> int:
     root = Path(__file__).resolve().parent.parent
     programs_dir = root / "data" / "programs"
@@ -153,7 +168,7 @@ def main() -> int:
         if program.get("status") == "published" and program["id"] not in published:
             print(f"{program['id']}: утверждена, но в индекс не пошла — проверь source")
 
-    text = json.dumps(index, ensure_ascii=False, indent=2) + "\n"
+    text = index_text(index)
 
     size = len(text.encode("utf-8"))
     wire = wire_size(text)

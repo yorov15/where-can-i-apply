@@ -5,6 +5,7 @@ from tools.build import (
     MAX_INDEX_WIRE_BYTES,
     build_index,
     index_entry,
+    index_text,
     stale_deadlines,
     wire_size,
 )
@@ -233,6 +234,31 @@ class TestWireSize(unittest.TestCase):
         text = "условие " * 500
         self.assertGreater(len(text.encode("utf-8")), len(text))
         self.assertLess(wire_size(text), len(text.encode("utf-8")))
+
+
+class TestIndexText(unittest.TestCase):
+    def index(self, count=3):
+        programs = [dict(index_entry(PROGRAM), id=f"p{n}") for n in range(count)]
+        return {"generatedAt": "2026-09-13", "programs": programs}
+
+    def test_reads_back_as_the_same_index(self):
+        index = self.index()
+        self.assertEqual(json.loads(index_text(index)), index)
+
+    def test_one_program_per_line(self):
+        # Индекс лежит в git: правка одной карточки должна менять одну строку.
+        lines = index_text(self.index(3)).splitlines()
+        self.assertEqual(sum(1 for line in lines if '"id":"p' in line), 3)
+        self.assertTrue(all(line.count('"id":"p') <= 1 for line in lines))
+
+    def test_smaller_on_the_wire_than_indented(self):
+        index = self.index(20)
+        indented = json.dumps(index, ensure_ascii=False, indent=2) + "\n"
+        self.assertLess(wire_size(index_text(index)), wire_size(indented))
+
+    def test_empty_index_is_valid(self):
+        empty = {"generatedAt": "2026-09-13", "programs": []}
+        self.assertEqual(json.loads(index_text(empty)), empty)
 
 
 if __name__ == "__main__":
