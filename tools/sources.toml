@@ -767,6 +767,21 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-12"
 
+# HKU — Гонконгский университет. Домен hku.hk выбран 13 сентября 2026 по
+# поручению человека взять «самые правильные и проверенные» из его списка.
+# Четыре страницы: подача с международным аттестатом, английский,
+# стоимость и расходы, стипендии для поступающих.
+[hku]
+name = "The University of Hong Kong — international admissions and entrance scholarships"
+urls = [
+  "https://admissions.hku.hk/apply/international-qualifications",
+  "https://admissions.hku.hk/apply/international-qualifications/english-language-requirement",
+  "https://admissions.hku.hk/fees-and-scholarships/tuition-and-living-expenses",
+  "https://admissions.hku.hk/fees-and-scholarships/scholarships",
+]
+approvedBy = "human"
+approvedAt = "2026-09-13"
+
 # GIST — Кванджуский институт науки и технологий (Корея). Домен
 # gist.ac.kr выбран 13 сентября 2026 по поручению человека взять «самые
 # правильные и проверенные» из предложенного им списка. Раздел для

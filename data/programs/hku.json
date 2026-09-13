@@ -1,0 +1,147 @@
+{
+  "id": "hku",
+  "status": "published",
+  "name": {
+    "ru": "Гонконгский университет (HKU) — приём иностранцев и стипендии за успехи",
+    "orig": "The University of Hong Kong — international admissions and entrance scholarships"
+  },
+  "hostCountry": "HK",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение дорогое: для иностранца 249 000 гонконгских долларов в год на STEM-факультетах, включая информатику, и 224 000 на остальных (набор 2026/27). Стипендии за успехи есть, они могут покрывать обучение, а иногда и жизнь, но их условия сайт показывает только через интерактивный фильтр, поэтому здесь их нет. Общежитие 17 290–37 940 в год, жизнь до 50 000 в год"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Non-local students with an international qualification or other national examination qualifications other than Mainland China's National Joint College Entrance Examination (NJCEE) or GaoKao."
+    },
+    "schoolCountry": {
+      "notMeasured": true,
+      "evidence": "If you can't find your qualification here, your academic results will be considered on an individual basis."
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "года выпуска страницы не называют: оценки вводят прогнозные или итоговые, итоговые подтверждают до начала учёбы"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "возраст для поступления не ограничен; с 25 лет вступительные требования считаются выполненными при подтверждающих документах"
+    },
+    "gpa": null,
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "An overall band score of 6.5 or better in IELTS Academic Module, achieved in the same attempt, is required."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 93,
+          "evidence": "A score of 93 or better in the TOEFL internet-based test (TOEFL iBT) is required, achieved in the same attempt."
+        }
+      ],
+      "evidence": "English Language Requirement (Information is for 2026 Reference Only)"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Стипендии HKU даются за успехи и могут покрывать обучение, а в некоторых случаях и расходы на жизнь, иностранцам тоже. Список и условия сайт показывает только через фильтр по типу студента, аттестату и факультету, поэтому смотри их там.",
+      "evidence": "HKU offers generous scholarships based on academic merit that cover tuition fees, and living expenses in some cases, to both local and non-local students."
+    },
+    {
+      "ru": "Сколько стоит обучение для иностранца в 2026/27: 249 000 гонконгских долларов в год на инженерии, естественных науках, медицине и в School of Computing and Data Science, 224 000 на остальных факультетах.",
+      "evidence": "HKD249,000 Annual Tuition Fees (inclusive of STEM Fee) for Non-local Students Admitted to the STEM Faculties and Schools"
+    },
+    {
+      "ru": "Жильё и жизнь: общежитие 17 290–37 940 гонконгских долларов в год, съёмное жильё 30 000–50 000, расходы на жизнь до 50 000 в год.",
+      "evidence": "Residential halls and colleges HKD17,290 to HKD37,940 per year"
+    },
+    {
+      "ru": "Таджикского аттестата в таблице требований нет, такие результаты рассматривают индивидуально. Минимальные требования приём не гарантируют: смотрят и интервью, и мотивационное письмо, и рекомендации.",
+      "evidence": "Admissions decisions to the University's undergraduate degree programmes are made based on academic performance as well as other factors, including interview performance, personal statement, references, other documents submitted to the University, etc."
+    },
+    {
+      "ru": "Английский обязателен: IELTS Academic от 6.5 или TOEFL iBT от 93 за одну попытку, сданные не раньше чем за два года до 1 сентября года поступления. Подходят также SAT по чтению и письму от 610 или PTE Academic от 64. IELTS Online, IELTS Indicator и домашний TOEFL не принимают.",
+      "evidence": "Note: The TOEFL ITP, TOEFL ITP Plus and TOEFL Home Edition tests are not accepted to fulfill the English language requirement."
+    },
+    {
+      "ru": "Пороги по английскому указаны для набора 2026 как справочные; на 2027 могут измениться.",
+      "evidence": "English Language Requirement (Information is for 2026 Reference Only)"
+    },
+    {
+      "ru": "Кому к 1 сентября года поступления исполнится 25, тот считается выполнившим вступительные требования, но должен приложить документы об образовании и опыте работы.",
+      "evidence": "Applicants who turn 25 on or before 1 September in the year that admission is sought are deemed to have satisfied HKU's entrance requirements."
+    },
+    {
+      "ru": "Сроки набора 2027: подача открывается 23 сентября 2026. Кто подаст до полудня 25 ноября 2026 по гонконгскому времени, попадает в первую волну с интервью в ноябре — январе и ответами с декабря. Дальше заявки рассматривают по мере поступления до 25 августа 2027.",
+      "evidence": "25 Aug 2027 Applications close at noon (HKT)"
+    },
+    {
+      "ru": "Оценки, прогнозные и итоговые, нужно ввести в систему подачи, а не только приложить файлы. Иначе заявку могут отклонить.",
+      "evidence": "Applicants must input all their academic results, including both predicted and actual results, into the application system (instead of merely uploading the documents)."
+    },
+    {
+      "ru": "Через агентов HKU не принимает: подавать нужно самому, напрямую. Обещания «поступить без оценок и IELTS» вуз называет ложью.",
+      "evidence": "Non-local applicants interested in applying to HKU must directly submit their applications to the University, and only eligible applicants who meet the necessary requirements will be considered for admission."
+    },
+    {
+      "ru": "После приглашения нужно подтвердить согласие за три-четыре недели и внести невозвратный депозит. На студенческую визу закладывай восемь-десять недель.",
+      "evidence": "Non-local students should allow at least four to six weeks for an assessment and eight to ten weeks for a visa application upon receiving an offer."
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-23",
+    "closes": "2027-08-25",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://admissions.hku.hk/apply/international-qualifications",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Гонконгский университет, в том числе School of Computing and Data Science"
+    }
+  },
+  "source": {
+    "url": "https://admissions.hku.hk/apply/international-qualifications",
+    "lastVerified": "2026-09-13",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://admissions.hku.hk/apply/international-qualifications",
+        "contentHash": "sha256:5424a1e177eb55cf1bc2799f187a5343cceedb901cfbb8a62dfb892b25b66f94"
+      },
+      {
+        "url": "https://admissions.hku.hk/apply/international-qualifications/english-language-requirement",
+        "contentHash": "sha256:2d09a9fb17a4a386187021abca1bc6459f9cd15b9f286a39677073f4cada6569"
+      },
+      {
+        "url": "https://admissions.hku.hk/fees-and-scholarships/tuition-and-living-expenses",
+        "contentHash": "sha256:bf5ed2d5d1776fdc79dc63bbdbd0f802d9a8385d0c7d911d5854e9d85d02bc00"
+      },
+      {
+        "url": "https://admissions.hku.hk/fees-and-scholarships/scholarships",
+        "contentHash": "sha256:7ac88b2010563eb1862b159b10e291ccc92ca0261919cc8985b5a1d9fcbd5f88"
+      }
+    ]
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:c7ed177e1a4da0cfaee9d0ca918caa8c8fae4d3f6715e0e26c57e4c2a287ddb7",
+    "gpa": "sha256:c7ed177e1a4da0cfaee9d0ca918caa8c8fae4d3f6715e0e26c57e4c2a287ddb7"
+  }
+}
