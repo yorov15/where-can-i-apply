@@ -767,6 +767,23 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-12"
 
+# APU — Ritsumeikan Asia Pacific University (Япония). Домен apu.ac.jp
+# одобрен человеком 13 сентября 2026 («davay vse po ocheredi»); сайт приёма
+# на поддомене admissions.apu.ac.jp. Шесть страниц: кто может подать,
+# сроки, порядок подачи, стипендии до и после зачисления, стоимость.
+[apu-japan]
+name = "Ritsumeikan Asia Pacific University (APU) — undergraduate admissions and tuition reduction scholarships"
+urls = [
+  "https://admissions.apu.ac.jp/admissions/application_eligibility/",
+  "https://admissions.apu.ac.jp/admissions/application_schedule/",
+  "https://admissions.apu.ac.jp/admissions/how_to_apply/",
+  "https://admissions.apu.ac.jp/costs_scholarships/before_enrollment/",
+  "https://admissions.apu.ac.jp/costs_scholarships/tuition_fees/",
+  "https://admissions.apu.ac.jp/costs_scholarships/after_enrollment/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-13"
+
 # Вассар. Домен vassar.edu вместе с официальными поддоменами одобрен
 # человеком 13 сентября 2026. Шесть страниц: для иностранцев, требования,
 # порядок подачи, помощь при поступлении, стоимость и подача на помощь.
