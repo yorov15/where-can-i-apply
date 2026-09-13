@@ -767,6 +767,22 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-12"
 
+# Вассар. Домен vassar.edu вместе с официальными поддоменами одобрен
+# человеком 13 сентября 2026. Шесть страниц: для иностранцев, требования,
+# порядок подачи, помощь при поступлении, стоимость и подача на помощь.
+[vassar-college]
+name = "Vassar College — need-based financial aid"
+urls = [
+  "https://www.vassar.edu/admission/apply/international/",
+  "https://www.vassar.edu/admission/apply/requirements/",
+  "https://www.vassar.edu/admission/apply/how-to-apply/",
+  "https://www.vassar.edu/admission/apply/financial-aid/",
+  "https://www.vassar.edu/admission/financial-aid/tuition/",
+  "https://www.vassar.edu/admission/financial-aid/apply/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-13"
+
 # Корнелл. Домен admissions.cornell.edu одобрен человеком 13 сентября 2026;
 # помощь описана на официальном поддомене finaid.cornell.edu. Четыре
 # страницы: подача первокурсников со сроками, политика экзаменов и
