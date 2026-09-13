@@ -1,0 +1,201 @@
+{
+  "id": "upenn",
+  "status": "published",
+  "name": {
+    "ru": "Пенсильванский университет — помощь по нужде",
+    "orig": "University of Pennsylvania — need-based financial aid"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Иностранцам, принятым с помощью, закрывают всю посчитанную нужду, как американцам, без кредитов. Но деньги семьи при отборе иностранцев учитывают, а средства на них ограничены. Помощь только по нужде, стипендий за успехи нет. Про оплату дороги для всех эти страницы не говорят"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Our application process is the same for domestic and international applicants."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "страну школы не ограничивают: вуз принимает большинство национальных и международных школьных программ и читает заявку в контексте твоей школы"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "числа лет школы страницы не называют: если старшая школа короче, просят документы за все её классы"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "возраст на страницах приёма не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "порога по среднему баллу нет: вуз пишет, что нет ни обязательных курсов, ни минимальных баллов по экзаменам"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "Competitive applicants tend to have an overall band score of 7 or above"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "Competitive applicants tend to have a composite score of 100 or above"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "Competitive applicants tend to have a composite score of 5 or above"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "Competitive applicants should have an overall score of 130 or above"
+        }
+      ],
+      "advisory": true,
+      "evidence": "If neither applies to you, you must submit scores from one of the following tests"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Для иностранцев отбор учитывает деньги семьи: вуз берёт только тех просящих помощь, кому может её дать. Средств на иностранцев мало, поэтому часть сильных кандидатов не проходит.",
+      "evidence": "Penn will only admit financial aid candidates for whom we can commit to providing aid."
+    },
+    {
+      "ru": "Иностранцем считается любой, кто не гражданин и не постоянный житель США, Канады или Мексики.",
+      "evidence": "Penn is need-aware for international applicants, who are defined as non-citizens, and non-permanent residents of the United States, Canada, and Mexico."
+    },
+    {
+      "ru": "Принятым с помощью закрывают 100% посчитанной нужды, так же как американцам.",
+      "evidence": "International students admitted as financial aid recipients will receive need-based aid that covers 100% of their demonstrated need, just like domestic students."
+    },
+    {
+      "ru": "Помощь просят сразу вместе с заявкой. После зачисления попросить нельзя, и решение действует на все четыре года.",
+      "evidence": "Requests for financial aid after being admitted as an international student cannot be considered."
+    },
+    {
+      "ru": "Для помощи иностранцу нужны анкета CSS Profile и налоговые документы или справки о доходе.",
+      "evidence": "If you are not a U.S. citizen or permanent resident, you will need to submit: CSS Profile Tax Return/Earning Statement"
+    },
+    {
+      "ru": "Нужен SAT или ACT. Если сдать трудно, в самой заявке можно попросить освобождение. Последние даты экзамена: для раннего тура ACT в октябре или SAT в ноябре 2026, для обычного декабрь 2026.",
+      "evidence": "Penn applicants are required to submit the SAT or ACT. Applicants who face hardship in meeting this requirement can submit a waiver directly through the application instead ."
+    },
+    {
+      "ru": "Сертификат по английскому обязателен, если язык не родной и ты не учился на английском хотя бы три года. Подходят TOEFL, IELTS и Duolingo, результаты должен прислать сам экзаменационный центр: сообщить балл самому нельзя.",
+      "evidence": "Penn does not accept self-reported scores for English proficiency examinations."
+    },
+    {
+      "ru": "Порога по английскому нет, но у конкурентных абитуриентов обычно IELTS от 7, TOEFL от 100 по старой шкале или от 5 по новой, Duolingo от 130. Поэтому ниже этих чисел карточка не отказывает, а просит проверить.",
+      "evidence": "Competitive applicants tend to have an overall band score of 7 or above"
+    },
+    {
+      "ru": "Сертификат действует два года и должен быть действителен в момент подачи. IELTS Indicator, IELTS One Retake и TOEFL MyBest не принимают.",
+      "evidence": "This means your scores must be valid at the time you submit you application."
+    },
+    {
+      "ru": "Обязательных предметов и минимальных баллов по экзаменам нет. Оценки не пересчитывай и в стороннюю службу оценки не отправляй.",
+      "evidence": "No, international transcripts do not need to be evaluated by a third party and applicants grades, GPAs, and test scores should not be recalculated."
+    },
+    {
+      "ru": "Нужны оценки за все годы старшей школы. Документы не на английском подают с заверенным переводом.",
+      "evidence": "Yes, please ensure that we receive a certified translations of any of your application materials which are not originally printed in English."
+    },
+    {
+      "ru": "Если выпускные экзамены сдаёшь после решения о приёме, школа присылает прогноз результатов. Итоговые результаты нужны до начала учёбы.",
+      "evidence": "We require and review final examination results before you matriculate to Penn."
+    },
+    {
+      "ru": "Рекомендации: от школьного консультанта и учителя основного предмета. Третью, от другого учителя или человека из твоего окружения, можно добавить по желанию.",
+      "evidence": "If you apply to Penn as a first-year or transfer student, you will need to request recommendation letters from two people"
+    },
+    {
+      "ru": "Сроки: ранний тур до 1 ноября 2026, ответ в декабре; обычный до 5 января 2027, ответ в апреле.",
+      "evidence": "Early Decision Deadline: November 1, 2026 Regular Decision Deadline: January 5, 2027"
+    },
+    {
+      "ru": "Ранний тур обязывающий: если примут, придётся согласиться и поступить. Сравнить предложения помощи разных вузов можно только в обычном туре.",
+      "evidence": "Our Early Decision program is binding, meaning that if you are admitted, you are required to accept our offer of admission and enroll at Penn."
+    },
+    {
+      "ru": "Плата за подачу 75 долларов. Если она тяжела для семьи, запроси освобождение в Common App или Coalition Application.",
+      "evidence": "The application fee to apply to Penn is $75."
+    },
+    {
+      "ru": "С агентами и платными консультантами по поступлению вуз не работает. Советует обращаться в EducationUSA.",
+      "evidence": "Please note that the University of Pennsylvania Office of Admission neither endorses nor supports the use of agents and independent college admissions related business in the application process."
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-05",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://admissions.upenn.edu/how-to-apply/international-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Пенсильванский университет в Филадельфии, заявка подаётся в одну из четырёх бакалаврских школ"
+    }
+  },
+  "source": {
+    "url": "https://admissions.upenn.edu/how-to-apply/international-applicants",
+    "lastVerified": "2026-09-13",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://admissions.upenn.edu/how-to-apply/international-applicants",
+        "contentHash": "sha256:49b57208626a76803de6cb19a14f1293d0efb12f5cbeb9a3d40db679af7c0c43"
+      },
+      {
+        "url": "https://admissions.upenn.edu/how-to-apply/international-applicants/guidelines",
+        "contentHash": "sha256:d2657ccaa5042fd3c32d8d2efee934338499227327d547b6ce2a2e1c72b69e0d"
+      },
+      {
+        "url": "https://admissions.upenn.edu/affording-penn/international-aid",
+        "contentHash": "sha256:ec635f300ea3d56ab3afca0bac07b9d4d888b8e3d809884fb6e05c2314699fe4"
+      },
+      {
+        "url": "https://admissions.upenn.edu/how-to-apply/first-year-applicants",
+        "contentHash": "sha256:d515fadcdbb4160fe9819af81c5abcb234c1835b3310435ad3db4865fb0cdd3d"
+      },
+      {
+        "url": "https://admissions.upenn.edu/how-to-apply/first-year-applicants/application-requirements",
+        "contentHash": "sha256:393dee66bf6d905690223f5fe282c1f010864732761756bdaee2b11991367de2"
+      },
+      {
+        "url": "https://admissions.upenn.edu/affording-penn/understanding-your-costs",
+        "contentHash": "sha256:82ecf2753a95333d00a6b21f8c3d14f02556862e0db48dc6309e1a309b52d4cd"
+      }
+    ]
+  }
+}

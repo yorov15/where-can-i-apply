@@ -767,6 +767,23 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-12"
 
+# Пенсильванский университет. Домен admissions.upenn.edu одобрен
+# человеком 13 сентября 2026. Шесть страниц: для иностранцев и их правила
+# подачи, помощь иностранцам, сроки первокурсников, требования к заявке и
+# стоимость.
+[upenn]
+name = "University of Pennsylvania — need-based financial aid"
+urls = [
+  "https://admissions.upenn.edu/how-to-apply/international-applicants",
+  "https://admissions.upenn.edu/how-to-apply/international-applicants/guidelines",
+  "https://admissions.upenn.edu/affording-penn/international-aid",
+  "https://admissions.upenn.edu/how-to-apply/first-year-applicants",
+  "https://admissions.upenn.edu/how-to-apply/first-year-applicants/application-requirements",
+  "https://admissions.upenn.edu/affording-penn/understanding-your-costs",
+]
+approvedBy = "human"
+approvedAt = "2026-09-13"
+
 # Боудин. Домен bowdoin.edu одобрен человеком 13 сентября 2026
 # (предложен как admissions.bowdoin.edu, страницы живут на www.bowdoin.edu).
 # Шесть страниц: заявка, сроки туров, условия для иностранцев, стоимость и
