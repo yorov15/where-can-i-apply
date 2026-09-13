@@ -767,6 +767,24 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-12"
 
+# Университет Падуи (Италия). Домен unipd.it выбран 13 сентября 2026 по
+# поручению человека взять «самые правильные и проверенные» из его списка.
+# Три страницы: обзор стипендий для иностранцев, стипендия Padua
+# International Excellence и полные освобождения от платы.
+#
+# Английская версия сайта переведена частично машинно; юридически
+# действует итальянская. На странице стипендии есть ошибка перевода в
+# условии про аттестат — карточка это оговаривает.
+[unipd]
+name = "University of Padua — Padua International Excellence Scholarship and fee waivers"
+urls = [
+  "https://www.unipd.it/en/borse-studio-agevolazioni-studenti-internazionali",
+  "https://www.unipd.it/en/padua-international-excellence-scholarship-programme",
+  "https://www.unipd.it/en/esoneri-totali-studenti-internazionali",
+]
+approvedBy = "human"
+approvedAt = "2026-09-13"
+
 # HKU — Гонконгский университет. Домен hku.hk выбран 13 сентября 2026 по
 # поручению человека взять «самые правильные и проверенные» из его списка.
 # Четыре страницы: подача с международным аттестатом, английский,
