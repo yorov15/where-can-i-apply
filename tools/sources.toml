@@ -767,6 +767,19 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-12"
 
+# Дьюк. Домен admissions.duke.edu одобрен человеком 13 сентября 2026.
+# Три страницы: требования к заявке (включая английский и правила для
+# иностранцев), финансовая помощь и сроки цикла 2026-2027.
+[duke-university]
+name = "Duke University — need-based financial aid"
+urls = [
+  "https://admissions.duke.edu/apply/",
+  "https://admissions.duke.edu/financial-support/",
+  "https://admissions.duke.edu/checklist/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-13"
+
 # Браун. Домен brown.edu одобрен человеком 13 сентября 2026; сайт приёма
 # живёт на поддомене admission.brown.edu. Раздел для иностранцев разбит
 # на страницы: критерии, процесс подачи, английский, помощь. Плюс сроки
