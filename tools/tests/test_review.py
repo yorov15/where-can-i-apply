@@ -372,6 +372,18 @@ class TestVerifiedOn(unittest.TestCase):
     def test_same_pages_but_no_recorded_date_takes_the_fetch_date(self):
         self.assertEqual(verified_on(self.recorded(None), self.meta(), "2026-09-13"), "2026-09-08")
 
+    def test_same_snapshot_fetched_later_takes_the_fetch_date(self):
+        # Источник скачали заново и нашли тем же — это настоящая проверка,
+        # и её дата не должна теряться за прежней.
+        got = verified_on(self.recorded("2026-09-08"), self.meta("2026-09-12"), "2026-09-13")
+        self.assertEqual(got, "2026-09-12")
+
+    def test_same_snapshot_without_fetch_date_keeps_the_date(self):
+        # Сегодняшняя дата здесь была бы той самой ошибкой: снимок не
+        # новый, а без даты скачивания доказать проверку нечем.
+        got = verified_on(self.recorded(), {"pages": PAGES}, "2026-09-13")
+        self.assertEqual(got, "2026-09-11")
+
 
 class TestForgetRules(unittest.TestCase):
     def test_drops_a_quoted_rule(self):

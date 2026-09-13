@@ -309,13 +309,18 @@ def verified_on(current, meta: dict, today: str) -> str:
     Утверждение по тому же снимку, что уже записан, — это правка текста,
     а не проверка: дата остаётся прежней. Иначе переформулировка сдвигала
     слежение, и лежащий сайт замечали позже.
+
+    Но если тот же текст скачали заново уже после записанной даты — это
+    проверка, и берётся более поздняя из двух дат.
     """
     source = (current or {}).get("source") or {}
     recorded = [(p.get("url"), p.get("contentHash")) for p in source.get("pages") or []]
     snapshot = [(p["url"], p["contentHash"]) for p in meta["pages"]]
+    fetched = meta.get("fetchedAt")
     if recorded == snapshot and source.get("lastVerified"):
-        return source["lastVerified"]
-    return meta.get("fetchedAt") or today
+        # Даты в ISO, строки сравниваются как даты.
+        return max(source["lastVerified"], fetched or "")
+    return fetched or today
 
 
 def approve(program: dict, today: str, pages: list[dict], by: str = "human") -> dict:
