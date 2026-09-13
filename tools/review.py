@@ -302,6 +302,22 @@ def ask(question: str, reader=input) -> bool:
         print("   не понял. Напиши «да» или «нет»")
 
 
+def verified_on(current, meta: dict, today: str) -> str:
+    """Когда источник в последний раз видели таким, каким он записан.
+
+    По этой дате tools.check назначает следующий заход к источнику.
+    Утверждение по тому же снимку, что уже записан, — это правка текста,
+    а не проверка: дата остаётся прежней. Иначе переформулировка сдвигала
+    слежение, и лежащий сайт замечали позже.
+    """
+    source = (current or {}).get("source") or {}
+    recorded = [(p.get("url"), p.get("contentHash")) for p in source.get("pages") or []]
+    snapshot = [(p["url"], p["contentHash"]) for p in meta["pages"]]
+    if recorded == snapshot and source.get("lastVerified"):
+        return source["lastVerified"]
+    return meta.get("fetchedAt") or today
+
+
 def approve(program: dict, today: str, pages: list[dict], by: str = "human") -> dict:
     """Утверждает запись и записывает все страницы источника с хешами.
 
@@ -600,7 +616,8 @@ def main(argv=None) -> int:
             print("Ничего не записано.")
             continue
 
-        approved = approve(proposed, date.today().isoformat(), meta["pages"], by)
+        checked = verified_on(current, meta, date.today().isoformat())
+        approved = approve(proposed, checked, meta["pages"], by)
         target.write_text(
             json.dumps(approved, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )

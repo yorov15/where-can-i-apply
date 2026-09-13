@@ -18,6 +18,7 @@ from tools.review import (
     sign_absence,
     sign_from_notes,
     unasked_fields,
+    verified_on,
 )
 
 
@@ -337,6 +338,39 @@ class TestApprove(unittest.TestCase):
     def test_unknown_approver_is_refused(self):
         with self.assertRaises(ValueError):
             approve({"status": "draft", "source": {}}, "2026-09-03", PAGES, "model")
+
+
+class TestVerifiedOn(unittest.TestCase):
+    """Дата проверки говорит, когда источник видели, а не когда правили текст.
+
+    По ней tools.check решает, когда идти к источнику снова. Правка
+    формулировок по старому снимку сдвигала её на сегодня и откладывала
+    проверку, в том числе у лежащих сайтов.
+    """
+
+    def meta(self, fetched="2026-09-08"):
+        return {"fetchedAt": fetched, "pages": PAGES}
+
+    def recorded(self, last="2026-09-11"):
+        pages = [{"url": p["url"], "contentHash": p["contentHash"]} for p in PAGES]
+        return {"source": {"pages": pages, "lastVerified": last}}
+
+    def test_same_snapshot_keeps_the_date(self):
+        self.assertEqual(verified_on(self.recorded(), self.meta(), "2026-09-13"), "2026-09-11")
+
+    def test_new_snapshot_takes_its_fetch_date(self):
+        current = self.recorded()
+        current["source"]["pages"][1]["contentHash"] = "sha256:старый"
+        self.assertEqual(verified_on(current, self.meta(), "2026-09-13"), "2026-09-08")
+
+    def test_new_record_takes_the_fetch_date(self):
+        self.assertEqual(verified_on(None, self.meta(), "2026-09-13"), "2026-09-08")
+
+    def test_snapshot_without_fetch_date_falls_back_to_today(self):
+        self.assertEqual(verified_on(None, {"pages": PAGES}, "2026-09-13"), "2026-09-13")
+
+    def test_same_pages_but_no_recorded_date_takes_the_fetch_date(self):
+        self.assertEqual(verified_on(self.recorded(None), self.meta(), "2026-09-13"), "2026-09-08")
 
 
 class TestForgetRules(unittest.TestCase):
