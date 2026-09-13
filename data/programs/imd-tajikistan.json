@@ -33,9 +33,11 @@
       "evidence": "қисми А - имтиҳон дар заминаи таҳсилоти умумӣ (синфи 11-ум)"
     },
     "graduationYear": {
-      "min": null,
-      "max": null,
-      "evidence": "хатмкарда ё хатмкунандаи муассисаҳои таълимии таҳсилоти умумии асосӣ (синфи 9-ум), миёнаи умумӣ (синфи 11-ум)"
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "на обеих утверждённых страницах право сдавать ИМД формулируется как «хатмкарда ё хатмкунандаи» — окончил или заканчивает соответствующий класс, без ограничения по году выпуска"
     },
     "age": {
       "noLimit": true,
@@ -90,7 +92,7 @@
   "source": {
     "url": "https://ntc.tj/tj/ba-dovtalab/rohnamoi-dovtalab.html?view=article&id=684",
     "lastVerified": "2026-09-11",
-    "humanChecked": true,
+    "humanChecked": false,
     "pages": [
       {
         "url": "https://ntc.tj/tj/ba-dovtalab/rohnamoi-dovtalab.html?view=article&id=684",
@@ -100,6 +102,7 @@
         "url": "https://ntc.tj/tj/ba-dovtalab/rohnamoi-dovtalab.html?view=article&id=696",
         "contentHash": "sha256:94cf3a914d43a84359200babac11bb37c3d9566b372820e6b20b4e0c3523750d"
       }
-    ]
+    ],
+    "approvedBy": "assistant"
   }
 }

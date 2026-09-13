@@ -35,26 +35,11 @@
       "note": "числа лет школы страница не называет"
     },
     "graduationYear": {
-      "noLimit": true,
-      "evidence": null,
-      "checkedBy": "assistant",
-      "checkedAt": "2026-09-12",
-      "note": "года выпуска страница не называет"
+      "notMeasured": true,
+      "evidence": "Every year, the Ministry of Education announces a competition for the award of \"World in Serbia\" scholarships and, in cooperation with the Ministry of Foreign Affairs, through consular representation offices, informs candidates and collects applications."
     },
-    "age": {
-      "noLimit": true,
-      "evidence": null,
-      "checkedBy": "assistant",
-      "checkedAt": "2026-09-12",
-      "note": "возраста страница не называет: требования публикуют вместе с ежегодным конкурсом министерства"
-    },
-    "gpa": {
-      "noLimit": true,
-      "evidence": null,
-      "checkedBy": "assistant",
-      "checkedAt": "2026-09-12",
-      "note": "порога по среднему баллу страница не называет: критерии отбора объявляет министерство в конкурсе"
-    },
+    "age": null,
+    "gpa": null,
     "language": {
       "notMeasured": true,
       "evidence": "As a prerequisite for education in the Serbian language, scholarship students upon arrival in the Republic of Serbia, and before enrolling in their desired study programs at higher education institutions, attend free intensive Serbian language courses."
@@ -123,5 +108,9 @@
         "contentHash": "sha256:be3973bd384631bfe2c74018219fe8a1a38dabb66da06d9e15f6a3583ceaaba2"
       }
     ]
+  },
+  "leftEmpty": {
+    "age": "sha256:432af4586ff2338cc71aa2124e97d353603df48798be4066b18643c371242479",
+    "gpa": "sha256:432af4586ff2338cc71aa2124e97d353603df48798be4066b18643c371242479"
   }
 }

@@ -24,11 +24,11 @@
       "evidence": "not hold Italian citizenship (unless it is dual citizenship)"
     },
     "schoolCountry": {
-      "noLimit": true,
-      "evidence": null,
-      "checkedBy": "assistant",
-      "checkedAt": "2026-09-13",
-      "note": "страну школы не ограничивают: нужен иностранный, то есть не итальянский, аттестат"
+      "allow": "*",
+      "deny": [
+        "IT"
+      ],
+      "evidence": "hold a foreign secondary school diploma (for students applying for Bachelor's and/or single-cycle degree programmes)"
     },
     "schoolYears": null,
     "graduationYear": {

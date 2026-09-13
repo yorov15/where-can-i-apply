@@ -17,8 +17,11 @@
   },
   "eligibility": {
     "citizenship": {
-      "allow": "*",
-      "evidence": "All international students are eligible to apply for the APU Tuition Reduction Scholarship for International Students."
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "страницы приёма не ограничивают гражданство по странам: единственная фраза про all international students — это про право подать на стипендию за обучение, а не на само зачисление, а запрета по каким-либо странам нигде не встречается"
     },
     "schoolCountry": {
       "noLimit": true,
