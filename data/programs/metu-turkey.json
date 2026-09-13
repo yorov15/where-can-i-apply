@@ -1,0 +1,169 @@
+{
+  "id": "metu-turkey",
+  "status": "published",
+  "name": {
+    "ru": "METU (Анкара) — приём иностранцев на бакалавриат",
+    "orig": "Middle East Technical University (METU) — international undergraduate admissions"
+  },
+  "hostCountry": "TR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Отдельной стипендиальной программы нет, поступление в государственный вуз платное. В 2025/26 иностранец платил 1 200 долларов за семестр на инженерных, архитектурных и естественнонаучных программах и 800 на остальных. Скидку или освобождение от платы дают по успеваемости, без заявки. Жильё и жизнь на тебе; после зачисления можно просить стипендию на питание или общежитие при финансовых трудностях"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Students who meet the application criteria below may apply for the undergraduate programs at the Middle East Technical University"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "страну школы не ограничивают: для каждой страны или категории стран указан свой минимальный балл, Таджикистан в категории C"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "числа лет школы страницы не называют: аттестат должен давать право на четырёхлетний бакалавриат"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "года выпуска страницы не называют: аттестат действует без срока, а SAT и TR-YÖS — два года"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "возраст на страницах приёма не упоминается"
+    },
+    "gpa": {
+      "min": 90,
+      "scale": "PERCENT",
+      "advisory": true,
+      "evidence": "Having achieved a minimum of 90% success in a high school graduation certificate"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "сертификат по английскому для подачи не обязателен: после зачисления сдают экзамен METU или идут на подготовительный год"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Таджикистан в категории C: с аттестатом нужно не меньше 90% успеваемости, и аттестат должен давать право поступать на четырёхлетний бакалавриат.",
+      "evidence": "Syria, Taj ikistan, Turkmenistan, Oman, Jordan, Yemen, Other Countries** Having achieved a minimum of 90% success in a high school graduation certificate"
+    },
+    {
+      "ru": "Вместо аттестата можно подать другой результат: SAT от 1200 (для инженерии, архитектуры и естественных наук ещё математика от 700 из 800), ACT от 27, IB от 33, три A-level не ниже ABB, медаль международной олимпиады, в том числе по информатике, или первые 5% на TR-YÖS. Поэтому ниже 90% карточка не отказывает, а просит проверить.",
+      "evidence": "A minimum total score of 1200 (with an additional minimum \"Math\" score of 700 out of 800 for the Faculty of Engineering, Faculty of Architecture, and scientific programs offered by the Faculty of Arts and Sciences )"
+    },
+    {
+      "ru": "Минимальные баллы только дают право подать. Зачисляют в пределах квоты программы по всей заявке.",
+      "evidence": "However, fulfilling these requirements does not guarantee admission."
+    },
+    {
+      "ru": "Мест для иностранцев немного: на 2026/27 всего 444, из них на компьютерную инженерию 22, электротехнику и электронику 30, машиностроение 24.",
+      "evidence": "Computer Engineering 22"
+    },
+    {
+      "ru": "SAT, TR-YÖS и похожие экзамены действуют два года, аттестат — без срока.",
+      "evidence": "Please note that exam results such as TR-YÖS, SAT, QUDURAT, and TQDK are valid for two years."
+    },
+    {
+      "ru": "Учат на английском, но сертификат для подачи не обязателен. После зачисления без TOEFL или PTE сдаёшь экзамен METU по английскому; не сдал — год подготовительного английского.",
+      "evidence": "However, for undergraduate programs, submitting an English proficiency score is not obligatory for the application ."
+    },
+    {
+      "ru": "IELTS, сданный 24 декабря 2022 года или позже, METU не принимает.",
+      "evidence": "IELTS exams taken on or after the 24th of December 2022 will not be anymore accepted."
+    },
+    {
+      "ru": "Подготовительный год английского оплачивается как семестры своей программы.",
+      "evidence": "Students at the English Preparatory Year will pay as much as the undergraduate program fee stated above for the related faculty/program."
+    },
+    {
+      "ru": "Плата указана в долларах, но платишь в лирах по курсу Центробанка Турции за неделю до срока оплаты.",
+      "evidence": "The fees announced in USD on this table will be converted to Turkish lira according to the effective selling ra te of the Central Bank of the Republic of Türkiye"
+    },
+    {
+      "ru": "Скидку или освобождение от платы дают по успеваемости, подавать заявку не нужно: студентов оценивают каждый год и сообщают письмом.",
+      "evidence": "In order to benefit from discounts or exemptions, you do not need to make an application."
+    },
+    {
+      "ru": "Стипендии на питание, общежитие или деньгами просят лично в офисе стипендий METU с письменным заявлением и документами о финансовых трудностях: в сентябре — октябре или феврале — марте. Онлайн не принимают.",
+      "evidence": "Documents sent online or online application requests will not be evaluated."
+    },
+    {
+      "ru": "Прошлый цикл: подача с 1 июня по 12 июля 2026. Даты на 2027 ещё не объявлены, поэтому срок в карточке по прошлому году и помечен неподтверждённым.",
+      "evidence": "Application Period for the 2026-2027 Academic Year: June 1-July 12, 2026"
+    }
+  ],
+  "deadline": {
+    "opens": "2027-06-01",
+    "closes": "2027-07-12",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://iso.metu.edu.tr/en/who-can-apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Ближневосточный технический университет, кампус в Анкаре"
+    }
+  },
+  "source": {
+    "url": "https://iso.metu.edu.tr/en/who-can-apply",
+    "lastVerified": "2026-09-13",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://iso.metu.edu.tr/en/who-can-apply",
+        "contentHash": "sha256:dc8cc39bde41b7dc04fa801c0d17ded5bbc286855cfa96058f15b3cd09588e63"
+      },
+      {
+        "url": "https://iso.metu.edu.tr/en/application-requirements",
+        "contentHash": "sha256:579088e2a1c2485a48d7d44bcc74567cd96bcf105b2503442ab74fec7eb53e60"
+      },
+      {
+        "url": "https://iso.metu.edu.tr/en/application-dates",
+        "contentHash": "sha256:73add48bb71746160758e8c6e16e1e62eebef57e1a2691a581abe1da18ad03a6"
+      },
+      {
+        "url": "https://iso.metu.edu.tr/en/english-proficiency",
+        "contentHash": "sha256:053fac3dc165091e8036e7a699a9f1b69d249efc76d4fe05d27558bc12933d47"
+      },
+      {
+        "url": "https://iso.metu.edu.tr/en/international-students-quotas-undergraduate-programs",
+        "contentHash": "sha256:3d973b998f1b21974b4fd969efd5e5f8f76f11379838e1bcae17626204e80fa3"
+      },
+      {
+        "url": "https://iso.metu.edu.tr/en/scholarship-opportunities",
+        "contentHash": "sha256:7f9e24c57a06cbcbd352de9113ed7bd9e2ce41208bdc988b4f1613ac13563bd5"
+      },
+      {
+        "url": "https://iso.metu.edu.tr/en/system/files/odtu_iso_requirements.pdf",
+        "contentHash": "sha256:7c4727b284ea12ab2b930dcfd46f8a371e33a2ba20160133a98bd5d17138aece"
+      },
+      {
+        "url": "https://iso.metu.edu.tr/tr/system/files/2025-2026_tuition_fee_11082025.pdf",
+        "contentHash": "sha256:9b7438fb60465c99b081ec81df0dfeacba802d474f4f57443ecaacc6452d4b20"
+      }
+    ]
+  }
+}

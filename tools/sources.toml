@@ -767,6 +767,29 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-12"
 
+# METU — Ближневосточный технический университет (Анкара). Домен
+# metu.edu.tr одобрен человеком 13 сентября 2026. Приём иностранцев на
+# iso.metu.edu.tr. Семь источников: кто может подать, требования, сроки,
+# квоты, стипендии, PDF с минимальными баллами по аттестатам и экзаменам
+# и PDF со стоимостью для иностранцев.
+#
+# ВНИМАНИЕ: PDF стоимости — за 2025-2026 год, адрес содержит дату. На новый
+# год вуз выпустит новый файл, и check.py скажет «источник недоступен».
+[metu-turkey]
+name = "Middle East Technical University (METU) — international undergraduate admissions"
+urls = [
+  "https://iso.metu.edu.tr/en/who-can-apply",
+  "https://iso.metu.edu.tr/en/application-requirements",
+  "https://iso.metu.edu.tr/en/application-dates",
+  "https://iso.metu.edu.tr/en/english-proficiency",
+  "https://iso.metu.edu.tr/en/international-students-quotas-undergraduate-programs",
+  "https://iso.metu.edu.tr/en/scholarship-opportunities",
+  "https://iso.metu.edu.tr/en/system/files/odtu_iso_requirements.pdf",
+  "https://iso.metu.edu.tr/tr/system/files/2025-2026_tuition_fee_11082025.pdf",
+]
+approvedBy = "human"
+approvedAt = "2026-09-13"
+
 # Constructor University (Бремен, Германия), бывший Jacobs University.
 # Домен constructor.university одобрен человеком 13 сентября 2026. Пять
 # страниц: подача на бакалавриат, финансирование, стипендии, FAQ и
