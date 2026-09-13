@@ -1,0 +1,153 @@
+{
+  "id": "ada-university",
+  "status": "published",
+  "name": {
+    "ru": "ADA University (Баку) — приём иностранцев и стипендия Топчубашова",
+    "orig": "ADA University — undergraduate admissions for international students"
+  },
+  "hostCountry": "AZ",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: по таблице 2025 года иностранец платит 8 500 манатов в год на любой бакалаврской программе, включая Computer Science, из них 750 — студенческий взнос, который платят все при любой стипендии. Для иностранцев есть стипендия имени Алимардан-бека Топчубашова, но её размер и что она покрывает, эти страницы не называют. Отдельной заявки на неё нет, нужно подать на приём до раннего срока"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "AZ"
+      ],
+      "evidence": "We consider international students who do not have Azerbaijani citizenship."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "страну школы не ограничивают: вуз принимает абитуриентов со всего мира, иностранцы подают аттестат с нотариальным переводом"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "числа лет школы страницы для иностранцев не называют: нужен аттестат или справка школы с датой выпуска"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "года выпуска страницы не называют: подавать можно со справкой школы об ожидаемой дате выпуска"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "возраст на страницах приёма не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "порога по среднему баллу для иностранцев страницы не называют: решение принимают по заявке и интервью"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "сертификат по английскому для подачи не обязателен: с ним только освобождают от вузовской программы академического английского"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Для иностранцев есть стипендия имени Алимардан-бека Топчубашова. Отдельной заявки нет: чтобы тебя рассмотрели, подай заявку на поступление до раннего срока, 8 апреля в прошлом цикле.",
+      "evidence": "To apply for the scholarship, you must submit ADA University admission application form by early deadline of April 8."
+    },
+    {
+      "ru": "Стипендию дают принятым иностранцам и продлевают на весь срок учёбы при выполнении условий и если хватает денег. Точных условий и размера страницы не приводят, они в отдельном положении вуза.",
+      "evidence": "are renewable for the duration of their studies when certain criteria are met upon availability of funds."
+    },
+    {
+      "ru": "Иностранец платит за бакалавриат 8 500 манатов в год по таблице 2025 года: 7 750 за обучение и 750 студенческого взноса. Студенческий взнос платят все, даже со стипендией.",
+      "evidence": "All students must pay this fee, regardless of their status and/or scholarship eligibility."
+    },
+    {
+      "ru": "Подача в три шага: онлайн-заявка с документами, онлайн-интервью на английском для прошедших отбор, затем заявка на портале Study in Azerbaijan. Решение о приёме принимают по итогам интервью.",
+      "evidence": "Interview serves as a final step of admission process, and final decisions are made based on the applicant's interview results."
+    },
+    {
+      "ru": "Документы: аттестат или справка школы о дате выпуска и транскрипт — с нотариальным переводом на английский, резюме до двух страниц, мотивационное письмо на 300–500 слов, паспорт и фото.",
+      "evidence": "Statement of Purpose describing motivation for applying to this program, future goals and career aspirations (minimum 300, maximum 500 words)"
+    },
+    {
+      "ru": "Сертификат по английскому для подачи не обязателен. С IELTS Academic 6.0, TOEFL iBT 75 или 4 по новой шкале, PTE 50 или Duolingo 105 освобождают от вузовской программы академического английского.",
+      "evidence": "Applicants who submit minimum test scores in one of the accepted exams (IELTS Academic 6.0 / TOEFL iBT 75 or 4 - new iBT TOEFL (for exams taken on or after January 21, 2026) / PTE 50 / Duolingo 105) will be exempted from English for Academic and Professional Purposes Program."
+    },
+    {
+      "ru": "Плата за подачу 100 манатов, не возвращается.",
+      "evidence": "submit your application by paying a non-refundable application fee of 100 AZN."
+    },
+    {
+      "ru": "Сроки прошлого цикла для иностранцев: первый этап до 8 апреля 2026 с интервью в мае — июне, поздний до 1 июля 2026 с интервью в июле — августе. Даты на 2027 ещё не объявлены, поэтому срок в карточке по прошлому году и помечен неподтверждённым.",
+      "evidence": "First round deadline: April 8, 2026 Interviews for shortlisted candidates: May, June 2026 Late application deadline: July 1, 2026"
+    },
+    {
+      "ru": "Кто имеет постоянный вид на жительство в Азербайджане или двойное гражданство с Азербайджаном, подаёт как гражданин Азербайджана, а не как иностранец.",
+      "evidence": "Candidates who have double citizenship that includes Azerbaijani citizenship, must follow the same application process as citizens of Azerbaijan."
+    },
+    {
+      "ru": "Для иностранцев недалеко от кампуса есть студенческое общежитие Univerium с меблированными квартирами. Его стоимость эти страницы не называют.",
+      "evidence": "Univerium offers apartments out of the ADA campus designed for international students."
+    },
+    {
+      "ru": "Визу оформляют через посольство Азербайджана. Если посольства в твоей стране нет, можно подать на электронную визу с целью «образование» на evisa.gov.az.",
+      "evidence": "If there is no Embassy of Azerbaijan in your country, you can apply for visa through (evisa.gov.az) portal by selecting EDUCATION purpose of visa only."
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-07-01",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.ada.edu.az/en/admission/undergraduate",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: ADA University в Баку, бакалавриат на английском, в том числе Computer Science, Computer Engineering и Information Technology"
+    }
+  },
+  "source": {
+    "url": "https://www.ada.edu.az/en/admission/undergraduate",
+    "lastVerified": "2026-09-13",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.ada.edu.az/en/admission/undergraduate",
+        "contentHash": "sha256:4b48d6afc9aec278bd37e3e167e53e34c37ee84a5a4b838d7afd2fb25b89781e"
+      },
+      {
+        "url": "https://www.ada.edu.az/en/admission/international",
+        "contentHash": "sha256:f2eacc5f533b13dddf5b3c1152ff1dbb2e58c615241e6de5d1f8835c5b04f909"
+      },
+      {
+        "url": "https://www.ada.edu.az/en/admission/financial-aid",
+        "contentHash": "sha256:ef9238e103f371d34449eb17c09848b1e3ca4adc3bc95b4e6041e5909acb67f8"
+      },
+      {
+        "url": "https://www.ada.edu.az/en/admission/tuition-costs",
+        "contentHash": "sha256:49d6500d819ccb5c690219cc10f0cf143bb7a1d42a16b795e432c110c23ab506"
+      }
+    ]
+  }
+}
