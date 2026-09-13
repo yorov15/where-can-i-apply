@@ -1,0 +1,181 @@
+{
+  "id": "cornell",
+  "status": "published",
+  "name": {
+    "ru": "Корнелл — помощь по нужде",
+    "orig": "Cornell University — need-based financial aid"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Принятым иностранцам закрывают всю посчитанную нужду, но не одними грантами: в пакет входят подработка и, в зависимости от дохода семьи, кредиты. Деньги семьи при отборе иностранцев учитывают. Про дорогу эти страницы не говорят. Стоимость года на этих страницах не названа"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Cornell welcomes students from around the globe."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "страну школы не ограничивают: вуз принимает студентов из более чем 125 стран"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "числа лет школы страницы не называют: нужен официальный транскрипт со всеми пройденными курсами"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "года выпуска страницы не называют: первокурсником считается тот, кто не набрал 12 вузовских кредитов после школы"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "возраст на страницах приёма не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "порога по среднему баллу страницы не называют: заявку смотрят целиком, вместе с экзаменами, эссе и рекомендациями"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7.5,
+          "evidence": "IELTS, minimum score of 7.5"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "TOEFL exams taken prior to January 2026: minimum score of 100"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5.0,
+          "evidence": "TOEFL exams taken January 2026 or later: minimum score of 5.0"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "Duolingo English Test, minimum score of 130"
+        }
+      ],
+      "advisory": true,
+      "evidence": "Accepted exams and score requirements to be most competitive in our admissions review process include:"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Для иностранцев отбор учитывает, нужна ли помощь: это один из факторов решения.",
+      "evidence": "Cornell's undergraduate admission process for international students is need-aware, meaning interest in or need for financial aid is one factor amongst many considered when making admission decisions."
+    },
+    {
+      "ru": "Принятым иностранцам закрывают 100% посчитанной нужды: гранты, ежегодная подработка и, в зависимости от дохода семьи, разумные кредиты.",
+      "evidence": "Cornell meets 100 percent of admitted international undergraduates' demonstrated financial need with annual aid offers that include Cornell grants, an annual work-study award, and reasonable student loans depending on total family income."
+    },
+    {
+      "ru": "Помощь просят сразу с заявкой и к её сроку. Кто не попросил вовремя, не получит помощь ни в один год учёбы.",
+      "evidence": "If you don't apply for aid by the posted deadline, you will not be eligible to apply for financial aid at any time as an undergraduate at Cornell."
+    },
+    {
+      "ru": "Для помощи нужна анкета CSS Profile, код Корнелла 2098. Освобождение от её платы иностранцам обычно не дают.",
+      "evidence": "International students are generally not eligible for a CSS Profile Fee waiver"
+    },
+    {
+      "ru": "С части помощи, которая больше платы за обучение и обязательных сборов, США удерживают налог 14%, если нет освобождения по налоговому договору.",
+      "evidence": "Cornell is required to withhold 14 percent of any grant or scholarship aid greater than tuition and mandatory fees to pay U.S. tax, if you do not qualify for exemption under a tax treaty ."
+    },
+    {
+      "ru": "Есть стипендия Левитанов: полные стипендии для пяти студентов в год. Условия: школа вне США, зачисление в Корнелл и право на большую помощь по нужде. Сохраняется при среднем балле от 3.0.",
+      "evidence": "Levitan Family Scholarships currently provide support to five students every year."
+    },
+    {
+      "ru": "Нужен SAT или ACT. Результат можно указать сам, но при зачислении понадобятся официальные баллы.",
+      "evidence": "First-year applicants are required to submit the SAT or ACT scores when applying to Cornell."
+    },
+    {
+      "ru": "Сертификат по английскому обязателен, если английский не родной и последние четыре года ты учился не на нём.",
+      "evidence": "Applicants who do not meet one of these criteria are required to submit an English proficiency exam score."
+    },
+    {
+      "ru": "Чтобы быть конкурентным, нужно IELTS от 7.5, TOEFL от 100 по старой шкале или от 5.0 по новой, Duolingo от 130, Cambridge C1 или C2 от 191. Вуз называет эти числа условием конкурентности, поэтому ниже них карточка не отказывает, а просит проверить.",
+      "evidence": "Cambridge C1 Advanced or C2 Proficiency, minimum score of 191"
+    },
+    {
+      "ru": "Заявку подают в один из колледжей или школ Корнелла, у каждого свои дополнительные требования и эссе.",
+      "evidence": "At Cornell, you'll apply directly to one of our colleges or schools; be sure to explore your options to choose your best fit."
+    },
+    {
+      "ru": "Сроки: ранний тур до 1 ноября, остальные документы до 13 ноября, ответ в середине декабря. Обычный тур до 2 января, остальные документы до 19 января, ответ в конце марта. Документы на помощь иностранцы сдают в день срока заявки: 1 ноября или 2 января.",
+      "evidence": "November 1 Aid application deadline for international students"
+    },
+    {
+      "ru": "Ранний тур обязывающий: если примут, все остальные заявки надо отозвать.",
+      "evidence": "If admitted in ED, students must withdraw all applications to other colleges and universities."
+    },
+    {
+      "ru": "Что собрать: официальный транскрипт, школьный отчёт, рекомендацию консультанта или директора и две рекомендации учителей. Оценки за полугодие выпускного класса досылают, когда появятся.",
+      "evidence": "You're required to submit two teacher recommendations, which should highlight your academic strengths and contributions in the classroom."
+    },
+    {
+      "ru": "Плата за подачу 85 долларов. Освобождение дают, если плата тяжела для семьи и ты просишь финансовую помощь.",
+      "evidence": "Cornell's application fee is $85. However, if the application fee presents a financial burden for you or your family and you plan to apply for financial aid, you may qualify for a fee waiver."
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-02",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Корнеллский университет в Итаке, штат Нью-Йорк, заявка подаётся в один из его колледжей"
+    }
+  },
+  "source": {
+    "url": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+    "lastVerified": "2026-09-13",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+        "contentHash": "sha256:c96cc0b9410757fe55cd6ee8cb9748e94686a3344bb872b788cdf323601295fb"
+      },
+      {
+        "url": "https://admissions.cornell.edu/policies/standardized-testing-policy",
+        "contentHash": "sha256:cab3d483f0bc4852bcae51a1e3945cb44550fc565b6c4d6b0553b8ce841f1cb4"
+      },
+      {
+        "url": "https://finaid.cornell.edu/first-year-and-transfer-students-international",
+        "contentHash": "sha256:115e5ab6c2af3ab8232e5b5e3a03a50970079e135ec4fc1ecfb706d6a64772b3"
+      },
+      {
+        "url": "https://finaid.cornell.edu/cost-to-attend/financial-aid-eligibility",
+        "contentHash": "sha256:17c06773c2094b760498d16ff003d257a7bd92b3f77f67becd7d3800182de9d6"
+      }
+    ]
+  }
+}

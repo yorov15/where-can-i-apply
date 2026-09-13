@@ -767,6 +767,21 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-12"
 
+# Корнелл. Домен admissions.cornell.edu одобрен человеком 13 сентября 2026;
+# помощь описана на официальном поддомене finaid.cornell.edu. Четыре
+# страницы: подача первокурсников со сроками, политика экзаменов и
+# английского, помощь иностранцам, кто имеет право на помощь.
+[cornell]
+name = "Cornell University — need-based financial aid"
+urls = [
+  "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+  "https://admissions.cornell.edu/policies/standardized-testing-policy",
+  "https://finaid.cornell.edu/first-year-and-transfer-students-international",
+  "https://finaid.cornell.edu/cost-to-attend/financial-aid-eligibility",
+]
+approvedBy = "human"
+approvedAt = "2026-09-13"
+
 # Пенсильванский университет. Домен admissions.upenn.edu одобрен
 # человеком 13 сентября 2026. Шесть страниц: для иностранцев и их правила
 # подачи, помощь иностранцам, сроки первокурсников, требования к заявке и
