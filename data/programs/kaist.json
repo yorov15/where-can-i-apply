@@ -31,8 +31,8 @@
       "note": "страна школы не ограничена"
     },
     "schoolYears": {
-      "definedBy": "institution",
-      "evidence": "decided differently by each university, so you will then need to contact universities directly"
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
     },
     "graduationYear": {
       "maxRelative": "applicationYear",
@@ -115,12 +115,16 @@
       "evidence": "Dual enrollment is grounds for dismissal according to KAIST regulations."
     },
     {
-      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцать. Но закон мягче: постановление о признании образования засчитывает «окончил школу за рубежом» и отдельно — «программу, признанную министром равной двенадцати годам». То есть аттестат сам по себе дорогу не закрывает, а решение принимает вуз.",
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
       "evidence": "you must have completed more than twelve years of elementary to secondary education"
     },
     {
       "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
       "evidence": "decided differently by each university, so you will then need to contact universities directly"
+    },
+    {
+      "ru": "Кроме гражданства, иностранцу нужно выполнить одно из условий: ни один из родителей не гражданин Кореи, или, при корейском происхождении, вся школа пройдена за пределами Кореи.",
+      "evidence": "Neither of the applicant's parents is a Korean citizen"
     }
   ],
   "deadline": {

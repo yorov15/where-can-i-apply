@@ -78,7 +78,11 @@ test('справочный балл: недобор не отказ, а пров
   const me = { gpa: { value: 3.5, scale: 'TJ_5' } };
   const got = checkGpa(me, advisoryGpa);
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /не порог/);
+  assert.match(got.message, /не отказ/);
+  // У Bilkent тот же флаг стоит на пороге для подачи с аттестатом, в
+  // обход которого есть SAT и IB. «Описывает поступивших» там ложь.
+  assert.doesNotMatch(got.message, /описывает своих поступивших/);
+  assert.match(got.message, /условия ниже/);
 });
 
 test('справочный балл: перебор всё равно проходит', () => {

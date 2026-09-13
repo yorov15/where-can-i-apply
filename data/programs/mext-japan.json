@@ -31,8 +31,8 @@
       "note": "на утверждённой странице страна окончания школы не ограничивается"
     },
     "schoolYears": {
-      "min": 12,
-      "evidence": "have completed 12 years of school education"
+      "notMeasured": true,
+      "evidence": "have completed 12 years of school education or have completed courses in a school comparable to a Japanese high school"
     },
     "graduationYear": {
       "noLimit": true,
@@ -77,6 +77,10 @@
     {
       "ru": "Бакалавриат идёт пять лет: первый год — японский язык, дальше четыре года программы. Для медицины, стоматологии, фармации и ветеринарии — семь лет.",
       "evidence": "5 years including Japanese language training"
+    },
+    {
+      "ru": "Для отбора через посольство бакалавры сдают экзамены: японский, английский, математику и естественные науки. Поступающим на естественнонаучные направления нужно выбрать два предмета из химии, физики и биологии.",
+      "evidence": "Undergraduate students Japanese, English, mathematics, science"
     }
   ],
   "deadline": {
@@ -96,12 +100,13 @@
   "source": {
     "url": "https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/",
     "lastVerified": "2026-09-11",
-    "humanChecked": true,
+    "humanChecked": false,
     "pages": [
       {
         "url": "https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/",
         "contentHash": "sha256:a5d288bbfc8c0672cc1820438a529178153ae2d29fe19eb394a45d07f5c0a298"
       }
-    ]
+    ],
+    "approvedBy": "assistant"
   }
 }

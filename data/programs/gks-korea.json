@@ -31,8 +31,8 @@
       "note": "на утверждённой странице страна окончания школы не упоминается"
     },
     "schoolYears": {
-      "definedBy": "institution",
-      "evidence": "decided differently by each university, so you will then need to contact universities directly"
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
     },
     "graduationYear": {
       "noLimit": true,
@@ -47,9 +47,7 @@
       "evidence": "Age: Applicants must be under 25 years of age as of the applicable year"
     },
     "gpa": {
-      "min": 80,
-      "scale": "PERCENT",
-      "advisory": true,
+      "notMeasured": true,
       "evidence": "such as a cumulative score of 80% or higher, ranking within the top 20% of their class, or meeting the required CGPA threshold"
     },
     "language": {
@@ -74,11 +72,11 @@
       "evidence": "Selection Quota Embassy Track General 88 Overseas Koreans 7 R-GKS 61 Subtotal 156 University Track UIC 100 Associate Degree 30 Subtotal 130 Total 286"
     },
     {
-      "ru": "Балл 80% — не единственный путь: подходит и место в лучших 20% класса, или нужный средний балл по шкале CGPA. Поэтому балл аттестата инструмент считает ориентиром, а не запретом.",
+      "ru": "Балл 80% не единственный путь: подходит и место в лучших 20% класса, или нужный средний балл по шкале CGPA. Одно из этих условий обязательно, но пересчитать таджикский аттестат инструмент не может, поэтому по баллу не решает.",
       "evidence": "such as a cumulative score of 80% or higher, ranking within the top 20% of their class, or meeting the required CGPA threshold"
     },
     {
-      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцать. Но закон мягче: постановление о признании образования засчитывает «окончил школу за рубежом» и отдельно — «программу, признанную министром равной двенадцати годам». То есть аттестат сам по себе дорогу не закрывает, а решение принимает вуз.",
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
       "evidence": "you must have completed more than twelve years of elementary to secondary education"
     },
     {

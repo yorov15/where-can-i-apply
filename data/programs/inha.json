@@ -18,7 +18,10 @@
   "eligibility": {
     "citizenship": {
       "allow": "*",
-      "evidence": "An applicant who holds a foreign passport can apply for IUT as an international student."
+      "deny": [
+        "KR"
+      ],
+      "evidence": "those applicants who hold a Korean passport are not eligible for IUT Entrance Examination Admission"
     },
     "schoolCountry": {
       "noLimit": true,
@@ -118,6 +121,10 @@
     {
       "ru": "Учатся только на английском. Корейский не обязателен — его можно взять по выбору.",
       "evidence": "the courses offered at IUT are taught only in English"
+    },
+    {
+      "ru": "Владельцев корейского паспорта, в том числе с двойным гражданством, по этим путям не принимают.",
+      "evidence": "Applicants with dual citizenship (Korean and other countries) are regarded as Korean citizens."
     }
   ],
   "deadline": {

@@ -72,6 +72,10 @@
     {
       "ru": "Окно подачи повторяется каждый год: 10 января — 20 февраля. Год в записи выведен из этого правила, официального объявления на следующий цикл ещё нет.",
       "evidence": "which is the application period every year"
+    },
+    {
+      "ru": "Не могут подать граждане Турции и те, кто турецкое гражданство утратил.",
+      "evidence": "Ineligible Groups: Turkish citizens and individuals who have lost Turkish citizenship"
     }
   ],
   "deadline": {
@@ -91,7 +95,7 @@
   "source": {
     "url": "https://turkiyeburslari.gov.tr/scholarshipsprograms",
     "lastVerified": "2026-09-11",
-    "humanChecked": true,
+    "humanChecked": false,
     "pages": [
       {
         "url": "https://turkiyeburslari.gov.tr/scholarshipsprograms",
@@ -105,6 +109,7 @@
         "url": "https://turkiyeburslari.gov.tr/fulltimeprograms",
         "contentHash": "sha256:c2e10806ded5398f2b986d368726887421921de847da3f1d897ce1314fdc3152"
       }
-    ]
+    ],
+    "approvedBy": "assistant"
   }
 }
