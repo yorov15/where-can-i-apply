@@ -767,6 +767,25 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-12"
 
+# Браун. Домен brown.edu одобрен человеком 13 сентября 2026; сайт приёма
+# живёт на поддомене admission.brown.edu. Раздел для иностранцев разбит
+# на страницы: критерии, процесс подачи, английский, помощь. Плюс сроки
+# двух туров, экзамены и стоимость.
+[brown-university]
+name = "Brown University — need-based financial aid"
+urls = [
+  "https://admission.brown.edu/international/admission-criteria",
+  "https://admission.brown.edu/international/application-process",
+  "https://admission.brown.edu/international/english-proficiency",
+  "https://admission.brown.edu/international/financial-aid",
+  "https://admission.brown.edu/first-year/early-decision",
+  "https://admission.brown.edu/first-year/regular-decision",
+  "https://admission.brown.edu/first-year/standardized-tests",
+  "https://admission.brown.edu/tuition-aid/tuition-fees",
+]
+approvedBy = "human"
+approvedAt = "2026-09-13"
+
 # Йель. Домен admissions.yale.edu одобрен человеком 13 сентября 2026.
 # Помощь по нужде, как у Гарварда и Принстона. Пять страниц: условия для
 # иностранцев, как считают помощь, сроки туров, состав заявки и экзамены.

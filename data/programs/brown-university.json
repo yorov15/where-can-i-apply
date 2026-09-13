@@ -1,0 +1,210 @@
+{
+  "id": "brown-university",
+  "status": "published",
+  "name": {
+    "ru": "Браун — помощь по нужде",
+    "orig": "Brown University — need-based financial aid"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Помощь только по нужде, стипендий за успехи нет. Принятым иностранцам нужду закрывают полностью, если они попросили помощь вместе с заявкой на поступление. Помощь идёт на обучение, сборы, жильё и питание и помогает с дорогой, книгами и личными расходами. Каникулы и лето она не покрывает. Полная стоимость года по таблице вуза на 2025/26 — 97 284 доллара"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "International students are eligible to apply for University financial aid."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "страну школы не ограничивают: предпочтений к стране или школьной системе вуз не делает"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Brown's first-year students will have completed 12 to 13 years of primary and secondary schooling."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "года выпуска страницы не называют; ожидают, что школа будет окончена"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "возраст на страницах приёма не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-13",
+      "note": "порога по среднему баллу нет: страницы приёма не называют ни минимального балла, ни процента"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 8.0,
+          "evidence": "IELTS: minimum score of 8.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 105,
+          "evidence": "TOEFL internet-based exam taken prior to January 2026: minimum score of 105"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5.5,
+          "evidence": "TOEFL internet-based exam taken January 2026 and later: minimum score of 5.5"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "Duolingo Test of English: minimum score of 130"
+        }
+      ],
+      "advisory": true,
+      "evidence": "The following minimum scores are expected in most cases:"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Начиная с выпуска 2029 года Браун не учитывает при отборе иностранцев, нужна ли им помощь.",
+      "evidence": "Brown will be need-blind for international students beginning with the Class of 2029."
+    },
+    {
+      "ru": "Принятым нужду закрывают полностью, но только если помощь попросили одновременно с заявкой на поступление. Иначе полное покрытие вуз не обещает.",
+      "evidence": "We meet full demonstrated need for students who are admitted provided they apply for financial aid at the time they apply for admission."
+    },
+    {
+      "ru": "Стипендий за успехи здесь нет, только помощь по нужде.",
+      "evidence": "Financial aid is need based. Brown University does not offer any merit awards."
+    },
+    {
+      "ru": "Помощь помогает с дорогой, книгами и личными расходами, но на каникулы и лето денег не даёт. Летом работать вне кампуса иностранцу мешают визовые правила, так что заранее продумай, на что жить в эти месяцы.",
+      "evidence": "The financial aid award will help with the cost of travel, books and personal expenses, but it does not assist with vacation and summer expenses."
+    },
+    {
+      "ru": "Сколько стоит год без помощи, по таблице 2025/26: обучение 71 700 долларов, сборы 2 950, жильё 10 410, питание 8 104, книги 1 300, личные расходы 2 820. Всего 97 284.",
+      "evidence": "Total Cost $48,642 $48,642 $97,284"
+    },
+    {
+      "ru": "Первокурсники Брауна обычно окончили 12–13 лет школы. В Таджикистане школа одиннадцатилетняя, поэтому спроси в приёмной комиссии, как рассмотрят твой аттестат.",
+      "evidence": "Brown's first-year students will have completed 12 to 13 years of primary and secondary schooling."
+    },
+    {
+      "ru": "Предпочтений к стране или школьной системе нет, заявку читают с учётом того, где и в каких условиях ты учился.",
+      "evidence": "There is no preference for or advantage given to any particular system or country."
+    },
+    {
+      "ru": "Нужен SAT или ACT. Минимального балла нет, и результат ниже средних по вузу не повод отказываться от заявки.",
+      "evidence": "Brown does not have minimum test scores required for admission, and a score that may be below our average test ranges should not deter a student from applying."
+    },
+    {
+      "ru": "Экзамен надо сдать вовремя: для раннего тура не позже последней октябрьской даты, для обычного не позже последней декабрьской.",
+      "evidence": "If you are applying Regular Decision, testing must be completed by the last December test date to ensure receipt of scores."
+    },
+    {
+      "ru": "Английский должен быть на уровне к моменту поступления: языковых курсов вуз не даёт и условно слабых в английском не берёт.",
+      "evidence": "Brown does not offer courses in English as a second language for its undergraduates and does not accept on a provisional basis students who are deficient in English."
+    },
+    {
+      "ru": "Сертификат по английскому настоятельно рекомендуют, если язык не родной и школа была не на английском. Принимают TOEFL, включая домашнюю версию, IELTS, Duolingo, Pearson и Cambridge English.",
+      "evidence": "We highly recommend that international applicants for whom English is not a first language, a primary language spoken at home, or the primary language of instruction for the duration of their secondary school career submit the results of an English proficiency test."
+    },
+    {
+      "ru": "Пороги по английскому высокие и ожидаются «в большинстве случаев»: IELTS 8.0, TOEFL 105 по старой шкале или 5.5 по новой, Duolingo 130, Pearson 75, Cambridge C1 или C2 от 191. Ниже этих чисел карточка не отказывает, а просит проверить.",
+      "evidence": "Pearson Test of English: minimum score of 75"
+    },
+    {
+      "ru": "Если сдаёшь национальные выпускные экзамены, пришли их прогноз или результат. Не собираешься сдавать экзамены своей программы — ты и школа должны письменно сообщить об этом при подаче.",
+      "evidence": "At the time of application, you and your school should submit a request in writing if you are in a national curriculum but are not planning on taking the corresponding external examinations."
+    },
+    {
+      "ru": "Документы подают на английском или с официальным переводом, приложив оригинал.",
+      "evidence": "Documents or information that will be part of your application file should be written in English or be accompanied by official translations along with original documents in the original language."
+    },
+    {
+      "ru": "С агентами Браун не работает. Исключения: правительства, EducationUSA и общественные организации.",
+      "evidence": "Brown does not endorse or work with agents or third parties, with the exception of governments, EducationUSA and community-based organizations."
+    },
+    {
+      "ru": "Сроки: ранний тур до 1 ноября, ответ в середине декабря; обычный до 5 января, ответ в начале апреля. О решении поступать надо сообщить до 1 мая. Подают через Common Application.",
+      "evidence": "which requires applying by January 5 (11:59 p.m. applicant's local time). Applicants who apply under our Regular Decision plan will receive a decision by early April."
+    },
+    {
+      "ru": "Ранний тур обязывает: если примут, все остальные заявки надо отозвать. Шансов он не повышает, решения те же, что в обычном туре.",
+      "evidence": "If you are admitted under our Early Decision plan, you will be required to withdraw all pending applications-including those you may have already submitted to regular, rolling or (open) early action programs."
+    },
+    {
+      "ru": "Отказ в раннем туре действует весь год: подать заново в обычный нельзя.",
+      "evidence": "If you are denied admission under Early Decision, you may not reapply for admission under the Regular Decision plan during the same year."
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-05",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://admission.brown.edu/international/application-process",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Университет Брауна в Провиденсе, штат Род-Айленд"
+    }
+  },
+  "source": {
+    "url": "https://admission.brown.edu/international/admission-criteria",
+    "lastVerified": "2026-09-13",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://admission.brown.edu/international/admission-criteria",
+        "contentHash": "sha256:cbe2028dcebf699c1eb1efab7ef88fc9293d1c9f2e24f3a083a96cc8e79df021"
+      },
+      {
+        "url": "https://admission.brown.edu/international/application-process",
+        "contentHash": "sha256:522214698868cbc45cc7fa9c72beed179364a98e67dec91cc46808fa7ad201ad"
+      },
+      {
+        "url": "https://admission.brown.edu/international/english-proficiency",
+        "contentHash": "sha256:6fe01ed2fb4366fe9fc992fe2f22fe1c4e492d0677dd81a06004936d44be4999"
+      },
+      {
+        "url": "https://admission.brown.edu/international/financial-aid",
+        "contentHash": "sha256:ea8afea3c321048e1c838fd5ab2ada6f84341aae4499f25262d02bf3a033e146"
+      },
+      {
+        "url": "https://admission.brown.edu/first-year/early-decision",
+        "contentHash": "sha256:d4cd4ce35d794416707e644dcb238858d4bcc4f26ddbf8c25f6fda61a81dd650"
+      },
+      {
+        "url": "https://admission.brown.edu/first-year/regular-decision",
+        "contentHash": "sha256:7a55359e9450eefda48c3afa99dc7f3e5677a438d5a13052d90b24441af2e370"
+      },
+      {
+        "url": "https://admission.brown.edu/first-year/standardized-tests",
+        "contentHash": "sha256:9a6e15e6cbba4c2459de66e32926d45d21bf27157ef567aeba119ae204bc9e5f"
+      },
+      {
+        "url": "https://admission.brown.edu/tuition-aid/tuition-fees",
+        "contentHash": "sha256:c5f5c720d82a4f42e710c34f3c26c803af2a1bcca9af0c407f74dafd2d812f1d"
+      }
+    ]
+  }
+}
