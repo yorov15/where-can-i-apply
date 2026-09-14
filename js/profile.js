@@ -44,3 +44,31 @@ export function missingFields(profile) {
   if (!Array.isArray(profile.languageTests)) out.push('languageTests');
   return out;
 }
+
+const COUNTRY = { TJ: 'Таджикистан', UZ: 'Узбекистан', KG: 'Кыргызстан', KZ: 'Казахстан', TM: 'Туркменистан', RU: 'Россия' };
+const COUNTRY_IN = { TJ: 'Таджикистане', UZ: 'Узбекистане', KG: 'Кыргызстане', KZ: 'Казахстане', TM: 'Туркменистане', RU: 'России' };
+const TEST_SHORT = { IELTS: 'IELTS', TOEFL_IBT: 'TOEFL', TOEFL_IBT_2026: 'TOEFL', DUOLINGO: 'Duolingo' };
+
+// Одна строка вместо свёрнутой анкеты: человек видит, по какому профилю
+// посчитан ответ, и не листает форму ради этого.
+export function profileSummary(profile) {
+  const parts = [];
+  if (profile.citizenship) parts.push(COUNTRY[profile.citizenship] ?? profile.citizenship);
+  if (profile.schoolCountry && profile.schoolCountry !== profile.citizenship) {
+    parts.push(`школа в ${COUNTRY_IN[profile.schoolCountry] ?? profile.schoolCountry}`);
+  }
+  if (profile.schoolYears != null) parts.push(`${profile.schoolYears} лет школы`);
+  if (profile.graduationYear != null) parts.push(`выпуск ${profile.graduationYear}`);
+  if (profile.gpa?.value != null) parts.push(`балл ${profile.gpa.value}`);
+  for (const t of profile.languageTests ?? []) {
+    const name = TEST_SHORT[t.test] ?? t.test;
+    parts.push(t.score == null ? `${name} не сдан` : `${name} ${t.score}`);
+  }
+  return parts.length ? parts.join(' · ') : 'Заполни анкету';
+}
+
+export function profileReady(profile) {
+  return Boolean(
+    profile.citizenship && profile.schoolCountry && profile.schoolYears != null && profile.graduationYear != null,
+  );
+}
