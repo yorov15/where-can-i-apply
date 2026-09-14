@@ -530,5 +530,43 @@ class TestNotMeasured(unittest.TestCase):
         self.assertTrue(any("только значение true" in p for p in problems), problems)
 
 
+class TestConditionTags(unittest.TestCase):
+    def with_condition(self, **tags):
+        program = good_program()
+        program["textConditions"] = [
+            {"ru": "Условие", "evidence": "citizens of eligible countries", **tags}
+        ]
+        return program
+
+    def test_valid_tags_pass(self):
+        program = self.with_condition(field="citizenship", kind="workaround")
+        self.assertEqual(validate_program(program, SNAPSHOT), [])
+
+    def test_general_condition_without_field_passes(self):
+        program = self.with_condition(field=None, kind="steps")
+        self.assertEqual(validate_program(program, SNAPSHOT), [])
+
+    def test_unknown_kind_is_caught(self):
+        problems = validate_program(self.with_condition(kind="maybe"), SNAPSHOT)
+        self.assertTrue(any("неизвестный kind" in p for p in problems), problems)
+
+    def test_unknown_field_is_caught(self):
+        problems = validate_program(self.with_condition(field="height", kind="note"), SNAPSHOT)
+        self.assertTrue(any("не поле анкеты" in p for p in problems), problems)
+
+    def test_workaround_needs_a_field(self):
+        # Обходной путь без поля показать негде: интерфейс ставит его под
+        # причиной отказа, а причина всегда про конкретное поле.
+        problems = validate_program(self.with_condition(kind="workaround"), SNAPSHOT)
+        self.assertTrue(any("обходной путь без field" in p for p in problems), problems)
+
+    def test_untagged_is_fine_until_tags_are_required(self):
+        self.assertEqual(validate_program(self.with_condition(), SNAPSHOT, require_tags=False), [])
+
+    def test_untagged_is_caught_when_tags_are_required(self):
+        problems = validate_program(self.with_condition(), SNAPSHOT, require_tags=True)
+        self.assertTrue(any("нет kind" in p for p in problems), problems)
+
+
 if __name__ == "__main__":
     unittest.main()

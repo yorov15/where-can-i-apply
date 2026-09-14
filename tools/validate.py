@@ -8,12 +8,14 @@
 import re
 
 from tools.schema import (
+    CONDITION_KINDS,
     FIELDS,
     LANGUAGE_TESTS,
     RELATIVE_BOUNDS,
     REQUIRED_FIELDS,
     SCALES,
     SIGNERS,
+    TAGS_REQUIRED,
     VALUE_KEYS,
     is_country_code,
 )
@@ -25,7 +27,9 @@ MAX_AGE = 60
 MONTH_DAY = re.compile(r"^(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$")
 
 
-def validate_program(program: dict, snapshot_text: str, check_required: bool = True) -> list[str]:
+def validate_program(
+    program: dict, snapshot_text: str, check_required: bool = True, require_tags=None
+) -> list[str]:
     """Проверяет запись. С check_required=False не требует обязательных полей.
 
     Так проверяют предложение модели до того, как человек поставил подписи:
@@ -33,6 +37,8 @@ def validate_program(program: dict, snapshot_text: str, check_required: bool = T
     из-за него всю запись — значит не дать её заполнить вообще. Перед
     записью на диск проверка идёт полная.
     """
+    if require_tags is None:
+        require_tags = TAGS_REQUIRED
     problems = []
     haystack = normalize(snapshot_text)
     eligibility = program.get("eligibility") or {}
@@ -95,6 +101,7 @@ def validate_program(program: dict, snapshot_text: str, check_required: bool = T
             problems.append(
                 f"условие {number}: цитата не найдена в тексте источника — {quote!r}"
             )
+        problems.extend(_check_condition_tags(number, condition, require_tags))
 
     problems.extend(_check_deadline(program.get("deadline") or {}))
     return problems
@@ -348,3 +355,19 @@ def _is_iso_date(value) -> bool:
         return False
     parts = value.split("-")
     return len(parts) == 3 and all(part.isdigit() for part in parts)
+
+
+def _check_condition_tags(number: int, condition: dict, required: bool) -> list[str]:
+    problems = []
+    kind = condition.get("kind")
+    field = condition.get("field")
+    if kind is None:
+        if required:
+            problems.append(f"условие {number}: нет kind — непонятно, что человеку с ним делать")
+    elif kind not in CONDITION_KINDS:
+        problems.append(f"условие {number}: неизвестный kind {kind!r}")
+    if field is not None and field not in FIELDS:
+        problems.append(f"условие {number}: field {field!r} — не поле анкеты")
+    if kind == "workaround" and not field:
+        problems.append(f"условие {number}: обходной путь без field — непонятно, что он обходит")
+    return problems
