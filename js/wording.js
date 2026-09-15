@@ -111,7 +111,7 @@ const SPECIAL = {
     detail: `Программа берёт тех, кто оканчивает школу к году подачи — к ${max}. Ты оканчиваешь в ${mine}, так что подать сможешь в следующем цикле.`,
   }),
   'graduationYear.too-late': ({ max, mine }) => ({
-    short: `берют выпускников до ${max} года`,
+    short: `берут выпускников до ${max} года`,
     detail: `Программа берёт тех, кто оканчивает школу не позже ${max} года, а ты — в ${mine}.`,
   }),
   'age.asof-unknown': () => ({
@@ -124,11 +124,11 @@ const SPECIAL = {
   }),
   'age.over-max': ({ age, max, maxExclusive }) => (maxExclusive != null
     ? {
-      short: `к подаче тебе будет ${age}, берют младше ${maxExclusive}`,
+      short: `к подаче тебе будет ${age}, берут младше ${maxExclusive}`,
       detail: `На дату приёма тебе будет ${age}, а программа берёт младше ${maxExclusive}.`,
     }
     : {
-      short: `к подаче тебе будет ${age}, берют до ${max}`,
+      short: `к подаче тебе будет ${age}, берут до ${max}`,
       detail: `На дату приёма тебе будет ${age}, а программа берёт до ${max} включительно.`,
     }),
   'age.near-min': ({ age, min, why }) => ({
@@ -136,7 +136,7 @@ const SPECIAL = {
     detail: `К дате приёма тебе будет около ${age}, а программа берёт с ${min}. Точно сказать нельзя: ${WHY[why]}. Проверь на сайте программы.`,
   }),
   'age.under-min': ({ age, min }) => ({
-    short: `к подаче тебе будет ${age}, берют с ${min}`,
+    short: `к подаче тебе будет ${age}, берут с ${min}`,
     detail: `На дату приёма тебе будет ${age}, а программа берёт с ${min}. Подать сможешь в одном из следующих циклов.`,
   }),
   'gpa.near-threshold': ({ mine, need }) => ({
@@ -164,8 +164,8 @@ const SPECIAL = {
     detail: `Программе нужен ${optionList(options)}, твой результат ниже. Экзамен можно пересдать.`,
   }),
   'language.other-test': ({ tests, options, advisory }) => ({
-    short: 'уточнить, примят ли твой экзамен',
-    detail: `Твой ${joinOr(tests.map(testName))} программа не называет — она ${advisory ? 'советует' : 'требует'} ${optionList(options)}. Спроси у программы, примят ли твой экзамен.`,
+    short: 'уточнить, примут ли твой экзамен',
+    detail: `Твой ${joinOr(tests.map(testName))} программа не называет — она ${advisory ? 'советует' : 'требует'} ${optionList(options)}. Спроси у программы, примут ли твой экзамен.`,
   }),
   'language.no-certificate': ({ options, advisory }) => {
     const first = `${testName(options[0].test)} от ${options[0].min}`;
