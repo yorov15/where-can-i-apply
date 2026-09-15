@@ -18,16 +18,16 @@ test('в отказе обе величины в процентах и без и
   // 3.2 по пятибалльной — это 64%, порог 70%. Сравнить «3.2» и «70»
   // человек не может, а слово PERCENT ему ничего не говорит.
   const got = checkGpa(me(3.2), need(70));
-  assert.match(got.message, /64%/);
-  assert.match(got.message, /70%/);
-  assert.doesNotMatch(got.message, /PERCENT|TJ_5|GPA_4/);
+  assert.equal(got.code, 'gpa.below');
+  assert.deepEqual(got.params, { mine: 64, need: 70 });
 });
 
 test('балл внутри полосы неопределённости — надо проверить', () => {
   // 4.8 по пятибалльной — это 96%, порог 94% отличается на 2 пункта
   const got = checkGpa(me(4.8), need(94));
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /проверь/);
+  assert.equal(got.code, 'gpa.near-threshold');
+  assert.deepEqual(got.params, { mine: 96, need: 94 });
 });
 
 test('ровно на границе полосы — ещё надо проверить', () => {
@@ -48,7 +48,8 @@ test('та же шкала, чуть ниже порога — отказ, а н
 test('разные шкалы у самого порога — по-прежнему сомнение', () => {
   const got = checkGpa(me(4.0), need(78));
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /шкалы разные/);
+  assert.equal(got.code, 'gpa.near-threshold');
+  assert.deepEqual(got.params, { mine: 80, need: 78 });
 });
 
 test('шкалы приводятся к одной, а не сравниваются как числа', () => {
@@ -78,11 +79,8 @@ test('справочный балл: недобор не отказ, а пров
   const me = { gpa: { value: 3.5, scale: 'TJ_5' } };
   const got = checkGpa(me, advisoryGpa);
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /не отказ/);
-  // У Bilkent тот же флаг стоит на пороге для подачи с аттестатом, в
-  // обход которого есть SAT и IB. «Описывает поступивших» там ложь.
-  assert.doesNotMatch(got.message, /описывает своих поступивших/);
-  assert.match(got.message, /условия ниже/);
+  assert.equal(got.code, 'gpa.below-advisory');
+  assert.deepEqual(got.params, { mine: 70, need: 90 });
 });
 
 test('справочный балл: перебор всё равно проходит', () => {

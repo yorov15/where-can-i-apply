@@ -19,7 +19,8 @@ test('дата считается из года приёма, а не берёт
   const rule = { min: 18, asOf: august31, evidence: 'x' };
   const got = checkAge(me, rule, deadline('2026-01-15'));
   assert.equal(got.status, 'fail');
-  assert.match(got.message, /17/);
+  assert.equal(got.code, 'age.under-min');
+  assert.deepEqual(got.params, { age: 17, min: 18 });
 });
 
 test('тот же человек в следующем цикле проходит', () => {
@@ -52,7 +53,8 @@ test('без дат приёма у нижней границы — сомнен
   const rule = { min: 18, asOf: august31, evidence: 'x' };
   const got = checkAge(me, rule, deadline(null, 'expected'));
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /нижней границе 18/);
+  assert.equal(got.code, 'age.near-min');
+  assert.deepEqual(got.params, { age: 17, min: 18, why: 'cycle-guessed' });
 });
 
 test('намного младше — отказ даже без дат приёма', () => {

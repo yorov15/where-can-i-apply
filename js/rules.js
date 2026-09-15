@@ -2,9 +2,10 @@
 // поле и больше ни про что: ошибку в правиле возраста нельзя занести в
 // правило языка. Ни одна из них не трогает DOM, сеть и localStorage.
 //
-// Каждая возвращает { status, message }, где status — 'pass', 'fail' или
-// 'unknown'. У pass сообщение пустое: человеку не нужно читать семь строк
-// о том, что у него всё в порядке.
+// Каждая возвращает { status, code, params }, где status — 'pass', 'fail'
+// или 'unknown', code — «поле.состояние», params — числа для текста.
+// Тексты собирает js/wording.js. У pass кода нет: человеку не нужно
+// читать семь строк о том, что у него всё в порядке.
 //
 // rule === null означает «в источнике этого нет» и даёт unknown. Явное
 // «ограничения нет» записывается объектом с пустыми значениями и цитатой,
@@ -13,19 +14,7 @@
 import { ageAt } from './lib/dates.js';
 import { toPercent } from './lib/scales.js';
 
-const r = (status, message = '') => ({ status, message });
-
-// Названия экзаменов для человека. TOEFL iBT с 21 января 2026 года
-// считается по шкале 1–6, и программы публикуют для старой и новой шкалы
-// отдельные пороги. Поэтому для движка это два экзамена, и в тексте их
-// надо различать: «TOEFL_IBT 90» человеку ничего не скажет.
-const TEST_NAMES = {
-  IELTS: 'IELTS',
-  TOEFL_IBT: 'TOEFL iBT (старая шкала 0–120)',
-  TOEFL_IBT_2026: 'TOEFL iBT (новая шкала 1–6)',
-  DUOLINGO: 'Duolingo (DET)',
-};
-const testName = (test) => TEST_NAMES[test] ?? test;
+const r = (status, code = null, params = {}) => ({ status, code, params });
 
 // Третье состояние правила помимо «есть требование» и null.
 //
@@ -91,62 +80,48 @@ function resolveAsOf(asOf, deadline, today) {
   return null;
 }
 
-function countryRule(value, rule, labels) {
-  if (!rule) return r('unknown', labels.noRule);
+function countryRule(value, rule, field) {
+  if (!rule) return r('unknown', `${field}.missing-rule`);
   if (noLimit(rule)) return r('pass');
-  if (delegated(rule)) return r('unknown', labels.byInstitution);
-  if (notMeasured(rule)) return r('unknown', labels.notMeasured);
-  if (!value) return r('unknown', labels.noValue);
-  if (Array.isArray(rule.deny) && rule.deny.includes(value)) return r('fail', labels.denied);
+  if (delegated(rule)) return r('unknown', `${field}.by-institution`);
+  if (notMeasured(rule)) return r('unknown', `${field}.not-measured`);
+  if (!value) return r('unknown', `${field}.no-value`);
+  if (Array.isArray(rule.deny) && rule.deny.includes(value)) return r('fail', `${field}.denied`);
   if (rule.allow === '*') return r('pass');
   if (Array.isArray(rule.allow) && rule.allow.includes(value)) return r('pass');
-  return r('fail', labels.notInList);
+  return r('fail', `${field}.not-in-list`);
 }
 
 export function checkCitizenship(profile, rule, ctx) {
-  return countryRule(profile.citizenship, rule, {
-    noRule: 'Программа не указывает, граждан каких стран принимает',
-    noValue: 'Ты не указал гражданство',
-    denied: 'Программа не принимает граждан твоей страны',
-    notInList: 'Твоего гражданства нет в списке стран программы',
-    byInstitution: 'Кого принимают по гражданству, решает принимающий вуз — смотри условия программы',
-    notMeasured: 'Требование к гражданству есть, но инструмент его не считает — читай условия ниже',
-  });
+  return countryRule(profile.citizenship, rule, 'citizenship');
 }
 
 export function checkSchoolCountry(profile, rule, ctx) {
-  return countryRule(profile.schoolCountry, rule, {
-    noRule: 'Программа не указывает, в какой стране должна быть окончена школа',
-    noValue: 'Ты не указал, в какой стране окончил школу',
-    denied: 'Программа не принимает аттестаты твоей страны',
-    notInList: 'Твоей страны школы нет в списке программы',
-    byInstitution: 'Какие аттестаты принимают, решает принимающий вуз — смотри условия программы',
-    notMeasured: 'Требование к школе есть, но инструмент его не считает — читай условия ниже',
-  });
+  return countryRule(profile.schoolCountry, rule, 'schoolCountry');
 }
 
 export function checkSchoolYears(profile, rule, ctx) {
-  if (!rule) return r('unknown', 'Программа не указывает, сколько лет школы нужно');
+  if (!rule) return r('unknown', 'schoolYears.missing-rule');
   if (noLimit(rule)) return r('pass');
-  if (delegated(rule)) return r('unknown', 'Сколько лет школы нужно, решает принимающий вуз — смотри условия программы');
-  if (notMeasured(rule)) return r('unknown', 'Требование к школьному образованию есть, но числом его не выразить — читай условия ниже');
-  if (profile.schoolYears == null) return r('unknown', 'Ты не указал, сколько лет учился в школе');
+  if (delegated(rule)) return r('unknown', 'schoolYears.by-institution');
+  if (notMeasured(rule)) return r('unknown', 'schoolYears.not-measured');
+  if (profile.schoolYears == null) return r('unknown', 'schoolYears.no-value');
   if (rule.min == null) return r('pass');
   if (profile.schoolYears < rule.min) {
-    return r('fail', `Программа требует ${rule.min} лет школы, у тебя ${profile.schoolYears}`);
+    return r('fail', 'schoolYears.below-min', { min: rule.min, mine: profile.schoolYears });
   }
   return r('pass');
 }
 
 export function checkGraduationYear(profile, rule, ctx) {
-  if (!rule) return r('unknown', 'Программа не указывает, в каком году нужно окончить школу');
+  if (!rule) return r('unknown', 'graduationYear.missing-rule');
   if (noLimit(rule)) return r('pass');
-  if (delegated(rule)) return r('unknown', 'Требование к году выпуска устанавливает принимающий вуз — смотри условия программы');
-  if (notMeasured(rule)) return r('unknown', 'Требование к году выпуска есть, но инструмент его не считает — читай условия ниже');
-  if (profile.graduationYear == null) return r('unknown', 'Ты не указал год выпуска');
+  if (delegated(rule)) return r('unknown', 'graduationYear.by-institution');
+  if (notMeasured(rule)) return r('unknown', 'graduationYear.not-measured');
+  if (profile.graduationYear == null) return r('unknown', 'graduationYear.no-value');
 
   if (rule.min != null && profile.graduationYear < rule.min) {
-    return r('fail', `Программа берёт выпускников не раньше ${rule.min} года, у тебя ${profile.graduationYear}`);
+    return r('fail', 'graduationYear.too-early', { min: rule.min, mine: profile.graduationYear });
   }
 
   // «Окончи школу к году подачи» — правило почти всех стипендий, и оно
@@ -155,27 +130,27 @@ export function checkGraduationYear(profile, rule, ctx) {
   if (rule.maxRelative === 'applicationYear') {
     const closes = ctx?.deadline?.closes;
     if (!closes) {
-      return r('unknown', 'Год приёма неизвестен, поэтому крайний год выпуска не посчитать');
+      return r('unknown', 'graduationYear.cycle-unknown');
     }
     const max = Number(closes.slice(0, 4));
     if (profile.graduationYear > max) {
-      return r('fail', `Программа берёт тех, кто оканчивает школу к году подачи — к ${max}, у тебя ${profile.graduationYear}`);
+      return r('fail', 'graduationYear.after-cycle', { max, mine: profile.graduationYear });
     }
     return r('pass');
   }
 
   if (rule.max != null && profile.graduationYear > rule.max) {
-    return r('fail', `Программа берёт выпускников не позже ${rule.max} года, у тебя ${profile.graduationYear}`);
+    return r('fail', 'graduationYear.too-late', { max: rule.max, mine: profile.graduationYear });
   }
   return r('pass');
 }
 
 export function checkAge(profile, rule, ctx) {
-  if (!rule) return r('unknown', 'Программа не указывает ограничение по возрасту');
+  if (!rule) return r('unknown', 'age.missing-rule');
   if (noLimit(rule)) return r('pass');
-  if (delegated(rule)) return r('unknown', 'Ограничение по возрасту устанавливает принимающий вуз — смотри условия программы');
-  if (notMeasured(rule)) return r('unknown', 'Требование к возрасту есть, но инструмент его не считает — читай условия ниже');
-  if (!profile.birthDate) return r('unknown', 'Ты не указал дату рождения');
+  if (delegated(rule)) return r('unknown', 'age.by-institution');
+  if (notMeasured(rule)) return r('unknown', 'age.not-measured');
+  if (!profile.birthDate) return r('unknown', 'age.no-value');
 
   // Источник часто не говорит, на какой момент считается возраст.
   // Придумывать дату нельзя, но и молчать необязательно: если ответ
@@ -187,7 +162,7 @@ export function checkAge(profile, rule, ctx) {
   const on =
     resolveAsOf(rule.asOf, ctx?.deadline, ctx?.today) ??
     (fromDeadline ? ctx?.today ?? null : null);
-  if (!on) return r('unknown', 'Дата, на которую программа считает возраст, неизвестна');
+  if (!on) return r('unknown', 'age.asof-unknown');
 
   const age = ageAt(profile.birthDate, on);
 
@@ -208,12 +183,12 @@ export function checkAge(profile, rule, ctx) {
   const usingToday = fromDeadline && !ctx?.deadline?.closes;
 
   const why = usingToday
-    ? 'даты приёма ещё не объявлены, и к подаче тебе может стать больше'
+    ? 'no-dates'
     : !ctx?.deadline?.closes
-      ? 'даты приёма ещё не объявлены, и год цикла взят по ближайшему такому числу'
+      ? 'cycle-guessed'
       : rule.asOf == null
-        ? 'источник не говорит, на какой момент считается возраст'
-        : 'дата приёма ещё не подтверждена';
+        ? 'asof-unknown'
+        : 'unconfirmed';
 
   if (maxInclusive != null) {
     // Когда считаем на сегодня, к подаче возраст может только вырасти —
@@ -226,12 +201,12 @@ export function checkAge(profile, rule, ctx) {
       : shaky && Math.abs(age - maxInclusive) <= 1;
 
     if (uncertain) {
-      return r('unknown', `На дату приёма тебе будет около ${age} при пределе ${maxInclusive}, а ${why} — проверь на сайте`);
+      return r('unknown', 'age.near-max', { age, limit: maxInclusive, why });
     }
     if (age > maxInclusive) {
-      return r('fail', rule.maxExclusive != null
-        ? `На дату приёма тебе будет ${age}, программа берёт младше ${rule.maxExclusive}`
-        : `На дату приёма тебе будет ${age}, программа берёт до ${rule.max}`);
+      return r('fail', 'age.over-max', rule.maxExclusive != null
+        ? { age, maxExclusive: rule.maxExclusive }
+        : { age, max: rule.max });
     }
   }
   if (rule.min != null && age < rule.min) {
@@ -239,9 +214,9 @@ export function checkAge(profile, rule, ctx) {
     // границы это сомнение, а не отказ. Иначе семнадцатилетнему
     // выпускнику закрывали бы почти всё, куда он подаст следующим летом.
     if (shaky && age >= rule.min - 1) {
-      return r('unknown', `На дату приёма тебе будет около ${age} при нижней границе ${rule.min}, а ${why} — проверь на сайте`);
+      return r('unknown', 'age.near-min', { age, min: rule.min, why });
     }
-    return r('fail', `На дату приёма тебе будет ${age}, программа берёт с ${rule.min}`);
+    return r('fail', 'age.under-min', { age, min: rule.min });
   }
   return r('pass');
 }
@@ -252,11 +227,11 @@ export function checkAge(profile, rule, ctx) {
 export const GPA_BAND = 5;
 
 export function checkGpa(profile, rule, ctx) {
-  if (!rule) return r('unknown', 'Программа не указывает требование к среднему баллу');
+  if (!rule) return r('unknown', 'gpa.missing-rule');
   if (noLimit(rule)) return r('pass');
-  if (delegated(rule)) return r('unknown', 'Порог по среднему баллу устанавливает принимающий вуз — смотри условия программы');
-  if (notMeasured(rule)) return r('unknown', 'Требование к успеваемости есть, но оно не число — читай условия ниже');
-  if (!profile.gpa || profile.gpa.value == null) return r('unknown', 'Ты не указал средний балл');
+  if (delegated(rule)) return r('unknown', 'gpa.by-institution');
+  if (notMeasured(rule)) return r('unknown', 'gpa.not-measured');
+  if (!profile.gpa || profile.gpa.value == null) return r('unknown', 'gpa.no-value');
   if (rule.min == null) return r('pass');
 
   const mine = toPercent(profile.gpa.value, profile.gpa.scale);
@@ -269,7 +244,7 @@ export function checkGpa(profile, rule, ctx) {
   // порог 4,0 по пятибалльной, и балл 4,2 проходит его прямо.
   const sameScale = profile.gpa.scale === rule.scale;
   if (!sameScale && Math.abs(mine - need) <= GPA_BAND) {
-    return r('unknown', 'Твой балл близко к порогу программы, а шкалы разные — проверь на сайте программы');
+    return r('unknown', 'gpa.near-threshold', { mine, need });
   }
   if (mine < need) {
     // Обе величины в процентах: человек ввёл 4,8 по пятибалльной, а
@@ -283,9 +258,9 @@ export function checkGpa(profile, rule, ctx) {
     // которого есть SAT и IB. Поэтому сообщение не объясняет, почему, а
     // отсылает к условиям карточки.
     if (rule.advisory === true) {
-      return r('unknown', `Твой балл — ${mine}%, программа называет ${need}%. Это не отказ: число не жёсткий порог или к нему есть обходной путь — читай условия ниже`);
+      return r('unknown', 'gpa.below-advisory', { mine, need });
     }
-    return r('fail', `Твой балл — ${mine}%, программе нужно ${need}%`);
+    return r('fail', 'gpa.below', { mine, need });
   }
   return r('pass');
 }
@@ -294,10 +269,10 @@ export function checkGpa(profile, rule, ctx) {
 // нужно видеть, какие двери откроются после него. fail только когда
 // сертификат есть и результат ниже порога.
 export function checkLanguage(profile, rule, ctx) {
-  if (!rule) return r('unknown', 'Программа не указывает требование к языку');
+  if (!rule) return r('unknown', 'language.missing-rule');
   if (noLimit(rule)) return r('pass');
-  if (delegated(rule)) return r('unknown', 'Язык знать нужно, но уровень устанавливает принимающий вуз — смотри условия программы');
-  if (notMeasured(rule)) return r('unknown', 'Требование к языку есть, но инструмент его не считает — читай условия ниже');
+  if (delegated(rule)) return r('unknown', 'language.by-institution');
+  if (notMeasured(rule)) return r('unknown', 'language.not-measured');
   const need = rule.anyOf ?? [];
   if (need.length === 0) return r('pass');
 
@@ -313,31 +288,26 @@ export function checkLanguage(profile, rule, ctx) {
     sawBelow = true;
   }
 
-  const list = need.map((x) => `${testName(x.test)} ${x.min}`).join(' или ');
+  const options = need.map(({ test, min }) => ({ test, min }));
+  const advisory = rule.advisory === true;
   if (sawEmpty) {
-    const what = rule.advisory === true ? 'Рекомендовано' : 'Нужен';
-    return r('unknown', `Ты отметил экзамен без результата. ${what} ${list}`);
+    return r('unknown', 'language.score-missing', { options, advisory });
   }
   if (sawBelow) {
     // Часть программ публикует не порог, а рекомендацию: KAIST пишет над
     // своей таблицей «Recommended Score». Красная карточка на таких
     // числах — прямая ложь: подавать документы человеку не запрещено.
-    if (rule.advisory === true) {
-      return r('unknown', `Рекомендовано ${list}, у тебя ниже. Это не отказ — программа называет балл рекомендацией, решает отбор`);
+    if (advisory) {
+      return r('unknown', 'language.below-advisory', { options });
     }
-    return r('fail', `Нужен ${list}, твой результат ниже`);
+    return r('fail', 'language.below', { options });
   }
   // Экзамен сдан, но программа его не называет — чаще всего TOEFL по
   // новой шкале там, где опубликован только старый порог. «Сертификата
   // у тебя нет» здесь было бы неправдой, а отказ — выдумкой.
   const other = mine.filter((x) => x.score != null);
   if (other.length) {
-    const names = other.map((x) => testName(x.test)).join(', ');
-    const what = rule.advisory === true ? 'рекомендует' : 'требует';
-    return r('unknown', `Твой ${names} программа не называет, она ${what} ${list} — уточни, примут ли твой экзамен`);
+    return r('unknown', 'language.other-test', { tests: other.map((x) => x.test), options, advisory });
   }
-  if (rule.advisory === true) {
-    return r('unknown', `Сертификат нужен, рекомендовано ${list}. Сдать экзамен ещё можно`);
-  }
-  return r('unknown', `Нужен ${list}. Сертификата у тебя пока нет — экзамен можно сдать`);
+  return r('unknown', 'language.no-certificate', { options, advisory });
 }

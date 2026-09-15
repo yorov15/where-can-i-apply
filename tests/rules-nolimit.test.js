@@ -44,8 +44,8 @@ test('возраст не требует даты рождения, если о�
   assert.equal(checkAge({}, absent, ctx).status, 'pass');
 });
 
-test('пустое сообщение, как у любого pass', () => {
-  assert.equal(checkGpa({}, absent, ctx).message, '');
+test('нет кода, как у любого pass', () => {
+  assert.equal(checkGpa({}, absent, ctx).code, null);
 });
 
 test('noLimit без true работает как обычное правило', () => {

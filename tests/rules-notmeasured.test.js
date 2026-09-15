@@ -42,17 +42,13 @@ for (const [name, fn] of checks) {
 
   test(`${name}: не говорит «программа не указывает»`, () => {
     const got = fn(me, nm, ctx);
-    assert.doesNotMatch(got.message, /не указывает/);
-    assert.match(got.message, /Требование .* есть/);
-  });
-
-  test(`${name}: отсылает к условиям, где написано какое именно`, () => {
-    assert.match(fn(me, nm, ctx).message, /условия/);
+    assert.notEqual(got.code?.split('.')[1], 'missing-rule');
+    assert.equal(got.code?.split('.')[1], 'not-measured');
   });
 }
 
-test('пустое поле по-прежнему говорит «не указывает» — это другое', () => {
-  assert.match(checkLanguage(me, null, ctx).message, /не указывает/);
+test('пустое поле по-прежнему даёт «правила нет» — это другое состояние', () => {
+  assert.equal(checkLanguage(me, null, ctx).code, 'language.missing-rule');
 });
 
 test('обычное правило пометка не ломает', () => {

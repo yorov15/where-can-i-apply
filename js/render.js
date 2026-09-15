@@ -2,6 +2,7 @@
 // не знают — поэтому их можно переписать, не сломав страницу.
 import { evaluate } from './verdict.js';
 import { deadlineState } from './lib/deadline.js';
+import { reasonText } from './wording.js';
 
 // «Подходишь» обещает то, чего инструмент не знает: возьмут или нет,
 // решает отбор. Он отвечает на другой вопрос — пустят ли подавать.
@@ -140,7 +141,7 @@ function card({ program, verdict, deadline }) {
     list.className = 'reasons';
     for (const reason of verdict.reasons) {
       const li = document.createElement('li');
-      li.textContent = reason.message;
+      li.textContent = reasonText(reason).detail;
       list.append(li);
     }
     el.append(list);

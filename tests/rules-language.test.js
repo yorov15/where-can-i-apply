@@ -18,14 +18,14 @@ test('сертификата нет вовсе — надо проверить, 
   const me = { languageTests: [] };
   const got = checkLanguage(me, need);
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /можно сдать/);
+  assert.equal(got.code, 'language.no-certificate');
 });
 
 test('сертификат отмечен без результата — надо проверить', () => {
   const me = { languageTests: [{ test: 'IELTS', score: null }] };
   const got = checkLanguage(me, need);
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /без результата/);
+  assert.equal(got.code, 'language.score-missing');
 });
 
 test('сертификат есть, но балл ниже — отказ', () => {
@@ -61,7 +61,7 @@ test('рекомендованный балл: недобор не отказ, �
   const me = { languageTests: [{ test: 'IELTS', score: 6.0 }] };
   const got = checkLanguage(me, advisory);
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /не отказ/);
+  assert.equal(got.code, 'language.below-advisory');
 });
 
 test('рекомендованный балл: перебор всё равно проходит', () => {
@@ -72,7 +72,8 @@ test('рекомендованный балл: перебор всё равно 
 test('рекомендованный балл: без сертификата это проверка', () => {
   const got = checkLanguage({ languageTests: [] }, advisory);
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /Сертификат нужен/);
+  assert.equal(got.code, 'language.no-certificate');
+  assert.equal(got.params.advisory, true);
 });
 
 test('обычный порог по-прежнему отказ, флаг ничего не ломает', () => {
@@ -103,21 +104,27 @@ test('старая шкала не сравнивается с порогом н
   const me = { languageTests: [{ test: 'TOEFL_IBT', score: 110 }] };
   const got = checkLanguage(me, onlyNew);
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /не называет/);
-  assert.match(got.message, /старая шкала 0–120/);
+  assert.equal(got.code, 'language.other-test');
+  assert.deepEqual(got.params.tests, ['TOEFL_IBT']);
 });
 
 test('сданный экзамен, которого программа не называет, — не «сертификата нет»', () => {
   const onlyIelts = { anyOf: [{ test: 'IELTS', min: 6.0 }], evidence: 'x' };
   const got = checkLanguage({ languageTests: [{ test: 'TOEFL_IBT_2026', score: 5 }] }, onlyIelts);
   assert.equal(got.status, 'unknown');
-  assert.doesNotMatch(got.message, /пока нет/);
+  assert.notEqual(got.code, 'language.no-certificate');
+  assert.equal(got.code, 'language.other-test');
 });
 
-test('в сообщении экзамены названы по-человечески', () => {
+test('без сертификата вообще — тоже проверка, а не отказ', () => {
   const got = checkLanguage({ languageTests: [] }, toefl);
-  assert.match(got.message, /TOEFL iBT \(новая шкала 1–6\) 4\.5/);
-  assert.doesNotMatch(got.message, /TOEFL_IBT/);
+  assert.equal(got.status, 'unknown');
+  assert.equal(got.code, 'language.no-certificate');
+  assert.deepEqual(got.params.options, [
+    { test: 'IELTS', min: 6.5 },
+    { test: 'TOEFL_IBT', min: 90 },
+    { test: 'TOEFL_IBT_2026', min: 4.5 },
+  ]);
 });
 
 // Duolingo сдают из дома и он дешевле остальных — для наших
@@ -129,14 +136,16 @@ test('Duolingo сравнивается со своим порогом', () => {
   assert.equal(checkLanguage({ languageTests: [{ test: 'DUOLINGO', score: 110 }] }, det).status, 'fail');
 });
 
-test('Duolingo назван по-человечески', () => {
+test('Duolingo передаётся в параметрах наравне с другими экзаменами', () => {
   const got = checkLanguage({ languageTests: [] }, det);
-  assert.match(got.message, /Duolingo \(DET\) 120/);
+  assert.equal(got.code, 'language.no-certificate');
+  assert.deepEqual(got.params.options, [{ test: 'IELTS', min: 7 }, { test: 'DUOLINGO', min: 120 }]);
 });
 
 test('рекомендованный балл: экзамен отмечен без результата — тоже рекомендация', () => {
   const me = { languageTests: [{ test: 'IELTS', score: null }] };
   const got = checkLanguage(me, advisory);
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /Рекомендовано/);
+  assert.equal(got.code, 'language.score-missing');
+  assert.equal(got.params.advisory, true);
 });

@@ -14,8 +14,8 @@ test('проходит по возрасту с запасом', () => {
 test('не проходит по возрасту', () => {
   const got = checkAge(me, rule(17), confirmed);
   assert.equal(got.status, 'fail');
-  assert.match(got.message, /18/);
-  assert.match(got.message, /17/);
+  assert.equal(got.code, 'age.over-max');
+  assert.deepEqual(got.params, { age: 18, max: 17 });
 });
 
 test('ровно на пределе при подтверждённой дате — проходит', () => {
@@ -25,7 +25,8 @@ test('ровно на пределе при подтверждённой дат�
 test('ровно на пределе при неподтверждённой дате — надо проверить', () => {
   const got = checkAge(me, rule(18), expected);
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /не подтверждена/);
+  assert.equal(got.code, 'age.near-max');
+  assert.deepEqual(got.params, { age: 18, limit: 18, why: 'unconfirmed' });
 });
 
 test('далеко от предела при неподтверждённой дате — обычный ответ', () => {

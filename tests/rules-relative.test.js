@@ -23,7 +23,8 @@ test('двадцать один не проходит там, где нужно 
   const me = { birthDate: '2006-01-01' }; // на 2027-02-20 будет 21
   const got = checkAge(me, under21, confirmed('2027-02-20'));
   assert.equal(got.status, 'fail');
-  assert.match(got.message, /младше 21/);
+  assert.equal(got.code, 'age.over-max');
+  assert.deepEqual(got.params, { age: 21, maxExclusive: 21 });
 });
 
 test('maxExclusive и max не путаются: до 21 включительно — другое правило', () => {
@@ -43,7 +44,8 @@ test('без asOf пограничный возраст даёт unknown с об
   const rule = { min: null, maxExclusive: 21, evidence: 'x' };
   const got = checkAge(me, rule, confirmed('2027-02-20'));
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /на какой момент/);
+  assert.equal(got.code, 'age.near-max');
+  assert.deepEqual(got.params, { age: 20, limit: 20, why: 'asof-unknown' });
 });
 
 test('без asOf и без даты приёма считать не на что', () => {
@@ -62,8 +64,8 @@ test('выпуск позже года подачи не проходит', () =
   const rule = { min: null, maxRelative: 'applicationYear', evidence: 'x' };
   const got = checkGraduationYear({ graduationYear: 2028 }, rule, confirmed('2027-02-20'));
   assert.equal(got.status, 'fail');
-  assert.match(got.message, /2027/);
-  assert.match(got.message, /2028/);
+  assert.equal(got.code, 'graduationYear.after-cycle');
+  assert.deepEqual(got.params, { max: 2027, mine: 2028 });
 });
 
 test('та же запись остаётся верной в следующем цикле', () => {
@@ -80,7 +82,7 @@ test('без даты приёма относительную границу н�
   const rule = { min: null, maxRelative: 'applicationYear', evidence: 'x' };
   const got = checkGraduationYear({ graduationYear: 2027 }, rule, expected(null));
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /Год приёма неизвестен/);
+  assert.equal(got.code, 'graduationYear.cycle-unknown');
 });
 
 // Дат приёма нет вовсе — обычный случай: ЦВЭ и GKS их не публикуют.
@@ -100,7 +102,8 @@ test('без дат приёма пограничный возраст даёт 
   const rule = { min: null, maxExclusive: 25, evidence: 'x' };
   const got = checkAge(me, rule, noDates('2026-09-03'));
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /даты приёма ещё не объявлены/);
+  assert.equal(got.code, 'age.near-max');
+  assert.deepEqual(got.params, { age: 24, limit: 24, why: 'no-dates' });
 });
 
 test('без дат приёма явно старший всё равно отсеивается', () => {
@@ -122,7 +125,8 @@ test('без дат приёма ровно на пределе — сомнен
   const rule = { min: null, maxExclusive: 25, evidence: 'x' };
   const got = checkAge(me, rule, noDates('2026-09-03'));
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /может стать больше/);
+  assert.equal(got.code, 'age.near-max');
+  assert.deepEqual(got.params, { age: 24, limit: 24, why: 'no-dates' });
 });
 
 test('без дат приёма на год младше предела — уже проходит', () => {
@@ -151,5 +155,6 @@ test('нижняя граница работает вместе с относи�
   const rule = { min: 2026, maxRelative: 'applicationYear', evidence: 'x' };
   const got = checkGraduationYear({ graduationYear: 2025 }, rule, confirmed('2027-02-20'));
   assert.equal(got.status, 'fail');
-  assert.match(got.message, /2026/);
+  assert.equal(got.code, 'graduationYear.too-early');
+  assert.deepEqual(got.params, { min: 2026, mine: 2025 });
 });

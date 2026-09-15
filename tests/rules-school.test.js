@@ -7,8 +7,8 @@ const me = { schoolYears: 11, graduationYear: 2027 };
 test('одиннадцати лет не хватает там, где нужно двенадцать', () => {
   const got = checkSchoolYears(me, { min: 12, evidence: 'x' });
   assert.equal(got.status, 'fail');
-  assert.match(got.message, /12/);
-  assert.match(got.message, /11/);
+  assert.equal(got.code, 'schoolYears.below-min');
+  assert.deepEqual(got.params, { min: 12, mine: 11 });
 });
 
 test('одиннадцати лет хватает там, где нужно одиннадцать', () => {
@@ -30,7 +30,8 @@ test('незаполненное поле профиля даёт unknown', () =
 test('выпуск раньше нижней границы — отказ', () => {
   const got = checkGraduationYear(me, { min: 2028, max: null, evidence: 'x' });
   assert.equal(got.status, 'fail');
-  assert.match(got.message, /2028/);
+  assert.equal(got.code, 'graduationYear.too-early');
+  assert.deepEqual(got.params, { min: 2028, mine: 2027 });
 });
 
 test('выпуск позже верхней границы — отказ', () => {

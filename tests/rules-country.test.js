@@ -17,7 +17,7 @@ test('запрет перевешивает звёздочку', () => {
   const r = { allow: '*', deny: ['TJ'], evidence: 'x' };
   const got = checkCitizenship(me, r);
   assert.equal(got.status, 'fail');
-  assert.match(got.message, /не принимает/);
+  assert.equal(got.code, 'citizenship.denied');
 });
 
 test('гражданство есть в списке', () => {
@@ -34,7 +34,7 @@ test('незаполненное поле профиля даёт unknown с т�
   const r = { allow: '*', deny: [], evidence: 'x' };
   const got = checkCitizenship({}, r);
   assert.equal(got.status, 'unknown');
-  assert.match(got.message, /Ты не указал/);
+  assert.equal(got.code, 'citizenship.no-value');
 });
 
 test('страна школы проверяется отдельно от гражданства', () => {
@@ -43,7 +43,7 @@ test('страна школы проверяется отдельно от гр�
   assert.equal(checkSchoolCountry(other, r).status, 'fail');
 });
 
-test('у pass сообщение пустое', () => {
+test('у pass нет кода', () => {
   const r = { allow: '*', deny: [], evidence: 'x' };
-  assert.equal(checkCitizenship(me, r).message, '');
+  assert.equal(checkCitizenship(me, r).code, null);
 });

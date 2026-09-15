@@ -42,13 +42,13 @@ test('все семь правил отвечают «решает вуз», а 
   ]) {
     const got = check(me, byInstitution, ctx);
     assert.equal(got.status, 'unknown', check.name);
-    assert.match(got.message, /вуз/, check.name);
+    assert.equal(got.code?.split('.')[1], 'by-institution', check.name);
   }
 });
 
-test('текст не говорит «программа не указывает» — это было бы неправдой', () => {
+test('код не говорит «программа не указывает» — это было бы неправдой', () => {
   const got = checkLanguage({ languageTests: [] }, byInstitution, ctx);
-  assert.doesNotMatch(got.message, /не указыва/);
+  assert.notEqual(got.code?.split('.')[1], 'missing-rule');
 });
 
 test('обычное правило по-прежнему считается', () => {
