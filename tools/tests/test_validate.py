@@ -125,6 +125,38 @@ class TestTextConditions(unittest.TestCase):
         self.assertTrue(any("условие 1: нет цитаты" in p for p in problems))
 
 
+class TestLanguageParts(unittest.TestCase):
+    """Флаг «у экзамена есть минимумы по частям».
+
+    Сами числа по частям анкета не спрашивает и движок не считает: флаг
+    лишь запрещает сказать «можно» по одному общему баллу. Поэтому
+    значение у него одно — True; число здесь означало бы проверку,
+    которой нет.
+    """
+
+    SNAPSHOT_WITH_IELTS = SNAPSHOT + " IELTS - 6.0; writing - 6.0; reading - 5.5."
+
+    def with_parts(self, value):
+        program = good_program()
+        program["eligibility"]["language"] = {
+            "anyOf": [{"test": "IELTS", "min": 6.0, "parts": value}],
+            "evidence": "IELTS - 6.0; writing - 6.0",
+        }
+        return program
+
+    def test_true_is_accepted(self):
+        self.assertEqual(validate_program(self.with_parts(True), self.SNAPSHOT_WITH_IELTS), [])
+
+    def test_number_is_caught(self):
+        problems = validate_program(self.with_parts(5.5), self.SNAPSHOT_WITH_IELTS)
+        self.assertTrue(any("parts" in p for p in problems), problems)
+
+    def test_false_is_caught(self):
+        # «parts: false» ничего не значит: отсутствие флага и есть «нет».
+        problems = validate_program(self.with_parts(False), self.SNAPSHOT_WITH_IELTS)
+        self.assertTrue(any("parts" in p for p in problems), problems)
+
+
 class TestEvidence(unittest.TestCase):
     def test_clean_program_passes(self):
         self.assertEqual(validate_program(good_program(), SNAPSHOT), [])

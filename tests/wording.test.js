@@ -30,6 +30,7 @@ const SAMPLES = [
   { field: 'language', status: 'unknown', code: 'language.score-missing', params: { options: opts, advisory: false, marked: ['IELTS'] } },
   { field: 'language', status: 'unknown', code: 'language.score-missing', params: { options: opts, advisory: true, marked: ['TOEFL_IBT'] } },
   { field: 'language', status: 'unknown', code: 'language.score-missing', params: { options: opts, advisory: false } },
+  { field: 'language', status: 'unknown', code: 'language.parts-unknown', params: { test: 'IELTS', min: 6 } },
   { field: 'language', status: 'unknown', code: 'language.below-advisory', params: { options: opts } },
   { field: 'language', status: 'fail', code: 'language.below', params: { options: opts } },
   { field: 'language', status: 'unknown', code: 'language.other-test', params: { tests: ['TOEFL_IBT_2026'], options: opts, advisory: false } },
@@ -92,6 +93,13 @@ test('заголовок называет экзамен и нужный бал�
   // Старые профили и чужие данные могут не назвать отмеченный экзамен.
   const any = reasonText({ field: 'language', status: 'unknown', code: 'language.score-missing', params: { options: opts, advisory: false } });
   assert.equal(any.short, 'вписать балл IELTS (нужно от 6.5)');
+});
+
+test('минимумы по частям: общий балл не выдаётся за готовый ответ', () => {
+  const t = reasonText({ field: 'language', status: 'unknown', code: 'language.parts-unknown', params: { test: 'IELTS', min: 6 } });
+  assert.equal(t.short, 'сверить баллы по частям экзамена');
+  assert.match(t.detail, /Общий балл подходит: IELTS от 6/);
+  assert.match(t.detail, /по отдельным частям/);
 });
 
 test('рекомендованный балл не выдаётся за порог', () => {

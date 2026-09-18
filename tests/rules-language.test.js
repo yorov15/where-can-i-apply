@@ -81,6 +81,37 @@ test('обычный порог по-прежнему отказ, флаг ни�
   assert.equal(checkLanguage(me, need).status, 'fail');
 });
 
+// У Назарбаева IELTS 6.0 — это общий балл, а письмо нужно сдать на 6.0 и
+// остальные части на 5.5 каждая. Анкета частей не спрашивает, поэтому
+// зелёная карточка по одному общему баллу была бы ложью: человек с
+// письмом 5.5 её увидел бы и получил отказ в приёмной комиссии.
+const withParts = {
+  anyOf: [{ test: 'IELTS', min: 6.0, parts: true }],
+  evidence: 'IELTS - 6.0; writing -6.0; reading & listening & speaking - 5.5',
+};
+
+test('общий балл подходит, но есть минимумы по частям — проверка, а не «можно»', () => {
+  const got = checkLanguage({ languageTests: [{ test: 'IELTS', score: 7.0 }] }, withParts);
+  assert.equal(got.status, 'unknown');
+  assert.equal(got.code, 'language.parts-unknown');
+  assert.deepEqual(got.params, { test: 'IELTS', min: 6.0 });
+});
+
+test('общий балл ниже — по-прежнему отказ, части ничего не меняют', () => {
+  const got = checkLanguage({ languageTests: [{ test: 'IELTS', score: 5.0 }] }, withParts);
+  assert.equal(got.status, 'fail');
+  assert.equal(got.code, 'language.below');
+});
+
+test('другой экзамен без требований к частям проходит начисто', () => {
+  const mixed = {
+    anyOf: [{ test: 'IELTS', min: 6.0, parts: true }, { test: 'DUOLINGO', min: 110 }],
+    evidence: 'x',
+  };
+  const me = { languageTests: [{ test: 'IELTS', score: 7.0 }, { test: 'DUOLINGO', score: 120 }] };
+  assert.equal(checkLanguage(me, mixed).status, 'pass');
+});
+
 // С 21 января 2026 года TOEFL iBT считается по шкале 1–6. Программы
 // публикуют два порога, и для движка это два разных экзамена.
 const toefl = {

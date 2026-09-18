@@ -304,6 +304,15 @@ def _check_rule_shape(field: str, rule: dict) -> list[str]:
                     f"language: экзамена {requirement['test']!r} анкета не знает — "
                     f"одно из {', '.join(sorted(LANGUAGE_TESTS))}"
                 )
+            # Флаг говорит «общего балла мало, есть ещё минимумы по
+            # частям». Числа по частям сюда писать нельзя: анкета их не
+            # спрашивает, и записанное число выглядело бы проверенным,
+            # не будучи проверкой. Сами числа живут текстовым условием.
+            if "parts" in requirement and requirement["parts"] is not True:
+                problems.append(
+                    f"language: parts у {requirement.get('test')!r} — только true; "
+                    "числа по частям идут текстовым условием"
+                )
 
     return problems
 

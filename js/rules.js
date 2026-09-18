@@ -281,13 +281,27 @@ export function checkLanguage(profile, rule, ctx) {
   // балл: по ним карточка скажет, какой балл нужен именно здесь.
   const marked = [];
   let sawBelow = false;
+  // Вариант, где общего балла хватает, но программа требует ещё и
+  // минимумы по частям. Частей анкета не спрашивает: их четыре у каждого
+  // экзамена, и спрашивать их у всех ради трёх программ — плохая сделка.
+  // Зелёная карточка по одному общему баллу была бы враньём, поэтому
+  // такой вариант даёт «проверь», а сами числа стоят условием рядом.
+  let byParts = null;
 
   for (const req of need) {
     const got = mine.find((x) => x.test === req.test);
     if (!got) continue;
     if (got.score == null) { marked.push(req.test); continue; }
-    if (got.score >= req.min) return r('pass');
+    if (got.score >= req.min) {
+      if (!req.parts) return r('pass');
+      byParts = byParts ?? req;
+      continue;
+    }
     sawBelow = true;
+  }
+
+  if (byParts) {
+    return r('unknown', 'language.parts-unknown', { test: byParts.test, min: byParts.min });
   }
 
   const options = need.map(({ test, min }) => ({ test, min }));

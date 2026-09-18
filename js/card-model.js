@@ -34,7 +34,7 @@ export function notLimitedItems(program, fields) {
 
 // Состояния, при которых программа описала требование словами: под
 // причиной показываем, что именно она пишет.
-const PROGRAM_SIDE = new Set(['not-measured', 'by-institution', 'missing-rule']);
+const PROGRAM_SIDE = new Set(['not-measured', 'by-institution', 'missing-rule', 'parts-unknown']);
 
 export function cardModel({ program, verdict, deadline }, extra, today) {
   const hasDetails = extra != null;

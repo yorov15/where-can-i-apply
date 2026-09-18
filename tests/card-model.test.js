@@ -41,6 +41,16 @@ test('у размытого требования — слова программ
   assert.deepEqual(model.reasons[0].says, ['Балл смотрят целиком']);
 });
 
+test('у требования к частям экзамена показаны сами цифры программы', () => {
+  const parts = { field: 'language', status: 'unknown', code: 'language.parts-unknown', params: { test: 'IELTS', min: 6 } };
+  const withNumbers = {
+    ...extra,
+    textConditions: [{ ru: 'Письмо не ниже 6.0, остальные части не ниже 5.5', field: 'language', kind: 'must' }],
+  };
+  const model = cardModel(row([parts], 'check'), withNumbers, today);
+  assert.deepEqual(model.reasons[0].says, ['Письмо не ниже 6.0, остальные части не ниже 5.5']);
+});
+
 test('отказ без обходного пути говорит об этом честно', () => {
   const noWay = { ...extra, textConditions: extra.textConditions.filter((c) => c.kind !== 'workaround') };
   assert.equal(cardModel(row([fail], 'no'), noWay, today).reasons[0].noWorkaround, true);

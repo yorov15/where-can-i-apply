@@ -59,7 +59,8 @@
       "anyOf": [
         {
           "test": "IELTS",
-          "min": 6.0
+          "min": 6.0,
+          "parts": true
         }
       ],
       "evidence": "IELTS - 6.0; writing -6.0; reading & listening & speaking - 5.5"
