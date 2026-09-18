@@ -75,7 +75,7 @@ test('неразмеченные условия идут одним списко
 
 test('шапка карточки и подвал', () => {
   const model = cardModel(row([fail], 'no'), extra, today);
-  assert.equal(model.headline, 'Нельзя: нужно 12 лет школы, у тебя 11 · есть обходной путь');
+  assert.equal(model.headline, 'Пока нельзя: нужно 12 лет школы, у тебя 11 · есть обходной путь');
   assert.equal(model.deadlineLine, 'Сроки программа не объявила');
   assert.equal(model.coverageLine, 'Жильё — за свой счёт');
   assert.equal(model.source, 'Проверено по сайту программы 13 сентября 2026, проверял ассистент');

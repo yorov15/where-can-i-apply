@@ -151,10 +151,17 @@ const SPECIAL = {
     short: `балл ${mine}% при пороге ${need}%`,
     detail: `Твой балл — ${mine}%, программе нужно ${need}%. Решает итоговый балл аттестата: если он окажется выше, ответ изменится.`,
   }),
-  'language.score-missing': ({ options, advisory }) => ({
-    short: 'вписать балл экзамена',
-    detail: `Ты отметил экзамен, но не вписал балл. ${advisory ? 'Программа советует' : 'Нужен'} ${optionList(options)}.`,
-  }),
+  // Порог стоит в самой строке: человек с отмеченным, но не вписанным
+  // экзаменом видел на трёх десятках карточек одинаковое «вписать балл
+  // экзамена» и не мог отличить программу с 6.0 от программы с 7.5, не
+  // раскрыв каждую.
+  'language.score-missing': ({ options, advisory, marked = [] }) => {
+    const need = options.find((option) => marked.includes(option.test)) ?? options[0];
+    return {
+      short: `вписать балл ${testName(need.test)} (${advisory ? 'рекомендуют' : 'нужно'} от ${need.min})`,
+      detail: `Ты отметил экзамен, но не вписал балл. ${advisory ? 'Программа советует' : 'Нужен'} ${optionList(options)}.`,
+    };
+  },
   'language.below-advisory': ({ options }) => ({
     short: 'балл ниже рекомендованного',
     detail: `Программа советует ${optionList(options)}, твой результат ниже. Это не отказ: программа называет балл рекомендацией, решает отбор.`,
@@ -201,8 +208,11 @@ export function headline(verdict, program) {
   const first = ordered[0];
   const text = reasonText(first);
   if (verdict.status === 'no') {
-    const way = (program.workaroundFields ?? []).includes(first.field) ? ' · есть обходной путь' : '';
-    return `${text.changeable ? 'Пока нельзя' : 'Нельзя'}: ${text.short}${way}`;
+    // Обходной путь и есть то самое «пока»: «Нельзя … есть обходной путь»
+    // в одной строке противоречит само себе.
+    const hasWay = (program.workaroundFields ?? []).includes(first.field);
+    const way = hasWay ? ' · есть обходной путь' : '';
+    return `${text.changeable || hasWay ? 'Пока нельзя' : 'Нельзя'}: ${text.short}${way}`;
   }
   const more = ordered.length - 1;
   return `Можно, но сначала: ${text.short}${more > 0 ? ` и ещё ${more}` : ''}`;

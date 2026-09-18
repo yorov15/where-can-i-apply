@@ -277,21 +277,23 @@ export function checkLanguage(profile, rule, ctx) {
   if (need.length === 0) return r('pass');
 
   const mine = profile.languageTests ?? [];
-  let sawEmpty = false;
+  // Какие из названных программой экзаменов человек отметил, но не вписал
+  // балл: по ним карточка скажет, какой балл нужен именно здесь.
+  const marked = [];
   let sawBelow = false;
 
   for (const req of need) {
     const got = mine.find((x) => x.test === req.test);
     if (!got) continue;
-    if (got.score == null) { sawEmpty = true; continue; }
+    if (got.score == null) { marked.push(req.test); continue; }
     if (got.score >= req.min) return r('pass');
     sawBelow = true;
   }
 
   const options = need.map(({ test, min }) => ({ test, min }));
   const advisory = rule.advisory === true;
-  if (sawEmpty) {
-    return r('unknown', 'language.score-missing', { options, advisory });
+  if (marked.length) {
+    return r('unknown', 'language.score-missing', { options, advisory, marked });
   }
   if (sawBelow) {
     // Часть программ публикует не порог, а рекомендацию: KAIST пишет над

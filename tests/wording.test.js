@@ -27,8 +27,9 @@ const SAMPLES = [
   { field: 'gpa', status: 'unknown', code: 'gpa.near-threshold', params: { mine: 72, need: 70 } },
   { field: 'gpa', status: 'unknown', code: 'gpa.below-advisory', params: { mine: 88, need: 90 } },
   { field: 'gpa', status: 'fail', code: 'gpa.below', params: { mine: 60, need: 70 } },
+  { field: 'language', status: 'unknown', code: 'language.score-missing', params: { options: opts, advisory: false, marked: ['IELTS'] } },
+  { field: 'language', status: 'unknown', code: 'language.score-missing', params: { options: opts, advisory: true, marked: ['TOEFL_IBT'] } },
   { field: 'language', status: 'unknown', code: 'language.score-missing', params: { options: opts, advisory: false } },
-  { field: 'language', status: 'unknown', code: 'language.score-missing', params: { options: opts, advisory: true } },
   { field: 'language', status: 'unknown', code: 'language.below-advisory', params: { options: opts } },
   { field: 'language', status: 'fail', code: 'language.below', params: { options: opts } },
   { field: 'language', status: 'unknown', code: 'language.other-test', params: { tests: ['TOEFL_IBT_2026'], options: opts, advisory: false } },
@@ -78,6 +79,21 @@ test('образцы из спецификации', () => {
   assert.equal(lang.changeable, true);
 });
 
+// Человек отметил IELTS и не вписал балл — и тридцать карточек говорили
+// ему одно и то же «вписать балл экзамена», молча пряча главное: где 6.0,
+// а где 7.5. Порог должен стоять в самой строке.
+test('заголовок называет экзамен и нужный балл', () => {
+  const marked = reasonText({ field: 'language', status: 'unknown', code: 'language.score-missing', params: { options: opts, advisory: false, marked: ['IELTS'] } });
+  assert.equal(marked.short, 'вписать балл IELTS (нужно от 6.5)');
+
+  const toefl = reasonText({ field: 'language', status: 'unknown', code: 'language.score-missing', params: { options: opts, advisory: true, marked: ['TOEFL_IBT'] } });
+  assert.equal(toefl.short, 'вписать балл TOEFL по старой шкале (рекомендуют от 90)');
+
+  // Старые профили и чужие данные могут не назвать отмеченный экзамен.
+  const any = reasonText({ field: 'language', status: 'unknown', code: 'language.score-missing', params: { options: opts, advisory: false } });
+  assert.equal(any.short, 'вписать балл IELTS (нужно от 6.5)');
+});
+
 test('рекомендованный балл не выдаётся за порог', () => {
   const t = reasonText({ field: 'gpa', status: 'unknown', code: 'gpa.below-advisory', params: { mine: 88, need: 90 } });
   assert.match(t.detail, /не отказ/);
@@ -109,7 +125,10 @@ test('заголовок: можно', () => {
 
 test('заголовок: нельзя насовсем, но с обходным путём', () => {
   const verdict = { status: 'no', reasons: [{ field: 'schoolYears', status: 'fail', code: 'schoolYears.below-min', params: { min: 12, mine: 11 } }] };
-  assert.equal(headline(verdict, { workaroundFields: ['schoolYears'] }), 'Нельзя: нужно 12 лет школы, у тебя 11 · есть обходной путь');
+  // Обходной путь и есть то самое «пока»: у Политеха Милана его закрывает
+  // подготовительный курс, и «Нельзя … есть обходной путь» в одной строке
+  // противоречило само себе.
+  assert.equal(headline(verdict, { workaroundFields: ['schoolYears'] }), 'Пока нельзя: нужно 12 лет школы, у тебя 11 · есть обходной путь');
   assert.equal(headline(verdict, {}), 'Нельзя: нужно 12 лет школы, у тебя 11');
 });
 
