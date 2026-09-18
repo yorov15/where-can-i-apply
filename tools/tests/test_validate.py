@@ -108,7 +108,7 @@ class TestTextConditions(unittest.TestCase):
         program["textConditions"] = [
             {"ru": "Моложе 21 года на момент подачи.", "evidence": "under 21 years old"}
         ]
-        self.assertEqual(validate_program(program, SNAPSHOT), [])
+        self.assertEqual(validate_program(program, SNAPSHOT, require_tags=False), [])
 
     def test_condition_with_invented_quote_is_caught(self):
         program = good_program()
