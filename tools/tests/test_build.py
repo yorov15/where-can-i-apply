@@ -2,12 +2,17 @@ import json
 import unittest
 
 from tools.build import (
+    MAX_DETAILS_WIRE_BYTES,
     MAX_INDEX_WIRE_BYTES,
+    build_details,
     build_index,
+    details_entry,
+    details_text,
     index_entry,
     index_text,
     stale_deadlines,
     wire_size,
+    workaround_fields,
 )
 
 PROGRAM = {
@@ -80,23 +85,24 @@ class TestIndexEntry(unittest.TestCase):
     def test_source_is_not_in_index(self):
         self.assertNotIn("source", index_entry(PROGRAM))
 
-    def test_text_conditions_reach_the_site(self):
-        # Они собраны, проверены цитатами — и до карточки не доезжали.
-        # Красная карточка MEXT говорила «нужно 12 лет школы» и молчала
-        # о том, что засчитывается сопоставимое образование.
-        entry = index_entry(PROGRAM)
-        self.assertEqual([c["ru"] for c in entry["textConditions"]], ["условие"])
+    def test_condition_texts_are_not_in_index(self):
+        # Тексты условий едут отдельным файлом: в индексе они не нужны для
+        # ответа, а весят больше всего остального.
+        self.assertNotIn("textConditions", index_entry(PROGRAM))
 
-    def test_text_condition_quotes_stay_behind(self):
-        # Цитата нужна тому, кто проверяет запись, а не тому, кто читает
-        # карточку. В индексе это лишние байты на мобильном интернете.
-        entry = index_entry(PROGRAM)
-        self.assertNotIn("evidence", json.dumps(entry, ensure_ascii=False))
+    def test_workaround_fields_reach_the_index(self):
+        program = json.loads(json.dumps(PROGRAM))
+        program["textConditions"] = [
+            {"ru": "a", "evidence": "x", "field": "schoolYears", "kind": "workaround"},
+            {"ru": "b", "evidence": "x", "field": "language", "kind": "note"},
+            {"ru": "c", "evidence": "x", "field": "citizenship", "kind": "workaround"},
+        ]
+        self.assertEqual(index_entry(program)["workaroundFields"], ["citizenship", "schoolYears"])
 
-    def test_program_without_conditions_gets_an_empty_list(self):
+    def test_program_without_conditions_has_no_workarounds(self):
         program = json.loads(json.dumps(PROGRAM))
         del program["textConditions"]
-        self.assertEqual(index_entry(program)["textConditions"], [])
+        self.assertEqual(index_entry(program)["workaroundFields"], [])
 
     def test_no_limit_flag_and_note_both_reach_the_site(self):
         # Без флага движок не отличит «человек проверил, требования нет»
@@ -259,6 +265,67 @@ class TestIndexText(unittest.TestCase):
     def test_empty_index_is_valid(self):
         empty = {"generatedAt": "2026-09-13", "programs": []}
         self.assertEqual(json.loads(index_text(empty)), empty)
+
+
+class TestDetails(unittest.TestCase):
+    def tagged(self):
+        program = json.loads(json.dumps(PROGRAM))
+        program["applyUrl"] = "https://example.gov/apply"
+        program["source"] = {
+            "url": "https://example.gov",
+            "lastVerified": "2026-09-13",
+            "approvedBy": "assistant",
+            "humanChecked": False,
+            "pages": [{"url": "https://example.gov", "contentHash": "sha256:x"}],
+        }
+        program["textConditions"] = [
+            {"ru": "условие", "evidence": "цитата", "field": "age", "kind": "must"},
+            {"ru": "без тегов", "evidence": "цитата"},
+        ]
+        return program
+
+    def test_conditions_keep_text_and_tags_but_not_quotes(self):
+        entry = details_entry(self.tagged())
+        self.assertEqual(
+            entry["textConditions"],
+            [{"ru": "условие", "field": "age", "kind": "must"}, {"ru": "без тегов"}],
+        )
+        self.assertNotIn("цитата", json.dumps(entry, ensure_ascii=False))
+
+    def test_coverage_note_apply_url_and_source(self):
+        entry = details_entry(self.tagged())
+        self.assertEqual(entry["coverageNote"], "нечто")
+        self.assertEqual(entry["applyUrl"], "https://example.gov/apply")
+        self.assertEqual(
+            entry["source"],
+            {"url": "https://example.gov", "lastVerified": "2026-09-13", "approvedBy": "assistant"},
+        )
+
+    def test_details_cover_the_same_programs_as_index(self):
+        program = self.tagged()
+        draft = dict(self.tagged(), id="draft", status="draft")
+        details = build_details([program, draft], "2026-09-14")
+        index = build_index([program, draft], "2026-09-14")
+        self.assertEqual(list(details["programs"]), [p["id"] for p in index["programs"]])
+
+    def test_details_text_reads_back_and_is_one_program_per_line(self):
+        details = build_details([self.tagged()], "2026-09-14")
+        text = details_text(details)
+        self.assertEqual(json.loads(text), details)
+        self.assertEqual(len(text.strip().splitlines()), 3)
+
+    def test_details_limit_is_larger_than_index_limit(self):
+        self.assertGreater(MAX_DETAILS_WIRE_BYTES, MAX_INDEX_WIRE_BYTES)
+
+
+class TestWorkaroundFields(unittest.TestCase):
+    def test_order_follows_the_form(self):
+        program = {"textConditions": [
+            {"field": "language", "kind": "workaround"},
+            {"field": "age", "kind": "workaround"},
+            {"field": "age", "kind": "workaround"},
+        ]}
+        self.assertEqual(workaround_fields(program), ["age", "language"])
 
 
 if __name__ == "__main__":

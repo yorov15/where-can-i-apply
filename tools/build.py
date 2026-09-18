@@ -28,6 +28,11 @@ from tools.schema import FIELDS, SIGNERS, approved_by
 # и следить за ростом всё равно надо.
 MAX_INDEX_WIRE_BYTES = 64 * 1024
 
+# Детали — тексты раскрытой карточки. Грузятся в фоне после индекса и
+# ответ не задерживают, поэтому предел больше. 14 сентября 2026 всё в одном
+# файле весило бы 66,6 КБ при пределе индекса 64.
+MAX_DETAILS_WIRE_BYTES = 128 * 1024
+
 # Уровень сжатия берём средний, а не максимальный: сервер жмёт примерно
 # так же, и лучше ошибиться в сторону большего числа, чем меньшего.
 GZIP_LEVEL = 6
@@ -63,6 +68,25 @@ def _rule_without_evidence(rule):
     return clean
 
 
+def workaround_fields(program: dict) -> list[str]:
+    """Поля, у которых есть обходной путь. По ним свёрнутая карточка
+    пишет «есть обходной путь», не загружая тексты условий."""
+    found = {
+        condition.get("field")
+        for condition in program.get("textConditions") or []
+        if condition.get("kind") == "workaround"
+    }
+    return [field for field in FIELDS if field in found]
+
+
+def _condition_for_site(condition: dict) -> dict:
+    entry = {"ru": condition.get("ru") or ""}
+    for key in ("field", "kind"):
+        if key in condition:
+            entry[key] = condition[key]
+    return entry
+
+
 def index_entry(program: dict) -> dict:
     coverage = program.get("coverage") or {}
     return {
@@ -80,11 +104,25 @@ def index_entry(program: dict) -> dict:
             for field in FIELDS
         },
         "deadline": program.get("deadline"),
-        # Текстовые условия едут на сайт: это то, что инструмент не умеет
-        # посчитать, но человеку знать обязан. Цитаты из них снимаются —
-        # они нужны при проверке записи, а не в карточке.
+        # Тексты условий уехали в details.json. Здесь остаётся только то,
+        # что нужно свёрнутой карточке и сводке.
+        "workaroundFields": workaround_fields(program),
+    }
+
+
+def details_entry(program: dict) -> dict:
+    coverage = program.get("coverage") or {}
+    source = program.get("source") or {}
+    return {
+        "coverageNote": (coverage.get("note") or {}).get("ru") or None,
+        "applyUrl": program.get("applyUrl"),
+        "source": {
+            "url": source.get("url"),
+            "lastVerified": source.get("lastVerified"),
+            "approvedBy": approved_by(program),
+        },
         "textConditions": [
-            {"ru": (condition.get("ru") or "")}
+            _condition_for_site(condition)
             for condition in program.get("textConditions") or []
         ],
     }
@@ -112,21 +150,31 @@ def stale_deadlines(programs, today: str) -> list[str]:
     return late
 
 
-def build_index(programs: list[dict], generated_at: str) -> dict:
+def publishable(programs: list[dict]) -> list[dict]:
     # Запись без списка страниц публиковать нельзя: за таким источником
     # слежение не работает, и устаревшие требования выдавались бы
     # уверенно и бессрочно.
-    publishable = [
+    chosen = [
         program
         for program in programs
         if program.get("status") == "published"
         and approved_by(program) in SIGNERS
         and (program.get("source") or {}).get("pages")
     ]
-    publishable.sort(key=lambda program: program["id"])
+    return sorted(chosen, key=lambda program: program["id"])
+
+
+def build_index(programs: list[dict], generated_at: str) -> dict:
     return {
         "generatedAt": generated_at,
-        "programs": [index_entry(program) for program in publishable],
+        "programs": [index_entry(program) for program in publishable(programs)],
+    }
+
+
+def build_details(programs: list[dict], generated_at: str) -> dict:
+    return {
+        "generatedAt": generated_at,
+        "programs": {program["id"]: details_entry(program) for program in publishable(programs)},
     }
 
 
@@ -143,6 +191,17 @@ def index_text(index: dict) -> str:
     return f'{{"generatedAt":{head},"programs":[\n{programs}\n]}}\n'
 
 
+def details_text(details: dict) -> str:
+    """Как index_text: без отступов, по программе на строку."""
+    compact = {"separators": (",", ":"), "ensure_ascii": False}
+    programs = ",\n".join(
+        f"{json.dumps(program_id, **compact)}:{json.dumps(entry, **compact)}"
+        for program_id, entry in details["programs"].items()
+    )
+    head = json.dumps(details["generatedAt"], **compact)
+    return f'{{"generatedAt":{head},"programs":{{\n{programs}\n}}}}\n'
+
+
 def main() -> int:
     root = Path(__file__).resolve().parent.parent
     programs_dir = root / "data" / "programs"
@@ -156,6 +215,7 @@ def main() -> int:
     )
 
     index = build_index(programs, date.today().isoformat())
+    details = build_details(programs, date.today().isoformat())
 
     # Молча выкинуть утверждённую программу из выдачи хуже, чем не собрать
     # индекс вовсе: человек считает, что она на сайте.
@@ -169,18 +229,23 @@ def main() -> int:
             print(f"{program['id']}: утверждена, но в индекс не пошла — проверь source")
 
     text = index_text(index)
+    extra = details_text(details)
 
-    size = len(text.encode("utf-8"))
     wire = wire_size(text)
+    extra_wire = wire_size(extra)
     if wire > MAX_INDEX_WIRE_BYTES:
         print(f"Индекс вырос до {wire} байт по проводу при пределе {MAX_INDEX_WIRE_BYTES}.")
         print("Это не мелочь: аудитория сидит на дорогом мобильном интернете.")
         return 1
+    if extra_wire > MAX_DETAILS_WIRE_BYTES:
+        print(f"Детали выросли до {extra_wire} байт по проводу при пределе {MAX_DETAILS_WIRE_BYTES}.")
+        return 1
 
     (root / "data" / "index.json").write_text(text, encoding="utf-8")
+    (root / "data" / "details.json").write_text(extra, encoding="utf-8")
     print(
-        f"Записано программ: {len(index['programs'])}, "
-        f"{wire} байт по проводу ({size} на диске)"
+        f"Записано программ: {len(index['programs'])}; "
+        f"индекс {wire} байт по проводу, детали {extra_wire}"
     )
     return 0
 

@@ -1,7 +1,10 @@
-// Индекс — один файл со всем, что нужно для вердикта. Цитаты и источники
-// в него не входят: они нужны только когда человек открыл карточку.
-export async function loadIndex() {
-  const res = await fetch('data/index.json', { cache: 'no-cache' });
+// Индекс — всё для ответа, сводки и свёрнутых карточек. Детали — тексты
+// раскрытой карточки; грузятся следом и ответ не задерживают.
+async function loadJson(path) {
+  const res = await fetch(path, { cache: 'no-cache' });
   if (!res.ok) throw new Error(`Не удалось загрузить данные: ${res.status}`);
   return res.json();
 }
+
+export const loadIndex = () => loadJson('data/index.json');
+export const loadDetails = () => loadJson('data/details.json');
