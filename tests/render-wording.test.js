@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { notLimitedItems } from '../js/render.js';
+import { notLimitedItems } from '../js/card-model.js';
 
 // За каждой строкой стоит подпись человека, проверившего страницу, и его
 // собственные слова. Раньше это была одна строка «не ограничивает:
