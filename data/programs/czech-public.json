@@ -57,47 +57,69 @@
   "textConditions": [
     {
       "ru": "Бесплатно — только на чешском языке. Программы на чешском в государственных вузах не стоят ничего, и гражданство тут не важно.",
-      "evidence": "Public and state higher education institutions in Czechia offer tuition-free degree programmes taught in Czech, regardless of nationality."
+      "evidence": "Public and state higher education institutions in Czechia offer tuition-free degree programmes taught in Czech, regardless of nationality.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Путь такой: сначала учишь чешский — на языковом курсе или подготовительной программе, потом доводишь его до нужного уровня, подаёшь на чешскоязычную программу, и вуз сам проверяет, хватает ли языка.",
-      "evidence": "Step 1 - Learn Czech Take a Czech language course or join a foundation programme."
+      "evidence": "Step 1 - Learn Czech Take a Czech language course or join a foundation programme.",
+      "field": "language",
+      "kind": "workaround"
     },
     {
       "ru": "Уровень языка обычно нужен B2. Инструмент чешский не проверяет: в анкете есть только английские экзамены.",
-      "evidence": "Many Czech-taught degree programmes require at least B2 level Czech."
+      "evidence": "Many Czech-taught degree programmes require at least B2 level Czech.",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Программы на английском платные: обычно от 0 до 6 000 евро в год, а медицина, искусство и отдельные специальности — от 8 000 до 25 000.",
-      "evidence": "most programmes: 0-6,000 EUR per year medicine, arts and some specialised fields: 8,000-25,000 EUR per year"
+      "evidence": "most programmes: 0-6,000 EUR per year medicine, arts and some specialised fields: 8,000-25,000 EUR per year",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Даже на бесплатной программе есть расходы: вступительный взнос при подаче, а если учиться дольше стандартного срока, могут начислить плату.",
-      "evidence": "you will usually pay an admission fee additional fees may apply if you exceed the standard length of study"
+      "evidence": "you will usually pay an admission fee additional fees may apply if you exceed the standard length of study",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Частные вузы к этому правилу отношения не имеют: они сами назначают плату.",
-      "evidence": "private universities set their own tuition fees"
+      "evidence": "private universities set their own tuition fees",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Единого приёма нет: требования, экзамены и сроки устанавливает каждый вуз и даже факультет отдельно.",
-      "evidence": "Each university and faculty is responsible for its own admission procedure."
+      "evidence": "Each university and faculty is responsible for its own admission procedure.",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Ориентир по срокам: много дедлайнов приходится на февраль — апрель, вступительные экзамены и собеседования идут весной и в начале лета, результаты объявляют в июне и июле.",
-      "evidence": "February to April: many application deadlines for the next academic year"
+      "evidence": "February to April: many application deadlines for the next academic year",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Аттестат нужно признать в Чехии, и это долго: портал советует начинать за шесть-девять месяцев до учёбы.",
-      "evidence": "6 to 9 months before studies: prepare your documents and start the recognition process if needed"
+      "evidence": "6 to 9 months before studies: prepare your documents and start the recognition process if needed",
+      "field": "schoolCountry",
+      "kind": "must"
     },
     {
       "ru": "Денег на жизнь никто не даёт. Общежитие стоит 160–330 евро в месяц за место в комнате на двоих и 250–450 за одноместную; комната в съёмной квартире — 250–500.",
-      "evidence": "student dormitory (shared room): 160 - 330 EUR student dormitory (single room): 250 - 450 EUR"
+      "evidence": "student dormitory (shared room): 160 - 330 EUR student dormitory (single room): 250 - 450 EUR",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "На еду уходит примерно 150–230 евро в месяц, студенческий проездной на год стоит 50–100 евро.",
-      "evidence": "A yearly student public transport pass can cost roughly 50-100 EUR"
+      "evidence": "A yearly student public transport pass can cost roughly 50-100 EUR",
+      "field": null,
+      "kind": "money"
     }
   ],
   "deadline": {

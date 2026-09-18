@@ -85,59 +85,87 @@
   "textConditions": [
     {
       "ru": "Для иностранцев отбор учитывает, нужна ли помощь: это один из факторов решения.",
-      "evidence": "Cornell's undergraduate admission process for international students is need-aware, meaning interest in or need for financial aid is one factor amongst many considered when making admission decisions."
+      "evidence": "Cornell's undergraduate admission process for international students is need-aware, meaning interest in or need for financial aid is one factor amongst many considered when making admission decisions.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Принятым иностранцам закрывают 100% посчитанной нужды: гранты, ежегодная подработка и, в зависимости от дохода семьи, разумные кредиты.",
-      "evidence": "Cornell meets 100 percent of admitted international undergraduates' demonstrated financial need with annual aid offers that include Cornell grants, an annual work-study award, and reasonable student loans depending on total family income."
+      "evidence": "Cornell meets 100 percent of admitted international undergraduates' demonstrated financial need with annual aid offers that include Cornell grants, an annual work-study award, and reasonable student loans depending on total family income.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Помощь просят сразу с заявкой и к её сроку. Кто не попросил вовремя, не получит помощь ни в один год учёбы.",
-      "evidence": "If you don't apply for aid by the posted deadline, you will not be eligible to apply for financial aid at any time as an undergraduate at Cornell."
+      "evidence": "If you don't apply for aid by the posted deadline, you will not be eligible to apply for financial aid at any time as an undergraduate at Cornell.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Для помощи нужна анкета CSS Profile, код Корнелла 2098. Освобождение от её платы иностранцам обычно не дают.",
-      "evidence": "International students are generally not eligible for a CSS Profile Fee waiver"
+      "evidence": "International students are generally not eligible for a CSS Profile Fee waiver",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "С части помощи, которая больше платы за обучение и обязательных сборов, США удерживают налог 14%, если нет освобождения по налоговому договору.",
-      "evidence": "Cornell is required to withhold 14 percent of any grant or scholarship aid greater than tuition and mandatory fees to pay U.S. tax, if you do not qualify for exemption under a tax treaty ."
+      "evidence": "Cornell is required to withhold 14 percent of any grant or scholarship aid greater than tuition and mandatory fees to pay U.S. tax, if you do not qualify for exemption under a tax treaty .",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Есть стипендия Левитанов: полные стипендии для пяти студентов в год. Условия: школа вне США, зачисление в Корнелл и право на большую помощь по нужде. Сохраняется при среднем балле от 3.0.",
-      "evidence": "Levitan Family Scholarships currently provide support to five students every year."
+      "evidence": "Levitan Family Scholarships currently provide support to five students every year.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Нужен SAT или ACT. Результат можно указать сам, но при зачислении понадобятся официальные баллы.",
-      "evidence": "First-year applicants are required to submit the SAT or ACT scores when applying to Cornell."
+      "evidence": "First-year applicants are required to submit the SAT or ACT scores when applying to Cornell.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Сертификат по английскому обязателен, если английский не родной и последние четыре года ты учился не на нём.",
-      "evidence": "Applicants who do not meet one of these criteria are required to submit an English proficiency exam score."
+      "evidence": "Applicants who do not meet one of these criteria are required to submit an English proficiency exam score.",
+      "field": "language",
+      "kind": "workaround"
     },
     {
       "ru": "Чтобы быть конкурентным, нужно IELTS от 7.5, TOEFL от 100 по старой шкале или от 5.0 по новой, Duolingo от 130, Cambridge C1 или C2 от 191. Вуз называет эти числа условием конкурентности, поэтому ниже них карточка не отказывает, а просит проверить.",
-      "evidence": "Cambridge C1 Advanced or C2 Proficiency, minimum score of 191"
+      "evidence": "Cambridge C1 Advanced or C2 Proficiency, minimum score of 191",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Заявку подают в один из колледжей или школ Корнелла, у каждого свои дополнительные требования и эссе.",
-      "evidence": "At Cornell, you'll apply directly to one of our colleges or schools; be sure to explore your options to choose your best fit."
+      "evidence": "At Cornell, you'll apply directly to one of our colleges or schools; be sure to explore your options to choose your best fit.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Сроки: ранний тур до 1 ноября, остальные документы до 13 ноября, ответ в середине декабря. Обычный тур до 2 января, остальные документы до 19 января, ответ в конце марта. Документы на помощь иностранцы сдают в день срока заявки: 1 ноября или 2 января.",
-      "evidence": "November 1 Aid application deadline for international students"
+      "evidence": "November 1 Aid application deadline for international students",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Ранний тур обязывающий: если примут, все остальные заявки надо отозвать.",
-      "evidence": "If admitted in ED, students must withdraw all applications to other colleges and universities."
+      "evidence": "If admitted in ED, students must withdraw all applications to other colleges and universities.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Что собрать: официальный транскрипт, школьный отчёт, рекомендацию консультанта или директора и две рекомендации учителей. Оценки за полугодие выпускного класса досылают, когда появятся.",
-      "evidence": "You're required to submit two teacher recommendations, which should highlight your academic strengths and contributions in the classroom."
+      "evidence": "You're required to submit two teacher recommendations, which should highlight your academic strengths and contributions in the classroom.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Плата за подачу 85 долларов. Освобождение дают, если плата тяжела для семьи и ты просишь финансовую помощь.",
-      "evidence": "Cornell's application fee is $85. However, if the application fee presents a financial burden for you or your family and you plan to apply for financial aid, you may qualify for a fee waiver."
+      "evidence": "Cornell's application fee is $85. However, if the application fee presents a financial burden for you or your family and you plan to apply for financial aid, you may qualify for a fee waiver.",
+      "field": null,
+      "kind": "money"
     }
   ],
   "deadline": {

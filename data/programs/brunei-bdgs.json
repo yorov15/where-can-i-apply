@@ -69,75 +69,111 @@
   "textConditions": [
     {
       "ru": "Учиться можно в одном из пяти вузов Брунея: Universiti Brunei Darussalam (UBD), UNISSA, Universiti Teknologi Brunei (UTB), KUPU SB или Politeknik Brunei.",
-      "evidence": "Universiti Brunei Darussalam (UBD), Universiti Islam Sultan Sharif Ali (UNISSA), Universiti Teknologi Brunei (UTB), Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB) and Politeknik Brunei (PB)"
+      "evidence": "Universiti Brunei Darussalam (UBD), Universiti Islam Sultan Sharif Ali (UNISSA), Universiti Teknologi Brunei (UTB), Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB) and Politeknik Brunei (PB)",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Стипендия — для тех, кто едет учиться в Бруней впервые. Не могут подать граждане и постоянные жители Брунея, а также те, кто уже учится или учился в вузе Брунея.",
-      "evidence": "Bruneians, Brunei Permanent Residents and international students studying/who have studied in Brunei tertiary institutions are NOT eligible."
+      "evidence": "Bruneians, Brunei Permanent Residents and international students studying/who have studied in Brunei tertiary institutions are NOT eligible.",
+      "field": "citizenship",
+      "kind": "must"
     },
     {
       "ru": "На бакалавриат берут, если на 1 июля года начала учёбы тебе не больше 25.",
-      "evidence": "Not exceed the age of 25, for Undergraduate and Diploma programmes, and the age of 35, for Postgraduate Master's Degree programmes, on the first day of July on the year when the course/programme starts."
+      "evidence": "Not exceed the age of 25, for Undergraduate and Diploma programmes, and the age of 35, for Postgraduate Master's Degree programmes, on the first day of July on the year when the course/programme starts.",
+      "field": "age",
+      "kind": "note"
     },
     {
       "ru": "Английский: IELTS от 6.0 или TOEFL от 550 — какую версию TOEFL имеют в виду, объявление не уточняет. Подходят и английский в O Level на Credit 6, и IGCSE на C. Заявки без нужного уровня отклоняют.",
-      "evidence": "Be proficient in English with a Credit 6 at GCE 'O' Level Examination"
+      "evidence": "Be proficient in English with a Credit 6 at GCE 'O' Level Examination",
+      "field": "language",
+      "kind": "must"
     },
     {
       "ru": "Могут вызвать на собеседование и на письменный экзамен по английскому, малайскому или арабскому — смотря по программе.",
-      "evidence": "An applicant may be required to appear for an interview at such place(s) as may be determined by the institutions offering the programmes"
+      "evidence": "An applicant may be required to appear for an interview at such place(s) as may be determined by the institutions offering the programmes",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Требования к оценкам у каждого вуза свои — читай описание своей программы до подачи.",
-      "evidence": "Please read all information regarding the courses/programmes that you are applying thoroughly, before submitting your application form."
+      "evidence": "Please read all information regarding the courses/programmes that you are applying thoroughly, before submitting your application form.",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Документы: удостоверение личности, заверенные копии аттестата, оценок и грамот, заверенные копии свидетельства о рождении и паспорта, две рекомендации (формы C1 и C2). Всё, что не на английском, — с заверенным переводом на английский.",
-      "evidence": "Certified English translations of supporting documents must be submitted for documents that are not in English."
+      "evidence": "Certified English translations of supporting documents must be submitted for documents that are not in English.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Подают через онлайн-форму BDGS на сайте МИД Брунея. Для UBD и UTB нужна ещё отдельная заявка на сайте самого вуза.",
-      "evidence": "Applicants applying to Universiti Brunei Darussalam (UBD) must also complete an online application through"
+      "evidence": "Applicants applying to Universiti Brunei Darussalam (UBD) must also complete an online application through",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Каждый месяц платят 500 брунейских долларов на личные расходы и 150 на питание, на книги — 600 в год.",
-      "evidence": "a monthly personal allowance of BND$500.00; a monthly meals allowance of BND$150.00; an annual book allowance of BND$600.00"
+      "evidence": "a monthly personal allowance of BND$500.00; a monthly meals allowance of BND$150.00; an annual book allowance of BND$600.00",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Совмещать с другой стипендией, грантом или кредитом без письменного разрешения МИД нельзя — иначе стипендию отзовут сразу.",
-      "evidence": "This scholarship may be terminated or revoked immediately should the scholarship recipient be found holding another scholarship, fellowship, grant or loan without prior written approval of the Ministry."
+      "evidence": "This scholarship may be terminated or revoked immediately should the scholarship recipient be found holding another scholarship, fellowship, grant or loan without prior written approval of the Ministry.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Работать за деньги во время учёбы нельзя.",
-      "evidence": "A scholarship recipient is not permitted to undertake any paid employment"
+      "evidence": "A scholarship recipient is not permitted to undertake any paid employment",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Семью брать не советуют: доплат на супруга и детей нет, и жильё им не дают.",
-      "evidence": "No marriage allowance nor child allowance is payable to the scholarship recipient"
+      "evidence": "No marriage allowance nor child allowance is payable to the scholarship recipient",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Нужно уважать обычаи, культуру и официальную религию Брунея и не заниматься политикой.",
-      "evidence": "respect the customs, culture and official religion of Brunei Darussalam"
+      "evidence": "respect the customs, culture and official religion of Brunei Darussalam",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "После окончания учёбы нужно сразу уехать из Брунея.",
-      "evidence": "Upon completion of the programme, the scholarship recipient will be required to leave Brunei Darussalam with immediate effect."
+      "evidence": "Upon completion of the programme, the scholarship recipient will be required to leave Brunei Darussalam with immediate effect.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Решение об отборе окончательное: споры и вопросы о нём не рассматривают.",
-      "evidence": "Any disputes or enquiries pertaining to the decision made will not be entertained."
+      "evidence": "Any disputes or enquiries pertaining to the decision made will not be entertained.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Полные условия стипендии присылают только после одобрения; принимая её, подписываешь согласие с ними.",
-      "evidence": "The full listing of the terms and conditions of the scholarship will be provided to the applicant once the application is successful and a scholarship is offered."
+      "evidence": "The full listing of the terms and conditions of the scholarship will be provided to the applicant once the application is successful and a scholarship is offered.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "На сессию 2026/2027 приём открылся 15 декабря 2025.",
-      "evidence": "for the academic session 2026 / 2027 will open on 15 December 2025"
+      "evidence": "for the academic session 2026 / 2027 will open on 15 December 2025",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Закрылся он 15 февраля 2026. Объявления на 2027/2028 ещё нет, поэтому срок в карточке — по прошлому году и помечен неподтверждённым.",
-      "evidence": "The closing date for application of the Scholarship is 15 February 2026."
+      "evidence": "The closing date for application of the Scholarship is 15 February 2026.",
+      "field": null,
+      "kind": "steps"
     }
   ],
   "deadline": {

@@ -89,71 +89,105 @@
   "textConditions": [
     {
       "ru": "Бакалавриат по этой стипендии — только на румынском. Кто не знает языка, сначала год учит румынский на подготовительном курсе, и его тоже оплачивают.",
-      "evidence": "For candidates who do not speak Romanian, a preparatory year is granted for the study of the Romanian language prior to the actual university studies"
+      "evidence": "For candidates who do not speak Romanian, a preparatory year is granted for the study of the Romanian language prior to the actual university studies",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Подготовительный год можно пропустить, если при поступлении сдашь тест по румынскому, покажешь сертификат румынского не ниже B1 или документы о трёх годах учёбы подряд на румынском в румынской системе образования.",
-      "evidence": "present a certificate of linguistic competence in Romanian, minimum level B1"
+      "evidence": "present a certificate of linguistic competence in Romanian, minimum level B1",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Медицину, стоматологию и фармацию эта стипендия не оплачивает.",
-      "evidence": "scholarships are NOT awarded in the fields of MEDICINE, DENTAL MEDICINE and PHARMACY"
+      "evidence": "scholarships are NOT awarded in the fields of MEDICINE, DENTAL MEDICINE and PHARMACY",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Средний балл за годы учёбы в последней оконченной школе — не ниже 7 по румынской 10-балльной шкале или «хорошо». Как пересчитывают таджикский аттестат, платформа не пишет, поэтому балл инструмент не проверяет.",
-      "evidence": "an average of the study years, for the last graduated school, of at least 7 (seven) corresponding to the scoring system in Romania or the Good score"
+      "evidence": "an average of the study years, for the last graduated school, of at least 7 (seven) corresponding to the scoring system in Romania or the Good score",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Подают только с оконченной школой: к концу приёма нужен аттестат или справка о сданных выпускных экзаменах. Если к концу приёма у тебя нет ни того ни другого, в этом цикле подать не получится — только в следующем.",
-      "evidence": "Copy of the certificate proving the passing of the baccalaureate, bachelor's or master's exam, as the case may be, for graduates who do not hold yet the diploma"
+      "evidence": "Copy of the certificate proving the passing of the baccalaureate, bachelor's or master's exam, as the case may be, for graduates who do not hold yet the diploma",
+      "field": "graduationYear",
+      "kind": "must"
     },
     {
       "ru": "Документы: аттестат, оценки за годы учёбы, свидетельство о рождении, первые три страницы паспорта и резюме; переводы — на английский, французский, испанский или румынский. Документы об учёбе нужно апостилировать или заверить в министерстве образования своей страны.",
-      "evidence": "All study documents must be apostilled under the Hague Convention or authenticated by the relevant authorities in the home country"
+      "evidence": "All study documents must be apostilled under the Hague Convention or authenticated by the relevant authorities in the home country",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Возрастного предела нет. Если к началу занятий тебе не будет 18, нужно нотариальное согласие родителей.",
-      "evidence": "Copy of the notarized declaration of parental consent in the case of candidates who have not reached the age of 18 by the date of commencement of the courses"
+      "evidence": "Copy of the notarized declaration of parental consent in the case of candidates who have not reached the age of 18 by the date of commencement of the courses",
+      "field": "age",
+      "kind": "must"
     },
     {
       "ru": "Подают только через платформу Study in Romania. Заявки по почте, через посольства или в министерства не рассматривают.",
-      "evidence": "The scholarship application can be sent ONLY through the Study in Romania platform."
+      "evidence": "The scholarship application can be sent ONLY through the Study in Romania platform.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Заявка одна на цикл, и после отправки её нельзя ни изменить, ни дополнить — проверь всё до отправки.",
-      "evidence": "You can only submit one application during each programme."
+      "evidence": "You can only submit one application during each programme.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Ежемесячную стипендию платят и на подготовительном году, и на бакалавриате, но не дольше срока программы. Сумму платформа не называет — только «по действующему законодательству».",
-      "evidence": "granting a monthly financial aid, in accordance with the legislation in force"
+      "evidence": "granting a monthly financial aid, in accordance with the legislation in force",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Общежитие дают только при наличии мест; условия проживания узнаёшь у своего вуза.",
-      "evidence": "accommodation will be provided to the extent of available places"
+      "evidence": "accommodation will be provided to the extent of available places",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Визу оформляешь и оплачиваешь сам.",
-      "evidence": "to bear all costs inherent to a visa application"
+      "evidence": "to bear all costs inherent to a visa application",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Если выбранный вуз не получится, министерство может предложить другой вуз того же направления. Сменить направление или вуз потом нельзя.",
-      "evidence": "Subsequent requests for a change of the field of study, respectively/or of the university, will not be taken into consideration."
+      "evidence": "Subsequent requests for a change of the field of study, respectively/or of the university, will not be taken into consideration.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Стипендию отнимают за отчисление, смену направления или нарушение договора с вузом — и уже не возвращают. За пропуски и недобор кредитов тоже лишают, но её можно вернуть, если в следующем году наверстаешь.",
-      "evidence": "The scholarship for foreign citizens cannot be reinstated after it has been lost under the conditions set out in points c)-f)."
+      "evidence": "The scholarship for foreign citizens cannot be reinstated after it has been lost under the conditions set out in points c)-f).",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Отложить стипендию на следующий год нельзя.",
-      "evidence": "The scholarship awarded cannot be suspended or transferred for the next academic year."
+      "evidence": "The scholarship awarded cannot be suspended or transferred for the next academic year.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Не могут подать: граждане стран ЕС, люди румынского происхождения (для них другие программы), получившие защиту в Румынии, лица без гражданства с признанным пребыванием в Румынии, семьи дипломатов и сотрудников международных организаций в Румынии и те, у кого уже есть румынская госстипендия на ту же ступень.",
-      "evidence": "citizens of Romanian origin or who are part of the Romanian historical communities in the proximity of Romania (entitled to different scholarship programmes)"
+      "evidence": "citizens of Romanian origin or who are part of the Romanian historical communities in the proximity of Romania (entitled to different scholarship programmes)",
+      "field": "citizenship",
+      "kind": "must"
     },
     {
       "ru": "Прошлый цикл: подача с 16 февраля по 31 марта 2026, результаты — около 15 июля. Стипендии дают каждый год, но даты на 2027 ещё не объявлены, поэтому срок в карточке — по прошлому году и помечен неподтверждённым.",
-      "evidence": "Applications can be submitted only via the online platform, between 16 February 2026 and 31 March 2026, with the selection results being announced around 15 July 2026."
+      "evidence": "Applications can be submitted only via the online platform, between 16 February 2026 and 31 March 2026, with the selection results being announced around 15 July 2026.",
+      "field": null,
+      "kind": "steps"
     }
   ],
   "deadline": {

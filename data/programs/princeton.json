@@ -63,59 +63,87 @@
   "textConditions": [
     {
       "ru": "Гражданство и страна проживания на рассмотрение не влияют: заявки читают одинаково.",
-      "evidence": "We review all applications in the same manner, regardless of citizenship or country of residence."
+      "evidence": "We review all applications in the same manner, regardless of citizenship or country of residence.",
+      "field": "citizenship",
+      "kind": "note"
     },
     {
       "ru": "Просьба о помощи не вредит заявке: отбор идёт без оглядки на то, нужны тебе деньги или нет.",
-      "evidence": "Princeton admission is need-blind - there is no disadvantage in the admission process for financial aid applicants."
+      "evidence": "Princeton admission is need-blind - there is no disadvantage in the admission process for financial aid applicants.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Иностранцам нужду закрывают так же, как американцам, — полностью.",
-      "evidence": "The full need of all admitted international students is met the same as it is for students from the United States."
+      "evidence": "The full need of all admitted international students is met the same as it is for students from the United States.",
+      "field": "citizenship",
+      "kind": "money"
     },
     {
       "ru": "Помощь дают грантом, а не кредитом: возвращать её не нужно. Стипендий за успехи и за спорт здесь нет вообще.",
-      "evidence": "Princeton does not offer academic or athletic merit scholarships."
+      "evidence": "Princeton does not offer academic or athletic merit scholarships.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Ориентир по взносу семьи из таблицы вуза: при доходе 150 000 долларов в год — ноль, при 200 000 — 12 500, при 250 000 — 25 000. Оговорка самого вуза: расчёт для семей с активами меньше 175 000, живущих в США и с одним ребёнком в вузе. Для семьи из Таджикистана считать будут отдельно.",
-      "evidence": "Income Total Family Contribution* 150,000 0 200,000 12,500 250,000 25,000"
+      "evidence": "Income Total Family Contribution* 150,000 0 200,000 12,500 250,000 25,000",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Сколько стоит без помощи: обучение 68 140 долларов в 2026/27 году, а с жильём, питанием и сборами — около 90 574.",
-      "evidence": "$68,140 is the tuition for the 2026-27 academic year"
+      "evidence": "$68,140 is the tuition for the 2026-27 academic year",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Про SAT и ACT: сейчас они не обязательны, но вуз возвращает это требование с цикла 2027-28 — для тех, кто поступает осенью 2028 года. Если поступаешь раньше, требование тебя не касается.",
-      "evidence": "Princeton will return to requiring standardized testing for undergraduate admission beginning with the 2027-28 admission cycle."
+      "evidence": "Princeton will return to requiring standardized testing for undergraduate admission beginning with the 2027-28 admission cycle.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Английский: если он не родной и школа была не на английском, нужен TOEFL, IELTS Academic, Duolingo или PTE Academic. Минимального балла страницы не называют.",
-      "evidence": "you must take the Test of English as a Foreign Language (TOEFL), the International English Language Testing System Academic (IELTS Academic), the Duolingo English Test (DET) or the Pearson Test of English Academic (PTE Academic)"
+      "evidence": "you must take the Test of English as a Foreign Language (TOEFL), the International English Language Testing System Academic (IELTS Academic), the Duolingo English Test (DET) or the Pearson Test of English Academic (PTE Academic)",
+      "field": "language",
+      "kind": "workaround"
     },
     {
       "ru": "Сроки: заявку раннего тура ждут 1 ноября, обычного — 1 января; решение раннего тура объявляют в середине декабря. Ответить вузу можно до 1 мая.",
-      "evidence": "Jan. 1 Application with Princeton-specific Questions Due"
+      "evidence": "Jan. 1 Application with Princeton-specific Questions Due",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Ранний тур не обязывает поступать, но закрывает ранние туры других частных вузов США. Это выбор: подал сюда — не подаёшь рано никуда больше.",
-      "evidence": "If you apply single-choice early action on Nov. 1, you may not apply to an early program at any other private college or university within the United States."
+      "evidence": "If you apply single-choice early action on Nov. 1, you may not apply to an early program at any other private college or university within the United States.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Заявку на финансовую помощь ждут отдельно и позже самой заявки: в раннем туре к 9 ноября, в обычном — к 1 февраля.",
-      "evidence": "Nov. 9 Princeton Financial Aid Application Due"
+      "evidence": "Nov. 9 Princeton Financial Aid Application Due",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Что собрать: школьный отчёт с транскриптом, письмо школьного консультанта, две формы от учителей и проверенную письменную работу.",
-      "evidence": "School Report, School Counselor Letter and Transcript Teacher Evaluation Form 1 Teacher Evaluation Form 2"
+      "evidence": "School Report, School Counselor Letter and Transcript Teacher Evaluation Form 1 Teacher Evaluation Form 2",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Транскрипт читают в контексте твоей школьной системы. Пересчитывать оценки в американский GPA не требуют, если у вас так не принято.",
-      "evidence": "We also do not expect you or your school to provide a conversion or grade-point average (GPA) if this is not a standard practice provided by your school or education system."
+      "evidence": "We also do not expect you or your school to provide a conversion or grade-point average (GPA) if this is not a standard practice provided by your school or education system.",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Плату за подачу можно не платить: освобождение просят через Common Application или прямо у вуза.",
-      "evidence": "Application Fee or Fee Waiver."
+      "evidence": "Application Fee or Fee Waiver.",
+      "field": null,
+      "kind": "money"
     }
   ],
   "deadline": {

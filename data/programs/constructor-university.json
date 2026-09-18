@@ -84,51 +84,75 @@
   "textConditions": [
     {
       "ru": "Полная стипендия фонда JetBrains есть только для программы Software, Data and Technology и только для первокурсников. Покрывает обучение, жильё с питанием, университетский взнос с проездным и карманные деньги на первый год.",
-      "evidence": "Tuition fees. Room & board. University fee and semester ticket. Pocket money for the first year of studies."
+      "evidence": "Tuition fees. Room & board. University fee and semester ticket. Pocket money for the first year of studies.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Отбор на неё в два этапа: сначала выиграть один из конкурсов (Algorithm and Code Training School, Constructor Open Cup, JetBrains Blackbox Cup), потом пройти интервью с вопросами по информатике и математике. Олимпиады и сертификаты по STEM прикладывай к заявке.",
-      "evidence": "The interview will include technical questions in informatics and mathematics, an assessment of your motivation, and a review of your academic achievements (such as participation in competitions, Olympiads, online courses, and additional classes)."
+      "evidence": "The interview will include technical questions in informatics and mathematics, an assessment of your motivation, and a review of your academic achievements (such as participation in competitions, Olympiads, online courses, and additional classes).",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Расписание конкурсов на сайте пока прошлого цикла: тогда на стипендию рассматривали заявки, поданные до 10 марта 2026. Даты для набора 2027 следи на странице стипендии.",
-      "evidence": "Please note that only applications submitted before March 10, 2026, at 23:59 (CET) , will be eligible for consideration for the scholarship."
+      "evidence": "Please note that only applications submitted before March 10, 2026, at 23:59 (CET) , will be eligible for consideration for the scholarship.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Если стипендию JetBrains не дали, учиться на программе всё равно можно, но на обычных условиях: стипендия по баллу и отсрочка платы.",
-      "evidence": "If you are not selected for the scholarship, you are still welcome to join the BSc SDT program and have access to our regular financing options - academic achievement scholarship and tuition deferral program."
+      "evidence": "If you are not selected for the scholarship, you are still welcome to join the BSc SDT program and have access to our regular financing options - academic achievement scholarship and tuition deferral program.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Всем принятым автоматически считают стипендию по среднему баллу школы, без отдельной заявки. Размер на сайте расходится: на странице стипендий до 7 000 евро в год, на странице финансирования до 10 000. Сильнейшим могут дать Talent Scholarship на 10 000 евро в год вместо неё.",
-      "evidence": "Exceptional applicants may be awarded the Talent Scholarship of €10,000 per academic year, which replaces the Academic Achievement Scholarship."
+      "evidence": "Exceptional applicants may be awarded the Talent Scholarship of €10,000 per academic year, which replaces the Academic Achievement Scholarship.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Отсроченную часть платы потом возвращаешь процентом от зарплаты, когда начнёшь зарабатывать выше установленного минимума. Её дают независимо от финансового положения.",
-      "evidence": "You pay a percentage of your income for a limited period of time."
+      "evidence": "You pay a percentage of your income for a limited period of time.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Стоимость набора 2027: обучение 11 925 евро за семестр, взносы до 696 евро, разовый взнос при зачислении 940 евро для граждан не из ЕС. Первый курс живёт в кампусе, проживание с питанием на девять месяцев — около 8 000 евро. Чтобы подтвердить место, платят невозвратный депозит 1 000 евро.",
-      "evidence": "€11,925 Tuition per semester"
+      "evidence": "€11,925 Tuition per semester",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Нужен сертификат по английскому, минимум: IELTS 6.5, TOEFL iBT 90 по старой шкале или 4.5 по новой, Duolingo 110. Освобождают, если английский родной, если учился только на английском не меньше шести лет, при SAT по чтению и письму от 600 или ACT Writing от 9.",
-      "evidence": "have been instructed exclusively in English for a minimum of 6 years"
+      "evidence": "have been instructed exclusively in English for a minimum of 6 years",
+      "field": "language",
+      "kind": "workaround"
     },
     {
       "ru": "SAT и ACT для рассмотрения не нужны. Но если аттестат не даёт права на прямое поступление в немецкий вуз, для зачисления могут потребовать SAT или ACT. Сдать его можно и в кампусе в первом семестре.",
-      "evidence": "enrollment may require standardized testing if the high school diploma does not grant direct admission to a German university."
+      "evidence": "enrollment may require standardized testing if the high school diploma does not grant direct admission to a German university.",
+      "field": "schoolCountry",
+      "kind": "note"
     },
     {
       "ru": "Что нужно: паспорт, оценки за 9, 10, 11 классы и первое полугодие выпускного, резюме, мотивационное письмо, сертификат по английскому. Документы не на английском или немецком — с переводом присяжного переводчика. Рекомендация по желанию.",
-      "evidence": "If any of the documents are not issued in English or German, they must be accompanied by a translated copy in English or German, completed by a sworn translator."
+      "evidence": "If any of the documents are not issued in English or German, they must be accompanied by a translated copy in English or German, completed by a sworn translator.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Приём скользящий, решение через 2–4 недели. Ранняя подача с 1 октября 2026 по 1 февраля 2027, дальше до 15 июля 2027. В прошлом цикле часть стипендий давали только за заявки до 1 февраля, так что лучше подавать рано.",
-      "evidence": "Early Action: October 1, 2026 - February 1, 2027 Rolling Admissions (Visa and No Visa): February 2, 2027 - July 15, 2027"
+      "evidence": "Early Action: October 1, 2026 - February 1, 2027 Rolling Admissions (Visa and No Visa): February 2, 2027 - July 15, 2027",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Во время учёбы можно работать до 20 часов в неделю, на каникулах полный день. Для граждан не из ЕС — до 120 полных или 240 неполных дней в год.",
-      "evidence": "Non-EU students hold a work-permit that allows them to work up to 120 full days or 240 half-days per year."
+      "evidence": "Non-EU students hold a work-permit that allows them to work up to 120 full days or 240 half-days per year.",
+      "field": null,
+      "kind": "note"
     }
   ],
   "deadline": {

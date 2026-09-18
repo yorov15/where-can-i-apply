@@ -55,51 +55,75 @@
   "textConditions": [
     {
       "ru": "Университет требует двенадцать лет школьного образования, а в Таджикистане школа одиннадцатилетняя. Для школьных систем, которых нет в таблице требований, есть раздел «другие системы»: присылаешь официальный транскрипт, и приёмная комиссия сама оценивает аттестат. Засчитают ли 11 лет, страница не говорит, поэтому уточняй в приёмной комиссии.",
-      "evidence": "All applicants to Qatar University must complete a minimum of 12 years of formal education"
+      "evidence": "All applicants to Qatar University must complete a minimum of 12 years of formal education",
+      "field": "schoolYears",
+      "kind": "note"
     },
     {
       "ru": "Второй барьер: на стипендию для иностранцев нужен средний балл аттестата не ниже 95%.",
-      "evidence": "A minimum high school average of 95%."
+      "evidence": "A minimum high school average of 95%.",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Что даёт стипендия: обучение, учебники, 500 риалов в месяц, общежитие по двое в комнате с транспортом до кампуса, авиабилет туда-обратно раз в год и вид на жительство под поручительство вуза.",
-      "evidence": "Exemption from tuition fees Exemption from textbook fees 500 QR monthly salary Student housing (two students per room) including transportation to/from campus. Annual round trip air fare ticket Residence permit under QU sponsorship"
+      "evidence": "Exemption from tuition fees Exemption from textbook fees 500 QR monthly salary Student housing (two students per room) including transportation to/from campus. Annual round trip air fare ticket Residence permit under QU sponsorship",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Стипендию просят отдельно, в объявленный период подачи, и отбирают на конкурсной основе.",
-      "evidence": "The applicant is requested to apply to this scholarship during the announced application period. Applicants for this scholarship are selected on a competitive basis."
+      "evidence": "The applicant is requested to apply to this scholarship during the announced application period. Applicants for this scholarship are selected on a competitive basis.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Мало подать: нужно получить окончательное зачисление в университет и выполнить требования того колледжа, куда поступаешь.",
-      "evidence": "Applicant must receive the final acceptance in the university. The applicant must meet the admission requirements for the college that they applied to."
+      "evidence": "Applicant must receive the final acceptance in the university. The applicant must meet the admission requirements for the college that they applied to.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Совмещать с другой стипендией или спонсорством нельзя.",
-      "evidence": "Applicant should not get benefit from this scholarship and another sponsorship/scholarship simultaneously."
+      "evidence": "Applicant should not get benefit from this scholarship and another sponsorship/scholarship simultaneously.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Провалил первый семестр — стипендию отменяют, и об этом сообщают письмом на университетскую почту.",
-      "evidence": "If the student does not pass his/her first semester, the scholarship will be canceled and the student will be informed by QU email."
+      "evidence": "If the student does not pass his/her first semester, the scholarship will be canceled and the student will be informed by QU email.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Чтобы сохранить стипендию, держи средний балл не ниже 3.0 из 4.0, набирай минимум 12 кредитов за семестр и не прерывай регистрацию до выпуска.",
-      "evidence": "The student must maintain a minimum cumulative GPA of 3.0 out of 4.0. The student must successfully complete a minimum of 12 hours per semester."
+      "evidence": "The student must maintain a minimum cumulative GPA of 3.0 out of 4.0. The student must successfully complete a minimum of 12 hours per semester.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Стипендия не для переводящихся из других вузов, приезжающих на семестр, слушателей без степени и тех, кто получает второй бакалавриат.",
-      "evidence": "Students who transfer from other universities to Qatar University, visiting students, non-degree applicants and applicants seeking a second bachelor's degree are not eligible for academic scholarships offered by Qatar University"
+      "evidence": "Students who transfer from other universities to Qatar University, visiting students, non-degree applicants and applicants seeking a second bachelor's degree are not eligible for academic scholarships offered by Qatar University",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Сроки прошлого цикла: подача на стипендию для иностранцев шла с 1 по 25 марта 2026 года, через ту же онлайн-заявку на поступление. Даты нового цикла ещё не объявлены, поэтому срок в карточке помечен неподтверждённым.",
-      "evidence": "International Students Scholarship and Talents scholarship March 1, 2026"
+      "evidence": "International Students Scholarship and Talents scholarship March 1, 2026",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Комиссия может посмотреть на результаты по английскому (IELTS или TOEFL) и по математике (SAT, ACT), но минимальных баллов по ним не называет.",
-      "evidence": "the scholarship committee may consider the applicant's standard test scores in English (IELTS or TOEFL)"
+      "evidence": "the scholarship committee may consider the applicant's standard test scores in English (IELTS or TOEFL)",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Минимальные требования к аттестату не гарантируют приём: они могут меняться в зависимости от силы потока и числа мест на программе.",
-      "evidence": "The high school grade requirements mentioned in this section are minimum scores, they do not guarantee admission"
+      "evidence": "The high school grade requirements mentioned in this section are minimum scores, they do not guarantee admission",
+      "field": "gpa",
+      "kind": "note"
     }
   ],
   "deadline": {

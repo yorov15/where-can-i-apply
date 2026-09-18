@@ -65,63 +65,93 @@
   "textConditions": [
     {
       "ru": "Подают только через портал A2A. Заявки, отправленные другим способом — в посольство Индии, в ICCR или прямо в вуз, — не принимают.",
-      "evidence": "Application sent through any other mode to the Indian Mission/ICCR/University will not be accepted."
+      "evidence": "Application sent through any other mode to the Indian Mission/ICCR/University will not be accepted.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Заявка одна на учебный год. Если подать несколько, отклонят все — в том числе уже после присуждения стипендии и даже после начала учёбы.",
-      "evidence": "Multiple applications during a single academic year will lead to rejection of all the applications at any point in time during the application/selection process."
+      "evidence": "Multiple applications during a single academic year will lead to rejection of all the applications at any point in time during the application/selection process.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Учат на английском. Сертификат не обязателен, но эссе на 500 слов по одной из тем портала — обязательно. TOEFL или IELTS можно приложить по желанию, а достаточность английского оценивает посольство Индии.",
-      "evidence": "the mandatory submission of an essay of 500 words in English on one of the topics/subjects listed on the A2A Portal"
+      "evidence": "the mandatory submission of an essay of 500 words in English on one of the topics/subjects listed on the A2A Portal",
+      "field": "language",
+      "kind": "must"
     },
     {
       "ru": "Возраст считают на 1 июля: не меньше 18 лет и не больше 35 для бакалавриата. У самого вуза могут быть свои возрастные требования.",
-      "evidence": "Applicants may note that Universities/Institutions have their own age criteria"
+      "evidence": "Applicants may note that Universities/Institutions have their own age criteria",
+      "field": "age",
+      "kind": "note"
     },
     {
       "ru": "Паспорт должен быть действителен ещё минимум два года на 1 июля года подачи.",
-      "evidence": "Applicants must note that the Passport should have a minimum validity of two years as on 1 July 2026."
+      "evidence": "Applicants must note that the Passport should have a minimum validity of two years as on 1 July 2026.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Не финансируют медицину и парамедицинские специальности — сестринское дело, физиотерапию, анестезиологию, лаборантов, — а также право и пятилетние совмещённые программы вроде BALLB.",
-      "evidence": "no scholarships are provided to study courses in the fields of Medical Science; Para-medical courses like Nursing, Physiotherapy, anaesthesia, Lab technicians, etc., Law, Integrated courses such as BALLB (5 Years)"
+      "evidence": "no scholarships are provided to study courses in the fields of Medical Science; Para-medical courses like Nursing, Physiotherapy, anaesthesia, Lab technicians, etc., Law, Integrated courses such as BALLB (5 Years)",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Учиться можно только в вузах из списка ICCR. В заявке выбираешь до пяти вузов и программ по приоритету; после присуждения стипендии сменить вуз или программу нельзя.",
-      "evidence": "Applicants have the choice to opt maximum of 5 Universities/Institutes and Courses in order of priority."
+      "evidence": "Applicants have the choice to opt maximum of 5 Universities/Institutes and Courses in order of priority.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Сколько платят на бакалавриате: 18 000 рупий в месяц, на жильё 6 500 в городах первой категории и 5 500 в остальных, плюс 5 000 рупий в год на расходы.",
-      "evidence": "UG INR 18000 INR 6500 INR 5500 INR 5000"
+      "evidence": "UG INR 18000 INR 6500 INR 5500 INR 5000",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Перелёт в общие правила не входит: его оплачивают, только если это прямо предусмотрено конкретной схемой стипендии.",
-      "evidence": "Airfare and other related travel expenses are not covered unless specifically stated under the scholarship scheme."
+      "evidence": "Airfare and other related travel expenses are not covered unless specifically stated under the scholarship scheme.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Первые деньги придут не сразу: пока идут формальности и открытие счёта — два-три месяца, — стипендию не платят. Правила советуют привезти с собой около 1500 долларов.",
-      "evidence": "students are advised to carry self-financial support of around USD 1500"
+      "evidence": "students are advised to carry self-financial support of around USD 1500",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Провалил учебный год — стипендию приостанавливают, и повторный год ты оплачиваешь сам. Провалил его снова — стипендию снимают совсем.",
-      "evidence": "In case the student fails again in the repeat academic year, his/her scholarship will stand terminated"
+      "evidence": "In case the student fails again in the repeat academic year, his/her scholarship will stand terminated",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Отбор ведёт посольство Индии в твоей стране. Оно и ICCR могут отклонить заявку на любом этапе и не обязаны объяснять почему.",
-      "evidence": "Indian Mission and ICCR reserve their rights to accept or reject any application at any stage without assigning any reason whatsoever."
+      "evidence": "Indian Mission and ICCR reserve their rights to accept or reject any application at any stage without assigning any reason whatsoever.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Порога по среднему баллу у самой стипендии нет: требования к приёму ставит вуз, и решение о зачислении тоже за ним.",
-      "evidence": "Decision on admission is solely that of the respective University/Institute"
+      "evidence": "Decision on admission is solely that of the respective University/Institute",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Карточка сделана по правилам на 2026/27 учебный год: пороги возраста и паспорта в них считаются на 1 июля 2026. На новый цикл ICCR выпускает новый документ, и даты подачи объявляет посольство Индии — поэтому срок в карточке пустой.",
-      "evidence": "ICCR Scholarships Academic Year 2026-27 Guidelines/Rules for Foreign Students"
+      "evidence": "ICCR Scholarships Academic Year 2026-27 Guidelines/Rules for Foreign Students",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "В IIT на программы B.Tech иностранцев не принимают, так что инженерный бакалавриат в IIT по этой стипендии недоступен.",
-      "evidence": "No admission is provided to foreign students for B.Tech Courses in the IITs"
+      "evidence": "No admission is provided to foreign students for B.Tech Courses in the IITs",
+      "field": null,
+      "kind": "note"
     }
   ],
   "deadline": {

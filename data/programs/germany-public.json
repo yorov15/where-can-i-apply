@@ -57,43 +57,63 @@
   "textConditions": [
     {
       "ru": "Главный вопрос — признают ли таджикский аттестат для прямого поступления. Ответ по каждой стране даёт база требований DAAD: выбери там Tajikistan. Инструмент эту базу прочесть не может, потому что ответ она показывает только в браузере. Поэтому сам за неё не решает.",
-      "evidence": "Information regarding the country-specific evaluation of foreign school-leaving certificates and degrees can be found on the DAAD admission database"
+      "evidence": "Information regarding the country-specific evaluation of foreign school-leaving certificates and degrees can be found on the DAAD admission database",
+      "field": "schoolCountry",
+      "kind": "note"
     },
     {
       "ru": "Если аттестат для прямого поступления не годится, путь — Studienkolleg: подготовительные курсы с экзаменом Feststellungsprüfung в конце. Сдал его — можно учиться в любом вузе Германии.",
-      "evidence": "If your school-leaving certificate does not entitle you to directly start studying in Germany, you can apply for a place at a Studienkolleg that has a final assessment test"
+      "evidence": "If your school-leaving certificate does not entitle you to directly start studying in Germany, you can apply for a place at a Studienkolleg that has a final assessment test",
+      "field": "schoolCountry",
+      "kind": "workaround"
     },
     {
       "ru": "Studienkolleg выбирают по будущей специальности: курс T для математических, естественных и технических направлений, W для экономики и социальных наук, M для медицины, биологии и фармации.",
-      "evidence": "T courses - for mathematical-scientific or technical courses of study"
+      "evidence": "T courses - for mathematical-scientific or technical courses of study",
+      "field": "schoolCountry",
+      "kind": "steps"
     },
     {
       "ru": "Даже ответ базы DAAD — только ориентир: окончательно решает вуз. Сроки подачи и требования к языку у каждого вуза свои.",
-      "evidence": "The information is for guidance only, as the final decision on admission always lies with the higher education institution."
+      "evidence": "The information is for guidance only, as the final decision on admission always lies with the higher education institution.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "За бакалавриат в государственных вузах Германии обычно не платят.",
-      "evidence": "There are generally no fees for Bachelor's courses or most Master's courses at state higher education institutions."
+      "evidence": "There are generally no fees for Bachelor's courses or most Master's courses at state higher education institutions.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Исключение — Баден-Вюртемберг: с граждан не из ЕС там берут 1 500 евро за семестр.",
-      "evidence": "The Federal State of Baden-Württemberg charges non-EU citizens tuition fees of EUR 1,500 per semester"
+      "evidence": "The Federal State of Baden-Württemberg charges non-EU citizens tuition fees of EUR 1,500 per semester",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "В Баварии вузы сами решают, брать ли плату с иностранцев не из ЕС, и она может доходить до нескольких тысяч евро за семестр — проверяй для своей программы.",
-      "evidence": "Tuition fees for international students from outside the EU/EEA may also apply in Bavaria."
+      "evidence": "Tuition fees for international students from outside the EU/EEA may also apply in Bavaria.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Семестровый взнос платят все студенты: от 70 до 430 евро за семестр, при зачислении и перед каждым новым семестром. Часто в него входит проездной.",
-      "evidence": "The semester contribution varies between higher education institutions and comes to between 70 and 430 EUR."
+      "evidence": "The semester contribution varies between higher education institutions and comes to between 70 and 430 EUR.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "На жизнь нужно 900–1 200 евро в месяц, в зависимости от города; главная статья — жильё.",
-      "evidence": "you will need between 900 and 1,200 Euros per month"
+      "evidence": "you will need between 900 and 1,200 Euros per month",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Для студенческой визы надо доказать, что у тебя есть 992 евро на каждый месяц: доходом родителей, деньгами на блокированном счёте (Sperrkonto) или признанной стипендией.",
-      "evidence": "must prove that they have 992 euros available per month"
+      "evidence": "must prove that they have 992 euros available per month",
+      "field": null,
+      "kind": "must"
     }
   ],
   "deadline": {

@@ -69,59 +69,87 @@
   "textConditions": [
     {
       "ru": "Отбор учитывает нужду в помощи: вуз соотносит её со свободными местами и деньгами.",
-      "evidence": "Duke Kunshan has a need-aware admissions process that may place some consideration on an applicant's level of financial need in relation to available space and funds."
+      "evidence": "Duke Kunshan has a need-aware admissions process that may place some consideration on an applicant's level of financial need in relation to available space and funds.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Помощь по нужде и стипендии обычно покрывают только обучение, до полной платы. Жильё, еду и дорогу оплачиваешь сам.",
-      "evidence": "Students are responsible for covering their living expenses such as room, board and transportation, which are relatively lower compared with typical U.S. universities."
+      "evidence": "Students are responsible for covering their living expenses such as room, board and transportation, which are relatively lower compared with typical U.S. universities.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "На стипендии за успехи рассматривают всех поступающих автоматически, отдельной заявки нет.",
-      "evidence": "All applicants for admission are automatically considered for all available merit scholarships."
+      "evidence": "All applicants for admission are automatically considered for all available merit scholarships.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Помощь по нужде просят сразу: отмечаешь «yes» в Common App и сдаёшь CSS Profile до 5 ноября в раннем туре или до 15 января в обычном. Не попросил при подаче — позже помощи не будет ни в один год.",
-      "evidence": "Admitted international students who did not apply for financial aid during the admissions application phase are ineligible to apply for financial aid for any year of undergraduate study."
+      "evidence": "Admitted international students who did not apply for financial aid during the admissions application phase are ineligible to apply for financial aid for any year of undergraduate study.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Полная стипендия Global Leaders: обучение все четыре года, большая часть расходов на жизнь, перелёт раз в год, ноутбук и семестр в Дьюке в США. Для иностранцев в наборе 2031 года — не больше трёх мест.",
-      "evidence": "Duke Kunshan University will offer up to 3 full scholarships to international students in the Class of 2031 ."
+      "evidence": "Duke Kunshan University will offer up to 3 full scholarships to international students in the Class of 2031 .",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Кто подходит под критерий серьёзной финансовой нужды, но полную стипендию не получил, в Duke Kunshan не принимают. В обычном туре нескольких кандидатов ставят в лист ожидания на случай, если стипендия освободится, обычно до конца мая.",
-      "evidence": "Therefore, candidates who meet the criteria for financial hardship but are not selected for this award will not be admitted to DKU."
+      "evidence": "Therefore, candidates who meet the criteria for financial hardship but are not selected for this award will not be admitted to DKU.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Кто может претендовать на полную стипендию: первокурсник-иностранец на осень 2027, низкий доход семьи, выдающиеся успехи, лидерство и место в лучших 10% всех заявок. Нужна отдельная форма с эссе до 15 ноября в раннем туре или до 1 февраля в обычном, затем интервью по приглашению.",
-      "evidence": "Position in the top 10% of the application pool"
+      "evidence": "Position in the top 10% of the application pool",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "SAT и ACT в цикле 2026–27 необязательны, без них заявка и стипендии рассматриваются на равных.",
-      "evidence": "Students who do not submit SAT or ACT scores with their application will not be at a disadvantage in our holistic admissions process or scholarship selection."
+      "evidence": "Students who do not submit SAT or ACT scores with their application will not be at a disadvantage in our holistic admissions process or scholarship selection.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Сертификат по английскому не требуют, но рекомендуют, если школа была не на английском. Если сдаёшь, ожидают IELTS от 7, TOEFL от 5 по новой шкале или от 100 по старой, Duolingo от 130. Учат на английском, китайский заранее не нужен, но два года китайского в вузе обязательны.",
-      "evidence": "we recommend but do not require that you take an English proficiency test."
+      "evidence": "we recommend but do not require that you take an English proficiency test.",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Платы за подачу нет. Подают через Common Application: эссе Common App и эссе для Duke Kunshan, школьный отчёт, рекомендация консультанта, транскрипт и две рекомендации учителей.",
-      "evidence": "There is no application fee"
+      "evidence": "There is no application fee",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Если сдаёшь выпускные или национальные экзамены, прикладываешь результаты или прогноз школы. Итоговые результаты нужны до начала учёбы.",
-      "evidence": "Final results are required prior to enrollment"
+      "evidence": "Final results are required prior to enrollment",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Сроки набора 2027: ранний тур до 2 ноября 2026, обычный до 4 января 2027. Приём заявок начинается в августе 2026.",
-      "evidence": "Early decision application deadline: November 2, 2026 (11:59pm ET) Regular decision application deadline: January 4, 2027 (11:59pm ET)"
+      "evidence": "Early decision application deadline: November 2, 2026 (11:59pm ET) Regular decision application deadline: January 4, 2027 (11:59pm ET)",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Из чего складывается год 2026/27: обучение и сборы 73 740 долларов, страховка 2 073, комната 2 350, книги и прочее 2 610, питание 3 292. Всего 84 065 без дороги.",
-      "evidence": "Total Estimated Cost：$84,065 *exclusive of transportation costs"
+      "evidence": "Total Estimated Cost：$84,065 *exclusive of transportation costs",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Семестр в Дьюке в США обходится дополнительно примерно в 7 500–9 500 долларов без перелёта, если нет полной стипендии.",
-      "evidence": "For the study away semester at Duke University, the incremental costs are calculated to be approximately $7,500-$9,500, depending on required health insurance needs."
+      "evidence": "For the study away semester at Duke University, the incremental costs are calculated to be approximately $7,500-$9,500, depending on required health insurance needs.",
+      "field": null,
+      "kind": "money"
     }
   ],
   "deadline": {

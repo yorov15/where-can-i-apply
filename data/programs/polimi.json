@@ -57,55 +57,81 @@
   "textConditions": [
     {
       "ru": "Двенадцать лет школы — жёсткое требование, а не пожелание. В Таджикистане школа одиннадцать, значит прямая дорога закрыта. Выход есть: университет засчитывает подготовительный курс длиной не меньше учебного года.",
-      "evidence": "Politecnico di Milano accepts the successful passing of a foundation course of at least one academic year"
+      "evidence": "Politecnico di Milano accepts the successful passing of a foundation course of at least one academic year",
+      "field": "schoolYears",
+      "kind": "workaround"
     },
     {
       "ru": "Университет пишет, что требования к иностранному аттестату могут зависеть от числа лет школы, итогового балла аттестата или вступительного теста — какой из трёх пунктов применят к тебе, решают правила Министерства для конкретной страны, а не сама страница. Проходного балла аттестата на этих страницах не названо, но и гарантии, что его нет именно для Таджикистана, тоже нет — уточняй в приёмной комиссии.",
-      "evidence": "These may relate to the total number of years of schooling completed, the final diploma grade/score, or the successful passing an academic suitability test."
+      "evidence": "These may relate to the total number of years of schooling completed, the final diploma grade/score, or the successful passing an academic suitability test.",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Язык зависит от того, на каком языке идёт программа. На итальянском нужен итальянский уровня B2 — сертификат CLIQ или аттестат, полученный на итальянском. Английский при поступлении на такую программу не требуют, но без него диплом не закончить.",
-      "evidence": "have an appropriate B2 level certification of proficiency in the Italian language issued by the CLIQ"
+      "evidence": "have an appropriate B2 level certification of proficiency in the Italian language issued by the CLIQ",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Бакалавриат на английском тоже есть. На такие программы английский нужен до зачисления — сертификат из списка университета или аттестат на английском, а итальянский B2 надо получить до выпуска. Какой балл нужен, страница прячет в раскрывающийся блок: смотри раздел языковых требований на сайте.",
-      "evidence": "In order to be admitted to Bachelor of Science programmes held in English, you must demonstrate: proficiency in English prior to enrolment."
+      "evidence": "In order to be admitted to Bachelor of Science programmes held in English, you must demonstrate: proficiency in English prior to enrolment.",
+      "field": "language",
+      "kind": "workaround"
     },
     {
       "ru": "Вступительный тест обязателен, но вместо итальянского TOL можно сдать SAT — его принимают напрямую и проводят на английском. Есть ещё CEnT-S на английском.",
-      "evidence": "SAT (provided by The College Board www.collegeboard.org), test administered in English"
+      "evidence": "SAT (provided by The College Board www.collegeboard.org), test administered in English",
+      "field": "gpa",
+      "kind": "workaround"
     },
     {
       "ru": "Иностранцам выделяют отдельные места, число которых устанавливают каждый год. То есть конкурс идёт не со всеми подряд, а внутри своей квоты — это может быть и легче, и тяжелее.",
-      "evidence": "Certain categories of international students are allocated a specific number of places, referred to as RESERVED PLACES."
+      "evidence": "Certain categories of international students are allocated a specific number of places, referred to as RESERVED PLACES.",
+      "field": "citizenship",
+      "kind": "note"
     },
     {
       "ru": "Правила для иностранных аттестатов устанавливает не университет, а министерство, и переиздаёт их каждый год отдельным документом. Значит перед подачей надо смотреть свежую редакцию, а не прошлогодние пересказы.",
-      "evidence": "issued each year by the Ministry of University and Research"
+      "evidence": "issued each year by the Ministry of University and Research",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Документы: табели за три последних года школы с печатью и подписью, плюс аттестат или справка о том, что ты в выпускном классе. Проверяет их отдельная служба, и до её проверки зачисление не считается завершённым.",
-      "evidence": "report cards from the last three years of secondary school, stamped and signed by the competent authority/office"
+      "evidence": "report cards from the last three years of secondary school, stamped and signed by the competent authority/office",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Даты сессий вступительного теста на этих страницах не выводятся — они лежат за раскрывающимися блоками, которые инструмент не читает. Сроки смотри на сайте.",
-      "evidence": "When to register for the tests"
+      "evidence": "When to register for the tests",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Плата за бакалавриат зависит от дохода семьи. При низком доходе (показатель ISEE до 22 000 евро) — 157 евро в год, дальше она растёт до максимума 3 943 евро. Правило «иностранцы платят максимум» касается только магистратуры.",
-      "evidence": "an ISEE of up to € 22,000, the amount is € 157.04"
+      "evidence": "an ISEE of up to € 22,000, the amount is € 157.04",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Бакалаврам положены стипендии DSU — по доходу и по успехам, по конкурсу, который объявляют каждый год. Размер на этих страницах не назван.",
-      "evidence": "Students admitted to a Bachelor of Science programme can apply for Diritto allo Studio (DSU) Scholarships: financial and merit-based scholarships assigned after a Call for Grant"
+      "evidence": "Students admitted to a Bachelor of Science programme can apply for Diritto allo Studio (DSU) Scholarships: financial and merit-based scholarships assigned after a Call for Grant",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Отдельные стипендии для иностранцев на бакалавриате есть только на двух программах: технологическая инженерия в Кремоне и промышленная инженерия в Пьяченце.",
-      "evidence": "BSc in Process Engineering at Cremona Campus BSc in Industrial Engineering at Piacenza Campus"
+      "evidence": "BSc in Process Engineering at Cremona Campus BSc in Industrial Engineering at Piacenza Campus",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Крупные стипендии для иностранцев — с освобождением от платы и выплатой до 10 000 евро в год — дают только поступившим в магистратуру. Бакалавриату они не положены.",
-      "evidence": "merit based scholarships to the most talented international candidates admitted to a Master of Science programme"
+      "evidence": "merit based scholarships to the most talented international candidates admitted to a Master of Science programme",
+      "field": null,
+      "kind": "money"
     }
   ],
   "deadline": {

@@ -64,35 +64,51 @@
   "textConditions": [
     {
       "ru": "Срок взят по прошлому циклу и потому помечен неподтверждённым. Утверждённый документ, который мы читаем, — это призыв на 2026/27, и его срок 15 января 2026 уже прошёл. Призыв на 2027/28 выходит осенью 2026 отдельным PDF, и дата в нём может сдвинуться.",
-      "evidence": "The deadline for submitting the complete application: 15 January 2026, 2 p.m. (Central European Time)"
+      "evidence": "The deadline for submitting the complete application: 15 January 2026, 2 p.m. (Central European Time)",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Подавать можно только через партнёра своей страны: гражданство должно совпадать со страной, через которую идёт заявка. Таджикистан в списке партнёров есть, и бакалавриат ему открыт в том числе по Computer Science and Information Technology.",
-      "evidence": "Applicants with citizenship different from the sending country/territory."
+      "evidence": "Applicants with citizenship different from the sending country/territory.",
+      "field": "citizenship",
+      "kind": "must"
     },
     {
       "ru": "Заявку надо подать дважды: в систему DreamApply и отдельно в ведомство своей страны. У партнёра могут быть свои сроки и свои требования — уточняй у него.",
-      "evidence": "Applications shall also be submitted to the responsible authority of the sending partner."
+      "evidence": "Applications shall also be submitted to the responsible authority of the sending partner.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Выбрать можно только две программы из более чем девятисот.",
-      "evidence": "but only 2 choices are allowed"
+      "evidence": "but only 2 choices are allowed",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Деньги покрывают не всё: программа прямо предупреждает, что стипендия и вклад в жильё — это помощь с расходами, а не полное содержание.",
-      "evidence": "these provisions are only a contribution to the living expenses of the Scholarship Holders"
+      "evidence": "these provisions are only a contribution to the living expenses of the Scholarship Holders",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Подать документы можно без экзаменов, но пройти отбор — нет: венгерские вузы проводят вступительные испытания с марта по май, и нужно набрать не меньше 56 баллов из 100. Инструмент проверяет допуск к подаче, а не шансы пройти конкурс.",
-      "evidence": "Your exam scores must be a minimum of 56 out of 100 points"
+      "evidence": "Your exam scores must be a minimum of 56 out of 100 points",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Даты в записи — от цикла 2026/2027: тогда срок был 15 января. Призыв на следующий цикл на момент проверки не опубликован, поэтому точной даты пока нет.",
-      "evidence": "15th January 2026, 2 pm (CET) APPLICATION DEADLINE"
+      "evidence": "15th January 2026, 2 pm (CET) APPLICATION DEADLINE",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Нижний порог в 18 лет не действует для программ по танцу.",
-      "evidence": "except applicants applying for Dance study programmes"
+      "evidence": "except applicants applying for Dance study programmes",
+      "field": "age",
+      "kind": "note"
     }
   ],
   "deadline": {
@@ -111,7 +127,7 @@
   },
   "source": {
     "url": "https://stipendiumhungaricum.hu/apply/",
-    "lastVerified": "2026-09-11",
+    "lastVerified": "2026-09-14",
     "humanChecked": false,
     "pages": [
       {

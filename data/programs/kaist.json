@@ -76,55 +76,81 @@
   "textConditions": [
     {
       "ru": "Сертификат по английскому обязателен, но балл в таблице KAIST назван рекомендованным, а не порогом: IELTS 6.5, TOEIC 720, TEPS 326. Ниже — не отказ, решает отбор.",
-      "evidence": "Test Recommended Score"
+      "evidence": "Test Recommended Score",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "С TOEFL осторожно: до 21 января 2026 года считается 83 по старой шкале, после — 4.5 по новой. Если сдаёшь сейчас, тебе нужна вторая цифра, и она с первой никак не связана.",
-      "evidence": "TOEFL iBT 83"
+      "evidence": "TOEFL iBT 83",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Duolingo, домашние и онлайн-версии экзаменов не принимаются. Сдавать надо очно.",
-      "evidence": "Duolingo English Test(DET) and at-home/online test versions are NOT accepted."
+      "evidence": "Duolingo English Test(DET) and at-home/online test versions are NOT accepted.",
+      "field": "language",
+      "kind": "must"
     },
     {
       "ru": "От экзамена по английскому освобождают, если вся школа была на английском — нужна справка от школы. Для таджикской школы это не сработает.",
-      "evidence": "Applicants who completed high school where English was the medium of instruction"
+      "evidence": "Applicants who completed high school where English was the medium of instruction",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Две волны приёма на осень: ранняя закрывается 22 октября 2026, обычная — 14 января 2027. Сменить волну после оплаты взноса нельзя.",
-      "evidence": "you are not allowed to change your application track from one to another"
+      "evidence": "you are not allowed to change your application track from one to another",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Перевода из другого вуза нет: подавать можно только на первый курс. И к моменту зачисления у тебя не должно быть места на другой программе с дипломом — иначе приём отменят.",
-      "evidence": "We do not have transfer program for international students."
+      "evidence": "We do not have transfer program for international students.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Специальность на первом курсе не выбирают: все поступают без факультета и выбирают его через год, без конкурса и квот.",
-      "evidence": "There is no quota for each department/major."
+      "evidence": "There is no quota for each department/major.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Вступительный взнос платят все, кроме граждан наименее развитых стран по списку ООН. Из Азии там только Афганистан, Бангладеш, Камбоджа, Лаос, Мьянма, Непал, Тимор-Лесте и Йемен — Таджикистана, Узбекистана, Киргизии и Казахстана в списке нет. Освобождения не будет.",
-      "evidence": "exceptional individuals from one of the Least Developed Countries"
+      "evidence": "exceptional individuals from one of the Least Developed Countries",
+      "field": "citizenship",
+      "kind": "money"
     },
     {
       "ru": "Отбор целостный, критерии не раскрываются. Смотрят прежде всего математику и естественные науки: какого уровня курсы ты прошёл и что это была за школа. Формального проходного балла нет — и узнать его не получится.",
-      "evidence": "Details of the evaluation process and specific assessment criteria will not be disclosed"
+      "evidence": "Details of the evaluation process and specific assessment criteria will not be disclosed",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Отложить поступление на год нельзя: придётся подавать заново. Учиться одновременно в другом вузе — основание для отчисления.",
-      "evidence": "Dual enrollment is grounds for dismissal according to KAIST regulations."
+      "evidence": "Dual enrollment is grounds for dismissal according to KAIST regulations.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
-      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
     },
     {
       "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
-      "evidence": "decided differently by each university, so you will then need to contact universities directly"
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
     },
     {
       "ru": "Кроме гражданства, иностранцу нужно выполнить одно из условий: ни один из родителей не гражданин Кореи, или, при корейском происхождении, вся школа пройдена за пределами Кореи.",
-      "evidence": "Neither of the applicant's parents is a Korean citizen"
+      "evidence": "Neither of the applicant's parents is a Korean citizen",
+      "field": "citizenship",
+      "kind": "must"
     }
   ],
   "deadline": {
@@ -143,7 +169,7 @@
   },
   "source": {
     "url": "https://admission.kaist.ac.kr/intl-undergraduate/before/sub02",
-    "lastVerified": "2026-09-11",
+    "lastVerified": "2026-09-14",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [

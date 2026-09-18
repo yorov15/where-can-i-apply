@@ -70,51 +70,75 @@
   "textConditions": [
     {
       "ru": "Англоязычный бакалавриат платный: обычно от 1 500 до 15 000 евро в год. Дороже всего медицина, право, бизнес и общественные науки.",
-      "evidence": "Generally, tuition fees vary from 1500 EUR to 15000 EUR per year for Bachelor and Master programmes"
+      "evidence": "Generally, tuition fees vary from 1500 EUR to 15000 EUR per year for Bachelor and Master programmes",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Часть вузов делает отдельные программы бесплатными или даёт освобождение от платы — но это решение конкретного вуза, а не общее правило страны.",
-      "evidence": "some universities offer a few Master and Bachelor programmes with no tuition fee at all ( tuition fee waivers, tuition free programmes )"
+      "evidence": "some universities offer a few Master and Bachelor programmes with no tuition fee at all ( tuition fee waivers, tuition free programmes )",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Некоторые вузы могут брать с граждан стран вне ЕС больше, чем с европейцев. Сколько именно, смотри на сайте вуза.",
-      "evidence": "Some higher education institutions may differentiate tuition fees for students from the European Union and from outside the European Union."
+      "evidence": "Some higher education institutions may differentiate tuition fees for students from the European Union and from outside the European Union.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Государственная стипендия для бакалавриата даётся только на направления, связанные с эстонским языком и культурой. Для программ по информатике и инженерии она не подходит.",
-      "evidence": "For Bachelor's studies, this scholarship can only be applied for in fields that are related to Estonian language and culture!"
+      "evidence": "For Bachelor's studies, this scholarship can only be applied for in fields that are related to Estonian language and culture!",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Размер этой стипендии — 350 евро в месяц, и другие расходы она не покрывает. Список стран, чьи граждане могут подавать, лежит отдельным приложением к правилам на сайте агентства Harno.",
-      "evidence": "the rate of the scholarship for Bachelor's studies is 350 euros per month ; other costs are not covered"
+      "evidence": "the rate of the scholarship for Bachelor's studies is 350 euros per month ; other costs are not covered",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Английский обязателен: обычно нужен IELTS от 6 или TOEFL iBT от 72, но у каждого вуза требования свои — проверяй на странице приёма своей программы.",
-      "evidence": "Usually, the required minimum test result for BA and MA is 6 in IELTS and 72 in TOEFL (IBT)."
+      "evidence": "Usually, the required minimum test result for BA and MA is 6 in IELTS and 72 in TOEFL (IBT).",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "От аттестата требуется одно: чтобы он давал право поступать в вуз в твоей собственной стране. Отдельные вузы могут добавить свои вступительные испытания — собеседование, эссе, портфолио.",
-      "evidence": "All applicants to Estonian universities' degree programmes are required to have a qualification giving access to university studies in their home country."
+      "evidence": "All applicants to Estonian universities' degree programmes are required to have a qualification giving access to university studies in their home country.",
+      "field": "schoolCountry",
+      "kind": "must"
     },
     {
       "ru": "Подают через общую систему DreamApply: одна заявка сразу в несколько эстонских вузов и программ.",
-      "evidence": "Submit your application via the online admission system at the following website: www.estonia.dreamapply.com . You can apply to several Estonian universities and programmes with a single application."
+      "evidence": "Submit your application via the online admission system at the following website: www.estonia.dreamapply.com . You can apply to several Estonian universities and programmes with a single application.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Подача чаще всего платная: сбор от 0 до 120 евро, он не возвращается независимо от результата. Внутри одного вуза платишь один раз, даже если подаёшь на несколько программ.",
-      "evidence": "Most Estonian universities have also established an application fee, the amount of which can range from 0-120 euros."
+      "evidence": "Most Estonian universities have also established an application fee, the amount of which can range from 0-120 euros.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Жизнь обойдётся в 300–500 евро в месяц: общежитие 150–350, комната или квартира 350–750, еда около 300.",
-      "evidence": "the prices per month usually range from €150-350 in the dormitories to €350-750 in private flats"
+      "evidence": "the prices per month usually range from €150-350 in the dormitories to €350-750 in private flats",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "В Таллине общественный транспорт для местных жителей бесплатный, и это касается иностранных студентов, которые там живут. В Тарту месячный студенческий проездной стоит 7,67 евро.",
-      "evidence": "Public transport is available for all students and is free of charge in Tallinn (only for residents of Tallinn, including international students studying in Tallinn)."
+      "evidence": "Public transport is available for all students and is free of charge in Tallinn (only for residents of Tallinn, including international students studying in Tallinn).",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Отдельно про санкции: Эстония ввела ограничения в связи с агрессией России и Беларуси против Украины. Портал приводит само постановление, но что оно означает для конкретного абитуриента, не расшифровывает — поэтому инструмент по гражданству не решает.",
-      "evidence": "Estonian Government has imposed sanctions in connection with aggression of Russian Federation and Republic of Belarus in Ukraine."
+      "evidence": "Estonian Government has imposed sanctions in connection with aggression of Russian Federation and Republic of Belarus in Ukraine.",
+      "field": "citizenship",
+      "kind": "note"
     }
   ],
   "deadline": {

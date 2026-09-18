@@ -82,79 +82,117 @@
   "textConditions": [
     {
       "ru": "Начиная с выпуска 2029 года Браун не учитывает при отборе иностранцев, нужна ли им помощь.",
-      "evidence": "Brown will be need-blind for international students beginning with the Class of 2029."
+      "evidence": "Brown will be need-blind for international students beginning with the Class of 2029.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Принятым нужду закрывают полностью, но только если помощь попросили одновременно с заявкой на поступление. Иначе полное покрытие вуз не обещает.",
-      "evidence": "We meet full demonstrated need for students who are admitted provided they apply for financial aid at the time they apply for admission."
+      "evidence": "We meet full demonstrated need for students who are admitted provided they apply for financial aid at the time they apply for admission.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Стипендий за успехи здесь нет, только помощь по нужде.",
-      "evidence": "Financial aid is need based. Brown University does not offer any merit awards."
+      "evidence": "Financial aid is need based. Brown University does not offer any merit awards.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Помощь помогает с дорогой, книгами и личными расходами, но на каникулы и лето денег не даёт. Летом работать вне кампуса иностранцу мешают визовые правила, так что заранее продумай, на что жить в эти месяцы.",
-      "evidence": "The financial aid award will help with the cost of travel, books and personal expenses, but it does not assist with vacation and summer expenses."
+      "evidence": "The financial aid award will help with the cost of travel, books and personal expenses, but it does not assist with vacation and summer expenses.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Сколько стоит год без помощи, по таблице 2025/26: обучение 71 700 долларов, сборы 2 950, жильё 10 410, питание 8 104, книги 1 300, личные расходы 2 820. Всего 97 284.",
-      "evidence": "Total Cost $48,642 $48,642 $97,284"
+      "evidence": "Total Cost $48,642 $48,642 $97,284",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Первокурсники Брауна обычно окончили 12–13 лет школы. В Таджикистане школа одиннадцатилетняя, поэтому спроси в приёмной комиссии, как рассмотрят твой аттестат.",
-      "evidence": "Brown's first-year students will have completed 12 to 13 years of primary and secondary schooling."
+      "evidence": "Brown's first-year students will have completed 12 to 13 years of primary and secondary schooling.",
+      "field": "schoolYears",
+      "kind": "must"
     },
     {
       "ru": "Предпочтений к стране или школьной системе нет, заявку читают с учётом того, где и в каких условиях ты учился.",
-      "evidence": "There is no preference for or advantage given to any particular system or country."
+      "evidence": "There is no preference for or advantage given to any particular system or country.",
+      "field": "schoolCountry",
+      "kind": "note"
     },
     {
       "ru": "Нужен SAT или ACT. Минимального балла нет, и результат ниже средних по вузу не повод отказываться от заявки.",
-      "evidence": "Brown does not have minimum test scores required for admission, and a score that may be below our average test ranges should not deter a student from applying."
+      "evidence": "Brown does not have minimum test scores required for admission, and a score that may be below our average test ranges should not deter a student from applying.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Экзамен надо сдать вовремя: для раннего тура не позже последней октябрьской даты, для обычного не позже последней декабрьской.",
-      "evidence": "If you are applying Regular Decision, testing must be completed by the last December test date to ensure receipt of scores."
+      "evidence": "If you are applying Regular Decision, testing must be completed by the last December test date to ensure receipt of scores.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Английский должен быть на уровне к моменту поступления: языковых курсов вуз не даёт и условно слабых в английском не берёт.",
-      "evidence": "Brown does not offer courses in English as a second language for its undergraduates and does not accept on a provisional basis students who are deficient in English."
+      "evidence": "Brown does not offer courses in English as a second language for its undergraduates and does not accept on a provisional basis students who are deficient in English.",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Сертификат по английскому настоятельно рекомендуют, если язык не родной и школа была не на английском. Принимают TOEFL, включая домашнюю версию, IELTS, Duolingo, Pearson и Cambridge English.",
-      "evidence": "We highly recommend that international applicants for whom English is not a first language, a primary language spoken at home, or the primary language of instruction for the duration of their secondary school career submit the results of an English proficiency test."
+      "evidence": "We highly recommend that international applicants for whom English is not a first language, a primary language spoken at home, or the primary language of instruction for the duration of their secondary school career submit the results of an English proficiency test.",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Пороги по английскому высокие и ожидаются «в большинстве случаев»: IELTS 8.0, TOEFL 105 по старой шкале или 5.5 по новой, Duolingo 130, Pearson 75, Cambridge C1 или C2 от 191. Ниже этих чисел карточка не отказывает, а просит проверить.",
-      "evidence": "Pearson Test of English: minimum score of 75"
+      "evidence": "Pearson Test of English: minimum score of 75",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Если сдаёшь национальные выпускные экзамены, пришли их прогноз или результат. Не собираешься сдавать экзамены своей программы — ты и школа должны письменно сообщить об этом при подаче.",
-      "evidence": "At the time of application, you and your school should submit a request in writing if you are in a national curriculum but are not planning on taking the corresponding external examinations."
+      "evidence": "At the time of application, you and your school should submit a request in writing if you are in a national curriculum but are not planning on taking the corresponding external examinations.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Документы подают на английском или с официальным переводом, приложив оригинал.",
-      "evidence": "Documents or information that will be part of your application file should be written in English or be accompanied by official translations along with original documents in the original language."
+      "evidence": "Documents or information that will be part of your application file should be written in English or be accompanied by official translations along with original documents in the original language.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "С агентами Браун не работает. Исключения: правительства, EducationUSA и общественные организации.",
-      "evidence": "Brown does not endorse or work with agents or third parties, with the exception of governments, EducationUSA and community-based organizations."
+      "evidence": "Brown does not endorse or work with agents or third parties, with the exception of governments, EducationUSA and community-based organizations.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Сроки: ранний тур до 1 ноября, ответ в середине декабря; обычный до 5 января, ответ в начале апреля. О решении поступать надо сообщить до 1 мая. Подают через Common Application.",
-      "evidence": "which requires applying by January 5 (11:59 p.m. applicant's local time). Applicants who apply under our Regular Decision plan will receive a decision by early April."
+      "evidence": "which requires applying by January 5 (11:59 p.m. applicant's local time). Applicants who apply under our Regular Decision plan will receive a decision by early April.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Ранний тур обязывает: если примут, все остальные заявки надо отозвать. Шансов он не повышает, решения те же, что в обычном туре.",
-      "evidence": "If you are admitted under our Early Decision plan, you will be required to withdraw all pending applications-including those you may have already submitted to regular, rolling or (open) early action programs."
+      "evidence": "If you are admitted under our Early Decision plan, you will be required to withdraw all pending applications-including those you may have already submitted to regular, rolling or (open) early action programs.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Отказ в раннем туре действует весь год: подать заново в обычный нельзя.",
-      "evidence": "If you are denied admission under Early Decision, you may not reapply for admission under the Regular Decision plan during the same year."
+      "evidence": "If you are denied admission under Early Decision, you may not reapply for admission under the Regular Decision plan during the same year.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Если результат экзамена по английскому указал сам, поступающим осенью 2027 года официальный отчёт понадобится в мае 2027. Истёкшие результаты не примут, поэтому попроси экзаменационный центр отправить отчёт в Браун до истечения срока.",
-      "evidence": "For students enrolling in the fall of 2027, those official score reports will be required in May of 2027."
+      "evidence": "For students enrolling in the fall of 2027, those official score reports will be required in May of 2027.",
+      "field": "language",
+      "kind": "steps"
     }
   ],
   "deadline": {

@@ -51,43 +51,63 @@
   "textConditions": [
     {
       "ru": "Стипендия Padua International Excellence: до 68 мест на бакалавриат и магистратуру вместе, конкурс очень жёсткий. 8 000 евро в год до вычета налогов и освобождение от платы за обучение.",
-      "evidence": "Scholarship amount : €8,000.00 (gross) + exemption from student fees for each academic year."
+      "evidence": "Scholarship amount : €8,000.00 (gross) + exemption from student fees for each academic year.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "На бакалавриате стипендия максимум на три года. Если учёба дольше, дальше платишь сам.",
-      "evidence": "At the end of the above-mentioned period, the beneficiaries will be required to pay the student tuition fees due until graduation."
+      "evidence": "At the end of the above-mentioned period, the beneficiaries will be required to pay the student tuition fees due until graduation.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Отдельной заявки на стипендию нет: подаёшь на англоязычную программу в срок и автоматически участвуешь в отборе. Выбирает комиссия программы по успеваемости.",
-      "evidence": "The application for the degree course of your interest automatically makes you eligible to compete for the award of the scholarship provided you meet the requirements listed above."
+      "evidence": "The application for the degree course of your interest automatically makes you eligible to compete for the award of the scholarship provided you meet the requirements listed above.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Стипендии в основном дают кандидатам первой волны приёма, во второй — только в исключительных случаях. Подавай в первую.",
-      "evidence": "The scholarships are mainly reserved for candidates from the first call; on an exceptional basis, the Teaching Committees may decide to award the scholarship to candidates from the second call."
+      "evidence": "The scholarships are mainly reserved for candidates from the first call; on an exceptional basis, the Teaching Committees may decide to award the scholarship to candidates from the second call.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Стипендию платят двумя частями по 4 000 евро при выполнении учебных требований. Если к 30 ноября следующего года не набрал 20 кредитов или перевёлся, стипендию отзывают, и полученное придётся вернуть.",
-      "evidence": "In the event of the scholarship being revoked, you will be required to return the installments you may have already received."
+      "evidence": "In the event of the scholarship being revoked, you will be required to return the installments you may have already received.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Совмещать с другой стипендией нельзя.",
-      "evidence": "in order to receive the scholarship applicants must also not be recipients of other scholarships and must complete their enrolment at the University of Padua."
+      "evidence": "in order to receive the scholarship applicants must also not be recipients of other scholarships and must complete their enrolment at the University of Padua.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Кроме стипендии, есть 100 полных освобождений от платы за обучение для лучших иностранцев на англоязычных программах. Даётся на год, продлевается на второй при 25 кредитах к 10 августа, на третий — при 80 кредитах.",
-      "evidence": "The University of Padua offers 100 full fee waivers of university tuition fees to outstanding international students enrolling in an English-taught Degree Programme."
+      "evidence": "The University of Padua offers 100 full fee waivers of university tuition fees to outstanding international students enrolling in an English-taught Degree Programme.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Условия отбора: не гражданин Италии, иностранный аттестат, не проживаешь в Италии и подаёшь на англоязычную программу в срок. На странице стипендии в английском переводе условие про аттестат записано наоборот; перевод частично машинный, юридически действует итальянская версия.",
-      "evidence": "hold a foreign secondary school diploma (for students applying for Bachelor's and/or single-cycle degree programmes)"
+      "evidence": "hold a foreign secondary school diploma (for students applying for Bachelor's and/or single-cycle degree programmes)",
+      "field": "schoolCountry",
+      "kind": "note"
     },
     {
       "ru": "Для студентов с низким доходом, в том числе иностранцев, есть региональные стипендии провинции Венето.",
-      "evidence": "The University of Padua, through the Veneto Region funding, supports low-income students (both Italian and international) enrolling in Bachelor's, Single-cycle or Master's degrees and PhD courses."
+      "evidence": "The University of Padua, through the Veneto Region funding, supports low-income students (both Italian and international) enrolling in Bachelor's, Single-cycle or Master's degrees and PhD courses.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Сроки подачи и требования к языку и аттестату эти страницы не называют: они в объявлении о приёме на англоязычные программы. Срок в карточке поэтому не указан.",
-      "evidence": "The scholarship results will be published on the University website according to the deadlines specified in the Admission Notice."
+      "evidence": "The scholarship results will be published on the University website according to the deadlines specified in the Admission Notice.",
+      "field": "language",
+      "kind": "note"
     }
   ],
   "deadline": {

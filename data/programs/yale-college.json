@@ -85,79 +85,117 @@
   "textConditions": [
     {
       "ru": "Гражданство и страна происхождения не влияют на отбор: все заявки рассматривают одинаково.",
-      "evidence": "All applicants, regardless of nationality, citizenship, or country of origin, are considered through the same whole-person admissions process."
+      "evidence": "All applicants, regardless of nationality, citizenship, or country of origin, are considered through the same whole-person admissions process.",
+      "field": "citizenship",
+      "kind": "note"
     },
     {
       "ru": "Просьба о помощи не вредит заявке: платёжеспособность семьи при отборе не учитывают ни у кого, где бы ты ни жил.",
-      "evidence": "A family's ability to pay is not a factor in the admissions process-for any student, anywhere in the world."
+      "evidence": "A family's ability to pay is not a factor in the admissions process-for any student, anywhere in the world.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Посчитанную нужду закрывают на 100% независимо от гражданства и без кредитов.",
-      "evidence": "our aid offers meet 100% of demonstrated need - regardless of a student's citizenship or immigration status - without requiring loans."
+      "evidence": "our aid offers meet 100% of demonstrated need - regardless of a student's citizenship or immigration status - without requiring loans.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Иностранцам в помощь включают деньги на жильё, питание и дорогу в вуз и обратно два раза в год.",
-      "evidence": "Yale's financial aid offers for international students include allowances for housing, meals, and travel to and from campus twice each year."
+      "evidence": "Yale's financial aid offers for international students include allowances for housing, meals, and travel to and from campus twice each year.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Помощь иностранцу считают с поправкой на разницу между экономикой США и твоей страны.",
-      "evidence": "Financial aid awards take into account the relative difference between the U.S. economy and your home country's economy."
+      "evidence": "Financial aid awards take into account the relative difference between the U.S. economy and your home country's economy.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Ориентир по взносу семьи из таблицы вуза: при доходе 100 000 долларов в год семья не платит ничего, при 150 000 платит 10 000, при 200 000 платит 20 000. Это расчёт для типичной семьи с обычными активами, семье из Таджикистана посчитают отдельно.",
-      "evidence": "The Typical Yale Family Pays $100,000 $0 $150,000 $10,000 $200,000 $20,000"
+      "evidence": "The Typical Yale Family Pays $100,000 $0 $150,000 $10,000 $200,000 $20,000",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Кому положен нулевой взнос семьи, тем в первый год дают ещё страховку на случай госпитализации и 2 000 долларов на обустройство.",
-      "evidence": "Qualifying students also receive hospitalization insurance coverage and $2,000 start-up grant in their first year."
+      "evidence": "Qualifying students also receive hospitalization insurance coverage and $2,000 start-up grant in their first year.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Подавать на помощь заново каждый год иностранцам не нужно.",
-      "evidence": "International students who enroll at Yale are not required to reapply for financial aid every year."
+      "evidence": "International students who enroll at Yale are not required to reapply for financial aid every year.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Нужен SAT или ACT, иностранцам тоже. Выпускные экзамены своей страны и сертификаты по английскому их не заменяют.",
-      "evidence": "Scores from other exams, including international leaving exams or English proficiency exams will not fulfill Yale's testing requirement."
+      "evidence": "Scores from other exams, including international leaving exams or English proficiency exams will not fulfill Yale's testing requirement.",
+      "field": "language",
+      "kind": "must"
     },
     {
       "ru": "Если английский не родной и ты не проучился хотя бы два года в школе с английским языком обучения, нужен сертификат вдобавок к SAT или ACT. Подходят TOEFL, IELTS, Cambridge English и Duolingo, в списке вуза есть и интервью InitialView без баллов.",
-      "evidence": "you are required to submit scores from an English proficiency test, in addition to fulfilling Yale's standardized testing requirement with ACT or SAT scores."
+      "evidence": "you are required to submit scores from an English proficiency test, in addition to fulfilling Yale's standardized testing requirement with ACT or SAT scores.",
+      "field": "language",
+      "kind": "workaround"
     },
     {
       "ru": "Минимального балла по английскому вуз не ставит. У самых сильных абитуриентов обычно IELTS от 7, TOEFL от 100 по старой шкале или от 5 по новой, Duolingo от 120, Cambridge English от 185. Поэтому ниже этих чисел карточка не отказывает, а просит проверить.",
-      "evidence": "Yale's most competitive applicants have Cambridge English scores of 185 or higher on the C1 Advanced, C2 Proficiency, or B2 First exams."
+      "evidence": "Yale's most competitive applicants have Cambridge English scores of 185 or higher on the C1 Advanced, C2 Proficiency, or B2 First exams.",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Все документы подают на английском. Перевод нужен заверенный, свой собственный перевод не примут.",
-      "evidence": "We are not able to accept any documents that you have translated yourself."
+      "evidence": "We are not able to accept any documents that you have translated yourself.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Сроки: ранний тур до 1 ноября, ответ в середине декабря; обычный тур до 2 января, ответ в конце марта. Ответить вузу можно до 1 мая.",
-      "evidence": "Regular Decision Application Deadline: January 2 Decisions Released: Late March Admitted Student Reply Deadline: May 1"
+      "evidence": "Regular Decision Application Deadline: January 2 Decisions Released: Late March Admitted Student Reply Deadline: May 1",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Документы на помощь иностранцы сдают до 1 декабря в раннем туре и до 15 февраля в обычном.",
-      "evidence": "Early Action: November 1 (US Citizens/Permanent Residents), December 1 (International Citizens) Regular Decision: February 15"
+      "evidence": "Early Action: November 1 (US Citizens/Permanent Residents), December 1 (International Citizens) Regular Decision: February 15",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Для помощи нужна анкета CSS Profile, код Йеля 3987. Автоматическое освобождение от её платы вуз обещает только семьям из США с низким доходом.",
-      "evidence": "Applicants in the U.S. from low-income families with few assets automatically receive a fee waiver when completing the CSS Profile."
+      "evidence": "Applicants in the U.S. from low-income families with few assets automatically receive a fee waiver when completing the CSS Profile.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Ранний тур не обязывает поступать, но в ранние туры других вузов подавать нельзя. Исключения есть, и среди них ранние туры вузов за пределами США: туда подавать можно.",
-      "evidence": "If you opt to apply through Single-Choice Early Action at Yale, you may not also apply through Early Action or Early Decision to other colleges or universities, unless:"
+      "evidence": "If you opt to apply through Single-Choice Early Action at Yale, you may not also apply through Early Action or Early Decision to other colleges or universities, unless:",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Отказ в раннем туре действует весь год: подать заново в обычный нельзя. Преимущества при отборе ранний тур не даёт.",
-      "evidence": "Applicants denied admission under Single-Choice Early Action are not eligible to reapply through Regular Decision during the same admissions cycle."
+      "evidence": "Applicants denied admission under Single-Choice Early Action are not eligible to reapply through Regular Decision during the same admissions cycle.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Что собрать: письма от двух учителей и школьного консультанта, школьный отчёт с транскриптом, результаты SAT или ACT. Подают через Common Application или Coalition Application на SCOIR.",
-      "evidence": "Letters of recommendation from two teachers and one counselor School Report with transcript Standardized test results (ACT or SAT)"
+      "evidence": "Letters of recommendation from two teachers and one counselor School Report with transcript Standardized test results (ACT or SAT)",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Своих освобождений от платы за подачу у Йеля нет, но подать бесплатно можно, если подходишь под условия Common App или Coalition Application.",
-      "evidence": "Yale does not issue its own fee waivers, but it is easy to apply for free if you meet any of the eligibility criteria for your chosen application platform."
+      "evidence": "Yale does not issue its own fee waivers, but it is easy to apply for free if you meet any of the eligibility criteria for your chosen application platform.",
+      "field": null,
+      "kind": "money"
     }
   ],
   "deadline": {

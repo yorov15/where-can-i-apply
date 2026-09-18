@@ -59,47 +59,69 @@
   "textConditions": [
     {
       "ru": "Стипендии HKU даются за успехи и могут покрывать обучение, а в некоторых случаях и расходы на жизнь, иностранцам тоже. Список и условия сайт показывает только через фильтр по типу студента, аттестату и факультету, поэтому смотри их там.",
-      "evidence": "HKU offers generous scholarships based on academic merit that cover tuition fees, and living expenses in some cases, to both local and non-local students."
+      "evidence": "HKU offers generous scholarships based on academic merit that cover tuition fees, and living expenses in some cases, to both local and non-local students.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Сколько стоит обучение для иностранца в 2026/27: 249 000 гонконгских долларов в год на инженерии, естественных науках, медицине и в School of Computing and Data Science, 224 000 на остальных факультетах.",
-      "evidence": "HKD249,000 Annual Tuition Fees (inclusive of STEM Fee) for Non-local Students Admitted to the STEM Faculties and Schools"
+      "evidence": "HKD249,000 Annual Tuition Fees (inclusive of STEM Fee) for Non-local Students Admitted to the STEM Faculties and Schools",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Жильё и жизнь: общежитие 17 290–37 940 гонконгских долларов в год, съёмное жильё 30 000–50 000, расходы на жизнь до 50 000 в год.",
-      "evidence": "Residential halls and colleges HKD17,290 to HKD37,940 per year"
+      "evidence": "Residential halls and colleges HKD17,290 to HKD37,940 per year",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Таджикского аттестата в таблице требований нет, такие результаты рассматривают индивидуально. Минимальные требования приём не гарантируют: смотрят и интервью, и мотивационное письмо, и рекомендации.",
-      "evidence": "Admissions decisions to the University's undergraduate degree programmes are made based on academic performance as well as other factors, including interview performance, personal statement, references, other documents submitted to the University, etc."
+      "evidence": "Admissions decisions to the University's undergraduate degree programmes are made based on academic performance as well as other factors, including interview performance, personal statement, references, other documents submitted to the University, etc.",
+      "field": "schoolCountry",
+      "kind": "workaround"
     },
     {
       "ru": "Английский обязателен: IELTS Academic от 6.5 или TOEFL iBT от 93 за одну попытку, сданные не раньше чем за два года до 1 сентября года поступления. Подходят также SAT по чтению и письму от 610 или PTE Academic от 64. IELTS Online, IELTS Indicator и домашний TOEFL не принимают.",
-      "evidence": "Note: The TOEFL ITP, TOEFL ITP Plus and TOEFL Home Edition tests are not accepted to fulfill the English language requirement."
+      "evidence": "Note: The TOEFL ITP, TOEFL ITP Plus and TOEFL Home Edition tests are not accepted to fulfill the English language requirement.",
+      "field": "language",
+      "kind": "workaround"
     },
     {
       "ru": "Пороги по английскому указаны для набора 2026 как справочные; на 2027 могут измениться.",
-      "evidence": "English Language Requirement (Information is for 2026 Reference Only)"
+      "evidence": "English Language Requirement (Information is for 2026 Reference Only)",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Кому к 1 сентября года поступления исполнится 25, тот считается выполнившим вступительные требования, но должен приложить документы об образовании и опыте работы.",
-      "evidence": "Applicants who turn 25 on or before 1 September in the year that admission is sought are deemed to have satisfied HKU's entrance requirements."
+      "evidence": "Applicants who turn 25 on or before 1 September in the year that admission is sought are deemed to have satisfied HKU's entrance requirements.",
+      "field": "age",
+      "kind": "note"
     },
     {
       "ru": "Сроки набора 2027: подача открывается 23 сентября 2026. Кто подаст до полудня 25 ноября 2026 по гонконгскому времени, попадает в первую волну с интервью в ноябре — январе и ответами с декабря. Дальше заявки рассматривают по мере поступления до 25 августа 2027.",
-      "evidence": "25 Aug 2027 Applications close at noon (HKT)"
+      "evidence": "25 Aug 2027 Applications close at noon (HKT)",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Оценки, прогнозные и итоговые, нужно ввести в систему подачи, а не только приложить файлы. Иначе заявку могут отклонить.",
-      "evidence": "Applicants must input all their academic results, including both predicted and actual results, into the application system (instead of merely uploading the documents)."
+      "evidence": "Applicants must input all their academic results, including both predicted and actual results, into the application system (instead of merely uploading the documents).",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Через агентов HKU не принимает: подавать нужно самому, напрямую. Обещания «поступить без оценок и IELTS» вуз называет ложью.",
-      "evidence": "Non-local applicants interested in applying to HKU must directly submit their applications to the University, and only eligible applicants who meet the necessary requirements will be considered for admission."
+      "evidence": "Non-local applicants interested in applying to HKU must directly submit their applications to the University, and only eligible applicants who meet the necessary requirements will be considered for admission.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "После приглашения нужно подтвердить согласие за три-четыре недели и внести невозвратный депозит. На студенческую визу закладывай восемь-десять недель.",
-      "evidence": "Non-local students should allow at least four to six weeks for an assessment and eight to ten weeks for a visa application upon receiving an offer."
+      "evidence": "Non-local students should allow at least four to six weeks for an assessment and eight to ten weeks for a visa application upon receiving an offer.",
+      "field": null,
+      "kind": "steps"
     }
   ],
   "deadline": {

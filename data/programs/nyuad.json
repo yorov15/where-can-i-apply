@@ -85,47 +85,69 @@
   "textConditions": [
     {
       "ru": "Порога по языку нет вовсе — вуз пишет это прямо. Названные баллы описывают тех, кто проходит конкурс: IELTS 7,5, TOEFL 5 по новой шкале, Duolingo 135. Это выше, чем у Торонто и Гонконга, но формально ниже подавать не запрещено.",
-      "evidence": "We don't have minimum score requirements, but competitive applicants will receive"
+      "evidence": "We don't have minimum score requirements, but competitive applicants will receive",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "SAT и ACT не нужны: тестонезависимая политика продлена на весь цикл 2027-2028. Твой цикл она покрывает целиком.",
-      "evidence": "NYU will remain test-optional through the 2027-2028 application cycle."
+      "evidence": "NYU will remain test-optional through the 2027-2028 application cycle.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Три волны: обязывающая ранняя до 1 ноября 2026, обязывающая вторая до 1 января 2027 и обычная до 5 января 2027. Анкета CSS Profile сдаётся отдельно и позже: 10 ноября, 10 января и 1 февраля соответственно.",
-      "evidence": "Early Decision I November 1 December 15 Early Decision II January 1 February 15 Regular Decision January 5 April 1"
+      "evidence": "Early Decision I November 1 December 15 Early Decision II January 1 February 15 Regular Decision January 5 April 1",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Ранняя волна связывает по рукам. Получил приглашение с достаточной помощью — обязан отозвать все остальные заявки за две-три недели и новых не подавать. Для тебя это значит отказ от Торонто, UBC, KAIST и Гонконга разом.",
-      "evidence": "the student must withdraw any previously submitted applications and accept NYUAD's admission offer"
+      "evidence": "the student must withdraw any previously submitted applications and accept NYUAD's admission offer",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Отказ в ранней волне закрывает NYU на весь год. Подать заново во вторую волну или в обычную будет нельзя, ни сюда, ни в нью-йоркский кампус.",
-      "evidence": "Early Decision I applicants who are not offered admission may not re-apply as Early Decision II or Regular Decision applicants in the same application cycle"
+      "evidence": "Early Decision I applicants who are not offered admission may not re-apply as Early Decision II or Regular Decision applicants in the same application cycle",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Если помощи не хватит на учёбу, от обязательства освободят. Вуз сам советует не подавать в раннюю волну, если деньги для тебя вопрос.",
-      "evidence": "Do not feel pressure to apply Early Decision if finances are a concern."
+      "evidence": "Do not feel pressure to apply Early Decision if finances are a concern.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Помощь считают только по CSS Profile — платной анкете американского College Board. Если родители в разводе, анкету заполняет каждый отдельно. Не сдал вовремя — помощи не будет, а без неё учёба здесь не по карману.",
-      "evidence": "Financial Aid at NYUAD is based on a student's and family's demonstrated financial need."
+      "evidence": "Financial Aid at NYUAD is based on a student's and family's demonstrated financial need.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Гражданам ОАЭ стипендию дают всем поступившим и без заявки. Всем остальным дают только по нужде.",
-      "evidence": "the Abu Dhabi government provides scholarships to all admitted UAE nationals"
+      "evidence": "the Abu Dhabi government provides scholarships to all admitted UAE nationals",
+      "field": "citizenship",
+      "kind": "note"
     },
     {
       "ru": "Подача идёт через Common Application — общую американскую систему. Нужны школьные документы, одно рекомендательное письмо и отдельная анкета NYUAD.",
-      "evidence": "The Common Application Academic records One letter of recommendation"
+      "evidence": "The Common Application Academic records One letter of recommendation",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Математику смотрят особо: вуз прямо советует пройти в школе курс матанализа, иначе на технических направлениях будет тяжело с первого дня.",
-      "evidence": "Building a strong foundation in calculus in high school"
+      "evidence": "Building a strong foundation in calculus in high school",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Сертификат по английскому обязателен, если английский не родной и последние три года ты не учился по программе полностью на английском. Без результата одобренного экзамена заявку не считают полной.",
-      "evidence": "Results from English language testing are required for students whose native language is not English, unless they have been studying in a curriculum where English is the sole language of instruction for three years prior to applying."
+      "evidence": "Results from English language testing are required for students whose native language is not English, unless they have been studying in a curriculum where English is the sole language of instruction for three years prior to applying.",
+      "field": "language",
+      "kind": "workaround"
     }
   ],
   "deadline": {

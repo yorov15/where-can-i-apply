@@ -60,63 +60,93 @@
   "textConditions": [
     {
       "ru": "Нужен один сертификат по английскому на выбор: собственный тест AUCA, TOEFL или IELTS. Минимального балла страницы приёма не называют.",
-      "evidence": "AUCA Test of English Language Proficiency or Official TOEFL Certificate"
+      "evidence": "AUCA Test of English Language Proficiency or Official TOEFL Certificate",
+      "field": "language",
+      "kind": "must"
     },
     {
       "ru": "Нужен и один вступительный экзамен на выбор: собственный экзамен AUCA, SAT или ACT. Результат SAT или ACT отправляют в AUCA по коду вуза.",
-      "evidence": "Official Admission Exam Results (only one exam certificate must be submitted): AUCA Admission Exam or SAT Reasoning Test (SAT I)"
+      "evidence": "Official Admission Exam Results (only one exam certificate must be submitted): AUCA Admission Exam or SAT Reasoning Test (SAT I)",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Ближайший вступительный экзамен AUCA — 1 ноября 2026, регистрация до 27 октября. Это набор на весенний семестр 2027; даты для набора на осень 2027 на странице пока не объявлены.",
-      "evidence": "The admissions exam date is November 1, 2026."
+      "evidence": "The admissions exam date is November 1, 2026.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Одиннадцатилетний таджикский аттестат по сроку подходит. После зачисления его надо подтвердить документом о равенстве кыргызскому аттестату, а оригинал с переводом на русский сдать в министерство образования Кыргызстана.",
-      "evidence": "applicants who have graduated from educational institutions outside of Kyrgyz Republic must present a document confirming they have obtained the equivalent of the Kyrgyz Republic's state diploma of secondary education"
+      "evidence": "applicants who have graduated from educational institutions outside of Kyrgyz Republic must present a document confirming they have obtained the equivalent of the Kyrgyz Republic's state diploma of secondary education",
+      "field": "schoolYears",
+      "kind": "steps"
     },
     {
       "ru": "Подавать можно из выпускного класса: вместо аттестата — справка из школы, что ты в выпускном классе. Оригинал аттестата приносят после зачисления.",
-      "evidence": "a document from current school certifying that an applicant is in the final year of study"
+      "evidence": "a document from current school certifying that an applicant is in the final year of study",
+      "field": "graduationYear",
+      "kind": "steps"
     },
     {
       "ru": "Гражданам Таджикистана не нужно регистрироваться на портале министерства Кыргызстана: это обязательно для иностранцев из всех стран, кроме Казахстана, Таджикистана, России и Беларуси.",
-      "evidence": "Mandatory registration of all international applicants (outside of Kazakhstan, Tajikistan, Russia and Belarus)"
+      "evidence": "Mandatory registration of all international applicants (outside of Kazakhstan, Tajikistan, Russia and Belarus)",
+      "field": "citizenship",
+      "kind": "note"
     },
     {
       "ru": "US-CAEF — отдельная полная стипендия на учёбу именно в AUCA. Её дают гражданам Казахстана, Кыргызстана, Таджикистана и Узбекистана, которым без помощи учиться не на что.",
-      "evidence": "are citizens of Kazakhstan, Kyrgyzstan, Tajikistan or Uzbekistan"
+      "evidence": "are citizens of Kazakhstan, Kyrgyzstan, Tajikistan or Uzbekistan",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "US-CAEF дают только на четыре направления: бизнес, экономика, программная инженерия, прикладная математика и информатика.",
-      "evidence": "Business Administration Economics Software Engineering Applied Mathematics and Informatics"
+      "evidence": "Business Administration Economics Software Engineering Applied Mathematics and Informatics",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Кроме платы за обучение US-CAEF даёт жильё, деньги на дорогу и ежемесячную стипендию, а также стажировку на конкурсной основе.",
-      "evidence": "In addition to tuition, U.S.-CAEF provides accommodation, travel stipends, a monthly living stipend"
+      "evidence": "In addition to tuition, U.S.-CAEF provides accommodation, travel stipends, a monthly living stipend",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Подать на US-CAEF мало: потом нужно отдельно поступить в сам AUCA. В финалисты стипендии берут только тех, кого университет уже принял.",
-      "evidence": "Only applicants who are admitted to AUCA may be selected as finalists"
+      "evidence": "Only applicants who are admitted to AUCA may be selected as finalists",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Срок US-CAEF в последнем объявлении на сайте AUCA — 22 января 2025, это цикл 2025/26. О новом цикле на этих страницах пока ничего нет, поэтому даты в карточке пустые.",
-      "evidence": "Application deadline - January 22, 2025, 17:00 (Bishkek time)."
+      "evidence": "Application deadline - January 22, 2025, 17:00 (Bishkek time).",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Помощь самого университета — по нужде, и она открыта гражданам СНГ, в том числе Таджикистана. В среднем — 2 400 долларов на студента.",
-      "evidence": "Financial aid is available to both incoming and continuing AUCA students from the Kyrgyz Republic as well as from other C.I.S. countries."
+      "evidence": "Financial aid is available to both incoming and continuing AUCA students from the Kyrgyz Republic as well as from other C.I.S. countries.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Сроки заявки на помощь на странице — от 2024 года: первый круг до 12 апреля, второй до 14 июня. Новых дат там нет.",
-      "evidence": "1st ROUND: Financial aid application deadline April 12, 2024"
+      "evidence": "1st ROUND: Financial aid application deadline April 12, 2024",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Стипендии по успехам — только для граждан Кыргызстана. Исключение: двое лучших на вступительных по антропологии и социологии получают 100%, и это открыто для всех стран СНГ.",
-      "evidence": "Only citizens of the Kyrgyz Republic are eligible for merit-based awards."
+      "evidence": "Only citizens of the Kyrgyz Republic are eligible for merit-based awards.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Полная стоимость учёбы — около 6 775 долларов в год, но это данные 2021/22 учебного года. Нынешнюю цену эти страницы не называют.",
-      "evidence": "the total cost of studying at AUCA is about $6,775 per year"
+      "evidence": "the total cost of studying at AUCA is about $6,775 per year",
+      "field": null,
+      "kind": "money"
     }
   ],
   "deadline": {

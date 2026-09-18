@@ -66,79 +66,117 @@
   "textConditions": [
     {
       "ru": "При отборе иностранцев не смотрят, может ли семья платить.",
-      "evidence": "That means your family's ability to pay is not a factor or barrier to admission."
+      "evidence": "That means your family's ability to pay is not a factor or barrier to admission.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Принятым иностранцам закрывают всю посчитанную нужду: грантами и небольшой обязательной подработкой в кампусе, без кредитов.",
-      "evidence": "Bowdoin meets all admitted international students' full demonstrated need with a small on-campus work expectation and scholarships."
+      "evidence": "Bowdoin meets all admitted international students' full demonstrated need with a small on-campus work expectation and scholarships.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Стипендий за успехи, спорт или творчество нет, только помощь по нужде.",
-      "evidence": "Bowdoin College does not offer special scholarships based solely on academic, athletic, or artistic achievement."
+      "evidence": "Bowdoin College does not offer special scholarships based solely on academic, athletic, or artistic achievement.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Сколько стоит год 2026/27 до помощи: обучение 74 268 долларов, сборы 700, жильё 10 106, питание 10 326, книги 840, личные расходы 1 660, плюс дорога. Всего от 97 900.",
-      "evidence": "Total Cost of Attendance $97,900+"
+      "evidence": "Total Cost of Attendance $97,900+",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Документы на помощь иностранцы подают только после зачисления, и сдать их надо в течение семи дней после решения о приёме.",
-      "evidence": "Admitted students should expect to submit all financial aid materials within seven days of your admission offer."
+      "evidence": "Admitted students should expect to submit all financial aid materials within seven days of your admission offer.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Для помощи нужна анкета CSS Profile, код Боудина 3089, но иностранцу её подавать нужно только после зачисления.",
-      "evidence": "International applicants (excluding Canadians) only need to submit student aid application materials if admitted to Bowdoin."
+      "evidence": "International applicants (excluding Canadians) only need to submit student aid application materials if admitted to Bowdoin.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Если оплата CSS Profile тяжела для семьи, страницы сайта расходятся: на одних написано, что вместо неё можно заполнить ISFAA и прислать по факсу или почте — и требование CSS Profile снимут; на другой странице сказано, что ISFAA больше не принимают и советуют просто написать в офис помощи sao@bowdoin.edu. Раз сайт сам себе противоречит, надёжнее сразу написать в офис помощи и спросить, примут ли ISFAA.",
-      "evidence": "If submitting the CSS Profile will cause extreme financial hardship, international students may complete the International Student Financial Aid Application (ISFAA) rather than the CSS Profile."
+      "evidence": "If submitting the CSS Profile will cause extreme financial hardship, international students may complete the International Student Financial Aid Application (ISFAA) rather than the CSS Profile.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "На странице вопросов и ответов сказано другое: ISFAA и форму IACAC больше не принимают вместо CSS Profile, а при трудностях с оплатой советуют написать в офис помощи после зачисления.",
-      "evidence": "We no longer accept the ISFAA or the IACAC Form in lieu of the CSS/PROFILE."
+      "evidence": "We no longer accept the ISFAA or the IACAC Form in lieu of the CSS/PROFILE.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Сертификат по английскому необязателен и минимального балла нет. Но языковых курсов в колледже нет, так что английский нужен уверенный, на уровне вуза.",
-      "evidence": "Bowdoin does not have a minimum qualifying EPT score."
+      "evidence": "Bowdoin does not have a minimum qualifying EPT score.",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "SAT и ACT не требуются: колледж не требует их больше 50 лет. Если сдал, можно попросить учесть результат.",
-      "evidence": "ACT or SAT scores are not required for the purpose of admission."
+      "evidence": "ACT or SAT scores are not required for the purpose of admission.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Минимального балла аттестата, IB или A-level для подачи нет: успехи смотрят в контексте твоей школы.",
-      "evidence": "We do not have a minimum qualifying score to apply."
+      "evidence": "We do not have a minimum qualifying score to apply.",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Если в стране есть национальный вступительный экзамен в вузы, нужны его официальные результаты. Таджикистан и ЦВЭ страница не упоминает, поэтому уточни у приёмной комиссии, нужны ли результаты ЦВЭ.",
-      "evidence": "Students from countries with national university entrance exams (such as but not limited to: WASSCE, EGSE, KCSE, CAPE, IGCSE, ISC, SLC) are required to submit official results."
+      "evidence": "Students from countries with national university entrance exams (such as but not limited to: WASSCE, EGSE, KCSE, CAPE, IGCSE, ISC, SLC) are required to submit official results.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Транскрипт переводят на английский, лучше через школу или заверяющего сотрудника. Нужны оценки за 9, 10 и 11 классы, а перед зачислением ещё и итоговые оценки с датой выпуска.",
-      "evidence": "Your transcript should be translated into English, and we prefer a translation from a school or a certifying official."
+      "evidence": "Your transcript should be translated into English, and we prefer a translation from a school or a certifying official.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Нужны три рекомендации: от школьного консультанта, учителя основного предмета из последних двух классов и ещё одного человека. Если консультанта в школе нет, этот раздел может заполнить учитель или директор.",
-      "evidence": "You may have a teacher or your principal complete the counselor section of your application."
+      "evidence": "You may have a teacher or your principal complete the counselor section of your application.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Сроки: подача открывается 1 августа. Первый ранний тур до 15 ноября, ответ в середине декабря; второй ранний тур до 5 января, ответ в начале февраля; обычный тур до 5 января, ответ в середине марта.",
-      "evidence": "Applications open on August 1. The Early Decision 1 deadline is November 15; Early Decision 2 and Regular Decision applications are due January 5."
+      "evidence": "Applications open on August 1. The Early Decision 1 deadline is November 15; Early Decision 2 and Regular Decision applications are due January 5.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Оба ранних тура обязывающие: они для тех, у кого Боудин на первом месте.",
-      "evidence": "A binding application program designed for students who believe that Bowdoin is their top choice."
+      "evidence": "A binding application program designed for students who believe that Bowdoin is their top choice.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Плату за подачу, 70 долларов, отменяют автоматически, если просишь финансовую помощь. Просить отдельно не нужно.",
-      "evidence": "Bowdoin automatically waives the $70 application fee for students who are applying for financial aid and/or are first-generation-to-college students"
+      "evidence": "Bowdoin automatically waives the $70 application fee for students who are applying for financial aid and/or are first-generation-to-college students",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Собеседование необязательно. Иностранцы сначала подают заявку, потом просят собеседование. Можно вместо него прислать независимое интервью InitialView, Vericant или встроенное в Duolingo, но тогда собеседование с колледжем уже не назначат.",
-      "evidence": "Please note that if you plan to submit an independent interview, you may not register for a Bowdoin interview."
+      "evidence": "Please note that if you plan to submit an independent interview, you may not register for a Bowdoin interview.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "С уже оконченным бакалавриатом не принимают.",
-      "evidence": "Students who have already obtained a bachelor's degree are ineligible for admission to Bowdoin."
+      "evidence": "Students who have already obtained a bachelor's degree are ineligible for admission to Bowdoin.",
+      "field": null,
+      "kind": "must"
     }
   ],
   "deadline": {

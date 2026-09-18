@@ -63,19 +63,27 @@
   "textConditions": [
     {
       "ru": "Нельзя подавать, если уже учишься в турецком вузе на той же ступени образования.",
-      "evidence": "Individuals who are currently enrolled in programs in Turkish universities at the level of education will apply."
+      "evidence": "Individuals who are currently enrolled in programs in Turkish universities at the level of education will apply.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Для медицины, стоматологии и фармации порог по баллу выше — 90%. Инструмент считает по общему порогу 70% и области обучения не различает.",
-      "evidence": "For candidates of Health Sciences (Medicine, Dentistry and Pharmacy): 90%"
+      "evidence": "For candidates of Health Sciences (Medicine, Dentistry and Pharmacy): 90%",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Окно подачи повторяется каждый год: 10 января — 20 февраля. Год в записи выведен из этого правила, официального объявления на следующий цикл ещё нет.",
-      "evidence": "which is the application period every year"
+      "evidence": "which is the application period every year",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Не могут подать граждане Турции и те, кто турецкое гражданство утратил.",
-      "evidence": "Ineligible Groups: Turkish citizens and individuals who have lost Turkish citizenship"
+      "evidence": "Ineligible Groups: Turkish citizens and individuals who have lost Turkish citizenship",
+      "field": "citizenship",
+      "kind": "note"
     }
   ],
   "deadline": {
@@ -94,7 +102,7 @@
   },
   "source": {
     "url": "https://turkiyeburslari.gov.tr/scholarshipsprograms",
-    "lastVerified": "2026-09-11",
+    "lastVerified": "2026-09-14",
     "humanChecked": false,
     "pages": [
       {

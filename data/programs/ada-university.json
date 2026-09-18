@@ -69,47 +69,69 @@
   "textConditions": [
     {
       "ru": "Для иностранцев есть стипендия имени Алимардан-бека Топчубашова. Отдельной заявки нет: чтобы тебя рассмотрели, подай заявку на поступление до раннего срока, 8 апреля в прошлом цикле.",
-      "evidence": "To apply for the scholarship, you must submit ADA University admission application form by early deadline of April 8."
+      "evidence": "To apply for the scholarship, you must submit ADA University admission application form by early deadline of April 8.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Стипендию дают принятым иностранцам и продлевают на весь срок учёбы при выполнении условий и если хватает денег. Точных условий и размера страницы не приводят, они в отдельном положении вуза.",
-      "evidence": "are renewable for the duration of their studies when certain criteria are met upon availability of funds."
+      "evidence": "are renewable for the duration of their studies when certain criteria are met upon availability of funds.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Иностранец платит за бакалавриат 8 500 манатов в год по таблице 2025 года: 7 750 за обучение и 750 студенческого взноса. Студенческий взнос платят все, даже со стипендией.",
-      "evidence": "All students must pay this fee, regardless of their status and/or scholarship eligibility."
+      "evidence": "All students must pay this fee, regardless of their status and/or scholarship eligibility.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Подача в три шага: онлайн-заявка с документами, онлайн-интервью на английском для прошедших отбор, затем заявка на портале Study in Azerbaijan. Решение о приёме принимают по итогам интервью.",
-      "evidence": "Interview serves as a final step of admission process, and final decisions are made based on the applicant's interview results."
+      "evidence": "Interview serves as a final step of admission process, and final decisions are made based on the applicant's interview results.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Документы: аттестат или справка школы о дате выпуска и транскрипт — с нотариальным переводом на английский, резюме до двух страниц, мотивационное письмо на 300–500 слов, паспорт и фото.",
-      "evidence": "Statement of Purpose describing motivation for applying to this program, future goals and career aspirations (minimum 300, maximum 500 words)"
+      "evidence": "Statement of Purpose describing motivation for applying to this program, future goals and career aspirations (minimum 300, maximum 500 words)",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Сертификат по английскому для подачи не обязателен. С IELTS Academic 6.0, TOEFL iBT 75 или 4 по новой шкале, PTE 50 или Duolingo 105 освобождают от вузовской программы академического английского.",
-      "evidence": "Applicants who submit minimum test scores in one of the accepted exams (IELTS Academic 6.0 / TOEFL iBT 75 or 4 - new iBT TOEFL (for exams taken on or after January 21, 2026) / PTE 50 / Duolingo 105) will be exempted from English for Academic and Professional Purposes Program."
+      "evidence": "Applicants who submit minimum test scores in one of the accepted exams (IELTS Academic 6.0 / TOEFL iBT 75 or 4 - new iBT TOEFL (for exams taken on or after January 21, 2026) / PTE 50 / Duolingo 105) will be exempted from English for Academic and Professional Purposes Program.",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Плата за подачу 100 манатов, не возвращается.",
-      "evidence": "submit your application by paying a non-refundable application fee of 100 AZN."
+      "evidence": "submit your application by paying a non-refundable application fee of 100 AZN.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Сроки прошлого цикла для иностранцев: первый этап до 8 апреля 2026 с интервью в мае — июне, поздний до 1 июля 2026 с интервью в июле — августе. Даты на 2027 ещё не объявлены, поэтому срок в карточке по прошлому году и помечен неподтверждённым.",
-      "evidence": "First round deadline: April 8, 2026 Interviews for shortlisted candidates: May, June 2026 Late application deadline: July 1, 2026"
+      "evidence": "First round deadline: April 8, 2026 Interviews for shortlisted candidates: May, June 2026 Late application deadline: July 1, 2026",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Кто имеет постоянный вид на жительство в Азербайджане или двойное гражданство с Азербайджаном, подаёт как гражданин Азербайджана, а не как иностранец.",
-      "evidence": "Candidates who have double citizenship that includes Azerbaijani citizenship, must follow the same application process as citizens of Azerbaijan."
+      "evidence": "Candidates who have double citizenship that includes Azerbaijani citizenship, must follow the same application process as citizens of Azerbaijan.",
+      "field": "citizenship",
+      "kind": "note"
     },
     {
       "ru": "Для иностранцев недалеко от кампуса есть студенческое общежитие Univerium с меблированными квартирами. Его стоимость эти страницы не называют.",
-      "evidence": "Univerium offers apartments out of the ADA campus designed for international students."
+      "evidence": "Univerium offers apartments out of the ADA campus designed for international students.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Визу оформляют через посольство Азербайджана. Если посольства в твоей стране нет, можно подать на электронную визу с целью «образование» на evisa.gov.az.",
-      "evidence": "If there is no Embassy of Azerbaijan in your country, you can apply for visa through (evisa.gov.az) portal by selecting EDUCATION purpose of visa only."
+      "evidence": "If there is no Embassy of Azerbaijan in your country, you can apply for visa through (evisa.gov.az) portal by selecting EDUCATION purpose of visa only.",
+      "field": null,
+      "kind": "note"
     }
   ],
   "deadline": {

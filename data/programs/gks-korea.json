@@ -61,27 +61,39 @@
   "textConditions": [
     {
       "ru": "Не только сам абитуриент, но и оба родителя не должны иметь корейского гражданства. В анкете такого вопроса нет — проверь сам.",
-      "evidence": "Nationality: Applicants and both of their parents must hold non-Korean citizenship"
+      "evidence": "Nationality: Applicants and both of their parents must hold non-Korean citizenship",
+      "field": "citizenship",
+      "kind": "must"
     },
     {
       "ru": "Объявление NIIED выходит в сентябре. Заявки по посольскому пути подают в сентябре, через вуз — с сентября по ноябрь; отбор идёт в октябре — декабре, итоги — в декабре. Точных чисел источник не называет, поэтому даты приёма в карточке пустые.",
-      "evidence": "Application Submission Embassy University Embassy Track: September / University Track: September - November"
+      "evidence": "Application Submission Embassy University Embassy Track: September / University Track: September - November",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Подавать можно двумя путями — через посольство Кореи или напрямую в вуз, и у каждого свои квоты. По посольскому пути 156 мест: 88 общих, 61 по программе R-GKS для студентов из развивающихся стран и 7 для зарубежных корейцев. Через вуз — 130: 100 на инженерные и научные программы UIC и 30 на программы колледжей (associate degree).",
-      "evidence": "Selection Quota Embassy Track General 88 Overseas Koreans 7 R-GKS 61 Subtotal 156 University Track UIC 100 Associate Degree 30 Subtotal 130 Total 286"
+      "evidence": "Selection Quota Embassy Track General 88 Overseas Koreans 7 R-GKS 61 Subtotal 156 University Track UIC 100 Associate Degree 30 Subtotal 130 Total 286",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Балл 80% не единственный путь: подходит и место в лучших 20% класса, или нужный средний балл по шкале CGPA. Одно из этих условий обязательно, но пересчитать таджикский аттестат инструмент не может, поэтому по баллу не решает.",
-      "evidence": "such as a cumulative score of 80% or higher, ranking within the top 20% of their class, or meeting the required CGPA threshold"
+      "evidence": "such as a cumulative score of 80% or higher, ranking within the top 20% of their class, or meeting the required CGPA threshold",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
-      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
     },
     {
       "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
-      "evidence": "decided differently by each university, so you will then need to contact universities directly"
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
     }
   ],
   "deadline": {

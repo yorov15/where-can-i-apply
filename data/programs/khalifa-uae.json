@@ -67,51 +67,75 @@
   "textConditions": [
     {
       "ru": "Отдельной заявки на стипендию нет: её решают вместе с приёмом, и в письме о зачислении будет написано, какую дали. Мест по стипендиям ограниченное число.",
-      "evidence": "Scholarship eligibility is assessed as part of the admission process and applicants are not required to submit a separate scholarship application. The number of available scholarship slots is limited."
+      "evidence": "Scholarship eligibility is assessed as part of the admission process and applicants are not required to submit a separate scholarship application. The number of available scholarship slots is limited.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Для иностранцев пять ступеней: полная оплата обучения и учебников, скидка 75%, 50%, 25% и, на последней, только учебники. На какую попадёшь, зависит от успеваемости и приоритетов вуза.",
-      "evidence": "Tier I Full coverage of tuition fees. Textbooks provided by the University. Tier II Partial waiver of 75% of tuition fees."
+      "evidence": "Tier I Full coverage of tuition fees. Textbooks provided by the University. Tier II Partial waiver of 75% of tuition fees.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Бесплатное общежитие и транспорт вуз обещает гражданам ОАЭ и детям эмиратских матерей. В ступенях для иностранцев жилья нет — считай его своим расходом.",
-      "evidence": "Scholarship for UAE National and Children of Emirati Mothers Full coverage of tuition fees. Free University accommodation for eligible students."
+      "evidence": "Scholarship for UAE National and Children of Emirati Mothers Full coverage of tuition fees. Free University accommodation for eligible students.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Соответствие минимальным требованиям стипендию не гарантирует — так вуз пишет прямо.",
-      "evidence": "Meeting the minimum eligibility criteria does not guarantee a scholarship award."
+      "evidence": "Meeting the minimum eligibility criteria does not guarantee a scholarship award.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Английский обязателен: IELTS Academic 6.0 или TOEFL iBT 79. Без сертификата заявку не рассматривают.",
-      "evidence": "Mandatory English Proficiency Test Score IELTS Academic 6.0 OR TOEFL iBT 79"
+      "evidence": "Mandatory English Proficiency Test Score IELTS Academic 6.0 OR TOEFL iBT 79",
+      "field": "language",
+      "kind": "must"
     },
     {
       "ru": "Школу нужно было окончить не раньше чем за два года до подачи: для цикла осени 2026 — не раньше 2024 года. Инструмент это не считает: даты цикла 2027 ещё не объявлены. На той же странице ниже стоит другое число — «не раньше 2023»; страница сама себе противоречит, ориентируйся на строгий вариант и уточняй в приёмной комиссии.",
-      "evidence": "Applicants must have graduated from high school within the last two years. For this admission cycle (i.e., not before 2024)."
+      "evidence": "Applicants must have graduated from high school within the last two years. For this admission cycle (i.e., not before 2024).",
+      "field": "graduationYear",
+      "kind": "note"
     },
     {
       "ru": "В последнем классе обязательны математика и один естественно-научный предмет — физика, биология или химия; какой именно, зависит от программы.",
-      "evidence": "Applicants must complete Mathematics as a mandatory subject, along with one science subject (Physics, Biology, or Chemistry)"
+      "evidence": "Applicants must complete Mathematics as a mandatory subject, along with one science subject (Physics, Biology, or Chemistry)",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Таджикский аттестат инструмент считает по строке «российская или равная ей система»: там требуется средний балл не ниже 4,0 за последний, одиннадцатый класс. Своей строки для Таджикистана в таблице нет — если приёмная комиссия отнесёт аттестат к строке «прочие», условия могут отличаться.",
-      "evidence": "Applicants must achieve a minimum score of 4.0 in the final year (grade 11)."
+      "evidence": "Applicants must achieve a minimum score of 4.0 in the final year (grade 11).",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Аттестат нужно признать: требуется сертификат об эквивалентности от Министерства образования ОАЭ.",
-      "evidence": "The certificate must be recognized, and applicants must submit an equivalency certificate issued by the UAE Ministry of Education."
+      "evidence": "The certificate must be recognized, and applicants must submit an equivalency certificate issued by the UAE Ministry of Education.",
+      "field": "schoolCountry",
+      "kind": "must"
     },
     {
       "ru": "Приём конкурсный: минимальные требования не гарантируют зачисление, решают выбранная программа и наличие мест.",
-      "evidence": "Admissions to the university is competitive, and meeting the minimum eligibility criteria does not guarantee final admission."
+      "evidence": "Admissions to the university is competitive, and meeting the minimum eligibility criteria does not guarantee final admission.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "SAT по математике от 700 и экзамены AP не обязательны, но, по словам вуза, усиливают заявку.",
-      "evidence": "Preferable Test (Strengthens Application) Score Math SAT 700"
+      "evidence": "Preferable Test (Strengthens Application) Score Math SAT 700",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Приём на осень 2026 закрыт, а даты на осень 2027 вуз ещё не вывесил — поэтому срок в карточке пустой. Следи за страницей приёма.",
-      "evidence": "Undergraduate admissions for Fall 2026 are closed."
+      "evidence": "Undergraduate admissions for Fall 2026 are closed.",
+      "field": null,
+      "kind": "steps"
     }
   ],
   "deadline": {

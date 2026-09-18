@@ -84,55 +84,81 @@
   "textConditions": [
     {
       "ru": "Главное условие: 12 лет школы. Для 11-летней школы исключение сделано только для стран из списка Министерства образования Японии: Беларусь, Казахстан, Мьянма, Перу, Россия, Судан, Украина, Узбекистан. Таджикистана в этом списке нет.",
-      "evidence": "standard education curricula in Belarus, Kazakhstan, Myanmar, Peru, Russia, Sudan, Ukraine, and Uzbekistan"
+      "evidence": "standard education curricula in Belarus, Kazakhstan, Myanmar, Peru, Russia, Sudan, Ukraine, and Uzbekistan",
+      "field": "schoolYears",
+      "kind": "must"
     },
     {
       "ru": "Другие пути для 11-летней школы: диплом IB или A-level не меньше чем по двум предметам, подготовительные курсы, признанные министерством, или индивидуальная проверка в APU с 18 лет. Проверку просят через форму подтверждения образования, лучше за четыре недели до срока подачи.",
-      "evidence": "Be at least 18 years of age and have been recognized through an individual screening by APU as having an academic background equivalent to or higher than a high school graduate."
+      "evidence": "Be at least 18 years of age and have been recognized through an individual screening by APU as having an academic background equivalent to or higher than a high school graduate.",
+      "field": "schoolYears",
+      "kind": "workaround"
     },
     {
       "ru": "Учиться можно на английском, японский заранее не нужен. Минимум для англоязычного потока: IELTS 6.0 и не ниже 5.5 по каждой части, TOEFL iBT 75 по старой шкале или 4.0 по новой, Duolingo 110. Домашний TOEFL и IELTS General не принимают.",
-      "evidence": "TOEFL iBT® Home Edition and TOEFL ITP® Test are not accepted."
+      "evidence": "TOEFL iBT® Home Edition and TOEFL ITP® Test are not accepted.",
+      "field": "language",
+      "kind": "must"
     },
     {
       "ru": "Для поступления в апреле 2027 засчитывают экзамены, сданные с 1 июня 2024 и до срока подачи; для сентября 2027 — с 1 сентября 2024.",
-      "evidence": "For April 2027 enrollment, only scores of examinations taken on or after June 1, 2024 and by the application deadline will be accepted."
+      "evidence": "For April 2027 enrollment, only scores of examinations taken on or after June 1, 2024 and by the application deadline will be accepted.",
+      "field": "language",
+      "kind": "must"
     },
     {
       "ru": "Скидку на обучение могут получить все иностранцы: 30, 50, 65, 80 или 100% на весь срок учёбы. Для неё к сроку подачи нужны эссе и рекомендация.",
-      "evidence": "APU Tuition Reduction Scholarships are offered in percentages of 30%, 50%, 65%, 80% and 100% , and cover the standard period of time until graduation."
+      "evidence": "APU Tuition Reduction Scholarships are offered in percentages of 30%, 50%, 65%, 80% and 100% , and cover the standard period of time until graduation.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Скидку дают по документам, записанному интервью и финансовому положению семьи. Чем раньше подашь в своём наборе, тем выше шанс её получить.",
-      "evidence": "You may have a greater chance of receiving the APU Tuition Reduction Scholarship if you apply earlier in each enrollment period."
+      "evidence": "You may have a greater chance of receiving the APU Tuition Reduction Scholarship if you apply earlier in each enrollment period.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Скидку проверяют каждый семестр: нужны успеваемость и нужное число кредитов, иначе её не продлят.",
-      "evidence": "To qualify for a renewal of the scholarship, recipients must pass a review of their academic performance and earn the required number of credits each semester."
+      "evidence": "To qualify for a renewal of the scholarship, recipients must pass a review of their academic performance and earn the required number of credits each semester.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Сколько сам платишь за обучение в первый год: при скидке 100% ничего, при 80% — 291 000 иен, при 50% — 727 500, при 30% — 1 018 500.",
-      "evidence": "80% Annual Scholarship Amount: 1,164,000 JPY Annual Tuition Borne by Student: 291,000 JPY"
+      "evidence": "80% Annual Scholarship Amount: 1,164,000 JPY Annual Tuition Borne by Student: 291,000 JPY",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "При зачислении платишь сразу: вступительный взнос 200 000 иен, первый семестр обучения по своей скидке, взнос за общежитие AP House 243 600 иен и страховку. Взнос за общежитие берут при любой скидке, так что деньги нужны заранее.",
-      "evidence": "This fee is required for all enrollees, regardless of the scholarship amount."
+      "evidence": "This fee is required for all enrollees, regardless of the scholarship amount.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Кредитов и грантов у вуза нет. После зачисления можно подать на другие стипендии, вуз советует искать и стипендии в своей стране.",
-      "evidence": "APU does not have a loan or grant program, but you may apply for a number of different scholarships after enrollment ."
+      "evidence": "APU does not have a loan or grant program, but you may apply for a number of different scholarships after enrollment .",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Подача онлайн: анкета, копии документов с официальным переводом на английский или японский, результаты экзаменов, плата за подачу и записанное интервью до срока. SAT, IB и другие стандартные экзамены прикладывают, если они есть.",
-      "evidence": "Complete your recorded interview before the application deadline."
+      "evidence": "Complete your recorded interview before the application deadline.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Сроки зависят от страны проживания, и в каждом наборе, апрельском и сентябрьском, несколько периодов подачи. Точных дат страница без интерактивной таблицы не показывает, поэтому смотри расписание на сайте. Сроки не продлевают.",
-      "evidence": "Deadlines will not be extended under any circumstances."
+      "evidence": "Deadlines will not be extended under any circumstances.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Начало учёбы: 1 апреля 2027 или 21 сентября 2027. Подавать можно из выпускного класса, если к началу учёбы покажешь аттестат.",
-      "evidence": "*The date of enrollment is April 1, 2027 for April enrollment and September 21, 2027 for September enrollment."
+      "evidence": "*The date of enrollment is April 1, 2027 for April enrollment and September 21, 2027 for September enrollment.",
+      "field": "graduationYear",
+      "kind": "steps"
     }
   ],
   "deadline": {

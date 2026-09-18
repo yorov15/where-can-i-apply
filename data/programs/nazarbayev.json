@@ -68,67 +68,99 @@
   "textConditions": [
     {
       "ru": "IELTS 6.0 — это не проходной балл по любой части, а общий средний. Письмо должны сдать отдельно не ниже 6.0, а чтение, аудирование и говорение — не ниже 5.5 каждое. Общий балл выше 6.0 не спасёт, если письмо ниже нормы.",
-      "evidence": "IELTS - 6.0; writing -6.0; reading & listening & speaking - 5.5"
+      "evidence": "IELTS - 6.0; writing -6.0; reading & listening & speaking - 5.5",
+      "field": "language",
+      "kind": "must"
     },
     {
       "ru": "Самый ранний срок — ноябрьский. В конкурсе на финпомощь через экзамен NUET подают до 20 ноября, и иностранцев этот путь тоже касается. Дата на странице — от прошлого цикла; новые даты университет вывешивает осенью, приём открывается 27 сентября.",
-      "evidence": "NUET Applicants (NUFYP and Undergraduate programs, including international): September 27-November 20, 2025"
+      "evidence": "NUET Applicants (NUFYP and Undergraduate programs, including international): September 27-November 20, 2025",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Остальные категории конкурса на финпомощь закрываются позже: SAT/ACT, IB, A-level и победители олимпиад — до 28 января, отдельная категория для иностранцев — до 10 февраля. Какие требования у категории для иностранцев, страница не расписывает.",
-      "evidence": "International Applicants (Undergraduate programs only and International SAT/ACT applicants for NUFYP): September 27- February 10, 2026"
+      "evidence": "International Applicants (Undergraduate programs only and International SAT/ACT applicants for NUFYP): September 27- February 10, 2026",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Для финпомощи NUET не обязателен: вместо него принимают Digital SAT от 1240 или ACT от 26.",
-      "evidence": "SAT/ACT applicants Digital SAT Reasoning Test - 1240 OR ACT - 26 composite score"
+      "evidence": "SAT/ACT applicants Digital SAT Reasoning Test - 1240 OR ACT - 26 composite score",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Порог NUET для государственного гранта — 120 баллов из 240 и не меньше 50 по каждому из двух предметов. Кому этот грант положен — только гражданам Казахстана или и иностранцам, — страница финпомощи не говорит. Иностранцам вуз отдельно называет стипендию Абая Кунанбаева.",
-      "evidence": "Minimum passing score to be eligible for a state grant - 120 in total for two subjects"
+      "evidence": "Minimum passing score to be eligible for a state grant - 120 in total for two subjects",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Стипендия Абая Кунанбаева покрывает обучение, медицинскую страховку и ежемесячную стипендию. Для какого уровня — бакалавриата или магистратуры — страница для иностранцев не уточняет.",
-      "evidence": "This scholarship covers the tuition fee, medical insurance, and a monthly stipend."
+      "evidence": "This scholarship covers the tuition fee, medical insurance, and a monthly stipend.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Её дают по заслугам лучшим иностранным кандидатам, по рекомендации приёмной комиссии каждой школы университета. Подать документы — ещё не значит её получить.",
-      "evidence": "merit-based Abay Kunanbayev scholarships available for top international candidates, as recommended by the admissions committee of each school"
+      "evidence": "merit-based Abay Kunanbayev scholarships available for top international candidates, as recommended by the admissions committee of each school",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Обычный приём — платный: 15 000 долларов в год, подготовительный год — 12 000. Цена одинаковая для казахстанцев и иностранцев. Для иностранцев из стран, где визу оформляют заранее, платный приём идёт до 17 июля.",
-      "evidence": "regular admissions is classified as a full tuition-based category, implying fee-paying study"
+      "evidence": "regular admissions is classified as a full tuition-based category, implying fee-paying study",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Балл аттестата — 4,0 из 5 — требуют только в платном приёме. В конкурсе на финпомощь его место занимают NUET, SAT/ACT, IB или A-level, поэтому балл ниже четырёх подачу на финпомощь не закрывает.",
-      "evidence": "GPA or equivalent and/or UNT in English *** 4.0 out of 5.0"
+      "evidence": "GPA or equivalent and/or UNT in English *** 4.0 out of 5.0",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Подготовительный год необязателен — можно поступать сразу на бакалавриат. Числа лет школы страницы не называют, так что вопрос, который у Италии и Японии закрывает дорогу, здесь не возникает.",
-      "evidence": "Admission to NUFYP after high school/college is optional. Applicants can enroll directly in the undergraduate program."
+      "evidence": "Admission to NUFYP after high school/college is optional. Applicants can enroll directly in the undergraduate program.",
+      "field": "schoolYears",
+      "kind": "note"
     },
     {
       "ru": "Общежитие иностранцам гарантируют, и жизнь недорогая: около 400 долларов в месяц вместе с едой, транспортом и прачечной.",
-      "evidence": "Accommodation is guaranteed for international students."
+      "evidence": "Accommodation is guaranteed for international students.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "От IELTS и TOEFL освобождают тех, кто уже проучился хотя бы семестр в вузе с обучением на английском. Об освобождении для выпускников школ с английским языком страница не пишет.",
-      "evidence": "where English is the language of instruction are exempt from submitting IELTS/TOEFL results"
+      "evidence": "where English is the language of instruction are exempt from submitting IELTS/TOEFL results",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "Подавать можно из выпускного класса, а не только с аттестатом на руках. Допускают также тех, кто уже учится в вузе или окончил его.",
-      "evidence": "Individuals who are students in the final year of secondary education institutions"
+      "evidence": "Individuals who are students in the final year of secondary education institutions",
+      "field": "graduationYear",
+      "kind": "note"
     },
     {
       "ru": "Осторожно с числами на их странице: IELTS 6.5 и SAT 1150 относятся к non-degree study — платному варианту без диплома. Не перепутай с требованиями бакалавриата.",
-      "evidence": "the education is offered exclusively on a fee-paying basis"
+      "evidence": "the education is offered exclusively on a fee-paying basis",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "IELTS и TOEFL надо сдавать очно в центре: домашние и онлайн-версии не засчитывают, баллы по частям из разных попыток не складывают.",
-      "evidence": "IELTS/TOEFL tests must be taken in person at the test center (not remotely)"
+      "evidence": "IELTS/TOEFL tests must be taken in person at the test center (not remotely)",
+      "field": "language",
+      "kind": "must"
     },
     {
       "ru": "NUET в прошлом цикле проводили только в городах Казахстана: Астане, Алматы, Шымкенте, Караганде и других. На экзамен придётся ехать в Казахстан.",
-      "evidence": "Dates of NUET 2026 February 1, 2026 : Astana, Kostanay, Aktau, Kokshetau, Oskemen"
+      "evidence": "Dates of NUET 2026 February 1, 2026 : Astana, Kostanay, Aktau, Kokshetau, Oskemen",
+      "field": null,
+      "kind": "steps"
     }
   ],
   "deadline": {

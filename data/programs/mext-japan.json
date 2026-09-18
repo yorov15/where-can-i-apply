@@ -64,23 +64,33 @@
   "textConditions": [
     {
       "ru": "Двенадцать лет школы — не единственный путь: засчитывается и обучение, признанное сопоставимым с японской старшей школой. Что именно засчитают, решает посольство — с одиннадцатилетним аттестатом идти спрашивать туда.",
-      "evidence": "or have completed courses in a school comparable to a Japanese high school"
+      "evidence": "or have completed courses in a school comparable to a Japanese high school",
+      "field": "schoolYears",
+      "kind": "note"
     },
     {
       "ru": "Подать можно двумя путями: по рекомендации посольства Японии в своей стране или по рекомендации японского вуза. Это разные отборы с разными сроками.",
-      "evidence": "required to apply in one of two ways: embassy recommendation or university recommendation"
+      "evidence": "required to apply in one of two ways: embassy recommendation or university recommendation",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Главный документ — гайдлайны конкретного набора, их выдаёт посольство. Сайт прямо предупреждает: если требования на нём расходятся с гайдлайнами, верны гайдлайны.",
-      "evidence": "If the application qualifications differ from the application guidelines, the contents of the guidelines should be followed."
+      "evidence": "If the application qualifications differ from the application guidelines, the contents of the guidelines should be followed.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Бакалавриат идёт пять лет: первый год — японский язык, дальше четыре года программы. Для медицины, стоматологии, фармации и ветеринарии — семь лет.",
-      "evidence": "5 years including Japanese language training"
+      "evidence": "5 years including Japanese language training",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Для отбора через посольство бакалавры сдают экзамены: японский, английский, математику и естественные науки. Поступающим на естественнонаучные направления нужно выбрать два предмета из химии, физики и биологии.",
-      "evidence": "Undergraduate students Japanese, English, mathematics, science"
+      "evidence": "Undergraduate students Japanese, English, mathematics, science",
+      "field": null,
+      "kind": "must"
     }
   ],
   "deadline": {
@@ -99,7 +109,7 @@
   },
   "source": {
     "url": "https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/",
-    "lastVerified": "2026-09-11",
+    "lastVerified": "2026-09-14",
     "humanChecked": false,
     "pages": [
       {

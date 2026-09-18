@@ -63,59 +63,87 @@
   "textConditions": [
     {
       "ru": "Для иностранцев отбор учитывает деньги семьи.",
-      "evidence": "We are need aware when reviewing applications from international students."
+      "evidence": "We are need aware when reviewing applications from international students.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Нужду закрывают полностью только тем принятым, кто попросил помощь вместе с заявкой на поступление.",
-      "evidence": "Vassar meets the full demonstrated need of all admitted students who apply for financial aid at the time of their admission application."
+      "evidence": "Vassar meets the full demonstrated need of all admitted students who apply for financial aid at the time of their admission application.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Иностранец, принятый без помощи на первом курсе, не получит деньги от Вассара ни в один год учёбы. Просить помощь нужно сразу.",
-      "evidence": "Students admitted without financial aid in the first year are not eligible to receive Vassar funding during their years at the College."
+      "evidence": "Students admitted without financial aid in the first year are not eligible to receive Vassar funding during their years at the College.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Для помощи нужна анкета CSS Profile, код Вассара 2956, открывается после 1 октября. Сроки помощи: 15 ноября в первом раннем туре, 1 января во втором, 1 февраля в обычном.",
-      "evidence": "Early Decision I November 15 Early Decision II January 1 Regular Decision February 1"
+      "evidence": "Early Decision I November 15 Early Decision II January 1 Regular Decision February 1",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Сертификат по английскому обязателен, если последние три года ты учился не на английском. Подходят TOEFL iBT, в том числе домашний, TOEFL PBT, IELTS Academic и Duolingo. Минимальных баллов страницы не называют.",
-      "evidence": "If English is not the primary language of instruction in the secondary school(s) you have attended for the last three years, you must submit English language proficiency exam results."
+      "evidence": "If English is not the primary language of instruction in the secondary school(s) you have attended for the last three years, you must submit English language proficiency exam results.",
+      "field": "language",
+      "kind": "workaround"
     },
     {
       "ru": "Результат Duolingo должен прийти от самого Duolingo в момент подачи. TOEFL и IELTS при финансовых трудностях может прислать школьный консультант в PDF, но для зачисления понадобятся официальные результаты.",
-      "evidence": "Test results MUST be submitted from Duolingo directly at the time of application."
+      "evidence": "Test results MUST be submitted from Duolingo directly at the time of application.",
+      "field": "language",
+      "kind": "must"
     },
     {
       "ru": "С TOEFL или IELTS советуют пройти ещё и интервью, например InitialView или Vericant. Интервью в Duolingo рассматривают как часть заявки.",
-      "evidence": "We recommend that applicants who submit the TOEFL/IELTS also complete an interview as an additional way to demonstrate English language proficiency"
+      "evidence": "We recommend that applicants who submit the TOEFL/IELTS also complete an interview as an additional way to demonstrate English language proficiency",
+      "field": "language",
+      "kind": "note"
     },
     {
       "ru": "SAT и ACT не нужны. Если хочешь, чтобы их учли, отметь это в портале заявителя.",
-      "evidence": "Vassar does not require applicants to submit SAT or ACT scores."
+      "evidence": "Vassar does not require applicants to submit SAT or ACT scores.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Транскрипт нужен со всеми оценками за школу, заверенный школой. Если он не на английском, нужны заверенная копия оригинала и перевод. Перевод лучше через агентство, но при трудностях его может сделать сотрудник школы или учитель английского.",
-      "evidence": "The translation should be completed by an agency, but can be done by a school official or English teacher, if an agency translation presents a financial hardship."
+      "evidence": "The translation should be completed by an agency, but can be done by a school official or English teacher, if an agency translation presents a financial hardship.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Сроки: первый ранний тур до 15 ноября, второй ранний и обычный до 1 января.",
-      "evidence": "Application Deadlines Early Decision I November 15 Early Decision II January 1 Regular Decision January 1"
+      "evidence": "Application Deadlines Early Decision I November 15 Early Decision II January 1 Regular Decision January 1",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Что собрать: школьный отчёт с рекомендацией консультанта и транскриптом, одну рекомендацию учителя и оценки за полугодие выпускного класса. Ранний тур требует подписанного соглашения.",
-      "evidence": "Early Decision Agreement (Early Decision Applicants ONLY)"
+      "evidence": "Early Decision Agreement (Early Decision Applicants ONLY)",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Советуют четыре года английского, математики, естественных наук, истории или обществознания и иностранного языка, а в последних двух классах самые сложные курсы школы.",
-      "evidence": "Special attention is given to the academic breadth, depth, and rigor of candidates' junior and senior year programs."
+      "evidence": "Special attention is given to the academic breadth, depth, and rigor of candidates' junior and senior year programs.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Плата за подачу 65 долларов. Если она тяжела, освобождение запрашивают в Common Application или Coalition Application.",
-      "evidence": "If the application fee poses a financial hardship, a fee waiver can be requested on the Common Application or the Coalition Application."
+      "evidence": "If the application fee poses a financial hardship, a fee waiver can be requested on the Common Application or the Coalition Application.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Иностранцам, переводящимся из другого вуза, помощь не дают.",
-      "evidence": "Financial aid is not available for international transfer applicants."
+      "evidence": "Financial aid is not available for international transfer applicants.",
+      "field": null,
+      "kind": "note"
     }
   ],
   "deadline": {

@@ -63,63 +63,93 @@
   "textConditions": [
     {
       "ru": "Поступающие сдают вступительный тест UCA по английскому и математике. Он стоит 15 долларов. Вместо него можно отправить результаты SAT по коду UCA 7834.",
-      "evidence": "UCA's Admissions Test will be conducted at designated testing locations and is comprised of two sections including English and mathematics."
+      "evidence": "UCA's Admissions Test will be conducted at designated testing locations and is comprised of two sections including English and mathematics.",
+      "field": "gpa",
+      "kind": "must"
     },
     {
       "ru": "В Таджикистане тест сдают в Душанбе, Хороге, Худжанде, Кулябе и Бохтаре. Место назначают в письме, и сдавать можно только там.",
-      "evidence": "Tajikistan (Dushanbe, Khorog, Khudjand, Kulob & Bokhtar)"
+      "evidence": "Tajikistan (Dushanbe, Khorog, Khudjand, Kulob & Bokhtar)",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Для отбора по английскому нужен уровень B1: с ним берут на подготовительный год. Для прямого зачисления нужен B2–C1. Вместо английской части теста можно показать IELTS: с 6–6.5 берут на подготовительный год, с 7 и выше сразу на второй курс. По TOEFL iBT это 79–95 и от 96.",
-      "evidence": "IELTS. PP - 6 to 6.5, DE - 7 and higher"
+      "evidence": "IELTS. PP - 6 to 6.5, DE - 7 and higher",
+      "field": "language",
+      "kind": "workaround"
     },
     {
       "ru": "Программа длится пять лет, первый год — подготовительный. С исключительным результатом теста могут условно зачислить сразу на второй курс.",
-      "evidence": "students may be eligible for conditional direct enrolment to the second year of UCA's five-year degree"
+      "evidence": "students may be eligible for conditional direct enrolment to the second year of UCA's five-year degree",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "В прошлом цикле заявки принимали с 1 октября 2025 по 14 февраля 2026, тест шёл 7–8 марта, заявку на финпомощь подавали до 22 апреля. Даты нового цикла ещё не объявлены, поэтому срок в карточке помечен неподтверждённым.",
-      "evidence": "UCA's application process will begin on October 1, 2025, and will close on February 14, 2026."
+      "evidence": "UCA's application process will begin on October 1, 2025, and will close on February 14, 2026.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "На первом этапе нужны паспорт и фото; выписку оценок за три последних года требуют только от иностранных абитуриентов. Аттестат и рекомендации приносят при зачислении — поэтому подать можно и из выпускного класса.",
-      "evidence": "academic transcripts for the last three years of study (mandatory for international students only)"
+      "evidence": "academic transcripts for the last three years of study (mandatory for international students only)",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Абитуриентов не из Таджикистана, Кыргызстана и Казахстана сначала отбирают по документам и только потом зовут на тест.",
-      "evidence": "Students from outside Tajikistan, Kyrgyzstan, or Kazakhstan will be shortlisted after preliminary review and invited to take the admissions test."
+      "evidence": "Students from outside Tajikistan, Kyrgyzstan, or Kazakhstan will be shortlisted after preliminary review and invited to take the admissions test.",
+      "field": "citizenship",
+      "kind": "note"
     },
     {
       "ru": "Полные стипендии — абитуриентам из Таджикистана, Кыргызстана и Казахстана, на конкурсе: за исключительный результат теста UCA, первое место на республиканской олимпиаде или золотой сертификат ОРТ.",
-      "evidence": "Full scholarships are awarded on a competitive basis to meritorious students from Tajikistan, Kyrgyzstan and Kazakhstan."
+      "evidence": "Full scholarships are awarded on a competitive basis to meritorious students from Tajikistan, Kyrgyzstan and Kazakhstan.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Полная цена — эквивалент 5 000 долларов в год за обучение и 3 000 за проживание, питание, ноутбук и страховку. Платят в местной валюте, и цена фиксируется на весь срок учёбы.",
-      "evidence": "Tuition fees at UCA are the equivalent of US$5000 per year"
+      "evidence": "Tuition fees at UCA are the equivalent of US$5000 per year",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "С учётом скидок студент платит в среднем около 1 400 долларов в год — вместе с жильём, пятиразовым питанием, ноутбуком, учебными материалами и страховкой.",
-      "evidence": "Taking into account discounts, the average cost of tuition at UCA is approximately $1,400 per year."
+      "evidence": "Taking into account discounts, the average cost of tuition at UCA is approximately $1,400 per year.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Из-за денег не отказывают: поступившим финансовая помощь гарантирована.",
-      "evidence": "No student is denied admission to UCA on financial grounds, and once admitted, financial assistance is guaranteed."
+      "evidence": "No student is denied admission to UCA on financial grounds, and once admitted, financial assistance is guaranteed.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Помощь собирается из стипендий, грантов по нужде и студенческих займов; для займа нужны два поручителя, один из них — родитель. Так сказано в пакете на финпомощь для студентов из других стран; для Таджикистана, Кыргызстана и Казахстана у вуза отдельные пакеты.",
-      "evidence": "For student loans, two Guarantors will be required including a parent/guardian."
+      "evidence": "For student loans, two Guarantors will be required including a parent/guardian.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Парням важно: подготовительный год не даёт отсрочки от армии — поступивших на него могут призвать.",
-      "evidence": "enrollment in the Preparatory Program of its School of Arts and Sciences does not serve as a ground for military deferment under applicable laws"
+      "evidence": "enrollment in the Preparatory Program of its School of Arts and Sciences does not serve as a ground for military deferment under applicable laws",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Направлений четыре: информатика и коммуникации и медиа — в Нарыне (Кыргызстан), глобальная экономика и науки о Земле и окружающей среде — в Хороге (Таджикистан). Учёба на английском, жить в общежитии обязательно.",
-      "evidence": "Computer Science and Communications and Media in Naryn, Kyrgyzstan, and Global Economics and Earth and Environmental Sciences in Khorog, Tajikistan"
+      "evidence": "Computer Science and Communications and Media in Naryn, Kyrgyzstan, and Global Economics and Earth and Environmental Sciences in Khorog, Tajikistan",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Перевода из другого вуза нет: поступать можно только на первый курс, через те же вступительные этапы.",
-      "evidence": "we do not offer transfers from other universities"
+      "evidence": "we do not offer transfers from other universities",
+      "field": null,
+      "kind": "must"
     }
   ],
   "deadline": {

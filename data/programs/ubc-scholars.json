@@ -80,47 +80,69 @@
   "textConditions": [
     {
       "ru": "Это стипендия по нужде, а не по успехам. Придётся показать документы о доходах семьи, имуществе и расходах, и доказать, что без помощи учиться не получится. Инструмент денег не считает и посчитать не может — по этой программе его зелёный цвет ничего не обещает.",
-      "evidence": "You can prove a significant level of financial need."
+      "evidence": "You can prove a significant level of financial need.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Нужны двое из школы: тот, кто выдвигает, и учитель-рекомендатель, и это должны быть разные люди. Школа выдвигает до двух человек на кампус в Ванкувере и одного в Оканагане.",
-      "evidence": "You'll need one nominator (guidance counsellor, principal, administrator, etc.) and one teacher referee"
+      "evidence": "You'll need one nominator (guidance counsellor, principal, administrator, etc.) and one teacher referee",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Срок — 15 ноября 2026. Формы от выдвигающего и учителя должны быть сданы за несколько дней до этого, иначе твою заявку нельзя даже дописать: без обеих форм она не открывается.",
-      "evidence": "The International Scholars Program application is due November 15."
+      "evidence": "The International Scholars Program application is due November 15.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Выбирать придётся один раз и навсегда: подал на эту программу — на стипендии за успехи тебя рассматривать не будут. Обратно переиграть нельзя.",
-      "evidence": "Applicants may only be considered for either our merit-based or financial need-based award program."
+      "evidence": "Applicants may only be considered for either our merit-based or financial need-based award program.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Академическое требование сформулировано без цифр: «все пятёрки или равный уровень». Инструмент такое не считает и пишет об этом в поле среднего балла. Требование при этом есть.",
-      "evidence": "You demonstrate superior academic achievement (achieve all As or equivalent standard)."
+      "evidence": "You demonstrate superior academic achievement (achieve all As or equivalent standard).",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "Таджикистана нет в списке стран UBC — там есть Казахстан, Россия, Украина, Азербайджан, но не он. Значит применяются базовые требования «если твоей страны нет в списке», и что именно в них входит, надо смотреть на сайте: эта часть страницы рисуется скриптом и в проверку не попадает.",
-      "evidence": "Basic requirements (if your country is not listed)"
+      "evidence": "Basic requirements (if your country is not listed)",
+      "field": "schoolCountry",
+      "kind": "note"
     },
     {
       "ru": "Страница противоречит сама себе: в одном месте написано, что приём на 2027 год открывается в сентябре 2026, в другом — что в начале октября. Ориентируйся на раннюю дату и проверяй сам.",
-      "evidence": "Applications for the September 2027 intake will open in early October 2026."
+      "evidence": "Applications for the September 2027 intake will open in early October 2026.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Не подходит для медсестринского дела, стоматологической гигиены, медицинских лабораторных наук, совместных и двойных программ. Для информатики ограничений нет.",
-      "evidence": "The following degrees are not eligible for UBC International Scholars Program awards"
+      "evidence": "The following degrees are not eligible for UBC International Scholars Program awards",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Если английского на прямое поступление не хватает, есть Vantage College — год языковой подготовки со своей стипендией. Это не отказ, а другая дверь.",
-      "evidence": "you may be eligible for Vantage College and the Vantage One Excellence Award"
+      "evidence": "you may be eligible for Vantage College and the Vantage One Excellence Award",
+      "field": "language",
+      "kind": "workaround"
     },
     {
       "ru": "Могут позвать на видеоинтервью в январе-марте, на запись даётся неделя. Документы об образовании присылают до 31 января, а не к общему сроку.",
-      "evidence": "Applicants may be invited to complete a video interview."
+      "evidence": "Applicants may be invited to complete a video interview.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Требование UBC по английскому надо выполнить до 31 января: если нужен экзамен, сдай его так, чтобы официальный результат дошёл до вуза к 31 января. Пока не хватает документов для поступления, заявку на программу не рассматривают.",
-      "evidence": "make sure you complete the test early enough for UBC Admissions to receive your official test results by January 31"
+      "evidence": "make sure you complete the test early enough for UBC Admissions to receive your official test results by January 31",
+      "field": null,
+      "kind": "steps"
     }
   ],
   "deadline": {

@@ -57,55 +57,81 @@
   "textConditions": [
     {
       "ru": "Плату за обучение отменяют всем иностранным бакалаврам без отдельной заявки и без условий, на 8 семестров.",
-      "evidence": "Tuition fees are fully waived for 8 semesters, and there are monthly allowances, settlement subsidy and flight reimbursement."
+      "evidence": "Tuition fees are fully waived for 8 semesters, and there are monthly allowances, settlement subsidy and flight reimbursement.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Ежемесячно: 130 000 вон на личные расходы и 270 000 на питание, если в прошлом семестре набрал не меньше 11 кредитов и не был на испытательном сроке; ещё 130 000 международной надбавки при среднем балле от 3.0 из 4.5.",
-      "evidence": "Achieved a GPA of at least 3.0 out of the 4.5 scale in the previous semester"
+      "evidence": "Achieved a GPA of at least 3.0 out of the 4.5 scale in the previous semester",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Общежитие в стипендию не входит: около 106 000 вон в месяц, еда в кампусе 4 000–7 000 вон. Медстраховку платишь сам, но вуз возвращает её полностью.",
-      "evidence": "However, dorm fee is not included in GIST Scholarship."
+      "evidence": "However, dorm fee is not included in GIST Scholarship.",
+      "field": null,
+      "kind": "money"
     },
     {
       "ru": "Мест мало: в прошлом наборе около 15 иностранцев. Квот по странам нет.",
-      "evidence": "Approximately 15 students will be selected."
+      "evidence": "Approximately 15 students will be selected.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Сертификат по английскому обязателен для всех, кроме носителей языка, но минимального балла нет. Подходят TOEFL, IELTS, TEPS, TOEIC, Cambridge, PTE Academic и Duolingo, сданные не раньше чем за два года до срока подачи.",
-      "evidence": "Only tests taken within 2 years prior to the deadline of the online application are valid."
+      "evidence": "Only tests taken within 2 years prior to the deadline of the online application are valid.",
+      "field": "language",
+      "kind": "must"
     },
     {
       "ru": "Нужен хотя бы один стандартный экзамен: SAT, ACT, A-level, IB, AP, диплом международной олимпиады или выпускной или вступительный экзамен своей страны. SAT, ACT, A-level, IB или AP настоятельно рекомендуют. Если подаёшь национальный экзамен, приложи описание процедуры, конкурса и результатов.",
-      "evidence": "At least one of the above official test score reports should be submitted."
+      "evidence": "At least one of the above official test score reports should be submitted.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Национальные олимпиады вместо экзамена не засчитывают.",
-      "evidence": "National Olympiad Certificate is not acceptable."
+      "evidence": "National Olympiad Certificate is not acceptable.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Все прошедшие отбор документов проходят интервью по математике и одному естественному предмету на выбор: физике, химии или биологии.",
-      "evidence": "All applicants who pass the document screening will be asked math and science subject during the interview."
+      "evidence": "All applicants who pass the document screening will be asked math and science subject during the interview.",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Школу нужно окончить к 31 августа, а апостилированный аттестат прислать к сроку регистрации. Поэтому кто оканчивает школу позже начала июля, подать не может.",
-      "evidence": "Therefore, those whose graduation date is after early July can not apply."
+      "evidence": "Therefore, those whose graduation date is after early July can not apply.",
+      "field": "graduationYear",
+      "kind": "must"
     },
     {
       "ru": "Документы: анкета, одна рекомендация (её загружает сам рекомендатель через систему GIST), транскрипты за все годы старшей школы с описанием системы оценок, аттестат или справка о выпуске, сертификаты, паспорта твой и обоих родителей. Всё на английском или с нотариальным переводом.",
-      "evidence": "All documents must be submitted in English. Any document in different language should be accompanied by a notarized English translation."
+      "evidence": "All documents must be submitted in English. Any document in different language should be accompanied by a notarized English translation.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Платы за подачу нет. Подают только онлайн.",
-      "evidence": "We do not charge any application fee."
+      "evidence": "We do not charge any application fee.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Учат в основном на английском, но для выпуска иностранцы проходят несколько курсов корейского. Первый год без специальности, выбор из 10 направлений, включая Electrical Engineering and Computer Science и AI Convergence.",
-      "evidence": "International students are required to take some Korean courses for their graduation."
+      "evidence": "International students are required to take some Korean courses for their graduation.",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Прошлый цикл: подача с 24 ноября 2025 по 23 января 2026, итоги 30 апреля, учёба с осени 2026. Даты нового цикла на сайте ещё не объявлены, поэтому срок в карточке по прошлому году и помечен неподтверждённым.",
-      "evidence": "Online Application Nov. 24(Mon), 2025 ~ Jan. 23(Fri), 2026"
+      "evidence": "Online Application Nov. 24(Mon), 2025 ~ Jan. 23(Fri), 2026",
+      "field": null,
+      "kind": "steps"
     }
   ],
   "deadline": {

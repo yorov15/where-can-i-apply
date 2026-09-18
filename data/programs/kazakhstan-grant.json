@@ -63,39 +63,57 @@
   "textConditions": [
     {
       "ru": "Приём заявок в 2026 году шёл с 30 марта по 31 мая, онлайн через портал studyin.kz. Даты на следующий год ещё не объявлены, поэтому срок в карточке помечен неподтверждённым.",
-      "evidence": "Applicants can apply online from 30 March to 31 May 2026 until 23:59 Astana time"
+      "evidence": "Applicants can apply online from 30 March to 31 May 2026 until 23:59 Astana time",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "При подаче нужен уже полученный документ о среднем образовании с оценками и нотариальным переводом, а справки о выпускном классе в списке нет. Приём заканчивается 31 мая: если аттестат выдают позже, подать в год выпуска, похоже, не получится — уточняй у оператора.",
-      "evidence": "A document on the previous level of education with a transcript and attachment (if available) and a notarized translation into Kazakh or Russian or English"
+      "evidence": "A document on the previous level of education with a transcript and attachment (if available) and a notarized translation into Kazakh or Russian or English",
+      "field": "graduationYear",
+      "kind": "note"
     },
     {
       "ru": "Средний балл аттестата должен быть не ниже «хорошо».",
-      "evidence": "the average score of the document confirming secondary education with a grade of at least"
+      "evidence": "the average score of the document confirming secondary education with a grade of at least",
+      "field": "gpa",
+      "kind": "note"
     },
     {
       "ru": "На бакалавриат — 490 стипендий на всех иностранцев сразу, на магистратуру — 50, на докторантуру — 10.",
-      "evidence": "Bachelor's degree - 490"
+      "evidence": "Bachelor's degree - 490",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Стипендия — только на первое образование этого уровня: кто уже получил степень бакалавра, на бакалавриат по ней не подаёт.",
-      "evidence": "The applicant is eligible for the scholarship if each education level is pursued for the first time"
+      "evidence": "The applicant is eligible for the scholarship if each education level is pursued for the first time",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Документы: мотивационное эссе и одно рекомендательное письмо от школы или работодателя — на казахском, русском или английском, медицинская справка для выезжающих на учёбу и справка об отсутствии ВИЧ из своей страны.",
-      "evidence": "Motivational essay in Kazakh or Russian or English"
+      "evidence": "Motivational essay in Kazakh or Russian or English",
+      "field": null,
+      "kind": "must"
     },
     {
       "ru": "Приглашение от казахстанского вуза не обязательно, но если оно есть, его прикладывают.",
-      "evidence": "letter of invitation from the Kazakhstan university (if available)"
+      "evidence": "letter of invitation from the Kazakhstan university (if available)",
+      "field": null,
+      "kind": "note"
     },
     {
       "ru": "Список вузов и специальностей виден только на портале Study In во время приёма заявок — заранее его на этих страницах нет.",
-      "evidence": "The list of universities participating in the scholarship program, as well as the available fields of study, is available on the Study In portal during the application process."
+      "evidence": "The list of universities participating in the scholarship program, as well as the available fields of study, is available on the Study In portal during the application process.",
+      "field": null,
+      "kind": "steps"
     },
     {
       "ru": "Программу ведёт АО «Центр международных программ»; вопросы — на info@bolashak.gov.kz.",
-      "evidence": "The operator of the Scholarship Program is JSC"
+      "evidence": "The operator of the Scholarship Program is JSC",
+      "field": null,
+      "kind": "note"
     }
   ],
   "deadline": {
