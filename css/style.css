@@ -8,6 +8,7 @@
   --yes: #1a7f47;
   --no: #b3261e;
   --check: #8a6100;
+  --soft: #f5f7fa;
 }
 
 * { box-sizing: border-box; }
@@ -45,25 +46,56 @@ input, select {
 label.row input { display: inline-block; width: auto; margin-top: 0; }
 input[type="checkbox"] { width: 1.1rem; height: 1.1rem; }
 
-.card { border: 1px solid var(--line); border-left-width: 4px; border-radius: .5rem; padding: .75rem; margin: 0 0 .75rem; }
+.profile-box { border: 1px solid var(--line); border-radius: .5rem; margin: 0 0 1rem; }
+.profile-box > summary { list-style: none; cursor: pointer; padding: .75rem; min-height: 44px; display: flex; flex-wrap: wrap; gap: .25rem .5rem; align-items: baseline; }
+.profile-box > summary::-webkit-details-marker { display: none; }
+.profile-box-label { font-weight: 600; }
+.profile-box-text { color: var(--muted); flex: 1 1 12rem; }
+.profile-box-edit { color: var(--yes); font-size: .875rem; }
+.profile-box[open] .profile-box-edit { display: none; }
+.profile-box form { padding: 0 .75rem .75rem; }
+
+.button { display: inline-block; min-height: 44px; padding: .6rem 1rem; font: inherit; font-weight: 600; color: #fff; background: var(--yes); border: 0; border-radius: .375rem; text-decoration: none; cursor: pointer; }
+.button-small { min-height: 36px; padding: .35rem .75rem; font-size: .875rem; }
+#show-results { width: 100%; }
+
+.summary { margin: 0 0 1rem; padding: .75rem; background: var(--soft); border-radius: .5rem; }
+.summary:empty { display: none; }
+.summary-line { margin: 0 0 .4rem; font-weight: 500; }
+.summary-note { margin: .5rem 0 0; color: var(--muted); font-size: .8125rem; }
+
+.group { margin: 0 0 1.25rem; }
+.group-title { font-size: 1.05rem; margin: 0 0 .5rem; }
+
+.card { border: 1px solid var(--line); border-left-width: 4px; border-radius: .5rem; margin: 0 0 .5rem; }
 .card.yes { border-left-color: var(--yes); }
 .card.no { border-left-color: var(--no); }
 .card.check { border-left-color: var(--check); }
 .card.closed { opacity: .6; }
+.card-head { list-style: none; cursor: pointer; padding: .6rem .75rem; display: flex; flex-direction: column; gap: .15rem; min-height: 44px; position: relative; padding-right: 2rem; }
+.card-head::-webkit-details-marker { display: none; }
+.card-head::after { content: "▾"; position: absolute; right: .75rem; top: .6rem; color: var(--muted); transition: transform .15s ease; }
+.card[open] > .card-head::after { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) { .card-head::after { transition: none; } }
+.card-title { font-weight: 600; }
+.card-headline { font-weight: 500; }
+.card.yes .card-headline { color: var(--yes); }
+.card.no .card-headline { color: var(--no); }
+.card.check .card-headline { color: var(--check); }
+.card-meta { color: var(--muted); font-size: .875rem; }
 
-.card h3 { margin: 0 0 .25rem; font-size: 1rem; }
-.verdict { font-weight: 600; }
-.card.yes .verdict { color: var(--yes); }
-.card.no .verdict { color: var(--no); }
-.card.check .verdict { color: var(--check); }
-
-.reasons { margin: .5rem 0 0; padding-left: 1.1rem; }
-.reasons li { margin-bottom: .25rem; }
-.attested-title { margin: .75rem 0 .25rem; font-size: .875rem; font-weight: 600; color: var(--muted); }
-.attested { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: .875rem; }
-.attested li { margin-bottom: .25rem; }
-
-.conditions-title { margin: .75rem 0 .25rem; font-size: .875rem; font-weight: 600; color: var(--muted); }
-.conditions { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: .875rem; }
-.conditions li { margin-bottom: .35rem; }
+.card-body { padding: 0 .75rem .75rem; border-top: 1px solid var(--line); }
+.card-section-title { margin: .75rem 0 .25rem; font-size: .875rem; }
+.card-list { margin: 0; padding-left: 1.1rem; font-size: .9rem; }
+.card-list li { margin-bottom: .35rem; }
+.card-list.muted { color: var(--muted); }
+.reason { margin: 0 0 .6rem; }
+.reason-text { margin: 0; }
+.reason-label { margin: .35rem 0 .15rem; font-size: .875rem; font-weight: 600; }
+.reason-list { margin: 0; padding-left: 1.1rem; font-size: .9rem; }
+.reason-muted, .details-state { margin: .35rem 0 0; color: var(--muted); font-size: .875rem; }
+.card-body > .button { margin-top: .75rem; }
+.more { margin-top: .75rem; }
+.more-head { cursor: pointer; font-size: .875rem; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
+.card-source { margin: .75rem 0 0; color: var(--muted); font-size: .8125rem; }
 .empty { color: var(--muted); }

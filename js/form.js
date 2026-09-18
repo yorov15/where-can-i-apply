@@ -1,6 +1,6 @@
 // Единственный файл, который знает про поля формы. Читает и пишет
 // профиль в той же форме, что описана в js/profile.js.
-import { emptyProfile } from './profile.js';
+import { emptyProfile, profileSummary, profileReady } from './profile.js';
 
 // TOEFL_IBT — старая шкала 0–120 (сдан до 21 января 2026), TOEFL_IBT_2026 —
 // новая шкала 1–6. Сохранённые раньше профили знают только первый, и
@@ -49,4 +49,21 @@ export function onProfileChange(root, handler) {
   const fire = () => handler(readForm(root));
   root.addEventListener('input', fire);
   root.addEventListener('change', fire);
+}
+
+// Анкета сворачивается в строку, когда главное уже заполнено, — и не
+// сворачивается сама, пока человек печатает.
+export function setupProfileBox({ box, summary, button, target }, profile) {
+  box.open = !profileReady(profile);
+  summary.textContent = profileSummary(profile);
+  button.addEventListener('click', () => {
+    box.open = false;
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+  });
+  return {
+    update(next) {
+      summary.textContent = profileSummary(next);
+    },
+  };
 }

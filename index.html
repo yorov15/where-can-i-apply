@@ -13,7 +13,13 @@
 </header>
 
 <main>
-  <form id="profile" autocomplete="off">
+  <details id="profile-box" class="profile-box" open>
+    <summary>
+      <span class="profile-box-label">Анкета</span>
+      <span id="profile-summary-text" class="profile-box-text">Заполни анкету</span>
+      <span class="profile-box-edit">изменить</span>
+    </summary>
+    <form id="profile" autocomplete="off">
     <fieldset>
       <legend>О тебе</legend>
 
@@ -86,9 +92,12 @@
         <input type="number" name="score-DUOLINGO" step="5" min="10" max="160" inputmode="numeric" placeholder="балл">
       </label>
     </fieldset>
-  </form>
+    <button type="button" id="show-results" class="button">Показать, куда можно подать</button>
+    </form>
+  </details>
 
-  <section id="results" aria-live="polite"></section>
+  <section id="summary" class="summary" aria-live="polite"></section>
+  <div id="results"></div>
 </main>
 
 <script type="module" src="js/main.js"></script>

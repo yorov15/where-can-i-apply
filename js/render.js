@@ -1,42 +1,18 @@
-// Единственный файл, который трогает DOM. Правила и вердикт про него
-// не знают — поэтому их можно переписать, не сломав страницу.
+// Единственный файл, который трогает DOM результатов (анкета — form.js).
+// Решения о словах и разделах принимают wording.js, summary.js и
+// card-model.js; здесь их только рисуют.
 import { evaluate } from './verdict.js';
 import { deadlineState } from './lib/deadline.js';
-import { reasonText } from './wording.js';
-import { notLimitedItems } from './card-model.js';
+import { summaryLines } from './summary.js';
+import { cardModel } from './card-model.js';
 
-// «Подходишь» обещает то, чего инструмент не знает: возьмут или нет,
-// решает отбор. Он отвечает на другой вопрос — пустят ли подавать.
-const VERDICT_TEXT = {
-  yes: 'Можешь подавать',
-  no: 'Подать не получится',
-  check: 'Можешь подавать, но проверь сам',
-};
-
-const DEADLINE_TEXT = {
-  open: 'Приём идёт',
-  upcoming: 'Приём ещё не начался',
-  due: 'Срок подачи',
-  closed: 'Приём закрыт',
-  unknown: 'Даты приёма неизвестны',
-};
-
-// Сначала то, куда подать можно: сайт отвечает на вопрос «куда я могу
-// подать документы», и человек с тридцатью пятью карточками не должен
-// пролистывать стену отказов, чтобы дойти до своих программ. Отказы
-// нужны — но после, как ответ на «а почему не сюда».
 const ORDER = { yes: 0, check: 1, no: 2 };
 
-// Как называть поля профиля в тексте карточки.
-const FIELD_NAMES = {
-  citizenship: 'гражданство',
-  schoolCountry: 'страну школы',
-  schoolYears: 'годы школы',
-  graduationYear: 'год выпуска',
-  age: 'возраст',
-  gpa: 'средний балл',
-  language: 'язык',
-};
+const GROUPS = [
+  ['yes', 'Можно подавать'],
+  ['check', 'Можно, если доделаешь или уточнишь'],
+  ['no', 'Сейчас нельзя'],
+];
 
 // Порядок выдачи: сначала открытые программы, куда подать можно, и
 // внутри — по близости срока. Вынесено из renderResults, чтобы порядок
@@ -60,16 +36,45 @@ export function sortRows(rows) {
   });
 }
 
-export function renderResults(node, profile, programs, today) {
-  node.textContent = '';
+export function groupRows(rows) {
+  sortRows(rows);
+  return GROUPS
+    .map(([status, title]) => ({ status, title, rows: rows.filter((row) => row.verdict.status === status) }))
+    .filter((group) => group.rows.length);
+}
+
+function el(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text != null) node.textContent = text;
+  return node;
+}
+
+function list(items, className) {
+  const ul = el('ul', className);
+  for (const item of items) ul.append(el('li', null, item));
+  return ul;
+}
+
+// Пересчёт идёт на каждое нажатие в анкете. Без этого все раскрытые
+// карточки захлопывались бы, пока человек правит балл.
+function rememberOpen(node, selector) {
+  return new Set([...node.querySelectorAll(`${selector}[open]`)].map((d) => d.dataset.id));
+}
+
+export function renderResults({ summaryNode, resultsNode }, profile, programs, today, details) {
+  const openCards = rememberOpen(resultsNode, 'details.card');
+  const openMore = rememberOpen(resultsNode, 'details.more');
+  summaryNode.textContent = '';
+  resultsNode.textContent = '';
 
   if (!programs.length) {
-    const p = document.createElement('p');
-    p.className = 'empty';
-    p.textContent = 'Программ пока нет. Данные собираются.';
-    node.append(p);
+    resultsNode.append(el('p', 'empty', 'Программ пока нет. Данные собираются.'));
     return;
   }
+
+  for (const line of summaryLines(profile, programs, today)) summaryNode.append(el('p', 'summary-line', line));
+  summaryNode.append(el('p', 'summary-note', 'Ответ — только про то, пустят ли подавать. Отбор, эссе и документы решают отдельно.'));
 
   const rows = programs.map((program) => ({
     program,
@@ -77,93 +82,103 @@ export function renderResults(node, profile, programs, today) {
     deadline: deadlineState(program.deadline, today),
   }));
 
-  sortRows(rows);
-
-  for (const row of rows) node.append(card(row));
+  for (const group of groupRows(rows)) {
+    const section = el('section', `group ${group.status}`);
+    section.append(el('h2', 'group-title', `${group.title} (${group.rows.length})`));
+    for (const row of group.rows) {
+      const model = cardModel(row, details.programs?.[row.program.id] ?? null, today);
+      section.append(card(model, details, openCards, openMore));
+    }
+    resultsNode.append(section);
+  }
 }
 
-function card({ program, verdict, deadline }) {
-  const el = document.createElement('article');
-  el.className = `card ${verdict.status}${deadline === 'closed' ? ' closed' : ''}`;
+function card(model, details, openCards, openMore) {
+  const box = el('details', `card ${model.status}${model.closed ? ' closed' : ''}`);
+  box.dataset.id = model.id;
+  box.open = openCards.has(model.id);
 
-  const title = document.createElement('h3');
-  title.textContent = program.name?.ru ?? program.id;
-  el.append(title);
+  const head = el('summary', 'card-head');
+  head.append(
+    el('span', 'card-title', model.title),
+    el('span', 'card-headline', model.headline),
+    el('span', 'card-meta', model.deadlineLine),
+    el('span', 'card-meta', model.coverageLine),
+  );
+  box.append(head);
 
-  const status = document.createElement('p');
-  status.className = 'verdict';
-  status.textContent = VERDICT_TEXT[verdict.status];
-  el.append(status);
+  const body = el('div', 'card-body');
 
-  const when = document.createElement('p');
-  when.className = 'hint';
-  when.textContent = DEADLINE_TEXT[deadline];
-  if (deadline !== 'unknown' && program.deadline?.closes) {
-    when.textContent += ` — до ${program.deadline.closes}`;
-    // Не «по прошлому году»: у многих программ окно просто повторяется
-    // каждый год, а объявления на новый цикл ещё нет.
-    if (program.deadline.confidence !== 'confirmed') when.textContent += ' (дата пока не подтверждена)';
-  }
-  el.append(when);
-
-  if (verdict.reasons.length) {
-    const list = document.createElement('ul');
-    list.className = 'reasons';
-    for (const reason of verdict.reasons) {
-      const li = document.createElement('li');
-      li.textContent = reasonText(reason).detail;
-      list.append(li);
+  if (model.reasons.length) {
+    body.append(el('h4', 'card-section-title', 'Почему так'));
+    for (const reason of model.reasons) {
+      const item = el('div', `reason ${reason.status}`);
+      const line = el('p', 'reason-text');
+      line.append(el('strong', null, `${reason.title}. `), document.createTextNode(reason.detail));
+      item.append(line);
+      if (reason.workarounds.length) {
+        item.append(el('p', 'reason-label', 'Как обойти:'), list(reason.workarounds, 'reason-list'));
+      }
+      if (reason.says.length) {
+        item.append(el('p', 'reason-label', 'Что пишет программа:'), list(reason.says, 'reason-list'));
+      }
+      if (reason.noWorkaround) {
+        item.append(el('p', 'reason-muted', 'Обходного пути программа не называет. Если сомневаешься — напиши в приёмную комиссию.'));
+      }
+      if (reason.seeBelow) item.append(el('p', 'reason-muted', 'Подробности — в условиях программы ниже.'));
+      body.append(item);
     }
-    el.append(list);
   }
 
-  // Главное содержание карточки, а не примечание. Семь полей анкеты
-  // отвечают на вопрос «пустят ли подавать», и у большинства программ
-  // ответ «да» — а настоящая работа описана здесь: экзамены, выдвижение
-  // школой, документы о доходах, отдельные заявки и сроки.
-  //
-  // Показывается на любой карточке, включая красную: именно там чаще
-  // всего и лежит обходной путь.
-  const conditions = (program.textConditions ?? []).filter((c) => c.ru);
-  if (conditions.length) {
-    const title = document.createElement('p');
-    title.className = 'conditions-title';
-    title.textContent = 'Что потребуется помимо анкеты:';
-    el.append(title);
-
-    const list = document.createElement('ul');
-    list.className = 'conditions';
-    for (const condition of conditions) {
-      const li = document.createElement('li');
-      li.textContent = condition.ru;
-      list.append(li);
+  if (!model.hasDetails) {
+    if (details.status === 'failed') {
+      const failed = el('p', 'details-state', 'Подробности не загрузились. Проверь интернет. ');
+      const retry = el('button', 'button button-small', 'Попробовать ещё раз');
+      retry.type = 'button';
+      retry.addEventListener('click', () => details.retry());
+      failed.append(retry);
+      body.append(failed);
+    } else {
+      body.append(el('p', 'details-state', 'Подробности загружаются…'));
     }
-    el.append(list);
   }
 
-  // Раньше здесь стояло «на странице не сказано ничего про...». Формально
-  // верно, читается как «данных нет» — и на большинстве карточек это была
-  // единственная строка между вердиктом и списком условий. Но за ней
-  // стоит проверка человека, и означает она обратное: перечисленное не
-  // мешает. Так и написано теперь.
-  //
-  // На красной карточке её нет: человеку, который не проходит, важна
-  // причина отказа, а не перечень того, что ему не мешает.
-  if (verdict.status !== 'no' && verdict.attested?.length) {
-    const head = document.createElement('p');
-    head.className = 'attested-title';
-    head.textContent = 'Не ограничивает — проверено по страницам программы:';
-    el.append(head);
+  for (const section of model.sections) {
+    body.append(el('h4', 'card-section-title', section.title), list(section.items, 'card-list'));
+  }
 
-    const list = document.createElement('ul');
-    list.className = 'attested';
-    for (const line of notLimitedItems(program, verdict.attested)) {
-      const li = document.createElement('li');
-      li.textContent = line;
-      list.append(li);
+  if (model.applyUrl) {
+    const link = el('a', 'button', 'Открыть сайт программы');
+    link.href = model.applyUrl;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    body.append(link);
+  }
+
+  if (model.more.notes.length || model.more.attested.length) {
+    const more = el('details', 'more');
+    more.dataset.id = model.id;
+    more.open = openMore.has(model.id);
+    more.append(el('summary', 'more-head', 'Ещё'));
+    if (model.more.notes.length) more.append(list(model.more.notes, 'card-list'));
+    if (model.more.attested.length) {
+      more.append(el('p', 'reason-label', 'Не ограничивает — проверено по страницам программы:'), list(model.more.attested, 'card-list muted'));
     }
-    el.append(list);
+    body.append(more);
   }
 
-  return el;
+  if (model.source) {
+    const foot = el('p', 'card-source', `${model.source}. `);
+    if (model.sourceUrl) {
+      const a = el('a', null, 'Источник');
+      a.href = model.sourceUrl;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      foot.append(a);
+    }
+    body.append(foot);
+  }
+
+  box.append(body);
+  return box;
 }
