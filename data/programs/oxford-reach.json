@@ -1,0 +1,220 @@
+{
+  "id": "oxford-reach",
+  "status": "published",
+  "name": {
+    "ru": "Оксфорд — Reach Oxford Scholarship: учёба, жильё и перелёт, 2–3 места в год",
+    "orig": "Reach Oxford Scholarship, University of Oxford"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Покрывает плату за курс, деньги на жизнь и один билет туда и обратно в год, но мест очень мало: около двух-трёх на весь университет в год. Просить стипендию можно только после того, как Оксфорд уже предложил тебе место",
+      "en": null
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": [
+        "TJ",
+        "UZ",
+        "KG",
+        "KZ",
+        "TM"
+      ],
+      "evidence": "Applicants must be nationals of countries who receive official development assistance from the Development Assistance Committee (DAC) of the Organisation for Economic Co-operation and Development (OECD)"
+    },
+    "schoolCountry": {
+      "allow": "*",
+      "deny": [
+        "TJ",
+        "TM",
+        "UZ",
+        "KG",
+        "KZ",
+        "RU"
+      ],
+      "evidence": "where a country is not listed on this page, this means that the school-leaving qualifications from that country do not currently meet our admissions requirements"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-20",
+      "note": "числа лет школы страницы Оксфорда не называют: смотрят на квалификацию из таблицы, а не на длину школы"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-20",
+      "note": "года выпуска страницы стипендии, аттестатов и приёма не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-20",
+      "note": "возраст на страницах приёма и стипендии не упоминается"
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "A total score of 38, 39 or 40 points (depending on the course) including core points, with 6s and 7s in subjects taken at the Higher level."
+    },
+    "language": {
+      "advisory": true,
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7.5,
+          "parts": true,
+          "evidence": "The IELTS UKVI Academic test can be accepted but is not recommended. | 7.5 | Minimum 7.0 per component"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 110,
+          "parts": true,
+          "evidence": "are currently under review by the University. | 110 | Minimum component scores: Listening: 22 Reading: 24 Speaking: 25 Writing: 24"
+        }
+      ],
+      "evidence": "You do not need to have evidence of your English Language proficiency when you make your UCAS application."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Стипендию рассматривают только у тех, кому Оксфорд уже предложил место. Сначала надо поступить, потом просить деньги.",
+      "evidence": "The University is unable to consider any scholarship applications from students who have not been offered a place at Oxford.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Национального аттестата стран Центральной Азии в таблице Оксфорда нет: казахстанский, киргизский, узбекский и российский названы «не принимается», а Таджикистана и Туркменистана в таблице нет вовсе — а страна вне таблицы, по словам самого университета, требованиям не соответствует.",
+      "evidence": "Not accepted | Attestat o srednem obrazovanii (Certificate of Secondary Education)",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Чтобы подать, надо сдать квалификацию из принимаемых. Подходит IB на 38–40 баллов в сумме (шестёрки и семёрки по предметам высокого уровня, точная сумма зависит от курса).",
+      "evidence": "A total score of 38, 39 or 40 points (depending on the course) including core points, with 6s and 7s in subjects taken at the Higher level.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ещё подходят международные A-level (Cambridge, Pearson Edexcel, OxfordAQA): их засчитывают оценка в оценку, как британские.",
+      "evidence": "International A-levels (offered by Cambridge Assessment International Education, Pearson Edexcel and OxfordAQA) are recognised as equivalent to UK GCE A-levels on a grade-for-grade basis.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Университет прямо советует не заходить с другой стороны: год первого курса в другом вузе не заменяет принимаемую квалификацию и делает заявку слабее.",
+      "evidence": "Taking one of these accepted qualifications will help you make the most competitive application, rather than seeking to qualify through attending the first year of university elsewhere.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Подготовительный год допускают только в отдельных случаях и лишь если он покрывает то же содержание, что нужные A-level. Университет сам советует брать другие квалификации.",
+      "evidence": "Although a foundation year course may be accepted in certain circumstances, we recommend taking different qualifications in order to make the strongest application.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский нужен как условие предложения места, а не подачи: сдать надо до 31 июля года, в котором получишь предложение. IELTS Academic от 7.5, причём каждая часть не ниже 7.0, либо TOEFL от 110 с минимумами по частям (слушание 22, чтение 24, речь 25, письмо 24).",
+      "evidence": "If you are offered a place, you will need to show the correct level of proficiency by 31 July in the year you receive your offer.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL, сданный с 21 января 2026, Оксфорд не принимает: правила для нового формата университет пока пересматривает. Годится только TOEFL, сданный до 20 января 2026 включительно.",
+      "evidence": "TOEFL tests taken from 21 January 2026 are not accepted and do not meet the English language condition.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Все части экзамена должны быть из одной сдачи: баллы из разных попыток не складывают.",
+      "evidence": "you must, where applicable, receive all qualifying test component scores (Reading, Writing, Listening and Speaking) from the same session; we will not consider scores from multiple sessions",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Вместо IELTS подойдут Cambridge C1 Advanced или C2 Proficiency от 191 (каждая часть не ниже 185), PTE Academic от 76 (каждая часть не ниже 66) или Oxford Test of English (Advanced) от 165 (каждая часть не ниже 155).",
+      "evidence": "C1 Advanced (formerly known as Cambridge English: Advanced or CAE) | 191 | Minimum 185 per component | C2 Proficiency (formerly known as Cambridge English: Proficiency or CPE) | 191 | Minimum 185 per component",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "При отборе смотрят на нужду, общественную работу и на то, что у тебя нет возможности учиться на бакалавра дома. Ждут, что ты вернёшься в свою страну после учёбы. Мест около двух-трёх в год, конкуренция очень высокая, а другого источника денег для тех, кому не дали стипендию, у университета нет.",
+      "evidence": "Financial need, social commitment and lack of ability to study for a degree in their own country are also major criteria for selection. Applicants should be intending to return to their country following their studies.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Стипендия распространяется на все курсы из списка, кроме медицины.",
+      "evidence": "All subjects in the course listing, except medicine",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Порядок подачи на стипендию на 2027 год Оксфорд выложит на странице стипендии в январе 2027. Срок подачи на стипендию — 26 января 2027, результат — до конца мая 2027.",
+      "evidence": "For 2027 entry applicants who apply by the 26 January 2027 scholarship deadline, the selection process will be undertaken in April 2027.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сама заявка в Оксфорд идёт через UCAS: крайний срок — 18:00 по британскому времени 15 октября. Ответ о предложении приходит 12 января 2027.",
+      "evidence": "Final deadline 6pm (UK time) on 15 October",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Без стипендии учёба иностранца стоит от 39 620 до 66 580 фунтов в год в зависимости от курса, и займа от британского государства иностранцам не дают.",
+      "evidence": "Overseas | Between £39,620 and £66,580*",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-10-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-support/reach-oxford-scholarship",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один университет: Оксфорд. Стипендия — от университета, а не от колледжа, но не каждый колледж участвует каждый год; если твой не участвует, тебя переведут в другой"
+    }
+  },
+  "source": {
+    "url": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-support/reach-oxford-scholarship",
+    "lastVerified": "2026-09-20",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-support/reach-oxford-scholarship",
+        "contentHash": "sha256:229468495d87f2c1bd6c5021bdfddc1d2d259d12d65983066b1d114392a33306"
+      },
+      {
+        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/admissions-requirements/international-qualifications",
+        "contentHash": "sha256:8612b62786ab6d6649b465e44078f08421330fbc43a54f2e347f25a3ad0d8378"
+      },
+      {
+        "url": "https://www.ox.ac.uk/admissions/undergraduate/applying/for-international-students/english-language-requirements-visas",
+        "contentHash": "sha256:d4dfc1ddb095a9fb268e8996fa9e00af0c89b3944c95eb91772f974ba3b2efe2"
+      },
+      {
+        "url": "https://www.ox.ac.uk/admissions/undergraduate/applying/admissions-timeline",
+        "contentHash": "sha256:be6590cf6814adc5b3590baf240292681ebaf9a0d2bf9aef5a9756289f9fb16d"
+      },
+      {
+        "url": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/course-fees",
+        "contentHash": "sha256:061657109e49953e905fad8d9a9723d060ece9562a20e47ce7e1b15a8d7e54f6"
+      }
+    ]
+  }
+}
