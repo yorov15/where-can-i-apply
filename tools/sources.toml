@@ -1173,3 +1173,37 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-19"
+
+# Reach Oxford Scholarship — стипендия Оксфорда для студентов из
+# небогатых стран. Домен ox.ac.uk одобрен человеком 19 сентября 2026.
+#
+# Британии в списке не было вовсе, а полностью оплаченный бакалавриат
+# там — редкость: почти вся помощь британских вузов достаётся своим.
+# Здесь оплачивают обучение, дают деньги на жизнь и один перелёт домой
+# в год, и Таджикистан прямо назван в списке стран.
+#
+# Пять страниц: сама стипендия, таблица международных аттестатов,
+# требования к английскому, календарь приёма и плата за обучение.
+# Аттестат и стипендия разнесены не случайно — стипендию дают только
+# тем, кого уже приняли, а принимают по совсем другим правилам.
+#
+# Страницы сохранены вручную: сборщику сайт отвечает 403, браузеру
+# отдаёт всё. Подделывать имя клиента ради обхода защиты нельзя, поэтому
+# текст снят браузером и лежит в manual/. Три файла из пяти — выдержки:
+# на страницах аттестатов и английского раскрывающиеся блоки, а таблица
+# стран занимает семьдесят тысяч знаков. Плата за ручной путь — слежение:
+# пока файлы не пересохранены, tools.check видит прежний текст и об
+# изменениях на сайте не скажет. Перечитывать вручную раз в цикл, а
+# страницу стипендии — в январе 2027, когда Оксфорд обещает выложить
+# порядок подачи на 2027 год.
+[oxford-reach]
+name = "Reach Oxford Scholarship, University of Oxford"
+files = [
+  { path = "manual/oxford-reach/00-reach-oxford-scholarship.txt", url = "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-support/reach-oxford-scholarship" },
+  { path = "manual/oxford-reach/01-international-qualifications.txt", url = "https://www.ox.ac.uk/admissions/undergraduate/courses/admissions-requirements/international-qualifications" },
+  { path = "manual/oxford-reach/02-english-language-visas.txt", url = "https://www.ox.ac.uk/admissions/undergraduate/applying/for-international-students/english-language-requirements-visas" },
+  { path = "manual/oxford-reach/03-admissions-timeline.txt", url = "https://www.ox.ac.uk/admissions/undergraduate/applying/admissions-timeline" },
+  { path = "manual/oxford-reach/04-course-fees.txt", url = "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/course-fees" },
+]
+approvedBy = "human"
+approvedAt = "2026-09-19"
