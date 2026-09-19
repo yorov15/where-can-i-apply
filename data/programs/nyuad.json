@@ -70,7 +70,8 @@
         {
           "test": "TOEFL_IBT_2026",
           "min": 5,
-          "evidence": "5 or above (overall score and subscores) on the TOEFL iBT taken on or after January 21, 2026"
+          "evidence": "5 or above (overall score and subscores) on the TOEFL iBT taken on or after January 21, 2026",
+          "parts": true
         },
         {
           "test": "DUOLINGO",
@@ -144,8 +145,8 @@
       "kind": "note"
     },
     {
-      "ru": "Сертификат по английскому обязателен, если английский не родной и последние три года ты не учился по программе полностью на английском. Без результата одобренного экзамена заявку не считают полной.",
-      "evidence": "Results from English language testing are required for students whose native language is not English, unless they have been studying in a curriculum where English is the sole language of instruction for three years prior to applying.",
+      "ru": "Сертификат по английскому обязателен, если английский тебе не родной и в любой из трёх последних учебных лет ты учил предметы не на английском, ходил на поддерживающий английский или учился по двуязычной программе. Таджикская школа под это подпадает. Не нужен только тем, у кого все три года обучение шло полностью на английском.",
+      "evidence": "All of your schooling for the three full consecutive academic years prior to the current year were taught entirely in English (excluding world language classes).",
       "field": "language",
       "kind": "must"
     }
@@ -166,7 +167,7 @@
   },
   "source": {
     "url": "https://nyuad.nyu.edu/en/apply/undergraduate/apply/key-dates-and-deadlines.html",
-    "lastVerified": "2026-09-12",
+    "lastVerified": "2026-09-19",
     "humanChecked": false,
     "pages": [
       {
@@ -175,7 +176,7 @@
       },
       {
         "url": "https://nyuad.nyu.edu/en/apply/undergraduate/apply/entry-requirements.html",
-        "contentHash": "sha256:3df130d7d34e5eed1f22620c375df7d6750b9b8eba9f91c3da07d5a28e1d1b51"
+        "contentHash": "sha256:8a6d7a44c67829641505062978353795cd955d89e29fa742390cc92e1f3fc20c"
       },
       {
         "url": "https://nyuad.nyu.edu/en/apply/undergraduate/apply/early-decision.html",
@@ -187,7 +188,7 @@
       },
       {
         "url": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/standardized-tests/english-language-testing.html",
-        "contentHash": "sha256:b52874ae218d3b485c56a3bdc412a1de2de8fc9afe622ad88611f644fa234d3e"
+        "contentHash": "sha256:bcfe05c9c1216c28046ba8bde636e1f9ae377acbb44cda2f2f3892071c07c968"
       }
     ],
     "approvedBy": "assistant"

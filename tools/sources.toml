@@ -291,7 +291,12 @@ urls = [
   "https://nyuad.nyu.edu/en/apply/undergraduate/apply/entry-requirements.html",
   "https://nyuad.nyu.edu/en/apply/undergraduate/apply/early-decision.html",
   "https://nyuad.nyu.edu/en/apply/undergraduate/scholarships-and-financial-aid.html",
-  "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/standardized-tests/english-language-testing.html",
+]
+# Страница NYU про языковые экзамены с 19 сентября 2026 отвечает
+# сборщику 403, хотя сам сайт Абу-Даби открыт. Требования к английскому
+# лежат только там, бросить её нельзя — сохранена руками через браузер.
+files = [
+  { path = "manual/nyuad/english-language-testing.txt", url = "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/standardized-tests/english-language-testing.html" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-07"

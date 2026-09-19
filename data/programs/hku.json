@@ -12,7 +12,7 @@
     "living": null,
     "travel": null,
     "note": {
-      "ru": "Обучение дорогое: для иностранца 249 000 гонконгских долларов в год на STEM-факультетах, включая информатику, и 224 000 на остальных (набор 2026/27). Стипендии за успехи есть, они могут покрывать обучение, а иногда и жизнь, но их условия сайт показывает только через интерактивный фильтр, поэтому здесь их нет. Общежитие 17 290–37 940 в год, жизнь до 50 000 в год"
+      "ru": "Обучение дорогое и подорожало: на 2027/28 иностранец платит 280 000 гонконгских долларов в год на STEM-факультетах, включая School of Computing and Data Science, и 250 000 на остальных — год назад было 249 000 и 224 000. Стипендии за успехи есть, они могут покрывать обучение, а иногда и жизнь, но их условия сайт показывает только через интерактивный фильтр, поэтому здесь их нет. Общежитие 17 290–37 940 в год, съёмное жильё 30 000–50 000, жизнь до 50 000 в год"
     }
   },
   "eligibility": {
@@ -45,15 +45,23 @@
         {
           "test": "IELTS",
           "min": 6.5,
-          "evidence": "An overall band score of 6.5 or better in IELTS Academic Module, achieved in the same attempt, is required."
+          "parts": true,
+          "evidence": "An overall band score of 6.5 or above in the IELTS Academic Module, with no less than 6.0 in both the Writing and Speaking components, achieved in the same attempt."
         },
         {
           "test": "TOEFL_IBT",
-          "min": 93,
-          "evidence": "A score of 93 or better in the TOEFL internet-based test (TOEFL iBT) is required, achieved in the same attempt."
+          "min": 95,
+          "parts": true,
+          "evidence": "An overall score of 95 or above in the TOEFL internet-based test (TOEFL iBT), with no less than 5.0 in both the Writing and Speaking components, achieved in the same attempt"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5.0,
+          "parts": true,
+          "evidence": "An overall score of 5.0 or above in the TOEFL internet-based test (TOEFL iBT), with no less than 5.0 in both the Writing and Speaking components, achieved in the same attempt."
         }
       ],
-      "evidence": "English Language Requirement (Information is for 2026 Reference Only)"
+      "evidence": "English Language Requirement"
     }
   },
   "textConditions": [
@@ -64,8 +72,8 @@
       "kind": "money"
     },
     {
-      "ru": "Сколько стоит обучение для иностранца в 2026/27: 249 000 гонконгских долларов в год на инженерии, естественных науках, медицине и в School of Computing and Data Science, 224 000 на остальных факультетах.",
-      "evidence": "HKD249,000 Annual Tuition Fees (inclusive of STEM Fee) for Non-local Students Admitted to the STEM Faculties and Schools",
+      "ru": "Сколько стоит обучение для иностранца в 2027/28: 280 000 гонконгских долларов в год на инженерии, медицине, естественных науках и в School of Computing and Data Science, 250 000 — на остальных факультетах.",
+      "evidence": "For STEM Faculties and Schools HK$ 280,000",
       "field": null,
       "kind": "money"
     },
@@ -82,14 +90,14 @@
       "kind": "workaround"
     },
     {
-      "ru": "Английский обязателен: IELTS Academic от 6.5 или TOEFL iBT от 93 за одну попытку, сданные не раньше чем за два года до 1 сентября года поступления. Подходят также SAT по чтению и письму от 610 или PTE Academic от 64. IELTS Online, IELTS Indicator и домашний TOEFL не принимают.",
+      "ru": "Английский обязателен, и общего балла мало: IELTS Academic от 6.5, причём письмо и речь не ниже 6.0 каждое, либо TOEFL iBT от 5.0 по новой шкале или от 95 по старой, тоже с 5.0 за письмо и речь. Всё за одну попытку. Домашние версии IELTS и TOEFL, IELTS Online, TOEFL ITP не принимают.",
       "evidence": "Note: The TOEFL ITP, TOEFL ITP Plus and TOEFL Home Edition tests are not accepted to fulfill the English language requirement.",
       "field": "language",
-      "kind": "workaround"
+      "kind": "must"
     },
     {
-      "ru": "Пороги по английскому указаны для набора 2026 как справочные; на 2027 могут измениться.",
-      "evidence": "English Language Requirement (Information is for 2026 Reference Only)",
+      "ru": "Требования по английскому вуз с прошлого цикла ужесточил: раньше хватало общего балла, теперь смотрят ещё письмо и речь по отдельности, а порог TOEFL по старой шкале поднялся с 93 до 95.",
+      "evidence": "with no less than 6.0 in both the Writing and Speaking components",
       "field": "language",
       "kind": "note"
     },
@@ -140,7 +148,7 @@
   },
   "source": {
     "url": "https://admissions.hku.hk/apply/international-qualifications",
-    "lastVerified": "2026-09-13",
+    "lastVerified": "2026-09-19",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
@@ -150,11 +158,11 @@
       },
       {
         "url": "https://admissions.hku.hk/apply/international-qualifications/english-language-requirement",
-        "contentHash": "sha256:2d09a9fb17a4a386187021abca1bc6459f9cd15b9f286a39677073f4cada6569"
+        "contentHash": "sha256:38f85ae468816ba59f703f66026f8674a54ceb49d85a71e2294ad34934a693df"
       },
       {
         "url": "https://admissions.hku.hk/fees-and-scholarships/tuition-and-living-expenses",
-        "contentHash": "sha256:bf5ed2d5d1776fdc79dc63bbdbd0f802d9a8385d0c7d911d5854e9d85d02bc00"
+        "contentHash": "sha256:92f9b66c3bb4ea1e5220cde186f7555a905421e8f55d0a9cf1c24f10c35e9d35"
       },
       {
         "url": "https://admissions.hku.hk/fees-and-scholarships/scholarships",
@@ -163,7 +171,7 @@
     ]
   },
   "leftEmpty": {
-    "schoolYears": "sha256:c7ed177e1a4da0cfaee9d0ca918caa8c8fae4d3f6715e0e26c57e4c2a287ddb7",
-    "gpa": "sha256:c7ed177e1a4da0cfaee9d0ca918caa8c8fae4d3f6715e0e26c57e4c2a287ddb7"
+    "schoolYears": "sha256:09a3367f5ccbb776dce1c32d2b835f7a79689594ad1a4c56a6e22c3b0dc4f5c7",
+    "gpa": "sha256:09a3367f5ccbb776dce1c32d2b835f7a79689594ad1a4c56a6e22c3b0dc4f5c7"
   }
 }
