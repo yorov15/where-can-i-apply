@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   validateRequest, buildPrompt, cacheKey, createCache, createLimiter,
-  originAllowed, corsHeaders, explain, cleanParams, SYSTEM_PROMPT,
+  originAllowed, corsHeaders, explain, cleanParams, parseCompletion, SYSTEM_PROMPT,
 } from '../api/_explain-core.js';
 
 const read = (name) => JSON.parse(readFileSync(new URL(`../data/${name}`, import.meta.url), 'utf8'));
@@ -177,4 +177,15 @@ test('каждая карточка сайта собирается в запр�
     assert.equal(checked.ok, true, program.id);
     assert.doesNotMatch(buildPrompt(checked.value, '2026-09-20').user, /undefined|NaN|\[object/, program.id);
   }
+});
+
+test('ответ OpenRouter: текст берётся, рассуждение вырезается, пустое — отказ', () => {
+  const wrap = (content) => ({ choices: [{ message: { content } }] });
+  assert.equal(parseCompletion(wrap('  Почему так\nТекст  ')), 'Почему так\nТекст');
+  assert.equal(parseCompletion(wrap('<think>ход мыслей\nв две строки</think>Ответ')), 'Ответ');
+  assert.equal(parseCompletion(wrap('Ответ</think>')), 'Ответ');
+  assert.equal(parseCompletion(wrap(null)), '');
+  assert.equal(parseCompletion({ choices: [] }), '');
+  assert.equal(parseCompletion(null), '');
+  assert.equal(parseCompletion(wrap('<think>только мысли</think>')), '');
 });

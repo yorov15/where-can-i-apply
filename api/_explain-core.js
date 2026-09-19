@@ -17,7 +17,7 @@ export const LIMITS = {
   bodyBytes: 4000,
   ipPerWindow: 6,
   windowMs: 10 * 60 * 1000,
-  dailyCalls: 300,
+  dailyCalls: 40,
   cacheEntries: 500,
   cacheTtlMs: 24 * 60 * 60 * 1000,
 };
@@ -248,6 +248,19 @@ export function corsHeaders(origin, allowed) {
   const headers = { 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type', Vary: 'Origin' };
   if (origin && allowed?.includes(origin)) headers['Access-Control-Allow-Origin'] = origin;
   return headers;
+}
+
+// Достаёт текст из ответа OpenRouter (формат chat/completions). Модели с
+// рассуждением иногда оставляют его в самом тексте в тегах — вырезаем:
+// человеку нужен ответ, а не ход мыслей. Пустой ответ — это отказ, а не
+// текст «ничего».
+export function parseCompletion(data) {
+  const raw = data?.choices?.[0]?.message?.content;
+  if (typeof raw !== 'string') return '';
+  return raw
+    .replace(/<(think|thinking|reasoning)>[\s\S]*?<\/\1>/gi, '')
+    .replace(/<\/?(think|thinking|reasoning)>/gi, '')
+    .trim();
 }
 
 // Собирает всё вместе. deps.callModel({ system, user }) возвращает текст

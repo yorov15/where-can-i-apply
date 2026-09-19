@@ -1,17 +1,22 @@
-// Прокси между сайтом и Claude. Единственное место, где живёт ключ API:
+// Прокси между сайтом и моделью. Единственное место, где живёт ключ API:
 // в браузер его отдавать нельзя, поэтому сайт спрашивает эту функцию.
 //
+// Модель — бесплатная, через OpenRouter: платить за такую маленькую
+// задачу незачем. Зависимостей у функции нет, только fetch.
+//
 // Настройка в Vercel (Settings → Environment Variables):
-//   ANTHROPIC_API_KEY  — обязательно
-//   EXPLAIN_MODEL      — по умолчанию claude-opus-5; для дешёвого
-//                        варианта — claude-haiku-4-5
+//   OPENROUTER_API_KEY — обязательно
+//   EXPLAIN_MODELS     — модели через запятую, первая основная, остальные
+//                        запасные (до трёх); по умолчанию бесплатные
 //   ALLOWED_ORIGINS    — адреса сайта через запятую, если сайт стоит не
 //                        там же, где функция (https://имя.github.io)
 //   DAILY_LIMIT        — потолок обращений к модели в сутки на один
-//                        экземпляр функции (по умолчанию 300)
+//                        экземпляр функции (по умолчанию 40: у бесплатных
+//                        моделей OpenRouter свой суточный предел)
 import fs from 'node:fs';
-import Anthropic from '@anthropic-ai/sdk';
-import { explain, createCache, createLimiter, originAllowed, corsHeaders, LIMITS } from './_explain-core.js';
+import {
+  explain, createCache, createLimiter, originAllowed, corsHeaders, parseCompletion, LIMITS,
+} from './_explain-core.js';
 
 const readJson = (name) => JSON.parse(fs.readFileSync(new URL(`../data/${name}`, import.meta.url), 'utf8'));
 const index = readJson('index.json');
@@ -21,30 +26,38 @@ const cache = createCache();
 const limiter = createLimiter({ daily: Number(process.env.DAILY_LIMIT) || LIMITS.dailyCalls });
 const allowed = (process.env.ALLOWED_ORIGINS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 
-const MODEL = process.env.EXPLAIN_MODEL || 'claude-opus-5';
-// Ключ читается из ANTHROPIC_API_KEY самим SDK.
-const client = new Anthropic({ timeout: 25_000, maxRetries: 1 });
+// Порядок: сначала та, что лучше пишет по-русски. Если первая занята или
+// отвечает пусто, OpenRouter сам пробует следующую.
+const DEFAULT_MODELS = [
+  'google/gemma-4-31b-it:free',
+  'qwen/qwen3.8-27b:free',
+  'deepseek/deepseek-v4-flash-0731:free',
+];
+const MODELS = (process.env.EXPLAIN_MODELS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
+const models = (MODELS.length ? MODELS : DEFAULT_MODELS).slice(0, 3);
 
 async function callModel({ system, user }) {
-  const params = {
-    model: MODEL,
-    max_tokens: 1500,
-    system,
-    messages: [{ role: 'user', content: user }],
-  };
-  // Глубину рассуждения задаёт только семейство Opus 5; у Haiku таких
-  // параметров нет, и лишнее поле дало бы 400.
-  if (MODEL.startsWith('claude-opus-5')) {
-    params.thinking = { type: 'adaptive' };
-    params.output_config = { effort: 'low' };
-  }
-  const response = await client.messages.create(params);
-  if (response.stop_reason === 'refusal') return '';
-  return response.content
-    .filter((block) => block.type === 'text')
-    .map((block) => block.text)
-    .join('\n')
-    .trim();
+  const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+      'Content-Type': 'application/json',
+      'HTTP-Referer': 'https://github.com/yorov15/where-can-i-apply',
+      'X-Title': 'Kuda ya mogu podat dokumenty',
+    },
+    body: JSON.stringify({
+      models,
+      messages: [
+        { role: 'system', content: system },
+        { role: 'user', content: user },
+      ],
+      max_tokens: 1200,
+      temperature: 0.3,
+    }),
+    signal: AbortSignal.timeout(25_000),
+  });
+  if (!res.ok) throw new Error(`openrouter ${res.status}`);
+  return parseCompletion(await res.json());
 }
 
 function send(res, status, json, headers = {}) {
@@ -62,7 +75,7 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return send(res, 204, {}, cors);
   if (req.method !== 'POST') return send(res, 405, { error: 'method' }, cors);
   if (!originAllowed(origin, req.headers.host, allowed)) return send(res, 403, { error: 'origin' }, cors);
-  if (!process.env.ANTHROPIC_API_KEY) return send(res, 503, { error: 'off' }, cors);
+  if (!process.env.OPENROUTER_API_KEY) return send(res, 503, { error: 'off' }, cors);
 
   // Тело читаем сами и с потолком: чужой запрос на мегабайты не должен
   // доходить до разбора.
