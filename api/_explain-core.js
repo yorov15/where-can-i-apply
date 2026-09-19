@@ -263,6 +263,34 @@ export function parseCompletion(data) {
     .trim();
 }
 
+// Цепочка запасных моделей. У OpenRouter в одном запросе умещается три
+// модели; чтобы запасных было больше, модели делятся на группы по три, и
+// если вся группа занята или ответила пусто, пробуется следующая. Человек
+// видит ошибку, только когда не ответила ни одна модель из списка.
+export function chunk(list, size = 3) {
+  const out = [];
+  for (let i = 0; i < list.length; i += size) out.push(list.slice(i, i + size));
+  return out;
+}
+
+// attempt(group, timeoutMs) возвращает текст или бросает ошибку. Бюджет
+// времени общий: функция на Vercel живёт ограниченное время, и лучше
+// честно отказать, чем оборваться на середине.
+export async function callWithFallback(groups, attempt, { now = () => Date.now(), budgetMs = 40000, perGroupMs = 14000, minLeftMs = 3000 } = {}) {
+  const deadline = now() + budgetMs;
+  for (const group of groups) {
+    const left = deadline - now();
+    if (left < minLeftMs) break;
+    try {
+      const text = await attempt(group, Math.min(perGroupMs, left));
+      if (text) return text;
+    } catch {
+      // Эта группа не ответила — идём к следующей.
+    }
+  }
+  return '';
+}
+
 // Собирает всё вместе. deps.callModel({ system, user }) возвращает текст
 // или бросает ошибку; остальное — состояние функции.
 export async function explain({ body, ip, today }, deps) {

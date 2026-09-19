@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   validateRequest, buildPrompt, cacheKey, createCache, createLimiter,
-  originAllowed, corsHeaders, explain, cleanParams, parseCompletion, SYSTEM_PROMPT,
+  originAllowed, corsHeaders, explain, cleanParams, parseCompletion, chunk, callWithFallback, SYSTEM_PROMPT,
 } from '../api/_explain-core.js';
 
 const read = (name) => JSON.parse(readFileSync(new URL(`../data/${name}`, import.meta.url), 'utf8'));
@@ -188,4 +188,40 @@ test('ответ OpenRouter: текст берётся, рассуждение �
   assert.equal(parseCompletion({ choices: [] }), '');
   assert.equal(parseCompletion(null), '');
   assert.equal(parseCompletion(wrap('<think>только мысли</think>')), '');
+});
+
+test('модели делятся на группы по три', () => {
+  assert.deepEqual(chunk(['a', 'b', 'c', 'd', 'e']), [['a', 'b', 'c'], ['d', 'e']]);
+  assert.deepEqual(chunk([]), []);
+});
+
+test('цепочка: занятая группа не даёт ошибку, отвечает следующая', async () => {
+  const tried = [];
+  const attempt = async (group) => {
+    tried.push(group[0]);
+    if (group[0] === 'a') throw new Error('429');
+    if (group[0] === 'd') return '';
+    return 'Ответ от ' + group[0];
+  };
+  assert.equal(await callWithFallback([['a'], ['d'], ['g']], attempt), 'Ответ от g');
+  assert.deepEqual(tried, ['a', 'd', 'g']);
+});
+
+test('цепочка: ответила первая группа — остальные не трогаем', async () => {
+  let calls = 0;
+  const text = await callWithFallback([['a'], ['b']], async () => { calls += 1; return 'ок'; });
+  assert.equal(text, 'ок');
+  assert.equal(calls, 1);
+});
+
+test('цепочка: не ответила ни одна — пустая строка, а не исключение', async () => {
+  assert.equal(await callWithFallback([['a'], ['b']], async () => { throw new Error('boom'); }), '');
+});
+
+test('цепочка: общий бюджет времени не превышается', async () => {
+  let t = 0;
+  const seen = [];
+  const attempt = async (group, timeoutMs) => { seen.push(timeoutMs); t += 15000; throw new Error('slow'); };
+  await callWithFallback([['a'], ['b'], ['c'], ['d']], attempt, { now: () => t, budgetMs: 30000, perGroupMs: 14000, minLeftMs: 3000 });
+  assert.deepEqual(seen, [14000, 14000]);
 });

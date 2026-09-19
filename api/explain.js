@@ -7,7 +7,9 @@
 // Настройка в Vercel (Settings → Environment Variables):
 //   OPENROUTER_API_KEY — обязательно
 //   EXPLAIN_MODELS     — модели через запятую, первая основная, остальные
-//                        запасные (до трёх); по умолчанию бесплатные
+//                        запасные (до девяти); по умолчанию бесплатные.
+//                        Когда сайт станет популярным — сюда можно
+//                        поставить платную, например deepseek/deepseek-chat
 //   ALLOWED_ORIGINS    — адреса сайта через запятую (по умолчанию
 //                        https://yorov15.github.io)
 //   DATA_BASE_URL      — где лежат data/index.json и details.json (по
@@ -16,7 +18,7 @@
 //                        экземпляр функции (по умолчанию 40: у бесплатных
 //                        моделей OpenRouter свой суточный предел)
 import {
-  explain, createCache, createLimiter, originAllowed, corsHeaders, parseCompletion, LIMITS,
+  explain, createCache, createLimiter, originAllowed, corsHeaders, parseCompletion, chunk, callWithFallback, LIMITS,
 } from './_explain-core.js';
 
 // Данные берутся с живого сайта, а не лежат внутри функции: карточки
@@ -51,17 +53,21 @@ const limiter = createLimiter({ daily: Number(process.env.DAILY_LIMIT) || LIMITS
 const configured = (process.env.ALLOWED_ORIGINS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 const allowed = configured.length ? configured : ['https://yorov15.github.io'];
 
-// Порядок: сначала та, что лучше пишет по-русски. Если первая занята или
-// отвечает пусто, OpenRouter сам пробует следующую.
+// Порядок: сначала те, что лучше пишут по-русски. Модели идут группами по
+// три: внутри группы OpenRouter сам переключается на следующую, если
+// первая занята; если не ответила вся группа, пробуется следующая группа.
 const DEFAULT_MODELS = [
   'google/gemma-4-31b-it:free',
   'qwen/qwen3.8-27b:free',
   'deepseek/deepseek-v4-flash-0731:free',
+  'nvidia/nemotron-3-super-120b-a12b:free',
+  'google/gemma-4-26b-a4b-it:free',
+  'openrouter/free',
 ];
-const MODELS = (process.env.EXPLAIN_MODELS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
-const models = (MODELS.length ? MODELS : DEFAULT_MODELS).slice(0, 3);
+const CONFIGURED = (process.env.EXPLAIN_MODELS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
+const groups = chunk((CONFIGURED.length ? CONFIGURED : DEFAULT_MODELS).slice(0, 9), 3);
 
-async function callModel({ system, user }) {
+async function askGroup(models, { system, user }, timeoutMs) {
   const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
     headers: {
@@ -79,11 +85,13 @@ async function callModel({ system, user }) {
       max_tokens: 1200,
       temperature: 0.3,
     }),
-    signal: AbortSignal.timeout(25_000),
+    signal: AbortSignal.timeout(timeoutMs),
   });
   if (!res.ok) throw new Error(`openrouter ${res.status}`);
   return parseCompletion(await res.json());
 }
+
+const callModel = (prompt) => callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs));
 
 function send(res, status, json, headers = {}) {
   res.statusCode = status;
