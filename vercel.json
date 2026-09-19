@@ -1,8 +1,7 @@
 {
   "functions": {
     "api/explain.js": {
-      "maxDuration": 30,
-      "includeFiles": "{data/*.json,js/**/*.js}"
+      "maxDuration": 30
     }
   }
 }

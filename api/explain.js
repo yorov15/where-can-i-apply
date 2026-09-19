@@ -8,23 +8,48 @@
 //   OPENROUTER_API_KEY — обязательно
 //   EXPLAIN_MODELS     — модели через запятую, первая основная, остальные
 //                        запасные (до трёх); по умолчанию бесплатные
-//   ALLOWED_ORIGINS    — адреса сайта через запятую, если сайт стоит не
-//                        там же, где функция (https://имя.github.io)
+//   ALLOWED_ORIGINS    — адреса сайта через запятую (по умолчанию
+//                        https://yorov15.github.io)
+//   DATA_BASE_URL      — где лежат data/index.json и details.json (по
+//                        умолчанию сайт на GitHub Pages)
 //   DAILY_LIMIT        — потолок обращений к модели в сутки на один
 //                        экземпляр функции (по умолчанию 40: у бесплатных
 //                        моделей OpenRouter свой суточный предел)
-import fs from 'node:fs';
 import {
   explain, createCache, createLimiter, originAllowed, corsHeaders, parseCompletion, LIMITS,
 } from './_explain-core.js';
 
-const readJson = (name) => JSON.parse(fs.readFileSync(new URL(`../data/${name}`, import.meta.url), 'utf8'));
-const index = readJson('index.json');
-const details = readJson('details.json');
+// Данные берутся с живого сайта, а не лежат внутри функции: карточки
+// обновляются каждый день, и передеплоить прокси при каждой правке было
+// бы незачем. Копия живёт полчаса; если сайт не ответил, а старая копия
+// есть, работаем на ней.
+const DATA_BASE = (process.env.DATA_BASE_URL || 'https://yorov15.github.io/where-can-i-apply/data/').replace(/\/?$/, '/');
+const DATA_TTL_MS = 30 * 60 * 1000;
+let live = null;
+
+async function loadData() {
+  if (live && Date.now() - live.at < DATA_TTL_MS) return live;
+  try {
+    const get = async (name) => {
+      const res = await fetch(`${DATA_BASE}${name}`, { signal: AbortSignal.timeout(8_000) });
+      if (!res.ok) throw new Error(`${name}: ${res.status}`);
+      return res.json();
+    };
+    const [index, details] = await Promise.all([get('index.json'), get('details.json')]);
+    if (!Array.isArray(index.programs) || !details.programs) throw new Error('формат данных');
+    live = { at: Date.now(), index, details };
+  } catch {
+    // Остаётся прошлая копия, если она была.
+  }
+  return live;
+}
 
 const cache = createCache();
 const limiter = createLimiter({ daily: Number(process.env.DAILY_LIMIT) || LIMITS.dailyCalls });
-const allowed = (process.env.ALLOWED_ORIGINS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
+// Сайт стоит на GitHub Pages, то есть на другом адресе, чем функция:
+// без списка разрешённых адресов браузер запретил бы ему сюда ходить.
+const configured = (process.env.ALLOWED_ORIGINS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
+const allowed = configured.length ? configured : ['https://yorov15.github.io'];
 
 // Порядок: сначала та, что лучше пишет по-русски. Если первая занята или
 // отвечает пусто, OpenRouter сам пробует следующую.
@@ -93,6 +118,11 @@ export default async function handler(req, res) {
 
   const ip = String(req.headers['x-forwarded-for'] ?? req.socket?.remoteAddress ?? 'unknown').split(',')[0].trim();
   const today = new Date().toISOString().slice(0, 10);
-  const { status, json } = await explain({ body, ip, today }, { index, details, cache, limiter, callModel });
+  const data = await loadData();
+  if (!data) return send(res, 503, { error: 'off' }, cors);
+  const { status, json } = await explain(
+    { body, ip, today },
+    { index: data.index, details: data.details, cache, limiter, callModel },
+  );
   return send(res, status, json, cors);
 }
