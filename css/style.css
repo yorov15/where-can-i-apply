@@ -62,7 +62,8 @@ input[type="checkbox"] { width: 1.1rem; height: 1.1rem; }
 
 .summary { margin: 0 0 1rem; padding: .75rem; background: var(--soft); border-radius: .5rem; }
 .summary:empty { display: none; }
-.summary-line { margin: 0 0 .4rem; font-weight: 500; }
+.summary-line { margin: 0 0 .5rem; font-weight: 400; }
+.summary-line:first-child { font-size: 1.1rem; font-weight: 650; line-height: 1.35; }
 .summary-note { margin: .5rem 0 0; color: var(--muted); font-size: .8125rem; }
 
 .group { margin: 0 0 1.25rem; }
