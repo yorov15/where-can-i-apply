@@ -64,7 +64,9 @@ export function cleanParams(params) {
   if (typeof params !== 'object' || Array.isArray(params)) return null;
   const out = {};
   for (const [key, value] of Object.entries(params)) {
-    if (PARAM_CHECKS[key]) {
+    // Object.hasOwn, а не PARAM_CHECKS[key]: иначе «__proto__», «constructor»
+    // и «toString» из чужого JSON находят свойства самого Object.
+    if (Object.hasOwn(PARAM_CHECKS, key)) {
       if (!PARAM_CHECKS[key](value)) return null;
       out[key] = value;
     } else if (OPTION_LISTS.includes(key)) {
@@ -103,8 +105,11 @@ export function validateRequest(body, index, details) {
     const params = cleanParams(reason.params);
     if (params == null) return { ok: false, error: 'bad-request' };
     const item = { field, status, code, params };
+    if (clean.some((c) => c.code === code)) return { ok: false, error: 'bad-request' };
     try {
       item.text = reasonText(item);
+      // Не хватает числа в params — в тексте вылезет «undefined»: такое модели не даём.
+      if (/undefined|NaN|\[object/.test(`${item.text.title} ${item.text.detail}`)) throw new Error('broken text');
     } catch {
       // Код, которого не знает wording.js, — не наш: выдумывать для него
       // объяснение нельзя.
@@ -163,6 +168,44 @@ export function buildPrompt({ program, extra, reasons }, today) {
     system: SYSTEM_PROMPT,
     user: `<program>\n${lines.join('\n')}\n</program>\n\n<reasons>\nИтог сайта: ${verdictWord(reasons)}.\n${items.join('\n')}\n</reasons>\n\nОбъясни этому человеку его результат.`,
   };
+}
+
+// Справка без ИИ: собирается из тех же данных и тех же трёх заголовков.
+// Показывается, когда модели заняты, лимит исчерпан или ответ не прошёл
+// проверку: человек получает не ошибку, а короткий честный ответ.
+export function fallbackAnswer({ program, extra, reasons }, today) {
+  const fails = reasons.filter((r) => r.status === 'fail');
+  const checks = reasons.filter((r) => r.status !== 'fail');
+  const why = [];
+  for (const r of fails) why.push(`${r.text.title}. ${r.text.detail}${r.text.changeable ? ' Это можно изменить со временем.' : ''}`);
+  for (const r of checks) why.push(`${fails.length ? 'Ещё нужно уточнить' : 'Это не отказ, но нужно уточнить'}: ${r.text.title}. ${r.text.detail}`);
+
+  const fields = new Set(reasons.map((r) => r.field));
+  const ways = (extra.textConditions ?? []).filter((c) => c.kind === 'workaround' && c.ru && (!c.field || fields.has(c.field))).slice(0, 3);
+  const how = ways.length
+    ? ways.map((c) => c.ru)
+    : [fails.length
+      ? 'Программа обходного пути не называет. Стоит спросить в приёмной комиссии, есть ли исключения.'
+      : 'Обходной путь не нужен: отказа нет, надо только уточнить условия.'];
+
+  const now = [];
+  const deadline = deadlineLine(program.deadline ?? null, today);
+  if (deadline) now.push(`Срок: ${deadline}.`);
+  now.push(fails.length
+    ? 'Пока пункт выше не изменился, заявку подавать рано. Напиши в приёмную комиссию и уточни.'
+    : 'Проверь условия на сайте программы. Если что-то неясно, спроси приёмную комиссию.');
+
+  const block = (title, lines) => `${title}\n${lines.join('\n')}`;
+  return [block('Почему так', why), block('Как это обойти', how), block('Что сделать сейчас', now)].join('\n\n');
+}
+
+// Ссылки, почты и телефоны в ответе модели должны быть из данных программы:
+// придуманный контакт хуже отсутствующего.
+export function grounded(text, source) {
+  const found = text.match(/https?:\/\/\S+|www\.\S+|[\w.+-]+@[\w-]+\.[\w.-]+|\+?\d[\d\s().-]{7,}\d/g) ?? [];
+  const squash = (x) => x.replace(/[\s().-]/g, '').replace(/[.,;:!?)]+$/, '');
+  const hay = squash(source);
+  return found.every((item) => hay.includes(squash(item)));
 }
 
 // Одинаковые вопросы задают многие: у всех, у кого школа в одной стране
@@ -309,25 +352,45 @@ export async function callWithFallback(groups, attempt, { now = () => Date.now()
 }
 
 // Собирает всё вместе. deps.callModel({ system, user }) возвращает текст
-// или бросает ошибку; остальное — состояние функции.
+// или бросает ошибку; остальное — состояние функции. Ошибкой отвечаем только
+// на плохой запрос: если модель недоступна или лимит вышел, человек всё равно
+// получает справку без ИИ (fallback: true).
 export async function explain({ body, ip, today }, deps) {
   const checked = validateRequest(body, deps.index, deps.details);
   if (!checked.ok) return { status: checked.error === 'unknown-program' ? 404 : 400, json: { error: checked.error } };
 
+  const plain = (why) => ({ status: 200, json: { text: fallbackAnswer(checked.value, today), fallback: true, why } });
   const key = cacheKey({ program: checked.value.program, reasons: checked.value.reasons });
   const cached = deps.cache.get(key);
   if (cached) return { status: 200, json: { text: cached, cached: true } };
 
-  const blocked = deps.limiter.allow(ip);
-  if (blocked) return { status: 429, json: { error: 'rate' } };
+  // Тот же вопрос уже летит к модели: ждём его же, а не платим лимитом дважды.
+  const inflight = deps.inflight ?? new Map();
+  if (inflight.has(key)) {
+    const text = await inflight.get(key);
+    return text ? { status: 200, json: { text, cached: true } } : plain('model');
+  }
 
+  const blocked = deps.limiter.allow(ip);
+  if (blocked) return plain(blocked);
+
+  const run = (async () => {
+    try {
+      const prompt = buildPrompt(checked.value, today);
+      const text = await deps.callModel(prompt);
+      // Ответ, в котором есть чужие контакты, — не ответ.
+      if (!text || !grounded(text, prompt.user)) return '';
+      deps.cache.set(key, text);
+      return text;
+    } catch {
+      return '';
+    }
+  })();
+  inflight.set(key, run);
   try {
-    const prompt = buildPrompt(checked.value, today);
-    const text = await deps.callModel(prompt);
-    if (!text) return { status: 502, json: { error: 'model' } };
-    deps.cache.set(key, text);
-    return { status: 200, json: { text } };
-  } catch {
-    return { status: 502, json: { error: 'model' } };
+    const text = await run;
+    return text ? { status: 200, json: { text } } : plain('model');
+  } finally {
+    inflight.delete(key);
   }
 }

@@ -145,13 +145,21 @@ test('explain: кэшированный ответ не тратит лимит'
   assert.equal(again.status, 200);
 });
 
-test('explain: лимит даёт 429, ошибка модели — 502, пустой ответ — 502', async () => {
-  const limited = deps({ limiter: createLimiter({ perIp: 0 }) });
-  assert.equal((await explain({ body: good, ip: 'x', today: '2026-09-20' }, limited)).status, 429);
-  const broken = deps({ callModel: async () => { throw new Error('boom'); } });
-  assert.equal((await explain({ body: good, ip: 'x', today: '2026-09-20' }, broken)).status, 502);
-  const empty = deps({ callModel: async () => '' });
-  assert.equal((await explain({ body: good, ip: 'x', today: '2026-09-20' }, empty)).status, 502);
+test('explain: лимит, сбой модели и пустой ответ дают справку без ИИ, а не ошибку', async () => {
+  const cases = {
+    limited: deps({ limiter: createLimiter({ perIp: 0 }) }),
+    broken: deps({ callModel: async () => { throw new Error('boom'); } }),
+    empty: deps({ callModel: async () => '' }),
+  };
+  for (const [name, d] of Object.entries(cases)) {
+    const r = await explain({ body: good, ip: 'x', today: '2026-09-20' }, d);
+    assert.equal(r.status, 200, name);
+    assert.equal(r.json.fallback, true, name);
+    assert.match(r.json.text, /^Почему так\n/, name);
+    assert.match(r.json.text, /Как это обойти\n/, name);
+    assert.match(r.json.text, /Что сделать сейчас\n/, name);
+    assert.equal(d.cache.size, 0, name);
+  }
 });
 
 test('explain: пустой ответ и ошибки не попадают в кэш', async () => {

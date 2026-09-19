@@ -37,9 +37,12 @@ export const ERROR_TEXT = {
   model: 'Не получилось объяснить. Ответ выше при этом остаётся верным.',
 };
 
+// Возвращает { text, fallback }. fallback: true — сервер ответил справкой без
+// ИИ (модели заняты или лимит вышел); такой ответ в кэш не кладём, чтобы
+// следующая попытка снова пошла к модели.
 export async function askExplain(model, { url, fetchImpl = fetch, timeoutMs = 50000 } = {}) {
   const key = explainKey(model);
-  if (cache.has(key)) return cache.get(key);
+  if (cache.has(key)) return { text: cache.get(key), fallback: false };
 
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
@@ -66,9 +69,10 @@ export async function askExplain(model, { url, fetchImpl = fetch, timeoutMs = 50
   } catch {
     throw new ExplainError('model');
   }
-  if (typeof data?.text !== 'string' || !data.text.trim()) throw new ExplainError('model');
+  if (typeof data?.text !== 'string' || !data.text.trim() || data.text.length > 5000) throw new ExplainError('model');
+  if (data.fallback === true) return { text: data.text, fallback: true };
   cache.set(key, data.text);
-  return data.text;
+  return { text: data.text, fallback: false };
 }
 
 // Ответ модели — текст с тремя строками-заголовками. Разбираем его в

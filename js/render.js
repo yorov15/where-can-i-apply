@@ -97,13 +97,15 @@ export function renderResults({ summaryNode, resultsNode }, profile, programs, t
   }
 }
 
-function answerNodes(text) {
+function answerNodes(text, fallback = false) {
   const box = el('div', 'explain-answer');
   for (const section of parseAnswer(text)) {
     if (section.heading) box.append(el('h5', 'explain-heading', section.heading));
     for (const line of section.lines) box.append(el('p', 'explain-line', line));
   }
-  box.append(el('p', 'explain-note', 'Пояснение написано ИИ по данным этой карточки. Он может ошибаться: сверься с сайтом программы.'));
+  box.append(el('p', 'explain-note', fallback
+    ? 'ИИ сейчас занят, поэтому это короткая справка, собранная из данных карточки. Сверься с сайтом программы.'
+    : 'Пояснение написано ИИ по данным этой карточки. Он может ошибаться: сверься с сайтом программы.'));
   return box;
 }
 
@@ -130,9 +132,9 @@ function explainBlock(model) {
     button.textContent = 'Думаю…';
     status.textContent = '';
     try {
-      const text = await askExplain(model, { url: EXPLAIN_URL });
+      const { text, fallback } = await askExplain(model, { url: EXPLAIN_URL });
       wrap.textContent = '';
-      wrap.append(answerNodes(text));
+      wrap.append(answerNodes(text, fallback));
     } catch (error) {
       button.disabled = false;
       button.textContent = 'Попробовать ещё раз';

@@ -29,8 +29,8 @@ test('успешный ответ возвращается и запоминае
   const fetchImpl = async (...args) => { calls += 1; return ok('Почему так\nТекст')(...args); };
   const m = model('cache-test');
   assert.equal(cachedAnswer(m), null);
-  assert.equal(await askExplain(m, { url: '/x', fetchImpl }), 'Почему так\nТекст');
-  assert.equal(await askExplain(m, { url: '/x', fetchImpl }), 'Почему так\nТекст');
+  assert.equal((await askExplain(m, { url: '/x', fetchImpl })).text, 'Почему так\nТекст');
+  assert.equal((await askExplain(m, { url: '/x', fetchImpl })).text, 'Почему так\nТекст');
   assert.equal(calls, 1);
   assert.equal(cachedAnswer(m), 'Почему так\nТекст');
 });
@@ -68,7 +68,7 @@ test('неудача в кэш не попадает', async () => {
   const m = model('fail-then-ok');
   await assert.rejects(askExplain(m, { url: '/x', fetchImpl: async () => ({ status: 502, ok: false }) }));
   assert.equal(cachedAnswer(m), null);
-  assert.equal(await askExplain(m, { url: '/x', fetchImpl: ok('Теперь можно') }), 'Теперь можно');
+  assert.equal((await askExplain(m, { url: '/x', fetchImpl: ok('Теперь можно') })).text, 'Теперь можно');
 });
 
 test('ключ зависит от причин, а не от порядка полей объекта', () => {
@@ -114,4 +114,17 @@ test('слово из заголовка внутри обычного пред�
   const sections = parseAnswer('Почему так\nЭто объясняет, почему так вышло.');
   assert.equal(sections.length, 1);
   assert.deepEqual(sections[0].lines, ['Это объясняет, почему так вышло.']);
+});
+
+test('справка без ИИ показывается, но в кэш не попадает: следующая попытка пойдёт к модели', async () => {
+  const m = model('fallback-test');
+  const fetchImpl = async () => ({ status: 200, ok: true, json: async () => ({ text: 'Почему так\nСправка', fallback: true }) });
+  const answer = await askExplain(m, { url: '/x', fetchImpl });
+  assert.deepEqual(answer, { text: 'Почему так\nСправка', fallback: true });
+  assert.equal(cachedAnswer(m), null);
+});
+
+test('слишком длинный ответ сервера считается сбоем', async () => {
+  const fetchImpl = ok('я'.repeat(6000));
+  await assert.rejects(askExplain(model('too-long'), { url: '/x', fetchImpl }), (e) => e.kind === 'model');
 });

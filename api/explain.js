@@ -18,7 +18,7 @@
 //                        экземпляр функции (по умолчанию 40: у бесплатных
 //                        моделей OpenRouter свой суточный предел)
 import {
-  explain, createCache, createLimiter, originAllowed, corsHeaders, parseCompletion, isUsableAnswer, chunk, callWithFallback, LIMITS,
+  explain, createCache, createLimiter, originAllowed, corsHeaders, parseCompletion, isUsableAnswer, grounded, chunk, callWithFallback, LIMITS,
 } from './_explain-core.js';
 
 // Данные берутся с живого сайта, а не лежат внутри функции: карточки
@@ -28,9 +28,9 @@ import {
 const DATA_BASE = (process.env.DATA_BASE_URL || 'https://yorov15.github.io/where-can-i-apply/data/').replace(/\/?$/, '/');
 const DATA_TTL_MS = 30 * 60 * 1000;
 let live = null;
+let loading = null;
 
-async function loadData() {
-  if (live && Date.now() - live.at < DATA_TTL_MS) return live;
+async function fetchData() {
   try {
     const get = async (name) => {
       const res = await fetch(`${DATA_BASE}${name}`, { signal: AbortSignal.timeout(8_000) });
@@ -41,12 +41,22 @@ async function loadData() {
     if (!Array.isArray(index.programs) || !details.programs) throw new Error('формат данных');
     live = { at: Date.now(), index, details };
   } catch {
-    // Остаётся прошлая копия, если она была.
+    // Остаётся прошлая копия; следующая попытка через минуту, а не на каждом
+    // запросе (иначе каждый ждал бы по 8 секунд).
+    if (live) live.at = Date.now() - DATA_TTL_MS + 60_000;
   }
   return live;
 }
 
+// Одновременные запросы делят одну загрузку.
+function loadData() {
+  if (live && Date.now() - live.at < DATA_TTL_MS) return live;
+  loading ??= fetchData().finally(() => { loading = null; });
+  return loading;
+}
+
 const cache = createCache();
+const inflight = new Map();
 const limiter = createLimiter({ daily: Number(process.env.DAILY_LIMIT) || LIMITS.dailyCalls });
 // Сайт стоит на GitHub Pages, то есть на другом адресе, чем функция:
 // без списка разрешённых адресов браузер запретил бы ему сюда ходить.
@@ -69,12 +79,10 @@ const DEFAULT_MODELS = [
 const CONFIGURED = (process.env.EXPLAIN_MODELS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 const groups = chunk((CONFIGURED.length ? CONFIGURED : DEFAULT_MODELS).slice(0, 9), 1);
 
-// След последнего обращения: какая модель, за сколько и чем кончилось.
-// Отдаётся только тому, кто попросил заголовком X-Explain-Trace: нужен, чтобы
-// подбирать порядок моделей по фактам, а не наугад.
-let trace = [];
-
-async function askGroup(models, { system, user }, timeoutMs) {
+// След обращения: какая модель, за сколько и чем кончилось. Собирается на
+// каждый запрос отдельно и отдаётся только тому, кто попросил заголовком
+// X-Explain-Trace: нужен, чтобы подбирать порядок моделей по фактам.
+async function askGroup(models, { system, user }, timeoutMs, trace) {
   const started = Date.now();
   const note = (result) => trace.push({ model: models[0], ms: Date.now() - started, result });
   try {
@@ -111,35 +119,46 @@ async function askOnce(models, { system, user }, timeoutMs) {
   const text = parseCompletion(await res.json());
   // Мусор — та же неудача, что и ошибка сети: идём к следующей модели.
   if (!isUsableAnswer(text)) throw new Error('unusable answer');
+  if (!grounded(text, user)) throw new Error('invented contact');
   return text;
 }
 
-const callModel = (prompt) => { trace = []; return callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs), { budgetMs: 44000, perGroupMs: 15000 }); };
+const callModel = (prompt, trace) => callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 44000, perGroupMs: 15000 });
 
 function send(res, status, json, headers = {}) {
   res.statusCode = status;
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'no-store');
+  res.setHeader('X-Content-Type-Options', 'nosniff');
   for (const [key, value] of Object.entries(headers)) res.setHeader(key, value);
   res.end(JSON.stringify(json));
 }
 
-export default async function handler(req, res) {
-  const origin = req.headers.origin;
-  const cors = corsHeaders(origin, allowed);
+// Тело читаем сами и с потолком: чужой запрос на мегабайты не должен
+// доходить до разбора. Считаем байты, а не символы.
+async function readBody(req) {
+  const declared = Number(req.headers['content-length']);
+  if (Number.isFinite(declared) && declared > LIMITS.bodyBytes) return null;
+  const parts = [];
+  let size = 0;
+  for await (const part of req) {
+    size += part.length;
+    if (size > LIMITS.bodyBytes) return null;
+    parts.push(part);
+  }
+  return Buffer.concat(parts).toString('utf8');
+}
 
+const clientIp = (req) => String(req.headers['x-vercel-forwarded-for'] ?? req.headers['x-real-ip'] ?? req.headers['x-forwarded-for'] ?? req.socket?.remoteAddress ?? 'unknown').split(',')[0].trim();
+
+async function handle(req, res, cors) {
   if (req.method === 'OPTIONS') return send(res, 204, {}, cors);
   if (req.method !== 'POST') return send(res, 405, { error: 'method' }, cors);
-  if (!originAllowed(origin, req.headers.host, allowed)) return send(res, 403, { error: 'origin' }, cors);
+  if (!originAllowed(req.headers.origin, req.headers.host, allowed)) return send(res, 403, { error: 'origin' }, cors);
   if (!process.env.OPENROUTER_API_KEY) return send(res, 503, { error: 'off' }, cors);
 
-  // Тело читаем сами и с потолком: чужой запрос на мегабайты не должен
-  // доходить до разбора.
-  let raw = '';
-  for await (const chunk of req) {
-    raw += chunk;
-    if (raw.length > LIMITS.bodyBytes) return send(res, 413, { error: 'too-big' }, cors);
-  }
+  const raw = await readBody(req);
+  if (raw === null) return send(res, 413, { error: 'too-big' }, cors);
   let body;
   try {
     body = JSON.parse(raw);
@@ -147,14 +166,23 @@ export default async function handler(req, res) {
     return send(res, 400, { error: 'bad-request' }, cors);
   }
 
-  const ip = String(req.headers['x-forwarded-for'] ?? req.socket?.remoteAddress ?? 'unknown').split(',')[0].trim();
-  const today = new Date().toISOString().slice(0, 10);
   const data = await loadData();
   if (!data) return send(res, 503, { error: 'off' }, cors);
+  const trace = [];
   const { status, json } = await explain(
-    { body, ip, today },
-    { index: data.index, details: data.details, cache, limiter, callModel },
+    { body, ip: clientIp(req), today: new Date().toISOString().slice(0, 10) },
+    { index: data.index, details: data.details, cache, limiter, inflight, callModel: (prompt) => callModel(prompt, trace) },
   );
-  const wantTrace = req.headers['x-explain-trace'] === '1';
-  return send(res, status, wantTrace ? { ...json, trace } : json, cors);
+  return send(res, status, req.headers['x-explain-trace'] === '1' ? { ...json, trace } : json, cors);
+}
+
+// Ни один сбой не должен уронить функцию: наружу всегда уходит JSON.
+export default async function handler(req, res) {
+  const cors = corsHeaders(req.headers.origin, allowed);
+  try {
+    await handle(req, res, cors);
+  } catch {
+    if (!res.headersSent) send(res, 500, { error: 'internal' }, cors);
+    else res.end();
+  }
 }
