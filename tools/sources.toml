@@ -1057,3 +1057,88 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-12"
+
+# Амхерст. Домен amherst.edu одобрен человеком 14 сентября 2026. Нужен
+# потому, что это единственный колледж в списке, где need-blind
+# распространяется и на иностранцев: решение о приёме не смотрит на
+# заявку о помощи.
+#
+# Страницы сохранены вручную: сборщику сайт отвечает 405, браузеру
+# отдаёт всё. Подделывать имя клиента ради обхода защиты нельзя, поэтому
+# текст снят браузером и лежит в manual/. Плата за это — слежение: пока
+# файлы не пересохранены, tools.check видит прежний текст и об
+# изменениях на сайте не скажет. Перечитывать вручную раз в цикл.
+[amherst-college]
+name = "Amherst College — need-blind financial aid for international students"
+files = [
+  { path = "manual/amherst-college/00-international.txt", url = "https://www.amherst.edu/admission/apply/international" },
+  { path = "manual/amherst-college/01-aid-international.txt", url = "https://www.amherst.edu/offices/financialaid/international_students" },
+  { path = "manual/amherst-college/02-aid-how-to-apply.txt", url = "https://www.amherst.edu/offices/financialaid/international_students/appleton" },
+  { path = "manual/amherst-college/03-aid-offer.txt", url = "https://www.amherst.edu/offices/financialaid/international_students/financialaid_award" },
+  { path = "manual/amherst-college/04-deadlines.txt", url = "https://www.amherst.edu/admission/apply/firstyear/calendar_deadlines" },
+]
+approvedBy = "human"
+approvedAt = "2026-09-14"
+
+# Уильямс. Домен williams.edu одобрен человеком 14 сентября 2026. Помощь
+# по нужде: не need-blind для иностранцев, но помощь получают около 70%
+# из них, и в неё входит перелёт домой раз в год.
+#
+# Страницы сохранены вручную по той же причине, что у Амхерста: сборщику
+# сайт отвечает 403, браузеру отдаёт всё. Слежение за текстом при этом не
+# работает — файлы перечитывать вручную раз в цикл.
+#
+# Страница помощи иностранцам (/financial-aid/international/) сама
+# переадресует на общую «Requirements and Deadlines»: там и сроки, и
+# раздел про иностранцев. Адрес записан тот, по которому ходят люди.
+[williams-college]
+name = "Williams College — need-based financial aid"
+files = [
+  { path = "manual/williams-college/00-international.txt", url = "https://www.williams.edu/admission-aid/how-to-apply/additional-applicant-information/international/" },
+  { path = "manual/williams-college/01-requirements-deadlines.txt", url = "https://www.williams.edu/admission-aid/financial-aid/international/" },
+  { path = "manual/williams-college/02-first-year.txt", url = "https://www.williams.edu/admission-aid/how-to-apply/first-year/" },
+]
+approvedBy = "human"
+approvedAt = "2026-09-14"
+
+# Колумбия. Домен columbia.edu вместе с поддоменами undergrad.admissions
+# и cc-seas.financialaid одобрен человеком 14 сентября 2026. Помощь по
+# нужде: отбор иностранцев need-aware, но принятым закрывают 100% нужды,
+# а семьям с доходом до 150 000 долларов обучение бесплатно.
+#
+# Страницы сохранены вручную: сборщику сайт отвечает 403, браузеру
+# отдаёт всё. Слежение за текстом при этом не работает — перечитывать
+# файлы вручную раз в цикл.
+[columbia-university]
+name = "Columbia University — need-based financial aid for international students"
+files = [
+  { path = "manual/columbia-university/00-international.txt", url = "https://undergrad.admissions.columbia.edu/apply/international" },
+  { path = "manual/columbia-university/01-international-aid.txt", url = "https://undergrad.admissions.columbia.edu/apply/international/aid" },
+  { path = "manual/columbia-university/02-english-proficiency.txt", url = "https://undergrad.admissions.columbia.edu/apply/international/english-proficiency" },
+  { path = "manual/columbia-university/03-how-aid-works.txt", url = "https://cc-seas.financialaid.columbia.edu/how/aid/works" },
+  { path = "manual/columbia-university/04-first-year.txt", url = "https://undergrad.admissions.columbia.edu/apply/firstyear" },
+]
+approvedBy = "human"
+approvedAt = "2026-09-14"
+
+# Стэнфорд. Домен stanford.edu одобрен человеком 14 сентября 2026.
+# Помощь по нужде есть и для иностранцев, но её мало, а запрос на неё
+# учитывается при отборе.
+#
+# Страницы сняты сборщиком 14 сентября 2026 и сохранены как оригиналы.
+# С тех пор сайт закрылся: сборщику отвечает 403, а браузеру показывает
+# проверку BitNinja с картинкой-кодом. Картинки мы не разгадываем,
+# поэтому дальше страницы обновляет человек руками.
+#
+# Сроков подачи и стоимости года в этих трёх страницах нет — они на
+# закрытых сейчас разделах. Поэтому в записи нет дат приёма: выдумывать
+# их нельзя.
+[stanford-university]
+name = "Stanford University — need-based financial aid for international students"
+files = [
+  { path = "manual/stanford-university/00-international-faq.txt", url = "https://admission.stanford.edu/apply/international/index.html" },
+  { path = "manual/stanford-university/01-international-aid.txt", url = "https://financialaid.stanford.edu/undergrad/how/international.html" },
+  { path = "manual/stanford-university/02-aid-requirements.txt", url = "https://financialaid.stanford.edu/undergrad/apply/requirements/rd_international.html" },
+]
+approvedBy = "human"
+approvedAt = "2026-09-14"

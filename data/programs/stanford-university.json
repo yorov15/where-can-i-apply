@@ -1,0 +1,186 @@
+{
+  "id": "stanford-university",
+  "status": "published",
+  "name": {
+    "ru": "Стэнфорд — помощь по нужде, но её мало",
+    "orig": "Stanford University — need-based financial aid for international students"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Принятым закрывают всю посчитанную нужду независимо от гражданства, но денег для иностранцев мало, и просьба о помощи снижает шансы на приём. Стипендий за успехи нет, кроме немногих спортивных. Не попросил помощь при подаче — не сможешь попросить все четыре года. Из чего складывается покрытие и сколько стоит год, эти страницы не говорят"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "The application requirements are the same for all applicants regardless of citizenship or country of residence."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "страну школы не ограничивают: заявку читают в контексте той страны и школы, где ты учишься"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "числа лет школы страницы не называют: нужен аттестат к началу учёбы"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "возраст на страницах приёма и помощи не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "минимального балла нет: вуз прямо пишет, что обязательных курсов и проходных баллов не установлено"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "экзамен по английскому не требуют: результат можно прислать по желанию"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Просьба о помощи учитывается при отборе: для иностранцев отбор не need-blind, и с заявкой о деньгах пройти труднее. Денег на иностранцев у вуза немного.",
+      "evidence": "For international citizens who indicate on their application that they will be applying for financial aid, that request will be a factor in our admission evaluation, making the process more selective.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Просить помощь нужно сразу, в заявке о приёме. Приняли без такой отметки — подать на помощь нельзя будет все четыре года учёбы.",
+      "evidence": "International citizens who indicate on their applications that they will not be applying for financial aid and subsequently are admitted are not eligible to apply for financial aid at any time during their four years at Stanford.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Принятым закрывают всю посчитанную нужду, гражданство на это не влияет. Стипендий за успехи нет, кроме небольшого числа спортивных.",
+      "evidence": "Stanford is committed to meeting demonstrated financial need for all admitted students (regardless of citizenship) who have requested financial aid during the application process. We do not offer merit scholarships outside of a limited number of athletic scholarships.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "SAT или ACT сдавать обязательно — в отличие от большинства американских вузов в этом списке.",
+      "evidence": "Yes, the ACT or SAT is required.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Экзамен по английскому не требуют вовсе, прислать результат можно по желанию. Но свободный английский назван условием приёма.",
+      "evidence": "No, we do not require any English proficiency exams.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Минимальных баллов и обязательных предметов нет, и пересчитывать оценки в американскую шкалу не нужно. Совет вуза — пройти те курсы, которые нужны для поступления в университет твоей страны.",
+      "evidence": "While there are no courses or minimum scores required to secure admission to Stanford, we recommend completing the necessary coursework to apply to a university program for a bachelor's degree in your home country or in the country you are currently studying in.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Аттестат должен быть на руках к началу учёбы осенью, но при подаче его ещё может не быть — подавать можно из выпускного класса.",
+      "evidence": "You must be in possession of a secondary school diploma (or your country's equivalent) by the time you enroll. You do not need to have it by the time you submit your application.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Если после школы ты уже поступил в другой вуз и получил там зачтённые кредиты, подавать надо как переводник, а не на первый курс.",
+      "evidence": "If you have enrolled either full-time or as a degree-seeking student after graduating from high school and have received credit, you will need to apply as a transfer student.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Транскрипт и рекомендации нужны с переводом на английский, вместе с оригиналами. Переводить самому нельзя: просят учителя английского или другого сотрудника школы.",
+      "evidence": "Applicants cannot translate the documents themselves. We recommend asking your English teacher or other school official to translate for you.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявку на помощь подают через CSS Profile (код 4704). Кому взнос за CSS Profile не по карману или чью страну College Board не обслуживает, вместо него заполняют International Student Application for Financial Assistance.",
+      "evidence": "If you are an international student who cannot afford the CSS Profile fee, or if you live in a country from which the College Board cannot process payments, you may submit an International Student Application for Financial Assistance using our secure Document Upload process.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки для обычного тура на 2026/27: CSS Profile открывается 1 октября, документы желательно подать до 15 февраля, ответ о помощи приходит в апреле. Точных дат подачи самой заявки о приёме на этих страницах нет — смотри раздел приёма на сайте.",
+      "evidence": "CSS Profile/IDOC Available October 1 Priority Filing Date February 15 Award Notification April",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Чтобы получить деньги вуза, иностранцу потребуется американский налоговый номер — SSN или ITIN. Для самой заявки о помощи он не нужен.",
+      "evidence": "In order to receive university scholarship funds, international students must obtain either a Social Security number (SSN) or an Individual Taxpayer Identification Number (ITIN).",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Учёба начинается только осенью: зимнего и весеннего набора нет. Программ обмена для бакалавров тоже нет.",
+      "evidence": "Students enroll and begin classes in the Fall. We do not offer Winter or Spring Quarter enrollment.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Приёмная комиссия не работает с платными агентами и посредниками: заявку ты должен собрать сам.",
+      "evidence": "The Office of Undergraduate Admission does not partner or work with paid agents or credentialing services.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admission.stanford.edu/apply/international/index.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один университет: Стэнфорд, Калифорния"
+    }
+  },
+  "source": {
+    "url": "https://admission.stanford.edu/apply/international/index.html",
+    "lastVerified": "2026-09-19",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://admission.stanford.edu/apply/international/index.html",
+        "contentHash": "sha256:badbd75a33c4c357ebf6fb85b6424050739f82badfa256de7eb4ea9a34be0673"
+      },
+      {
+        "url": "https://financialaid.stanford.edu/undergrad/how/international.html",
+        "contentHash": "sha256:4a5f8eaab3e9112d6721fade3470573b0bca0af433b0b006bd1f7590275d9a6c"
+      },
+      {
+        "url": "https://financialaid.stanford.edu/undergrad/apply/requirements/rd_international.html",
+        "contentHash": "sha256:bdf1fa69b5f25f14ae794fb9092985776d730187c042419b407fde9402b287a0"
+      }
+    ]
+  }
+}

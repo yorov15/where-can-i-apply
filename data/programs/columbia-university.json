@@ -1,0 +1,185 @@
+{
+  "id": "columbia-university",
+  "status": "published",
+  "name": {
+    "ru": "Колумбийский университет — помощь по нужде, при доходе до 150 000 учёба бесплатна",
+    "orig": "Columbia University — need-based financial aid for international students"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Принятым закрывают 100% посчитанной нужды все четыре года, без кредитов: грант плюс работа в кампусе. Семьям с доходом меньше 150 000 долларов в год обучение бесплатно, меньше 66 000 — родители не платят ничего. Средняя выплата иностранцу — 79 375 долларов в год. Про дорогу страницы не пишут. Стипендий за успехи нет вовсе: деньги дают только по нужде"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Columbia's admissions process is largely the same for everyone, regardless of citizenship or country of residence."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "страну школы не ограничивают: принимают любую школьную программу и читают заявку в контексте твоей школы"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "года выпуска страницы не называют; ограничение есть только для тех, кто прервал учёбу больше чем на год — им советуют другой факультет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "возраст на страницах приёма и помощи не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "порога по среднему баллу страницы не называют: оценки читают вместе со школьным профилем и программой"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "you must take one of the below English Language Proficiency exams and provide your score to Columbia as part of your application"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Показать знание английского обязательно, но проходного балла университет не называет — ни по IELTS, ни по TOEFL, ни по Duolingo. Принимают TOEFL, IELTS, Duolingo и кембриджские экзамены.",
+      "evidence": "Please note that demonstration of English language proficiency, including potentially through English Language Proficiency exams, is required.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Экзамен по английскому можно вообще не сдавать: достаточно 700 из 800 за чтение и письмо в SAT или 29 за английский либо чтение в ACT. Второй путь — школа, где всё обучение шло на английском.",
+      "evidence": "700 or higher on the Reading and Writing section of the SAT (either paper or digital administration)",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Заявка о помощи влияет на приём: для иностранцев отбор need-aware. Но принятым закрывают 100% нужды, а средняя выплата иностранцу — 79 375 долларов в год.",
+      "evidence": "The Columbia admissions process is largely the same for all students, regardless of citizenship and residency, but international students are evaluated in a need-aware manner.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Просить помощь нужно сразу, при подаче. Приняли без заявки о помощи — получить её потом нельзя ни в этот год, ни в следующие, даже если в семье всё изменится.",
+      "evidence": "If admitted without requesting financial aid, international students may not change their status to apply for aid, even if their financial circumstances change.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "При доходе семьи меньше 150 000 долларов в год обучение бесплатное, меньше 66 000 — родители не платят ничего. Считают и необлагаемые доходы, и имущество, кроме пенсионных накоплений.",
+      "evidence": "Students coming from families with calculated total incomes of less than $150,000 annually (and typical assets) will be able to attend Columbia tuition-free.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Кредитов в пакете нет: помощь состоит из гранта и работы в кампусе. Первокурсникам из семей с низким доходом дают ещё 2 000 долларов на обустройство.",
+      "evidence": "Incoming first-year students from low-income families will receive a $2,000 start-up grant to ease their transition to college.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендий за успехи, спорт или таланты нет вообще — только помощь по нужде.",
+      "evidence": "there are no academic, athletic or talent-based institutional scholarships",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Любой школьный аттестат подходит: IB, A-level, национальная программа. Заявку читают в контексте твоей школы и её программы.",
+      "evidence": "Columbia accepts all secondary school curricula (e.g., International Baccalaureate, Cambridge A Levels, National School curricula, etc.), and applications are reviewed within the context of your curriculum.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Результаты выпускных и национальных экзаменов прикладывают, только если без них не оканчивают школу. Не требуются для аттестата — присылать не нужно.",
+      "evidence": "If they are not required for the completion of and graduation from secondary school, you are not required to submit results.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Перерыв в учёбе больше года закрывает обычный путь в Columbia College: таким советуют School of General Studies. Для инженерного факультета перерыв помехой не считают.",
+      "evidence": "If you're a potential applicant to Columbia College and you've taken a break of more than a year in your education (with the exception of those in mandatory military service) you should, instead, consider Columbia University's School of General Studies.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки набора на осень 2027: ранний тур до 1 ноября, обычный до 1 января. Заявка на помощь — до 15 ноября в раннем туре и до 15 февраля в обычном. Университет предупреждает, что даты типовые и в конкретный год могут сдвинуться.",
+      "evidence": "Please note that the above dates and deadlines are based on typical admissions cycles and specific dates may vary in a particular year.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подают через Common Application, Coalition на Scoir или QuestBridge. Интервью в отборе нет.",
+      "evidence": "Interviews are not a part of the application process.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Агентов и посредников университет не нанимает ни в одной стране. Если кто-то обещает помочь поступить за деньги от имени Колумбии — это обман.",
+      "evidence": "Please be aware that Columbia Undergraduate Admissions does not authorize or work with any independent agents anywhere in the world for our recruitment efforts.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-08-01",
+    "closes": "2027-01-01",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://undergrad.admissions.columbia.edu/apply/international",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один университет: Колумбийский, Нью-Йорк. Заявка идёт в Columbia College или в инженерный факультет"
+    }
+  },
+  "source": {
+    "url": "https://undergrad.admissions.columbia.edu/apply/international",
+    "lastVerified": "2026-09-19",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://undergrad.admissions.columbia.edu/apply/international",
+        "contentHash": "sha256:4a48d304ad512367a923b592b51c8f2d5a3bbad606acd3f948e83ecb1e5ba5d5"
+      },
+      {
+        "url": "https://undergrad.admissions.columbia.edu/apply/international/aid",
+        "contentHash": "sha256:3af5daddfa991a0654352b4ce09cbafc74240df9f790009dc0148c589ef1476e"
+      },
+      {
+        "url": "https://undergrad.admissions.columbia.edu/apply/international/english-proficiency",
+        "contentHash": "sha256:a19b3797b3953141c7796b2d4c923cd8bff396a9e4eb91c1dc7eaaa764822023"
+      },
+      {
+        "url": "https://cc-seas.financialaid.columbia.edu/how/aid/works",
+        "contentHash": "sha256:c2831176c8f1ed36d245ace2523a33fa1e0ef6505c2f063f2fd011b23db4439a"
+      },
+      {
+        "url": "https://undergrad.admissions.columbia.edu/apply/firstyear",
+        "contentHash": "sha256:ade5dd39d90bcd2b0acf32dff89050472af1953b29261fe85831e5dce3ce7a45"
+      }
+    ]
+  }
+}

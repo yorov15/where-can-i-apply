@@ -1,0 +1,207 @@
+{
+  "id": "amherst-college",
+  "status": "published",
+  "name": {
+    "ru": "Амхерст — помощь по нужде, не глядя на твои деньги",
+    "orig": "Amherst College — need-blind admission and financial aid for international students"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Заявка о помощи не влияет на решение о приёме — у иностранцев так делают единицы колледжей. Принятым закрывают 100% посчитанной нужды и не дают кредитов: первые 1800 долларов нужды — работа в кампусе, остальное стипендией, которую не возвращают. Из чего складывается сама нужда, эти страницы не расписывают. В 2025/26 помощь получали 82% иностранцев, средняя — больше 84 000 долларов в год"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Regardless of your citizenship or geographic location, you should follow the same first-year or transfer application process that other students follow."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "страну школы не ограничивают: приёмная комиссия разбирает системы образования разных стран и смотрит заявку в контексте твоей школы"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "возраст на страницах приёма и помощи не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "порога по среднему баллу страницы не называют: смотрят оценки вместе с экзаменами, эссе, рекомендациями и программой твоей школы целиком"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7.5,
+          "evidence": "7.5 overall band score on IELTS Academic"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "100 (pre-January 21, 2026) or 5.5 on the internet-based TOEFL (iBT) or TOEFL Home Edition"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5.5,
+          "evidence": "100 (pre-January 21, 2026) or 5.5 on the internet-based TOEFL (iBT) or TOEFL Home Edition"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "130 or above on the Duolingo English Test"
+        }
+      ],
+      "advisory": true,
+      "evidence": "the following minimum scores are strongly recommended"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Заявка о помощи не влияет на приём: колледж смотрит заявку, а не кошелёк. Для иностранцев это редкость — обычно просьба о деньгах снижает шансы.",
+      "evidence": "This means Amherst will admit international students without regard to their level of financial need or request for financial aid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Принятым закрывают 100% посчитанной нужды. Кредитов в пакете нет: первые 1800 долларов дают работой в кампусе, остальное — стипендией, которую не возвращают.",
+      "evidence": "The first $1,800 of calculated financial need is offered in a student employment opportunity. Any remaining need is met with scholarship - aid that does not have to be repaid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "В 2025/26 помощь получали 82% иностранцев, средняя выплата — больше 84 000 долларов в год.",
+      "evidence": "82% International students with aid, 2025-2026",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сертификат по английскому обязателен, если английский тебе не родной. Освобождают только тех, кто последние два года учился в школе с английским языком обучения — таджикская школа под это не подходит. Других оснований для освобождения нет.",
+      "evidence": "Only those first-year applicants who have completed the two most recent years of secondary education at a school with English as the primary language of instruction are eligible for a waiver of the English proficiency requirement.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Баллы названы настоятельно рекомендованными, а не порогом: IELTS Academic 7.5, TOEFL iBT 100 по старой шкале или 5.5 по новой, Duolingo 130. Ниже — не автоматический отказ, но планка высокая.",
+      "evidence": "For international applicants required to submit evidence of English language proficiency, the following minimum scores are strongly recommended:",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Условного зачисления с доучиванием языка нет, курсов английского как иностранного в колледже тоже нет. Английский нужен готовым к началу учёбы.",
+      "evidence": "Amherst does not offer provisional admission for applicants, nor do we provide English-as-a-Second-Language instruction.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "SAT и ACT в цикле 2026/27 необязательны.",
+      "evidence": "Optional testing: SAT or ACT",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Интервью в отборе нет вовсе. Если у тебя есть запись интервью InitialView, её можно прислать.",
+      "evidence": "Please note that Amherst College does not offer interviews for prospective students.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Сроки набора на осень 2027: ранний тур до 9 ноября 2026, обычный — до 5 января 2027. Заявку на помощь подают чуть позже: до 13 ноября и до 15 января.",
+      "evidence": "January 5, 2027 (Regular Decision)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Помощь просят через CSS Profile (код 3003), он открывается 1 октября 2026. Доходы указывают в валюте своей страны.",
+      "evidence": "Please complete the CSS Profile reporting your family's financial information in the currency of your home country.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Если платить за CSS Profile тяжело, просят разрешить форму ISFAA вместо него — на шансы получить помощь это не влияет.",
+      "evidence": "Applying for financial aid using the ISFAA will not change an applicant's eligibility for financial aid; completing the ISFAA is considered the equivalent of completing the CSS Profile.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы о доходах — только PDF, в своей валюте и на своём языке, с переводом на английский. Переводить можно самому, платное бюро не нужно. Подписи нужны настоящие, электронные не принимают.",
+      "evidence": "it does not need to be a paid translation service; your own translation is sufficient",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Если курс валюты изменится на 10% и больше, размер помощи пересчитают — раз в год, в августе или декабре.",
+      "evidence": "If a currency exchange rate changes 10% or higher than the rate used in an initial award determination, students can request a review of the rate one time per academic year.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-05",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.amherst.edu/admission/apply/international",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один колледж: Amherst College, штат Массачусетс"
+    }
+  },
+  "source": {
+    "url": "https://www.amherst.edu/admission/apply/international",
+    "lastVerified": "2026-09-19",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.amherst.edu/admission/apply/international",
+        "contentHash": "sha256:93819f3c036396b371576165cd2af061dca64834dfc53a8eab7ed231b74042fa"
+      },
+      {
+        "url": "https://www.amherst.edu/offices/financialaid/international_students",
+        "contentHash": "sha256:86a3790aaf57e8d0a3c1ca4b41829f9cc3f83894efd52f185375406fc338978d"
+      },
+      {
+        "url": "https://www.amherst.edu/offices/financialaid/international_students/appleton",
+        "contentHash": "sha256:76f217b3355f0bf34fd78754dfb9c1cf0e11daaa596907aa8d1463189d1e8de2"
+      },
+      {
+        "url": "https://www.amherst.edu/offices/financialaid/international_students/financialaid_award",
+        "contentHash": "sha256:fe22b397c0d2210c816b0d7dabfb377efa05945396d888a8780793acfcf146fd"
+      },
+      {
+        "url": "https://www.amherst.edu/admission/apply/firstyear/calendar_deadlines",
+        "contentHash": "sha256:0bec5eeb1f944de630311fe5f4366ffb485906578f154cb7a728a1aad28c3883"
+      }
+    ]
+  }
+}

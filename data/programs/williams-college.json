@@ -1,0 +1,174 @@
+{
+  "id": "williams-college",
+  "status": "published",
+  "name": {
+    "ru": "Уильямс — помощь по нужде с перелётом домой",
+    "orig": "Williams College — need-based financial aid"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Помощь закрывает 100% посчитанной нужды все четыре года, без кредитов и без обязательной работы. В неё входят учебники, материалы для лабораторных и рисования, уроки музыки, хранение вещей на каникулах и перелёт домой раз в год. Но это помощь по нужде, а не всем подряд: её получают около 70% иностранцев, средняя выплата — больше 90 000 долларов в год. Сколько дадут, зависит от доходов семьи"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "As an international applicant, you'll follow the same admission procedures as first-year or transfer U.S. citizens with no additional forms or tests required."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "страну школы не ограничивают: приёмная комиссия разбирает школьные системы и учебные программы разных стран"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "возраст на страницах приёма и помощи не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "порога по среднему баллу страницы не называют: заявку читают целиком два сотрудника приёмной комиссии"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "сертификат по английскому требованием не назван: его просят прислать по желанию, а перечисленные баллы описывают тех, кого обычно берут"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Заявка о помощи влияет на приём: для иностранцев колледж не need-blind. Но помощь получают около 70% из них, в среднем больше 90 000 долларов в год.",
+      "evidence": "Although Williams isn't need-blind for international applicants, approximately 70% of international students receive financial aid from the college, with aid awards averaging more than $90,000 annually.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Просить помощь нужно сразу: в заявке о приёме есть вопрос «Do you intend to apply for financial aid?», и там надо ответить «Yes». Сами документы о доходах с заявкой не посылают — их запросят, если примут.",
+      "evidence": "Indicate your intent to apply for financial aid by selecting \"Yes\" for the question \"Do you intend to apply for financial aid?\" within the admission application. Do not submit any financial aid materials as part of your application to Williams.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Что входит в помощь кроме учёбы и жилья: учебники, материалы для лабораторных и рисования, уроки музыки, хранение вещей и перелёт домой раз в год. Помощь закрывает 100% нужды и держится все четыре года.",
+      "evidence": "Our financial aid includes free textbooks, lab and art supplies, music lessons, storage and one round-trip plane ticket home each year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Кредитов в пакете нет, и подрабатывать в кампусе не обязывают.",
+      "evidence": "with no loans or work-study requirement as part of your financial aid package",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сертификат по английскому не обязателен: его просят прислать, если английский тебе не родной, но требованием это не названо. При этом сильный английский — условие приёма: читать и писать придётся много.",
+      "evidence": "a high level of English proficiency is a prerequisite for admission",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Ориентир по баллам: у тех, кого обычно берут, IELTS 7.5–9, TOEFL 5–6 по новой шкале или 100–120 по старой, Duolingo 135–160. Это описание поступивших, а не порог.",
+      "evidence": "Competitive applicants to Williams typically have the following English Language Proficiency results:",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Баллы, указанные в заявке, проверяют у всех, кто зачислился. Расхождение с официальным результатом может стоить места.",
+      "evidence": "Discrepancies between self-reported scores and official scores may jeopardize a student's place at Williams.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявка о приёме и заявка о помощи подаются одновременно — в большинстве вузов это разные сроки, здесь один. Ранний тур до 15 ноября, обычный до 4 января.",
+      "evidence": "At Williams, your admission and financial aid applications are due at the same time.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Что собрать: заявку через Common App, Coalition с Scoir или QuestBridge, школьный транскрипт с промежуточным отчётом, три рекомендации — от школьного консультанта и двух учителей, и 65 долларов взноса или освобождение от него.",
+      "evidence": "$65 Application Fee or Fee Waiver",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Ранний тур связывает обязательством: если примут, остальные заявки надо отозвать. Ответ придёт 14 декабря. В обычном туре ответ 1 апреля, согласиться можно до 1 мая.",
+      "evidence": "If admitted, you'll be expected to withdraw any applications to other schools.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Интервью в отборе нет. Запись интервью InitialView можно прислать по желанию.",
+      "evidence": "Williams does not conduct interviews with prospective students",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Для тех, кто сорван с места войной, политическим конфликтом или стихийным бедствием, есть отдельная программа поддержки при подаче — Global Student Haven Initiative.",
+      "evidence": "GSHI seeks to remove barriers in the college application process for talented students who are displaced by war, political conflict, catastrophic natural disasters or other crises.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-04",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.williams.edu/admission-aid/how-to-apply/first-year/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один колледж: Williams College, штат Массачусетс"
+    }
+  },
+  "source": {
+    "url": "https://www.williams.edu/admission-aid/how-to-apply/additional-applicant-information/international/",
+    "lastVerified": "2026-09-19",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.williams.edu/admission-aid/how-to-apply/additional-applicant-information/international/",
+        "contentHash": "sha256:01ae2c69058582fac1ba62ab3271b95672d8692bb30173f141f5212fb542e868"
+      },
+      {
+        "url": "https://www.williams.edu/admission-aid/financial-aid/international/",
+        "contentHash": "sha256:5db413edab5a7938064104c99c0fb7b11698e23535fd392f945aef3b003e55c1"
+      },
+      {
+        "url": "https://www.williams.edu/admission-aid/how-to-apply/first-year/",
+        "contentHash": "sha256:5e63f36e38014aba90913cc83729b3b2499d910616f050cda48272b1f18d2e69"
+      }
+    ]
+  }
+}
