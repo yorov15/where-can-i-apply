@@ -67,7 +67,25 @@ const DEFAULT_MODELS = [
 const CONFIGURED = (process.env.EXPLAIN_MODELS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 const groups = chunk((CONFIGURED.length ? CONFIGURED : DEFAULT_MODELS).slice(0, 9), 1);
 
+// След последнего обращения: какая модель, за сколько и чем кончилось.
+// Отдаётся только тому, кто попросил заголовком X-Explain-Trace: нужен, чтобы
+// подбирать порядок моделей по фактам, а не наугад.
+let trace = [];
+
 async function askGroup(models, { system, user }, timeoutMs) {
+  const started = Date.now();
+  const note = (result) => trace.push({ model: models[0], ms: Date.now() - started, result });
+  try {
+    const text = await askOnce(models, { system, user }, timeoutMs);
+    note('ok');
+    return text;
+  } catch (error) {
+    note(String(error.message ?? error).slice(0, 60));
+    throw error;
+  }
+}
+
+async function askOnce(models, { system, user }, timeoutMs) {
   const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
     headers: {
@@ -94,7 +112,7 @@ async function askGroup(models, { system, user }, timeoutMs) {
   return text;
 }
 
-const callModel = (prompt) => callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs), { budgetMs: 45000, perGroupMs: 12000 });
+const callModel = (prompt) => { trace = []; return callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs), { budgetMs: 45000, perGroupMs: 12000 }); };
 
 function send(res, status, json, headers = {}) {
   res.statusCode = status;
@@ -135,5 +153,6 @@ export default async function handler(req, res) {
     { body, ip, today },
     { index: data.index, details: data.details, cache, limiter, callModel },
   );
-  return send(res, status, json, cors);
+  const wantTrace = req.headers['x-explain-trace'] === '1';
+  return send(res, status, wantTrace ? { ...json, trace } : json, cors);
 }
