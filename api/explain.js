@@ -18,7 +18,7 @@
 //                        экземпляр функции (по умолчанию 40: у бесплатных
 //                        моделей OpenRouter свой суточный предел)
 import {
-  explain, createCache, createLimiter, originAllowed, corsHeaders, parseCompletion, chunk, callWithFallback, LIMITS,
+  explain, createCache, createLimiter, originAllowed, corsHeaders, parseCompletion, isUsableAnswer, chunk, callWithFallback, LIMITS,
 } from './_explain-core.js';
 
 // Данные берутся с живого сайта, а не лежат внутри функции: карточки
@@ -53,19 +53,19 @@ const limiter = createLimiter({ daily: Number(process.env.DAILY_LIMIT) || LIMITS
 const configured = (process.env.ALLOWED_ORIGINS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 const allowed = configured.length ? configured : ['https://yorov15.github.io'];
 
-// Порядок: сначала те, что лучше пишут по-русски. Модели идут группами по
-// три: внутри группы OpenRouter сам переключается на следующую, если
-// первая занята; если не ответила вся группа, пробуется следующая группа.
+// Порядок: сначала те, что лучше пишут по-русски и не рассуждают вслух.
+// Модели пробуются по одной: каждый ответ проверяется (isUsableAnswer), и
+// занятая или болтливая модель просто уступает место следующей.
 const DEFAULT_MODELS = [
   'google/gemma-4-31b-it:free',
+  'google/gemma-4-26b-a4b-it:free',
   'qwen/qwen3.8-27b:free',
   'deepseek/deepseek-v4-flash-0731:free',
   'nvidia/nemotron-3-super-120b-a12b:free',
-  'google/gemma-4-26b-a4b-it:free',
   'openrouter/free',
 ];
 const CONFIGURED = (process.env.EXPLAIN_MODELS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
-const groups = chunk((CONFIGURED.length ? CONFIGURED : DEFAULT_MODELS).slice(0, 9), 3);
+const groups = chunk((CONFIGURED.length ? CONFIGURED : DEFAULT_MODELS).slice(0, 9), 1);
 
 async function askGroup(models, { system, user }, timeoutMs) {
   const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
@@ -88,10 +88,13 @@ async function askGroup(models, { system, user }, timeoutMs) {
     signal: AbortSignal.timeout(timeoutMs),
   });
   if (!res.ok) throw new Error(`openrouter ${res.status}`);
-  return parseCompletion(await res.json());
+  const text = parseCompletion(await res.json());
+  // Мусор — та же неудача, что и ошибка сети: идём к следующей модели.
+  if (!isUsableAnswer(text)) throw new Error('unusable answer');
+  return text;
 }
 
-const callModel = (prompt) => callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs));
+const callModel = (prompt) => callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs), { budgetMs: 45000, perGroupMs: 12000 });
 
 function send(res, status, json, headers = {}) {
   res.statusCode = status;

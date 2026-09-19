@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   validateRequest, buildPrompt, cacheKey, createCache, createLimiter,
-  originAllowed, corsHeaders, explain, cleanParams, parseCompletion, chunk, callWithFallback, SYSTEM_PROMPT,
+  originAllowed, corsHeaders, explain, cleanParams, parseCompletion, isUsableAnswer, chunk, callWithFallback, SYSTEM_PROMPT,
 } from '../api/_explain-core.js';
 
 const read = (name) => JSON.parse(readFileSync(new URL(`../data/${name}`, import.meta.url), 'utf8'));
@@ -224,4 +224,25 @@ test('цепочка: общий бюджет времени не превыша
   const attempt = async (group, timeoutMs) => { seen.push(timeoutMs); t += 15000; throw new Error('slow'); };
   await callWithFallback([['a'], ['b'], ['c'], ['d']], attempt, { now: () => t, budgetMs: 30000, perGroupMs: 14000, minLeftMs: 3000 });
   assert.deepEqual(seen, [14000, 14000]);
+});
+
+const GOOD = 'Почему так\nОксфорд не принимает школьный аттестат твоей страны: её нет в его таблице квалификаций.\n\nКак это обойти\nСдай IB или международные A-level.\n\nЧто сделать сейчас\nНапиши в приёмную комиссию.';
+
+test('ответ годен к показу: с заголовка, по-русски, в разумной длине', () => {
+  assert.equal(isUsableAnswer(GOOD), true);
+  assert.equal(isUsableAnswer('Почему так: ' + GOOD.slice(12)), true);
+  assert.equal(isUsableAnswer('**Почему так**\n' + GOOD.slice(11)), true);
+});
+
+test('черновик модели по-английски не показывается человеку', () => {
+  const leaked = 'We need to produce explanation in three short paragraphs with headings: Почему так, Как это обойти, Что сделать сейчас. Must be <=120 words, short sentences. Use only data from program and reasons.\n\nПочему так\nСайт сказал, что сейчас нельзя подать, потому что аттестат не в списке.';
+  assert.equal(isUsableAnswer(leaked), false);
+});
+
+test('пустое, короткое, слишком длинное и не-строка не годятся', () => {
+  assert.equal(isUsableAnswer(''), false);
+  assert.equal(isUsableAnswer('Почему так\nкоротко'), false);
+  assert.equal(isUsableAnswer('Почему так\n' + 'а'.repeat(3100)), false);
+  assert.equal(isUsableAnswer(null), false);
+  assert.equal(isUsableAnswer('Ответ без заголовка. ' + 'а'.repeat(120)), false);
 });
