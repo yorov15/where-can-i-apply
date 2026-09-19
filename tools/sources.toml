@@ -1147,3 +1147,29 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-14"
+
+# Tuition Grant Scheme — государственная дотация Сингапура на обучение.
+# Домен moe.gov.sg одобрен человеком 19 сентября 2026.
+#
+# Это не стипендия и не вуз, а механизм: государство оплачивает часть
+# платы за обучение в сингапурских вузах, а иностранец взамен обязуется
+# три года отработать в сингапурской компании. Условие тяжёлое, но это
+# один из немногих путей в дорогой вуз Азии без своих денег.
+#
+# NUS сидит за защитой Imperva и отдаёт пустую заглушку и сборщику, и
+# браузеру, поэтому вуз в записи — NTU: домен ntu.edu.sg одобрен
+# человеком 19 сентября 2026 взамен nus.edu.sg. Требования к аттестату,
+# языку и плата — со страниц вуза, правила дотации и отработки — с сайта
+# министерства.
+[ntu-singapore]
+name = "NTU Singapore with the MOE Tuition Grant"
+urls = [
+  "https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications",
+  "https://www.ntu.edu.sg/admissions/undergraduate/financial-matters/tuition-grants",
+  "https://www.ntu.edu.sg/admissions/undergraduate/financial-matters/tuition-fees",
+  "https://www.ntu.edu.sg/admissions/undergraduate/scholarships",
+  "https://www.moe.gov.sg/financial-matters/tuition-grant-scheme",
+  "https://www.moe.gov.sg/financial-matters/tuition-grant-scheme/overview",
+]
+approvedBy = "human"
+approvedAt = "2026-09-19"

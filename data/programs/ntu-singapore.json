@@ -1,0 +1,200 @@
+{
+  "id": "ntu-singapore",
+  "status": "published",
+  "name": {
+    "ru": "NTU (Сингапур) — госдотация на обучение в обмен на три года работы",
+    "orig": "Nanyang Technological University with the MOE Tuition Grant"
+  },
+  "hostCountry": "SG",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Это не стипендия, а сделка с государством: министерство оплачивает часть платы за обучение, а ты подписываешь договор и три года после выпуска работаешь в сингапурской компании. Отказаться от отработки потом можно только выкупив договор. Сколько именно остаётся платить, на снятых страницах не указано — суммы вуз показывает в таблице по году поступления. Жильё и дорога в дотацию не входят",
+      "en": null
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Eligible Singapore Citizens (SC), Singapore Permanent Residents (PR) and international students (IS) enrolled in selected full-time diploma or undergraduate courses at the following Institutes of Higher Learning (IHL) may receive it."
+    },
+    "schoolCountry": {
+      "notMeasured": true,
+      "evidence": "All other international qualifications not listed below (including German Abitur, Turkish High School, New Zealand NCEA, Bangladesh HSC, Pakistan HSC, Iran High School Diploma etc)"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you will need to provide your schooling history from Primary 1 in the form enclosed and upload it to your application for assessment of your eligibility for admission after you have applied for admission"
+    },
+    "graduationYear": {
+      "maxRelative": "applicationYear",
+      "evidence": "You must have completed or will be taking High School national examinations in the year of application in order to be considered for admission."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "возрастного ограничения для иностранцев страницы не ставят: правило про 18 лет обращено к гражданам и постоянным жителям Сингапура"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-19",
+      "note": "порога по среднему баллу страницы приёма не называют: вуз публикует только справочный профиль оценок поступивших"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6,
+          "parts": true,
+          "evidence": "Submission of IELTS (a minimum Overall 6, writing 6, speaking 6)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "parts": true,
+          "evidence": "or TOEFL (a minimum of 90, verbal 25) [taken before 2026]"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "a minimum Overall score of 4.5, speaking 4.5 [TOEFL iBT taken from January 2026 onwards]"
+        }
+      ],
+      "evidence": "or taken English language only as a 2nd language"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Главное условие дотации: после выпуска три года работать в сингапурской компании. Это письменный договор, а не пожелание.",
+      "evidence": "they are required to sign the Tuition Grant Agreement in which they will be contractually obliged to work in a Singapore entity for three (3) years upon graduation",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Дотацию надо попросить прямо в заявке о приёме, отметив соответствующий пункт. Дадут её — решают вместе с местом в вузе.",
+      "evidence": "SPR and International students who are interested in obtaining the MOE Tuition Grant to subsidise their tuition fees are required to indicate that they are opting for TG in their online admission application form.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Дотацию не дадут, если у тебя уже есть диплом того же или более высокого уровня, оплаченный государством Сингапура. Не распространяется она и на заочные программы и на частные вузы.",
+      "evidence": "You are eligible if you have not received a TG, subsidy, sponsorship or scholarship from the Singapore Government to obtain qualifications that are the same level as or higher than your course.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Получившие дотацию платят сниженную плату, а не ноль. Размер зависит от гражданства и программы: у дотации три уровня, самый большой — для граждан Сингапура.",
+      "evidence": "TG recipients pay subsidised tuition fees. There are 3 tiers of TG (Tier A, Tier B and Tier C), with Tier A providing the highest level of tuition fee subsidy for SCs.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Если бросишь учёбу, сменишь статус или захочешь откупиться от отработки — придётся платить неустойку.",
+      "evidence": "You need to pay for the liquidated damages if there are changes to your course status or if you decide to buy out your bond.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Таджикский аттестат попадает в общую графу «прочие международные аттестаты» — свою строку в таблице требований он не имеет, и вуз оценивает такие документы отдельно.",
+      "evidence": "All other international qualifications not listed below (including German Abitur, Turkish High School, New Zealand NCEA, Bangladesh HSC, Pakistan HSC, Iran High School Diploma etc)",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Экзамен по английскому обязателен тем, у кого английский в школе был вторым языком, — в таджикской школе это так. Нужен IELTS от 6.0, причём письмо и речь не ниже 6.0 каждое, либо TOEFL от 90 со словесной частью 25 по старой шкале или 4.5 с речью 4.5 по новой.",
+      "evidence": "OR who do not take up English language in Junior and Senior High School or taken English language only as a 2nd language",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Вместо экзамена по английскому подойдёт SAT от 1250, PTE Academic от 55 с речью 55, ACT с письмом от 30 за одну сдачу или кембриджский C1 Advanced от 170 с письмом и речью от 170.",
+      "evidence": "or SAT (a minimum of 1250 for SAT taken for March 2016 onwards) or Pearson Test of English Academic (PTE Academic) (a minimum of overall 55,speaking 55) or ACT with Writing (a minimum of composite score of 30 in ACT with Writing in one sitting)",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Результаты IELTS, TOEFL и PTE годятся, только если сданы в течение двух лет до срока подачи. SAT и ACT действуют пять лет.",
+      "evidence": "For IELTS, TOEFL and PTE Academic, only scores obtained in the 2 years leading up to the application deadline will be considered. The validity period for SAT and ACT is 5 years.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Требование «18 лет или 12 лет школы» на страницах приёма обращено к гражданам и постоянным жителям Сингапура. Иностранцам вуз оценивает школьную историю отдельно, поэтому с 11-летней школой ответ даёт приёмная комиссия, а не эта карточка.",
+      "evidence": "All Singapore Citizen and Permanent Resident applicants must be at least 18 years of age as of 1st January of the year of matriculation or have completed a minimum of 12 years of formal education beginning with Primary 1 or equivalent.",
+      "field": "age",
+      "kind": "note"
+    },
+    {
+      "ru": "Набор один раз в год, учёба начинается в конце июля. Заявку с прочим международным аттестатом в прошлом цикле принимали с 15 октября 2025 по 20 января 2026 — даты следующего цикла ещё не объявлены, в карточке стоят прошлогодние.",
+      "evidence": "There is only one intake per academic year here, typically term commences in late July.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы догружают не позже чем через три дня после закрытия подачи. Опоздания не принимают.",
+      "evidence": "Upload/Submit documents according to the Checklist within 3 days after application closing date.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Кроме общих требований, у каждой программы есть свои обязательные предметы — их проверяют отдельно.",
+      "evidence": "In addition to fulfilling the minimum entry requirements, you must also satisfy the minimum subject requirements for the programmes you apply.",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-10-15",
+    "closes": "2027-01-20",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Nanyang Technological University. Такую же дотацию дают и в других сингапурских вузах, но требования к поступающим у каждого свои"
+    }
+  },
+  "source": {
+    "url": "https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications",
+    "lastVerified": "2026-09-19",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications",
+        "contentHash": "sha256:2b18194565d8a41f886f6263b4080f51a81dc7e69aff362dfbb37984912abefd"
+      },
+      {
+        "url": "https://www.ntu.edu.sg/admissions/undergraduate/financial-matters/tuition-grants",
+        "contentHash": "sha256:ec6d523307c2c7b5e58a33e6779008ec2658dceb97af4321dad5a048a7e62565"
+      },
+      {
+        "url": "https://www.ntu.edu.sg/admissions/undergraduate/financial-matters/tuition-fees",
+        "contentHash": "sha256:735a93567c61290924050580f5e3e6deae7e0c535716a7eb717a1c497fe34747"
+      },
+      {
+        "url": "https://www.ntu.edu.sg/admissions/undergraduate/scholarships",
+        "contentHash": "sha256:2b2a0d1b2256a9fcc11f989224a6d89cc8eb24ee28b813149b1a1a941ddf8a65"
+      },
+      {
+        "url": "https://www.moe.gov.sg/financial-matters/tuition-grant-scheme",
+        "contentHash": "sha256:70a0c6c5b3aa62d9cccaa666b71222a8c731b03fcb16b64f8b279ccbb5bf7057"
+      },
+      {
+        "url": "https://www.moe.gov.sg/financial-matters/tuition-grant-scheme/overview",
+        "contentHash": "sha256:9ce3d6494c0cc22be2e75f0f43453c5b63bafbbe3e7204856665795c79ba4d8e"
+      }
+    ]
+  }
+}
