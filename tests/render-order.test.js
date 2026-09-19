@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { sortRows, groupRows, bucketOf } from '../js/render.js';
+import { sortRows, groupRows } from '../js/render.js';
+import { bucketOf } from '../js/wording.js';
 
 const row = (id, status, closes, deadline = 'upcoming') => ({
   program: { id, deadline: closes ? { closes } : null },

@@ -63,6 +63,10 @@ export function programSideOnly(verdict) {
     && reasons.every((r) => PROGRAM_SIDE_STATES.has(r.code.split('.')[1]));
 }
 
+// Корзина, а не цвет: «программа не публикует порога» и «сдай экзамен»
+// оба жёлтые, но первое человеку делать нечего.
+export const bucketOf = (verdict) => (programSideOnly(verdict) ? 'likely' : verdict.status);
+
 // Отказы, которые могут измениться: пересдать, дождаться возраста или цикла.
 const CHANGEABLE = new Set(['language.below', 'gpa.below', 'age.under-min', 'graduationYear.after-cycle']);
 

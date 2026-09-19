@@ -1,4 +1,4 @@
-import { reasonText, orderReasons, headline, programSideOnly } from './wording.js';
+import { reasonText, orderReasons, headline, bucketOf } from './wording.js';
 import { deadlineLine, coverageLine, formatDate } from './lib/format.js';
 
 // В именительном падеже — для строк вида «Страна школы: ...».
@@ -33,8 +33,11 @@ export function notLimitedItems(program, fields) {
 }
 
 // Состояния, при которых программа описала требование словами: под
-// причиной показываем, что именно она пишет.
-const PROGRAM_SIDE = new Set(['not-measured', 'by-institution', 'missing-rule', 'parts-unknown']);
+// причиной показываем, что именно она пишет. Это не то же самое, что
+// PROGRAM_SIDE_STATES в wording.js: там — «человеку делать нечего», и
+// минимумов по частям экзамена в том списке нет, потому что свои баллы
+// человек как раз сверить может.
+const SAYS_STATES = new Set(['not-measured', 'by-institution', 'missing-rule', 'parts-unknown']);
 
 export function cardModel({ program, verdict, deadline }, extra, today) {
   const hasDetails = extra != null;
@@ -58,7 +61,7 @@ export function cardModel({ program, verdict, deadline }, extra, today) {
     const text = reasonText(reason);
     const state = reason.code.split('.')[1];
     const workarounds = take((c) => c.kind === 'workaround' && c.field === reason.field);
-    const says = PROGRAM_SIDE.has(state)
+    const says = SAYS_STATES.has(state)
       ? take((c) => (c.kind === 'must' || c.kind === 'note') && c.field === reason.field)
       : [];
     return {
@@ -69,7 +72,7 @@ export function cardModel({ program, verdict, deadline }, extra, today) {
       workarounds,
       says,
       noWorkaround: hasDetails && reason.status === 'fail' && workarounds.length === 0,
-      seeBelow: hasDetails && PROGRAM_SIDE.has(state) && says.length === 0 && workarounds.length === 0,
+      seeBelow: hasDetails && SAYS_STATES.has(state) && says.length === 0 && workarounds.length === 0,
     };
   });
 
@@ -98,7 +101,7 @@ export function cardModel({ program, verdict, deadline }, extra, today) {
   return {
     id: program.id,
     status: verdict.status,
-    bucket: programSideOnly(verdict) ? 'likely' : verdict.status,
+    bucket: bucketOf(verdict),
     closed: deadline === 'closed',
     title: program.name?.ru ?? program.id,
     headline: headline(verdict, program),

@@ -5,7 +5,7 @@ import { evaluate } from './verdict.js';
 import { deadlineState } from './lib/deadline.js';
 import { summaryLines } from './summary.js';
 import { cardModel } from './card-model.js';
-import { programSideOnly } from './wording.js';
+import { bucketOf } from './wording.js';
 
 const ORDER = { yes: 0, likely: 1, check: 2, no: 3 };
 
@@ -15,10 +15,6 @@ const GROUPS = [
   ['check', 'Можно, если доделаешь'],
   ['no', 'Сейчас нельзя'],
 ];
-
-// Корзина, а не цвет: «программа не публикует порога» и «сдай экзамен»
-// оба жёлтые, но первое человеку делать нечего.
-export const bucketOf = (verdict) => (programSideOnly(verdict) ? 'likely' : verdict.status);
 
 // Порядок выдачи: сначала открытые программы, куда подать можно, и
 // внутри — по близости срока. Вынесено из renderResults, чтобы порядок
