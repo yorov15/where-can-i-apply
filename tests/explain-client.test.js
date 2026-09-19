@@ -100,3 +100,18 @@ test('теги в ответе остаются текстом: parseAnswer ни
   const [section] = parseAnswer('<img src=x onerror=alert(1)>');
   assert.equal(section.lines[0], '<img src=x onerror=alert(1)>');
 });
+
+// Так отвечает настоящая модель: заголовок в начале абзаца, а не отдельной
+// строкой.
+test('заголовок в начале абзаца, через двоеточие, тоже открывает секцию', () => {
+  const sections = parseAnswer('Почему так: Оксфорд не принимает аттестат.\n\nКак это обойти: Сдай IB.\n\nЧто сделать сейчас: Напиши им.');
+  assert.deepEqual(sections.map((s) => s.heading), HEADINGS);
+  assert.deepEqual(sections[0].lines, ['Оксфорд не принимает аттестат.']);
+  assert.deepEqual(sections[1].lines, ['Сдай IB.']);
+});
+
+test('слово из заголовка внутри обычного предложения секцию не открывает', () => {
+  const sections = parseAnswer('Почему так\nЭто объясняет, почему так вышло.');
+  assert.equal(sections.length, 1);
+  assert.deepEqual(sections[0].lines, ['Это объясняет, почему так вышло.']);
+});

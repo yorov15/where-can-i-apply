@@ -77,20 +77,24 @@ export async function askExplain(model, { url, fetchImpl = fetch, timeoutMs = 30
 export function parseAnswer(text) {
   const sections = [];
   let current = null;
+  const open = (heading) => {
+    current = { heading, lines: [] };
+    sections.push(current);
+  };
   for (const raw of text.split('\n')) {
-    const line = raw.trim();
+    const line = raw.replace(/^[*#\s]+/, '').replace(/\*+/g, '').trim();
     if (!line) continue;
-    const bare = line.replace(/[*#:]+/g, '').trim();
-    if (HEADINGS.includes(bare)) {
-      current = { heading: bare, lines: [] };
-      sections.push(current);
-    } else {
-      if (!current) {
-        current = { heading: null, lines: [] };
-        sections.push(current);
-      }
-      current.lines.push(line.replace(/^[*#]+\s*/, ''));
+    // Модели пишут заголовок то отдельной строкой, то в начале абзаца:
+    // «Почему так: Сейчас…». Обе формы дают одну секцию.
+    const head = HEADINGS.find((h) => line === h || line.startsWith(`${h}:`) || line.startsWith(`${h}.`));
+    if (head) {
+      open(head);
+      const rest = line.slice(head.length).replace(/^[:.\s]+/, '');
+      if (rest) current.lines.push(rest);
+      continue;
     }
+    if (!current) open(null);
+    current.lines.push(line);
   }
   return sections;
 }
