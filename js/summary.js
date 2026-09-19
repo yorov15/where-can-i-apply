@@ -3,7 +3,7 @@
 import { evaluate } from './verdict.js';
 import { deadlineState } from './lib/deadline.js';
 import { formatDate, plural } from './lib/format.js';
-import { testName } from './wording.js';
+import { testName, programSideOnly } from './wording.js';
 
 const programsWord = (n) => plural(n, 'программу', 'программы', 'программ');
 
@@ -82,6 +82,13 @@ export function summaryLines(profile, programs, today) {
     lines.push(line);
   } else {
     lines.push('Прямо сейчас подать некуда — ниже видно, что поменять.');
+  }
+
+  // Эти программы в список дел не идут: доделывать в них нечего, и
+  // человеку важно знать, что жёлтых карточек у него не тридцать шесть.
+  const likely = rows.filter((row) => programSideOnly(row.verdict));
+  if (likely.length) {
+    lines.push(`Ещё ${likely.length} ${programsWord(likely.length)} — похоже, можно: точных требований они не называют, но в твоей анкете ничего не мешает.`);
   }
 
   const ladder = examLadder(profile, open, today);

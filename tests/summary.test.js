@@ -85,3 +85,22 @@ test('программы с закрытым приёмом в сводке не
   const programs = [{ ...program('a'), deadline: open('2026-09-01') }];
   assert.equal(summaryLines(me, programs, today)[0], 'Прямо сейчас подать некуда — ниже видно, что поменять.');
 });
+
+// Сводка обещала «можно подать в 17», а ниже человек видел 36 жёлтых
+// карточек и читал их как очередь дел.
+test('сводка отделяет программы без чисел от списка дел', () => {
+  const programs = [
+    program('green'),
+    program('vague', { gpa: { notMeasured: true, evidence: 'смотрим аттестат целиком' } }),
+    program('vague2', { schoolYears: { notMeasured: true, evidence: 'смотрим аттестат целиком' } }),
+    program('todo', { language: ielts(6.5) }),
+  ];
+  const lines = summaryLines(me, programs, today);
+  assert.ok(lines.some((l) => /Ещё 2 программы — похоже, можно/.test(l)), lines.join(' | '));
+  assert.ok(lines.some((l) => /^Можешь подать в 1 программу/.test(l)), lines.join(' | '));
+});
+
+test('без таких программ строки нет', () => {
+  const lines = summaryLines(me, [program('green')], today);
+  assert.ok(!lines.some((l) => /похоже, можно/.test(l)), lines.join(' | '));
+});

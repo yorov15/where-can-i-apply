@@ -46,25 +46,55 @@ const WHY = {
 // Состояния, которые человек исправляет сам: указать поле, сдать экзамен.
 export const USER_SIDE_STATES = new Set(['no-value', 'no-certificate', 'score-missing', 'other-test']);
 
+// Состояния, где чисел не назвала сама программа. Делать человеку нечего:
+// его анкета тут ни при чём, и в список дел такая строка попадать не должна.
+export const PROGRAM_SIDE_STATES = new Set([
+  'not-measured', 'by-institution', 'missing-rule', 'cycle-unknown', 'asof-unknown',
+]);
+
+// Жёлтый жёлтому рознь. «Сдай экзамен» и «программа не публикует порога» —
+// разные ответы: первый человек закрывает сам, второй не закроет никогда.
+// Свалив их в одну кучу, сайт показывал тридцать шесть дел там, где дел
+// было десять.
+export function programSideOnly(verdict) {
+  const reasons = verdict.reasons ?? [];
+  return verdict.status === 'check'
+    && reasons.length > 0
+    && reasons.every((r) => PROGRAM_SIDE_STATES.has(r.code.split('.')[1]));
+}
+
 // Отказы, которые могут измениться: пересдать, дождаться возраста или цикла.
 const CHANGEABLE = new Set(['language.below', 'gpa.below', 'age.under-min', 'graduationYear.after-cycle']);
+
+// Подлежащее в этих строках — программа, а не человек. «Уточнить
+// требование к языку» звучало как дело, которое ему поручили, и висело
+// одинаковым текстом на полутора десятках карточек.
+const NO_NUMBER = {
+  citizenship: 'твоей страны программа прямо не называет',
+  schoolCountry: 'аттестат твоей страны программа отдельно не называет',
+  schoolYears: 'числа лет школы программа не называет',
+  graduationYear: 'года выпуска программа не называет',
+  age: 'возрастной планки программа не называет',
+  gpa: 'проходного балла программа не называет',
+  language: 'порога по языку программа не называет',
+};
 
 function generic(field, state) {
   switch (state) {
     case 'missing-rule':
       return {
-        short: `уточнить требования к ${TO[field]}`,
+        short: `про ${ABOUT[field]} программа молчит`,
         detail: `На страницах программы про ${ABOUT[field]} ничего не нашлось. Если сомневаешься, спроси у неё.`,
       };
     case 'by-institution':
       return {
-        short: `узнать требование к ${TO[field]} в вузе`,
+        short: `требование к ${TO[field]} ставит сам вуз`,
         detail: `Требование к ${TO[field]} ставит принимающий вуз, у каждого своё. Смотри на сайте вуза, куда подаёшь.`,
       };
     case 'not-measured':
       return {
-        short: `уточнить требование к ${TO[field]}`,
-        detail: `Программа описывает требование к ${TO[field]} словами, а не числом.`,
+        short: NO_NUMBER[field] ?? `числа по ${TO[field]} программа не называет`,
+        detail: `Программа описывает требование к ${TO[field]} словами, а не числом: сверить не с чем.`,
       };
     case 'no-value':
       if (!FILL[field]) return null;
@@ -103,7 +133,7 @@ const SPECIAL = {
     detail: `Программа берёт тех, кто окончил школу в ${min} году или позже, а ты — в ${mine}.`,
   }),
   'graduationYear.cycle-unknown': () => ({
-    short: 'уточнить, к какому году окончить школу',
+    short: 'крайний год выпуска пока не посчитать',
     detail: 'Школу нужно окончить к году подачи, но даты приёма ещё не объявлены, поэтому крайний год пока не посчитать.',
   }),
   'graduationYear.after-cycle': ({ max, mine }) => ({
@@ -115,7 +145,7 @@ const SPECIAL = {
     detail: `Программа берёт тех, кто оканчивает школу не позже ${max} года, а ты — в ${mine}.`,
   }),
   'age.asof-unknown': () => ({
-    short: 'уточнить, на какую дату считают возраст',
+    short: 'на какую дату считают возраст, не сказано',
     detail: 'У программы есть ограничение по возрасту, но не сказано, на какую дату его считают.',
   }),
   'age.near-max': ({ age, limit, why }) => ({
@@ -201,8 +231,15 @@ export function reasonText(reason) {
 
 const stateOf = (reason) => reason.code.split('.')[1];
 
+// В заголовок попадает первая причина, поэтому строки, где человеку
+// делать нечего, уходят в конец: иначе «Можно, но сначала» открывалось
+// молчанием программы, а настоящее дело пряталось за «и ещё 1».
 export function orderReasons(reasons) {
-  const rank = (r) => (r.status === 'fail' ? 0 : USER_SIDE_STATES.has(stateOf(r)) ? 1 : 2);
+  const rank = (r) => {
+    if (r.status === 'fail') return 0;
+    if (USER_SIDE_STATES.has(stateOf(r))) return 1;
+    return PROGRAM_SIDE_STATES.has(stateOf(r)) ? 3 : 2;
+  };
   return [...reasons].sort((a, b) => rank(a) - rank(b));
 }
 
@@ -219,5 +256,7 @@ export function headline(verdict, program) {
     return `${text.changeable || hasWay ? 'Пока нельзя' : 'Нельзя'}: ${text.short}${way}`;
   }
   const more = ordered.length - 1;
-  return `Можно, но сначала: ${text.short}${more > 0 ? ` и ещё ${more}` : ''}`;
+  const tail = more > 0 ? ` и ещё ${more}` : '';
+  const lead = programSideOnly(verdict) ? 'Похоже, можно' : 'Можно, но сначала';
+  return `${lead}: ${text.short}${tail}`;
 }

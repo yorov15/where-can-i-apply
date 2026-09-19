@@ -1,4 +1,4 @@
-import { reasonText, orderReasons, headline } from './wording.js';
+import { reasonText, orderReasons, headline, programSideOnly } from './wording.js';
 import { deadlineLine, coverageLine, formatDate } from './lib/format.js';
 
 // В именительном падеже — для строк вида «Страна школы: ...».
@@ -98,6 +98,7 @@ export function cardModel({ program, verdict, deadline }, extra, today) {
   return {
     id: program.id,
     status: verdict.status,
+    bucket: programSideOnly(verdict) ? 'likely' : verdict.status,
     closed: deadline === 'closed',
     title: program.name?.ru ?? program.id,
     headline: headline(verdict, program),

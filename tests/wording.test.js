@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { reasonText, orderReasons, headline, joinOr } from '../js/wording.js';
+import { reasonText, orderReasons, headline, joinOr, programSideOnly } from '../js/wording.js';
 
 const FIELDS = ['citizenship', 'schoolCountry', 'schoolYears', 'graduationYear', 'age', 'gpa', 'language'];
 const opts = [{ test: 'IELTS', min: 6.5 }, { test: 'TOEFL_IBT', min: 90 }, { test: 'DUOLINGO', min: 125 }];
@@ -154,4 +154,66 @@ test('заголовок: можно, но сначала — и сколько 
     ],
   };
   assert.equal(headline(verdict, {}), 'Можно, но сначала: сдать английский (IELTS от 6.5) и ещё 1');
+});
+
+// Пятнадцать карточек говорили «уточнить требование к языку» — одинаково
+// и ни о чём. Человеку слышалось поручение, хотя поручать нечего:
+// программа просто не публикует порога.
+test('когда чисел нет у программы, подлежащее — программа, а не человек', () => {
+  const vague = (field, state) => reasonText({ field, status: 'unknown', code: `${field}.${state}`, params: {} }).short;
+  assert.equal(vague('language', 'not-measured'), 'порога по языку программа не называет');
+  assert.equal(vague('gpa', 'not-measured'), 'проходного балла программа не называет');
+  assert.equal(vague('schoolYears', 'missing-rule'), 'про годы школы программа молчит');
+  assert.equal(vague('gpa', 'by-institution'), 'требование к баллу ставит сам вуз');
+  for (const state of ['not-measured', 'missing-rule', 'by-institution']) {
+    for (const field of FIELDS) {
+      assert.doesNotMatch(vague(field, state), /^(уточни|узнай|уточнить|узнать|вписать|сдать|сверить)/, `${field}.${state}`);
+    }
+  }
+});
+
+test('заголовок: похоже, можно — когда чисел не назвала программа', () => {
+  const only = {
+    status: 'check',
+    reasons: [
+      { field: 'schoolYears', status: 'unknown', code: 'schoolYears.not-measured', params: {} },
+      { field: 'gpa', status: 'unknown', code: 'gpa.by-institution', params: {} },
+    ],
+  };
+  assert.equal(headline(only, {}), 'Похоже, можно: числа лет школы программа не называет и ещё 1');
+});
+
+test('заголовок: одно дело человека возвращает «можно, но сначала»', () => {
+  const mixed = {
+    status: 'check',
+    reasons: [
+      { field: 'schoolYears', status: 'unknown', code: 'schoolYears.not-measured', params: {} },
+      { field: 'gpa', status: 'unknown', code: 'gpa.no-value', params: {} },
+    ],
+  };
+  assert.equal(headline(mixed, {}), 'Можно, но сначала: указать средний балл и ещё 1');
+});
+
+test('«похоже, можно» не подменяет собой ни зелёный ответ, ни отказ', () => {
+  assert.equal(programSideOnly({ status: 'yes', reasons: [] }), false);
+  assert.equal(programSideOnly({ status: 'check', reasons: [] }), false);
+  assert.equal(
+    programSideOnly({ status: 'no', reasons: [{ field: 'gpa', status: 'fail', code: 'gpa.below', params: {} }] }),
+    false,
+  );
+});
+
+// «Можно, но сначала: числа лет школы программа не называет и ещё 1» —
+// дело человека пряталось за «и ещё 1», а в заголовок шло то, с чем он
+// всё равно ничего не сделает.
+test('в заголовок идёт дело человека, а не молчание программы', () => {
+  const verdict = {
+    status: 'check',
+    reasons: [
+      { field: 'schoolYears', status: 'unknown', code: 'schoolYears.not-measured', params: {} },
+      { field: 'language', status: 'unknown', code: 'language.below-advisory', params: { options: opts } },
+    ],
+  };
+  assert.equal(headline(verdict, {}), 'Можно, но сначала: балл ниже рекомендованного и ещё 1');
+  assert.deepEqual(orderReasons(verdict.reasons).map((r) => r.code), ['language.below-advisory', 'schoolYears.not-measured']);
 });

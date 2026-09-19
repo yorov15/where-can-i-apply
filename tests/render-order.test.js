@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { sortRows, groupRows } from '../js/render.js';
+import { sortRows, groupRows, bucketOf } from '../js/render.js';
 
 const row = (id, status, closes, deadline = 'upcoming') => ({
   program: { id, deadline: closes ? { closes } : null },
@@ -42,4 +42,39 @@ test('группы по ответу, пустые не показываются
   assert.deepEqual(groups.map((g) => g.status), ['yes', 'no']);
   assert.deepEqual(groups[0].rows.map((r) => r.program.id), ['yesSoon', 'yesLate', 'yesClosed']);
   assert.equal(groups[0].title, 'Можно подавать');
+});
+
+// Жёлтая куча из тридцати шести карточек читалась как список дел, хотя
+// дел в ней было десять: в остальных программа просто не публикует
+// чисел, и человеку там делать нечего.
+const vague = (id) => ({
+  program: { id, deadline: { closes: '2027-01-01' } },
+  verdict: {
+    status: 'check',
+    reasons: [{ field: 'gpa', status: 'unknown', code: 'gpa.not-measured', params: {} }],
+  },
+  deadline: 'upcoming',
+});
+const todo = (id) => ({
+  program: { id, deadline: { closes: '2027-01-01' } },
+  verdict: {
+    status: 'check',
+    reasons: [
+      { field: 'gpa', status: 'unknown', code: 'gpa.not-measured', params: {} },
+      { field: 'language', status: 'unknown', code: 'language.no-certificate', params: { options: [{ test: 'IELTS', min: 6 }] } },
+    ],
+  },
+  deadline: 'upcoming',
+});
+
+test('«похоже, можно» — отдельная группа между зелёным и списком дел', () => {
+  const groups = groupRows([todo('todo'), row('no1', 'no', '2027-01-01'), vague('vague'), row('yes1', 'yes', '2027-01-01')]);
+  assert.deepEqual(groups.map((g) => g.status), ['yes', 'likely', 'check', 'no']);
+  assert.deepEqual(groups[1].rows.map((r) => r.program.id), ['vague']);
+  assert.deepEqual(groups[2].rows.map((r) => r.program.id), ['todo']);
+});
+
+test('хотя бы одно дело человека — и карточка остаётся в списке дел', () => {
+  assert.equal(bucketOf(todo('x').verdict), 'check');
+  assert.equal(bucketOf(vague('x').verdict), 'likely');
 });
