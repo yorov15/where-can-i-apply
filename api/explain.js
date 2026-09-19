@@ -60,8 +60,10 @@ const DEFAULT_MODELS = [
   'google/gemma-4-31b-it:free',
   'google/gemma-4-26b-a4b-it:free',
   'qwen/qwen3.8-27b:free',
-  'deepseek/deepseek-v4-flash-0731:free',
+  'z-ai/glm-5.2:free',
   'nvidia/nemotron-3-super-120b-a12b:free',
+  'nex-agi/nex-n2.5-pro:free',
+  'deepseek/deepseek-v4-flash-0731:free',
   'openrouter/free',
 ];
 const CONFIGURED = (process.env.EXPLAIN_MODELS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
@@ -112,7 +114,7 @@ async function askOnce(models, { system, user }, timeoutMs) {
   return text;
 }
 
-const callModel = (prompt) => { trace = []; return callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs), { budgetMs: 45000, perGroupMs: 12000 }); };
+const callModel = (prompt) => { trace = []; return callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs), { budgetMs: 44000, perGroupMs: 15000 }); };
 
 function send(res, status, json, headers = {}) {
   res.statusCode = status;

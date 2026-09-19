@@ -37,7 +37,7 @@ export const ERROR_TEXT = {
   model: 'Не получилось объяснить. Ответ выше при этом остаётся верным.',
 };
 
-export async function askExplain(model, { url, fetchImpl = fetch, timeoutMs = 30000 } = {}) {
+export async function askExplain(model, { url, fetchImpl = fetch, timeoutMs = 50000 } = {}) {
   const key = explainKey(model);
   if (cache.has(key)) return cache.get(key);
 
