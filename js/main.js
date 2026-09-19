@@ -2,6 +2,7 @@ import { loadProfile, saveProfile } from './profile.js';
 import { readForm, writeForm, onProfileChange, setupProfileBox } from './form.js';
 import { loadIndex, loadDetails } from './data.js';
 import { renderResults } from './render.js';
+import { EXPLAIN_URL } from './config.js';
 
 const form = document.getElementById('profile');
 const nodes = {
@@ -9,6 +10,13 @@ const nodes = {
   resultsNode: document.getElementById('results'),
 };
 const today = new Date().toISOString().slice(0, 10);
+
+// Шапка обещает, что данные никуда не уходят. Пока объяснялка выключена,
+// это правда; когда включена, единственное исключение называется здесь же.
+if (EXPLAIN_URL) {
+  const lead = document.querySelector('.lead');
+  if (lead) lead.append(' Исключение — кнопка «Объяснить» в карточке: она отправляет причины ответа по этой одной программе, без анкеты целиком.');
+}
 
 let programs = [];
 const details = { status: 'loading', programs: {}, retry: fetchDetails };

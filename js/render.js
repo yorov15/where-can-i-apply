@@ -6,6 +6,8 @@ import { deadlineState } from './lib/deadline.js';
 import { summaryLines } from './summary.js';
 import { cardModel } from './card-model.js';
 import { bucketOf } from './wording.js';
+import { EXPLAIN_URL } from './config.js';
+import { askExplain, cachedAnswer, parseAnswer, ERROR_TEXT } from './explain.js';
 
 const ORDER = { yes: 0, likely: 1, check: 2, no: 3 };
 
@@ -95,6 +97,51 @@ export function renderResults({ summaryNode, resultsNode }, profile, programs, t
   }
 }
 
+function answerNodes(text) {
+  const box = el('div', 'explain-answer');
+  for (const section of parseAnswer(text)) {
+    if (section.heading) box.append(el('h5', 'explain-heading', section.heading));
+    for (const line of section.lines) box.append(el('p', 'explain-line', line));
+  }
+  box.append(el('p', 'explain-note', 'Пояснение написано ИИ по данным этой карточки. Он может ошибаться: сверься с сайтом программы.'));
+  return box;
+}
+
+// Кнопка есть только когда в config.js указан адрес прокси. Что уходит
+// наружу, сказано рядом с кнопкой: человек решает, нажимать ли, зная это.
+function explainBlock(model) {
+  const wrap = el('div', 'explain');
+  const cached = cachedAnswer(model);
+  if (cached) {
+    wrap.append(answerNodes(cached));
+    return wrap;
+  }
+  const button = el('button', 'button button-small', 'Объяснить простыми словами (ИИ)');
+  button.type = 'button';
+  const status = el('p', 'explain-note');
+  status.setAttribute('aria-live', 'polite');
+  wrap.append(
+    button,
+    el('p', 'explain-note', 'Уйдут только причины ответа по этой программе и названные в них цифры — без анкеты целиком и без даты рождения.'),
+    status,
+  );
+  button.addEventListener('click', async () => {
+    button.disabled = true;
+    button.textContent = 'Думаю…';
+    status.textContent = '';
+    try {
+      const text = await askExplain(model, { url: EXPLAIN_URL });
+      wrap.textContent = '';
+      wrap.append(answerNodes(text));
+    } catch (error) {
+      button.disabled = false;
+      button.textContent = 'Попробовать ещё раз';
+      status.textContent = ERROR_TEXT[error.kind] ?? ERROR_TEXT.model;
+    }
+  });
+  return wrap;
+}
+
 function card(model, details, openCards, openMore) {
   const box = el('details', `card ${model.bucket}${model.closed ? ' closed' : ''}`);
   box.dataset.id = model.id;
@@ -130,6 +177,7 @@ function card(model, details, openCards, openMore) {
       if (reason.seeBelow) item.append(el('p', 'reason-muted', 'Подробности — в условиях программы ниже.'));
       body.append(item);
     }
+    if (EXPLAIN_URL) body.append(explainBlock(model));
   }
 
   if (!model.hasDetails) {

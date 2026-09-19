@@ -67,6 +67,8 @@ export function cardModel({ program, verdict, deadline }, extra, today) {
     return {
       field: reason.field,
       status: reason.status,
+      code: reason.code,
+      params: reason.params ?? {},
       title: text.title,
       detail: text.detail,
       workarounds,

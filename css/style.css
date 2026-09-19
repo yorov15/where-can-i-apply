@@ -102,3 +102,9 @@ input[type="checkbox"] { width: 1.1rem; height: 1.1rem; }
 .more-head { cursor: pointer; font-size: .875rem; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
 .card-source { margin: .75rem 0 0; color: var(--muted); font-size: .8125rem; }
 .empty { color: var(--muted); }
+
+.explain { margin: .75rem 0 .25rem; padding: .6rem .75rem; background: var(--soft); border-radius: .5rem; }
+.explain-note { margin: .35rem 0 0; color: var(--muted); font-size: .8125rem; }
+.explain-heading { margin: .6rem 0 .15rem; font-size: .875rem; }
+.explain-heading:first-child { margin-top: 0; }
+.explain-line { margin: 0 0 .3rem; font-size: .9rem; }
