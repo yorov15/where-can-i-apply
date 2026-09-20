@@ -42,7 +42,7 @@ test('группы по ответу, пустые не показываются
   const groups = groupRows(rows);
   assert.deepEqual(groups.map((g) => g.status), ['yes', 'no']);
   assert.deepEqual(groups[0].rows.map((r) => r.program.id), ['yesSoon', 'yesLate', 'yesClosed']);
-  assert.equal(groups[0].title, 'Можно подавать');
+  assert.equal(groups[0].title, 'Подходишь по условиям');
 });
 
 // Жёлтая куча из тридцати шести карточек читалась как список дел, хотя

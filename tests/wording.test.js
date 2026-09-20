@@ -127,8 +127,8 @@ test('сначала отказы, среди остального — то, ч�
   assert.deepEqual(orderReasons([program, cert, fail]).map((r) => r.code), ['gpa.below', 'language.no-certificate', 'schoolYears.not-measured']);
 });
 
-test('заголовок: можно', () => {
-  assert.equal(headline({ status: 'yes', reasons: [] }, {}), 'Можно подавать');
+test('заголовок: условия совпали', () => {
+  assert.equal(headline({ status: 'yes', reasons: [] }, {}), 'Подходишь по условиям');
 });
 
 test('заголовок: нельзя насовсем, но с обходным путём', () => {

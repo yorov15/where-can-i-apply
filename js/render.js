@@ -15,7 +15,7 @@ import { askExplain, cachedAnswer, parseAnswer, ERROR_TEXT } from './explain.js'
 const ORDER = { yes: 0, likely: 1, check: 2, no: 3 };
 
 const GROUPS = [
-  ['yes', 'Можно подавать'],
+  ['yes', 'Подходишь по условиям'],
   ['likely', 'Похоже, можно — программа не называет чисел'],
   ['check', 'Можно, если доделаешь'],
   ['no', 'Сейчас нельзя'],
@@ -59,7 +59,7 @@ function el(tag, className, text) {
 
 // headline() отдаёт «Вердикт: причина» одной строкой (wording.js не
 // трогаем). В карточке вердикт — плашка, а причина — отдельная строка под
-// названием. Без двоеточия («Можно подавать») причины нет.
+// названием. Без двоеточия («Подходишь по условиям») причины нет.
 export function splitHeadline(text) {
   const at = text.indexOf(': ');
   if (at === -1) return { verdict: text, reason: '' };

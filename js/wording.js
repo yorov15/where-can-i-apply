@@ -248,7 +248,9 @@ export function orderReasons(reasons) {
 }
 
 export function headline(verdict, program) {
-  if (verdict.status === 'yes') return 'Можно подавать';
+  // Не «можно подавать»: это читалось как «рекомендуем», а сайт проверяет
+  // только совпадение с названными условиями допуска.
+  if (verdict.status === 'yes') return 'Подходишь по условиям';
   const ordered = orderReasons(verdict.reasons);
   const first = ordered[0];
   const text = reasonText(first);
