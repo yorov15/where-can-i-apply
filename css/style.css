@@ -54,6 +54,9 @@
 
 * { box-sizing: border-box; }
 
+/* Без этого .button { display: inline-flex } перебивает атрибут hidden. */
+[hidden] { display: none !important; }
+
 html { -webkit-text-size-adjust: 100%; }
 
 body {
@@ -116,6 +119,26 @@ select + input, input + select { margin-top: .5rem; }
 .button:disabled { opacity: .6; cursor: default; }
 .button-small { min-height: 44px; padding: .5rem 1rem; font-size: .9375rem; }
 #show-results { width: 100%; }
+
+/* Пошаговая анкета: пока человек впервые её заполняет, виден один шаг. */
+.wizard-head { display: none; }
+.profile-box.wizard { border: 0; }
+.profile-box.wizard > summary, .profile-box.wizard .step { display: none; }
+.profile-box.wizard .step.is-current { display: block; }
+.profile-box.wizard .wizard-head { display: block; margin: 0 0 1.5rem; }
+.profile-box.wizard form { padding: 0; }
+.wizard-progress-label { margin: 0 0 .5rem; font-size: .875rem; font-weight: 600; color: var(--muted); }
+.wizard-progress { display: block; width: 100%; height: .375rem; border: 0; border-radius: 999px; background: var(--line); overflow: hidden; -webkit-appearance: none; appearance: none; }
+.wizard-progress::-webkit-progress-bar { background: var(--line); }
+.wizard-progress::-webkit-progress-value { background: var(--ink); transition: width .2s ease; }
+.wizard-progress::-moz-progress-bar { background: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .wizard-progress::-webkit-progress-value { transition: none; } }
+legend:focus { outline: none; }
+.wizard-error { margin: 0 0 .75rem; color: var(--no); font-weight: 600; }
+.wizard-error:empty { display: none; }
+.wizard-nav { display: flex; gap: .75rem; }
+.wizard-nav .button { flex: 1 1 0; width: auto; }
+.wizard-nav #wizard-back { flex: 0 0 auto; }
 
 .summary { margin: 2rem 0 1.5rem; padding: 1rem var(--gap); background: var(--soft); border-radius: var(--radius); }
 .summary:empty { display: none; }

@@ -23,8 +23,13 @@
       <span class="profile-box-edit">изменить</span>
     </summary>
     <form id="profile" autocomplete="off">
-    <fieldset>
-      <legend>О тебе</legend>
+    <div class="wizard-head">
+      <p id="wizard-progress-label" class="wizard-progress-label" aria-live="polite"></p>
+      <progress id="wizard-progress" class="wizard-progress" value="1" max="4" aria-hidden="true"></progress>
+    </div>
+
+    <fieldset class="step is-current">
+      <legend>Кто ты</legend>
 
       <label>Гражданство
         <select name="citizenship">
@@ -56,6 +61,10 @@
           <option value="12">12 лет</option>
         </select>
       </label>
+    </fieldset>
+
+    <fieldset class="step">
+      <legend>Выпуск и возраст</legend>
 
       <label>Год выпуска
         <input type="number" name="graduationYear" min="2020" max="2035" inputmode="numeric" placeholder="2027">
@@ -63,8 +72,12 @@
 
       <label>Дата рождения
         <input type="date" name="birthDate">
-        <small>Возраст программы считают на дату приёма, а не на сегодня — поэтому нужна именно дата.</small>
+        <small>Возраст программы считают на дату приёма, а не на сегодня — поэтому нужна именно дата. Можно пропустить: тогда сайт скажет, для каких программ она нужна.</small>
       </label>
+    </fieldset>
+
+    <fieldset class="step">
+      <legend>Оценки</legend>
 
       <label>Средний балл за последнюю четверть
         <input type="number" name="gpaValue" step="0.1" min="0" max="100" inputmode="decimal" placeholder="4.8">
@@ -78,7 +91,7 @@
       </label>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="step">
       <legend>Языковые экзамены</legend>
       <p class="hint">Если экзамен ещё не сдан — оставь балл пустым, но отметь галочку. Программа тогда не отсеется: её покажет жёлтым с подписью, какой балл нужен.</p>
 
@@ -95,7 +108,12 @@
         <input type="number" name="score-DUOLINGO" step="5" min="10" max="160" inputmode="numeric" placeholder="балл">
       </label>
     </fieldset>
-    <button type="button" id="show-results" class="button">Показать, куда можно подать</button>
+    <p id="wizard-error" class="wizard-error" role="alert"></p>
+    <div class="wizard-nav">
+      <button type="button" id="wizard-back" class="button button-quiet" hidden>Назад</button>
+      <button type="button" id="wizard-next" class="button" hidden>Далее</button>
+      <button type="button" id="show-results" class="button">Показать, куда можно подать</button>
+    </div>
     </form>
   </details>
 

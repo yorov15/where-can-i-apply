@@ -1,5 +1,6 @@
-import { loadProfile, saveProfile, emptyProfile, STORAGE_KEY } from './profile.js';
+import { loadProfile, saveProfile, emptyProfile, profileReady, STORAGE_KEY } from './profile.js';
 import { readForm, writeForm, onProfileChange, setupProfileBox } from './form.js';
+import { setupWizard } from './steps.js';
 import { loadIndex, loadDetails } from './data.js';
 import { renderResults } from './render.js';
 import { EXPLAIN_URL } from './config.js';
@@ -14,9 +15,14 @@ const answerScreen = document.getElementById('answer');
 const catalogScreen = document.getElementById('catalog');
 const catalogButton = document.getElementById('open-catalog');
 
+// Пока человек не закончил анкету, ни ответа, ни каталога не видно: ответ
+// по пустому профилю — это стена «можно, но сначала», из которой нечего
+// вынести. Каталог по прямой ссылке тоже ждёт анкету.
+let finished = false;
+
 function showCatalog(on) {
-  answerScreen.hidden = on;
-  catalogScreen.hidden = !on;
+  answerScreen.hidden = on || !finished;
+  catalogScreen.hidden = !on || !finished;
 }
 
 function openProgram(id) {
@@ -37,7 +43,6 @@ const nodes = {
 
 const syncScreen = () => showCatalog(location.hash === '#programs');
 addEventListener('hashchange', syncScreen);
-syncScreen();
 
 catalogButton.addEventListener('click', () => {
   location.hash = 'programs';
@@ -62,15 +67,47 @@ const details = { status: 'loading', programs: {}, retry: fetchDetails };
 
 const saved = loadProfile(localStorage);
 writeForm(form, saved);
+const box = document.getElementById('profile-box');
+const finishButton = document.getElementById('show-results');
 const profileBox = setupProfileBox(
   {
-    box: document.getElementById('profile-box'),
+    box,
     summary: document.getElementById('profile-summary-text'),
-    button: document.getElementById('show-results'),
+    button: finishButton,
     target: nodes.summaryNode,
   },
   saved,
 );
+
+const wizard = setupWizard({
+  box,
+  form,
+  progress: document.getElementById('wizard-progress'),
+  progressLabel: document.getElementById('wizard-progress-label'),
+  back: document.getElementById('wizard-back'),
+  next: document.getElementById('wizard-next'),
+  finish: finishButton,
+  error: document.getElementById('wizard-error'),
+});
+
+// Вернувшегося человека с готовой анкетой мастер не встречает: он сразу
+// видит ответ. Новичок идёт по шагам.
+finished = profileReady(saved);
+if (finished) wizard.end(); else wizard.start();
+syncScreen();
+
+// Слушатель на захвате, потому что обработчик из setupProfileBox сворачивает
+// анкету безусловно, а при пропущенном обязательном она должна остаться.
+finishButton.addEventListener('click', (event) => {
+  if (!wizard.active) return;
+  if (!wizard.canFinish()) {
+    event.stopImmediatePropagation();
+    return;
+  }
+  wizard.end();
+  finished = true;
+  syncScreen();
+}, true);
 
 function refresh(profile = readForm(form)) {
   saveProfile(profile, localStorage);
@@ -101,7 +138,11 @@ document.getElementById('clear-profile').addEventListener('click', () => {
   writeForm(form, empty);
   refresh(empty);
   try { localStorage.removeItem(STORAGE_KEY); } catch { /* приватный режим: стирать нечего */ }
-  document.getElementById('profile-box').open = true;
+  box.open = true;
+  finished = false;
+  location.hash = '';
+  wizard.start();
+  syncScreen();
   document.getElementById('clear-status').textContent = 'Анкета стёрта с этого устройства.';
 });
 
