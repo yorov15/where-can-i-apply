@@ -6,6 +6,9 @@ import { deadlineState } from './lib/deadline.js';
 import { summaryLines } from './summary.js';
 import { cardModel } from './card-model.js';
 import { bucketOf } from './wording.js';
+import { agenda } from './agenda.js';
+import { timeLeft, formatDate } from './lib/format.js';
+import { safeHttpUrl } from './lib/url.js';
 import { EXPLAIN_URL } from './config.js';
 import { askExplain, cachedAnswer, parseAnswer, ERROR_TEXT } from './explain.js';
 
@@ -54,6 +57,15 @@ function el(tag, className, text) {
   return node;
 }
 
+// headline() отдаёт «Вердикт: причина» одной строкой (wording.js не
+// трогаем). В карточке вердикт — плашка, а причина — отдельная строка под
+// названием. Без двоеточия («Можно подавать») причины нет.
+export function splitHeadline(text) {
+  const at = text.indexOf(': ');
+  if (at === -1) return { verdict: text, reason: '' };
+  return { verdict: text.slice(0, at), reason: text.slice(at + 2) };
+}
+
 function list(items, className) {
   const ul = el('ul', className);
   for (const item of items) ul.append(el('li', null, item));
@@ -66,10 +78,39 @@ function rememberOpen(node, selector) {
   return new Set([...node.querySelectorAll(`${selector}[open]`)].map((d) => d.dataset.id));
 }
 
-export function renderResults({ summaryNode, resultsNode }, profile, programs, today, details) {
+// Календарь сроков: строка на программу, без раскрытия. Подробности
+// лежат в каталоге — сюда человек пришёл за датами, а не за чтением.
+function agendaBlock(groups, today, onOpenProgram) {
+  const box = el('div', 'agenda');
+  box.append(el('h2', 'agenda-title', 'Ближайшие сроки'));
+
+  for (const group of groups) {
+    box.append(el('h3', 'agenda-horizon', group.title));
+    const ul = el('ul', 'agenda-list');
+    for (const row of group.rows) {
+      const item = el('li');
+      const line = el('button', 'agenda-item');
+      line.type = 'button';
+      const closes = row.program.deadline?.closes;
+      line.append(el('span', 'agenda-name', row.program.name?.ru ?? row.program.id));
+      line.append(el('span', 'agenda-when', closes
+        ? `до ${formatDate(closes)} · ${timeLeft(today, closes)}`
+        : 'дату программа не назвала'));
+      line.addEventListener('click', () => onOpenProgram(row.program.id));
+      item.append(line);
+      ul.append(item);
+    }
+    box.append(ul);
+  }
+  return box;
+}
+
+export function renderResults(nodes, profile, programs, today, details) {
+  const { summaryNode, agendaNode, resultsNode, catalogButton, onOpenProgram } = nodes;
   const openCards = rememberOpen(resultsNode, 'details.card');
   const openMore = rememberOpen(resultsNode, 'details.more');
   summaryNode.textContent = '';
+  agendaNode.textContent = '';
   resultsNode.textContent = '';
 
   if (!programs.length) {
@@ -78,13 +119,16 @@ export function renderResults({ summaryNode, resultsNode }, profile, programs, t
   }
 
   for (const line of summaryLines(profile, programs, today)) summaryNode.append(el('p', 'summary-line', line));
-  summaryNode.append(el('p', 'summary-note', 'Ответ — только про то, пустят ли подавать. Отбор, эссе и документы решают отдельно.'));
+  summaryNode.append(el('p', 'summary-note', 'Это ответ на вопрос «пустят ли подавать», а не «возьмут ли». Шансы поступления сайт не оценивает: отбор, эссе и документы решают сами программы. Всё сверяй с сайтом программы.'));
 
   const rows = programs.map((program) => ({
     program,
     verdict: evaluate(profile, program, today),
     deadline: deadlineState(program.deadline, today),
   }));
+
+  const soon = agenda(rows, today);
+  if (soon.length) agendaNode.append(agendaBlock(soon, today, onOpenProgram));
 
   for (const group of groupRows(rows)) {
     const section = el('section', `group ${group.status}`);
@@ -95,6 +139,9 @@ export function renderResults({ summaryNode, resultsNode }, profile, programs, t
     }
     resultsNode.append(section);
   }
+
+  catalogButton.textContent = `Все программы (${rows.length})`;
+  catalogButton.hidden = false;
 }
 
 function answerNodes(text, fallback = false) {
@@ -113,6 +160,8 @@ function answerNodes(text, fallback = false) {
 // наружу, сказано рядом с кнопкой: человек решает, нажимать ли, зная это.
 function explainBlock(model) {
   const wrap = el('div', 'explain');
+  // Ответ модели приходит в уже стоящий блок: экранный диктор его зачитает.
+  wrap.setAttribute('aria-live', 'polite');
   const cached = cachedAnswer(model);
   if (cached) {
     wrap.append(answerNodes(cached));
@@ -121,7 +170,6 @@ function explainBlock(model) {
   const button = el('button', 'button button-small', 'Объяснить простыми словами (ИИ)');
   button.type = 'button';
   const status = el('p', 'explain-note');
-  status.setAttribute('aria-live', 'polite');
   wrap.append(
     button,
     el('p', 'explain-note', 'Уйдут только причины ответа по этой программе и названные в них цифры — без анкеты целиком и без даты рождения.'),
@@ -149,10 +197,12 @@ function card(model, details, openCards, openMore) {
   box.dataset.id = model.id;
   box.open = openCards.has(model.id);
 
+  const { verdict, reason } = splitHeadline(model.headline);
   const head = el('summary', 'card-head');
   head.append(
+    el('span', 'card-verdict', verdict),
     el('span', 'card-title', model.title),
-    el('span', 'card-headline', model.headline),
+    ...reason.split(' · ').filter(Boolean).map((part, i) => el('span', i ? 'card-reason card-reason-tail' : 'card-reason', part)),
     el('span', 'card-meta', model.deadlineLine),
     el('span', 'card-meta', model.coverageLine),
   );
@@ -199,9 +249,10 @@ function card(model, details, openCards, openMore) {
     body.append(el('h4', 'card-section-title', section.title), list(section.items, 'card-list'));
   }
 
-  if (model.applyUrl) {
+  const applyUrl = safeHttpUrl(model.applyUrl);
+  if (applyUrl) {
     const link = el('a', 'button', 'Открыть сайт программы');
-    link.href = model.applyUrl;
+    link.href = applyUrl;
     link.target = '_blank';
     link.rel = 'noopener';
     body.append(link);
@@ -221,9 +272,10 @@ function card(model, details, openCards, openMore) {
 
   if (model.source) {
     const foot = el('p', 'card-source', `${model.source}. `);
-    if (model.sourceUrl) {
+    const sourceUrl = safeHttpUrl(model.sourceUrl);
+    if (sourceUrl) {
       const a = el('a', null, 'Источник');
-      a.href = model.sourceUrl;
+      a.href = sourceUrl;
       a.target = '_blank';
       a.rel = 'noopener';
       foot.append(a);

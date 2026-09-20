@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://where-can-i-apply.vercel.app; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
 <title>Куда я могу подать документы</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -98,9 +99,27 @@
     </form>
   </details>
 
-  <section id="summary" class="summary" aria-live="polite"></section>
-  <div id="results"></div>
+  <section id="answer" aria-label="Ответ">
+    <div id="summary" class="summary" aria-live="polite" aria-atomic="true"></div>
+    <div id="agenda"></div>
+    <button type="button" id="open-catalog" class="button button-quiet" hidden></button>
+  </section>
+
+  <section id="catalog" aria-label="Все программы" hidden>
+    <button type="button" id="back-to-answer" class="button button-quiet">← Назад к ответу</button>
+    <div id="results"></div>
+  </section>
 </main>
+
+<footer class="site-footer">
+  <nav aria-label="О сайте">
+    <a href="faq.html">Вопросы и ответы</a>
+    <a href="privacy.html">Конфиденциальность</a>
+    <a href="https://github.com/yorov15/where-can-i-apply/issues" target="_blank" rel="noopener">Сообщить об ошибке</a>
+  </nav>
+  <button type="button" id="clear-profile" class="link-button">Стереть мою анкету с этого устройства</button>
+  <p id="clear-status" class="fineprint" role="status"></p>
+</footer>
 
 <script type="module" src="js/main.js"></script>
 </body>

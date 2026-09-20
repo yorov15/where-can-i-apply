@@ -1,111 +1,229 @@
-/* Мобильный вперёд. Системные шрифты: подключаемые стоят трафика,
-   которого у аудитории нет. */
+/* Мобильный вперёд. Один системный шрифт: подключаемые стоят трафика,
+   которого у аудитории нет, и шрифтов из сети CSP всё равно не пустит.
+
+   Цвет в интерфейсе один — цвет вердикта. Кнопки, ссылки и рамка фокуса
+   чернильные (в тёмной теме — светлые): зелёная кнопка читалась бы как
+   «можно». Различать вердикты только по цвету нельзя, поэтому у каждого
+   есть слово и значок (✓ ≈ ! ✕). */
 :root {
-  --fg: #16181d;
-  --muted: #5b6472;
+  color-scheme: light dark;
+
   --bg: #ffffff;
-  --line: #dfe3ea;
-  --yes: #1a7f47;
-  --no: #b3261e;
-  --check: #8a6100;
-  --likely: #1f6f8b;
-  --soft: #f5f7fa;
+  --soft: #f4f5f7;
+  --line: #e2e5ea;
+  --line-strong: #858d9a;
+  --fg: #14161a;
+  --muted: #565e6b;
+  --ink: #14161a;
+  --on-ink: #ffffff;
+
+  --yes: #146c3e;
+  --yes-bg: #e6f4ec;
+  --likely: #0d6079;
+  --likely-bg: #e4f2f7;
+  --check: #7a4f00;
+  --check-bg: #fbf0d9;
+  --no: #a3231b;
+  --no-bg: #fbe9e7;
+
+  --radius: .75rem;
+  --gap: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111318;
+    --soft: #1a1d24;
+    --line: #2c313b;
+    --line-strong: #7a8393;
+    --fg: #e8eaee;
+    --muted: #a3abb8;
+    --ink: #e8eaee;
+    --on-ink: #111318;
+
+    --yes: #7fd8a4;
+    --yes-bg: #14261c;
+    --likely: #7cc8e6;
+    --likely-bg: #132631;
+    --check: #efc063;
+    --check-bg: #2a2110;
+    --no: #ff9d95;
+    --no-bg: #331917;
+  }
 }
 
 * { box-sizing: border-box; }
 
+html { -webkit-text-size-adjust: 100%; }
+
 body {
-  margin: 0;
-  padding: 1rem;
-  max-width: 40rem;
-  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  margin: 0 auto;
+  padding: 1.5rem var(--gap) 4rem;
+  max-width: 42rem;
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
   color: var(--fg);
   background: var(--bg);
+  overflow-wrap: anywhere;
 }
 
-h1 { font-size: 1.4rem; margin: 0 0 .5rem; }
-.lead, .hint, small { color: var(--muted); font-size: .875rem; }
+h1 { font-size: 1.625rem; line-height: 1.2; margin: 0 0 .75rem; letter-spacing: -.01em; }
+.lead { margin: 0 0 2rem; color: var(--muted); }
+.hint, small { color: var(--muted); font-size: .875rem; }
 
-fieldset { border: 1px solid var(--line); border-radius: .5rem; margin: 0 0 1rem; padding: .75rem; }
-legend { font-weight: 600; padding: 0 .25rem; }
+a { color: var(--fg); text-decoration: underline; text-underline-offset: .2em; }
 
-label { display: block; margin: 0 0 .875rem; font-weight: 500; }
-label small { display: block; font-weight: 400; margin-top: .25rem; }
-label.row { display: flex; align-items: center; gap: .5rem; font-weight: 400; }
+/* Фокус виден на любом фоне: сплошной контур цвета текста. Внутри
+   карточек он уходит внутрь (отрицательный отступ), чтобы не обрезаться. */
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+summary:focus-visible { outline-offset: -3px; }
+
+fieldset { border: 0; margin: 0 0 2rem; padding: 0; min-width: 0; }
+legend { font-size: 1.0625rem; font-weight: 650; padding: 0; margin: 0 0 1rem; }
+
+label { display: block; margin: 0 0 1.25rem; font-weight: 500; }
+label small { display: block; font-weight: 400; margin-top: .375rem; }
+label.row { display: flex; align-items: center; gap: .75rem; min-height: 48px; margin-bottom: .5rem; font-weight: 400; }
 
 input, select {
   display: block;
   width: 100%;
-  margin-top: .25rem;
-  padding: .5rem;
+  min-height: 48px;
+  margin-top: .375rem;
+  padding: .625rem .75rem;
   font: inherit;
   color: inherit;
   background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: .375rem;
+  border: 1px solid var(--line-strong);
+  border-radius: .5rem;
 }
-label.row input { display: inline-block; width: auto; margin-top: 0; }
-input[type="checkbox"] { width: 1.1rem; height: 1.1rem; }
+label.row input[type="number"] { flex: 0 0 6rem; width: 6rem; margin: 0 0 0 auto; }
+input[type="checkbox"] { flex: none; width: 1.5rem; height: 1.5rem; min-height: 0; margin: 0; accent-color: var(--ink); }
+select { -webkit-appearance: none; appearance: none; padding-right: 2.25rem; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 1.1rem) 55%, calc(100% - .8rem) 55%; background-size: .3rem .3rem; background-repeat: no-repeat; }
+select + input, input + select { margin-top: .5rem; }
 
-.profile-box { border: 1px solid var(--line); border-radius: .5rem; margin: 0 0 1rem; }
-.profile-box > summary { list-style: none; cursor: pointer; padding: .75rem; min-height: 44px; display: flex; flex-wrap: wrap; gap: .25rem .5rem; align-items: baseline; }
+.profile-box { border: 1px solid var(--line); border-radius: var(--radius); margin: 0 0 var(--gap); }
+.profile-box > summary { list-style: none; cursor: pointer; padding: .75rem var(--gap); min-height: 56px; display: flex; flex-wrap: wrap; gap: .125rem .75rem; align-items: center; border-radius: var(--radius); }
 .profile-box > summary::-webkit-details-marker { display: none; }
-.profile-box-label { font-weight: 600; }
-.profile-box-text { color: var(--muted); flex: 1 1 12rem; }
-.profile-box-edit { color: var(--yes); font-size: .875rem; }
+/* Слева «Анкета», справа «изменить», под ними — краткое содержание. */
+.profile-box-label { order: 1; font-weight: 650; }
+.profile-box-edit { order: 2; margin-left: auto; font-size: .875rem; font-weight: 600; text-decoration: underline; text-underline-offset: .2em; }
+.profile-box-text { order: 3; color: var(--muted); flex: 1 1 100%; }
 .profile-box[open] .profile-box-edit { display: none; }
-.profile-box form { padding: 0 .75rem .75rem; }
+.profile-box[open] > summary { border-bottom: 1px solid var(--line); border-radius: var(--radius) var(--radius) 0 0; }
+.profile-box form { padding: 1.5rem var(--gap) var(--gap); }
 
-.button { display: inline-block; min-height: 44px; padding: .6rem 1rem; font: inherit; font-weight: 600; color: #fff; background: var(--yes); border: 0; border-radius: .375rem; text-decoration: none; cursor: pointer; }
-.button-small { min-height: 36px; padding: .35rem .75rem; font-size: .875rem; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .625rem 1.25rem; font: inherit; font-weight: 600; color: var(--on-ink); background: var(--ink); border: 0; border-radius: .5rem; text-decoration: none; cursor: pointer; }
+.button:disabled { opacity: .6; cursor: default; }
+.button-small { min-height: 44px; padding: .5rem 1rem; font-size: .9375rem; }
 #show-results { width: 100%; }
 
-.summary { margin: 0 0 1rem; padding: .75rem; background: var(--soft); border-radius: .5rem; }
+.summary { margin: 2rem 0 1.5rem; padding: 1rem var(--gap); background: var(--soft); border-radius: var(--radius); }
 .summary:empty { display: none; }
-.summary-line { margin: 0 0 .5rem; font-weight: 400; }
-.summary-line:first-child { font-size: 1.1rem; font-weight: 650; line-height: 1.35; }
-.summary-note { margin: .5rem 0 0; color: var(--muted); font-size: .8125rem; }
+.summary-line { margin: 0 0 .5rem; }
+.summary-line:first-child { font-size: 1.125rem; font-weight: 650; line-height: 1.4; }
+.summary-note { margin: .75rem 0 0; color: var(--muted); font-size: .875rem; }
 
-.group { margin: 0 0 1.25rem; }
-.group-title { font-size: 1.05rem; margin: 0 0 .5rem; }
+/* Календарь сроков. Строки, а не карточки: здесь человек выбирает, куда
+   идти смотреть, а читает уже в каталоге. */
+.agenda { margin: 0 0 1.5rem; }
+.agenda-title { font-size: 1.125rem; margin: 0 0 .25rem; }
+.agenda-horizon { font-size: .875rem; font-weight: 600; color: var(--muted); margin: 1.25rem 0 .5rem; }
+.agenda-list { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.agenda-list li + li { border-top: 1px solid var(--line); }
+.agenda-item { display: flex; flex-direction: column; gap: .2rem; width: 100%; min-height: 56px; padding: .75rem var(--gap); font: inherit; color: inherit; text-align: left; background: none; border: 0; cursor: pointer; }
+.agenda-item:focus-visible { outline-offset: -3px; }
+@media (hover: hover) { .agenda-item:hover { background: var(--soft); } }
+.agenda-name { font-weight: 600; line-height: 1.35; }
+.agenda-when { color: var(--muted); font-size: .875rem; }
 
-.card { border: 1px solid var(--line); border-left-width: 4px; border-radius: .5rem; margin: 0 0 .5rem; }
-.card.yes { border-left-color: var(--yes); }
-.card.no { border-left-color: var(--no); }
-.card.check { border-left-color: var(--check); }
-.card.likely { border-left-color: var(--likely); }
-.card.closed { opacity: .6; }
-.card-head { list-style: none; cursor: pointer; padding: .6rem .75rem; display: flex; flex-direction: column; gap: .15rem; min-height: 44px; position: relative; padding-right: 2rem; }
+/* Переход между экранами — не главное действие, поэтому кнопка тихая. */
+.button-quiet { color: var(--fg); background: none; border: 1px solid var(--line-strong); }
+#open-catalog { width: 100%; margin-top: .5rem; }
+#back-to-answer { margin: 0 0 1.5rem; }
+
+/* Подвал и текстовые страницы (конфиденциальность, вопросы, 404). */
+.site-footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+.site-footer a { display: inline-flex; align-items: center; min-height: 44px; }
+.link-button { display: inline-flex; align-items: center; min-height: 44px; padding: 0; font: inherit; color: var(--muted); text-decoration: underline; text-underline-offset: .2em; background: none; border: 0; cursor: pointer; text-align: left; }
+.fineprint { color: var(--muted); font-size: .875rem; margin: .5rem 0 0; }
+.back { margin: 0 0 1rem; }
+.back a { display: inline-flex; align-items: center; min-height: 44px; }
+.prose h2 { font-size: 1.125rem; margin: 2rem 0 .5rem; }
+.prose p, .prose ul { margin: 0 0 1rem; }
+.prose ul { padding-left: 1.25rem; }
+.prose li { margin-bottom: .375rem; }
+.faq { border-bottom: 1px solid var(--line); }
+.faq > summary { list-style: none; cursor: pointer; min-height: 56px; display: flex; align-items: center; padding: .75rem 2rem .75rem 0; font-weight: 600; position: relative; }
+.faq > summary::-webkit-details-marker { display: none; }
+.faq > summary::after { content: ""; position: absolute; right: .25rem; top: 1.4rem; width: .5rem; height: .5rem; border: solid var(--muted); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.faq[open] > summary::after { transform: rotate(-135deg); top: 1.65rem; }
+.faq > p { margin: 0 0 1rem; }
+
+.group { margin: 0 0 2rem; }
+.group-title { display: flex; gap: .5rem; align-items: baseline; font-size: 1rem; line-height: 1.4; margin: 0 0 .75rem; }
+.group-title::before { flex: none; font-weight: 800; }
+.group.yes .group-title::before { content: "✓"; color: var(--yes); }
+.group.likely .group-title::before { content: "≈"; color: var(--likely); }
+.group.check .group-title::before { content: "!"; color: var(--check); }
+.group.no .group-title::before { content: "✕"; color: var(--no); }
+
+.card { border: 1px solid var(--line); border-radius: var(--radius); margin: 0 0 .75rem; background: var(--bg); }
+/* Закрытый приём не бледнеет через opacity: тот съел бы контраст текста.
+   Его выдаёт пунктир и подпись «Приём закрыт». */
+.card.closed { border-style: dashed; background: var(--soft); }
+
+.card-head { list-style: none; cursor: pointer; display: flex; flex-direction: column; align-items: flex-start; gap: .375rem; min-height: 56px; padding: var(--gap) 2.75rem var(--gap) var(--gap); position: relative; border-radius: var(--radius); }
 .card-head::-webkit-details-marker { display: none; }
-.card-head::after { content: "▾"; position: absolute; right: .75rem; top: .6rem; color: var(--muted); transition: transform .15s ease; }
-.card[open] > .card-head::after { transform: rotate(180deg); }
+.card-head::after { content: ""; position: absolute; right: 1.25rem; top: 1.5rem; width: .5rem; height: .5rem; border: solid var(--muted); border-width: 0 2px 2px 0; transform: rotate(45deg); transition: transform .15s ease; }
+.card[open] > .card-head::after { transform: rotate(-135deg); top: 1.75rem; }
 @media (prefers-reduced-motion: reduce) { .card-head::after { transition: none; } }
-.card-title { font-weight: 600; }
-.card-headline { font-weight: 500; }
-.card.yes .card-headline { color: var(--yes); }
-.card.no .card-headline { color: var(--no); }
-.card.check .card-headline { color: var(--check); }
-.card.likely .card-headline { color: var(--likely); }
-.card-meta { color: var(--muted); font-size: .875rem; }
+@media (hover: hover) { .card-head:hover { background: var(--soft); } .card.closed .card-head:hover { background: var(--line); } }
 
-.card-body { padding: 0 .75rem .75rem; border-top: 1px solid var(--line); }
-.card-section-title { margin: .75rem 0 .25rem; font-size: .875rem; }
-.card-list { margin: 0; padding-left: 1.1rem; font-size: .9rem; }
-.card-list li { margin-bottom: .35rem; }
+/* Вердикт: слово и значок в плашке — первое, что видно в карточке. */
+.card-verdict { display: inline-flex; align-items: center; gap: .4rem; padding: .25rem .75rem .25rem .625rem; font-size: .9375rem; font-weight: 650; line-height: 1.4; border-radius: 999px; }
+.card-verdict::before { font-weight: 800; }
+.card.yes .card-verdict { color: var(--yes); background: var(--yes-bg); }
+.card.yes .card-verdict::before { content: "✓"; }
+.card.likely .card-verdict { color: var(--likely); background: var(--likely-bg); }
+.card.likely .card-verdict::before { content: "≈"; }
+.card.check .card-verdict { color: var(--check); background: var(--check-bg); }
+.card.check .card-verdict::before { content: "!"; }
+.card.no .card-verdict { color: var(--no); background: var(--no-bg); }
+.card.no .card-verdict::before { content: "✕"; }
+
+.card-title { font-size: 1.0625rem; font-weight: 650; line-height: 1.35; }
+.card-reason { line-height: 1.45; }
+.card-reason::first-letter { text-transform: uppercase; }
+.card-reason-tail { color: var(--muted); font-size: .9375rem; }
+.card-meta { color: var(--muted); font-size: .875rem; line-height: 1.45; }
+.card-meta:empty { display: none; }
+
+.card-body { padding: 0 var(--gap) var(--gap); border-top: 1px solid var(--line); }
+.card-section-title { margin: 1.25rem 0 .375rem; font-size: .9375rem; }
+.card-list { margin: 0; padding-left: 1.25rem; font-size: .9375rem; }
+.card-list li { margin-bottom: .375rem; }
 .card-list.muted { color: var(--muted); }
-.reason { margin: 0 0 .6rem; }
+.reason { margin: 1rem 0 0; }
 .reason-text { margin: 0; }
-.reason-label { margin: .35rem 0 .15rem; font-size: .875rem; font-weight: 600; }
-.reason-list { margin: 0; padding-left: 1.1rem; font-size: .9rem; }
-.reason-muted, .details-state { margin: .35rem 0 0; color: var(--muted); font-size: .875rem; }
-.card-body > .button { margin-top: .75rem; }
-.more { margin-top: .75rem; }
-.more-head { cursor: pointer; font-size: .875rem; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
-.card-source { margin: .75rem 0 0; color: var(--muted); font-size: .8125rem; }
+.reason-label { margin: .5rem 0 .25rem; font-size: .875rem; font-weight: 600; }
+.reason-list { margin: 0; padding-left: 1.25rem; font-size: .9375rem; }
+.reason-muted, .details-state { margin: .5rem 0 0; color: var(--muted); font-size: .875rem; }
+.card-body > .button { margin-top: 1.25rem; width: 100%; }
+.more { margin-top: 1rem; }
+.more-head { cursor: pointer; font-size: .9375rem; font-weight: 600; min-height: 48px; display: flex; align-items: center; }
+.card-source { margin: 1rem 0 0; color: var(--muted); font-size: .8125rem; }
 .empty { color: var(--muted); }
 
-.explain { margin: .75rem 0 .25rem; padding: .6rem .75rem; background: var(--soft); border-radius: .5rem; }
-.explain-note { margin: .35rem 0 0; color: var(--muted); font-size: .8125rem; }
-.explain-heading { margin: .6rem 0 .15rem; font-size: .875rem; }
+.explain { margin: 1.25rem 0 .25rem; padding: .75rem var(--gap); background: var(--soft); border-radius: var(--radius); }
+.explain-note { margin: .5rem 0 0; color: var(--muted); font-size: .8125rem; }
+.explain-heading { margin: .75rem 0 .25rem; font-size: .9375rem; }
 .explain-heading:first-child { margin-top: 0; }
-.explain-line { margin: 0 0 .3rem; font-size: .9rem; }
+.explain-line { margin: 0 0 .375rem; font-size: .9375rem; }
+
+@media (min-width: 40rem) {
+  body { padding-top: 3rem; }
+  h1 { font-size: 2rem; }
+  .card-body > .button { width: auto; }
+  .card-head { padding-right: 3rem; }
+}
