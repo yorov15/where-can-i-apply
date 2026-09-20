@@ -6,6 +6,8 @@ import { formatDate, plural } from './lib/format.js';
 import { testName, programSideOnly } from './wording.js';
 
 const programsWord = (n) => plural(n, 'программу', 'программы', 'программ');
+// «Подходишь к …» требует дательного падежа.
+const programsTo = (n) => plural(n, 'программе', 'программам', 'программам');
 
 const FILL = {
   citizenship: 'гражданство', schoolCountry: 'страну школы', schoolYears: 'число лет школы',
@@ -72,7 +74,7 @@ export function summaryLines(profile, programs, today) {
 
   const ready = rows.filter((row) => row.verdict.status === 'yes');
   if (ready.length) {
-    let line = `Можешь подать в ${ready.length} ${programsWord(ready.length)}.`;
+    let line = `По условиям подходишь к ${ready.length} ${programsTo(ready.length)}.`;
     const next = ready
       .filter((row) => row.program.deadline?.closes)
       .sort((a, b) => (a.program.deadline.closes < b.program.deadline.closes ? -1 : 1))[0];
@@ -94,8 +96,8 @@ export function summaryLines(profile, programs, today) {
   const ladder = examLadder(profile, open, today);
   if (ladder.steps.length) {
     const [first, ...rest] = ladder.steps;
-    let line = `Наберёшь ${testName(ladder.test)} ${first.score} — можно будет подавать ещё в ${first.gained} ${programsWord(first.gained)}`;
-    for (const step of rest) line += `, ${step.score} — ещё в ${step.gained}`;
+    let line = `Наберёшь ${testName(ladder.test)} ${first.score} — будешь подходить ещё к ${first.gained} ${programsTo(first.gained)}`;
+    for (const step of rest) line += `, ${step.score} — ещё к ${step.gained}`;
     lines.push(`${line}.`);
   }
 
