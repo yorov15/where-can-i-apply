@@ -1,6 +1,7 @@
 import { loadProfile, saveProfile, emptyProfile, profileReady, STORAGE_KEY } from './profile.js';
 import { readForm, writeForm, onProfileChange, setupProfileBox } from './form.js';
 import { setupWizard } from './steps.js';
+import { setupCatalogFilter } from './filter.js';
 import { loadIndex, loadDetails } from './data.js';
 import { renderResults } from './render.js';
 import { EXPLAIN_URL } from './config.js';
@@ -26,12 +27,19 @@ function showCatalog(on) {
 }
 
 function openProgram(id) {
+  // Карточку, спрятанную фильтром, открыть нельзя: сначала снимаем его.
+  catalogFilter.reset();
   location.hash = 'programs';
   const card = catalogScreen.querySelector(`details.card[data-id="${CSS.escape(id)}"]`);
   if (!card) return;
   card.open = true;
   card.scrollIntoView({ block: 'start' });
 }
+
+const catalogFilter = setupCatalogFilter({
+  root: document.getElementById('catalog-tools'),
+  resultsNode: document.getElementById('results'),
+});
 
 const nodes = {
   summaryNode: document.getElementById('summary'),

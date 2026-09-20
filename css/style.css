@@ -164,6 +164,18 @@ legend:focus { outline: none; }
 #open-catalog { width: 100%; margin-top: .5rem; }
 #back-to-answer { margin: 0 0 1.5rem; }
 
+/* Поиск и фильтры каталога. */
+.catalog-tools { margin: 0 0 2rem; }
+.catalog-tools label { margin-bottom: 1rem; }
+.catalog-tools input[type="search"] { -webkit-appearance: none; appearance: none; }
+.chips { display: flex; flex-wrap: wrap; gap: .375rem; margin: 0 0 1rem; }
+.chip { display: inline-flex; align-items: center; gap: .3rem; min-height: 44px; padding: .375rem .7rem; font: inherit; font-size: .9375rem; color: var(--fg); background: none; border: 1px solid var(--line-strong); border-radius: 999px; cursor: pointer; }
+.chip[aria-pressed="true"] { color: var(--on-ink); background: var(--ink); border-color: var(--ink); font-weight: 650; }
+.chip-glyph { font-weight: 800; }
+.chip-count { opacity: .8; }
+.catalog-tools .fineprint:empty { display: none; }
+@media (hover: hover) { .chip[aria-pressed="false"]:hover { background: var(--soft); } }
+
 /* Подвал и текстовые страницы (конфиденциальность, вопросы, 404). */
 .site-footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }

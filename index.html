@@ -125,6 +125,25 @@
 
   <section id="catalog" aria-label="Все программы" hidden>
     <button type="button" id="back-to-answer" class="button button-quiet">← Назад к ответу</button>
+
+    <div id="catalog-tools" class="catalog-tools">
+      <label for="catalog-search">Найти программу
+        <input type="search" id="catalog-search" placeholder="Название или страна" autocomplete="off" enterkeyhint="search">
+      </label>
+      <div class="chips" role="group" aria-label="Показать только">
+        <button type="button" class="chip" data-bucket="all" aria-pressed="true">Все <span class="chip-count"></span></button>
+        <button type="button" class="chip" data-bucket="yes" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">✓</span> Подходишь <span class="chip-count"></span></button>
+        <button type="button" class="chip" data-bucket="likely" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">≈</span> Похоже <span class="chip-count"></span></button>
+        <button type="button" class="chip" data-bucket="check" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">!</span> Доделать <span class="chip-count"></span></button>
+        <button type="button" class="chip" data-bucket="no" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">✕</span> Нельзя <span class="chip-count"></span></button>
+      </div>
+      <label for="catalog-country">Страна
+        <select id="catalog-country"><option value="">Все страны</option></select>
+      </label>
+      <p id="catalog-status" class="fineprint" role="status" aria-live="polite"></p>
+      <button type="button" id="catalog-reset" class="link-button" hidden>Сбросить фильтры</button>
+    </div>
+
     <div id="results"></div>
   </section>
 </main>

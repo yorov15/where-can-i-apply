@@ -9,6 +9,7 @@ import { bucketOf } from './wording.js';
 import { agenda } from './agenda.js';
 import { timeLeft, formatDate } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
+import { refreshFilter } from './filter.js';
 import { EXPLAIN_URL } from './config.js';
 import { askExplain, cachedAnswer, parseAnswer, ERROR_TEXT } from './explain.js';
 
@@ -132,13 +133,22 @@ export function renderResults(nodes, profile, programs, today, details) {
 
   for (const group of groupRows(rows)) {
     const section = el('section', `group ${group.status}`);
-    section.append(el('h2', 'group-title', `${group.title} (${group.rows.length})`));
+    const title = el('h2', 'group-title', `${group.title} (${group.rows.length})`);
+    title.dataset.base = group.title;
+    section.append(title);
     for (const row of group.rows) {
       const model = cardModel(row, details.programs?.[row.program.id] ?? null, today);
-      section.append(card(model, details, openCards, openMore));
+      const node = card(model, details, openCards, openMore);
+      // По этим полям фильтр каталога решает, показать карточку или спрятать.
+      node.dataset.title = model.title;
+      node.dataset.orig = row.program.name?.orig ?? '';
+      node.dataset.country = row.program.hostCountry ?? '';
+      node.dataset.bucket = model.bucket;
+      section.append(node);
     }
     resultsNode.append(section);
   }
+  refreshFilter(programs);
 
   catalogButton.textContent = `Все программы (${rows.length})`;
   catalogButton.hidden = false;
