@@ -32,6 +32,19 @@ REQUIRED_FIELDS = frozenset({"citizenship", "graduationYear"})
 
 SCALES = frozenset({"PERCENT", "TJ_5", "GPA_4", "GPA_4_5"})
 
+# Тип программы. Это редакторская разметка, а не факт с сайта программы:
+# у неё нет цитаты и быть не может, её ставит человек по названию и сути
+# записи. Нужна затем, чтобы Гарвард и государственная стипендия Кореи не
+# стояли в одной колонке как одинаковые вещи.
+#
+#   government — государство даёт стипендию или квоту (CSC, GKS, MEXT)
+#   national   — правила приёма в государственные вузы страны в целом
+#   need-aid   — помощь по достатку семьи (американские колледжи)
+#   university — приём в конкретный университет и его стипендии
+#
+# Тот же список, что в js/lib/kinds.js; расхождение ловят тесты.
+KINDS = ("government", "national", "need-aid", "university")
+
 # Экзамены, которые знает анкета. TOEFL iBT с 21 января 2026 года
 # считается по новой шкале 1–6, и программы публикуют для старой и новой
 # шкалы отдельные пороги (KAIST: «83 (Taken before Jan 21, 2026) / 4.5»).
@@ -105,6 +118,7 @@ def empty_program(program_id: str, name: str) -> dict:
         "status": "draft",
         "name": {"ru": name, "orig": name},
         "hostCountry": None,
+        "kind": None,
         "level": "bachelor",
         "coverage": {"tuition": None, "living": None, "travel": None, "note": {"ru": ""}},
         "eligibility": {field: None for field in FIELDS},

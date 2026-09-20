@@ -6,6 +6,8 @@
 // уже нарисованные карточки и, как вся работа с DOM в проекте, тестами
 // не покрыта.
 
+import { KINDS, KIND_FILTER, KIND_LABEL } from './lib/kinds.js';
+
 export const COUNTRY_RU = {
   US: 'США', TR: 'Турция', TJ: 'Таджикистан', KR: 'Южная Корея', AZ: 'Азербайджан',
   JP: 'Япония', DE: 'Германия', CN: 'Китай', HK: 'Гонконг', UZ: 'Узбекистан',
@@ -23,12 +25,14 @@ export const countryName = (code) => COUNTRY_RU[code] ?? code;
 // NFD отделяет значки от букв, и они отбрасываются с обеих сторон.
 export const norm = (text) => text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().trim();
 
-export function matchesFilter(item, { query, bucket, country }) {
+export function matchesFilter(item, { query, bucket, country, kind }) {
   if (bucket !== 'all' && item.bucket !== bucket) return false;
   if (country && item.country !== country) return false;
+  if (kind && item.kind !== kind) return false;
   const words = norm(query).split(/\s+/).filter(Boolean);
   if (!words.length) return true;
-  const haystack = norm(`${item.title} ${item.orig ?? ''} ${countryName(item.country)}`);
+  // Тип показан в карточке словами, поэтому его можно и набрать.
+  const haystack = norm(`${item.title} ${item.orig ?? ''} ${countryName(item.country)} ${KIND_LABEL[item.kind] ?? ''}`);
   return words.every((word) => haystack.includes(word));
 }
 
@@ -40,7 +44,7 @@ export function bucketCounts(items) {
 
 // ——— DOM ———
 
-const state = { query: '', bucket: 'all', country: '' };
+const state = { query: '', bucket: 'all', country: '', kind: '' };
 let ui = null;
 
 const itemOf = (card) => ({
@@ -48,6 +52,7 @@ const itemOf = (card) => ({
   orig: card.dataset.orig ?? '',
   country: card.dataset.country ?? '',
   bucket: card.dataset.bucket ?? '',
+  kind: card.dataset.kind ?? '',
 });
 
 function apply() {
@@ -61,6 +66,13 @@ function apply() {
   for (const chip of ui.chips) {
     chip.setAttribute('aria-pressed', String(chip.dataset.bucket === state.bucket));
     chip.querySelector('.chip-count').textContent = `(${counts[chip.dataset.bucket] ?? 0})`;
+  }
+
+  // Так же и у типов: сколько программ станет, если выбрать этот тип, при
+  // прочих выбранных условиях.
+  const byKind = items.filter((item) => matchesFilter(item, { ...state, kind: '' }));
+  for (const option of ui.kind.options) {
+    if (option.value) option.textContent = `${KIND_FILTER[option.value]} (${byKind.filter((item) => item.kind === option.value).length})`;
   }
 
   let shown = 0;
@@ -77,7 +89,7 @@ function apply() {
     if (title?.dataset.base) title.textContent = `${title.dataset.base} (${visible})`;
   }
 
-  const active = state.query.trim() !== '' || state.bucket !== 'all' || state.country !== '';
+  const active = state.query.trim() !== '' || state.bucket !== 'all' || state.country !== '' || state.kind !== '';
   ui.reset.hidden = !active;
   ui.status.textContent = !active
     ? ''
@@ -88,9 +100,11 @@ export function resetFilter() {
   state.query = '';
   state.bucket = 'all';
   state.country = '';
+  state.kind = '';
   if (ui) {
     ui.search.value = '';
     ui.country.value = '';
+    ui.kind.value = '';
   }
   apply();
 }
@@ -104,12 +118,22 @@ function fillCountries(programs) {
   for (const code of codes) ui.country.append(new Option(countryName(code), code));
 }
 
+// Типы берутся в порядке из kinds.js, и только те, что есть в данных: пустой
+// пункт «Университеты (0)» сбивал бы с толку.
+function fillKinds(programs) {
+  if (ui.kind.options.length > 1) return;
+  const present = new Set(programs.map((p) => p.kind));
+  for (const kind of KINDS) if (present.has(kind)) ui.kind.append(new Option(KIND_FILTER[kind], kind));
+}
+
 // Вызывается после каждой перерисовки карточек: пересчёт идёт на каждое
 // нажатие в анкете, и без этого фильтр слетал бы вместе с карточками.
 export function refreshFilter(programs) {
   if (!ui) return;
   fillCountries(programs);
+  fillKinds(programs);
   ui.country.value = state.country;
+  ui.kind.value = state.kind;
   apply();
 }
 
@@ -119,11 +143,13 @@ export function setupCatalogFilter({ root, resultsNode }) {
     search: root.querySelector('#catalog-search'),
     chips: [...root.querySelectorAll('.chip')],
     country: root.querySelector('#catalog-country'),
+    kind: root.querySelector('#catalog-kind'),
     status: root.querySelector('#catalog-status'),
     reset: root.querySelector('#catalog-reset'),
   };
   ui.search.addEventListener('input', () => { state.query = ui.search.value; apply(); });
   ui.country.addEventListener('change', () => { state.country = ui.country.value; apply(); });
+  ui.kind.addEventListener('change', () => { state.kind = ui.kind.value; apply(); });
   for (const chip of ui.chips) chip.addEventListener('click', () => { state.bucket = chip.dataset.bucket; apply(); });
   ui.reset.addEventListener('click', resetFilter);
   return { reset: resetFilter };

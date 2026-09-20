@@ -10,6 +10,7 @@ from tools.build import (
     details_text,
     index_entry,
     index_text,
+    missing_kind,
     stale_deadlines,
     wire_size,
     workaround_fields,
@@ -20,6 +21,7 @@ PROGRAM = {
     "status": "published",
     "name": {"ru": "Пример", "orig": "Example"},
     "hostCountry": "TR",
+    "kind": "government",
     "level": "bachelor",
     "coverage": {"tuition": True, "living": True, "travel": False, "note": {"ru": "нечто"}},
     "eligibility": {
@@ -156,6 +158,33 @@ class TestBuildIndex(unittest.TestCase):
         second = dict(PROGRAM, id="alpha")
         index = build_index([PROGRAM, second], "2026-09-03")
         self.assertEqual([p["id"] for p in index["programs"]], ["alpha", "primer"])
+
+
+class TestKind(unittest.TestCase):
+    """Тип программы — редакторская разметка, без неё карточка не знает,
+    в какую колонку встать; поэтому сборка не пропускает запись без типа."""
+
+    def test_index_carries_the_kind(self):
+        self.assertEqual(index_entry(PROGRAM)["kind"], "government")
+
+    def test_published_programs_with_a_valid_kind_are_fine(self):
+        self.assertEqual(missing_kind([PROGRAM]), [])
+
+    def test_published_program_without_kind_is_reported(self):
+        bare = {key: value for key, value in PROGRAM.items() if key != "kind"}
+        self.assertEqual(len(missing_kind([bare])), 1)
+        self.assertIn("primer", missing_kind([bare])[0])
+
+    def test_unknown_kind_is_reported_with_the_allowed_ones(self):
+        odd = dict(PROGRAM, kind="grant")
+        problem = missing_kind([odd])[0]
+        self.assertIn("grant", problem)
+        self.assertIn("need-aid", problem)
+
+    def test_drafts_are_not_asked_for_a_kind(self):
+        draft = {key: value for key, value in PROGRAM.items() if key != "kind"}
+        draft["status"] = "draft"
+        self.assertEqual(missing_kind([draft]), [])
 
 
 class TestSourceWithoutPages(unittest.TestCase):

@@ -107,6 +107,13 @@ def merge_proposed(current, proposed: dict) -> dict:
     if declined:
         merged["leftEmpty"] = copy.deepcopy(declined)
 
+    # Тип программы ставит человек, а модель про него не знает и ставить
+    # не должна. Без переноса первый же повторный review стёр бы его, и
+    # сборка перестала бы работать.
+    kind = (current or {}).get("kind")
+    if kind:
+        merged["kind"] = kind
+
     return merged
 
 

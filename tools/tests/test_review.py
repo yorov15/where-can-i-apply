@@ -190,6 +190,20 @@ class TestMergeProposed(unittest.TestCase):
         merged = merge_proposed({"eligibility": {}}, {"eligibility": {"age": None}})
         self.assertIsNone(merged["eligibility"]["age"])
 
+    def test_human_set_kind_survives_a_rerun(self):
+        # Тип ставит человек, а предложение модели про него не знает: без
+        # переноса первый же повторный review стёр бы его у всех программ,
+        # и сборка отказалась бы работать.
+        merged = merge_proposed({"kind": "need-aid", "eligibility": {}}, {"eligibility": {}})
+        self.assertEqual(merged["kind"], "need-aid")
+
+    def test_model_cannot_overrule_the_kind(self):
+        merged = merge_proposed({"kind": "need-aid", "eligibility": {}}, {"kind": "university", "eligibility": {}})
+        self.assertEqual(merged["kind"], "need-aid")
+
+    def test_kind_of_a_first_time_record_is_left_alone(self):
+        self.assertNotIn("kind", merge_proposed(None, {"eligibility": {}}))
+
     def test_inputs_are_not_mutated(self):
         current = {"eligibility": {"age": SIGNED}}
         proposed = {"eligibility": {"age": None}}

@@ -227,6 +227,9 @@ legend:focus { outline: none; }
 .card.no .card-verdict { color: var(--no); background: var(--no-bg); }
 .card.no .card-verdict::before { content: "✕"; }
 
+/* Тип и страна: что за программа. Стоит между вердиктом и названием и
+   тише названия, чтобы не спорить с ответом. */
+.card-kind { color: var(--muted); font-size: .8125rem; font-weight: 600; line-height: 1.35; }
 .card-title { font-size: 1.0625rem; font-weight: 650; line-height: 1.35; }
 .card-reason { line-height: 1.45; }
 .card-reason::first-letter { text-transform: uppercase; }

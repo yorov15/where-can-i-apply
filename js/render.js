@@ -9,7 +9,8 @@ import { bucketOf } from './wording.js';
 import { agenda } from './agenda.js';
 import { timeLeft, formatDate } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
-import { refreshFilter } from './filter.js';
+import { refreshFilter, countryName } from './filter.js';
+import { kindLabel } from './lib/kinds.js';
 import { EXPLAIN_URL } from './config.js';
 import { askExplain, cachedAnswer, parseAnswer, ERROR_TEXT } from './explain.js';
 
@@ -138,11 +139,17 @@ export function renderResults(nodes, profile, programs, today, details) {
     section.append(title);
     for (const row of group.rows) {
       const model = cardModel(row, details.programs?.[row.program.id] ?? null, today);
-      const node = card(model, details, openCards, openMore);
+      // «Тип · страна» — что это за программа и где; без типа (данных ещё
+      // нет) остаётся одна страна, без выдуманной подписи.
+      const kindLine = [kindLabel(row.program.kind), row.program.hostCountry && countryName(row.program.hostCountry)]
+        .filter(Boolean)
+        .join(' · ');
+      const node = card(model, details, openCards, openMore, kindLine);
       // По этим полям фильтр каталога решает, показать карточку или спрятать.
       node.dataset.title = model.title;
       node.dataset.orig = row.program.name?.orig ?? '';
       node.dataset.country = row.program.hostCountry ?? '';
+      node.dataset.kind = row.program.kind ?? '';
       node.dataset.bucket = model.bucket;
       section.append(node);
     }
@@ -202,7 +209,7 @@ function explainBlock(model) {
   return wrap;
 }
 
-function card(model, details, openCards, openMore) {
+function card(model, details, openCards, openMore, kindLine) {
   const box = el('details', `card ${model.bucket}${model.closed ? ' closed' : ''}`);
   box.dataset.id = model.id;
   box.open = openCards.has(model.id);
@@ -211,6 +218,7 @@ function card(model, details, openCards, openMore) {
   const head = el('summary', 'card-head');
   head.append(
     el('span', 'card-verdict', verdict),
+    ...(kindLine ? [el('span', 'card-kind', kindLine)] : []),
     el('span', 'card-title', model.title),
     ...reason.split(' · ').filter(Boolean).map((part, i) => el('span', i ? 'card-reason card-reason-tail' : 'card-reason', part)),
     el('span', 'card-meta', model.deadlineLine),

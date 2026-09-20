@@ -11,7 +11,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from tools.schema import FIELDS, SIGNERS, approved_by
+from tools.schema import FIELDS, KINDS, SIGNERS, approved_by
 
 # Предел ставится на то, за что человек платит, — на сжатый размер.
 #
@@ -93,6 +93,7 @@ def index_entry(program: dict) -> dict:
         "id": program["id"],
         "name": program.get("name"),
         "hostCountry": program.get("hostCountry"),
+        "kind": program.get("kind"),
         "level": program.get("level"),
         "coverage": {
             "tuition": coverage.get("tuition"),
@@ -164,6 +165,25 @@ def publishable(programs: list[dict]) -> list[dict]:
     return sorted(chosen, key=lambda program: program["id"])
 
 
+def missing_kind(programs: list[dict]) -> list[str]:
+    """Публикуемые программы без типа или с неизвестным типом.
+
+    Тип ставит человек (см. KINDS в schema.py), поэтому сборка не выдумывает
+    его сама, а отказывается собирать: карточка без типа не знает, в какую
+    колонку встать, и молча выпала бы из фильтра по типу.
+    """
+    allowed = ", ".join(KINDS)
+    problems = []
+    for program in publishable(programs):
+        kind = program.get("kind")
+        if kind not in KINDS:
+            problems.append(
+                f"{program['id']}: тип {kind!r} не из списка ({allowed}) — "
+                f"впиши \"kind\" в data/programs/{program['id']}.json"
+            )
+    return problems
+
+
 def build_index(programs: list[dict], generated_at: str) -> dict:
     return {
         "generatedAt": generated_at,
@@ -213,6 +233,12 @@ def main() -> int:
         if programs_dir.exists()
         else []
     )
+
+    kind_problems = missing_kind(programs)
+    if kind_problems:
+        for problem in kind_problems:
+            print("ТИП:", problem)
+        return 1
 
     index = build_index(programs, date.today().isoformat())
     details = build_details(programs, date.today().isoformat())
