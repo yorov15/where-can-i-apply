@@ -12,7 +12,7 @@
 <body>
 <header>
   <h1>Куда я могу подать документы</h1>
-  <p class="lead">Заполни анкету — увидишь, в какие программы тебя пускают, а в какие нет и почему. Данные остаются в твоём телефоне и никуда не отправляются.</p>
+  <p class="lead">Заполни анкету — увидишь, куда тебя пускают и почему нет. Анкета остаётся в твоём телефоне.</p>
 </header>
 
 <main>
@@ -137,12 +137,15 @@
         <button type="button" class="chip" data-bucket="check" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">!</span> Доделать <span class="chip-count"></span></button>
         <button type="button" class="chip" data-bucket="no" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">✕</span> Нельзя <span class="chip-count"></span></button>
       </div>
-      <label for="catalog-kind">Тип программы
-        <select id="catalog-kind"><option value="">Все типы</option></select>
-      </label>
-      <label for="catalog-country">Страна
-        <select id="catalog-country"><option value="">Все страны</option></select>
-      </label>
+      <details class="catalog-more">
+        <summary>Ещё фильтры: тип и страна</summary>
+        <label for="catalog-kind">Тип программы
+          <select id="catalog-kind"><option value="">Все типы</option></select>
+        </label>
+        <label for="catalog-country">Страна
+          <select id="catalog-country"><option value="">Все страны</option></select>
+        </label>
+      </details>
       <p id="catalog-status" class="fineprint" role="status" aria-live="polite"></p>
       <button type="button" id="catalog-reset" class="link-button" hidden>Сбросить фильтры</button>
     </div>

@@ -67,7 +67,7 @@ document.getElementById('show-results').addEventListener('click', () => {
 // это правда; когда включена, единственное исключение называется здесь же.
 if (EXPLAIN_URL) {
   const lead = document.querySelector('.lead');
-  if (lead) lead.append(' Исключение — кнопка «Объяснить» в карточке: она отправляет причины ответа по этой одной программе, без анкеты целиком.');
+  if (lead) lead.append(' Кнопка «Объяснить» отправляет только причины по одной программе.');
 }
 
 let programs = [];
