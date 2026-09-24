@@ -7,7 +7,7 @@ import { summaryLines } from './summary.js';
 import { cardModel } from './card-model.js';
 import { bucketOf } from './wording.js';
 import { agenda } from './agenda.js';
-import { timeLeft, formatDate } from './lib/format.js';
+import { timeLeft, formatDate, plural } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
 import { refreshFilter, countryName } from './filter.js';
 import { kindLabel } from './lib/kinds.js';
@@ -82,12 +82,13 @@ function rememberOpen(node, selector) {
 
 // Календарь сроков: строка на программу, без раскрытия. Подробности
 // лежат в каталоге — сюда человек пришёл за датами, а не за чтением.
-function agendaBlock(groups, today, onOpenProgram) {
-  const box = el('div', 'agenda');
-  box.append(el('h2', 'agenda-title', 'Ближайшие сроки'));
+// Первый экран — только самые близкие сроки; остальное под «Ещё».
+const AGENDA_VISIBLE = 5;
 
+function agendaGroups(groups, today, onOpenProgram) {
+  const frag = document.createDocumentFragment();
   for (const group of groups) {
-    box.append(el('h3', 'agenda-horizon', group.title));
+    frag.append(el('h3', 'agenda-horizon', group.title));
     const ul = el('ul', 'agenda-list');
     for (const row of group.rows) {
       const item = el('li');
@@ -102,7 +103,33 @@ function agendaBlock(groups, today, onOpenProgram) {
       item.append(line);
       ul.append(item);
     }
-    box.append(ul);
+    frag.append(ul);
+  }
+  return frag;
+}
+
+function agendaBlock(groups, today, onOpenProgram) {
+  const box = el('div', 'agenda');
+  box.append(el('h2', 'agenda-title', 'Ближайшие сроки'));
+
+  const head = [];
+  const rest = [];
+  let left = AGENDA_VISIBLE;
+  for (const group of groups) {
+    const take = group.rows.slice(0, Math.max(left, 0));
+    const other = group.rows.slice(take.length);
+    left -= take.length;
+    if (take.length) head.push({ ...group, rows: take });
+    if (other.length) rest.push({ ...group, rows: other });
+  }
+  box.append(agendaGroups(head, today, onOpenProgram));
+
+  if (rest.length) {
+    const count = rest.reduce((n, g) => n + g.rows.length, 0);
+    const more = el('details', 'agenda-more');
+    more.append(el('summary', 'agenda-more-head', `Ещё ${count} ${plural(count, 'программа', 'программы', 'программ')} с подходящими условиями`));
+    more.append(agendaGroups(rest, today, onOpenProgram));
+    box.append(more);
   }
   return box;
 }
@@ -120,8 +147,17 @@ export function renderResults(nodes, profile, programs, today, details) {
     return;
   }
 
-  for (const line of summaryLines(profile, programs, today)) summaryNode.append(el('p', 'summary-line', line));
-  summaryNode.append(el('p', 'summary-note', 'Это ответ на вопрос «пустят ли подавать», а не «возьмут ли». Шансы поступления сайт не оценивает: отбор, эссе и документы решают сами программы. Всё сверяй с сайтом программы.'));
+  // Наверху одна главная строка. Что улучшить и на что обратить внимание —
+  // под «Подробнее»: это нужно не каждому и не с первого взгляда.
+  const [headline, ...extra] = summaryLines(profile, programs, today);
+  summaryNode.append(el('p', 'summary-line', headline));
+  if (extra.length) {
+    const more = el('details', 'summary-more');
+    more.append(el('summary', 'summary-more-head', 'Подробнее: что улучшить'));
+    for (const line of extra) more.append(el('p', 'summary-line', line));
+    summaryNode.append(more);
+  }
+  summaryNode.append(el('p', 'summary-note', 'Это «пустят ли подавать», а не «возьмут ли»: шансы сайт не оценивает. Всё сверяй с сайтом программы.'));
 
   const rows = programs.map((program) => ({
     program,

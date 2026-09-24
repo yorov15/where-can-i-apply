@@ -144,6 +144,13 @@ legend:focus { outline: none; }
 .summary:empty { display: none; }
 .summary-line { margin: 0 0 .5rem; }
 .summary-line:first-child { font-size: 1.125rem; font-weight: 650; line-height: 1.4; }
+.summary-more { margin: .5rem 0 0; }
+.summary-more-head, .agenda-more-head, .catalog-more > summary { list-style: none; cursor: pointer; display: flex; align-items: center; min-height: 44px; font-weight: 600; color: var(--muted); }
+.summary-more-head::-webkit-details-marker, .agenda-more-head::-webkit-details-marker, .catalog-more > summary::-webkit-details-marker { display: none; }
+.summary-more-head::after, .agenda-more-head::after, .catalog-more > summary::after { content: ""; width: .45rem; height: .45rem; margin-left: .6rem; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.summary-more[open] > .summary-more-head::after, .agenda-more[open] > .agenda-more-head::after, .catalog-more[open] > summary::after { transform: rotate(-135deg); }
+.agenda-more { margin-top: .75rem; }
+.catalog-more { margin: 0 0 1rem; }
 .summary-note { margin: .75rem 0 0; color: var(--muted); font-size: .875rem; }
 
 /* Календарь сроков. Строки, а не карточки: здесь человек выбирает, куда
