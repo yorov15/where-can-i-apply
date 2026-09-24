@@ -33,6 +33,6 @@
 - Стадить только явные пути, никогда `git add -A` / `commit -a`.
 - Секретов в репозиторий не класть.
 
-## Готово в ветке cloud/data-verification (ждёт слияния, ссылка PR: github.com/yorov15/where-can-i-apply/pull/new/cloud/data-verification)
+## Готово и УЖЕ СЛИТО в main (2026-09-24, ветка cloud/data-verification)
 
 Перепроверены все 56 программ, исправлены hku, hkust, constructor-university, ntu-singapore, stanford-university; 7 адресов исправлены по редиректам; шесть программ (amherst, williams, oxford-reach, russia-quota, columbia, nyuad) не проверить ботом — нужна ручная сохранёнка страниц (`manual/README.md`). Ежедневный робот пишет в `main` строки `lastVerified`, поэтому при слиянии возможен конфликт только в них.
