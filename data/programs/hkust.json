@@ -100,8 +100,8 @@
       "kind": "steps"
     },
     {
-      "ru": "Система подачи на 2027/28 открывается только в начале октября 2026 — раньше подать нельзя, ждать смысла нет.",
-      "evidence": "Online application system opens",
+      "ru": "Система подачи на 2027/28 открывается 2 октября 2026 — раньше подать нельзя, ждать смысла нет.",
+      "evidence": "Date 2 Oct Year 2026 Description Title Online application system opens",
       "field": null,
       "kind": "steps"
     },
@@ -119,7 +119,7 @@
     }
   ],
   "deadline": {
-    "opens": null,
+    "opens": "2026-10-02",
     "closes": "2027-06-30",
     "recurring": "annual",
     "confidence": "confirmed"
@@ -134,24 +134,24 @@
   },
   "source": {
     "url": "https://join.hkust.edu.hk/admissions/international-qualifications?general_requirement=46180",
-    "lastVerified": "2026-09-19",
+    "lastVerified": "2026-09-24",
     "humanChecked": false,
     "pages": [
       {
         "url": "https://join.hkust.edu.hk/admissions/international-qualifications?general_requirement=46180",
-        "contentHash": "sha256:cf39b4bd9ae8e212247a59230b1e42e08268f6c73bb810af71ba11769978dad3"
+        "contentHash": "sha256:53608a8beab9cf9ac2463544ce9af56fea51ac7217beee59c044acff891b0673"
       },
       {
         "url": "https://join.hkust.edu.hk/admissions/international-qualifications?general_requirement=46728",
-        "contentHash": "sha256:50682eb2e91f921e82334eecd2b2b22c726225d5945b82d1e976e69a39908433"
+        "contentHash": "sha256:ab063cfed2cf2fde175c78a9124bd8022d7c091453909d6cce96579a412e3106"
       },
       {
         "url": "https://join.hkust.edu.hk/university-admissions-scholarship-for-other-qualifications-holders",
-        "contentHash": "sha256:09190f406fa1bc45597e4da8e5a07b56cef9a63b1a597d2cdc3bd2b6adf194b5"
+        "contentHash": "sha256:978f83d6b42b02d4600d95a3d0683377fd22fba570146f7a4ffaf601e66e612e"
       },
       {
         "url": "https://join.hkust.edu.hk/fees-and-scholarships",
-        "contentHash": "sha256:0457538b4e3dbab1ac5fe87b05a6b95188b9f8fc09ee293388fe6c83ee04b679"
+        "contentHash": "sha256:772cc6fa2398ba8d0725a648a78211f6c3b6ce962f1d430b1804949a57286b53"
       }
     ],
     "approvedBy": "assistant"

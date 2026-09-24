@@ -53,7 +53,7 @@
           "test": "TOEFL_IBT",
           "min": 95,
           "parts": true,
-          "evidence": "An overall score of 95 or above in the TOEFL internet-based test (TOEFL iBT), with no less than 5.0 in both the Writing and Speaking components, achieved in the same attempt"
+          "evidence": "An overall score of 95 or above in the TOEFL internet-based test (TOEFL iBT), with no less than 25 in both the Writing and Speaking components, achieved in the same attempt"
         },
         {
           "test": "TOEFL_IBT_2026",
@@ -91,7 +91,7 @@
       "kind": "workaround"
     },
     {
-      "ru": "Английский обязателен, и общего балла мало: IELTS Academic от 6.5, причём письмо и речь не ниже 6.0 каждое, либо TOEFL iBT от 5.0 по новой шкале или от 95 по старой, тоже с 5.0 за письмо и речь. Всё за одну попытку. Домашние версии IELTS и TOEFL, IELTS Online, TOEFL ITP не принимают.",
+      "ru": "Английский обязателен, и общего балла мало: IELTS Academic от 6.5, причём письмо и речь не ниже 6.0 каждое, либо TOEFL iBT от 5.0 по новой шкале или от 95 по старой; письмо и речь не ниже 5.0 по новой шкале и не ниже 25 по старой. Всё за одну попытку. Домашние версии IELTS и TOEFL, IELTS Online, TOEFL ITP не принимают.",
       "evidence": "Note: The TOEFL ITP, TOEFL ITP Plus and TOEFL Home Edition tests are not accepted to fulfill the English language requirement.",
       "field": "language",
       "kind": "must"
@@ -149,25 +149,25 @@
   },
   "source": {
     "url": "https://admissions.hku.hk/apply/international-qualifications",
-    "lastVerified": "2026-09-19",
+    "lastVerified": "2026-09-24",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
       {
         "url": "https://admissions.hku.hk/apply/international-qualifications",
-        "contentHash": "sha256:5424a1e177eb55cf1bc2799f187a5343cceedb901cfbb8a62dfb892b25b66f94"
+        "contentHash": "sha256:b90c40a99ae5b88bf80a41c5ce7754b08f237b4dce763454db174465336d5ae9"
       },
       {
         "url": "https://admissions.hku.hk/apply/international-qualifications/english-language-requirement",
-        "contentHash": "sha256:38f85ae468816ba59f703f66026f8674a54ceb49d85a71e2294ad34934a693df"
+        "contentHash": "sha256:b8c81189942f21e0b7d81d0b3c4a6e98c5ed2a880a03333d18f8afc2f1ed5db0"
       },
       {
         "url": "https://admissions.hku.hk/fees-and-scholarships/tuition-and-living-expenses",
-        "contentHash": "sha256:92f9b66c3bb4ea1e5220cde186f7555a905421e8f55d0a9cf1c24f10c35e9d35"
+        "contentHash": "sha256:7aed106ae50d19482f62ef79393a9db3002ce63c693a322c86a65c481cc83263"
       },
       {
         "url": "https://admissions.hku.hk/fees-and-scholarships/scholarships",
-        "contentHash": "sha256:7ac88b2010563eb1862b159b10e291ccc92ca0261919cc8985b5a1d9fcbd5f88"
+        "contentHash": "sha256:32d72d7a4cd3c5e19a1f99efe490d08d978391ab7e45342a4f30532dacd0dcd4"
       }
     ]
   },
