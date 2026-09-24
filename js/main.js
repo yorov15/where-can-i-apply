@@ -21,9 +21,14 @@ const catalogButton = document.getElementById('open-catalog');
 // вынести. Каталог по прямой ссылке тоже ждёт анкету.
 let finished = false;
 
+// Вводная фраза нужна тому, кто пришёл впервые. Когда анкета готова, она
+// только отодвигает ответ вниз: на телефоне это пять строк до первого слова.
+const lead = document.querySelector('.lead');
+
 function showCatalog(on) {
   answerScreen.hidden = on || !finished;
   catalogScreen.hidden = !on || !finished;
+  if (lead) lead.hidden = finished;
 }
 
 function openProgram(id) {
@@ -66,7 +71,6 @@ document.getElementById('show-results').addEventListener('click', () => {
 // Шапка обещает, что данные никуда не уходят. Пока объяснялка выключена,
 // это правда; когда включена, единственное исключение называется здесь же.
 if (EXPLAIN_URL) {
-  const lead = document.querySelector('.lead');
   if (lead) lead.append(' Кнопка «Объяснить» отправляет только причины по одной программе.');
 }
 

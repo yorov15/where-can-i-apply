@@ -264,6 +264,16 @@ function card(model, details, openCards, openMore, kindLine) {
 
   const body = el('div', 'card-body');
 
+  // Главное действие — сразу под шапкой, а не после списков условий.
+  const applyUrl = safeHttpUrl(model.applyUrl);
+  if (applyUrl) {
+    const link = el('a', 'button', 'Открыть сайт программы');
+    link.href = applyUrl;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    body.append(link);
+  }
+
   if (model.reasons.length) {
     body.append(el('h4', 'card-section-title', 'Почему так'));
     for (const reason of model.reasons) {
@@ -301,15 +311,6 @@ function card(model, details, openCards, openMore, kindLine) {
 
   for (const section of model.sections) {
     body.append(el('h4', 'card-section-title', section.title), list(section.items, 'card-list'));
-  }
-
-  const applyUrl = safeHttpUrl(model.applyUrl);
-  if (applyUrl) {
-    const link = el('a', 'button', 'Открыть сайт программы');
-    link.href = applyUrl;
-    link.target = '_blank';
-    link.rel = 'noopener';
-    body.append(link);
   }
 
   if (model.more.notes.length || model.more.attested.length) {
