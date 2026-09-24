@@ -24,7 +24,7 @@
     },
     "schoolCountry": {
       "notMeasured": true,
-      "evidence": "All other international qualifications not listed below (including German Abitur, Turkish High School, New Zealand NCEA, Bangladesh HSC, Pakistan HSC, Iran High School Diploma etc)"
+      "evidence": "All other international qualifications not listed below (including German Abitur, Turkish High School, New Zealand NCEA, Bangladesh HSC, Pakistan HSC, Iran High School Diploma, Cameroon GCE Advanced Level, SABIS Diploma, etc)"
     },
     "schoolYears": {
       "notMeasured": true,
@@ -32,7 +32,7 @@
     },
     "graduationYear": {
       "maxRelative": "applicationYear",
-      "evidence": "You must have completed or will be taking High School national examinations in the year of application in order to be considered for admission."
+      "evidence": "Applicants must have completed, or be taking, their national high school examinations in the year of application to be eligible for admission."
     },
     "age": {
       "noLimit": true,
@@ -52,24 +52,24 @@
       "anyOf": [
         {
           "test": "IELTS",
-          "min": 6,
+          "min": 6.5,
           "parts": true,
-          "evidence": "Submission of IELTS (a minimum Overall 6, writing 6, speaking 6)"
+          "evidence": "IELTS Academic; IELTS UKAI Academic Overall score - 6.5 Writing - 6.5, Speaking - 6.5 TOEFL / TOEFL iBT Home Edition Total Score - 90 or 4.5 Writing - 25 or 4.5 Verbal/Speaking - 25 or 4.5"
         },
         {
           "test": "TOEFL_IBT",
           "min": 90,
           "parts": true,
-          "evidence": "or TOEFL (a minimum of 90, verbal 25) [taken before 2026]"
+          "evidence": "IELTS Academic; IELTS UKAI Academic Overall score - 6.5 Writing - 6.5, Speaking - 6.5 TOEFL / TOEFL iBT Home Edition Total Score - 90 or 4.5 Writing - 25 or 4.5 Verbal/Speaking - 25 or 4.5"
         },
         {
           "test": "TOEFL_IBT_2026",
           "min": 4.5,
           "parts": true,
-          "evidence": "a minimum Overall score of 4.5, speaking 4.5 [TOEFL iBT taken from January 2026 onwards]"
+          "evidence": "IELTS Academic; IELTS UKAI Academic Overall score - 6.5 Writing - 6.5, Speaking - 6.5 TOEFL / TOEFL iBT Home Edition Total Score - 90 or 4.5 Writing - 25 or 4.5 Verbal/Speaking - 25 or 4.5"
         }
       ],
-      "evidence": "or taken English language only as a 2nd language"
+      "evidence": "Did not study English in both junior and senior high school, or studied English only as a second language/additional language."
     }
   },
   "textConditions": [
@@ -105,25 +105,31 @@
     },
     {
       "ru": "Таджикский аттестат попадает в общую графу «прочие международные аттестаты» — свою строку в таблице требований он не имеет, и вуз оценивает такие документы отдельно.",
-      "evidence": "All other international qualifications not listed below (including German Abitur, Turkish High School, New Zealand NCEA, Bangladesh HSC, Pakistan HSC, Iran High School Diploma etc)",
+      "evidence": "All other international qualifications not listed below (including German Abitur, Turkish High School, New Zealand NCEA, Bangladesh HSC, Pakistan HSC, Iran High School Diploma, Cameroon GCE Advanced Level, SABIS Diploma, etc)",
       "field": "schoolCountry",
       "kind": "note"
     },
     {
-      "ru": "Экзамен по английскому обязателен тем, у кого английский в школе был вторым языком, — в таджикской школе это так. Нужен IELTS от 6.0, причём письмо и речь не ниже 6.0 каждое, либо TOEFL от 90 со словесной частью 25 по старой шкале или 4.5 с речью 4.5 по новой.",
-      "evidence": "OR who do not take up English language in Junior and Senior High School or taken English language only as a 2nd language",
+      "ru": "Экзамен по английскому обязателен тем, кто не учил английский в школе вовсе или учил его только как второй язык, — в таджикской школе это так. Нужен IELTS от 6.5, причём письмо и речь не ниже 6.5 каждое, либо TOEFL iBT от 90 по старой шкале или 4.5 по новой, с письмом и речью не ниже 25 (старая) или 4.5 (новая).",
+      "evidence": "Did not study English in both junior and senior high school, or studied English only as a second language/additional language.",
       "field": "language",
       "kind": "must"
     },
     {
-      "ru": "Вместо экзамена по английскому подойдёт SAT от 1250, PTE Academic от 55 с речью 55, ACT с письмом от 30 за одну сдачу или кембриджский C1 Advanced от 170 с письмом и речью от 170.",
-      "evidence": "or SAT (a minimum of 1250 for SAT taken for March 2016 onwards) or Pearson Test of English Academic (PTE Academic) (a minimum of overall 55,speaking 55) or ACT with Writing (a minimum of composite score of 30 in ACT with Writing in one sitting)",
+      "ru": "Вместо IELTS или TOEFL подойдёт другой экзамен: PTE Academic от 55 с речью 55 и письмом 59; SAT от 1250, из них чтение и письмо от 60; ACT с письмом за одну сдачу — общий балл 30, английский 30, письмо 7; кембриджский C1 Advanced от 170 с письмом и речью от 170; Aptitude Scholastic Test (AST) от 220.",
+      "evidence": "Pearson Test of English (PTE) Academic Overall score - 55 Speaking - 55, Writing - 59 C1 Advanced (formerly Cambridge English Advanced (CAE)) Overall score - 170 Writing - 170 Speaking - 170 SAT Total score - 1250 Reading and Writing - 60 ACT with Writing in a single sitting Composite - 30 English - 30 Writing - 7 Aptitude Scholastic Test (AST) English Score - 220",
       "field": "language",
       "kind": "workaround"
     },
     {
-      "ru": "Результаты IELTS, TOEFL и PTE годятся, только если сданы в течение двух лет до срока подачи. SAT и ACT действуют пять лет.",
-      "evidence": "For IELTS, TOEFL and PTE Academic, only scores obtained in the 2 years leading up to the application deadline will be considered. The validity period for SAT and ACT is 5 years.",
+      "ru": "Названные пороги по английскому относятся в основном к естественным наукам, инженерии и информатике. Для других программ вуз может потребовать балл выше — смотри требования выбранной программы.",
+      "evidence": "The English language test score requirements stated above apply generally to Science, Engineering, and Computing programmes only. Higher scores may be required for admission to other programmes.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Результаты IELTS, TOEFL, PTE, C1 Advanced и AST годятся, только если сданы в течение двух лет до срока подачи. SAT и ACT действуют пять лет.",
+      "evidence": "For IELTS, TOEFL, PTE Academic, C1 Advanced, and AST , only test scores obtained within two (2) years prior to the application deadline will be accepted. SAT and ACT scores are valid for five (5) years from the test date.",
       "field": "language",
       "kind": "must"
     },
@@ -134,8 +140,8 @@
       "kind": "note"
     },
     {
-      "ru": "Набор один раз в год, учёба начинается в конце июля. Заявку с прочим международным аттестатом в прошлом цикле принимали с 15 октября 2025 по 20 января 2026 — даты следующего цикла ещё не объявлены, в карточке стоят прошлогодние.",
-      "evidence": "There is only one intake per academic year here, typically term commences in late July.",
+      "ru": "Набор один раз в год, учёба начинается в конце июля. Заявку с прочим международным аттестатом принимают с 15 октября 2026 по 20 января 2027. У этой строки на странице сейчас стоит статус «Closed», то есть подача ещё не открыта.",
+      "evidence": "NTU admits students once per academic year , with the academic term typically beginning in late July.",
       "field": null,
       "kind": "steps"
     },
@@ -147,7 +153,7 @@
     },
     {
       "ru": "Кроме общих требований, у каждой программы есть свои обязательные предметы — их проверяют отдельно.",
-      "evidence": "In addition to fulfilling the minimum entry requirements, you must also satisfy the minimum subject requirements for the programmes you apply.",
+      "evidence": "Minimum Subject Requirements Applicants must also satisfy the minimum subject requirements for the programmes you wish to apply for.",
       "field": null,
       "kind": "must"
     }
@@ -156,7 +162,7 @@
     "opens": "2026-10-15",
     "closes": "2027-01-20",
     "recurring": "annual",
-    "confidence": "expected"
+    "confidence": "confirmed"
   },
   "applyUrl": "https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications",
   "coversInstitutions": {
@@ -168,17 +174,17 @@
   },
   "source": {
     "url": "https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications",
-    "lastVerified": "2026-09-19",
+    "lastVerified": "2026-09-24",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
       {
         "url": "https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications",
-        "contentHash": "sha256:2b18194565d8a41f886f6263b4080f51a81dc7e69aff362dfbb37984912abefd"
+        "contentHash": "sha256:cb06d3aa63268406fe01eff1d517501fc71977cfff6b27c610ec33fe36ad0f0e"
       },
       {
         "url": "https://www.ntu.edu.sg/admissions/undergraduate/financial-matters/tuition-grants",
-        "contentHash": "sha256:ec6d523307c2c7b5e58a33e6779008ec2658dceb97af4321dad5a048a7e62565"
+        "contentHash": "sha256:d4fa31376e1369280ec8b6bef756edbc3daa67a034f8b93b62915dc43f485239"
       },
       {
         "url": "https://www.ntu.edu.sg/admissions/undergraduate/financial-matters/tuition-fees",

@@ -133,6 +133,11 @@
         "contentHash": "sha256:869eaf5b290acfe0a79aa8142093f39cf3caa7c8c18739b34167501b816379db"
       }
     ],
-    "approvedBy": "assistant"
+    "approvedBy": "assistant",
+    "recheck": {
+      "status": "не подтверждено",
+      "on": "2026-09-24",
+      "reason": "Обе страницы education-in-russia.com открываются (HTTP 200), но текст на них рисуется JavaScript-ом: в HTML пусто, 7 записанных цитат найти нельзя. Нужен человек с браузером. Записанные цитаты сверены только со снимком от 2026-09-20."
+    }
   }
 }
