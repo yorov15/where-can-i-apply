@@ -192,6 +192,11 @@
         "contentHash": "sha256:bcfe05c9c1216c28046ba8bde636e1f9ae377acbb44cda2f2f3892071c07c968"
       }
     ],
-    "approvedBy": "assistant"
+    "approvedBy": "assistant",
+    "recheck": {
+      "status": "не подтверждено",
+      "on": "2026-09-24",
+      "reason": "1 из 5 страниц (nyu.edu/admissions/.../english-language-testing.html) отдала HTTP 403, она не перепроверена. Остальные 4 открылись: 3 без изменений, у entry-requirements изменился только заголовок («Age Requirements» -> «Age Requirement»), цитаты записи находятся. Английский сверен только со снимком от 2026-09-19."
+    }
   }
 }
