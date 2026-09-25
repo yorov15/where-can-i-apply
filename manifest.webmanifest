@@ -1,0 +1,15 @@
+{
+  "name": "Куда я могу подать документы",
+  "short_name": "Куда подать",
+  "description": "Заполни анкету и узнай, на какие стипендии и в какие университеты мира тебя пускают.",
+  "lang": "ru",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f6f7f9",
+  "theme_color": "#2b4fd8",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

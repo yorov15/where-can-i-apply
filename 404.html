@@ -3,28 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; manifest-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#2b4fd8">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="/icons/icon-180.png">
 <meta name="robots" content="noindex">
 <title>Страница не найдена — Куда я могу подать документы</title>
 <!-- GitHub Pages отдаёт этот файл по любому неизвестному адресу, в том числе
      глубокому, поэтому пути здесь абсолютные, а не относительные. -->
-<link rel="stylesheet" href="/where-can-i-apply/css/style.css">
-<script src="/where-can-i-apply/js/theme.js"></script>
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/theme.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">К содержимому</a>
 <div class="topbar">
-  <a class="brand" href="/where-can-i-apply/">Куда подать</a>
-  <nav aria-label="Разделы"><a href="/where-can-i-apply/faq.html">Вопросы</a></nav>
+  <a class="brand" href="/">Куда подать</a>
+  <nav aria-label="Разделы"><a href="/faq.html">Вопросы</a></nav>
   <button type="button" id="theme-toggle" class="theme-toggle" hidden>Тёмная</button>
 </div>
 <main id="main" class="prose">
   <h1>Такой страницы нет</h1>
   <p class="lead">Ссылка устарела или в ней опечатка. Анкета и результаты — на главной.</p>
-  <p><a class="button" href="/where-can-i-apply/">Открыть анкету</a></p>
-  <p><a href="/where-can-i-apply/faq.html">Вопросы и ответы</a></p>
+  <p><a class="button" href="/">Открыть анкету</a></p>
+  <p><a href="/faq.html">Вопросы и ответы</a></p>
 </main>
 </body>
 </html>

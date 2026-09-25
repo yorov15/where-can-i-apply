@@ -3,9 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; manifest-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#2b4fd8">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="/icons/icon-180.png">
 <title>Конфиденциальность — Куда я могу подать документы</title>
 <link rel="preload" href="fonts/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
@@ -29,6 +33,7 @@
   <p>Ответы из анкеты (страна, годы школы, год выпуска, дата рождения, балл, экзамены) сохраняются <strong>только в браузере на твоём устройстве</strong>, чтобы ты не вводил их заново. На наш сервер они не отправляются: сервера с анкетами у сайта нет.</p>
   <p>Отмеченные кнопкой «В мой план» программы тоже хранятся только у тебя в браузере, отдельно от анкеты: это список названий-кодов программ без каких-либо данных о тебе. Галочки в списке «Что подготовить» хранятся там же, в браузере: код программы и короткий отпечаток текста дела, без твоих данных. Файл календаря и текст списка собираются прямо на твоём устройстве и никуда не отправляются.</p>
   <p>Ещё в браузере запоминается выбранная тема (светлая или тёмная): одно слово, к тебе оно не привязано.</p>
+  <p>Чтобы открыться без интернета, сайт сохраняет в кэше браузера свои страницы и список программ. Это те же общедоступные файлы, что и на сайте: твоих ответов в этом кэше нет. Пока сеть есть, сайт всегда берёт свежие данные с сервера, а копия нужна только на случай, когда сети нет.</p>
   <p>Стереть анкету и план можно кнопкой «Стереть мою анкету с этого устройства» внизу главной страницы либо очисткой данных сайта в настройках браузера.</p>
 
   <h2>Чего сайт не делает</h2>
