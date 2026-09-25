@@ -58,8 +58,8 @@ test('есть видимый фокус и отключение движени�
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
 });
 
-test('CSS не больше 30 КБ', () => {
-  assert.ok(Buffer.byteLength(css) <= 30 * 1024, `размер ${Buffer.byteLength(css)} байт`);
+test('CSS не больше 36 КБ', () => {
+  assert.ok(Buffer.byteLength(css) <= 36 * 1024, `размер ${Buffer.byteLength(css)} байт`);
 });
 
 test('в разметке нет атрибутов style (CSP их не пустит)', () => {

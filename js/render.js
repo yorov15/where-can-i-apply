@@ -297,13 +297,14 @@ function card(model, details, openCards, openMore, kindLine) {
 
   const { verdict, reason } = splitHeadline(model.headline);
   const head = el('summary', 'card-head');
+  const metas = el('span', 'card-metas');
+  metas.append(el('span', 'card-meta', model.deadlineLine), el('span', 'card-meta card-meta-cover', model.coverageLine));
   head.append(
     el('span', 'card-verdict', verdict),
     ...(kindLine ? [el('span', 'card-kind', kindLine)] : []),
     el('span', 'card-title', model.title),
     ...reason.split(' · ').filter(Boolean).map((part, i) => el('span', i ? 'card-reason card-reason-tail' : 'card-reason', part)),
-    el('span', 'card-meta', model.deadlineLine),
-    el('span', 'card-meta', model.coverageLine),
+    metas,
   );
   box.append(head);
 
