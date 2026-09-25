@@ -1216,7 +1216,13 @@ approvedAt = "2026-09-19"
 # входят, пока человек не одобрит и его.
 [italy-universitaly]
 name = "Universitaly: предзапись иностранцев в вузы Италии"
-urls = ["https://www.universitaly.it/it/studenti-stranieri"]
+urls = [
+  "https://www.universitaly.it/it/studenti-stranieri",
+  # Домен universitaly-private.cineca.it одобрил Мурод 2026-09-25 (циркуляры, на которые ссылается страница)
+  "https://universitaly-private.cineca.it/uploads/universitaly-pubblico/Circolare_2026-2027_studenti_internazionali.pdf",
+  "https://universitaly-private.cineca.it/uploads/universitaly-pubblico/Allegato_1-Circolare_2026_2027.pdf",
+  "https://universitaly-private.cineca.it/uploads/universitaly-pubblico/FAQ.pdf",
+]
 approvedBy = "human"
 approvedAt = "2026-09-25"
 

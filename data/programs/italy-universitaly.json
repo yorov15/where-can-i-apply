@@ -23,8 +23,8 @@
     },
     "schoolCountry": null,
     "schoolYears": {
-      "definedBy": "institution",
-      "evidence": "è competenza esclusiva delle Istituzioni di formazione superiore"
+      "min": 12,
+      "evidence": "conseguito con almeno 12 anni di scolarità"
     },
     "graduationYear": {
       "noLimit": true,
@@ -38,6 +38,24 @@
     "language": null
   },
   "textConditions": [
+    {
+      "ru": "Аттестат школы с 11 годами обучения напрямую не принимают: вуз может потребовать закрыть недостающий год — сданные экзамены первого года в вузе.",
+      "evidence": "certificazione accademica attestante il superamento di tutti gli esami previsti per il primo anno di studi svolti presso una istituzione della formazione superiore nel caso di sistema scolastico locale di undici anni",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Другой способ закрыть год при 11-летней школе: годичный неуниверситетский диплом после школы по близкой к выбранному курсу теме.",
+      "evidence": "conseguito in un Istituto superiore non universitario e di materia affine al corso prescelto, rispettivamente della durata di un anno nel caso di sistema scolastico locale di undici anni",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Такие дополнения к аттестату с менее чем 12 годами школы дают право записаться только на первый год, дальше их не оценивают.",
+      "evidence": "consentono in Italia la sola immatricolazione al primo anno accademico",
+      "field": "schoolYears",
+      "kind": "note"
+    },
     {
       "ru": "Предзапись для получения визы подают только через портал Universitaly — единственный бесплатный официальный портал министерства.",
       "evidence": "dovrà essere presentata esclusivamente per il tramite del portale UNIVERSITALY",
@@ -103,14 +121,26 @@
       {
         "url": "https://www.universitaly.it/it/studenti-stranieri",
         "contentHash": "sha256:ef796cf3674a588c6524e5901af39589e87dbd2b38f2e7536da937f7d01e22d3"
+      },
+      {
+        "url": "https://universitaly-private.cineca.it/uploads/universitaly-pubblico/Circolare_2026-2027_studenti_internazionali.pdf",
+        "contentHash": "sha256:0e688c8df57d90cabe6fefaad9e4349d1ae0dae9d310b7cfd35fcd8aad358bd7"
+      },
+      {
+        "url": "https://universitaly-private.cineca.it/uploads/universitaly-pubblico/Allegato_1-Circolare_2026_2027.pdf",
+        "contentHash": "sha256:435332575a3ee1d07fcb0243dbf852560d57351ad294d042bbe914bd5319f525"
+      },
+      {
+        "url": "https://universitaly-private.cineca.it/uploads/universitaly-pubblico/FAQ.pdf",
+        "contentHash": "sha256:c025c7516c14cebc1649d57c5dcadd5ab8c0b81dcd510176ecade99d81e84a01"
       }
     ],
     "approvedBy": "assistant"
   },
   "leftEmpty": {
-    "schoolCountry": "sha256:3553bae105664a29ac5eccf3fbfae6cd07aa2a65ae031b2f69dc3d27fc1b883c",
-    "age": "sha256:3553bae105664a29ac5eccf3fbfae6cd07aa2a65ae031b2f69dc3d27fc1b883c",
-    "gpa": "sha256:3553bae105664a29ac5eccf3fbfae6cd07aa2a65ae031b2f69dc3d27fc1b883c",
-    "language": "sha256:3553bae105664a29ac5eccf3fbfae6cd07aa2a65ae031b2f69dc3d27fc1b883c"
+    "schoolCountry": "sha256:e4272081bab98e134b2bbc5ca7dbfd0f772ec200a83bc2841fc2f91781a0b0b9",
+    "age": "sha256:e4272081bab98e134b2bbc5ca7dbfd0f772ec200a83bc2841fc2f91781a0b0b9",
+    "gpa": "sha256:e4272081bab98e134b2bbc5ca7dbfd0f772ec200a83bc2841fc2f91781a0b0b9",
+    "language": "sha256:e4272081bab98e134b2bbc5ca7dbfd0f772ec200a83bc2841fc2f91781a0b0b9"
   }
 }
