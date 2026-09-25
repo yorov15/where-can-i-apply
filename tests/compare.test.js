@@ -18,7 +18,7 @@ const duke = {
   eligibility: { exam: { optional: true, anyOf: [{ test: 'SAT', min: null }, { test: 'ACT', min: null }], evidence: 'x' } },
 };
 const entry = (program, status = 'yes') => ({ program, verdict: { status, reasons: [], attested: [] }, deadline: 'unknown' });
-const details = { programs: { mit: { applyUrl: 'https://mit.edu/apply' } } };
+const details = { programs: { mit: { applyUrl: 'https://mit.edu/apply', textConditions: [{ ru: 'плата', fee: { amount: 75, currency: 'USD' } }] } } };
 
 test('экзамен: нет правила — «не указан», обязателен — нужен, необязателен — по желанию', () => {
   assert.equal(examCell(null), 'Не указан');
@@ -30,7 +30,7 @@ test('экзамен: нет правила — «не указан», обяз�
 test('таблица: по столбцу на программу, строки в одном порядке, ссылка только там, где она есть', () => {
   const table = compareTable([entry(mit), entry(duke)], details, today);
   assert.deepEqual(table.columns.map((c) => c.title), ['MIT', 'Duke']);
-  assert.deepEqual(table.rows.map((r) => r.label), ['Подходишь ли', 'Срок', 'Что покрывает', 'Экзамен', 'Сайт']);
+  assert.deepEqual(table.rows.map((r) => r.label), ['Подходишь ли', 'Срок', 'Что покрывает', 'Экзамен', 'Плата за подачу', 'Сайт']);
   for (const r of table.rows) assert.equal(r.cells.length, 2);
   const site = table.rows.at(-1).cells;
   assert.equal(site[0].href, 'https://mit.edu/apply');
@@ -38,4 +38,7 @@ test('таблица: по столбцу на программу, строки 
   assert.equal(site[1].text, '—');
   assert.match(table.rows[0].cells[0].text, /Подходишь по условиям/);
   assert.match(table.rows[1].cells[0].text, /4 января 2027/);
+  const fee = table.rows.find((r) => r.label === 'Плата за подачу').cells;
+  assert.match(fee[0].text, /^75 долл/);
+  assert.equal(fee[1].text, 'Не указана');
 });

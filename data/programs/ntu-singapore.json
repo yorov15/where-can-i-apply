@@ -156,6 +156,17 @@
       "evidence": "Minimum Subject Requirements Applicants must also satisfy the minimum subject requirements for the programmes you wish to apply for.",
       "field": null,
       "kind": "must"
+    },
+    {
+      "ru": "Плата за подачу для иностранцев 25 сингапурских долларов. Освободиться от неё нельзя, вернуть её тоже нельзя, даже при отказе.",
+      "evidence": "The fee is non-waivable, non-refundable and payable whether your application is ultimately successful or not.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 25,
+        "currency": "SGD",
+        "evidence": "The application fee payable is SGD25 for international applicants"
+      }
     }
   ],
   "deadline": {

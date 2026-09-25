@@ -59,6 +59,12 @@ LANGUAGE_TESTS = frozenset({"IELTS", "TOEFL_IBT", "TOEFL_IBT_2026", "DUOLINGO"})
 EXAM_TESTS = frozenset({"SAT", "ACT"})
 EXAM_LIMITS = {"SAT": (400, 1600), "ACT": (1, 36)}
 
+# Плата за подачу — необязательная разметка на условии: fee = {amount,
+# currency, evidence, waivedForAid}. Сумма и валюта здесь для сложения в
+# плане, поэтому у неё своя цитата с числом; текст условия остаётся для
+# чтения. amount 0 — программа прямо пишет, что платы нет.
+FEE_CURRENCIES = frozenset({"USD", "EUR", "GBP", "AZN", "SGD", "KZT", "KRW", "JPY", "CNY", "HKD", "TRY", "UZS", "AED", "QAR"})
+
 # Форма, а не список: списка стран в стандартной библиотеке нет, а форма
 # ловит реальные опечатки — TJK, tj, «Таджикистан».
 _COUNTRY = re.compile(r"^[A-Z]{2}$")

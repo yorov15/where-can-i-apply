@@ -108,7 +108,12 @@
       "ru": "Плата за подачу 100 манатов, не возвращается.",
       "evidence": "submit your application by paying a non-refundable application fee of 100 AZN.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 100,
+        "currency": "AZN",
+        "evidence": "non-refundable application fee of 100 AZN"
+      }
     },
     {
       "ru": "Сроки прошлого цикла для иностранцев: первый этап до 8 апреля 2026 с интервью в мае — июне, поздний до 1 июля 2026 с интервью в июле — августе. Даты на 2027 ещё не объявлены, поэтому срок в карточке по прошлому году и помечен неподтверждённым.",

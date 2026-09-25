@@ -3,6 +3,7 @@
 // покрывает), плюс требование к экзамену прямо из правил допуска.
 import { cardModel } from './card-model.js';
 import { testName, joinOr } from './wording.js';
+import { feeOf, feeCell } from './cost.js';
 
 // Что программа просит по SAT и ACT. Пустое правило — программа про
 // экзамен не говорит или не просит: обещать «не нужен» мы не вправе.
@@ -27,6 +28,7 @@ export function compareTable(entries, details, today) {
       row('Срок', ({ model }) => ({ text: model.deadlineLine })),
       row('Что покрывает', ({ model }) => ({ text: model.coverageLine })),
       row('Экзамен', ({ entry }) => ({ text: examCell(entry.program.eligibility?.exam) })),
+      row('Плата за подачу', ({ model }) => ({ text: feeCell(feeOf(details.programs?.[model.id])) })),
       row('Сайт', ({ model }) => ({ text: model.applyUrl ? 'Открыть' : '—', href: model.applyUrl })),
     ],
   };

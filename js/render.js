@@ -15,6 +15,7 @@ import { kindLabel } from './lib/kinds.js';
 import { EXPLAIN_URL } from './config.js';
 import { planPrograms, planText, buildIcs, planTasks } from './plan.js';
 import { compareTable } from './compare.js';
+import { planCost, costText } from './cost.js';
 import { askExplain, cachedAnswer, parseAnswer, ERROR_TEXT } from './explain.js';
 
 const ORDER = { yes: 0, likely: 1, check: 2, no: 3 };
@@ -203,6 +204,8 @@ function planBlock(planned, today, details, onOpenProgram, plan, entries) {
     .sort((a, b) => (a.deadline?.closes ?? '9999') < (b.deadline?.closes ?? '9999') ? -1 : 1)
     .map((program) => ({ program }));
   box.append(agendaGroups([{ title: 'По срокам', rows }], today, onOpenProgram));
+  const cost = costText(planCost(planned, details));
+  if (cost) box.append(el('p', 'summary-line', cost));
   const todo = todoBlock(rows.map((r) => r.program), details, plan);
   if (todo.childElementCount) box.append(todo);
   if (entries.length > 1) box.append(compareBlock(entries, details, today));

@@ -179,7 +179,12 @@
       "ru": "Плата за подачу 85 долларов. При большой финансовой нужде её часто отменяют: запрос делают в Common Application, школьный консультант его подтверждает.",
       "evidence": "we will waive the $85 application fee for students with high financial need.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 85,
+        "currency": "USD",
+        "evidence": "nonrefundable $85 application fee"
+      }
     },
     {
       "ru": "На инженерную школу Pratt нужен калькулюс в школе, физику настоятельно рекомендуют.",

@@ -140,7 +140,12 @@
       "ru": "Платы за подачу нет. Подают через Common Application: эссе Common App и эссе для Duke Kunshan, школьный отчёт, рекомендация консультанта, транскрипт и две рекомендации учителей.",
       "evidence": "There is no application fee",
       "field": null,
-      "kind": "steps"
+      "kind": "steps",
+      "fee": {
+        "amount": 0,
+        "currency": "CNY",
+        "evidence": "There is no application fee"
+      }
     },
     {
       "ru": "Если сдаёшь выпускные или национальные экзамены, прикладываешь результаты или прогноз школы. Итоговые результаты нужны до начала учёбы.",
