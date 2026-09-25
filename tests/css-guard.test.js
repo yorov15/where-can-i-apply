@@ -93,9 +93,11 @@ test('палитра: токены поверхностей заданы, вер
   }
   for (const verdict of ['yes', 'likely', 'check', 'no']) {
     const count = css.split(`--${verdict}:`).length - 1;
-    assert.equal(count, 2, `--${verdict} должен быть в светлой и тёмной теме`);
+    // светлая, тёмная по системе, тёмная по ручному выбору
+    assert.equal(count, 3, `--${verdict} должен быть в светлой и в обеих тёмных записях`);
   }
   assert.match(css, /prefers-color-scheme:\s*dark/);
+  assert.match(css, /:root\[data-theme="dark"\]/);
 });
 
 test('на каждой странице есть ссылка «к содержимому» и main с id', () => {

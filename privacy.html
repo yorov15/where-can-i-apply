@@ -3,15 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="color-scheme" content="light dark">
 <title>Конфиденциальность — Куда я могу подать документы</title>
 <link rel="preload" href="fonts/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
+<script src="js/theme.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">К содержимому</a>
+<div class="topbar">
+  <a class="brand" href="index.html">Куда подать</a>
+  <nav aria-label="Разделы"><a href="faq.html">Вопросы</a></nav>
+  <button type="button" id="theme-toggle" class="theme-toggle" hidden>Тёмная тема</button>
+</div>
 <header class="hero hero-page">
   <p class="back"><a href="index.html">← К анкете</a></p>
   <h1>Конфиденциальность</h1>
@@ -21,7 +27,8 @@
 <main id="main" class="prose">
   <h2>Что хранится</h2>
   <p>Ответы из анкеты (страна, годы школы, год выпуска, дата рождения, балл, экзамены) сохраняются <strong>только в браузере на твоём устройстве</strong>, чтобы ты не вводил их заново. На наш сервер они не отправляются: сервера с анкетами у сайта нет.</p>
-  <p>Стереть их можно кнопкой «Стереть мою анкету с этого устройства» внизу главной страницы либо очисткой данных сайта в настройках браузера.</p>
+  <p>Ещё в браузере запоминается выбранная тема (светлая или тёмная): одно слово, к тебе оно не привязано.</p>
+  <p>Стереть анкету можно кнопкой «Стереть мою анкету с этого устройства» внизу главной страницы либо очисткой данных сайта в настройках браузера.</p>
 
   <h2>Чего сайт не делает</h2>
   <ul>

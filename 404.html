@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="color-scheme" content="light dark">
 <meta name="robots" content="noindex">
@@ -11,9 +11,15 @@
 <!-- GitHub Pages отдаёт этот файл по любому неизвестному адресу, в том числе
      глубокому, поэтому пути здесь абсолютные, а не относительные. -->
 <link rel="stylesheet" href="/where-can-i-apply/css/style.css">
+<script src="/where-can-i-apply/js/theme.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">К содержимому</a>
+<div class="topbar">
+  <a class="brand" href="/where-can-i-apply/">Куда подать</a>
+  <nav aria-label="Разделы"><a href="/where-can-i-apply/faq.html">Вопросы</a></nav>
+  <button type="button" id="theme-toggle" class="theme-toggle" hidden>Тёмная тема</button>
+</div>
 <main id="main" class="prose">
   <h1>Такой страницы нет</h1>
   <p class="lead">Ссылка устарела или в ней опечатка. Анкета и результаты — на главной.</p>

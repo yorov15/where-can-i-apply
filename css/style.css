@@ -71,40 +71,80 @@
   --z-skip: 30;
 }
 
+/* Тёмная палитра: сине-чернильная, поверхности заметно светлее фона, шапка яркая.
+   Записана дважды (по системе и по ручному выбору): у CSS нет способа поделить блок между @media и атрибутом. */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0f1115;
-    --surface: #161a20;
-    --soft: #1e232b;
-    --line: #262c35;
-    --line-strong: #7a8393;
-    --fg: #e8eaee;
-    --muted: #a3abb8;
-    --ink: #e8eaee;
-    --on-ink: #0f1115;
+  :root:not([data-theme="light"]) {
+    --bg: #0b0e1a;
+    --surface: #151a2e;
+    --soft: #1f2645;
+    --line: #2a3357;
+    --line-strong: #7b86ad;
+    --fg: #eef0fa;
+    --muted: #aab3d0;
+    --ink: #eef0fa;
+    --on-ink: #0b0e1a;
 
-    --accent: #7c93ff;
-    --accent-text: #a5b6ff;
-    --accent-soft: #1b2450;
-    --on-accent: #0b1030;
-    --hero-from: #22337f;
-    --hero-to: #0f1745;
-    --tint: rgb(124 147 255 / .13);
-    --accent-glow: none;
+    --accent: #8ea2ff;
+    --accent-text: #b4c1ff;
+    --accent-soft: #232c66;
+    --on-accent: #0a0f2e;
+    --on-hero: #f8f9ff;
+    --hero-from: #3d5ae0;
+    --hero-to: #1b2575;
+    --tint: rgb(110 135 255 / .2);
+    --accent-glow: 0 18px 40px -18px rgb(100 130 255 / .6);
 
-    --yes: #7fd8a4;
-    --yes-bg: #14261c;
-    --likely: #7cc8e6;
-    --likely-bg: #132631;
-    --check: #efc063;
-    --check-bg: #2a2110;
-    --no: #ff9d95;
-    --no-bg: #331917;
+    --yes: #86e0ad;
+    --yes-bg: #123222;
+    --likely: #82d0ee;
+    --likely-bg: #113243;
+    --check: #f2c76b;
+    --check-bg: #352a10;
+    --no: #ffa39c;
+    --no-bg: #3d1c1f;
 
-    --shadow: 0 0 0 1px rgb(255 255 255 / .05);
-    --hover: rgb(255 255 255 / .06);
+    --shadow: 0 0 0 1px rgb(255 255 255 / .07), 0 14px 32px -18px rgb(0 0 0 / .7);
+    --hover: rgb(255 255 255 / .08);
+    color-scheme: dark;
   }
 }
+
+:root[data-theme="dark"] {
+  --bg: #0b0e1a;
+  --surface: #151a2e;
+  --soft: #1f2645;
+  --line: #2a3357;
+  --line-strong: #7b86ad;
+  --fg: #eef0fa;
+  --muted: #aab3d0;
+  --ink: #eef0fa;
+  --on-ink: #0b0e1a;
+
+  --accent: #8ea2ff;
+  --accent-text: #b4c1ff;
+  --accent-soft: #232c66;
+  --on-accent: #0a0f2e;
+  --on-hero: #f8f9ff;
+  --hero-from: #3d5ae0;
+  --hero-to: #1b2575;
+  --tint: rgb(110 135 255 / .2);
+  --accent-glow: 0 18px 40px -18px rgb(100 130 255 / .6);
+
+  --yes: #86e0ad;
+  --yes-bg: #123222;
+  --likely: #82d0ee;
+  --likely-bg: #113243;
+  --check: #f2c76b;
+  --check-bg: #352a10;
+  --no: #ffa39c;
+  --no-bg: #3d1c1f;
+
+  --shadow: 0 0 0 1px rgb(255 255 255 / .07), 0 14px 32px -18px rgb(0 0 0 / .7);
+  --hover: rgb(255 255 255 / .08);
+  color-scheme: dark;
+}
+:root[data-theme="light"] { color-scheme: light; }
 
 * { box-sizing: border-box; }
 
@@ -150,6 +190,16 @@ summary:focus-visible { outline-offset: -3px; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
+/* Верхняя полоса: название, «Вопросы» и переключатель темы всегда на виду, как на обычных сайтах. */
+.topbar { display: flex; align-items: center; gap: var(--s-1); margin: 0 0 var(--s-3); white-space: nowrap; }
+.brand { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; margin-right: auto; font-weight: 800; letter-spacing: -.02em; color: var(--fg); text-decoration: none; }
+.brand::before { content: ""; width: .75rem; height: .75rem; border-radius: 50%; background: linear-gradient(140deg, var(--hero-from), var(--accent)); }
+.topbar nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--s-2); font-weight: 500; color: var(--fg); text-decoration: none; border-radius: var(--r-control); }
+.theme-toggle { min-height: 44px; padding: 0 var(--s-3); font: inherit; font-size: .9375rem; font-weight: 600; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-pill); box-shadow: var(--shadow); cursor: pointer; transition: transform var(--dur) var(--ease), background var(--dur) var(--ease); }
+.theme-toggle { display: inline-flex; align-items: center; gap: var(--s-2); }
+.theme-toggle::before { content: ""; width: 1rem; height: 1rem; border: 2px solid currentColor; border-radius: 50%; background: linear-gradient(90deg, currentColor 50%, transparent 50%); }
+.theme-toggle:active { transform: scale(.98); }
+@media (hover: hover) { .topbar nav a:hover, .theme-toggle:hover { background: var(--hover); } }
 .skip-link { position: fixed; left: var(--s-3); top: var(--s-3); z-index: var(--z-skip); padding: var(--s-3) var(--s-4); font-weight: 600; color: var(--on-ink); background: var(--ink); border-radius: var(--r-control); transform: translateY(-200%); }
 .skip-link:focus { transform: none; }
 
