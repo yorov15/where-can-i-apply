@@ -210,7 +210,9 @@ export function renderResults(nodes, profile, programs, today, details) {
   }
   refreshFilter(programs);
 
-  catalogButton.textContent = `Все программы (${rows.length})`;
+  // Есть подходящие — кнопка ведёт прямо к ним, иначе к полному списку.
+  catalogButton.textContent = ready.count ? 'Показать подходящие' : `Все программы (${rows.length})`;
+  catalogButton.dataset.bucket = ready.count ? 'yes' : 'all';
   catalogButton.hidden = false;
 }
 
