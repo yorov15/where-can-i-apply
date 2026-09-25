@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadPlan, savePlan, togglePlan, planPrograms, planText, buildIcs, fold, PLAN_KEY } from '../js/plan.js';
+import { loadPlan, savePlan, togglePlan, planPrograms, planText, buildIcs, fold, PLAN_KEY, DONE_KEY, loadDone, saveDone, taskKey, planTasks } from '../js/plan.js';
 
 const store = (initial) => {
   const map = new Map(initial ? [[PLAN_KEY, initial]] : []);
@@ -83,4 +83,29 @@ test('длинная строка режется по 75 байт и не рвё
   assert.ok(parts.length > 1);
   for (const part of parts) assert.ok(new TextEncoder().encode(part).length <= 75, part);
   assert.equal(parts.map((x, i) => (i ? x.slice(1) : x)).join(''), `SUMMARY:${'ж'.repeat(80)}`);
+});
+
+const extraOf = (...conds) => ({ textConditions: conds.map(([kind, ru]) => ({ kind, ru, field: null })) });
+
+test('дела: обязательное, потом шаги, потом деньги; заметки и повторы не попадают', () => {
+  const tasks = planTasks('mit', extraOf(['money', 'Взнос 75 долларов'], ['note', 'Кредитов нет'], ['must', 'Два письма'], ['steps', 'Подача онлайн'], ['must', 'Два письма']));
+  assert.deepEqual(tasks.map((t) => [t.kind, t.text]), [['must', 'Два письма'], ['steps', 'Подача онлайн'], ['money', 'Взнос 75 долларов']]);
+  assert.deepEqual(planTasks('x', null), []);
+});
+
+test('отметка привязана к тексту дела: ключ стабилен и различает и программы, и тексты', () => {
+  assert.equal(taskKey('mit', 'Два письма'), taskKey('mit', 'Два письма'));
+  assert.notEqual(taskKey('mit', 'Два письма'), taskKey('yale', 'Два письма'));
+  assert.notEqual(taskKey('mit', 'Два письма'), taskKey('mit', 'Три письма'));
+});
+
+test('отметки дел читаются и пишутся, мусор даёт пустой набор', () => {
+  const map = new Map();
+  const s = { getItem: (k) => map.get(k) ?? null, setItem: (k, v) => map.set(k, v) };
+  saveDone(new Set(['a#1', 'b#2']), s);
+  assert.deepEqual([...loadDone(s)], ['a#1', 'b#2']);
+  map.set(DONE_KEY, 'не json');
+  assert.equal(loadDone(s).size, 0);
+  map.set(DONE_KEY, '["a",5]');
+  assert.deepEqual([...loadDone(s)], ['a']);
 });

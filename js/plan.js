@@ -149,3 +149,49 @@ export function buildIcs(programs, today, stamp, urls = {}) {
   lines.push('END:VCALENDAR');
   return { text: `${lines.map(fold).join('\r\n')}\r\n`, events };
 }
+
+// ——— «Что подготовить»: список дел из проверенных условий программ ———
+
+export const DONE_KEY = 'eligibility-plan-done';
+
+export function loadDone(storage) {
+  try {
+    const keys = JSON.parse(storage.getItem(DONE_KEY) ?? '[]');
+    return new Set(Array.isArray(keys) ? keys.filter((k) => typeof k === 'string') : []);
+  } catch {
+    return new Set();
+  }
+}
+
+export function saveDone(done, storage) {
+  try { storage.setItem(DONE_KEY, JSON.stringify([...done])); } catch { /* приватный режим */ }
+}
+
+// Отметка привязана к тексту дела, а не к номеру: когда условия программы
+// перепишут, старая отметка не встанет на чужое дело, а пропадёт вместе с
+// прежним текстом.
+function hash(text) {
+  let h = 5381;
+  for (const ch of text) h = ((h * 33) ^ ch.codePointAt(0)) >>> 0;
+  return h.toString(36);
+}
+
+export const taskKey = (id, text) => `${id}#${hash(text)}`;
+
+const TASK_KINDS = ['must', 'steps', 'money'];
+
+// Дела берутся из тех же условий, что видны в карточке: письма, отдельная
+// заявка на деньги, взнос. Своих формулировок не добавляем — только
+// проверенный по сайту текст. Порядок: обязательное, шаги подачи, деньги.
+export function planTasks(id, extra) {
+  const seen = new Set();
+  const out = [];
+  for (const kind of TASK_KINDS) {
+    for (const c of extra?.textConditions ?? []) {
+      if (c.kind !== kind || !c.ru || seen.has(c.ru)) continue;
+      seen.add(c.ru);
+      out.push({ key: taskKey(id, c.ru), text: c.ru, kind });
+    }
+  }
+  return out;
+}
