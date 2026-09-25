@@ -85,6 +85,14 @@ function rememberOpen(node, selector) {
 // Первый экран — только самые близкие сроки; остальное под «Ещё».
 const AGENDA_VISIBLE = 5;
 
+// Строка календаря читается в два столбца: слева «до какого числа», справа
+// «сколько осталось». Остаток считает format.js; для прошедшей даты он
+// отдаёт null, и правого столбца тогда нет.
+export function agendaParts(closes, today) {
+  if (!closes) return { when: 'дату программа не назвала', left: null };
+  return { when: `до ${formatDate(closes)}`, left: timeLeft(today, closes) };
+}
+
 function agendaGroups(groups, today, onOpenProgram) {
   const frag = document.createDocumentFragment();
   for (const group of groups) {
@@ -94,11 +102,10 @@ function agendaGroups(groups, today, onOpenProgram) {
       const item = el('li');
       const line = el('button', 'agenda-item');
       line.type = 'button';
-      const closes = row.program.deadline?.closes;
+      const { when, left } = agendaParts(row.program.deadline?.closes, today);
       line.append(el('span', 'agenda-name', row.program.name?.ru ?? row.program.id));
-      line.append(el('span', 'agenda-when', closes
-        ? `до ${formatDate(closes)} · ${timeLeft(today, closes)}`
-        : 'дату программа не назвала'));
+      line.append(el('span', 'agenda-when', when));
+      if (left) line.append(el('span', 'agenda-left', left));
       line.addEventListener('click', () => onOpenProgram(row.program.id));
       item.append(line);
       ul.append(item);
