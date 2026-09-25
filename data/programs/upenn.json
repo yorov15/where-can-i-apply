@@ -197,7 +197,12 @@
       "ru": "Плата за подачу 75 долларов. Если она тяжела для семьи, запроси освобождение в Common App или Coalition Application.",
       "evidence": "The application fee to apply to Penn is $75.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 75,
+        "currency": "USD",
+        "evidence": "The application fee to apply to Penn is $75."
+      }
     },
     {
       "ru": "С агентами и платными консультантами по поступлению вуз не работает. Советует обращаться в EducationUSA.",

@@ -13,6 +13,7 @@ from tools.schema import (
     LANGUAGE_TESTS,
     EXAM_TESTS,
     EXAM_LIMITS,
+    FEE_CURRENCIES,
     RELATIVE_BOUNDS,
     REQUIRED_FIELDS,
     SCALES,
@@ -104,6 +105,7 @@ def validate_program(
                 f"условие {number}: цитата не найдена в тексте источника — {quote!r}"
             )
         problems.extend(_check_condition_tags(number, condition, require_tags))
+        problems.extend(_check_fee(number, condition, haystack))
 
     problems.extend(_check_deadline(program.get("deadline") or {}))
     return problems
@@ -386,6 +388,46 @@ def _is_iso_date(value) -> bool:
         return False
     parts = value.split("-")
     return len(parts) == 3 and all(part.isdigit() for part in parts)
+
+
+def _check_fee(number: int, condition: dict, haystack: str) -> list[str]:
+    """Разметка платы за подачу: число обязано стоять в собственной цитате.
+
+    Без этого сумма в плане выглядела бы проверенной, а держалась бы на
+    пересказе. Ноль — «платы нет» — числом в цитате не подтверждается:
+    вместо него цитата должна прямо говорить об отсутствии платы.
+    """
+    fee = condition.get("fee")
+    if fee is None:
+        return []
+    where = f"условие {number}: fee"
+    problems = []
+    amount = fee.get("amount")
+    if isinstance(amount, bool) or not isinstance(amount, (int, float)) or amount < 0:
+        problems.append(f"{where}.amount: нужно неотрицательное число")
+    if fee.get("currency") not in FEE_CURRENCIES:
+        problems.append(f"{where}.currency: неизвестная валюта {fee.get('currency')!r}")
+    if fee.get("waivedForAid") not in (None, True):
+        problems.append(f"{where}.waivedForAid: только значение true")
+    quote = fee.get("evidence")
+    if not quote:
+        return problems + [f"{where}: нет собственной цитаты"]
+    if normalize(quote) not in haystack:
+        problems.append(f"{where}: цитата не найдена в тексте источника — {quote!r}")
+    elif amount == 0:
+        if not re.search(r"\b(no|not|without|free)\b", quote, re.IGNORECASE):
+            problems.append(f"{where}: ноль без слов об отсутствии платы в цитате")
+    elif isinstance(amount, (int, float)) and not isinstance(amount, bool):
+        # Разделители тысяч — запятая или пробел: «10,000», «30 000».
+        numbers = {
+            float(re.sub(r"[,\s]", "", raw))
+            for raw in re.findall(r"\d+(?:[,\s]\d{3})*(?:\.\d+)?", quote)
+        }
+        if float(amount) not in numbers:
+            problems.append(f"{where}.amount: числа {amount} нет в цитате")
+    if fee.get("waivedForAid") and "waive" not in (quote or "").lower():
+        problems.append(f"{where}.waivedForAid: в цитате нет слова о снятии платы")
+    return problems
 
 
 def _check_condition_tags(number: int, condition: dict, required: bool) -> list[str]:

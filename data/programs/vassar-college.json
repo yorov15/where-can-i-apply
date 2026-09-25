@@ -152,7 +152,12 @@
       "ru": "Плата за подачу 65 долларов. Если она тяжела, освобождение запрашивают в Common Application или Coalition Application.",
       "evidence": "If the application fee poses a financial hardship, a fee waiver can be requested on the Common Application or the Coalition Application.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 65,
+        "currency": "USD",
+        "evidence": "$65 application fee or a fee waiver"
+      }
     },
     {
       "ru": "Иностранцам, переводящимся из другого вуза, помощь не дают.",

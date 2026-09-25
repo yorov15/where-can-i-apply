@@ -84,6 +84,10 @@ def _condition_for_site(condition: dict) -> dict:
     for key in ("field", "kind"):
         if key in condition:
             entry[key] = condition[key]
+    fee = condition.get("fee")
+    if fee:
+        # Цитата — для проверяющего, сайту хватает суммы и признака.
+        entry["fee"] = {key: fee[key] for key in ("amount", "currency", "waivedForAid") if key in fee}
     return entry
 
 

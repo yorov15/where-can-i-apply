@@ -120,7 +120,12 @@
       "ru": "Платы за подачу нет. Подают только онлайн.",
       "evidence": "We do not charge any application fee.",
       "field": null,
-      "kind": "steps"
+      "kind": "steps",
+      "fee": {
+        "amount": 0,
+        "currency": "KRW",
+        "evidence": "We do not charge any application fee."
+      }
     },
     {
       "ru": "Учат в основном на английском, но для выпуска иностранцы проходят несколько курсов корейского. Первый год без специальности, выбор из 10 направлений, включая Electrical Engineering and Computer Science и AI Convergence.",

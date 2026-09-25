@@ -650,5 +650,65 @@ class TestConditionTags(unittest.TestCase):
         self.assertTrue(any("нет kind" in p for p in problems), problems)
 
 
+class TestFee(unittest.TestCase):
+    QUOTE = "Application fee: USD 20 (or UZS 200,000)"
+
+    def program(self, fee):
+        program = good_program()
+        program["textConditions"] = [
+            {"ru": "Плата за подачу", "evidence": "citizens of eligible countries", "kind": "money", "fee": fee}
+        ]
+        return program
+
+    def problems(self, **fee):
+        snapshot = SNAPSHOT + " " + self.QUOTE + " There is no application fee. Bowdoin automatically waives the $70 fee."
+        return validate_program(self.program(fee), snapshot)
+
+    def test_valid_fee_passes(self):
+        self.assertEqual(self.problems(amount=20, currency="USD", evidence=self.QUOTE), [])
+
+    def test_amount_must_stand_in_its_own_quote(self):
+        problems = self.problems(amount=25, currency="USD", evidence=self.QUOTE)
+        self.assertTrue(any("нет в цитате" in p for p in problems), problems)
+
+    def test_amount_is_not_matched_as_a_substring_of_a_longer_number(self):
+        # 200 не должно находиться внутри 200,000 и внутри 20.
+        problems = self.problems(amount=200, currency="UZS", evidence=self.QUOTE)
+        self.assertTrue(any("нет в цитате" in p for p in problems), problems)
+
+    def test_thousands_separator_is_read(self):
+        self.assertEqual(self.problems(amount=200000, currency="UZS", evidence=self.QUOTE), [])
+
+    def test_quote_must_be_in_the_source(self):
+        problems = self.problems(amount=20, currency="USD", evidence="Application fee: USD 20 (or UZS 300)")
+        self.assertTrue(any("цитата не найдена" in p for p in problems), problems)
+
+    def test_own_quote_is_required(self):
+        problems = self.problems(amount=20, currency="USD")
+        self.assertTrue(any("нет собственной цитаты" in p for p in problems), problems)
+
+    def test_unknown_currency_is_caught(self):
+        problems = self.problems(amount=20, currency="XXX", evidence=self.QUOTE)
+        self.assertTrue(any("неизвестная валюта" in p for p in problems), problems)
+
+    def test_negative_or_text_amount_is_caught(self):
+        for bad in (-5, "20", True, None):
+            problems = self.problems(amount=bad, currency="USD", evidence=self.QUOTE)
+            self.assertTrue(any("неотрицательное число" in p for p in problems), (bad, problems))
+
+    def test_zero_needs_a_quote_that_says_there_is_no_fee(self):
+        self.assertEqual(self.problems(amount=0, currency="USD", evidence="There is no application fee"), [])
+        problems = self.problems(amount=0, currency="USD", evidence=self.QUOTE)
+        self.assertTrue(any("ноль без слов" in p for p in problems), problems)
+
+    def test_waived_for_aid_needs_the_word_in_the_quote(self):
+        ok = "Bowdoin automatically waives the $70 fee"
+        self.assertEqual(self.problems(amount=70, currency="USD", evidence=ok, waivedForAid=True), [])
+        problems = self.problems(amount=20, currency="USD", evidence=self.QUOTE, waivedForAid=True)
+        self.assertTrue(any("слова о снятии" in p for p in problems), problems)
+        problems = self.problems(amount=20, currency="USD", evidence=self.QUOTE, waivedForAid=False)
+        self.assertTrue(any("только значение true" in p for p in problems), problems)
+
+
 if __name__ == "__main__":
     unittest.main()

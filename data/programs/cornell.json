@@ -179,7 +179,12 @@
       "ru": "Плата за подачу 85 долларов. Освобождение дают, если плата тяжела для семьи и ты просишь финансовую помощь.",
       "evidence": "Cornell's application fee is $85. However, if the application fee presents a financial burden for you or your family and you plan to apply for financial aid, you may qualify for a fee waiver.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 85,
+        "currency": "USD",
+        "evidence": "Cornell's application fee is $85."
+      }
     }
   ],
   "deadline": {

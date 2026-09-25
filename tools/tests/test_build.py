@@ -321,6 +321,23 @@ class TestDetails(unittest.TestCase):
         )
         self.assertNotIn("цитата", json.dumps(entry, ensure_ascii=False))
 
+    def test_fee_reaches_the_site_without_its_quote(self):
+        program = self.tagged()
+        program["textConditions"] = [
+            {
+                "ru": "Плата 75 долларов",
+                "evidence": "цитата",
+                "kind": "money",
+                "fee": {"amount": 75, "currency": "USD", "evidence": "Application fee of $75"},
+            },
+        ]
+        entry = details_entry(program)
+        self.assertEqual(
+            entry["textConditions"],
+            [{"ru": "Плата 75 долларов", "kind": "money", "fee": {"amount": 75, "currency": "USD"}}],
+        )
+        self.assertNotIn("Application fee", json.dumps(entry, ensure_ascii=False))
+
     def test_coverage_note_apply_url_and_source(self):
         entry = details_entry(self.tagged())
         self.assertEqual(entry["coverageNote"], "нечто")

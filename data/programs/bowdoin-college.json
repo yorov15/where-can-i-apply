@@ -179,7 +179,13 @@
       "ru": "Плату за подачу, 70 долларов, отменяют автоматически, если просишь финансовую помощь. Просить отдельно не нужно.",
       "evidence": "Bowdoin automatically waives the $70 application fee for students who are applying for financial aid and/or are first-generation-to-college students",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 70,
+        "currency": "USD",
+        "waivedForAid": true,
+        "evidence": "Bowdoin automatically waives the $70 application fee for students who are applying for financial aid"
+      }
     },
     {
       "ru": "Собеседование необязательно. Иностранцы сначала подают заявку, потом просят собеседование. Можно вместо него прислать независимое интервью InitialView, Vericant или встроенное в Duolingo, но тогда собеседование с колледжем уже не назначат.",
