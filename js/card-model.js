@@ -1,5 +1,6 @@
 import { reasonText, orderReasons, headline, bucketOf } from './wording.js';
 import { deadlineLine, coverageLine, formatDate } from './lib/format.js';
+import { isStale } from './lib/dates.js';
 
 // В именительном падеже — для строк вида «Страна школы: ...».
 const FIELD_TITLES = {
@@ -97,8 +98,9 @@ export function cardModel({ program, verdict, deadline }, extra, today) {
     : [];
 
   const checked = extra?.source?.lastVerified;
+  const stale = isStale(checked, today);
   const source = checked
-    ? `Проверено по сайту программы ${formatDate(checked)}${extra.source.approvedBy === 'assistant' ? ', проверял ассистент' : ''}`
+    ? `Проверено по сайту программы ${formatDate(checked)}${extra.source.approvedBy === 'assistant' ? ', проверял ассистент' : ''}${stale ? '. Данные давние: сверь условия и сроки на сайте' : ''}`
     : null;
 
   return {
@@ -117,5 +119,6 @@ export function cardModel({ program, verdict, deadline }, extra, today) {
     applyUrl: extra?.applyUrl ?? null,
     sourceUrl: extra?.source?.url ?? null,
     source,
+    stale,
   };
 }

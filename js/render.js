@@ -9,6 +9,7 @@ import { bucketOf } from './wording.js';
 import { agenda } from './agenda.js';
 import { timeLeft, formatDate, dateTile, plural } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
+import { isStale, STALE_DAYS } from './lib/dates.js';
 import { refreshFilter, countryName } from './filter.js';
 import { kindLabel } from './lib/kinds.js';
 import { EXPLAIN_URL } from './config.js';
@@ -130,6 +131,11 @@ function planBlock(planned, today, details, onOpenProgram) {
     .sort((a, b) => (a.deadline?.closes ?? '9999') < (b.deadline?.closes ?? '9999') ? -1 : 1)
     .map((program) => ({ program }));
   box.append(agendaGroups([{ title: 'По срокам', rows }], today, onOpenProgram));
+
+  const old = planned.filter((p) => isStale(details.programs?.[p.id]?.source?.lastVerified, today));
+  if (old.length) {
+    box.append(el('p', 'card-source stale', `Данные давние (проверялись больше ${STALE_DAYS} дней назад): ${old.map((p) => p.name?.ru ?? p.id).join('; ')}. Сверь сроки на сайтах этих программ.`));
+  }
 
   const urls = Object.fromEntries(Object.entries(details.programs ?? {}).map(([id, d]) => [id, d.applyUrl]));
   const status = el('p', 'plan-status');
@@ -437,7 +443,7 @@ function card(model, details, openCards, openMore, kindLine, plan) {
   }
 
   if (model.source) {
-    const foot = el('p', 'card-source', `${model.source}. `);
+    const foot = el('p', model.stale ? 'card-source stale' : 'card-source', `${model.source}. `);
     const sourceUrl = safeHttpUrl(model.sourceUrl);
     if (sourceUrl) {
       const a = el('a', null, 'Источник');
