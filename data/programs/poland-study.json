@@ -1,0 +1,171 @@
+{
+  "id": "poland-study",
+  "status": "published",
+  "kind": "national",
+  "name": {
+    "ru": "Поступление в вузы Польши (общие правила для иностранцев)",
+    "orig": "Study in Poland: requirements for foreign applicants"
+  },
+  "hostCountry": "PL",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": null,
+    "note": {
+      "ru": "Это не стипендия, а правила поступления: бесплатно учатся только поляки по происхождению с Картой поляка, обладатели ВНЖ и граждане ЕС. Остальные платят. Гранты для иностранцев — на сайте NAWA, вне этой записи"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Foreign students applying to universities in Poland are expected to fulfill general criteria."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-25",
+      "note": "страну школы страница не ограничивает: аттестат может быть из любой страны, но для стран вне ЕС, ЕАСТ и ОЭСР нужно подтверждение NAWA (см. условия)"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-25",
+      "note": "числа лет школы страница не называет: сказано лишь, что аттестат должен давать право поступать в вуз в стране выдачи и быть признан равным польскому; для некоторых стран нужно письменное подтверждение NAWA"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-25",
+      "note": "года выпуска страница не называет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-25",
+      "note": "возраст на странице не упоминается"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "The university sets the admission requirements, list of documents, deadlines, fees, and any entrance exams or interviews."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Applicants must demonstrate proficiency in the language of instruction at least at B2 level"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать документы нужно не в общий центр, а прямо в выбранный вуз: он сам решает, кого принять.",
+      "evidence": "the candidate applies directly to the chosen higher education institution",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Требования, список документов, сроки, плату и вступительные экзамены или собеседования задаёт каждый вуз сам, поэтому общего срока подачи у Польши нет.",
+      "evidence": "The university sets the admission requirements, list of documents, deadlines, fees, and any entrance exams or interviews.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Аттестат иностранной школы нужен легализованный или с апостилем.",
+      "evidence": "Foreign secondary school diplomas/certificates - legalized or issued with an apostille, which confirms their validity in Poland.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестату нужно право поступать в вуз в стране, где его выдали, и признание равным польскому аттестату зрелости.",
+      "evidence": "entitling them to apply for admission to higher education institutions of any type in the country where the issuing institution operates",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестаты школ ЕС, ЕАСТ и ОЭСР, а также IB, европейский бакалавриат и аттестаты по двусторонним договорам не требуют признания в NAWA. Остальные подают с письменным подтверждением директора NAWA, что с ними можно поступать в бакалавриат. Попадает ли под договор аттестат Таджикистана или Узбекистана, страница не говорит.",
+      "evidence": "Other certificates - must be submitted with a written confirmation from the Director of NAWA confirming eligibility to apply for first-cycle or long-cycle master's studies.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский или другой язык обучения — не ниже B2, если аттестат из страны вне ЕС, ЕАСТ и ОЭСР (кроме IB и EB).",
+      "evidence": "required for foreign education documents (excluding IB and EB diplomas) from non-EU, non-EFTA, non-OECD countries.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "На программы на польском нужен польский не ниже B2: годичные курсы NAWA, сертификат Госкомиссии или окончание школы на польском.",
+      "evidence": "applying for programs taught in Polish must demonstrate Polish language proficiency at least at B2 level.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Иностранцы с аттестатом из страны вне ЕС, ЕАСТ и ОЭСР, на которых не распространено международное соглашение, сдают вступительный экзамен.",
+      "evidence": "must pass an entrance exam",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Бесплатно, как поляки, учатся в государственных вузах только обладатели Карты поляка, ВНЖ или статуса долгосрочного резидента ЕС и граждане ЕС/ЕЭП/Швейцарии.",
+      "evidence": "Foreigners with Polish family roots holding a Polish Card (Karta Polaka), those who have a permanent residence permit, or EU long-term resident status as well as EU/EEA/Switzerland citizens may study under the same conditions as Polish citizens",
+      "field": "citizenship",
+      "kind": "money"
+    },
+    {
+      "ru": "Для визы нужны справка о зачислении и подтверждение оплаты обучения.",
+      "evidence": "Proof of payment of tuition fees",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для визы нужно подтвердить, что хватит денег на жизнь.",
+      "evidence": "Proof of financial means for living expenses",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Медицинская страховка на всё время учёбы обязательна и нужна для визы.",
+      "evidence": "Foreign nationals are obliged to have health insurance for illness or accidents during their studies in Poland",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Гранты для иностранцев — на сайте NAWA; на утверждённых страницах их условий нет.",
+      "evidence": "Grants and their conditions are available at: https://nawa.gov.pl/en/students/foreign-students",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.studyinpoland.pl/en/how-to-apply/124-requirements-for-foreign-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": null,
+    "note": {
+      "ru": "Вузы Польши из каталога сайта (больше 400 программ на английском); подаёшь в каждый отдельно"
+    }
+  },
+  "source": {
+    "url": "https://www.studyinpoland.pl/en/how-to-apply",
+    "lastVerified": "2026-09-25",
+    "humanChecked": false,
+    "pages": [
+      {
+        "url": "https://www.studyinpoland.pl/en/how-to-apply",
+        "contentHash": "sha256:a2ec4231f86a92a5a0ab78a55fcbaffdcdd1031be9c232801d1b3dd9d07490f6"
+      },
+      {
+        "url": "https://www.studyinpoland.pl/en/how-to-apply/124-requirements-for-foreign-applicants",
+        "contentHash": "sha256:f3033ec30dd8e8ea1c13963c1ccc46750c6dda66590427dc3b8cf6780006d5a2"
+      }
+    ],
+    "approvedBy": "assistant"
+  }
+}

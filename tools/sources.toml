@@ -1207,3 +1207,46 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-19"
+
+# Одобрены человеком 2026-09-25 (список docs/PROPOSED-SOURCES.md). Страницы
+# внутри домена выбирал ассистент по меню и ссылкам самого сайта.
+#
+# Порядок приёма иностранцев в Италию, страница на итальянском.
+# Сами процедуры (Circolare) лежат на другом домене (cineca.it) и в запись не
+# входят, пока человек не одобрит и его.
+[italy-universitaly]
+name = "Universitaly: предзапись иностранцев в вузы Италии"
+urls = ["https://www.universitaly.it/it/studenti-stranieri"]
+approvedBy = "human"
+approvedAt = "2026-09-25"
+
+[berea-college]
+name = "Berea College (США): полное покрытие для иностранцев"
+urls = [
+  "https://www.berea.edu/admissions/admission-information/apply/checklist-items/international-faqs",
+  "https://www.berea.edu/admissions/admission-information/deadlines-and-important-dates",
+  "https://www.berea.edu/admissions/admission-information/am-i-eligible",
+]
+approvedBy = "human"
+approvedAt = "2026-09-25"
+
+# В списке из 75 стран «Etudes en France» нет ни одной страны Центральной Азии
+# (проверено по странице FAQ ниже), поэтому берётся страница для тех, кого
+# список не касается: процедура DAP.
+[campus-france]
+name = "Поступление в бакалавриат во Франции (Campus France, DAP)"
+urls = [
+  "https://www.campusfrance.org/en/application-non-EU-student-living-outside-EU-without-etudes-en-france-procedure",
+  "https://www.campusfrance.org/en/faq/which-countries-are-affected-by-the-etudes-en-france-studying-in-france-procedure",
+]
+approvedBy = "human"
+approvedAt = "2026-09-25"
+
+[poland-study]
+name = "Поступление в вузы Польши (Study in Poland)"
+urls = [
+  "https://www.studyinpoland.pl/en/how-to-apply",
+  "https://www.studyinpoland.pl/en/how-to-apply/124-requirements-for-foreign-applicants",
+]
+approvedBy = "human"
+approvedAt = "2026-09-25"

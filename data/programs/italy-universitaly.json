@@ -1,0 +1,116 @@
+{
+  "id": "italy-universitaly",
+  "status": "published",
+  "kind": "national",
+  "name": {
+    "ru": "Поступление в вузы Италии: предзапись через Universitaly",
+    "orig": "Universitaly: procedure per l'ingresso e l'immatricolazione degli studenti internazionali"
+  },
+  "hostCountry": "IT",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Это порядок предзаписи для визы, а не стипендия: стоимость учёбы и помощь на странице не названы"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "immatricolazione e riconoscimento dei titoli degli studenti internazionali"
+    },
+    "schoolCountry": null,
+    "schoolYears": {
+      "definedBy": "institution",
+      "evidence": "è competenza esclusiva delle Istituzioni di formazione superiore"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-25",
+      "note": "года выпуска страница не называет"
+    },
+    "age": null,
+    "gpa": null,
+    "language": null
+  },
+  "textConditions": [
+    {
+      "ru": "Предзапись для получения визы подают только через портал Universitaly — единственный бесплатный официальный портал министерства.",
+      "evidence": "dovrà essere presentata esclusivamente per il tramite del portale UNIVERSITALY",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Оценку иностранного аттестата для поступления делает сам вуз, а не консульство: бумаги консульства для него не обязательны и его не связывают.",
+      "evidence": "è competenza esclusiva delle Istituzioni di formazione superiore",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Подтверждённая предзапись не гарантирует ни записи в консульство, ни визы: решение о визе за консульством.",
+      "evidence": "non costituiscono in alcun modo garanzia di ottenere un appuntamento",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Консульство оценивает риск, что человек едет не учиться: особенно важны достаток семьи, качество прежней учёбы и логика выбранной программы.",
+      "evidence": "Tra gli elementi in parola assumono particolare rilevanza la condizione socio-economica dello studente e del suo nucleo familiare",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Визу на бакалавриат и магистратуру подают в консульство не позже 30 ноября 2026 года для 2026/27 учебного года.",
+      "evidence": "entro e non oltre il 30 novembre 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для 2027/28 учебного года крайний срок подачи на визу — 31 октября 2027 года.",
+      "evidence": "il termine ultimo per la presentazione delle domande di visto è fissato al 31 ottobre 2027",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Вузы могут назвать даты раньше: конкретный срок по каждой программе смотри на сайте самого вуза.",
+      "evidence": "Tali date potranno essere anche antecedenti a quella del 30 novembre 2026",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.universitaly.it/it/studenti-stranieri",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": null,
+    "note": {
+      "ru": "Итальянские вузы: выбираешь программы в предзаписи на Universitaly; сами правила приёма и сроки задаёт каждый вуз"
+    }
+  },
+  "source": {
+    "url": "https://www.universitaly.it/it/studenti-stranieri",
+    "lastVerified": "2026-09-25",
+    "humanChecked": false,
+    "pages": [
+      {
+        "url": "https://www.universitaly.it/it/studenti-stranieri",
+        "contentHash": "sha256:ef796cf3674a588c6524e5901af39589e87dbd2b38f2e7536da937f7d01e22d3"
+      }
+    ],
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolCountry": "sha256:3553bae105664a29ac5eccf3fbfae6cd07aa2a65ae031b2f69dc3d27fc1b883c",
+    "age": "sha256:3553bae105664a29ac5eccf3fbfae6cd07aa2a65ae031b2f69dc3d27fc1b883c",
+    "gpa": "sha256:3553bae105664a29ac5eccf3fbfae6cd07aa2a65ae031b2f69dc3d27fc1b883c",
+    "language": "sha256:3553bae105664a29ac5eccf3fbfae6cd07aa2a65ae031b2f69dc3d27fc1b883c"
+  }
+}
