@@ -12,6 +12,7 @@ import { safeHttpUrl } from './lib/url.js';
 import { refreshFilter, countryName } from './filter.js';
 import { kindLabel } from './lib/kinds.js';
 import { EXPLAIN_URL } from './config.js';
+import { planPrograms, planText, buildIcs } from './plan.js';
 import { askExplain, cachedAnswer, parseAnswer, ERROR_TEXT } from './explain.js';
 
 const ORDER = { yes: 0, likely: 1, check: 2, no: 3 };
@@ -120,6 +121,54 @@ function agendaGroups(groups, today, onOpenProgram) {
   return frag;
 }
 
+// «Мой план»: отмеченные программы по срокам и два действия, ради которых
+// план нужен — календарь с напоминаниями и текст для родителей или учителя.
+function planBlock(planned, today, details, onOpenProgram) {
+  const box = el('div', 'agenda');
+  box.append(el('h2', 'agenda-title', `Мой план (${planned.length})`));
+  const rows = [...planned]
+    .sort((a, b) => (a.deadline?.closes ?? '9999') < (b.deadline?.closes ?? '9999') ? -1 : 1)
+    .map((program) => ({ program }));
+  box.append(agendaGroups([{ title: 'По срокам', rows }], today, onOpenProgram));
+
+  const urls = Object.fromEntries(Object.entries(details.programs ?? {}).map(([id, d]) => [id, d.applyUrl]));
+  const status = el('p', 'plan-status');
+  status.setAttribute('role', 'status');
+
+  const calendar = el('button', 'button button-quiet', 'Сроки в календарь');
+  calendar.type = 'button';
+  calendar.addEventListener('click', () => {
+    const stamp = new Date().toISOString().replace(/[-:]|\.\d{3}/g, '');
+    const { text, events } = buildIcs(planned, today, stamp, urls);
+    if (!events) {
+      status.textContent = 'В плане нет программ с открытым сроком: добавлять в календарь нечего.';
+      return;
+    }
+    const link = el('a');
+    link.href = URL.createObjectURL(new Blob([text], { type: 'text/calendar;charset=utf-8' }));
+    link.download = 'plan-postupleniya.ics';
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+    status.textContent = `Файл скачан: ${events} ${plural(events, 'срок', 'срока', 'сроков')} с напоминанием за неделю и за день. Открой его — и они окажутся в календаре телефона.`;
+  });
+
+  const copy = el('button', 'button button-quiet', 'Скопировать список');
+  copy.type = 'button';
+  copy.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(planText(planned, today, urls));
+      status.textContent = 'Скопировано. Можно вставить в мессенджер.';
+    } catch {
+      status.textContent = 'Браузер не дал скопировать. Открой карточки программ по одной.';
+    }
+  });
+
+  const actions = el('div', 'plan-actions');
+  actions.append(calendar, copy);
+  box.append(actions, status);
+  return box;
+}
+
 function agendaBlock(groups, today, onOpenProgram) {
   const box = el('div', 'agenda');
   box.append(el('h2', 'agenda-title', 'Ближайшие сроки'));
@@ -148,6 +197,7 @@ function agendaBlock(groups, today, onOpenProgram) {
 
 export function renderResults(nodes, profile, programs, today, details) {
   const { summaryNode, agendaNode, resultsNode, catalogButton, onOpenProgram } = nodes;
+  const plan = nodes.plan;
   const openCards = rememberOpen(resultsNode, 'details.card');
   const openMore = rememberOpen(resultsNode, 'details.more');
   summaryNode.textContent = '';
@@ -182,6 +232,9 @@ export function renderResults(nodes, profile, programs, today, details) {
     deadline: deadlineState(program.deadline, today),
   }));
 
+  const planned = planPrograms(programs, plan.ids);
+  if (planned.length) agendaNode.append(planBlock(planned, today, details, onOpenProgram));
+
   const soon = agenda(rows, today);
   if (soon.length) agendaNode.append(agendaBlock(soon, today, onOpenProgram));
 
@@ -197,7 +250,8 @@ export function renderResults(nodes, profile, programs, today, details) {
       const kindLine = [kindLabel(row.program.kind), row.program.hostCountry && countryName(row.program.hostCountry)]
         .filter(Boolean)
         .join(' · ');
-      const node = card(model, details, openCards, openMore, kindLine);
+      const node = card(model, details, openCards, openMore, kindLine, plan);
+      node.dataset.plan = plan.ids.includes(model.id) ? '1' : '0';
       // По этим полям фильтр каталога решает, показать карточку или спрятать.
       node.dataset.title = model.title;
       node.dataset.orig = row.program.name?.orig ?? '';
@@ -292,7 +346,7 @@ function skeleton(label) {
   return box;
 }
 
-function card(model, details, openCards, openMore, kindLine) {
+function card(model, details, openCards, openMore, kindLine, plan) {
   const box = el('details', `card ${model.bucket}${model.closed ? ' closed' : ''}`);
   box.dataset.id = model.id;
   box.open = openCards.has(model.id);
@@ -321,6 +375,15 @@ function card(model, details, openCards, openMore, kindLine) {
     link.rel = 'noopener';
     body.append(link);
   }
+
+  // Отметить программу, чтобы вернуться к ней: из отмеченных собирается
+  // календарь с напоминаниями (см. planBlock).
+  const inPlan = plan.ids.includes(model.id);
+  const mark = el('button', 'button button-quiet plan-toggle', inPlan ? '✓ В моём плане' : '＋ В мой план');
+  mark.type = 'button';
+  mark.setAttribute('aria-pressed', String(inPlan));
+  mark.addEventListener('click', () => plan.toggle(model.id));
+  body.append(mark);
 
   if (model.reasons.length) {
     body.append(el('h4', 'card-section-title', 'Почему так'));

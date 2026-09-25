@@ -55,6 +55,17 @@ export function examLadder(profile, programs, today) {
   return { test, steps: steps.slice(0, 3) };
 }
 
+// Сколько программ откроет сам факт сдачи SAT или ACT. Считается только то,
+// что откроется наверняка: у программ с порогом отметка без балла не
+// засчитывается (см. checkExam), и они сюда не попадают.
+export function examGain(profile, programs, today) {
+  const have = new Set((profile.exams ?? []).map((x) => x.test));
+  if (have.has('SAT') || have.has('ACT')) return 0;
+  const before = readyIds(profile, programs, today);
+  const after = readyIds({ ...profile, exams: [...(profile.exams ?? []), { test: 'SAT', score: null }] }, programs, today);
+  return [...after].filter((id) => !before.has(id)).length;
+}
+
 function topField(rows, match) {
   const counts = new Map();
   for (const { verdict } of rows) {
@@ -109,6 +120,11 @@ export function summaryLines(profile, programs, today) {
     let line = `Наберёшь ${testName(ladder.test)} ${first.score} — будешь подходить ещё к ${first.gained} ${programsTo(first.gained)}`;
     for (const step of rest) line += `, ${step.score} — ещё к ${step.gained}`;
     lines.push(`${line}.`);
+  }
+
+  const gain = examGain(profile, open, today);
+  if (gain > 0) {
+    lines.push(`Сдашь SAT или ACT — станет доступно ещё ${gain} ${plural(gain, 'программа', 'программы', 'программ')}: без этого экзамена они не принимают.`);
   }
 
   const missing = topField(rows, (r) => r.status === 'unknown' && r.code?.endsWith('.no-value') && FILL[r.field]);

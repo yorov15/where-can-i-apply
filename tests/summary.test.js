@@ -104,3 +104,23 @@ test('без таких программ строки нет', () => {
   const lines = summaryLines(me, [program('green')], today);
   assert.ok(!lines.some((l) => /похоже, можно/.test(l)), lines.join(' | '));
 });
+
+const sat = { anyOf: [{ test: 'SAT', min: null }, { test: 'ACT', min: null }], evidence: 'x' };
+
+test('сводка: сдача SAT или ACT открывает программы, которые без него не принимают', () => {
+  const programs = [program('a', { exam: sat }), program('b', { exam: sat }), program('c')];
+  const lines = summaryLines(me, programs, today);
+  assert.ok(lines.includes('Сдашь SAT или ACT — станет доступно ещё 2 программы: без этого экзамена они не принимают.'), lines.join('\n'));
+});
+
+test('сводка: экзамен уже есть или его не требуют — строки нет', () => {
+  const programs = [program('a', { exam: sat }), program('c')];
+  const withSat = { ...me, exams: [{ test: 'SAT', score: 1400 }] };
+  assert.ok(!summaryLines(withSat, programs, today).some((l) => l.includes('SAT или ACT')));
+  assert.ok(!summaryLines(me, [program('c')], today).some((l) => l.includes('SAT или ACT')));
+});
+
+test('сводка: программа с порогом SAT в выигрыш не идёт — отметка без балла её не открывает', () => {
+  const hard = { anyOf: [{ test: 'SAT', min: 1400 }], evidence: 'x' };
+  assert.ok(!summaryLines(me, [program('a', { exam: hard })], today).some((l) => l.includes('SAT или ACT')));
+});
