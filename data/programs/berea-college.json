@@ -1,0 +1,175 @@
+{
+  "id": "berea-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Berea College — колледж в США, где студентам не платят за обучение",
+    "orig": "Berea College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Иностранцам принятым закрывают обучение, жильё, питание и сборы полностью. Но нужен взнос 2 200 долларов (при нехватке денег есть дополнительная помощь), а на личные расходы копят по программе «работа при колледже»"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Berea College has a long history of welcoming all peoples of the earth."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-25",
+      "note": "страну школы страницы не ограничивают: нужен аттестат, дающий право поступать в вуз в своей стране"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-25",
+      "note": "числа лет школы страницы не называют: сказано лишь, что нужно выполнить требования для поступления в вуз своей страны"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-25",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-25",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "present outstanding secondary or leaving exam results"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Applicants must also present scores from one of the following approved standardized tests: TOEFL, IELTS, SAT, ACT or Duolingo."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Берут только тех, кому нужны деньги: колледж называет себя единственным в США, где учатся исключительно студенты с высокой финансовой нуждой и сильными способностями к учёбе.",
+      "evidence": "the only college in America that exclusively serves students with high financial need and strong academic promise",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Иностранцам, принятым в колледж, закрывают 100% обучения, жилья, питания и сборов.",
+      "evidence": "All admitted international students receive financial aid and scholarships that cover 100% of tuition, housing, food, and fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Принятый платит взнос 2 200 долларов США, чтобы подтвердить место.",
+      "evidence": "Accepted international students are also expected to pay a $2,200 (US) deposit to confirm their enrollment.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Каждый студент обязан работать не меньше десяти часов в неделю.",
+      "evidence": "Each student is required to work at least ten hours per week.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Все обязаны прислать балл одного из экзаменов: TOEFL, IELTS, SAT, ACT или Duolingo. Исключений нет.",
+      "evidence": "All applicants must submit scores from either the TOEFL, IELTS, SAT, ACT, or Duolingo. There are no exceptions to this requirement.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Минимальные баллы: IELTS 6 в целом и не ниже 5 по каждой части; TOEFL iBT 68 (по прежней шкале 0–120); Duolingo 95; SAT 980; ACT 19. Для TOEFL по новой шкале 1–6 порога на странице нет.",
+      "evidence": "TOEFL: 520 (paper-based); 190 (computer-based); 68 (internet-based) IELTS: 6 overall, 5 in each area ACT: 19 Composite SAT: 980 Combined Score Duolingo: 95",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Результаты экзамена старше двух лет почти никогда не принимают.",
+      "evidence": "Berea will almost never consider scores from a test taken more than two years ago.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужен аттестат, дающий право поступать в вуз в твоей стране, и выдающиеся результаты выпускных экзаменов. Порога среднего балла в цифрах нет.",
+      "evidence": "Applicants must meet university entrance requirements in their own country and present outstanding secondary or leaving exam results.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Тех, у кого уже есть степень бакалавра, не берут.",
+      "evidence": "we are unable to admit students who have previously earned a",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Новых иностранных студентов принимают только на осенний семестр.",
+      "evidence": "New international students may enroll only in the Fall Term of each year.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Все части заявки надо подать до 30 ноября.",
+      "evidence": "Applicants wishing to be considered must submit all application components by November 30.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Мест мало: колледж принимает меньше 40 новых иностранных студентов в год.",
+      "evidence": "can enroll less than 40 new international students each year",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Для семьи студента колледж жильё и деньги не предоставляет.",
+      "evidence": "Berea College is not prepared to provide accommodations or financial support for families.",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-11-30",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.berea.edu/admissions/admission-information/apply/checklist-items/international-faqs",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один колледж: Berea College, штат Кентукки"
+    }
+  },
+  "source": {
+    "url": "https://www.berea.edu/admissions/admission-information/apply/checklist-items/international-faqs",
+    "lastVerified": "2026-09-25",
+    "humanChecked": false,
+    "pages": [
+      {
+        "url": "https://www.berea.edu/admissions/admission-information/apply/checklist-items/international-faqs",
+        "contentHash": "sha256:39e594c21c13f52841d42e3823f36018b3fe75d5067ab66f9451ffd19c254951"
+      },
+      {
+        "url": "https://www.berea.edu/admissions/admission-information/deadlines-and-important-dates",
+        "contentHash": "sha256:926000f65b0209862333bb98866128f21db05bc7d0857f2d2ccc2a5db00b0977"
+      },
+      {
+        "url": "https://www.berea.edu/admissions/admission-information/am-i-eligible",
+        "contentHash": "sha256:9c1ee3b360fa065f64a704c6ba6abc340168e276d6628d5e7fe026ed36ea850b"
+      }
+    ],
+    "approvedBy": "assistant"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "id": "campus-france",
+  "status": "published",
+  "kind": "national",
+  "name": {
+    "ru": "Поступление в бакалавриат во Франции (процедура DAP, Campus France)",
+    "orig": "Campus France: applying to a Licence (Bachelor's) in France without the Etudes en France procedure"
+  },
+  "hostCountry": "FR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Это порядок подачи, а не стипендия: стоимость учёбы и помощь на этих страницах не названы"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "If you are not European and you do not reside in one of the countries affected by the"
+    },
+    "schoolCountry": null,
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-25",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": null,
+    "gpa": null,
+    "language": null
+  },
+  "textConditions": [
+    {
+      "ru": "Не европейцам, живущим вне 75 стран из списка «Etudes en France», для первого курса бакалавриата нужна предварительная заявка на допуск (DAP).",
+      "evidence": "If you are not European and you do not reside in one of the countries affected by the",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "В списке из 75 стран «Etudes en France» нет Таджикистана, Узбекистана, Казахстана, Кыргызстана и Туркменистана.",
+      "evidence": "There are 75 countries affected by the",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Заявку подают в отдел сотрудничества и культурных связей посольства Франции в стране проживания.",
+      "evidence": "Applications must be sent to the department of cooperation and cultural action at the French Embassy in your country of residence.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Одновременно заявку рассматривают три университета, которые ты выбрал.",
+      "evidence": "Your application will be examined at the same time by the 3 universities you have requested.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки на 2026/27 год: приём заявок закрылся 15 декабря 2025. Даты на 2027/28 страница ещё не называет, поэтому срок в карточке — по прошлому году и помечен неподтверждённым.",
+      "evidence": "Registrations close on 15 December 2025",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Закончить процедуру советуют как можно раньше, лучше в ноябре перед учебным годом.",
+      "evidence": "Ideally, in November preceding the academic year in which you wish to study in France.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "В прошлом цикле университеты отвечали до 30 апреля, а студент должен был ответить до 31 мая — молчание считается отказом.",
+      "evidence": "if you do not answer before 31 May",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "После принятия получаешь документ о зачислении и идёшь в консульство Франции за визой.",
+      "evidence": "you will be able to undertake the procedures with the French Consulate in your country of residence to obtain a visa",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-10-01",
+    "closes": "2026-12-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.campusfrance.org/en/application-non-EU-student-living-outside-EU-without-etudes-en-france-procedure",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": null,
+    "note": {
+      "ru": "Французские вузы; в заявке выбираешь три университета"
+    }
+  },
+  "source": {
+    "url": "https://www.campusfrance.org/en/application-non-EU-student-living-outside-EU-without-etudes-en-france-procedure",
+    "lastVerified": "2026-09-25",
+    "humanChecked": false,
+    "pages": [
+      {
+        "url": "https://www.campusfrance.org/en/application-non-EU-student-living-outside-EU-without-etudes-en-france-procedure",
+        "contentHash": "sha256:e551dd97da65cdf1f0fe6841054a9e4d945a602e34667fc173993830ee6fa9d7"
+      },
+      {
+        "url": "https://www.campusfrance.org/en/faq/which-countries-are-affected-by-the-etudes-en-france-studying-in-france-procedure",
+        "contentHash": "sha256:d13b4f9e32c89f5a4663287c4a63a6f5c1496d6491ca990714b29fa8d345c213"
+      }
+    ],
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolCountry": "sha256:e8d26218d1dea8e905fa3676f1648feccd377d72a09fe6f5f0790e3ca09a4175",
+    "schoolYears": "sha256:e8d26218d1dea8e905fa3676f1648feccd377d72a09fe6f5f0790e3ca09a4175",
+    "age": "sha256:e8d26218d1dea8e905fa3676f1648feccd377d72a09fe6f5f0790e3ca09a4175",
+    "gpa": "sha256:e8d26218d1dea8e905fa3676f1648feccd377d72a09fe6f5f0790e3ca09a4175",
+    "language": "sha256:e8d26218d1dea8e905fa3676f1648feccd377d72a09fe6f5f0790e3ca09a4175"
+  }
+}
