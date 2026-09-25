@@ -30,7 +30,7 @@
     function paint() {
       var next = current() === 'dark' ? 'light' : 'dark';
       button.setAttribute('data-to', next);
-      button.textContent = next === 'dark' ? 'Тёмная тема' : 'Светлая тема';
+      button.textContent = next === 'dark' ? 'Тёмная' : 'Светлая';
       button.setAttribute('aria-label', next === 'dark' ? 'Включить тёмную тему' : 'Включить светлую тему');
     }
 
