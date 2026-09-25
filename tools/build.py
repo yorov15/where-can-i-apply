@@ -11,6 +11,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from tools.changelog import feed_xml
 from tools.schema import FIELDS, KINDS, SIGNERS, approved_by
 
 # Предел ставится на то, за что человек платит, — на сжатый размер.
@@ -273,6 +274,12 @@ def main() -> int:
 
     (root / "data" / "index.json").write_text(text, encoding="utf-8")
     (root / "data" / "details.json").write_text(extra, encoding="utf-8")
+
+    # Лента изменений собирается из журнала, который пишет review.
+    log_path = root / "data" / "changelog.json"
+    log = json.loads(log_path.read_text(encoding="utf-8")) if log_path.exists() else []
+    names = {p["id"]: (p.get("name") or {}).get("ru") or p["id"] for p in programs}
+    (root / "feed.xml").write_text(feed_xml(log, names), encoding="utf-8")
     print(
         f"Записано программ: {len(index['programs'])}; "
         f"индекс {wire} байт по проводу, детали {extra_wire}"

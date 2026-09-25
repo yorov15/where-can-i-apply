@@ -12,6 +12,7 @@ from datetime import date
 from pathlib import Path
 
 from tools.fetch import latest_snapshot
+from tools.changelog import record, summarize
 from tools.schema import FIELDS, SIGNERS, absence_rule
 from tools.snapshot import source_fingerprint
 from tools.validate import validate_program
@@ -520,6 +521,10 @@ def main(argv=None) -> int:
 
         target = programs_dir / f"{program_id}.json"
         current = json.loads(target.read_text(encoding="utf-8")) if target.exists() else None
+        # Журнал сравнивает с тем, что лежало на диске и что видели
+        # читатели, а не с записью, у которой --resign или --drop уже
+        # что-то стёрли: иначе снятое правило в ленту не попало бы.
+        on_disk = current
         if ask_again and current is not None:
             current = forget_declined(current, FIELDS)
         if resign and current is not None:
@@ -636,6 +641,14 @@ def main(argv=None) -> int:
             json.dumps(approved, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
         print(f"{program_id}: записано в {target}")
+        # Что изменилось, уходит в журнал, из которого собирается лента
+        # feed.xml. Дата проверки и повторная подпись сюда не попадают.
+        record(
+            target.parent.parent / "changelog.json",
+            date.today().isoformat(),
+            program_id,
+            summarize(on_disk, approved),
+        )
     return 0
 
 

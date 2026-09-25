@@ -28,3 +28,15 @@ test('страница 404 не ссылается на путь старого 
 test('главная объявляет плашку «нет сети», скрытую по умолчанию', () => {
   assert.match(read('index.html'), /<p id="offline" class="summary-note" role="status" hidden>/);
 });
+
+test('лента изменений объявлена на главной и в FAQ, файл лежит и собран из журнала', () => {
+  for (const page of ['index.html', 'faq.html']) {
+    assert.match(read(page), /<link rel="alternate" type="application\/atom\+xml"[^>]*href="\/feed\.xml">/, page);
+  }
+  const feed = read('feed.xml');
+  const log = JSON.parse(read('data/changelog.json'));
+  assert.match(feed, /^<\?xml version="1\.0" encoding="UTF-8"\?>\r?\n<feed xmlns="http:\/\/www\.w3\.org\/2005\/Atom"/);
+  const shown = (feed.match(/<entry>/g) ?? []).length;
+  assert.equal(shown, Math.min(log.length, 40));
+  assert.ok(log.every((e) => e.date && e.id && e.changes.length), 'запись журнала без даты, id или изменений');
+});
