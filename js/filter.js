@@ -26,7 +26,7 @@ export const countryName = (code) => COUNTRY_RU[code] ?? code;
 export const norm = (text) => text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().trim();
 
 export function matchesFilter(item, { query, bucket, country, kind }) {
-  if (bucket !== 'all' && item.bucket !== bucket) return false;
+  if (bucket === 'plan' ? !item.plan : bucket !== 'all' && item.bucket !== bucket) return false;
   if (country && item.country !== country) return false;
   if (kind && item.kind !== kind) return false;
   const words = norm(query).split(/\s+/).filter(Boolean);
@@ -37,8 +37,11 @@ export function matchesFilter(item, { query, bucket, country, kind }) {
 }
 
 export function bucketCounts(items) {
-  const counts = { all: items.length, yes: 0, likely: 0, check: 0, no: 0 };
-  for (const item of items) counts[item.bucket] += 1;
+  const counts = { all: items.length, plan: 0, yes: 0, likely: 0, check: 0, no: 0 };
+  for (const item of items) {
+    counts[item.bucket] += 1;
+    if (item.plan) counts.plan += 1;
+  }
   return counts;
 }
 
@@ -53,6 +56,7 @@ const itemOf = (card) => ({
   country: card.dataset.country ?? '',
   bucket: card.dataset.bucket ?? '',
   kind: card.dataset.kind ?? '',
+  plan: card.dataset.plan === '1',
 });
 
 function apply() {

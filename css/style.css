@@ -340,6 +340,10 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
    смотреть, а читает уже в каталоге. Дата слева, остаток справа. */
 .agenda { margin: 0 0 var(--s-5); }
 .agenda-title { font-size: 1.25rem; font-weight: 800; letter-spacing: -.025em; margin: 0 0 var(--s-1); }
+.plan-actions { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-3); }
+.plan-status { color: var(--muted); font-size: .9375rem; margin: var(--s-2) 0 0; }
+.plan-status:empty { display: none; }
+.plan-toggle { margin-left: var(--s-2); }
 .agenda-horizon { font-size: .875rem; font-weight: 600; color: var(--muted); margin: var(--s-4) 0 var(--s-2); }
 .agenda-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
 .agenda-list li + li { border-top: 1px solid var(--line); }

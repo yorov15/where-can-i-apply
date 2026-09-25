@@ -95,7 +95,14 @@ test('у каждой программы в индексе есть допуст
 });
 
 test('счётчики по вердиктам', () => {
-  assert.deepEqual(bucketCounts([harvard, turkey, { ...harvard, bucket: 'yes' }]), { all: 3, yes: 2, likely: 0, check: 1, no: 0 });
+  assert.deepEqual(bucketCounts([harvard, turkey, { ...harvard, bucket: 'yes' }]), { all: 3, plan: 0, yes: 2, likely: 0, check: 1, no: 0 });
+});
+
+test('«В плане» считает отмеченные программы поверх вердиктов и фильтрует по ним', () => {
+  const items = [{ ...harvard, plan: true }, turkey];
+  assert.equal(bucketCounts(items).plan, 1);
+  assert.equal(matchesFilter(items[0], { query: '', bucket: 'plan', country: '', kind: '' }), true);
+  assert.equal(matchesFilter(items[1], { query: '', bucket: 'plan', country: '', kind: '' }), false);
 });
 
 test('неизвестный код страны показывается как есть, а не пропадает', () => {

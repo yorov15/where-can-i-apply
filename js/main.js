@@ -4,6 +4,7 @@ import { setupWizard } from './steps.js';
 import { setupCatalogFilter } from './filter.js';
 import { loadIndex, loadDetails } from './data.js';
 import { renderResults } from './render.js';
+import { loadPlan, savePlan, togglePlan, PLAN_KEY } from './plan.js';
 import { EXPLAIN_URL } from './config.js';
 
 const form = document.getElementById('profile');
@@ -46,7 +47,18 @@ const catalogFilter = setupCatalogFilter({
   resultsNode: document.getElementById('results'),
 });
 
+// План живёт отдельно от анкеты: анкету можно поправить, не потеряв отмеченное.
+const plan = {
+  ids: loadPlan(localStorage),
+  toggle(id) {
+    plan.ids = togglePlan(plan.ids, id);
+    savePlan(plan.ids, localStorage);
+    refresh();
+  },
+};
+
 const nodes = {
+  plan,
   summaryNode: document.getElementById('summary'),
   agendaNode: document.getElementById('agenda'),
   resultsNode: document.getElementById('results'),
@@ -150,7 +162,11 @@ document.getElementById('clear-profile').addEventListener('click', () => {
   const empty = emptyProfile();
   writeForm(form, empty);
   refresh(empty);
-  try { localStorage.removeItem(STORAGE_KEY); } catch { /* приватный режим: стирать нечего */ }
+  plan.ids = [];
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem(PLAN_KEY);
+  } catch { /* приватный режим: стирать нечего */ }
   box.open = true;
   finished = false;
   location.hash = '';
