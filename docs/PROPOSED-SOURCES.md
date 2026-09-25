@@ -33,3 +33,44 @@
 - **saudi-study** — домена `studyinsaudi.moe.gov.sa` не существует. Нужен реальный официальный адрес.
 - **italy-universitaly** — домен `universitaly-private.cineca.it` одобрен Муродом 2026-09-25; добавлены Circolare 2026/27, Allegato 1 и FAQ. Правило schoolYears: минимум 12 лет, для 11-летней школы — условия-обходы (год экзаменов в вузе, годичный диплом, foundation). Готово.
 - **campus-france** — Таджикистан и Центральная Азия в списке стран процедуры «Études en France» отсутствуют (75 стран, проверено по FAQ); запись честно об этом.
+
+## Кандидаты из PDF Мурода (2026-09-26): ждут «да / нет» по доменам
+
+Источник идей: `Financial Aid.pdf` (≈60 колледжей США с «полной помощью» иностранцам) и таблица
+«Financial Aid for International Noncitizens, Class of 2026» (данные 2023 года). Сами PDF **не источник**:
+без автора, без ссылок, цифры 2017–2023. Они только подсказывают, где искать. Каждое правило
+всё равно берётся с официальной страницы дословно.
+
+Из 60 колледжей в каталоге уже есть 13 (Amherst, Berea, Bowdoin, Brown, Columbia, Cornell, Duke, NYUAD,
+Princeton, Stanford, Penn, Vassar, Williams) плюс Harvard, Yale, MIT (в списке PDF по имени не совпали);
+Jacobs = наш `constructor-university`. Не добавляем: Deep Springs (закрытая мужская программа),
+Sarah Lawrence/Kalamazoo/Oberlin (в таблице 2023 нет данных по политике для иностранцев).
+
+Домены проверены только на «открывается» (HTTP 200 с `www.`). `colby.edu` и `jhu.edu` отдают 403 боту:
+понадобится ручной снимок страниц.
+
+**Первая очередь (10):** в таблице политика «Need-Based» или «Need & Merit» и высокая средняя помощь
+иностранцам; в списке PDF «полная помощь».
+
+| id | Колледж | Домен |
+|---|---|---|
+| dartmouth-college | Dartmouth | dartmouth.edu |
+| swarthmore-college | Swarthmore | swarthmore.edu |
+| pomona-college | Pomona | pomona.edu |
+| bryn-mawr-college | Bryn Mawr | brynmawr.edu |
+| middlebury-college | Middlebury | middlebury.edu |
+| kenyon-college | Kenyon | kenyon.edu |
+| carleton-college | Carleton | carleton.edu |
+| vanderbilt-university | Vanderbilt | vanderbilt.edu |
+| rice-university | Rice | rice.edu |
+| wellesley-college | Wellesley | wellesley.edu |
+
+**Вторая очередь (13):** grinnell.edu, macalester.edu, colgate.edu, davidson.edu, denison.edu, bard.edu,
+tufts.edu, northwestern.edu, barnard.edu, mtholyoke.edu, smith.edu, `colby.edu` (403), `jhu.edu` (403).
+
+Что не пригодилось и почему: «ВУЗы Австрии с дедлайнами» и «Лучшие университеты Венгрии» (2023, без
+ссылок; по Венгрии есть `stipendium-hungaricum`); «Университеты Франции в сфере моды» (платные частные
+школы); `scholarships for 2026` (реклама платного ментора, в основном магистратура); `University list`
+(осень 2017).
+
+Ответ достаточно дать так: «первая очередь: да», либо список id, либо «нет».
