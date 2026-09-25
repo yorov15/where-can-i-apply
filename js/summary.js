@@ -67,20 +67,30 @@ function topField(rows, match) {
   return best;
 }
 
+// Главное число ответа: к скольким открытым программам подходишь и какой срок
+// ближайший. Экран показывает его крупно, а первая строка сводки берёт его же,
+// чтобы цифра и фраза не разошлись.
+export function readySummary(profile, programs, today) {
+  const open = programs.filter((p) => deadlineState(p.deadline, today) !== 'closed');
+  const ready = open.filter((program) => evaluate(profile, program, today).status === 'yes');
+  const next = ready
+    .filter((program) => program.deadline?.closes)
+    .sort((a, b) => (a.deadline.closes < b.deadline.closes ? -1 : 1))[0];
+  return {
+    count: ready.length,
+    next: next ? { date: next.deadline.closes, name: next.name?.ru ?? next.id } : null,
+  };
+}
+
 export function summaryLines(profile, programs, today) {
   const open = programs.filter((p) => deadlineState(p.deadline, today) !== 'closed');
   const rows = open.map((program) => ({ program, verdict: evaluate(profile, program, today) }));
   const lines = [];
 
-  const ready = rows.filter((row) => row.verdict.status === 'yes');
-  if (ready.length) {
-    let line = `По условиям подходишь к ${ready.length} ${programsTo(ready.length)}.`;
-    const next = ready
-      .filter((row) => row.program.deadline?.closes)
-      .sort((a, b) => (a.program.deadline.closes < b.program.deadline.closes ? -1 : 1))[0];
-    if (next) {
-      line += ` Ближайший срок — ${formatDate(next.program.deadline.closes)}, ${next.program.name?.ru ?? next.program.id}.`;
-    }
+  const { count, next } = readySummary(profile, programs, today);
+  if (count) {
+    let line = `По условиям подходишь к ${count} ${programsTo(count)}.`;
+    if (next) line += ` Ближайший срок — ${formatDate(next.date)}, ${next.name}.`;
     lines.push(line);
   } else {
     lines.push('Прямо сейчас подать некуда — ниже видно, что поменять.');

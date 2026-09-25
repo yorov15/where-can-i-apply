@@ -3,7 +3,7 @@
 // card-model.js; здесь их только рисуют.
 import { evaluate } from './verdict.js';
 import { deadlineState } from './lib/deadline.js';
-import { summaryLines } from './summary.js';
+import { summaryLines, readySummary } from './summary.js';
 import { cardModel } from './card-model.js';
 import { bucketOf } from './wording.js';
 import { agenda } from './agenda.js';
@@ -157,7 +157,12 @@ export function renderResults(nodes, profile, programs, today, details) {
   // Наверху одна главная строка. Что улучшить и на что обратить внимание —
   // под «Подробнее»: это нужно не каждому и не с первого взгляда.
   const [headline, ...extra] = summaryLines(profile, programs, today);
-  summaryNode.append(el('p', 'summary-line', headline));
+  const ready = readySummary(profile, programs, today);
+  if (ready.count) {
+    summaryNode.append(readyStat(ready));
+  } else {
+    summaryNode.append(el('p', 'summary-line', headline));
+  }
   if (extra.length) {
     const more = el('details', 'summary-more');
     more.append(el('summary', 'summary-more-head', 'Подробнее: что улучшить'));
@@ -252,6 +257,22 @@ function explainBlock(model) {
     }
   });
   return wrap;
+}
+
+// Главный ответ крупно: число программ и ближайший срок. Число то же, что в
+// первой строке сводки (обе берут readySummary), поэтому они не разойдутся.
+function readyStat({ count, next }) {
+  const box = el('div', 'summary-stat');
+  box.append(
+    el('span', 'summary-number', String(count)),
+    el('span', 'summary-label', `${plural(count, 'программа подходит', 'программы подходят', 'программ подходят')} по условиям`),
+  );
+  if (next) {
+    const line = el('p', 'summary-next');
+    line.append('Ближайший срок: ', el('strong', '', formatDate(next.date)), ` · ${next.name}`);
+    box.append(line);
+  }
+  return box;
 }
 
 // Пока подробности едут по сети, вместо пустоты стоит заготовка будущего
