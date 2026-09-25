@@ -172,9 +172,8 @@ h1 { font-size: clamp(1.75rem, 1.35rem + 1.9vw, 2.5rem); line-height: 1.05; marg
 .hero::before { content: ""; position: absolute; right: -5rem; top: -6rem; width: 16rem; height: 16rem; border-radius: 50%; background: radial-gradient(circle, rgb(255 255 255 / .2), transparent 66%); pointer-events: none; }
 .hero::after { content: ""; position: absolute; left: -4rem; bottom: -7rem; width: 14rem; height: 14rem; border-radius: 50%; background: radial-gradient(circle, rgb(255 255 255 / .1), transparent 68%); pointer-events: none; }
 .hero h1, .hero .lead { position: relative; z-index: 1; }
-/* Когда человек уже смотрит ответ или каталог, шапка сжимается до полосы: ответ должен быть на первом экране. */
-body:has(:is(#answer, #catalog):not([hidden])) .hero { margin-bottom: var(--s-4); padding: var(--s-4) var(--s-5); }
-body:has(:is(#answer, #catalog):not([hidden])) .hero h1 { font-size: 1.375rem; line-height: 1.2; }
+/* Ответ и каталог идут без шапки: название уже в верхней полосе, а ответ должен быть на первом экране. h1 остаётся для скринридеров. */
+body:has(:is(#answer, #catalog):not([hidden])) .hero { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); box-shadow: none; }
 .hero h1 { color: var(--on-hero); font-size: clamp(2rem, 1.5rem + 3.2vw, 3.25rem); }
 .hero .lead { margin: 0; color: var(--on-hero); opacity: .88; }
 .hint, small { color: var(--muted); font-size: .875rem; }
@@ -298,11 +297,6 @@ body:has(#catalog:not([hidden])) .profile-box { display: none; }
 .profile-box.wizard .stepper li { height: .5rem; }
 .profile-box.wizard .stepper li.is-current::after { box-shadow: 0 0 .75rem var(--accent); }
 .profile-box.wizard legend { font-size: clamp(1.75rem, 1.4rem + 2vw, 2.25rem); line-height: 1.1; letter-spacing: -.03em; margin-bottom: var(--s-5); }
-.profile-box.wizard legend::before { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; margin-bottom: var(--s-3); font-size: 1.375rem; font-weight: 800; letter-spacing: 0; color: var(--on-accent); background: var(--accent); border-radius: 50%; box-shadow: var(--accent-glow); }
-.profile-box.wizard .step:nth-of-type(1) legend::before { content: "1"; }
-.profile-box.wizard .step:nth-of-type(2) legend::before { content: "2"; }
-.profile-box.wizard .step:nth-of-type(3) legend::before { content: "3"; }
-.profile-box.wizard .step:nth-of-type(4) legend::before { content: "4"; }
 label:not(.row) > select, label:not(.row) > input { min-height: 56px; font-size: 1.0625rem; background-color: var(--surface); transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
 label:not(.row) > select:not(:has(option[value=""]:checked)), label:not(.row) > input:not(:placeholder-shown) { border-color: var(--accent); background-color: var(--accent-soft); }
 input:focus-visible, select:focus-visible { box-shadow: 0 0 0 4px var(--tint); }
