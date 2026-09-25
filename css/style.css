@@ -200,12 +200,6 @@ select + input, input + select { margin-top: var(--s-2); }
 .stepper li::after { content: ""; position: absolute; inset: 0; background: var(--ink); transform: scaleX(0); transform-origin: left; transition: transform var(--dur) var(--ease); }
 .stepper li.is-done::after, .stepper li.is-current::after { transform: scaleX(1); }
 
-/* Временное: старый индикатор, пока разметка не переехала на .stepper. */
-.wizard-progress { display: block; width: 100%; height: .375rem; border: 0; border-radius: var(--r-pill); background: var(--line); overflow: hidden; -webkit-appearance: none; appearance: none; }
-.wizard-progress::-webkit-progress-bar { background: var(--line); }
-.wizard-progress::-webkit-progress-value { background: var(--ink); }
-.wizard-progress::-moz-progress-bar { background: var(--ink); }
-
 .wizard-nav { display: flex; gap: var(--s-3); }
 .wizard-nav .button { flex: 1 1 0; width: auto; }
 .wizard-nav #wizard-back { flex: 0 0 auto; }

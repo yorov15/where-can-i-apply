@@ -39,6 +39,12 @@ export function stepView(step, total) {
   };
 }
 
+// Подпись над индикатором: номер шага и его название, чтобы человек видел
+// не только «где он», но и «о чём этот шаг».
+export function progressWithTitle(view, title) {
+  return `${view.progressText} · ${title}`;
+}
+
 // Мастер включается только пока человек впервые заполняет анкету. Когда он
 // нажал «Показать», анкета становится обычной: все поля разом, как при
 // правке. Так «изменить» не заставляет идти по шагам заново.
@@ -52,9 +58,11 @@ export function setupWizard({ box, form, progress, progressLabel, back, next, fi
   function paint(moveFocus) {
     const view = stepView(step, steps.length);
     steps.forEach((node, i) => node.classList.toggle('is-current', i === step));
-    progress.max = steps.length;
-    progress.value = step + 1;
-    progressLabel.textContent = view.progressText;
+    [...progress.children].forEach((segment, i) => {
+      segment.classList.toggle('is-done', i < step);
+      segment.classList.toggle('is-current', i === step);
+    });
+    progressLabel.textContent = progressWithTitle(view, steps[step].querySelector('legend').textContent);
     back.hidden = !view.showBack;
     next.hidden = !view.showNext;
     finish.hidden = !view.showFinish;
