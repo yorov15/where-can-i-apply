@@ -158,11 +158,29 @@ document.getElementById('clear-profile').addEventListener('click', () => {
   document.getElementById('clear-status').textContent = 'Анкета стёрта с этого устройства.';
 });
 
+// Список программ не приехал: без него ответа нет. Человек видит, что
+// случилось и что делать, а не сырой текст исключения. Блок стоит вне
+// узлов, которые перерисовывает refresh(), поэтому его не сотрёт ввод в анкете.
+function showLoadError() {
+  const box = document.createElement('div');
+  box.className = 'state-error';
+  box.setAttribute('role', 'alert');
+  const text = document.createElement('p');
+  text.textContent = 'Не удалось загрузить список программ. Проверь интернет и попробуй ещё раз.';
+  const retry = document.createElement('button');
+  retry.type = 'button';
+  retry.className = 'button button-small';
+  retry.textContent = 'Попробовать ещё раз';
+  retry.addEventListener('click', () => location.reload());
+  box.append(text, retry);
+  document.querySelector('main').prepend(box);
+}
+
 loadIndex()
   .then((index) => {
     programs = index.programs ?? [];
     fetchDetails();
   })
-  .catch((err) => {
-    nodes.resultsNode.textContent = err.message;
+  .catch(() => {
+    showLoadError();
   });

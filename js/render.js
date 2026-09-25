@@ -237,6 +237,7 @@ function explainBlock(model) {
   );
   button.addEventListener('click', async () => {
     button.disabled = true;
+    button.setAttribute('aria-busy', 'true');
     button.textContent = 'Думаю…';
     status.textContent = '';
     try {
@@ -245,11 +246,22 @@ function explainBlock(model) {
       wrap.append(answerNodes(text, fallback));
     } catch (error) {
       button.disabled = false;
+      button.removeAttribute('aria-busy');
       button.textContent = 'Попробовать ещё раз';
       status.textContent = ERROR_TEXT[error.kind] ?? ERROR_TEXT.model;
     }
   });
   return wrap;
+}
+
+// Пока подробности едут по сети, вместо пустоты стоит заготовка будущего
+// списка. Текст остаётся для экранного диктора: глазами его не видно.
+function skeleton(label) {
+  const box = el('div', 'skeleton-lines');
+  box.setAttribute('role', 'status');
+  box.append(el('span', 'sr-only', label));
+  for (let i = 0; i < 3; i += 1) box.append(el('span', 'skeleton'));
+  return box;
 }
 
 function card(model, details, openCards, openMore, kindLine) {
@@ -312,7 +324,7 @@ function card(model, details, openCards, openMore, kindLine) {
       failed.append(retry);
       body.append(failed);
     } else {
-      body.append(el('p', 'details-state', 'Подробности загружаются…'));
+      body.append(skeleton('Подробности загружаются…'));
     }
   }
 

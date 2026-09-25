@@ -94,6 +94,7 @@ function apply() {
   ui.status.textContent = !active
     ? ''
     : shown === 0 ? 'Ничего не нашлось. Попробуй убрать фильтр.' : `Показано ${shown} из ${cards.length}`;
+  ui.status.dataset.empty = String(active && shown === 0);
 }
 
 export function resetFilter() {
