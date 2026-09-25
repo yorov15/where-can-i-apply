@@ -358,11 +358,16 @@ export function checkExam(profile, rule) {
 
   const options = need.map(({ test, min }) => ({ test, min: min ?? null }));
   const advisory = rule.advisory === true;
+  // Второй путь — «свой экзамен вуза вместо SAT или ACT». Из-за него
+  // ниже порога уже не отказ: экзамен можно не пересдавать, а заменить.
+  // Что за путь, живёт текстовым условием (workaround по полю exam).
+  const alternative = rule.alternative === true;
   if (marked.length) return r('unknown', 'exam.score-missing', { options, advisory, marked });
   if (sawBelow) {
+    if (alternative) return r('unknown', 'exam.below-alt', { options });
     return advisory
       ? r('unknown', 'exam.below-advisory', { options })
       : r('fail', 'exam.below', { options });
   }
-  return r('unknown', 'exam.no-certificate', { options });
+  return r('unknown', 'exam.no-certificate', alternative ? { options, alternative } : { options });
 }

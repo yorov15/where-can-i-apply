@@ -18,7 +18,8 @@ export function joinOr(items) {
 
 const optionList = (options) => joinOr(options.map((o) => `${testName(o.test)} от ${o.min}`));
 // Порога у SAT и ACT часто нет: тогда называем просто экзамен.
-const examOptions = (options) => joinOr(options.map((o) => (o.min == null ? testName(o.test) : `${testName(o.test)} от ${o.min}`)));
+const examItems = (options) => options.map((o) => (o.min == null ? testName(o.test) : `${testName(o.test)} от ${o.min}`));
+const examOptions = (options) => joinOr(examItems(options));
 
 const TITLE = {
   citizenship: 'Гражданство', schoolCountry: 'Страна школы', schoolYears: 'Школа',
@@ -220,9 +221,17 @@ const SPECIAL = {
     short: 'результат SAT или ACT ниже порога',
     detail: `Программе нужен ${examOptions(options)}, твой результат ниже. Экзамен можно пересдать.`,
   }),
-  'exam.no-certificate': ({ options }) => ({
-    short: `сдать ${joinOr(options.map((o) => testName(o.test)))}`,
-    detail: `Программа требует результат экзамена: ${examOptions(options)}. Экзамена в анкете нет — сдать ещё можно.`,
+  'exam.below-alt': ({ options }) => ({
+    short: 'балл ниже порога, есть другой путь',
+    detail: `Программа называет ${examOptions(options)}, твой результат ниже. Пересдавать необязательно: вместо этого экзамена она принимает и свой.`,
+  }),
+  'exam.no-certificate': ({ options, alternative }) => ({
+    short: alternative
+      ? `сдать ${joinOr([...options.map((o) => testName(o.test)), 'экзамен вуза'])}`
+      : `сдать ${joinOr(options.map((o) => testName(o.test)))}`,
+    detail: alternative
+      ? `Программа требует один результат экзамена на выбор: ${joinOr([...examItems(options), 'её собственный вступительный'])}. В анкете экзамена нет — сдать ещё можно.`
+      : `Программа требует результат экзамена: ${examOptions(options)}. Экзамена в анкете нет — сдать ещё можно.`,
   }),
   'language.below-advisory': ({ options }) => ({
     short: 'балл ниже рекомендованного',

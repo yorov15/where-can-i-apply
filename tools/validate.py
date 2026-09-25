@@ -107,6 +107,15 @@ def validate_program(
         problems.extend(_check_condition_tags(number, condition, require_tags))
         problems.extend(_check_fee(number, condition, haystack))
 
+    # Флаг «есть другой путь» без слов, какой именно, — пустая отговорка:
+    # карточка написала бы «или экзамен вуза» и не сказала бы, что за экзамен.
+    exam = (program.get("eligibility") or {}).get("exam") or {}
+    if exam.get("alternative") is True and not any(
+        c.get("kind") == "workaround" and c.get("field") == "exam"
+        for c in program.get("textConditions") or []
+    ):
+        problems.append("exam: alternative без условия kind=workaround по полю exam — не сказано, какой это путь")
+
     problems.extend(_check_deadline(program.get("deadline") or {}))
     return problems
 
@@ -318,6 +327,13 @@ def _check_rule_shape(field: str, rule: dict) -> list[str]:
                 problems.append(f"exam: порог {test} {minimum} вне границ {low}-{high}")
         if rule.get("optional") is True and not (rule.get("anyOf") or []):
             problems.append("exam: optional без anyOf — непонятно, о каких экзаменах речь")
+        if "alternative" in rule and rule["alternative"] is not True:
+            problems.append("exam: alternative знает только значение true")
+        if rule.get("alternative") is True:
+            if not (rule.get("anyOf") or []):
+                problems.append("exam: alternative без anyOf — не с чем сравнивать другой путь")
+            if rule.get("optional") is True:
+                problems.append("exam: alternative вместе с optional — экзамен не может быть и необязательным, и заменяемым")
 
     if field == "language":
         for requirement in rule.get("anyOf") or []:

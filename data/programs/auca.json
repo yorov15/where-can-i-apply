@@ -56,6 +56,20 @@
     "language": {
       "notMeasured": true,
       "evidence": "Official English Test Certificate (only one English test certificate must be submitted)"
+    },
+    "exam": {
+      "alternative": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "AUCA Admission Exam or SAT Reasoning Test (SAT I) - REPORT TO AUCA INSTITUTION CODE 5825 or ACT Test Plus Writing"
     }
   },
   "textConditions": [
@@ -66,10 +80,10 @@
       "kind": "must"
     },
     {
-      "ru": "Нужен и один вступительный экзамен на выбор: собственный экзамен AUCA, SAT или ACT. Результат SAT или ACT отправляют в AUCA по коду вуза.",
+      "ru": "Вместо SAT или ACT подойдёт собственный вступительный экзамен AUCA. Нужен один результат на выбор из трёх; SAT или ACT отправляют в AUCA по коду вуза.",
       "evidence": "Official Admission Exam Results (only one exam certificate must be submitted): AUCA Admission Exam or SAT Reasoning Test (SAT I)",
-      "field": null,
-      "kind": "must"
+      "field": "exam",
+      "kind": "workaround"
     },
     {
       "ru": "Ближайший вступительный экзамен AUCA — 1 ноября 2026, регистрация до 27 октября. Это набор на весенний семестр 2027; даты для набора на осень 2027 на странице пока не объявлены.",

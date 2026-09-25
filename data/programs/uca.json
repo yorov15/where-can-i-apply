@@ -59,6 +59,16 @@
     "language": {
       "notMeasured": true,
       "evidence": "The minimum threshold to be shortlisted is a B1 level for UCA's preparatory programme"
+    },
+    "exam": {
+      "alternative": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        }
+      ],
+      "evidence": "UCA Admissions Test or SAT Scores"
     }
   },
   "textConditions": [
@@ -67,6 +77,12 @@
       "evidence": "UCA's Admissions Test will be conducted at designated testing locations and is comprised of two sections including English and mathematics.",
       "field": "gpa",
       "kind": "must"
+    },
+    {
+      "ru": "SAT здесь — замена собственному вступительному тесту UCA, а не обязательное условие. ACT в списке не назван.",
+      "evidence": "UCA Admissions Test or SAT Scores",
+      "field": "exam",
+      "kind": "workaround"
     },
     {
       "ru": "В Таджикистане тест сдают в Душанбе, Хороге, Худжанде, Кулябе и Бохтаре. Место назначают в письме, и сдавать можно только там.",

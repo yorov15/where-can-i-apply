@@ -650,6 +650,51 @@ class TestConditionTags(unittest.TestCase):
         self.assertTrue(any("нет kind" in p for p in problems), problems)
 
 
+class TestExamAlternative(unittest.TestCase):
+    QUOTE = "AUCA Admission Exam or SAT Reasoning Test"
+
+    def program(self, alternative=True, workaround=True, **extra):
+        program = good_program()
+        program["eligibility"]["exam"] = {
+            "anyOf": [{"test": "SAT", "min": None}, {"test": "ACT", "min": None}],
+            "evidence": self.QUOTE,
+            **({"alternative": alternative} if alternative is not None else {}),
+            **extra,
+        }
+        if workaround:
+            program["textConditions"] = [
+                {"ru": "Вместо SAT или ACT можно сдать вступительный экзамен вуза.", "evidence": self.QUOTE,
+                 "kind": "workaround", "field": "exam"}
+            ]
+        return program
+
+    def problems(self, **kw):
+        return validate_program(self.program(**kw), SNAPSHOT + " " + self.QUOTE)
+
+    def test_valid_alternative_passes(self):
+        self.assertEqual(self.problems(), [])
+
+    def test_alternative_needs_true(self):
+        problems = self.problems(alternative="yes")
+        self.assertTrue(any("alternative знает только" in p for p in problems), problems)
+
+    def test_alternative_needs_workaround_text(self):
+        problems = self.problems(workaround=False)
+        self.assertTrue(any("не сказано, какой это путь" in p for p in problems), problems)
+
+    def test_alternative_and_optional_conflict(self):
+        problems = self.problems(optional=True)
+        self.assertTrue(any("и необязательным, и заменяемым" in p for p in problems), problems)
+
+    def test_workaround_for_another_field_does_not_count(self):
+        program = self.program(workaround=False)
+        program["textConditions"] = [
+            {"ru": "Про язык.", "evidence": self.QUOTE, "kind": "workaround", "field": "language"}
+        ]
+        problems = validate_program(program, SNAPSHOT + " " + self.QUOTE)
+        self.assertTrue(any("не сказано, какой это путь" in p for p in problems), problems)
+
+
 class TestFee(unittest.TestCase):
     QUOTE = "Application fee: USD 20 (or UZS 200,000)"
 
