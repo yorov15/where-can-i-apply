@@ -128,6 +128,9 @@ h1 { font-size: clamp(1.75rem, 1.35rem + 1.9vw, 2.5rem); line-height: 1.05; marg
 .hero::before { content: ""; position: absolute; right: -5rem; top: -6rem; width: 16rem; height: 16rem; border-radius: 50%; background: radial-gradient(circle, rgb(255 255 255 / .2), transparent 66%); pointer-events: none; }
 .hero::after { content: ""; position: absolute; left: -4rem; bottom: -7rem; width: 14rem; height: 14rem; border-radius: 50%; background: radial-gradient(circle, rgb(255 255 255 / .1), transparent 68%); pointer-events: none; }
 .hero h1, .hero .lead { position: relative; z-index: 1; }
+/* Когда человек уже смотрит ответ или каталог, шапка сжимается до полосы: ответ должен быть на первом экране. */
+body:has(:is(#answer, #catalog):not([hidden])) .hero { margin-bottom: var(--s-4); padding: var(--s-4) var(--s-5); }
+body:has(:is(#answer, #catalog):not([hidden])) .hero h1 { font-size: 1.375rem; line-height: 1.2; }
 .hero h1 { color: var(--on-hero); font-size: clamp(2rem, 1.5rem + 3.2vw, 3.25rem); }
 .hero .lead { margin: 0; color: var(--on-hero); opacity: .88; }
 .hint, small { color: var(--muted); font-size: .875rem; }
@@ -199,7 +202,8 @@ select + input, input + select { margin-top: var(--s-2); }
 #open-catalog { width: 100%; margin: 0 0 var(--s-6); justify-content: space-between; }
 #open-catalog::after { content: "→" / ""; font-size: 1.25rem; transition: transform var(--dur) var(--ease); }
 @media (hover: hover) { #open-catalog:hover::after { transform: translateX(.25rem); } }
-#back-to-answer { margin: 0 0 var(--s-5); }
+#back-to-answer { min-height: 44px; margin: 0; padding: .5rem var(--s-4); font-size: .9375rem; }
+body:has(#catalog:not([hidden])) .profile-box { display: none; }
 
 /* Анкета */
 .profile-box { margin: 0 0 var(--s-5); background: var(--surface); border-radius: var(--r-container); box-shadow: var(--shadow); }
@@ -259,10 +263,10 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .summary { margin: 0 0 var(--s-3); padding: var(--s-5); background: var(--surface); border-radius: var(--r-container); box-shadow: var(--shadow); }
 .summary:empty { display: none; }
 .summary-line { margin: 0 0 var(--s-2); }
-.summary-stat { display: grid; }
+.summary-stat { display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: var(--s-4); }
 .summary-number { font-size: clamp(4.5rem, 3rem + 11vw, 7rem); font-weight: 800; line-height: .9; letter-spacing: -.055em; color: var(--accent-text); font-variant-numeric: tabular-nums; }
-.summary-label { margin-top: var(--s-2); font-size: 1.375rem; font-weight: 750; line-height: 1.25; letter-spacing: -.02em; }
-.summary-next { margin: var(--s-4) 0 0; padding-top: var(--s-4); color: var(--muted); border-top: 1px solid var(--line); }
+.summary-label { font-size: 1.375rem; font-weight: 750; line-height: 1.25; letter-spacing: -.02em; }
+.summary-next { grid-column: 1 / -1; margin: var(--s-4) 0 0; padding-top: var(--s-4); color: var(--muted); border-top: 1px solid var(--line); }
 .summary-next strong { color: var(--fg); font-variant-numeric: tabular-nums; }
 .summary-stat + .summary-more, .summary-stat + .summary-note { margin-top: var(--s-4); }
 .summary-line:first-child { font-size: 1.25rem; font-weight: 650; line-height: 1.35; letter-spacing: -.01em; }
@@ -300,7 +304,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .catalog-tools { display: contents; }
 #results { margin-top: var(--s-5); }
 .catalog-bar { position: sticky; top: 0; z-index: var(--z-tools); margin: 0 calc(var(--gutter) * -1) var(--s-3); padding: var(--s-3) var(--gutter) var(--s-2); background: var(--bg); }
-.catalog-title { margin: var(--s-4) 0 var(--s-2); font-size: clamp(2rem, 1.5rem + 3vw, 2.75rem); font-weight: 800; letter-spacing: -.035em; line-height: 1.05; }
+.catalog-title { margin: var(--s-3) 0 var(--s-2); font-size: clamp(2rem, 1.5rem + 3vw, 2.75rem); font-weight: 800; letter-spacing: -.035em; line-height: 1.05; }
 .catalog-bar input[type="search"] { min-height: 56px; margin: 0 0 var(--s-3); font-size: 1.0625rem; background: var(--soft); border-color: transparent; -webkit-appearance: none; appearance: none; }
 .catalog-bar input[type="search"]:focus-visible { background: var(--surface); }
 .chips { display: flex; gap: .375rem; margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter); overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; }
