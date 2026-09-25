@@ -325,9 +325,13 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .site-footer a { display: inline-flex; align-items: center; min-height: 44px; }
 .fineprint { color: var(--muted); font-size: .875rem; margin: var(--s-2) 0 0; }
 .back { margin: 0 0 var(--s-4); }
+.hero .back a { color: var(--on-hero); }
+.hero-page h1 { margin: 0; font-size: clamp(1.5rem, .5rem + 4vw, 2.75rem); overflow-wrap: break-word; hyphens: auto; }
+.hero-page .lead { margin-top: var(--s-3); }
+.faq[open] > summary { color: var(--accent-text); }
 .back a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; text-decoration: none; }
 @media (hover: hover) { .back a:hover { text-decoration: underline; } }
-.prose { max-width: 65ch; }
+.prose p, .prose ul { max-width: 65ch; }
 .prose h2 { font-size: 1.25rem; letter-spacing: -.01em; margin: var(--s-6) 0 var(--s-2); }
 .prose p, .prose ul { margin: 0 0 var(--s-4); }
 .prose ul { padding-left: 1.25rem; }
