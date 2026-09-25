@@ -234,6 +234,27 @@ select + input, input + select { margin-top: var(--s-2); }
 /* На телефоне панель кнопок липнет к низу экрана, а не уезжает за поле. */
 .profile-box.wizard .wizard-nav { position: sticky; bottom: 0; z-index: var(--z-bar); margin: 0 calc(var(--s-4) * -1) calc(var(--s-4) * -1); padding: var(--s-4) var(--s-4) calc(var(--s-4) + env(safe-area-inset-bottom)); background: linear-gradient(to top, var(--surface) 70%, transparent); border-radius: 0 0 var(--r-container) var(--r-container); }
 
+/* Шаг анкеты: крупный номер, крупные поля, заполненное видно сразу. */
+.profile-box.wizard { background: linear-gradient(to bottom, var(--accent-soft), var(--surface) 10rem); }
+.profile-box.wizard .stepper { gap: .5rem; }
+.profile-box.wizard .stepper li { height: .5rem; }
+.profile-box.wizard .stepper li.is-current::after { box-shadow: 0 0 .75rem var(--accent); }
+.profile-box.wizard legend { font-size: clamp(1.75rem, 1.4rem + 2vw, 2.25rem); line-height: 1.1; letter-spacing: -.03em; margin-bottom: var(--s-5); }
+.profile-box.wizard legend::before { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; margin-bottom: var(--s-3); font-size: 1.375rem; font-weight: 800; letter-spacing: 0; color: var(--on-accent); background: var(--accent); border-radius: 50%; box-shadow: var(--accent-glow); }
+.profile-box.wizard .step:nth-of-type(1) legend::before { content: "1"; }
+.profile-box.wizard .step:nth-of-type(2) legend::before { content: "2"; }
+.profile-box.wizard .step:nth-of-type(3) legend::before { content: "3"; }
+.profile-box.wizard .step:nth-of-type(4) legend::before { content: "4"; }
+label:not(.row) > select, label:not(.row) > input { min-height: 56px; font-size: 1.0625rem; background-color: var(--surface); transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+label:not(.row) > select:not(:has(option[value=""]:checked)), label:not(.row) > input:not(:placeholder-shown) { border-color: var(--accent); background-color: var(--accent-soft); }
+input:focus-visible, select:focus-visible { box-shadow: 0 0 0 4px var(--tint); }
+label.row { transition: background-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
+label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); box-shadow: inset 0 0 0 2px var(--accent); }
+@media (prefers-reduced-motion: no-preference) {
+  .profile-box.wizard .step.is-current { animation: step-in .4s var(--ease) both; }
+}
+@keyframes step-in { from { opacity: 0; transform: translateY(.75rem); } }
+
 /* Ответ */
 .summary { margin: 0 0 var(--s-3); padding: var(--s-5); background: var(--surface); border-radius: var(--r-container); box-shadow: var(--shadow); }
 .summary:empty { display: none; }
