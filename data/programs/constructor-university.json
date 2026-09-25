@@ -80,6 +80,20 @@
         }
       ],
       "evidence": "English Language proficiency tests accepted by Constructor University and the minimum scores/grades:"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Constructor University does not require SAT/ACT scores for admission evaluation"
     }
   },
   "textConditions": [

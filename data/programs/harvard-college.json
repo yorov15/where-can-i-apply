@@ -62,6 +62,19 @@
       "checkedBy": "assistant",
       "checkedAt": "2026-09-12",
       "note": "отдельного порога по английскому нет: TOEFL, IELTS и Duolingo вместо SAT не засчитывают, но и минимального балла по ним не требуют"
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Harvard requires the SAT or ACT to meet its standardized testing requirement"
     }
   },
   "textConditions": [

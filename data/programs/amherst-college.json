@@ -81,6 +81,20 @@
       ],
       "advisory": true,
       "evidence": "the following minimum scores are strongly recommended"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Optional testing: SAT or ACT"
     }
   },
   "textConditions": [

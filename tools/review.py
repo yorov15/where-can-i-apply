@@ -248,7 +248,9 @@ def empty_fields(program: dict) -> list[str]:
     что-либо значить.
     """
     rules = program.get("eligibility", {})
-    return [field for field in FIELDS if rules.get(field) is None]
+    # Экзамен (SAT/ACT) — исключение: пустое поле «exam» значит «программа
+    # его не просит» и карточку не жёлтит, подписи под отсутствием не нужно.
+    return [field for field in FIELDS if field != "exam" and rules.get(field) is None]
 
 
 def sign_absence(program: dict, field: str, today: str, note: str, by: str = "human") -> dict:

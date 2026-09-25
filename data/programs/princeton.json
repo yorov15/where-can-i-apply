@@ -59,6 +59,19 @@
     "language": {
       "notMeasured": true,
       "evidence": "you must take the Test of English as a Foreign Language (TOEFL), the International English Language Testing System Academic (IELTS Academic), the Duolingo English Test (DET) or the Pearson Test of English Academic (PTE Academic)"
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "will need to submit either SAT or ACT scores"
     }
   },
   "textConditions": [

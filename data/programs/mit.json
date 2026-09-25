@@ -79,6 +79,19 @@
         }
       ],
       "evidence": "IELTS Minimum: 7"
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "We require the SAT or ACT"
     }
   },
   "textConditions": [
