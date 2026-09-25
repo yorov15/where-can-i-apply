@@ -14,6 +14,7 @@ import { refreshFilter, countryName } from './filter.js';
 import { kindLabel } from './lib/kinds.js';
 import { EXPLAIN_URL } from './config.js';
 import { planPrograms, planText, buildIcs, planTasks } from './plan.js';
+import { compareTable } from './compare.js';
 import { askExplain, cachedAnswer, parseAnswer, ERROR_TEXT } from './explain.js';
 
 const ORDER = { yes: 0, likely: 1, check: 2, no: 3 };
@@ -122,8 +123,7 @@ function agendaGroups(groups, today, onOpenProgram) {
   return frag;
 }
 
-// «Мой план»: отмеченные программы по срокам и два действия, ради которых
-// план нужен — календарь с напоминаниями и текст для родителей или учителя.
+// Дела по программам плана: то, что нужно подготовить, с галочками.
 function todoBlock(planned, details, plan) {
   const box = el('div');
   for (const program of planned) {
@@ -155,7 +155,48 @@ function todoBlock(planned, details, plan) {
   return box;
 }
 
-function planBlock(planned, today, details, onOpenProgram, plan) {
+// Таблица «программы в столбцах, признаки в строках»; на телефоне
+// прокручивается вбок, первый столбец с названиями признаков остаётся.
+function compareBlock(entries, details, today) {
+  const { columns, rows } = compareTable(entries, details, today);
+  const group = el('details', 'agenda-more');
+  group.append(el('summary', 'agenda-more-head', `Сравнить программы плана (${columns.length})`));
+  const wrap = el('div', 'compare');
+  const table = el('table');
+  const head = el('tr');
+  head.append(el('td'), ...columns.map((c) => Object.assign(el('th', null, c.title), { scope: 'col' })));
+  const thead = el('thead');
+  thead.append(head);
+  table.append(thead);
+  const body = el('tbody');
+  for (const row of rows) {
+    const tr = el('tr');
+    tr.append(Object.assign(el('th', null, row.label), { scope: 'row' }));
+    for (const cell of row.cells) {
+      const td = el('td');
+      const href = safeHttpUrl(cell.href);
+      if (href) {
+        const a = el('a', null, cell.text);
+        a.href = href;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        td.append(a);
+      } else {
+        td.textContent = cell.text;
+      }
+      tr.append(td);
+    }
+    body.append(tr);
+  }
+  table.append(body);
+  wrap.append(table);
+  group.append(wrap);
+  return group;
+}
+
+// «Мой план»: отмеченные программы по срокам и два действия, ради которых
+// план нужен — календарь с напоминаниями и текст для родителей или учителя.
+function planBlock(planned, today, details, onOpenProgram, plan, entries) {
   const box = el('div', 'agenda');
   box.append(el('h2', 'agenda-title', `Мой план (${planned.length})`));
   const rows = [...planned]
@@ -164,6 +205,7 @@ function planBlock(planned, today, details, onOpenProgram, plan) {
   box.append(agendaGroups([{ title: 'По срокам', rows }], today, onOpenProgram));
   const todo = todoBlock(rows.map((r) => r.program), details, plan);
   if (todo.childElementCount) box.append(todo);
+  if (entries.length > 1) box.append(compareBlock(entries, details, today));
 
   const old = planned.filter((p) => isStale(details.programs?.[p.id]?.source?.lastVerified, today));
   if (old.length) {
@@ -272,7 +314,7 @@ export function renderResults(nodes, profile, programs, today, details) {
   }));
 
   const planned = planPrograms(programs, plan.ids);
-  if (planned.length) agendaNode.append(planBlock(planned, today, details, onOpenProgram, plan));
+  if (planned.length) agendaNode.append(planBlock(planned, today, details, onOpenProgram, plan, rows.filter((r) => plan.ids.includes(r.program.id))));
 
   const soon = agenda(rows, today);
   if (soon.length) agendaNode.append(agendaBlock(soon, today, onOpenProgram));
