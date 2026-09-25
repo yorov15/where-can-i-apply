@@ -12,6 +12,12 @@ export function formatDate(iso) {
   return `${d} ${MONTHS[m - 1]} ${y}`;
 }
 
+// Плитка даты для календаря сроков: число и месяц тремя буквами.
+export function dateTile(iso) {
+  const [, m, d] = iso.split('-').map(Number);
+  return { day: String(d), month: MONTHS[m - 1].slice(0, 3) };
+}
+
 export function plural(n, one, few, many) {
   const tens = Math.abs(n) % 100;
   const ones = tens % 10;
