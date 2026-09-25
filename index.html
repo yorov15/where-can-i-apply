@@ -89,6 +89,7 @@
         <input type="date" name="birthDate">
         <small>Возраст программы считают на дату приёма, а не на сегодня — поэтому нужна именно дата. Можно пропустить: тогда сайт скажет, для каких программ она нужна.</small>
       </label>
+      <p class="field-error" role="alert"></p>
     </fieldset>
 
     <fieldset class="step">
@@ -98,12 +99,14 @@
         <input type="number" name="gpaValue" step="0.1" min="0" max="100" inputmode="decimal" placeholder="4.8">
         <select name="gpaScale">
           <option value="TJ_5">по пятибалльной</option>
+          <option value="TJ_10">по десятибалльной</option>
           <option value="PERCENT">в процентах</option>
           <option value="GPA_4">по шкале 4.0</option>
           <option value="GPA_4_5">по шкале 4.5</option>
         </select>
         <small>Итоговый балл аттестата может отличаться, и решает именно он.</small>
       </label>
+      <p class="field-error" role="alert"></p>
     </fieldset>
 
     <fieldset class="step">
@@ -111,7 +114,7 @@
       <p class="hint">Если экзамен ещё не сдан — оставь балл пустым, но отметь галочку. Программа тогда не отсеется: её покажет жёлтым с подписью, какой балл нужен.</p>
 
       <label class="row"><input type="checkbox" name="has-IELTS"> IELTS
-        <input type="number" name="score-IELTS" step="0.5" min="0" max="9" inputmode="decimal" placeholder="балл">
+        <input type="number" name="score-IELTS" step="0.5" min="1" max="9" inputmode="decimal" placeholder="балл">
       </label>
       <label class="row"><input type="checkbox" name="has-TOEFL_IBT"> TOEFL iBT, сдан до 21 января 2026 (0–120)
         <input type="number" name="score-TOEFL_IBT" step="1" min="0" max="120" inputmode="numeric" placeholder="балл">
@@ -122,6 +125,7 @@
       <label class="row"><input type="checkbox" name="has-DUOLINGO"> Duolingo English Test (10–160)
         <input type="number" name="score-DUOLINGO" step="5" min="10" max="160" inputmode="numeric" placeholder="балл">
       </label>
+      <p class="field-error" role="alert"></p>
     </fieldset>
     <p id="wizard-error" class="wizard-error" role="alert"></p>
     <div class="wizard-nav">

@@ -90,6 +90,12 @@ export function setupWizard({ box, form, progress, progressLabel, back, next, fi
       form.elements[missing].focus();
       return;
     }
+    const bad = steps[step].querySelector('[aria-invalid="true"]');
+    if (bad) {
+      error.textContent = steps[step].querySelector('.field-error')?.textContent || 'Проверь значение в поле';
+      bad.focus();
+      return;
+    }
     step += 1;
     paint(true);
   });
@@ -106,6 +112,14 @@ export function setupWizard({ box, form, progress, progressLabel, back, next, fi
     // поэтому «Показать» проверяет всё ещё раз и при пропуске возвращает
     // на тот шаг, где не хватает.
     canFinish() {
+      const wrong = form.querySelector('[aria-invalid="true"]');
+      if (wrong) {
+        step = steps.findIndex((node) => node.contains(wrong));
+        paint(true);
+        error.textContent = steps[step].querySelector('.field-error')?.textContent || 'Проверь значение в поле';
+        wrong.focus();
+        return false;
+      }
       const now = values();
       const at = STEP_REQUIRED.findIndex((_, i) => firstMissing(i, now));
       if (at === -1) return true;

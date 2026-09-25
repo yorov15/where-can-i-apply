@@ -278,6 +278,9 @@ body:has(#catalog:not([hidden])) .profile-box { display: none; }
 .wizard-progress-label { margin: 0 0 var(--s-2); font-size: .875rem; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
 .wizard-error { margin: 0 0 var(--s-3); color: var(--no); font-weight: 600; }
 .wizard-error:empty { display: none; }
+.field-error { margin: var(--s-3) 0 0; color: var(--no); font-weight: 600; }
+.field-error:empty { display: none; }
+input[aria-invalid="true"] { border-color: var(--no); background: var(--no-bg); }
 
 /* Индикатор шагов: четыре сегмента, заполнение растёт слева направо. */
 .stepper { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: .375rem; margin: 0; padding: 0; list-style: none; }

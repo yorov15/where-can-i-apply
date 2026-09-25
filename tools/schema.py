@@ -30,7 +30,7 @@ TAGS_REQUIRED = True
 # «ограничения нет» пишется объектом с пустыми значениями и цитатой.
 REQUIRED_FIELDS = frozenset({"citizenship", "graduationYear"})
 
-SCALES = frozenset({"PERCENT", "TJ_5", "GPA_4", "GPA_4_5"})
+SCALES = frozenset({"PERCENT", "TJ_5", "TJ_10", "GPA_4", "GPA_4_5"})
 
 # Тип программы. Это редакторская разметка, а не факт с сайта программы:
 # у неё нет цитаты и быть не может, её ставит человек по названию и сути
