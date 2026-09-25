@@ -70,3 +70,18 @@ test('в разметке нет атрибутов style (CSP их не пус�
     assert.doesNotMatch(read(`js/${file}`), /setAttribute\(\s*['"]style['"]/, file);
   }
 });
+
+test('в CSS нет чисто чёрного и чисто белого', () => {
+  assert.doesNotMatch(css, /#(?:000|000000|fff|ffffff)\b/i);
+});
+
+test('палитра: токены поверхностей заданы, вердикты сохранены в обеих темах', () => {
+  for (const token of ['--bg', '--surface', '--soft', '--line', '--fg', '--muted', '--ink', '--on-ink']) {
+    assert.match(css, new RegExp(`${token}:`), token);
+  }
+  for (const verdict of ['yes', 'likely', 'check', 'no']) {
+    const count = css.split(`--${verdict}:`).length - 1;
+    assert.equal(count, 2, `--${verdict} должен быть в светлой и тёмной теме`);
+  }
+  assert.match(css, /prefers-color-scheme:\s*dark/);
+});
