@@ -59,6 +59,20 @@
     "language": {
       "notMeasured": true,
       "evidence": "If English is not the primary language of instruction in the secondary school(s) you have attended for the last three years, you must submit English language proficiency exam results."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Vassar does not require applicants to submit SAT or ACT scores"
     }
   },
   "textConditions": [

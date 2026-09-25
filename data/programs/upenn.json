@@ -81,6 +81,19 @@
       ],
       "advisory": true,
       "evidence": "If neither applies to you, you must submit scores from one of the following tests"
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Penn applicants are required to submit the SAT or ACT"
     }
   },
   "textConditions": [

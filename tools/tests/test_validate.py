@@ -433,6 +433,56 @@ class TestDelegated(unittest.TestCase):
         self.assertTrue(any("разные утверждения" in p for p in problems))
 
 
+EXAM_SNAPSHOT = SNAPSHOT + (
+    " Applicants must submit an SAT or ACT score."
+    " A middle SAT score of 1450 is typical."
+)
+
+
+def with_exam(rule):
+    program = good_program()
+    program["eligibility"]["exam"] = rule
+    return program
+
+
+class TestExam(unittest.TestCase):
+    def test_required_exam_without_threshold_passes(self):
+        program = with_exam({
+            "anyOf": [{"test": "SAT", "min": None}, {"test": "ACT", "min": None}],
+            "evidence": "must submit an SAT or ACT score",
+        })
+        self.assertEqual(validate_program(program, EXAM_SNAPSHOT), [])
+
+    def test_optional_exam_needs_the_tests_named(self):
+        program = with_exam({"optional": True, "evidence": "must submit an SAT or ACT score"})
+        problems = validate_program(program, EXAM_SNAPSHOT)
+        self.assertTrue(any("optional без anyOf" in p for p in problems))
+
+    def test_unknown_exam_is_caught(self):
+        program = with_exam({
+            "anyOf": [{"test": "GRE", "min": None}],
+            "evidence": "must submit an SAT or ACT score",
+        })
+        problems = validate_program(program, EXAM_SNAPSHOT)
+        self.assertTrue(any("GRE" in p for p in problems))
+
+    def test_threshold_out_of_bounds_is_caught(self):
+        program = with_exam({
+            "anyOf": [{"test": "SAT", "min": 2000}],
+            "evidence": "must submit an SAT or ACT score",
+        })
+        problems = validate_program(program, EXAM_SNAPSHOT)
+        self.assertTrue(any("вне границ" in p for p in problems))
+
+    def test_invented_exam_quote_is_caught(self):
+        program = with_exam({
+            "anyOf": [{"test": "SAT", "min": None}],
+            "evidence": "SAT is mandatory for everyone",
+        })
+        problems = validate_program(program, EXAM_SNAPSHOT)
+        self.assertTrue(any("цитата не найдена" in p for p in problems))
+
+
 class TestRelativeAsOf(unittest.TestCase):
     def with_as_of(self, as_of):
         program = good_program()

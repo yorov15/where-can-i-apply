@@ -78,6 +78,19 @@
       ],
       "advisory": true,
       "evidence": "The following minimum scores are expected in most cases:"
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "requiring standardized test scores (either SAT or ACT scores) for first-year applicants"
     }
   },
   "textConditions": [

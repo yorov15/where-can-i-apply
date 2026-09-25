@@ -15,7 +15,7 @@ const FILL = {
 };
 const BLOCKER = {
   citizenship: 'Гражданство', schoolCountry: 'Страна школы', schoolYears: 'Число лет школы',
-  graduationYear: 'Год выпуска', age: 'Возраст', gpa: 'Средний балл', language: 'Результат экзамена',
+  graduationYear: 'Год выпуска', age: 'Возраст', gpa: 'Средний балл', language: 'Результат экзамена', exam: 'Экзамен SAT или ACT',
 };
 
 function withScore(profile, test, score) {

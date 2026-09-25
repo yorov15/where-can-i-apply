@@ -6,6 +6,7 @@ import {
   checkAge,
   checkGpa,
   checkLanguage,
+  checkExam,
 } from './rules.js';
 
 // Порядок полей задаёт порядок причин в выдаче.
@@ -17,6 +18,7 @@ export const FIELDS = [
   ['age', checkAge],
   ['gpa', checkGpa],
   ['language', checkLanguage],
+  ['exam', checkExam],
 ];
 
 // Одно fail перевешивает всё. Процентов совпадения здесь нет намеренно:

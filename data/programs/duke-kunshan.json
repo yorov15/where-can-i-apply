@@ -65,6 +65,20 @@
       "checkedBy": "assistant",
       "checkedAt": "2026-09-14",
       "note": "сертификат по английскому не требуют: уровень английского оценивают по материалам заявки и, при приглашении, по интервью"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "SAT or ACT test scores ( optional )"
     }
   },
   "textConditions": [

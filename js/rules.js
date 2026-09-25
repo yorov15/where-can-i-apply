@@ -1,4 +1,4 @@
-// Семь функций правил, по одной на поле профиля. Каждая знает про своё
+// Функции правил, по одной на поле профиля. Каждая знает про своё
 // поле и больше ни про что: ошибку в правиле возраста нельзя занести в
 // правило языка. Ни одна из них не трогает DOM, сеть и localStorage.
 //
@@ -326,4 +326,43 @@ export function checkLanguage(profile, rule, ctx) {
     return r('unknown', 'language.other-test', { tests: other.map((x) => x.test), options, advisory });
   }
   return r('unknown', 'language.no-certificate', { options, advisory });
+}
+
+// SAT и ACT. Проверяются только там, где программа про них написала: если
+// правила нет, экзамен на ответ не влияет. Это не «мы не смотрели»: у
+// половины программ экзамена нет вовсе, и жёлтый цвет у каждой из них
+// заглушил бы настоящие причины.
+//
+// Порога у экзамена может не быть («пришли SAT или ACT»): тогда хватает
+// отметки, что экзамен сдан. Отсутствие сертификата — unknown, не fail:
+// экзамен можно сдать. fail только когда балл есть и он ниже порога.
+export function checkExam(profile, rule) {
+  if (!rule) return r('pass');
+  if (noLimit(rule) || rule.optional === true) return r('pass');
+  if (delegated(rule)) return r('unknown', 'exam.by-institution');
+  if (notMeasured(rule)) return r('unknown', 'exam.not-measured');
+  const need = rule.anyOf ?? [];
+  if (need.length === 0) return r('pass');
+
+  const mine = profile.exams ?? [];
+  const marked = [];
+  let sawBelow = false;
+  for (const req of need) {
+    const got = mine.find((x) => x.test === req.test);
+    if (!got) continue;
+    if (req.min == null) return r('pass');
+    if (got.score == null) { marked.push(req.test); continue; }
+    if (got.score >= req.min) return r('pass');
+    sawBelow = true;
+  }
+
+  const options = need.map(({ test, min }) => ({ test, min: min ?? null }));
+  const advisory = rule.advisory === true;
+  if (marked.length) return r('unknown', 'exam.score-missing', { options, advisory, marked });
+  if (sawBelow) {
+    return advisory
+      ? r('unknown', 'exam.below-advisory', { options })
+      : r('fail', 'exam.below', { options });
+  }
+  return r('unknown', 'exam.no-certificate', { options });
 }

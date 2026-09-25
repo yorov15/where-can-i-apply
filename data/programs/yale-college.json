@@ -81,6 +81,19 @@
       ],
       "advisory": true,
       "evidence": "you are required to submit scores from an English proficiency test, in addition to fulfilling Yale's standardized testing requirement with ACT or SAT scores."
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "must submit scores from the SAT or ACT"
     }
   },
   "textConditions": [

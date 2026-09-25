@@ -62,6 +62,20 @@
       "checkedBy": "assistant",
       "checkedAt": "2026-09-13",
       "note": "сертификат по английскому необязателен и минимального балла нет, но английский нужен уверенный: языковых курсов в колледже нет"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "ACT or SAT scores are not required for the purpose of admission"
     }
   },
   "textConditions": [

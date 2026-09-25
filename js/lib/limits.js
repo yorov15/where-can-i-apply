@@ -9,6 +9,8 @@ export const SCORE_LIMITS = {
   TOEFL_IBT: { name: 'TOEFL iBT (старая шкала)', min: 0, max: 120, step: 1 },
   TOEFL_IBT_2026: { name: 'TOEFL iBT (новая шкала)', min: 1, max: 6, step: 0.5 },
   DUOLINGO: { name: 'Duolingo', min: 10, max: 160, step: 5 },
+  SAT: { name: 'SAT', min: 400, max: 1600, step: 10 },
+  ACT: { name: 'ACT', min: 1, max: 36, step: 1 },
 };
 
 // Балл аттестата. Шаг не задаём: средний балл бывает 4.85 или 8.63.

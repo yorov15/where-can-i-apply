@@ -62,6 +62,19 @@
       "checkedBy": "assistant",
       "checkedAt": "2026-09-19",
       "note": "экзамен по английскому не требуют: результат можно прислать по желанию"
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Yes, the ACT or SAT is required"
     }
   },
   "textConditions": [

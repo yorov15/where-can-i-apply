@@ -81,6 +81,19 @@
       ],
       "advisory": true,
       "evidence": "Accepted exams and score requirements to be most competitive in our admissions review process include:"
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "You're required to submit SAT or ACT scores when applying to Cornell"
     }
   },
   "textConditions": [
