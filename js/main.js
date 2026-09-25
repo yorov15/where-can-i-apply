@@ -201,6 +201,17 @@ function showLoadError() {
   document.querySelector('main').prepend(box);
 }
 
+// Без сети сайт открывается из копии, сохранённой при прошлом заходе. Сроки
+// в ней могли устареть, поэтому об этом сказано прямо.
+const offlineNote = document.getElementById('offline');
+const showOffline = () => { offlineNote.hidden = navigator.onLine; };
+window.addEventListener('online', showOffline);
+window.addEventListener('offline', showOffline);
+showOffline();
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+}
+
 loadIndex()
   .then((index) => {
     programs = index.programs ?? [];

@@ -3,9 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://where-can-i-apply.vercel.app; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; manifest-src 'self'; connect-src 'self' https://where-can-i-apply.vercel.app; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#2b4fd8">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="/icons/icon-180.png">
 <title>Куда я могу подать документы</title>
 <meta name="description" content="Бесплатный инструмент для выпускников школ Центральной Азии: заполни анкету и увидишь, в какие университеты и на какие стипендии можно подать документы, а куда нельзя и почему. Данные с официальных сайтов, у каждого правила есть цитата и дата проверки.">
 <meta property="og:type" content="website">
@@ -31,6 +35,7 @@
 </header>
 
 <main id="main">
+<p id="offline" class="summary-note" role="status" hidden>Нет сети. Показано то, что сохранилось на этом устройстве при прошлом заходе: сроки могли измениться, сверяй их на сайтах программ.</p>
   <details id="profile-box" class="profile-box" open>
     <summary>
       <span class="profile-box-label">Анкета</span>
