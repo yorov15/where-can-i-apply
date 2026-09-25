@@ -201,7 +201,7 @@ select + input, input + select { margin-top: var(--s-2); }
 .stepper li.is-done::after, .stepper li.is-current::after { transform: scaleX(1); }
 
 .wizard-nav { display: flex; gap: var(--s-3); }
-.wizard-nav .button { flex: 1 1 0; width: auto; }
+.wizard-nav .button { flex: 1 1 0; width: auto; white-space: normal; line-height: 1.25; text-align: center; }
 .wizard-nav #wizard-back { flex: 0 0 auto; }
 /* На телефоне панель кнопок липнет к низу экрана, а не уезжает за поле. */
 .profile-box.wizard .wizard-nav { position: sticky; bottom: 0; z-index: var(--z-bar); margin: 0 calc(var(--s-4) * -1) calc(var(--s-4) * -1); padding: var(--s-4) var(--s-4) calc(var(--s-4) + env(safe-area-inset-bottom)); background: linear-gradient(to top, var(--surface) 70%, transparent); border-radius: 0 0 var(--r-container) var(--r-container); }
