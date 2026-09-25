@@ -4,7 +4,7 @@ import { setupWizard } from './steps.js';
 import { setupCatalogFilter } from './filter.js';
 import { loadIndex, loadDetails } from './data.js';
 import { renderResults } from './render.js';
-import { loadPlan, savePlan, togglePlan, PLAN_KEY } from './plan.js';
+import { loadPlan, savePlan, togglePlan, PLAN_KEY, DONE_KEY, loadDone, saveDone } from './plan.js';
 import { EXPLAIN_URL } from './config.js';
 
 const form = document.getElementById('profile');
@@ -54,6 +54,12 @@ const plan = {
     plan.ids = togglePlan(plan.ids, id);
     savePlan(plan.ids, localStorage);
     refresh();
+  },
+  // Отметки дел: без перерисовки, чтобы раскрытый список не схлопывался.
+  done: loadDone(localStorage),
+  markDone(key, on) {
+    if (on) plan.done.add(key); else plan.done.delete(key);
+    saveDone(plan.done, localStorage);
   },
 };
 
@@ -161,11 +167,13 @@ onProfileChange(form, (profile) => refresh(profile));
 document.getElementById('clear-profile').addEventListener('click', () => {
   const empty = emptyProfile();
   writeForm(form, empty);
-  refresh(empty);
   plan.ids = [];
+  plan.done = new Set();
+  refresh(empty);
   try {
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(PLAN_KEY);
+    localStorage.removeItem(DONE_KEY);
   } catch { /* приватный режим: стирать нечего */ }
   box.open = true;
   finished = false;

@@ -13,7 +13,7 @@ import { isStale, STALE_DAYS } from './lib/dates.js';
 import { refreshFilter, countryName } from './filter.js';
 import { kindLabel } from './lib/kinds.js';
 import { EXPLAIN_URL } from './config.js';
-import { planPrograms, planText, buildIcs } from './plan.js';
+import { planPrograms, planText, buildIcs, planTasks } from './plan.js';
 import { askExplain, cachedAnswer, parseAnswer, ERROR_TEXT } from './explain.js';
 
 const ORDER = { yes: 0, likely: 1, check: 2, no: 3 };
@@ -124,13 +124,46 @@ function agendaGroups(groups, today, onOpenProgram) {
 
 // «Мой план»: отмеченные программы по срокам и два действия, ради которых
 // план нужен — календарь с напоминаниями и текст для родителей или учителя.
-function planBlock(planned, today, details, onOpenProgram) {
+function todoBlock(planned, details, plan) {
+  const box = el('div');
+  for (const program of planned) {
+    const tasks = planTasks(program.id, details.programs?.[program.id]);
+    if (!tasks.length) continue;
+    const name = program.name?.ru ?? program.id;
+    const group = el('details', 'agenda-more');
+    const head = el('summary', 'agenda-more-head');
+    const count = () => tasks.filter((t) => plan.done.has(t.key)).length;
+    const refreshHead = () => { head.textContent = `Что подготовить: ${name} (${count()} из ${tasks.length})`; };
+    refreshHead();
+    group.append(head);
+    for (const task of tasks) {
+      const row = el('label', 'todo');
+      const tick = el('input');
+      tick.type = 'checkbox';
+      tick.checked = plan.done.has(task.key);
+      row.classList.toggle('done', tick.checked);
+      tick.addEventListener('change', () => {
+        plan.markDone(task.key, tick.checked);
+        row.classList.toggle('done', tick.checked);
+        refreshHead();
+      });
+      row.append(tick, el('span', null, task.text));
+      group.append(row);
+    }
+    box.append(group);
+  }
+  return box;
+}
+
+function planBlock(planned, today, details, onOpenProgram, plan) {
   const box = el('div', 'agenda');
   box.append(el('h2', 'agenda-title', `Мой план (${planned.length})`));
   const rows = [...planned]
     .sort((a, b) => (a.deadline?.closes ?? '9999') < (b.deadline?.closes ?? '9999') ? -1 : 1)
     .map((program) => ({ program }));
   box.append(agendaGroups([{ title: 'По срокам', rows }], today, onOpenProgram));
+  const todo = todoBlock(rows.map((r) => r.program), details, plan);
+  if (todo.childElementCount) box.append(todo);
 
   const old = planned.filter((p) => isStale(details.programs?.[p.id]?.source?.lastVerified, today));
   if (old.length) {
@@ -239,7 +272,7 @@ export function renderResults(nodes, profile, programs, today, details) {
   }));
 
   const planned = planPrograms(programs, plan.ids);
-  if (planned.length) agendaNode.append(planBlock(planned, today, details, onOpenProgram));
+  if (planned.length) agendaNode.append(planBlock(planned, today, details, onOpenProgram, plan));
 
   const soon = agenda(rows, today);
   if (soon.length) agendaNode.append(agendaBlock(soon, today, onOpenProgram));
