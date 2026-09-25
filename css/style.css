@@ -473,6 +473,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .more { margin-top: var(--s-4); }
 .more-head { cursor: pointer; font-size: .9375rem; font-weight: 600; min-height: 48px; display: flex; align-items: center; }
 .card-source { margin: var(--s-4) 0 0; color: var(--muted); font-size: .8125rem; }
+.card-source.stale { color: var(--check); font-weight: 600; }
 .empty { color: var(--muted); }
 
 .explain { margin: var(--s-5) 0 var(--s-1); padding: var(--s-3) var(--s-4); background: var(--soft); border-radius: var(--r-control); }

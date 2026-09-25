@@ -96,3 +96,12 @@ test('«не ограничивает» только на незакрытых �
   assert.deepEqual(cardModel(row([], 'yes'), extra, today).more.attested, ['Возраст: возраст не ограничен (проверил ассистент)']);
   assert.deepEqual(cardModel(row([fail], 'no'), extra, today).more.attested, []);
 });
+
+test('давняя проверка (старше 60 дней) помечается в карточке', () => {
+  const fresh = cardModel(row([], 'yes'), extra, '2026-09-14');
+  assert.equal(fresh.stale, false);
+  assert.doesNotMatch(fresh.source, /давние/);
+  const old = cardModel(row([], 'yes'), extra, '2026-12-01');
+  assert.equal(old.stale, true);
+  assert.match(old.source, /Данные давние: сверь условия и сроки на сайте/);
+});
