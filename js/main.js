@@ -58,6 +58,7 @@ const syncScreen = () => showCatalog(location.hash === '#programs');
 addEventListener('hashchange', syncScreen);
 
 catalogButton.addEventListener('click', () => {
+  catalogFilter.showBucket(catalogButton.dataset.bucket || 'all');
   location.hash = 'programs';
   catalogScreen.scrollIntoView({ block: 'start' });
 });

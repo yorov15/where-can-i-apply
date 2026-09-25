@@ -153,5 +153,8 @@ export function setupCatalogFilter({ root, resultsNode }) {
   ui.kind.addEventListener('change', () => { state.kind = ui.kind.value; apply(); });
   for (const chip of ui.chips) chip.addEventListener('click', () => { state.bucket = chip.dataset.bucket; apply(); });
   ui.reset.addEventListener('click', resetFilter);
-  return { reset: resetFilter };
+  return {
+    reset: resetFilter,
+    showBucket(bucket) { state.bucket = bucket; apply(); },
+  };
 }
