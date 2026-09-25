@@ -6,6 +6,8 @@ const TEST = {
   TOEFL_IBT: 'TOEFL по старой шкале',
   TOEFL_IBT_2026: 'TOEFL по новой шкале',
   DUOLINGO: 'Duolingo',
+  SAT: 'SAT',
+  ACT: 'ACT',
 };
 export const testName = (test) => TEST[test] ?? test;
 
@@ -15,20 +17,22 @@ export function joinOr(items) {
 }
 
 const optionList = (options) => joinOr(options.map((o) => `${testName(o.test)} от ${o.min}`));
+// Порога у SAT и ACT часто нет: тогда называем просто экзамен.
+const examOptions = (options) => joinOr(options.map((o) => (o.min == null ? testName(o.test) : `${testName(o.test)} от ${o.min}`)));
 
 const TITLE = {
   citizenship: 'Гражданство', schoolCountry: 'Страна школы', schoolYears: 'Школа',
-  graduationYear: 'Год выпуска', age: 'Возраст', gpa: 'Средний балл', language: 'Язык',
+  graduationYear: 'Год выпуска', age: 'Возраст', gpa: 'Средний балл', language: 'Язык', exam: 'Экзамен',
 };
 // «требование к …»
 const TO = {
   citizenship: 'гражданству', schoolCountry: 'стране школы', schoolYears: 'школе',
-  graduationYear: 'году выпуска', age: 'возрасту', gpa: 'баллу', language: 'языку',
+  graduationYear: 'году выпуска', age: 'возрасту', gpa: 'баллу', language: 'языку', exam: 'экзамену',
 };
 // «про …»
 const ABOUT = {
   citizenship: 'гражданство', schoolCountry: 'страну школы', schoolYears: 'годы школы',
-  graduationYear: 'год выпуска', age: 'возраст', gpa: 'средний балл', language: 'язык',
+  graduationYear: 'год выпуска', age: 'возраст', gpa: 'средний балл', language: 'язык', exam: 'экзамен',
 };
 // «указать …»
 const FILL = {
@@ -68,7 +72,7 @@ export function programSideOnly(verdict) {
 export const bucketOf = (verdict) => (programSideOnly(verdict) ? 'likely' : verdict.status);
 
 // Отказы, которые могут измениться: пересдать, дождаться возраста или цикла.
-const CHANGEABLE = new Set(['language.below', 'gpa.below', 'age.under-min', 'graduationYear.after-cycle']);
+const CHANGEABLE = new Set(['language.below', 'exam.below', 'gpa.below', 'age.under-min', 'graduationYear.after-cycle']);
 
 // Подлежащее в этих строках — программа, а не человек. «Уточнить
 // требование к языку» звучало как дело, которое ему поручили, и висело
@@ -81,6 +85,7 @@ const NO_NUMBER = {
   age: 'возрастной планки программа не называет',
   gpa: 'проходного балла программа не называет',
   language: 'порога по языку программа не называет',
+  exam: 'порога по SAT и ACT программа не называет',
 };
 
 function generic(field, state) {
@@ -199,6 +204,25 @@ const SPECIAL = {
   'language.parts-unknown': ({ test, min }) => ({
     short: 'сверить баллы по частям экзамена',
     detail: `Общий балл подходит: ${testName(test)} от ${min}. Но программа требует ещё и минимумы по отдельным частям — сверь с ними свои.`,
+  }),
+  'exam.score-missing': ({ options, marked = [] }) => {
+    const need = options.find((option) => marked.includes(option.test)) ?? options[0];
+    return {
+      short: `вписать балл ${testName(need.test)}${need.min == null ? '' : ` (нужно от ${need.min})`}`,
+      detail: `Ты отметил экзамен, но не вписал балл. Нужен ${examOptions(options)}.`,
+    };
+  },
+  'exam.below-advisory': ({ options }) => ({
+    short: 'балл ниже ориентира программы',
+    detail: `Программа называет ${examOptions(options)}, твой результат ниже. Это ориентир, а не порог подачи: решает отбор.`,
+  }),
+  'exam.below': ({ options }) => ({
+    short: 'результат SAT или ACT ниже порога',
+    detail: `Программе нужен ${examOptions(options)}, твой результат ниже. Экзамен можно пересдать.`,
+  }),
+  'exam.no-certificate': ({ options }) => ({
+    short: `сдать ${joinOr(options.map((o) => testName(o.test)))}`,
+    detail: `Программа требует результат экзамена: ${examOptions(options)}. Экзамена в анкете нет — сдать ещё можно.`,
   }),
   'language.below-advisory': ({ options }) => ({
     short: 'балл ниже рекомендованного',

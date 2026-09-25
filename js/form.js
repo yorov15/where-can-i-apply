@@ -7,6 +7,7 @@ import { SCORE_LIMITS, GPA_LIMITS, scoreProblem, gpaProblem, graduationYearProbl
 // новая шкала 1–6. Сохранённые раньше профили знают только первый, и
 // это верно: до этой правки анкета принимала лишь баллы 0–120.
 const LANG_TESTS = ['IELTS', 'TOEFL_IBT', 'TOEFL_IBT_2026', 'DUOLINGO'];
+const EXAM_TESTS = ['SAT', 'ACT'];
 
 const num = (v) => (v === '' || v == null ? null : Number(v));
 
@@ -21,7 +22,7 @@ export function formProblems(root) {
   add('graduationYear', graduationYearProblem(num(f.graduationYear.value)));
   add('birthDate', birthDateProblem(f.birthDate.value, today()));
   add('gpaValue', gpaProblem(num(f.gpaValue.value), f.gpaScale.value));
-  for (const t of LANG_TESTS) add(`score-${t}`, scoreProblem(t, num(f[`score-${t}`].value)));
+  for (const t of [...LANG_TESTS, ...EXAM_TESTS]) add(`score-${t}`, scoreProblem(t, num(f[`score-${t}`].value)));
   return found;
 }
 
@@ -41,6 +42,9 @@ export function readForm(root) {
   profile.gpa = { value: clean('gpaValue', num(f.gpaValue.value)), scale: f.gpaScale.value };
 
   profile.languageTests = LANG_TESTS
+    .filter((t) => f[`has-${t}`].checked)
+    .map((t) => ({ test: t, score: clean(`score-${t}`, num(f[`score-${t}`].value)) }));
+  profile.exams = EXAM_TESTS
     .filter((t) => f[`has-${t}`].checked)
     .map((t) => ({ test: t, score: clean(`score-${t}`, num(f[`score-${t}`].value)) }));
 
@@ -97,8 +101,8 @@ export function writeForm(root, profile) {
   f.gpaValue.value = profile.gpa?.value ?? '';
   f.gpaScale.value = profile.gpa?.scale ?? 'TJ_5';
 
-  for (const t of LANG_TESTS) {
-    const got = (profile.languageTests ?? []).find((x) => x.test === t);
+  for (const t of [...LANG_TESTS, ...EXAM_TESTS]) {
+    const got = [...(profile.languageTests ?? []), ...(profile.exams ?? [])].find((x) => x.test === t);
     f[`has-${t}`].checked = Boolean(got);
     f[`score-${t}`].value = got?.score ?? '';
   }

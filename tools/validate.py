@@ -11,6 +11,8 @@ from tools.schema import (
     CONDITION_KINDS,
     FIELDS,
     LANGUAGE_TESTS,
+    EXAM_TESTS,
+    EXAM_LIMITS,
     RELATIVE_BOUNDS,
     REQUIRED_FIELDS,
     SCALES,
@@ -294,6 +296,26 @@ def _check_rule_shape(field: str, rule: dict) -> list[str]:
         scale = rule.get("scale")
         if scale not in SCALES:
             problems.append(f"gpa: неизвестная шкала — {scale!r}")
+
+    if field == "exam":
+        # Порога у SAT/ACT часто нет: «пришли один из двух» — тоже правило,
+        # тогда min = null. Экзамен, который программа не требует
+        # (test-optional), записывается как optional: true с цитатой.
+        if "optional" in rule and rule["optional"] is not True:
+            problems.append("exam: optional знает только значение true")
+        for requirement in rule.get("anyOf") or []:
+            test = requirement.get("test")
+            if test not in EXAM_TESTS:
+                problems.append(
+                    f"exam: экзамена {test!r} анкета не знает — одно из {', '.join(sorted(EXAM_TESTS))}"
+                )
+                continue
+            minimum = requirement.get("min")
+            low, high = EXAM_LIMITS[test]
+            if minimum is not None and not (low <= minimum <= high):
+                problems.append(f"exam: порог {test} {minimum} вне границ {low}-{high}")
+        if rule.get("optional") is True and not (rule.get("anyOf") or []):
+            problems.append("exam: optional без anyOf — непонятно, о каких экзаменах речь")
 
     if field == "language":
         for requirement in rule.get("anyOf") or []:

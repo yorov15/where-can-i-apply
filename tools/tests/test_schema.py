@@ -4,7 +4,7 @@ from tools.schema import FIELDS, KINDS, REQUIRED_FIELDS, SCALES, empty_program, 
 
 
 class TestSchema(unittest.TestCase):
-    def test_seven_fields_in_engine_order(self):
+    def test_eight_fields_in_engine_order(self):
         self.assertEqual(
             FIELDS,
             (
@@ -15,6 +15,7 @@ class TestSchema(unittest.TestCase):
                 "age",
                 "gpa",
                 "language",
+                "exam",
             ),
         )
 

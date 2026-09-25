@@ -110,7 +110,7 @@
     </fieldset>
 
     <fieldset class="step">
-      <legend>Языковые экзамены</legend>
+      <legend>Экзамены</legend>
       <p class="hint">Если экзамен ещё не сдан — оставь балл пустым, но отметь галочку. Программа тогда не отсеется: её покажет жёлтым с подписью, какой балл нужен.</p>
 
       <label class="row"><input type="checkbox" name="has-IELTS"> IELTS
@@ -124,6 +124,14 @@
       </label>
       <label class="row"><input type="checkbox" name="has-DUOLINGO"> Duolingo English Test (10–160)
         <input type="number" name="score-DUOLINGO" step="5" min="10" max="160" inputmode="numeric" placeholder="балл">
+      </label>
+
+      <p class="hint">Американские вузы часто просят SAT или ACT. Если их нет — пропусти: часть вузов их не требует.</p>
+      <label class="row"><input type="checkbox" name="has-SAT"> SAT (400–1600)
+        <input type="number" name="score-SAT" step="10" min="400" max="1600" inputmode="numeric" placeholder="балл">
+      </label>
+      <label class="row"><input type="checkbox" name="has-ACT"> ACT (1–36)
+        <input type="number" name="score-ACT" step="1" min="1" max="36" inputmode="numeric" placeholder="балл">
       </label>
       <p class="field-error" role="alert"></p>
     </fieldset>

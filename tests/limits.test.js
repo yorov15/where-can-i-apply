@@ -59,3 +59,12 @@ test('дата рождения: не раньше 1985 и не моложе д�
   assert.match(birthDateProblem('2024-01-01', '2026-09-26'), /от 1985 до 2016/);
   assert.equal(birthDateProblem('', '2026-09-26'), null);
 });
+
+test('SAT: 400–1600 с шагом 10, ACT: 1–36 целыми', () => {
+  assert.equal(scoreProblem('SAT', 1450), null);
+  assert.match(scoreProblem('SAT', 2000), /от 400 до 1600/);
+  assert.match(scoreProblem('SAT', 1455), /шагом 10/);
+  assert.equal(scoreProblem('ACT', 33), null);
+  assert.match(scoreProblem('ACT', 40), /от 1 до 36/);
+  assert.match(scoreProblem('ACT', 30.5), /шагом 1/);
+});
