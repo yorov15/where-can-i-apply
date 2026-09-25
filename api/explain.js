@@ -11,7 +11,7 @@
 //                        Когда сайт станет популярным — сюда можно
 //                        поставить платную, например deepseek/deepseek-chat
 //   ALLOWED_ORIGINS    — адреса сайта через запятую (по умолчанию
-//                        https://yorov15.github.io)
+//                        https://yorov15.github.io и https://kuda-podat.vercel.app)
 //   DATA_BASE_URL      — где лежат data/index.json и details.json (по
 //                        умолчанию сайт на GitHub Pages)
 //   DAILY_LIMIT        — потолок обращений к модели в сутки на один
@@ -61,7 +61,7 @@ const limiter = createLimiter({ daily: Number(process.env.DAILY_LIMIT) || LIMITS
 // Сайт стоит на GitHub Pages, то есть на другом адресе, чем функция:
 // без списка разрешённых адресов браузер запретил бы ему сюда ходить.
 const configured = (process.env.ALLOWED_ORIGINS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
-const allowed = configured.length ? configured : ['https://yorov15.github.io'];
+const allowed = configured.length ? configured : ['https://yorov15.github.io', 'https://kuda-podat.vercel.app'];
 
 // Порядок: сначала те, что лучше пишут по-русски и не рассуждают вслух.
 // Модели пробуются по одной: каждый ответ проверяется (isUsableAnswer), и
