@@ -85,3 +85,11 @@ test('палитра: токены поверхностей заданы, вер
   }
   assert.match(css, /prefers-color-scheme:\s*dark/);
 });
+
+test('на каждой странице есть ссылка «к содержимому» и main с id', () => {
+  for (const page of PAGES) {
+    const html = read(page);
+    assert.match(html, /<body>\s*<a class="skip-link" href="#main">К содержимому<\/a>/, `${page}: skip-link`);
+    assert.match(html, /<main[^>]*\sid="main"/, `${page}: main#main`);
+  }
+});
