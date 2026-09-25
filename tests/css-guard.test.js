@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -48,9 +48,21 @@ test('высота экрана задаётся не через 100vh', () => {
   assert.doesNotMatch(css, /\b100vh\b/);
 });
 
-test('шрифт системный: нет @font-face и адресов из сети', () => {
-  assert.doesNotMatch(css, /@font-face/);
-  assert.doesNotMatch(css, /url\(\s*['"]?https?:/i);
+test('шрифт свой, с этого же сайта: нет адресов из сети, есть системный запасной', () => {
+  assert.doesNotMatch(css, /url\(\s*['"]?(?:https?:|\/\/)/i);
+  const urls = [...css.matchAll(/url\(\s*["']?([^"')]+)/g)].map((m) => m[1]).filter((u) => /\.woff2$/.test(u));
+  assert.ok(urls.length >= 2, 'нужны кириллица и латиница');
+  for (const url of urls) {
+    assert.match(url, /^\.\.\/fonts\/[a-z-]+\.woff2$/, url);
+    assert.ok(existsSync(join(root, 'css', url)), `нет файла ${url}`);
+  }
+  assert.match(css, /font:[^;]*Onest, system-ui/);
+});
+
+test('CSP разрешает шрифты только с этого же сайта', () => {
+  for (const page of PAGES) {
+    assert.match(read(page), /Content-Security-Policy" content="[^"]*font-src 'self';/, page);
+  }
 });
 
 test('есть видимый фокус и отключение движения', () => {

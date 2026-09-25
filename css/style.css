@@ -1,3 +1,7 @@
+/* Шрифт Onest (SIL OFL, fonts/OFL.txt), свой, с этого же сайта. Два куска: кириллица и латиница
+   (латиница урезана до знаков, которые встречаются в тексте). Запасной шрифт системный. */
+@font-face { font-family: Onest; font-style: normal; font-weight: 400 800; font-display: swap; src: url("../fonts/onest-cyrillic.woff2") format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: Onest; font-style: normal; font-weight: 400 800; font-display: swap; src: url("../fonts/onest-latin.woff2") format("woff2"); unicode-range: U+0020-007E, U+00A0, U+00AB, U+00B7, U+00BB, U+2013, U+2014, U+2018-201D, U+2026, U+2212; }
 /* Система «яркий акцент». Мобильный вперёд. Один системный шрифт: подключаемые
    стоят трафика, которого у аудитории нет, а CSP шрифтов из сети всё равно не
    пустит.
@@ -113,7 +117,7 @@ body {
   margin: 0 auto;
   padding: var(--s-4) var(--gutter) 5rem;
   max-width: 42rem;
-  font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  font: 1rem/1.55 Onest, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
   color: var(--fg);
   background: radial-gradient(48rem 26rem at 50% -8rem, var(--tint), transparent 70%) no-repeat, var(--bg);
   overflow-wrap: anywhere;
@@ -264,7 +268,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .summary:empty { display: none; }
 .summary-line { margin: 0 0 var(--s-2); }
 .summary-stat { display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: var(--s-4); }
-.summary-number { font-size: clamp(4.5rem, 3rem + 11vw, 7rem); font-weight: 800; line-height: .9; letter-spacing: -.055em; color: var(--accent-text); font-variant-numeric: tabular-nums; }
+.summary-number { font-size: clamp(4.5rem, 3rem + 11vw, 7rem); font-weight: 800; line-height: .9; letter-spacing: -.055em; color: var(--accent-text); }
 .summary-label { font-size: 1.375rem; font-weight: 750; line-height: 1.25; letter-spacing: -.02em; }
 .summary-next { grid-column: 1 / -1; margin: var(--s-4) 0 0; padding-top: var(--s-4); color: var(--muted); border-top: 1px solid var(--line); }
 .summary-next strong { color: var(--fg); font-variant-numeric: tabular-nums; }
