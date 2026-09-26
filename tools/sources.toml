@@ -1905,3 +1905,48 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-26"
+
+# Китай, партия 27.09.2026. Мурод выбрал пакет «Китай (вузы)»; когда выяснилось,
+# что у государственных вузов бакалавриат для иностранцев идёт НА КИТАЙСКОМ и
+# требует HSK, а полностью английские программы у них магистерские, он выбрал
+# другой путь: совместные вузы (Sino-foreign). Это единственный реальный
+# англоязычный бакалавриат в Китае, и у них бывает полная помощь. Duke Kunshan
+# в каталоге уже есть (см. блок duke-kunshan выше).
+#
+# Государственные вузы (Tsinghua, Peking, Fudan, SJTU, Zhejiang, Nanjing, XJTU,
+# BNU) поэтому в sources.toml не оставлены: снимут страницу, а программы из неё
+# не выйдет. Разбор — в docs/PROPOSED-SOURCES.md и docs/HANDOFF.md.
+
+[nyu-shanghai]
+name = "NYU Shanghai (Китай, Шанхай): бакалавриат для иностранцев"
+urls = [
+  "https://shanghai.nyu.edu/undergraduate-admissions",
+  "https://shanghai.nyu.edu/page/how-apply",
+  "https://shanghai.nyu.edu/page/cost-attendance",
+  "https://shanghai.nyu.edu/page/how-apply-financial-aid",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[nottingham-ningbo]
+name = "University of Nottingham Ningbo China (Китай, Нинбо): бакалавриат для иностранцев"
+urls = [
+  "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/entry-requirements/index.aspx",
+  "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/entry-requirements/international.aspx",
+  "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/how-to-apply.aspx",
+  "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/fees-and-scholarships/index.aspx",
+  "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/fees-and-scholarships/international.aspx",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[xjtlu]
+name = "Xi'an Jiaotong-Liverpool University (Китай, Сучжоу): бакалавриат для иностранцев"
+urls = [
+  "https://www.xjtlu.edu.cn/en/admissions/ug/global/entry-requirements",
+  "https://www.xjtlu.edu.cn/en/admissions/global/how-to-apply",
+  "https://www.xjtlu.edu.cn/en/admissions/global/fees-and-scholarships",
+  "https://www.xjtlu.edu.cn/en/admissions/global/qualifications",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"

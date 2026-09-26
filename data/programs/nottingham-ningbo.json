@@ -1,0 +1,247 @@
+{
+  "id": "nottingham-ningbo",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "University of Nottingham Ningbo China (UNNC, Нинбо, Китай) — английский бакалавриат для иностранцев, набор на сентябрь 2027; для таджикского аттестата есть подготовительный год",
+    "orig": "University of Nottingham Ningbo China (UNNC), Undergraduate entry requirements, fees and how to apply for international students"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Полного покрытия нет. Обучение для иностранцев 120 000 юаней в год — дороже, чем в XJTLU. Общежитие на кампусе 11 000–20 000 юаней за учебный год. Сам вуз оценивает полный год, включая обучение, жильё, обязательную страховку и жизнь в Нинбо, в 150 000–190 000 юаней. Рассрочку новым студентам не дают: регистрация в вузе возможна только после полной оплаты года. Есть отдельная страница стипендий для иностранцев, но суммы на снятых страницах не названы."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничено: вуз набирает иностранных студентов со всего мира, отдельного списка паспортов нет. Отдельно оговорено только то, что гражданство проверяют при приёме документов"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена, но прямого списка для Таджикистана нет. Вуз публикует страницы требований по странам, и Таджикистана среди них не оказалось — есть Узбекистан, Казахстан, Азербайджан, Россия, Иран, Турция, Пакистан. Для стран без страницы вуз пишет прямо: обращаться в приёмную комиссию или подать онлайн-запрос"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "число лет учёбы вуз не считает: он принимает по аттестату об окончании школы. Для таджикского одиннадцатилетнего аттестата есть отдельный вход — подготовительный год (preliminary year), куда берут именно по справке об окончании средней школы"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Applications can be made pending final results or during the final year of school / university education.",
+      "note": "заявку можно подавать в последний год школы, до получения аттестата: вуз выдаёт условные офферы. Числом год выпуска в правилах не задан"
+    },
+    "age": {
+      "min": 18,
+      "evidence": "An applicant should be at least 18 years of age on admission to the University.",
+      "asOf": {
+        "relativeTo": "applicationYear",
+        "monthDay": "09-01"
+      }
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "Entry requirements for our courses vary depending on your school qualifications, which determine your entry into either the preliminary year (year one) or qualifying year (year two).",
+      "note": "порога в баллах для Таджикистана вуз не публикует: требования зависят от школьной квалификации и разбираются по стране. Для стран без страницы вуз просит обращаться в приёмную комиссию"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5.5,
+          "parts": true,
+          "evidence": "IELTS 5.5 with no less than 5.0 in any element"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 72,
+          "parts": true,
+          "evidence": "TOEFL iBT 72 (minimum 14 in Reading, 15 in Listening, 16 in Writing and 19 in Speaking)"
+        }
+      ],
+      "evidence": "IELTS 5.5 with no less than 5.0 in any element or PTE Academic 59 (minimum 53) or TOEFL iBT 72 (minimum 14 in Reading, 15 in Listening, 16 in Writing and 19 in Speaking)"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "ГЛАВНОЕ ДЛЯ ТАДЖИКСКОГО АТТЕСТАТА: у вуза два входа, и первый из них — подготовительный год (preliminary year). Туда берут по справке об окончании средней школы, без A-levels и без IB. Это ровно тот случай, когда одиннадцатилетняя таджикская школа не мешает: подготовительный год её и закрывает.",
+      "evidence": "Preliminary year (Year one entry) GCSE / IGCSE / O levels Normally a minimum of five B grades including Bs in relevant subjects High school graduation certificate",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "На подготовительный год английский нужен ниже: IELTS 5,5 (не ниже 5,0 в каждой части), PTE Academic 59 или TOEFL iBT 72. На прямой вход со второго курса — IELTS 6,5 (письмо не ниже 6,0) или TOEFL iBT 90 (письмо не ниже 19).",
+      "evidence": "The minimum requirements for our preliminary year (year one) entry are listed below: IELTS 5.5 with no less than 5.0 in any element or PTE Academic 59 (minimum 53) or TOEFL iBT 72 (minimum 14 in Reading, 15 in Listening, 16 in Writing and 19 in Speaking)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Выше английский нужен на инженерные программы: для BEng Aerospace Engineering на подготовительном году IELTS 6,0 (не ниже 5,5 в каждой части), на втором курсе — 6,5 (не ниже 6,0).",
+      "evidence": "The minimum English language requirements for BEng Aerospace Engineering are: Preliminary year entry: IELTS 6.0 with at least 5.5 in each element",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "ДЛЯ АНГЛИЙСКОЙ ФИЛОЛОГИИ ПОРОГ ВЫШЕ ВСЕГО: IELTS 7,0 (письмо не ниже 6,0), PTE 76 или TOEFL iBT 100. Это касается BA English Language and Applied Linguistics, BA English Language and Literature и BA English with International Business.",
+      "evidence": "IELTS 7.0 with the writing band no less than 6.0 or PTE Academic 76 (minimum 65) or TOEFL iBT 100 (minimum 19 in writing)",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "ВТОРОЙ ВХОД — СРАЗУ НА ВТОРОЙ КУРС (qualifying year) — для таджикского выпускника закрыт: туда берут с британскими A-levels (обычно ABB или BBB), дипломом IB (28–34 балла) или тремя экзаменами AP по 4–5. Ничего из этого у выпускника таджикской школы нет, поэтому твой путь — подготовительный год.",
+      "evidence": "Qualifying year (Year two entry) A levels : Typical A level requirements are ABB / BBB for the majority of programmes.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "ТАДЖИКИСТАНА В СПИСКЕ СТРАН НЕТ — и это надо знать заранее. Вуз публикует требования по странам, и рядом с Узбекистаном, Казахстаном и Азербайджаном Таджикистана не оказалось: проверено и по ссылкам на странице, и запросом по адресу страницы. Сам вуз на этот случай пишет прямо, что делать.",
+      "evidence": "If your country is not listed, please contact our Admissions Office directly or submit an online enquiry .",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Что делать без страницы для Таджикистана: писать в приёмную комиссию напрямую или подавать онлайн-запрос. Адрес приёмной комиссии — admissions@nottingham.edu.cn, телефон +86 (0574) 8818 0182. Это первый шаг, а не последний: без ответа комиссии оценивать свои шансы нельзя.",
+      "evidence": "E. admissions@nottingham.edu.cn T. +86 (0574) 8818 0182",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Оценки в аттестате важны, но вуз смотрит не только на них: он прямо пишет, что по одним оценкам места не дают, сравнивает applicants между собой и может попросить собеседование или тест. Даже с подходящими оценками место не гарантировано — заявок больше, чем мест.",
+      "evidence": "We receive more applications than places we have. This means that even if you have the right grades for a course, you might not be offered a place.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "ВОЗРАСТ: не берут младше 18 лет на момент зачисления, а зачислением считается 1 сентября учебного года. Для выпускника одиннадцатилетней школы, которому в сентябре ещё 17, это ограничение настоящее. Исключение возможно, но по индивидуальному решению: родители или опекуны должны заранее письменно согласиться на дополнительные условия.",
+      "evidence": "This requirement may be waived for applicants who will be less than 18 years of age on admission, on an individual basis, provided that their parents or guardians have given their written agreement in advance to additional safeguards and requirements.",
+      "field": "age",
+      "kind": "workaround"
+    },
+    {
+      "ru": "СРОК ПОДАЧИ НА СЕНТЯБРЬ 2027 НА САЙТЕ ЕЩЁ НЕ ОБЪЯВЛЕН. На прошлый цикл, сентябрь 2026, срок был 30 июня 2026, но набор закрыли досрочно — 21 июня 2026, а кто подал позже, попал в лист ожидания. Значит, и на этот цикл закрытие может произойти раньше объявленной даты, и подавать надо заранее. Заявку принимают только через собственную систему вуза — Application Hub, письма и почта не принимаются.",
+      "evidence": "Application deadline for September 2026 entry: 30 June 2026",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Правило досрочного закрытия прошлого цикла: admissions закрыли в 23:59 по Пекину 21 июня 2026, потому что заявок было слишком много. Это про то, почему ждать до последнего дня нельзя.",
+      "evidence": "UNNC will formally close admissions at 23:59 (Beijing Time) on 21st June 2026. Any student that applies after this time will be put onto a waitlist.",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "РЕЗУЛЬТАТЫ МОЖНО ДОНЕСТИ ПОЗЖЕ: условные офферы дают, а результаты — аттестат и балл по английскому — можно предоставить до 15 июля. Заявку при этом принимают уже в последний год школы.",
+      "evidence": "Conditional offers will be made where appropriate and students will have until 15 July 2026 to provide their results such as English language test scores and/or diploma certificates.",
+      "field": "graduationYear",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Пакет документов: одна рекомендация на фирменном бланке с подписью или печатью, табель школьных оценок, аттестат об окончании школы, справка об английском, личное заявление, копия главных страниц паспорта и цветное фото на белом фоне. Документы не на английском нужны с полным переводом от аккредитованного переводчика.",
+      "evidence": "One recommendation letter on headed paper, signed and/or stamped Transcript of school exam results (completed or results so far) High School Certificate",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Фотография сдаётся по строгим правилам: 2 дюйма, цветная, на белом фоне, без головного убора, голова занимает две трети кадра, размер не меньше 320 × 240 точек, пропорция 4:3, файл от 100 до 500 КБ в формате jpg.",
+      "evidence": "photo dimension is no less than 320 × 240 pixels, the aspect ratio is 4:3; the file size is between 100kb - 500kb; jpg format",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Плата за обучение для иностранных студентов — 120 000 юаней за учебный год. Это больше, чем в XJTLU, где 99 000.",
+      "evidence": "International students: 120,000 RMB per year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общежитие на кампусе обойдётся примерно в 11 000–20 000 юаней за учебный год в зависимости от типа комнаты.",
+      "evidence": "Accommodation on campus costs approximately 11,000 - 20,000 RMB per academic year for oversea students",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "ПОЛНАЯ ЦЕНА ГОДА: сам вуз оценивает обучение, жильё, обязательную страховку и жизнь в Нинбо в 150 000–190 000 юаней. Стипендии в эту оценку не входят — их надо вычитать отдельно.",
+      "evidence": "The estimated total annual costs, including tuition fee, accommodation fee, compulsory insurance and living in Ningbo but excluding any scholarship awards, is approximately 150,000 - 190,000 RMB",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "РАССРОЧКИ НОВЫМ СТУДЕНТАМ НЕТ: регистрация в вузе не завершится, пока не оплачен весь год обучения целиком. Рассрочка возможна только тем, кто уже отучился минимум год и столкнулся с финансовыми трудностями.",
+      "evidence": "installment plans are not available to commencing students, therefore a student's registration for degree study will only be completed once the full payment of each year's tuition fee has been made",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельная страница стипендий для иностранных студентов у вуза есть, но на снятых страницах суммы не названы. Стипендии для китайских студентов (Li Yip Yio Chin и Excellent Freshmen) тебе не подходят — они только для материкового Китая.",
+      "evidence": "If you are a student from anywhere else in the world, please refer to the scholarships page for International students .",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Два года из четырёх можно доучиваться в Ноттингеме в Британии — но тогда за эти годы платишь британскую цену, а не китайскую. Набор на такой маршрут есть не на всех программах.",
+      "evidence": "Students who choose to spend two years studying at the University of Nottingham in the UK (available on certain courses) will need to pay the international fee",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Учиться можно только здесь: вуз работает вместе с британским Ноттингемом и выдаёт его диплом, но кампус один — Нинбо. Отдельного перевода в Британию с первого курса нет.",
+      "evidence": "University of Nottingham Ningbo China enrolls students from all around the world.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/how-to-apply.aspx",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Nottingham Ningbo China (UNNC), бакалавриат для иностранных студентов"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/entry-requirements/index.aspx",
+    "pages": [
+      {
+        "url": "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/entry-requirements/index.aspx",
+        "contentHash": "sha256:3f65b5fb3d765a1b2bc96cefd6eac2f882a9e35c4d0b0e074c9477baa1cf1813"
+      },
+      {
+        "url": "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/entry-requirements/international.aspx",
+        "contentHash": "sha256:9cd80ddc37faae564494f11acbe0b54eef840e113cfeee96d56ca00186b5e31f"
+      },
+      {
+        "url": "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/how-to-apply.aspx",
+        "contentHash": "sha256:fc33e2ea6291baf442d19473e4da088ed9df6b48323d57bfe98efa1bcf6db302"
+      },
+      {
+        "url": "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/fees-and-scholarships/index.aspx",
+        "contentHash": "sha256:2899c3d63294f96a2091ed7f9a5608525b531fbbe79d4b6eff316cce82ecd911"
+      },
+      {
+        "url": "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/fees-and-scholarships/international.aspx",
+        "contentHash": "sha256:4b96c573ed09d5b62641344eb678c5bdf249f2db1264bb6ca714ed4c6b27f8d8"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}

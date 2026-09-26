@@ -1,0 +1,237 @@
+{
+  "id": "nyu-shanghai",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "NYU Shanghai (Шанхай, Китай) — американский бакалавриат в Китае, приём через Common Application, набор на осень 2027",
+    "orig": "NYU Shanghai, Undergraduate Admissions and Cost of Attendance, 2026-2027"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Полного покрытия нет, и год очень дорогой: обучение 68 576 долларов, а полная стоимость года по расчёту самого вуза — 91 676 долларов, включая жильё, страховку, еду, книги и дорогу. Но у NYU Shanghai помощь по нужде открыта всем: вуз пишет прямо, что подать на неё приглашают каждого студента независимо от гражданства. Помощь дают на входе и не пересматривают потом — сумма сохраняется на все годы учёбы. Условие одно: международному абитуриенту нужен CSS Profile, и его надо подать отдельно от заявки, в свой срок."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Non-Chinese students are required to study Mandarin Chinese and achieve proficiency by the time they graduate."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена: половина студентов приезжает из более чем 70 стран мира, отдельного списка стран нет. Вместо списка вуз требует один из признанных экзаменов — и национальный экзамен страны тоже принимают, если он есть в утверждённом списке NYU"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "число лет школы вуз не считает: он требует не годы, а результат одного из признанных экзаменов — SAT, ACT, три AP, диплом IB или национальный экзамен страны, который местно считается завершением среднего образования, проводится независимо от школы и утверждён приёмной комиссией NYU. Для Таджикистана это значит: нужен национальный экзамен, и надо заранее проверить, входит ли он в список NYU"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "The Common Application Mid-Year Report (This should show your first semester senior year grades. Have your counselor submit the report by March 1 through the Common Application.)",
+      "note": "заявку подают в выпускном классе: школа присылает отчёт с оценками за первое полугодие последнего года. Аттестат нужен позже, к 1 августа, и только от зачисленных"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "требований к возрасту на страницах приёма нет: в правилах приёма NYU Shanghai возраст не назван ни числом, ни оговоркой"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "минимального среднего балла вуз не называет: он пишет, что сильная успеваемость важна, но разбор заявки не сводится к баллам и оценкам"
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "Results from English language testing are required for students whose native language is not English (unless they have been in a school where English is the sole language of instruction for 3 years prior to applying).",
+      "note": "порог балла вуз задаёт не здесь, а в общих правилах NYU по английскому языку: на снятых страницах числа нет"
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "alternative": true,
+      "evidence": "The SAT Reasoning Test (essay test not required); or The ACT (writing test not required); or Three AP exam scores (one in literature or humanities, one in math or science, and one of your choosing); or The International Baccalaureate Diploma; or Results from a nationally accredited exam that is considered locally to signify the completion of secondary education, is administered independently of the student's school, and has been approved by the NYU Office of Undergraduate Admissions"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "ГЛАВНЫЙ ПУТЬ ДЛЯ ТАДЖИКСКОГО ВЫПУСКНИКА — НАЦИОНАЛЬНЫЙ ЭКЗАМЕН. Вуз принимает не только SAT, ACT, AP и IB, но и национальный экзамен страны, если он одновременно: местно считается завершением среднего образования, проводится независимо от школы и утверждён приёмной комиссией NYU. Таджикский национальный экзамен проводится Национальным центром тестирования, то есть независимо от школы, — но входит ли он в утверждённый список NYU, надо проверить до подачи. Спрашивать приёмную комиссию: shanghai.admissions@nyu.edu.",
+      "evidence": "Results from a nationally accredited exam that is considered locally to signify the completion of secondary education, is administered independently of the student's school, and has been approved by the NYU Office of Undergraduate Admissions",
+      "field": "exam",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если национальный экзамен не подойдёт, остаются стандартные пути, и любой один из них закрывает требование: SAT без эссе, ACT без письменной части, три экзамена AP (один по литературе или гуманитарным предметам, один по математике или естественным наукам, третий на выбор) либо диплом IB.",
+      "evidence": "The SAT Reasoning Test (essay test not required); or The ACT (writing test not required); or Three AP exam scores (one in literature or humanities, one in math or science, and one of your choosing); or The International Baccalaureate Diploma",
+      "field": "exam",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Заявка подаётся через Common Application — общую американскую систему, куда входят все три кампуса NYU: Шанхай, Нью-Йорк и Абу-Даби. В разделе NYU Questions надо выбрать кампус: если Шанхай первый по желанию, он ставится основным, если второй или третий — запасным.",
+      "evidence": "You'll be able to choose your campus(es) and program(s) of interest on the NYU Questions page of the Common Application.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "ТРИ ПОТОКА ПОДАЧИ, и все они раньше, чем у китайских вузов из подборки: Early Decision I — 1 ноября 2026, Early Decision II — 1 января 2027, Regular Decision — 5 января 2027. Отсечка по времени — 23:59 по восточному времени США.",
+      "evidence": "Early Decision I - November 1 Early Decision II - January 1 Regular Decision - January 5",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Ранние потоки (Early Decision) в американских вузах обязывающие: если примут и дадут помощь, ты обязан поехать именно сюда. Для семьи, которой нужна стипендия, это риск: сравнивать предложения других вузов уже не получится. Обычный поток (Regular Decision) таких обязательств не создаёт.",
+      "evidence": "Learn more about early decision .",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "СРОК ОТДЕЛЬНО ОТ ЗАЯВКИ: чтобы попасть на помощь по нужде, надо подать CSS Profile. Сроки свои — 10 ноября (к Early Decision I), 10 января (к Early Decision II) и 1 февраля (к Regular Decision). Это позже, чем срок самой заявки, но пропустить его нельзя: без профиля на институциональную помощь не рассматривают вообще.",
+      "evidence": "CSS Profile and FAFSA (for U.S. eligible applicants) November 10 January 10 February 1",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "ПОМОЩЬ ОТКРЫТА ВСЕМ ГРАЖДАНСТВАМ — это редкость среди китайских вузов. Вуз пишет прямо: подать на финансовую помощь приглашают каждого студента NYU Shanghai независимо от гражданства. Код NYU для CSS Profile — 2785.",
+      "evidence": "Every NYU Shanghai student, regardless of citizenship, is invited to apply for financial aid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "CSS Profile — это отдельная американская форма о доходах и имуществе семьи, её заполняют на сайте College Board. Для иностранных абитуриентов она обязательна. Если родители в разводе или не состоят в браке, каждый из них заполняет свою отдельную форму: за неподанную форму второго родителя вуз лишает права на помощь.",
+      "evidence": "The CSS Profile is required for all applicants who are U.S. or international citizens (non-Chinese nationals) who would like to be considered for institutional grants from NYU Shanghai.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "ПОМОЩЬ НЕ ПЕРЕСМАТРИВАЮТ: сумму, которую дали при поступлении, вуз сохраняет на все годы учёбы и заново нужду не оценивает. Это значит, что решается всё один раз и на входе — и что при изменении положения семьи пересчёта не будет.",
+      "evidence": "NYU Shanghai does not re-evaluate for institutional aid in subsequent years, as typically any institutional grant aid offered upon admission is renewed at the same amount during your time at NYU Shanghai.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "ГОД ОЧЕНЬ ДОРОГОЙ: обучение 68 576 долларов в год, а полная оценка года самим вузом — 91 676 долларов. В неё входят обучение, жильё 5 774, обязательная медицинская страховка 5 140, книги и материалы 1 330, а также еда 5 264, личные расходы 1 138 и дорога 4 454. Без крупной помощи по нужде эта сумма для семьи из Таджикистана неподъёмна.",
+      "evidence": "Estimated Total Cost of Attendance $91,676",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия покрывает не всё: сумма помощи не может превысить полную стоимость года, и внешние стипендии тоже учитываются — их вычитают из помощи вуза. То есть выиграть стороннюю стипендию и получить больше не значит: общий размер останется тем же.",
+      "evidence": "Your combined total awards (from NYUSH and external resources) cannot exceed the estimated annual Cost of Attendance.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка стоит 85 долларов, и это невозвратный взнос. Если оплатить не получается, вуз принимает запрос об отмене взноса — fee waiver. Это единственный китайский вуз в подборке, где взнос назван прямо.",
+      "evidence": "Students who are unable to pay the application fee can request a fee waiver .",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 85,
+        "currency": "USD",
+        "waivedForAid": true,
+        "evidence": "Nonrefundable $85.00 application fee. Students who are unable to pay the application fee can request a fee waiver ."
+      }
+    },
+    {
+      "ru": "Комплект документов: школьный отчёт от консультанта с официальным табелем, одна рекомендация от учителя (вторая — по желанию, но не больше двух), результаты экзаменов, справка об английском и взнос. Отчёт за первое полугодие выпускного класса школа присылает до 1 марта, а итоговый документ об окончании — до 1 августа, уже после зачисления.",
+      "evidence": "The Common Application School Report and official high school transcript One teacher evaluation",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Документы принимают только в оригинале или заверенной копии, с подписью регистратора или печатью школы; не на английском — нужен официальный перевод. Исключение сделано только для документов на китайском, поданных в шанхайский кампус.",
+      "evidence": "Submit original or certified copies only. A certified copy has an original signature of the registrar or other designated school official, or the institution's seal.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "ОСОБОЕ УСЛОВИЕ, КОТОРОЕ РЕДКО ВСТРЕЧАЕТСЯ: китайский язык обязателен для всех, кто не из Китая. Диплом не выдадут, пока не достигнешь требуемого уровня владения китайским. Программа англоязычная, но выпускник обязан знать китайский — это часть учебного плана, а не пожелание.",
+      "evidence": "Non-Chinese students are required to study Mandarin Chinese and achieve proficiency by the time they graduate.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Специальность выбирают не сразу: сначала общий курс свободных искусств и наук, дальше — одна из 19 специализаций. Соотношение студентов и преподавателей 8 к 1, а половина студентов — из Китая, половина из более чем 70 стран.",
+      "evidence": "Students complete a core curriculum in the liberal arts and sciences before choosing among 19 majors",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Учиться можно в трёх кампусах NYU: все студенты проводят минимум один семестр за границей — в Нью-Йорке, Абу-Даби или в одном из учебных центров сети. Это входит в программу, а не является отдельной поездкой.",
+      "evidence": "All students spend at least one semester studying abroad at one or more of NYU's 14 international locations",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский нужен всем, для кого он не родной, — кроме тех, кто последние три года учился в школе, где английский единственный язык обучения. Точные баллы вуз задаёт в общих правилах NYU по английскому языку, а не на этой странице: смотреть их надо там.",
+      "evidence": "Results from English language testing are required for students whose native language is not English (unless they have been in a school where English is the sole language of instruction for 3 years prior to applying).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Подавать документы можно и почтой, если они не идут через Common Application: Office of Undergraduate Admissions, 400 Lafayette Street, New York, NY 10003, США, либо на admissions.docs@nyu.edu. Имя во всех документах должно совпадать с паспортом.",
+      "evidence": "New York University Office of Undergraduate Admissions 400 Lafayette Street New York, NY 10003 USA",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-05",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://shanghai.nyu.edu/undergraduate-admissions",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: NYU Shanghai, бакалавриат (отдельный кампус Нью-Йоркского университета в Шанхае)"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://shanghai.nyu.edu/undergraduate-admissions",
+    "pages": [
+      {
+        "url": "https://shanghai.nyu.edu/undergraduate-admissions",
+        "contentHash": "sha256:f8255c527c3e796637dad8677e8812507042434687c96a3afb77cae8c90edf29"
+      },
+      {
+        "url": "https://shanghai.nyu.edu/page/how-apply",
+        "contentHash": "sha256:568346107980307f9c5709c5693c016f9d5cad8ecbd75306be9a7d1f727f66f7"
+      },
+      {
+        "url": "https://shanghai.nyu.edu/page/cost-attendance",
+        "contentHash": "sha256:1da516266399985e9cacfbe0a1ee284cbd412aee0cfc6d989517cbd08fe2b03c"
+      },
+      {
+        "url": "https://shanghai.nyu.edu/page/how-apply-financial-aid",
+        "contentHash": "sha256:b7deb55989bc68df64c9996ea6ceb565fe79a9e50ee3d16ee717af65f190a842"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}

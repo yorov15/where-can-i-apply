@@ -1,0 +1,266 @@
+{
+  "id": "xjtlu",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Xi'an Jiaotong-Liverpool University (XJTLU, Сучжоу, Китай) — английский бакалавриат для иностранцев, набор на сентябрь 2027; таджикский аттестат принимают по общему пути",
+    "orig": "Xi'an Jiaotong-Liverpool University (XJTLU), Entry requirements and How to apply for international students, September 2027 entry"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Полного покрытия нет. Обучение для иностранцев 99 000 юаней в год. Есть скидка за раннюю подачу — 10 % платы за год, если подать документы и получить оффер до 31 марта 2027. Главное — стипендия за успеваемость до 50 % платы за год: отбор идёт раундами, последний срок 30 апреля 2027, продлевается ежегодно при хорошей успеваемости. Жильё, еду и дорогу вуз не оплачивает. Депозит 10 000 юаней после безусловного оффера не лишний расход, а часть платы за обучение."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничено: правила приёма написаны для иностранных студентов вообще, отдельного списка паспортов нет. Единственное правило о происхождении — «4-4-2» — касается абитуриентов китайского происхождения, которые претендуют на статус иностранца, и таджикского выпускника не затрагивает"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена: вуз публикует список стран и регионов с требованиями, и Таджикистан в нём назван отдельной строкой. Если страны в списке нет, вуз просит писать на international@xjtlu.edu.cn"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "числа лет учёбы вуз не требует — он называет не годы, а документ об образовании. Для Таджикистана это «Certificate of Completed Secondary Education» со средним баллом 4 из 5, то есть обычный одиннадцатилетний таджикский аттестат, и он подходит сразу на первый курс, без подготовительного года"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "we will give you either an unconditional offer, conditional offer or rejection letter based on your academic qualification",
+      "note": "вуз выдаёт и условный оффер: заявку можно подавать, пока школа не закончена, а аттестат донести позже. Отдельного года выпуска в правилах нет"
+    },
+    "age": {
+      "min": 17,
+      "evidence": "We do not admit any students under 17 years old by 1 Sept 2027 for degree programs.",
+      "asOf": {
+        "relativeTo": "applicationYear",
+        "monthDay": "09-01"
+      }
+    },
+    "gpa": {
+      "min": 4,
+      "scale": "TJ_5",
+      "evidence": "Tajikistan Certificate of Completed Secondary Education with minimum grade average of 4 (out of 5), and 4 in relevant subjects."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5,
+          "parts": true,
+          "evidence": "Year one entry IELTS: 5.0 (min 4.5 in all sections)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 62,
+          "evidence": "TOEFL: 62 (iBT)"
+        }
+      ],
+      "evidence": "Year one entry IELTS: 5.0 (min 4.5 in all sections) TOEFL: 62 (iBT)"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "ТАДЖИКИСТАН ПРЯМО В СПИСКЕ — это единственный китайский вуз в подборке, который называет таджикский аттестат отдельной строкой в списке стран на 2027 год. Требование: аттестат об окончании средней школы со средним баллом не ниже 4 из 5 и 4 по профильным предметам.",
+      "evidence": "Tajikistan Certificate of Completed Secondary Education with minimum grade average of 4 (out of 5), and 4 in relevant subjects.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Ты подаёшь на первый курс (Year one entry): нужны школьная аттестация «high school or equivalent» и средний балл не ниже B по всем предметам. Подготовительного года, как в Германии, здесь не требуется — аттестат принимают сразу.",
+      "evidence": "International students Year one entry We welcome applications from high-quality candidates in all subjects with appropriate high school or equivalent qualifications.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Второй путь — сразу на второй курс (Year two entry) — для таджикского выпускника закрыт: туда берут с британскими A-levels (BBB), дипломом IB (30 баллов) или американским школьным дипломом с GPA 3,0 и тремя экзаменами AP по 4. Ничего из этого у выпускника таджикской школы нет.",
+      "evidence": "Students who have completed A-levels or International Baccalaureate (or equivalent) will be considered for entry into Year Two",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Оценки: средний балл аттестата не ниже 4 из 5 и 4 по профильным предметам. Для информатики профильный предмет — математика.",
+      "evidence": "Tajikistan Certificate of Completed Secondary Education with minimum grade average of 4 (out of 5), and 4 in relevant subjects.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский на первый курс — самый низкий порог из всей китайской подборки: IELTS 5,0 (не ниже 4,5 в каждой части) или TOEFL iBT 62. Для сравнения, на второй курс сразу требуют IELTS 6,5 или TOEFL 90. Если английский слабее 5,0, есть время подтянуть — срок подачи только в мае 2027.",
+      "evidence": "Year one entry IELTS: 5.0 (min 4.5 in all sections) TOEFL: 62 (iBT)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Если идёшь сразу на второй курс, английский нужен выше: IELTS 6,5 (не ниже 5,5 в каждой части) или TOEFL iBT 90 (не ниже 21 по каждому навыку).",
+      "evidence": "Year two entry IELTS 6.5 (min 5.5 in all sections) TOEFL: 90 (iBT) (min 21 in any skill)",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Профильные требования по предметам: инженерия, прикладная математика, промышленный дизайн, мехатроника и технические науки требуют и математики, и физики в аттестате.",
+      "evidence": "Programmes in Engineering, Applied Mathematics, Industrial Design, Mechatronics and Technology Science and so on require both Mathematics and Physics .",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Для информатики, экономики, финансов, бухгалтерского учёта, математики, химии, биологии и фармацевтики нужна математика в аттестате. Это важно для CS: без математики в табеле заявку на информатику не рассмотрят.",
+      "evidence": "Programmes in Accounting, Economics, Finance, Computer Science, Mathematics, Chemistry, Biology, Environmental Sciences, Pharmaceutical Sciences and so on require Mathematics .",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "СРОК ПОДАЧИ НА СЕНТЯБРЬ 2027 — 31 МАЯ 2027 для большинства программ бакалавриата. Заявка идёт через собственную онлайн-систему вуза, письма по почте не принимают.",
+      "evidence": "the closing date for September 2027 entry is 31 May 2027",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "СКИДКА ЗА РАННЮЮ ПОДАЧУ: 10 % платы за год, если подать заявку и все документы и получить оффер (условный или безусловный) до 31 марта 2027. Дальше нужно успеть внести депозит в срок из письма об оффере — иначе скидку не дадут.",
+      "evidence": "Submit their applications and documents by 31 March 2027.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "СТИПЕНДИЯ ЗА УСПЕВАЕМОСТЬ — ДО 50 % ПЛАТЫ ЗА ГОД. Отбор идёт по раундам: 30 ноября 2026, 15 января 2027, 28 февраля 2027, 31 марта 2027 и 30 апреля 2027. Чтобы попасть в раунд, надо успеть загрузить полный пакет документов до его срока; пересмотра в следующем раунде не бывает — пропустил, значит пропустил на весь год. Стипендия продлевается ежегодно при хорошей успеваемости.",
+      "evidence": "We offer an entry scholarship of up to 50 percent of the tuition fee per year for international and Hong Kong, Macao and Taiwan undergraduate students, based on academic excellence.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "ПОСЛЕДНИЙ СРОК ДЛЯ СТИПЕНДИИ — 30 АПРЕЛЯ 2027, на месяц раньше общего срока подачи. Кто подаёт позже, на стипендию не претендует вообще. Отметить интерес к стипендии нужно прямо в заявке, в разделе «XJTLU Entry Scholarship».",
+      "evidence": "the final application deadline is 30 April 2027. Late applicants will not be considered for the scholarship.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за обучение для иностранцев — 99 000 юаней за учебный год.",
+      "evidence": "International Students: RMB 99,000 per academic year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "После безусловного оффера нужно внести депозит 10 000 юаней, чтобы закрепить место. Он невозвратный, но не пропадает: это часть платы за обучение, и его вычтут из общей суммы при зачислении. Только после депозита вуз начинает готовить визовые документы и бронь общежития.",
+      "evidence": "you are required to pay a non-refundable deposit of RMB 10,000 to secure your place at XJTLU",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть скидка за брата или сестру: 5 % за второго учащегося в семье, 10 % за третьего и 15 % за четвёртого. О ней надо написать в приёмную комиссию до 31 мая 2027.",
+      "evidence": "5% for the second sibling; 10% for the third sibling and 15% for the fourth sibling",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия за успеваемость по итогам года: за отличные оценки 10 000 юаней, за хорошие — 5 000. Заявку подавать не нужно, отбор идёт автоматически по среднему баллу.",
+      "evidence": "The award for first class marks is currently RMB 10,000; the award for second class marks is RMB 5,000.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "МАРШРУТ 2+2: можно два последних курса доучиваться в Ливерпуле и получить британский диплом. При переходе дают 10 % скидки на обучение в Ливерпульском университете. Обратная сторона — жизнь в Британии заметно дороже Сучжоу.",
+      "evidence": "will be offered a discount of 10 percent off the tuition fees of the University of Liverpool",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Пакет документов: аттестат об образовании, табель с переводом на английский, справка об английском (IELTS или TOEFL), оценки A-level, IB или AP — если они есть, копия паспорта и цветная фотография на белом фоне. Всё, что не на английском, нужно с переводом. Подача — через онлайн-систему вуза.",
+      "evidence": "Certificates of education qualifications Transcripts, translated into English",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "ВОЗРАСТ: не берут младше 17 лет на 1 сентября 2027 года. Если на эту дату ещё нет 18 лет, по требованию министерства образования Китая нужно назначить опекуна — постоянного жителя Китая, родственника или знакомого; родители подписывают согласие. Без опекуна зачисление не оформят, и вуз прямо советует решать это заранее или писать на international@xjtlu.edu.cn.",
+      "evidence": "Based on the policy requirement from the Ministry of Education in China, when enrolling international students under the age of 18, higher education institutions shall confirm whether the student's parents reside permanently in China before admission.",
+      "field": "age",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Опекун нужен именно на дату 1 сентября 2027 года, и это не формальность: вуз пишет, что студенты, которым к этой дате нет 18 лет, должны найти законного опекуна в Китае и оформить форму назначения.",
+      "evidence": "If you cannot find a legal guardian in China, please reach out to international@xjtlu.edu.cn for assistance.",
+      "field": "age",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Язык обучения — английский, но китайский всё равно будет: у программы BA International Business with a Language иностранные студенты обычно берут китайский как язык специализации. Китайского на входе не требуют, учат с нуля.",
+      "evidence": "normally international students study Chinese and Hong Kong/Macao/Taiwan students study Spanish or Japanese as the language option",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Исключение — перевод и устный перевод (BA Translation and Interpreting): туда нужен HSK 6 либо сданный внутренний тест кафедры. Для информатики это неважно.",
+      "evidence": "an HSK level 6 or the pass of the aptitude test arranged by the Department of Translation and Interpreting is required",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "ПРАВИЛО 4-4-2 — ОНО НЕ ПРО ТЕБЯ, но знать стоит. Если у абитуриента есть китайские корни, вуз требует доказать, что он не считается китайским гражданином: паспорт не менее четырёх лет, два из последних четырёх лет прожиты вне Китая и справки об отказе от прежнего гражданства и прописки. У выпускника таджикской школы этих вопросов не возникнет.",
+      "evidence": "it is the responsibility of every international applicant to XJTLU to ensure that they meet the criteria under the 4-4-2 policy",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Если страны нет в списке, вуз не отказывает молча: он просит писать на international@xjtlu.edu.cn или смотреть общую страницу требований. Таджикистан в списке есть, поэтому этот путь тебе не нужен — но при смене правил он остаётся.",
+      "evidence": "If your country or region is not in the list, please visit our general entry requirements page for international students or contact us at international@xjtlu.edu.cn",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Оффер приходит в трёх видах: безусловный, условный или отказ. Условный означает, что место закреплено за тобой после того, как донесёшь документы из письма. На разбор заявки вуз отводит обычно 15 рабочих дней.",
+      "evidence": "It usually takes 15 working days for us to process your application and prepare an offer or a response of additional documents requirement.",
+      "field": "graduationYear",
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-05-31",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.xjtlu.edu.cn/en/admissions/ug/global/how-to-apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Xi'an Jiaotong-Liverpool University (XJTLU), бакалавриат для иностранных студентов"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.xjtlu.edu.cn/en/admissions/ug/global/entry-requirements",
+    "pages": [
+      {
+        "url": "https://www.xjtlu.edu.cn/en/admissions/ug/global/entry-requirements",
+        "contentHash": "sha256:6c03d4b4e827b37d0b0fe5805bdab73f5a0dd2f7111bbdb74723374bee20bb67"
+      },
+      {
+        "url": "https://www.xjtlu.edu.cn/en/admissions/global/how-to-apply",
+        "contentHash": "sha256:8c1cd479fe4e2ef47e5c60c7d92ecba59882b23fbef84b1c01b01a12551fa2c3"
+      },
+      {
+        "url": "https://www.xjtlu.edu.cn/en/admissions/global/fees-and-scholarships",
+        "contentHash": "sha256:c05a0f6a10c663b2eb75ccdcccdb95a9e27a8383c6bc577fa46a6edb1a85b27c"
+      },
+      {
+        "url": "https://www.xjtlu.edu.cn/en/admissions/global/qualifications",
+        "contentHash": "sha256:9db7cfb13a267b5dfbad693af55a42c3c8f4335da3f553aac77127ece8d73839"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}
