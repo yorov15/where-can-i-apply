@@ -1256,3 +1256,111 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-25"
+
+# Первая очередь колледжей США из PDF Мурода. Домены одобрены Муродом
+# 2026-09-26 (ответ в чате на вопрос о доменах первой очереди). Сами PDF
+# источником не служат: правила берутся только с официальных страниц.
+[dartmouth-college]
+name = "Dartmouth College (США): need-blind для иностранцев"
+urls = [
+  "https://admissions.dartmouth.edu/glossary-term/international-students",
+  "https://admissions.dartmouth.edu/apply/testing-policy",
+  "https://admissions.dartmouth.edu/glossary-question/if-english-not-my-first-language-am-i-required-submit-language-proficiency-test",
+  "https://financialaid.dartmouth.edu/apply-aid/international-students",
+  "https://admissions.dartmouth.edu/glossary-question/what-application-deadline",
+  "https://admissions.dartmouth.edu/glossary-question/when-financial-aid-deadline",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[swarthmore-college]
+name = "Swarthmore College (США): помощь иностранцам"
+urls = [
+  "https://www.swarthmore.edu/admissions-aid/international-students",
+  "https://www.swarthmore.edu/financial-aid/international-students",
+  "https://www.swarthmore.edu/financial-aid/common-financial-aid-topics-international-students",
+  "https://www.swarthmore.edu/admissions-aid/application-materials-deadlines",
+  "https://www.swarthmore.edu/financial-aid/financial-aid-deadlines",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[pomona-college]
+name = "Pomona College (США): помощь иностранцам, need-aware"
+urls = [
+  "https://www.pomona.edu/admissions/apply/international-applicants",
+  "https://www.pomona.edu/admissions/apply/international-applicants/international-applicant-faqs",
+  "https://www.pomona.edu/financial-aid/applying-for-aid/international-aid",
+  "https://www.pomona.edu/financial-aid/applying-aid/application-materials-and-deadlines",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[bryn-mawr-college]
+name = "Bryn Mawr College (США): помощь иностранцам"
+urls = [
+  "https://www.brynmawr.edu/admissions-aid/apply/international-students",
+  "https://www.brynmawr.edu/admissions-aid/financial-aid/international-first-year-applicants",
+  "https://www.brynmawr.edu/admissions-aid/policies-resources/admissions-policies",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[middlebury-college]
+name = "Middlebury College (США): помощь иностранцам"
+urls = [
+  "https://www.middlebury.edu/college/admissions/financial-aid",
+  "https://www.middlebury.edu/college/admissions/application-instructions-and-deadlines",
+  "https://www.middlebury.edu/student-financial-services/apply-aid/first-year-and-transfer-students",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[kenyon-college]
+name = "Kenyon College (США): помощь иностранцам"
+urls = [
+  "https://www.kenyon.edu/admissions-aid/how-to-apply/international-students/",
+  "https://www.kenyon.edu/admissions-aid/financial-aid-scholarships/apply-for-financial-aid/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[carleton-college]
+name = "Carleton College (США): помощь иностранцам"
+urls = [
+  "https://www.carleton.edu/admissions/apply/steps/international/",
+  "https://www.carleton.edu/financial-aid/apply-for-aid/international-students/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[vanderbilt-university]
+name = "Vanderbilt University (США): помощь иностранцам, need-aware"
+urls = [
+  "https://admissions.vanderbilt.edu/apply/international.php",
+  "https://admissions.vanderbilt.edu/affordability/international-costs-and-finances/",
+  "https://www.vanderbilt.edu/financialaid/undergraduate/international/",
+  "https://admissions.vanderbilt.edu/apply/first-year-process/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[rice-university]
+name = "Rice University (США): помощь иностранцам, need-aware"
+urls = [
+  "https://admission.rice.edu/apply/first-year-international-applicants",
+  "https://financialaid.rice.edu/apply-aid/international-students",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[wellesley-college]
+name = "Wellesley College (США): помощь иностранцам"
+urls = [
+  "https://www.wellesley.edu/admission-aid/apply/first-year-applicants/international-applicants",
+  "https://www.wellesley.edu/admission-aid/student-financial-services/understanding-financial-aid/apply-for-aid/international-students",
+  "https://www.wellesley.edu/admission-aid/apply/first-year-applicants",
+  "https://www.wellesley.edu/about-us/policies-procedures/gender-policy",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"

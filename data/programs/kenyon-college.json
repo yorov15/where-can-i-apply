@@ -1,0 +1,187 @@
+{
+  "id": "kenyon-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Kenyon College — колледж в США, помощь по нужде: полное покрытие страницы не обещают",
+    "orig": "Kenyon College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Помощь даётся по нужде, пакетом: гранты, стипендии, кредиты и работа в кампусе. Сколько именно нужды иностранца колледж закрывает и есть ли отбор без оглядки на деньги, на этих страницах не сказано, полного покрытия они не обещают. Кроме помощи по нужде есть стипендии без учёта нужды, но для иностранцев страницы их отдельно не называют"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "International students* applying for need-based financial aid are required to complete either the CSS Profile application (Kenyon code 1370) or Kenyon's Online International Financial Aid Application"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: подходят школы вне США; для иностранцев есть отдельные требования (английский, международная анкета на помощь)"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: страницы называют только требуемые документы (табель, рекомендации), отсечки не ставят"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "Duolingo English Test (score of at least 130 is encouraged)"
+        },
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "IELTS Academic Test (score of at least 7.0 is encouraged)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "TOEFL (score of at least 100 is encouraged)"
+        }
+      ],
+      "advisory": true,
+      "evidence": "International students must demonstrate English language proficiency unless your primary language of instruction in secondary school is English."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Test-Optional Policy - Kenyon has adopted a test-optional policy for all students applying for admission."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Помощь получают только по нужде и пакетом: гранты, стипендии, кредиты и работа в кампусе. Колледж не пишет, что закрывает нужду полностью, и не пишет, что отбор иностранцев не смотрит на деньги.",
+      "evidence": "A financial aid package then provides resources (grants, loans, and employment) to meet this demonstrated need.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Для помощи иностранцу нужен CSS Profile (код колледжа 1370) или собственная международная анкета колледжа. Анкета доступна в личном кабинете после подачи заявки. Тем, кто живёт в США или Канаде, подходит только CSS Profile.",
+      "evidence": "International students living in the United States or Canada must complete the CSS Profile application to be considered for need-based assistance and are not eligible to use Kenyon's international aid application form.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Помощь надо запросить при подаче заявки: принятому без помощи её в течение всех четырёх лет уже не рассмотрят.",
+      "evidence": "If you are admitted to Kenyon College without financial aid, you are not eligible to be considered for financial aid during your four years at Kenyon.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Взнос семьи для принятого иностранца остаётся тем же все следующие годы и не меняется, что бы ни случилось.",
+      "evidence": "The family contribution for admitted international students remains constant in future years and will not change, regardless of circumstances.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Кроме помощи по нужде колледж даёт стипендии без учёта нужды. Достаются ли они иностранцам, страницы не говорят.",
+      "evidence": "In addition to financial aid based on need, Kenyon offers a variety of scholarship programs without regard to need.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Балл SAT или ACT не нужен: колледж принимает заявки без него.",
+      "evidence": "Test-Optional Policy - Kenyon has adopted a test-optional policy for all students applying for admission.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский нужен, если язык обучения в твоей школе не английский: результат Duolingo, IELTS (Academic или Indicator) или TOEFL. Колледж называет пороги желательными, а не обязательными: Duolingo 130, IELTS 7,0, TOEFL 100.",
+      "evidence": "Students are required to submit the results of an English proficiency exam.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Интервью не обязательно, но рекомендовано. Есть партнёры InitialView и Vericant: они записывают интервью, а колледж смотрит запись.",
+      "evidence": "Interviews - Interviews are recommended but not required.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Нужны школьный отчёт с табелем, рекомендация консультанта, рекомендация учителя и отчёт за середину года.",
+      "evidence": "Secondary School Report, including transcript Counselor Recommendation Teacher Evaluation",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 15 ноября, ранний тур II и обычный — до 15 января. Документы на помощь: CSS Profile и налоговые документы до 15 ноября в раннем туре I и до 15 января в остальных.",
+      "evidence": "Early Decision Option 1 Application Due: November 15 Decision Released: Mid-December Early Decision Option 2 Application Due: January 15 Decision Released: Mid-February Regular Decision Application Due: January 15",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.kenyon.edu/admissions-aid/how-to-apply/international-students/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Kenyon College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.kenyon.edu/admissions-aid/how-to-apply/international-students/",
+    "pages": [
+      {
+        "url": "https://www.kenyon.edu/admissions-aid/how-to-apply/international-students/",
+        "contentHash": "sha256:b8c7dcd25b0ba33061b0904756db9275cd707a7ba583e5a274ed2085d5b46215"
+      },
+      {
+        "url": "https://www.kenyon.edu/admissions-aid/financial-aid-scholarships/apply-for-financial-aid/",
+        "contentHash": "sha256:07a6065b347d22471bb3f1c2a5682fdaed693cd4eb8d315097b37cc4e037c494"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

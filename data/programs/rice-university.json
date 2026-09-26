@@ -1,0 +1,221 @@
+{
+  "id": "rice-university",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Rice University — университет в США: помощь по нужде есть, но лишь ограниченному числу иностранцев",
+    "orig": "Rice University"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Тем иностранцам, кому помощь по нужде дали, нужду закрывают на 100% грантами университета (программа Rice Investment на них не распространяется). Но помощь получает лишь ограниченное число первокурсников-иностранцев, и при отборе деньги учитывают: политика need-aware. Ещё около 20% принятых получают стипендии за заслуги без отдельной заявки"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "International students who receive need-based aid will have 100% of demonstrated need met with institutional grant aid, but are not eligible for the Rice Investment."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: иностранцем считают по гражданству и статусу, а не по месту учёбы; школы вне США подают тот же пакет с переводами"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: требуют минимальный набор курсов (16 кредитов) и табель; отсечки не ставят"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "Applicants must submit a minimum score of 100 for exams taken before January 21, 2026."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "Rice requires a minimum overall score of 5.0 on the updated TOEFL iBT scale"
+        },
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "International English Language Testing System (IELTS) 7"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "Duolingo English Test 130"
+        }
+      ],
+      "evidence": "Applicants whose first language is not English are required to demonstrate English proficiency in one of two ways"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Rice recommends that degree-seeking first-year and transfer applicants submit SAT or ACT test scores if available."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Помощь по нужде даётся лишь ограниченному числу иностранцев-первокурсников: гарантии её получить нет.",
+      "evidence": "Rice University offers need-based financial aid to a limited number of international first-year applicants.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Тем, кто помощь получает, нужду закрывают на 100% грантами университета. Участвовать в программе Rice Investment иностранцы не могут.",
+      "evidence": "International students who receive need-based aid will have 100% of demonstrated need met with institutional grant aid, but are not eligible for the Rice Investment.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Деньги при отборе иностранцев учитывают (need-aware): нужную сумму помощи комиссия принимает в расчёт при решении о приёме.",
+      "evidence": "Rice's international need-based aid policy for both admission and financial aid is need aware.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Помощь надо запросить в заявке: принятый без просьбы о помощи потом её попросить не сможет.",
+      "evidence": "International students admitted without a request for financial aid cannot apply for aid in subsequent years.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Переводным иностранцам помощи по нужде и стипендий за заслуги не дают, и это действует все годы учёбы.",
+      "evidence": "We do not offer need-based or merit-based aid to international transfer applicants.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Для помощи подают CSS Profile (код колледжа 6609). Налоговые документы загружают в личном кабинете, а не через IDOC; документы не на английском идут с официальным переводом.",
+      "evidence": "As an International student you will be uploading your parent and student tax documents via the applicant portal",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Все иностранцы подают International Student Financial Statement: банковские выписки или справки о средствах семьи (налоговые документы и справки о доходах в этой форме не принимают), на английском и в долларах. Если доступная сумма меньше 101 634 долларов, надо объяснить, как покроешь остальное.",
+      "evidence": "Tax documents and proof of income are not accepted as supporting documentation.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Тем, кто помощь не просит, надо документами показать деньги хотя бы на первый год, прежде чем заявку рассмотрят.",
+      "evidence": "International applicants who are not requesting financial aid must show official documentation (appropriate affidavits and/or scholarship awards) of resources sufficient to cover the costs of the first year of study before their files can be reviewed for admission.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Иностранцы не могут просить освобождение от платы за подачу заявки (75 долларов).",
+      "evidence": "International applicants are not eligible to request an application fee waiver.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии за заслуги (около 20% принятых) дают всем принятым автоматически, без отдельной заявки; нужду не учитывают.",
+      "evidence": "There is no separate application or interview required; the Admission Committee automatically considers all admitted students, both domestic and international, on the basis of the student's application for admission.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сдавать SAT или ACT не обязательно: без баллов заявку рассматривают полноценно.",
+      "evidence": "Students who are unable or prefer not to submit test scores will still be given full consideration in the admission review selection process.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский нужен, если родной язык не английский: либо два года очной учёбы по английской программе до подачи, либо сертификат. Минимум: TOEFL 100 (5,0 по новой шкале), IELTS 7, Duolingo 130.",
+      "evidence": "Completing at least two years of full-time study in an English language curriculum prior to submitting an application.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Нужен табель с 9 по 11 класс и оценки за текущий 12 класс; выпускные и предсказанные результаты экзаменов, если школа на международной программе. Обычный тур — оценки середины года.",
+      "evidence": "Official high school/secondary school transcripts must include grades from 9th through 11th grade as well as courses being taken in the 12th grade.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны письма консультанта и двух учителей.",
+      "evidence": "Candidates must submit letters of recommendation from their counselor and two teachers.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 1 ноября; ранний тур II и обычный — до 4 января. CSS Profile: 15 ноября, 4 января и 1 февраля соответственно.",
+      "evidence": "Students who apply Early Decision I must submit their materials by November 1, while students who apply Early Decision II must submit their materials by January 4.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-04",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admission.rice.edu/apply/first-year-international-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Rice University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://admission.rice.edu/apply/first-year-international-applicants",
+    "pages": [
+      {
+        "url": "https://admission.rice.edu/apply/first-year-international-applicants",
+        "contentHash": "sha256:b693ea1c633d48e4fb60e0c4ec23f1ce56ef624a668b6bc038c569409c372e62"
+      },
+      {
+        "url": "https://financialaid.rice.edu/apply-aid/international-students",
+        "contentHash": "sha256:e0cedf07d96fbce6eb1e7c296ef3bc7a1eab3b6cd05b363670d8c620a7f9cc6d"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "id": "pomona-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Pomona College — колледж в США, помощь по нужде без кредитов, но отбор учитывает деньги",
+    "orig": "Pomona College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Нужду принятого закрывают на 100%, кредиты в помощь не входят. Средняя помощь иностранцам — почти 74 000 долларов в год, получает её 41% иностранных студентов. Один раз за четыре года колледж возмещает дорогу домой. Но при отборе иностранцев деньги учитывают: у колледжа политика need-aware"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Students studying outside the United States may apply using the same forms as all first-year applicants"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: школы вне США подают те же заявки и сроки, что и все; оценивают с поправкой на местный контекст"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: колледж не сравнивает оценки иностранцев с американскими, а смотрит на местный контекст; пересчитывать балл не нужно"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "7 on the IELTS"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "The minimum scores for admission are 100 (TOEFL iBT and iBT Special Home Edition)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "5 Minimum TOEFL"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "130 on the Duolingo English Test"
+        }
+      ],
+      "evidence": "If English is not the primary language of instruction in your secondary school, you must submit either official or self-reported results of either the Test of English as a Foreign Language (TOEFL) , the International English Language Testing System (IELTS) or the Duolingo English Test ."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "All applicants to Pomona have the option to self-report standardized (ACT or SAT) test scores."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Деньги при отборе иностранцев учитывают: колледж прямо называет это need-aware. Поэтому просить помощь надо сразу, в заявке на поступление.",
+      "evidence": "Admissions is need-aware for international applicants, but we meet the full need of every admitted international student.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Помощь получает около половины принятых иностранцев в год; нужду принятого колледж закрывает полностью.",
+      "evidence": "Pomona College does offer financial aid to approximately half of the admitted international students each year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Кредиты доступны, но колледж не использует их, чтобы закрыть нужду студента. Стипендий за заслуги и спортивных нет: вся помощь только по нужде.",
+      "evidence": "While loans are available, Pomona does not use loans to meet a student's financial need.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Один раз за четыре года иностранец может попросить возместить поездку домой, кроме поездки после выпуска. Работать можно в кампусе в учебное время и летом.",
+      "evidence": "International students can request reimbursement for one trip home during their four years, excepting a trip home after graduating.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь надо запросить при подаче заявки: после подачи выбор менять нельзя, а принятому без запроса помощи позже её не дадут.",
+      "evidence": "International students who are admitted to Pomona and have not applied for financial aid may not appeal for financial aid at a later date",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Для помощи подают CSS Profile (код колледжа 4607). Если плата за него в тягость, можно заполнить собственную международную анкету колледжа. К ней нужны переведённая справка о доходах или налоговые документы родителей за позапрошлый год.",
+      "evidence": "If the CSS Profile application fee is a burden, applicants may complete the Pomona College International Financial Aid Application.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Достаток семьи после поступления не пересматривают: помощь считают один раз при зачислении, повторно подавать на неё не нужно.",
+      "evidence": "Financial eligibility is assessed at the time the international student is admitted and will not change in subsequent years.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Балл SAT или ACT не обязателен: сообщить его можно по желанию.",
+      "evidence": "All applicants to Pomona have the option to self-report standardized (ACT or SAT) test scores.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Сертификат по английскому нужен, если в твоей школе язык обучения не английский. Минимум: IELTS 7, TOEFL iBT 100 по старой шкале или 5 по новой, Duolingo 130. Порогов по частям экзамена нет.",
+      "evidence": "The minimum scores for admission are 100 (TOEFL iBT and iBT Special Home Edition), 627 (TOEFL ITP Plus for China Solutions); 7 on the IELTS; and 130 on the Duolingo English Test.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Интервью InitialView, Vericant или Duolingo необязательны и заменой сертификату по английскому не служат.",
+      "evidence": "Duolingo, Vericant or InitialView interviews are considered optional supplements to your application and do not serve as substitutes for the required TOEFL, IELTS or Duolingo tests for applicants whose primary language of instruction is not English.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Школьные документы не на английском подают с официальным переводом. Если школа у тебя трёхлетняя (10–12 классы), к документам за них добавляют табель девятого класса. Пересчитывать средний балл в американскую шкалу не нужно.",
+      "evidence": "If secondary school in your country is 3 years (10 th -12 th grades), you will need to submit transcripts from both your 9 th grade year and from your 10 th -12 th -grade years in secondary school.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Тех, кто сейчас учится на очном отделении вуза, берут только как переводных студентов.",
+      "evidence": "If you are currently enrolled full time at a postsecondary institution (college or university), you must apply as a transfer applicant",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 15 ноября, ранний тур II и обычный — до 15 января. Документы на помощь подают в те же даты.",
+      "evidence": "Early Decision I: November 15 QuestBridge National College Match: November 1 Posse Scholar: November 15 Early Decision II: January 15 Regular Decision: January 15",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.pomona.edu/admissions/apply/international-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Pomona College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.pomona.edu/admissions/apply/international-applicants",
+    "pages": [
+      {
+        "url": "https://www.pomona.edu/admissions/apply/international-applicants",
+        "contentHash": "sha256:d8eba2a2945fe300ce03f7b669406791a5b6971dde4ef9de297ff75783f12fc0"
+      },
+      {
+        "url": "https://www.pomona.edu/admissions/apply/international-applicants/international-applicant-faqs",
+        "contentHash": "sha256:a485de5c96baefcb423512a2ba7f5c9ce020e22b575683d6e30c0b8b804ce2fd"
+      },
+      {
+        "url": "https://www.pomona.edu/financial-aid/applying-for-aid/international-aid",
+        "contentHash": "sha256:7c4988634977d1c1cf5c391012d391d78a25d21cefb721ac541342d1b7cb9668"
+      },
+      {
+        "url": "https://www.pomona.edu/financial-aid/applying-aid/application-materials-and-deadlines",
+        "contentHash": "sha256:b6e04e39990c63c4cc0b9fa99b41655f0ce74248a037c4523943877186329cd9"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

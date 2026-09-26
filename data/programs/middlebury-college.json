@@ -1,0 +1,232 @@
+{
+  "id": "middlebury-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Middlebury College — колледж в США, помощь по нужде, но отбор иностранцев учитывает деньги",
+    "orig": "Middlebury College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Нужду принятого колледж закрывает полностью, почти вся помощь — гранты, которые не возвращают. В помощь входят книги и учебные принадлежности. Средний грант по всем студентам — около 66 000 долларов; у семей с доходом до 175 000 долларов обучение бесплатное. Что ещё входит в нужду иностранца (жильё, дорога), страницы не называют. Но при отборе иностранцев деньги учитывают: у колледжа политика need-aware"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Currently, 15 percent of our students carry international passports or have grown up outside of the U.S."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: иностранные школы подают ту же заявку через Common App, Coalition App или QuestBridge; всё, что просят от иностранных школ, — табели и рекомендации"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: оценки читают вместе с табелем и отчётом школы; балла отсечки страницы не называют"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5.5,
+          "evidence": "5.5 TOEFL iBT"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 105,
+          "evidence": "105 on TOEFL iBT taken prior to January 21, 2026"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "130 DET"
+        },
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "7.0 IELTS"
+        }
+      ],
+      "advisory": true,
+      "evidence": "we require verifiable results from the TOEFL iBT, Duolingo English Test (DET), IELTS, or Cambridge English exam. The following minimum scores are recommended"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Middlebury is test optional."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Деньги при отборе иностранцев учитывают: колледж прямо называет это need-aware. Помощь надо просить сразу, вместе с заявкой на поступление, не позже сроков колледжа.",
+      "evidence": "We are need aware in our admission of international students. If you are seeking financial assistance, you must apply for aid when you apply for admission",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Средний грант по всем студентам колледжа — около 66 000 долларов в год; половина студентов получает помощь. Данные общие, не по иностранцам.",
+      "evidence": "$ 66 K AVERAGE GRANT",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Нужду всех принятых студентов колледж закрывает полностью.",
+      "evidence": "We meet all admitted students' demonstrated financial need.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Почти вся помощь — гранты и стипендии, которые не надо возвращать. Книги и учебные принадлежности входят в помощь.",
+      "evidence": "Almost all of our financial aid is institutional grants and scholarships which do not have to be repaid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для семей с доходом до 175 000 долларов в год обучение бесплатное. Колледж пишет это для всех студентов и отдельно для иностранцев не оговаривает.",
+      "evidence": "Middlebury is tuition-free for families with annual incomes up to $175,000.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для помощи иностранцу нужен CSS Profile (код колледжа 3526), только в электронном виде: ISFAA и бумажную копию не принимают.",
+      "evidence": "Middlebury College does not accept the ISFAA or a paper copy of the CSS Profile as alternatives to submitting the CSS Profile electronically.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Освобождение от платы за CSS Profile колледж сам не даёт: он опирается на решение College Board.",
+      "evidence": "Middlebury relies on the College Board's determination of eligibility for waivers and does not provide fee waivers.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцы после CSS Profile загружают через College Board (IDOC) налоговые формы родителей за 2025 год с переводом на английский или справку работодателя о всём доходе за 2025 год, на английском и с подписью. Если родитель налоги не подавал и справки нет, загружают форму об отсутствии налоговой декларации.",
+      "evidence": "International applicants must submit the following: Parent 2025 Non-US tax forms or Earning Statement(s)* translated into English",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Баллы SAT и ACT необязательны: по желанию можно прислать, самостоятельно указанные баллы принимают на этапе подачи.",
+      "evidence": "Middlebury is test optional.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Подтверждение английского не нужно, если родной язык английский или все классы последних трёх–четырёх лет школы шли на английском. Остальным нужны результаты TOEFL iBT, Duolingo, IELTS или Cambridge English.",
+      "evidence": "Your high school classes were taught entirely in English (for the last three or four years, depending on the duration of high school in your country)",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Минимальные баллы по английскому колледж называет рекомендуемыми: TOEFL iBT 5,5 по новой шкале (105 по старой), Duolingo 130, IELTS 7,0, Cambridge C1 Advanced.",
+      "evidence": "The following minimum scores are recommended: 5.5 TOEFL iBT (105 on TOEFL iBT taken prior to January 21, 2026) 130 DET 7.0 IELTS Cambridge English C1 Advanced",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужны рекомендации минимум двух учителей, а также школьный отчёт, рекомендация консультанта и табель от школьного консультанта.",
+      "evidence": "Teacher recommendations Please request at least two. School report, counselor recommendation, and transcript Submitted directly from your high school counselor.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Без оценок выпускного года решения о приёме не принимают.",
+      "evidence": "No admissions decisions will be made without senior grades.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Тем, кто учился или учится очно на программе вуза, подавать надо как переводным студентам.",
+      "evidence": "If you have been or are currently enrolled in a full-time degree-seeking program, you must apply as a transfer student.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: ранний тур I — заявка до 2 ноября; ранний тур II и обычный — до 4 января. Документы на помощь: 15 ноября, 4 января и 1 февраля.",
+      "evidence": "Early Decision I November 2 November 15 mid-December Early Decision II January 4 January 4 mid-February Regular January 4 February 1 late March",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "На странице помощи срок для раннего тура II указан 3 января 2027, на странице приёма — 4 января: две страницы колледжа расходятся на один день. Надёжнее ориентироваться на более ранний.",
+      "evidence": "Early Decision II January 3, 2027 January 3, 2027",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-04",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.middlebury.edu/college/admissions/application-instructions-and-deadlines",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Middlebury College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.middlebury.edu/college/admissions/financial-aid",
+    "pages": [
+      {
+        "url": "https://www.middlebury.edu/college/admissions/financial-aid",
+        "contentHash": "sha256:2b9f9fc242f7ae88b72c8789c9d161f58fd344d8a5e49d1b2fb6ebea007aeaa0"
+      },
+      {
+        "url": "https://www.middlebury.edu/college/admissions/application-instructions-and-deadlines",
+        "contentHash": "sha256:e1ddf7a26df26b5e8fe3f9f76fd75354c3ee0242bae746491c4b709deb7f2710"
+      },
+      {
+        "url": "https://www.middlebury.edu/student-financial-services/apply-aid/first-year-and-transfer-students",
+        "contentHash": "sha256:d9a6f8439c4084028fa6995ceb472afd7d33541184b1811d685de779bbdddcbb"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

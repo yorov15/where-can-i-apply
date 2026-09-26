@@ -1,0 +1,204 @@
+{
+  "id": "swarthmore-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Swarthmore College — колледж в США, помощь по нужде без кредитов, но отбор учитывает деньги",
+    "orig": "Swarthmore College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Нужду принятого иностранца закрывают на 100% и без кредитов: обучение (плюс 800 долларов в год на книги), сборы, жильё, питание, учебные принадлежности и часть личных расходов. Средняя помощь принятым иностранцам выпуска 2030 года — больше 93 000 долларов. Но деньги при отборе иностранцев учитывают: у колледжа политика need-aware"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "our application requirements are the same regardless of your citizenship."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: школы вне США подают ту же заявку с дополнительными материалами (видео или английский)"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: деканы читают транскрипты в контексте системы оценок страны"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "We will accept results from TOEFL, IELTS, or the Duolingo English Test."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Деньги при отборе иностранцев учитывают: заявка на помощь и нужная сумма могут повлиять на решение о приёме. Это политика need-aware, а не need-blind.",
+      "evidence": "Admission to Swarthmore is need-aware for international citizens",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Нужду принятого закрывают на 100% и кредитов в помощи иностранцам нет, только гранты. Колледж называет такой подход очень редким.",
+      "evidence": "Swarthmore is one of a small number of U.S. institutions that meets 100% of institutionally-determined financial need and does not include loans in the financial aid it offers to international students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Средняя помощь принятым иностранцам выпуска 2030 года — больше 93 000 долларов в год.",
+      "evidence": "The average financial aid decision for international students admitted to the Class of 2030 was more than $93,000 USD.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Попросить помощь можно только в заявке на поступление. Не отметил помощь при подаче — потом запросить нельзя, даже если положение семьи изменилось.",
+      "evidence": "If you do not ask for aid when you apply for admission, you cannot request it later",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Взнос семьи для иностранцев выпуска 2030 года и позже остаётся одним и тем же все четыре года; пересматривают его при смене числа братьев и сестёр в вузах или при резком падении курса валюты.",
+      "evidence": "For international students in the Class of 2030 and later, Swarthmore will offer a four-year aid decision.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Анкету на помощь иностранцы подают только после решения о приёме, не раньше: все документы надо загрузить за семь дней после решения.",
+      "evidence": "It is very important that you complete the financial aid documentation within seven (7) days of receiving your admission decision.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для помощи нужны CSS Profile (код колледжа 2821) и анкета ISAFA. Плату за CSS Profile колледж снимает у всех принятых иностранцев, код придёт после поступления.",
+      "evidence": "All admitted international students will receive a CSS Profile fee waiver.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Анкета ISAFA обязательна для тех, кто просит помощь впервые.",
+      "evidence": "All international student applicants applying for financial aid for the first time must submit the International Student Application for Financial Assistance (ISAFA)",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Доходы семьи подтверждают официальными документами: справки о зарплате и налогах в валюте, в которой заработано, без пересчёта в доллары.",
+      "evidence": "Documentation of income and assets must be attested, official, and legitimate.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Если официальных документов о доходе нет, подойдёт подписанное письмо работодателя на бланке с данными о доходе.",
+      "evidence": "If official documents are not available, submit a signed employer letter on company letterhead with verified income details.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Тем, кто учился в другом вузе в США или за границей, подавать надо как переводным студентам; помощь переводным иностранцам не дают.",
+      "evidence": "International transfer students are not eligible to apply for financial aid.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Тем, кто учится в школе вне США, нужен один из материалов: видеоответ колледжа, результат экзамена по английскому (TOEFL, IELTS или Duolingo) или видеоинтервью InitialView либо Vericant.",
+      "evidence": "Applicants attending school outside of the U.S., regardless of citizenship, are required to submit one of the following",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Баллы английского из разных сдач не складывают: берут лучший балл одной сдачи. Результат Duolingo принимают только официальный.",
+      "evidence": "We only consider your highest score from a single sitting of an English Proficiency exam and will not accept a score created from multiple tests.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Тем, кто уже закончил школу, нужны баллы выпускных экзаменов, если они есть: IB, A-levels, гаокао, WASSCE и подобные.",
+      "evidence": "students who already graduated from secondary school are required to submit their leaving exam scores if they are available",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Ранний тур осенью — до 15 ноября.",
+      "evidence": "Fall Early Decision Application Deadline: November 15",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Обычный тур — до 4 января, ответ до 1 апреля.",
+      "evidence": "Regular Decision Application Deadline: January 4",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-04",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.swarthmore.edu/admissions-aid/international-students",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Swarthmore College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.swarthmore.edu/admissions-aid/international-students",
+    "pages": [
+      {
+        "url": "https://www.swarthmore.edu/admissions-aid/international-students",
+        "contentHash": "sha256:ec57bb8e80543c42d71a128b07900de248ee204f52d61cf24e5520a5a464aea2"
+      },
+      {
+        "url": "https://www.swarthmore.edu/financial-aid/international-students",
+        "contentHash": "sha256:298548ddac7495b46de2249678e10d70bf3b407e26dcfa5583cc604661ad2339"
+      },
+      {
+        "url": "https://www.swarthmore.edu/financial-aid/common-financial-aid-topics-international-students",
+        "contentHash": "sha256:135bee351f0f083ab4a65b934ff068bf6194a427e8a0fcf495ad97fe2cac0e08"
+      },
+      {
+        "url": "https://www.swarthmore.edu/admissions-aid/application-materials-deadlines",
+        "contentHash": "sha256:588a4fcbcf4f7712335a40ba112c6d3e412ba964c894c065909428ce93d390ba"
+      },
+      {
+        "url": "https://www.swarthmore.edu/financial-aid/financial-aid-deadlines",
+        "contentHash": "sha256:fa0bfc9da8e64a9627d3e2128f935eabfc8877a90143596ff4f7d97685052d35"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}
