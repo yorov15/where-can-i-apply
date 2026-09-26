@@ -1,0 +1,298 @@
+{
+  "id": "hokkaido-mjsp",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Hokkaido University (Хоккайдо, Саппоро), Modern Japanese Studies Program — бакалавриат после полугодового курса японского, набор на октябрь 2027 (курс) и апрель 2028 (бакалавриат)",
+    "orig": "Hokkaido University, Modern Japanese Studies Program (MJSP)"
+  },
+  "hostCountry": "JP",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Условия самые мягкие из всей японской подборки: всем иностранным студентам потока (кроме тех, кто получил государственную стипендию MEXT) отменяют вступительный взнос 282 000 иен и плату за первый год бакалавриата целиком. Платить приходится только за полугодовой курс японского перед началом — 181 200 иен. Дальше, со второго курса, отменяют всю или половину платы по отбору за успеваемость, отменяют не всем. Тем, кому и это тяжело, дают полное, половинное или четвертное освобождение по нужде. До четырёх человек с первого потока могут получить японскую государственную стипендию MEXT по представлению вуза. Первые полгода студенты обычно живут в общежитии. Дорогу вуз не оплачивает"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "JP"
+      ],
+      "evidence": "Individuals who have Japanese permanent resident status are not eligible to apply."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "min": 11,
+      "evidence": "deemed to be equivalent to 11 years or more of school education completed in that country"
+    },
+    "graduationYear": {
+      "maxRelative": "applicationYear",
+      "evidence": "Individuals who have completed, or are expected to complete, 12 years of school education in a country other than Japan by September 30, 2027 (see Note 1 on page 4)."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "требований к возрасту нет: 18 лет упомянуты только в одном из путей допуска — для тех, кто сдал государственный экзамен своей страны вместо полных 12 лет школы"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "минимального балла аттестата нет: отбор идёт по табелю, личному заявлению, другим бумагам и собеседованию, требований к предметам и оценкам за стандартные экзамены вуз не ставит"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 79,
+          "evidence": "TOEFL-iBT (including Home Edition) : Band Score 4.5 or higher, or 0 -120 score 79 or higher"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "evidence": "TOEFL-iBT (including Home Edition) : Band Score 4.5 or higher, or 0 -120 score 79 or higher"
+        },
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "IELTS (Academic Module): 6.5 or higher"
+        }
+      ],
+      "evidence": "Individuals must fulfill either following a or b (English Proficiency Requirements)"
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "advisory": true,
+      "evidence": "If national or other standardized examinations for university admission or for completion of secondary education in their own country exists, it is desirable for applicants to have taken them."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство: подавать могут только иностранцы, обладателям японского вида на жительство нельзя. Японское гражданство тоже мешает, но у кого оно есть вместе с иностранным, тот проходит предварительную проверку допуска: первый поток — с 1 по 8 октября 2026, второй — с 6 по 13 января 2027.",
+      "evidence": "Individuals who have Japanese permanent resident status are not eligible to apply.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Основной путь: 12 лет школы в стране вне Японии, законченных или ожидаемых к 30 сентября 2027. Таджикская школа одиннадцатилетняя, поэтому именно этот пункт её не закрывает.",
+      "evidence": "Individuals who have completed, or are expected to complete, 12 years of school education in a country other than Japan by September 30, 2027 (see Note 1 on page 4).",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Путь для 11-летней школы, прямо названный числом: вуз принимает тех, чья школа вне Японии признана равной японской старшей школе и кому засчитали 11 лет и больше, если школа отвечает требованиям японского министерства образования (MEXT). Одиннадцать лет стоят в правилах как отдельный пункт, а не как исключение по звонку. Входит ли таджикская школа в список, из этих страниц не видно — это вопрос приёмной комиссии до подачи.",
+      "evidence": "deemed to be equivalent to 11 years or more of school education completed in that country",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ещё пути, без таджикского аттестата: диплом International Baccalaureate, немецкий Abitur, французский baccalauréat, британский GCE A-Level, международный IGCE A-Level, европейский European Baccalaureate, либо 12 лет в школе с аккредитацией WASC, ACSI, CIS, NEASC, Cognia или COBIS. Отдельно есть путь для тех, кто сдал государственный экзамен своей страны, подтверждающий уровень выпускника школы, и кому к 30 сентября 2027 исполнится 18 лет.",
+      "evidence": "Individuals who hold General Certificate of Education (GCE) Advanced Level (A Levels) recognized as a qualification for university admission in the UK",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Нужно было учиться в школе не меньше двух лет подряд, включая последний класс. Для выпускника обычной школы это выполняется само собой, но тем, кто ушёл на экстернат или заканчивал школу за год, условие может помешать.",
+      "evidence": "must have been enrolled, or be expected to be enrolled, at schools for at least two consecutive years, including their final school year.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Школу надо закончить к 30 сентября 2027: допуск считается на эту дату. Выпускник 2027 года подходит.",
+      "evidence": "Individuals who have completed, or are expected to complete, 12 years of school education in a country other than Japan by September 30, 2027 (see Note 1 on page 4).",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "ГЛАВНОЕ ПРО ЭТУ ПРОГРАММУ: японский язык знать заранее не нужно. Первые полгода — курс японского с нуля, он и есть условие входа в бакалавриат. Учить японский до подачи не требуется, в заявке смотрят английский и мотивацию.",
+      "evidence": "The six-month Intensive Japanese Course is a beginners' level course in the Japanese language to provide students with the Japanese language ability required to enter the Bachelor's degree program.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужен английский: TOEFL iBT 79 (или 4,5 по новой шкале) либо IELTS Academic 6,5. Duolingo эта программа не принимает, в отличие от соседней Integrated Science Program. Балл принимают только за один конкретный тест, MyBest не годится; он должен быть сдан не раньше чем за два года до конца регистрации, то есть не раньше конца октября 2024.",
+      "evidence": "IELTS (Academic Module): 6.5 or higher",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Балл английского можно не сдавать, если четыре года и больше средней или высшей школы ты учился на английском как на основном языке обучения. Просто уроки английского как предмет эти четыре года не считаются; если школа учит на двух и больше языках и справку с одним английским дать не могут, балл всё равно потребуют.",
+      "evidence": "Individuals who have received , or are expected to receive, four years or more of their secondary education (at junior or senior high school, etc.) , or higher education (at university or college) in English as their primary language of instruction by September 30, 2027.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если у тебя есть результаты стандартных экзаменов для поступления в вуз или для окончания школы в твоей стране, их нужно приложить. Для Таджикистана это республиканский экзамен. Требований к предметам и оценкам вуз прямо не ставит, но и не брать эти результаты нельзя, если экзамен в стране есть. SAT и ACT тоже принимают, код College Board у программы — 7944, код ACT — 8000.",
+      "evidence": "Individuals who have taken the following national or other standardized tests for university admission or for completion of secondary education in their own country must upload score reports for the tests.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Подача в два потока. Первый: онлайн-регистрация с 10:00 27 октября до 17:00 4 ноября 2026, рекомендация должна прийти в вуз почтой до 17:00 20 ноября 2026. Второй: регистрация с 10:00 2 февраля до 17:00 9 февраля 2027, рекомендация — до 17:00 24 февраля 2027. Собеседование в первом потоке с 5 по 14 января 2027, итоги 12 февраля 2027; во втором — с 6 по 15 апреля 2027, итоги 13 мая 2027. Подавать можно только в один поток за один год.",
+      "evidence": "October 27, 2026 (Tue.) at 10:00 a.m. - November 4, 2026 (Wed.) at 5:00 p.m. (JST)",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу — 5 000 иен. Возвращают только если заплатил дважды. Платят картой или через японские банкомат и магазин, обычным банковским переводом нельзя.",
+      "evidence": "13 Application fee ¥5,000",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 5000,
+        "currency": "JPY",
+        "evidence": "13 Application fee ¥5,000"
+      }
+    },
+    {
+      "ru": "Полугодовой курс японского (октябрь 2027 — март 2028) платный: 181 200 иен за семестр, вступительный взнос за него не берут. Именно эту сумму и приходится платить в первый год, всё остальное отменяют.",
+      "evidence": "¥181,200 (1 semester)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Бакалавриат начинается в апреле 2028: вступительный взнос 282 000 иен и обучение 535 800 иен в год.",
+      "evidence": "Bachelor's degree in Modern Japanese Studies ¥5,000 ¥282,000 ¥535,800 (per year)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "ГЛАВНАЯ ЛЬГОТА: всем иностранным студентам потока, зачисленным в бакалавриат в апреле 2028, отменяют целиком вступительный взнос и плату за первый год. Исключение одно — те, кто получил государственную стипендию MEXT: у них вместо отмены стипендия. Если передумаешь и откажешься от зачисления, льгота пропадает и взнос могут потребовать.",
+      "evidence": "We will waive the full amount of the enrollment and tuition fees for the 2028 academic year for students enrolling in the Modern Japanese Studies Program in April 2028.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Со второго курса бакалавриата и дальше всю или половину платы отменяют по отбору за успеваемость. Отменяют не всем: это конкурс, а не право.",
+      "evidence": "In the second year of the Bachelor's degree in the Modern Japanese Studies and thereafter, all or half of the tuition fees will be waived for selected students based on academic performance.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Всего около четырёх человек с первого потока, зачисленных на курс японского в октябре 2027, могут получить государственную стипендию MEXT по представлению вуза. Второму потоку она недоступна, и тем, кого освободили от курса японского, тоже. Имена отобранных называют вместе с итогами отбора.",
+      "evidence": "Approximately 4 successful applicants from the First Call of Application enrolled in the Intensive Japanese Course in October 2027 will be selected as Japanese Government Scholarship Students",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Тем, кто не получил ни одной из этих льгот и кому платить тяжело, дают полное, половинное или четвертное освобождение от платы за обучение по нужде — с условием хорошей успеваемости. Заявление подают после зачисления.",
+      "evidence": "students may apply for a full, half, or quarter tuition waiver if they are facing hardship in paying their tuition fees for financial reasons and have demonstrated outstanding academic performance",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Жильё: первые полгода в Японии студенты программы обычно живут в общежитии, при заявке можно выбрать желаемое, но могут поселить и не туда. Плата за общежитие меняется и оплачивается отдельно.",
+      "evidence": "Students on this program usually spend their first six months in Japan living in student dorms",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подрабатывать можно только с разрешения иммиграционной службы, которое оформляют до начала работы. Вуз прямо предупреждает: рассчитывать на то, что подработка покроет обучение и жизнь, не стоит.",
+      "evidence": "applicants are strongly advised against assuming that tuition fees and living expenses incurred while studying on the Modern Japanese Studies Program can be largely or completely paid for by working part-time while on the program.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Пакет документов: анкета и фотография, чек-лист (форма 1), форма о школе (форма 3) и табель от директора школы за всё время учёбы, справка об английском, результаты стандартных экзаменов, копия паспорта, личное заявление (форма 4) и одна рекомендация (форма 5). Если уже учился в вузе — справка и табель оттуда. Документы не на английском или японском нужны с переводом, присланные бумаги не возвращают, за ложные сведения отчисляют.",
+      "evidence": "Certificates indicating school performance/grades listed below must be official and issued by the principal or head of the school or institution.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Личное заявление пишут на форме 4, заполняя разделы A–D: раздел D нужен только тем, кто просит освободить его от курса японского и должен доказать уровень не ниже среднего. Переводческими программами и ИИ пользоваться прямо запрещено — вуз проверяет.",
+      "evidence": "Professional proofreading and use of AI is strictly prohibited for Section A through D.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Рекомендация — ровно одна, на форме 5, от учителя старшей школы, который хорошо знает твою успеваемость; от родственника или друга её принимать нельзя. Отправляют только почтой с отслеживанием, в запечатанном и подписанном через клапан конверте; по электронной почте не принимают, и спрашивать о её получении бессмысленно — вуз не отвечает, надо смотреть трек-номер.",
+      "evidence": "The Letter of Recommendation will be accepted only via postal mail. Do not upload it to the Online Registration Site.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Отбор в два этапа: по документам (табель, личное заявление и остальные бумаги) — 100 баллов, и онлайн-собеседование — ещё 100. Собеседование записывают для защиты от подлога. Результаты не сообщают ни по телефону, ни по почте: номера принятых вывешивают на сайте программы и присылают в личный кабинет.",
+      "evidence": "Scoring Application review 100 points Interview 100 points",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Учиться: четыре года бакалавриата после полугодового курса японского. Сначала курс с октября 2027, бакалавриат с апреля 2028. Программа про современную Японию — язык, общество, гуманитарные и социальные науки; выпускник должен стать связующим звеном между Японией и своей страной.",
+      "evidence": "The Modern Japanese Studies Program is a four-year Bachelor's degree program preceded by a sixmonth Intensive Japanese Course.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Если тебя уже приняли на другую программу Хоккайдо — Integrated Science Program или International Qualification-Based Admission — и ты подтвердил зачисление, в MJSP принять не могут. Подавать одновременно в несколько программ одного вуза нельзя.",
+      "evidence": "Students admitted to Hokkaido University's Undergraduate Courses, the Integrated Science Program (Undergraduate) or International Qualification -Based Admission, who complete the enrollment procedures, will not be accepted into the Modern Japanese Studies Program.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Для въезда нужна студенческая виза и Certificate of Eligibility, на оформление которого уходит больше трёх месяцев, — начинать надо сразу после зачисления. По правилам экспортного контроля вуз проверяет зачисляемых иностранцев и может ограничить обучение в отдельных областях.",
+      "evidence": "It may take more than three months for a COE to be issued.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-10-27",
+    "closes": "2026-11-04",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.oia.hokudai.ac.jp/mjsp/application/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Hokkaido University, Modern Japanese Studies Program (MJSP)"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.oia.hokudai.ac.jp/mjsp/application/",
+    "pages": [
+      {
+        "url": "https://www.oia.hokudai.ac.jp/mjsp/application/",
+        "contentHash": "sha256:fa4bc3328b0cfa3749ad98f2868241cf30583a73beed2fa7ba60ba7a36ff528d"
+      },
+      {
+        "url": "https://www.oia.hokudai.ac.jp/mjsp/wp-content/uploads/2026/07/MJSP-Application-Guidelines-2028-Enrollment.pdf",
+        "contentHash": "sha256:8d85319bc1d351b8a5af00633f94719dcc21c1849199d7def07f649041ce73af"
+      },
+      {
+        "url": "https://www.oia.hokudai.ac.jp/mjsp/application/fees-scholarships/",
+        "contentHash": "sha256:7d99d8cb4a2b3e5a9ccd8af5a8f6d762cf0fde550c596ecf7715c1195af83d39"
+      },
+      {
+        "url": "https://www.oia.hokudai.ac.jp/mjsp/",
+        "contentHash": "sha256:0d840cff5dc2d6c81a67a6bf3435910cebec068bc65d0583042ae09330b7345f"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}
