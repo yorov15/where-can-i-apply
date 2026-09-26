@@ -78,3 +78,6 @@ tufts.edu, northwestern.edu, barnard.edu, mtholyoke.edu, smith.edu, `colby.edu` 
 **Результат (2026-09-26):** обе очереди внесены. Первая: 10 программ (всего 70). Вторая одобрена Муродом («Да, 11 из 13»): grinnell, macalester, colgate, davidson, denison, bard, tufts, northwestern, barnard, mount-holyoke, smith. Colby и JHU (403 боту) сохранены вручную через Chrome Мурода, файлы лежат в `manual/` и перечитываются вручную каждый цикл. Итого **83 проверенные программы**.
 
 Открытым остаётся: italy-maeci, pakistan-hec, saudi-study (нужен верный адрес или другой уровень), дедлайн Barnard (пока пусто: страницы колледжа показывают прошлый цикл).
+
+## Корея (26.09.2026)
+Мурод одобрил 16 доменов («Все 16»). Внесены 12 программ (всего 95); подробности и список неудач (Hanyang, Chung-Ang, Dongguk, Kyungpook, Sogang) — в `docs/HANDOFF.md`, раздел «Вузы Кореи».

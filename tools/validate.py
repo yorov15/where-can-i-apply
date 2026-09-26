@@ -434,10 +434,11 @@ def _check_fee(number: int, condition: dict, haystack: str) -> list[str]:
         if not re.search(r"\b(no|not|without|free)\b", quote, re.IGNORECASE):
             problems.append(f"{where}: ноль без слов об отсутствии платы в цитате")
     elif isinstance(amount, (int, float)) and not isinstance(amount, bool):
-        # Разделители тысяч — запятая или пробел: «10,000», «30 000».
+        # Разделители тысяч — запятая или пробел: «10,000», «30 000». PDF
+        # с растянутыми буквами даёт «150 , 000» — запятая в пробелах.
         numbers = {
             float(re.sub(r"[,\s]", "", raw))
-            for raw in re.findall(r"\d+(?:[,\s]\d{3})*(?:\.\d+)?", quote)
+            for raw in re.findall(r"\d+(?:(?:\s*,\s*|\s)\d{3})*(?:\.\d+)?", quote)
         }
         if float(amount) not in numbers:
             problems.append(f"{where}.amount: числа {amount} нет в цитате")

@@ -724,6 +724,14 @@ class TestFee(unittest.TestCase):
     def test_thousands_separator_is_read(self):
         self.assertEqual(self.problems(amount=200000, currency="UZS", evidence=self.QUOTE), [])
 
+    def test_comma_padded_by_pdf_spacing_is_read(self):
+        # PDF с растянутыми буквами (SKKU) даёт «150 , 000», а не «150,000».
+        quote = "admission 150 , 000"
+        problems = validate_program(
+            self.program({"amount": 150000, "currency": "KRW", "evidence": quote}), SNAPSHOT + " " + quote
+        )
+        self.assertEqual(problems, [])
+
     def test_quote_must_be_in_the_source(self):
         problems = self.problems(amount=20, currency="USD", evidence="Application fee: USD 20 (or UZS 300)")
         self.assertTrue(any("цитата не найдена" in p for p in problems), problems)

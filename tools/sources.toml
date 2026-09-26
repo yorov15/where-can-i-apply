@@ -1541,8 +1541,7 @@ approvedAt = "2026-09-26"
 name = "Yonsei University, Underwood International College (Корея)"
 urls = [
   "https://uic.yonsei.ac.kr/admission.php?mid=m04_02_02",
-  "https://uic.yonsei.ac.kr/main/admission.php?mid=m04_03_02",
-  "https://iadmission.yonsei.ac.kr/admission_en/index.do",
+  "https://uic.yonsei.ac.kr/admission.php?mid=m04_03",
   "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
 ]
 approvedBy = "human"
@@ -1576,6 +1575,9 @@ name = "Sungkyunkwan University (Корея): бакалавриат для ин
 urls = [
   "https://admission-global.skku.edu/eng/grad/scholarship_undergrad.html",
   "https://www.skku.edu/eng/International/StudySKKU/Application.do",
+  "https://admission-global.skku.edu/bbs/filedown.php?bbsid=global_notice_re_eng&file_seq=11473",
+  "https://admission-global.skku.edu/bbs/filedown.php?bbsid=global_notice_re_eng&file_seq=11413",
+  "https://admission-global.skku.edu/eng/etc/bbs_list.html?bbsid=global_notice_re_eng&ctg_cd=&page=1&skey=&keyword=&mode=view&bltn_seq=53798",
   "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
 ]
 approvedBy = "human"
@@ -1668,9 +1670,12 @@ approvedAt = "2026-09-26"
 [sejong]
 name = "Sejong University (Корея): бакалавриат для иностранцев"
 urls = [
-  "https://en.sejong.ac.kr/eng/academics/Undergraduate_School.do",
-  "https://sos.sejong.ac.kr/pdf/409094/2026%ED%95%99%EB%85%84%20%ED%9B%84%EA%B8%B0%20%ED%95%99%EB%B6%80%20%EC%A0%95%EC%9B%90%EC%99%B8%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95%20(%EC%98%81%EB%AC%B8)_2026.03.12.pdf",
   "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+# Гид лежит на sos.sejong.ac.kr: сервер обрывает TLS-рукопожатие у Python (curl проходит),
+# поэтому файл скачан вручную, см. manual/README.md.
+files = [
+  { path = "manual/sejong/undergrad-guide-fall-2026.pdf", url = "https://sos.sejong.ac.kr/pdf/409094/2026%ED%95%99%EB%85%84%20%ED%9B%84%EA%B8%B0%20%ED%95%99%EB%B6%80%20%EC%A0%95%EC%9B%90%EC%99%B8%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95%20(%EC%98%81%EB%AC%B8)_2026.03.12.pdf" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-26"
@@ -1690,6 +1695,15 @@ name = "Kyungpook National University (Корея): бакалавриат дл�
 urls = [
   "https://en.knu.ac.kr/admission/foreign01.htm",
   "https://en.knu.ac.kr/admission/foreign03.htm",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[yonsei]
+name = "Yonsei University (Корея): бакалавриат для иностранцев, кампус в Сеуле и Сонгдо"
+urls = [
+  "https://www2.yonsei.ac.kr/entrance/2026/intl/2026_9_docu/Fall%202026%20Application%20Guide%20for%20International%20Students(Eng).pdf",
   "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
 ]
 approvedBy = "human"

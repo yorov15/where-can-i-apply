@@ -1,0 +1,195 @@
+{
+  "id": "yonsei-uic",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Yonsei University, Underwood International College (UIC) — обучение на английском в Сеуле и Сонгдо, для отобранных плата снимается на все 4 года",
+    "orig": "Yonsei University, Underwood International College"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Гарантированного покрытия нет, но есть Admissions Scholarship: полная плата за 4 года. Отдельной заявки не нужно: всех подающих иностранцев рассматривают на неё автоматически, получателей выбирают среди принятых по академическим данным, письмо о награде приходит вместе с зачислением, а балл придётся держать каждый семестр. Плата иначе — 8,26 млн вон в семестр (первый семестр 8,42 млн). У уже поступивших есть стипендия по нужде: полная, половина или треть платы. Жильё и дорогу не покрывают"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "The student must be a non-Korean with non-Korean parents as stated by Article 3 of the Nationality Act."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Students must either hold or expect to hold a high school diploma or a certificate of high school equivalency as defined by Article 98 of Enforcement Decree of the Elementary and Secondary Education Act before matriculating at UIC."
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "in the latter case, certificate of graduation must be submitted before matriculation"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата страницы не называют: документы оценивают в 200 баллов, собеседование — в 100"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": null
+        },
+        {
+          "test": "IELTS",
+          "min": null
+        }
+      ],
+      "evidence": "TOEFL PBT/CBT/iBT; IELTS; CEFR English Certification; IB DP English A: Language and Literature or English A: Literature AP English Language and Composition; AP English Literature and Composition (No minimum scores)"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут только иностранцы с иностранными родителями. Если у тебя или хотя бы у одного из родителей есть ещё и гражданство Кореи, эта дорожка закрыта.",
+      "evidence": "If the student or any one of the student's parents has dual citizenship with Korea, the student is NOT eligible for the International Students Track.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат об окончании старшей школы или его эквивалент по корейскому закону — к моменту зачисления. GED, домашнее и дистанционное обучение не принимают. 11-летний аттестат в правилах не упомянут: спроси приёмную комиссию до подачи.",
+      "evidence": "GED, home schooling, cyber schooling, or other equivalent certificates are not considered as a high school diploma, thus does not satisfy the minimum criteria for eligibility.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Подать можно ещё до выпуска: достаточно справки об ожидаемом окончании школы. Аттестат надо прислать до начала занятий.",
+      "evidence": "in the latter case, certificate of graduation must be submitted before matriculation",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский нужно подтвердить, но минимального балла нет: подойдёт TOEFL, IELTS, сертификат CEFR, IB English A или AP English. Либо диплом школы из страны, где английский единственный официальный (США, Канада без Квебека, Великобритания, Австралия, Новая Зеландия). Либо справка о том, что вся школа шла на английском, — Medium of Instruction.",
+      "evidence": "a Medium of Instruction certificate",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Принимают два раза в год: в марте и в сентябре. Весной 2027 первый тур шёл с 26 августа по 22 сентября 2026 (документы должны прийти до 2 октября), собеседования 11–12 декабря, результаты 18 декабря. Осенний набор 2027: заявки в марте 2027, собеседования и результаты в июне 2027; точных дат вуз пока не назвал.",
+      "evidence": "Admission Round 1st Round 2nd Round (TBD) Entry Term Spring 2027 Fall 2027 Online Application 10AM on Aug. 26, 2026 - 5PM on Sept. 22, 2026 March, 2027",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Обязательно онлайн-собеседование: документы оценивают в 200 баллов, собеседование — в 100. Не явился на собеседование или не прислал документы вовремя — отказ, срок не продлевают.",
+      "evidence": "If the applicant fails to submit the required application documents by the deadline, the applicant will not be interviewed and will be disqualified.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Взнос за подачу — 150 000 вон. Можно подать через сайт вуза или через Common App: тогда заявку заполняешь в Common App, а документы шлёшь в UIC почтой.",
+      "evidence": "Application Fee: KRW 150,000",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 150000,
+        "currency": "KRW",
+        "evidence": "Application Fee: KRW 150,000"
+      }
+    },
+    {
+      "ru": "Аттестат и табель со всех школ надо прислать с апостилем или консульской легализацией Кореи.",
+      "evidence": "[Apostille/Korean Consulate Authentication] Official transcripts from all high schools attended",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Плата в 2026 году: 8 202 000 вон за обучение и 56 000 разных взносов — всего 8 258 000 вон за семестр (в первом семестре 8 416 000). Может вырасти.",
+      "evidence": "Tuition Fee 8,202,000 * 7,398,000 * Miscellaneous Fees ** 56,000 56,000 Total 8,258,000 7,454,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Admissions Scholarship — полная плата за 4 года. Отдельной заявки нет: иностранцев, подающихся в UIC, рассматривают автоматически; получателей выбирают из принятых по академическим данным.",
+      "evidence": "International students applying for UIC will be automatically considered as scholarship candidates.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Чтобы сохранить Admissions Scholarship, надо держать определённый средний балл в каждом семестре. Какой, страница не называет.",
+      "evidence": "Scholarship recipients are required to maintain a certain level of GPA each semester to stay eligible for the scholarship in the following semester.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "После зачисления можно просить стипендию по нужде: полная, половина или треть платы. Её объявляют в конце каждого семестра, нужна заявка и документы, возможно собеседование.",
+      "evidence": "Freedom scholarship will be announced at the end of each semester for UIC students in need of financial aid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://uic.yonsei.ac.kr/admission.php?mid=m04_02_02",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Yonsei University, Underwood International College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://uic.yonsei.ac.kr/admission.php?mid=m04_02_02",
+    "pages": [
+      {
+        "url": "https://uic.yonsei.ac.kr/admission.php?mid=m04_02_02",
+        "contentHash": "sha256:1ed300b6b56c57731a33f789b8ce42dc933b1124ea150bf02aac7ffb4d75da4b"
+      },
+      {
+        "url": "https://uic.yonsei.ac.kr/admission.php?mid=m04_03",
+        "contentHash": "sha256:3dd89e060ecedc48da364c17a65d8ced4479ad37e3f7e024beda5a53ab760776"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "id": "skku",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Sungkyunkwan University (SKKU) — один из старейших вузов Кореи, есть английский трек, а для граждан Таджикистана — шанс на скидку 50% платы",
+    "orig": "Sungkyunkwan University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полного покрытия по умолчанию нет. Скидка при поступлении 10–100% платы по итогам отбора; за язык на первый семестр: TOPIK 6 или IELTS 8,0 / TOEFL iBT 5,5 (по новой шкале) — 100% платы, TOPIK 5 или IELTS 7,0 / TOEFL 5,0 — 50%. Таджикистан входит в список стран стипендии Global Leader (тип A): 50% платы на все 8 семестров при среднем балле от 3,5; номинируют из сильнейших первокурсников, гарантии нет. Лучшим отбирают Samsung Global Sungkyun: вся плата, 3,4 млн вон в семестр на содержание и приоритет в общежитии. Дорогу не покрывают"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "Applicant and the applicant's parents must not hold Korean nationality, including dual nationalities."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Applicants who graduated from high school ( or expected to graduate before M a r . 2 0 2 7 )"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата страницы не называют: оценка идёт по документам целиком — успеваемость, язык и внеклассная деятельность"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "At least one of the language requirements must be fulfilled before the document submission deadline"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут только те, у кого и у родителей нет корейского гражданства (двойное тоже закрывает подачу). Тому, кто был корейцем, нужны справки об отказе.",
+      "evidence": "Non-Korean students whose parents are both non-Koreans",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат об окончании старшей школы, законченной или ожидаемой до марта 2027. GED, домашнее и дистанционное обучение, аттестаты «по экзамену» не засчитывают. 11-летний аттестат в гиде не упомянут: спроси приёмную комиссию до подачи.",
+      "evidence": "Qualification examinations and programs such as GED, home schooling, cyber schooling, or other high school equivalency certificates are not regarded as high school diploma",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Гид на 2027 год — это набор на весенний семестр (занятия с 1 марта 2027), в него принимают только тех, кто закончит школу до марта 2027. Выпускнику таджикской школы, заканчивающему в мае–июне 2027, нужен осенний набор 2027: для него вуз сроков пока не объявил. Часть направлений (Global Economics, Global Business Administration, Biomedical Engineering) вообще набирает только весной.",
+      "evidence": "Recuritment only for the Spring semester ( Admission in March ) : Global Economics , Global Business Administration , Biomedical Engineering",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Два пути: корейский трек (нужен TOPIK или курсы корейского) и английский трек (нужен TOEFL iBT, IELTS, TEPS или TOEIC; ходить на корейский потом не обязательно). Английский трек есть у Global Economics, Global Business Administration, Human Science and Society, инженерных направлений, Computer Science and Engineering и Biomedical Engineering.",
+      "evidence": "English Track : Admission unit that requires English proficiency",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский трек: официальный отчёт TEPS, TOEFL iBT, IELTS или TOEIC. Освобождены граждане стран, где английский родной или официальный, и те, кто учился всю среднюю и старшую школу в такой стране (апостиль обязателен).",
+      "evidence": "Original official English proficiency test (TOEFL iBT, IELTS, TEPS, TOEIC, etc.) score report",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "На английском треке TOPIK не нужен ни для выбора специальности, ни для записи на курсы, ни для выпуска.",
+      "evidence": "English Track students are not required to obtain the Korean Language Proficiency ( TOPIK , TOPIK IBT ) score as a requirement for major placement , course registration for major courses , or graduation",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Корейский трек без TOPIK: подавать можно, получишь «предварительное зачисление». Окончательное — если в течение двух лет подашь заново на то же направление с TOPIK 4 или курсом корейского того же уровня в Sungkyun Language Institute.",
+      "evidence": "Candidate who does not have any type of Korean Language Proficiency documents mentioned above are also ABLE to apply",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Весной 2027 приём шёл в два тура: онлайн-заявка 12–21 августа 2026 (документы до 4 сентября) и 4–13 ноября 2026 (документы до 27 ноября); итоги — 23 октября 2026 и 8 января 2027. Осенний набор 2027 университет ещё не объявил.",
+      "evidence": "10 : 00 , N o v . 4 ( W e d ) ~ 17 : 00 , N o v . 1 3 ( F r i ) , 2026",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу — 150 000 вон; тому, кто повторно подаёт на то же направление с предварительным зачислением, — 30 000 вон. Не возвращается.",
+      "evidence": "International Undergraduate students admission 150 , 000",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 150000,
+        "currency": "KRW",
+        "evidence": "International Undergraduate students admission 150 , 000"
+      }
+    },
+    {
+      "ru": "Плата за первый семестр 2026 года (в неё входит вступительный взнос 198 000 вон) зависит от направления: от 5,38 млн вон (гуманитарные, социальные, бизнес) до 8,26 млн (Global Business Administration); естественные науки — 6,21 млн, инженерия и Computer Science — 6,99 млн. В 2027 году плата может измениться.",
+      "evidence": "Humanities / Social Sciences / Business Administration / 5 , 380 , 000 Global Business Administration 8 , 264 , 000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидка при поступлении — от 10 до 100% платы по итогам отбора, отдельной заявки нет; результат сообщают в день объявления итогов (только на первый семестр).",
+      "evidence": "10-100% of Dues (including entrance fee) will be waived for remarkable freshmen",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидка за язык, только на первый семестр: TOPIK 6 (или курс 6 в Sungkyun Language Institute) — 100% платы, TOPIK 5 — 50%; для выпускников зарубежных школ. Английский: IELTS 8,0 / TOEFL iBT 5,5 по новой шкале — 100%, IELTS 7,0 / TOEFL iBT 5,0 — 50%.",
+      "evidence": "IELTS 8 . 0 / TOEFL iBT 5 . 5 ( 110 for tests taken before Jan 21 , 2026 ) or higher : 100 % tuition waiver",
+      "field": "language",
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия SKKU Global Leader (тип A): для граждан стран из списка помощи развитию ОЭСР, где в SKKU учатся трое и меньше; Таджикистан в списке 2027 года есть. Номинируют среди лучших первокурсников, отдельной заявки нет, собеседование возможно. Список пересматривают каждый год.",
+      "evidence": "Yemen, Jordan, Iraq, Tajikistan, Turkmenistan",
+      "field": "citizenship",
+      "kind": "money"
+    },
+    {
+      "ru": "Global Leader (тип A) даёт 50% платы на 4 года (8 семестров), но при условии: минимум 12 кредитов в семестре (9 перед последним) и средний балл от 3,5 без единой F. Дважды не выполнил — стипендию снимают.",
+      "evidence": "Completion of at least 12 credits in the previous semester (9 credits for semester previous to the final semester) with a GPA of 3.5 or higher (without any F grades)",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Samsung Global Sungkyun: номинируют лучших первокурсников по итогам отбора, отдельной заявки нет. Полная плата за 8 семестров, 3,4 млн вон в семестр на содержание, приоритет в общежитии. Условие — средний балл от 3,7 (в первых двух семестрах от 3,5).",
+      "evidence": "Full Dues for 4 academic years (8 semesters, including Entrance fee)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Аттестат и табель надо прислать оригиналами с апостилем или консульской легализацией; без неё документы не принимают. Таджикистан входит в страны Гаагской конвенции, значит хватит апостиля.",
+      "evidence": "Kyrgyzstan, Tajikistan, Tonga",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "После оплаты взноса заявку нельзя ни изменить, ни отозвать.",
+      "evidence": "It is impossible to modify or withdraw application after the payment.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admission-global.skku.edu/eng/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Sungkyunkwan University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://admission-global.skku.edu/eng/grad/scholarship_undergrad.html",
+    "pages": [
+      {
+        "url": "https://admission-global.skku.edu/eng/grad/scholarship_undergrad.html",
+        "contentHash": "sha256:7a93b4a4b1ccec1447cf94d57f004bf49b407cadc50108daf4c4087de42729bb"
+      },
+      {
+        "url": "https://www.skku.edu/eng/International/StudySKKU/Application.do",
+        "contentHash": "sha256:41b49be348435110746dc8d2971b4259dfa2b66fcd51cec8b81d6ee1fe213ee0"
+      },
+      {
+        "url": "https://admission-global.skku.edu/bbs/filedown.php?bbsid=global_notice_re_eng&file_seq=11473",
+        "contentHash": "sha256:606c619335cde76f49933b2d0ec684fa499853623649f5e607f67973fd0bd82a"
+      },
+      {
+        "url": "https://admission-global.skku.edu/bbs/filedown.php?bbsid=global_notice_re_eng&file_seq=11413",
+        "contentHash": "sha256:2a3204db0a1ad346fd0c28cae75e7705cfad4052aa15516c238fb6fbdab3f328"
+      },
+      {
+        "url": "https://admission-global.skku.edu/eng/etc/bbs_list.html?bbsid=global_notice_re_eng&ctg_cd=&page=1&skey=&keyword=&mode=view&bltn_seq=53798",
+        "contentHash": "sha256:f7789fb5d3772355a9749ba5762426b99632b17586d68b3d47ffe8c4eeaadd76"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

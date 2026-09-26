@@ -42,6 +42,11 @@ class TestNormalize(unittest.TestCase):
         # в исходнике неотличим от обычного, и тест молча стал бы пустым.
         self.assertEqual(normalize("18\u00a0лет"), "18 лет")
 
+    def test_pdf_control_codes_become_space(self):
+        # Шрифты PDF ставят \x00 и \x07 вместо пробела (SKKU, HUFS): без
+        # этого цитата через такую границу не находится в тексте.
+        self.assertEqual(normalize("Iraq,\x00Tajikistan,\x07Turkmenistan"), "Iraq, Tajikistan, Turkmenistan")
+
 
 class TestZeroWidth(unittest.TestCase):
     def test_bom_at_start_is_removed(self):
