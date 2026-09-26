@@ -1,0 +1,214 @@
+{
+  "id": "dartmouth-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Dartmouth College — колледж в США, помощь по нужде, отбор не смотрит на деньги",
+    "orig": "Dartmouth College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Нужду принятого иностранца закрывают полностью. Помощь состоит из стипендий и кредитов, в неё входит дорога в США. Сам размер помощи считают по достатку семьи, полной стоимости года эти страницы не называют. Со второго года иностранец вносит из своих заработков 1 500 долларов в год"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Dartmouth practices need-blind admissions for all applicants including international students."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: учащиеся школ вне США подают ту же заявку и выполняют те же условия"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: оценки оценивают целиком, вместе с национальной системой и школой"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "most successful applicants score above a 7 on IELTS"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "For TOEFL exams taken before January 21, 2026 most successful applicants scores above a 100."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "For TOEFL exams taken on or after January 21, 2026, most successful applicants score a 5 or above."
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 135,
+          "evidence": "above a 135 on Duolingo"
+        }
+      ],
+      "advisory": true,
+      "evidence": "we require you to submit an English proficiency exam score from the TOEFL , IELTS , Duolingo , or Cambridge English exam"
+    },
+    "exam": {
+      "alternative": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Students who attend(ed) high school outside of the United States may fulfill Dartmouth's standardized testing requirement in one of five ways"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство не влияет на отбор: иностранцев принимают без оглядки на то, сможет ли семья заплатить.",
+      "evidence": "Applicants are admitted to the College without regard to financial circumstances.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Деньги считают уже после решения о приёме: сначала отбирают студентов, потом офис помощи определяет нужду каждого.",
+      "evidence": "Once the Admissions office has selected the students it intends to admit to Dartmouth, the Financial Aid Office determines each student's need, and awards financial aid accordingly.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Нужду всех принятых, в том числе из других стран, колледж закрывает полностью.",
+      "evidence": "Dartmouth College meets the demonstrated need of all admitted undergraduates, including those from other countries.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь иностранцам состоит из стипендий и кредитов, и в неё входят деньги на дорогу в США.",
+      "evidence": "Dartmouth College has scholarships and loans available to international students, which includes an allowance for travel to the U.S.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Со второго года иностранец вносит из заработка 1 500 долларов в год; до поступления, в первое лето, от него ничего не ждут. В пакет помощи уже заложено 2 450 долларов заработка за учебные семестры в год.",
+      "evidence": "in subsequent years there will be a student work contribution of $1,500.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Нужен балл стандартного экзамена: для учёбы в школе вне США это SAT или ACT, но подойдёт и другое.",
+      "evidence": "Standardized testing is a required element of Dartmouth's undergraduate application.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Вместо SAT или ACT принимают один из четырёх вариантов: три экзамена AP, результаты IB, A-Levels или итоговые баллы единого национального экзамена своей страны. Школьные экзамены не подходят; прогнозные баллы национального экзамена не принимают, нужны итоговые. Если итоги придут позже февраля, надо выбрать другой вариант.",
+      "evidence": "School-based exams will not satisfy the testing requirement.",
+      "field": "exam",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский нужен, если родной язык не английский и меньше двух лет учился в школе на английском: сертификат TOEFL, IELTS, Duolingo или Cambridge English.",
+      "evidence": "If your first language is not English and your curriculum has not been delivered in English for at least two years, we require you to submit an English proficiency exam score",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Минимального балла по английскому колледж не ставит. У успешных абитуриентов обычно IELTS выше 7, Duolingo выше 135, Cambridge выше 185.",
+      "evidence": "Dartmouth does not have minimum required scores on English proficiency exams",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Сроки: ранний тур до 1 ноября, обычный до 1 января. Документы на помощь иностранцы сдают до 1 ноября в раннем туре и до 1 февраля в обычном.",
+      "evidence": "The Early Decision deadline is November 1. The Regular Decision deadline is January 1.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Тем, кому не по карману плата за подачу заявки, колледж даёт освобождение.",
+      "evidence": "Admissions application fee waivers are available for students who require them.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-01",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admissions.dartmouth.edu/glossary-term/international-students",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Dartmouth College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://admissions.dartmouth.edu/glossary-term/international-students",
+    "pages": [
+      {
+        "url": "https://admissions.dartmouth.edu/glossary-term/international-students",
+        "contentHash": "sha256:563a7d9df92d1c16272546f776eb647969dd63ab2812ab5297ee0ed5cc9267b3"
+      },
+      {
+        "url": "https://admissions.dartmouth.edu/apply/testing-policy",
+        "contentHash": "sha256:70b8391f2e3bd4ea6eae941e10acb61798e62f0c5f3f66d2313ec30078aa6a30"
+      },
+      {
+        "url": "https://admissions.dartmouth.edu/glossary-question/if-english-not-my-first-language-am-i-required-submit-language-proficiency-test",
+        "contentHash": "sha256:559d34f3aac9fcab2669c5e7b955139dffbbecb356064387a1e31004e6e87b35"
+      },
+      {
+        "url": "https://financialaid.dartmouth.edu/apply-aid/international-students",
+        "contentHash": "sha256:8a093c1eaf6fdc67a8719b322fbe4dd785fc5ac878b836691cac457431a9c96c"
+      },
+      {
+        "url": "https://admissions.dartmouth.edu/glossary-question/what-application-deadline",
+        "contentHash": "sha256:e6d6018916473a2de8a47046808a28c954fc503c2453286a29ca88c9970b5226"
+      },
+      {
+        "url": "https://admissions.dartmouth.edu/glossary-question/when-financial-aid-deadline",
+        "contentHash": "sha256:d4c59a09ee6648536cd0f09003f29aee43f2059c840d7c5d1dfafb97126e9d3c"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

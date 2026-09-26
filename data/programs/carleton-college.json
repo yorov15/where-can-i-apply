@@ -1,0 +1,202 @@
+{
+  "id": "carleton-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Carleton College — колледж в США: обещает закрыть нужду, но денег иностранцам мало",
+    "orig": "Carleton College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Колледж заявляет, что закрывает 100% нужды каждого студента, но сразу же пишет, что денег на иностранцев ограниченное количество и стипендий по нужде им дают «несколько». Оценка полной стоимости года — 99 580 долларов (обучение, жильё, питание, сборы, книги, личные расходы, дорога, страховка); стоимость растёт на 4–5% в год. С 2027–28 учебного года кредиты в пакетах помощи заменят грантами"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Carleton's small yet global community welcomes students like you."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: иностранцем считают любого без гражданства США, постоянного вида на жительство и статуса DACA, где бы он ни учился"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: страницы приёма для иностранцев его не называют"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5.5,
+          "evidence": "TOEFL iBT: 5.5 and above"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "iBT before 2026: 100 and above"
+        },
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "IELTS : 7.0 and above"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "Duolingo English Test (DET) : 130 and above"
+        }
+      ],
+      "advisory": true,
+      "evidence": "If you answered no to both questions, you should submit results of either the TOEFL, IELTS, or Duolingo English Test (DET)."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Колледж пишет, что закрывает 100% нужды каждого студента, а верхнего предела дохода для помощи нет.",
+      "evidence": "we meet 100% of demonstrated need for every student.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Но денег на иностранцев ограниченное количество: новую или исправленную заявку на помощь после решения о приёме не рассматривают, и стипендий по нужде иностранцам дают лишь несколько. Помощь на все четыре года остаётся той же, подавать её заново каждый год не надо.",
+      "evidence": "We have limited funding available to international students. As a result, we will not consider a new or revised application for aid once you have been offered admission.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Оценка полной стоимости года на 2025–2026 — 99 580 долларов: обучение, жильё, питание, сборы, книги, личные расходы, дорога, страховка и расходы на каникулы. Ожидай роста на 4–5% в год.",
+      "evidence": "The estimated cost of attendance for the 2025-2026 academic year is $99,580 .",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "С 2027–28 учебного года колледж заменяет кредиты в пакетах помощи грантами и стипендиями.",
+      "evidence": "Beginning in the 2027-28 academic year, Carleton will replace all federal and institutional loans in need-based financial aid packages with grants and scholarships.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь надо отметить в заявке на поступление: поставить галочку о намерении просить помощь. Отдельной формы нет.",
+      "evidence": "When you fill out your application for admission, check the box indicating that you intend to apply for financial aid. No separate form is required.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Для помощи подают CSS Profile (код колледжа 6081, взнос 25 долларов) или бесплатную международную анкету колледжа, которую отправляют прямо в приёмную комиссию.",
+      "evidence": "You can provide either: the free International Student Application for Financial Assistance (you submit this directly to Admissions), or the CSS/Profile (you submit this through the College Board website)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Certification of Finances (справку о том, сколько семья может дать на учёбу) подают все иностранцы вместе с заявкой, даже те, кто помощь не просит. Форма открывается в кабинете после подачи заявки.",
+      "evidence": "All international students must submit a Certification of Finances (CoF) with their application materials. This includes students who do not apply for aid.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Если подал на помощь, тебя автоматически рассматривают на три стипендии для иностранцев: Starr Foundation (для студентов из Азии), Kellogg (для высококвалифицированных не граждан США) и Underbrink Fund (без ограничений по регионам).",
+      "evidence": "If you apply for financial aid, you are automatically considered for these scholarships: Starr Foundation Grants: Scholarship opportunities for students from Asia",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Ранний тур обязывает поступить: при принятии предложения надо отозвать все остальные заявки. Иностранцам в раннем туре дают очень мало стипендий, большинство отдают в обычном туре.",
+      "evidence": "During Early Decision, we award a very limited number of international scholarships.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Документ не на английском присылают вместе с переводом от официального переводчика: переводить свои документы самому нельзя.",
+      "evidence": "Applicants are not allowed to translate their own documents.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Подтверждение английского нужно, если дома ты на английском не говоришь и последние четыре года школа шла не на английском: TOEFL, IELTS или Duolingo. Колледж называет ориентиры: TOEFL iBT 5,5 по новой шкале (100 до 2026), IELTS 7,0, Duolingo 130.",
+      "evidence": "Do you speak English at home? Have your classes been taught in English for the last four years? If you answered no to both questions, you should submit results of either the TOEFL, IELTS, or Duolingo English Test (DET).",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Интервью не обязательно; можно прислать запись InitialView или Vericant.",
+      "evidence": "Interviews are not a required part of the application process.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "К иностранцам колледж относит всех, у кого нет гражданства США, постоянного вида на жительство и статуса DACA, где бы они ни жили и ни учились.",
+      "evidence": "we're referring to students who do not have US citizenship, nor permanent residency, nor DACA status regardless of where they or their parents live, or where they go to school.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Сроки: ранний тур — до 15 ноября; второй ранний и обычный — до 15 января. CSS Profile открывается 1 октября.",
+      "evidence": "November 15 Fall Early Decision Deadline January 15 Winter Early Decision & Regular Decision Deadline",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.carleton.edu/admissions/apply/steps/international/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Carleton College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.carleton.edu/admissions/apply/steps/international/",
+    "pages": [
+      {
+        "url": "https://www.carleton.edu/admissions/apply/steps/international/",
+        "contentHash": "sha256:0d7c6f0f7e136c69279ddf48a882def151cbd33c38846667e2e916a48be99664"
+      },
+      {
+        "url": "https://www.carleton.edu/financial-aid/apply-for-aid/international-students/",
+        "contentHash": "sha256:9dbe18cc9854b823db1f660f764cb07c028cb5e953c2dc7b128f421fe05964f7"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

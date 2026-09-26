@@ -1,0 +1,208 @@
+{
+  "id": "bryn-mawr-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Bryn Mawr College — колледж в США для женщин, помощь по нужде, но денег на всех не хватает",
+    "orig": "Bryn Mawr College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Нужду принятого колледж закрывает полностью, но фонд ограничен: колледж называет себя need-sensitive. Суммы и что именно входит в помощь (жильё, питание, дорога) страницы не называют. Стипендий за заслуги иностранцам не дают"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Bryn Mawr is a global community where 13% of undergraduates are non-U.S. citizens or permanent residents."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: подходят все национальные программы, нужны табели за каждый год и результаты выпускных экзаменов"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: оценки колледж читает в общем комплексе, табели за все годы школы обязательны"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "The minimum score required for consideration is 100 on the TOEFL, 7 on the IELTS and 130 on Duolingo."
+        },
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "7 on the IELTS"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "130 on Duolingo"
+        }
+      ],
+      "evidence": "international students are required to demonstrate English proficiency. This can be done one of two ways"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "we give students the option to submit their testing scores as part of their application"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подать заявку на бакалавриат могут женщины (в том числе трансгендерные), а также люди с рождения женского пола, не идентифицирующие себя как мужчины, и интерсекс-люди, не считающие себя мужчинами. Тех, кто в этот список не входит (например, мужчин), колледж подходящими для подачи не называет.",
+      "evidence": "Bryn Mawr College considers as eligible to apply to the undergraduate college all individuals who have identified and continue to identify as women (including cisgender and trans women), intersex individuals who do not identify as male, individuals assigned female at birth who have not taken medical or legal steps to identify as male, and individuals assigned female at birth who do not identify within the gender binary.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужду принятых колледж закрывает полностью, но денег у него ограниченное количество: он сам называет себя need-sensitive. Значит, просьба о помощи может сказаться на решении о приёме.",
+      "evidence": "Bryn Mawr is a need-sensitive institution, meaning that while we meet the full calculated need of all admitted students, we have a limited amount of funds available to provide that support.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Помощь надо запросить сразу, вместе с заявкой на поступление. Не подал вместе с заявкой — в последующие годы её не получить.",
+      "evidence": "Note: If you do not apply for financial aid at that time, you cannot apply in subsequent years.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Иностранцам стипендии за заслуги не дают.",
+      "evidence": "International students are not eligible for merit aid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Взнос семьи, который посчитали в первый год, не меняется все четыре года.",
+      "evidence": "your Estimated Family Contribution (EFC) will remain the same for all four years.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для помощи нужен CSS Profile (код колледжа 2049) в срок подачи заявки: без него колледж не гарантирует, что рассмотрит и саму заявку на поступление.",
+      "evidence": "If you do not complete your CSS Profile, we cannot guarantee we will be able to consider you for admission to the College.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Форма «Declaration of Finances» обязательна для всех, кто не гражданин и не постоянный житель США: в ней пишешь, сколько денег семья может выделять на учёбу каждый год.",
+      "evidence": "This form is required for all non-US citizens/permanent residents who are applying to Bryn Mawr as a declaration of the financial support available for educational costs each year they attend the College.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Баллы SAT и ACT необязательны.",
+      "evidence": "Optional Application Materials Standardized test results (SAT/ACT) Interview",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский подтверждают одним из двух способов: освобождение (если все предметы с 9 по 12 класс шли на английском, кроме языков) или официальный сертификат: TOEFL 100, IELTS 7, Duolingo 130. Освобождение запрашивают в личном кабинете после подачи Common App. Колледж настойчиво советует прислать подтверждение всем иностранцам, даже тем, кто имеет право на освобождение.",
+      "evidence": "The minimum score required for consideration is 100 on the TOEFL, 7 on the IELTS and 130 on Duolingo.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Баллы выпускных или национальных экзаменов нужны в копиях, если они есть в твоей программе. Если школа окончена, присылают официальные результаты; если нет — в заявке указывают предполагаемую дату сдачи.",
+      "evidence": "We require copies of all external exam results if it is part of your school or national curriculum.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны табели за каждый год школы, на английском, и присылает их школьный сотрудник, а не ты сам.",
+      "evidence": "We require transcripts for each year of secondary school .",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны рекомендации консультанта и двух учителей. Если консультанта нет, пишет директор или другой сотрудник школы, который тебя знает.",
+      "evidence": "We require two recommendations-these are typically written by teachers of core academic subjects",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 15 ноября, ранний тур II — до 1 января, обычный — до 15 января. Документы на помощь подают в те же даты.",
+      "evidence": "Early Decision: November 15 or January 1",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.brynmawr.edu/admissions-aid/apply/international-students",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Bryn Mawr College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.brynmawr.edu/admissions-aid/apply/international-students",
+    "pages": [
+      {
+        "url": "https://www.brynmawr.edu/admissions-aid/apply/international-students",
+        "contentHash": "sha256:5b9bab22fa325d1888b82843c5e6b67168626663ffc9c408cd3ebb8fd415c6fb"
+      },
+      {
+        "url": "https://www.brynmawr.edu/admissions-aid/financial-aid/international-first-year-applicants",
+        "contentHash": "sha256:d1bda6cb7fb4919c12651c0ff3272da180b15d1531b5fc1503617707be6c9fa8"
+      },
+      {
+        "url": "https://www.brynmawr.edu/admissions-aid/policies-resources/admissions-policies",
+        "contentHash": "sha256:7feacc5139538aea74a6f1054bcb91a833fbab8d5a0bd1830021a417836c1610"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

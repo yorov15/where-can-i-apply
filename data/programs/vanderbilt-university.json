@@ -1,0 +1,213 @@
+{
+  "id": "vanderbilt-university",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Vanderbilt University — университет в США: стипендии по нужде только ограниченному числу иностранцев",
+    "orig": "Vanderbilt University"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полного покрытия университет иностранцам не обещает: стипендии по нужде получает ограниченное число первокурсников-иностранцев. Для поступивших на осень 2026 года суммы были от 16 815 до 99 998 долларов в год на четыре года (это и помощь по нужде, и стипендии за заслуги). Отбор иностранцев, которые просят помощь, ведут с учётом денег: политика need-aware"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "For international students admitted for fall 2026, Vanderbilt offered need-based aid and/or merit scholarships to 89 students representing 54 countries."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: иностранцы подают по тому же пути с международным разделом заявки"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: университет прямо пишет, что отсечек по баллам и оценкам не ставит"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "TOEFL iBT 5"
+        },
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "IELTS 7.0"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "Duolingo English Test 130"
+        }
+      ],
+      "advisory": true,
+      "evidence": "See recommended minimum score chart below. Applicants whose first language or language of instruction is English are not required to submit English proficiency exam scores."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "For students applying for fall 2027 and 2028 entry, SAT or ACT scores are optional."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Стипендии по нужде получает лишь ограниченное число иностранцев-первокурсников: гарантии помощи нет.",
+      "evidence": "Vanderbilt University offers need-based scholarships to a limited number of first-year international undergraduate applicants.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Если в заявке отметить, что нужна помощь по нужде, решение о приёме принимают с учётом денег (need-aware). Заявки иностранцев, просящих помощь, сравнивают между собой по учёбе, лидерству, нужде и наличию средств.",
+      "evidence": "If you indicate on your application for admission that you are seeking need-based assistance, the admission decision will be made on a need-aware basis.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Для студентов, принятых на осень 2026 года: помощь или стипендии получили 89 студентов из 54 стран, суммы от 16 815 до 99 998 долларов в год на четыре года.",
+      "evidence": "The range of awards offered was $16,815-$99,998 per year for four years.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Кто не просит помощь по нужде, должен быть готов оплатить всю стоимость четырёх лет сам или через спонсора.",
+      "evidence": "International students not seeking need-based financial aid should be prepared to finance, either privately or through a sponsor, the full cost of their Vanderbilt education for all four years.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Для помощи нужен CSS Profile или анкета ISFAA (международная анкета на помощь).",
+      "evidence": "In order to apply for need-based scholarships, you must submit the College Scholarship Service (CSS) Profile or the ISFAA (International Student Financial Aid Application).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Переводным иностранцам помощи по нужде нет: заявки на перевод с просьбой о помощи снимают сразу.",
+      "evidence": "The University has no need-based aid available for international transfer applicants who are not U.S. citizens or eligible non-citizens.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Иностранцы-первокурсники могут подавать на все стипендии за заслуги. Заявка на стипендию рекомендуется, но их дают лишь немногим исключительным абитуриентам. Срок — 1 декабря 2026.",
+      "evidence": "International first-year applicants are eligible to apply for all merit-based scholarships offered at Vanderbilt.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Балл SAT или ACT необязателен при подаче на 2027 и 2028 годы; для поступающих на осень 2029 года станет обязательным.",
+      "evidence": "For students applying for fall 2027 and 2028 entry, SAT or ACT scores are optional.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Подтверждение английского не нужно, если родной язык или язык обучения английский, или если балл ACT English выше 26 либо SAT Reading and Writing выше 630. Остальным нужен сертификат (TOEFL iBT, TOEFL Essentials, IELTS, Cambridge, LanguageCert или Duolingo). Рекомендуемый минимум: TOEFL iBT 5 (новая шкала), IELTS 7,0, Duolingo 130.",
+      "evidence": "Applicants whose first language or language of instruction is English are not required to submit English proficiency exam scores.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Документы не на английском присылают с переводом от школы или сертифицированного переводчика: переводить свои материалы самому нельзя.",
+      "evidence": "applicants may not provide their own translation of materials.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен официальный табель за все школьные классы: одних результатов выпускных экзаменов недостаточно.",
+      "evidence": "Submitting only leaving exams will not complete your application.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Отсечек по баллам стандартных тестов и среднему баллу нет: заявки читают целиком.",
+      "evidence": "we do not employ cutoffs for standardized testing or grade point averages.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 1 ноября; ранний тур II и обычный — до 1 января. Документы на помощь: CSS Profile или ISFAA до 1 ноября (ED I), 1 января (ED II) и 1 февраля (обычный).",
+      "evidence": "November 1, 2026 - Deadline for completed application Mid-December - Admission decisions available",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-01",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admissions.vanderbilt.edu/apply/first-year-process/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Vanderbilt University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://admissions.vanderbilt.edu/apply/international.php",
+    "pages": [
+      {
+        "url": "https://admissions.vanderbilt.edu/apply/international.php",
+        "contentHash": "sha256:a7972bbced2b24fcdcbd1975675f6a4437227c0dd3f5a59832af76983f2ccd51"
+      },
+      {
+        "url": "https://admissions.vanderbilt.edu/affordability/international-costs-and-finances/",
+        "contentHash": "sha256:bad414dff886472deb8168ca2c3fbcb93a2797c1d687d28ae65128fcadbda50a"
+      },
+      {
+        "url": "https://www.vanderbilt.edu/financialaid/undergraduate/international/",
+        "contentHash": "sha256:a6813c6056a1321c93706403c3d0e66b41d554bdc79cb68fbdeb10ec612ed857"
+      },
+      {
+        "url": "https://admissions.vanderbilt.edu/apply/first-year-process/",
+        "contentHash": "sha256:3012fb6210b9694624a1581651d9c1c82c348bbb458cb2ac9e9ce00dc45eeae7"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

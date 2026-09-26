@@ -162,7 +162,7 @@ def tls_context():
 
 def http_fetch(url: str) -> bytes:
     """Отдаёт байты, а не строку: в строку PDF не помещается."""
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "*/*"})
     with urllib.request.urlopen(
         request, timeout=TIMEOUT_SECONDS, context=tls_context()
     ) as response:

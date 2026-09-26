@@ -1,0 +1,190 @@
+{
+  "id": "wellesley-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Wellesley College — колледж в США для женщин, помощь по нужде ограниченному числу иностранцев",
+    "orig": "Wellesley College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": false,
+    "note": {
+      "ru": "Колледж обещает закрыть 100% рассчитанной нужды принятым иностранцам, которые подали на помощь при поступлении. Но помощь есть лишь для ограниченного числа иностранцев, и колледж просит подавать на неё только тем, чьи семьи не могут оплатить учёбу. В стоимость учёбы входят обучение, сборы, жильё, питание, книги и учебные принадлежности; дорога в них не входит"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "International students at Wellesley are students who are not U.S. citizens or permanent residents."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: подходят школы вне США; нужны заверенные копии аттестатов и экзаменационных свидетельств"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: страницы для иностранцев называют документы (табель, свидетельства), отсечки не ставят"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "we strongly recommend that you take one of the following English-proficiency tests or use one of the interview tools"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Wellesley College will continue to be test optional for those applying for entry in fall 2027."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Wellesley — женский колледж: рассматривают заявки тех, кто живёт как женщина и постоянно называет себя женщиной.",
+      "evidence": "Wellesley will consider for admission any applicant who lives as a woman and consistently identifies as a woman.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Колледж обещает закрыть 100% рассчитанной нужды принятых иностранцев, подавших на помощь при поступлении.",
+      "evidence": "Wellesley is committed to meeting 100% of calculated need for all admitted international citizens who have applied for financial aid during the admission process.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Но помощь есть лишь для ограниченного числа иностранцев из-за острой конкуренции за средства: подавать на неё советуют, только если семья не может оплатить учёбу.",
+      "evidence": "Financial assistance is available for a limited number of international citizens.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Помощь надо запросить при поступлении: принятому без помощи её потом не дадут. Подавать заново каждый год не нужно.",
+      "evidence": "International students admitted to Wellesley without financial aid will not be eligible for financial aid in future years at the College.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Стоимость учёбы для расчёта помощи: обучение, сборы, жильё, питание, книги и принадлежности. Дорога в неё не входит.",
+      "evidence": "Please note that travel is not included in international students' cost of attendance.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "После подачи заявки в личном кабинете заполняют Financial Aid Intent Form. CSS Profile присылать не надо, пока колледж сам не попросит; если попросит, расскажет, как получить освобождение от платы.",
+      "evidence": "However, you won't need to submit the CSS Profile unless our staff instructs you to do so.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подать заявку бесплатно.",
+      "evidence": "Remember: It's free to apply to Wellesley!",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Балл SAT или ACT необязателен для поступающих на осень 2027 года.",
+      "evidence": "Wellesley College will continue to be test optional for those applying for entry in fall 2027.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Тем, кто учится по английской программе меньше четырёх лет, колледж настойчиво советует сдать тест (TOEFL, Duolingo, IELTS, Cambridge, GTEC) или записать интервью InitialView или Vericant. Порогов баллов страницы не называют. Курсов английского для иностранцев в колледже нет.",
+      "evidence": "If English is not your native language and you have been studying in an English-based curriculum for fewer than four years, we strongly recommend that you take one of the following English-proficiency tests or use one of the interview tools",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужны рекомендации двух преподавателей, и в одной должна быть оценка твоего английского (чтение, письмо, разговор).",
+      "evidence": "Wellesley requires two letters of recommendation from academic instructors. At least one recommendation must include an evaluation of your proficiency in reading, writing, and speaking English.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны заверенные копии всех аттестатов и государственных экзаменационных свидетельств; свидетельства не заменяют табель и обязательные тесты. Документ не на английском присылают в оригинале и с переводом.",
+      "evidence": "All applicants must submit certified photocopies of all academic diplomas and government examination certificates.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 1 ноября; ранний тур II — до 5 января; обычный — до 8 января. Документы на помощь в те же даты.",
+      "evidence": "Application November 1 January 5 January 8 Financial aid* November 1** January 5** January 8**",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-08",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants/international-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Wellesley College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants/international-applicants",
+    "pages": [
+      {
+        "url": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants/international-applicants",
+        "contentHash": "sha256:5112486b1f18c9178023df3d30f9fbc694f1bc89af8a43fc7b4732670b6bde01"
+      },
+      {
+        "url": "https://www.wellesley.edu/admission-aid/student-financial-services/understanding-financial-aid/apply-for-aid/international-students",
+        "contentHash": "sha256:e2129e0ef4cf8fa5c2a44f0544fb4beafd1d99835c1547dcf72f3a638e6ad63f"
+      },
+      {
+        "url": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants",
+        "contentHash": "sha256:72392683e7042121938e44dcce0782f67bd7064621e89fd8c77b4c92fbecef64"
+      },
+      {
+        "url": "https://www.wellesley.edu/about-us/policies-procedures/gender-policy",
+        "contentHash": "sha256:938e9ced6b0aeba44671fb05555563ca90a820cb0927d7547545af7ef3cf1695"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}
