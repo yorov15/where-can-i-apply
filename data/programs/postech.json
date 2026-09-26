@@ -1,0 +1,223 @@
+{
+  "id": "postech",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "POSTECH — технический университет в Похане (наука и инженерия): плата за обучение снимается, есть пособие на жизнь и дорогу",
+    "orig": "POSTECH"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Всем принятым иностранцам вся плата за обучение снимается с первого семестра, а дальше продлевается до 8 семестров при GPA не ниже 3,0 из 4,3. Тем, кто поступил по международному набору, ещё 500 000 вон в месяц (в том числе на каникулах) и один раз до 2,5 млн вон за билет в Корею и дорогу внутри страны. Общежитие около 1,4 млн вон в год в основном покрывается этим пособием. Отдельной заявки нет. Условия могут меняться от года к году"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "Both applicants and their parents must hold non-Korean citizenship."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "The recognition of high school graduation from overseas institutions will be based on a comprehensive review of the educational system and academic calendar of the respective country."
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Applicants must have graduated from high school or be expected to graduate by February 2027."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата нет: комиссия смотрит только документы — курсы математики и естественных наук, качество оценок, школу и мотивацию"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "IELTS 6.5"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 83,
+          "evidence": "TOEFL iBT 83 (4.0+)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4,
+          "evidence": "TOEFL iBT 83 (4.0+)"
+        }
+      ],
+      "advisory": true,
+      "evidence": "There is no minimum score requirement; however, the following scores are recommended: IELTS 6.5, TEPS 327, TOEFL iBT 83 (4.0+), TOEIC 800"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Ты и оба родителя должны быть иностранцами: до поступления в старшую школу у всех троих было только иностранное гражданство, и позже двойного с Кореей не было. Если хоть у одного из вас корейское гражданство, подавать надо как кореец, а не по международному набору.",
+      "evidence": "The applicant and both parents must have held only foreign citizenship before the applicant entered high school",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Школу надо окончить или ожидать окончания до февраля 2027 — это условие набора на весну 2027; выпускнику таджикской школы, заканчивающему в мае–июне 2027, нужен осенний набор 2027. Сроки университет назвал заранее: заявки откроются в марте–апреле 2027, руководство появится на сайте в конце января 2027.",
+      "evidence": "The Fall 2027 intake is expected to open for applications in March-April 2027.",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Одиннадцатилетнюю школу вуз оценивает по системе образования и календарю страны, а не по числу лет: то есть окончание таджикской школы может быть признано. Предварительной проверки вуз не проводит и заранее не говорит, подойдёшь ли ты — ответственность за проверку требований на тебе.",
+      "evidence": "POSTECH does not conduct pre-screening of applicants or provide advance determinations of eligibility or admission chances prior to the formal application review process.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "GED, домашнее и дистанционное обучение как аттестат не признают.",
+      "evidence": "Academic credentials such as the GED, homeschooling, online or distance learning programs, or similar alternatives are not considered equivalent to a high school diploma",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский нужен, но минимума нет: рекомендуют IELTS 6,5, TEPS 327, TOEFL iBT 83 (или 4,0 по новой шкале), TOEIC 800. Сдать надо не раньше чем за 2 года до срока подачи; TOEFL Home Edition, Essentials и MyBest, а также IELTS General и Indicator не принимают.",
+      "evidence": "There is no minimum score requirement; however, the following scores are recommended: IELTS 6.5, TEPS 327, TOEFL iBT 83 (4.0+), TOEIC 800",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Тест по английскому не нужен, если старшая школа шла на английском (с письмом о языке обучения) или у тебя гражданство Австралии, Канады, Ирландии, Новой Зеландии, ЮАР, Великобритании или США.",
+      "evidence": "Applicants who have attended a high school where English was the primary language of instruction and can submit an official Medium of Instruction (MOI) letter issued by the high school.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Набор только на первый курс и без перевода из других вузов. Принимают на единую программу без выбора специальности, только естественные науки и инженерия; отбор идёт по документам без собеседования: успехи по математике и естественным наукам, потенциал в STEM, мотивация.",
+      "evidence": "All international undergraduate students are admitted through a non-declared major track.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Одновременно подавать по двум наборам (международному и GKS) нельзя: заявку аннулируют.",
+      "evidence": "Multiple applications across different tracks (e.g., International Admissions and the Global Korea Scholarship) are not permitted, and such cases will result in disqualification.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Взнос за подачу — 60 000 вон или 60 долларов США. Не возвращается и не отменяется.",
+      "evidence": "A non-refundable and non-waivable application fee of KRW 60,000 or USD 60 is required",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 60000,
+        "currency": "KRW",
+        "evidence": "KRW 60,000"
+      }
+    },
+    {
+      "ru": "Набор на весну 2027: подача с 25 августа по 2 сентября 2026 на сайте StudyinKorea, письмо-рекомендация до 3 сентября. Итоги — в середине ноября (предварительные) и в середине декабря 2026.",
+      "evidence": "Online Application August 25 (Tue), 2026, 14:00 - September 2 (Wed), 2026, 17:00",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Апостиль или консульская легализация нужны только тем, кого предварительно зачислили: получить их надо и прислать почтой к 8 декабря. В сроки страны они могут не уложиться, потому оформляй заранее.",
+      "evidence": "applicants who are preliminarily admitted must ensure that documents bearing Apostille or Korean Consular Authentication are received by POSTECH by post no later than December 8 for final admission",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Всем принятым — полная скидка на плату с первого семестра, дальше до 8 семестров при GPA 3,0 из 4,3. Плата без скидки — 5,714 млн вон в год (около 3 900 долларов).",
+      "evidence": "All admitted students are granted a full tuition waiver starting from their first semester. The waiver is renewed each semester for up to 8 regular semesters, provided that students maintain a minimum GPA of 3.0/4.3.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Пособие на жизнь 500 000 вон в месяц (около 360 долларов) круглый год, включая каникулы. Оно рассчитано на еду, страховку и общежитие. Единовременно до 2,5 млн вон возвращают за билет в Корею и дорогу внутри страны, если ты не жил в Корее последние 6 месяцев.",
+      "evidence": "A monthly stipend of KRW 500,000 (approx. USD 360) will be provided throughout the academic year, including vacation periods.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "После трёх семестров — Pathfinder Voucher: 11 млн вон на саморазвитие и собственные проекты. TOPIK 4 и выше дают разовую премию 300 000 вон.",
+      "evidence": "After completing three semesters, each student will be awarded a Pathfinder Voucher worth KRW 11,000,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://adm-iu.postech.ac.kr/user/admission/guide/international.do",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: POSTECH"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://adm-iu.postech.ac.kr/user/admission/guide/international.do",
+    "pages": [
+      {
+        "url": "https://adm-iu.postech.ac.kr/user/admission/guide/international.do",
+        "contentHash": "sha256:35853e35d3cead0cd847370cf2978b67b87cd9012e672e3f5543e523e11d4785"
+      },
+      {
+        "url": "https://adm-iu.postech.ac.kr/user/comm/menu/e2afb97fa1b8f43c574be0dabef78f87/content/index.do",
+        "contentHash": "sha256:9853fd74a27c7e63df1ba300b9154e3802ca5516344e80b24a91f1bb5b46d300"
+      },
+      {
+        "url": "https://adm-iu.postech.ac.kr/user/comm/menu/3317587a17a23d4dacdb9ffc4762bf4a/content/index.do",
+        "contentHash": "sha256:90ab9c36d3ad77afd2669a155cad40856358f2f42bcca6f4ba624fa016264422"
+      },
+      {
+        "url": "https://adm-iu.postech.ac.kr/comm/cmfile/download.do?encFileGrpSeq=cc2ba150020190627ad899352ae4d036&encFileSeq=82c441f65591f55a229cf6d79a4d6b8a",
+        "contentHash": "sha256:ccc94c19432b706a87498bf8521190226aff6d0f422f35b05d87a475409df45b"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

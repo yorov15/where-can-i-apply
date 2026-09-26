@@ -1,0 +1,198 @@
+{
+  "id": "snu-korea",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Seoul National University (SNU) — лучший университет Кореи, особый набор иностранцев на бакалавриат",
+    "orig": "Seoul National University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Собственных стипендий для принятых иностранцев на страницах нет: помощь только через государственную GKS (вся плата за 8 семестров, 1,2 млн вон в месяц, авиабилет, год корейского). Зато плата очень низкая по меркам мира — примерно 2,4–3,0 млн вон за семестр на большинстве факультетов (около 2 000–2 500 долларов). Жильё и жизнь оплачиваешь сам"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "국적: 지원자 및 부모 모두 외국국적 소지자"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "2027. 2. 28.까지 아래 학력과 국적 요건을 모두 충족하는 자"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата приём не называет: комиссия оценивает успеваемость, способности к специальности, язык и внешкольную деятельность вместе"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "한국어 또는 영어 능력을 증빙할 수 있는 다음 중 하나 이상의 서류"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подают в тип I «глобальные таланты», если и ты, и оба родителя иностранцы. Гражданство не Кореи родитель и ты должны были получить до начала старшей школы; кто был корейцем, должен полностью отказаться до конца приёма заявок.",
+      "evidence": "국적: 지원자 및 부모 모두 외국국적 소지자",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат об окончании средней школы (или равное образование), выданный государственным органом. GED, домашнее и дистанционное обучение не признают. 11-летний аттестат в тексте не упомянут: спроси приёмную комиссию до подачи.",
+      "evidence": "학력: 고등학교 졸업자 또는 이와 동등 이상의 학력이 있다고 인정되는 자",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Школу надо закончить до 28 февраля 2027 — это условие набора в весенний семестр 2027, поэтому выпускнику таджикской школы, заканчивающему в мае–июне 2027, оно не подходит: жди набора на осень 2027 (правил и сроков ещё нет).",
+      "evidence": "2027. 2. 28.까지 아래 학력과 국적 요건을 모두 충족하는 자",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Подача в набор на весну 2027 шла с 6 по 9 июля 2026, онлайн, через сайт приёма SNU. Рекомендательное письмо учителя — до 10 июля. Осенний набор 2027 университет ещё не объявил.",
+      "evidence": "2026. 7. 6.(월) 10:00 ~ 2026. 7. 9.(목) 17:00",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Язык подтверждают любым из: TOPIK 3 или 4-й уровень курсов при вузе в Корее; TOEFL iBT 80 (4,0 по новой шкале с 21.1.2026), IELTS Academic 6,0 или TEPS 269; либо документ, что вся старшая школа шла на корейском или английском. Тест должен быть сдан не раньше 9 июля 2024.",
+      "evidence": "TOEFL iBT 80 이상(응시일이 2026. 1. 21. 이후인 경우 4.0 이상), 또는 IELTS Academic Band Score 6.0 이상, 또는 TEPS 269 이상",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "После зачисления часть принятых сдаёт тест корейского языка в феврале: по результату могут ограничить набор предметов по факультету.",
+      "evidence": "한국어능력평가시험 대상자로 선정된 합격자는 서울대학교 언어교육원에서 실시하는 한국어능력평가시험에 응시하여야 함",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Оценка комплексная, по загруженным документам: успеваемость, способности к специальности, язык, внеклассная деятельность. Отдельного проходного балла нет; причины отказа университет не раскрывает.",
+      "evidence": "제출한 서류를 기초로 학업능력, 모집단위 관련 적성, 언어능력, 학업 및 학업 외 활동 등을 종합적으로 평가하여 선발",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Взнос за подачу — 70 000 вон (если онлайн подать нельзя из-за форс-мажора, вместо этого шлют банковский чек на 65 долларов США). Не возвращается и не отменяется.",
+      "evidence": "전형료(70,000원)",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 70000,
+        "currency": "KRW",
+        "evidence": "70,000"
+      }
+    },
+    {
+      "ru": "Подавать можно только на одну программу: повторная подача считается нарушением, и заявку аннулируют.",
+      "evidence": "복수 지원 불가",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "В университете нет собственной стипендии для принятых иностранцев; полное финансирование даёт государственная GKS: вся плата за 8 семестров, 1,2 млн вон в месяц, экономичный билет туда-обратно, год корейского. Подают на неё в посольстве Кореи в сентябре.",
+      "evidence": "Monthly Allowance: 1,200,000 KRW per month",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за семестр в 2026 году: гуманитарные и социальные факультеты — 2,44 млн вон, естественные науки и инженерия — 2,98–3,0 млн, искусство — 3,65 млн, музыка — 3,92 млн. Она может измениться.",
+      "evidence": "인문대학 전 학과(부) 2,442,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "После предварительного зачисления присылают оригиналы документов, а аттестат и табель нужны с апостилем или консульской легализацией. Нет апостиля — зачисление отменяют.",
+      "evidence": "예비합격 후 졸업증명서 및 성적증명서에 아포스티유 또는 영사확인을 받아 제출하지 않은 경우",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://en.snu.ac.kr/admission/undergraduate/application",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Seoul National University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://en.snu.ac.kr/admission/undergraduate/application",
+    "pages": [
+      {
+        "url": "https://en.snu.ac.kr/admission/undergraduate/application",
+        "contentHash": "sha256:d7b9acc0b0664a438e0268a0a8036e5fb8d34f2589ca58ac9bc3eddd20d03317"
+      },
+      {
+        "url": "https://en.snu.ac.kr/admission/undergraduate/scholarships/before_admission",
+        "contentHash": "sha256:70e05dfdd105397f7e6c7ec2c85040c4812fd15a1cdd73dd9ae3e22cc9dc2721"
+      },
+      {
+        "url": "https://en.snu.ac.kr/admission/overview/notice?md=v&bbsidx=170606",
+        "contentHash": "sha256:2453c62f97606c303f1e67df30dc6498f36b5ce3416054e09a9cc7c0940c9ed7"
+      },
+      {
+        "url": "https://en.snu.ac.kr/webdata/uploads/eng/file/2026/06/Admissions_for_Undergraduate_Spring_2027.pdf",
+        "contentHash": "sha256:c347399a0368ee3d426813967ef43a026d2f075e89f6762bfd40be6158deaae3"
+      },
+      {
+        "url": "https://en.snu.ac.kr/webdata/uploads/eng/file/2026/03/Guideline_for_Online_Application_Undergraduate.pdf",
+        "contentHash": "sha256:bf4274039c60f23a8e0d03b7307aac6a2327465c47c3da108b00a4f06a62773f"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

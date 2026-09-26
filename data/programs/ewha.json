@@ -1,0 +1,217 @@
+{
+  "id": "ewha",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Ewha Womans University — приём иностранок на бакалавриат (только для женщин)",
+    "orig": "Ewha Womans University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Деньги не гарантированы, но есть путь к полной оплате: стипендия ISS F4 покрывает всё обучение до 8 семестров тем, кого комиссия оценила как выдающихся; по баллу TOPIK скидка от частичной до полной. Есть и программа EGPP для женщин из развивающихся стран: обучение, общежитие и стипендия. Сколько стоит без стипендии: примерно 4,6–6,3 млн вон за семестр. Дорогу страницы в общем случае не покрывают"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "Applicants who hold dual nationalities including Korean nationality are not eligible to apply."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Applicants who have graduated or are expected to graduate from high school by February 2027"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата страницы не называют: комиссия оценивает успеваемость, язык, готовность к специальности и мотивацию вместе"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "для бакалавриата язык при поступлении не требуют, кроме факультета международных исследований (там нужен английский, условие ниже)"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Принимают только женщин. Это не пожелание, а условие подачи.",
+      "evidence": "Ewha Womans University accepts applications from female applicants only.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Оба родителя тоже должны быть иностранцами: паспорт не Кореи нужен и у тебя, и у обоих родителей. Двойное гражданство с Кореей у тебя или у одного из родителей отменяет заявку, даже если уже приняли.",
+      "evidence": "Applicants and their parents must hold nationality (i.e., passport) of a country other than Korea.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Школу нужно окончить или ожидать окончания не позже февраля 2027. Это условие весеннего набора 2027, и выпускнику таджикской школы, который заканчивает в мае–июне 2027, оно не подходит: ждать надо осенний набор, а его правила и срок вуз ещё не опубликовал.",
+      "evidence": "Applicants who have graduated or are expected to graduate from high school by February 2027",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Приём на весенний семестр 2027: подача с 2 сентября до 17:00 8 октября 2026 (по времени Сеула). Заявка полностью онлайн, а считается поданной только после оплаты взноса.",
+      "evidence": "Online Application Wednesday, September 2, 2026 13:00 - Thursday, October 8, 2026 17:00",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Требования к языку при поступлении на бакалавриат нет, кроме факультета международных исследований (International Studies, Global Korean Studies): там нужен английский — TOEFL iBT 80 (или 4,0 по новой шкале с 21 января 2026), IELTS 6,0 или New TEPS 326, либо вся школа на английском.",
+      "evidence": "TOEFL iBT 80(for tests taken on or after January 21, 2026, a score of 4.0 or higher), IELTS 6.0, New TEPS 326 or above",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Но после зачисления на бакалавриат надо получить TOPIK 4 или выше до выпуска, даже если поступил по английскому. Первый год почти все проходят программу Global Scholars: корейский и общие курсы. Без TOPIK 3 на основные курсы не пустят.",
+      "evidence": "Applicants admitted to undergraduate programs are required to acquire TOPIK level 4 or above before graduation.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Ограничение на основные курсы: у кого нет TOPIK 3 после первого года, тот их проходить не может.",
+      "evidence": "Students who do not achieve TOPIK level 3 will be subject to restrictions in taking major courses.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Один человек — одна программа: подать можно только на одну специальность.",
+      "evidence": "Applicants may apply to only one program of study.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Отбор целостный, отдельного проходного балла нет: смотрят успеваемость, язык, подготовку к специальности и мотивацию.",
+      "evidence": "Applicants will be selected through a comprehensive evaluation of their academic capability, language proficiency, preparedness in the chosen major, academic motivation",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Документы не на корейском или английском нужны с нотариальным переводом. Свой перевод или перевод агентства без нотариуса не принимают.",
+      "evidence": "Documents issued in a language other than Korean or English must be uploaded together with a notarized Korean or English translation.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестат и табель из-за границы после предварительного зачисления сдают только с апостилем или консульской легализацией. Она может занять много времени, отсрочек нет.",
+      "evidence": "Apostille or Consular authentication",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу — 150 000 вон (около 150 долларов США), не возвращается.",
+      "evidence": "Special Admission for Foreigners 150,000 KRW (150 USD)",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 150000,
+        "currency": "KRW",
+        "evidence": "150,000 KRW"
+      }
+    },
+    {
+      "ru": "Полная стипендия на всё обучение (до 8 семестров) — ISS F4, её дают тем, кого комиссия оценила как выдающихся при поступлении. Отдельной заявки не требуется.",
+      "evidence": "ISS F4 (Full tuition - 4 years) Outstanding Admissions Evaluation",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельная программа EGPP: полная оплата обучения, общежитие и стипендия для женщин из развивающихся стран, у которых комиссия видит потенциал будущего лидера. Входит ли Таджикистан в эту категорию, страницы не говорят.",
+      "evidence": "EGPP (Ewha Global Partnership Program) Applicants from developing countries whose potential for growth as female leaders is recognized",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Без стипендии обучение на первом году — примерно 6,31 млн вон за семестр в общем колледже HOKMA, потом 4,6–6,3 млн вон в зависимости от факультета.",
+      "evidence": "HOKMA College: App. 6,310,000 KRW",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для визы после зачисления нужна справка из банка с остатком не меньше 20 млн вон на имя твоё или родителей, выданная не раньше 8 января 2027.",
+      "evidence": "Minimum balance: 20 million KRW",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://isa.ewha.ac.kr/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Ewha Womans University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://isa.ewha.ac.kr/sites/oisa/file/ag_english.pdf",
+    "pages": [
+      {
+        "url": "https://isa.ewha.ac.kr/sites/oisa/file/ag_english.pdf",
+        "contentHash": "sha256:f2843b1ecc83e3439a4f24c2086ff6ba2ea7f0c6f06b3e0426b46ecccb8cf91c"
+      },
+      {
+        "url": "https://www.ewha.ac.kr/ewhaen/bachelor/scholarship-undergraduate.do",
+        "contentHash": "sha256:cc4fabe37c74fc8cf7fa57b76848072b26e1a2250f0f3874f79a404ccd90e8c0"
+      },
+      {
+        "url": "https://www.ewha.ac.kr/ewhaen/admission/admission.do",
+        "contentHash": "sha256:8002ea1f5fdc734fc65d24b23ab18f3d954b596a7e1d9db1cc61c6b72e511f36"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

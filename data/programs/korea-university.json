@@ -1,0 +1,202 @@
+{
+  "id": "korea-university",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Korea University (Кориё) — приём иностранцев на бакалавриат, один из трёх лучших вузов Кореи",
+    "orig": "Korea University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Деньги не гарантированы, но стипендии идут по итогам приёма без отдельной заявки: Anam Global (полная плата за 8 семестров лучшему в направлении), KU STEM Overseas (полная плата за 4 семестра), Global Leader A и B (полная и 50% платы), KU Global Friends для сильных заявителей из развивающихся стран, включая Африку и Южную Америку. Входит ли Таджикистан в «развивающиеся», страницы не говорят. Дорогу и жильё стипендии не называют"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "If applicant and applicant's parent(s) have multiple citizenships including Korean citizenship, the applicant is not eligible to apply."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "plan to graduate before August 2026"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата страницы не называют: оценивают успеваемость по документам"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "all applicants must submit official language proficiency test scores that meet Korea University's requirements"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Оба родителя тоже должны быть иностранцами: гражданство не Кореи нужно и у тебя, и у родителей. Двойное гражданство с Кореей у тебя или у родителя закрывает подачу.",
+      "evidence": "Both the applicant and the applicant's parent(s) must be non-Korean citizens.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужно окончить школу, равную корейским классам с 1 по 12, и закончить её к августу года подачи. В таджикской школе 11 лет: засчитают ли аттестат, справка не говорит, спроси приёмную комиссию.",
+      "evidence": "The applicant must have completed regular primary and secondary education, equivalent to Grades 1 to 12 in the Korean education system",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение вне школы не считается: GED, домашнее обучение, онлайн-курсы и языковые школы не приравнивают к обычной школьной программе.",
+      "evidence": "such as GED, homeschooling, online courses, or language schools, etc., from the level of primary, secondary to higher education are not regarded as equivalent to a regular academic school curriculum",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "С весеннего набора 2027 языковой сертификат нужен всем: прежний онлайн-тест корейского университета отменяют. Значит, без сертификата или диплома школы на английском/корейском подать нельзя.",
+      "evidence": "will no longer be available from the Spring 2027 International Undergraduate Admission",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Язык подтверждают одним из документов: TOPIK или сертификат курсов корейского, либо TOEFL iBT или IELTS Academic, либо справка, что вся средняя школа шла на корейском или английском. Результат действителен 2 года на день подачи.",
+      "evidence": "Only those official test results within 2-year as of the application submission are acceptable.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Для факультета международных исследований (International Studies) английский сертификат обязателен: TOPIK для него не заменяет.",
+      "evidence": "For International Studies major, English language qualification is mandatory.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для распределения на специальность в Global Open Major нужен TOPIK 5, IELTS 7,0 или TOEFL iBT 100.",
+      "evidence": "TOPIK level 5 (Korean) or IELTS 7.0 or TOEFL iBT 100 (5 in the new TOEFL scale) (English) or higher is required.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Уровень корейского влияет на первый год: с TOPIK 5 ограничений нет; с TOPIK 4 — один семестр обязательных курсов корейского и не больше 6 кредитов по специальности; с 3 и ниже — два семестра курсов и без основных предметов.",
+      "evidence": "Level 3 or Lower Two semesters of mandatory training Enrollment in major courses is not allowed.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Подача полностью онлайн, и заявка считается поданной только после оплаты взноса и загрузки документов. Бумажные оригиналы нужно отправить почтой.",
+      "evidence": "Online application is completed only when the application fee payment and online document submission is successfully completed by the deadline.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Приём на осень 2027 откроется в марте 2027, точных дат университет ещё не назвал; весной 2027 подача была с 3 по 31 августа 2026. Выпускнику таджикской школы, заканчивающему в мае–июне 2027, нужен осенний набор 2027.",
+      "evidence": "Online Application Submission August 3 (10:00) - August 31, 2026 (17:00) March, 2027 (TBA)",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу — 150 000 вон на гуманитарные и естественные направления и 200 000 на искусство и дизайн. Не возвращается, кроме остатка после расходов на обработку.",
+      "evidence": "Humanities or Science 150,000",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 150000,
+        "currency": "KRW",
+        "evidence": "150,000"
+      }
+    },
+    {
+      "ru": "Стипендия по итогам приёма, отдельной заявки нет: результат сообщают вместе с решением. Anam Global — полная плата за 8 семестров с условием GPA 3,5; KU Global Friends — полная плата за 4 семестра сильным заявителям из Африки, Южной Америки и других развивающихся стран.",
+      "evidence": "Scholarships are awarded based on the applicant's admission evaluation, and no separate application is required.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для визы после зачисления нужна справка о банковском остатке не меньше 20 млн вон.",
+      "evidence": "A proof of bank balance (KRW 20,000,000 or more) will be required to submit for visa application only those for applicants who are successfully admitted.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Школьные документы нужны с апостилем или консульской легализацией и с нотариальным переводом на английский или корейский.",
+      "evidence": "All documents must be translated in English or Korean with notarization.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://oia.korea.ac.kr/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Korea University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://oia.korea.ac.kr/oia2026/Admission-Guide.do",
+    "pages": [
+      {
+        "url": "https://oia.korea.ac.kr/oia2026/Admission-Guide.do",
+        "contentHash": "sha256:bebf7ace9286ef26144b5a8fd26962d3070d54627647c85f399d52e3b742b558"
+      },
+      {
+        "url": "https://oia.korea.ac.kr/oia/under/Scholarships.do",
+        "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "url": "https://oia.korea.ac.kr/_res/oia/etc/Application_Guide_for_Fall_2026_Freshman(ENG).pdf",
+        "contentHash": "sha256:1c73adc1f6a476cde1f2dd37b7d6568fdbb7ecc51afabd64f95f347f24fc40d8"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}
