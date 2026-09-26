@@ -1,0 +1,242 @@
+{
+  "id": "tohoku-gateway-college",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Tohoku University, Gateway College (Тохоку, Сендай) — бакалавриат на английском, осенний набор 2027, приём онлайн без поездки в Японию",
+    "orig": "Tohoku University, Gateway College"
+  },
+  "hostCountry": "JP",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полного покрытия нет. Плата для иностранцев — 900 тысяч иен в год плюс вступительный взнос 282 тысячи. С 2027 года вводят стипендию на полную или половинную плату для лучшей трети студентов по итогам второго этапа отбора. Общежитие в первый год обязательное, около 36 тысяч иен в месяц. Дорогу вуз не покрывает"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "The program is open to candidates of all nationalities."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "min": 12,
+      "evidence": "You have completed a 12-year curriculum of school education outside Japan, or have an academic qualification recognized as equivalent by the Minister of Education, Culture, Sports, Science and Technology of Japan."
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "You must fulfill (or expect to fulfill by September 30, 2027) one of the following requirements"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата нет: вуз оценивает табель вместе с тестом, письменным экзаменом и собеседованием"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "IELTS Academic (Including IELTS Online) Overall Band 6.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "evidence": "TOEFL iBT® TEST (Including Home Edition) 80"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.0,
+          "evidence": "4.0 for tests conducted in January 2026 or later"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 110,
+          "evidence": "Duolingo English Test 110"
+        }
+      ],
+      "evidence": "Regardless of nationality, all applicants are required to submit a proof of English proficiency"
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": 1400,
+          "evidence": "SAT, Digital SAT Total score of 1,400 or higher"
+        },
+        {
+          "test": "ACT",
+          "min": 31,
+          "evidence": "ACT Composite score of 31 or higher"
+        }
+      ],
+      "advisory": true,
+      "evidence": "SAT, Digital SAT Total score of 1,400 or higher"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Национальность не ограничена: программа открыта для всех, японцы и иностранцы подают на одинаковых условиях.",
+      "evidence": "The program is open to candidates of all nationalities.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Основной путь: 12 лет школьного образования вне Японии в школе, которая входит в официальную систему образования своей страны, по программе, равной японской старшей школе. Если 12 лет пройдены за 11 или меньше из-за пропуска класса или досрочного выпуска, до подачи надо написать в приёмную комиссию вуза.",
+      "evidence": "If you have completed a 12-year curriculum in 11 years or less, due to a skipped grade, early graduation, or any other reason, you must contact the Admissions Division before applying.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Таджикская школа одиннадцатилетняя, поэтому прямо она условие о 12 годах не выполняет. Есть путь E: вуз оценивает твою подготовку отдельно, при условии что на 30 сентября 2027 тебе не меньше 18 лет. Для этого надо написать в Admission Division не позже чем за месяц до начала подачи, то есть до 15 ноября 2026. Результат проверки не гарантирован.",
+      "evidence": "When applying under this provision, you must contact the Admission Division at least one month before the start of application submission period.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ещё один путь — диплом международного образца: IB, A-Level (в том числе международный), Abitur, французский Baccalauréat, Европейский бакалавриат, либо 12 лет в школе, аккредитованной WASC, ACSI, CIS, NEASC, Cognia или COBIS. Для таких дипломов справку и табель выдаёт сама организация.",
+      "evidence": "have completed a 12-year curriculum at an educational institution whose educational activities have been certified by the Western Association of Schools and Colleges (WASC), Association of Christian Schools International (ACSI), Council of International Schools (CIS), New England Association of Schools and Colleges (NEASC), Cognia or Council of British International Schools (COBIS).",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ожидающих окончания школы принимают: справка об ожидаемом окончании подходит, оригинал аттестата нужен при зачислении. Требование к школе надо выполнить до 30 сентября 2027, а занятия начинаются в октябре 2027, поэтому выпускник таджикской школы 2027 года подходит.",
+      "evidence": "If you apply with Expected Graduation Certificate, you will be required to submit your Graduation Certificate at the time of enrollment to Tohoku University.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен официальный балл одного экзамена по нужным предметам. SAT: 1 400 и выше (для Digital SAT то же; суперскор не принимают). ACT: 31 и выше. Вуз называет эти баллы «рекомендуемыми». Для гуманитарного трека нужны Evidence-Based Reading and Writing и Math (для ACT — English, Reading, Math), для STEM — Math и Science. Результаты разных систем (SAT плюс IB и т. д.) складывать нельзя.",
+      "evidence": "SAT, Digital SAT Total score of 1,400 or higher We do not accept Superscores (a combination of the highest scores from multiple test dates).",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Балл английского нужен от всех: IELTS Academic не ниже 6,0 (в том числе IELTS Online), TOEFL iBT не ниже 80 (в том числе Home Edition; для тестов с января 2026 — 4,0 по новой шкале), Duolingo не ниже 110, Cambridge B2 First/C1/C2 не ниже 169, Eiken Pre-1 или 1 с 2 400. Тест должен быть сдан с 1 октября 2025 до последнего дня подачи. TOEFL MyBest, TOEFL ITP, TOEIC, IELTS Indicator и IELTS One Skill Retake не принимают.",
+      "evidence": "For the Fall 2027 Enrollment, scores must be from a test dated from October 1, 2025, to the last day of the application submission period.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский можно не сдавать, если из четырёх последних лет перед окончанием школы три года ты учился в школе с английским как основным языком обучения. Нужна справка школы в формате Tohoku.",
+      "evidence": "Applicants can be exempted from submitting English proficiency test scores, if they completed at least 3 years of formal, English-medium education in the period of 4 academic years prior to their high school graduation",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Треку гуманитарных и социальных наук вуз рекомендует японский на уровне CEFR B1 или выше. Для STEM японский не требуется.",
+      "evidence": "International and Japanese students with educational backgrounds outside of Japan who wish to apply for Humanities & Social Sciences Track are expected to demonstrate Japanese language proficiency at CEFR B1 level or higher",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Осенний набор 2027 (зачисление в октябре 2027): заявка с 15 декабря 2026 до 14 января 2027, полдень по Японии; итоги первого этапа (документы) 5 февраля; второй этап — письменный экзамен и собеседование онлайн 21–22 февраля 2027; результат 24 марта 2027. Ехать в Японию не нужно. Подать можно только в один набор года: весенний или осенний.",
+      "evidence": "Application Submission Period Noon (JST), 2026.12.15 (Tue) to Noon (JST), 2027.1.14 (Thu)",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Взнос за экзамен — 17 000 иен, платить картой через Flywire (можно картой родителя). Комиссию платёжного сервиса платит подающий. Если не пройдёшь первый этап, вернут 13 000 иен.",
+      "evidence": "Examination Fee: JPY 17,000",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 17000,
+        "currency": "JPY",
+        "evidence": "Examination Fee: JPY 17,000"
+      }
+    },
+    {
+      "ru": "Плата после зачисления для иностранцев: вступительный взнос 282 000 иен и обучение 900 000 иен в год (450 000 за семестр). Суммы плановые и могут поменяться.",
+      "evidence": "International Students: 450,000 JPY / semester (900,000 JPY / year)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Новая стипендия с 2027 года: эквивалент полной или половинной платы за обучение получит лучшая треть студентов, выбранных по итогам второго этапа или по учёбе. Иностранцам освобождение от платы по нужде не дают.",
+      "evidence": "A new scholarship system will be established from 2027, offering an equivalent to full or half tuition fees to the top one-third students selected based on their 2nd stage screening performance or academic achievements.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "В первый год все студенты Gateway College живут в общежитии University House, это обязательно. Плата около 36 000 иен в месяц, коммунальные и прокат платятся отдельно.",
+      "evidence": "Dormitory fees are approx. 36,000 JPY / month, which residents must pay themselves.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Нужны фото, эссе о цели (до 400 слов, вводится прямо в систему TAO), справка об окончании школы, табель за 10 и 11 классы с описанием системы оценок и GPA, отчёт о тесте, отчёт об английском и документ о гражданстве (копия паспорта). Документы не на английском или японском — с переводом. Неполные заявки отклоняют.",
+      "evidence": "Academic transcript must include an explanation on the grading criteria and show your GPA.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Использование генеративного ИИ вуз просит не допускать: писать идеи и текст надо самому. Если ИИ заметят, на оценку документов это не повлияет.",
+      "evidence": "Even if the use of Generative AI is detected, it will not influence the evaluation of application documents.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "В набор на осень 2027 берут 90 человек: 17 на гуманитарный трек и 73 на STEM. Медицинский и фармацевтический факультеты для студентов Gateway College закрыты. Список ожидания возможен.",
+      "evidence": "Admission Track Quota Humanities & Social Sciences 17 STEM 73",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-12-15",
+    "closes": "2027-01-14",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://admissions.tohoku.ac.jp/en/admissions/undergraduate/gateway_college/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Tohoku University, Gateway College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://admissions.tohoku.ac.jp/en/admissions/undergraduate/gateway_college/",
+    "pages": [
+      {
+        "url": "https://admissions.tohoku.ac.jp/en/admissions/undergraduate/gateway_college/",
+        "contentHash": "sha256:657e6dacc6e3bd5f5224779ff803618f35d8fe915327e899a8c38f984f9ccede"
+      },
+      {
+        "url": "https://admissions.tohoku.ac.jp/en/adcms/wp-content/uploads/2026/08/ApplicationGuideGWC2027Fall.pdf",
+        "contentHash": "sha256:32e5da227c9bab8cf9a4a72f5792d00ffb66ddfab4f9118cc80693a00f41020c"
+      },
+      {
+        "url": "https://admissions.tohoku.ac.jp/en/adcms/wp-content/uploads/2025/11/gwcFAQ_en.pdf",
+        "contentHash": "sha256:e7b3290534ff247bc7038a7cdf273f5ffd4f61087e8c5de31ef93d2c25c90ffa"
+      },
+      {
+        "url": "https://www.tohoku.ac.jp/en/admissions/tuition_fees.html",
+        "contentHash": "sha256:92e287ca0f3ed95cc36b6e531e82084a439b4a6f3057b4bdf469748c09dd4e44"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

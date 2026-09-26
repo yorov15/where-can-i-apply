@@ -121,6 +121,7 @@ def validate_program(
 
 
 NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
+THOUSANDS = re.compile(r"\d{1,3}(?:,\d{3})+")
 
 
 def _numbers_in(text: str) -> set:
@@ -129,6 +130,10 @@ def _numbers_in(text: str) -> set:
         value = raw.replace(",", ".")
         found.add(value)
         found.add(value.rstrip("0").rstrip("."))
+    # «1,400» в английском тексте — тысяча четыреста, а не 1,4. Без этого
+    # порог SAT 1400 не находился в честной цитате Tohoku.
+    for raw in THOUSANDS.findall(text or ""):
+        found.add(raw.replace(",", ""))
     return found
 
 

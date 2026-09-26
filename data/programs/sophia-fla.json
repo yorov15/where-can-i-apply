@@ -1,0 +1,217 @@
+{
+  "id": "sophia-fla",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Sophia University, Faculty of Liberal Arts (Софийский университет, Токио) — бакалавриат гуманитарных наук на английском, осенний набор 2027, только по документам",
+    "orig": "Sophia University, Faculty of Liberal Arts (B.A. in Liberal Arts)"
+  },
+  "hostCountry": "JP",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полного покрытия нет. Плата первого семестра около 950 тысяч иен (2026 год), потом по 745 тысяч за семестр. Стипендия Sophia University New Student Scholarship покрывает полную, половину или треть платы за первый год для нуждающихся с хорошими оценками; подавать надо вместе с заявкой. Дорогу и жильё вуз не покрывает"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Applicants are eligible to apply regardless of nationality or country of residence, provided they satisfy the admission requirements."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "min": 12,
+      "evidence": "(2) Those who have completed, or are expected to complete, 12 years or more of formal education outside Japan"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "(2) Those who have completed, or are expected to complete, 12 years or more of formal education outside Japan"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла и GPA нет: вуз пишет, что решение принимают по документам целиком"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": null
+        },
+        {
+          "test": "IELTS",
+          "min": null
+        }
+      ],
+      "evidence": "Applicants must prove their English proficiency by taking the TOEFL® iBT or the IELTS (Academic)."
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "All first-year and third-year transfer applicants are required to submit one or more of the following."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Национальность и страна проживания не ограничены: главное, чтобы выполнялись требования к поступающему.",
+      "evidence": "Applicants are eligible to apply regardless of nationality or country of residence, provided they satisfy the admission requirements.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Основной путь: 12 лет и больше школьного образования за пределами Японии. Таджикская школа одиннадцатилетняя, поэтому прямо она условие не закрывает.",
+      "evidence": "(2) Those who have completed, or are expected to complete, 12 years or more of formal education outside Japan",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Путь для тех, у кого меньше 12 лет: вуз может признать квалификацию отдельно, если тебе будет не меньше 18 лет на момент поступления. Какие документы для этого нужны и в какие сроки писать, на страницах не сказано: пиши в приёмную комиссию на admission-u-co@sophia.ac.jp заранее. Итог не гарантирован.",
+      "evidence": "(5) Those who have been recognized individually by Sophia University as having qualifications equivalent to (1), (2), (3) or (4) and will reach the age of 18 at the time of entrance to Sophia University",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ещё путь без 12 лет школы: диплом International Baccalaureate, Baccalauréat, Abitur, International A-Level, GCE A-Level или Европейский бакалавриат.",
+      "evidence": "(4) Those who hold, or are expected to hold, the International Baccalaureate Diploma, Baccalaureate, Abitur, International ALevels, GCE A-levels or European Baccalaureate before entering Sophia University",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ожидающих окончания школы принимают: справка об ожидаемом окончании входит в пакет документов, документы о завершении школы нужны до зачисления. Выпускник 2027 года подходит на осенний набор.",
+      "evidence": "ITEM D. Certificate of Graduation (or expected graduation/early graduation)",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен официальный результат SAT (Reading & Writing и Math) или ACT (вместе с разделом Writing), либо диплом IB, либо три предмета A-Level. Минимального балла и минимального GPA нет. Суперскор не принимают: берут лучший результат одной даты. SAT должен быть не старше двух лет на день подачи, код Sophia у College Board — в правилах приёма. Вместо теста можно подать доп. эссе на 500 слов, но только тем, кто уже два года работает после школы.",
+      "evidence": "There is no minimum required score or GPA for application.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен балл английского: TOEFL iBT или IELTS Academic, сданный не раньше чем за два года до первого дня подачи; код TOEFL для Sophia — 0819. Минимального балла вуз не называет. Не принимают TOEFL Home Edition, TOEFL ITP, TOEFL Essentials, MyBest, IELTS Online и IELTS Indicator; IELTS One Skill Retake разрешён.",
+      "evidence": "Applicants must prove their English proficiency by taking the TOEFL® iBT or the IELTS (Academic).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский можно не сдавать, если из последних шести лет ты пять лет учился там, где основной язык обучения английский, или у тебя Cambridge English C2 Proficiency.",
+      "evidence": "TOEFL® or IELTS can be waived if a student has studied at least five years out of the last six years in an institution where English is the primary medium of instruction.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Набор на осень 2027 (сентябрь) идёт в двух периодах для первого курса: первый — подача онлайн с 11 ноября по 4 декабря 2026, документы до 11 декабря 2026, результат 5 февраля 2027; второй — подача с 10 по 31 марта 2027, документы до 7 апреля 2027, результат 4 июня 2027. Не принятый в первом периоде может подать снова во втором. Экзаменов и собеседования нет: решают по документам.",
+      "evidence": "Application Period (via MyPage) November 11, 2026, 10:00 a.m. ~ December 4, 2026, 11:59 p.m. (JST)",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу — 35 000 иен, плюс 1 100 иен комиссии онлайн-платежа. Возвращают только если документы не поданы вовсе или заявку не приняли из-за несоответствия допуску; комиссию 1 100 иен не возвращают.",
+      "evidence": "6. APPLICATION FEE 35,000 yen",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 35000,
+        "currency": "JPY",
+        "evidence": "6. APPLICATION FEE 35,000 yen"
+      }
+    },
+    {
+      "ru": "Плата 2026 года для справки (плату для 2027 года объявят в сентябре 2026): вступительный взнос 200 000 иен один раз, взнос за семестр 30 000, обучение 586 000 за семестр, взнос на развитие образования 129 000 за семестр, страховка 2 650. К оплате до поступления — 947 650 иен.",
+      "evidence": "Total fees for first-year students 947,650 yen",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия «Sophia University New Student Scholarship» (для всех национальностей, для тех, кому не хватает денег, при отличных оценках): полная, половина или треть платы за обучение первого года. Заявку подают вместе с заявкой на поступление.",
+      "evidence": "Recipient may receive the amount equivalent to the full, one-half or one-third of the Tuition Fee for the first year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "В набор на осень берут 80 студентов на первый курс, на весну — 60. Число мест на третий курс (перевод) ограничено.",
+      "evidence": "Autumn Intake 80 students",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Нужны: анкета, два эссе (Personal Statement и Self-Reflective Essay, набранные на компьютере), официальный табель, справка об окончании школы, два письма рекомендации, результаты SAT/ACT и TOEFL/IELTS от организации-тестера, копия паспорта.",
+      "evidence": "ITEM B. Essays The applicant must submit two essays: a Personal Statement and a Self-Reflective Essay .",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-11-11",
+    "closes": "2027-04-07",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/fla/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Sophia University, Faculty of Liberal Arts (B.A. in Liberal Arts)"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/fla/qual/",
+    "pages": [
+      {
+        "url": "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/fla/qual/",
+        "contentHash": "sha256:4a90cf06e180dbcf70880612f3c03802e098b44ec54dca499c1d4318f04d19b6"
+      },
+      {
+        "url": "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/fla/w_h/",
+        "contentHash": "sha256:2c33af0030d42fa674440c94cf692e35eabe100e1ab3963a7deced4e7e72d1c5"
+      },
+      {
+        "url": "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/fla/pay_aid/",
+        "contentHash": "sha256:97c5aa215bacd61e42037026abbeb745ce130fb498ca71a1255ba1c041396e65"
+      },
+      {
+        "url": "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/fla/number/",
+        "contentHash": "sha256:d29a93828c27148f1374b54c49b8070d73ac57c8028260d889f6338379846ad0"
+      },
+      {
+        "url": "https://adm.sophia.ac.jp/assets/uploads/sites/2/2026/06/03f35ed5ff1d1382e4ff273b1a97f0b2.pdf",
+        "contentHash": "sha256:af1a6be89c8092371062c241cd2cc5b784a37c40a0e1492adcc933545dc4a7be"
+      },
+      {
+        "url": "https://www.sophia.ac.jp/eng/admissions-and-aid/tuition/scholarship-before/",
+        "contentHash": "sha256:352e2449097e40328e1014e713a482103f8cfdeeff43f1d031ff745f647bc7c3"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

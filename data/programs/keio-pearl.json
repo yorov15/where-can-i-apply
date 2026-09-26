@@ -1,0 +1,219 @@
+{
+  "id": "keio-pearl",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Keio University, Faculty of Economics, PEARL (Кэйо, Токио) — бакалавриат экономики на английском, осенний набор 2027, три тура без минимальных баллов",
+    "orig": "Keio University, Faculty of Economics (PEARL)"
+  },
+  "hostCountry": "JP",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полного покрытия нет. Плата в первый год около 1,51 млн иен по данным 2026 года. Стипендии Кэйо есть, но чужие государственные (MEXT) для PEARL недоступны; специальная стипендия «Design the Future» (вся плата и ежемесячная выплата на жизнь) описана на странице вуза общими словами, без указания, дают ли её поступающим на бакалавриат PEARL. Дорогу и жильё вуз не покрывает"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "you must meet at least one of the following requirements"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "min": 12,
+      "evidence": "12 years or more of formal education at foreign schools outside Japan or online"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "you are required to graduate from high school by September 21, 2027"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата нет: вуз пишет, что отбор идёт по всем материалам вместе, а пороговых баллов не ставит"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": null
+        },
+        {
+          "test": "IELTS",
+          "min": null
+        }
+      ],
+      "evidence": "There are no \"cut-off\" TOEFL® or IELTS scores."
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        }
+      ],
+      "evidence": "All applicants are required to submit one (or more) of the following: a. International Baccalaureate (IB) diploma final scores or predicted grades b. SAT scores"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Национальность не ограничена: в списке требований к поступающему нет условия о гражданстве, только о длительности и виде школы.",
+      "evidence": "you must meet at least one of the following requirements",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Основной путь: 12 и больше лет школьного образования за пределами Японии (можно и онлайн), в школе, признанной государством или международной аккредитацией. Все 12 лет в одной школе проводить не обязательно.",
+      "evidence": "12 years or more of formal education at foreign schools outside Japan or online",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Одиннадцатилетняя школа допускается только для нескольких стран: Беларусь, Казахстан, Мьянма, Перу, Россия, Судан, Украина, Узбекистан. Таджикистана в списке нет, поэтому таджикский аттестат за 11 лет напрямую не подходит.",
+      "evidence": "11 years or more of formal education in which the school curriculum is based on the system of Belarus, Kazakhstan, Myanmar, Peru, Russia, Sudan, Ukraine, or Uzbekistan",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Если ни один путь не подходит, вуз может признать твою квалификацию отдельно. Для этого надо написать в Приёмный центр Keio не позже чем за месяц до начала подачи и уточнить документы и сроки индивидуальной проверки. Возраст на момент зачисления — от 18 лет. Ответ по итогам проверки не гарантирован.",
+      "evidence": "you should contact the Admissions Center at least one month before the start of the application period",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ожидающих окончания школы принимают: справку об ожидаемом окончании подаёт школа, а закончить школу надо до 21 сентября 2027, иначе зачисление отменят. Выпускнику таджикской школы, заканчивающему в мае–июне 2027, срок подходит.",
+      "evidence": "you are required to graduate from high school by September 21, 2027",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен официальный балл SAT (или диплом IB, но для выпускника таджикской школы это SAT). Другие тесты вместо них не принимают; ACT для набора на сентябрь 2027 больше не принимают. Минимального балла нет. Суммировать лучшие разделы разных дат нельзя; принимают только баллы, полученные не раньше 1 октября 2023, бумажный и цифровой SAT равны. Баллы отправляет College Board, код Keio для SAT — 0773.",
+      "evidence": "beginning with applications for entry in September 2027, ACT scores will no longer be accepted for PEARL applications",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен балл английского — от всех, даже носителей английского: TOEFL iBT и/или IELTS Academic. Минимального балла нет. Принимают не раньше 1 января 2025 (I тур), 1 февраля 2025 (II) и 1 мая 2025 (III). TOEFL Home Edition, IELTS Online, MyBest и IELTS One Skill Retake не подходят; старая (0–120) и новая (1–6) шкалы TOEFL равны.",
+      "evidence": "All applicants, including native English speakers, are required to submit TOEFL iBT® and/or IELTS Academic Module Scores.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Набор на сентябрь 2027 идёт тремя турами: I — с 21 октября по 2 декабря 2026 (итоги 25 января), II — с 4 декабря 2026 по 27 января 2027 (итоги 4 марта), III — с 24 февраля по 7 апреля 2027 (итоги 24 мая). Не принятый в одном туре может подать в следующем. Занятия начинаются 22 сентября 2027.",
+      "evidence": "Application Period Announcement of Results I 10:00 a.m. on October 21, 2026 - 3:00 p.m. on December 2, 2026 (JST)",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу — 35 000 иен, платить картой; сверх этого берут административный сбор. Взнос не возвращают ни при каких обстоятельствах.",
+      "evidence": "Applicants are required to pay an application fee of JPY 35,000 through TAO by credit card.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 35000,
+        "currency": "JPY",
+        "evidence": "application fee of JPY 35,000"
+      }
+    },
+    {
+      "ru": "Плата для факультета экономики в 2026 году: за первый год всего 1 508 350 иен вместе с единовременными платежами при поступлении; со второго года — около 1 308 250 в год. Плату на 2027 год вуз ещё не опубликовал.",
+      "evidence": "Faculty of Economics 2026 1 200,000 70,000 990,000 240,000 － 5,000 750 2,600 1,508,350",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Японская государственная стипендия MEXT для студентов PEARL недоступна.",
+      "evidence": "Japanese Government (MONBUKAGAKUSHO: MEXT) Scholarships are not available for the PEARL students.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "У Keio есть особая стипендия «Design the Future» для иностранных студентов: она покрывает всю плату, даёт выплату на жизнь каждый месяц и единовременную сумму при зачислении. Страница вуза не говорит, доступна ли она поступающим на PEARL и как её получить: спрашивай Приёмный центр.",
+      "evidence": "It is a special scholarship which in addition to paying the full academic fees and expenses necessary to be enrolled at Keio University, also provides monthly payments to cover living expenses",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Кроме теста нужны эссе о целях учёбы (до 600 слов), видео до двух минут и рекомендательные письма. Собеседования нет: видео его заменяет.",
+      "evidence": "Interviews are not part of the PEARL admissions/selection process. However, the submission of a two-minute video is mandatory for all applicants.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Материалы нельзя писать с помощью генеративного ИИ: вуз считает это академической недобросовестностью.",
+      "evidence": "You must not use generative AI tools to produce any of the application materials",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Принятые заказывают у школы оригинал аттестата и итоговые оценки — школа отправляет их в вуз по почте. Если данные в заявке окажутся неверными, зачисление отменяют, взнос не возвращают.",
+      "evidence": "All successful applicants are required to arrange for their high school to send the original high school graduation certificate and final academic transcripts directly to the University by post.",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-10-21",
+    "closes": "2027-04-07",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.keio.ac.jp/en/admissions/faculty/examinations/pearl/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Keio University, Faculty of Economics (PEARL)"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.keio.ac.jp/en/admissions/faculty/examinations/pearl/",
+    "pages": [
+      {
+        "url": "https://www.keio.ac.jp/en/admissions/faculty/examinations/pearl/",
+        "contentHash": "sha256:dcb311d4806ca9005894a585c989b0e288d6c1511ed77dc65f6e416bc368173a"
+      },
+      {
+        "url": "https://www.keio.ac.jp/files/c9c4d47ee5f4d118ad078942dac9baeb225edc5c1b26271959e2b80c4ed54c82",
+        "contentHash": "sha256:e114a645a8a05c424b60cb6b15f4b2a00857f4cfa424f949ea9825b4b51d06e2"
+      },
+      {
+        "url": "https://www.keio.ac.jp/en/admissions/faculty/faq/pearl/",
+        "contentHash": "sha256:7cde132454dbfb36ed5c879b06ca49ac36b02596f406558a8219817923870092"
+      },
+      {
+        "url": "https://www.keio.ac.jp/en/admissions/fee/faculty/",
+        "contentHash": "sha256:eac419b25f94adf04f9990d0eaa2079b5a0e329a03ca352462aa09dc7e6b2512"
+      },
+      {
+        "url": "https://www.keio.ac.jp/files/74725a53d22ba2b1b26d1889f8567d82404785eb0003ebc298aa8ae44022f822",
+        "contentHash": "sha256:ee7954b370be4940da43c2dd3324841896099da0c06e50ffea01057078c6a32a"
+      },
+      {
+        "url": "https://www.keio.ac.jp/en/admissions/scholarship/",
+        "contentHash": "sha256:97a2e09de563dd14f599cfbbeacea46c43f6dd4bce4f3c60a4b2a055ea47d6ac"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

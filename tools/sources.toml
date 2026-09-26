@@ -1708,3 +1708,131 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-26"
+
+# Япония, пакет 2026-09-26. Мурод выбрал «Япония» в вопросе о следующем пакете;
+# адреса взяты с официальных сайтов вузов, не из поиска.
+[tokyo-peak]
+name = "University of Tokyo (Япония): PEAK и GSC, бакалавриат на английском"
+urls = [
+  "https://www.u-tokyo.ac.jp/en/prospective-students/undergraduate_english.html",
+  "https://www.u-tokyo.ac.jp/en/prospective-students/tuition_scholarships.html",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[waseda-sils]
+name = "Waseda University, School of International Liberal Studies (SILS) (Япония): бакалавриат на английском"
+urls = [
+  "https://www.waseda.jp/fire/sils/en/applicants/admission/",
+  "https://www.waseda.jp/fire/sils/en/applicants/faq/",
+  "https://www.waseda.jp/fire/sils/en/applicants/tuitions/",
+  "https://www.waseda.jp/inst/admission/en/undergraduate/english/",
+  "https://www.waseda.jp/inst/admission/en/scholarship/",
+]
+# Два PDF сайт отдаёт только с заголовком Referer (без него 403), питон-сборщик
+# их не берёт; скачаны curl-ом в manual/waseda/ и перечитываются вручную.
+files = [
+  { path = "manual/waseda/list-of-application-documents-AY2027.pdf", url = "https://www.waseda.jp/inst/admission/assets/uploads/2026/08/List-of-Application-documents-by-Education-System-AY202709.pdf" },
+  { path = "manual/waseda/sils-2027-september-guide.pdf", url = "https://www.waseda.jp/fire/sils/assets/uploads/2026/09/2027_September_Guide.pdf" },
+  { path = "manual/waseda/tuition-AY2027.pdf", url = "https://www.waseda.jp/inst/admission/assets/uploads/2026/08/Waseda_EDP_Tuition_AY2027.pdf" },
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[keio-pearl]
+name = "Keio University, Faculty of Economics, PEARL (Япония): бакалавриат на английском"
+urls = [
+  "https://www.keio.ac.jp/en/admissions/faculty/examinations/pearl/",
+  "https://www.keio.ac.jp/files/c9c4d47ee5f4d118ad078942dac9baeb225edc5c1b26271959e2b80c4ed54c82",
+  "https://www.keio.ac.jp/en/admissions/faculty/faq/pearl/",
+  "https://www.keio.ac.jp/en/admissions/fee/faculty/",
+  "https://www.keio.ac.jp/files/74725a53d22ba2b1b26d1889f8567d82404785eb0003ebc298aa8ae44022f822",
+  "https://www.keio.ac.jp/en/admissions/scholarship/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[sophia-fla]
+name = "Sophia University (Япония): Faculty of Liberal Arts, бакалавриат на английском"
+urls = [
+  "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/fla/qual/",
+  "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/fla/w_h/",
+  "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/fla/pay_aid/",
+  "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/fla/number/",
+  "https://adm.sophia.ac.jp/assets/uploads/sites/2/2026/06/03f35ed5ff1d1382e4ff273b1a97f0b2.pdf",
+  "https://www.sophia.ac.jp/eng/admissions-and-aid/tuition/scholarship-before/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[sophia-spsf]
+name = "Sophia University (Япония): SPSF, программа устойчивого будущего на английском"
+urls = [
+  "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/spsf/qual/",
+  "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/spsf/w_h/",
+  "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/spsf/fee_aid/",
+  "https://adm.sophia.ac.jp/eng/admissions/ug_p/en_ug/spsf/number/",
+  "https://adm.sophia.ac.jp/assets/uploads/sites/2/2026/06/07c28af288f35e4dcd52d0defb0cc086.pdf",
+  "https://www.sophia.ac.jp/eng/admissions-and-aid/tuition/scholarship-before/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[icu-japan]
+name = "International Christian University (Япония): бакалавриат"
+urls = [
+  "https://www.icu.ac.jp/en/admissions/undergraduate/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[tsukuba]
+name = "University of Tsukuba (Япония): бакалавриат на английском"
+urls = [
+  "https://www.global.tsukuba.ac.jp/apply/",
+  "https://www.tsukuba.ac.jp/en/admissions/fees-tuition/",
+  "https://www.tsukuba.ac.jp/en/admissions/financial-scholarships/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[tohoku-gateway-college]
+name = "Tohoku University (Япония): Gateway College, бакалавриат на английском"
+urls = [
+  "https://admissions.tohoku.ac.jp/en/admissions/undergraduate/gateway_college/",
+  "https://admissions.tohoku.ac.jp/en/adcms/wp-content/uploads/2026/08/ApplicationGuideGWC2027Fall.pdf",
+  "https://admissions.tohoku.ac.jp/en/adcms/wp-content/uploads/2025/11/gwcFAQ_en.pdf",
+  "https://www.tohoku.ac.jp/en/admissions/tuition_fees.html",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[nagoya-g30]
+name = "Nagoya University (Япония): бакалавриат на английском (Global 30)"
+urls = [
+  "https://admissions.g30.nagoya-u.ac.jp/admissions/undergraduate/",
+  "https://admissions.g30.nagoya-u.ac.jp/upload/2027_admission_requirements_en.pdf",
+  "https://admissions.g30.nagoya-u.ac.jp/wp-content/uploads/2025/08/List-of-English-Qualifications-Application-Requirements-II.-2-1.pdf",
+  "https://admissions.g30.nagoya-u.ac.jp/admission_/tuition/",
+  "https://en.nagoya-u.ac.jp/admissions/financial/exemptions/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[kyushu]
+name = "Kyushu University (Япония): бакалавриат для иностранцев"
+urls = [
+  "https://www.kyushu-u.ac.jp/en/admission/faculty/foreign/",
+  "https://www.kyushu-u.ac.jp/en/admission/fees/expenses/",
+  "https://www.kyushu-u.ac.jp/en/admission/fees/exempt01",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[ritsumeikan]
+name = "Ritsumeikan University (Япония): бакалавриат для иностранцев"
+urls = [
+  "https://en.ritsumei.ac.jp/e-ug/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
