@@ -1,0 +1,160 @@
+{
+  "id": "netherlands-study",
+  "status": "published",
+  "kind": "national",
+  "name": {
+    "ru": "Нидерланды: бакалавриат на английском — платно, взнос за заявку у части вузов",
+    "orig": "Bachelor's studies in the Netherlands — tuition fees, application fees and scholarships"
+  },
+  "hostCountry": "NL",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Государственный тариф 2 694 евро в год положен только своим — гражданам ЕЭК, Швейцарии и Суринама. Для остальных бакалавриат стоит примерно 9 000–20 000 евро в год, точная сумма зависит от программы. Плюс у части вузов есть взнос за рассмотрение документов, 75–100 евро; иногда его возвращают при зачислении."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничивают: гражданам не из ЕЭК достаётся плата по рыночному тарифу и, у части вузов, взнос за заявку"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничивает: портал отправляет за требованиями к конкретной программе, а не делит абитуриентов по стране аттестата"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "числа лет школы страница не называет"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "год выпуска страница не ограничивает"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст на странице не упоминается"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "Note that some programmes have a selection procedure and an application deadline of 15 January."
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "check the institution's website pages for the programme to find information on the application process"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Сначала проверь в самом вузе, нужно ли тебе вообще регистрироваться через Studielink: часть вузов регистрирует иностранцев иначе.",
+      "evidence": "you should first check with the institution of your choice whether you are required to register via Studielink",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Общие сроки подачи: 15 января — для программ с numerus fixus, 1 мая — для всех остальных. Это рамочные даты, у конкретного вуза и программы они могут отличаться.",
+      "evidence": "1 May for all other study programmes.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Numerus fixus — это конкурс на ограниченное число мест: если желающих больше, вуз проводит отбор с 15 января по 15 апреля и 15 апреля выдаёт порядковый номер. Место нужно принять в течение двух недель, иначе оно уйдёт следующему.",
+      "evidence": "First check with your institution You need to check with your institution whether the programme of your choice has a numerus fixus.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "За год можно участвовать в отборе не больше чем по двум программам с numerus fixus. Для медицины, стоматологии, гигиены зубов и физиотерапии правило строже — только одно заявление на программу в год.",
+      "evidence": "For each academic year you can submit an application for a maximum of two numerus fixus programmes.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Тариф 2 694 евро в год — это государственная плата для своих: граждан ЕЭК, Швейцарии и Суринама. Тебе он не положен.",
+      "evidence": "The annual tuition fee (statutory fee) is € 2,694 for the academic year 2026-2027.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Твоя вилка другая: для бакалавриата у иностранцев в среднем от 9 000 до 20 000 евро в год. Точную сумму смотри по конкретной программе.",
+      "evidence": "For students with other nationalities the average tuition fee for bachelor's programmes is between € 9,000 and € 20,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "У части вузов есть взнос за заявку или за рассмотрение документов — от 75 до 100 евро; он зависит от вуза, а некоторые возвращают его при зачислении. Уточняй до подачи.",
+      "evidence": "These fees range from € 75 to € 100.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Программа Orange Knowledge закрыта: последний набор был в 2024 году, новых раундов нет. Не трать на неё время.",
+      "evidence": "In 2024, the Orange Knowledge Programme ended. That means that there are no new application rounds for this programme.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Стипендий у Nuffic три: MENA Scholarship Programme (MSP), Erasmus+ NL scholarship (Holland Scholarship) и Erasmus+. Ни одна не выдаётся автоматически — проверяй условия по своей стране.",
+      "evidence": "MENA Scholarship Programme (MSP) Erasmus+ NL scholarship (Holland Scholarship)",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Это далеко не все стипендии, которые существуют, — портал советует отдельно спрашивать у выбранного вуза, что есть у него.",
+      "evidence": "These are not all scholarships out there, so also make sure to contact the institution of your choice to inquire about the possibilities.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-05-01",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.studielink.nl/",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": null,
+    "note": {
+      "ru": "Голландские университеты и университеты прикладных наук; подача через Studielink, у части программ — отдельный отбор"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.studyinnl.org/finances/tuition-fees",
+    "pages": [
+      {
+        "url": "https://www.studyinnl.org/finances/tuition-fees",
+        "contentHash": "sha256:196854e6aa14043ad2cd7f6ba03fbbdfb46a8d1ff0c94c4cc9d09c44dd013bbb"
+      },
+      {
+        "url": "https://www.studyinnl.org/finances/scholarships",
+        "contentHash": "sha256:5be17b05eb7b9e43747644cb8ba773889eaee9c184d4ec18e1628a053ab69b39"
+      },
+      {
+        "url": "https://www.studyinnl.org/plan-your-stay/how-to-apply",
+        "contentHash": "sha256:7e9ce2c4f66cba3b730c68e3a6adeffb422ba16e31c3aba899f99f7b069e4ed6"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}

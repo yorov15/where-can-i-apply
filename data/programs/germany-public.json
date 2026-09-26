@@ -1,6 +1,5 @@
 {
   "id": "germany-public",
-  "status": "published",
   "name": {
     "ru": "Бакалавриат в государственных вузах Германии — без стипендии",
     "orig": "Bachelor at German public universities (no scholarship) — DAAD"
@@ -115,11 +114,46 @@
       "evidence": "must prove that they have 992 euros available per month",
       "field": null,
       "kind": "must"
+    },
+    {
+      "ru": "Подавать можно по-разному: напрямую в вуз, через uni-assist или, для части предметов, через Stiftung für Hochschulzulassung. Куда именно — зависит от страны, аттестата и предмета.",
+      "evidence": "Foreign students have to apply to the Stiftung für Hochschulzulassung, directly to the higher education institution, or to the University Application Service for International Students ( uni-assist )",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявление через uni-assist платное: 75 евро за первый выбор и 30 евро за каждое следующее заявление в том же семестре. Это единственный обязательный платёж на входе — за само обучение в государственных вузах обычно не платят.",
+      "evidence": "If you apply via uni-assist , an assessment of your certificates and preliminary review of your documents costs 75 EUR for your first choice of study and 30 EUR for each application to further courses of study in the same semester.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 75,
+        "currency": "EUR",
+        "evidence": "If you apply via uni-assist , an assessment of your certificates and preliminary review of your documents costs 75 EUR for your first choice of study and 30 EUR for each application to further courses of study in the same semester."
+      }
+    },
+    {
+      "ru": "Документы принимают только в заверенных копиях с заверенным переводом. Заверить их можно, например, в посольстве Германии в своей стране; это стоит денег и требует времени, так что начинать надо заранее.",
+      "evidence": "Only officially certified copies and translations are accepted for the application process. Official certifications can be issued for example by the German embassy in your home country.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Общее правило по срокам: зимний семестр (начало в сентябре-октябре) — подача с начала мая до 15 июля, летний (начало в марте-апреле) — с начала декабря до 15 января. Письма о зачислении приходят в августе-сентябре и в феврале-марте. У частных вузов сроки другие.",
+      "evidence": "At most higher education institutions, the application phase for the winter semester starting in September/October begins in early May and ends on 15 July.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "На многие программы мест меньше, чем желающих, и тогда работает конкурс — numerus clausus. Для медицины, фармации, ветеринарии и стоматологии ограничение действует во всех вузах страны; для остальных предметов решает конкретный вуз, и у него могут быть свои критерии: средний балл, мотивационное письмо, тест или собеседование.",
+      "evidence": "For many degree programmes in Germany there are more prospective students than study places, so applicants first have to take part in an admission procedure .",
+      "field": "gpa",
+      "kind": "note"
     }
   ],
   "deadline": {
     "opens": null,
-    "closes": null,
+    "closes": "2027-07-15",
     "recurring": "annual",
     "confidence": "expected"
   },
@@ -132,10 +166,8 @@
     }
   },
   "source": {
-    "url": "https://www.daad.de/en/studying-in-germany/living-in-germany/finances/",
-    "lastVerified": "2026-09-24",
-    "humanChecked": false,
     "approvedBy": "assistant",
+    "url": "https://www.daad.de/en/studying-in-germany/living-in-germany/finances/",
     "pages": [
       {
         "url": "https://www.daad.de/en/studying-in-germany/living-in-germany/finances/",
@@ -148,7 +180,14 @@
       {
         "url": "https://www.daad.de/en/studying-in-germany/requirements/admission-database/",
         "contentHash": "sha256:ba5540b816711fac040fb0cfd63e38ae80cf10b7fc17495439101b65ef877242"
+      },
+      {
+        "url": "https://www.daad.de/en/studying-in-germany/requirements/application-process/",
+        "contentHash": "sha256:949b5948b7feb90abab25651385944fb13188cd77ca41bd09283446947d176c2"
       }
-    ]
-  }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  },
+  "status": "published"
 }
