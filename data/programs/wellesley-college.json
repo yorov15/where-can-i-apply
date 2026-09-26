@@ -116,7 +116,12 @@
       "ru": "Подать заявку бесплатно.",
       "evidence": "Remember: It's free to apply to Wellesley!",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": "USD",
+        "evidence": "It's free to apply to Wellesley!"
+      }
     },
     {
       "ru": "Балл SAT или ACT необязателен для поступающих на осень 2027 года.",

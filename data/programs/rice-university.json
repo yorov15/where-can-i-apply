@@ -146,6 +146,17 @@
       "kind": "must"
     },
     {
+      "ru": "Плата за подачу заявки — 75 долларов, не возвращается, платят онлайн.",
+      "evidence": "$75 nonrefundable application fee (must be paid online)",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 75,
+        "currency": "USD",
+        "evidence": "$75 nonrefundable application fee (must be paid online)"
+      }
+    },
+    {
       "ru": "Иностранцы не могут просить освобождение от платы за подачу заявки (75 долларов).",
       "evidence": "International applicants are not eligible to request an application fee waiver.",
       "field": null,
