@@ -1786,12 +1786,18 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-26"
 
-[tsukuba]
-name = "University of Tsukuba (Япония): бакалавриат на английском"
+[tsukuba-ide]
+name = "University of Tsukuba, Interdisciplinary Engineering (Япония): бакалавриат инженерии на английском"
 urls = [
-  "https://www.global.tsukuba.ac.jp/apply/",
+  "https://www.ide.tsukuba.ac.jp/application-information",
+  "https://www.ide.tsukuba.ac.jp/faq",
+  "https://www.tsukuba.ac.jp/en/admissions/guidebook-enrollment/pdf/EnrollmentGuidebook.pdf",
   "https://www.tsukuba.ac.jp/en/admissions/fees-tuition/",
   "https://www.tsukuba.ac.jp/en/admissions/financial-scholarships/",
+]
+# Правила приёма лежат на Google Drive, питон-сборщик их не берёт; скачаны в manual/tsukuba-ide/.
+files = [
+  { path = "manual/tsukuba-ide/guidelines.pdf", url = "https://drive.google.com/file/d/1ZvyD7wPCcIuBnFHa55R3fKxwAn73btxR/view" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-26"

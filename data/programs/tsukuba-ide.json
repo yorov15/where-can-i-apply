@@ -1,0 +1,231 @@
+{
+  "id": "tsukuba-ide",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "University of Tsukuba, Interdisciplinary Engineering (Цукуба) — бакалавриат инженерии на английском, набор на сентябрь 2027, 13 мест",
+    "orig": "University of Tsukuba, Bachelor's Program in Interdisciplinary Engineering"
+  },
+  "hostCountry": "JP",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полного покрытия нет. Плата для студента с визой Student — 608 800 иен в год плюс вступительный взнос 282 000 иен. Полное или частичное освобождение от платы дают ограниченному числу студентов, которым трудно платить. Дорогу и жильё вуз не покрывает"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Applicants who have received more than four years of formal school education in Japan are not eligible."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "min": 12,
+      "evidence": "Applicants who have completed or are expected to complete a 12-year curriculum of formal school education*1 in a country other than Japan by August 31, 2027."
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Applicants who have completed or are expected to complete a 12-year curriculum of formal school education*1 in a country other than Japan by August 31, 2027."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата нет: вуз смотрит табель, тест по математике, эссе и собеседование вместе"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "IELTS (Academic) /IELTS online 6.5 or higher"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "evidence": "[For tests taken before January 20, 2026] 80 or higher"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.0,
+          "evidence": "[For tests taken on or after January 21, 2026] 4 or higher"
+        }
+      ],
+      "advisory": true,
+      "evidence": "Applicants must submit a TOEFL or IELTS score. Only TOEFL and IELTS scores are accepted. The preferred minimum scores are as follows"
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Mathematical proficiency is assessed through scores from one of the standardized examinations listed below, and applicants are strongly encouraged to submit SAT or ACT scores."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Национальность не ограничена: требований к гражданству нет, в анкете просто указывают все гражданства. Тем, кто получил больше четырёх лет школьного образования в Японии, подавать нельзя.",
+      "evidence": "Applicants who have received more than four years of formal school education in Japan are not eligible.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Основной путь: 12 лет школы вне Японии, законченных или ожидаемых к окончанию до 31 августа 2027. Таджикская школа одиннадцатилетняя, поэтому пункт прямо она не закрывает.",
+      "evidence": "Applicants who have completed or are expected to complete a 12-year curriculum of formal school education*1 in a country other than Japan by August 31, 2027.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "СРОЧНО, до 30 сентября 2026: для тех, кто не подходит ни под один из основных путей (в том числе с 11-летней школой), есть индивидуальная проверка. Вуз оценивает допуск отдельно, решение принимает до 30 сентября 2026. Кто не уверен, пишет на ac.intl@un.tsukuba.ac.jp именно до 30 сентября. Результат не гарантирован. После этого срока путь закрыт.",
+      "evidence": "If you are unsure about your eligibility, please send an email to the \"11. Contact Office\" by September 30.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ещё пути без 12 лет школы: диплом International Baccalaureate, Европейский бакалавриат, Abitur, Baccalauréat, GCE A-Level или International A-Level (три предмета A-Level, среди них математика, оценка не ниже E), либо 12 лет в школе, аккредитованной WASC, CIS, ACSI, NEASC, Cognia или COBIS.",
+      "evidence": "Complete three or more Advanced Level subjects (including mathematics) at grade E or above.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ожидающих окончания школы принимают: выпускник 2027 года подходит, оригинал аттестата и табеля нужен только принятым и не позднее 31 августа 2027. Если к 31 августа 2027 условия не выполнены, зачисление отменят.",
+      "evidence": "If you do not meet the eligibility requirements by August 31, 2027, your admission will be revoked.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужна проверка математики: официальный балл SAT или ACT (вуз настоятельно рекомендует именно их) либо IB, Европейский бакалавриат, Abitur или A-Level (не AS-Level). В отчёте должен быть раздел по математике. Минимального балла вуз не называет. Суперскор не принимают. Баллы должен отправить сам тестовый центр не позже 4 ноября 2026: код SAT — 7264, код ACT — 1876. Баллы надо ещё раз ввести в онлайн-заявке.",
+      "evidence": "Mathematical proficiency is assessed through scores from one of the standardized examinations listed below, and applicants are strongly encouraged to submit SAT or ACT scores.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен балл английского: TOEFL iBT или IELTS Academic. Вуз называет «предпочтительные минимальные баллы»: IELTS 6,5, TOEFL iBT 80 (для тестов до 20 января 2026) или 4 по новой шкале (с 21 января 2026). Принимают только TOEFL и IELTS; TOEIC и институциональный TOEFL не подходят. Код TOEFL для Tsukuba — C238; IELTS отправляют прямо на почту приёмной. Отправка не позже 4 ноября 2026.",
+      "evidence": "TOEIC Listening & Reading, TOEIC IP scores, and TOEFL Institutional Test Score Records are not accepted.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский можно не сдавать, если три года средней школы ты учился на английском. Вуз всё равно настоятельно советует прислать балл; без него на собеседовании ждут почти родного английского.",
+      "evidence": "Applicants who have completed three years of secondary education with English as the medium of instruction are exempt from submitting TOEFL or IELTS scores.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Подача онлайн с 1 октября (12:00 по Японии) до 4 ноября 2026 (17:00). Итоги первого этапа (документы) — 10 февраля 2027; второй этап — онлайн-собеседование с 26 февраля по 8 марта 2027; итог — 25 марта 2027. Зачисление 1 сентября 2027. Подать можно только на одну из программ Tsukuba на английском, после отправки менять нельзя.",
+      "evidence": "October 1 (from 12 p.m. JST), to November 4 (until 5 p.m. JST), 2026",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Взнос за первый этап — 4 000 иен, потом 13 000 иен за второй этап (только тем, кто прошёл первый). Взносы не возвращают.",
+      "evidence": "First-Stage Screening All applicants JPY 4,000",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 4000,
+        "currency": "JPY",
+        "evidence": "First-Stage Screening All applicants JPY 4,000"
+      }
+    },
+    {
+      "ru": "Плата после поступления: вступительный взнос 282 000 иен, обучение для студента с визой Student 304 400 иен за семестр (608 800 в год). Плату начинают брать с сентября 2027.",
+      "evidence": "Tuition fee (For international students) -Fall Semester (October - March): JPY 304,400",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полное или частичное освобождение от платы за обучение дают ограниченному числу студентов, которым трудно платить. Как подать заявку, на этих страницах не сказано.",
+      "evidence": "A full or partial tuition fee waiver is available to a limited number of students who would otherwise face financial difficulty in paying the tuition fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Нужны: эссе 800–1 200 слов (форма 1), финансовый план на четыре года (форма 2), справка об окончании школы, табель за три последних года, форма 3 от учителя, консультанта или директора, брошюра школы, паспорт, отчёты по английскому и математике, письмо-рекомендация через систему. Документы не на английском — с заверенным школой переводом.",
+      "evidence": "The statement must be between 800 and 1,200 words.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Собеседование онлайн (можно из любой страны): проверяют английский, базовые знания по инженерии и мотивацию.",
+      "evidence": "The interview will assess English communication ability, fundamental academic knowledge relevant to the chosen field, and the applicant's motivation and goals for the Bachelor's Program in Interdisciplinary Engineering.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Для визы Student после зачисления понадобятся документы о средствах, например справка о балансе счёта спонсора.",
+      "evidence": "applicants applying for a \"Student\" visa will be required to submit documents proving their ability to cover the costs of studying in Japan, such as a sponsor's bank balance certificate.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-10-01",
+    "closes": "2026-11-04",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.ide.tsukuba.ac.jp/application-information",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Tsukuba, Bachelor's Program in Interdisciplinary Engineering"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.ide.tsukuba.ac.jp/application-information",
+    "pages": [
+      {
+        "url": "https://www.ide.tsukuba.ac.jp/application-information",
+        "contentHash": "sha256:6757b6bd0299d41661208b80652d219230d219cd8a06d4f18714aff84cd67f8f"
+      },
+      {
+        "url": "https://www.ide.tsukuba.ac.jp/faq",
+        "contentHash": "sha256:181d7373e8dbd708ce88ea81f573a872af48f57115d8caea3a17ab0235910b48"
+      },
+      {
+        "url": "https://www.tsukuba.ac.jp/en/admissions/guidebook-enrollment/pdf/EnrollmentGuidebook.pdf",
+        "contentHash": "sha256:025cedf1200bebf979894403549bf6f4672ab14a07cf75a4581a17bee937b9fb"
+      },
+      {
+        "url": "https://www.tsukuba.ac.jp/en/admissions/fees-tuition/",
+        "contentHash": "sha256:aced874c3ab600104e9094afa95e15c839e96c78312caf9c80480ac8caf8185c"
+      },
+      {
+        "url": "https://www.tsukuba.ac.jp/en/admissions/financial-scholarships/",
+        "contentHash": "sha256:680845c439bfa9e1551e6c31dce730ab16c3c5f1ab0542a1213935ef04cc7bca"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1ZvyD7wPCcIuBnFHa55R3fKxwAn73btxR/view",
+        "contentHash": "sha256:ca0a195b3be990bc1b758566865d5f4dad38a2ea7e9bd76556e11800ea93df74"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}
