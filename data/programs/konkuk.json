@@ -1,0 +1,178 @@
+{
+  "id": "konkuk",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Konkuk University (Конкук) — приём иностранцев на бакалавриат в Сеуле",
+    "orig": "Konkuk University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полной оплаты при поступлении не обещают, но скидка на первый семестр зависит от языка: по TOPIK 3 — 30% платы, на английском треке TOEFL iBT 114 (или IELTS 8,5) — 100% платы за первый семестр, TOEFL 102 — 70%, 91 — 50%, 71 — 30%. Скидки за курсы корейского при вузе — до 100%. Стипендии вычитают из счёта сразу, отдельной заявки нет. Первый семестр включает регистрационный взнос 187 000 вон. Дорогу и жильё не покрывают"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "Applicant, father, and mother must all hold a single foreign nationality"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "have graduated (or are expected to graduate) from a domestic or international high school"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата страницы не называют: комиссия оценивает документы и, у части направлений, собеседование"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Applicants who meet at least one of the criteria"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Ты, отец и мать должны быть гражданами одной иностранной страны каждый. Двойное гражданство с Кореей закрывает подачу. Если корейское гражданство потеряно, это признают только при потере до начала приёма заявок.",
+      "evidence": "Applicants with dual Korean citizenship are disqualified",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужно пройти всю обычную школу, равную корейской начальной, средней и старшей, и окончить или ожидать окончания старшей школы. GED, заочные, онлайн-курсы, курсы для взрослых и языковые курсы не засчитывают. Как быть с 11-летним аттестатом, страница не говорит: спроси приёмную комиссию.",
+      "evidence": "Applicants who have completed all regular educational courses equivalent to Korean elementary, middle, and high school",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Язык (все направления, кроме двух ниже): любой из — TOPIK 3, тест корейского при Конкуке уровня 3, курсы корейского в Конкуке или другом вузе Кореи уровня 3, курсы King Sejong 3B, либо другой документ по усмотрению университета.",
+      "evidence": "TOPIK Lv. 3 or higher",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Компьютерное программирование (Computer Software): нужен только английский — TOEFL iBT 71, IELTS 5,5, CEFR B2 или New TEPS 327. Корейский язык там не принимают.",
+      "evidence": "TOEFL iBT score of 71 or higher",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Международная торговля и бизнес (International Commerce & Business): подходит либо корейский (как выше), либо английский (те же пороги TOEFL/IELTS/CEFR). Ветку, английскую или корейскую, назначает университет по поданным документам, а не ты.",
+      "evidence": "The curriculum (English track / Korean track) will be assigned by the University based on the documents submitted at the time of application.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Онлайн-заявка подаётся на ek-apply.com/ku, а бумажные документы — только по почте. Лично не принимают. Языковой документ надо приложить в срок подачи: дополнительного окна нет.",
+      "evidence": "Only language proficiency documents submitted and completed during the document submission period will be accepted.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Осенний набор 2026 проходил в два тура: подача с 9 по 20 марта и с 27 апреля по 8 мая 2026. Осенний набор 2027 вуз ещё не объявил; выпускнику таджикской школы, заканчивающему в мае–июне 2027, нужен именно осенний набор.",
+      "evidence": "Application Mar. 9, 2026 (Mon)- Mar. 20, 2026 (Fri)",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу — 150 000 вон на обычные направления и 180 000 на искусство и дизайн; ещё 20 000 за второе желаемое направление.",
+      "evidence": "Other Majors KRW 150,000",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 150000,
+        "currency": "KRW",
+        "evidence": "KRW 150,000"
+      }
+    },
+    {
+      "ru": "Скидки на первый семестр по языку: TOPIK 3 — 30% платы; на английском треке TOEFL iBT 114 (IELTS 8,5, New TEPS 526) — 100%, 102 — 70%, 91 — 50%, 71 — 30%. Скидка идёт в счёт на оплату, заявки не нужно.",
+      "evidence": "TOEFL iBT 114, IELTS 8.5, CEFR C2, NEW TEPS 526 or higher: 100% of first-semester tuition",
+      "field": "language",
+      "kind": "money"
+    },
+    {
+      "ru": "Для визы после зачисления нужна справка банка на 20 млн вон и больше; для граждан Китая — с блокировкой средств, для остальных не требуется блокировка.",
+      "evidence": "Other Countries Overseas bank KRW 20,000,000 or higher",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://ciss.konkuk.ac.kr/ciss/18391/subview.do",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Konkuk University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://ciss.konkuk.ac.kr/ciss/18391/subview.do",
+    "pages": [
+      {
+        "url": "https://ciss.konkuk.ac.kr/ciss/18391/subview.do",
+        "contentHash": "sha256:6207ec69de987eaab869c2efc8cebfc998f52908fa78ebb6970c3a7e29dadc8a"
+      },
+      {
+        "url": "https://ciss.konkuk.ac.kr/sites/ciss/files/260205_Fall_Semester_Admission_Guidelines_pc_en.pdf",
+        "contentHash": "sha256:626e08d52eff7175884b10401e808229153ac51c05859d37c9808dfe114117bd"
+      },
+      {
+        "url": "https://www.konkuk.ac.kr/sites/ciss/files/250814_Spring_Semester_Admission_Guidelines_pc_eng.pdf",
+        "contentHash": "sha256:8913e2835553cf38a8f375ca08b61ec83e88cba2ffd0bd8501a3aa3832b78b99"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

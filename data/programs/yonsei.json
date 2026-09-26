@@ -1,0 +1,176 @@
+{
+  "id": "yonsei",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Yonsei University (Ёнсе) — один из трёх лучших вузов Кореи, набор иностранцев на бакалавриат в Сеуле и Сонгдо",
+    "orig": "Yonsei University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Гид Ёнсе не называет ни платы за учёбу (отсылает на сайт вуза), ни стипендий для принятых иностранцев, поэтому здесь только правила приёма. Программа с английским обучением — Underwood International College — описана отдельной карточкой, и там плата и стипендия названы. Для этой программы первый год проходит в кампусе в Сонгдо, дорогу и жильё вуз не покрывает"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "Applicants and both of their parents must hold a non-Korean nationality."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "The recognition of high school graduation by overse as high schools is determined by comprehensively considering the school system and semester of each country."
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Applicants must be expected to hold a high scho ol diploma by August 2026."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата гид не называет: комиссия оценивает табель, тесты, награды и профиль школы вместе"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Korean or English language proficiency test score Standardized test result indicating proficiency in Korean or English"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут только те, у кого и у обоих родителей нет гражданства Кореи. Двойное гражданство Кореи у тебя или у одного из родителей закрывает эту дорожку.",
+      "evidence": "If the applicant or any one of the applicant's pare nts holds dual citizenship, one being Korean, the student is not eligible for this track.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат или справка об ожидаемом окончании школы. Засчитают ли школу другой страны, комиссия решает, сравнивая систему и число семестров этой страны: для одиннадцатилетней школы Таджикистана письменно спроси у приёмной комиссии до подачи. GED, домашнее и дистанционное обучение не принимают.",
+      "evidence": "The recognition of high school graduation by overse as high schools is determined by comprehensively considering the school system and semester of each country.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Ожидающих аттестат принимают, если школа закончится до августа 2026 (в цикле осени 2026). Гида на осень 2027 пока нет: сроки и условие для выпускника 2027 года смотри, когда он выйдет.",
+      "evidence": "Applicants must be expected to hold a high scho ol diploma by August 2026.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Язык нужно подтвердить одним из четырёх способов: тест корейского или английского, сертификат курсов корейского, справка, что школьные курсы шли на корейском или английском. Минимального балла гид не называет.",
+      "evidence": "Korean or English language proficiency test score Standardized test result indicating proficiency in Korean or English",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Осенний набор 2026 шёл так: онлайн-заявка с 10 по 26 марта 2026, документы почтой до 10 апреля, результаты 19 июня. Гид на осень 2027 пока не вышел. В цикле 2026 подача шла в марте, до окончания школы: справки об ожидаемом окончании это допускали.",
+      "evidence": "Online Application 2026. 3. 10.(Tue) 10:00 ~ 3. 26.(Thu) 17:00",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу — 150 000 вон. После оплаты заявку нельзя ни изменить, ни отменить, и взнос не возвращают.",
+      "evidence": "Int'l Student Track All Majors & departments 150,000 KRW",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 150000,
+        "currency": "KRW",
+        "evidence": "Int'l Student Track All Majors & departments 150,000 KRW"
+      }
+    },
+    {
+      "ru": "Первый год всех принятых проходит в международном кампусе в Инчхоне (Сонгдо) в рамках программы Residential College. Часть программ (компьютерные, интеллектуальные полупроводники, мобильные системы) идёт в Сонгдо целиком.",
+      "evidence": "must complete their first and second semesters (freshmen year) at the International Campus in Incheon as part of the Residential College Program",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение на корейском, а английские курсы есть только у части программ. Чтобы выбрать специальность на втором курсе, нужен TOPIK 3, для выпуска — TOPIK 4. Кто не привёз сертификата, начинает с начального корейского.",
+      "evidence": "B. Before graduation: TOPIK level 4 or higher",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Вуз христианский: все студенты обязаны пройти назначенные курсы по христианству и посещать часовню.",
+      "evidence": "All enrolled students are required to complete the designated Christianity courses and chapel.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Для визы после зачисления нужна справка банка на 22 млн вон и больше на имя твоё или родителей; тогда нужна и справка о родстве. Пришлёт вуз в срок, который назовут после результатов.",
+      "evidence": "[Degree Program Freshmen] KRW 22,000,000 or more",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестат и табель за 10–12 классы надо прислать оригиналами с апостилем или консульской легализацией Кореи; документы на других языках, кроме корейского и английского, — с нотариальным переводом.",
+      "evidence": "Original document with an Apostille or Consulate Au thentication",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admission.yonsei.ac.kr/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Yonsei University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www2.yonsei.ac.kr/entrance/2026/intl/2026_9_docu/Fall%202026%20Application%20Guide%20for%20International%20Students(Eng).pdf",
+    "pages": [
+      {
+        "url": "https://www2.yonsei.ac.kr/entrance/2026/intl/2026_9_docu/Fall%202026%20Application%20Guide%20for%20International%20Students(Eng).pdf",
+        "contentHash": "sha256:35e68b94578902668249bc253a22110e8e9e238f08c2f89cd3b46a3a5b8a17a6"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

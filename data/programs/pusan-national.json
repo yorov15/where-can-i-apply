@@ -1,0 +1,148 @@
+{
+  "id": "pusan-national",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Pusan National University (Пусан) — государственный вуз в Пусане, приём иностранцев на бакалавриат",
+    "orig": "Pusan National University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Стипендии по TOPIK при поступлении, отдельной заявки нет — их оценивают по документам: TOPIK 6 или 5 — вся плата за первый семестр, TOPIK 4 — вся плата по сниженной ставке. Отличникам, принятым по особому набору, полную плату продлевают по оценкам. Сколько платить без стипендии, страницы не называют"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "you are not of a Korean nationality"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата эти страницы не называют: подробности в руководстве по приёму на сайте вуза"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страницы, с которых взято, языкового минимума при поступлении не называют; стипендии привязаны к TOPIK"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем считают того, у кого нет корейского гражданства. Про родителей эти страницы не говорят, а у корейских вузов обычно нужны оба родителя не корейцами. Уточни в руководстве по приёму.",
+      "evidence": "you are not of a Korean nationality",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Это неполная запись: страницы о стипендиях университет дал, а руководство по приёму (сроки, взнос за подачу, точные требования к языку и школе) в снимок не попало. Все эти пункты проверь на сайте приёма Пусанского университета.",
+      "evidence": "Contact Us at pnuadmin@pusan.ac.kr for Further information",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Стипендия при поступлении: TOPIK 6 и TOPIK 5 — вся плата за первый семестр, TOPIK 4 — вся плата по нижней ставке (Tuition II и Tuition I). Отдельной заявки нет.",
+      "evidence": "New/ Transfer Admission for International Students TOPIK Lv.6 Full tuition The first semester",
+      "field": "language",
+      "kind": "money"
+    },
+    {
+      "ru": "Отличникам, принятым по особому набору для иностранцев, дают полную плату и продлевают её по оценкам. Заявки не нужно: оценивают по документам приёма.",
+      "evidence": "Application process: No application needed(will be evaluated with admission documents)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Действующим студентам платят за рост TOPIK: 400 000 вон, если после поступления получил уровень 4 или выше при GPA не ниже 2,5 (до 3 раз).",
+      "evidence": "KRW 400,000",
+      "field": "language",
+      "kind": "money"
+    },
+    {
+      "ru": "Чтобы сохранять стипендию, нужно набирать не меньше 12 кредитов за семестр и держать GPA не ниже 2,5 за прошлый семестр.",
+      "evidence": "Students who are below GPA 2.5 for the previous semester.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.pusan.ac.kr/eng/CMS/Contents/Contents.do?mCode=MN013",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Pusan National University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.pusan.ac.kr/eng/CMS/Contents/Contents.do?mCode=MN013",
+    "pages": [
+      {
+        "url": "https://www.pusan.ac.kr/eng/CMS/Contents/Contents.do?mCode=MN013",
+        "contentHash": "sha256:fd865933df0cccb4a9cc64c5fae76387d3d48aaca41d80f6067145cf29a86f06"
+      },
+      {
+        "url": "https://www.pusan.ac.kr/eng/CMS/Contents/Contents.do?mCode=MN016",
+        "contentHash": "sha256:adc9c4f3c3f959e95c3d518e65e460071fb4044b785a1e5214a9eac534826398"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

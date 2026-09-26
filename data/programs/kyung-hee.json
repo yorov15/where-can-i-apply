@@ -1,0 +1,166 @@
+{
+  "id": "kyung-hee",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Kyung Hee University (Кёнхи) — приём иностранцев на бакалавриат в Сеуле и Йонъине",
+    "orig": "Kyung Hee University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Стипендии идут по итогам приёма, отдельной заявки нет: самому сильному в каждом колледже и обладателям TOPIK 6 — вся плата за первый семестр, TOPIK 5 — половина. Для заявителей из стран-получателей помощи ODA (наименее развитые, низкий и ниже среднего доход) есть SDGs Scholarship — вся плата за первый семестр, а при выполнении условий до 4 лет. Стипендия Pioneer — вся плата за первый семестр, если из твоей страны никто ещё не учится в вузах по статистике. Входит ли Таджикистан, страницы не говорят: смотри Приложение 4 руководства"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "you are not of a Korean nationality"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Graduates / Prospective Graduates"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата эти страницы не называют: подробности в руководстве по приёму на сайте вуза"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "этим страницам языкового минимума нет: подробности в руководстве по приёму, а стипендии привязаны к TOPIK"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем считают того, у кого нет корейского гражданства. Про родителей эти страницы не говорят, а у корейских вузов обычно нужны оба родителя не корейцами. Уточни в руководстве по приёму.",
+      "evidence": "you are not of a Korean nationality",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Весенний набор 2027, первый тур: онлайн-заявка с 17 по 28 августа 2026, второй тур — с 26 октября по 6 ноября 2026. Занятия начинаются 2 марта 2027. Осенний набор 2027 университет ещё не назвал; выпускнику таджикской школы, заканчивающему в мае–июне 2027, нужен он.",
+      "evidence": "Online Application Submission Monday, August 17th, 2026 ~ Friday, August 28th, 2026, 5:00 PM",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы отправляют почтой в дополнение к онлайн-заявке; университет не отвечает за потерянные по почте.",
+      "evidence": "Kyung Hee University is NOT responsible for the loss of the documents when submitting via post",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Итоговые документы об образовании (аттестат и табель) нужны с консульской легализацией или апостилем и нотариальным переводом.",
+      "evidence": "Original Copy of the translated and notarised, with consular authentication (Apostille) of the final Certificate of Graduation and Academic Transcript",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Для визы нужен оригинал банковской справки: без него, без легализованных документов и без итогового аттестата Certificate of Admission не выдают.",
+      "evidence": "Original Bank Certificate for Student Visa Applicants",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "SDGs Scholarship: вся плата за первый семестр для проживающих в Корее со статусом беженца или равным и гражданам стран-получателей помощи ODA (наименее развитые страны, страны с низким и ниже среднего доходом). При выполнении условий плату покрывают до 4 лет.",
+      "evidence": "Nationality of DAC's ODA beneficiary countries (Least Developed Countries, Low Income Countries, Lower Middle Income Countries & Territories)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Pioneer Scholarship: вся плата за первый семестр студентам из стран, из которых по высшему образованию статистика ещё никого не показывает. Плата за первый год при 12 кредитах в первом семестре и GPA не ниже 2,5.",
+      "evidence": "Students from countries which is not enrolled in university based on the higher education statistics",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия по баллу приёма: A — вся плата за первый семестр лучшему в колледже (при баллах ниже 90 исключают); B — вся плата за первый семестр при TOPIK 6; C — половина при TOPIK 5. Вступительный взнос стипендии не покрывают.",
+      "evidence": "Admission Scholarship B Students who submitted TOPIK Level 6 by the designated document submission period Full tuition for the first semester",
+      "field": "language",
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендию по итогам приёма объявляют вместе с решением: отдельной заявки не описано. Из нескольких стипендий платят одну, с большей суммой.",
+      "evidence": "Scholarship offers will be announced along with acceptance result.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://iadmission.khu.ac.kr/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Kyung Hee University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://iadmission.khu.ac.kr/gglobalcenter/user/contents/view.do?menuNo=8000031",
+    "pages": [
+      {
+        "url": "https://iadmission.khu.ac.kr/gglobalcenter/user/contents/view.do?menuNo=8000031",
+        "contentHash": "sha256:89d186afb0e2d901abdcaad0bbc6390bfd19929d33e86bc48d59e5c04380c0b6"
+      },
+      {
+        "url": "https://www.khu.ac.kr/eng/user/contents/view.do?menuNo=300152",
+        "contentHash": "sha256:3fa619b4f63e321e5f2cee3b90eeafdf1fb13b1ad5cfcd1eafc1ab63815309a6"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

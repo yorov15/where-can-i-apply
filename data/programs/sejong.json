@@ -1,0 +1,194 @@
+{
+  "id": "sejong",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Sejong University (Седжон) — вуз в Сеуле, английский трек по 10 направлениям, IELTS 5,5 или TOEFL 71 достаточно",
+    "orig": "Sejong University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полной оплаты при поступлении нет, но первый семестр можно удешевить языком: на английском треке IELTS 8,0 / TOEFL iBT 112 — 80% платы, IELTS 6,5 / TOEFL 100 — 50%, IELTS 5,5 / TOEFL 71 — 30%; на корейском TOPIK 6 — 100%, 5 — 70%, 4 — 50%, 3 — 30%. Потом студентам с хорошими оценками дают 20–50% платы. Отдельной заявки на стипендию не нужно: считают по языковому документу, поданному вместе с заявкой. Общежитие примерно 1,6 млн вон за полгода, дорогу не покрывают"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "A non-Korean national whose parents are BOTH non-Korean nationals"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "A student who has completed, or is expected to complete primary and secondary education at the time of application"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "A student who has completed, or is expected to complete primary and secondary education at the time of application"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата гид не называет: решение принимают по прошлой успеваемости и документам, у части направлений — собеседование"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "A non-Korean national who satisfies the language proficiency requirements specified below"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут только те, у кого и у обоих родителей нет корейского гражданства. Если есть только один родитель (смерть, развод и т. п.), нужна справка государственного органа о гражданстве его и твоём. Получивший иностранное гражданство сменой не подходит.",
+      "evidence": "A non-Korean national whose parents are BOTH non-Korean nationals",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Школа: нужно окончить или ожидать окончания начального и среднего образования на момент подачи. Если учился в двух и более странах, вместе должно набраться 12 лет. Как быть с одиннадцатью годами таджикской школы, гид не говорит: спроси приёмную комиссию до подачи.",
+      "evidence": "If a student is educated in two or more countries, the total education period should be 12 years or more.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Язык (английский трек, 10 направлений): достаточно любого из IELTS 5,5, TOEFL iBT 71 (4,0 по новой шкале), New TEPS 327.",
+      "evidence": "A person who meets at least one of the following language proficiency requirements Division IELTS TOEFL iBT New TEPS All Majors 5.5 71(4.0) 327",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Язык (корейский трек): TOPIK 2 для творческих и спортивных направлений, 4 — для корейской филологии, СМИ и бизнеса, 3 — для остальных. Либо два семестра корейского в Sejong Language Center по рекомендации директора.",
+      "evidence": "A person who meets the minimum TOPIK or Sejong TOPIK score",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если языкового балла нет, можно пройти подготовительный курс Sejong: по итогам оценки других способностей допускают на него, а на обычное поступление — только после завершения курса.",
+      "evidence": "Students who do not meet language requirements can pass Sejong University's prep course by being evaluated for other academic potential.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Осенний набор 2026 шёл в два тура: подача с 9 по 24 марта и с 27 апреля по 15 мая 2026, оплата в мае и июле. Осень 2027 университет ещё не объявил. Выпускнику таджикской школы с окончанием в мае–июне 2027 подходит: гид принимает и тех, кто окончит школу к моменту подачи или ожидает окончания.",
+      "evidence": "Online Application & Submitting Documents Mar 09, 2026 ~ Mar 24, 2026 (5:00PM) Apr 27, 2026 ~ May 15, 2026 (5:00PM)",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу — 150 000 вон. До срока подачи можно отозвать и получить деньги, после срока не вернут.",
+      "evidence": "Application fee: Total 150,000 KRW",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 150000,
+        "currency": "KRW",
+        "evidence": "Application fee: Total 150,000 KRW"
+      }
+    },
+    {
+      "ru": "Плата в 2026 году по направлениям: гуманитарные, социальные, бизнес — 4 669 000 вон; естественные науки и физкультура — 5 521 000; IT, инженерия, науки о жизни — 6 340 000; искусство — 6 392 000. Гид не называет период, по размеру и по скидкам на «первый семестр» это плата за семестр.",
+      "evidence": "Humanities and Social Sciences/ Business, Economics, Hospitality and Tourism 4,669,000 Natural Sciences College / Physical Education 5,521,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидка на первый семестр по английскому: IELTS 8,0 / TOEFL 112 / New TEPS 498 — 80%; 6,5 / 100 / 398 — 50%; 5,5 / 71 / 327 — 30%. Для стран, где английский родной (Великобритания, США, Канада, Австралия, Новая Зеландия, Ирландия, ЮАР), — 30%.",
+      "evidence": "80% 8.0 112(6.0) 498 50% 6.5 100(5.0) 398 30% 5.5 71(4.0) 327",
+      "field": "language",
+      "kind": "money"
+    },
+    {
+      "ru": "Скидка на первый семестр по TOPIK: 6 уровень — 100%, 5 — 70%, 4 — 50%, 3 — 30%. Только по документам, поданным при заявке.",
+      "evidence": "TOPIK 100% Level 6 70% Level 5 50% Level 4 30% Level 3",
+      "field": "language",
+      "kind": "money"
+    },
+    {
+      "ru": "Студентам с хорошими оценками дают стипендию 20–50% платы; надо набирать не меньше 15 кредитов в семестр.",
+      "evidence": "20% ~ 50% of tuition fee (also applicable to transfer students)",
+      "field": "gpa",
+      "kind": "money"
+    },
+    {
+      "ru": "Для визы нужна справка банка на 20 млн вон (или 16 000 долларов) и больше. Она должна быть на имя твоё или отца или матери.",
+      "evidence": "Applicant's Verification of Deposit(VOD): 20 Million KRW / 16,000 USD / RMB 110,000 or more",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестат и табель надо прислать оригиналами с апостилем или консульской легализацией; Таджикистан в списке стран Гаагской конвенции, значит нужен апостиль. Без документов в срок сертификат зачисления не выдадут.",
+      "evidence": "Kyrgyzstan, Tajikistan, Tonga",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Общежитие для иностранцев: заявки принимают в январе и июле, шесть месяцев стоят около 1,6 млн вон.",
+      "evidence": "The dormitory fee for six months is about 1.6 million won.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://sos.sejong.ac.kr/eng/admission/univ/index.do",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Sejong University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+    "pages": [
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      },
+      {
+        "url": "https://sos.sejong.ac.kr/pdf/409094/2026%ED%95%99%EB%85%84%20%ED%9B%84%EA%B8%B0%20%ED%95%99%EB%B6%80%20%EC%A0%95%EC%9B%90%EC%99%B8%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EB%AA%A8%EC%A7%91%EC%9A%94%EA%B0%95%20(%EC%98%81%EB%AC%B8)_2026.03.12.pdf",
+        "contentHash": "sha256:528195b6c5877736c07d54abd29c41e9b6696c0c48f328dd6afca37a8e84150f"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

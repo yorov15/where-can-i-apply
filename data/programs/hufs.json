@@ -1,0 +1,189 @@
+{
+  "id": "hufs",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Hankuk University of Foreign Studies (HUFS) — вуз иностранных языков в Сеуле, приём иностранцев на бакалавриат",
+    "orig": "Hankuk University of Foreign Studies"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полной оплаты при поступлении не обещают, но есть стипендии по баллу приёма: президентская — вся плата за 1 семестр (до 10 человек, верхние 5%), вице-президентская — половина за семестр (верхние 10%). Языковые стипендии за высокий TOPIK или TOEFL — тоже на один семестр. Обучение без стипендии — примерно 4,3–5,1 млн вон за семестр по факультетам. Дорогу и жильё страницы не покрывают"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "A Korean citizen applicant with dual citizenship cannot apply as an international student."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Completed (or will be completed prior to Admission) primary and secondary school either in or outside Korea"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла аттестата страницы не называют: на бумажном этапе смотрят успеваемость вместе с эссе, планом учёбы и рекомендациями"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "справку о языке можно не подавать, но тогда назначат собеседование; сертификат не требуется, если английский родной или три года школы были в англоязычной стране"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Оба родителя тоже должны быть не корейскими гражданами. Гражданство не Кореи должно быть получено до поступления в старшую школу; двойное гражданство с Кореей закрывает подачу.",
+      "evidence": "Both biological parents and/or the current legal guardians must not be holders of Korean citizenship.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Школа должна быть обычной: аттестат по GED, экзаменам на квалификацию, домашнему, дистанционному или языковому обучению как основное образование не засчитывают.",
+      "evidence": "it will not be recognized as regular education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Языковую справку можно не подавать, но тогда назначат собеседование. Можно приложить TOPIK 3 или курсы корейского, а для английской ветки (Международные исследования) — TOEFL iBT 3,5 (59 по старой шкале) или IELTS 5,5.",
+      "evidence": "International undergraduate admission students can apply without proof of language proficiency.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Сертификат по английскому не нужен, если английский родной или ты учился в англоязычной стране не меньше трёх лет старшей школы или университета.",
+      "evidence": "Applicants whose native language or official language is English, or who have completed at least three years of high school or university education in an English-speaking country, are not required to submit an official English proficiency score.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Тем, кому нужно подтянуть корейский, дают до года интенсивного курса корейского. Кто сдал TOPIK 4 и выше или поступил на международные исследования, освобождён.",
+      "evidence": "Newly admitted international undergraduate students who require improvement in their Korean proficiency must complete the Intensive Korean Language Program.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Оценка при поступлении: бумажная часть 30 баллов, язык 30, собеседование 40 из 100. Подать можно на две специальности, даже в разных кампусах.",
+      "evidence": "Applicants are allowed to apply for two majors, even if they are taught at different campuses.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Осенний набор 2026: ранний тур 3–20 марта 2026, обычный 13 апреля – 29 мая 2026. Осенний набор 2027 вуз ещё не назвал. Заявка онлайн, а документы присылают почтой или лично.",
+      "evidence": "Document Submission Tue, March 3, 2026",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу — 158 000 вон. Не возвращается, кроме исключительных случаев вроде стихийных бедствий или болезни.",
+      "evidence": "Online KRW 158,000",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 158000,
+        "currency": "KRW",
+        "evidence": "KRW 158,000"
+      }
+    },
+    {
+      "ru": "Стипендии по баллу приёма: президентская — вся плата за 1 семестр (до 10 человек, верхние 5%), вице-президентская — половина за 1 семестр (верхние 10%), деканская — 1 млн вон (верхние 20%). Отдельной заявки не описано.",
+      "evidence": "President Full tuition 1 semester - Top 5% Admission score Up to 10 students",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Языковая стипендия: TOPIK 6, TOEFL iBT 6,0 (110–120 по старой шкале) или IELTS 8–9 — вся плата за 1 семестр; TOPIK 5, TOEFL 5,5 или IELTS 7–7,5 — половина.",
+      "evidence": "Language Excellence Scholarship A Full tuition 1 semester - TOPIK Level 6",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Первый семестр обойдётся в 4,3–5,1 млн вон плюс студенческий взнос 21 000 вон, в зависимости от факультета (гуманитарный и бизнес — 4,5 млн).",
+      "evidence": "KRW 4,496,000 KRW 4,298,000 KRW 21,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для визы после зачисления нужна справка о банковском остатке не меньше 20 млн вон на твоё или спонсора имя, выданная не раньше чем за 30 дней до подачи.",
+      "evidence": "Verification of Deposit (VOD) must show a minimum of KRW 20,000,000.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет школы. В Таджикистане школа одиннадцатилетняя. Засчитают ли такой аттестат, источник не говорит: спроси вуз или посольство до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до оплаты взноса.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://international.hufs.ac.kr/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Hankuk University of Foreign Studies"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://international.hufs.ac.kr/",
+    "pages": [
+      {
+        "url": "https://international.hufs.ac.kr/",
+        "contentHash": "sha256:e34943dd3a1765885b4ff06a59545d4d6483150c53c1395cca23d7757fbb96a3"
+      },
+      {
+        "url": "https://international.hufs.ac.kr/sites/international/contents/files/2026fall/HUFS_2026_Fall_Admission_guide(ENG)_update_ver.pdf",
+        "contentHash": "sha256:ec87bd6aa56657b0e5d4a51dd03627c54ad935bc9683debce34d7c8fa2a8b29f"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}
