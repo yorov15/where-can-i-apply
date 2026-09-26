@@ -189,6 +189,17 @@ class TestEvidence(unittest.TestCase):
         self.assertTrue(any("нет цитаты" in p for p in problems))
 
 
+class TestNumbersIn(unittest.TestCase):
+    def test_thousands_separator_matches_plain_number(self):
+        from tools.validate import _numbers_in
+        self.assertIn("1400", _numbers_in("Total score of 1,400 or higher"))
+        self.assertIn("1000000", _numbers_in("JPY 1,000,000"))
+
+    def test_decimal_comma_is_still_a_decimal(self):
+        from tools.validate import _numbers_in
+        self.assertIn("6.5", _numbers_in("IELTS 6,5"))
+
+
 class TestRequired(unittest.TestCase):
     def test_null_in_required_field_is_caught(self):
         program = good_program()

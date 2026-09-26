@@ -1,0 +1,375 @@
+{
+  "id": "icu-japan",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "International Christian University (ICU, Митака, пригород Токио) — бакалавриат Liberal Arts на английском, приём English Language Based Admissions (ELBA), набор на сентябрь 2027",
+    "orig": "International Christian University (ICU), College of Liberal Arts, English Language Based Admissions (ELBA)"
+  },
+  "hostCountry": "JP",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полного покрытия нет, вуз частный и дорогой: вступительный взнос 300 000 иен и 1 557 000 иен в год (обучение 1 203 000 плюс сбор за пользование 354 000) — это около 11 000 долларов в год, дороже любого государственного вуза Японии. Но у ICU самая щедрая стипендиальная система из всей японской подборки, и часть стипендий подаётся вместе с заявкой: Peace Bell — 14 человек на поток, полное покрытие обучения, вступительного взноса и общежития на четыре года; Torch Relay High Endeavor — вступительный взнос и первый семестр каждого года; Torch Relay Global Citizenship для сентябрьского набора — вступительный взнос и два семестра каждого года; University of Tomorrow с квотой для наименее развитых стран — полное покрытие плюс 110 000 иен в месяц, но только во втором потоке сентябрьского набора. Примерно треть студентов получает поддержку. Общежитие 25 750–62 650 иен в месяц плюс 62 000 иен при заселении; жизнь в Токио около 75 000 иен в месяц. Дорогу вуз не оплачивает"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Those who do not hold Japanese nationality must have, or obtain, valid residence status in Japan to enroll in ICU."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена: подходит школа любой страны вне Японии, но вуз требует, чтобы образовательная система была в его списке, иначе нужна форма проверки допуска"
+    },
+    "schoolYears": {
+      "min": 12,
+      "evidence": "Have completed 12 years or more of formal education outside of Japan"
+    },
+    "graduationYear": {
+      "maxRelative": "applicationYear",
+      "evidence": "Applicants must meet ONE of the following criteria by the time of enrollment at ICU"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "требований к возрасту нет, но с 23 лет и при законченной школе заявку рассматривают через отдельную форму проверки допуска"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "минимального балла аттестата нет: оценки смотрят вместе с личным заявлением, коротким эссе, рекомендациями и собеседованием, все части заявки одинаково важны"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "(Academic Module) 6.5 6.5 (No change)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 79,
+          "evidence": "TOEFL iBT 79 79 (Scores taken before January 20, 2026)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "evidence": "4.5 (Scores taken on or after January 21, 2026)"
+        }
+      ],
+      "evidence": "FROM AY2027 Minimum English Proficiency Test Score Requirements (for Apr. and Sep. 2027 Entries)."
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "optional": true,
+      "evidence": "L) SAT or ACT Plus Science and Writing Scores (only for applicable Type A applicants)"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство не ограничено: правила касаются образования, а не паспорта. Не-японцу для зачисления нужен действующий вид на жительство в Японии, то есть студенческая виза.",
+      "evidence": "Those who do not hold Japanese nationality must have, or obtain, valid residence status in Japan to enroll in ICU.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Основной путь: 12 лет формального образования вне Японии, законченных к моменту зачисления. Важно: вуз считает не общее число лет учёбы, а окончание последнего класса формальной программы в 12 лет и больше.",
+      "evidence": "Have completed 12 years or more of formal education outside of Japan",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "ПУТЬ ДЛЯ 11-ЛЕТНЕЙ ШКОЛЫ ЕСТЬ, НО ТАДЖИКИСТАНА В НЁМ НЕТ. Вуз прямо перечисляет восемь стран, чью одиннадцатилетнюю школу японское министерство образования признало равной японской старшей школе: Узбекистан, Судан, Беларусь, Перу, Россия, Мьянма, Украина, Казахстан. Таджикистана в списке нет. Это единственный японский вуз в подборке, который называет конкретные страны вместо общей формулировки, и для таджикского выпускника одиннадцатилетней школы это означает отказ по стандартному пути.",
+      "evidence": "Have completed 11 years or more of formal education in which the high school curriculum is based on the system of Uzbekistan, Sudan, Belarus, Peru, Russia, Myanmar, Ukraine, or Kazakhstan.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "ЧТО ДЕЛАТЬ С ОДИННАДЦАТЬЮ ГОДАМИ: подать Eligibility Check Form — отдельную форму проверки допуска. Вуз сам пишет в ответах на вопросы: если твоей образовательной системы нет в списке, подавай эту форму. Её рассматривают больше недели, и решение не гарантировано: заявку могут признать несоответствующей уже после просмотра документов. Заявку при этом можно отправлять, не дожидаясь ответа.",
+      "evidence": "If your educational system is not listed, please submit the Eligibility Check Form by the deadlines below",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "СРОЧНО: срок формы проверки допуска на сентябрьский набор 2027 — до 23:59 13 ноября 2026 по Японии (на апрельский набор 2027 срок уже прошёл, это было 14 августа 2026). Подавать форму надо заранее, не в последний день. Адрес приёмной комиссии: admissions-center@icu.ac.jp.",
+      "evidence": "For September 2027 Entry: 23:59 (JST) on November 13, 2026",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ещё пути без полных 12 лет: диплом International Baccalaureate, французский Baccalauréat, европейский European Baccalaureate, немецкий Abitur или британский GCE A-Levels. Отдельно — сданный экзамен на уровень выпускника школы, например GED или экзамен на аттестат об эквивалентности, но его надо иметь на руках уже при подаче, ожидаемые результаты не принимают, и к зачислению должно быть 18 лет.",
+      "evidence": "Have passed an examination demonstrating academic ability equivalent to 12 years of formal education, such as the GED (General Educational Development) test or the Upper Secondary School Equivalency Examination, and be at least 18 years of age",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Условия допуска считаются не на дату подачи, а на момент зачисления. Для сентябрьского набора 2027 школа должна быть закончена к сентябрю 2027 — выпускник 2027 года подходит.",
+      "evidence": "Applicants must meet ONE of the following criteria by the time of enrollment at ICU",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен английский: IELTS Academic 6,5, TOEFL iBT 79 (для тестов до 20 января 2026) или 4,5 по новой шкале (с 21 января 2026). TOEFL принимают только за одну конкретную дату, MyBest не годится. Код ICU для отправки баллов — 5279.",
+      "evidence": "FROM AY2027 Minimum English Proficiency Test Score Requirements (for Apr. and Sep. 2027 Entries).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "ВАЖНО НА БУДУЩЕЕ: с набора 2028 года порог английского поднимают — IELTS с 6,5 до 7,0, TOEFL iBT с 79 до 95 (или с 4,5 до 5,0 по новой шкале). Кто подаёт на 2027 год, проходит по старым, более низким баллам; для следующих лет готовиться надо к более высоким.",
+      "evidence": "FROM AY2028 Minimum English Proficiency Test Score Requirements (for Apr.2028 and thereafter). AY2027 AY2028 and thereafter IELTS (Academic Module) 6.5 7.0 TOEFL iBT 79 95",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "С того же 2028 года балл можно будет не сдавать: если последние шесть лет подряд школа учила на английском (все предметы, кроме иностранного и родного языка), либо если ты сдаёшь IB English A. Для 2027 года это правило ещё не действует — балл нужен.",
+      "evidence": "submission of IELTS or TOEFL scores will be optional if either of the following criteria is met",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Японский при подаче не нужен, но диплом без него не дадут: программа двуязычная, и все, кого приняли по английскому набору, обязаны пройти курс японского языка как часть требований на диплом. Новичку на это уходит до шести семестров, то есть два года. Закончить ICU, учась только на английском или только на японском, нельзя.",
+      "evidence": "must complete the Japanese Language Program (JLP) as part of graduation requirements",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Ты подаёшь по типу B: тип A — это японский или американский школьный диплом, диплом IB или британские A-Levels, у таджикского выпускника ничего из этого нет. Тип B означает дополнительный этап — онлайн-собеседование, к которому обязателен проверочный тест соединения.",
+      "evidence": "Type B: Applicants who do not meet the Type A criteria but have completed senior secondary education with qualifications for university entrance in their respective educational system must apply under Type B.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Первый поток сентябрьского набора: регистрация с 10:00 6 января до 23:59 14 января 2027 по Японии. Первый поток открыт только для типа A, тебе он недоступен. Решение по этой волне объявляют 26 февраля 2027.",
+      "evidence": "10:00 on Jan. 6, 2027 23:59 on Jan. 14, 2027",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Второй поток сентябрьского набора — твой: регистрация с 10:00 15 февраля до 23:59 25 февраля 2027, собеседование 2 апреля 2027 с проверкой связи 29 марта, решение 16 апреля 2027. Вуз отдельно пишет, что подавать в первый или во второй поток одинаково — преимуществ нет. Но квота для наименее развитых стран есть только во втором потоке.",
+      "evidence": "10:00 on Feb. 15, 2027 23:59 on Feb. 25, 2027",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Апрельский набор 2027: регистрация с 10:00 1 октября до 23:59 8 октября 2026, собеседование 21 ноября 2026, решение 1 декабря 2026. Этот набор подходит только тем, кто уже закончил школу — школьнику из Таджикистана он не годится, потому что школа заканчивается позже.",
+      "evidence": "10:00 on Oct. 1, 2026 23:59 on Oct. 8, 2026",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Вступительный взнос вместе с платой за первый семестр надо внести до 1 июня 2027, регистрацию на сентябрьский набор закрывают 16 апреля. Плата за осенний семестр — до 10 августа 2027.",
+      "evidence": "Autumn Term Tuition and Facilities Fee must be paid by August 10, 2027.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Взнос за подачу — 30 000 иен плюс 880 иен за работу системы, всего около 31 000 иен. Это самый дорогой взнос за подачу во всей подборке: почти в два раза дороже Осаки. Не возвращают ни взнос, ни сбор. Платят картой Visa, Mastercard, JCB, AMEX или Diners, имя на карте может быть не твоё.",
+      "evidence": "Pay the Application Fee 30,000 yen for the application fee plus 880 yen for the system operation charge. Both the application fee and system operation charge are non-refundable.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 30000,
+        "currency": "JPY",
+        "evidence": "Pay the Application Fee 30,000 yen for the application fee plus 880 yen for the system operation charge."
+      }
+    },
+    {
+      "ru": "Плата за учёбу на 2027 год: вступительный взнос 300 000 иен, обучение 1 203 000 иен в год плюс сбор за пользование 354 000 иен в год, итого 1 557 000 иен в год (примерно 507 000 иен за семестр). Дальше плата растёт каждый год: на 2028 год 1 578 000, на 2029 — 1 599 000.",
+      "evidence": "AY2027 Per year ¥1,203,000 ¥354,000 ¥1,557,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "СТИПЕНДИЯ PEACE BELL — самая крупная, подаётся вместе с заявкой: около 14 человек на поток, покрывают вступительный взнос, взнос за общежитие, годовое обучение со сбором и общежитие на четыре года. Условия: ICU должен быть вузом первого выбора, отличная успеваемость и подтверждённая нужда. Заявку подают в тот же срок, что и заявку на поступление.",
+      "evidence": "Expected number of recipients: 14",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Torch Relay High Endeavor: покрывают вступительный взнос и первый семестр каждого года четыре года. Тоже подаётся вместе с заявкой на поступление, нужны успеваемость и нужда.",
+      "evidence": "Award amount: Matriculation Fee, as well as Tuition and Facilities Fee for the first term each year for the four years in principle within the minimum period of enrollment at ICU.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Torch Relay с квотой «глобальное гражданство» — только для сентябрьского набора: покрывают вступительный взнос и два семестра каждого года четыре года. Нужен вид на жительство «студент».",
+      "evidence": "Award amount: Matriculation Fee, as well as Tuition and Facilities Fee for the first and second term each year for the four years in principle within the minimum period of enrollment at ICU.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "СТИПЕНДИЯ UNIVERSITY OF TOMORROW (квота для наименее развитых стран): покрывают вступительный взнос, годовое обучение со сбором, взнос за общежитие и само общежитие на четыре года, включая июль и август, плюс платят 110 000 иен в месяц. Условия: гражданство страны из списка наименее развитых стран ООН, школа закончена в такой стране (не в международной школе), сильная успеваемость, сентябрьский набор и только второй поток подачи. Есть ли Таджикистан в действующем списке ООН — надо проверить до подачи: статус пересматривается, а от него зависит и эта стипендия. Спрашивать приёмную комиссию.",
+      "evidence": "Be a student whose nationality is one of the countries classified as 'Least Developed Countries' by the United Nations",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия University of Tomorrow платит 110 000 иен в месяц — это больше, чем японская государственная стипендия JASSO, и вместе с полным покрытием обучения делает ICU одним из самых дешёвых вариантов в Японии, если под неё подходишь.",
+      "evidence": "A monthly stipend of JPY110,000 will be paid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "После зачисления тоже есть поддержка: ICU Scholarship for International Students и Torch Relay для уже учащихся — отмена части платы по успеваемости и нужде. А вот долгосрочный заём ICU, при котором вуз выступает поручителем, доступен только японским гражданам и обладателям постоянного вида на жительство, то есть не тебе.",
+      "evidence": "This loan is for Japanese Nationals and foreign residents who possess permanent resident status.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "О масштабе: примерно треть студентов получает поддержку от вуза или от внешних стипендий. Это много, но и стоит помнить, что две трети не получают ничего.",
+      "evidence": "Annually, about 1/3 of students receive financial support from ICU and our listed external scholarships.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Жильё: общежитие стоит 25 750–62 650 иен в месяц плюс 62 000 иен при заселении, места распределяют по заявке. Снимать квартиру в Токио — от 45 000 до 85 000 иен в месяц. Вуз оценивает жизнь без жилья примерно в 75 000 иен в месяц (еда), плюс 15 000 на книги, 8 000 на транспорт и около 11 000 на обязательную медицинскую страховку.",
+      "evidence": "Miscellaneous: Living Expenses(including food) approx. 75,000 yen / month",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Пакет документов: анкета в онлайн-системе (личное заявление, короткое эссе, внеклассная деятельность, особые достижения), документы, которые загружает школа — аттестат и табель, школьный отчёт ICU об успеваемости и контексте школы, две рекомендации, — и документы от тебя: справка об английском. У SAT и ACT требование есть только для типа A, у типа B их не требуют.",
+      "evidence": "Two Letters of Recommendation",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "SAT и ACT нужны только части поступающих по типу A — это японские и американские школьные дипломы, IB и A-Levels. По типу B, то есть для таджикского выпускника, стандартные экзамены не требуются.",
+      "evidence": "L) SAT or ACT Plus Science and Writing Scores (only for applicable Type A applicants)",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Все документы принимают только на английском; выданные на другом языке нужны с официальным переводом от школы или уполномоченной организации, например посольства.",
+      "evidence": "All documents must be submitted in English.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "ИСПОЛЬЗОВАНИЕ ИИ ПРИ ПОДГОТОВКЕ ДОКУМЕНТОВ ПРЯМО ЗАПРЕЩЕНО — вуз пишет это отдельным пунктом. Это касается личного заявления и эссе: писать надо самому.",
+      "evidence": "The use of generative AI in preparing any application documents is strictly prohibited.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Насколько трудно поступить по цифрам: на сентябрьский набор 2026 года подали 697 человек, приняли 239; на апрельский — 225 подали, 33 приняли. То есть сентябрьский набор в разы проще апрельского, а твоя квота стипендии привязана именно к сентябрьскому.",
+      "evidence": "English Language Based Admissions (September Entry) 697 (14) 239 (5)",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Средние баллы принятых (2022–2026): SAT 1386 из 1600, ACT 30,4 из 36, IB 38,3 из 45, TOEFL iBT 105 из 120, IELTS 7,51 из 9. Это не минимумы, а средние: минимум по английскому 79/6,5, по остальным экзаменам минимума нет вообще, но реальный конкурс идёт вокруг этих чисел.",
+      "evidence": "Average /Full Marks SAT 1,386 /1,600 ACT (Composite) 30.4 /36 IB Full Diploma 38.3 /45 TOEFL iBT 105 /120 IELTS 7.51 /9.0",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Специальность выбирать при поступлении не нужно: первые два года все учатся широко и только перед третьим курсом определяются с основным направлением. Учиться четыре года, при хорошей успеваемости можно выпуститься раньше срока.",
+      "evidence": "ICU does not require undergraduate students to choose a specific major before enrollment.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Учиться можно только в ICU: держать параллельное зачисление в другом вузе нельзя, перед поступлением надо официально отчислиться или закончить прежнее место учёбы.",
+      "evidence": "are not permitted to hold concurrent enrollment at another institution while enrolled in ICU",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Документы, выданные школой, должны быть официальными: вуз принимает только бумаги с печатью или подписью выдавшего их учреждения. Справки и табели должны быть от директора школы; за ложные сведения зачисление отменяют.",
+      "evidence": "Only documents bearing an official seal or signature of the issuing institution will be accepted.",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": "2027-01-06",
+    "closes": "2027-02-25",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.icu.ac.jp/en/admissions/undergraduate/engdoc/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: International Christian University (ICU), College of Liberal Arts, English Language Based Admissions (ELBA)"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.icu.ac.jp/en/admissions/",
+    "pages": [
+      {
+        "url": "https://www.icu.ac.jp/en/admissions/",
+        "contentHash": "sha256:442b51a6a00fa9fa40f7fe60e8d6472c516a59851196961230688884c27e7b83"
+      },
+      {
+        "url": "https://www.icu.ac.jp/en/admissions/undergraduate/data/",
+        "contentHash": "sha256:dbeeb20c75e4b90dc60fb5cd6e47c478b1a90a07680b590b4fa51bb2940257a8"
+      },
+      {
+        "url": "https://www.icu.ac.jp/en/admissions/undergraduate/engdoc/",
+        "contentHash": "sha256:bd8b83c65292263fcaf054ec07a6b365648f95679e563d1d83ab6420cc3e804c"
+      },
+      {
+        "url": "https://www.icu.ac.jp/en/admissions/undergraduate/engdoc/categories/",
+        "contentHash": "sha256:10d1d495f806ef9976e3a68efb7a270595df091b64669e37a6e3d33917dac35d"
+      },
+      {
+        "url": "https://www.icu.ac.jp/en/admissions/undergraduate/engdoc/schedules/",
+        "contentHash": "sha256:fd3e11c43a3f17f99fd5f9655b037383eaf6f520795b121b9c6ed14a344500f0"
+      },
+      {
+        "url": "https://www.icu.ac.jp/en/admissions/undergraduate/engdoc/documents/",
+        "contentHash": "sha256:7518ec653d4b76652be2646aa6aa8299458fc689c6f1819eca6a50562f79ac52"
+      },
+      {
+        "url": "https://www.icu.ac.jp/en/admissions/undergraduate/engdoc/guides/",
+        "contentHash": "sha256:f4c4a904e76101917cc1c19645c0d7404e2a8609dcd7ac19b1a263a1a0955074"
+      },
+      {
+        "url": "https://www.icu.ac.jp/en/admissions/undergraduate/images/UndergraduateAdmissionsGuide2027_Regular.pdf",
+        "contentHash": "sha256:0ad99584ce3d9d2a3d2304004862a6e6b05add89e7cdd59bfbe0c19267df0349"
+      },
+      {
+        "url": "https://www.icu.ac.jp/en/admissions/undergraduate/images/27ELBA.pdf",
+        "contentHash": "sha256:5da7b3b86468c75653c6d8ff73487534eac3e529e700fb54ded5ad39fd26c115"
+      },
+      {
+        "url": "https://www.icu.ac.jp/en/admissions/undergraduate/policy/",
+        "contentHash": "sha256:dbf5f9dd4acd507ebec54bf139b2a3f218b090f1216ac6424f32a112a63d22cf"
+      },
+      {
+        "url": "https://www.icu.ac.jp/en/admissions/tuition/",
+        "contentHash": "sha256:85eed0418ae72ed5a776ff9968461f66ad46d7c66eed5a6833f58195a4cb5707"
+      },
+      {
+        "url": "https://www.icu.ac.jp/en/admissions/finance/",
+        "contentHash": "sha256:60b1455f991a0235d8e56a78a433fedbc8a1915bc913c55b7eecb0762b0437bd"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}

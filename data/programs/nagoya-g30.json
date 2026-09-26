@@ -1,0 +1,233 @@
+{
+  "id": "nagoya-g30",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Nagoya University, программы G30 (Нагоя) — бакалавриат на английском, набор на октябрь 2027, дешёвое обучение в государственном вузе",
+    "orig": "Nagoya University, Global 30 International Programs (undergraduate)"
+  },
+  "hostCountry": "JP",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полного покрытия нет, но обучение дёшево: государственный вуз берёт 535 800 иен в год с любой национальности плюс разовый взнос 282 000. Стипендию Global 30 для бакалавров рассматривают автоматически при подаче, если приложить форму и справку о доходах спонсора; размер на сайте не назван. Дорогу вуз не покрывает"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Nagoya University invites students (foreign nationals, Japanese nationals, and permanent residents of Japan) to apply"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "min": 12,
+      "evidence": "The applicant has completed, or is expected to complete, a 12 -year curriculum by September 30, 2027, in an education institution located in a foreign country"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "The applicant has completed, or is expected to complete, a 12 -year curriculum by September 30, 2027"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "минимального балла нет: вуз требует «отличные результаты в школе» и смотрит табель вместе с эссе, письмами и собеседованием"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "IELTS (Academic Module) Overall band score of 6.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "evidence": "TOEFL 80 iBT 60 Paper-delivered Test"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 110,
+          "evidence": "Duolingo English Test (DET) 110 and above"
+        }
+      ],
+      "evidence": "Applicants who graduate from a high school where the primary language of instruction is not English must submit one of the English language proficiency test scores listed in Appendix 1."
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "optional": true,
+      "evidence": "Although not compulsory, applicants are highly recommended to submit SAT, ACT, EJU or some other standardized test scores."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Национальность не ограничена: вуз принимает иностранцев, японцев и постоянных жителей Японии.",
+      "evidence": "Nagoya University invites students (foreign nationals, Japanese nationals, and permanent residents of Japan) to apply",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Основной путь: 12 лет школы за пределами Японии, при этом хотя бы два из трёх последних лет средней школы учёба шла не по японской системе, и 12-летний курс завершён (или будет завершён) к 30 сентября 2027. Таджикская школа одиннадцатилетняя, поэтому прямо этот пункт она не закрывает.",
+      "evidence": "The applicant has completed, or is expected to complete, a 12 -year curriculum by September 30, 2027, in an education institution located in a foreign country",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Вуз признаёт и 11-летний курс, но только если министерство образования Японии (MEXT) признало систему той страны равной японской старшей школе. Кто окончил такой курс, что «получает право поступать в университет в своей стране», подходит. Есть ли таджикская система в списке MEXT, на странице вуза не сказано: спрашивай приёмную комиссию.",
+      "evidence": "The applicant must complete an 11-year (or more) curriculum.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ещё один путь — индивидуальная проверка: вуз оценивает твою подготовку отдельно, если тебе будет не меньше 18 лет к 30 сентября 2027. Написать в Admissions Office надо не позже чем за месяц до первого дня подачи нужного тура: для первого тура (с 2 ноября 2026) это примерно 2 октября 2026, для второго (с 5 января 2027) — примерно 5 декабря 2026. Сайт вуза в одном месте называет 4 ноября: сверься с приёмной. Результат не гарантирован.",
+      "evidence": "Applicants who wish to apply under eligibility provision 3. mentioned above must contact the Admissions Office for the International Programs at least one month before the first day of the application period",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ещё пути без 12 лет школы: диплом IB, Abitur, Baccalauréat, A-Level, международный A-Level или Европейский бакалавриат; либо 12 лет в школе, аккредитованной WASC, ACSI, CIS, NEASC, Cognia или COBIS.",
+      "evidence": "The applicant has acquired, or is expected to acquire the International Baccalaureate, the Abitur, the Baccalauréat, the General Certificate of Education (GCE) Advanced Level (A -Level), Cambridge International A Levels or the European Baccalaureate by September 30, 2027.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ожидающих окончания школы принимают: справка об ожидаемом окончании подходит, оригинал аттестата и итоговый табель надо прислать не позже 1 августа 2027, иначе предложение отзывают. Выпускник таджикской школы 2027 года срок выполняет.",
+      "evidence": "Applicants who have not yet earned an academic qualification equivalent to high school graduation must ensure that official copies of a certificate of graduation",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Официальный SAT, ACT или EJU не обязательны, но «настоятельно рекомендуются»: вуз пишет, что заявки с более высокими баллами оценивают выше. Код Nagoya для SAT и AP — 6535, для ACT — 5480. Какие предметы нужны для каждой программы, написано в приложении 3 к правилам приёма.",
+      "evidence": "Although not compulsory, applicants are highly recommended to submit SAT, ACT, EJU or some other standardized test scores.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Балл английского нужен, если английский не был языком обучения в школе: IELTS Academic не ниже 6,0 (One Skill Retake разрешён), TOEFL iBT не ниже 80 (Home Edition и MyBest разрешены), Duolingo не ниже 110, либо CEFR C1 и выше в официальном табеле. TOEIC и TOEFL ITP не принимают. Коды: TOEFL — 7256, IELTS и Duolingo — по названию вуза.",
+      "evidence": "TOEIC® and TOEFL- ITP® are not accepted",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Балл английского не нужен, если последние три года школы подряд, включая выпускной, ты учился на английском. Нужна справка школы по шаблону вуза с подписью и печатью.",
+      "evidence": "applicants who have completed three or more consecutive years of education - including the final year of secondary education - in which English was the medium of instruction are exempt from submitting English test scores.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Набор на октябрь 2027 в два тура: первый — с 2 ноября (9:00 по Японии) до 19 ноября 2026, полдень; второй — с 5 января до 21 января 2027. Второго тура нет у химии, биологии, социальных наук и Japan-in-Asia Cultural Studies. Итоги первого этапа (документы) — 3 февраля или 24 марта 2027, потом онлайн-собеседование на 30–45 минут; итог — 15 марта или 26 апреля 2027. Подать можно только один раз в год и только на одну программу.",
+      "evidence": "First Round November 2, 2026, 9:00 (JST or UTC +9) November 19, 2026, 12:00 noon (JST or UTC +9)",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Отбор идёт по документам (табель, два эссе, письмо учителя), затем онлайн-собеседование через Zoom. Письменных экзаменов нет. Для науки и инженерии на собеседовании решают задачи по математике и профильной науке устно.",
+      "evidence": "Only shortlisted applicants who passed the primary screening will be invited for the secondary screening stage, which is an admission interview and/or oral examination.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Взнос за подачу — 10 000 иен, платить онлайн (PayPal или Flywire), не возвращается. На одной странице вуза встречается 5 000 иен: верить надо правилам приёма 2027, где названо 10 000.",
+      "evidence": "Application fee: JPY 10,000",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 10000,
+        "currency": "JPY",
+        "evidence": "Application fee: JPY 10,000"
+      }
+    },
+    {
+      "ru": "Плата после поступления: разовый регистрационный взнос 282 000 иен, обучение 535 800 иен в год (267 900 за семестр) и страховка 4 660 иен. Для иностранцев и японцев плата одинаковая.",
+      "evidence": "Tuition fee, regardless the nationality of students, is JPY535,800 per academic year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Nagoya University Global 30 Undergraduate Scholarship: все подавшие в G30 автоматически рассматриваются на неё. Чтобы участвовать, надо приложить форму заявки и справку о доходе спонсоров, переведённую на английский. Размер стипендии на страницах не назван.",
+      "evidence": "you will automatically be considered as an applicant for the Nagoya University Global 30 Undergraduate Scholarship",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Расходы на жизнь в Нагое по оценке вуза — 86 500–106 500 иен в месяц. Для визы нужна выписка со счёта на не менее чем 1 000 000 иен (для получателей стипендии G30 — 500 000).",
+      "evidence": "Total JPY 86,500-106,500",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Нужны: справка об окончании школы, табель за последние два и больше года, два эссе (мотивационное и по программе), письмо от школьного учителя, копия паспорта. Писать эссе с помощью генеративного ИИ запрещено, все тексты проверяют программой обнаружения ИИ. Документы не на английском — с заверенным переводом.",
+      "evidence": "the use of generative AI tools to create text or any other content-including essays-for application documents is strictly prohibited",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-11-02",
+    "closes": "2026-11-19",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://admissions.g30.nagoya-u.ac.jp/admissions/undergraduate/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Nagoya University, Global 30 International Programs (undergraduate)"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://admissions.g30.nagoya-u.ac.jp/admissions/undergraduate/",
+    "pages": [
+      {
+        "url": "https://admissions.g30.nagoya-u.ac.jp/admissions/undergraduate/",
+        "contentHash": "sha256:fe5fd3fc47dc4f72c909bbdc1c2aaa6534516ed10af5f0ddd26fe0480cb4008d"
+      },
+      {
+        "url": "https://admissions.g30.nagoya-u.ac.jp/upload/2027_admission_requirements_en.pdf",
+        "contentHash": "sha256:747f22ace437f01cba854be4e0879563dde2d2ec1dc7740fad913a657e15aa29"
+      },
+      {
+        "url": "https://admissions.g30.nagoya-u.ac.jp/wp-content/uploads/2025/08/List-of-English-Qualifications-Application-Requirements-II.-2-1.pdf",
+        "contentHash": "sha256:0c053c5edec5d6f8d5149a381dce2c84082ac8fd6af2545d0b3a95c81cba620f"
+      },
+      {
+        "url": "https://admissions.g30.nagoya-u.ac.jp/admission_/tuition/",
+        "contentHash": "sha256:72268742b3e9f0405e6ce2268ac4e1ff198b656a090c28b16bb955a9d1cad105"
+      },
+      {
+        "url": "https://en.nagoya-u.ac.jp/admissions/financial/exemptions/",
+        "contentHash": "sha256:22df5438b5208dec46b0aa69aa8aaf6e6acc85fb8b519d2c3c849e055f50ccf3"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}
