@@ -1,0 +1,210 @@
+{
+  "id": "bard-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Bard College — колледж в США, нужду гарантируют только в ранних турах, семья обычно платит от 30 000 долларов",
+    "orig": "Bard College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Нужду закрывают полностью гарантированно только тем, кого приняли в ранних турах (Early Decision I, Immediate Decision Plan, Early Action); в Early Decision II и обычном туре такой гарантии нет. Помощь иностранцам обычно доходит только до полной стоимости обучения; жильё, питание и прочее покрывают редко. Колледж ждёт, что семья иностранца заплатит в год не меньше 30 000 долларов"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "If you are a non-US citizen living outside of the United States or living in the United States on a temporary visa, you are considered to be an international applicant."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: иностранцы подают ту же заявку через Common App или Coalition with Scoir"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: страницы называют только пакет документов и оценки как часть общего рассмотрения"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "TOEFL score of at least 5 on the 1-6 band scale."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "For scores reported on the previous 0-120 scale, a minimum score of 100 is required."
+        },
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "IELTS score of at least 7"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 120,
+          "evidence": "Duolingo English Test score of at least 120"
+        }
+      ],
+      "advisory": true,
+      "evidence": "Our test score guidelines are: TOEFL score of at least 5 on the 1-6 band scale."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "You do not need to take the SAT or ACT to apply to Bard."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Нужду закрывают полностью гарантированно только тем, кого приняли в ранних турах: Early Decision I, Immediate Decision Plan или Early Action. В Early Decision II и обычном туре такой гарантии нет.",
+      "evidence": "Bard guarantees to meet full demonstrated financial need for all students admitted via the Early Decision I, the Immediate Decision Plan or the Early Action application rounds, regardless of citizenship.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "В обычном туре и Early Decision II полное покрытие нужды не гарантируют.",
+      "evidence": "Bard does not guarantee to meet full demonstrated need for students admitted via the ED II or Regular Decision rounds.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Колледж ждёт, что семья иностранца заплатит в год не меньше 30 000 долларов из всей суммы расходов: обучение, жильё, питание, сборы, личные расходы, дорога, книги, страховка.",
+      "evidence": "Bard typically expects that international students contribute at least $30,000 per year towards the total of their educational expenses* (tuition, housing and food, mandatory fees, as well as estimated costs of personal expenses, transportation, books, and medical insurance).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь иностранцам обычно доходит только до полной стоимости обучения. Стипендии на жильё, питание и прочие расходы дают очень редко.",
+      "evidence": "International student financial aid packages, including those that meet demonstrated need, generally do not provide support beyond full tuition.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Бюджет помощи ограничен, и колледж, как правило, принимает иностранца только если тот показал, что у него хватит денег на жильё, питание и дорогу. Принять без подтверждённых средств он не готов.",
+      "evidence": "Please note: It is Bard's policy not to offer admission to any international student who is unable to demonstrate sufficient funding.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Есть стипендии Bard Global Citizen: невозвратные гранты по нужде и по успехам, обычно от 10 000 до 60 000 долларов в год. Всех, кто подал форму помощи, рассматривают автоматически.",
+      "evidence": "Typically, Bard Global Citizen Scholarships range from $10,000 to $60,000 annually for full-time enrollment.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь надо запросить с заявкой на поступление: после предложения о приёме заявки на неё не рассматривают.",
+      "evidence": "International applications for financial aid submitted after an offer of admission has been released to an applicant will not be considered.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Для помощи нужна собственная анкета колледжа BISFAA, другие формы не принимают. Подавать её надо каждый год, чтобы стипендию сохранить: сама она не продлевается.",
+      "evidence": "NOTE: Financial Aid is not automatically renewed each year.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Баллы SAT и ACT необязательны: колледж обходится без них более 50 лет.",
+      "evidence": "Bard College has been test-optional for over 50 years.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский нужен всем, для кого он не родной: подходят TOEFL, IELTS или Duolingo. Ориентиры колледжа: TOEFL не ниже 5 по новой шкале 1–6 (или 100 по старой), IELTS не ниже 7, Duolingo не ниже 120.",
+      "evidence": "All international applicants for whom English is not their primary language must submit one of the approved English proficiency tests.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Освобождение от экзамена по английскому можно попросить после подачи заявки, если последние три года школы прошли полностью на английском или ты вырос в стране, где английский основной язык.",
+      "evidence": "Students who have attended a secondary school with full English instruction, for at least the 3 most recent years of their education, may request an English proficiency test waiver after they submit their application",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Нужны табель, который школа присылает напрямую, школьный отчёт консультанта и две рекомендации учителей. Рекомендации должны прийти от самих авторов, загружать их самому нельзя.",
+      "evidence": "Teacher recommendations: Two are required.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: ранний тур (Early Action, Early Decision I, Immediate Decision Plan) — до 1 ноября, Early Decision II и обычный — до 15 января. Одна страница называет для анкеты помощи в обычном туре срок 1 января, другая 15 января, поэтому лучше уложиться в 1 января.",
+      "evidence": "Jan. 15 Applications Due Jan. 15 Financial Aid Application Due",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.bard.edu/admission/international/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Bard College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.bard.edu/admission/international/",
+    "pages": [
+      {
+        "url": "https://www.bard.edu/admission/international/",
+        "contentHash": "sha256:326c2c55cc967628bd0051e941d48ff920a8e587a132e152e09e86ab1eac30db"
+      },
+      {
+        "url": "https://www.bard.edu/sfs/international/",
+        "contentHash": "sha256:f81ded0e9d2bc4833ee87a14ad5aee94cd1040ef3d7f23598b3a65f43bd78228"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

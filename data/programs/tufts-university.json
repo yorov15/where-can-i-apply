@@ -1,0 +1,222 @@
+{
+  "id": "tufts-university",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Tufts University — университет в США, нужду закрывают полностью, но денег для иностранцев ограниченное количество",
+    "orig": "Tufts University"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Нужду принятого закрывают на 100%, а нужду считают от полной стоимости года, включая книги, личные расходы и дорогу до кампуса. Но денег для иностранцев в университете ограниченное количество; стипендий за заслуги на бакалавриате нет. Из чего состоит пакет (гранты, займы, работа), эти страницы не называют"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Tufts proudly meets 100% of the demonstrated financial need of every admitted student, regardless of citizenship."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: приёмная комиссия знакома с британской, французской, международной и немецкой системами"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: университет оценивает документы в контексте страны и школы"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "TOEFL 5.0+ for exams taken on January 21, 2026 or later"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "100+ for exams taken prior to January 21, 2026"
+        },
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "IELTS 7+"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "Duolingo English Test 130+"
+        }
+      ],
+      "advisory": true,
+      "evidence": "While Tufts has no score minimums, generally successful applicants have at least the corresponding score below"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Tufts University is test-optional, giving applicants a choice about whether or not to submit SAT or ACT scores to be considered with their application."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Нужду каждого принятого университет закрывает на 100%, независимо от гражданства. Нужда — разница между полной стоимостью года (с книгами, личными расходами и дорогой до кампуса) и взносом семьи.",
+      "evidence": "Demonstrated need is the difference between the annual cost to attend Tufts (including books, personal expenses, and transportation to campus) and the amount a student's family is expected to contribute each year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Денег для иностранцев в университете ограниченное количество: он выделяет небольшую часть на талантливых иностранцев.",
+      "evidence": "In light of Tufts' commitment to maintain an internationally diverse community, the University makes available a limited amount of funding for talented international students.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Вся помощь только по нужде, стипендий за заслуги на бакалавриате нет.",
+      "evidence": "The university does not offer any merit-based scholarships to undergraduate students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Взнос семьи, который определили при зачислении, не меняется, пока студент имеет право на помощь. Гранты выдают на срок до четырёх лет.",
+      "evidence": "The family contribution that is determined upon admission will remain the same as long as the student is eligible to receive financial aid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь надо запросить в заявке на поступление: после решения о приёме иностранцу её не дают.",
+      "evidence": "If you wait until you are notified about your admission to Tufts to indicate a request for financial aid, you will not receive it.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Помощь можно просить и в раннем туре: пакет будет тем же, что и в обычном.",
+      "evidence": "you may apply to Tufts Early Decision as an international aid applicant and your financial aid package will be identical to the one you would have received during the Regular Decision process.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Помощь просят одним из двух способов: бесплатная анкета ISFAA (скачивают в личном кабинете после подачи заявки) или CSS Profile. Плату за CSS Profile университет не снимает при подаче заявки, но принятых иностранцев просит подать CSS Profile в течение 5–7 дней после решения и даёт им бесплатный код.",
+      "evidence": "Admitted international students will be asked to submit the CSS Profile within 5-7 days of their admission decision, regardless of whether they have submitted the ISFAA.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Плату за подачу заявки университет снимает для иностранцев, которым нужна помощь по нужде: это отмечают в онлайн-заявке, в вопросе об освобождении от платы Tufts.",
+      "evidence": "Tufts Admissions has waived the admission application fee for international citizens seeking need-based financial aid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Баллы SAT и ACT необязательны; если прислать, их оценивают с учётом иностранного образования.",
+      "evidence": "If students choose to have SAT or ACT test scores considered as part of their application, these tests are interpreted in the context of their international background.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский надо подтвердить, если родной язык не английский, кроме тех, кто три года и больше учился в школе на английском. Подходят TOEFL, IELTS, PTE и Duolingo. Минимума нет, но у успешных обычно TOEFL 5,0+ (новая шкала) или 100+ (старая), IELTS 7+, PTE 68+, Duolingo 130+. TOEFL ITP Plus и IELTS Indicator не подходят.",
+      "evidence": "All applicants whose primary language is not English must submit proof of English proficiency, unless they have been enrolled in an English instruction school for at least three years.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Нужны четыре года школьных результатов: три года оценок и оценки текущего года, плюс официальные результаты уже сданных национальных экзаменов и прогнозные баллы за будущие. Школа присылает документы сама; копии не принимают. Переводить документы должен не ты и не родственники.",
+      "evidence": "The Tufts Admissions Office requires original copies of all secondary school transcripts to be sent directly to our office from your secondary school.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Тех, кто уже проучился два семестра и больше в университете на родине, рассматривают как переводных студентов; помощь им крайне ограничена.",
+      "evidence": "If you have completed the equivalent of two or more semesters at a university in your home country, you may apply as a transfer student.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 2 ноября 2026, ранний тур II и обычный — до 4 января 2027. Отдельный срок анкеты ISFAA для иностранцев страницы не называют: в таблице университета сроки даны для CSS Profile, а его иностранцам при подаче не требуют.",
+      "evidence": "Early Decision I November 2, 2026 Mid-December Early Decision II January 4, 2027 Early February Regular Decision January 4, 2027 By April 1",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-04",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admissions.tufts.edu/apply/applying-as-an-international-s/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Tufts University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://admissions.tufts.edu/tuition-and-aid/applying-for-aid/international-student-aid/",
+    "pages": [
+      {
+        "url": "https://admissions.tufts.edu/tuition-and-aid/applying-for-aid/international-student-aid/",
+        "contentHash": "sha256:d14706c9e247ca62732fcb7d23a4a9a0ce41fe1e82cfd7987af0af253fd7cabf"
+      },
+      {
+        "url": "https://admissions.tufts.edu/apply/applying-as-an-international-s/faqs/",
+        "contentHash": "sha256:4ce87f38536d601b8f48bf31ca3b0b3335b0cf6e6fc28468ab265efae0f99175"
+      },
+      {
+        "url": "https://admissions.tufts.edu/tuition-and-aid/applying-for-aid/",
+        "contentHash": "sha256:b74bad353c7dc6bc480605674171d2272caca659ffaa068f72ca7ff115488284"
+      },
+      {
+        "url": "https://admissions.tufts.edu/apply/first-year-students/",
+        "contentHash": "sha256:8305b0c937a7f13062e9d207f41b98d1bd4f48ed825eebb8089db7140426f289"
+      },
+      {
+        "url": "https://admissions.tufts.edu/apply/applying-as-an-international-s/",
+        "contentHash": "sha256:3d15442845a296ecdc1658c6c7cc22f1dd5a01934fc90e9dcf1c3d518ce24035"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

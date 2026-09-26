@@ -1,0 +1,209 @@
+{
+  "id": "mount-holyoke-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Mount Holyoke College — колледж в США для женщин, помощь по нужде, подача бесплатная",
+    "orig": "Mount Holyoke College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Колледж обещает закрыть рассчитанную нужду каждого принятого. Пакет может состоять из грантов, кредитов и работы на кампусе. 45% принятых иностранцев получают помощь по нужде (в среднем 58 686 долларов) или стипендию за заслуги (в среднем 17 500 долларов). Помощь для иностранцев просят один раз, при подаче заявки"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Mount Holyoke promises to meet the demonstrated financial need (as determined by Student Financial Services through its assessment of the financial aid application) for each admitted student."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: документы не на английском принимают с профессиональным переводом"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: колледж читает табели и рекомендации целиком"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "English Proficiency Test Scores (for nonnative English speakers)."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Standardized test scores (optional)."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Колледж для женщин, но принимает шире: заявки подают женщины, трансгендерные и небинарные студенты.",
+      "evidence": "As a gender diverse women's college, we welcome applications from female, transgender and nonbinary students.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужду каждого принятого колледж обещает закрыть полностью. Пакет может состоять из грантов, кредитов (их возвращают после выпуска) и работы на кампусе.",
+      "evidence": "Several components can make up a financial aid award: Grants, which do not need to be repaid Loans, which need to be repaid after graduation Work study",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приёмная комиссия решает по большинству заявок без оглядки на деньги семьи, но слово «большинство» стоит запомнить: колледж не называет себя полностью need-blind для иностранцев.",
+      "evidence": "The Office of Admission makes most of its admission decisions without regard to a family's financial resources or \"need.\"",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "45% принятых иностранцев получают помощь по нужде (в среднем 58 686 долларов) или стипендию за заслуги (в среднем 17 500 долларов).",
+      "evidence": "45% of incoming international students receive need-based financial aid (average award USD $58,686) or merit scholarships",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Все подавшие автоматически участвуют и в конкурсе на стипендии за заслуги.",
+      "evidence": "All applicants to Mount Holyoke College are automatically considered for merit aid.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Помощь для иностранцев просят один раз, при подаче заявки. Помощь по нужде даётся на четыре года; если нужда может появиться позже, просить надо сразу. Документы на помощь, поданные после срока, могут повлиять на решение о приёме и на право на помощь.",
+      "evidence": "Need based aid is awarded for four years, so candidates anticipating financial need at any time during their Mount Holyoke career must apply for aid as a prospective student.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Для помощи нужен CSS Profile (код колледжа 3529); право на освобождение от платы за него определяет College Board. Кто не просит помощь по нужде, но не гражданин США, подаёт International Financial Declaration.",
+      "evidence": "CSS Profile (required of students applying for need-based financial aid).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Тем, кто переводится из другого вуза, надо подавать как переводным студентам; старше 25 лет — через программу Frances Perkins.",
+      "evidence": "If you're an international student who is transferring from another higher education institution, please apply as a transfer student.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Баллы SAT и ACT необязательны; принятым, которые их присылали, надо прислать официальные результаты до начала учёбы.",
+      "evidence": "All admitted students who choose to enroll must submit official (send directly to Mount Holyoke from the test agency) test results prior to entering Mount Holyoke.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский подтверждают, если он не родной: принимают Cambridge Academic English, Duolingo, IELTS, Pearson и TOEFL, отчёт можно загрузить самому в личном кабинете. Балл, который указали в Common App или Coalition, не считается. Минимума страницы не называют; средний TOEFL принятых — 105.",
+      "evidence": "English proficiency scores reported within the Common App or Coalition App do not meet Mount Holyoke's English proficiency requirement.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Нужны две рекомендации, одна из них от учителя основного предмета. Если документы и письма не на английском, нужны профессиональные переводы.",
+      "evidence": "Two letters of recommendation, one of which should be from a core academic subject teacher",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Подать заявку бесплатно.",
+      "evidence": "It's free to apply to Mount Holyoke College.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": "USD",
+        "evidence": "It's free to apply to Mount Holyoke College."
+      }
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 15 ноября, ранний тур II — до 5 января, обычный — до 15 января. Подтверждение английского в раннем туре I можно прислать до 26 ноября.",
+      "evidence": "Application November 15 January 5 January 15 English Proficiency November 26 January 5 January 15",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.mtholyoke.edu/admission/apply-undergraduate-first-year/application-process/international-admission",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Mount Holyoke College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.mtholyoke.edu/admission/apply-undergraduate-first-year/application-process/international-admission",
+    "pages": [
+      {
+        "url": "https://www.mtholyoke.edu/admission/apply-undergraduate-first-year/application-process/international-admission",
+        "contentHash": "sha256:255cebe2c9054bb15c10510d4ea5223c3827c1a0508f339f7dc37eae97ab1c9d"
+      },
+      {
+        "url": "https://www.mtholyoke.edu/admission/apply-undergraduate-first-year/application-process/international-admission/international-admission-faq",
+        "contentHash": "sha256:1923c2bfc4c509bf99b04f64f9ab310240a6b68e883c2a81a683440709fc6474"
+      },
+      {
+        "url": "https://www.mtholyoke.edu/admission/apply-undergraduate-first-year/application-deadlines-undergraduates",
+        "contentHash": "sha256:aeadd5b2dc6a75d9372423dea2debc1bd4e56586a6262f76b5804e7938cb8b2c"
+      },
+      {
+        "url": "https://www.mtholyoke.edu/admission/inclusion",
+        "contentHash": "sha256:6640ae0be0d14ed17785c638648913addb68e19f1a26536503def0ce577bdc8e"
+      },
+      {
+        "url": "https://www.mtholyoke.edu/admission/apply-undergraduate-first-year/affording-mount-holyoke/financial-aid/applying-aid",
+        "contentHash": "sha256:e4faf41040719f6bd2495781614e8e79a88c2c8d4f5e4984050da9cbdf951b66"
+      },
+      {
+        "url": "https://www.mtholyoke.edu/admission/apply-undergraduate-first-year/affording-mount-holyoke/financial-aid/how-aid-works/eligibility-need-based-financial-aid",
+        "contentHash": "sha256:9b8f9d0ca48c3c392e392bca67072aadd66be8c23090c827b76353206219c85e"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}
