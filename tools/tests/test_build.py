@@ -2,10 +2,13 @@ import json
 import unittest
 
 from tools.build import (
+    MAX_CONDITIONS_WIRE_BYTES,
     MAX_DETAILS_WIRE_BYTES,
     MAX_INDEX_WIRE_BYTES,
     build_details,
     build_index,
+    conditions_entry,
+    conditions_text,
     details_entry,
     details_text,
     index_entry,
@@ -314,7 +317,7 @@ class TestDetails(unittest.TestCase):
         return program
 
     def test_conditions_keep_text_and_tags_but_not_quotes(self):
-        entry = details_entry(self.tagged())
+        entry = conditions_entry(self.tagged())
         self.assertEqual(
             entry["textConditions"],
             [{"ru": "условие", "field": "age", "kind": "must"}, {"ru": "без тегов"}],
@@ -331,7 +334,7 @@ class TestDetails(unittest.TestCase):
                 "fee": {"amount": 75, "currency": "USD", "evidence": "Application fee of $75"},
             },
         ]
-        entry = details_entry(program)
+        entry = conditions_entry(program)
         self.assertEqual(
             entry["textConditions"],
             [{"ru": "Плата 75 долларов", "kind": "money", "fee": {"amount": 75, "currency": "USD"}}],
@@ -362,6 +365,25 @@ class TestDetails(unittest.TestCase):
 
     def test_details_limit_is_larger_than_index_limit(self):
         self.assertGreater(MAX_DETAILS_WIRE_BYTES, MAX_INDEX_WIRE_BYTES)
+
+    def test_details_carry_no_conditions(self):
+        """Условия уехали в отдельный файл: в общих деталях их быть не должно,
+        иначе за них платил бы каждый посетитель, как и раньше."""
+        entry = details_entry(self.tagged())
+        self.assertNotIn("textConditions", entry)
+
+    def test_conditions_text_reads_back_and_is_one_condition_per_line(self):
+        text = conditions_text(conditions_entry(self.tagged()))
+        self.assertEqual(json.loads(text)["textConditions"], [
+            {"ru": "условие", "field": "age", "kind": "must"},
+            {"ru": "без тегов"},
+        ])
+        self.assertEqual(len(text.strip().splitlines()), 4)
+
+    def test_conditions_limit_is_smaller_than_details_limit(self):
+        # Один файл условий — это одна карточка, а не каталог: предел должен
+        # ловить разросшуюся программу, а не вмещать весь каталог.
+        self.assertLess(MAX_CONDITIONS_WIRE_BYTES, MAX_DETAILS_WIRE_BYTES)
 
 
 class TestWorkaroundFields(unittest.TestCase):

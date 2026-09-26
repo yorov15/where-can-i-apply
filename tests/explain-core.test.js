@@ -8,7 +8,24 @@ import {
 
 const read = (name) => JSON.parse(readFileSync(new URL(`../data/${name}`, import.meta.url), 'utf8'));
 const index = read('index.json');
-const details = read('details.json');
+// Условия программ лежат теперь по одному файлу на программу, и сервер
+// склеивает их с деталями по той программе, о которой спросили
+// (api/explain.js, withConditions). Тест делает то же самое: иначе он
+// проверял бы подсказку без единого условия.
+function withConditions(base) {
+  const dir = new URL('../data/conditions/', import.meta.url);
+  const programs = { ...base.programs };
+  for (const [id, entry] of Object.entries(programs)) {
+    let textConditions = [];
+    try {
+      textConditions = JSON.parse(readFileSync(new URL(`${id}.json`, dir), 'utf8')).textConditions ?? [];
+    } catch { /* файла нет — условий нет */ }
+    programs[id] = { ...entry, textConditions };
+  }
+  return { ...base, programs };
+}
+
+const details = withConditions(read('details.json'));
 
 const good = {
   programId: 'oxford-reach',

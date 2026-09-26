@@ -48,6 +48,37 @@ async function fetchData() {
   return live;
 }
 
+// Тексты условий лежат теперь по одному файлу на программу, и объяснялка
+// спрашивает только ту программу, о которой её спросили: тянуть ради одной
+// карточки условия всех — та же ошибка, что и раньше в браузере. Копия
+// живёт столько же, сколько копия данных. Не приехало — работаем без
+// условий: подсказка выйдет беднее, а отказ человек всё равно получит.
+const conditions = new Map();
+
+async function conditionsFor(id) {
+  const hit = conditions.get(id);
+  if (hit && Date.now() - hit.at < DATA_TTL_MS) return hit.list;
+  try {
+    const res = await fetch(`${DATA_BASE}conditions/${encodeURIComponent(id)}.json`, { signal: AbortSignal.timeout(8_000) });
+    if (!res.ok) throw new Error(String(res.status));
+    const list = (await res.json()).textConditions ?? [];
+    conditions.set(id, { at: Date.now(), list });
+    return list;
+  } catch {
+    return hit ? hit.list : null;
+  }
+}
+
+// Детали программы вместе с её условиями — то, что раньше лежало в общем
+// файле. Чужой id сюда не проходит: неизвестной программы в details нет.
+async function withConditions(details, body) {
+  const id = body && typeof body.programId === 'string' ? body.programId : null;
+  const entry = id ? details.programs?.[id] : null;
+  if (!entry) return details;
+  const list = await conditionsFor(id);
+  return { ...details, programs: { ...details.programs, [id]: { ...entry, textConditions: list ?? [] } } };
+}
+
 // Одновременные запросы делят одну загрузку.
 function loadData() {
   if (live && Date.now() - live.at < DATA_TTL_MS) return live;
@@ -171,7 +202,7 @@ async function handle(req, res, cors) {
   const trace = [];
   const { status, json } = await explain(
     { body, ip: clientIp(req), today: new Date().toISOString().slice(0, 10) },
-    { index: data.index, details: data.details, cache, limiter, inflight, callModel: (prompt) => callModel(prompt, trace) },
+    { index: data.index, details: await withConditions(data.details, body), cache, limiter, inflight, callModel: (prompt) => callModel(prompt, trace) },
   );
   return send(res, status, req.headers['x-explain-trace'] === '1' ? { ...json, trace } : json, cors);
 }

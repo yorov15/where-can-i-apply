@@ -18,7 +18,10 @@ const duke = {
   eligibility: { exam: { optional: true, anyOf: [{ test: 'SAT', min: null }, { test: 'ACT', min: null }], evidence: 'x' } },
 };
 const entry = (program, status = 'yes') => ({ program, verdict: { status, reasons: [], attested: [] }, deadline: 'unknown' });
-const details = { programs: { mit: { applyUrl: 'https://mit.edu/apply', textConditions: [{ ru: 'плата', fee: { amount: 75, currency: 'USD' } }] } } };
+const details = {
+  programs: { mit: { applyUrl: 'https://mit.edu/apply' } },
+  conditions: { mit: [{ ru: 'плата', fee: { amount: 75, currency: 'USD' } }] },
+};
 
 test('экзамен: нет правила — «не указан», обязателен — нужен, необязателен — по желанию', () => {
   assert.equal(examCell(null), 'Не указан');

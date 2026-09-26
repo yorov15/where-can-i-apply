@@ -1,3 +1,5 @@
+import { extraFor } from './card-model.js';
+
 // Сколько стоит подать заявки из плана. Считаем только то, что программа
 // прямо называет: сумма и валюта лежат в разметке условия `fee` вместе с
 // цитатой. Валюты не переводим — курс придумали бы мы. Где плата нигде не
@@ -35,7 +37,7 @@ export function planCost(planned, details) {
   const waived = [];
   const unknown = [];
   for (const program of planned) {
-    const fee = feeOf(details.programs?.[program.id]);
+    const fee = feeOf(extraFor(details, program.id));
     const name = shortName(program);
     if (!fee) unknown.push(name);
     else if (fee.amount === 0) free.push(name);

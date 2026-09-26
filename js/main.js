@@ -2,7 +2,7 @@ import { loadProfile, saveProfile, emptyProfile, profileReady, STORAGE_KEY } fro
 import { readForm, writeForm, onProfileChange, setupProfileBox } from './form.js';
 import { setupWizard } from './steps.js';
 import { setupCatalogFilter } from './filter.js';
-import { loadIndex, loadDetails } from './data.js';
+import { loadIndex, loadDetails, loadConditions } from './data.js';
 import { renderResults } from './render.js';
 import { loadPlan, savePlan, togglePlan, PLAN_KEY, DONE_KEY, loadDone, saveDone } from './plan.js';
 import { EXPLAIN_URL } from './config.js';
@@ -54,6 +54,10 @@ const plan = {
     plan.ids = togglePlan(plan.ids, id);
     savePlan(plan.ids, localStorage);
     refresh();
+    // План показывает дела и плату за подачу — и то и другое берётся из
+    // условий. Только что отмеченную программу надо дочитать: иначе её
+    // строка в плане была бы пустой до раскрытия карточки.
+    if (plan.ids.includes(id)) details.ensure(id).then(() => refresh());
   },
   // Отметки дел: без перерисовки, чтобы раскрытый список не схлопывался.
   done: loadDone(localStorage),
@@ -94,7 +98,22 @@ if (EXPLAIN_URL) {
 }
 
 let programs = [];
-const details = { status: 'loading', programs: {}, retry: fetchDetails };
+
+// programs — лёгкие детали по всем программам; conditions — условия тех,
+// которые уже раскрывали. Значение null значит «файл не приехал»: это не то
+// же самое, что «условий нет», и карточка их различает (js/card-model.js).
+const details = {
+  status: 'loading',
+  programs: {},
+  conditions: {},
+  retry: fetchDetails,
+  // Возвращает промис, по которому карточка перерисовывает себя: файл
+  // условий едет по требованию, а не вместе со всеми деталями.
+  ensure(id) {
+    if (details.conditions[id] !== undefined) return Promise.resolve();
+    return loadConditions(id).then((list) => { details.conditions[id] = list ?? null; });
+  },
+};
 
 const saved = loadProfile(localStorage);
 writeForm(form, saved);
@@ -157,7 +176,14 @@ function fetchDetails() {
     .catch(() => {
       details.status = 'failed';
     })
-    .finally(() => refresh());
+    .then(() => {
+      // «Мой план» показывает дела и плату за подачу — и то и другое берётся
+      // из условий. Для отмеченных программ их надо попросить сразу, иначе
+      // план был бы пустым до тех пор, пока карточку не раскроют. Обычно
+      // отмеченных программ единицы.
+      return Promise.all(plan.ids.filter((id) => details.programs[id]).map((id) => details.ensure(id)));
+    })
+    .then(() => refresh());
 }
 
 onProfileChange(form, (profile) => refresh(profile));

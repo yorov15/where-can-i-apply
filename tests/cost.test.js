@@ -3,15 +3,18 @@ import assert from 'node:assert/strict';
 import { money, feeOf, feeCell, planCost, costText } from '../js/cost.js';
 
 const prog = (id, name) => ({ id, name: { ru: name } });
-const withFee = (fee) => ({ textConditions: [{ ru: 'x', kind: 'money' }, { ru: 'плата', kind: 'money', fee }] });
+// Как на сайте: лёгкая запись программы лежит в programs, тексты условий —
+// отдельным слоем conditions, который приезжает при раскрытии карточки.
+const feeConds = (fee) => [{ ru: 'x', kind: 'money' }, { ru: 'плата', kind: 'money', fee }];
 const details = {
-  programs: {
-    mit: withFee({ amount: 75, currency: 'USD' }),
-    cornell: withFee({ amount: 85, currency: 'USD' }),
-    ntu: withFee({ amount: 25, currency: 'SGD' }),
-    bowdoin: withFee({ amount: 70, currency: 'USD', waivedForAid: true }),
-    gist: withFee({ amount: 0, currency: 'KRW' }),
-    yale: { textConditions: [{ ru: 'без платы в данных', kind: 'money' }] },
+  programs: { mit: {}, cornell: {}, ntu: {}, bowdoin: {}, gist: {}, yale: {} },
+  conditions: {
+    mit: feeConds({ amount: 75, currency: 'USD' }),
+    cornell: feeConds({ amount: 85, currency: 'USD' }),
+    ntu: feeConds({ amount: 25, currency: 'SGD' }),
+    bowdoin: feeConds({ amount: 70, currency: 'USD', waivedForAid: true }),
+    gist: feeConds({ amount: 0, currency: 'KRW' }),
+    yale: [{ ru: 'без платы в данных', kind: 'money' }],
   },
 };
 const planned = [
@@ -26,8 +29,8 @@ test('сумма пишется с пробелами тысяч и назван
 });
 
 test('плата берётся из первой размеченной условия; нет разметки — null', () => {
-  assert.deepEqual(feeOf(details.programs.mit), { amount: 75, currency: 'USD' });
-  assert.equal(feeOf(details.programs.yale), null);
+  assert.deepEqual(feeOf({ textConditions: details.conditions.mit }), { amount: 75, currency: 'USD' });
+  assert.equal(feeOf({ textConditions: details.conditions.yale }), null);
   assert.equal(feeOf(null), null);
 });
 

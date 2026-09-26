@@ -41,8 +41,28 @@ export function notLimitedItems(program, fields) {
 // человек как раз сверить может.
 const SAYS_STATES = new Set(['not-measured', 'by-institution', 'missing-rule', 'parts-unknown']);
 
+// К лёгкой записи программы подмешиваются её условия. Пока файл не приехал,
+// textConditions остаётся undefined, и карточка знает, что программу ещё не
+// прочитали, — вместо «условий нет». Значение null значит «файл не приехал»:
+// это тоже не «условий нет», и карточка их различает.
+//
+// Доступ один на всех: и карточка, и план, и сравнение читают условия отсюда,
+// иначе после переезда условий в отдельный файл кто-нибудь из них молча
+// показывал бы пустоту.
+export function extraFor(details, id) {
+  const entry = details?.programs?.[id];
+  if (!entry) return null;
+  const list = details.conditions?.[id];
+  return { ...entry, textConditions: list, conditionsPending: list === undefined };
+}
+
 export function cardModel({ program, verdict, deadline }, extra, today) {
   const hasDetails = extra != null;
+  // Условия едут отдельным файлом. Пока их нет — это не «условий нет», а
+  // «ещё не прочитали»: разница видна там, где карточка утверждает, что
+  // обходного пути не существует.
+  const conditionsPending = extra?.conditionsPending === true;
+  const conditionsFailed = extra?.textConditions === null;
   const conditions = (extra?.textConditions ?? []).filter((c) => c.ru);
   const used = new Set();
 
@@ -75,8 +95,8 @@ export function cardModel({ program, verdict, deadline }, extra, today) {
       detail: text.detail,
       workarounds,
       says,
-      noWorkaround: hasDetails && reason.status === 'fail' && workarounds.length === 0,
-      seeBelow: hasDetails && SAYS_STATES.has(state) && says.length === 0 && workarounds.length === 0,
+      noWorkaround: hasDetails && !conditionsPending && reason.status === 'fail' && workarounds.length === 0,
+      seeBelow: hasDetails && !conditionsPending && SAYS_STATES.has(state) && says.length === 0 && workarounds.length === 0,
     };
   });
 
@@ -113,6 +133,8 @@ export function cardModel({ program, verdict, deadline }, extra, today) {
     deadlineLine: deadlineLine(program.deadline, today),
     coverageLine: coverageLine(program.coverage),
     hasDetails,
+    conditionsPending,
+    conditionsFailed,
     reasons,
     sections,
     more: { notes, attested },

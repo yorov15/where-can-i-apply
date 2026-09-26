@@ -4,7 +4,7 @@
 import { evaluate } from './verdict.js';
 import { deadlineState } from './lib/deadline.js';
 import { summaryLines, readySummary } from './summary.js';
-import { cardModel } from './card-model.js';
+import { cardModel, extraFor } from './card-model.js';
 import { bucketOf } from './wording.js';
 import { agenda } from './agenda.js';
 import { timeLeft, formatDate, dateTile, plural } from './lib/format.js';
@@ -128,7 +128,7 @@ function agendaGroups(groups, today, onOpenProgram) {
 function todoBlock(planned, details, plan) {
   const box = el('div');
   for (const program of planned) {
-    const tasks = planTasks(program.id, details.programs?.[program.id]);
+    const tasks = planTasks(program.id, extraFor(details, program.id));
     if (!tasks.length) continue;
     const name = program.name?.ru ?? program.id;
     const group = el('details', 'agenda-more');
@@ -328,21 +328,12 @@ export function renderResults(nodes, profile, programs, today, details) {
     title.dataset.base = group.title;
     section.append(title);
     for (const row of group.rows) {
-      const model = cardModel(row, details.programs?.[row.program.id] ?? null, today);
       // «Тип · страна» — что это за программа и где; без типа (данных ещё
       // нет) остаётся одна страна, без выдуманной подписи.
       const kindLine = [kindLabel(row.program.kind), row.program.hostCountry && countryName(row.program.hostCountry)]
         .filter(Boolean)
         .join(' · ');
-      const node = card(model, details, openCards, openMore, kindLine, plan);
-      node.dataset.plan = plan.ids.includes(model.id) ? '1' : '0';
-      // По этим полям фильтр каталога решает, показать карточку или спрятать.
-      node.dataset.title = model.title;
-      node.dataset.orig = row.program.name?.orig ?? '';
-      node.dataset.country = row.program.hostCountry ?? '';
-      node.dataset.kind = row.program.kind ?? '';
-      node.dataset.bucket = model.bucket;
-      section.append(node);
+      section.append(card(row, today, details, openCards, openMore, kindLine, plan));
     }
     resultsNode.append(section);
   }
@@ -430,10 +421,19 @@ function skeleton(label) {
   return box;
 }
 
-function card(model, details, openCards, openMore, kindLine, plan) {
+function card(row, today, details, openCards, openMore, kindLine, plan) {
+  const id = row.program.id;
+  let model = cardModel(row, extraFor(details, id), today);
   const box = el('details', `card ${model.bucket}${model.closed ? ' closed' : ''}`);
-  box.dataset.id = model.id;
-  box.open = openCards.has(model.id);
+  box.dataset.id = id;
+  box.open = openCards.has(id);
+  // По этим полям фильтр каталога решает, показать карточку или спрятать.
+  box.dataset.plan = plan.ids.includes(id) ? '1' : '0';
+  box.dataset.title = model.title;
+  box.dataset.orig = row.program.name?.orig ?? '';
+  box.dataset.country = row.program.hostCountry ?? '';
+  box.dataset.kind = row.program.kind ?? '';
+  box.dataset.bucket = model.bucket;
 
   const { verdict, reason } = splitHeadline(model.headline);
   const head = el('summary', 'card-head');
@@ -504,6 +504,10 @@ function card(model, details, openCards, openMore, kindLine, plan) {
     }
   }
 
+  if (model.conditionsFailed) {
+    body.append(el('p', 'details-state', 'Условия программы не загрузились. Проверь интернет и обнови страницу.'));
+  }
+
   for (const section of model.sections) {
     body.append(el('h4', 'card-section-title', section.title), list(section.items, 'card-list'));
   }
@@ -534,5 +538,20 @@ function card(model, details, openCards, openMore, kindLine, plan) {
   }
 
   box.append(body);
+
+  // Условия приезжают отдельным файлом: карточку раскрыли — просим их и
+  // перерисовываем только её. Вместе со всеми деталями они ехали бы к
+  // каждому посетителю, включая того, кто ничего не раскрывал.
+  box.addEventListener('toggle', () => {
+    if (!box.open || !model.conditionsPending || !details.ensure) return;
+    details.ensure(id).then(() => {
+      // Пока файл ехал, карточку могли закрыть или перерисовать.
+      if (!box.isConnected) return;
+      const fresh = card(row, today, details, openCards, openMore, kindLine, plan);
+      fresh.open = true;
+      box.replaceWith(fresh);
+    });
+  });
+
   return box;
 }

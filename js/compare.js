@@ -1,7 +1,7 @@
 // Сравнение программ из плана рядом. Ничего не считает заново: каждая
 // ячейка — те же строки, что уже видны в карточке (ответ, срок, что
 // покрывает), плюс требование к экзамену прямо из правил допуска.
-import { cardModel } from './card-model.js';
+import { cardModel, extraFor } from './card-model.js';
 import { testName, joinOr } from './wording.js';
 import { feeOf, feeCell } from './cost.js';
 
@@ -18,7 +18,7 @@ export function examCell(rule) {
 export function compareTable(entries, details, today) {
   const models = entries.map((entry) => ({
     entry,
-    model: cardModel(entry, details.programs?.[entry.program.id] ?? null, today),
+    model: cardModel(entry, extraFor(details, entry.program.id), today),
   }));
   const row = (label, pick) => ({ label, cells: models.map(pick) });
   return {
@@ -28,7 +28,7 @@ export function compareTable(entries, details, today) {
       row('Срок', ({ model }) => ({ text: model.deadlineLine })),
       row('Что покрывает', ({ model }) => ({ text: model.coverageLine })),
       row('Экзамен', ({ entry }) => ({ text: examCell(entry.program.eligibility?.exam) })),
-      row('Плата за подачу', ({ model }) => ({ text: feeCell(feeOf(details.programs?.[model.id])) })),
+      row('Плата за подачу', ({ model }) => ({ text: feeCell(feeOf(extraFor(details, model.id))) })),
       row('Сайт', ({ model }) => ({ text: model.applyUrl ? 'Открыть' : '—', href: model.applyUrl })),
     ],
   };
