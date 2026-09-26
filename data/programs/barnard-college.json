@@ -1,0 +1,201 @@
+{
+  "id": "barnard-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Barnard College — колледж в США для женщин, помощь иностранцам есть, но стипендий мало",
+    "orig": "Barnard College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Колледж обещает закрыть 100% нужды принятых, но иностранцам стипендий по нужде даёт небольшое число на каждый набор первокурсников. Пакет для иностранцев по страницам колледжа не описан: что входит и есть ли кредиты, там не сказано. Иностранцев оценивают need-aware: просьба о помощи может повлиять на решение о приёме"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Barnard will meet 100% of the financial need of admitted students."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: подходят национальные экзамены, нужны табели за каждый год"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: колледж читает табели и результаты экзаменов целиком"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7.5,
+          "evidence": "a score of 7.5 or higher on the IELTS"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 105,
+          "evidence": "a score of 105 or higher on the TOEFL"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 135,
+          "evidence": "a score of 135 or higher on the Duolingo English Test"
+        }
+      ],
+      "advisory": true,
+      "evidence": "The most competitive candidates for admission generally receive: a score of 7.5 or higher on the IELTS"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Barnard is SAT and ACT test-optional for students applying through the 2027 first-year and transfer admissions cycles."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут те, кто постоянно живёт и называет себя женщиной, и чьи материалы это подтверждают. Тем, кто при рождении считался женщиной, но теперь называет себя мужчиной, подавать нельзя.",
+      "evidence": "Barnard accepts applications from individuals who consistently live and identify as women and who seek an outstanding liberal arts education in a unique environment designed and implemented to serve women. Applicants assigned female at birth who now identify as male are not eligible for admission.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Иностранцев оценивают need-aware: просьба о помощи может повлиять на решение о приёме. Для граждан и постоянных жителей США колледж need-blind.",
+      "evidence": "We are need-aware for non-U.S. citizens and non-permanent residents.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Колледж даёт небольшое число стипендий по нужде иностранцам в каждом наборе первокурсников. Нужду закрывают сочетанием грантов, кредитов и работы, но для иностранцев страницы состав пакета не называют.",
+      "evidence": "Barnard College is able to award a small number of need-based scholarships for international students in each first-year entering class.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь надо просить сразу с заявкой на поступление: после решения о приёме первокурсники подать на помощь не могут. Иностранцу, не подавшему при поступлении, помощи в следующие годы не будет.",
+      "evidence": "Incoming first-year students are not eligible to apply for institutional need-based aid after an admission decision has been made.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Тем, кто переводится из другого вуза, иностранцам помощь не дают.",
+      "evidence": "Barnard is unable to assist international transfer students.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Баллы SAT и ACT необязательны; принятому, который их присылал, придётся прислать официальные результаты для проверки.",
+      "evidence": "Students who are admitted and choose to enroll will be required to submit their official testing records to validate their scores.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский надо подтвердить, если не подходит ни одно освобождение: английский среди родных языков, вся школа на английском, диплом IB или A Level на английском, высокий балл в SAT или ACT по чтению и письму. Иначе нужен TOEFL, IELTS или Duolingo. Минимума нет, но у сильных заявителей IELTS 7,5+, TOEFL 105+ (для сдачи с 20 января 2026 года — от 5,5), Duolingo 135+. Баллы действуют два года, суперскор и MyBest не рассматривают, TOEFL Essentials не подходит.",
+      "evidence": "Barnard requires students to display English proficiency.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Документы, выданные не на английском, нужны с заверенным английским переводом. Сертификатов и копий сертификатов присылать не надо; результаты национальных экзаменов присылают вместе с табелями за каждый год.",
+      "evidence": "Students with transcripts or official documents not issued in English need to provide certified English translations along with the official documents.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки на страницах колледжа устарели или расходятся: раздел о раундах ещё показывает даты прошлого набора (ранний тур 1 ноября 2025, обычный 1 января 2026), а раздел про помощь называет 15 ноября и 15 января. Актуальные даты на 2026/27 сверь в личном кабинете или у приёмной комиссии, пока они не обновятся.",
+      "evidence": "Regular Decision Deadline: January 1, 2026",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://barnard.edu/admissions/internationalstudents",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Barnard College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://barnard.edu/admissions/internationalstudents",
+    "pages": [
+      {
+        "url": "https://barnard.edu/admissions/internationalstudents",
+        "contentHash": "sha256:305c829ce6423355b16748f5be3b1c4e9e6fe82300b231c6d022ed0203b3d111"
+      },
+      {
+        "url": "https://barnard.edu/admissions/application-rounds",
+        "contentHash": "sha256:a89db2d4bbd76356f76bd0955fc2cdc41270b665625da9c985545fc62e72bd54"
+      },
+      {
+        "url": "https://barnard.edu/admissions/how-to-apply",
+        "contentHash": "sha256:3c7da85f7fce3468c733ad57c27bb0ae0dd28023ed091a3bb41a6748c94c92bc"
+      },
+      {
+        "url": "https://barnard.edu/admissions/first-year-applicants",
+        "contentHash": "sha256:8d643e426f2fe20f6cb688646d4f7964e1b5f58613085db98a51adf8941b284c"
+      },
+      {
+        "url": "https://barnard.edu/admissions/Womens-College-Eligibility-for-Admission",
+        "contentHash": "sha256:686bfdef1b0399bd0983b0ba6da6070cea120e5442d2cf3b41463921e0a81796"
+      },
+      {
+        "url": "https://barnard.edu/finaid/apply-for-aid",
+        "contentHash": "sha256:b553dc1f6af25b781f28cf4e764396c24b5ae843fc4e60789580452a2fe51af4"
+      },
+      {
+        "url": "https://barnard.edu/finaid/general-policies",
+        "contentHash": "sha256:1a8fb704c281a45183edd9b6f94943d6a397c60c869547fd2c91cd24bb20ce31"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

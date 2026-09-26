@@ -1,0 +1,217 @@
+{
+  "id": "grinnell-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Grinnell College — колледж в США, нужду закрывают, но отбор иностранцев учитывает деньги",
+    "orig": "Grinnell College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Нужду принятого иностранца закрывают на 100%: гранты и работа в кампусе. Что именно входит в помощь (жильё, питание, дорога) страницы не называют. Но при отборе иностранцев деньги учитывают: у колледжа политика need-aware. Есть также редкие стипендии за заслуги — до 28 000 долларов"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "you do not hold U.S. citizenship, permanent residency, or your asylee/refugee status is pending, you must apply as an international student."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: иностранцы подают ту же заявку через Common App, нужны табель и внешние экзамены своей системы"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: колледж читает табели и оценивает заявку в целом"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "If your native language is not English and/or your primary language of instruction in high school was not English, you will need to demonstrate your English proficiency."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Applicants who choose to apply with an ACT and/or SAT test score may submit either official or self-reported scores to Grinnell College."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Деньги при отборе иностранцев учитывают: чем больше нужна помощь, тем выше конкуренция. Это политика need-aware, а не need-blind.",
+      "evidence": "Grinnell employs a need-aware admission policy for international students.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Нужду всех принятых иностранцев, которые подали документы на помощь в срок, колледж закрывает полностью.",
+      "evidence": "Grinnell is committed to meeting 100% of institutionally determined need for all admitted international students who complete a financial aid application by the deadline associated with their application term.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь состоит из грантов и работы в кампусе.",
+      "evidence": "committed to meeting 100% of each admitted student's institutionally-determined financial need with a combination of grants and student employment.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии за заслуги для иностранцев есть, до 28 000 долларов, но выдают их очень немногим. Отдельной заявки на них нет.",
+      "evidence": "International students are also considered for merit scholarships ranging up to $28,000, though this process is extremely competitive.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь надо запросить в заявке на поступление: после зачисления заявки на неё не принимают, а если не попросил на первый год, потом не получить.",
+      "evidence": "Grinnell will not consider applications for financial aid from international students after they are admitted to the College.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Достаток семьи заново не пересматривают каждый год, и просьбы о дополнительной помощи колледж не принимает.",
+      "evidence": "Your financial aid eligibility is not reevaluated each year, and requests for additional assistance are not accepted.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для помощи нужен один из двух документов: CSS Profile (код колледжа 6252, форма появляется 1 октября) или собственная анкета ISAFA, которую загружают в личном кабинете. Без них заявка на поступление не считается полной.",
+      "evidence": "Your application file will not be complete, nor given consideration for admission, until you have submitted one of the following.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Плату за CSS Profile колледж не снимает: платит семья. Тем, кому это тяжело, остаётся бесплатная анкета ISAFA.",
+      "evidence": "Grinnell College does not offer CSS Profile application fee waivers.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за подачу заявки — ноль: колледж её не берёт.",
+      "evidence": "We don't charge an application fee so applying to Grinnell is free!",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": "USD",
+        "evidence": "We don't charge an application fee so applying to Grinnell is free!"
+      }
+    },
+    {
+      "ru": "Баллы SAT и ACT необязательны. Если прислал самостоятельно записанный балл и поступил, официальный результат надо прислать до приезда.",
+      "evidence": "All enrolling students who applied with a self-reported test score will be required to submit an official test score prior to arriving on campus.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский подтверждают, если родной язык не английский или в школе учили не на английском: подходят TOEFL iBT (в том числе домашний и бумажный вариант), TOEFL Essentials, IELTS или Duolingo. Минимальных баллов страница не называет. Нужен официальный отчёт.",
+      "evidence": "We require an official score report.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужен табель с предметами и оценками за каждый год школы; его присылает школьный консультант или сотрудник EducationUSA, а не ты сам.",
+      "evidence": "We are looking for a document (i.e., mark sheet, progress report, grade sheet, report card) that shows us what subjects you have studied each year of high school and the grades/marks you earned in each subject.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны официальные результаты внешних экзаменов, которые есть в твоей системе (IB, A-Level, IGCSE и подобные). Кто учился по системе O-Level/A-Level, должен пройти обучение до A-Level.",
+      "evidence": "Depending on the educational system of your country, the external exams that we require include: O-Level, A-Level, SSSCE, WAEC, NECO, HSEB, SLC, KCSE, IGCSE, SPM, IB, ICSE, HSC, AISSCE, CXC.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны рекомендация консультанта и две рекомендации учителей академических предметов (английский, математика, обществознание, естественные науки или язык).",
+      "evidence": "You should choose teachers from an academic subject area (English, math, social studies, science, or language).",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 15 ноября, ранний тур II — до 5 января, обычный — до 15 января. Документы на помощь подают в те же даты.",
+      "evidence": "ED1 Nov. 15 Nov. 15 mid-late December mid-January ED2 Jan. 5 Jan. 5 early February mid-February RD Jan. 15 Jan. 15 late March/early April May 1",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.grinnell.edu/admission/apply/international",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Grinnell College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.grinnell.edu/admission/apply/international",
+    "pages": [
+      {
+        "url": "https://www.grinnell.edu/admission/apply/international",
+        "contentHash": "sha256:189eb952506995eb0e27eec26c061564572467f064a3b20b35d25a6c9f22abc3"
+      },
+      {
+        "url": "https://www.grinnell.edu/admission/apply/international/faq",
+        "contentHash": "sha256:00ad4bfb81701ee7f2bf5b38badb50f74552982653c893cc7bdbcbbb33e7b473"
+      },
+      {
+        "url": "https://www.grinnell.edu/admission/apply/tips/intl-aid",
+        "contentHash": "sha256:0d81bd3062f18c0d0522c28a6248247aabb6bd58045a1d9d62f0827211467452"
+      },
+      {
+        "url": "https://www.grinnell.edu/admission/financial-aid/apply-aid/prospective-students",
+        "contentHash": "sha256:68b7a4e00edc0bfaa629117d89fb916665b95f83d7819fda93e7699faed078b4"
+      },
+      {
+        "url": "https://www.grinnell.edu/admission/apply/first-year/requirements",
+        "contentHash": "sha256:71ea207cbba4b06f5e884436129ee696ee0d292a3e6d58b8b6440d61f76ed647"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "id": "denison-university",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Denison University — университет в США, те же помощь и стипендии, что у американцев; заявка бесплатна",
+    "orig": "Denison University"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Нужду принятого закрывают на 100%: гранты и работа в кампусе. Стипендии за заслуги — от 5 000 долларов в год до полной стоимости обучения. Университет называет себя need-aware, но говорит, что именно это позволяет ему закрывать всю нужду. Обучение, жильё и питание не включают книги, дорогу, страховку и прочие расходы"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "International (anyone who is not a citizen or permanent resident of the United States) first-year students interested in Denison must submit an application through the Common Application or the Coalition Application."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: иностранцы подают ту же заявку через Common App или Coalition"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: страницы называют только пакет документов"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "All international applicants must demonstrate adequate English proficiency to qualify for admission."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "ACT/SAT Scores (optional): Denison is test-optional ."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцам дают ту же помощь по нужде и те же стипендии за заслуги, что американским гражданам и постоянным жителям. Нужду принятого закрывают на 100%.",
+      "evidence": "Denison offers exactly the same need-based financial aid and merit-based scholarships to international students as it does to U.S. citizens and permanent residents, and Denison meets 100% of each student's demonstrated financial need.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Деньги при отборе учитывают: университет сам называет себя need-aware и объясняет, что это позволяет закрывать всю нужду принятых.",
+      "evidence": "Denison is need-aware in the application process as this allows us to meet 100% of demonstrated need for all admitted students.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Помощь по нужде состоит из грантов и работы в кампусе.",
+      "evidence": "At Denison, need-based aid is offered through a variety of grants and students have the opportunity to work while they are on campus.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии за заслуги: каждого, кто подал заявку, рассматривают на них автоматически; размер — от 5 000 долларов в год до полной стоимости обучения. Решение объявляют вместе с зачислением.",
+      "evidence": "All students who submit an application for admission are considered for merit-based scholarships, which range from $5,000 per year to full tuition.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обучение, жильё и питание не включают книги, дорогу, страховку и прочие расходы: это платишь сам.",
+      "evidence": "Denison's tuition, housing, and food costs do not include other expenses, like books, transportation, health insurance, incidental expenses, or any other charges that you could accrue throughout your program.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь по нужде можно запросить только при подаче заявки на поступление; если поступил без неё, потом попросить нельзя.",
+      "evidence": "International students who enroll at Denison without need-based financial aid cannot apply for funding in the future.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "CSS Profile университет от иностранцев не принимает. Вместо него нужна собственная Certification of Finances: бесплатная, обязательная для всех иностранцев, даже тех, кто помощи не просит. Заполняют один раз, при подаче заявки; форма открывается 1 октября.",
+      "evidence": "Denison requires the Denison Certification of Finances from all international applicants, which is free to submit.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Плата за подачу заявки: нет, университет её не берёт.",
+      "evidence": "No fee to apply for admission",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": "USD",
+        "evidence": "No fee to apply for admission"
+      }
+    },
+    {
+      "ru": "Баллы SAT и ACT необязательны: с 2008 года их не требуют. Если пришлёшь, учтут лучшие части и можно получить кафедральную стипендию.",
+      "evidence": "Denison applicants have not been required to submit ACT or SAT scores since 2008.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский надо подтвердить всем иностранцам. Один сертификат не обязателен: университет смотрит на несколько признаков сразу, среди них язык обучения в школе, родной язык, TOEFL, IELTS, Duolingo, часть SAT или ACT по чтению и английскому и интервью. Минимальных баллов не называют. Освобождение рассматривают отдельно, после подачи заявки.",
+      "evidence": "Considerations include, but are not limited to, the following: English as the primary language of school instruction; English as the first/native language; TOEFL iBT; IELTS; Duolingo English Test (DET)+; SAT Reading; ACT English Language Arts; and an admission interview.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Интервью необязательно, но большинство принятых его проходят: университет советует его тем, кто настроен серьёзно.",
+      "evidence": "While interviews are not required to be admitted, the majority of successful applicants complete an interview.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Нужны официальный табель, который присылает консультант, а также рекомендация консультанта и школьный отчёт. Отдельного эссе-приложения нет.",
+      "evidence": "High School Transcript (required): Your counselor must send us a copy of your official transcript.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 15 ноября, ранний тур II и обычный — до 15 января. Certification of Finances подают к тем же датам.",
+      "evidence": "Early Decision 1: November 15 Early Decision 2: January 15 Regular Decision: January 15",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://denison.edu/campus/admission/international-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Denison University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://denison.edu/campus/admission/international-applicants",
+    "pages": [
+      {
+        "url": "https://denison.edu/campus/admission/international-applicants",
+        "contentHash": "sha256:cbe30e8bc35908884f90cfbea57c4fa14f5e3830a8da6ce64a2d897c9b30368d"
+      },
+      {
+        "url": "https://denison.edu/campus/admission/international-applicant-financial-aid",
+        "contentHash": "sha256:de8a1223c6f66966df6d63f3f7e480fc19e98c61f8d03f6e097dc9c55d1f25b3"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

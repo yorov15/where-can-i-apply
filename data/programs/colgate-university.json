@@ -1,0 +1,229 @@
+{
+  "id": "colgate-university",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Colgate University — университет в США, нужду закрывают, заявка бесплатна, но отбор учитывает деньги",
+    "orig": "Colgate University"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Нужду каждого принятого колледж закрывает полностью. В пакет могут входить гранты, займы и работа в кампусе; из чего именно он составлен, зависит от нужды. Стипендий за заслуги нет, вся помощь по нужде. Но деньги при отборе учитывают: у университета политика need-aware. Какие расходы входят в помощь, страницы не перечисляют"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Colgate defines international students as non-U.S. citizens."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: иностранцы подают ту же заявку; табель присылает школа, для школ вне США добавляются внешние экзамены"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: страницы называют только пакет документов"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "evidence": "TOEFL IBT (Test of English as a Foreign Language) = 4.5"
+        },
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "IELTS (International English Language Testing System) = 7"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "DET (Duolingo English Test) = 130"
+        }
+      ],
+      "evidence": "Non-native English-speaking students who do not study at a secondary school where English is the primary language of instruction must submit one of the following language proficiency tests with a minimum score"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Submitting SAT and ACT test scores is optional; students who choose not to submit their scores are at no disadvantage"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Деньги при отборе учитывают: колледж прямо называет это need-aware. Самых сильных берут независимо от того, просили они помощь или нет.",
+      "evidence": "Need-aware admissions : We consider financial need during the review process for all applicants. However, our most competitive applicants are admitted regardless of whether they have applied for financial aid.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Нужду каждого принятого, в том числе полную, университет закрывает на 100%.",
+      "evidence": "Colgate meets 100% of demonstrated financial need for every admitted student, including those who would require a full financial package.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "В помощь входят гранты, займы и работа в кампусе, и состав пакета зависит от размера нужды и наличия денег.",
+      "evidence": "The composition of an aid offer depends on several factors, including the extent of a student's financial need, eligibility for other aid resources, and the availability of funds.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендий за заслуги нет: вся помощь строится только по нужде.",
+      "evidence": "The financial aid program at Colgate is need-based and the university does not offer academic merit scholarships.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь надо запросить в заявке на поступление. Если не подал или не получил её при зачислении, позже иностранцу помощь не положена.",
+      "evidence": "International students who do not apply for or qualify for Colgate need-based financial aid upon admission are not eligible for Colgate need-based financial aid in subsequent years.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Получающему помощь иностранцу заново подавать на неё каждый год не нужно: право на неё проверяют по первой заявке.",
+      "evidence": "International students currently receiving financial aid do not need to reapply for aid annually.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для помощи нужен CSS Profile (код 2086); бумажные и PDF-копии не принимают. Если плата за него тяжела, можно попросить код освобождения в личном кабинете после обработки заявки, в те же сроки, что и заявка.",
+      "evidence": "Colgate offers CSS Profile fee waiver codes to international applicants for whom submitting the CSS Profile would be a significant financial burden.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Плата за подачу заявки: у иностранцев её нет, заявки для них бесплатны.",
+      "evidence": "We are committed to making your education accessible by offering fee-free applications for international students",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": "USD",
+        "evidence": "We are committed to making your education accessible by offering fee-free applications for international students"
+      }
+    },
+    {
+      "ru": "Баллы SAT и ACT необязательны: без них ты не в худшем положении. Если прислал и поступил, официальные результаты надо прислать после решения.",
+      "evidence": "After receiving an admission decision, admitted applicants who chose to have their scores considered will be required to send official scores from the testing agency.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский нужен тем, чей родной язык не английский и кто учился не в школе с английским языком обучения. Минимумы: TOEFL iBT 4,5, IELTS 7, Duolingo 130. Страница не называет шкалу TOEFL; 4,5 подходит только под новую шкалу 1–6. Баллы SAT английский не заменяют.",
+      "evidence": "We do not waive the English proficiency requirement based on SAT results. We require a TOEFL, IELTS, or Duolingo test.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Официальный балл по английскому должен прийти от самого тестирующего агентства, а не от тебя.",
+      "evidence": "Score submission : Scores must be sent by the official testing agency.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Табель присылает только школа: с ним не на английском нужны оригинал и официальный перевод. Присланное самим студентом не принимают.",
+      "evidence": "Transcripts submitted by students will not be accepted.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Результаты внешних национальных или международных экзаменов, если ты их сдавал, присылает агентство или сотрудник школы.",
+      "evidence": "If you complete external national or international exams, results must be sent directly from the testing agency or emailed by a school official to admission@colgate.edu .",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны рекомендация консультанта и две рекомендации от учителей основных предметов, которые вели тебя в 10–12 классах. Их отправляет школа.",
+      "evidence": "Recommendations must be from core academic teachers who worked with a student in 10th, 11th, or 12th grade.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 1 ноября, ранний тур II и обычный — до 15 января. Документы на помощь подают в эти же даты. Одна страница называет для двух последних туров срок помощи 22 января, другая 15 января, поэтому ориентируйся на 15.",
+      "evidence": "Early Decision 1 Application Deadline: Nov. 1 Financial Aid Submission: Nov. 1 Notification Date: Mid-December Early Decision II Application Deadline: Jan. 15 Financial Aid Submission: Jan. 15 Notification Date: Mid-February Regular Decision Application Deadline: Jan. 15 Financial Aid Submission: Jan. 15 Notification Date: Late March",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.colgate.edu/admission-aid/apply/international-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Colgate University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.colgate.edu/admission-aid/apply/international-applicants",
+    "pages": [
+      {
+        "url": "https://www.colgate.edu/admission-aid/apply/international-applicants",
+        "contentHash": "sha256:a9bdce4fa843829d8804408d3e3d40b10ae41a0f11d2b76054b5b79b452ecf86"
+      },
+      {
+        "url": "https://www.colgate.edu/admission-aid/apply/first-year-applicants",
+        "contentHash": "sha256:b73d9af4e9442bec4e86255fe2864546bd8009d4a408398b149d5d997541af6b"
+      },
+      {
+        "url": "https://www.colgate.edu/admission-aid/financial-aid/apply-aid",
+        "contentHash": "sha256:273c2efae2e29f869284e44ecbb97c5485779f908da5aa4207b6e8ef755714d7"
+      },
+      {
+        "url": "https://www.colgate.edu/admission-aid/financial-aid/policies-procedures",
+        "contentHash": "sha256:92989669f1056fc40d0d052d101b43cff3b1295e346c4fde00a712a80210ee51"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "id": "davidson-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Davidson College — колледж в США, нужду закрывают, заявка бесплатна, но отбор учитывает деньги",
+    "orig": "Davidson College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Нужду принятого закрывают на 100%, но помощь иностранцам колледж называет ограниченной и конкурентной, а отбор учитывает деньги (need-aware). Общих стипендий за заслуги нет, только небольшое число особых. Какие расходы входят в помощь, эти страницы не перечисляют"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Yes, we waive the application fee for students who are not U.S. citizens."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: иностранцы подают ту же заявку, а табель читают в контексте школы"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: колледж читает табель в контексте школы"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "DET: 130 IELTS: 7 TOEFL iBT: 5.0 (score scale 1-6)/100 (score scale 0-120)"
+        },
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "IELTS: 7"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "100 (score scale 0-120)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "TOEFL iBT: 5.0 (score scale 1-6)"
+        }
+      ],
+      "advisory": true,
+      "evidence": "We have found students who achieve test scores in the following ranges or higher are best prepared to study and learn at Davidson College"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Yes, we are test-optional for the ACT and SAT."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Деньги при отборе иностранцев учитывают: колледж прямо называет себя need-aware для тех, кто не гражданин США. Нужду принятых при этом закрывают полностью.",
+      "evidence": "While we consider financial need during the admission process and are need-aware for applicants who are not citizens of the United States, we meet 100% of the calculated need for all admitted students.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Помощь иностранцам ограничена и конкурентна, поэтому просить её надо сразу, в заявке на поступление.",
+      "evidence": "Please be aware that financial aid for international students is limited and competitive",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Заявки на помощь после зачисления не принимают ни тогда, ни за всё время учёбы.",
+      "evidence": "Applications for financial assistance from international students submitted after admission to Davidson are not accepted, nor will they be accepted for the duration of enrollment at Davidson.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Помощь только по нужде: общих стипендий за заслуги нет. Иностранцев рассматривают и на небольшое число особых стипендий, а всех, кто просит помощь, автоматически — на программу Alvarez Scholars.",
+      "evidence": "We do not offer general merit scholarships.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь получают только первокурсники, ещё не учившиеся в другом вузе.",
+      "evidence": "financial aid is limited to first year students who have not enrolled at another college or university, in the U.S. or another country.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Форму Financial Verification Form должны подать все иностранцы, даже те, кто помощи не просит. Тем, кто просит помощь, её подают до CSS Profile.",
+      "evidence": "All international students are required to submit the Financial Verification Form even if you are not planning on filing for financial aid.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Если семья сможет платить меньше 5 000 долларов в год, вместо CSS Profile принимают расширенную форму в личном кабинете. Если больше — нужен CSS Profile (25 долларов, освобождения от платы нет).",
+      "evidence": "If your family contribution will be more than $5,000 per year, we require the CSS Profile.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Плата за подачу заявки: нет, для граждан других стран колледж её снимает автоматически, после того как выбрано гражданство.",
+      "evidence": "There is no application fee for non-U.S. citizens .",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": "USD",
+        "evidence": "There is no application fee for non-U.S. citizens ."
+      }
+    },
+    {
+      "ru": "Баллы SAT и ACT необязательны.",
+      "evidence": "Students may choose to submit scores on the SAT and/or ACT.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский нужен всем, чей родной язык не английский: подходят TOEFL, IELTS или Duolingo; SAT и ACT его не заменяют. Порога нет, но колледж называет тех, кто лучше подготовлен: Duolingo 130, IELTS 7, TOEFL iBT 5,0 по новой шкале или 100 по старой.",
+      "evidence": "To satisfy this requirement, we accept results from TOEFL, IELTS or Duolingo's English Test (DET). The SAT and ACT tests do not satisfy this requirement.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Требование по английскому снимают, если ты из страны, где английский — официальный язык, сдаёшь English A по IB или четыре года учился в школе в США.",
+      "evidence": "Davidson will waive this requirement for students whom: Are from a country where English is an official language Are taking English A as part of the IB diploma Spent four years of high school studying in the United States",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Результаты TOEFL и IELTS должны прийти от агентства или консультанта, самому присылать или указывать в заявке их нельзя. Duolingo отправляют из личного кабинета Duolingo.",
+      "evidence": "we will not accept scores submitted directly from students or self-reported on the application",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Видеоинтервью InitialView или Vericant необязательно, но колледж настойчиво советует его иностранцам. Освобождения от платы за них нет.",
+      "evidence": "we strongly recommend international applicants to submit materials from InitialView or Vericant Interview in order to demonstrate their communication skills and ability to converse about academic topics.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Нужен официальный табель, который присылает школа; рассматривают его в контексте твоей школы.",
+      "evidence": "Davidson requires that each student submit an official copy of their high school transcript.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны рекомендация консультанта и две рекомендации преподавателей академических предметов от разных людей, отправляет их сам автор. Также просят рекомендацию ровесника.",
+      "evidence": "Davidson requires two recommendations from two different high school academic instructors.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 15 ноября, ранний тур II — до 4 января, обычный — до 11 января. Заявку на помощь подают к тому же сроку.",
+      "evidence": "January 11 Regular Decision Admission & Aid Application Deadline",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-11",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.davidson.edu/admission-and-financial-aid/apply/international-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Davidson College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.davidson.edu/admission-and-financial-aid/apply/international-applicants",
+    "pages": [
+      {
+        "url": "https://www.davidson.edu/admission-and-financial-aid/apply/international-applicants",
+        "contentHash": "sha256:73d1159c30a19e414c5f985ea15fab23b86bbe8b047dd5f1abb25b8fd75406d7"
+      },
+      {
+        "url": "https://www.davidson.edu/admission-and-financial-aid/apply/first-year-applicants",
+        "contentHash": "sha256:c774ad47dddc1dba4b9b3ea8347555347270e6ec1c06da565c0fd0bd4cd8e089"
+      },
+      {
+        "url": "https://www.davidson.edu/admission-and-financial-aid/admission-aid-timeline",
+        "contentHash": "sha256:88092650086d2b591b3fc877a1b703516fdfc9fc72cda6518d075529133804a4"
+      },
+      {
+        "url": "https://www.davidson.edu/admission-and-financial-aid/financial-aid/applying-aid/international-students",
+        "contentHash": "sha256:68b348a4e6f34f618e6d8d6a5252dae7a6233a00ff7034f1346bf3adce921ca7"
+      },
+      {
+        "url": "https://www.davidson.edu/admission-and-financial-aid/admission-process-help/frequently-asked-questions/international-admission-aid-faqs",
+        "contentHash": "sha256:a72ae244c7ffa18e791d98466143c2d826a2559922ab4a9c02b902c1ba8e2713"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

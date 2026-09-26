@@ -1,0 +1,214 @@
+{
+  "id": "macalester-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Macalester College — колледж в США, нужду закрывают, но отбор учитывает деньги",
+    "orig": "Macalester College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Нужду принятого закрывают на 100% в пределах примерной стоимости года: обучение, жильё, питание, страховка, книги. Часть пакета — небольшой заём для иностранцев и работа в кампусе. Не покрыты, например, расходы на визу и на длинные каникулы. Деньги при отборе учитывают: чем больше нужна помощь, тем выше конкуренция"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "students who plan to study on a non-immigrant visa (ex. F-1, L-2, etc.) and are applying for need-based financial aid."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: подходят школы разных систем, табель и внешние экзамены рассматривают с учётом местной системы"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: колледж рассматривает табели по каждой системе отдельно"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Submission of English proficiency testing (EPT) is optional ."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Macalester follows a Test-Optional admissions policy."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Деньги при отборе иностранцев учитывают. Тем, кому нужна самая большая помощь (семья может платить меньше 40 000 долларов в год), достаётся самая жёсткая конкуренция.",
+      "evidence": "International students with the highest levels of financial need (contributions of less than $40,000 USD) face the greatest levels of competition in the selection process.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Нужду каждого принятого колледж закрывает полностью, но только до своей примерной стоимости года. Минимального взноса семьи нет.",
+      "evidence": "Macalester is committed to meeting the full demonstrated financial need of every student we admit up to our estimated cost of attendance.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь — на все четыре года сразу: стипендии (гранты), небольшой заём Macalester College International Student Loan и работа в кампусе.",
+      "evidence": "Students who are offered admission and qualify for need-based aid can expect a four-year financial aid package that is made up of scholarships (gift aid), a small Macalester College International Student Loan , and campus employment.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь покрывает не всё: иностранцам придётся самим платить за визу F-1 и, возможно, за дополнительные расходы на длинных зимних и летних каникулах.",
+      "evidence": "That said, while most costs are covered by Macalester's financial aid, not all costs are .",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Работа в кампусе входит в пакет помощи: около 9 часов в неделю, примерно 3 600 долларов за первый год после налогов. Кто не работает, того заработок заменить стипендией нельзя.",
+      "evidence": "Students typically have the option to work approximately 9 hours per week on campus and earn about $3,600 (after taxes) over the course of their first year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заём для иностранцев колледж заменить стипендией не может: если студент не берёт заём в полном размере, разницу он покрывает сам.",
+      "evidence": "Note: Students choosing not to accept the full MCISL amount in a given year are responsible for making up the difference. Macalester cannot replace the MCISL with additional scholarship.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Одна стипендия за заслуги для иностранцев есть: Turck, до 40 000 долларов в год. Отдельной заявки не нужно, рассматривают каждого.",
+      "evidence": "Every international applicant is automatically considered for the Turck Scholarship - no special application is required.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь надо запросить при подаче заявки: после предложения о приёме и в течение учёбы её не дают.",
+      "evidence": "To secure eligibility for financial aid, students must express their interest during the application process, as financial aid cannot be awarded after an offer of admission has been made, nor at any time during their studies at Macalester.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Для помощи нужны два документа: CSS Profile или бесплатная анкета ISAFA, а также Financial Declaration Form из личного кабинета. Пока не поданы оба, заявку не рассматривают. Плату за CSS Profile колледж не снимает.",
+      "evidence": "Your application will not be reviewed until both are submitted.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Тем, кто не просит помощи, тоже надо подписать форму Financial Obligations Agreement: без неё заявку не рассматривают.",
+      "evidence": "International students not applying for aid will not be considered for admission unless this form is completed.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Баллы SAT и ACT необязательны, и без них ты не в худшем положении.",
+      "evidence": "Choosing not to submit test scores will not disadvantage you in our selection process.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Сертификат по английскому необязателен, но рекомендован тем, чей родной язык не английский и кто меньше двух лет учился в школе на английском. Подходят TOEFL, IELTS, Duolingo или интервью InitialView/Vericant. Минимальных баллов страницы не называют.",
+      "evidence": "proof of English Proficiency is recommended for international applicants whose first language is not English AND who have spent fewer than two years in a curriculum taught primarily in English in secondary/upper secondary schooling.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужен официальный табель за 9–12/13 классы и официальные справки о внешних экзаменах, если они есть. Присланное самим студентом официальным не считается. Тем, кто подаёт до выпускных экзаменов, добавляют прогнозные баллы.",
+      "evidence": "The standard requirement for transcripts is to include grades (marks) for years 9 through 12/13 and available external exam scores.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Кто учился только по O-Level, того не рассмотрят; тем, кто учился по A-Level, нужны итоговые результаты O, AS и A Level.",
+      "evidence": "Students who have only completed the O Levels will not be considered for admission to Macalester.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны две рекомендации: одна от консультанта или сотрудника школы, вторая от учителя одного из основных предметов.",
+      "evidence": "One recommendation letter from a counselor or school official One recommendation letter from a teacher",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки на поступление: ранний тур I и Early Action — до 1 ноября, ранний тур II — до 1 января, обычный — до 15 января. Документы на помощь в эти же туры подают до 10 ноября, 8 января и 22 января.",
+      "evidence": "Early Decision I November 1 Early Action November 1 Early Decision II January 1 Regular Decision January 15",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.macalester.edu/admissions/international/first-year/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Macalester College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.macalester.edu/admissions/international/first-year/",
+    "pages": [
+      {
+        "url": "https://www.macalester.edu/admissions/international/first-year/",
+        "contentHash": "sha256:76baf1c1c157209fd57b1271e80c183782b77e1dff482a70ee725e8e7b13e0a4"
+      },
+      {
+        "url": "https://www.macalester.edu/admissions/international/financing-options/",
+        "contentHash": "sha256:6a36915602a31b899328b9a36b717a55377887c3b67dff9a3e3c5d1732c64bdc"
+      },
+      {
+        "url": "https://www.macalester.edu/financial-aid/apply/international/",
+        "contentHash": "sha256:11a3d85a7125396949ba51756b289741fe3cbf7a82ef6cb001200ae6abed3858"
+      },
+      {
+        "url": "https://www.macalester.edu/admissions/international/faq/",
+        "contentHash": "sha256:13217f841c5e324ac32f35dff39173128df196d9ad1008bb670aa1f220d94beb"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

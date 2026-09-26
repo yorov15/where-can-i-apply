@@ -1,0 +1,201 @@
+{
+  "id": "smith-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Smith College — колледж в США для женщин, помощь только грантами, но помощь просят до зачисления",
+    "orig": "Smith College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Колледж закрывает полную рассчитанную нужду всех принятых, кто подал на помощь в срок. Кредитов в пакетах нет: их заменили грантами колледжа. Уровень помощи иностранцам сильно разный, зависит от семьи. Иностранцам, которые получают помощь по нужде, колледж даёт ещё грант на медстраховку. Но кто не подал на помощь до зачисления, тому институциональной помощи не дадут никогда"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "The college will meet the full documented need, as determined by college policy, of all admitted students who apply for aid by the published deadlines."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: требование по английскому зависит от гражданства, а не от страны школы"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: колледж читает табель, рекомендации и эссе целиком"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "International citizens whose primary language is not English or have not attended a school at which English is the primary language of instruction will be required to submit TOEFL, IELTS, PTE or the Duolingo English Test/DET."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Smith has a test-optional standardized testing policy."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Колледж для женщин: подавать могут все, кто называет себя женщиной, включая цисгендерных, трансгендерных и небинарных женщин.",
+      "evidence": "Smith is a women's college and considers for admission any applicants who self-identify as women; cis, trans, and nonbinary women are eligible to apply to Smith.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Колледж закрывает полную рассчитанную нужду принятых, которые подали на помощь в срок. Кредитов из пакетов убрали: их заменили грантами колледжа.",
+      "evidence": "Smith has eliminated loans from its undergraduate financial aid packages for those students receiving institutional need-based aid, replacing those funds with institutional grants.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь иностранцам колледж даёт по нужде, но конкурс сильный, а размер помощи сильно разный и зависит от семьи.",
+      "evidence": "The pool of international students is highly competitive and the level of support provided from the college ranges widely, depending on particular family circumstances.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Помощь надо просить до зачисления, вместе с заявкой и в срок. Иностранцам, которые не подали на помощь до зачисления, институциональную помощь не дадут ни в какой год.",
+      "evidence": "International students who do not apply for aid prior to admission are not eligible to receive institutional aid at Smith at any time",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Иностранцам с помощью по нужде колледж даёт грант на медстраховку.",
+      "evidence": "All international and undocumented students who receive need-based financial aid from the college will receive a health grant to cover the cost of health insurance through the college.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия за заслуги, если она есть, входит в расчёт нужды: помощь по нужде получают только сверх её суммы.",
+      "evidence": "Merit scholarships are considered a resource when determining eligibility for need-based financial aid.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Помощь просят через CSS Profile (код колледжа 3762): плату за него колледж может снять при тяжёлых для семьи расходах, по заявке. К нему прикладывают переведённые, подписанные налоговые декларации родителей; если декларации нет, нужна форма International Parent Non-Filer и справка работодателя. Документы загружают через IDOC College Board.",
+      "evidence": "If submission of the CSS PROFILE would cause significant financial hardship for your family, please complete this fee waiver request form to request a CSS Profile Fee Waiver code.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Баллы SAT и ACT необязательны, и без них вас не поставят в невыгодное положение.",
+      "evidence": "If you choose not to submit test scores, you will in no way be disadvantaged in the admission process.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский надо подтвердить, если он не родной или школа была не на английском: TOEFL, IELTS, PTE или Duolingo. Освобождение даёт английский как родной, вся школа на английском, два года школы в США на английском, диплом IB или A level на английском. Требование зависит от гражданства, а не от страны школы. Минимума страницы не называют.",
+      "evidence": "Please note that the test requirement is based on citizenship, not on where a student attends school.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Нужны отчёт школы с официальным табелем, рекомендация консультанта и две оценки от учителей.",
+      "evidence": "Common Application or Coalition Application Secondary School Report, including official high school transcript Counselor Recommendation Two Teacher Evaluation Forms",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Тем, кто переводится из другого вуза, помощь для иностранцев есть, но подавать надо как переводным.",
+      "evidence": "Smith College awards need-based aid to non-U.S. citizens, both first-year and transfer applicants.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Подать заявку бесплатно.",
+      "evidence": "There is no application fee.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": "USD",
+        "evidence": "There is no application fee."
+      }
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 15 ноября, ранний тур II — до 5 января, обычный — до 15 января. Документы на помощь для иностранцев подают в свои сроки: ранний I — 15 ноября, ранний II — 6 января, обычный — 25 января.",
+      "evidence": "Common Application or Coalition Application January 15 Secondary School Report January 15 Counselor Recommendation January 15",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.smith.edu/admission-aid/apply-smith/first-year-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Smith College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.smith.edu/admission-aid/tuition-aid-applicants/international-applicants",
+    "pages": [
+      {
+        "url": "https://www.smith.edu/admission-aid/tuition-aid-applicants/international-applicants",
+        "contentHash": "sha256:dfea105a2f6912d5cba30d4bfa53ed0424de546604a911a7fd30ec7369d6a206"
+      },
+      {
+        "url": "https://www.smith.edu/admission-aid/apply-smith/first-year-applicants",
+        "contentHash": "sha256:ad6bcb7721874e111dcbc6e654c0c00d2cce6192aa93e8706c61e31164782060"
+      },
+      {
+        "url": "https://www.smith.edu/admission-aid/apply-smith",
+        "contentHash": "sha256:e90e8c5cf6d60ddeb73bb6745f8bfb4639ba253b6e88e15be626fbe496ab5bb7"
+      },
+      {
+        "url": "https://www.smith.edu/admission-aid/tuition-aid-applicants/first-year-applicants",
+        "contentHash": "sha256:bb746e2f88201bb289055da9db9550347a8ed36712838667120845964f251639"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}
