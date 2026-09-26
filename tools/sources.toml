@@ -1492,3 +1492,29 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-26"
+
+# Colby и JHU. Сайты отдают 403 боту, страницы открыл сам Мурод в своём Chrome
+# (разрешение в чате 26.09.2026: «da, ispolzuy moy Chrome dlya Colby i JHU»),
+# текст сохранён в manual/ построчно сверенным с живой страницей. tools.check
+# эти файлы не перекачивает: раз в цикл открыть страницы заново.
+[colby-college]
+name = "Colby College (США): помощь иностранцам"
+files = [
+  { path = "manual/colby-college/01-international-applicants.txt", url = "https://afa.colby.edu/apply/requirements/international-applicants/" },
+  { path = "manual/colby-college/02-dates-and-deadlines.txt", url = "https://afa.colby.edu/apply/dates-and-deadlines/" },
+  { path = "manual/colby-college/03-requirements.txt", url = "https://afa.colby.edu/apply/requirements/" },
+  { path = "manual/colby-college/04-applying-for-aid.txt", url = "https://afa.colby.edu/apply/applying-for-aid/" },
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"
+
+[jhu]
+name = "Johns Hopkins University (США): помощь иностранцам"
+files = [
+  { path = "manual/jhu/01-international-applicants.txt", url = "https://apply.jhu.edu/international-applicants/" },
+  { path = "manual/jhu/02-deadlines-requirements.txt", url = "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/" },
+  { path = "manual/jhu/03-how-to-apply-for-financial-aid.txt", url = "https://apply.jhu.edu/tuition-aid/how-to-apply-for-financial-aid/" },
+  { path = "manual/jhu/04-standardized-testing.txt", url = "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/standardized-testing/" },
+]
+approvedBy = "human"
+approvedAt = "2026-09-26"

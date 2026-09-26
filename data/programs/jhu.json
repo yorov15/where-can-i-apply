@@ -1,0 +1,199 @@
+{
+  "id": "jhu",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Johns Hopkins University — университет в США, нужду закрывают полностью, но отбор учитывает деньги, SAT или ACT обязательны",
+    "orig": "Johns Hopkins University"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Нужду принятых университет закрывает на 100% стипендиями по нужде, которые не возвращают, и работой на кампусе. Но иностранцев оценивают need-aware: просьба о помощи может повлиять на решение о приёме. Суммы и что именно входит в помощь (жильё, дорога) страницы не называют"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "We meet 100% of demonstrated need for all admitted students."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: отдельной заявки для иностранцев нет, подаёт через Common App или Coalition"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: комиссия смотрит табель вместе с тестами и сложностью курсов"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "TOEFL (iBT)- A minimum of 5 total with preferred sub-scores of 5.5 (Reading), 5.5 (Listening), 5 (Writing), and 5 (Speaking)"
+        },
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "IELTS- A score of 7.0 or higher on each band"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 120,
+          "evidence": "DET- A composite score of 120 or higher"
+        }
+      ],
+      "advisory": true,
+      "evidence": "TOEFL, IELTS, the Duolingo English Test (DET), or the Cambridge English Exam are recommended if your primary language is not English, or you have not attended an English language school for the last three years."
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Johns Hopkins University requires first-year applicants to submit SAT (Math and Evidence-Based Reading and Writing sections) or ACT (Math, Reading, and English sections) scores to be considered for admission."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцев оценивают need-aware: просьба о помощи может повлиять на решение о приёме.",
+      "evidence": "We are need-aware for international students.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Нужду принятых университет закрывает на 100%: остаток покрывают стипендиями по нужде, которые не возвращают, и работой на кампусе.",
+      "evidence": "Then, we cover the rest through need-based scholarships that don’t need to be paid back, and work-study opportunities.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь надо просить сразу, как первокурсник. Тот, кто не подал на неё при поступлении, позже подать не сможет.",
+      "evidence": "International students who do not apply for financial aid as a first-year applicant will not be able to apply for aid later.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Для помощи нужен CSS Profile (код университета 5332). Если его подать нельзя, есть бесплатная замена — анкета Johns Hopkins University International Student Financial Aid Application.",
+      "evidence": "If you are unable to complete the CSS Profile, we encourage you to complete our free alternative form, the Johns Hopkins University International Student Financial Aid Application.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Всем иностранцам, и просящим помощь, и нет, нужна форма Certification of Finances: в ней подтверждают, откуда деньги на учёбу.",
+      "evidence": "All international applicants must document the available funding for their education by submitting the Certification of Finances form in their applicant portal.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки помощи: ранний тур I — до 15 ноября 2026, ранний тур II и обычный — до 15 января 2027.",
+      "evidence": "Decision Plan Application Deadline Financial Aid Deadline Early Decision I November 1, 2026 November 15, 2026 Early Decision II January 2, 2027 January 15, 2027 Regular Decision & Returning Undergrads January 2, 2027 January 15, 2027",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "SAT или ACT обязательны для первокурсников; освобождения от них для иностранцев страницы не называют. Можно указать баллы самому, а зачисленному придётся прислать официальные.",
+      "evidence": "For students who self-report scores on the application, if you are admitted and choose to enroll, you will be required to send official score reports.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Английский рекомендуют подтвердить, если он не родной или последние три года школа была не на английском: TOEFL, IELTS, Duolingo или Cambridge English. Особенно тем, у кого в SAT по чтению и письму ниже 690 или в ACT по чтению и английскому ниже 30. Строгого минимума нет; у конкурентных заявителей обычно TOEFL от 5 (новая шкала), IELTS 7,0 по каждой части, Duolingo 120+.",
+      "evidence": "We encourage you to submit TOEFL, IELTS, DET, or Cambridge English scores if you score below 690 on the Evidence-Based Reading and Writing (ERW) section of the SAT or below 30 on both the ACT Reading and English sections.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Плата за подачу заявки — 70 долларов; освобождение можно запросить прямо в Common App или Coalition, а если не подходишь под их критерии — формой запроса от тебя или от школы.",
+      "evidence": "The $70 application fee or fee waiver",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 70,
+        "currency": "USD",
+        "evidence": "The $70 application fee or fee waiver"
+      }
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 1 ноября 2026 (ответ 11 декабря), ранний тур II и обычный — до 2 января 2027 (ответ 12 февраля и 24 марта).",
+      "evidence": "APPLICATION DEADLINE November 1, 2026 January 2, 2027 January 2, 2027 March 1, 2027",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-02",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://apply.jhu.edu/international-applicants/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Johns Hopkins University"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://apply.jhu.edu/international-applicants/",
+    "pages": [
+      {
+        "url": "https://apply.jhu.edu/international-applicants/",
+        "contentHash": "sha256:19fea751d5ec0f28d085ff03308bc26ef3e5d0bce9a17f65a121058b76ca9b11"
+      },
+      {
+        "url": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+        "contentHash": "sha256:f35fc5bca1fb13df60f6e397460bd715ac35d402ca78d902c9086807dc6b242a"
+      },
+      {
+        "url": "https://apply.jhu.edu/tuition-aid/how-to-apply-for-financial-aid/",
+        "contentHash": "sha256:343fc64e70ec838df324fdaf22acd3570534397f06380d345e7ada62ab608c55"
+      },
+      {
+        "url": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/standardized-testing/",
+        "contentHash": "sha256:611518e03ac827f5b80706b17805fbd83203ec5c264055dc3f9a6d49ec6d348f"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}

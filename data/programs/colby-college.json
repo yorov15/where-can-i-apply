@@ -1,0 +1,201 @@
+{
+  "id": "colby-college",
+  "status": "published",
+  "kind": "need-aid",
+  "name": {
+    "ru": "Colby College — колледж в США, нужду закрывают полностью и без кредитов, стипендий за заслуги нет",
+    "orig": "Colby College"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Нужду принятых колледж закрывает на 100% без кредитов: в пакет входят гранты и работа на кампусе. Стипендий за заслуги нет. Но помощь надо просить до зачисления: кто не подал на неё до решения о приёме, грантов колледжа не получит до третьего курса. Как колледж учитывает деньги при отборе иностранцев, эти страницы не говорят"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Colby meets 100 percent of demonstrated need for all admitted students, including international students."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "страну школы не ограничивают: подходят все национальные программы"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "числа лет школы страницы не называют"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "года выпуска страницы не называют"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-26",
+      "note": "порога по среднему баллу нет: колледж читает табель целиком и ждёт сильную программу школы"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "If English is neither your first language nor your current language of instruction we require a score report of the Test of English as a Foreign Language (TOEFL) iBT or Home Edition, International English Language Testing System (IELTS) Academic at a test center or online, or Duolingo English Test (DET)."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Colby is a test optional institution."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Нужду каждого принятого колледж закрывает на 100% без кредитов. Семьям с общим доходом до 200 тысяч долларов вклад родителей не больше 20 тысяч, а до 75 тысяч — ноль.",
+      "evidence": "Through the Colby Commitment, we pledge to meet 100 percent of each admitted student’s demonstrated financial need without loans.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "В пакет входят гранты и работа на кампусе, кредитов нет.",
+      "evidence": "Colby aid packages contain grants and work-study aid—but not loans.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь только по нужде, стипендий за заслуги (учёба, спорт, таланты) колледж не даёт.",
+      "evidence": "At Colby, eligibility for financial aid is based solely on relative financial strength; merit scholarships (based on academic achievement, athletic or other talents) are not available from the College.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь надо просить до зачисления. Кто не подал на помощь до решения о приёме, грантов колледжа не получит до третьего курса, если только положение семьи неожиданно не изменится.",
+      "evidence": "Students who do not apply for financial aid prior to admission will not be considered for College grant assistance until their junior year, unless their family financial circumstances change unexpectedly.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Помощь надо просить заново каждый год; она может вырасти или упасть вместе с положением семьи.",
+      "evidence": "Aid recipients must reapply for financial aid each year. Aid may increase or decrease with changes in family circumstances.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Для помощи иностранцы подают CSS Profile (код колледжа 3280); FAFSA нужна только гражданам и постоянным жителям США. Если родители в разводе, нужен второй CSS Profile от другого родителя. Плату за CSS Profile колледж снимает по заявке, если она тяжела для семьи.",
+      "evidence": "For students for whom the fee to submit the CSS Profile poses a financial burden, Colby offers a CSS fee waiver.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Налоговые декларации родителей и студента за 2025 год (все страницы, приложения и W-2) присылают через IDOC College Board, а дополнительных документов колледж без запроса присылать не просит.",
+      "evidence": "Please do not submit any additional financial aid documentation unless requested by the Admissions and Financial Aid team.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Баллы SAT и ACT необязательны; принятым, которые их присылали, надо прислать официальные результаты до зачисления.",
+      "evidence": "Admitted students who submit test scores as part of their application will be required to provide official score reports prior to enrollment.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский подтверждают, если он не родной и не язык обучения сейчас: TOEFL iBT (в том числе Home Edition), IELTS Academic или Duolingo. Балл можно указать самому в заявке или прислать PDF на admissions@colby.edu. TOEFL считают суперскором, MyBest принимают. Минимума страницы не называют.",
+      "evidence": "We superscore the TOEFL and accept MyBest scores.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Все материалы заявки должны быть на английском, каким бы ни был язык обучения.",
+      "evidence": "All application materials must be submitted in English (regardless of your language of instruction).",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны школьный табель и отчёт школьного сотрудника, одна рекомендация консультанта и две — учителей.",
+      "evidence": "We require one counselor recommendation and two teacher recommendations.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Подать заявку бесплатно.",
+      "evidence": "It is free to apply.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": "USD",
+        "evidence": "It is free to apply."
+      }
+    },
+    {
+      "ru": "Сроки: ранний тур I — до 15 ноября, ранний тур II — до 4 января, обычный — до 4 января (решение до 1 апреля). Документы на помощь: 15 ноября, 4 января и 15 января. Ранний тур обязывает поступить, если приняли.",
+      "evidence": "Early Decision I Nov. 15 Nov. 15 Nov. 22 On or before Dec. 15 Early Decision II Jan. 4 Jan. 4 Jan. 15 On or before Feb. 15 Regular Decision Jan. 4 Jan. 15 Jan. 15 On or before April 1",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-04",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://afa.colby.edu/apply/requirements/international-applicants/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Colby College"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://afa.colby.edu/apply/requirements/international-applicants/",
+    "pages": [
+      {
+        "url": "https://afa.colby.edu/apply/requirements/international-applicants/",
+        "contentHash": "sha256:fe53c476b2900b8afc784e63b18c9572c8f8f1e1b64651c62b72cd3e92555bb3"
+      },
+      {
+        "url": "https://afa.colby.edu/apply/dates-and-deadlines/",
+        "contentHash": "sha256:13d4043076ed39102d160faac45dffbf3097b658acd5ce06879ae4d16b5404c6"
+      },
+      {
+        "url": "https://afa.colby.edu/apply/requirements/",
+        "contentHash": "sha256:52a9f5888c1e645169480da25b58101c9e2294c63755b2396ee099e836db6c54"
+      },
+      {
+        "url": "https://afa.colby.edu/apply/applying-for-aid/",
+        "contentHash": "sha256:ba65b4085799881208232886841395f38b8fb1d8da3f554f884e81a49d0cd141"
+      }
+    ],
+    "lastVerified": "2026-09-26",
+    "humanChecked": false
+  }
+}
