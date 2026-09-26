@@ -534,6 +534,7 @@ urls = [
   "https://www.daad.de/en/studying-in-germany/living-in-germany/finances/",
   "https://www.daad.de/en/studying-in-germany/requirements/studienkollegs/",
   "https://www.daad.de/en/studying-in-germany/requirements/admission-database/",
+  "https://www.daad.de/en/studying-in-germany/requirements/application-process/",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-11"
@@ -1950,3 +1951,65 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-27"
+
+# ---------------------------------------------------------------------------
+# Германия и Европа — третий пакет, одобренный Муродом 27.09.2026
+# («Япония», «Китай (вузы)», «Германия и Европа»).
+#
+# Начато с официальных государственных порталов, а не с отдельных вузов:
+# у Германии уже есть карточка germany-public (HZB, Studienkolleg,
+# Feststellungsprüfung, плата), и шесть карточек TUM/LMU/Heidelberg/KIT/RWTH/
+# Берлин повторяли бы её слово в слово — тот же промах, что с китайскими
+# государственными вузами. Сначала читаем общие правила по странам, потом
+# решаем, у какого вуза есть то, чего нет в общих правилах.
+# ---------------------------------------------------------------------------
+
+[finland-study]
+name = "Финляндия: бакалавриат на английском, плата и стипендии (Study in Finland)"
+urls = [
+  "https://www.studyinfinland.fi/admissions/bachelors-and-masters-admissions",
+  "https://www.studyinfinland.fi/funding-your-studies/bachelors-and-masters-scholarships",
+  "https://www.studyinfinland.fi/funding-your-studies/fees-and-cost-living",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[sweden-study]
+name = "Швеция: плата, стипендии и подача для иностранцев (Study in Sweden)"
+urls = [
+  "https://studyinsweden.se/plan-your-studies/fees-costs/",
+  "https://studyinsweden.se/scholarships/",
+  "https://studyinsweden.se/plan-your-studies/how-to-apply/",
+  "https://studyinsweden.se/moving-to-sweden/permits-visas/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[netherlands-study]
+name = "Нидерланды: плата, стипендии и подача для иностранцев (Study in NL)"
+urls = [
+  "https://www.studyinnl.org/finances/tuition-fees",
+  "https://www.studyinnl.org/finances/scholarships",
+  "https://www.studyinnl.org/plan-your-stay/how-to-apply",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[austria-study]
+name = "Австрия: приём, плата и стипендии для иностранцев (Study in Austria, OeAD)"
+urls = [
+  "https://studyinaustria.at/en/plan-your-studies/application-and-admission",
+  "https://studyinaustria.at/en/plan-your-studies/scholarships-funding",
+  "https://studyinaustria.at/en/tuition",
+  "https://studyinaustria.at/en/live-and-work/living-costs",
+  "https://vorstudienlehrgang.oead.at/en/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+# Отдельной записи [germany-daad] здесь нет намеренно. Две из трёх её
+# страниц (studienkollegs и admission-database) уже перечислены в
+# germany-public выше, третья — application-process — добавлена туда же.
+# Вторая карточка про Германию слово в слово повторяла бы первую; вместо
+# этого общие правила подачи (сроки 15 июля и 15 января, сбор uni-assist,
+# numerus clausus) дописаны в существующую карточку.

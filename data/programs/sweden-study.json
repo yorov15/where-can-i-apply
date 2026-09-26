@@ -1,0 +1,161 @@
+{
+  "id": "sweden-study",
+  "status": "published",
+  "kind": "national",
+  "name": {
+    "ru": "Швеция: бакалавриат на английском — платно, стипендии частично закрывают плату",
+    "orig": "Bachelor's studies in Sweden — application fee, tuition fees and scholarships"
+  },
+  "hostCountry": "SE",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Для всех, кто приехал из-за пределов ЕС/ЕЭК, обучение платное: в среднем около 160 000 шведских крон в год, по стране разброс от 80 000 до 320 000. Технические и естественные науки — обычно 140 000–185 000 в год, это как раз случай информатики. Стипендии в Швеции есть, большинство закрывают плату за обучение, некоторые — ещё и жизнь; выдаёт их сам вуз или Шведский институт, и они конкурентные."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничивают: для граждан не из ЕС/ЕЭК меняется только плата и взнос за заявку"
+    },
+    "schoolCountry": {
+      "notMeasured": true,
+      "evidence": "So these are things like having completed your high-school studies. Or having a bachelor's degree."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "числа лет школы страница не называет — требуется законченное среднее образование"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "год выпуска страница не ограничивает"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст на странице не упоминается"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "You may need to meet some specific entry reqruirements too. You'll find them listed on the programme's webpage."
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "Also? Having a sufficient level of English."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Заявка стоит 900 крон, и неважно, сколько программ ты указал: одна, четыре или восемь — взнос один и тот же.",
+      "evidence": "The fee is SEK 900, regardless of how many programmes you apply for.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача идёт через Universityadmissions.se — центральный портал. На бакалавриат в одном заявлении можно указать до восьми программ, на магистратуру — до четырёх.",
+      "evidence": "And if you're applying for a bachelor's? You can apply for up to eight programmes.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Английские программы почти все начинаются осенью, и подавать надо к середине января. Небольшая часть стартует весной — там срок сдвигается к середине августа.",
+      "evidence": "Pretty much all of our English-taught programmes start in the autumn semester. So, chances are you'll apply by mid-January.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "На технических и естественнонаучных программах плата выше средней: от 140 000 до 185 000 крон в год. Для информатики ориентируйся на эту вилку.",
+      "evidence": "These programmes cost a little more. You'll pay from SEK 140,000 - 185,000 per year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Средняя плата по стране — около 160 000 крон в год, но разброс большой: от 80 000 до 320 000. Точную сумму ищи на странице программы.",
+      "evidence": "On average, tuition fees are around SEK 160,000 per academic year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На жизнь нужно около 10 656 крон в месяц. Самая большая статья — жильё (4 900), дальше еда (2 716), транспорт (650), телефон и интернет (400) и прочее (1 990).",
+      "evidence": "You'll need around SEK 10,656 per month to cover all of your living costs.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Вид на жительство не дадут, пока не оплачен первый взнос за обучение. Решение может идти месяцами, так что платить и подавать надо сразу после зачисления.",
+      "evidence": "But first, you must be admitted to full-time accredited university studies in Sweden and have paid your first tuition fee instalment.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Стипендии в Швеции есть, и большинство закрывает плату за обучение; некоторые покрывают и плату, и жизнь. Ищи их на сайте выбранного вуза и в базе стипендий Study in Sweden.",
+      "evidence": "Most of them will cover the cost of your tuition. And some of them will cover tuition and living expenses.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Если учишься больше года, надо зарегистрироваться в шведском реестре населения и получить личный номер personnummer — без него трудно открыть счёт в банке и решить бытовые дела.",
+      "evidence": "If you're going to stay in Sweden for more than one year, you're generally required to register in the Swedish Population Register.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "После учёбы вид на жительство можно продлить на 12 месяцев, чтобы искать работу или открыть своё дело.",
+      "evidence": "You can apply to extend your residence permit for an extra 12 months.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.universityadmissions.se/en/",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": null,
+    "note": {
+      "ru": "Шведские вузы; на бакалавриат одним заявлением выбирают до восьми программ на центральном портале"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://studyinsweden.se/plan-your-studies/fees-costs/",
+    "pages": [
+      {
+        "url": "https://studyinsweden.se/plan-your-studies/fees-costs/",
+        "contentHash": "sha256:1b99a9eb0062a344f73b6a259f46b8b360fbb28efd102cbb9a2deee5d1265eb8"
+      },
+      {
+        "url": "https://studyinsweden.se/scholarships/",
+        "contentHash": "sha256:a562453f2244d7f48c2c638409ff863e3dc0216001f6fc95f40c8a7dcdb86662"
+      },
+      {
+        "url": "https://studyinsweden.se/plan-your-studies/how-to-apply/",
+        "contentHash": "sha256:69a8bdf9cabdde26ec31939dd50199715814688dad5c486098dba349af1c9042"
+      },
+      {
+        "url": "https://studyinsweden.se/moving-to-sweden/permits-visas/",
+        "contentHash": "sha256:dc2738b53b407a7c68ce9fe72ff80851e45ed8f5cef2f07137e600cbce3c9631"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}

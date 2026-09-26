@@ -1,0 +1,162 @@
+{
+  "id": "finland-study",
+  "status": "published",
+  "kind": "national",
+  "name": {
+    "ru": "Финляндия: бакалавриат на английском — платно, стипендия только от вуза",
+    "orig": "Bachelor's studies in Finland — tuition fees, application fee and university scholarships"
+  },
+  "hostCountry": "FI",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Плату берут со всех, кто приехал из-за пределов ЕС/ЕЭК: обычно 9 000–20 000 евро в год. Государственных стипендий в Финляндии нет — стипендии и скидки дают только сами вузы, они конкурентные и закрывают, как правило, лишь плату за обучение. Жизнь оплачивается отдельно: для вида на жительство Migri требует показать 800 евро на каждый месяц."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничивают: для граждан не из ЕС/ЕЭК меняется только плата и взнос за заявку"
+    },
+    "schoolCountry": {
+      "notMeasured": true,
+      "evidence": "You'll need a high-school diploma that qualifies you for higher education in your home country."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "числа лет школы страница не называет — требует только аттестат, дающий право на вуз у себя дома"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "год выпуска страница не ограничивает"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст на странице не упоминается"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "Depending on the degree programme, admissions may include entrance exams, SAT or GMAT tests, or interviews."
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "If the programme requires proof of English proficiency, accepted tests and minimum scores vary by university and degree programme."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подача идёт через Studyinfo.fi — государственный портал. Общий приём (joint application): одним заявлением можно подать сразу в шесть программ, приём в январе, учёба начинается в сентябре.",
+      "evidence": "Apply to up to six programmes with one application in January for autumn (September) study start.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявка платная для всех, кто приехал из-за пределов ЕС/ЕЭК: 100 евро. Это единственный обязательный платёж на входе, но он есть у каждой программы.",
+      "evidence": "Applicants from outside the EU/EEA or Switzerland also need to pay the €100 application fee .",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 100,
+        "currency": "EUR",
+        "evidence": "Applicants from outside the EU/EEA or Switzerland also need to pay the €100 application fee ."
+      }
+    },
+    {
+      "ru": "Принять можно только одно место в семестр: если подаёшь в несколько финских вузов, выбрать придётся один.",
+      "evidence": "you can only accept one study place per term",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Государственных стипендий в Финляндии нет — стипендии и скидки на плату дают только сами вузы.",
+      "evidence": "There are no governmental scholarship programmes available .",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Реклама «полностью финансируемых государственных стипендий Финляндии» — обман. Официальный портал прямо предупреждает, что такие посты и объявления содержат много ложной информации.",
+      "evidence": "Be cautious - those claims are misleading. Posts and ads like that contain a lot of false information.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Плата за английский бакалавриат — обычно от 9 000 до 20 000 евро в год, зависит от вуза и программы. Точную сумму смотри в описании программы на Studyinfo.fi.",
+      "evidence": "Tuition fees typically range from €9,000 to €20,000 per year, depending on the university and programme.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для вида на жительство Migri требует доказать 800 евро на каждый месяц — 9 600 евро в год. Сама страница советует закладывать больше: 900–1 200 евро в месяц.",
+      "evidence": "the official minimum requirement set by Finnish Immigration Service Migri is €800 per month (€9,600 per year)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сверху — профсоюзный взнос около 50–70 евро в год и взнос на студенческое здравоохранение примерно 35 евро за семестр, то есть около 70 в год.",
+      "evidence": "University students pay an annual student union fee of about €50-€70 per academic year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Работать можно в среднем до 30 часов в неделю в учебном году и полный день на каникулах, но страница честно предупреждает: подработка не покроет ни плату, ни жизнь, и строить на ней финансовый план нельзя.",
+      "evidence": "As an international student you are allowed to work part-time up to 30 hours per week on average during the academic year and full-time during holidays.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Кроме аттестата часть программ добавляет вступительный экзамен, SAT или GMAT либо собеседование — набор решает конкретная программа, смотри её описание.",
+      "evidence": "Depending on the degree programme, admissions may include entrance exams, SAT or GMAT tests, or interviews.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://studyinfo.fi/",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": null,
+    "note": {
+      "ru": "Финские университеты и университеты прикладных наук; в общем приёме одним заявлением выбирают до шести программ"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.studyinfinland.fi/admissions/bachelors-and-masters-admissions",
+    "pages": [
+      {
+        "url": "https://www.studyinfinland.fi/admissions/bachelors-and-masters-admissions",
+        "contentHash": "sha256:9e69d14dbc72e26413fd8d6e689dc5e80d7714cf6006286c52f63d8fc72fa6e9"
+      },
+      {
+        "url": "https://www.studyinfinland.fi/funding-your-studies/bachelors-and-masters-scholarships",
+        "contentHash": "sha256:043bcf782f1c196dc3205992e16bb66ef2ad7e7dd1461bd7fa6cd7f756d75cf6"
+      },
+      {
+        "url": "https://www.studyinfinland.fi/funding-your-studies/fees-and-cost-living",
+        "contentHash": "sha256:269fd3d73a443df1578af7b84eb58cb1410932f2c7d35371843a5fc8e108a3ed"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}

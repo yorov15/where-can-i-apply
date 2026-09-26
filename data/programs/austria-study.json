@@ -1,0 +1,176 @@
+{
+  "id": "austria-study",
+  "status": "published",
+  "kind": "national",
+  "name": {
+    "ru": "Австрия: бакалавриат — 751,92 евро за семестр, но обучение в основном на немецком",
+    "orig": "Bachelor's studies in Austria — tuition fees, application and admission"
+  },
+  "hostCountry": "AT",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Для студентов из третьих стран плата — 751,92 евро за семестр, плюс обязательный взнос 25,20 евро за семестр (профсоюз и страховка). Полных стипендий на всю программу OeAD не даёт: в Австрии их почти нет. Жизнь стоит около 1 300 евро в месяц, самая большая статья — жильё, 450–700."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничивают: для студентов из третьих стран меняется только плата — 751,92 евро за семестр"
+    },
+    "schoolCountry": {
+      "notMeasured": true,
+      "evidence": "An equivalent secondary school leaving certificate"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "числа лет школы страница не называет — требуется аттестат, признанный эквивалентным австрийскому"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "год выпуска страница не ограничивает"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст на странице не упоминается"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "For detailed information concerning your eligibility, the admission procedure or the application requirements, please contact the Admission Office of the institution you are applying for."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "For many programmes proof of proficiency in German is necessary and should also be included in the application documents, if available"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Главное препятствие — язык: на большинстве программ учат по-немецки, и подтверждение немецкого обычно требуется уже в пакете документов. Английских бакалаврских программ в Австрии мало.",
+      "evidence": "While the majority of the programmes at Austrian higher education institutions are taught in German but more and more study programmes are offered in English.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки у университетов: зимний семестр — до 5 сентября, летний — до 5 февраля. Иностранные документы проверяют дольше, поэтому портал советует подавать как можно раньше.",
+      "evidence": "At universities the closing dates for application for the winter semester are September 5 , and for the summer semester February 5 .",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы нужны в оригинале и в копии, и они должны быть легализованы. Переводы на немецкий или английский тоже легализуют, в том числе сделанные за границей.",
+      "evidence": "Foreign documents (e.g. transcripts) have to be presented in the original (and in photocopy) and have to be legalised.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Плата для студентов из третьих стран с видом на жительство — 751,92 евро за семестр. Граждане ЕС и те, кто учится в пределах минимального срока плюс два семестра, не платят.",
+      "evidence": "For all other students from third countries (who are in possession of a Residence Permit-Student ) 751.92 euros per semester is generally required.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 751.92,
+        "currency": "EUR",
+        "evidence": "For all other students from third countries (who are in possession of a Residence Permit-Student ) 751.92 euros per semester is generally required."
+      }
+    },
+    {
+      "ru": "Сверху обязателен взнос 25,20 евро за семестр — профсоюз студентов и страхование от несчастных случаев. Его платят все.",
+      "evidence": "The student union membership fee \"ÖH-Beitrag\" and the student accident insurance fee is 25,20 euros per semester and is compulsory for all students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На программы с ограничением приёма может быть вступительный экзамен, и заявление на него закрывают вплоть до шести месяцев до начала семестра. Это надо проверять задолго до общего срока.",
+      "evidence": "closing date for application for entrance examinations can be up to 6 months before the beginning of the semester",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Информатика названа в списке направлений, где университеты вводят ограничения приёма, — наравне с архитектурой, биологией, экономикой, медициной и психологией. Это может быть экзамен до зачисления или отбор в первые два семестра.",
+      "evidence": "In some degree programmes (e.g. Architecture, Biology, Business, Computer Science, Medicine, Dentistry, Psychology), universities may impose admission restrictions.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Если знаний не хватает, поступают через подготовительные программы OeAD — VWU в Вене и VGUH в Граце. Они готовят уже зачисленных студентов к дополнительным экзаменам: немецкий как иностранный, математика, физика, химия, биология, история, география.",
+      "evidence": "The University Preparation Programmes in Vienna and Graz prepare international students who have been admitted to study at an Austrian university for supplementary examinations.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Полных стипендий на бакалавриат в Австрии почти нет: OeAD прямо говорит, что не выдаёт стипендии на всю программу. Искать надо в базе grants.at, но большинство стипендий там выдают не OeAD, а другие организации.",
+      "evidence": "do not offer any scholarships for a whole degree programme (bachelor's, master's or PhD) here in Austria",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Заявки OeAD не принимает и не обрабатывает — подавать надо напрямую в вуз, в его приёмную комиссию.",
+      "evidence": "Please note that the OeAD does not handle any study applications.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "На жизнь закладывай около 1 300 евро в месяц: жильё 450–700, еда около 300, остальное — 500. В Вене дороже, чем в небольших городах.",
+      "evidence": "The average monthly living expenses for a student in Austria are approximately 1,300 euros.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-09-05",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://studyinaustria.at/en/plan-your-studies/application-and-admission",
+  "coversInstitutions": {
+    "kind": "chosen-in-application",
+    "approxCount": null,
+    "note": {
+      "ru": "Австрийские университеты, университеты прикладных наук и педагогические вузы; заявка подаётся напрямую в вуз"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://studyinaustria.at/en/plan-your-studies/application-and-admission",
+    "pages": [
+      {
+        "url": "https://studyinaustria.at/en/plan-your-studies/application-and-admission",
+        "contentHash": "sha256:ab65e255bb22f06b22acca9722fc6673deb8ca6ae6aad31940d39e236265e676"
+      },
+      {
+        "url": "https://studyinaustria.at/en/plan-your-studies/scholarships-funding",
+        "contentHash": "sha256:6bc797ad81c80eb91282d1f2b72fb892c0553ef397048f270d711802a169121e"
+      },
+      {
+        "url": "https://studyinaustria.at/en/tuition",
+        "contentHash": "sha256:db58e520b4df1e7d53bd32977d1f8599da533afbacebb470edb163877488b175"
+      },
+      {
+        "url": "https://studyinaustria.at/en/live-and-work/living-costs",
+        "contentHash": "sha256:92b74be87f5db1431eb99af318188accb9c7d7f9f91fdbfc754377f40169c0a9"
+      },
+      {
+        "url": "https://vorstudienlehrgang.oead.at/en/",
+        "contentHash": "sha256:a0df021fb23bfc23386b418d3a90f9d28def91335c197463394c48d7d6122294"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}
