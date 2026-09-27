@@ -1,0 +1,171 @@
+{
+  "id": "rug",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Groningen (Гронинген, Нидерланды) — таджикский аттестат в список приравненных не входит",
+    "orig": "University of Groningen — bachelor's admission for international students"
+  },
+  "hostCountry": "NL",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Гронинген даёт стипендии иностранцам за академические успехи, но сумм на страницах, которые мы читали, нет, и полного покрытия они не обещают. Обучение для не-ЕС стоит 14 000–19 800 евро в год, так что считай, что платишь сам."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничивают: для не-ЕС меняется только тариф — вместо голландских 2 694 евро в год вуз берёт свой, от 14 000"
+    },
+    "schoolCountry": {
+      "definedBy": "institution",
+      "evidence": "If your diploma country is not in the list it may be that the secondary education diploma in your country does not meet our general end level requirements for admission."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "If your diploma country is not in the list it may be that the secondary education diploma in your country does not meet our general end level requirements for admission."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "год выпуска страница не ограничивает: сроки привязаны к дате подачи, а не к году аттестата"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст страница не называет ни для иностранцев, ни для своих"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "Click on the aforementioned certificates or find them in the list of the previous page to find out whether you meet the subject-specific requirements per study programme (if applicable)."
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "We accept the following language tests: Cambridge C1 Advanced and Cambridge C2 Proficiency IELTS Academic LanguageCert Academic Pearson PTE Academic TOEFL iBT"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гронинген принимает не всякий школьный аттестат: у вуза есть список стран, чьи дипломы приравнены к голландскому VWO, и Таджикистана в нём нет — рядом стоят Танзания, Турция, Уганда. Страница сама оговаривает: если страны твоей в списке нет, аттестат, скорее всего, не дотягивает до их общего уровня. Это вопрос, который решается до подачи, а не после.",
+      "evidence": "If your diploma country is not in the list it may be that the secondary education diploma in your country does not meet our general end level requirements for admission.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь один: добрать к аттестату международные сертификаты — три британских A-level, четыре IB Higher Level или четыре AP College Board. С ними вуз может признать тебя годным по общему уровню. Это отдельные экзамены, и сдавать их надо заранее, до подачи.",
+      "evidence": "However, if you are obtaining international certificates such as 3 British Advanced Level certificates",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Заявка стоит 100 евро — невозвратный взнос за рассмотрение, платят все, у кого аттестат не нидерландский. За несколько программ в один год взнос платится один раз.",
+      "evidence": "De Rijksuniversiteit Groningen vraagt een niet-restitueerbaar application fee van 100 euro voor kandidaten met een niet-Nederlands diploma.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 100,
+        "currency": "EUR",
+        "evidence": "een niet-restitueerbaar application fee van 100 euro"
+      }
+    },
+    {
+      "ru": "Сроки на 2027/2028: обычная заявка — до 1 мая 2027, а на программы с ограниченным числом мест (numerus fixus) — до 15 января 2027. Отдельно: тем, кому вуз оформляет визу, то есть не-ЕС, надо выполнить условия приёма до 1 июня, иначе не успеют с документами.",
+      "evidence": "moet je dit uiterlijk op 1 mei 2027 doen (numerus fixus-opleidingen uiterlijk 15 januari 2027)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "У части факультетов — экономика, наука и инженерия, философия, гуманитарные, право — есть ранний срок: подашь до 28 февраля, и ответ придёт в течение 15 дней. Это заметно раньше общей даты 1 мая.",
+      "evidence": "Als je je aanmeldt voor 28 februari ontvang je binnen 15 dagen bericht of je toegelaten bent.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение для не-ЕС на 2026/2027: 14 000 евро в год на большинстве факультетов, 19 800 на Science and Engineering и науке о движении, 32 000 на медицине и стоматологии. Цифр на 2027/2028 вуз ещё не публиковал — в таблице там прочерк, так что к подаче их надо перепроверить.",
+      "evidence": "Instellingscollegegeld II voor non-EU/EER studenten",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Голландский тариф 2 694 евро в год тебе не положен: его платят те, кто отвечает условиям государственного тарифа, а иностранцу с не-нидерландским аттестатом достаётся тариф вуза — в пять-семь раз выше.",
+      "evidence": "Instellingscollegegeld II Je betaalt het hogere instellingscollegegeld II als je niet voldoet aan de voorwaarden voor het wettelijk collegegeld",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский принимают по IELTS Academic, TOEFL iBT, Cambridge C1 Advanced и C2 Proficiency, LanguageCert Academic и Pearson PTE. Порог у каждой программы свой: по IELTS это от 6,0 до 7,0, по TOEFL iBT — от 80 до 100, и почти везде есть ещё минимумы по каждой части. IELTS Online и пересдачу одной части вуз не принимает.",
+      "evidence": "We accept the following language tests: Cambridge C1 Advanced and Cambridge C2 Proficiency IELTS Academic LanguageCert Academic Pearson PTE Academic TOEFL iBT",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Сертификаты IELTS, TOEFL, LanguageCert и Pearson годны два года — просроченный не примут. TOEFL, сданный после 21 января 2026 года, считается по новой шкале 1–6, и пороги по ней другие.",
+      "evidence": "Keep in mind that IELTS, LanguageCert, Pearson PTE, and TOEFL certificates are only valid for 2 years.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Стипендии у Гронингена есть: вуз пишет, что даёт их иностранцам за академические успехи. Но сумм на этой странице нет и полного покрытия она не обещает. Общая картина по стипендиям в Нидерландах — в отдельной карточке про страну.",
+      "evidence": "The university is committed to recognizing excellence in academic achievement through offering a number of scholarships for international students",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-05-01",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/non-dutch-qualification/bachelor-non-dutch-qualification",
+  "source": {
+    "url": "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/non-dutch-qualification/bachelor-non-dutch-qualification",
+    "pages": [
+      {
+        "url": "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/non-dutch-qualification/bachelor-non-dutch-qualification",
+        "contentHash": "sha256:e7b6297a06905e82cde1e1d068e231447b4da32a2df2a456fdc44f3179323c7b"
+      },
+      {
+        "url": "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/application-deadlines/",
+        "contentHash": "sha256:a942e75e142423feddbdd444ece8388cf7c49f4f92f205cf3ead4795f0858063"
+      },
+      {
+        "url": "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/procedures/application-informatie/with-non-dutch-diploma/bachelor/bachelor-entry-requirements/language-requirements-and-exemptions",
+        "contentHash": "sha256:e07406e87fa04557877f63855b256dd37246add272b6b035eae59dfc0d779cac"
+      },
+      {
+        "url": "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/procedures/application-informatie/with-non-dutch-diploma/bachelor/bachelor-entry-requirements/vwo-equivalent-qualifications",
+        "contentHash": "sha256:4b7eb0682dca8db6d474632d63e5df7dd886364e03e9cf12b8eaf7c9099d71dd"
+      },
+      {
+        "url": "https://www.rug.nl/education/application-enrolment-tuition-fees/tuition-fee/",
+        "contentHash": "sha256:7ceda5a0d692dc1cda5c44bc9340bc42bd106bdf69184c8a25e2ae792aaa812a"
+      },
+      {
+        "url": "https://www.rug.nl/education/application-enrolment-tuition-fees/tuition-fee/bachelor",
+        "contentHash": "sha256:548e884a6e516da467314f6dafb6e77ec2a04f2b04279b048edc229d4ab0cf9f"
+      },
+      {
+        "url": "https://www.rug.nl/education/scholarships/",
+        "contentHash": "sha256:c563994040d9763c8f923613de463cda018086b22c1e25c86b265c77343d01bc"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}

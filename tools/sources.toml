@@ -2039,3 +2039,28 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-27"
 
+# Гронинген. Второй нидерландский вуз после Твенте, из списка Мурода.
+#
+# Берём не ради «ещё одного вуза Нидерландов», а ради одного ответа: у
+# Гронингена есть список аттестатов, приравненных к голландскому VWO, и
+# Таджикистана в нём нет. Для выпускника одиннадцатилетки это прямое «нет»
+# на входе — то, что надо узнать до того, как полгода собираешь документы.
+[rug]
+name = "University of Groningen (Нидерланды): бакалавриат для иностранцев"
+urls = [
+  "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/non-dutch-qualification/bachelor-non-dutch-qualification",
+  "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/application-deadlines/",
+  "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/procedures/application-informatie/with-non-dutch-diploma/bachelor/bachelor-entry-requirements/language-requirements-and-exemptions",
+  "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/procedures/application-informatie/with-non-dutch-diploma/bachelor/bachelor-entry-requirements/vwo-equivalent-qualifications",
+  "https://www.rug.nl/education/application-enrolment-tuition-fees/tuition-fee/",
+  "https://www.rug.nl/education/application-enrolment-tuition-fees/tuition-fee/bachelor",
+  # Страница стипендий нужна, чтобы карточка не соврала в обе стороны:
+  # без неё нечем подтвердить ни «стипендий нет», ни «есть». Гронинген
+  # пишет, что даёт их иностранцам за успехи, но сумм на странице нет —
+  # так и будет написано, а общая картина по Нидерландам лежит в
+  # netherlands-study.
+  "https://www.rug.nl/education/scholarships/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
