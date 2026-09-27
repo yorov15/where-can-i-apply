@@ -1597,6 +1597,9 @@ urls = [
   "https://oia.hanyang.ac.kr/admission",
   "https://www.hanyang.ac.kr/web/eng/admissions-guide",
   "https://www.hanyang.ac.kr/web/eng/scholarships",
+  "https://www.hanyang.ac.kr/web/eng/global_edu",
+  "https://www.hanyang.ac.kr/web/eng/global_s",
+  "https://www.hanyang.ac.kr/web/eng/global_e",
   "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
 ]
 approvedBy = "human"
@@ -2193,3 +2196,152 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-27"
 
+# Корея, вторая партия 2026-09-27. Мурод: «добавляй много и разных
+# университетов, но не плохих — хороших хотя бы в одной сфере». Домены и
+# страницы приёма найдены переходом с главных страниц вузов.
+
+
+[hongik]
+name = "Hongik University (Корея): бакалавриат для иностранцев"
+urls = [
+  "https://www.hongik.ac.kr/en/admissions/admissions-guide.do",
+  "https://www.hongik.ac.kr/en/admissions/apply.do",
+  "https://www.hongik.ac.kr/en/academics/intro-faculty-detail.do",
+  "https://www.hongik.ac.kr/en/academics/hongik-global-scholarship.do",
+  "https://www.hongik.ac.kr/kr/admission/recruitment-is.do",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[kookmin]
+name = "Kookmin University (Корея): бакалавриат для иностранцев"
+urls = [
+  "https://iat.kookmin.ac.kr/admission",
+  "https://kibs.kookmin.ac.kr/",
+  "https://iat.kookmin.ac.kr/admission/apply/freshman",
+  "https://iat.kookmin.ac.kr/admission/program/department",
+  "https://iat.kookmin.ac.kr/admission/scholarship/department",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[ajou]
+name = "Ajou University (Корея): бакалавриат для иностранцев"
+urls = [
+  "https://www.ajou.ac.kr/iadmissions_en/index.do",
+  "https://www.ajou.ac.kr/en/admission/overview.do",
+  "https://www.ajou.ac.kr/en/admission/college-of-engineering.do",
+  "https://www.ajou.ac.kr/iadmissions_en/undergraduate/intro.do",
+  "https://www.ajou.ac.kr/iadmissions_en/undergraduate/major.do",
+  "https://www.ajou.ac.kr/iadmissions_en/undergraduate/tuition.do",
+  "https://www.ajou.ac.kr/iadmissions_en/undergraduate/scholarship.do",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[inha-univ]
+name = "Inha University (Корея): бакалавриат для иностранцев"
+urls = [
+  "https://eng.inha.ac.kr/eng/3713/subview.do",
+  "https://eng.inha.ac.kr/eng/3681/subview.do",
+  "https://eng.inha.ac.kr/eng/3707/subview.do",
+  "https://eng.inha.ac.kr/eng/3705/subview.do",
+  "https://eng.inha.ac.kr/eng/3706/subview.do",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[cnu]
+name = "Chungnam National University (Корея): бакалавриат для иностранцев"
+urls = [
+  "https://plus.cnu.ac.kr/html/en/sub03/sub03_0303.html",
+  "https://plus.cnu.ac.kr/html/en/sub03/sub03_0302.html",
+  "https://plus.cnu.ac.kr/html/en/sub04/sub04_040101.html",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[handong]
+name = "Handong Global University (Корея): бакалавриат для иностранцев"
+urls = [
+  "https://www.handong.edu/eng/admission/undergraduate/",
+  "https://www.handong.edu/eng/admission/undergraduate/application/",
+  "https://www.handong.edu/eng/admission/undergraduate/tuition/",
+  "https://www.handong.edu/eng/academics/undergraduate/schools/",
+  "https://www.handong.edu/eng/admission/undergraduate/scholarship/",
+  "https://www.handong.edu/eng/academics/undergraduate/english-programs/",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[sookmyung]
+name = "Sookmyung Women's University (Корея): бакалавриат для иностранок"
+urls = [
+  "https://e.sookmyung.ac.kr/en/admission/undergraduate.do",
+  "https://e.sookmyung.ac.kr/en/admission/admission-guide.do",
+  "https://e.sookmyung.ac.kr/en/admission/korean-scholarship.do",
+  "https://e.sookmyung.ac.kr/_res/sookmyung//etc/2027%20Spring%20Admission_Undergraduate_EN.pdf",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[seoultech]
+name = "Seoul National University of Science and Technology (Корея)"
+urls = [
+  "https://en.seoultech.ac.kr/adm/under",
+  "https://global.seoultech.ac.kr/admissions/undergraduate/admission_guidlines/",
+  "https://en.seoultech.ac.kr/adm/guide",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[ynu]
+name = "Yeungnam University (Корея): бакалавриат для иностранцев"
+urls = [
+  "https://isaen.yu.ac.kr/",
+  "https://www.yu.ac.kr/english/admissions/financial-aid-undergraduate.do",
+  "https://www.yu.ac.kr/english/academics/undergraduate.do",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[kangwon]
+name = "Kangwon National University (Корея): бакалавриат для иностранцев"
+urls = [
+  "https://global.kangwon.ac.kr/",
+  "https://global.kangwon.ac.kr/global/conts/1215/directory.do",
+  "https://global.kangwon.ac.kr/global/conts/1391/directory.do",
+  "https://global.kangwon.ac.kr/global/conts/1201/directory.do",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[unist]
+name = "UNIST (Корея): бакалавриат для иностранцев"
+urls = [
+  "https://www.unist.ac.kr/en/admissions/",
+  "https://www.unist.ac.kr/unist/admissions/admissions.do",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[catholic]
+name = "Catholic University of Korea (Корея): бакалавриат для иностранцев"
+urls = [
+  "https://www.catholic.ac.kr/en/index.do",
+  "https://www.catholic.ac.kr/en/admission.do",
+  "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"

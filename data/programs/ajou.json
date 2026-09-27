@@ -1,0 +1,180 @@
+{
+  "id": "ajou",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities"
+  ],
+  "name": {
+    "ru": "Университет Ачжу (Ajou University, Сувон) — частный вуз, приём иностранцев; учатся на корейском, точный уровень вуз не называет, за семестр от 3 748 долларов",
+    "orig": "Ajou University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полной оплаты страница не обещает: учёба платная. Есть стипендии за язык — от 30% до полного освобождения платы за семестр, и отдельная стипендия для студентов из стран-получателей помощи ОЭСР."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "you are not of a Korean nationality"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страну школы скачанные страницы не ограничивают: списка стран нет, единственное условие — корейского гражданства быть не должно"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "год окончания школы на скачанных страницах не назван: вуз публикует только сроки приёма, требования к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст на скачанных страницах не упоминается"
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "you have a good academic standing in previous education"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "students entering the undergraduate program need to have a certain level of Korean language proficiency level"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут только те, у кого нет корейского гражданства: министерство образования Кореи пишет в своём FAQ, что иностранцем считается тот, у кого корейского гражданства нет. Про гражданство родителей эта страница молчит.",
+      "evidence": "you are not of a Korean nationality",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет начального и среднего образования. У таджикской школы их одиннадцать, поэтому это условие надо обсуждать с приёмной комиссией до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Учатся на корейском: вуз пишет, что поступающий на первый курс должен иметь определённый уровень корейского, и что все занятия идут на корейском (английские курсы можно брать по выбору). Какой именно уровень нужен для приёма, на скачанных страницах не сказано — числа вуз здесь не называет.",
+      "evidence": "students entering the undergraduate program need to have a certain level of Korean language proficiency level",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи в своём FAQ пишет, что знать корейский в совершенстве и сдавать тест на знание языка для поступления не обязательно, и что правила о языке у каждого вуза свои. То есть порог для Ajou эти страницы не называют — его надо спросить у приёмной комиссии.",
+      "evidence": "Foreigners do not necessarily have to possess excellent Korean language skills or pass the Korean Language Proficiency Test in order to apply for a Korean university.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Точных дат на 2027 год страницы не называют — вуз вывешивает расписание на каждый цикл отдельно. Вот прошлый осенний приём: заявка на английском пути шла с 6 апреля по 29 мая 2026 года. Отдельно идёт приём на корейском языке — с 11 мая по 10 июля 2026 года. Перед подачей смотри новое расписание на сайте приёмной комиссии.",
+      "evidence": "2026 Fall Admission Application Monday, April 6, 2026 ~Friday, May 29, 2026",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Учёба платная. За семестр: инженерия, IT и информатика — 4 916 долларов; естественные науки — 4 349; бизнес — 3 748; международный бизнес — 4 050 (корейский поток) и 4 270 (английский); гуманитарные и социальные науки — 3 748. Вместе с общежитием (516–1 569), питанием (около 1 200) и книгами (100) выходит 5 564–7 785 долларов за семестр.",
+      "evidence": "Engineering, Information Technology, Computing & Informatics: $4,916 Natural Sciences: $4,349 Business Administration: $3,748 International Business(Korean Track): $4,050 International Business(English Track): $4,270 Humanities, Social Sciences : $3,748 Global IT (Transfer Chinese Track): $5,143",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плату за семестр можно закрыть стипендией за язык: полное освобождение — TOPIK 6 или IELTS 8.0 или TOEFL iBT 100; 70% — TOPIK 5 / IELTS 7.0 / TOEFL 90; 50% — TOPIK 4 / IELTS 6.5 / TOEFL 80; 30% — TOPIK 3 / IELTS 5.5 / TOEFL 75. Это стипендии для поступивших, а не порог приёма.",
+      "evidence": "Ajou Global Scholarship 1 100% of tuition waiver (1 semester) TOPIK Level 6 IELTS 8.0 TOEFL iBT 100",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На первый курс иностранцев берут в инженерные и IT-направления, естественные науки, бизнес (включая международный бизнес, где есть английский поток), гуманитарные и социальные науки. Медицины, искусства и права в списке международного приёма нет.",
+      "evidence": "Business Administration International Business - International Business Major (English track is available) - IT Business Major (English track is available)",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Для подающих документы это удобно: вуз получил высшую категорию IEQAS («Excellent Certified University») на 2025 год — с такой категорией иностранцам упрощают проверку документов на визу.",
+      "evidence": "Institutions with this status receive administrative benefits, including simplified visa screening procedures for international students",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.ajou.ac.kr/iadmissions_en/index.do",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Ajou University (Университет Ачжу), кампус в Сувоне, около 30 км к югу от Сеула"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.ajou.ac.kr/iadmissions_en/index.do",
+    "pages": [
+      {
+        "url": "https://www.ajou.ac.kr/iadmissions_en/index.do",
+        "contentHash": "sha256:417bc64980b9f1040e3b9ed99f40f871b6e181b3f0610bd5e2b4e8a62ca65391"
+      },
+      {
+        "url": "https://www.ajou.ac.kr/en/admission/overview.do",
+        "contentHash": "sha256:8c58d552a084d43cea6de328302961fc92a55443015ee3d4862a26e8b792db13"
+      },
+      {
+        "url": "https://www.ajou.ac.kr/en/admission/college-of-engineering.do",
+        "contentHash": "sha256:b8f6c0ee2fc2b938726f9de4257a4edc738d067f9ea2e94d25b2d27b284f7128"
+      },
+      {
+        "url": "https://www.ajou.ac.kr/iadmissions_en/undergraduate/intro.do",
+        "contentHash": "sha256:e611071ca6aa357e1b179889bec8e95ea2c35bd8a18d5cfb011075908b2d867b"
+      },
+      {
+        "url": "https://www.ajou.ac.kr/iadmissions_en/undergraduate/major.do",
+        "contentHash": "sha256:6950d01d9ecf9d588dc18820cb24f8c32e584bd9799d792d85984942dfd2ba0f"
+      },
+      {
+        "url": "https://www.ajou.ac.kr/iadmissions_en/undergraduate/tuition.do",
+        "contentHash": "sha256:ea7fee4d643105622c3152e6b1a1081a00bb960f8dfc8985e939a81382be1516"
+      },
+      {
+        "url": "https://www.ajou.ac.kr/iadmissions_en/undergraduate/scholarship.do",
+        "contentHash": "sha256:5d3bf3f06538479125200b16c6416bbcff975d4d887d171a1c413394f979cf98"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}

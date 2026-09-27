@@ -1,0 +1,249 @@
+{
+  "id": "handong",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts"
+  ],
+  "name": {
+    "ru": "Handong Global University (Хандон, Пхохан) — христианский вуз; заявка только онлайн, плата за семестр от 3,17 млн вон, за TOPIK 6 первый семестр учат бесплатно",
+    "orig": "Handong Global University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обещания учить всех бесплатно страница не даёт: учёба платная (на осень 2025 это 3 171 000 вон за семестр на гуманитарных и общественных науках, 4 068 000 вон на инженерии и искусствах, 4 023 000 вон за первый семестр на первом курсе). Стипендии есть и крупные: Cornerstone закрывает плату, общежитие, питание и карманные расходы, но только 15 абитуриентам на поток; Presidential даёт плату и общежитие на 4 года; за TOPIK 4 или IELTS 5,5 дают 50% платы за первый семестр. Всё это не право, а отбор."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "you are not of a Korean nationality"
+    },
+    "schoolCountry": {
+      "notMeasured": true,
+      "evidence": "Students that hold nationalities and graduate from High schools in all countries (except Republic of Korea) can apply"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "age": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education, you are not of a Korean nationality, and you have a good academic standing in previous education."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "you have a good academic standing in previous education"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "All Cornerstone scholarship applicants MUST submit a language test result. e.g. TOEFL, IELTS, IB, TEPS, TOPIK"
+    },
+    "exam": {
+      "notMeasured": true,
+      "evidence": "The percentage will be according to the total score of Step 1 (document screening) & Step 2 (interview) combined"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут те, у кого нет корейского гражданства: министерство образования Кореи пишет в своём FAQ, что иностранцем считается тот, у кого корейского гражданства нет. Это определение страны, а не проверка школы: где ты учился и сколько лет, оно не ограничивает.",
+      "evidence": "you are not of a Korean nationality",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "У Handong есть своё уточнение: для двух главных стипендий — Cornerstone и Presidential — мало быть некорейцем самому, иностранцами должны быть и абитуриент, и его родители. Это условие стипендии, а не приёма: без него подать можно, но полную оплату не дадут.",
+      "evidence": "Both the applicant and his/her parent(s) must be foreigners (non-Korean citizens)",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет начального и среднего образования. У таджикской школы их одиннадцать, поэтому это условие надо обсуждать с приёмной комиссией до подачи, а не в день закрытия приёма.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Минимального балла аттестата страницы Handong не называют: своими словами вуз просит незаурядную успеваемость и соответствие тому, кого он ищет, а министерство образования Кореи говорит про хорошую успеваемость без числа. Решают документы и собеседование вместе, а не один средний балл.",
+      "evidence": "He/she must demonstrate outstanding academic achievement and must match the characteristics sought by HGU",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Стипендию держат, пока средний балл не ниже 3,0 каждый семестр: упал ниже или получил взыскание от комитета — права на стипендию лишают навсегда. Это условие не для подачи, а для того, чтобы помощь не отобрали.",
+      "evidence": "Recipients must maintain a GPA of at least 3.0 each semester to retain eligibility for the scholarship",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Обязательного уровня языка для приёма скачанные страницы Handong не называют: ни TOPIK, ни IELTS, ни TOEFL. Министерство образования Кореи при этом напоминает, что знать корейский и сдавать TOPIK для подачи в корейский вуз не обязательно, а правила у каждого вуза свои. Поэтому здесь «не измерено», а не «ограничения нет»: отказывать по языку нечем.",
+      "evidence": "Foreigners do not necessarily have to possess excellent Korean language skills or pass the Korean Language Proficiency Test in order to apply for a Korean university.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Путь без сертификата существует, и не один. У Handong есть список специальностей, которые учат на английском (ниже), а министерство образования Кореи пишет, что вузы держат интенсивные курсы корейского для иностранцев и всё больше программ ведут только на английском. Если сертификата нет, сначала спроси приёмную комиссию про языковой курс и английские специальности — не отказывай себе самой.",
+      "evidence": "To support the study of foreigners, universities in Korea offer intensive Korean language training courses and are operating a growing number of courses taught exclusively in English and other foreign languages.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Для главной стипендии языковой сертификат обязателен: заявку на Cornerstone без результата теста не рассматривают. Подойдёт любой из списка — TOEFL, IELTS, IB, TEPS или TOPIK, то есть и корейский, и английский открывают одну и ту же дверь.",
+      "evidence": "All Cornerstone scholarship applicants MUST submit a language test result. e.g. TOEFL, IELTS, IB, TEPS, TOPIK",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Специальности, которые Handong учит на английском: Architecture and Civil, Counseling Psychology, Economics, English, Global Convergence Studies, Global Management, ICT Convergence, Information Technology, Life Science, U.S. & International Law, Urban and Environmental Engineering. Про весь бакалавриат страница так не говорит: вне этого списка английского может не быть, это уточняй в приёмной комиссии.",
+      "evidence": "Majors Offered in English Architecture and Civil Counseling Psychology Economics English Global Convergence Studies Global Management ICT Convergence Information Technology Life Science U.S. & International Law Urban and Environmental Engineering",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Стипендия за корейский: TOPIK 4 — 50% платы, TOPIK 6 — 100% платы за первый семестр. Балл должен быть действителен на дату закрытия приёма.",
+      "evidence": "Students with a valid Korean Language Proficiency (TOPIK) Score (at the time of Application Deadline) Coverage TOPIK Level 4 TOPIK Level 6 50% of Tuition Scholarship 100% of Tuition Scholarship",
+      "field": "language",
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия за английский: TOEFL iBT 85 и выше, IELTS 5,5 и выше или TEPS 600 и выше (это новый TEPS 430) дают 50% платы за учёбу. Балл должен быть действителен на дату закрытия приёма.",
+      "evidence": "Students with a valid English Language Score (at the time of Application Deadline) Coverage TOEFL iBT 85 and above IELTS Level 5.5 and above TEPS 600 and above (equivalent to New TEPS 430 and above)",
+      "field": "language",
+      "kind": "money"
+    },
+    {
+      "ru": "Cornerstone — самая крупная стипендия: плата за учёбу целиком, взнос за зачисление, общежитие, питание, а на семестрах ещё и карманные расходы около 200 000 вон в месяц. Дают её только 15 абитуриентам на поток, и жить стипендиат обязан в общежитии.",
+      "evidence": "Limited to 15 recipients including freshmen and transferring students Coverage Type A (Tuition 100%) During semesters: • Admission Fee • Tuition Fee • Dormitory Fee • Meals • Daily Expenses (about 200,000 KRW per month)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Корейский нужен, чтобы удержать Cornerstone: с 5-го семестра стипендию продлевают только тем, у кого есть TOPIK 2. Обойтись совсем без корейского на этой стипендии не выйдет.",
+      "evidence": "Only Students who obtains TOPIK level 2 will continue to receive the Cornerstone Scholarship from the 5th semester.",
+      "field": "language",
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Presidential — для лучшего студента из стран, которые не подходят под Cornerstone: плата за учёбу и общежитие целиком на 4 года. Условие то же — держать средний балл не ниже 3,0.",
+      "evidence": "100% of Tuition Fee, Dormitory Fee for 4 years",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Christian Leaders Scholarship — 50% платы, шесть человек в год. Подать могут иностранцы, окончившие школу в любой стране, кроме Кореи: это единственное место, где страница говорит про страну школы.",
+      "evidence": "Coverage 6 Students per Year • 50% of Tuition as Scholarship",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за семестр на осень 2025: первый семестр первого курса 4 023 000 вон, второй семестр 3 843 000 вон, гуманитарные и общественные науки 3 171 000 вон, инженерия и искусства 4 068 000 вон, смешанные направления 3 618 000 вон. Плата зависит от направления, поэтому готовься считать по своей специальности.",
+      "evidence": "Tuition (per semester, as of FALL 2025) Freshman (1st Semester) 4,023,000 KRW Freshman (2nd Semester) 3,843,000 KRW Humanities & Social Science 3,171,000 KRW Engineering & Arts 4,068,000 KRW Combination of Areas (Humanities & Social Science + Engineering & Arts) 3,618,000 KRW Visiting Students 3,000 USD",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Размер платы пересматривают каждый январь, поэтому суммы выше относятся к осени 2025 и к твоему году будут другими. Обменникам плату снимают полностью или частично по договору между вузами — на первокурсника это не распространяется.",
+      "evidence": "Tuition fees vary depending on your area of study. Every year, in January, the tuition fees will be decided, thus, it is subject to change.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Точных дат на скачанных страницах нет: вуз пишет, что даты приёма на 2027 год вынесены на отдельную страницу «Admissions Process», и там же лежат формы заявки. Чисел здесь не печатают, выдумывать их нельзя — открой эту страницу перед подачей.",
+      "evidence": "Admissions Process Dates for 2027 Undergraduate Admissions",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявку принимают только через онлайн-систему на английском сайте вуза. Лично и по почте документы не принимают — это отличие от вузов, которые просят распечатать форму и отправить письмом.",
+      "evidence": "All applications must be submitted through the online application system on the University's English website. In-person and postal applications will not be accepted.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявка считается поданной, только когда отправлена онлайн-форма, загружены все обязательные документы и оплачен взнос за подачу. Размер взноса на скачанных страницах не назван — смотри страницу подачи.",
+      "evidence": "An application is considered complete only when the online application form has been submitted, all Required Documents have been uploaded, and the Application Fee has been paid.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Отбор идёт в два шага: сначала документы, потом собеседование. Проценты стипендии Outstanding International Students считают по сумме баллов двух шагов — то есть собеседование влияет и на поступление, и на размер помощи.",
+      "evidence": "The percentage will be according to the total score of Step 1 (document screening) & Step 2 (interview) combined",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Вуз христианский: школы и кафедры подписаны библейскими строками, например «A Christ Centered Foundation for Global Leaders» у Global Leadership School. Требований к вероисповеданию при поступлении страницы не называют.",
+      "evidence": "A Christ Centered Foundation for Global Leaders",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.handong.edu/eng/admission/undergraduate/application/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Handong Global University, кампус в Пхохане (Пук-ку, Кёнсан-Пукто)"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.handong.edu/eng/admission/undergraduate/",
+    "pages": [
+      {
+        "url": "https://www.handong.edu/eng/admission/undergraduate/",
+        "contentHash": "sha256:8973e9a27fbc2588a66e708f951ea14f9409880a42f8d3afc6f3a06f17f00ec7"
+      },
+      {
+        "url": "https://www.handong.edu/eng/admission/undergraduate/application/",
+        "contentHash": "sha256:8973e9a27fbc2588a66e708f951ea14f9409880a42f8d3afc6f3a06f17f00ec7"
+      },
+      {
+        "url": "https://www.handong.edu/eng/admission/undergraduate/tuition/",
+        "contentHash": "sha256:869d03265e5bceb51ffa93b97ed733a9d4280c183616d0dd928024c4eccc0f3b"
+      },
+      {
+        "url": "https://www.handong.edu/eng/academics/undergraduate/schools/",
+        "contentHash": "sha256:d7fdce58ee0b826de721a08ee9ff7a561a21ed75cbf6486b5b5dd4b53548b702"
+      },
+      {
+        "url": "https://www.handong.edu/eng/admission/undergraduate/scholarship/",
+        "contentHash": "sha256:e8edf5a2dd19ad706eb454be0845085228360f7be708b8bc970d1aa20fbcb943"
+      },
+      {
+        "url": "https://www.handong.edu/eng/academics/undergraduate/english-programs/",
+        "contentHash": "sha256:a7d5fa534c85155077e3aaa37daebc5f9373d02b07ca917e5b6f8a828061ae91"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}

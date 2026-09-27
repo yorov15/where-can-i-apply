@@ -1,0 +1,192 @@
+{
+  "id": "inha-univ",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "Inha University (Инха, Инчхон) — головной вуз в Корее, приём иностранцев по документам; конкретных тестов и баллов языка страница не называет",
+    "orig": "Inha University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Плату за обучение, жильё и дорогу эти страницы не называют — вуз отправляет за ними на сайт International Center. Отдельная стипендия для иностранцев (Global Scholarship) существует: её размер определяют при зачислении."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "you are not of a Korean nationality"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена: страница называет аттестат школы и иностранный аттестат, списка стран нет"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "application form, high school diploma, foreign language proficiency certificate, cover letter, study plan, recommendation letter, bank account certificate, passport copy etc."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "минимального балла аттестата страница не называет: поступление решает проверка документов, а не порог по оценкам"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "foreign language proficiency certificate"
+    },
+    "exam": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "SAT и ACT на этих страницах не упоминаются: экзамен поступления вуз не называет"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут только те, у кого нет корейского гражданства: министерство образования Кореи пишет в своём FAQ, что иностранцем считается тот, у кого корейского гражданства нет. Сама страница Inha про гражданство молчит, поэтому основание здесь — общее правило Кореи для иностранных студентов.",
+      "evidence": "you are not of a Korean nationality",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Иностранная стипендия Global Scholarship прекращается, когда студент получает корейское гражданство, — этот путь приёма связан с иностранным гражданством.",
+      "evidence": "When a student obtains Korean nationality.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет начального и среднего образования. У таджикской школы их одиннадцать, поэтому это условие надо обсуждать с приёмной комиссией до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Среди обязательных документов — сертификат владения иностранным языком. Какой именно тест и с каким баллом, страница не пишет.",
+      "evidence": "foreign language proficiency certificate",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Ни TOEFL, ни IELTS, ни TOPIK, ни внутренний экзамен, ни окончание языкового курса на этих страницах не названы. Поэтому то, что в анкете нет твоего сертификата, — не отказ: какой тест и какой балл нужен, спрашивай в приёмной комиссии.",
+      "evidence": "foreign language proficiency certificate",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Решение принимают по проверке документов, отдельного минимального балла аттестата страница не называет. Аттестат при этом входит в список обязательных документов, так что оценки всё равно поедут вместе с заявкой.",
+      "evidence": "Admission review process will be done by document screening",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Приём назван месяцами без чисел и без года: на март (весенний семестр) заявки принимают с середины октября до начала ноября предыдущего года, на сентябрь (осенний) — с середины апреля до середины мая.",
+      "evidence": "Admission for March (Spring semester): mid-October ~ early November of previous year Admission for September (Fall semester): mid-April ~ mid-May",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Точных дат на странице нет — только «середина октября» и подобное, год не напечатан. Всё остальное про поступление (требования, программы, стипендии, плата) вуз держит на сайте International Center.",
+      "evidence": "For more information about undergraduate program admissions including qualifications, available academic programs, scholarships and tuition, please go to our International Center Website",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Документы для подачи: заявка, аттестат школы, сертификат владения иностранным языком, сопроводительное письмо, план учёбы, рекомендация, справка из банка и копия паспорта.",
+      "evidence": "application form, high school diploma, foreign language proficiency certificate, cover letter, study plan, recommendation letter, bank account certificate, passport copy etc.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Подача идёт онлайн: заявку заполняют на сайте, а документы к ней прикладывают.",
+      "evidence": "online application and submission of required documents",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для иностранцев есть отдельная стипендия Global Scholarship: её дают тем, кто прошёл специальный отбор для иностранцев. Размер — от полной платы за обучение до её четверти — зависит от оценок за прошлый семестр, а на первом курсе его определяют при зачислении.",
+      "evidence": "International students who have passed the special admission process for foreigners.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://eng.inha.ac.kr/eng/3713/subview.do",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: головной Inha University, кампус в Инчхоне. Это не филиал Inha University in Tashkent (IUT) — про него отдельная запись."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://eng.inha.ac.kr/eng/3713/subview.do",
+    "pages": [
+      {
+        "url": "https://eng.inha.ac.kr/eng/3713/subview.do",
+        "contentHash": "sha256:a62cff7d3eab8a308975bce31abdaac35ef7128d457925a5ae85e235226b2653"
+      },
+      {
+        "url": "https://eng.inha.ac.kr/eng/3681/subview.do",
+        "contentHash": "sha256:13b6d4c1e0d0b9655cec1a569dd6510a2cfa13b1d513f7ceb54fb77ca762c1f4"
+      },
+      {
+        "url": "https://eng.inha.ac.kr/eng/3707/subview.do",
+        "contentHash": "sha256:1b1e2ddf0d95ae384a2121455c60df0debe4a9b8b31efbb3b671dd1839bfd6b4"
+      },
+      {
+        "url": "https://eng.inha.ac.kr/eng/3705/subview.do",
+        "contentHash": "sha256:7bdc5f867563d9c9a0dc10098acab5597646986e2f6e619ec8cc2af92f363ca7"
+      },
+      {
+        "url": "https://eng.inha.ac.kr/eng/3706/subview.do",
+        "contentHash": "sha256:b4f0d5d49402762d416b11e323d3ef37a275f77f00eb44d545086f144588f585"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}

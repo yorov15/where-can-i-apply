@@ -1,0 +1,221 @@
+{
+  "id": "sookmyung",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts"
+  ],
+  "name": {
+    "ru": "Sookmyung Women's University (Суктимён, Сеул) — женский вуз: TOPIK 3 или английский трек с IELTS 5,5; точные даты трёх волн приёма",
+    "orig": "Sookmyung Women's University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полной оплаты нет, но за язык снимают заметную часть платы уже в первом семестре: TOPIK 6 — 90%, 5 — 70%, 4 — 60%, 3 — 40%; без TOPIK 30% (на искусствах 20%). Дальше скидка зависит от GPA и уровня TOPIK и доходит до полной платы. Отдельной заявки на стипендию нет."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "1. Female students whose parents both hold foreign nationalities"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена: гид называет школу «в своей стране или за границей», списка стран нет"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Applicants must have graduated (or to be expected) from accredited high schools"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст в гиде не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "минимального балла аттестата гид не называет: GPA влияет на стипендию, а не на допуск"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "A. TOPIK (include IBT) level 3 or higher"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Это женский вуз: берут только девушек. Родители оба должны быть иностранцами, а у самой поступающей корейского гражданства быть не должно. Двойное гражданство — основание для отказа.",
+      "evidence": "1. Female students whose parents both hold foreign nationalities",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Если корейское гражданство было сменено на иностранное, сделать это надо было до поступления в старшую школу, и родители тоже должны были сменить или отказаться от корейского до того же момента.",
+      "evidence": "Students who changed their Korean nationality to a foreign nationality before entering high school",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет начального и среднего образования. У таджикской школы их одиннадцать, поэтому это условие надо обсудить с приёмной комиссией до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестат нужен настоящей школы. Справки об эквивалентности — GED, домашнее обучение, онлайн-школа — не принимают, даже если их кто-то признаёт.",
+      "evidence": "High school equivalency certifications, such as GED programs, homeschooling, or online learning, will not be accepted",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Корейский трек (большинство отделений): TOPIK 3 и выше, либо оконченный третий уровень языкового института Sookmyung, либо третий уровень их собственного теста корейского, либо третий уровень языкового института другого вуза.",
+      "evidence": "A. TOPIK (include IBT) level 3 or higher B. Completion of Level 3 or higher at the Sookmyung Global Language Institute (expected) C. Achieving Level 3 or higher on the Korea",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский трек (School of English TESL и Global Service): один из трёх тестов — IELTS 5,5, новый TOEFL iBT 3,5 или новый TEPS 327. TOPIK здесь не нужен. Кто порог не выполнил, на этот трек не подаёт.",
+      "evidence": "TOEFL iBT 3.5, IELTS 5.5, New TEPS 327 or higher, or a nationally recognized English proficiency test score equivalent to the required level (TOPIK scores are not required).",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Отделения Hallyu Studies и Interdisciplinary Studies берут без знания языка вообще, но после зачисления надо пройти не меньше 300 часов корейского.",
+      "evidence": "Applicants can apply regardless of language proficiency.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если язык подтверждён институтом или их тестом, а не TOPIK, вуз даёт условное зачисление: с первого курса корейского нет. Пока TOPIK 3 не получен, берут академический отпуск. Учиться на корейском треке и получить диплом можно только с TOPIK 4 к выпуску (на искусствах и физкультуре хватит 3).",
+      "evidence": "Students who do not have TOPIK level 3 or higher → Take a leave of absence until an acceptable score is obtained → Class begins",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Сроки весеннего приёма 2027 идут тремя волнами. Первая: заявка 7–16 октября 2026, документы до 30 октября, итоги 27 ноября. Вторая: заявка 6–20 ноября, документы до 27 ноября, итоги 6 января 2027. Третья: заявка 3–18 декабря, документы до 18 декабря, итоги 15 января 2027. Занятия с 2 марта 2027.",
+      "evidence": "2026 Oct. 7 (Wed.) 10:00 ~ Oct. 16 (Fri.) 17:0 0 2026 Nov. 6 (Fri.) 10:00 ~ Nov. 20 (Fri.) 17:00 2026 Dec. 3 (Thu.) 10:00 ~ Dec. 18 (Fri.) 17:00",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "В третьей волне участвовать могут только те, кто уже живёт в Корее; остальным надо написать в вуз до подачи.",
+      "evidence": "*Only residents of Korea are eligible to apply.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Документы принимают почтой или лично, но не письмом на email: онлайн-форму заполняют, распечатывают и отправляют вместе с документами.",
+      "evidence": "By postal mail or inperson (Not by email)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу 150 000 вон, не возвращается. Платят через систему Jinhaksa: перевод на банковский счёт вуза не засчитают.",
+      "evidence": "1. KRW 150,000",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 150000,
+        "currency": "KRW",
+        "evidence": "Application Fee 1. KRW 150,000"
+      }
+    },
+    {
+      "ru": "На художественных отделениях отбор не по документам: танец, фортепиано, вокал, композиция, инструменты, а также дизайн среды, промышленный и визуально-медийный дизайн проходят собеседование. Кто не может приехать, проходит его по телефону или видео.",
+      "evidence": "If you are unable to attend the interview due to being overseas, a phone interview (or video interview) may be conducted.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Свой экзамен по практике сдают танцоры и музыканты, а также живопись и декоративно-прикладное искусство. Для тех, кто подаёт из-за границы, предусмотрена замена экзамена.",
+      "evidence": "Alternative practical examination for students applying out of Korea",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Стипендия за язык на первый семестр: TOPIK 6 — 90% платы, 5 — 70%, 4 — 60%, 3 — 40%. Без TOPIK тоже дают: 30% на нехудожественных отделениях и 20% на художественных. На английском треке IELTS 8,0 или новый TOEFL 6 — 70%. Заявку подавать не нужно.",
+      "evidence": "TOPIK(iBT) Level 6 90% Tuition Waiver",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Дальше стипендию считают по GPA и уровню TOPIK: при GPA 4,0 и TOPIK 6 снимают всю плату, дальше ступенями до 10% у тех, у кого TOPIK нет вовсе. Нужно набирать больше 12 кредитов за семестр, дают не дольше восьми семестров. За TOPIK 4 в первый год после зачисления платят разово 300 000 вон.",
+      "evidence": "A scholarship of 300,000 KRW will be awarded if the applicant achieves a TOPIK level 4 or higher within one year of enrollment",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общежитие дают только иностранкам, у которых оба родителя не корейцы.",
+      "evidence": "Accepted students who have been accepted as international students whose parents are both non-Korean Citizens.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-10-07",
+    "closes": "2026-12-18",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://e.sookmyung.ac.kr/_res/sookmyung//etc/2027%20Spring%20Admission_Undergraduate_EN.pdf",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Sookmyung Women's University, Сеул"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://e.sookmyung.ac.kr/en/admission/undergraduate.do",
+    "pages": [
+      {
+        "url": "https://e.sookmyung.ac.kr/en/admission/undergraduate.do",
+        "contentHash": "sha256:e1f60455f3500496239f01a1564f7523082a9717d75043774126d903dcb9f22e"
+      },
+      {
+        "url": "https://e.sookmyung.ac.kr/en/admission/admission-guide.do",
+        "contentHash": "sha256:345ddfc4f73d91295ff13066077d8cf92a7a1d14f4ce9b4e34d0815921c870eb"
+      },
+      {
+        "url": "https://e.sookmyung.ac.kr/en/admission/korean-scholarship.do",
+        "contentHash": "sha256:9e44abafb21509a77b7ddf70feda4c675556b03b95794642251e9f26ba34df40"
+      },
+      {
+        "url": "https://e.sookmyung.ac.kr/_res/sookmyung//etc/2027%20Spring%20Admission_Undergraduate_EN.pdf",
+        "contentHash": "sha256:5a4fa0346b88daf44a47be5b95fb5b5cba736c6391bc706980da517ddb671250"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "id": "hongik",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "humanities",
+    "arts"
+  ],
+  "name": {
+    "ru": "Hongik University (Хоник, Сеул) — главный художественный вуз Кореи: живопись, скульптура, дизайн; TOPIK 4 освобождает от экзамена",
+    "orig": "Hongik University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полной оплаты при поступлении нет, но плату снимают за учёбу: с GPA 4,0 — всю, дальше 80%, 60%, 40% и 1 200 000 вон ступенями; отдельная стипендия иностранцам с TOPIK 5. Заявку на стипендию подавать не нужно, вуз отбирает сам."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "Both applicant and their parents must have obtained foreign citizenship before the applicant enters high school"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена: страница называет иностранное гражданство, а не страну школы"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "before the applicant enters high school"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "минимального балла аттестата страница не называет: балл влияет на стипендию, а не на допуск"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "will be exempted from the test"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут те, у кого иностранец не только сам, но и оба родителя, причём гражданство получено до того, как ты пошёл в старшую школу. Отец и мать считаются родные или приёмные, но не отчим и не мачеха.",
+      "evidence": "Both applicant and their parents must have obtained foreign citizenship before the applicant enters high school",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет начального и среднего образования. У таджикской школы их одиннадцать, поэтому это условие надо обсудить с приёмной комиссией до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Экзамен по корейскому сдавать не нужно, если есть TOPIK 4 или выше либо окончен четвёртый уровень корейского при языковом институте самого Hongik. Кто освобождён — экзамен не сдаёт; остальные его сдают.",
+      "evidence": "Applicants who acquired \"S-TOPIK (Standard Test of Proficiency in Korean, http://www.topik.go.kr)\" Level 4 Certificate or have completed \"Level 4 Korean course at the International Institute of Language at Hongik University\" will be exempted from the test.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Отбор считают по-разному: у гуманитарных и естественных направлений 80 баллов за документы и 20 за собеседование, а у художественных — 60 за документы и 40 за собеседование. Для художников собеседование весит вдвое больше.",
+      "evidence": "Humanities (including Liberal Arts Studies) Document Review : 80 Interview : 20 Sciences Document Review : 80 Interview : 20 Fine Arts (excluding Arts Studies (theory)) Document Review : 60 Interview : 40",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Вузов два кампуса и девять колледжей: инженерия, архитектура, бизнес, гуманитарные науки, право, экономика, изящные искусства, науки и технологии Седжона, дизайн и искусства, игровое ПО. Медицинского факультета нет.",
+      "evidence": "Fine Arts Arts Art Studies Oriental Painting Painting Printmaking Sculptures Design Visual Communication Design / Industrial Design Metal Art and Design Ceramics and Glass Woodworking and Furniture Design Textile Art and Fashion Design",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Стипендия за оценки: при GPA 4,0 и выше платят всю плату за обучение, при 3,5–4,0 — 80%, 3,0–3,5 — 60%, 2,5–3,0 — 40%, 2,0–2,5 — 1 200 000 вон. Нужно набрать 12 кредитов за прошлый семестр. В архитектуре и изящных искусствах стипендию получают только лучшие 3% по GPA.",
+      "evidence": "GPA in previous semester : 4.0 or more Amount of payment : All tuition",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельная стипендия для иностранцев: поступающим с TOPIK 5 и выше. Заявку подавать не надо — вуз отбирает сам.",
+      "evidence": "International Scholarship Qualifications : Freshmen with TOPIK II level 5 and above",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Если первый семестр — курс корейского и все предметы сданы (15 кредитов), платят 900 000 вон. Студентам архитектуры и изящных искусств это не положено.",
+      "evidence": "if a student completes all subjects (15 credits), the process as same as described above and KRW 900,000 is paid",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Порядок поступления: онлайн-заявка, документы, проверка соответствия, отбор, решение, донесение документов, регистрация, письмо о зачислении, запись на курсы, начало семестра.",
+      "evidence": "Online Application → Required Document Submission → Qualification Evaluation → Screening → Admission Decision → Additional Document Submission → Registration → Acceptance Letter → Course Registration → Semester Starts",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.hongik.ac.kr/en/admissions/admissions-guide.do",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Hongik University, кампусы в Сеуле и Седжоне"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.hongik.ac.kr/en/admissions/admissions-guide.do",
+    "pages": [
+      {
+        "url": "https://www.hongik.ac.kr/en/admissions/admissions-guide.do",
+        "contentHash": "sha256:40b4ab592a192a4b3391190ac9c701d27557d1e8140c36f6a5d9889c45747fd1"
+      },
+      {
+        "url": "https://www.hongik.ac.kr/en/admissions/apply.do",
+        "contentHash": "sha256:625fa0d6b2666148d04bd06f7273fec69eaa51772372d7ade2c3487ee2bec790"
+      },
+      {
+        "url": "https://www.hongik.ac.kr/en/academics/intro-faculty-detail.do",
+        "contentHash": "sha256:8e887d6f8b494c7a7e2a04eb6007f1fc2ab6b86073c238e82e126780ae1ec6e0"
+      },
+      {
+        "url": "https://www.hongik.ac.kr/en/academics/hongik-global-scholarship.do",
+        "contentHash": "sha256:c6c705c015cab290d738cf467aede665dc862e69c1bd410e5f36df6b544c3f6a"
+      },
+      {
+        "url": "https://www.hongik.ac.kr/kr/admission/recruitment-is.do",
+        "contentHash": "sha256:31cd70d9155a527f10f4e349f6265ad0b85b5f67a75575332c46632b425b58d2"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id": "cnu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "Chungnam National University (CNU, Тэджон) — государственный вуз, приём иностранцев; TOPIK 3 или TOEFL 71 / IELTS 5,5, взнос 60 000 вон",
+    "orig": "Chungnam National University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полной оплаты страница не обещает. Вуз государственный, плата ниже частных, но на этой странице она не названа — смотри счёт после зачисления."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "you are not of a Korean nationality"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена: страница называет иностранный аттестат, списка стран нет"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Graduation certificate and transcripts of high school"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "минимального балла аттестата страница не называет: решают документы и собеседование"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "An international student should receive the Test of proficiency in Korean (TOPIK) score level 3 or higher."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут только те, у кого нет корейского гражданства: министерство образования Кореи пишет в своём FAQ, что иностранцем считается тот, у кого корейского гражданства нет. Про гражданство родителей эта страница молчит.",
+      "evidence": "you are not of a Korean nationality",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет начального и среднего образования. У таджикской школы их одиннадцать, поэтому это условие надо обсуждать с приёмной комиссией до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Корейский: TOPIK уровня 3 и выше. Уровень 3 и выше по тесту корейского при языковом центре самого CNU тоже подходит, а окончание курса корейского уровня 4 и выше — тем более.",
+      "evidence": "An international student should receive the Test of proficiency in Korean (TOPIK) score level 3 or higher.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Вместо корейского подойдёт английский: TOEIC 700, TOEFL iBT 71, TEPS 600, новый TEPS 327 или IELTS 5,5. TOEIC и TEPS анкета не знает, поэтому здесь они только текстом — человек с одним таким сертификатом не получит отказа.",
+      "evidence": "Minimum accepted scores are : TOEIC 700, TOEFL (iBT 71), TEPS 600, New TEPS 327, IELTS 5.5 from a recognized English proficiency test.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Первый этап — только документы, решение принимают по ним и по собеседованию. Оценки за аттестат смотрят вместе с остальными документами, отдельного минимального балла страница не называет.",
+      "evidence": "The admission will be determined by initial document review & the interview",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Сроки названы по семестрам, без года и чисел: осенний приём — заявка в конце мая, тест корейского в конце апреля, собеседование в середине июня, итоги в начале июля, оплата в середине июля. Весенний: заявка в конце ноября, тест в конце октября, собеседование в середине декабря, итоги в начале января, оплата в середине января.",
+      "evidence": "Application Deadline Late May Late November Korean test Late April Late October Interview Mid June Mid December Notification of successful applicants Early July Early January Tuition payment Mid July Mid January",
+      "field": "graduationYear",
+      "kind": "steps"
+    },
+    {
+      "ru": "Точных дат на странице нет — только «конец мая» и подобное, и год не напечатан. Перед подачей смотри расписание на сайте приёмной комиссии.",
+      "evidence": "For the exact date of admission schedule, please refer to website.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Взнос за подачу 60 000 вон, не возвращается.",
+      "evidence": "Application Fee (Non-refundable) KRW 60,000",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 60000,
+        "currency": "KRW",
+        "evidence": "Application Fee (Non-refundable) KRW 60,000"
+      }
+    },
+    {
+      "ru": "Документы для первого курса: эссе о цели учёбы, аттестат и табель школы, копия паспорта, копия карты иностранца (если есть), справка о составе семьи от государственного органа, сертификат TOPIK или английского теста, подтверждение финансовой поддержки и справка из банка спонсора с остатком больше 16 000 000 вон.",
+      "evidence": "Sponsor's Bank Certificate with a balance of more than KRW 16,000,000",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Документы не на английском и не на корейском надо перевести и заверить.",
+      "evidence": "All the official documents not in English or in Korean must be translated into English or Korean and notarized.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Заявку подают по почте заказным письмом: онлайн-форму заполняют, распечатывают и отправляют вместе с документами, а не оставляют в системе.",
+      "evidence": "An applicant should submit an application form (After completing the online application, print it out)and required documents",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "После зачисления вуз присылает на почту свидетельство о зачислении и номер для визы, по ним оформляют студенческую визу D-2 в посольстве Кореи в своей стране.",
+      "evidence": "Apply for a D-2 student visa at the Korean Embassy in your home country.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://plus.cnu.ac.kr/html/en/sub03/sub03_0303.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Chungnam National University, кампус в Тэджоне"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://plus.cnu.ac.kr/html/en/sub03/sub03_0303.html",
+    "pages": [
+      {
+        "url": "https://plus.cnu.ac.kr/html/en/sub03/sub03_0303.html",
+        "contentHash": "sha256:1a6a1e1f93cbfe99442e68575a9d9242a4229871ad6379fb94d06a390fef6b8e"
+      },
+      {
+        "url": "https://plus.cnu.ac.kr/html/en/sub03/sub03_0302.html",
+        "contentHash": "sha256:77a7af81588c5bf89d7efb8c996e8e15a6875c2a4f642eb556fd472bddc6fce7"
+      },
+      {
+        "url": "https://plus.cnu.ac.kr/html/en/sub04/sub04_040101.html",
+        "contentHash": "sha256:a37ab875a7226a0a3d9d1fc1e7228f8326eedbaa41e02cb3e9dc7b9a49747848"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}

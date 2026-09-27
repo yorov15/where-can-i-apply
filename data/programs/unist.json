@@ -1,0 +1,163 @@
+{
+  "id": "unist",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural"
+  ],
+  "name": {
+    "ru": "UNIST (Ulsan National Institute of Science and Technology, Ульсан) — научно-технический вуз; всем новым студентам покрывают вступительный взнос и плату за обучение на 100%",
+    "orig": "울산과학기술원 (UNIST)"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "На корейской странице приёма сказано, что всем новым студентам вступительный взнос и плату за обучение покрывают на 100%. Слово «иностранец» в этой фразе не стоит: это общее обещание вуза, и распространяется ли оно на иностранцев, страница не уточняет. Жильё, питание и дорогу страница не называет вовсе."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "you are not of a Korean nationality"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена: ни на страницах UNIST, ни в FAQ министерства образования Кореи списка стран нет"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "года выпуска скачанные страницы UNIST не называют ни в одной строке: правила для иностранцев вуз держит на отдельном сайте International Undergraduate Admissions, которого в снимке нет. Ограничения не видно, но и подтвердить его отсутствие нечем — проверь сроки и год выпуска там"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст на скачанных страницах не упоминается ни разу"
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "you have a good academic standing in previous education"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Foreigners do not necessarily have to possess excellent Korean language skills or pass the Korean Language Proficiency Test in order to apply for a Korean university."
+    },
+    "exam": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "SAT и ACT на скачанных страницах не упоминаются; отдельного вступительного экзамена страница тоже не называет — отбор идёт по документам и собеседованию"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут только те, у кого нет корейского гражданства: министерство образования Кореи пишет в своём FAQ, что иностранцем считается тот, у кого корейского гражданства нет. Про гражданство родителей эта страница молчит — уточняй у приёмной комиссии.",
+      "evidence": "you are not of a Korean nationality",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет начального и среднего образования. У таджикской школы их одиннадцать, поэтому это условие надо обсуждать с приёмной комиссией до подачи.",
+      "evidence": "you must have completed more than twelve years of elementary to secondary education",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Правила приёма иностранцев корейские вузы устанавливают каждый сам — министерство прямо отсылает спрашивать вуз. Значит про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до подачи.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Отбор целостный: UNIST пишет, что выбирает людей с характером, творческим началом и глобальным мышлением и оценивает их со многих сторон. Проходного балла за аттестат страница не называет — какая цифра достаточна, не знает никто, кроме комиссии.",
+      "evidence": "UNIST는 인성과 창의성, 글로벌 마인드를 갖춘 인재를 다면적 평가를 통해 선발하고 있습니다.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Единственное, что об учёбе говорит министерство образования Кореи, — нужна «хорошая успеваемость в предыдущем обучении». Это оценка словами, числа нет ни у министерства, ни на скачанных страницах UNIST, поэтому балл аттестата здесь не проверяется.",
+      "evidence": "you have a good academic standing in previous education",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Своего порога по языку в снимке нет: на скачанных страницах UNIST ни TOPIK, ни IELTS, ни TOEFL не упомянуты ни разу. Министерство образования Кореи пишет в своём FAQ, что для подачи в корейский вуз не обязательно знать корейский на высоком уровне и сдавать TOPIK, но тут же оговаривается, что правила языка каждый вуз задаёт сам. Свои требования спрашивай на сайте International Undergraduate Admissions.",
+      "evidence": "Foreigners do not necessarily have to possess excellent Korean language skills or pass the Korean Language Proficiency Test in order to apply for a Korean university.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Всем новым студентам вуз покрывает вступительный взнос и плату за обучение на 100% — это обещание университета целиком, слово «иностранец» в нём не стоит. Если плата за учёбу решает, подавать ли, спроси приёмную комиссию письмом, что эта строка значит для тебя.",
+      "evidence": "서류 및 면접 전형을 통해 인재를 선발하며, 모든 신입생에게 입학금과 등록금을 100% 지원합니다.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отбор идёт по документам и собеседованию; отдельного вступительного экзамена страница приёма не называет.",
+      "evidence": "서류 및 면접 전형을 통해 인재를 선발하며, 모든 신입생에게 입학금과 등록금을 100% 지원합니다.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Требования к иностранцам UNIST держит на отдельном сайте International Undergraduate Admissions, и его страниц в снимке нет. Поэтому здесь нет ни сроков, ни платы за подачу, ни порога по языку — смотри расписание подачи и требования там и не считай отсутствие строки в этой карточке за отсутствие требования.",
+      "evidence": "학부 입학 홈페이지 International Undergraduate Admissions",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.unist.ac.kr/en/admissions/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: UNIST, кампус в Ульсане (울산광역시 울주군)"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.unist.ac.kr/en/admissions/",
+    "pages": [
+      {
+        "url": "https://www.unist.ac.kr/en/admissions/",
+        "contentHash": "sha256:ab8496da190078913e597c503acc919d8e8f6ff0b98f4cf2ae94a874e83d918b"
+      },
+      {
+        "url": "https://www.unist.ac.kr/unist/admissions/admissions.do",
+        "contentHash": "sha256:6a67a0d8edcabbc8f52413f6413e9c04305256eb713769fdbbe391222553104d"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}
