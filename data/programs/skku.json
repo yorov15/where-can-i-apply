@@ -2,7 +2,7 @@
   "id": "skku",
   "status": "published",
   "kind": "university",
-  "majors": ["any"],
+  "majors": ["cs", "engineering", "natural", "business", "social", "humanities", "arts", "medicine"],
   "name": {
     "ru": "Sungkyunkwan University (SKKU) — один из старейших вузов Кореи, есть английский трек, а для граждан Таджикистана — шанс на скидку 50% платы",
     "orig": "Sungkyunkwan University"
@@ -60,6 +60,12 @@
     }
   },
   "textConditions": [
+    {
+      "ru": "Вуз называет такие колледжи и факультеты: College of Confucian Studies and Eastern Philosophy, College of Liberal Arts (гуманитарные и языки), College of Social Sciences, College of Education (социальные), College of Economics, School of Business (экономика и бизнес), School of Art (искусство), College of Science, College of Biotechnology and Bioengineering (естественные), College of Information and Communication Engineering, College of Computing and Informatics, College of Engineering (инженерия и информатика), School of Pharmacy, School of Medicine (медицина).",
+      "evidence": "College of Confucian Studies and Eastern Philosophy College of Liberal Arts College of Social Sciences College of Economics School of Business College of Education School of Art College of Science College of Information and Communication Engineering College of Computing and Informatics College of Engineering School of Pharmacy College of Biotechnology and Bioengineering College of Sport Science School of Medicine",
+      "field": null,
+      "kind": "note"
+    },
     {
       "ru": "Подавать могут только те, у кого и у родителей нет корейского гражданства (двойное тоже закрывает подачу). Тому, кто был корейцем, нужны справки об отказе.",
       "evidence": "Non-Korean students whose parents are both non-Koreans",

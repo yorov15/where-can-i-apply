@@ -1,0 +1,222 @@
+{
+  "id": "hanyang",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "Hanyang University (Ханян, Сеул) — один из ведущих технических вузов Кореи, приём иностранцев на бакалавриат",
+    "orig": "Hanyang University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полной оплаты страница не обещает. Плата за обучение первокурсника на этих страницах не названа вовсе: числа, которые попадаются, — это про своих студентов, уезжающих по обмену, и про уже зачисленных. Стипендий для поступающих страница тоже не описывает: обе названные (Hanyang International Excellence Awards и TOPIK Scholarship) доступны только тем, кто уже учится. Сколько стоит год, смотри в счёте после зачисления"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "you are not of a Korean nationality"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена: страница называет иностранный аттестат, списка стран нет; требования к школе корейские вузы устанавливают каждый сам, и общего перечня стран в источнике нет"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed more than twelve years of elementary to secondary education"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Basic requirements are that you must have completed more than twelve years of elementary to secondary education, you are not of a Korean nationality, and you have a good academic standing in previous education."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст абитуриента на этих страницах не упоминается. Число 35 и TOEFL 91 стоят на странице про стипендию для выпускников Ханяна, уезжающих в магистратуру, — к поступлению на первый курс это не относится"
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "you have a good academic standing in previous education"
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "Admission regulations regarding language proficiency can differ among universities, so please check with each individual university of your interest for details."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут только те, у кого нет корейского гражданства. Министерство образования Кореи в своём FAQ перечисляет это как основное требование к иностранцу. Про гражданство родителей эта страница молчит.",
+      "evidence": "you are not of a Korean nationality",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Министерство образования Кореи пишет в своём FAQ, что иностранец должен иметь больше двенадцати лет начального и среднего образования. У таджикской школы их одиннадцать, поэтому это условие надо обсуждать с приёмной комиссией до подачи.",
+      "evidence": "Basic requirements are that you must have completed more than twelve years of elementary to secondary education, you are not of a Korean nationality, and you have a good academic standing in previous education.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Отдельного списка требований Ханяна на английском в источнике нет: министерство прямо отсылает спрашивать вуз, потому что правила приёма иностранцев каждый вуз устанавливает сам. Значит и про одиннадцать лет школы отвечает приёмная комиссия письмом, и спросить надо до подачи.",
+      "evidence": "decided differently by each university, so you will then need to contact universities directly",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский гид бакалавриата на этой странице лежит только файлом на скачивание, текстом его там нет — а сам файл оказался сканом PDF без текстового слоя, прочитать который нечем. Поэтому ни языка, ни среднего балла, ни дат в записи нет: молчание источника это «не измерено», а не «без ограничения».",
+      "evidence": "Undergraduate Admission Guide Download",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Плата за подачу в записи не стоит: страницы её не называют, а выдумывать число нельзя. Взнос и порядок подачи будут в том самом скане PDF — спроси приёмную комиссию.",
+      "evidence": "International Admission HOMEPAGE : https://oia.hanyang.ac.kr",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Министерство пишет, что знание корейского языка и сертификат TOPIK для поступления не обязательны: вузы открывают курсы корейского и всё больше программ только на английском. Что именно требует Ханян, министерство не говорит — отвечает вуз.",
+      "evidence": "Foreigners do not necessarily have to possess excellent Korean language skills or pass the Korean Language Proficiency Test in order to apply for a Korean university.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Правила по языку у каждого вуза свои, и министерство отсылает за ними в сам вуз. Языковой порог Ханяна надо спрашивать у приёмной комиссии письмом: на этой странице его нет.",
+      "evidence": "Admission regulations regarding language proficiency can differ among universities, so please check with each individual university of your interest for details.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Путь в обход языкового сертификата называет министерство: вузы Кореи открывают интенсивные курсы корейского и всё больше программ читают только на английском. То есть без IELTS и без TOPIK подать можно, а язык добрать уже на месте. Точный порог Ханяна эта страница не называет, поэтому в анкете он не записан и отказа не даёт.",
+      "evidence": "universities in Korea offer intensive Korean language training courses and are operating a growing number of courses taught exclusively in English and other foreign languages",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Осторожно: TOEFL 75 и IELTS 6,0 на страницах Ханяна — это требования к СВОИМ студентам, уезжающим по обмену в партнёрский вуз, а не к поступающим. В анкету они не записаны: у абитуриента-иностранца такого балла никто не спрашивает, и превратить их в порог значило бы выдать ложный отказ.",
+      "evidence": "Language requirements Table Caption English speaking countries (US,UK,AUS, CAN, IRE)",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Министерство называет требование к оценкам, но не числом: нужна «хорошая успеваемость» в прошлом обучении. Какую оценку за аттестат считают достаточной, страница не говорит — это решает приёмная комиссия.",
+      "evidence": "you have a good academic standing in previous education",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Стипендия Hanyang International Excellence Awards: её может получить иностранный студент, у которого есть сертификат TOPIK и средний балл не ниже 3,0 за прошлый семестр; нужна действующая страховка. Первый этап — только документы, второй — собеседование.",
+      "evidence": "International Students who have a TOPIK level certificate and achieved a minimum GPA of 3.0 for the previous semester.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "По этой стипендии плату снижают на 70%, 50% или 30% — размер зависит от результатов оценки; сначала платишь полностью, потом вуз возвращает разницу. Действует один семестр. Заявки принимают в начале марта и сентября, собеседование — в середине марта и сентября.",
+      "evidence": "Award amount: Recipients will receive 70%, 50% or 30% tuition reduction according to the evaluation results.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "С другими стипендиями, включая государственную GKS, эту совместить нельзя: получающие стипендию от других организаций к ней не допускаются.",
+      "evidence": "Those who are receiving other scholarships from other organizations, including GKS Scholarship, can't apply for this scholarship.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Отдельная маленькая стипендия TOPIK — 40 000 вон за взнос за сам тест с уровня 3 и 190 000 вон за получение уровня 4 и выше. Подавать на неё можно только уже учась на программе и только если уровень выше прежнего; сумма идёт на взнос за TOPIK, а не на плату за обучение.",
+      "evidence": "1) Admission fee: KRW 40,000 from level 3 2) Scholarship: KRW 190,000 at the acquirement of level 4 or above (refer to Application Criteria)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Год и числа на страницах не напечатаны: и приём, и стипендии описаны по семестрам — «начало марта и сентября», «середина марта и сентября». Точных дат нет, поэтому в записи они не стоят. Перед подачей смотри расписание приёмной комиссии на сайте.",
+      "evidence": "Online application: Every year beginning of March and September.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Приёмом иностранцев занимается Office of International Affairs (Офис международных дел): адрес, почта и телефоны для вопросов об иностранном приёме указаны на гиде бакалавриата. Вопросы о языке и о зачёте одиннадцати лет школы лучше задавать туда письмом.",
+      "evidence": "Inquiries for transfer, foreign nationals, professional graduate school admission : 82-2- 220-3080~3",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Вуз перечисляет свои колледжи бакалавриата (кампус в Сеуле): инженерия, медицина, сестринское дело, гуманитарные науки, общественные науки, естественные науки, политология, экономика и финансы, бизнес, педагогика, науки о быте, музыка, исполнительские искусства и спорт, международные исследования, технологические инновации. Отдельного колледжа информатики в списке нет, поэтому направление «информатика» не отмечено.",
+      "evidence": "Undergraduate Program Seoul Campus College of Engineering College of Medicine College of Nursing College of Humanities College of Social Sciences College of Natural Sciences College of Policy Science College of Economics & Finance College of Business College of Education College of Human Ecology College of Music College of Performing Arts & Sport College of International Studies College of Technology Innovation",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://oia.hanyang.ac.kr/admission",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Hanyang University, кампусы в Сеуле и в Ансане (ERICA)"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://oia.hanyang.ac.kr/admission",
+    "pages": [
+      {
+        "url": "https://oia.hanyang.ac.kr/admission",
+        "contentHash": "sha256:7b023271efacf7c31b0c04738e68632582d371e72f5e6698846e5793566bb91f"
+      },
+      {
+        "url": "https://www.hanyang.ac.kr/web/eng/admissions-guide",
+        "contentHash": "sha256:3bb55f764cf0ce30b633046efa0091a2c32d6d74fc2d9941c9d8846e3a216c23"
+      },
+      {
+        "url": "https://www.hanyang.ac.kr/web/eng/scholarships",
+        "contentHash": "sha256:5395fc22c00f32ac5e284b562d50233080a8e9c7c4d79ed9c0ba31992db089f7"
+      },
+      {
+        "url": "https://www.hanyang.ac.kr/web/eng/global_edu",
+        "contentHash": "sha256:2de923ac191faf757151d76962b6e4de19fcb44811010b4f0834162477de438a"
+      },
+      {
+        "url": "https://www.hanyang.ac.kr/web/eng/global_s",
+        "contentHash": "sha256:c61841d0917ae5fe47f1fab7d5e49931bf726a4481075ccbfff272e18b07b4d9"
+      },
+      {
+        "url": "https://www.hanyang.ac.kr/web/eng/global_e",
+        "contentHash": "sha256:501dc206bac72f1c363dd7216131ef14f208a45212a36c908d41e9da434b92ff"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}
