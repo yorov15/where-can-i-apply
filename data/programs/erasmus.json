@@ -1,0 +1,163 @@
+{
+  "id": "erasmus",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Erasmus University Rotterdam (Нидерланды) — бакалавриат с иностранным аттестатом: отбор, 100 евро за заявку и ни одной стипендии для не-ЕС",
+    "orig": "Erasmus University Rotterdam — bachelor admission and application"
+  },
+  "hostCountry": "NL",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Стипендий для иностранца на бакалавриате нет: обе бакалаврские стипендии вуза закрыты — одна только для граждан ЕЭС, вторая только для граждан Китая. Обучение для не-ЕС стоит 13 500–32 200 евро в год, и это без жизни в Роттердаме."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничивают: для не-ЕС меняется только тариф — вместо государственных 2 694 евро вуз берёт свой, от 13 500"
+    },
+    "schoolCountry": {
+      "definedBy": "institution",
+      "evidence": "Since entry requirements and selection procedures for each programme at Erasmus University Rotterdam are decided by the programmes themselves, they differ per programme."
+    },
+    "schoolYears": {
+      "definedBy": "institution",
+      "evidence": "Since entry requirements and selection procedures for each programme at Erasmus University Rotterdam are decided by the programmes themselves, they differ per programme."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "год выпуска страница не ограничивает: сроки привязаны к подаче и к дате аттестата, а не к году выпуска"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст страница не называет ни для иностранцев, ни для своих"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "Since entry requirements and selection procedures for each programme at Erasmus University Rotterdam are decided by the programmes themselves, they differ per programme."
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "If you do not meet the language or math requirements of the programme, you will be asked to demonstrate your skills with a proficiency test"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Заявка стоит 100 евро, и это невозвратный взнос: платят все, кто подаётся на бакалавриат с иностранным аттестатом. Без оплаты заявку не двинут — продолжить её нельзя, пока взнос не внесён.",
+      "evidence": "all applicants for a bachelor's programme with an international diploma must pay a non-refundable application fee of €100",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 100,
+        "currency": "EUR",
+        "evidence": "a non-refundable application fee of €100"
+      }
+    },
+    {
+      "ru": "Отбор, а не просто соответствие требованиям: вуз прямо пишет, что весь его международный бакалавриат — с отбором, и что подходить под требования ещё не значит быть зачисленным. Решают документы целиком, а не галочки.",
+      "evidence": "Because of the selective nature of all international bachelor programmes of Erasmus University Rotterdam, meeting the requirements does not automatically mean you will be selected.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Требования и сроки ставит сама программа, а не вуз, и у каждой они свои. Общей страницы с порогами нет — открывать надо страницу выбранной программы. По email вуз про допуск не отвечает: «сомневаешься — подавайся».",
+      "evidence": "Since entry requirements and selection procedures for each programme at Erasmus University Rotterdam are decided by the programmes themselves, they differ per programme.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение для не-ЕС на 2026/2027: 13 500 евро в год на большинстве факультетов, 14 000 в школе менеджмента (RSM), 16 300 в университетском колледже (EUC), 32 200 в медицинском центре.",
+      "evidence": "Non-EEA Students: €13.500",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Голландский тариф 2 694 евро тебе не положен: для него нужно гражданство ЕЭС, Швейцарии или Суринама. Иностранцу с не-нидерландским аттестатом достаётся тариф вуза.",
+      "evidence": "To be eligible for the statutory tuition fee, you must fulfil two conditions: You have an EEA, Swiss or Surinamese nationality.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Диплом и итоговый транскрипт надо прислать бумагой по почте — заверенные копии со свежими печатями и подписями, «мокрыми», а не сканами уже заверенных бумаг. Если документы не на голландском, английском, немецком, испанском, итальянском или французском, нужен ещё заверенный перевод от присяжного переводчика. Оригиналы вуз не просит никогда.",
+      "evidence": "Certified hardcopies are copies of official documents which are stamped and signed by a school official, notary or other authorised person.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заверенные копии принимают до 1 августа. У кого результаты A-level выходят только в середине августа, школа может прислать предварительную ведомость от экзаменационного совета.",
+      "evidence": "after the deadline for handing in your certified copies (1st of August)",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Первая из двух бакалаврских стипендий Эразмуса — Entrepreneurial Spirit Scholarship — открыта только гражданам ЕЭС. Иностранцу с таджикским паспортом она не положена.",
+      "evidence": "Nationalities: EU/EEA",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Вторая бакалаврская стипендия, G&D Europe, — только для граждан Китая. Остальные стипендии в списке вуза — магистратура и докторантура.",
+      "evidence": "Scholarship for Chinese students who wish to fund their Bachelor or Master at EUR.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Жильё вуз не устраивает: место забронировано примерно для четверти приезжающих иностранцев, остальные ищут сами на частном рынке. В Нидерландах это обычное дело, но начинать надо заранее.",
+      "evidence": "Erasmus University Rotterdam has reserved accommodation for about 25% of our yearly incoming international students, most of you will need to secure housing on the private market.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.eur.nl/en/education/practical-matters/bachelor-admission-and-application",
+  "source": {
+    "url": "https://www.eur.nl/en/education/practical-matters/bachelor-admission-and-application",
+    "pages": [
+      {
+        "url": "https://www.eur.nl/en/education/practical-matters/bachelor-admission-and-application",
+        "contentHash": "sha256:d32862ce508840347873ed35567eeee83d08fef3b4fdc88b51457e4ee2a77eaf"
+      },
+      {
+        "url": "https://www.eur.nl/en/education/practical-matters/registration/tuition-fee",
+        "contentHash": "sha256:84d9a01dd30e4a50086ac80095c9dd1108fbaef0b6cc7de95f4e92346e7817c5"
+      },
+      {
+        "url": "https://www.eur.nl/en/education/practical-matters/scholarships-grants/students-coming-rotterdam",
+        "contentHash": "sha256:4cb542383f411218066a7a556c503e6b2cd9b19b20f1ce8c41b30cfaf9a4e546"
+      },
+      {
+        "url": "https://www.eur.nl/en/education/practical-matters/registration/tuition-fee/tuition-fee-2026-2027",
+        "contentHash": "sha256:ed008cf48fff49ff821328e68ed5fb9a9806506e5edfed250b3bb26e86c88b48"
+      },
+      {
+        "url": "https://www.eur.nl/en/scholarship/entrepreneurial-spirit-scholarship",
+        "contentHash": "sha256:930a598e5ccf7b12637071cea89580cc7eaccc6b44beffd078955287c6fae84d"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}

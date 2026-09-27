@@ -2064,3 +2064,26 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-27"
 
+# Эразмус (Роттердам). Третий нидерландский вуз, из списка Мурода.
+#
+# Взят ради страницы стипендий: у Твенте их нет вовсе, у Гронингена они
+# названы, но без сумм. Если у Эразмуса есть стипендия бакалавру
+# с названной суммой, это первое место в Нидерландах, о котором можно
+# сказать не «спроси у вуза», а «вот сколько».
+[erasmus]
+name = "Erasmus University Rotterdam (Нидерланды): бакалавриат для иностранцев"
+urls = [
+  "https://www.eur.nl/en/education/practical-matters/bachelor-admission-and-application",
+  "https://www.eur.nl/en/education/practical-matters/registration/tuition-fee",
+  "https://www.eur.nl/en/education/practical-matters/scholarships-grants/students-coming-rotterdam",
+  # Тарифы названы числом только на этой странице; общая про плату — одна
+  # навигация без цифр.
+  "https://www.eur.nl/en/education/practical-matters/registration/tuition-fee/tuition-fee-2026-2027",
+  # Единственная бакалаврская стипендия Эразмуса без ограничения по
+  # гражданству. Вторая бакалаврская, G&D Europe, — только для граждан
+  # Китая, поэтому её в источники не берём.
+  "https://www.eur.nl/en/scholarship/entrepreneurial-spirit-scholarship",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
