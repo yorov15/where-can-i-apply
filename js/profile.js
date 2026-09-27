@@ -58,6 +58,20 @@ const TEST_SHORT = {
   GOETHE: 'Goethe', SAT: 'SAT', ACT: 'ACT',
 };
 
+// Порядок экзаменов в сводке — тот же, что в анкете: сначала английские,
+// потом SAT с ACT, потом сертификаты по языкам стран. Хранятся они в двух
+// разных списках (языковые и поступленческие), поэтому порядок приходится
+// задавать отдельно — иначе сводка читалась бы вразнобой с формой.
+const TEST_ORDER = [
+  'IELTS', 'TOEFL_IBT', 'TOEFL_IBT_2026', 'DUOLINGO', 'PTE',
+  'SAT', 'ACT',
+  'HSK', 'JLPT', 'TOPIK', 'TESTDAF', 'DSH', 'GOETHE',
+];
+const rank = (name) => {
+  const i = TEST_ORDER.indexOf(name);
+  return i === -1 ? TEST_ORDER.length : i;
+};
+
 // Одна строка вместо свёрнутой анкеты: человек видит, по какому профилю
 // посчитан ответ, и не листает форму ради этого.
 export function profileSummary(profile) {
@@ -69,7 +83,10 @@ export function profileSummary(profile) {
   if (profile.schoolYears != null) parts.push(`${profile.schoolYears} лет школы`);
   if (profile.graduationYear != null) parts.push(`выпуск ${profile.graduationYear}`);
   if (profile.gpa?.value != null) parts.push(`балл ${profile.gpa.value}`);
-  for (const t of [...(profile.languageTests ?? []), ...(profile.exams ?? [])]) {
+  const tests = [...(profile.languageTests ?? []), ...(profile.exams ?? [])]
+    .slice()
+    .sort((a, b) => rank(a.test) - rank(b.test));
+  for (const t of tests) {
     const name = TEST_SHORT[t.test] ?? t.test;
     parts.push(t.score == null ? `${name} не сдан` : `${name} ${t.score}`);
   }

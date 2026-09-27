@@ -137,6 +137,14 @@
         <input type="number" name="score-PTE" step="1" min="10" max="90" inputmode="numeric" placeholder="балл">
       </label>
 
+      <p class="hint">Американские вузы часто просят SAT или ACT. Если их нет — пропусти: часть вузов их не требует.</p>
+      <label class="row"><input type="checkbox" name="has-SAT"> SAT (400–1600)
+        <input type="number" name="score-SAT" step="10" min="400" max="1600" inputmode="numeric" placeholder="балл">
+      </label>
+      <label class="row"><input type="checkbox" name="has-ACT"> ACT (1–36)
+        <input type="number" name="score-ACT" step="1" min="1" max="36" inputmode="numeric" placeholder="балл">
+      </label>
+
       <p class="hint">Сертификаты по другим языкам: они открывают дорогу в свою страну — HSK в Китай, JLPT в Японию, TOPIK в Корею, немецкие в Германию. Если такого экзамена нет — оставь пусто. Уровень вписывай числом по подсказке в скобках: чем выше число, тем сильнее язык.</p>
       <label class="row"><input type="checkbox" name="has-HSK"> HSK, китайский (1–9)
         <input type="number" name="score-HSK" step="1" min="1" max="9" inputmode="numeric" placeholder="уровень">
@@ -155,14 +163,6 @@
       </label>
       <label class="row"><input type="checkbox" name="has-GOETHE"> Goethe-Zertifikat, немецкий (A1 → введи 1, C2 → введи 6)
         <input type="number" name="score-GOETHE" step="1" min="1" max="6" inputmode="numeric" placeholder="уровень">
-      </label>
-
-      <p class="hint">Американские вузы часто просят SAT или ACT. Если их нет — пропусти: часть вузов их не требует.</p>
-      <label class="row"><input type="checkbox" name="has-SAT"> SAT (400–1600)
-        <input type="number" name="score-SAT" step="10" min="400" max="1600" inputmode="numeric" placeholder="балл">
-      </label>
-      <label class="row"><input type="checkbox" name="has-ACT"> ACT (1–36)
-        <input type="number" name="score-ACT" step="1" min="1" max="36" inputmode="numeric" placeholder="балл">
       </label>
       <p class="field-error" role="alert"></p>
     </fieldset>
