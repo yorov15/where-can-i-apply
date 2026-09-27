@@ -17,6 +17,10 @@ export function emptyProfile() {
     gpa: { value: null, scale: 'TJ_5' },
     languageTests: [],
     exams: [],
+    // Приоритеты — необязательная часть анкеты: на ответ «пустят ли» они не
+    // влияют, только на порядок карточек. Поэтому profileReady их не ждёт.
+    priorityCountries: [],
+    priorityMajors: [],
   };
 }
 

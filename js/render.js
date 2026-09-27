@@ -15,6 +15,7 @@ import { kindLabel } from './lib/kinds.js';
 import { EXPLAIN_URL } from './config.js';
 import { planPrograms, planText, buildIcs, planTasks } from './plan.js';
 import { compareTable } from './compare.js';
+import { orderByPriority, hasPriorities } from './lib/priority.js';
 import { planCost, costText } from './cost.js';
 import { askExplain, cachedAnswer, parseAnswer, ERROR_TEXT } from './explain.js';
 
@@ -322,12 +323,22 @@ export function renderResults(nodes, profile, programs, today, details) {
   const soon = agenda(rows, today);
   if (soon.length) agendaNode.append(agendaBlock(soon, today, onOpenProgram));
 
+  // Порядок внутри каждой группы — по приоритетам человека: свои страны и
+  // направления сверху. На ответ «пустят ли» это не влияет, поэтому
+  // группы остаются те же, меняется только порядок внутри.
+  const priorities = { countries: profile.priorityCountries ?? [], majors: profile.priorityMajors ?? [] };
+  const sorted = hasPriorities(priorities);
+  if (sorted) {
+    resultsNode.append(el('p', 'hint',
+      'Сверху — программы из выбранных тобой стран и направлений, в том порядке, в каком ты их поставил.'));
+  }
+
   for (const group of groupRows(rows)) {
     const section = el('section', `group ${group.status}`);
     const title = el('h2', 'group-title', `${group.title} (${group.rows.length})`);
     title.dataset.base = group.title;
     section.append(title);
-    for (const row of group.rows) {
+    for (const row of (sorted ? orderByPriority(group.rows, priorities) : group.rows)) {
       // «Тип · страна» — что это за программа и где; без типа (данных ещё
       // нет) остаётся одна страна, без выдуманной подписи.
       const kindLine = [kindLabel(row.program.kind), row.program.hostCountry && countryName(row.program.hostCountry)]

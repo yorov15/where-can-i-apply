@@ -14,6 +14,7 @@ from tools.build import (
     index_entry,
     index_text,
     missing_kind,
+    missing_majors,
     stale_deadlines,
     wire_size,
     workaround_fields,
@@ -25,6 +26,7 @@ PROGRAM = {
     "name": {"ru": "Пример", "orig": "Example"},
     "hostCountry": "TR",
     "kind": "government",
+    "majors": ["any"],
     "level": "bachelor",
     "coverage": {"tuition": True, "living": True, "travel": False, "note": {"ru": "нечто"}},
     "eligibility": {
@@ -398,3 +400,39 @@ class TestWorkaroundFields(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestMajors(unittest.TestCase):
+    """Направление — тоже редакторская разметка, как и тип. Без неё запись
+    молча выпала бы из выдачи по приоритету, а человек не понял бы, почему."""
+
+    def test_index_carries_the_majors(self):
+        self.assertEqual(index_entry(PROGRAM)["majors"], ["any"])
+
+    def test_named_majors_reach_the_index(self):
+        named = dict(PROGRAM, majors=["cs", "natural"])
+        self.assertEqual(index_entry(named)["majors"], ["cs", "natural"])
+
+    def test_published_program_with_majors_is_fine(self):
+        self.assertEqual(missing_majors([PROGRAM]), [])
+
+    def test_program_without_majors_is_reported(self):
+        bare = {key: value for key, value in PROGRAM.items() if key != "majors"}
+        self.assertEqual(len(missing_majors([bare])), 1)
+        self.assertIn("primer", missing_majors([bare])[0])
+
+    def test_unknown_major_is_reported_with_the_allowed_ones(self):
+        odd = dict(PROGRAM, majors=["medicine", "law"])
+        problem = missing_majors([odd])[0]
+        self.assertIn("law", problem)
+        self.assertIn("engineering", problem)
+
+    def test_any_mixed_with_a_named_major_is_a_contradiction(self):
+        odd = dict(PROGRAM, majors=["any", "cs"])
+        problem = missing_majors([odd])[0]
+        self.assertIn("противоречие", problem)
+
+    def test_drafts_are_not_asked_for_majors(self):
+        draft = {key: value for key, value in PROGRAM.items() if key != "majors"}
+        draft["status"] = "draft"
+        self.assertEqual(missing_majors([draft]), [])

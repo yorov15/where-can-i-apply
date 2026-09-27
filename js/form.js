@@ -28,6 +28,12 @@ export function formProblems(root) {
 
 // Значение с ошибкой в профиль не попадает: ответ считается так, будто
 // поле пустое, а не по числу, которого не бывает.
+// Приоритеты лежат скрытыми полями, по одному на выбор, в порядке нажатий
+// (js/priority.js). Порядок и есть приоритет, поэтому читается не значение
+// поля, а список.
+const ordered = (root, name) =>
+  [...root.querySelectorAll(`input[type="hidden"][name="${name}"]`)].map((input) => input.value);
+
 export function readForm(root) {
   const f = root.elements;
   const profile = emptyProfile();
@@ -47,6 +53,10 @@ export function readForm(root) {
   profile.exams = EXAM_TESTS
     .filter((t) => f[`has-${t}`].checked)
     .map((t) => ({ test: t, score: clean(`score-${t}`, num(f[`score-${t}`].value)) }));
+
+  // Приоритеты уже прочитаны выше — здесь только поля анкеты.
+  profile.priorityCountries = ordered(root, 'priorityCountry');
+  profile.priorityMajors = ordered(root, 'priorityMajor');
 
   return profile;
 }

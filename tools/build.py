@@ -16,7 +16,7 @@ from datetime import date
 from pathlib import Path
 
 from tools.changelog import feed_xml
-from tools.schema import FIELDS, KINDS, SIGNERS, approved_by
+from tools.schema import FIELDS, KINDS, MAJORS, SIGNERS, approved_by
 
 # Предел ставится на то, за что человек платит, — на сжатый размер.
 #
@@ -119,6 +119,9 @@ def index_entry(program: dict) -> dict:
         "hostCountry": program.get("hostCountry"),
         "kind": program.get("kind"),
         "level": program.get("level"),
+        # Направление едет в индекс, а не в детали: по нему анкета
+        # расставляет приоритеты сразу, не дожидаясь раскрытия карточек.
+        "majors": program.get("majors") or [],
         "coverage": {
             "tuition": coverage.get("tuition"),
             "living": coverage.get("living"),
@@ -221,6 +224,37 @@ def missing_kind(programs: list[dict]) -> list[str]:
     return problems
 
 
+def missing_majors(programs: list[dict]) -> list[str]:
+    """Публикуемые программы без направления или с неизвестным.
+
+    Направление, как и тип, ставит человек: сборка не выдумывает его сама.
+    Без него запись молча выпала бы из выдачи по приоритету — человек
+    расставил бы приоритеты и не увидел бы, что часть программ их не
+    учитывает.
+    """
+    allowed = ", ".join(MAJORS)
+    problems = []
+    for program in publishable(programs):
+        majors = program.get("majors")
+        if not majors:
+            problems.append(
+                f"{program['id']}: нет направления — "
+                f"впиши \"majors\" в data/programs/{program['id']}.json"
+            )
+            continue
+        unknown = [m for m in majors if m not in MAJORS]
+        if unknown:
+            problems.append(
+                f"{program['id']}: направление {unknown} не из списка ({allowed})"
+            )
+        if "any" in majors and len(majors) > 1:
+            problems.append(
+                f"{program['id']}: \"any\" стоит вместе с другими направлениями "
+                f"({majors}) — это противоречие"
+            )
+    return problems
+
+
 def build_index(programs: list[dict], generated_at: str) -> dict:
     return {
         "generatedAt": generated_at,
@@ -275,6 +309,12 @@ def main() -> int:
     if kind_problems:
         for problem in kind_problems:
             print("ТИП:", problem)
+        return 1
+
+    major_problems = missing_majors(programs)
+    if major_problems:
+        for problem in major_problems:
+            print("НАПРАВЛЕНИЕ:", problem)
         return 1
 
     index = build_index(programs, date.today().isoformat())

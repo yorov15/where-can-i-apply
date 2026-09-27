@@ -46,7 +46,7 @@
     <form id="profile" autocomplete="off">
     <div class="wizard-head">
       <p id="wizard-progress-label" class="wizard-progress-label" aria-live="polite"></p>
-      <ol id="wizard-progress" class="stepper" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
+      <ol id="wizard-progress" class="stepper" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li></ol>
     </div>
 
     <fieldset class="step is-current">
@@ -141,7 +141,27 @@
       </label>
       <p class="field-error" role="alert"></p>
     </fieldset>
+
+    <fieldset class="step">
+      <legend>Что тебе важнее</legend>
+      <p class="hint">Нажимай по порядку: первое нажатие — первое желание, число на кнопке его показывает. Повторное нажатие снимает выбор. Программы, подходящие под выбор, встанут в начале списка. Шаг можно пропустить.</p>
+
+      <div id="priority-countries">
+        <p><strong>Страны</strong></p>
+        <div class="chips" data-role="list"></div>
+      </div>
+
+      <div id="priority-majors">
+        <p><strong>Направления</strong></p>
+        <div class="chips" data-role="list"></div>
+      </div>
+
+      <p class="hint" id="priority-lost" hidden></p>
+      <p class="hint">«Любое направление» в выборе нет: так размечены программы, которые покрывают вуз целиком, — направление там выбирается внутри. Поднять их за любое твоё желание значило бы обещать то, чего мы не читали.</p>
+      <p class="field-error" role="alert"></p>
+    </fieldset>
     <p id="wizard-error" class="wizard-error" role="alert"></p>
+
     <div class="wizard-nav">
       <button type="button" id="wizard-back" class="button button-quiet" hidden>Назад</button>
       <button type="button" id="wizard-next" class="button" hidden>Далее</button>

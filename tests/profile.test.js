@@ -19,12 +19,14 @@ const filled = {
   gpa: { value: 4.8, scale: 'TJ_5' },
   languageTests: [{ test: 'IELTS', score: 7.0 }],
   exams: [],
+  priorityCountries: ['DE', 'KR'],
+  priorityMajors: ['cs'],
 };
 
-test('пустой профиль содержит все восемь ключей', () => {
+test('пустой профиль содержит все десять ключей', () => {
   assert.deepEqual(Object.keys(emptyProfile()).sort(), [
     'birthDate', 'citizenship', 'exams', 'gpa', 'graduationYear',
-    'languageTests', 'schoolCountry', 'schoolYears',
+    'languageTests', 'priorityCountries', 'priorityMajors', 'schoolCountry', 'schoolYears',
   ]);
 });
 

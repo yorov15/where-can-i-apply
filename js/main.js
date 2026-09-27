@@ -2,6 +2,7 @@ import { loadProfile, saveProfile, emptyProfile, profileReady, STORAGE_KEY } fro
 import { readForm, writeForm, onProfileChange, setupProfileBox } from './form.js';
 import { setupWizard } from './steps.js';
 import { setupCatalogFilter } from './filter.js';
+import { setupPriority } from './priority.js';
 import { loadIndex, loadDetails, loadConditions } from './data.js';
 import { renderResults } from './render.js';
 import { loadPlan, savePlan, togglePlan, PLAN_KEY, DONE_KEY, loadDone, saveDone } from './plan.js';
@@ -117,6 +118,18 @@ const details = {
 
 const saved = loadProfile(localStorage);
 writeForm(form, saved);
+
+// Приоритеты: кнопки стран строятся по данным, а не по списку в коде —
+// незачем показывать страну, программ которой на сайте нет. До загрузки
+// данных в блоке пусто, и это честно: выбирать пока не из чего.
+const priority = setupPriority({
+  form,
+  countriesNode: document.getElementById('priority-countries'),
+  majorsNode: document.getElementById('priority-majors'),
+  countries: [],
+  onPick: () => refresh(),
+});
+priority.set(saved);
 const box = document.getElementById('profile-box');
 const finishButton = document.getElementById('show-results');
 const profileBox = setupProfileBox(
@@ -241,6 +254,19 @@ if ('serviceWorker' in navigator) {
 loadIndex()
   .then((index) => {
     programs = index.programs ?? [];
+    priority.setCountries(
+      [...new Set(programs.map((program) => program.hostCountry).filter(Boolean))].sort(),
+      programs,
+    );
+    priority.setMajorCounts(programs);
+    // Выбранная раньше страна могла пропасть из данных — например, программу
+    // сняли. Об этом надо сказать: молча потерять выбор человека нельзя.
+    const lost = priority.lost();
+    const lostNote = document.getElementById('priority-lost');
+    if (lost.length) {
+      lostNote.textContent = `Из выбранного больше нет в данных: ${lost.join(', ')}. Убери его из приоритетов или выбери заново.`;
+      lostNote.hidden = false;
+    }
     fetchDetails();
   })
   .catch(() => {

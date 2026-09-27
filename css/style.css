@@ -523,3 +523,8 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
+
+/* Приоритеты: чип — не «да/нет», а место в очереди, порядок виден в подписи. */
+.chips { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-bottom: var(--s-4); }
+.chip { padding: .375rem .75rem; font: inherit; font-size: .9375rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-control); cursor: pointer; }
+.chip[aria-pressed="true"] { color: var(--accent-text); background: var(--accent-soft); border-color: var(--accent); font-weight: 700; }
