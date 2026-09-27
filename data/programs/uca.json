@@ -7,7 +7,12 @@
   },
   "hostCountry": "TJ",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "cs",
+    "natural",
+    "business",
+    "social"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": true,
@@ -168,6 +173,12 @@
       "evidence": "we do not offer transfers from other universities",
       "field": null,
       "kind": "must"
+    },
+    {
+      "ru": "Программ ровно четыре: информатика и коммуникации и медиа — в Нарыне (Кыргызстан), глобальная экономика и науки о Земле и об окружающей среде — в Хороге (Таджикистан). Инженерии, гуманитарных наук, искусств и медицины среди них нет.",
+      "evidence": "UCA offers four popular programs: Computer Science and Communications and Media in Naryn, Kyrgyzstan, and Global Economics and Earth and Environmental Sciences in Khorog, Tajikistan.",
+      "field": null,
+      "kind": "note"
     }
   ],
   "deadline": {

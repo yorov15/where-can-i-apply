@@ -2,7 +2,14 @@
   "id": "kyoto-iup",
   "status": "published",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities"
+  ],
   "name": {
     "ru": "Kyoto University, Kyoto iUP (Киото) — международный бакалавриат на английском с полугодовым подготовительным курсом, набор на октябрь 2027, 40 мест",
     "orig": "Kyoto University International Undergraduate Program (Kyoto iUP)"
@@ -205,6 +212,12 @@
     {
       "ru": "Набор — 40 человек на октябрь 2027. Конкурс очень высокий: в 2026 году на первое место по числу заявок был инженерный факультет — 524 заявки, на факультет экономики 188, на естественные науки 239.",
       "evidence": "40 students will be admitted in October 2027.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Доступные факультеты перечислены в таблице 1: интегральные гуманитарные науки, Letters, Education, Law, Economics, Science, Pharmaceutical Sciences, Engineering и Agriculture. Медицины среди них нет, и зачисление на медицинский факультет вуз не даёт вовсе. Внутри Engineering есть «Informatics and Mathematical Science».",
+      "evidence": "Faculty of Integrated Human Studies Faculty of Letters*2*3 - Philosophy - Ethics Faculty of Education Faculty of Law Faculty of Economics Faculty of Science*2 - Mathematical Sciences - Physics and Astrophysics - Earth and Planetary Sciences - Chemistry - Biological Sciences Faculty of Pharmaceutical Sciences*4 - Pharmaceutical Sciences Faculty of Engineering*2 - Civil, Environmental and Resources Engineering - Architecture - Engineering Science - Electrical and Electronic Engineering - Informatics and Mathematical Science - Chemical Science and Technology Faculty of Agriculture*2*5 - Bioresource Science (Agricultural Biology) - Applied Life Sciences (Agricultural Chemistry) - Agricultural and Environmental Engineering - Food and Environmental Economics - Forest and Biomaterials Science",
       "field": null,
       "kind": "note"
     }

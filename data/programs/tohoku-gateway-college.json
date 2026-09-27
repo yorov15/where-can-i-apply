@@ -2,7 +2,13 @@
   "id": "tohoku-gateway-college",
   "status": "published",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "humanities",
+    "social"
+  ],
   "name": {
     "ru": "Tohoku University, Gateway College (Тохоку, Сендай) — бакалавриат на английском, осенний набор 2027, приём онлайн без поездки в Японию",
     "orig": "Tohoku University, Gateway College"
@@ -196,8 +202,20 @@
       "kind": "note"
     },
     {
-      "ru": "В набор на осень 2027 берут 90 человек: 17 на гуманитарный трек и 73 на STEM. Медицинский и фармацевтический факультеты для студентов Gateway College закрыты. Список ожидания возможен.",
+      "ru": "В набор на осень 2027 берут 90 человек: 17 на гуманитарный трек и 73 на STEM.",
       "evidence": "Admission Track Quota Humanities & Social Sciences 17 STEM 73",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Кафедра медицинских наук в школе медицины и кафедра фармации на фармацевтическом факультете студентам Gateway College недоступны.",
+      "evidence": "However, the Health Sciences Department at the School of Medicine and the Department of Pharmacy at the Faculty of Pharmaceutical Sciences are not available to Gateway College students.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "После объявления итогов второго этапа добор возможен из списка ожидания. О статусе в списке и о решениях вуз справок не даёт.",
+      "evidence": "After the announcement of the 2nd Stage Screening results, additional applicants may be admitted from the waitlist.",
       "field": null,
       "kind": "note"
     }
