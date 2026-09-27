@@ -535,6 +535,13 @@ urls = [
   "https://www.daad.de/en/studying-in-germany/requirements/studienkollegs/",
   "https://www.daad.de/en/studying-in-germany/requirements/admission-database/",
   "https://www.daad.de/en/studying-in-germany/requirements/application-process/",
+  # Добавлено 27.09.2026 (партия «Германия и Европа»). До этой страницы
+  # карточка про язык молчала: поле стояло «не измерено», и человек с
+  # английским читал это как «язык не помеха». На самом деле бакалавриат в
+  # Германии идёт ПО-НЕМЕЦКИ, и это закрывает почти все государственные
+  # вузы сразу — тот же ответ, который дали бы шесть отдельных карточек
+  # TUM, LMU, Heidelberg, KIT, RWTH и Берлина.
+  "https://www.daad.de/en/studying-in-germany/requirements/overview/",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-11"

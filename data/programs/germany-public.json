@@ -6,7 +6,9 @@
   },
   "hostCountry": "DE",
   "kind": "national",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": null,
@@ -51,8 +53,8 @@
       "evidence": "the final decision on admission always lies with the higher education institution"
     },
     "language": {
-      "notMeasured": true,
-      "evidence": "offering preparatory courses that give students general, specialised and linguistic competencies that are necessary for successful studies at a German university"
+      "definedBy": "institution",
+      "evidence": "In Germany, the language of instruction for most programmes and subjects at higher education institutions is German. Therefore, most higher education institutions require German language skills of at least B2 level of the CEFR (Common European Framework of Reference for Languages)."
     }
   },
   "textConditions": [
@@ -63,7 +65,7 @@
       "kind": "note"
     },
     {
-      "ru": "Если аттестат для прямого поступления не годится, путь — Studienkolleg: подготовительные курсы с экзаменом Feststellungsprüfung в конце. Сдал его — можно учиться в любом вузе Германии.",
+      "ru": "Если аттестат для прямого поступления не годится, путь — Studienkolleg: подготовительные курсы с экзаменом Feststellungsprüfung в конце. Учат там по-немецки, и на входе нужен немецкий уровня B1–B2. Сдал — можно учиться в любом вузе Германии.",
       "evidence": "If your school-leaving certificate does not entitle you to directly start studying in Germany, you can apply for a place at a Studienkolleg that has a final assessment test",
       "field": "schoolCountry",
       "kind": "workaround"
@@ -150,6 +152,18 @@
       "evidence": "For many degree programmes in Germany there are more prospective students than study places, so applicants first have to take part in an admission procedure .",
       "field": "gpa",
       "kind": "note"
+    },
+    {
+      "ru": "Бакалавриат в государственных вузах Германии идёт по-немецки, и английский его не заменяет. Вуз попросит подтвердить немецкий не ниже B2 по европейской шкале — сертификатом или экзаменом на месте. Без немецкого подавать туда нечего.",
+      "evidence": "In Germany, the language of instruction for most programmes and subjects at higher education institutions is German. Therefore, most higher education institutions require German language skills of at least B2 level of the CEFR (Common European Framework of Reference for Languages).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь один: программа, которая прямо объявлена англоязычной. Такие DAAD освобождает от требования немецкого, но взамен просит подтвердить английский. Если программа англоязычной не объявлена, она идёт по-немецки.",
+      "evidence": "International degree programmes or postgraduate programmes taught in English are exempt from these requirements.",
+      "field": "language",
+      "kind": "workaround"
     }
   ],
   "deadline": {
@@ -185,6 +199,10 @@
       {
         "url": "https://www.daad.de/en/studying-in-germany/requirements/application-process/",
         "contentHash": "sha256:949b5948b7feb90abab25651385944fb13188cd77ca41bd09283446947d176c2"
+      },
+      {
+        "url": "https://www.daad.de/en/studying-in-germany/requirements/overview/",
+        "contentHash": "sha256:7a937730c2dcd984c5ef031e3b4cfba77fe46b3c79750bb0dca976f734aa85e5"
       }
     ],
     "lastVerified": "2026-09-27",
