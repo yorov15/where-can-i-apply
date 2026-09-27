@@ -1,0 +1,112 @@
+{
+  "id": "tu-berlin",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Technische Universität Berlin (Германия) — бакалавриат для иностранцев",
+    "orig": "TU Berlin — bachelor's application and enrolment"
+  },
+  "hostCountry": "DE",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Стипендий бакалавру TU Berlin не даёт. Платы за обучение для иностранцев на прочитанных страницах нет; остаётся обычный семестровый взнос, который платят все."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничивают: приём иностранцев идёт, отличается только порядок подачи и сроки"
+    },
+    "schoolCountry": {
+      "definedBy": "institution",
+      "evidence": "For undergraduate degrees (bachelor´s or Staatsexamen), you require either a general or subject-specific university entrance qualification."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "For undergraduate degrees (bachelor´s or Staatsexamen), you require either a general or subject-specific university entrance qualification."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "год выпуска страницы TU Berlin не ограничивают: сроки заданы периодами подачи"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст страницы TU Berlin не называют ни для иностранцев, ни для своих"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "Applicants with an international higher education entrance qualification Application for bachelor's programs with restricted admission (NC): 01.06.2026 until 15.07.2026 Application for bachelor's programs with open admission (no NC): 01.06.2026 until 31.08.2026"
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "For undergraduate degrees (bachelor´s or Staatsexamen), you require either a general or subject-specific university entrance qualification."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "К заявке нужна предварительная проверка документов (VPD) от uni-assist: без неё заявление не примут. Оформляют её заранее — это отдельный шаг до подачи, а не часть заявки.",
+      "evidence": "To apply, you must also submit a VPD (preliminary review documentation) from uni-assist.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки для тех, у кого аттестат не немецкий, на зимний семестр 2026: на программы с ограничением приёма (NC) — с 1 июня по 15 июля, на программы без ограничения — с 1 июня по 31 августа.",
+      "evidence": "Applicants with an international higher education entrance qualification Application for bachelor's programs with restricted admission (NC): 01.06.2026 until 15.07.2026 Application for bachelor's programs with open admission (no NC): 01.06.2026 until 31.08.2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Нужно общее или предметное право поступления в вуз. Аттестата самого по себе мало: вуз проверяет, даёт ли он такое право, и от ответа зависит, придётся ли идти через подготовительное отделение.",
+      "evidence": "For undergraduate degrees (bachelor´s or Staatsexamen), you require either a general or subject-specific university entrance qualification.",
+      "field": "schoolCountry",
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-07-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment",
+  "source": {
+    "url": "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment",
+    "pages": [
+      {
+        "url": "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment",
+        "contentHash": "sha256:0ef21e17522ac247a5ff688311c9cc5d10412b45e70b846d53ee631a30c7a8d4"
+      },
+      {
+        "url": "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment/prospective-students-with-an-international-higher-education-entrance-qualification",
+        "contentHash": "sha256:95648e9165789a3efeba5a4cf750cd4ba947ac3bc6c3de97f0ba52469989403c"
+      },
+      {
+        "url": "https://www.tu.berlin/en/studying/applying-and-enrolling/dates-deadlines",
+        "contentHash": "sha256:9c32f00c55958296599b70dc26014fa3987519cac0f429a08b3c960c02169dbd"
+      },
+      {
+        "url": "https://www.tu.berlin/en/studying/applying-and-enrolling/requirements-for-admission-to-a-degree-program",
+        "contentHash": "sha256:56bb33e44ab7a3bec91ce7bd751f54d2d9aa89800e552f54bd1bf34463762101"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}

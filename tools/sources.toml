@@ -2087,3 +2087,103 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-27"
 
+# ---------------------------------------------------------------------------
+# Немецкая шестёрка из списка Мурода: TUM, LMU, Heidelberg, KIT, RWTH, Берлин.
+#
+# Мурод выбрал «добавить все шесть» 27.09.2026, зная, что общие правила
+# Германии уже лежат в germany-public и что карточки будут её повторять.
+# Решение его, и оно записано: карточки нужны, чтобы вузы стояли в списке
+# по именам, а не только общим правилом.
+#
+# «Берлин» в его списке — это TU Berlin: остальные пять названий
+# технические (TUM, KIT, RWTH), и в девятке TU9 Берлин представляет именно
+# технический университет.
+# ---------------------------------------------------------------------------
+
+[tum]
+name = "Technische Universität München (Германия): бакалавриат для иностранцев"
+urls = [
+  "https://www.tum.de/en/studies/application/application-info-portal/application-international",
+  "https://www.tum.de/en/studies/fees/tuition",
+  "https://www.tum.de/en/studies/application/application-info-portal/dates-periods-and-deadlines",
+  "https://www.tum.de/en/studies/application/application-info-portal/admission-requirements/language-certificates",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[heidelberg]
+name = "Heidelberg University (Германия): бакалавриат для иностранцев"
+urls = [
+  "https://www.uni-heidelberg.de/en/study/application-enrolment",
+  "https://www.uni-heidelberg.de/en/study/management-of-studies/key-dates-deadlines",
+  "https://www.uni-heidelberg.de/en/study/management-of-studies/semester-fees",
+  "https://www.uni-heidelberg.de/en/study/international-studies/study-in-heidelberg",
+  "https://www.uni-heidelberg.de/en/study/management-of-studies/semester-fees/tuition-fees-for-international-students",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+[lmu]
+name = "Ludwig-Maximilians-Universität München (Германия): бакалавриат для иностранцев"
+urls = [
+  "https://www.lmu.de/en/study/degree-students/steps-to-studying-at-lmu/",
+  "https://www.lmu.de/en/study/degree-students/applications-for-admission/",
+  "https://www.lmu.de/en/study/degree-students/prerequisites/",
+  "https://www.lmu.de/en/study/degree-students/prerequisites/german-proficiency/",
+  # Платы для иностранцев на страницах приёма нет вовсе. Эта страница —
+  # единственная оставшаяся, где она может быть; если и здесь её нет,
+  # карточка так и скажет, а не напишет «бесплатно» от себя.
+  "https://www.lmu.de/en/workspace-for-students/international-student-guide/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+# KIT. Номера в адресах — внутренние номера страниц их системы, как у
+# HKUST: перестроят сайт, адреса умрут, и слежение скажет об этом.
+[kit]
+name = "Karlsruher Institut für Technologie (Германия): бакалавриат для иностранцев"
+urls = [
+  "https://www.sle.kit.edu/english/vorstudium/88.php",
+  "https://www.sle.kit.edu/english/vorstudium/85.php",
+  "https://www.sle.kit.edu/english/vorstudium/3968.php",
+  "https://www.sle.kit.edu/english/imstudium/703.php",
+  # Английская страница сборов про плату с иностранцев не говорит вовсе;
+  # правило про 1 500 евро за семестр лежит только на немецкой. Без неё
+  # карточка KIT молчала бы о главном, что про этот вуз надо знать.
+  "https://www.sle.kit.edu/imstudium/gebuehren.php",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+# RWTH Aachen. Английская версия отдаётся тем же адресом с ?lang=en —
+# проверено 27.09.2026, заголовок страницы английский.
+[rwth]
+name = "RWTH Aachen (Германия): бакалавриат для иностранцев"
+urls = [
+  "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~bdpsux/Internationale-Studieninteressierte/lidx/1/?lang=en",
+  "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~ege/Zugangsvoraussetzungen/lidx/1/?lang=en",
+  "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~egg/Bewerbung-um-einen-Studienplatz/lidx/1/?lang=en",
+  "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~bsottx/Bewerbungs-und-Einschreibefrist/lidx/1/?lang=en",
+  "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~cgfzv/Kosten-und-Finanzierung/lidx/1/?lang=en",
+  # Английские страницы RWTH оказались почти без текста: меню и одна-две
+  # фразы. Содержательные страницы — немецкие, и их берём как есть, с
+  # немецкими цитатами. Это тот же случай, что с итальянскими и китайскими
+  # источниками.
+  "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~ege/Zugangsvoraussetzungen/lidx/1/",
+  "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~bdpsux/Internationale-Studieninteressierte/lidx/1/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
+# TU Berlin — это и есть «Берлин» из списка Мурода (см. пояснение выше).
+[tu-berlin]
+name = "Technische Universität Berlin (Германия): бакалавриат для иностранцев"
+urls = [
+  "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment",
+  "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment/prospective-students-with-an-international-higher-education-entrance-qualification",
+  "https://www.tu.berlin/en/studying/applying-and-enrolling/dates-deadlines",
+  "https://www.tu.berlin/en/studying/applying-and-enrolling/requirements-for-admission-to-a-degree-program",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+

@@ -1,0 +1,128 @@
+{
+  "id": "kit",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Karlsruher Institut für Technologie (Германия) — бакалавриат для иностранцев: 1 500 евро за семестр",
+    "orig": "KIT — application and admission for international students"
+  },
+  "hostCountry": "DE",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Стипендий бакалавру KIT не даёт, а обучение для не-ЕС стоит 1 500 евро за семестр — плата земли Баден-Вюртемберг. Сверх неё 80 евро административного сбора за семестр."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничивают: меняется только плата — 1 500 евро за семестр с тех, кто приезжает учиться из-за пределов ЕС"
+    },
+    "schoolCountry": {
+      "definedBy": "institution",
+      "evidence": "Internationale Studierende, die zum Zwecke des Studiums von außerhalb der EU einreisen, müssen bei einer Neuimmatrikulation einen Eigenbeitrag in Höhe von 1.500€ pro Semester leisten."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Internationale Studierende, die zum Zwecke des Studiums von außerhalb der EU einreisen, müssen bei einer Neuimmatrikulation einen Eigenbeitrag in Höhe von 1.500€ pro Semester leisten."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "год выпуска страницы приёма KIT не ограничивают: сроки заданы датами подачи"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст страницы KIT не называют ни для иностранцев, ни для своих"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "Application deadline for the Losverfahren: October 05, 2026"
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "Internationale Studierende, die zum Zwecke des Studiums von außerhalb der EU einreisen, müssen bei einer Neuimmatrikulation einen Eigenbeitrag in Höhe von 1.500€ pro Semester leisten."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Обучение в KIT для иностранцев платное: 1 500 евро за семестр при первом зачислении, то есть 3 000 евро в год. Это плата земли Баден-Вюртемберг — та же, что в Гейдельберге.",
+      "evidence": "Internationale Studierende, die zum Zwecke des Studiums von außerhalb der EU einreisen, müssen bei einer Neuimmatrikulation einen Eigenbeitrag in Höhe von 1.500€ pro Semester leisten.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "К ней добавляется административный сбор 80 евро за семестр — с летнего семестра 2025 года, раньше было 70. Его платят все студенты, включая своих.",
+      "evidence": "Verwaltungskostenbeitrag Die Hochschulen erheben für ihre studentenbezogenen Verwaltungsleistungen von ihren Studierenden ab dem Sommersemester 2025 einen Beitrag in Höhe von 80€ pro Semester (zuvor 70€ pro Semester).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "За вторую специальность берут ещё 650 евро за семестр — это касается тех, кто уже имеет диплом и приходит за вторым.",
+      "evidence": "Für das Zweitstudium werden ab diesem Zeitpunkt bei einer Einschreibung jeweils 650€ pro Semester erhoben.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Часть мест разыгрывают в лотерею: на зимний семестр 2026 года заявления принимают до 5 октября 2026 года, и участвовать может каждый, кто подходит под условия приёма.",
+      "evidence": "Application deadline for the Losverfahren: October 05, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки в KIT жёсткие: документы должны дойти до студенческой службы в последний день, и дата отправки письма значения не имеет. Если последний день выпал на выходной, правило о переносе не действует.",
+      "evidence": "Should the deadline be on a weekend or on a holiday, §3 section 5 of the Hochschulvergabeordnung takes precedence over §193 BGB!",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.sle.kit.edu/english/vorstudium/88.php",
+  "source": {
+    "url": "https://www.sle.kit.edu/english/vorstudium/88.php",
+    "pages": [
+      {
+        "url": "https://www.sle.kit.edu/english/vorstudium/88.php",
+        "contentHash": "sha256:03d306a4fc5a00171c31d48a50309082128f67fe6c232f24ce5f372f48b67494"
+      },
+      {
+        "url": "https://www.sle.kit.edu/english/vorstudium/85.php",
+        "contentHash": "sha256:7a585795d5b0eba734ce8aba73aa1eaaa9ab8538664a5988accacbd661f37769"
+      },
+      {
+        "url": "https://www.sle.kit.edu/english/vorstudium/3968.php",
+        "contentHash": "sha256:29b19119099cb0f9da0485b9be7a79ce8f0d74a3ed29367d78899d00b2a231f6"
+      },
+      {
+        "url": "https://www.sle.kit.edu/english/imstudium/703.php",
+        "contentHash": "sha256:cb25bfd5a59517e89cf3e72dc4c87d69c15ddbdd50cbadedf3ddcc8cd9ae8376"
+      },
+      {
+        "url": "https://www.sle.kit.edu/imstudium/gebuehren.php",
+        "contentHash": "sha256:86814d90f4e054789f711afc77ff0e070d4d902ab64b5567d7a3fad716bf4a9c"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}

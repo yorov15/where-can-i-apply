@@ -1,0 +1,130 @@
+{
+  "id": "rwth",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "RWTH Aachen (Германия) — бакалавриат для иностранцев",
+    "orig": "RWTH Aachen University — prospective international students"
+  },
+  "hostCountry": "DE",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Стипендий бакалавру RWTH не даёт. Платы за обучение для иностранцев в Северном Рейне-Вестфалии нет — остаётся семестровый взнос, который платят все; его сумму вуз показывает только в личном кабинете."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничивают: иностранцам из-за пределов ЕС и ЕЭС назначен свой срок подачи, но не запрет"
+    },
+    "schoolCountry": {
+      "definedBy": "institution",
+      "evidence": "If you're applying from a country outside the EU or EEA, you must always apply for admission by the specified deadline to secure a spot at the university."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "If you're applying from a country outside the EU or EEA, you must always apply for admission by the specified deadline to secure a spot at the university."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "год выпуска страница RWTH не ограничивает: сроки заданы датами подачи"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст страница RWTH не называет ни для иностранцев, ни для своих"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "If you're applying from a country outside the EU or EEA, you must always apply for admission by the specified deadline to secure a spot at the university."
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "Living expenses are for example the Student Body and Social Contribution Fee, colloquially known as the Semester Fee, but also include rent, food, teaching materials, or leisure activities."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Срок для иностранцев обязателен: если ты подаёшься из страны за пределами ЕС или ЕЭС, заявление надо успеть подать к назначенной дате — иначе место не дадут. Даты зависят от программы.",
+      "evidence": "If you're applying from a country outside the EU or EEA, you must always apply for admission by the specified deadline to secure a spot at the university.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Семестровый взнос платят все студенты: в него входит взнос студенческого союза и социальный взнос. Точную сумму вуз называет только в личном кабинете RWTHonline при зачислении — на странице её нет.",
+      "evidence": "You can see the amount of the semester fee charged by RWTH, which varies slightly every semester, in the Campus Management System RWTHonline during enrollment and throughout your degree.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Страница про деньги говорит о расходах шире: кроме взноса это аренда, еда, учебные материалы. Платы за само обучение для иностранцев здесь не названо — в этой земле её нет.",
+      "evidence": "Living expenses are for example the Student Body and Social Contribution Fee, colloquially known as the Semester Fee, but also include rent, food, teaching materials, or leisure activities.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Часть бакалаврских программ с ограничением приёма идёт через общий немецкий процесс DoSV — ту же систему, что и для своих абитуриентов, только со своим сроком.",
+      "evidence": "Dialogue-Oriented Service Process",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~bdpsux/Internationale-Studieninteressierte/lidx/1/?lang=en",
+  "source": {
+    "url": "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~bdpsux/Internationale-Studieninteressierte/lidx/1/?lang=en",
+    "pages": [
+      {
+        "url": "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~bdpsux/Internationale-Studieninteressierte/lidx/1/?lang=en",
+        "contentHash": "sha256:33f31ac06c497e49587b68b44d0c4aeac47f9c80b6f5ba06b40cc5bcd762ae04"
+      },
+      {
+        "url": "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~ege/Zugangsvoraussetzungen/lidx/1/?lang=en",
+        "contentHash": "sha256:4be55ba45a56c9290f75ad3acb7a40e91d4aa41f3830405a5a548b572ce56d9d"
+      },
+      {
+        "url": "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~egg/Bewerbung-um-einen-Studienplatz/lidx/1/?lang=en",
+        "contentHash": "sha256:32c61081727cfe041417fb20efd450c7c69a8c367d6d4152cfdc9aed12ac86aa"
+      },
+      {
+        "url": "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~bsottx/Bewerbungs-und-Einschreibefrist/lidx/1/?lang=en",
+        "contentHash": "sha256:021077043a0ad5af02fdb3f29ef2bc59f092920c8cf2a2a99e5b7945ce089a10"
+      },
+      {
+        "url": "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~cgfzv/Kosten-und-Finanzierung/lidx/1/?lang=en",
+        "contentHash": "sha256:bb79858ebc5ee58647b6e5d0510a60ad6cfba797106a6808f4bfe65e2ce01bb1"
+      },
+      {
+        "url": "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~ege/Zugangsvoraussetzungen/lidx/1/",
+        "contentHash": "sha256:4be55ba45a56c9290f75ad3acb7a40e91d4aa41f3830405a5a548b572ce56d9d"
+      },
+      {
+        "url": "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~bdpsux/Internationale-Studieninteressierte/lidx/1/",
+        "contentHash": "sha256:33f31ac06c497e49587b68b44d0c4aeac47f9c80b6f5ba06b40cc5bcd762ae04"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}

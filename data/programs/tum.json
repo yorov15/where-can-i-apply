@@ -1,0 +1,154 @@
+{
+  "id": "tum",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Technische Universität München (Германия) — бакалавриат для иностранцев: 2 000–3 000 евро за семестр",
+    "orig": "TUM — application for international students"
+  },
+  "hostCountry": "DE",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Стипендий на бакалавриат нет, но есть скидки и освобождения от платы — за них надо подаваться отдельно. Обучение для не-ЕС стоит 2 000–3 000 евро за семестр плюс обычный семестровый взнос."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничивают: для не-ЕС меняется только плата — 2 000–3 000 евро за семестр, зато есть скидки и освобождения"
+    },
+    "schoolCountry": {
+      "definedBy": "institution",
+      "evidence": "Not every secondary school diploma directly qualifies you to study at a German university."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "International students who did not obtain their entrance qualification for the degree program in the German education system must apply for preliminary documentation (VPD)."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "год выпуска страница не ограничивает: сроки привязаны к периоду подачи, а не к году аттестата"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст страницы TUM не называют ни для иностранцев, ни для своих"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "Not every secondary school diploma directly qualifies you to study at a German university."
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "Courses at TUM are offered in two languages of instruction: German and English."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Обучение в TUM для иностранцев платное: 2 000 или 3 000 евро за семестр, то есть 4 000–6 000 евро в год. Платят все, кто не из ЕЭС, и плата берётся только с тех, кто поступает впервые — тех, кто уже учился здесь, она не касается.",
+      "evidence": "For bachelor's degree programs, tuition fees are usually 2,000 or 3,000 euros per semester.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подготовительное отделение не спасает от платы: вуз прямо пишет, что окончание Studienkolleg не освобождает от tuition fees на бакалавриате. Это отличает TUM от других немецких вузов, где подготовительный год даёт право учиться бесплатно.",
+      "evidence": "Important to know: Attending a Studienkolleg does not exempt you from the obligation to pay tuition fees in a subsequent bachelor's degree program.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "К плате за обучение добавляется обычный семестровый взнос, который платят все студенты. Точную сумму вуз показывает в личном кабинете TUMonline.",
+      "evidence": "The regular semester fee must be paid in addition to the tuition fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Аттестат из-за пределов Германии сам по себе права учиться не даёт: вуз пишет, что не каждый школьный диплом годится, и отправляет в базу anabin проверять свой. Если диплом не подходит, путь — Studienkolleg.",
+      "evidence": "Not every secondary school diploma directly qualifies you to study at a German university.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Отдельно нужно получить предварительную проверку документов (VPD) — её оформляют до подачи, и без неё заявку не рассматривают.",
+      "evidence": "International students who did not obtain their entrance qualification for the degree program in the German education system must apply for preliminary documentation (VPD).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Язык зависит от программы: в TUM часть программ идёт по-немецки, часть по-английски, а некоторые требуют и того и другого. Немецкий подтверждают TestDaF с четвёркой во всех разделах, английский — TOEFL iBT от 88 или IELTS Academic.",
+      "evidence": "Courses at TUM are offered in two languages of instruction: German and English.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Немецкий надо успеть сдать до конца периода подачи, а не к началу учёбы: вуз пишет, что для программ с немецким языком обучения сертификат подаётся вместе с заявкой. TestDaF принимают с уровнем 4 во всех разделах.",
+      "evidence": "Proof of sufficient German language skills must be submitted before the end of the application period for all degree programs whose language of instruction is German.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Отменить или снизить плату можно: вуз пишет, что для тех, кто обязан платить, есть разные варианты облегчения — например, в совместных программах, в академическом отпуске или при доказанных связях с Германией. Это не автоматическая скидка: заявление рассматривают отдельно и по своим срокам.",
+      "evidence": "If you are required to pay tuition fees, there are various options for financial relief.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Освобождения по гражданству есть, но оба привязаны к жизни в Германии: плату не берут с граждан Турции, у которых хотя бы один родитель живёт в Германии, и с британцев, живших там до 31 декабря 2020 года. Ни одно из них не даётся за таджикский аттестат или за хорошие оценки.",
+      "evidence": "Students with Turkish citizenship are exempt from tuition fees if all of the following requirements are met: At least one parent lives in Germany at the time of application.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Отдельно про беженцев: вуз предупреждает, что признанные беженцы и лица, имеющие право на убежище, автоматически от платы не освобождаются. То есть даже статус сам по себе здесь не даёт бесплатного обучения — нужно подавать заявление в срок.",
+      "evidence": "Please note: Persons entitled to asylum and recognized refugees are not automatically exempt from tuition fees.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.tum.de/en/studies/application/application-info-portal/application-international",
+  "source": {
+    "url": "https://www.tum.de/en/studies/application/application-info-portal/application-international",
+    "pages": [
+      {
+        "url": "https://www.tum.de/en/studies/application/application-info-portal/application-international",
+        "contentHash": "sha256:af1507bbf54e4f91359a40dada8eb1a634492fde96fce6931c3c3f3887056662"
+      },
+      {
+        "url": "https://www.tum.de/en/studies/fees/tuition",
+        "contentHash": "sha256:b97940e96fa485403641bfed3cd0f83b511158687fe2052ff4bab1e18679084d"
+      },
+      {
+        "url": "https://www.tum.de/en/studies/application/application-info-portal/dates-periods-and-deadlines",
+        "contentHash": "sha256:4a8e3a5a96c53056991205897e8291c66bc4445a610db0f989907eb89fedaceb"
+      },
+      {
+        "url": "https://www.tum.de/en/studies/application/application-info-portal/admission-requirements/language-certificates",
+        "contentHash": "sha256:e2b9fe1c01b37c0e23dc0235f757931f8fca98155c180dfdaf2fc0cbf68894d0"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}

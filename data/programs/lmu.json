@@ -1,0 +1,128 @@
+{
+  "id": "lmu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Ludwig-Maximilians-Universität München (Германия) — бакалавриат для иностранцев, обучение по-немецки",
+    "orig": "LMU Munich — application and admission for international students"
+  },
+  "hostCountry": "DE",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Стипендий бакалавру LMU не даёт. Платы за обучение для иностранцев на прочитанных страницах вуза нет вовсе — ни в пользу того, что она есть, ни в пользу того, что её нет; уточнять на месте."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничивают: для не-ЕС меняется только порядок — по предметам с ограничением приёма свои условия"
+    },
+    "schoolCountry": {
+      "definedBy": "institution",
+      "evidence": "If your high school leaving certificate does not qualify you to begin a degree program, you may be able to acquire a university entrance qualification by attending a one year Studienkolleg (preparatory course) ."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "If your high school leaving certificate does not qualify you to begin a degree program, you may be able to acquire a university entrance qualification by attending a one year Studienkolleg (preparatory course) ."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "год выпуска страницы LMU не ограничивают: сроки заданы датами подачи"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст страницы LMU не называют ни для иностранцев, ни для своих"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "If your high school leaving certificate does not qualify you to begin a degree program, you may be able to acquire a university entrance qualification by attending a one year Studienkolleg (preparatory course) ."
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "In order to complete a bachelor's degree or a State Examination degree program, you will first need to pass a recognized German language test."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Бакалавриат в LMU идёт по-немецки: без сданного признанного экзамена по немецкому на программу не берут. Английский здесь заменить немецкий не может.",
+      "evidence": "In order to complete a bachelor's degree or a State Examination degree program, you will first need to pass a recognized German language test.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Немецкий принимают по TestDaF с четвёркой во всех разделах или по DSH-2. Есть и другие сертификаты уровня C1–C2, но список закрытый.",
+      "evidence": "TestDaF-Niveaustufe 4: The German as a Foreign Language test with a level 4 in all sections.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Тем, кто не из ЕС и подаётся на предмет с ограничением приёма, сертификат надо сдать к последнему дню подачи — не к началу учёбы. Без него заявку отклоняют.",
+      "evidence": "Non-EU citizens applying for a subject with admission restrictions You must submit one of the above certificates by the closing date for applications (15 July / 15 January).",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Сроки подачи: на зимний семестр — до 15 июля, на летний — до 15 января. В 2026 году портал приёма открыт с 15 мая по 15 июля.",
+      "evidence": "The deadline for applications (via the International Office / the Office of the University Registrar) is - 15 January for the summer semester and - 15 July for the winter semester .",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Если школьный аттестат не даёт права учиться в Германии, путь идёт через Studienkolleg — подготовительный год, после которого право появляется.",
+      "evidence": "If your high school leaving certificate does not qualify you to begin a degree program, you may be able to acquire a university entrance qualification by attending a one year Studienkolleg (preparatory course) .",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-07-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.lmu.de/en/study/degree-students/applications-for-admission/",
+  "source": {
+    "url": "https://www.lmu.de/en/study/degree-students/steps-to-studying-at-lmu/",
+    "pages": [
+      {
+        "url": "https://www.lmu.de/en/study/degree-students/steps-to-studying-at-lmu/",
+        "contentHash": "sha256:6e94182e94bead40d4cf600fce66c1e41c9c0bbff099f7196ad3cdc9436729e0"
+      },
+      {
+        "url": "https://www.lmu.de/en/study/degree-students/applications-for-admission/",
+        "contentHash": "sha256:81472b62bec97486956c42e5439d3e8b83026afa49a5acd11bdaaef005b58d27"
+      },
+      {
+        "url": "https://www.lmu.de/en/study/degree-students/prerequisites/",
+        "contentHash": "sha256:3d23fc34b10dff3912e365b64f15cb1150ef007eda280295094614f7780a9838"
+      },
+      {
+        "url": "https://www.lmu.de/en/study/degree-students/prerequisites/german-proficiency/",
+        "contentHash": "sha256:ff6892e2511b8b1f76b95db19952915026b874886b77e5aecb51b881b2fa293f"
+      },
+      {
+        "url": "https://www.lmu.de/en/workspace-for-students/international-student-guide/",
+        "contentHash": "sha256:ec9dc6454e51253f486fededbd35e0b851eb7f0e73996df941395bd1bb6acc2b"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}
