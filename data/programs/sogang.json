@@ -1,0 +1,131 @@
+{
+  "id": "sogang",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Sogang University (Сеул, Корея) — приём иностранцев: заявки с ноября по декабрь",
+    "orig": "Sogang University — undergraduate admission for international applicants"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Плату за обучение и стипендии прочитанные страницы не называют вовсе, и языковых порогов тоже нет: вуз пишет только, что программы идут на корейском и английском, а числа лежат в гиде приёма, который отдаётся файлом. Суммы и требования к языку уточнять на месте — здесь их нет."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "Admission Requirements 1. International applicants whose parents hold foreign nationality"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена: подходит школа любой страны"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Undergraduate Freshman Applicants Those who are graduates (or expected graduates) of high school or those with an equivalent educational background."
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Undergraduate Freshman Applicants Those who are graduates (or expected graduates) of high school or those with an equivalent educational background."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст на этих страницах не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "минимального балла аттестата страница не называет: сказано лишь, что нужен аттестат или равноценный документ"
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "The programs are delivered in Korean and English."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать этим путём могут только иностранцы: и ты, и оба родителя. Корейское гражданство закрывает дорогу, а таджикский паспорт — ровно то, что нужно.",
+      "evidence": "Admission Requirements 1. International applicants whose parents hold foreign nationality",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат об окончании школы или равноценный документ. Ждать выпуска не обязательно: вуз принимает и тех, кто школу ещё оканчивает.",
+      "evidence": "Undergraduate Freshman Applicants Those who are graduates (or expected graduates) of high school or those with an equivalent educational background.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки зависят от семестра. На весенний (учёба с марта) гид объявляют в октябре, заявки принимают с ноября по декабрь, ответ — в январе. На осенний: гид в марте, заявки с апреля по май, ответ в июне. То есть на март 2027 года подача — это ноябрь–декабрь 2026, и до неё остаётся около двух месяцев.",
+      "evidence": "Schedule For Spring semester For Fall semester Admissions Guide announcement October March Application November to December April to May Acceptance announcement January June",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Программы идут и на корейском, и на английском. Порогов — уровня TOPIK или TOEFL — эта страница не называет вовсе: числа есть только в гиде приёма, а он отдаётся файлом, который здесь прочитать не удалось. Спрашивать до подачи.",
+      "evidence": "The programs are delivered in Korean and English.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Год делится на два семестра по 16 недель, начинаются в марте и сентябре. Направлений 27 в 9 школах, и можно собрать вторую специальность: вуз называет больше 600 комбинаций из 8 школ. Выбирать специальность разрешают самому.",
+      "evidence": "The undergraduate program consists of 27 departments in 9 schools. The highlights of the programs are as follows: + Best majors in Korea (Business Administration, Communication, Global Korean Studies) + Offering multiple major system (More than 600 major combinations from 8 schools) + Enable majors to be chosen by yourself",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Если уже учишься в другом вузе, есть перевод: после одного года (двух семестров) — на второй курс, после двух лет — на третий.",
+      "evidence": "Undergraduate Transfer Application - 2nd year transfer Those who have completed (or are expected to complete) at least one year (two semesters) in a degree program at a four-year university of another Bachelor's degree program.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Вопросы задавать в международный отдел приёма: applysogang@sogang.ac.kr. Гид приёма лежит по адресу, указанному на странице, — но вуз отдаёт его файлом, и открывать лучше из браузера.",
+      "evidence": "Contact Information http://oia.sogang.ac.kr/enter/html/admission/guide.asp applysogang@sogang.ac.kr",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://wwwe.sogang.ac.kr/wwwe/admissionprograms.html",
+  "source": {
+    "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+    "pages": [
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      },
+      {
+        "url": "https://wwwe.sogang.ac.kr/wwwe/admissionprograms.html",
+        "contentHash": "sha256:3c9d2a46fe56ef901501159dcdf42867dba7ab8b3c4d966dce0ccb90b139568c"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}

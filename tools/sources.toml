@@ -1605,9 +1605,15 @@ approvedAt = "2026-09-26"
 [sogang]
 name = "Sogang University (Корея): бакалавриат для иностранцев"
 urls = [
-  "https://www.sogang.ac.kr/en/international-students",
-  "https://wwwe.sogang.ac.kr/wwwe/admissionprograms.html",
   "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+]
+# Страница требований — единственная внятная у Sogang: каркас сайта рисует
+# JavaScript, и на www.sogang.ac.kr/en/international-students в HTML пусто
+# (проверено 27.09.2026, страница убрана из списка). Эта лежит на wwwe —
+# статический HTML. Python её не берёт: сервер обрывает TLS-рукопожатие
+# (curl и браузер проходят), тот же случай, что у Sejong.
+files = [
+  { path = "manual/sogang/undergraduate-admission-requirements.html", url = "https://wwwe.sogang.ac.kr/wwwe/admissionprograms.html" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-26"
