@@ -180,3 +180,35 @@ test('рекомендованный балл: экзамен отмечен б�
   assert.equal(got.code, 'language.score-missing');
   assert.equal(got.params.advisory, true);
 });
+
+// Вуз может требовать сертификат и не публиковать порог: у японских программ
+// так и есть — «пришли TOEFL или IELTS», без чисел. Раньше это работало
+// случайно: min: null приводится к нулю, и любой балл проходил. Стоило
+// ключ пропустить — undefined давал NaN, сравнение «ниже порога», и человек
+// с TOEFL 110 получал красный отказ. Теперь отсутствие порога названо прямо:
+// выполнение — сам сертификат.
+test('порога нет — хватает сертификата, а не сравнения с пустотой', () => {
+  const noMin = { anyOf: [{ test: 'TOEFL_IBT', evidence: 'x' }, { test: 'IELTS', evidence: 'x' }] };
+  assert.equal(checkLanguage({ languageTests: [{ test: 'TOEFL_IBT', score: 110 }] }, noMin).status, 'pass');
+  assert.equal(checkLanguage({ languageTests: [{ test: 'IELTS', score: 5.5 }] }, noMin).status, 'pass');
+});
+
+test('порога нет, но сертификат отмечен без балла — по-прежнему «впиши балл»', () => {
+  const noMin = { anyOf: [{ test: 'TOEFL_IBT', evidence: 'x' }] };
+  const got = checkLanguage({ languageTests: [{ test: 'TOEFL_IBT', score: null }] }, noMin);
+  assert.equal(got.code, 'language.score-missing');
+});
+
+test('min: null и пропущенный ключ значат одно и то же', () => {
+  const withNull = { anyOf: [{ test: 'TOEFL_IBT', min: null, evidence: 'x' }] };
+  const withoutKey = { anyOf: [{ test: 'TOEFL_IBT', evidence: 'x' }] };
+  for (const rule of [withNull, withoutKey]) {
+    const me = { languageTests: [{ test: 'TOEFL_IBT', score: 110 }] };
+    assert.equal(checkLanguage(me, rule).status, 'pass');
+  }
+});
+
+test('настоящий порог отсутствие ключа не отменяет', () => {
+  const low = { anyOf: [{ test: 'TOEFL_IBT', min: 90, evidence: 'x' }] };
+  assert.equal(checkLanguage({ languageTests: [{ test: 'TOEFL_IBT', score: 80 }] }, low).status, 'fail');
+});

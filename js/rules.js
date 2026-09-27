@@ -292,6 +292,11 @@ export function checkLanguage(profile, rule, ctx) {
     const got = mine.find((x) => x.test === req.test);
     if (!got) continue;
     if (got.score == null) { marked.push(req.test); continue; }
+    // Порога может не быть: вуз требует сертификат, но числа не называет.
+    // Тогда выполнение — сам сертификат. Сравнение с отсутствующим порогом
+    // дало бы отказ сильному кандидату; у null это скрыто тем, что
+    // null приводится к нулю, а вот пропущенный ключ даёт NaN и «ниже порога».
+    if (req.min == null) return r('pass');
     if (got.score >= req.min) {
       if (!req.parts) return r('pass');
       byParts = byParts ?? req;

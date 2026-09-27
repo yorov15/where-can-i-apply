@@ -64,7 +64,10 @@ MAJORS = ("cs", "engineering", "natural", "business", "social", "humanities", "a
 # шкалы отдельные пороги (KAIST: «83 (Taken before Jan 21, 2026) / 4.5»).
 # Для движка это два разных экзамена: сравнить 90 из 120 с порогом 4.5
 # значило бы выдать ответ, которого программа не давала.
-LANGUAGE_TESTS = frozenset({"IELTS", "TOEFL_IBT", "TOEFL_IBT_2026", "DUOLINGO"})
+LANGUAGE_TESTS = frozenset({
+    "IELTS", "TOEFL_IBT", "TOEFL_IBT_2026", "DUOLINGO", "PTE",
+    "HSK", "JLPT", "TOPIK", "TESTDAF", "DSH", "GOETHE",
+})
 
 # Экзамены поступления (не языковые): SAT и ACT. Правило exam проверяется
 # только там, где программа про них пишет; если про экзамен в записи ничего
