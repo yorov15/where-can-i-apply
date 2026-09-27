@@ -50,9 +50,13 @@ export function missingFields(profile) {
   return out;
 }
 
-const COUNTRY = { TJ: 'Таджикистан', UZ: 'Узбекистан', KG: 'Кыргызстан', KZ: 'Казахстан', TM: 'Туркменистан', RU: 'Россия' };
-const COUNTRY_IN = { TJ: 'Таджикистане', UZ: 'Узбекистане', KG: 'Кыргызстане', KZ: 'Казахстане', TM: 'Туркменистане', RU: 'России' };
-const TEST_SHORT = { IELTS: 'IELTS', TOEFL_IBT: 'TOEFL', TOEFL_IBT_2026: 'TOEFL', DUOLINGO: 'Duolingo', SAT: 'SAT', ACT: 'ACT' };
+export const COUNTRY = { TJ: 'Таджикистан', UZ: 'Узбекистан', KG: 'Кыргызстан', KZ: 'Казахстан', TM: 'Туркменистан', RU: 'Россия', US: 'США' };
+export const COUNTRY_IN = { TJ: 'Таджикистане', UZ: 'Узбекистане', KG: 'Кыргызстане', KZ: 'Казахстане', TM: 'Туркменистане', RU: 'России', US: 'США' };
+const TEST_SHORT = {
+  IELTS: 'IELTS', TOEFL_IBT: 'TOEFL', TOEFL_IBT_2026: 'TOEFL', DUOLINGO: 'Duolingo',
+  PTE: 'PTE', HSK: 'HSK', JLPT: 'JLPT', TOPIK: 'TOPIK', TESTDAF: 'TestDaF', DSH: 'DSH',
+  GOETHE: 'Goethe', SAT: 'SAT', ACT: 'ACT',
+};
 
 // Одна строка вместо свёрнутой анкеты: человек видит, по какому профилю
 // посчитан ответ, и не листает форму ради этого.

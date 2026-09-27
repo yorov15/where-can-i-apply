@@ -11,6 +11,18 @@ export const SCORE_LIMITS = {
   DUOLINGO: { name: 'Duolingo', min: 10, max: 160, step: 5 },
   SAT: { name: 'SAT', min: 400, max: 1600, step: 10 },
   ACT: { name: 'ACT', min: 1, max: 36, step: 1 },
+
+  // Экзамены по языкам стран, куда поступают чаще всего. Уровневые
+  // сертификаты (JLPT, Goethe) хранятся числом, где БОЛЬШЕ — СИЛЬНЕЕ:
+  // правила сравнивают балл с порогом через >=, и обратный порядок
+  // («N1 — это 1») молча отказывал бы самому сильному.
+  PTE: { name: 'PTE Academic', min: 10, max: 90, step: 1 },
+  HSK: { name: 'HSK', min: 1, max: 9, step: 1 },
+  JLPT: { name: 'JLPT', min: 1, max: 5, step: 1 },
+  TOPIK: { name: 'TOPIK', min: 1, max: 6, step: 1 },
+  TESTDAF: { name: 'TestDaF', min: 3, max: 5, step: 1 },
+  DSH: { name: 'DSH', min: 1, max: 3, step: 1 },
+  GOETHE: { name: 'Goethe-Zertifikat', min: 1, max: 6, step: 1 },
 };
 
 // Балл аттестата. Шаг не задаём: средний балл бывает 4.85 или 8.63.

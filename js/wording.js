@@ -8,6 +8,13 @@ const TEST = {
   DUOLINGO: 'Duolingo',
   SAT: 'SAT',
   ACT: 'ACT',
+  PTE: 'PTE Academic',
+  HSK: 'HSK',
+  JLPT: 'JLPT',
+  TOPIK: 'TOPIK',
+  TESTDAF: 'TestDaF',
+  DSH: 'DSH',
+  GOETHE: 'Goethe-Zertifikat',
 };
 export const testName = (test) => TEST[test] ?? test;
 

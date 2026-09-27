@@ -6,8 +6,11 @@ import { SCORE_LIMITS, GPA_LIMITS, scoreProblem, gpaProblem, graduationYearProbl
 // TOEFL_IBT — старая шкала 0–120 (сдан до 21 января 2026), TOEFL_IBT_2026 —
 // новая шкала 1–6. Сохранённые раньше профили знают только первый, и
 // это верно: до этой правки анкета принимала лишь баллы 0–120.
-const LANG_TESTS = ['IELTS', 'TOEFL_IBT', 'TOEFL_IBT_2026', 'DUOLINGO'];
-const EXAM_TESTS = ['SAT', 'ACT'];
+export const LANG_TESTS = [
+  'IELTS', 'TOEFL_IBT', 'TOEFL_IBT_2026', 'DUOLINGO', 'PTE',
+  'HSK', 'JLPT', 'TOPIK', 'TESTDAF', 'DSH', 'GOETHE',
+];
+export const EXAM_TESTS = ['SAT', 'ACT'];
 
 const num = (v) => (v === '' || v == null ? null : Number(v));
 
