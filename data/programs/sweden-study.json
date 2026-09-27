@@ -2,7 +2,9 @@
   "id": "sweden-study",
   "status": "published",
   "kind": "national",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Швеция: бакалавриат на английском — платно, стипендии частично закрывают плату",
     "orig": "Bachelor's studies in Sweden — application fee, tuition fees and scholarships"
@@ -26,8 +28,11 @@
       "note": "гражданство не ограничивают: для граждан не из ЕС/ЕЭК меняется только плата и взнос за заявку"
     },
     "schoolCountry": {
-      "notMeasured": true,
-      "evidence": "So these are things like having completed your high-school studies. Or having a bachelor's degree."
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена: страница называет только оконченную среднюю школу, списка стран нет — аттестат любой страны подходит, если даёт право учиться дома"
     },
     "schoolYears": {
       "noLimit": true,
@@ -118,6 +123,12 @@
       "ru": "После учёбы вид на жительство можно продлить на 12 месяцев, чтобы искать работу или открыть своё дело.",
       "evidence": "You can apply to extend your residence permit for an extra 12 months.",
       "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Страна школы значения не имеет: списка стран страница не даёт, речь только об аттестате, который даёт право учиться дома.",
+      "evidence": "So these are things like having completed your high-school studies. Or having a bachelor's degree.",
+      "field": "schoolCountry",
       "kind": "note"
     }
   ],

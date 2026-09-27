@@ -2,7 +2,9 @@
   "id": "finland-study",
   "status": "published",
   "kind": "national",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Финляндия: бакалавриат на английском — платно, стипендия только от вуза",
     "orig": "Bachelor's studies in Finland — tuition fees, application fee and university scholarships"
@@ -26,8 +28,11 @@
       "note": "гражданство не ограничивают: для граждан не из ЕС/ЕЭК меняется только плата и взнос за заявку"
     },
     "schoolCountry": {
-      "notMeasured": true,
-      "evidence": "You'll need a high-school diploma that qualifies you for higher education in your home country."
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "страна школы не ограничена: вуз просит аттестат, который даёт право на высшее образование «в твоей стране» — то есть подходит школа любой страны"
     },
     "schoolYears": {
       "noLimit": true,
@@ -123,6 +128,12 @@
       "ru": "Кроме аттестата часть программ добавляет вступительный экзамен, SAT или GMAT либо собеседование — набор решает конкретная программа, смотри её описание.",
       "evidence": "Depending on the degree programme, admissions may include entrance exams, SAT or GMAT tests, or interviews.",
       "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Страна школы значения не имеет: списка стран страница не даёт, речь только об аттестате, который даёт право учиться дома.",
+      "evidence": "You'll need a high-school diploma that qualifies you for higher education in your home country.",
+      "field": "schoolCountry",
       "kind": "note"
     }
   ],
