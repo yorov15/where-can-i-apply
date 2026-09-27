@@ -2,7 +2,9 @@
   "id": "denison-university",
   "status": "published",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Denison University — университет в США, те же помощь и стипендии, что у американцев; заявка бесплатна",
     "orig": "Denison University"
@@ -58,8 +60,8 @@
       "note": "порога по среднему баллу нет: страницы называют только пакет документов"
     },
     "language": {
-      "notMeasured": true,
-      "evidence": "All international applicants must demonstrate adequate English proficiency to qualify for admission."
+      "definedBy": "institution",
+      "evidence": "English Proficiency Demonstration (required): All international applicants must demonstrate adequate English proficiency to qualify for admission."
     },
     "exam": {
       "optional": true,
@@ -159,6 +161,30 @@
       "evidence": "Early Decision 1: November 15 Early Decision 2: January 15 Regular Decision: January 15",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Показать английский обязательно всем иностранцам, но способ вуз не сужает: годится и язык обучения в школе, и TOEFL с IELTS с Duolingo, и балл SAT по чтению, и собеседование. Числа не названы — решает приёмная комиссия.",
+      "evidence": "English Proficiency Demonstration (required): All international applicants must demonstrate adequate English proficiency to qualify for admission.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Отказ от сертификата разбирают по одному человеку, а не по правилу: заявление на это рассматривают только после того, как подана сама заявка. Заранее узнать нельзя.",
+      "evidence": "English proficiency waivers are considered on a case-by-case basis after a student applies for admission.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Показать английский обязательно всем иностранцам, но способ вуз не сужает: годится и язык обучения в школе, и TOEFL с IELTS с Duolingo, и балл SAT по чтению, и собеседование. Числа не названы — решает приёмная комиссия.",
+      "evidence": "English Proficiency Demonstration (required): All international applicants must demonstrate adequate English proficiency to qualify for admission.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Отказ от сертификата разбирают по одному человеку, а не по правилу: заявление на это рассматривают только после того, как подана сама заявка. Заранее узнать нельзя.",
+      "evidence": "English proficiency waivers are considered on a case-by-case basis after a student applies for admission.",
+      "field": "language",
+      "kind": "note"
     }
   ],
   "deadline": {

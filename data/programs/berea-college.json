@@ -2,7 +2,9 @@
   "id": "berea-college",
   "status": "published",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Berea College — колледж в США, где студентам не платят за обучение",
     "orig": "Berea College"
@@ -55,8 +57,24 @@
       "evidence": "present outstanding secondary or leaving exam results"
     },
     "language": {
-      "notMeasured": true,
-      "evidence": "Applicants must also present scores from one of the following approved standardized tests: TOEFL, IELTS, SAT, ACT or Duolingo."
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 68,
+          "evidence": "68 (internet-based)"
+        },
+        {
+          "test": "IELTS",
+          "min": 6,
+          "evidence": "IELTS: 6 overall, 5 in each area"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 95,
+          "evidence": "Duolingo: 95"
+        }
+      ],
+      "evidence": "The minimum score required for each test is: TOEFL: 520 (paper-based); 190 (computer-based); 68 (internet-based) IELTS: 6 overall, 5 in each area ACT: 19 Composite SAT: 980 Combined Score Duolingo: 95"
     }
   },
   "textConditions": [
@@ -137,6 +155,42 @@
       "evidence": "Berea College is not prepared to provide accommodations or financial support for families.",
       "field": null,
       "kind": "must"
+    },
+    {
+      "ru": "Английский подтверждают одним из трёх: TOEFL iBT от 68, IELTS от 6 (и не ниже 5 по каждой части) или Duolingo от 95. Пороги вуз публикует сам, это не догадка.",
+      "evidence": "The minimum score required for each test is: TOEFL: 520 (paper-based); 190 (computer-based); 68 (internet-based) IELTS: 6 overall, 5 in each area ACT: 19 Composite SAT: 980 Combined Score Duolingo: 95",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Результат старше двух лет не берут. Если сертификат лежит с прошлого года — его, скорее всего, не примут, и сдавать придётся заново.",
+      "evidence": "Berea will almost never consider scores from a test taken more than two years ago.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Вместо языкового экзамена можно принести SAT (от 980 по сумме) или ACT (от 19): вуз принимает их как тот же «стандартизированный тест». Это дешевле и иногда проще, чем TOEFL.",
+      "evidence": "Applicants must also present scores from one of the following approved standardized tests: TOEFL, IELTS, SAT,",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский подтверждают одним из трёх: TOEFL iBT от 68, IELTS от 6 (и не ниже 5 по каждой части) или Duolingo от 95. Пороги вуз публикует сам, это не догадка.",
+      "evidence": "The minimum score required for each test is: TOEFL: 520 (paper-based); 190 (computer-based); 68 (internet-based) IELTS: 6 overall, 5 in each area ACT: 19 Composite SAT: 980 Combined Score Duolingo: 95",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Результат старше двух лет не берут. Если сертификат лежит с прошлого года — его, скорее всего, не примут, и сдавать придётся заново.",
+      "evidence": "Berea will almost never consider scores from a test taken more than two years ago.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Вместо языкового экзамена можно принести SAT (от 980 по сумме) или ACT (от 19): вуз принимает их как тот же «стандартизированный тест». Это дешевле и иногда проще, чем TOEFL.",
+      "evidence": "Applicants must also present scores from one of the following approved standardized tests: TOEFL, IELTS, SAT,",
+      "field": "language",
+      "kind": "workaround"
     }
   ],
   "deadline": {

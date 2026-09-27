@@ -2,7 +2,9 @@
   "id": "colby-college",
   "status": "published",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Colby College — колледж в США, нужду закрывают полностью и без кредитов, стипендий за заслуги нет",
     "orig": "Colby College"
@@ -58,7 +60,23 @@
       "note": "порога по среднему баллу нет: колледж читает табель целиком и ждёт сильную программу школы"
     },
     "language": {
-      "notMeasured": true,
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": null,
+          "evidence": "Test of English as a Foreign Language (TOEFL) iBT or Home Edition"
+        },
+        {
+          "test": "IELTS",
+          "min": null,
+          "evidence": "International English Language Testing System (IELTS) Academic"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": null,
+          "evidence": "Duolingo English Test (DET)"
+        }
+      ],
       "evidence": "If English is neither your first language nor your current language of instruction we require a score report of the Test of English as a Foreign Language (TOEFL) iBT or Home Edition, International English Language Testing System (IELTS) Academic at a test center or online, or Duolingo English Test (DET)."
     },
     "exam": {
@@ -159,6 +177,18 @@
       "evidence": "Early Decision I Nov. 15 Nov. 15 Nov. 22 On or before Dec. 15 Early Decision II Jan. 4 Jan. 4 Jan. 15 On or before Feb. 15 Regular Decision Jan. 4 Jan. 15 Jan. 15 On or before April 1",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Если английский не родной и не язык обучения — сертификат обязателен, один из трёх: TOEFL iBT, IELTS Academic или Duolingo. Порога вуз не публикует вовсе: он есть, но числа не названы, и решает отбор.",
+      "evidence": "If English is neither your first language nor your current language of instruction we require a score report of the Test of English as a Foreign Language (TOEFL) iBT or Home Edition, International English Language Testing System (IELTS) Academic at a test center or online, or Duolingo English Test (DET).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Баллы можно заявить самому при подаче, но TOEFL при этом склеивают из нескольких попыток и принимают MyBest — то есть неудачная попытка не портит картину.",
+      "evidence": "We superscore the TOEFL and accept MyBest scores.",
+      "field": "language",
+      "kind": "note"
     }
   ],
   "deadline": {

@@ -7,7 +7,9 @@
   },
   "hostCountry": "US",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": true,
@@ -58,8 +60,29 @@
       "note": "порога по среднему баллу нет: вуз пишет, что не ждёт пересчёта оценок в GPA, если в твоей школе так не принято"
     },
     "language": {
-      "notMeasured": true,
-      "evidence": "you must take the Test of English as a Foreign Language (TOEFL), the International English Language Testing System Academic (IELTS Academic), the Duolingo English Test (DET) or the Pearson Test of English Academic (PTE Academic)"
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": null,
+          "evidence": "Test of English as a Foreign Language (TOEFL)"
+        },
+        {
+          "test": "IELTS",
+          "min": null,
+          "evidence": "IELTS Academic"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": null,
+          "evidence": "Duolingo English Test (DET)"
+        },
+        {
+          "test": "PTE",
+          "min": null,
+          "evidence": "Pearson Test of English Academic (PTE Academic)"
+        }
+      ],
+      "evidence": "you must take the Test of English as a Foreign Language (TOEFL) , the International English Language Testing System Academic (IELTS Academic) , the Duolingo English Test (DET) or the Pearson Test of English Academic (PTE Academic)"
     },
     "exam": {
       "anyOf": [
@@ -159,6 +182,18 @@
       "evidence": "Application Fee or Fee Waiver.",
       "field": null,
       "kind": "money"
+    },
+    {
+      "ru": "Сертификат обязателен, если английский не родной и школа была не на английском: TOEFL, IELTS Academic, Duolingo или PTE. Числа вуз не называет.",
+      "evidence": "you must take the Test of English as a Foreign Language (TOEFL) , the International English Language Testing System Academic (IELTS Academic) , the Duolingo English Test (DET) or the Pearson Test of English Academic (PTE Academic)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Но есть выход без экзамена: если английский родной или ты отучился не меньше трёх лет в школе, где преподают на английском, сертификат не нужен вовсе. Для таджикской школы это редкость, но проверить стоит — если школа была англоязычной, требование снимается.",
+      "evidence": "You are not required to take the TOEFL, IELTS, DET or PTE Academic if English is your native language or if you have spent at least three years at a secondary school where English is the primary language of instruction.",
+      "field": "language",
+      "kind": "workaround"
     }
   ],
   "deadline": {

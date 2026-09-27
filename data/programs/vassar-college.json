@@ -7,7 +7,9 @@
   },
   "hostCountry": "US",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": true,
@@ -58,7 +60,23 @@
       "note": "порога по среднему баллу нет: смотрят успеваемость, сложность курсов, эссе и рекомендации без минимального балла"
     },
     "language": {
-      "notMeasured": true,
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": null,
+          "evidence": "TOEFL iBT"
+        },
+        {
+          "test": "IELTS",
+          "min": null,
+          "evidence": "IELTS Academic"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": null,
+          "evidence": "Duolingo English Test (DET)"
+        }
+      ],
       "evidence": "If English is not the primary language of instruction in the secondary school(s) you have attended for the last three years, you must submit English language proficiency exam results."
     },
     "exam": {
@@ -165,6 +183,24 @@
       "evidence": "Financial aid is not available for international transfer applicants.",
       "field": null,
       "kind": "note"
+    },
+    {
+      "ru": "Сертификат обязателен, если последние три года школа была не на английском: TOEFL, IELTS Academic или Duolingo. Порога вуз не называет.",
+      "evidence": "If English is not the primary language of instruction in the secondary school(s) you have attended for the last three years, you must submit English language proficiency exam results.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "IELTS принимают только Academic: General Training не годится. TOEFL Essentials тоже не берут — только iBT, бумажный и Home Edition. Ошибка при выборе экзамена стоит денег и месяца времени.",
+      "evidence": "We accept the IELTS Academic. We do NOT accept the IELTS General Training.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Duolingo принимают, но результат должен прийти напрямую от Duolingo в момент подачи, а не копией от тебя.",
+      "evidence": "We accept the Duolingo English Test (DET).",
+      "field": "language",
+      "kind": "steps"
     }
   ],
   "deadline": {

@@ -2,7 +2,9 @@
   "id": "mount-holyoke-college",
   "status": "published",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Mount Holyoke College — колледж в США для женщин, помощь по нужде, подача бесплатная",
     "orig": "Mount Holyoke College"
@@ -58,8 +60,29 @@
       "note": "порога по среднему баллу нет: колледж читает табели и рекомендации целиком"
     },
     "language": {
-      "notMeasured": true,
-      "evidence": "English Proficiency Test Scores (for nonnative English speakers)."
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": null,
+          "evidence": "TOEFL"
+        },
+        {
+          "test": "IELTS",
+          "min": null,
+          "evidence": "IELTS"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": null,
+          "evidence": "Duolingo English Test"
+        },
+        {
+          "test": "PTE",
+          "min": null,
+          "evidence": "Pearson"
+        }
+      ],
+      "evidence": "English proficiency scores reported within the Common App or Coalition App do not meet Mount Holyoke's English proficiency requirement."
     },
     "exam": {
       "optional": true,
@@ -159,6 +182,24 @@
       "evidence": "Application November 15 January 5 January 15 English Proficiency November 26 January 5 January 15",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Сертификат обязателен для тех, у кого английский не родной. Принимают TOEFL, IELTS, Duolingo, Pearson и Cambridge — порога вуз не называет, решает отбор.",
+      "evidence": "English proficiency scores reported within the Common App or Coalition App do not meet Mount Holyoke's English proficiency requirement.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Результат можно заявить самому, загрузив PDF в портал вуза. Но копия, отправленная через Common App, не считается: вуз прямо пишет, что такая не закрывает требование — то есть балл придётся загрузить ещё раз, в его собственный портал.",
+      "evidence": "English proficiency test results (Cambridge Academic English, Duolingo English Test, IELTS, Pearson and TOEFL) may be self-reported",
+      "field": "language",
+      "kind": "steps"
+    },
+    {
+      "ru": "Ту же ошибку вуз называет отдельно: баллы, отправленные внутри Common App или Coalition App, требование не закрывают. Это частая потеря: человек думает, что отправил.",
+      "evidence": "English proficiency scores reported within the Common App or Coalition App do not meet Mount Holyoke's English proficiency requirement.",
+      "field": "language",
+      "kind": "note"
     }
   ],
   "deadline": {

@@ -2,7 +2,9 @@
   "id": "swarthmore-college",
   "status": "published",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Swarthmore College — колледж в США, помощь по нужде без кредитов, но отбор учитывает деньги",
     "orig": "Swarthmore College"
@@ -58,8 +60,8 @@
       "note": "порога по среднему баллу нет: деканы читают транскрипты в контексте системы оценок страны"
     },
     "language": {
-      "notMeasured": true,
-      "evidence": "We will accept results from TOEFL, IELTS, or the Duolingo English Test."
+      "definedBy": "institution",
+      "evidence": "Applicants attending school outside the U.S., regardless of citizenship, are required to submit one of the following : Swarthmore Video Response, English Proficiency Exam Result, or an Initialview Video."
     }
   },
   "textConditions": [
@@ -169,6 +171,30 @@
       "evidence": "Regular Decision Application Deadline: January 4",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Языковой экзамен здесь не обязателен: тот, кто учится в школе вне США, присылает ОДНО из трёх — видеозапись Swarthmore, результат языкового экзамена или видео InitialView. То есть можно вообще не сдавать TOEFL и не платить за него.",
+      "evidence": "Applicants attending school outside the U.S., regardless of citizenship, are required to submit one of the following : Swarthmore Video Response, English Proficiency Exam Result, or an Initialview Video.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если большая часть школы была не на английском, вуз советует приложить результат TOEFL, IELTS или Duolingo — но это совет, а не требование. Принимают любой из трёх.",
+      "evidence": "We will accept results from TOEFL, IELTS, or the Duolingo English Test.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Языковой экзамен здесь не обязателен: тот, кто учится в школе вне США, присылает ОДНО из трёх — видеозапись Swarthmore, результат языкового экзамена или видео InitialView. То есть можно вообще не сдавать TOEFL и не платить за него.",
+      "evidence": "Applicants attending school outside the U.S., regardless of citizenship, are required to submit one of the following : Swarthmore Video Response, English Proficiency Exam Result, or an Initialview Video.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если большая часть школы была не на английском, вуз советует приложить результат TOEFL, IELTS или Duolingo — но это совет, а не требование. Принимают любой из трёх.",
+      "evidence": "We will accept results from TOEFL, IELTS, or the Duolingo English Test.",
+      "field": "language",
+      "kind": "note"
     }
   ],
   "deadline": {

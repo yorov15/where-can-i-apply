@@ -2,7 +2,9 @@
   "id": "grinnell-college",
   "status": "published",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Grinnell College — колледж в США, нужду закрывают, но отбор иностранцев учитывает деньги",
     "orig": "Grinnell College"
@@ -58,8 +60,30 @@
       "note": "порога по среднему баллу нет: колледж читает табели и оценивает заявку в целом"
     },
     "language": {
-      "notMeasured": true,
-      "evidence": "If your native language is not English and/or your primary language of instruction in high school was not English, you will need to demonstrate your English proficiency."
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "100 or higher on previous scale"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "the score for international students admitted to Grinnell is typically 5"
+        },
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "We prefer to see students with IELTS scores of 7"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": null,
+          "evidence": "Duolingo: The mid-50% score range is 129-145."
+        }
+      ],
+      "evidence": "We prefer to see students with IELTS scores of 7",
+      "advisory": true
     },
     "exam": {
       "optional": true,
@@ -171,6 +195,24 @@
       "evidence": "ED1 Nov. 15 Nov. 15 mid-late December mid-January ED2 Jan. 5 Jan. 5 early February mid-February RD Jan. 15 Jan. 15 late March/early April May 1",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Сертификат нужен, но числа — не порог, а то, что вуз предпочитает видеть: IELTS 7, TOEFL по новой шкале 5, Duolingo 129–145 у половины зачисленных. Это ориентир, а не отсечка.",
+      "evidence": "We prefer to see students with IELTS scores of 7",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "По TOEFL вуз называет не минимум, а типичный балл зачисленных — 5 по новой шкале, то есть около 100 по старой. Ниже — не отказ, но шансов меньше.",
+      "evidence": "TOEFL (iBT): the score for international students admitted to Grinnell is typically 5.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Duolingo вуз приводит диапазоном 129–145 по середине зачисленных. Это самый дешёвый из трёх экзаменов и сдаётся из дома.",
+      "evidence": "Duolingo: The mid-50% score range is 129-145.",
+      "field": "language",
+      "kind": "note"
     }
   ],
   "deadline": {

@@ -2,7 +2,9 @@
   "id": "northwestern-university",
   "status": "published",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Northwestern University — университет в США, помощь по нужде только грантами, но отбор учитывает деньги",
     "orig": "Northwestern University"
@@ -58,8 +60,24 @@
       "note": "порога по среднему баллу нет: оценки читают в контексте школы и семьи"
     },
     "language": {
-      "notMeasured": true,
-      "evidence": "While there is no minimum score required by Northwestern"
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": null,
+          "evidence": "TOEFL"
+        },
+        {
+          "test": "IELTS",
+          "min": null,
+          "evidence": "IELTS"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": null,
+          "evidence": "Duolingo English Test (DET)"
+        }
+      ],
+      "evidence": "It's important to note that an English proficiency score is required for applicants whose first/primary language is not English or whose secondary schooling has not been in English."
     },
     "exam": {
       "optional": true,
@@ -165,6 +183,18 @@
       "evidence": "Application Due Date October 1, 2026 November 1, 2026 January 4, 2027 March 1, 2027* April 1, 2027*",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Сертификат обязателен, если английский не первый язык и школа была не на английском. Принимают TOEFL, IELTS и Duolingo; порога вуз не публикует — пишет лишь, что сильные кандидаты сдают в верхней части шкалы.",
+      "evidence": "It's important to note that an English proficiency score is required for applicants whose first/primary language is not English or whose secondary schooling has not been in English.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL не склеивают из попыток и MyBest не смотрят: балл идёт один, за одну сдачу. Пересдача не улучшает уже отправленный результат.",
+      "evidence": "Northwestern does not superscore English proficiency exams, and will not review TOEFL's MyBest Scores.",
+      "field": "language",
+      "kind": "note"
     }
   ],
   "deadline": {

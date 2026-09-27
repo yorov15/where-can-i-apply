@@ -2,7 +2,9 @@
   "id": "macalester-college",
   "status": "published",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Macalester College — колледж в США, нужду закрывают, но отбор учитывает деньги",
     "orig": "Macalester College"
@@ -58,8 +60,30 @@
       "note": "порога по среднему баллу нет: колледж рассматривает табели по каждой системе отдельно"
     },
     "language": {
-      "notMeasured": true,
-      "evidence": "Submission of English proficiency testing (EPT) is optional ."
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "ibTOEFL Tests taken before January 2026: minimum 100 or higher"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "ibTOEFL Tests taken after January 2026: minimum score of 5"
+        },
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "IELTS: Minimum 7.0 or higher"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "Minimum 130 or higher"
+        }
+      ],
+      "evidence": "Macalester does not have minimum score requirements",
+      "advisory": true
     },
     "exam": {
       "optional": true,
@@ -172,6 +196,42 @@
       "evidence": "Early Decision I November 1 Early Action November 1 Early Decision II January 1 Regular Decision January 15",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Порога требования у вуза нет вовсе — он пишет это прямым текстом. Числа ниже — баллы тех, кто успешно учится, то есть ориентир, а не отсечка.",
+      "evidence": "Macalester does not have minimum score requirements",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Ориентиры такие: IELTS от 7, Duolingo от 130, TOEFL от 100 по старой шкале и от 5 по новой. Ниже — не отказ, но вуз смотрит на это.",
+      "evidence": "IELTS: Minimum 7.0 or higher",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Duolingo от 130 — самый доступный ориентир из списка: 50 минут из дома и дешевле остальных. Результат выше 130 здесь ценится наравне с IELTS.",
+      "evidence": "Minimum 130 or higher",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Порога требования у вуза нет вовсе — он пишет это прямым текстом. Числа ниже — баллы тех, кто успешно учится, то есть ориентир, а не отсечка.",
+      "evidence": "Macalester does not have minimum score requirements",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Ориентиры такие: IELTS от 7, Duolingo от 130, TOEFL от 100 по старой шкале и от 5 по новой. Ниже — не отказ, но вуз смотрит на это.",
+      "evidence": "IELTS: Minimum 7.0 or higher",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Duolingo от 130 — самый доступный ориентир из списка: 50 минут из дома и дешевле остальных. Результат выше 130 здесь ценится наравне с IELTS.",
+      "evidence": "Minimum 130 or higher",
+      "field": "language",
+      "kind": "note"
     }
   ],
   "deadline": {

@@ -7,7 +7,9 @@
   },
   "hostCountry": "US",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": true,
@@ -58,8 +60,24 @@
       "note": "порога по среднему баллу страницы не называют: оценки читают вместе со школьным профилем и программой"
     },
     "language": {
-      "notMeasured": true,
-      "evidence": "you must take one of the below English Language Proficiency exams and provide your score to Columbia as part of your application"
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": null,
+          "evidence": "TOEFL (Test of English as a Foreign Language)"
+        },
+        {
+          "test": "IELTS",
+          "min": null,
+          "evidence": "IELTS (International English Language Testing System)"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": null,
+          "evidence": "DET (Duolingo English Test)"
+        }
+      ],
+      "evidence": "you must take one of the below English Language Proficiency exams and provide your score to Columbia as part of your application."
     }
   },
   "textConditions": [
@@ -140,6 +158,12 @@
       "evidence": "Please be aware that Columbia Undergraduate Admissions does not authorize or work with any independent agents anywhere in the world for our recruitment efforts.",
       "field": null,
       "kind": "note"
+    },
+    {
+      "ru": "Сертификат обязателен, и балл надо приложить к заявке: Columbia принимает TOEFL, IELTS, Duolingo или Cambridge. Порога вуз не публикует — решает отбор, а не число.",
+      "evidence": "you must take one of the below English Language Proficiency exams and provide your score to Columbia as part of your application.",
+      "field": "language",
+      "kind": "must"
     }
   ],
   "deadline": {

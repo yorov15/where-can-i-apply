@@ -2,7 +2,9 @@
   "id": "smith-college",
   "status": "published",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Smith College — колледж в США для женщин, помощь только грантами, но помощь просят до зачисления",
     "orig": "Smith College"
@@ -58,7 +60,28 @@
       "note": "порога по среднему баллу нет: колледж читает табель, рекомендации и эссе целиком"
     },
     "language": {
-      "notMeasured": true,
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": null,
+          "evidence": "TOEFL"
+        },
+        {
+          "test": "IELTS",
+          "min": null,
+          "evidence": "IELTS"
+        },
+        {
+          "test": "PTE",
+          "min": null,
+          "evidence": "PTE"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": null,
+          "evidence": "Duolingo English Test/DET"
+        }
+      ],
       "evidence": "International citizens whose primary language is not English or have not attended a school at which English is the primary language of instruction will be required to submit TOEFL, IELTS, PTE or the Duolingo English Test/DET."
     },
     "exam": {
@@ -159,6 +182,12 @@
       "evidence": "Common Application or Coalition Application January 15 Secondary School Report January 15 Counselor Recommendation January 15",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Сертификат обязателен, если английский не первый язык или школа была не на английском: TOEFL, IELTS, PTE или Duolingo. Порога вуз не публикует.",
+      "evidence": "International citizens whose primary language is not English or have not attended a school at which English is the primary language of instruction will be required to submit TOEFL, IELTS, PTE or the Duolingo English Test/DET.",
+      "field": "language",
+      "kind": "must"
     }
   ],
   "deadline": {

@@ -2,7 +2,9 @@
   "id": "wellesley-college",
   "status": "published",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Wellesley College — колледж в США для женщин, помощь по нужде ограниченному числу иностранцев",
     "orig": "Wellesley College"
@@ -58,8 +60,25 @@
       "note": "порога по среднему баллу нет: страницы для иностранцев называют документы (табель, свидетельства), отсечки не ставят"
     },
     "language": {
-      "notMeasured": true,
-      "evidence": "we strongly recommend that you take one of the following English-proficiency tests or use one of the interview tools"
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": null,
+          "evidence": "TOEFL (iBT or Essentials)"
+        },
+        {
+          "test": "IELTS",
+          "min": null,
+          "evidence": "IELTS"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": null,
+          "evidence": "Duolingo English Test"
+        }
+      ],
+      "evidence": "we strongly recommend that you take one of the following English-proficiency tests or use one of the interview tools: TOEFL (iBT or Essentials) Duolingo English Test IELTS Cambridge Assessment English Qualifications",
+      "advisory": true
     },
     "exam": {
       "optional": true,
@@ -153,6 +172,12 @@
       "evidence": "Application November 1 January 5 January 8 Financial aid* November 1** January 5** January 8**",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Сертификат здесь не требование, а настоятельная рекомендация: вуз советует сдать один из экзаменов или пройти собеседование. Правило не жёсткое, но без английского заявка слабее.",
+      "evidence": "we strongly recommend that you take one of the following English-proficiency tests or use one of the interview tools: TOEFL (iBT or Essentials) Duolingo English Test IELTS Cambridge Assessment English Qualifications",
+      "field": "language",
+      "kind": "note"
     }
   ],
   "deadline": {
