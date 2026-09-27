@@ -1,0 +1,182 @@
+{
+  "id": "utwente",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social"
+  ],
+  "name": {
+    "ru": "University of Twente (Энсхеде, Нидерланды) — бакалавриат на английском: 12 652–16 869 евро в год и 100 евро за заявку",
+    "orig": "University of Twente — bachelor's admission for international students"
+  },
+  "hostCountry": "NL",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Стипендий для иностранцев на бакалавриате у Твенте нет: вуз прямо пишет, что даёт стипендии тем, кто идёт в магистратуру. Своими силами выходит 12 652–16 869 евро в год за обучение плюс около 1 300 евро в месяц на жизнь — жильё, еда, страховка и прочее."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "гражданство не ограничивают: иностранцам из-за пределов ЕЭК достаётся тариф вуза — почти в шесть раз выше государственного, но подавать они могут наравне со всеми"
+    },
+    "schoolCountry": {
+      "definedBy": "institution",
+      "evidence": "Make sure you meet the admission requirements of that specific bachelor's."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Make sure you meet the admission requirements of that specific bachelor's."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "год выпуска страница не ограничивает: сроки привязаны к дате подачи, а не к году аттестата"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-27",
+      "note": "возраст страница не называет ни для иностранцев, ни для своих"
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "You can find them on the website of the bachelor's of your interest"
+    },
+    "language": {
+      "evidence": "an overall band score of at least 6.0, and a minimum score on each section of at least 5.5",
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "parts": true,
+          "evidence": "an overall band score of at least 6.0, and a minimum score on each section of at least 5.5"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "parts": true,
+          "evidence": "TOEFL iBT (internet-based) certificate, not older than two years, with an overall score of 80, and a minimum score on each section of at least 18."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.0,
+          "evidence": "TOEFL iBT (internet-based) certificate, not older than two years, with an overall score of 4, and a minimum score of 4 on reading, listening and writing."
+        }
+      ]
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "У Твенте требования не собраны на одной странице: общая страница приёма отправляет за ними на сайт конкретной программы. Перед подачей открой страницу своей программы и сверь диплом.",
+      "evidence": "Make sure you meet the admission requirements of that specific bachelor's.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Заявка стоит 100 евро — это взнос за рассмотрение документов, и его не возвращают. Платят все, у кого аттестат не нидерландский, то есть и ты.",
+      "evidence": "All students holding a non-Dutch educational degree have to pay an application fee of €100 for an application to a bachelor's programme.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 100,
+        "currency": "EUR",
+        "evidence": "have to pay an application fee of €100 for an application to a bachelor's programme"
+      }
+    },
+    {
+      "ru": "Обучение на 2027/2028 год: 12 652 евро в год на программах низкого тарифа (International Business Administration, Psychology, Communication Science, Public Administration) и 16 869 евро на высоком тарифе — это все технические и точные программы, включая Technical Computer Science.",
+      "evidence": "€ 16,869 per year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Государственный тариф 2 771 евро в год тебе не положен: он для граждан ЕЭК, а не для тех, у кого из аттестата не нидерландская страна.",
+      "evidence": "€ 2,771 per year",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Почему такая разница: голландские вузы не получают государственного финансирования за студентов не из ЕЭК, и тариф вуза выше государственного именно поэтому.",
+      "evidence": "This fee is higher than the statutory tuition fee, as Dutch universities do not receive government funding for non-EU/EEA students.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Английский на бакалавриат: IELTS 6,0 общий и не ниже 5,5 в каждой части, либо TOEFL iBT 80 (старая шкала, до 21 января 2026) и не ниже 18 в каждой части, либо TOEFL iBT 4,0 по новой шкале. Сертификат не старше двух лет. Есть ещё PTE Academic и LANGUAGECERT, но их принимают немногие программы.",
+      "evidence": "an overall band score of at least 6.0, and a minimum score on each section of at least 5.5",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: заявка — до 1 мая, доказательство выпуска — 1 июля, заверенные копии — до 1 сентября. Отдельно: тем, кому вуз оформляет визу (это не-ЕЭК), надо успеть получить место до 1 июня, иначе не успеют с документами.",
+      "evidence": "Non-EEA applicants for whom we have to submit an application to the IND have to be eligible for a place before the deadline of 1 June in order to comply with the visa deadlines.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Год на странице сроков не напечатан — стоит просто «до 1 мая». Дату выше надо подтвердить на сайте вуза ближе к подаче.",
+      "evidence": "before 1 May",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Стипендий для иностранцев на бакалавриате вуз не даёт: он пишет, что даёт их тем, кто идёт в магистратуру. Искать надо у себя — министерство образования, Nuffic, Study in Holland.",
+      "evidence": "The University of Twente offers scholarships to outstanding students pursuing a master's degree",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Жизнь в Нидерландах обойдётся примерно в 1 300 евро в месяц без платы за обучение — это расчёт по данным Nibud, нидерландского института семейных финансов. В Энсхеде жильё дешевле, чем в других студенческих городах.",
+      "evidence": "studying and living in the Netherlands will cost you, on average, about 1,300 euros a month",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-05-01",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.utwente.nl/en/education/bachelor/how-to-apply/",
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.utwente.nl/en/education/bachelor/how-to-apply/",
+    "pages": [
+      {
+        "url": "https://www.utwente.nl/en/education/bachelor/how-to-apply/",
+        "contentHash": "sha256:a6ef720e95dffe71e180a91ac1c54aabc35c822606ae67f81b710803cfe5c19f"
+      },
+      {
+        "url": "https://www.utwente.nl/en/education/bachelor/how-to-apply/language-requirements/",
+        "contentHash": "sha256:651c9e96de8e68e585b2886306d0fa8e81957278e2dc21a266a2ac6ec85a9c8c"
+      },
+      {
+        "url": "https://www.utwente.nl/en/education/bachelor/apply/bachelor-deadlines/",
+        "contentHash": "sha256:307ba06e7497949d00376706f72e587ef831e3da23846a0af4c0b659f85196cd"
+      },
+      {
+        "url": "https://www.utwente.nl/en/education/bachelor/apply/tuition-fees/",
+        "contentHash": "sha256:a1b025c3f37720fd3463d649d9b59396a102a322f4538e1e281d46a6f549a208"
+      }
+    ],
+    "lastVerified": "2026-09-27",
+    "humanChecked": false
+  }
+}

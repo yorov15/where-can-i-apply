@@ -2013,3 +2013,22 @@ approvedAt = "2026-09-27"
 # Вторая карточка про Германию слово в слово повторяла бы первую; вместо
 # этого общие правила подачи (сроки 15 июля и 15 января, сбор uni-assist,
 # numerus clausus) дописаны в существующую карточку.
+
+# Пакет «Германия и Европа» утверждён Муродом 27.09.2026 (AskUserQuestion);
+# конкретные страницы внутри пакета выбирал ассистент — тот же порядок, что
+# был с пакетами «Япония» и «Китай».
+#
+# Требования к иностранцу у Твенте не лежат на одной странице: общая
+# страница приёма отправляет за ними на сайт конкретной программы. Что
+# удалось взять с общих страниц — плата, сроки и английский.
+[utwente]
+name = "University of Twente (Нидерланды): бакалавриат для иностранцев"
+urls = [
+  "https://www.utwente.nl/en/education/bachelor/how-to-apply/",
+  "https://www.utwente.nl/en/education/bachelor/how-to-apply/language-requirements/",
+  "https://www.utwente.nl/en/education/bachelor/apply/bachelor-deadlines/",
+  "https://www.utwente.nl/en/education/bachelor/apply/tuition-fees/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-27"
+
