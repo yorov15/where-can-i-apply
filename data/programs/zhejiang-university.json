@@ -1,0 +1,136 @@
+{
+  "id": "zhejiang-university",
+  "status": "published",
+  "name": {
+    "ru": "Чжэцзянский университет (Китай) — англоязычный бакалавриат",
+    "orig": "Zhejiang University — English-taught undergraduate programs"
+  },
+  "hostCountry": "CN",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: цена зависит от программы (в приёмном каталоге), сбор за заявку 800 юаней, страховка 800 юаней в год. Общежитие за свой счёт. Главное ограничение по деньгам: государственная стипендия Китая (CSC) и стипендия провинции Чжэцзян открыты ТОЛЬКО для китайскоязычных программ. Для англоязычных есть отдельные стипендии двойного диплома ZJU-UoE, Global Communication и MBBS. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Non-Chinese citizens with an ordinary foreign passport."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: выпускники текущего года подают с справкой, диплом донести до регистрации"
+    },
+    "age": {
+      "maxExclusive": 25,
+      "evidence": "Under the age of 25."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: смотрят успеваемость, язык и интервью"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Applicants for English-taught programs must provide score report of English language test (e.g. TOEFL/IELTS/OTHER) , if their native language is not English ."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужен иностранный паспорт — не гражданин Китая. Отказавшимся от китайского гражданства нужны ещё документы и проживание за рубежом более двух лет.",
+      "evidence": "Non-Chinese citizens with an ordinary foreign passport.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст — до 25 лет.",
+      "evidence": "Under the age of 25.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Для англоязычных программ нужен сертификат по английскому (TOEFL/IELTS и другие); конкретный порог вуз на этой странице не называет.",
+      "evidence": "Applicants for English-taught programs must provide score report of English language test (e.g. TOEFL/IELTS/OTHER) , if their native language is not English .",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "С 2026/27 всем иностранным абитуриентам бакалавриата обязателен китайский экзамен CSCA (тест проводят с декабря 2025 года).",
+      "evidence": "all international students applying for undergraduate programs are required to provide valid CSCA report .",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявка подаётся онлайн с 1 декабря 2025 по 28 февраля 2026 (у части специальностей — до 31 мая 2026). Сбор за заявку — 800 юаней.",
+      "evidence": "Application Fee: RMB 800 yuan, non-refundable.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Государственная стипендия Китая (CSC) и стипендия провинции Чжэцзян открыты только для китайскоязычных программ.",
+      "evidence": "Only open to Chinese-taught programs.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для англоязычных программ есть отдельные стипендии: двойной диплом ZJU-UoE, Global Communication and Management и MBBS.",
+      "evidence": "Scholarships for ZJU-UoE Institute Dual Degree Programs ( English-taught )",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-02-28",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Чжэцзянский университет (ZJU)"
+    }
+  },
+  "source": {
+    "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+    "pages": [
+      {
+        "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+        "contentHash": "sha256:60ac787e8b199fe448a922c7c51a88528e72fcd0cec155cc1143f17c6371db5f"
+      },
+      {
+        "url": "https://iczu.zju.edu.cn/admissionsen/wcholarships/list.htm",
+        "contentHash": "sha256:845628ef405fdb1f75aef56ca3a4e26c3a179ef66c3748265cd258b229d4faf3"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:181521b956f2489f97e1f1df447a62287138eb2af85176bb9066d6ca9d846eb6"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "id": "wuhan-university",
+  "status": "published",
+  "name": {
+    "ru": "Уханьский университет (Китай) — англоязычный бакалавриат",
+    "orig": "Wuhan University — English-taught undergraduate programs"
+  },
+  "hostCountry": "CN",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: на англоязычных программах бакалавриата — 23 000 юаней в год (гуманитарные), 28 000 (наука и инженерия) или 40 000 (медицина). Плюс сбор за заявку 800 юаней (или 111 долларов), страховка 500 юаней за семестр, медосмотр около 300 и учебники. Общежитие дают на кампусе, но оно платное. Стипендии — государственные программы Китая (CSC, типы A и B) и China-Link; заявка по ним отдельная. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Applicants shall be non-Chinese citizens and meet the requirements stipulated in the JWH [2020] No.12 Document"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: нужен диплом школы или справка о скором выпуске"
+    },
+    "age": {
+      "min": 18,
+      "max": 30,
+      "evidence": "Applicants generally shall be between 18 and 30 years of age as of Sep. 1, 2026."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: оценивают документы и интервью с экзаменом"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "Applicants for English-taught programs shall hold a TOEFL 80+, TOEFL Essential 8+ or IELTS 6.0+ certificate."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "evidence": "Applicants for English-taught programs shall hold a TOEFL 80+, TOEFL Essential 8+ or IELTS 6.0+ certificate."
+        }
+      ],
+      "evidence": "Applicants for English-taught programs shall hold a TOEFL 80+, TOEFL Essential 8+ or IELTS 6.0+ certificate."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужен иностранный паспорт (не гражданин Китая). Если родители китайцы или абитуриент эмигрировал из Китая, нужны четыре года иностранного гражданства и два года проживания за рубежом.",
+      "evidence": "Applicants shall be non-Chinese citizens and meet the requirements stipulated in the JWH [2020] No.12 Document",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст — обычно от 18 до 30 лет на 1 сентября года поступления.",
+      "evidence": "Applicants generally shall be between 18 and 30 years of age as of Sep. 1, 2026.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Англоязычные программы: TOEFL iBT 80 и выше или IELTS 6.0 и выше. Китайскоязычные — HSK 4 (180 баллов). Освобождение — если родной язык английский или учёба шла на английском.",
+      "evidence": "Applicants for English-taught programs shall hold a TOEFL 80+, TOEFL Essential 8+ or IELTS 6.0+ certificate.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Плата за англоязычный бакалавриат: 23 000 юаней в год (гуманитарные), 28 000 (наука и инженерия), 40 000 (медицина). Сбор за заявку 800 юаней, страховка 500 юаней за семестр.",
+      "evidence": "English Medium RMB23,000 English medium RMB28,000 English medium RMB40,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка на осень 2026 шла с 1 октября 2025 по 30 июня 2026. Нужна финансовая справка — вклад от 5 000 долларов, и медосмотр за последние полгода.",
+      "evidence": "Autumn semester 2026: The application period for autumn semester 2026 runs from Oct. 1, 2025 to Jun. 30, 2026 .",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Стипендии — государственные программы Китая: CSC (Bilateral, тип A, через посольство; Belt and Road, тип B) и China-Link. Заявка на них отдельная.",
+      "evidence": "Admission Guide for Chinese Government Scholarship Belt and Road Program of Wuhan University （Type B 2026）",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-06-30",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admission.whu.edu.cn/info/1121/5802.htm",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Уханьский университет (WHU)"
+    }
+  },
+  "source": {
+    "url": "https://admission.whu.edu.cn/info/1121/5802.htm",
+    "pages": [
+      {
+        "url": "https://admission.whu.edu.cn/info/1121/5802.htm",
+        "contentHash": "sha256:2c34f0df00e59ccc320dfad23a77174d0452deb4e10085638067d818fc90a3b2"
+      },
+      {
+        "url": "https://admission.whu.edu.cn/FRESHMEN_RELATED/FEES.htm",
+        "contentHash": "sha256:72802be3bdf622471dbf986317dc1544f50539df078f4db825814b17cc3159c3"
+      },
+      {
+        "url": "https://admission.whu.edu.cn/ADMISSION/SCHOLARSHIPS.htm",
+        "contentHash": "sha256:8060102d1f55169ade05d8001452eb1e99d1f2b09fe5dea10ac85914a2b2e16c"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:f65e48548c6105ba7479919707dd5c17819128fbb747d64af4014d1e37c6e1ec"
+  }
+}

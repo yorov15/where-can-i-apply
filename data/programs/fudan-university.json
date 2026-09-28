@@ -1,0 +1,122 @@
+{
+  "id": "fudan-university",
+  "status": "published",
+  "name": {
+    "ru": "Университет Фудань (Китай) — англоязычный бакалавриат",
+    "orig": "Fudan University — English-taught undergraduate programs"
+  },
+  "hostCountry": "CN",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: цены на снятых страницах нет — она в приёмных материалах по каждой программе, поэтому назвать её нельзя. Есть стипендии: государственная стипендия Китая (CSC, через посольство), стипендия для иностранных студентов Фуданя (по успеваемости и итогам приёма) и стипендия декана экономического факультета для программы UIPE. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: страницы приёма — для иностранных студентов, ограничений по стране нет (общие правила для граждан КНР — по законодательству Китая)"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы на снятых страницах нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата на снятых страницах не называют"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Англоязычный бакалавриат Фуданя включает несколько программ: International Organizations and Global Governance (IOGG), Bachelor of Medicine and Bachelor of Surgery (MBBS), Undergraduate International Program in Economics (UIPE), Global Bachelor of Fintech (GBF) и Data Science and Big Data Technology (UIPDB).",
+      "evidence": "2026 List of English-taught Undergraduate Programs of Fudan",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Государственная стипендия Китая (CSC): за ней обращаются в посольство Китая в своей стране.",
+      "evidence": "Prospective students may contact the Chinese embassy to find out about the Chinese government scholarship.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия для иностранных студентов Фуданя даётся сильным абитуриентам по успеваемости и итогам приёмной оценки.",
+      "evidence": "Fudan University International Students ' Scholarship This scholarship is valid for excellent applicants who would like to study at Fudan University.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельно стипендия декана экономического факультета: её дают студентам программы UIPE в конце учебного года по успеваемости.",
+      "evidence": "Fudan School of Economics Dean's Scholarship It is awarded to the international students of the UIPE program at the end of each academic year based on the academic performance.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://iso.fudan.edu.cn/isoenglish/16199/list.htm",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Фудань"
+    }
+  },
+  "source": {
+    "url": "https://iso.fudan.edu.cn/isoenglish/16199/list.htm",
+    "pages": [
+      {
+        "url": "https://iso.fudan.edu.cn/isoenglish/16199/list.htm",
+        "contentHash": "sha256:288978e3c68e0d42e769ad1cd8b49d654c4959a2d2329129ba05825b5bc40840"
+      },
+      {
+        "url": "https://econ.fudan.edu.cn/uipe/Prospective_Students1/Tuition_and_Expenses.htm",
+        "contentHash": "sha256:a0ea11f5c5d286c738436d3d6338c7aad23459fb61fdfbf40d5c5d97f299532a"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:7ce7ecff7d6d7749da8f3fefd709474529bd216b45aa57c39c0d413712fe7f22",
+    "language": "sha256:7ce7ecff7d6d7749da8f3fefd709474529bd216b45aa57c39c0d413712fe7f22"
+  }
+}

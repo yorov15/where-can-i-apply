@@ -1,0 +1,165 @@
+{
+  "id": "sjtu",
+  "status": "published",
+  "name": {
+    "ru": "Шанхайский университет Цзяо Тун (SJTU) — англоязычный Engineering Cluster",
+    "orig": "Shanghai Jiao Tong University — Undergraduate Engineering Cluster Program in English"
+  },
+  "hostCountry": "CN",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "engineering",
+    "cs",
+    "natural"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: 150 000 юаней в год (около 21 000 долларов) плюс несборочный сбор за заявку 75 долларов и страховка 800 юаней в год, общежитие — за свой счёт. Но есть стипендии: SJTU Scholarships — Первого класса (полное покрытие обучения, 2 500 юаней в месяц на жизнь, 1 100 на жильё и страховка), Второго (50% платы) и Третьего (25%). Плюс государственная стипендия Китая (CSC) и шанхайская. Жильё и дорога без стипендии не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Non-Chinese citizens holding a valid foreign passport"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: выпускники и выпускники текущего года могут подать (с объяснением пауз в учёбе)"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают; для тех, кому меньше 18 на 1 сентября, нужен опекун в Китае"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "среднего балла аттестата числом не называют: смотрят оценки по математике, физике и химии и результаты тестов"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "IELTS: 6 or above"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "evidence": "TOEFL iBT - exams taken before January 21, 2026: minimum 90 (0 - 120 scale)"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 120,
+          "evidence": "Duolingo English Test : 120 or above"
+        }
+      ],
+      "evidence": "For non-native speakers of English, either TOEFL (iBT, code: 6210), IELTS, or Duolingo score is required."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужен иностранный паспорт (не гражданин Китая). Если один или оба родителя — граждане Китая, требуются дополнительные документы об отказе от китайского гражданства минимум за четыре года.",
+      "evidence": "Non-Chinese citizens holding a valid foreign passport",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский: IELTS 6.0, TOEFL iBT 90 (или 4.5 по новой шкале) либо Duolingo 120. Освобождают при SAT чтение и письмо от 650, ACT Reading и English от 27 или четырёх годах учёбы на английском.",
+      "evidence": "For non-native speakers of English, either TOEFL (iBT, code: 6210), IELTS, or Duolingo score is required.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны баллы тестов: обязателен китайский экзамен CSCA с математикой; пока его нет — принимают SAT, ACT, A-Level, IB и другие. Ориентиры прошлого набора: SAT 1390–1500 (математика 750–790), ACT 30–34; A-Level по математике A и выше, IB Mathematics HL 5 или SL 7. Баллы CSCA донести до 30 июня 2027.",
+      "evidence": "SAT total score: 1390-1500",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявка идёт через Common Application, затем через портал SJTU. Ранняя подача — до 1 ноября 2026, обычная — до 31 марта 2027.",
+      "evidence": "Early Action: November 1 , 2026 (Beijing Time, GMT+8) Regular Application: March 31, 202 7",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Стоимость: сбор за заявку 75 долларов, обучение 150 000 юаней в год, страховка 800 юаней. Нужна финансовая гарантия — вклад не меньше 100 000 юаней.",
+      "evidence": "Tuition: RMB 150,000/Year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия SJTU Первого класса: освобождение от платы за обучение, 2 500 юаней в месяц на жизнь, 1 100 на жильё и страховка, на четыре года. Второй класс — 50% платы, третий — 25%.",
+      "evidence": "First-Class Scholarship Period: 4 years Tuition waiver, provides living allowance, accommodation subsidy and insurance",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Учат на английском, но для выпуска обязателен китайский экзамен HSK 4.",
+      "evidence": "All Cluster students are expected to meet HSK Level 4 (Chinese Language Test) as the minimum Chinese language requirement for graduation.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-03-31",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/278",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Шанхайский университет Цзяо Тун (SJTU)"
+    }
+  },
+  "source": {
+    "url": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/278",
+    "pages": [
+      {
+        "url": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/278",
+        "contentHash": "sha256:90924e37362c260aed0b2a0a2593bb5eff2860ac22e311fa473814cdc5b7f35a"
+      },
+      {
+        "url": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/778",
+        "contentHash": "sha256:0f303dc933d4a15ffbab1b512aec6ef7d51be8c8dcc78451bc677fcd5bab6ab3"
+      },
+      {
+        "url": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/794",
+        "contentHash": "sha256:99f31bb659b51e534b07710f06c72c45a07baf21ac50f466bcda690d06aa5a9f"
+      },
+      {
+        "url": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/scholarships",
+        "contentHash": "sha256:fd28f3ea6e78c53934e5ddcf7fd9bd795f825b4ba3ea53c0be09b7215927047a"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:49171bbe8a9ced138eb4427821ac8a033344258b18a53d77079e8535172a903e"
+  }
+}

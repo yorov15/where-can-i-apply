@@ -1,0 +1,152 @@
+{
+  "id": "tianjin-university",
+  "status": "published",
+  "name": {
+    "ru": "Тяньцзиньский университет (Китай) — англоязычный бакалавриат",
+    "orig": "Tianjin University — English-taught undergraduate programs"
+  },
+  "hostCountry": "CN",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "engineering",
+    "natural"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: 16 600 юаней в год на китайскоязычных программах, 20 000 на англоязычных, 26 000 на особых (архитектура, ПО, урбанистика, ландшафт). Сбор за заявку 420 юаней, депозит при зачислении 7 000, страховка 800, общежитие 15–60 юаней за койку в сутки. Государственная стипендия Китая (CSC Type A) открыта только для китайскоязычных программ; для англоязычных есть Qiushi и стипендии Тяньцзиньского университета. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Applicants must be non-Chinese citizens with a valid passport."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: выпускники текущего года подают со справкой"
+    },
+    "age": {
+      "maxExclusive": 25,
+      "evidence": "Applicant must have a high school diploma and be under the age of 25."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: смотрят CSCA, документы и интервью"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "IELTS 6.0 or TOEFL 80 is mandatory."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "evidence": "IELTS 6.0 or TOEFL 80 is mandatory."
+        }
+      ],
+      "evidence": "IELTS 6.0 or TOEFL 80 is mandatory."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужен иностранный паспорт (не гражданин Китая), для бывших граждан КНР — дополнительные условия министерства образования.",
+      "evidence": "Applicants must be non-Chinese citizens with a valid passport.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст — до 25 лет, школьный аттестат.",
+      "evidence": "Applicant must have a high school diploma and be under the age of 25.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Англоязычные программы: IELTS 6.0 или TOEFL 80 обязательно. Китайскоязычные — HSK 5 (180) или HSK 4 (180).",
+      "evidence": "IELTS 6.0 or TOEFL 80 is mandatory.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Все абитуриенты сдают китайский экзамен CSCA; результат желательно подать до 20 мая 2026.",
+      "evidence": "Students must take the \"CSCA Test\" organized by the China Scholarship Council",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявка на осень 2026: с 15 октября 2025 по 15 апреля 2026; на стипендии — до 1 апреля 2026. Обучение 16 600/20 000/26 000 юаней, сбор 420, депозит 7 000.",
+      "evidence": "October 15th, 202 5 - April 15th , 202 6",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Государственная стипендия Китая (CSC Type A) — только для китайскоязычных программ; для англоязычных — Qiushi и стипендии Тяньцзиньского университета.",
+      "evidence": "Chinese Government Scholarship (Type A) (for Chinese-instructed Programs only)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Англоязычные программы: химическая инженерия, экологическая инженерия и фармацевтика (последняя только на английском). Учат на английском, но к выпуску нужен китайский — уровень 4.",
+      "evidence": "All English-taught undergraduate students should attain Level 4 of the \" Chinese Language Proficiency Scales for Speakers of Other Languages\" standard before graduation.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-04-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202510/t20251013_324445.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Тяньцзиньский университет (TJU)"
+    }
+  },
+  "source": {
+    "url": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202510/t20251013_324445.html",
+    "pages": [
+      {
+        "url": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202510/t20251013_324445.html",
+        "contentHash": "sha256:7ac88d099c2436d25e8b0b2a6f0b775aaf02f29311f592a8788d5bafadb1fc11"
+      },
+      {
+        "url": "https://en.tju.edu.cn/info/1017/11186.htm",
+        "contentHash": "sha256:fa5d6b0b2edbcea070071f4b88c25c53049d93a133423a797e3beafa65ecc5a3"
+      },
+      {
+        "url": "https://sie.tju.edu.cn/en/jxj/tjdxjxj/",
+        "contentHash": "sha256:a1fd7f58edc3cec9782da667cbb31754fdaffd4de2ffa44b9fd4a5a97ef8faa1"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:bc28aeca042bc0349effcf04977c7ffc70dc77fd90541178f8ac012decdcf88f"
+  }
+}

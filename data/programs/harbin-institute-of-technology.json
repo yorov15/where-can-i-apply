@@ -1,0 +1,157 @@
+{
+  "id": "harbin-institute-of-technology",
+  "status": "published",
+  "name": {
+    "ru": "Харбинский политехнический институт (HIT, Китай) — бакалавриат для иностранцев",
+    "orig": "Harbin Institute of Technology — international bachelor's programs"
+  },
+  "hostCountry": "CN",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: 20 000 юаней в год на китайскоязычных программах и 26 000 на англоязычных. Плюс страховка 800, сбор за заявку 400 (600 при заявке на стипендию), общежитие 800–1 000 юаней в месяц. Есть стипендия HIT: лучшим — полное освобождение от платы (Elite), далее 50%, 30% и 20%; и государственная стипендия Китая CSC Type A (обучение, жильё, стипендия) через посольство. Жильё и дорога без стипендии не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Applicants must be citizens of countries other than the People's Republic of China"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: нужен диплом школы или справка о скором выпуске"
+    },
+    "age": {
+      "maxExclusive": 30,
+      "evidence": "Applicants must be under the age of 30 (HlT Scholarship applicants must be under the age of 25)."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "Applicants should have an Academic lELTS>6.0 (no subtest lower than 5.5), or TOEFL (iBT) >80."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "evidence": "Applicants should have an Academic lELTS>6.0 (no subtest lower than 5.5), or TOEFL (iBT) >80."
+        }
+      ],
+      "evidence": "Applicants should have an Academic lELTS>6.0 (no subtest lower than 5.5), or TOEFL (iBT) >80."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужен иностранный паспорт (не гражданин Китая), соответствие правилам министерства образования КНР.",
+      "evidence": "Applicants must be citizens of countries other than the People's Republic of China",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст — до 30 лет, а для стипендии HIT — до 25.",
+      "evidence": "Applicants must be under the age of 30 (HlT Scholarship applicants must be under the age of 25).",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Англоязычные программы: IELTS выше 6.0 (ни одна часть не ниже 5.5) или TOEFL iBT выше 80. Китайскоязычные — HSK 4 от 210 баллов.",
+      "evidence": "Applicants should have an Academic lELTS>6.0 (no subtest lower than 5.5), or TOEFL (iBT) >80.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Все абитуриенты обязаны сдать китайский экзамен CSCA и приложить его результат.",
+      "evidence": "All applicants have to take the China Scholastic Competency Assessment (CSCA) and get the score report.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение: 20 000 юаней в год на китайском, 26 000 на английском. Страховка 800, сбор за заявку 400 или 600, общежитие 800–1 000 юаней в месяц. Нужна справка о вкладе от 20 000 юаней.",
+      "evidence": "English-taught CNY26,000/year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия HIT: Elite — полное освобождение от платы, затем 50%, 30% и 20%. Заявка — до 15 июля.",
+      "evidence": "HIT Scholarship Elite 100% t uition waiver July 15 th ,2026",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Государственная стипендия Китая (CSC Type A) покрывает обучение, жильё и даёт месячную стипендию; подают через посольство Китая.",
+      "evidence": "Chinese Government Scholarship Type A (Bilateral Program) Tuition fee, accommodation fee, monthly stipend",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Англоязычная программа запускается, только если наберётся минимум 20 человек.",
+      "evidence": "A minimum of 20 students is mandatory for English-taught undergraduate programs to commence.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-07-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://studyathit.hit.edu.cn/18337/list.htm",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Харбинский политехнический институт (HIT)"
+    }
+  },
+  "source": {
+    "url": "https://studyathit.hit.edu.cn/18337/list.htm",
+    "pages": [
+      {
+        "url": "https://studyathit.hit.edu.cn/18337/list.htm",
+        "contentHash": "sha256:043b50cb75e6d29491778a86ba2eabc9859bcde0f5d5222ad143a37fc7fc79fd"
+      },
+      {
+        "url": "https://en.hit.edu.cn/2025/0604/c11958a238191/page.htm",
+        "contentHash": "sha256:b61f6fddee4fd6d6944573a8c77532194db9f943a7e0112a0a288c65cff8f58f"
+      },
+      {
+        "url": "https://studyathit.hit.edu.cn/18367/list.htm",
+        "contentHash": "sha256:89eda7ba4fecab4371d366610a72becfb486db1582a7f49c830c8f1064dadda8"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:93236b906f332d9890c6c13ef92ac19f5f0ad642b64205ede266dd036cfe13e1"
+  }
+}

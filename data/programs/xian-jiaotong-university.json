@@ -1,0 +1,146 @@
+{
+  "id": "xian-jiaotong-university",
+  "status": "published",
+  "name": {
+    "ru": "Сианьский университет Цзяо Тун (XJTU, Китай) — англоязычный бакалавриат",
+    "orig": "Xi'an Jiaotong University — English-taught undergraduate programs"
+  },
+  "hostCountry": "CN",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "engineering",
+    "natural",
+    "medicine"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: на англоязычных программах 40 000 юаней в год (инженерия) или 180 000 (электротехника и автоматика), медицина — 40 000. Китайскоязычные — 20 000–40 000. Общежитие 8 000–19 000 в год. Сбор за заявку 500 юаней (800 при заявке на стипендию). Есть стипендия для первых курсов XJTU Freshman: от 10% до полного освобождения от платы, и государственная стипендия Китая (CSC). Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: страницы приёма — для иностранных студентов; общие правила для граждан КНР по законодательству Китая"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: выпускники текущего года подают со справкой, диплом донести до 1 сентября"
+    },
+    "age": {
+      "maxExclusive": 25,
+      "evidence": "Under the age of 25 and in good health."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: смотрят оценки, язык, CSCA и интервью"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "English-taught program: Submit English proficiency certificate. IELTS 6.0 or TOEFL 80 (or above), or other equivalent English proficiency certificates recognized by our university are accepted."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "evidence": "English-taught program: Submit English proficiency certificate. IELTS 6.0 or TOEFL 80 (or above), or other equivalent English proficiency certificates recognized by our university are accepted."
+        }
+      ],
+      "evidence": "English-taught program: Submit English proficiency certificate. IELTS 6.0 or TOEFL 80 (or above), or other equivalent English proficiency certificates recognized by our university are accepted."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Возраст — до 25 лет; школьный аттестат или диплом выше. Подают и школьники последнего года.",
+      "evidence": "Under the age of 25 and in good health.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Англоязычные программы: IELTS 6.0 или TOEFL 80 и выше. Китайскоязычные — HSK 4 и выше (иначе сначала подготовительная программа).",
+      "evidence": "English-taught program: Submit English proficiency certificate. IELTS 6.0 or TOEFL 80 (or above), or other equivalent English proficiency certificates recognized by our university are accepted.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен результат китайского экзамена CSCA.",
+      "evidence": "Scanned copy of the China Scholastic Competency Assessment（CSCA）transcript；",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявка с 1 ноября 2025 по 30 июня 2026. Обучение: 180 000 юаней в год за электротехнику и автоматику, 40 000 — за инженерные и медицинские программы; общежитие 8 000–19 000 в год.",
+      "evidence": "Electrical Engineering & Automation Intelligent Manufacturing Engineering Energy and Power Engineering Materials Science and Engineering Medicine 180,000 40,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия для первых курсов XJTU Freshman (кроме медицины): 100% платы — высшая, 75%, 50%, 25% и 10% — по заслугам; на первый год. Государственная стипендия Китая (CSC) — через посольство.",
+      "evidence": "Highest Honor Scholarship (100% tuition waiver), First Class Scholarship (75% tuition waiver), Second Class Scholarship (50% tuition waiver), Third Class Scholarship (25% tuition waiver), Merit Scholarship (10% tuition waiver).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Англоязычные программы: медицина (MBBS), электротехника и автоматика, интеллектуальное производство, энергетика, материаловедение.",
+      "evidence": "Health Science Center MBBS English 6 years Bachelor of Medicine",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-06-30",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://sie.xjtu.edu.cn/en/Programs/Degree_Program/Bachelor_Program.htm",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Сианьский университет Цзяо Тун (XJTU)"
+    }
+  },
+  "source": {
+    "url": "https://sie.xjtu.edu.cn/en/info/1119/2943.htm",
+    "pages": [
+      {
+        "url": "https://sie.xjtu.edu.cn/en/info/1119/2943.htm",
+        "contentHash": "sha256:2354f8c02abfdf1262f4fe7554c39c93dd11a079b247382b3de2d2ed320d6184"
+      },
+      {
+        "url": "https://sie.xjtu.edu.cn/en/Programs/Degree_Program/Bachelor_Program.htm",
+        "contentHash": "sha256:8633bd7accc2a33ae97d5a7aebc7b5265d3dd6242f3774ca21cb32ff284f9767"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:bd8363c2ed45bb1a7390843b838dcf13c6b8170090927f407709c1d3e8c543ba"
+  }
+}

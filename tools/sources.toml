@@ -2702,3 +2702,78 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
+
+# Китай, англоязычные бакалаврские программы (партия 2026-09-28).
+#
+# В main раньше записано решение исключить государственные вузы Китая: их
+# обычный бакалавриат идёт НА КИТАЙСКОМ и требует HSK. Но у части вузов есть
+# ОТДЕЛЬНЫЕ программы на английском (Fudan UIPE, SJTU English engineering,
+# Zhejiang ZJU-UoE и др.) со стипендиями — их и берём. Мурод 28.09.2026
+# сказал продолжать (домены из одобренного списка 50).
+[sjtu]
+name = "Shanghai Jiao Tong University (Китай): англоязычный бакалавриат"
+urls = [
+  "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/278",
+  "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/778",
+  "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/794",
+  "https://global.sjtu.edu.cn/en/study-sjtu/prospective/scholarships",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+[zhejiang-university]
+name = "Zhejiang University (Китай): англоязычный бакалавриат"
+urls = [
+  "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+  "https://iczu.zju.edu.cn/admissionsen/wcholarships/list.htm",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+[fudan-university]
+name = "Fudan University (Китай): англоязычный бакалавриат (UIPE и др.)"
+urls = [
+  "https://iso.fudan.edu.cn/isoenglish/16199/list.htm",
+  "https://econ.fudan.edu.cn/uipe/Prospective_Students1/Tuition_and_Expenses.htm",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+[wuhan-university]
+name = "Wuhan University (Китай): англоязычный бакалавриат"
+urls = [
+  "https://admission.whu.edu.cn/info/1121/5802.htm",
+  "https://admission.whu.edu.cn/FRESHMEN_RELATED/FEES.htm",
+  "https://admission.whu.edu.cn/ADMISSION/SCHOLARSHIPS.htm",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+[harbin-institute-of-technology]
+name = "Harbin Institute of Technology (Китай): англоязычный бакалавриат"
+urls = [
+  "https://studyathit.hit.edu.cn/18337/list.htm",
+  "https://en.hit.edu.cn/2025/0604/c11958a238191/page.htm",
+  "https://studyathit.hit.edu.cn/18367/list.htm",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+[tianjin-university]
+name = "Tianjin University (Китай): англоязычный бакалавриат"
+urls = [
+  "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202510/t20251013_324445.html",
+  "https://en.tju.edu.cn/info/1017/11186.htm",
+  "https://sie.tju.edu.cn/en/jxj/tjdxjxj/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+[xian-jiaotong-university]
+name = "Xi'an Jiaotong University (Китай): англоязычный бакалавриат"
+urls = [
+  "https://sie.xjtu.edu.cn/en/info/1119/2943.htm",
+  "https://sie.xjtu.edu.cn/en/Programs/Degree_Program/Bachelor_Program.htm",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
