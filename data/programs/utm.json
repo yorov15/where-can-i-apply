@@ -1,0 +1,159 @@
+{
+  "id": "utm",
+  "status": "published",
+  "name": {
+    "ru": "Технологический университет Малайзии (UTM) — приём иностранцев",
+    "orig": "Universiti Teknologi Malaysia — international undergraduate admissions"
+  },
+  "hostCountry": "MY",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: вся программа стоит от 55 000 до 76 000 ринггитов (примерно 13 000–18 000 долларов США), первый семестр — 12 000–15 000 ринггитов. Плюс разовые сборы: регистрационный 6 152 ринггита, сервисный 1 075, и обязательный возвращаемый Personal Bond. Финансовой помощи иностранным первокурсникам вуз прямо не даёт — в списке стипендий иностранцам достаются только аспирантские (MTCP). Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: есть отдельный приём для иностранцев, ограничений по стране гражданства нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают; список стран на странице английского только освобождает от языкового требования"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: нужен школьный сертификат старшей ступени, требования к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: нужен школьный сертификат старшей ступени или равная ему подготовка"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5.5,
+          "evidence": "International English Language Testing System (IELTS) Band 5.5 and above"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 46,
+          "evidence": "Test of English as a Foreign Language (TOEFL) iBT / TOEFL IBT Home Edition Score of 46 and above"
+        }
+      ],
+      "evidence": "Candidates who will join UTM starting from September 2023 must meet one of the following English language requirements"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Для поступления нужен школьный сертификат старшей ступени или равная ему подготовка, английский и — если применимо — собеседование на факультете.",
+      "evidence": "A Senior High School Certificate or equivalent pre - university qualifications; and",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Английский: IELTS 5.5 (для программы TESL — 6.5) или TOEFL iBT 46 (для TESL — 79) и выше. Результат действителен два года.",
+      "evidence": "International English Language Testing System (IELTS) Band 5.5 and above",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Если английского не хватает, можно сначала пройти интенсивную программу английского при вузе (IEP) или сертифицированную CIEP, а потом поступить.",
+      "evidence": "Applicants who do not meet the English proficiency requirements of their chosen programme at Universiti Teknologi Malaysia (UTM) can improve their English at Intensive English Programme (IEP)",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Вся программа стоит от 55 000 до 76 000 ринггитов (примерно 13 000–18 000 долларов), в зависимости от направления; инженерия дороже всего. Первый семестр — 12 000–15 000 ринггитов.",
+      "evidence": "Engineering RM14,758 (USD 3,500) RM60,242 (USD 14,500) RM75,000 (USD 18,000)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Разовые и обязательные сборы: регистрационный 6 152 ринггита за семестр, сервисный 1 075, Personal Bond (возвратный) по требованию иммиграции, выпускной 220.",
+      "evidence": "Registration Fee (Normal Semester) RM6,152",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельной помощи иностранным первокурсникам вуз не даёт: стипендии в списке — аспирантские или для граждан Малайзии. Например, MTCP — только для последипломного обучения иностранцев из развивающихся стран.",
+      "evidence": "The MTCP Scholarship is sponsored by the Malaysian Government and dedicated to international students from developing countries to pursue their postgraduate studies in Malaysia",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admission.utm.my/undergraduate-international/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Технологический университет Малайзии (UTM)"
+    }
+  },
+  "source": {
+    "url": "https://admission.utm.my/undergraduate-international/",
+    "pages": [
+      {
+        "url": "https://admission.utm.my/undergraduate-international/",
+        "contentHash": "sha256:0c314ae75c61a85c07b08e020ed6b9edf47e27acbac2066fa39d526b4585e49d"
+      },
+      {
+        "url": "https://admission.utm.my/entry-requirements-ug-international/",
+        "contentHash": "sha256:42886e8c5419e754c775a993d165c8bfc5e4de089d7e2ed4f5825190e94f8d38"
+      },
+      {
+        "url": "https://admission.utm.my/english-language-requirements-3/",
+        "contentHash": "sha256:a195c566425d27330801f98ef380427fb299d81926eb3a63ba4c43af017279ce"
+      },
+      {
+        "url": "https://admission.utm.my/programme-fees-ug-international/",
+        "contentHash": "sha256:373e11d3015fab8f4052ac5a81bc54d98308126a744c97f8854c7d0caa7e4d9e"
+      },
+      {
+        "url": "https://admission.utm.my/scholarship-and-financial-aid/",
+        "contentHash": "sha256:df6d59f96c0cc27cd2f14c0f1feeb689efef3db4db982531767e58b90b87c4b1"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:d60cf4060a4d5c1c6bcc675a85fa5763acebea0ed7b3eb379b9325f85b429092"
+  }
+}

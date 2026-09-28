@@ -1,0 +1,118 @@
+{
+  "id": "usm",
+  "status": "published",
+  "name": {
+    "ru": "Университет Малайзии (USM, Пенанг) — приём иностранцев на бакалавриат",
+    "orig": "Universiti Sains Malaysia — international undergraduate admissions"
+  },
+  "hostCountry": "MY",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное; цены вуз держит только в PDF-файле, в тексте страницы чисел нет, поэтому назвать их нельзя. Разовый невозвратный сбор за рассмотрение заявки — 100 ринггитов. Стипендий для иностранных бакалавров вуз не публикует. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: есть отдельный онлайн-приём для иностранцев, ограничений по стране гражданства нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы на странице нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: нужны школьные документы, требования к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на странице приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата на странице приёма не называют"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "IELTS/TOEFL/MUET/CAE/CPE/PTE/Authorization Letter from an institution in which the medium instruction is English"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Заявка только онлайн, через систему приёма USM: регистрируешься, заполняешь данные, загружаешь документы. Нужны школьные аттестаты и выписки за все годы, их перевод, копия паспорта, фото и подтверждение оплаты сбора.",
+      "evidence": "All application must be submitted via online at International@USM.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "За рассмотрение каждой заявки берут невозвратный сбор — 100 ринггитов.",
+      "evidence": "A processing fee of RM100 is applicable for every application submitted.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Английский подтверждают сертификатом (IELTS, TOEFL, MUET, CAE, CPE, PTE) или письмом из школы, где учили на английском. Минимальный балл на странице не назван — какой именно порог, вуз не пишет.",
+      "evidence": "IELTS/TOEFL/MUET/CAE/CPE/PTE/Authorization Letter from an institution in which the medium instruction is English",
+      "field": "language",
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admission.usm.my/undergraduate/undergraduate-international/how-to-apply-international",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Малайзии (USM)"
+    }
+  },
+  "source": {
+    "url": "https://admission.usm.my/undergraduate/undergraduate-international/how-to-apply-international",
+    "pages": [
+      {
+        "url": "https://admission.usm.my/undergraduate/undergraduate-international/how-to-apply-international",
+        "contentHash": "sha256:27610165c510c253079a7ced32e8cc2337514598e332ca6a19dde74bb02f8a58"
+      },
+      {
+        "url": "https://admission.usm.my/index.php/undergraduate/undergraduate-international/fee-ugi",
+        "contentHash": "sha256:a39f9747572739d507d81aff5eef77b3ae0ca7b1c9faac961695b4b0084f68e8"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:5a37f4f787fc060f0f8f4d762a9b76204bf049ef2c031bdc52a2cf34dc549c22"
+  }
+}
