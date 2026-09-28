@@ -1,0 +1,121 @@
+{
+  "id": "university-of-economics-bratislava",
+  "status": "published",
+  "name": {
+    "ru": "Экономический университет в Братиславе (EUBA, Словакия) — англоязычный бакалавриат",
+    "orig": "University of Economics in Bratislava — English-taught bachelor programmes"
+  },
+  "hostCountry": "SK",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "business",
+    "social"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Англоязычный бакалавриат стоит 1 500 евро в год: Applied Economics, Economics and Business Management, Finance, Banking and Insurance. Плату за учебный год вносят до 30 ноября; можно подать заявление о снижении, освобождении или отсрочке. Точных данных о стипендиях для иностранных первокурсников на снятых страницах нет. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: есть программы на иностранных языках для иностранцев, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы на снятых страницах нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата на снятых страницах не называют"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Бакалавриат на английском стоит 1 500 евро в год: Applied Economics, Economics and Business Management, Finance, Banking and Insurance.",
+      "evidence": "1st degree program Applied Economics (in English) 1 500,00 €",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плату за учебный год вносят не позднее 30 ноября 2026; оплата в срок — условие продолжения учёбы.",
+      "evidence": "Tuition fees for the external form of study no later than November 30, 2026.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Студент может подать письменное заявление о снижении, освобождении или отсрочке платы, приложив подтверждающие документы.",
+      "evidence": "The student may submit an application for remission, reduction or postponement of the school due date",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://euba.sk/en/applicant/fees-related-to-the-study",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Экономический университет в Братиславе (EUBA)"
+    }
+  },
+  "source": {
+    "url": "https://euba.sk/en/applicant/admission-procedure/general-information",
+    "pages": [
+      {
+        "url": "https://euba.sk/en/applicant/admission-procedure/general-information",
+        "contentHash": "sha256:1ce7d16fcb28474b9f03bf26e32c9ac8bfcc969bf80b2448cc3706dde8664c55"
+      },
+      {
+        "url": "https://admission.euba.sk/",
+        "contentHash": "sha256:34aa7eea50340b8d4e361d1d32214dde483d395c24e7fabde9100786210a9618"
+      },
+      {
+        "url": "https://euba.sk/en/applicant/fees-related-to-the-study",
+        "contentHash": "sha256:36a27bb2d7a2fb72268edf225d9e559361338627c0d8830a9195579c5d07da66"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:3ae40573cc018322f491aa551474d0c3d1bddb3479d27b6f71dc8c593b41b519",
+    "language": "sha256:3ae40573cc018322f491aa551474d0c3d1bddb3479d27b6f71dc8c593b41b519"
+  }
+}

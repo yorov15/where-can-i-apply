@@ -148,6 +148,17 @@
 - harbin-institute-of-technology — HIT (Китай): возраст до 30, IELTS >6.0/TOEFL >80, плата 20/26 тыс. ¥, стипендия HIT до 100%, CSC
 - tianjin-university — Tianjin (Китай): возраст до 25, IELTS 6.0/TOEFL 80, плата 16,6/20/26 тыс. ¥, CSC только китайскоязычным, Qiushi
 - xian-jiaotong-university — XJTU (Китай): возраст до 25, IELTS 6.0/TOEFL 80, англоплата 40 тыс. ¥ (электротехника 180 тыс.), Freshman Scholarship 10–100%, CSC
+- fu-berlin — FU Berlin (Германия): обучения нет, только сбор €376,80, своих стипендий вуз не даёт
+- uni-due — Uni Duisburg-Essen (Германия): платы нет, немецкий DSH-2, подача через uni-assist
+- palacky-university — Palacký (Чехия): программы на англ. и чешском, обязательны признание и легализация документов (цен в снимке нет)
+- university-of-debrecen — Debrecen (Венгрия): 6–10 тыс. $/год, B2, Stipendium Hungaricum, скидка до 20% за GPA
+- bme-budapest — BME (Венгрия): не-ЕС 3200–3500 €/семестр, сбор 150 €, вступительный экзамен, 18 лет
+- university-of-szeged — Szeged (Венгрия): DreamApply + экзамен, стипендии SH/Start (цен в снимке нет)
+- slovak-university-of-technology — STUBA (Словакия): словацкий бесплатно, английский до 4000 €
+- university-of-economics-bratislava — EUBA (Словакия): англобакалавриат 1500 €/год
+- university-of-warsaw — UW (Польша): сбор 85/100 злотых, цены англопрограмм в PDF
+- jagiellonian-university — UJ (Польша): все платно, англ. от 16 тыс. злотых до 15 500 €, NAWA освобождает
+- warsaw-university-of-technology — PW (Польша): GPA ≥70%, сбор 85 злотых, экзамен + признание NAWA, заявка до 21.07.2026
 
 ### Не добавлены
 (дописывай: `id — причина`)
@@ -159,3 +170,4 @@
 - tokyo-peak — программа PEAK закрывается: сентябрь 2026 был последним набором, приём завершён
 - inu: язык приёма — приёмный гид только PDF по JS-кнопке, порог цитатой не подтверждается (в карточке пусто)
 - science-tokyo — isct.ac.jp обрывает TLS у сборщика (нет промежуточного сертификата), ни certifi, ни системный набор не помогают
+- comenius-university — uniba.sk обрывает TLS-рукопожатие (SSLV3_ALERT_HANDSHAKE_FAILURE)

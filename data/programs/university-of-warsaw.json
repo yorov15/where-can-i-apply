@@ -1,0 +1,126 @@
+{
+  "id": "university-of-warsaw",
+  "status": "published",
+  "name": {
+    "ru": "Варшавский университет (Польша) — англоязычный бакалавриат",
+    "orig": "University of Warsaw — studies in English"
+  },
+  "hostCountry": "PL",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное; цены на англоязычные программы вуз держит отдельным PDF-файлом по программам, в тексте страницы чисел нет. Сбор за заявку — 85 злотых (100, если есть экзамен или собеседование). Студенческий билет 22 злотых. О стипендиях — на отдельной странице. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: приём для иностранцев, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: иностранный аттестат нужно признать, требований к стране нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата на снятых страницах не называют"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Сбор за заявку на одну программу — 85 злотых. Если есть письменный экзамен, устный экзамен или собеседование — 100 злотых.",
+      "evidence": "Amount of application fee for registration to one chosen field of studies as well as level and form of studies is 85 PLN .",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Если экзамен или собеседование проверяют только знание польского или английского, сбор остаётся 85 злотых.",
+      "evidence": "In case of candidates participating in exam or qualification interview conducted by the admission commissions, aiming only at checking knowledge of Polish or English language, the amount of application fee is 85 PLN.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стоимость англоязычных программ на 2026/27 вуз выкладывает отдельным PDF-файлом по программам — в тексте страницы чисел нет.",
+      "evidence": "Tuition fees for studies in English (PDF file in English)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка подаётся через систему IRK; у каждого абитуриента свой банковский счёт для оплаты, его номер появляется в личном кабинете.",
+      "evidence": "Candidate makes the application fee payment in PLN or foreign currency using individual bank account number, generated for each candidate by IRK system.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://rekrutacja.uw.edu.pl/en/application-and-tuition-fees",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Варшавский университет (UW)"
+    }
+  },
+  "source": {
+    "url": "https://rekrutacja.uw.edu.pl/en/admission-rules-and-application-deadlines-for-studies-provided-in-english-for-the-academic-year-2026-2027",
+    "pages": [
+      {
+        "url": "https://rekrutacja.uw.edu.pl/en/admission-rules-and-application-deadlines-for-studies-provided-in-english-for-the-academic-year-2026-2027",
+        "contentHash": "sha256:45ced8ac6138ca550f04424cc9cd502d47115419088775c8e0462b460aa1acf6"
+      },
+      {
+        "url": "https://rekrutacja.uw.edu.pl/en/application-and-tuition-fees",
+        "contentHash": "sha256:1410ce82b4ffdd97c1595ccca16b26ece0d572d76678439bae38245607ea303f"
+      },
+      {
+        "url": "https://rekrutacja.uw.edu.pl/en/scholarships",
+        "contentHash": "sha256:3b28a40946ee090aa3797bf7e35753e16b3563ba5865869530bb1e5deb325aad"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:1af5523369bad4ab98f49a74fb6bb8130f66522575d2adb37061222e0db5af98",
+    "language": "sha256:1af5523369bad4ab98f49a74fb6bb8130f66522575d2adb37061222e0db5af98"
+  }
+}

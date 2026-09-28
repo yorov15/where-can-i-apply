@@ -1,0 +1,134 @@
+{
+  "id": "university-of-szeged",
+  "status": "published",
+  "name": {
+    "ru": "Сегедский университет (Венгрия) — бакалавриат для иностранцев",
+    "orig": "University of Szeged — bachelor's programmes for international students"
+  },
+  "hostCountry": "HU",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное; точные суммы на снятых страницах вынесены в отдельные разделы по факультетам, поэтому назвать их нельзя. Есть стипендии: государственная Stipendium Hungaricum (полное покрытие), собственная SZTE Start Scholarship, стипендия венгерской диаспоры, Erasmus+ и другие. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: приём для иностранцев, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "uploading documents presenting applicants academic background and the required language proficiency"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Заявка идёт через онлайн-платформу DreamApply: выбираешь программу, заполняешь форму, загружаешь документы и платишь сбор.",
+      "evidence": "The process of Application at the University of Szeged happens via an online application platform called the DreamApply .",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "После проверки документов проходит вступительный экзамен (за него отдельный сбор), у части факультетов ещё интервью и мотивационное письмо.",
+      "evidence": "An entrance exam will take place after your application has been submitted and your documents have been reviewed.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны документы об успеваемости и подтверждение языка — уровень зависит от программы и факультета.",
+      "evidence": "uploading documents presenting applicants academic background and the required language proficiency",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Стипендии: государственная Stipendium Hungaricum (полное покрытие), собственная SZTE Start Scholarship, стипендия венгерской диаспоры, Erasmus+ и Ceepus.",
+      "evidence": "SZTE Start Scholarship",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Перед приездом часто просят оплатить сразу первый год (два семестра).",
+      "evidence": "in most of the cases of SZTE programmes you are asked to pay the first two semesters (one year)",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://u-szeged.hu/admission--/--how-to-apply/how-to-apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Сегедский университет (SZTE)"
+    }
+  },
+  "source": {
+    "url": "https://u-szeged.hu/admission--/--how-to-apply/how-to-apply",
+    "pages": [
+      {
+        "url": "https://u-szeged.hu/admission--/--how-to-apply/how-to-apply",
+        "contentHash": "sha256:1ff0ebe9a12349048ee1ec0c9ffe995bce5969ecbb21492b7b8ab988cf377c9f"
+      },
+      {
+        "url": "https://u-szeged.hu/english/admissions/tuition-fees",
+        "contentHash": "sha256:77039951e1b17bb2a236251cd5107101b8addbca3cc88210730ff3aa26dd62ee"
+      },
+      {
+        "url": "https://u-szeged.hu/scholarships",
+        "contentHash": "sha256:1e50a4fc58c19e2ff61d730d376719fe7dd8f0c489521d9599d3fbc11ad4526c"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:5cf292eb7105fec0bac32ff7cd1f36ab4518dadc80789efdfbd4bd0bfeb88a5e"
+  }
+}

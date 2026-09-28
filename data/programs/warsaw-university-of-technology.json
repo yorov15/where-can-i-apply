@@ -1,0 +1,140 @@
+{
+  "id": "warsaw-university-of-technology",
+  "status": "published",
+  "name": {
+    "ru": "Варшавская политехника (PW, Польша) — англоязычный бакалавриат",
+    "orig": "Warsaw University of Technology — bachelor's (B.Sc.) admission"
+  },
+  "hostCountry": "PL",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "engineering",
+    "cs",
+    "natural"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное; точную сумму за семестр вуз на этих страницах не даёт, но платить нужно полностью за первый семестр (при необходимости — сразу за год), иначе не оформят визу. Сбор за заявку 85 злотых. Отдельных стипендий для иностранных первокурсников на снятых страницах нет (в основном NAWA, для второй ступени). Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: приём для иностранцев, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают, но аттестат нужно признать (апостиль или признание NAWA)"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "scale": "PERCENT",
+      "min": 70,
+      "evidence": "We usually require a GPA of at least 70% and very good grades in Math and Science."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Proof of English Proficiency"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Обычно требуют средний балл аттестата не ниже 70% и очень хорошие оценки по математике и естественным наукам. С меньшим баллом подать можно, но шансы ниже.",
+      "evidence": "We usually require a GPA of at least 70% and very good grades in Math and Science.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужно подтверждение английского — либо обучение на английском, либо один из сертификатов из списка вуза.",
+      "evidence": "Proof of English Proficiency",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Сбор за заявку — 85 злотых, платят на личный счёт абитуриента, который выдаёт система набора.",
+      "evidence": "Proof of payment of PLN 85 application fee .",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём на октябрь 2026: регистрация с 11 мая 2026, заявку создать до 21 июля 2026, документы загрузить до 19 августа, занятия с 1 октября.",
+      "evidence": "Deadline to create a new application : 21 July 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "По новому закону нужен вступительный экзамен (онлайн-интервью) и признание школьного аттестата: либо решение куратории, либо признание NAWA через систему Syrena (до 60 дней).",
+      "evidence": "participate in an entrance exam (an online interview), and",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Оплата обучения за первый семестр (или сразу за год, если нужно для визы) входит в список документов при зачислении.",
+      "evidence": "Tuition Fee Payment - proof of tuition fee payment for the 1st semester of studies.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-07-21",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.students.pw.edu.pl/How-to-Apply/Admission-to-B.Sc",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Варшавская политехника (PW)"
+    }
+  },
+  "source": {
+    "url": "https://www.students.pw.edu.pl/How-to-Apply/Admission-to-B.Sc",
+    "pages": [
+      {
+        "url": "https://www.students.pw.edu.pl/How-to-Apply/Admission-to-B.Sc",
+        "contentHash": "sha256:9ffd17ffb0c46cd03d3b5d8f95ae8388c4bb506964f9cc602cc2abe352216527"
+      },
+      {
+        "url": "https://www.students.pw.edu.pl/Resources/Application-Glossary/Tuition-fee",
+        "contentHash": "sha256:825594a19addc1a8af8b177ef29e6894c3090d89ab7978e100a0ea7973d97d08"
+      },
+      {
+        "url": "https://www.students.pw.edu.pl/Resources/Students-Life/Scholarships",
+        "contentHash": "sha256:7329d6e50b2a5053b2c3f7819123e7587453ac996e5ee580f5973abfb95d5440"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:959d2675c4165ad1f9ef17e9e4285434e3ac50bad8903de05539e0e8b2a04931"
+  }
+}

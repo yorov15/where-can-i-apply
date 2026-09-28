@@ -1,0 +1,118 @@
+{
+  "id": "slovak-university-of-technology",
+  "status": "published",
+  "name": {
+    "ru": "Словацкий технический университет в Братиславе (STUBA) — бакалавриат",
+    "orig": "Slovak University of Technology in Bratislava — bachelor's study"
+  },
+  "hostCountry": "SK",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "engineering",
+    "cs",
+    "natural"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение на словацком бесплатное. Англоязычные программы платные — до 4000 евро. Есть сбор за приём. Условия приёма и сроки задаёт каждый факультет. Отдельных стипендий для иностранцев на снятых страницах нет. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: приём для иностранцев, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы на снятых страницах нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата на снятых страницах не называют"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Обучение на словацком языке бесплатное.",
+      "evidence": "Studying in Slovak language is for free.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Англоязычные программы платные — до 4000 евро.",
+      "evidence": "The cost of the study programmes in an English language reaches 4.000 € maximum.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Условия приёма и сроки задаёт каждый факультет отдельно.",
+      "evidence": "Bachelor study admission conditions",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.stuba.sk/english/applicants-1/how-to-start-to-study/tuition-and-fees.html?page_id=16567",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Словацкий технический университет в Братиславе (STUBA)"
+    }
+  },
+  "source": {
+    "url": "https://www.stuba.sk/admission-process/bachelor-study-admission-conditions.html?page_id=17324",
+    "pages": [
+      {
+        "url": "https://www.stuba.sk/admission-process/bachelor-study-admission-conditions.html?page_id=17324",
+        "contentHash": "sha256:4f757310e415f29fbb0af989a9b7e9a65cad2b94b25975a51d4f7969b99ee1d6"
+      },
+      {
+        "url": "https://www.stuba.sk/english/applicants-1/how-to-start-to-study/tuition-and-fees.html?page_id=16567",
+        "contentHash": "sha256:f66e416dde111342a22ceb9d8a4dde4566458d37f21c8515326722ee43e2abf7"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:1b6663e0eb2698432ed3115fc746e1b133da5d8f3f9e372e4c4cb6907f668610",
+    "language": "sha256:1b6663e0eb2698432ed3115fc746e1b133da5d8f3f9e372e4c4cb6907f668610"
+  }
+}

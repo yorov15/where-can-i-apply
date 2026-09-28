@@ -1,0 +1,132 @@
+{
+  "id": "jagiellonian-university",
+  "status": "published",
+  "name": {
+    "ru": "Ягеллонский университет (Краков, Польша) — англоязычный бакалавриат",
+    "orig": "Jagiellonian University — studies in English"
+  },
+  "hostCountry": "PL",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Все иностранные студенты учатся платно. Англоязычные программы на первый год стоят от 16 000 злотых до 15 500 евро (медицина). Плату вносят по семестрам, первый взнос — в течение 7 дней после зачисления. От платы за англоязычные программы освобождает стипендия NAWA. Скидку или освобождение за бедность или успеваемость можно просить, но не на первом курсе. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: приём для иностранцев, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: кандидаты без польского гражданства поступают по правилам для иностранцев"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата на снятых страницах не называют"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Все иностранные студенты учатся платно — и на польском, и на английском; бесплатно на польском могут только отдельные категории (граждане ЕС, обладатели Карты поляка, украинцы со статусом временной защиты и др.).",
+      "evidence": "All international students undertake first-, second-, and long-cycle studies on a fee-paying basis.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Англоязычные программы на первый год стоят от 16 000 злотых (охрана окружающей среды) до 15 500 евро (медицина). Плату вносят по семестрам.",
+      "evidence": "the fees amount from PLN 16,000 (Environmental Protection and Management) to EUR 15,500 (MD program in English) for the first year of studies.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Первый взнос нужно внести не позднее чем через 7 дней после зачисления (сдачи документов).",
+      "evidence": "Candidates admitted for the first year are obliged to pay the first instalment at the latest within 7 days of enrolment",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия NAWA освобождает от платы за англоязычные программы. Важно: если подаёшься на NAWA и не получаешь её — платить всё равно придётся.",
+      "evidence": "International students may also be eligible for an exemption from the fees for studies in English upon the grant of one of the National Agency for Academic Support (NAWA) scholarships.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидку или освобождение (по бедности, за оценки, за обмен) можно просить, но на первом курсе эта процедура недоступна.",
+      "evidence": "a student may apply for a fee reduction or exemption, but this procedure is not available in the first year of studies.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://welcome.uj.edu.pl/en_GB/admission",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Ягеллонский университет"
+    }
+  },
+  "source": {
+    "url": "https://welcome.uj.edu.pl/en_GB/admission",
+    "pages": [
+      {
+        "url": "https://welcome.uj.edu.pl/en_GB/admission",
+        "contentHash": "sha256:dd14ba2b76c140cbe41bbdfc797cc80794ef903f1bfb9871357f34877278028e"
+      },
+      {
+        "url": "https://internationalstudents.uj.edu.pl/en-GB/studenci/oplaty",
+        "contentHash": "sha256:c80b1748dee2744d7fdb865cb945c2ec254134dafc132f5f7525fed31b328b6d"
+      },
+      {
+        "url": "https://internationalstudents.uj.edu.pl/en/studenci/stypendia",
+        "contentHash": "sha256:59c29c931f19b02d8e841a97fed026f63781b562cb4792add994b9e574d510d1"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:3c8d05ad18049f7c5fbebe853b6fe6ff70abfb6ccddaa62e82668d8a5e5db4cd",
+    "language": "sha256:3c8d05ad18049f7c5fbebe853b6fe6ff70abfb6ccddaa62e82668d8a5e5db4cd"
+  }
+}
