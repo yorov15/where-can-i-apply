@@ -1,0 +1,151 @@
+{
+  "id": "chung-ang",
+  "status": "published",
+  "name": {
+    "ru": "Университет Чунан (Chung-Ang, Корея) — приём иностранцев",
+    "orig": "Chung-Ang University — international undergraduate admissions"
+  },
+  "hostCountry": "KR",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное; точные цены за семестр в снятые страницы не попали, поэтому назвать их нельзя. Есть английский трек: часть направлений (например, Game Convergence) учат полностью на английском. Вуз берёт иностранцев четыре раза в год. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Features of CAU Undergraduate Admission for International Students"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы на страницах приёма нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: нужен школьный аттестат, требования к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: отбор по документам и языку"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOPIK",
+          "min": 4,
+          "evidence": "TOPIK Level 4 or higher - TOPIK 3 or higher for Design department/Global School of Arts"
+        }
+      ],
+      "evidence": "TOPIK Level 4 or higher - TOPIK 3 or higher for Design department/Global School of Arts"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Корейский язык: TOPIK 4 и выше, либо окончание 4 уровня при языковом институте CAU или сертифицированного вуза. Для дизайна и Global School of Arts достаточно TOPIK 3.",
+      "evidence": "TOPIK Level 4 or higher - TOPIK 3 or higher for Design department/Global School of Arts",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "На английском треке (занятия полностью на английском, например Game Convergence) нужен TOEFL iBT 60 или IELTS 5.5.",
+      "evidence": "TOEFL iBT 60 (converted score: 3.5)or higher, or IELTS 5.5 or higher",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Есть условное зачисление: если примут, но корейского не хватает, нужно добрать язык в течение двух лет и подать снова на то же направление — тогда зачислят окончательно.",
+      "evidence": "will be finally admitted if they meet the Korean-language requirement within two years and reapply to the same admission unit",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Вуз принимает иностранцев четыре раза в год. Заявка на весну 2027 (первый раунд) шла с 31 августа по 18 сентября 2026.",
+      "evidence": "Online application period: August 31, 2026 (Mon) 10:00 - September 18, 2026 (Fri) 18:00",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сбор за подачу зависит от направления: 150 000 вон обычно, 60 000 — для части творческих, 200 000 — для искусств и спорта, 150 000 — для медицины.",
+      "evidence": "College of Arts ad Technology KRW 150,000 KRW 60,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Английский трек — отдельные направления с обучением полностью на английском.",
+      "evidence": "English Track (100% English-Instructed Classes)",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-09-18",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://neweng.cau.ac.kr/cms/FR_CON/index.do?MENU_ID=410",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Чунан (Chung-Ang)"
+    }
+  },
+  "source": {
+    "url": "https://neweng.cau.ac.kr/cms/FR_CON/index.do?MENU_ID=410",
+    "pages": [
+      {
+        "url": "https://neweng.cau.ac.kr/cms/FR_CON/index.do?MENU_ID=410",
+        "contentHash": "sha256:aaa772c3a35f255825bac597cac00bf74bfb35a9080df52098caa09480c1c056"
+      },
+      {
+        "url": "https://neweng.cau.ac.kr/cms/FR_CON/index.do?MENU_ID=550&CONTENTS_NO=2",
+        "contentHash": "sha256:da7be74c5925693bdbdbca19abf95412c80317ccbf909159e8a376186dcea3f5"
+      },
+      {
+        "url": "https://neweng.cau.ac.kr/cms/FR_CON/index.do?MENU_ID=540",
+        "contentHash": "sha256:1c8f1e695487bc5c6d1ea60a10c549a72a99fbbdc891df1ce13ff19485c065dd"
+      },
+      {
+        "url": "https://oias.cau.ac.kr/_attach/gradcau/file/2026/08/osIrsNiLIsHJiFISatlLQvxjLj.pdf",
+        "contentHash": "sha256:9d9bf3f40ca2a81270f2421d6c9d0cf2f6d77fa61aae56226c6dbc3f2af830bd"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:60e46b00693d0e5872bbc74903d402d9c0ec9d7ea7e232f3db97d31c86a88195"
+  }
+}

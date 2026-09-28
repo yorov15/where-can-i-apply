@@ -1,0 +1,144 @@
+{
+  "id": "masaryk-university",
+  "status": "published",
+  "name": {
+    "ru": "Университет Масарика (Чехия) — приём иностранцев на бакалавриат",
+    "orig": "Masaryk University — international undergraduate admissions"
+  },
+  "hostCountry": "CZ",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Англоязычные программы платные, но заметно дешевле западных: факультет социальных исследований — 3 000 евро в год (с осени 2026), факультет науки — 3 000 евро, информатика — 4 500 евро, экономика и управление — 100 000 крон, искусств — 76 000 крон. Программы на чешском бесплатны, но нужен серьёзный чешский. Есть стипендия на жильё и государственная стипендия Чехии по линии Минобразования. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: приём для иностранцев по факультетам, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: иностранный аттестат нужно подтвердить, требований к стране нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требования к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: оценивают документы, язык и мотивацию"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Proof of English language level at least at B2 level proved by accepted below-mentioned certificate."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Для англоязычных программ нужен английский не ниже B2, подтверждённый сертификатом; у некоторых факультетов ещё интервью и вступительный экзамен.",
+      "evidence": "Proof of English language level at least at B2 level proved by accepted below-mentioned certificate.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Плата за англоязычное обучение различается по факультетам: социальные исследования — 3 000 евро в год, наука — 3 000 евро, информатика — 4 500 евро, экономика и управление — 100 000 крон, искусств — 76 000 крон.",
+      "evidence": "Faculty of Social Studies 3,000 EUR (studies starting in Sep 2026)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Программы на чешском полностью бесплатны, но нужен рабочий уровень чешского; до поступления можно год учиться на языковом курсе.",
+      "evidence": "programmes taught in Czech are completely tuition free",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть стипендия на жильё: вуз доплачивает на проживание каждый семестр тем, кто учится очно на первой программе в Чехии и не прописан в Брно.",
+      "evidence": "Masaryk University provides a financial grant to help students offset their accommodation costs.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельно — государственная стипендия Чехии от министерства образования для иностранных студентов и аспирантов.",
+      "evidence": "The Ministry of Education, Youth and Sport of the Czech Republic annually offers scholarships designed for university students",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки подачи у каждого факультета свои: например, у социальных исследований осенний набор — до 15 мая, у информатики — до 30 апреля, у медицинского — до 31 июля.",
+      "evidence": "Faculty of Social Studies September intake: 15 May",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.muni.cz/en/admissions/bachelors-and-masters-studies/how-to-apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Масарика"
+    }
+  },
+  "source": {
+    "url": "https://www.muni.cz/en/admissions/bachelors-and-masters-studies/how-to-apply",
+    "pages": [
+      {
+        "url": "https://www.muni.cz/en/admissions/bachelors-and-masters-studies/how-to-apply",
+        "contentHash": "sha256:6c3b0d9615f7be61b799878f778d1b2aa1e50d5e196351ba4c0bd2186b74c615"
+      },
+      {
+        "url": "https://www.muni.cz/en/admissions/bachelors-and-masters-studies/tuition-fees-and-financial-aid",
+        "contentHash": "sha256:18e5b643f2bd90e87abbc318ae58f8392f3b1e87590b1e395c3d44e9b8cade60"
+      },
+      {
+        "url": "https://www.muni.cz/en/students/scholarships",
+        "contentHash": "sha256:5d69ace1e741ecfb07ed0e202329ec9004dd041d45addd014d9925f56c5866e5"
+      },
+      {
+        "url": "https://www.muni.cz/en/admissions/bachelors-and-masters-studies",
+        "contentHash": "sha256:cc1310aeb59c0183615ef1b395fcbf17aec79147c38c1ace0b9a6963dbfac70c"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:c8d21b82bb9265dab496a0e37a6123187348fcc44b19dd3163bd23eac192a98a"
+  }
+}

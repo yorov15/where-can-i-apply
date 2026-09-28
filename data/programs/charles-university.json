@@ -1,0 +1,136 @@
+{
+  "id": "charles-university",
+  "status": "published",
+  "name": {
+    "ru": "Карлов университет (Чехия) — приём иностранцев на бакалавриат",
+    "orig": "Charles University — international undergraduate admissions"
+  },
+  "hostCountry": "CZ",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение на английском, немецком, французском и русском платное — от 0 евро (некоторые докторские) до 14 000 евро в год в зависимости от факультета и программы. Обучение на чешском бесплатное: платить начинают только если срок учёбы превышен больше чем на год. Правительство Чехии ежегодно дает стипендии по программе помощи развивающимся странам — для граждан развивающихся стран, куда входит и Таджикистан. Докторантам платят 10 500–25 000 крон в месяц. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: приём для иностранцев, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы на снятой странице нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятой странице нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на снятой странице нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата на снятой странице не называют"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Обучение на иностранных языках (английский, немецкий, французский, русский) платное: от 0 евро за некоторые докторские программы до 14 000 евро в год, цена зависит от факультета и программы.",
+      "evidence": "The tuition fees range from € 0 (some PhD programmes) to € 14,000 per year, depending on the faculty and study programme.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обучение на чешском бесплатное. Платить начинают, только если срок учёбы превышен больше чем на год (например, генеральная медицина — 6 лет программы, но 7 лет можно учиться бесплатно).",
+      "evidence": "Studies in Czech are free of charge.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Правительство Чехии каждый год даёт стипендии для граждан развивающихся стран по программе помощи — обучение в государственных вузах Чехии.",
+      "evidence": "The Government of the Czech Republic annually offers scholarships within its Foreign Development Assistance Programme.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Докторантам платят стипендию 10 500–25 000 крон в месяц в течение стандартного срока учёбы.",
+      "evidence": "The scholarship ranges from CZK 10,500 to CZK 25,000 per month.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельные факультеты дают свои стипендии студентам англоязычных программ: например, факультет математики и физики — до двух стипендий на плату за бакалавриат по информатике.",
+      "evidence": "up to two Computer Science Tuition Fee Scholarships for the Bachelor's Programme in Computer Science",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://cuni.cz/uken-329.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Карлов университет"
+    }
+  },
+  "source": {
+    "url": "https://cuni.cz/uken-329.html",
+    "pages": [
+      {
+        "url": "https://cuni.cz/uken-329.html",
+        "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "url": "https://cuni.cz/UKEN-372.html",
+        "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "url": "https://cuni.cz/UKEN-1617.html",
+        "contentHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "url": "https://admission.cuni.cz/ADM-43.html",
+        "contentHash": "sha256:cbca7d9b53742341cc116fa8b21696e726c774fb8bb01d89a0ead78ffcd4a31f"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:62ec148f6765264dcd525c49dc45a8abeeccf7e1d917e65a0bd385c9da261a53",
+    "language": "sha256:62ec148f6765264dcd525c49dc45a8abeeccf7e1d917e65a0bd385c9da261a53"
+  }
+}

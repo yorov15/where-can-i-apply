@@ -1,0 +1,139 @@
+{
+  "id": "tmu-japan",
+  "status": "published",
+  "name": {
+    "ru": "Токийский столичный университет (TMU) — англоязычные программы",
+    "orig": "Tokyo Metropolitan University — English-taught undergraduate degree programs"
+  },
+  "hostCountry": "JP",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "natural",
+    "engineering"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: 520 800 иен в год плюс разовый вступительный взнос 282 000 иен. Для иностранцев, платящих за себя, есть снижение или освобождение от платы. Отдельно стипендия Global Futures: 100 000 иен в месяц (то есть 1 200 000 в год) и половина платы за обучение, до 10 человек на четыре года; за успеваемость могут добавить 20 000 иен в месяц и освободить от платы целиком. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают для приёма; стипендия Global Futures предназначена не-японцам, живущим за пределами Японии"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы на страницах нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "department of biological sciences, faculty of science offers English program, in which both the admission examination and classes are provided in English"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Бакалавриат на английском по умолчанию один — биологические науки на факультете науки: и экзамен, и занятия там на английском. С 2027 года к ним добавятся четыре направления в School of Urban Environmental Sciences, а в 2028 откроют новый факультет.",
+      "evidence": "department of biological sciences, faculty of science offers English program, in which both the admission examination and classes are provided in English",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение стоит 520 800 иен в год, разовый вступительный взнос — 282 000 иен.",
+      "evidence": "Undergraduate 282,000yen 520,800yen",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Global Futures: 100 000 иен в месяц и половина платы за обучение, до 10 человек, на четыре года. За успеваемость могут добавить 20 000 иен в месяц и освободить от платы полностью.",
+      "evidence": "Stipend: 100,000 JPY per month (1,200,000 JPY per year)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для иностранцев, которые платят за себя, вуз даёт снижение или освобождение от платы — за успеваемость или после стихийного бедствия.",
+      "evidence": "TMU offers a program of reduction of, or exemption from, tuition fees for international students studying at the university at their own expense",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На стипендию Global Futures подают одновременно с заявкой на вступительный экзамен, не приезжая в Японию.",
+      "evidence": "At the same time as applying for the designated entrance exam",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.tmu.ac.jp/english/study_at_tmu.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Токийский столичный университет (TMU)"
+    }
+  },
+  "source": {
+    "url": "https://www.tmu.ac.jp/english/study_at_tmu.html",
+    "pages": [
+      {
+        "url": "https://www.tmu.ac.jp/english/study_at_tmu.html",
+        "contentHash": "sha256:a9d6cca6a5a42646e5a5faca4e85397910c851e3dbd80befb2dff4af93a76800"
+      },
+      {
+        "url": "https://www.tmu.ac.jp/english/education/english-taught_degree_programs.html",
+        "contentHash": "sha256:d857005d5f99be2d3815d4d191854d9217baf22f576d4a365e06d8bc9b5efc18"
+      },
+      {
+        "url": "https://www.ic.tmu.ac.jp/english/study_abroad/exemption.html",
+        "contentHash": "sha256:acae7798d2705c0b6be5eab82b72323b80b4bdee7f8c7293306f805d92767a31"
+      },
+      {
+        "url": "https://www.ic.tmu.ac.jp/english/study_abroad/scholarship_gfs.html",
+        "contentHash": "sha256:8b6a1384e207229554486f2e4040712e2ddc7a8222f732072946efd28b828db2"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:f97c55b13f7a5e24e0a4495ccb676c0120f7d46248e8217d298deccbf1f8e158"
+  }
+}
