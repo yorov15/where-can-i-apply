@@ -1,0 +1,143 @@
+{
+  "id": "aus-uae",
+  "status": "published",
+  "name": {
+    "ru": "Американский университет Шарджи (AUS, ОАЭ) — приём иностранцев",
+    "orig": "American University of Sharjah — bachelor's admission requirements"
+  },
+  "hostCountry": "AE",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: 110 876 дирхамов ОАЭ в год (около 30 200 долларов) на всех направлениях. Плюс сбор за заявку 400 дирхамов и 5% НДС, депозит за место 5 000, взносы за лаборатории и студенческую деятельность, медицинская страховка. Общежитие платное. Есть гранты и стипендии (President's, Merit, гранты по нужде), их подают отдельно. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "гражданство не ограничивают: страница приёма для иностранных студентов, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "страну школы не ограничивают, но иностранный аттестат нужно подтвердить справкой об эквивалентности Минобра ОАЭ"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "года выпуска не ограничивают: смотрят оценки за последние годы школы, требования к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "scale": "PERCENT",
+      "min": 85,
+      "evidence": "The minimum required average to apply for admission consideration is the equivalent of 85% or above in the final year of secondary school"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "a minimum TOEFL iBT score of 80, or TOEFL ITP score of 550, or an IELTS Academic score of 6.5 are accepted."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "evidence": "a minimum TOEFL iBT score of 80, or TOEFL ITP score of 550, or an IELTS Academic score of 6.5 are accepted."
+        }
+      ],
+      "evidence": "a minimum TOEFL iBT score of 80, or TOEFL ITP score of 550, or an IELTS Academic score of 6.5 are accepted."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Минимальный средний балл для подачи — 85% за выпускной год (или лучшие два из трёх последних лет). Это ориентир: приём конкурсный, для части направлений планка выше.",
+      "evidence": "The minimum required average to apply for admission consideration is the equivalent of 85% or above in the final year of secondary school",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский: IELTS Academic 6.5 либо TOEFL iBT 80 (по новой шкале 4.5) или TOEFL iTP 550. Принимают только TOEFL и IELTS — IELTS Indicator, TOEFL Home Edition и Linguaskill не берут.",
+      "evidence": "a minimum TOEFL iBT score of 80, or TOEFL ITP score of 550, or an IELTS Academic score of 6.5 are accepted.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для поступления на американский аттестат нужен SAT Math от 450.",
+      "evidence": "International American High School and SABIS curricula applicants are required to upload an SAT Math score of 450 and above",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужна справка об эквивалентности школьного аттестата от Министерства образования ОАЭ; её оформляют заранее, не позже чем за два месяца до начала занятий.",
+      "evidence": "The UAE Ministry of Education requires enrolled students to obtain a certificate of equivalency for their secondary education certificate.",
+      "field": "schoolYears",
+      "kind": "steps"
+    },
+    {
+      "ru": "Обучение стоит 110 876 дирхамов в год; сбор за заявку — 400 дирхамов плюс 5% НДС, депозит за место — 5 000.",
+      "evidence": "Tuition for all majors is AED 110,876 per academic year.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.aus.edu/admissions/bachelors-degrees/application-requirements",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Американский университет Шарджи (AUS)"
+    }
+  },
+  "source": {
+    "url": "https://www.aus.edu/admissions/bachelors-degrees/application-requirements",
+    "pages": [
+      {
+        "url": "https://www.aus.edu/admissions/bachelors-degrees/application-requirements",
+        "contentHash": "sha256:cbe1b7cc4efe28ce6a7695e27529a8d923c93d25feaafaed30df341fc66a632c"
+      },
+      {
+        "url": "https://www.aus.edu/admissions/bachelors-degrees/undergraduate-tuition-and-fees",
+        "contentHash": "sha256:5767255c2b20082a22ed445568c7c2f70038bfae2d9f53423c10f9dadaf5deac"
+      },
+      {
+        "url": "https://www.aus.edu/admissions/financial-grants-and-scholarships",
+        "contentHash": "sha256:65cf640cf63a5cfc7a1134cc1f4d31def75a0013cd032e213d81df6bdd0cd829"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:571c45e879e7d4cf049fb6a05626b66e9149202a131d5080725a4b3ac83caad9"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "id": "bologna-italy",
+  "status": "published",
+  "name": {
+    "ru": "Болонский университет (Италия) — приём иностранцев на бакалавриат",
+    "orig": "University of Bologna — first cycle degree for non-EU students"
+  },
+  "hostCountry": "IT",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Плата за обучение зависит от дохода семьи: чем ниже доход, тем меньше платят, а по финансовому показателю (ISEE или его аналогу для иностранных доходов) можно получить полное освобождение. Вуз не называет твёрдую цену — считает по документам. Для визы гражданину страны вне ЕС нужно подтвердить средства на жизнь в Италии — на 2026 год минимум 10 179,85 евро. Есть стипендии и льготы, о них — отдельно. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "гражданство не ограничивают: есть отдельный порядок приёма для граждан стран вне ЕС, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "страну школы не ограничивают: иностранный аттестат нужно признать, требований к стране нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "минимального балла аттестата на снятых страницах не называют"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Плата за обучение зависит от дохода семьи: ниже доход — ниже плата. Чтобы просить освобождение, подают финансовый показатель семьи — ISEE (для доходов в Италии) или отдельные документы о зарубежных доходах и имуществе.",
+      "evidence": "fees are lower for those with lower incomes. To request an exemption, you must submit the family unit's financial index ( ISEE for those with income in Italy, other specific documentation for those with foreign income and assets ).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для визы нужно подтвердить средства на жизнь в Италии: на 2026 год минимум 10 179,85 евро. Наличие средств оценивает посольство.",
+      "evidence": "the document certifying the economic resources needed to stay in Italy (minimum required for 2026: € 10.179,85).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть стипендии, льготы и жильё — заявки подают отдельно, с подготовкой документов.",
+      "evidence": "Scholarships, financial benefits, and accommodation",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка идёт через портал Studenti Online: заполнить, оплатить взносы и активировать учебную карьеру.",
+      "evidence": "go to Studenti Online for further information on how to validate your digital identity, activate your career",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.unibo.it/en/study/enrolment-fees-and-other-procedures/degree-programmes/enrolling-in-first-cycle-and-single-cycle-degree-programmes/enrolling-in-a-first-cycle-or-single-cycle-degree-programme-if-you-come-from-a-non-eu-country",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Болонский университет"
+    }
+  },
+  "source": {
+    "url": "https://www.unibo.it/en/study/enrolment-fees-and-other-procedures/degree-programmes/enrolling-in-first-cycle-and-single-cycle-degree-programmes/enrolling-in-a-first-cycle-or-single-cycle-degree-programme-if-you-come-from-a-non-eu-country",
+    "pages": [
+      {
+        "url": "https://www.unibo.it/en/study/enrolment-fees-and-other-procedures/degree-programmes/enrolling-in-first-cycle-and-single-cycle-degree-programmes/enrolling-in-a-first-cycle-or-single-cycle-degree-programme-if-you-come-from-a-non-eu-country",
+        "contentHash": "sha256:954f6ed3cca297dbd07d171b6466c1dd9afd350375f5cdfb3e83e1943e34b311"
+      },
+      {
+        "url": "https://www.unibo.it/en/study/enrolment-fees-and-other-procedures/degree-programmes/tuition-fees-and-exemptions",
+        "contentHash": "sha256:b6a90a31bebf88464e26b338bee72baccd3f37cdbc67365ab05fda39785e99a0"
+      },
+      {
+        "url": "https://www.unibo.it/en/study/study-grants-and-subsidies",
+        "contentHash": "sha256:8daa69a175a7dd0639f3e741911246d3b0216a4c07bbb328d2a8557cdd8ef3e3"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:3440fe6d5af6920a51787b037a7181d91756c81512704fd29d6609160bb6b11f",
+    "language": "sha256:3440fe6d5af6920a51787b037a7181d91756c81512704fd29d6609160bb6b11f"
+  }
+}

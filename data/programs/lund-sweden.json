@@ -1,0 +1,128 @@
+{
+  "id": "lund-sweden",
+  "status": "published",
+  "name": {
+    "ru": "Лундский университет (Швеция) — бакалавриат для иностранцев",
+    "orig": "Lund University — bachelor's degree studies"
+  },
+  "hostCountry": "SE",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное; точную цену вуз указывает на странице каждой программы, отдельной общей суммы нет. Есть стипендия Lund University Global Scholarship (в 2026 году раздали 110 стипендий на общую сумму 26 млн шведских крон) и внешние стипендии. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "гражданство не ограничивают: приём для иностранцев, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "страну школы не ограничивают: требований к стране школы на снятых страницах нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "минимального балла аттестата на снятых страницах не называют"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "demonstrate the required proficiency in English (generally English 6/English level 2) by means of an internationally recognised test, e.g. TOEFL, IELTS or the equivalent"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужен английский (обычно уровень «English 6»): подтверждают международным тестом — TOEFL, IELTS или равным.",
+      "evidence": "demonstrate the required proficiency in English (generally English 6/English level 2) by means of an internationally recognised test, e.g. TOEFL, IELTS or the equivalent",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Цена обучения у каждой программы своя — она указана на странице программы, общей суммы нет.",
+      "evidence": "The tuition fee for a specific programme or course can be found on the programme and course webpages.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть стипендия университета — Lund University Global Scholarship; в 2026 году раздали 110 стипендий на общую сумму 26 млн шведских крон.",
+      "evidence": "Lund University Global Scholarship",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка подаётся через шведскую систему universityadmissions.se; туда же прикладывают документы.",
+      "evidence": "All documents must be submitted by the application deadline.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.lunduniversity.lu.se/study/study-opportunities-lund-university/bachelors-degree-studies",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Лундский университет"
+    }
+  },
+  "source": {
+    "url": "https://www.lunduniversity.lu.se/study/admission-degree-studies/entry-requirements",
+    "pages": [
+      {
+        "url": "https://www.lunduniversity.lu.se/study/admission-degree-studies/entry-requirements",
+        "contentHash": "sha256:53e07a37ed8cd58ed8608f15a9cbbdd1c0ab84cd927aef0609e03c82ed441f68"
+      },
+      {
+        "url": "https://www.lunduniversity.lu.se/study/admission-degree-studies/applying-studies-when-apply/tuition-fees",
+        "contentHash": "sha256:4d8e1f65964d11a3f193fc1f2505c7ffb0ea9aa4fde5f991f02b807804285e9a"
+      },
+      {
+        "url": "https://www.lunduniversity.lu.se/study/admission-degree-studies/scholarships-and-awards",
+        "contentHash": "sha256:679c04d78eeace9976fd805a2a075e8276e0b31757cafc80e290e254c0017d80"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:2da25c44b03fece8738cda8820cf35d3d8ccffba740d3f54302b7655cd7525cc"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "id": "aalto-finland",
+  "status": "published",
+  "name": {
+    "ru": "Университет Аалто (Финляндия) — англоязычный бакалавриат",
+    "orig": "Aalto University — bachelor's programmes in English"
+  },
+  "hostCountry": "FI",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "business",
+    "engineering",
+    "cs",
+    "arts"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Для граждан вне ЕС, ЕЭЗ и Швейцарии бакалавриат платный; точные суммы вуз вынес на отдельную страницу стипендий и платы. Сбор за заявку для них — 100 евро. Есть стипендия Aalto University Excellence Scholarship, но её дают очень немногим. Граждане ЕС/ЕЭЗ и Швейцарии от платы и сбора освобождены. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "гражданство не ограничивают: есть программы для граждан вне ЕС, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "страну школы не ограничивают: принимают аттестаты разных стран, требований к стране нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "года выпуска не ограничивают: можно подавать, если выпуск весной 2027"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "минимального балла аттестата не называют: отбор по SAT/ACT или по оценкам аттестата"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Приём на англоязычные программы — с 7 по 22 января 2027. Заявка через финскую систему Studyinfo.",
+      "evidence": "The next application period for programmes taught in English is 7-22 January 2027.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявка стоит 100 евро для тех, кто не гражданин ЕС, ЕЭЗ или Швейцарии; платить нужно в течение 7 дней после подачи, иначе заявку не рассмотрят. Граждане ЕС/ЕЭЗ и Швейцарии освобождены.",
+      "evidence": "must pay a €100 application fee to apply for higher education in Finland. Citizens of EU or EEA member states and Switzerland are exempt from the fee.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Бакалавриат и магистратура платные для граждан вне ЕС/ЕЭЗ и Швейцарии — суммы на отдельной странице стипендий и платы.",
+      "evidence": "Bachelor's and master's programmes have a tuition fee for students who are not citizens of the EU/EEA countries or Switzerland.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть стипендия Aalto University Excellence Scholarship для платящих студентов, но мест очень мало.",
+      "evidence": "Prospective students subject to tuition fees can apply for Aalto University Excellence Scholarship.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "В раннем раунде A (для тех, у кого нет финского аттестата, IB, EB или DIA) отбор идёт по SAT или ACT.",
+      "evidence": "Admission method in admission round A SAT or ACT test results.",
+      "field": "exam",
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-22",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Аалто"
+    }
+  },
+  "source": {
+    "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english",
+    "pages": [
+      {
+        "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english",
+        "contentHash": "sha256:7a5b5b56bffd32ae0de3c8a9a26fd0878996dffb17c8d2dbabd1c03209fe2a41"
+      },
+      {
+        "url": "https://www.aalto.fi/en/admission-services/scholarships-and-tuition-fees",
+        "contentHash": "sha256:52348891e65b530e4bcf90c0eb42762087b2464429b834fe227b3033e79eeddb"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:fa0ae13bfcf75feae1aa540e6690dbff5774e929313f895d43c81396f0df878b",
+    "language": "sha256:fa0ae13bfcf75feae1aa540e6690dbff5774e929313f895d43c81396f0df878b"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "id": "sapienza-italy",
+  "status": "published",
+  "name": {
+    "ru": "Университет Сапиенца (Рим, Италия) — приём иностранцев на бакалавриат",
+    "orig": "Sapienza University of Rome — international student admission"
+  },
+  "hostCountry": "IT",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Плата за обучение считается по доходу семьи (ISEE): чем ниже доход, тем меньше платят. Точные суммы на 2026/27 вуз обещал опубликовать после 30 сентября, поэтому на снятых страницах их нет. Для иностранцев есть Foundation Year — подготовительный год. Есть стипендии и льготы. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "гражданство не ограничивают: есть отдельные порядки для граждан ЕС и не-ЕС, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "страну школы не ограничивают: иностранный аттестат нужно признать, требований к стране нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "минимального балла аттестата на снятых страницах не называют"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Порядок подачи различается: для граждан ЕС и не-ЕС, для тех, кому нужна виза, и для уже живущих в Италии — разные процедуры.",
+      "evidence": "you must follow different procedures depending on whether you hold an EU or non-EU passport, need a visa, or are already living in Italy.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Плата зависит от дохода семьи (ISEE); точные суммы на 2026/27 вуз публикует после 30 сентября.",
+      "evidence": "Le informazioni per l'anno accademico 2026-2027 saranno pubblicate dopo il 30 settembre",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для иностранцев, которым нужна подготовка, есть Foundation Year — подготовительный год при университете.",
+      "evidence": "The Sapienza University Foundation Year was conceived for international students who need",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Есть стипендиальные возможности — детали вуз даёт на отдельной странице.",
+      "evidence": "scholarship opportunities",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.uniroma1.it/en/pagina/applying-sapienza-international-student",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Сапиенца (Рим)"
+    }
+  },
+  "source": {
+    "url": "https://www.uniroma1.it/en/pagina/applying-sapienza-international-student",
+    "pages": [
+      {
+        "url": "https://www.uniroma1.it/en/pagina/applying-sapienza-international-student",
+        "contentHash": "sha256:fe11e379707b043b478abd69a74f114e35bf6c998500ea300e26663539d2d2b4"
+      },
+      {
+        "url": "https://www.uniroma1.it/en/pagina/tuition-fees-and-benefits",
+        "contentHash": "sha256:5c85214a80f4fb21cf38f9e86b1ee9463ac60f10353de958be9080a0852537d4"
+      },
+      {
+        "url": "https://www.uniroma1.it/en/pagina/scholarships",
+        "contentHash": "sha256:1d73eb88c77cebc2c89a893d112bd55eb08fc945cb2edb69851b52ce12760324"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:ca0d779b86dfb294dd82b83f0bedc96e7b1b1c7771df6159c625295cf04ce2d6",
+    "language": "sha256:ca0d779b86dfb294dd82b83f0bedc96e7b1b1c7771df6159c625295cf04ce2d6"
+  }
+}

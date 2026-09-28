@@ -1,0 +1,138 @@
+{
+  "id": "polyu-hongkong",
+  "status": "published",
+  "name": {
+    "ru": "Политехнический университет Гонконга (PolyU) — приём иностранцев",
+    "orig": "Hong Kong Polytechnic University — international / other qualifications admissions"
+  },
+  "hostCountry": "HK",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение для не-местных студентов — 240 000 гонконгских долларов в год (около 30 800 долларов США), плюс сбор за заявку 600. С общежитием (около 18 500), питанием и личными расходами год выходит примерно в 330 000 гонконгских долларов (около 42 300 долларов США). Стипендии за успехи рассматривают автоматически, без отдельной заявки; есть отдельная Cultural Ambassador для не-местных — до 60 000 в год. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "гражданство не ограничивают: есть приём для не-местных по международным квалификациям, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "страну школы не ограничивают: принимают международные аттестаты, требований к стране нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "возраст не ограничивают; для тех, кому нет 18, есть отдельные правила (Students Under 18)"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "минимального балла аттестата на снятых страницах не называют"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Год обучения для не-местных студентов стоит 240 000 гонконгских долларов (около 30 800 долларов США); сбор за заявку — 600.",
+      "evidence": "Tuition Fee (Non-local Students) HKD240,000 per academic year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии за успехи раздают без отдельной заявки: сильных абитуриентов рассматривают автоматически. Есть исключение — стипендии внешних организаций.",
+      "evidence": "outstanding applicants for full-time undergraduate programmes will be considered for merit-based scholarships without needing a separate application",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельно есть Cultural Ambassador Scholarship для не-местных студентов — возобновляемая, до 60 000 гонконгских долларов в год.",
+      "evidence": "Cultural Ambassador Scholarship for Non-Local Students",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общежитие дают в основном на первый год (около 18 500 гонконгских долларов); с питанием и личными расходами год у не-местного выходит примерно в 330 272 гонконгских доллара.",
+      "evidence": "The rent of HK$18,515 (USD2,374) is charged in the 2026/27 academic year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Срок подачи у программ — 17 ноября 2026.",
+      "evidence": "Application Deadline: 17 Nov 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "К заявке нужны подтверждение английского и другие документы; требования к языку вуз описывает на отдельной странице.",
+      "evidence": "English Language Requirements",
+      "field": "language",
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-11-17",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.polyu.edu.hk/study/ug/admissions/international-other-qualifications",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Политехнический университет Гонконга (PolyU)"
+    }
+  },
+  "source": {
+    "url": "https://www.polyu.edu.hk/study/ug/admissions/international-other-qualifications",
+    "pages": [
+      {
+        "url": "https://www.polyu.edu.hk/study/ug/admissions/international-other-qualifications",
+        "contentHash": "sha256:a3c2651aa100f1e1ff3f230fd3193d07469953d4328332b4a50def0f49fb2d47"
+      },
+      {
+        "url": "https://www.polyu.edu.hk/study/ug/fees-and-scholarships/fees",
+        "contentHash": "sha256:ed94dfc76f2473a71e144ce05f8edf5aa70869187f28836e7037b53edc5363cd"
+      },
+      {
+        "url": "https://www.polyu.edu.hk/study/ug/fees-and-scholarships/scholarships",
+        "contentHash": "sha256:7fc9f7de73e57d1e9a66e86a4c590fa7cfc5eb48fbe2acf2f2b0318fb95bf338"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:3c8e727ba206db3f78c6e0770e08795d32dfe2756c6add126ea490afaec7d04d",
+    "language": "sha256:3c8e727ba206db3f78c6e0770e08795d32dfe2756c6add126ea490afaec7d04d"
+  }
+}

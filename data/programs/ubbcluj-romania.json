@@ -1,0 +1,126 @@
+{
+  "id": "ubbcluj-romania",
+  "status": "published",
+  "name": {
+    "ru": "Университет Бабеш-Бойяи (Клуж, Румыния) — приём иностранцев",
+    "orig": "Babeș-Bolyai University — admission for international students"
+  },
+  "hostCountry": "RO",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное; цены зависят от факультета и лежат в выпадающих списках по годам, на самой странице чисел нет. Для граждан вне ЕС плата — в иностранной валюте, отдельный раздел. Платят частями: к 15 октября — 25% годовой платы, к 5 декабря — 50%, к 15 марта — 75%, к 15 мая — 100%. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "гражданство не ограничивают: есть отдельный порядок для граждан не-ЕС, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "страну школы не ограничивают, но иностранный диплом нужно признать в министерстве образования Румынии"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "минимального балла аттестата на снятых страницах не называют: условия задаёт каждый факультет"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранный диплом сначала признаёт министерство образования Румынии; после признания кандидат поступает по тем же правилам и срокам, что и граждане Румынии (факультет, документы, возможные экзамены или конкурс).",
+      "evidence": "After the Romanian Ministry of Education issues the recognition of the foreign degrees, the candidate follows the same calendar and admission conditions as Romanian citizens",
+      "field": "schoolYears",
+      "kind": "steps"
+    },
+    {
+      "ru": "Для граждан вне ЕС обучение платное, плата — в иностранной валюте, отдельным разделом.",
+      "evidence": "Tuition fees in foreign currency for Non-EU citizens",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Платят частями: к 15 октября — 25% годовой платы, к 5 декабря — 50%, к 15 марта — 75%, к 15 мая — 100%.",
+      "evidence": "by May 15 , 100% of the annual tuition fee to be paid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть подготовительный год румынского языка — отдельный путь для тех, кому языка не хватает.",
+      "evidence": "Preparatory Year of Romanian Language",
+      "field": "language",
+      "kind": "workaround"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://infoadmitere.ubbcluj.ro/en/internationalstudents",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Бабеш-Бойяи (Клуж)"
+    }
+  },
+  "source": {
+    "url": "https://infoadmitere.ubbcluj.ro/en/internationalstudents",
+    "pages": [
+      {
+        "url": "https://infoadmitere.ubbcluj.ro/en/internationalstudents",
+        "contentHash": "sha256:62047d71f5c3ea438bd584b33acd0d1b2bf82b0a6df891b906f4a00bc9886679"
+      },
+      {
+        "url": "https://cci.ubbcluj.ro/admission-international-students/candidates-from-other-countries/bachelor",
+        "contentHash": "sha256:e3eb3789c2f18f8c2b8ef91bb2bf6880e21952f0b80e03af8f8261cd2eae5dc6"
+      },
+      {
+        "url": "https://www.ubbcluj.ro/en/taxe/taxe_de_scolarizare",
+        "contentHash": "sha256:195b3ce72cddd31ce8b45efc070685acd7bdbb2bd70abc45d78bfe7aec0bdcdd"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:4fd1df4ebec4abcf521014371e056ec71cdb09871df82e6cc1099705b9c13072",
+    "language": "sha256:4fd1df4ebec4abcf521014371e056ec71cdb09871df82e6cc1099705b9c13072"
+  }
+}

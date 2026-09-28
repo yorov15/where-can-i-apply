@@ -159,6 +159,17 @@
 - university-of-warsaw — UW (Польша): сбор 85/100 злотых, цены англопрограмм в PDF
 - jagiellonian-university — UJ (Польша): все платно, англ. от 16 тыс. злотых до 15 500 €, NAWA освобождает
 - warsaw-university-of-technology — PW (Польша): GPA ≥70%, сбор 85 злотых, экзамен + признание NAWA, заявка до 21.07.2026
+- polyu-hongkong — PolyU (Гонконг): не-местным 240 тыс. HK$/год, сбор 600, стипендии автоматом, Cultural Ambassador до 60 тыс.
+- hkbu-hongkong — HKBU (Гонконг): IELTS 6.0, не-местным 190 тыс. HK$/год, стипендии при поступлении
+- bologna-italy — Болонья (Италия): плата по доходу (ISEE), для визы нужно ~€10 180
+- sapienza-italy — Сапиенца (Италия): плата по ISEE, Foundation Year, суммы 2026/27 ещё не опубликованы
+- polito-italy — Polito (Италия): английский B2, тест TIL, TOPoliTO 8000 €/год, 14 стипендий для афганцев
+- lund-sweden — Lund (Швеция): English 6, цена по программам, Global Scholarship (110 стипендий)
+- aalto-finland — Aalto (Финляндия): приём 7–22.01.2027, сбор €100, Excellence Scholarship
+- uaeu-uae — UAEU (ОАЭ): возраст ≤35, IELTS 5.5/TOEFL 70, GPA от 85%, Chancellor's 75–100%
+- aus-uae — AUS (ОАЭ): GPA ≥85%, IELTS 6.5/TOEFL 80, 110 876 AED/год, эквивалентность Минобра ОАЭ
+- ubbcluj-romania — UBB (Румыния): оплата частями, плата для не-ЕС в валюте, подготовительный год румынского
+- ljubljana-slovenia — Любляна (Словения): не-ЕС без двустороннего соглашения платят (Таджикистана в списке нет)
 
 ### Не добавлены
 (дописывай: `id — причина`)
@@ -171,3 +182,7 @@
 - inu: язык приёма — приёмный гид только PDF по JS-кнопке, порог цитатой не подтверждается (в карточке пусто)
 - science-tokyo — isct.ac.jp обрывает TLS у сборщика (нет промежуточного сертификата), ни certifi, ни системный набор не помогают
 - comenius-university — uniba.sk обрывает TLS-рукопожатие (SSLV3_ALERT_HANDSHAKE_FAILURE)
+- cuhk-hongkong — cuhk.edu.hk обрывает TLS у сборщика (нет промежуточного сертификата)
+- cityu-hongkong — cityu.edu.hk отдаёт пустой JavaScript-каркас (0 символов текста)
+- nus-singapore — nus.edu.sg отдаёт пустой JavaScript-каркас (0 символов текста)
+- tartu-estonia — ut.ee отдаёт сборщику 403

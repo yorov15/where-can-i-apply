@@ -1,0 +1,146 @@
+{
+  "id": "uaeu-uae",
+  "status": "published",
+  "name": {
+    "ru": "Университет ОАЭ (UAEU, Аль-Айн) — приём иностранцев",
+    "orig": "United Arab Emirates University — international undergraduate admission"
+  },
+  "hostCountry": "AE",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное, точных цен на снятых страницах нет. Есть крупные стипендии, покрывающие только плату за обучение: Chancellor's для лучших абитуриентов — 100% (средний балл 98% и IELTS 7.5) или 75% (95% и IELTS 6.5); Chancellor's для талантливых — 100% или 50%; детям сотрудников вуза — 100%. Стипендию нельзя складывать с другой, покрывают только обучение, не жильё и не сборы. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "гражданство не ограничивают: есть отдельный порядок приёма для иностранцев, ограничений по стране нет (исключения — медицина и ветеринария, там нужна стипендия)"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "страну школы не ограничивают, но аттестат не по программе Минобра ОАЭ нужно подтвердить справкой об эквивалентности"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "года выпуска не ограничивают, но приоритет у более свежих выпускников"
+    },
+    "age": {
+      "max": 35,
+      "evidence": "The applicant must not be older than (35) years at the time of application."
+    },
+    "gpa": {
+      "scale": "PERCENT",
+      "min": 85,
+      "evidence": "85% or its equivalent"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5.5,
+          "evidence": "IELTS (Academic): 5.5 points TOEFL ITP: 525 points TOEFL iBT: 70 points"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 70,
+          "evidence": "IELTS (Academic): 5.5 points TOEFL ITP: 525 points TOEFL iBT: 70 points"
+        }
+      ],
+      "evidence": "IELTS (Academic): 5.5 points TOEFL ITP: 525 points TOEFL iBT: 70 points"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Возраст — не старше 35 лет на момент подачи заявки.",
+      "evidence": "The applicant must not be older than (35) years at the time of application.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Средний балл аттестата: для большинства колледжей нужно 90%, для бизнеса, гуманитарных, педагогики и права — 85%.",
+      "evidence": "85% or its equivalent",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский: IELTS Academic 5.5, TOEFL iBT 70 или TOEFL iTP 525. IELTS Indicator, TOEFL Home Edition и Duolingo не принимают.",
+      "evidence": "IELTS (Academic): 5.5 points TOEFL ITP: 525 points TOEFL iBT: 70 points",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужна справка об эквивалентности аттестата от Министерства образования ОАЭ — для всех аттестатов, которые не идут по программе Минобра.",
+      "evidence": "Obtaining equivalency certificate issued by the Ministry of Education in the UAE",
+      "field": "schoolYears",
+      "kind": "steps"
+    },
+    {
+      "ru": "Стипендия Chancellor's для лучших: 100% платы при среднем балле 98% и IELTS 7.5; 75% при 95% и IELTS 6.5. Покрывает только обучение.",
+      "evidence": "Achieving a minimum of ( 98% ) in the General Secondary School Certificate (Grade 12)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть ещё Chancellor's для талантливых (100% или 50%) и для детей сотрудников вуза (100%). Держать две стипендии сразу нельзя.",
+      "evidence": "A 100% discount on tuition fees only",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.uaeu.ac.ae/en/admission/international-students-and-children-of-uaeu-employees.shtml",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет ОАЭ (UAEU)"
+    }
+  },
+  "source": {
+    "url": "https://www.uaeu.ac.ae/en/admission/international-students-and-children-of-uaeu-employees.shtml",
+    "pages": [
+      {
+        "url": "https://www.uaeu.ac.ae/en/admission/international-students-and-children-of-uaeu-employees.shtml",
+        "contentHash": "sha256:3a7c86f3efc9b94d3fab2568af0d21e39ea0ee392c2a20630d3a476bd60891fb"
+      },
+      {
+        "url": "https://www.uaeu.ac.ae/en/dvcsae/student_account_office/program-and-housing-rates-international-students-undergraduate-students.shtml",
+        "contentHash": "sha256:c099350d8adf5cf7f172707312c3e10bfd8cb44f51101a7b4574357e3da5df1f"
+      },
+      {
+        "url": "https://www.uaeu.ac.ae/en/admission/undergraduate-scholarships.shtml",
+        "contentHash": "sha256:de8e7882849b9bb0994e2fef8b71c1175d3be6c9d0391c835192204b44df9d6c"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:76b3ff5b785de2aa59bd272d3dd9d5e87b445ac58bdd1f2f61a3ec69d3d9104b"
+  }
+}

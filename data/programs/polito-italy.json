@@ -1,0 +1,131 @@
+{
+  "id": "polito-italy",
+  "status": "published",
+  "name": {
+    "ru": "Туринский политехнический университет (Polito, Италия) — бакалавриат для иностранцев",
+    "orig": "Politecnico di Torino — bachelor's degree for students with a non-Italian qualification"
+  },
+  "hostCountry": "IT",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "engineering",
+    "cs"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Плата за обучение зависит от гражданства и дохода — вуз даёт симулятор, точной суммы нет; при зачислении платят первый взнос. Есть стипендии: TOPoliTO — 8000 евро в год лучшим студентам, региональные EDISU, отдельная программа для афганских студентов. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "гражданство не ограничивают: есть порядок приёма для обладателей иностранных аттестатов, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "страну школы не ограничивают: иностранный аттестат принимают, требований к стране нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "минимального балла аттестата не называют: отбор по вступительному тесту"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "English-taught programmes English Level B2 or above"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Англоязычные программы требуют английский B2 и выше, италоязычные — итальянский B2. Точный список сертификатов вуз даёт отдельно.",
+      "evidence": "English-taught programmes English Level B2 or above",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Поступление — по вступительному тесту TIL (даты и порядок в приёмных правилах).",
+      "evidence": "admission test (TIL test) with calendars and deadlines, registration procedures and admission requirements",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Плата зависит от гражданства и дохода: вуз даёт симулятор, твёрдой суммы нет. При зачислении платят первый взнос.",
+      "evidence": "You have paid the first instalment of the tuition fees",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия TOPoliTO — 8000 евро в год лучшим студентам бакалавриата и магистратуры.",
+      "evidence": "8000€ per year scholarship",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть и региональная помощь EDISU, подработка на кампусе, а также отдельная программа: 14 стипендий по 8000 евро в год для афганских студентов.",
+      "evidence": "The Politecnico di Torino will award 14 scholarships (8.000 euro per academic year) to Afghan student",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.polito.it/en/education/applying-studying-graduating/admissions-and-enrolment/bachelor-s-degree-programmes/students-with-a-non-italian-qualification",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Туринский политехнический университет"
+    }
+  },
+  "source": {
+    "url": "https://www.polito.it/en/education/applying-studying-graduating/admissions-and-enrolment/bachelor-s-degree-programmes/students-with-a-non-italian-qualification",
+    "pages": [
+      {
+        "url": "https://www.polito.it/en/education/applying-studying-graduating/admissions-and-enrolment/bachelor-s-degree-programmes/students-with-a-non-italian-qualification",
+        "contentHash": "sha256:1cad650a302af666c7369efdb81df533770cc3361875c60fe5ca3bea7e4e924a"
+      },
+      {
+        "url": "https://www.polito.it/en/education/international-students/financial-aid",
+        "contentHash": "sha256:be562f6fd6b66742d40c467572d73fd497c0b408262bfdb2d70a38eef416bcc7"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:22e1d4f537f77089c8fdbd89382249c6b0908bb49555b22357e2b68ee4034f10"
+  }
+}

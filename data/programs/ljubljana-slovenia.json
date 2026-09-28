@@ -1,0 +1,126 @@
+{
+  "id": "ljubljana-slovenia",
+  "status": "published",
+  "name": {
+    "ru": "Люблянский университет (Словения) — приём иностранцев на бакалавриат",
+    "orig": "University of Ljubljana — bachelor's and single cycle master's study"
+  },
+  "hostCountry": "SI",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Оплату за обучение на бакалавриате не берут с граждан Словении, ЕС, Швейцарии, Исландии, Лихтенштейна, Норвегии и стран с двусторонним соглашением (Босния и Герцеговина, Северная Македония, Черногория, Косово, Сербия). Граждане стран вне ЕС без такого соглашения (в том числе Таджикистан) платят — цены лежат в отдельных прайс-листах по факультетам, в тексте страницы чисел нет. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "гражданство не ограничивают: есть отдельный порядок для граждан не-ЕС, ограничений по стране нет (гражданство влияет только на плату)"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "страну школы не ограничивают, но иностранный аттестат нужно признать"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "минимального балла аттестата на снятых страницах не называют"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Платить за обучение обязаны граждане стран вне ЕС, с которыми у Словении нет двустороннего соглашения. В список исключений входят Босния и Герцеговина, Северная Македония, Черногория, Косово и Сербия; Таджикистана там нет.",
+      "evidence": "Tuition fees are paid by: Citizens of non-EU countries with which the Republic of Slovenia has not signed bilateral agreement",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "От платы освобождены граждане Словении, ЕС, Швейцарии, Исландии, Лихтенштейна, Норвегии и стран с двусторонним соглашением, а также некоторые другие категории.",
+      "evidence": "Students from countries with which the Republic of Slovenia has concluded bilateral agreement (Bosnia and Herzegovina, North Macedonia, Montenegro, Kosovo and Serbia)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Первый приёмный период шёл с 18 февраля по 18 марта 2026; для граждан не-ЕС есть отдельный второй период в сентябре.",
+      "evidence": "The first application period for enrolment in Bachelor's and Single Cycle Master's degree programmes opened on 18 February 2026 and will close on 18 March 2026.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Иностранный школьный аттестат нужно признать отдельной процедурой.",
+      "evidence": "Procedure of recognition of foreign secondary school diplomas",
+      "field": "schoolYears",
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.uni-lj.si/en/study/bachelors-and-single-cycle-masters-study/call-for-enrolment",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Люблянский университет"
+    }
+  },
+  "source": {
+    "url": "https://www.uni-lj.si/en/study/bachelors-and-single-cycle-masters-study/call-for-enrolment",
+    "pages": [
+      {
+        "url": "https://www.uni-lj.si/en/study/bachelors-and-single-cycle-masters-study/call-for-enrolment",
+        "contentHash": "sha256:d0d9707a849c86538066ac7c6ebfab5abffda67968a5d04d3fccd40e5a124cc7"
+      },
+      {
+        "url": "https://www.uni-lj.si/en/study/tuition-fees-and-other-study-contributions",
+        "contentHash": "sha256:41fac2276eacf4253b33751848856e5ff636f7f2a7b5609d527679bf68e29dae"
+      },
+      {
+        "url": "https://www.uni-lj.si/en/study/scholarships",
+        "contentHash": "sha256:1eddca64bec955e0c13dd518db65eb3d60145732398dca697cc7ec4326fd5406"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:034ef6487816aae773846fe65a467d5c74b65d268b33ecd5296ff440d7661de8",
+    "language": "sha256:034ef6487816aae773846fe65a467d5c74b65d268b33ecd5296ff440d7661de8"
+  }
+}

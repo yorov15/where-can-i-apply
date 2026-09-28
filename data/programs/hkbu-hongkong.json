@@ -1,0 +1,134 @@
+{
+  "id": "hkbu-hongkong",
+  "status": "published",
+  "name": {
+    "ru": "Гонконгский баптистский университет (HKBU) — приём иностранцев",
+    "orig": "Hong Kong Baptist University — international qualifications admissions"
+  },
+  "hostCountry": "HK",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение для не-местных студентов — 190 000 гонконгских долларов в год (местные платят 47 000). Платят двумя равными частями. Есть стипендии при поступлении для не-местных студентов. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "гражданство не ограничивают: есть приём по международным квалификациям для не-местных, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "страну школы не ограничивают: принимают международные квалификации, требований к стране нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "минимального балла аттестата не называют: смотрят международные аттестаты и результаты тестов"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "IELTS Academic Overall Band: 6.0"
+        }
+      ],
+      "evidence": "IELTS Academic Overall Band: 6.0"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Для англоязычных программ нужен IELTS Academic 6.0 (либо другой признанный тест). Сертификат должен быть сдан за последние два года — на 2027 год это тест не раньше 1 сентября 2025.",
+      "evidence": "IELTS Academic Overall Band: 6.0",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Год обучения для не-местных студентов стоит 190 000 гонконгских долларов (местные — 47 000). Платят двумя равными частями.",
+      "evidence": "The tuition fee of full-time undergraduate programmes for 2026/27 academic year is HK$47,000 for local students and HK$190,000 i for non-local students",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "При поступлении есть стипендии для не-местных студентов.",
+      "evidence": "Fees and Scholarships Tuition Fee Admission Scholarships",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявки раннего раунда попадают в предварительную оценку, а решения начинают рассылать с конца декабря.",
+      "evidence": "Applications received in early round will be shortlisted for advance assessment.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admissions.hkbu.edu.hk/admissions/international-qualifications.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Гонконгский баптистский университет (HKBU)"
+    }
+  },
+  "source": {
+    "url": "https://admissions.hkbu.edu.hk/admissions/international-qualifications.html",
+    "pages": [
+      {
+        "url": "https://admissions.hkbu.edu.hk/admissions/international-qualifications.html",
+        "contentHash": "sha256:aaee8315cb9435d734b17a11a6e0f6905f546e8bedc8297c20699771786519df"
+      },
+      {
+        "url": "https://admissions.hkbu.edu.hk/fees-and-scholarships.html",
+        "contentHash": "sha256:538d5182aefc3db2a5e87544c348f23cf9abbea60f76bc133d9a7f5e0becbef0"
+      },
+      {
+        "url": "https://admissions.hkbu.edu.hk/en/scholarships.html",
+        "contentHash": "sha256:111fe63c0bd758992c6a0d3c57604cc6d4c2b2bbef87c08a91e76c41828ae8df"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:02e526114ae7148d04d3b8510d44d0ce3c8fccba2f37b662808cfb205fec9b36"
+  }
+}
