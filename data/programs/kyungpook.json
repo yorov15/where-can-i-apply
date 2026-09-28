@@ -1,0 +1,154 @@
+{
+  "id": "kyungpook",
+  "status": "published",
+  "name": {
+    "ru": "Кёнбукский национальный университет (KNU, Корея) — приём иностранцев",
+    "orig": "Kyungpook National University — international undergraduate admissions"
+  },
+  "hostCountry": "KR",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Государственный вуз, отбор — по документам, языку и собеседованию. Стоимость обучения и стипендии на этих страницах не приведены (у вуза отдельные страницы оплаты и стипендий), поэтому цену назвать нельзя. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "Must be a non-Korean national, and both parents must be non-Korean nationals"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: принимают окончивших школу и в своей стране, и за рубежом"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: выпускники и выпускники текущего года могут подать"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на странице приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: отбор по документам, языку и собеседованию"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOPIK",
+          "min": 3,
+          "evidence": "Achieve at least Level 3 on the Test of Proficiency in Korean (TOPIK or TOPIK iBT)."
+        },
+        {
+          "test": "IELTS",
+          "min": 5.5,
+          "evidence": "English proficiency test scores: TOEFL iBT 59, IELTS (Academic) 5.5, CEFR B2, NEW TEPS 202 or higher"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 59,
+          "evidence": "English proficiency test scores: TOEFL iBT 59, IELTS (Academic) 5.5, CEFR B2, NEW TEPS 202 or higher"
+        }
+      ],
+      "evidence": "Applicants must meet at least one of the following language proficiency requirements"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Абитуриент и оба родителя должны быть иностранцами; двойное гражданство не допускают.",
+      "evidence": "Must be a non-Korean national, and both parents must be non-Korean nationals",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Домашнее обучение, интернет-обучение, взрослое образование и экзамены вроде GED не признают: нужно полностью пройти обучение, равное корейской начальной и средней школе.",
+      "evidence": "Applicants who have completed homeschooling, cyber learning, adult education, or domestic/international qualification exams (such as GED) during their entire education are not recognized as eligible students.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Язык: TOPIK 3 и выше, либо окончание языкового курса при вузе (3 уровень), либо английский — TOEFL iBT 59, IELTS 5.5, CEFR B2, NEW TEPS 202. Отдельные факультеты требуют больше: медиа и коммуникации — TOPIK 5, информатика — TOPIK 4.",
+      "evidence": "TOPIK Requirement: Achieve at least Level 3 on the Test of Proficiency in Korean (TOPIK or TOPIK iBT).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Приём на весну 2027: заявка с 12 по 30 октября 2026, собеседование с 18 по 27 ноября, результаты — 6 января 2027. На осень 2027 заявка с 12 по 30 апреля 2027.",
+      "evidence": "Oct. 12, 2026 (Mon) 09:00 ~ Oct. 30, 2026 (Fri) 18:00",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы — на корейском или английском, иные языки — с нотариальным переводом. Нужны аттестат и оценки, мотивационное письмо, результаты языка, паспорт и подтверждение гражданства родителей и родства.",
+      "evidence": "All documents should be in Korean or English.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-10-30",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://home.knu.ac.kr/HOME/global/sub.htm?nav_code=glo1549935033",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Кёнбукский национальный университет (KNU)"
+    }
+  },
+  "source": {
+    "url": "https://en.knu.ac.kr/admission/foreign01.htm",
+    "pages": [
+      {
+        "url": "https://en.knu.ac.kr/admission/foreign01.htm",
+        "contentHash": "sha256:44e376b51885a8f70935c11c4bc029ff802a861e2af10dfe7f456b85e7665878"
+      },
+      {
+        "url": "https://home.knu.ac.kr/HOME/global/sub.htm?nav_code=glo1549935033",
+        "contentHash": "sha256:eb8b536a36ff27ce71a6ab3d7115a0e40da5c437705854ccc69c1a19538be25f"
+      },
+      {
+        "url": "https://en.knu.ac.kr/campus/info01.htm",
+        "contentHash": "sha256:69ab2dde3c180f534e9833d2bca0437f464d452de16c8dcf6e9d190dbdf50be6"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:b56807700847726df0c4158084fa479333cfdbfb399bb920f2ac2f356b7b2330"
+  }
+}
