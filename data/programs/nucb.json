@@ -1,0 +1,156 @@
+{
+  "id": "nucb",
+  "status": "published",
+  "name": {
+    "ru": "NUCB Undergraduate School (Нагоя) — Global BBA на английском",
+    "orig": "NUCB Undergraduate School — Global BBA (English-medium)"
+  },
+  "hostCountry": "JP",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "business"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: четыре года стоят 4 724 000 иен (набор 2026) или 4 874 000 (набор 2027) плюс разовый вступительный взнос 270 000 иен. В плату входят учебники, клубные взносы и новый MacBook тем, кто не получил стипендию. Стипендии только за заслуги, отдельную заявку подавать не надо: скидка на обучение до 900 000 иен в год, скидка на общежитие, номинация на стипендию JASSO. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: вуз прямо пишет, что приветствует все национальности"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы на страницах нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: школьники последнего года могут подать, аттестат донести до зачисления"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: отбор целостный, по всем документам"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "An official score such as TOEFL, IELTS or TOEIC is required of all non-native speakers unless the language of instruction at high school was 100% in English."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Не носителям английского нужен сертификат TOEFL, IELTS или TOEIC (принимают и Duolingo, и TOEFL Home). Освобождают, если вся школа была на английском. Порог по баллам на этих страницах вуз не пишет — уточняй по ссылке в заявлении.",
+      "evidence": "An official score such as TOEFL, IELTS or TOEIC is required of all non-native speakers unless the language of instruction at high school was 100% in English.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для поступления в основном нужно 12 лет школы. Если система образования даёт 11 лет, доучиваться придётся на подготовительных курсах или их аналоге — пока не наберётся 12 лет. Для таджикской 11-летки это главный вопрос: узнавай в приёмной до подачи.",
+      "evidence": "you must have graduated or be scheduled from a 12-year standard education curriculum",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Вуз допускает исключение: можно подать и после 11 лет, если школа признана японским министерством образования (MEXT), но стандартное требование — 12 лет.",
+      "evidence": "You may apply to the university if you have completed more than 11-years of education at an educational institution designated by Japan's Ministry of Education (MEXT)",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Заявка в 5 шагов: онлайн-форма, оплата сбора, загрузка документов, интервью онлайн и решение по почте. Все документы можно подать цифровыми копиями, оригиналы — только после зачисления.",
+      "evidence": "An interview is required of all applicants. All interviews are held online.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Четыре года обучения стоят 4 724 000 иен (набор 2026; на 2027 — 4 874 000) плюс разовый вступительный взнос 270 000 иен. В плату входят также учебники, клубные взносы и новый MacBook тем, кто не получил стипендию.",
+      "evidence": "the tuition for all 4-years of study at NUCB is ¥4,724,000 (Excludes 270,000 JPY One-Time Entrance Fee)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии — только по заслугам, отдельную заявку подавать не нужно: скидка на обучение до 900 000 иен в год, скидка на жильё, а также номинация на стипендию JASSO.",
+      "evidence": "tuition reduction up to 900,000 JPY per year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "SAT или ACT не обязательны: их можно приложить для усиления заявки. Вступительный экзамен EJU тоже не нужен.",
+      "evidence": "NUCB conducts a holistic overview of applicants and there are no requirements for SAT or ACT.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Перевод из другого вуза не принимают.",
+      "evidence": "NUCB is currently not accepting transfer admissions.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.nucba.ac.jp/en/admission/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — NUCB Undergraduate School"
+    }
+  },
+  "source": {
+    "url": "https://www.nucba.ac.jp/en/admission/",
+    "pages": [
+      {
+        "url": "https://www.nucba.ac.jp/en/admission/",
+        "contentHash": "sha256:e62ea2cd0085bf37c2c257ea510d8f45ab849925eb3a2b8371628f493299047c"
+      },
+      {
+        "url": "https://www.nucba.ac.jp/en/scholarship/",
+        "contentHash": "sha256:78e11e5a198e2824b939bd70774c4d216b296a247497446f176fd61c8a8696e2"
+      },
+      {
+        "url": "https://www.nucba.ac.jp/en/scholarship/tuition_list.html",
+        "contentHash": "sha256:3311e8b94cfbeb53eaf983d5affd65afde889e223506be961adfcdda4447ebf8"
+      },
+      {
+        "url": "https://www.nucba.ac.jp/en/admission/faq/",
+        "contentHash": "sha256:2935e3ed71b7f2058bd2568b23b9dccee7d06b459f5eed6bee3b584de6057e54"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:51a7eb1b32a9e6d015ae1d159da7773fb5752fd4899ebf6345300a737fd990d4"
+  }
+}

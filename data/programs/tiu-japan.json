@@ -1,0 +1,188 @@
+{
+  "id": "tiu-japan",
+  "status": "published",
+  "name": {
+    "ru": "Токийский международный университет (TIU) — E-Track на английском",
+    "orig": "Tokyo International University — E-Track English-medium bachelor programs"
+  },
+  "hostCountry": "JP",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "cs",
+    "business",
+    "social"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: первый год стоит 1,67–1,97 млн иен с учётом разового взноса 250 000 и ежегодного операционного 320 000; дальше 1,62–1,92 млн иен в год. Есть своя стипендия на обучение — 30%, 50%, 80% или 100%, её дают по конкурсу документов и сохраняют до 4 лет. Отдельная стипендия MUN освобождает от вступительного взноса 250 000 иен. Жильё и дорога не покрываются; общежитие оплачивается отдельно"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: программа англоязычная и открыта всем, включая японцев; ограничений по стране гражданства нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают; отдельные правила есть только для выпускников школ в Японии и Китае по составу документов"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: школьники последнего года могут подать, а промежуток после школы (gap years) не влияет на приём"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают для обычного пути; 18 лет нужно только для варианта с GED"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: отбор идёт по документам, оценкам и мотивации"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "IELTS Academic Module (IELTS Indicator accepted) (IELTS One Skill Retake not accepted) Overall 6.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 72,
+          "evidence": "TOEFL (Special Home Edition accepted) (MyBest Score not accepted) 72 (0-120 scale) or 4.0 (1-6 scale)"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 115,
+          "evidence": "Duolingo English Test 115"
+        }
+      ],
+      "evidence": "Applicants are required to submit one of the following forms of proof of English proficiency and achieve at least the minimum score indicated below."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Английский для поступления обязателен: IELTS 6.0, TOEFL iBT 72 (или 4.0 по новой шкале 1–6), Duolingo 115, TOEIC 780 — или освобождение, если школа была в англоязычной стране. Сертификат должен быть сдан за последние 2 года.",
+      "evidence": "Applicants are required to submit one of the following forms of proof of English proficiency and achieve at least the minimum score indicated below.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявка идёт двумя частями: онлайн-форма на My TIU Page (со сбором за подачу) и бумажные документы почтой, чтобы пришли к дедлайну. Нужны выписки за последние 3 года, сертификат об окончании школы, рекомендательное письмо и результаты экзаменов.",
+      "evidence": "Register My TIU Page account (Online).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Важно для таджикской 11-летней школы: TIU принимает выпускников 11-летней программы только после дополнительного образования. MEXT признаёт 11-летнюю школу Беларуси, Мьянмы, Перу, России, Судана, Узбекистана, Казахстана и Украины — Таджикистана в этом списке нет. Значит, нужен один из трёх путей: подготовительный курс UPC при вузе (требует японского, JLPT N5 или 150 часов), диплом GED (с 18 лет) либо перевод из другого вуза после первого курса.",
+      "evidence": "Students from certain countries with an 11-year curriculum are eligible to apply to TIU E-Track only after obtaining additional education as per the Japanese Ministry of Education's (MEXT) regulations*.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "(MEXT признаёт 11-летнюю школу Беларуси, Мьянмы, Перу, России, Судана, Узбекистана, Казахстана и Украины.)",
+      "evidence": "MEXT recognizes the 11-year curricula of Belarus, Myanmar, Peru, Russia, Sudan, Uzbekistan, Kazakhstan and Ukraine as sufficient for enrollment in an undergraduate degree program.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Первый год с учётом разового вступительного взноса 250 000 иен и операционного 320 000 стоит 1 670 000 иен (Business Economics и International Relations), 1 870 000 (Digital Business) или 1 970 000 (Data Science & AI).",
+      "evidence": "First Year Tuition 1,100,000 JPY 1,300,000 JPY 1,400,000 JPY",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия TIU на обучение снижает плату на 30%, 50%, 80% или 100% и сохраняется до 4 лет при хорошей учёбе. Со 100% четыре года обучения обойдутся в 1 530 000 иен вместо 6 530 000–7 730 000.",
+      "evidence": "successful applicants may be offered a 30%, 50%, 80% or 100% Tuition Fee reduction",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельная стипендия MUN освобождает от вступительного взноса 250 000 иен — но только для направления International Relations и при опыте участия в Model United Nations.",
+      "evidence": "Applicants who are awarded this scholarship will have their enrollment fee of 250,000 yen waived.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Японский для поступления не нужен, собеседование обычно не проводят.",
+      "evidence": "Japanese proficiency is not required for application.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Гражданам Бангладеш, Мьянмы, Непала, Узбекистана, Шри-Ланки и Пакистана оплату за весь первый год требуют вперёд. Таджикистана в этом списке нет.",
+      "evidence": "Applicants from Bangladesh, Myanmar, Nepal, Uzbekistan, Sri Lanka & Pakistan",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.tiu.ac.jp/etrack/admissions/apply/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Токийский международный университет (TIU)"
+    }
+  },
+  "source": {
+    "url": "https://www.tiu.ac.jp/etrack/admissions/apply/",
+    "pages": [
+      {
+        "url": "https://www.tiu.ac.jp/etrack/admissions/apply/",
+        "contentHash": "sha256:02b6115ec034d110c341854cc92a8b63f4b90a4e9c343461b94611680a30da4d"
+      },
+      {
+        "url": "https://www.tiu.ac.jp/etrack/admissions/tuition/",
+        "contentHash": "sha256:5275a2d3c93597f73638a8bacd08729b8589460a95fe0e11782b624a69a5da36"
+      },
+      {
+        "url": "https://www.tiu.ac.jp/etrack/admissions/reductions/",
+        "contentHash": "sha256:306d79a2bdfd8e603978e8c4d56edb8af8c10ed3a2cf231899a9a009fd7d19bc"
+      },
+      {
+        "url": "https://www.tiu.ac.jp/etrack/admissions/admissionschedule/",
+        "contentHash": "sha256:173cef75fa3c304155d92eb8c7f5a0095b430232b3007a2cf978ce5d87ee9cc6"
+      },
+      {
+        "url": "https://www.tiu.ac.jp/etrack/admissions/11-year-curriculum/",
+        "contentHash": "sha256:49ae952958958086207a722a34af9dc627430a4b7507ab5d928d200174303b21"
+      },
+      {
+        "url": "https://www.tiu.ac.jp/etrack/wp-content/uploads/application_guideline_for_first_year.pdf",
+        "contentHash": "sha256:d84091a16bed8de4c4f0fd3bab4b16c196bdc8466f78eaba3aa20fcc655ae69b"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:58abd4d8765e449d943529693ed8e7fbfe2641c2923e7a4ae3637b7e69cdd841"
+  }
+}
