@@ -1,0 +1,132 @@
+{
+  "id": "inu",
+  "status": "published",
+  "name": {
+    "ru": "Инчхонский национальный университет (INU, Корея) — приём иностранцев",
+    "orig": "Incheon National University — international undergraduate admissions"
+  },
+  "hostCountry": "KR",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Государственный вуз с недорогим обучением: на корейском треке семестр стоит 2 557 000–3 217 000 вон, на английском — 2 823 000–3 552 000 вон. Скидки за язык и успеваемость большие: за TOPIK 6 или IELTS 7 — 70% платы, за TOPIK 4 или IELTS 6 — 30%; уже во время учёбы за GPA 4.2 дают 100%, за 4.0 — 85%. Есть и отдельная помощь по нужде, 40–70%. Жильё и дорога не покрываются; общежитие и страховка оплачиваются отдельно"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: вуз приветствует студентов со всего мира, отдельного условия по гражданству на страницах нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы на страницах нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска на страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата для приёма не называют; GPA учитывается только для стипендий уже во время учёбы"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцы учатся по двум трекам. На корейском треке семестр стоит 2 557 000 вон (гуманитарные и социальные), 2 871 000 (естественные науки и физкультура), 3 217 000 (инженерия и искусство). На английском треке те же направления дороже на 300–400 тысяч вон.",
+      "evidence": "Korean-Taught Track Humanities and Social Sciences KRW 2,557,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидка на обучение по языку: TOPIK 6 или IELTS 7,0 — 70% платы, TOPIK 5 или IELTS 6,5 — 50%, TOPIK 4 или IELTS 6,0 — 30%.",
+      "evidence": "Level 6 7.0 800 94 70% of tuition fee",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Во время учёбы скидка зависит от среднего балла: GPA 4.2 и выше — 100% платы, 4.0 — 85%, 3.5 — 50%, 3.0 — 30%.",
+      "evidence": "4.2 or above 100% of tuition fee",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Порядок подачи: скачать приёмный гид для иностранцев, выбрать программу, проверить сроки и требования, собрать документы, подать онлайн и оплатить сбор, при необходимости пройти собеседование, затем зарегистрироваться и оплатить обучение.",
+      "evidence": "Process Undergraduate Admissions Guide for International Students",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Вуз государственный и открыто приветствует студентов со всего мира.",
+      "evidence": "INU welcomes students from all over the world.",
+      "field": "citizenship",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.inu.ac.kr/inuengl/8528/subview.do",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Инчхонский национальный университет (INU)"
+    }
+  },
+  "source": {
+    "url": "https://www.inu.ac.kr/inuengl/8528/subview.do",
+    "pages": [
+      {
+        "url": "https://www.inu.ac.kr/inuengl/8528/subview.do",
+        "contentHash": "sha256:c420fef6b631d2d0af07a4f9a4c5421e9d5a3e54824107dff67a6db180b37365"
+      },
+      {
+        "url": "https://www.inu.ac.kr/inuengl/13944/subview.do",
+        "contentHash": "sha256:d6ef59dc9eec97ddd593eb6aaab113cc876971f806f7e22ce070628c0a88e8f2"
+      },
+      {
+        "url": "https://www.inu.ac.kr/inuengl/13939/subview.do",
+        "contentHash": "sha256:e0eea5a1fc7515865992d195c489f651053b7518112499dfdd4ea0ba18090dd8"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:67c91ca6d5902c4da73c5b9e88eb28afb44a926ed925f7e1aa2ec865f1b6b544",
+    "language": "sha256:67c91ca6d5902c4da73c5b9e88eb28afb44a926ed925f7e1aa2ec865f1b6b544"
+  }
+}

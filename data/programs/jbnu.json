@@ -1,0 +1,169 @@
+{
+  "id": "jbnu",
+  "status": "published",
+  "name": {
+    "ru": "Чонбукский национальный университет (JBNU, Корея) — приём иностранцев",
+    "orig": "Jeonbuk National University — international undergraduate admissions"
+  },
+  "hostCountry": "KR",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное, но недорогое: 2 016 000 вон за семестр на гуманитарных, экономических и социальных направлениях, 2 704 000 — на инженерных (инженерия дороже всех). Государственный вуз даёт сильные скидки за язык: за TOPIK 6 или IELTS 8 — полное освобождение от платы за обучение, за TOPIK 5 или IELTS 7,5 — половина. Общежитие оплачивается отдельно (примерно 580 000–1 404 630 вон за семестр), плюс обязательная медицинская страховка около 76 390 вон в месяц. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Type 1: Both applicants and their parents should hold foreign nationality"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: есть два типа абитуриентов, один из них — окончившие все ступени образования за рубежом, ограничений по конкретной стране нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: нужен диплом школы, требования к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: отбор по документам, языку и собеседованию"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOPIK",
+          "min": 2,
+          "evidence": "Test of Proficiency in Korean TOPIK Level 2 or above (Including TOPIK IBT)"
+        },
+        {
+          "test": "IELTS",
+          "min": 5.5,
+          "evidence": "IELTS 5.5, TEPS 600, New TEPS 330, TOEFL iBT 71"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 71,
+          "evidence": "IELTS 5.5, TEPS 600, New TEPS 330, TOEFL iBT 71"
+        }
+      ],
+      "evidence": "Applicants must fulfil one of the following requirements:"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Абитуриент и оба родителя должны быть иностранцами (двойное гражданство не допускают), либо иностранец должен пройти всё обучение за рубежом.",
+      "evidence": "Type 1: Both applicants and their parents should hold foreign nationality",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Язык: на корейском треке — TOPIK 2 и выше, на английском (International Engineering и International Studies) — IELTS 5.5 или TOEFL iBT 71. Через два года по корейскому треку для выпуска всё равно понадобится TOPIK 4.",
+      "evidence": "IELTS 5.5, TEPS 600, New TEPS 330, TOEFL iBT 71",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Подача на весну 2027 идёт в два раунда: с 21 сентября по 2 октября 2026 и с 9 по 20 ноября 2026. Сбор за заявку — 80 000 вон.",
+      "evidence": "Fee : KRW 80,000 (Unpaid applications can not be accepted)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Семестр на гуманитарных, экономических и социальных направлениях стоит 2 016 000 вон, на инженерных — 2 704 000 вон (данные осени 2026).",
+      "evidence": "Social Sciences, Commerce, Humanities, Namwon Glocal Campus(Glocal Commerce, Korean Language) 375,000 1,641,000 2,016,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидки за язык на первый семестр: TOPIK 6 или IELTS 8 — освобождение от платы за обучение целиком; TOPIK 5 или IELTS 7,5 — половина; за другие сертификаты — по бюджету.",
+      "evidence": "Academic Scholarship Type 1 Tuition feeⅠ&Ⅱ 100% waiver Recipient of TOPIK Level 6 or IELTS 8 higher",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отбор: документы — 40%, собеседование — 40%, отношение и этикет — 20%. Нужно набрать не меньше 60 баллов; не пришёл на собеседование — отказ.",
+      "evidence": "Admission Criteria : Document Screening and Interview",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Общежитие на семестр: 1 404 630 вон с трёхразовым питанием (5 дней в неделю), 580 000 вон без питания (только для юношей), 870 000 вон в Иксане. Всем иностранным студентам после приезда обязательна национальная медстраховка — около 76 390 вон в месяц со скидкой 50%.",
+      "evidence": "Dorm fee (/semester)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Документы нужно апостилировать. Таджикистан в списке стран Гаагской конвенции, который приводит вуз, — значит апостиль оформить можно.",
+      "evidence": "Singapore, Indonesia, Korea, Tajikistan",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-11-20",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.jbnu.ac.kr/en/admission/undergradute/application.do",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Чонбукский национальный университет (JBNU)"
+    }
+  },
+  "source": {
+    "url": "https://www.jbnu.ac.kr/en/admission/undergradute/application.do",
+    "pages": [
+      {
+        "url": "https://www.jbnu.ac.kr/en/admission/undergradute/application.do",
+        "contentHash": "sha256:d020b76ddfdc8bea8cc72fee6656d6b65add1994e9bb68fd17435b7eeff7c71e"
+      },
+      {
+        "url": "https://www.jbnu.ac.kr/en/admission/undergradute/tuition.do",
+        "contentHash": "sha256:a1b1437a059ff9029916bbaad29486345207a7761712e1f1e4dfbad79ff33fb0"
+      },
+      {
+        "url": "https://www.jbnu.ac.kr/en/admission/undergradute/scholarships.do",
+        "contentHash": "sha256:8317fe33063180e4aa230ac2f84ae3c65adfdb1d4b1d81340c6ae336e780c23a"
+      },
+      {
+        "url": "https://top.jbnu.ac.kr/sites/ioffice/file/2-1%20English.pdf",
+        "contentHash": "sha256:992afb89e0289aee1cb1d0616b602228b2f194d9c9accb17c52e7fd60868e73c"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:0ef6350ec2af2677e43d5f515d01bce9407375ad3567b73fa6dca0f042c24538"
+  }
+}

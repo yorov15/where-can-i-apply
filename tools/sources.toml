@@ -1711,7 +1711,8 @@ approvedAt = "2026-09-26"
 name = "Kyungpook National University (Корея): бакалавриат для иностранцев"
 urls = [
   "https://en.knu.ac.kr/admission/foreign01.htm",
-  "https://en.knu.ac.kr/admission/foreign03.htm",
+  "https://home.knu.ac.kr/HOME/global/sub.htm?nav_code=glo1549935033",
+  "https://en.knu.ac.kr/campus/info01.htm",
   "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
 ]
 approvedBy = "human"
@@ -2617,6 +2618,29 @@ urls = [
   "https://www.nucba.ac.jp/en/scholarship/",
   "https://www.nucba.ac.jp/en/scholarship/tuition_list.html",
   "https://www.nucba.ac.jp/en/admission/faq/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# Корея, партия 2026-09-28. Домены jbnu.ac.kr и inu.ac.kr одобрены Муродом
+# 2026-09-28 (список из 50, ответ «да»).
+[jbnu]
+name = "Jeonbuk National University (Корея): бакалавриат для иностранцев"
+urls = [
+  "https://www.jbnu.ac.kr/en/admission/undergradute/application.do",
+  "https://www.jbnu.ac.kr/en/admission/undergradute/tuition.do",
+  "https://www.jbnu.ac.kr/en/admission/undergradute/scholarships.do",
+  "https://top.jbnu.ac.kr/sites/ioffice/file/2-1%20English.pdf",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+[inu]
+name = "Incheon National University (Корея): бакалавриат для иностранцев"
+urls = [
+  "https://www.inu.ac.kr/inuengl/8528/subview.do",
+  "https://www.inu.ac.kr/inuengl/13944/subview.do",
+  "https://www.inu.ac.kr/inuengl/13939/subview.do",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
