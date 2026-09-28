@@ -1,0 +1,146 @@
+{
+  "id": "university-of-debrecen",
+  "status": "published",
+  "name": {
+    "ru": "Дебреценский университет (Венгрия) — англоязычный бакалавриат",
+    "orig": "University of Debrecen — English-taught bachelor programmes"
+  },
+  "hostCountry": "HU",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение на английском платное: бакалавриат стоит 6 000–10 000 долларов США в год в зависимости от программы (гуманитарные 6 000, инженерия 7 000–7 500, искусство и музыка 10 000). Сбор за заявку 150 долларов и экзамен 350. Платную помощь даёт государственная стипендия Stipendium Hungaricum (полное покрытие), стипендия самого вуза и до 20% скидки за успеваемость. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: приём для иностранцев, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: принимают аттестаты разных систем"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают, но есть правило про паузу в учёбе (см. условия)"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: отбор по документам и экзамену"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "The language proficiency of applicants must be proven with a standardized, at least upper-intermediate (B2) level language certificate, obtained at a proctored exam."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужен языковой сертификат не ниже B2, сданный на прокторинге. Освобождают носителей английского и тех, кто учился на английском (нужна справка о языке обучения).",
+      "evidence": "The language proficiency of applicants must be proven with a standardized, at least upper-intermediate (B2) level language certificate, obtained at a proctored exam.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Сбор за заявку — 150 долларов США, вступительный экзамен — 350 долларов.",
+      "evidence": "Application fee: 150 USD Entrance exam fee: 350 USD",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обучение на английском: гуманитарные программы 6 000 долларов в год, инженерия 7 000–7 500, искусство и музыка 10 000; медицина и стоматология дороже — 16 900 и 17 500.",
+      "evidence": "Computer Science * 6 semesters 7,000 USD/year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка на сентябрь 2026 — до 15 июня 2026; на февраль 2027 — до 1 ноября 2026. Вступительные экзамены и собеседования проходят очно и онлайн.",
+      "evidence": "all other programs: 15th June 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Есть государственная стипендия Венгрии Stipendium Hungaricum (полное покрытие) — подают через Tempus Public Foundation, а также стипендия университета Дебрецена и FAO.",
+      "evidence": "Stipendium Hungaricum Scholarship",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Уже во время учёбы дают скидку до 20% за высокий средний балл.",
+      "evidence": "Up to 20% tuition fee reduction can be granted for a given semester",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Пауза после школы не должна быть больше четырёх лет (для не-медицинских программ бакалавриата).",
+      "evidence": "In case of non-medical applicants to foundation or undergraduate programs, the study gap cannot be longer than 4 years.",
+      "field": "graduationYear",
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-06-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://edu.unideb.hu/p/application-and-admission",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Дебреценский университет"
+    }
+  },
+  "source": {
+    "url": "https://edu.unideb.hu/p/application-and-admission",
+    "pages": [
+      {
+        "url": "https://edu.unideb.hu/p/application-and-admission",
+        "contentHash": "sha256:8006d6116fbc1818f56f1bfc63033f41a3bc33dff7dcf12028057558adf3816c"
+      },
+      {
+        "url": "https://edu.unideb.hu/p/tuition-fee-application-entrance-fee",
+        "contentHash": "sha256:1954efeffad8660d20c4f6e8b336d24cf1cb7f692abc7a3bc08dbf14cefc73e9"
+      },
+      {
+        "url": "https://edu.unideb.hu/p/scholarships-and-loans",
+        "contentHash": "sha256:82e660c357b475d2996f9de6de2b48a9e09ca3424e46b19bbf6a413c85e5e748"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:e92d64936401406ebb8f26dd3bcde3f8070ed6212d2872466b89909d00de2366"
+  }
+}

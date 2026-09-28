@@ -1,0 +1,134 @@
+{
+  "id": "fu-berlin",
+  "status": "published",
+  "name": {
+    "ru": "Свободный университет Берлина (FU Berlin) — бакалавриат для иностранцев",
+    "orig": "Freie Universität Berlin — bachelor's degrees for international applicants"
+  },
+  "hostCountry": "DE",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": true,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Платы за обучение нет — только семестровый сбор. На зиму 2026/27 он составляет 376,80 евро: 226,80 за проездной, 85 в студенческий союз, 50 административный сбор, 10 в студенческое самоуправление и 5 в социальный фонд. Своих стипендий и грантов вуз не даёт вообще — иностранцу остаётся искать внешние (DAAD и подобные). На визу нужно доказать наличие денег на жизнь"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: приём для иностранцев через uni-assist, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают; для Китая, Индии и Вьетнама нужен дополнительный сертификат APS"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска нет, аттестат проверяют через uni-assist"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: аттестат оценивает uni-assist"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "sufficient knowledge of German depending on the requested study course"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Обучения плата не берётся — только семестровый сбор 376,80 евро на зиму 2026/27 (проездной, студенческий союз, административный сбор и прочее).",
+      "evidence": "Freie Universität Berlin does not charge any tuition fees (except for continuing education programs)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Своих стипендий и грантов вуз не даёт вообще — только база DAAD и BAföG в исключительных случаях.",
+      "evidence": "The Freie Universität Berlin does not award any grants or scholarships.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Нужен немецкий, уровень зависит от программы (обычно B2 / DSH-2). Точный порог вуз на этих страницах не называет.",
+      "evidence": "sufficient knowledge of German depending on the requested study course",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявка только через предварительную проверку документов (VPD) в uni-assist, потом через портал вуза. VPD готовят до 8 недель, поэтому просят подавать заранее.",
+      "evidence": "Applicants to Freie Universität Berlin must now submit a preliminary review documentation (VPD) .",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Срок заявки — до 15 июля для программ с ограниченным приёмом и до 1 сентября для остальных.",
+      "evidence": "This applies in particular to the period up to 8 weeks BEFORE the application deadline on July 15",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-07-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.fu-berlin.de/en/studium/bewerbung/bachelor/ausl-hzb/index.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Свободный университет Берлина (FU Berlin)"
+    }
+  },
+  "source": {
+    "url": "https://www.fu-berlin.de/en/studium/bewerbung/bachelor/ausl-hzb/index.html",
+    "pages": [
+      {
+        "url": "https://www.fu-berlin.de/en/studium/bewerbung/bachelor/ausl-hzb/index.html",
+        "contentHash": "sha256:0b01b9c2c21167f3922b882fca9d41688fa820233b841d8354a76c9b3fe9e441"
+      },
+      {
+        "url": "https://www.fu-berlin.de/en/studium/studieren/studienorganisation/gebuehren/index.html",
+        "contentHash": "sha256:1fb88479615578c317bfa00e022cd5d693a25ef975284a7bdb687dc5bdb64543"
+      },
+      {
+        "url": "https://www.fu-berlin.de/en/studium/international/studium_fu/studienfinanzierung/index.html",
+        "contentHash": "sha256:fbd6437d0d49eff9b6bc98c88eeb5149470bf6e93d78212e065a9f9b41b3a521"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:a311707492e86ce9c13eb35dd0e72625834bf9b34e2ad81626b16d69d5435e9d"
+  }
+}

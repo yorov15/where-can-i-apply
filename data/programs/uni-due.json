@@ -1,0 +1,134 @@
+{
+  "id": "uni-due",
+  "status": "published",
+  "name": {
+    "ru": "Университет Дуйсбург-Эссен (Германия) — бакалавриат для иностранцев",
+    "orig": "University of Duisburg-Essen — bachelor's admission for non-EU applicants"
+  },
+  "hostCountry": "DE",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": true,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Платы за обучение нет. Платят только студенческие сборы каждый семестр (проездной, студенческий союз, самоуправление) — точная сумма на отдельной странице. Вуз даёт единичные свои стипендии для студентов из развивающихся стран и гранты на выпуск, но основная помощь — внешняя (DAAD), и подавать на неё лучше из своей страны. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: приём для не-ЕС через uni-assist, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают; для Китая, Индии и Вьетнама нужен APS-сертификат"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: нужен школьный документ, признанный как немецкий Abitur"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Most applicants from foreign countries must provide proof of German language proficiency at DSH 2 level before beginning a course of study"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Платы за обучение вуз не берёт, только студенческие сборы каждый семестр.",
+      "evidence": "The University of Duisburg-Essen does not charge tuition fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Большинство иностранцев должны подтвердить немецкий на уровне DSH-2 (или TestDaF TDN-4, Goethe ZOP и т. п.). Для инженерных ISE-программ нужен английский B1 и можно без немецкого.",
+      "evidence": "Most applicants from foreign countries must provide proof of German language proficiency at DSH 2 level before beginning a course of study",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявка на бакалавриат — через uni-assist. Сроки на зиму: с 1 мая по 15 июня для программ с ограниченным приёмом и до 31 июля для остальных.",
+      "evidence": "For courses without admission restrictions: 01 May - 31 July",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Если немецкого не хватает, можно поступить на программу без ограничений и сначала учить язык на курсах при вузе (немецкий DSH сдать надо до начала учёбы).",
+      "evidence": "Once your eligibility for university admission - and, in the case of master's courses, your subject-specific aptitude - has been established, you will receive a letter of admission for a language course.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Вуз даёт единичные свои стипендии для студентов из развивающихся стран и гранты на выпуск; основная помощь — внешняя (DAAD), лучше подавать из своей страны.",
+      "evidence": "Individual scholarships awarded by the state of North Rhine-Westphalia to highly talented students from emerging and developing countries",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-07-31",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.uni-due.de/international/international-admissions-en.php",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Дуйсбург-Эссен (UDE)"
+    }
+  },
+  "source": {
+    "url": "https://www.uni-due.de/international/international-admissions-en.php",
+    "pages": [
+      {
+        "url": "https://www.uni-due.de/international/international-admissions-en.php",
+        "contentHash": "sha256:b93ae4be34af9d5fa9c4412fe9f7eb8889e4ba611f729774adf1903dc41b7007"
+      },
+      {
+        "url": "https://www.uni-due.de/en/studying/cost.php",
+        "contentHash": "sha256:424302e627f9982b2f8d5086e61add24fec80606a56b5ddbf2511a714a300b67"
+      },
+      {
+        "url": "https://www.uni-due.de/ise/admission.php",
+        "contentHash": "sha256:43e9d39270cc3232a5611d3d1b3e8d92665a282b19d26d67ba1d3bb0de8f064f"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:0f57028528c100f5e2827198e1ae7926a952f2c1de4e8ee1555e165a3d097c34"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "id": "palacky-university",
+  "status": "published",
+  "name": {
+    "ru": "Университет Палацкого (Оломоуц, Чехия) — бакалавриат для иностранцев",
+    "orig": "Palacký University Olomouc — bachelor's admission for international applicants"
+  },
+  "hostCountry": "CZ",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Программы есть и на английском, и на чешском; условия и плата зависят от факультета, точных сумм на снятых страницах нет. Обязательный шаг — признание прежнего образования и легализация документов. Стипендии и скидки дают уже зачисленным студентам, заранее их не выдаёт. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: приём для иностранцев, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают, но прежнее образование нужно признать"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска на снятых страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на снятых страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата на снятых страницах не называют"
+    },
+    "language": null,
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Университет принимает на бакалавриат, магистратуру и докторантуру — программы есть на английском и других языках (а также на чешском).",
+      "evidence": "Palacký University offers various degree programmes at three levels - Bachelor's, Master's and Doctoral, in English and other languages.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Кто окончил школу вне Чехии, обязан подтвердить и признать прежнее образование — это обязательное условие приёма. За процедуру признания платят отдельно.",
+      "evidence": "Applicants who have completed their previous education outside the Czech Republic must prove their prior education abroad.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы нужно легализовать — как именно, зависит от страны; порядок университет описывает отдельной инструкцией.",
+      "evidence": "Legalize your documents according to the instructions",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявка подаётся онлайн через форму вуза: программа, документы, оплата сбора. Только после загрузки всех документов и оплаты заявка считается полной.",
+      "evidence": "only once all required documents are uploaded and the application fee paid your application be considered as complete!",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.studuj.upol.cz/en/admissions",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Палацкого (Оломоуц)"
+    }
+  },
+  "source": {
+    "url": "https://www.studuj.upol.cz/en/admissions",
+    "pages": [
+      {
+        "url": "https://www.studuj.upol.cz/en/admissions",
+        "contentHash": "sha256:174fc8f5e4650191a30ba1c6f05a043216587b71f0c0eaec28f4cb86bfe52943"
+      },
+      {
+        "url": "https://www.upol.cz/en/students/degree-students/rights-obligations-fees",
+        "contentHash": "sha256:417cd016afad69a491cfba73b8c24d6040dac4646b6f8dc43c60405df4bd195b"
+      },
+      {
+        "url": "https://www.upol.cz/en/students/degree-students/scholarships-and-bursaries",
+        "contentHash": "sha256:a3b33ac142c3173725e654f46537710dc17dcf83fda5d4fd14eb4bda75c0e334"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:54fe47e12d4921ffa48a5615ca9a377f1f7ce52fa22f3b3c5f91c2ee7dacffa2",
+    "language": "sha256:54fe47e12d4921ffa48a5615ca9a377f1f7ce52fa22f3b3c5f91c2ee7dacffa2"
+  }
+}
