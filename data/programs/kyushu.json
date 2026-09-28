@@ -1,0 +1,147 @@
+{
+  "id": "kyushu",
+  "status": "published",
+  "name": {
+    "ru": "Университет Кюсю (Япония) — англоязычный бакалавриат",
+    "orig": "Kyushu University — international undergraduate programs (English)"
+  },
+  "hostCountry": "JP",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "engineering",
+    "natural"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Всем поступившим на англоязычные программы вуз покрывает половину платы за обучение все четыре года: семестр 267 900 иен превращается в 133 950, а за четыре года — 2 143 200 вместо 1 071 600. Плюс до 10 человек в год получают стипендию 60 000 иен в месяц (заявка входит в анкету), а отдельные — стипендию MEXT: 117 000 иен в месяц, освобождение от взноса и платы и билеты на перелёт. Общежитие гарантируют минимум на полтора года (аренда 23 000–30 000 иен). Жильё дальше и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: приём открыт для иностранных абитуриентов, ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы на страницах нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска на страницах нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "There are minimum requirements on the standardized test scores."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Всем успешно поступившим на англоязычные программы положено освобождение от половины платы за обучение на четыре года.",
+      "evidence": "Exemption of Half the Tuition All successful applicants of the international undergraduate programs will be entitled to the exemption of half the tuition for four years.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "До 10 человек в год получают стипендию вуза: 60 000 иен в месяц четыре года. Отдельную заявку подавать не нужно — галочка в анкете.",
+      "evidence": "Four years with 60,000 yen per month.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельно стипендия MEXT по рекомендации вуза: 117 000 иен в месяц четыре года, освобождение от вступительного взноса и платы, а также билеты в Японию и обратно.",
+      "evidence": "Four years with 117,000 yen per month",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общежитие гарантируют минимум на первые полтора года; аренда одноместной комнаты — 23 000–30 000 иен в месяц.",
+      "evidence": "All successful applicants of the international undergraduate programs will be guaranteed a room in a university dormitory at least for the first year and a half.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "По стандартизированным тестам есть минимальные баллы — их приводят в приёмной инструкции, на самой странице чисел нет.",
+      "evidence": "There are minimum requirements on the standardized test scores.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Приём на октябрь 2027: онлайн-заявка принимается с 7 по 11 декабря 2026, документы потом отправляют почтой.",
+      "evidence": "(December 7, 2026 - December 11, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Перевода с других вузов здесь нет: принятый начинает учёбу с первого курса с нуля кредитов.",
+      "evidence": "we do NOT have a \"transfer system\" for this program",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-12-11",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.kyushu-u.ac.jp/en/admission/faculty/foreign/foreign10/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Кюсю"
+    }
+  },
+  "source": {
+    "url": "https://www.kyushu-u.ac.jp/en/admission/faculty/foreign/foreign10/",
+    "pages": [
+      {
+        "url": "https://www.kyushu-u.ac.jp/en/admission/faculty/foreign/foreign10/",
+        "contentHash": "sha256:64cc77edad4d413fa6535a6dfbdd9ba4fa5bdd4f02c910b6a4e9cd5909cba441"
+      },
+      {
+        "url": "https://www.isc.kyushu-u.ac.jp/financialaid.html",
+        "contentHash": "sha256:63f4459756799dbf539a9878eb1a7e39dabefd595151e6445e3968a7329db6ad"
+      },
+      {
+        "url": "https://www.kyushu-u.ac.jp/en/admission/fees/",
+        "contentHash": "sha256:7ebb768c271d4cf5c93dbaf57aab12c867d59955257e556fa8e1617bdca0eda6"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:1dccedeec9debf6f1cea04d55ed6678577bd554372647d711e851eb4a646240b"
+  }
+}

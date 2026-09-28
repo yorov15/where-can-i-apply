@@ -1,0 +1,162 @@
+{
+  "id": "seoultech",
+  "status": "published",
+  "name": {
+    "ru": "Сеульский национальный технический университет (SeoulTech) — приём иностранцев",
+    "orig": "Seoul National University of Science and Technology — international undergraduate admissions"
+  },
+  "hostCountry": "KR",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "any"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Государственный вуз. Обучение платное, но скидок много: за TOPIK 6 или TOEFL 100 — полное освобождение (а при оценке A ещё и общежитие), за TOPIK 5 — 70%, за TOPIK 4 — 50%. Отдельно есть стипендия для стран-партнёров по линии помощи Кореи (ODA): Таджикистан в её списке — она покрывает всё обучение и платит 500 000 вон в месяц восемь семестров. Для поступления нужен банковский вклад больше 20 млн вон. Жильё и дорога без стипендии не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "Applicant and applicant's parents must hold citizenship from another country other than Korea"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: требований к стране школы на страницах нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: выпускники и выпускники текущего года могут подать"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "для обычного приёма минимального балла аттестата не называют"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOPIK",
+          "min": 3,
+          "evidence": "Applicants who have obtained TOPIK Level 3 or higher"
+        },
+        {
+          "test": "IELTS",
+          "min": 5.5,
+          "evidence": "English score: TOEFL iBT 71, IELTS 5.5, or above"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 71,
+          "evidence": "English score: TOEFL iBT 71, IELTS 5.5, or above"
+        }
+      ],
+      "evidence": "Applicants must meet one of the following language requirements"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Абитуриент и оба родителя должны быть гражданами не Кореи.",
+      "evidence": "Applicant and applicant's parents must hold citizenship from another country other than Korea",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Язык: TOPIK 3 и выше либо окончание корейского курса при вузе (4 уровень) и подобное. На англоязычных направлениях (MSDE, ITM, Business Administration, Global IT Convergence) — TOEFL iBT 71 или IELTS 5.5. Для Creative Writing нужен TOPIK 6.",
+      "evidence": "English score: TOEFL iBT 71, IELTS 5.5, or above",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Стипендия для стран-партнёров по линии помощи Кореи (ODA): Таджикистан в списке. Покрывает всё обучение и платит 500 000 вон в месяц все восемь семестров. Нужны средний балл 90% или 4.0/4.5 и корейский TOPIK 5 либо IELTS 6.5.",
+      "evidence": "All tuition fees and monthly allowance(₩500,000) during regular academic semesters",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидка за язык на первый семестр: TOPIK 4 или TOEFL 80 — 50% платы (при оценке A — 70%); TOPIK 5 или TOEFL 90 — 70% (при A — полностью); TOPIK 6 или TOEFL 100 — полностью, а при A ещё и общежитие.",
+      "evidence": "Level A Full Tuition fee",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Дальше скидка зависит от успеваемости: GPA 3.5 — 30% платы, 3.8 — 50%, 4.0 — полностью плюс общежитие.",
+      "evidence": "GPA 4.0 or higher Full Tuition fee + Full Boarding fee",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём идёт в два раунда: на весенний семестр — в сентябре и ноябре, на осенний — в марте и июне.",
+      "evidence": "Spring Semester : (1st Round) September (2nd Round) Novemb er",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для поступления нужен банковский вклад больше 20 млн вон; справку о нём подают после объявления результатов.",
+      "evidence": "Bank deposit more than KRW 20,000,000",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://global.seoultech.ac.kr/apply/undergraduate",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Сеульский национальный технический университет (SeoulTech)"
+    }
+  },
+  "source": {
+    "url": "https://global.seoultech.ac.kr/apply/undergraduate",
+    "pages": [
+      {
+        "url": "https://global.seoultech.ac.kr/apply/undergraduate",
+        "contentHash": "sha256:005d4a0c2de066f12270a4a5aadea0eb014e2ec8a9fc7d07d36b629dd3b8ed81"
+      },
+      {
+        "url": "https://global.seoultech.ac.kr/apply/scholar",
+        "contentHash": "sha256:0cfcc1d56fff26677c1c925796ca315b4b2c106716a76603937fe525540bf002"
+      },
+      {
+        "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+        "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:52bcfeabb59b5d37a58dd4a96c13ac7d692ff793d756c02d31bd481cd7c270a3"
+  }
+}

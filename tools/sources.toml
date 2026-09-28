@@ -1732,8 +1732,9 @@ approvedAt = "2026-09-26"
 [tokyo-peak]
 name = "University of Tokyo (Япония): PEAK и GSC, бакалавриат на английском"
 urls = [
-  "https://www.u-tokyo.ac.jp/en/prospective-students/undergraduate_english.html",
-  "https://www.u-tokyo.ac.jp/en/prospective-students/tuition_scholarships.html",
+  "https://peak.c.u-tokyo.ac.jp/apply/index.html",
+  "https://peak.c.u-tokyo.ac.jp/fees_scholarships/l3/Vcms3_00000197.html",
+  "https://peak.c.u-tokyo.ac.jp/fees_scholarships/l3/Vcms3_00000232.html",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-26"
@@ -1909,9 +1910,9 @@ approvedAt = "2026-09-26"
 [kyushu]
 name = "Kyushu University (Япония): бакалавриат для иностранцев"
 urls = [
-  "https://www.kyushu-u.ac.jp/en/admission/faculty/foreign/",
-  "https://www.kyushu-u.ac.jp/en/admission/fees/expenses/",
-  "https://www.kyushu-u.ac.jp/en/admission/fees/exempt01",
+  "https://www.kyushu-u.ac.jp/en/admission/faculty/foreign/foreign10/",
+  "https://www.isc.kyushu-u.ac.jp/financialaid.html",
+  "https://www.kyushu-u.ac.jp/en/admission/fees/",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-26"
@@ -1919,7 +1920,9 @@ approvedAt = "2026-09-26"
 [ritsumeikan]
 name = "Ritsumeikan University (Япония): бакалавриат для иностранцев"
 urls = [
-  "https://en.ritsumei.ac.jp/e-ug/",
+  "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+  "https://en.ritsumei.ac.jp/e-ug/financial_info/fees.html",
+  "https://en.ritsumei.ac.jp/e-ug/financial_info/scholarships.html",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-26"
@@ -2296,9 +2299,8 @@ approvedAt = "2026-09-27"
 [seoultech]
 name = "Seoul National University of Science and Technology (Корея)"
 urls = [
-  "https://en.seoultech.ac.kr/adm/under",
-  "https://global.seoultech.ac.kr/admissions/undergraduate/admission_guidlines/",
-  "https://en.seoultech.ac.kr/adm/guide",
+  "https://global.seoultech.ac.kr/apply/undergraduate",
+  "https://global.seoultech.ac.kr/apply/scholar",
   "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
 ]
 approvedBy = "human"
@@ -2618,6 +2620,17 @@ urls = [
   "https://www.nucba.ac.jp/en/scholarship/",
   "https://www.nucba.ac.jp/en/scholarship/tuition_list.html",
   "https://www.nucba.ac.jp/en/admission/faq/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+[aiu-japan]
+name = "Akita International University (Япония): бакалавриат на английском"
+urls = [
+  "https://admission.aiu.ac.jp/en/ug/international/",
+  "https://web.aiu.ac.jp/en/undergraduate/tuition/",
+  "https://web.aiu.ac.jp/en/campuslife/scholarship/",
+  "https://admission.aiu.ac.jp/en/ug/",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"

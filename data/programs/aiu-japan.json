@@ -1,0 +1,146 @@
+{
+  "id": "aiu-japan",
+  "status": "published",
+  "name": {
+    "ru": "Международный университет Акиты (AIU) — приём иностранцев на английском",
+    "orig": "Akita International University — International Examination (English-medium)"
+  },
+  "hostCountry": "JP",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "humanities",
+    "social",
+    "business"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: 896 000 иен в год плюс разовый вступительный взнос 423 000 иен (для жителей префектуры Акита — 282 000). Итого первый год у обычного студента — 1 319 000 иен. Общежитие с питанием — 622 900 иен. Есть программа освобождения от платы для тех, кому трудно платить (бедность, стихийные бедствия), но она по заявке и не гарантирована; отдельные стипендии вуза в основном связаны с Японией и годичной учёбой за рубежом. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: международный экзамен открыт для окончивших школу в Японии или за рубежом, ограничений по гражданству нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: принимают аттестаты из любой страны"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требований к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на странице приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: отбор по документам, английскому и мотивации"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Applicants must be able to commit to enrolling if admitted and must hold an English proficiency certification equivalent to Eiken Pre-1 or higher."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Международный экзамен рассчитан на тех, кто окончил 12-летнюю школу. Для выпускника таджикской 11-летки отдельного правила нет — уточняй в приёмной, зачтут ли аттестат.",
+      "evidence": "The International Examination is designed for applicants who have completed a 12-year school education program, either in Japan or abroad.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен английский на уровне японского экзамена Eiken Pre-1 и выше. Вместо сертификата годится подтверждение, что школьное обучение шло на английском как минимум три последних года, включая выпускной.",
+      "evidence": "must hold an English proficiency certification equivalent to Eiken Pre-1 or higher",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Отбор — по документам и интервью на английском, без письменного вступительного экзамена.",
+      "evidence": "Through document screening and an English interview",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Год обучения стоит 896 000 иен; разовый вступительный взнос — 423 000 иен (282 000 для жителей префектуры Акита). Итого первый год 1 319 000 иен.",
+      "evidence": "Other students：1,319,000 yen",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общежитие с питанием стоит 622 900 иен (проживание 11,5 месяца и 8 месяцев питания).",
+      "evidence": "Housing 622,900 yen",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть программа освобождения от платы за обучение для тех, кому трудно платить из-за финансов или стихийных бедствий, но её надо запрашивать и она не гарантирована.",
+      "evidence": "AIU has a tuition waiver program for students who encounter difficulties affording tuition fees because of financial situations, natural disasters, etc.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admission.aiu.ac.jp/en/ug/international/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Международный университет Акиты (AIU)"
+    }
+  },
+  "source": {
+    "url": "https://admission.aiu.ac.jp/en/ug/international/",
+    "pages": [
+      {
+        "url": "https://admission.aiu.ac.jp/en/ug/international/",
+        "contentHash": "sha256:cc393205f115eda33d700b2d47076e902fa4eadc8d436237a243219753637a61"
+      },
+      {
+        "url": "https://web.aiu.ac.jp/en/undergraduate/tuition/",
+        "contentHash": "sha256:ebe62f86bd5bfcddf3fc092c22f7724634546d9e584709d23609209ae1572cb9"
+      },
+      {
+        "url": "https://web.aiu.ac.jp/en/campuslife/scholarship/",
+        "contentHash": "sha256:45fd1d1a837f1f920eccf7b8593d4a0f114cf5f49c5026e607ccbe87486ad03a"
+      },
+      {
+        "url": "https://admission.aiu.ac.jp/en/ug/",
+        "contentHash": "sha256:09411affd137fa5c5f9ae4e397246ef0c2ca6281f549b9a860160a87ea86f17e"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:d60fe00933cf6e2dab359cb19353e1c1f599659e5a5cd30968b1b9c4f6053ace"
+  }
+}

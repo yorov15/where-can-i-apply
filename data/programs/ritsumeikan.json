@@ -1,0 +1,165 @@
+{
+  "id": "ritsumeikan",
+  "status": "published",
+  "name": {
+    "ru": "Университет Рицумейкан (Япония) — английские бакалаврские программы",
+    "orig": "Ritsumeikan University — English-medium undergraduate programs (AO Admissions)"
+  },
+  "hostCountry": "JP",
+  "kind": "university",
+  "level": "bachelor",
+  "majors": [
+    "social",
+    "humanities",
+    "cs",
+    "engineering"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: от 1,56 млн иен в год (CRPS) и 1,67 млн (GS) до 2,6 млн (GLA с двойным дипломом ANU) плюс разовый вступительный взнос 200 000. Скидка на обучение даётся всем по конкурсу: 100% лучшим 10%, 50% следующим 10%, 20% — остальным. После зачисления доступны JASSO (48 000 иен в месяц), стипендия вуза 250 000 иен в год и стипендия MEXT. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают; исключение только для программы GLA — граждане и резиденты Австралии подают через Австралийский национальный университет, а не через Рицумейкан"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: принимают аттестаты разных систем, требований к стране школы нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требования к году выпуска нет, нужен аттестат к дате зачисления"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают для основного пути; 18 лет нужно для путей через GED и эквивалентный экзамен"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: отбор по документам, языку и эссе"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5.5,
+          "evidence": "IELTS Academic Module 5.5"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 72,
+          "evidence": "TOEFL iBT®Test 0-120 scale (Test taken before Jan. 21, 2026) 72"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 105,
+          "evidence": "Duolingo English Test 105"
+        }
+      ],
+      "evidence": "In order to demonstrate sufficient English ability, applicants must take one of the tests listed below and achieve the minimum score indicated below."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Важно для таджикской 11-летней школы: вуз принимает 11-летнее образование только стран, признанных MEXT, — Беларусь, Казахстан, Мьянма, Перу, Россия, Судан, Украина, Узбекистан. Таджикистана в этом списке нет, поэтому нужен либо GED, либо подготовительный курс, либо индивидуальный разбор заявления вузом.",
+      "evidence": "Have completed a standard 11-year education in one of the designated curriculums of countries specified by MEXT e.g., Belarus, Kazakhstan, Myanmar, Peru, Russia, Sudan, Ukraine, Uzbekistan",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский зависит от программы. Ниже всего порог у CRPS и ISSE: IELTS 5.5 / TOEFL 72 / Duolingo 105. У GS — IELTS 6.0 / TOEFL 76 / Duolingo 110, у двойного диплома JD — TOEFL 85, у GLA — IELTS 6.5 (не ниже 6.0 в каждой части). TOEFL Home, MyBest и IELTS Online не принимают.",
+      "evidence": "IELTS Academic Module 6.5 with 6.0 in each component",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Год обучения: GLA с дипломом Австралийского национального университета — 2,6 млн иен, ISSE — 2,0 млн, GS — 1,67 млн, CRPS — 1,56 млн; вступительный взнос 200 000 иен платят один раз.",
+      "evidence": "GLA RU-ANU Major 200,000 1,200,000 1,200,000 2,600,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидка на обучение даётся всем поступившим по конкурсу: 100% — лучшим 10% набора, 50% — следующим 10%, 20% — остальным. Со второго года скидка зависит от оценок.",
+      "evidence": "Undergraduate Category I 100% Reduction",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть стипендия MEXT по рекомендации вуза (полное покрытие) и после зачисления — JASSO 48 000 иен в месяц и стипендия вуза 250 000 иен в год.",
+      "evidence": "MEXT University Recommendation Scholarship, Special Selection",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача через систему TAO; сбор — 5 000 иен за каждую программу. Приёмные окна на 2027 год: у GLA сентябрьский набор — с 14 октября по 2 ноября 2026, далее ещё два окна.",
+      "evidence": "Fee Amount: 5,000 JPY per program.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для программы GLA граждане и резиденты Австралии подавать через Рицумейкан не могут — только через Австралийский национальный университет.",
+      "evidence": "Australian domestic students are not eligible to apply through Ritsumeikan University and must instead apply through ANU.",
+      "field": "citizenship",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-11-02",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Рицумейкан"
+    }
+  },
+  "source": {
+    "url": "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+    "pages": [
+      {
+        "url": "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+        "contentHash": "sha256:e2ac672c8568a0989be656b5206d31e0bb211d79bb69a1a7219b595891cfc3e4"
+      },
+      {
+        "url": "https://en.ritsumei.ac.jp/e-ug/financial_info/fees.html",
+        "contentHash": "sha256:2cadc45cc988ec5bd17fd39e77f64a784f68b92d45f5889e8d23e9bb8d57ab09"
+      },
+      {
+        "url": "https://en.ritsumei.ac.jp/e-ug/financial_info/scholarships.html",
+        "contentHash": "sha256:6530775dbc677b01289d1ba0ce3c8ee088030ee1af06aca2072cd9dc06df474c"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:10fb3c8426b0f9ab9a8a3a2839f04f541efd58c8e509dee28483f75756494ec4"
+  }
+}
