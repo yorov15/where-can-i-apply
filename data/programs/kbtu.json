@@ -1,0 +1,162 @@
+{
+  "id": "kbtu",
+  "status": "published",
+  "name": {
+    "ru": "Казахстанско-Британский технический университет (КБТУ) — приём иностранцев",
+    "orig": "Kazakh-British Technical University (KBTU) — international bachelor admissions"
+  },
+  "hostCountry": "KZ",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Учёба платная: цены на обучение на этих страницах не названы. Есть внутренние гранты и скидки для граждан стран СНГ, Грузии, Украины, Монголии, Пакистана, Индии, Турции и Индонезии (Таджикистан входит в СНГ) — но размер скидки на странице не указан. Отдельно описан путь государственной стипендии Казахстана (Bolashak): обучение на 4 года бакалавриата и месячная выплата 52 372 тенге, но она не покрывает визу, жильё, дорогу и личные расходы. Разовый студенческий сбор при зачислении — 50 000 тенге. Про жильё и дорогу для иностранца эти страницы молчат"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство для приёма не ограничивают: страница для иностранных абитуриентов; отдельно названы внутренние гранты для стран СНГ, в список входит Таджикистан"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: принимают иностранцев, требований к стране школы на странице нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: нужен документ об образовании (аттестат с приложением), требования к году выпуска на странице нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: на странице приёма требований к возрасту нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "для приёма минимального балла аттестата не называют; условие про среднюю оценку не ниже «хорошо» стоит в требованиях государственной стипендии, а не в общем приёме"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "3 step - Take an English language test (IELTS, TOEFL, DUOLINGO, KELET)"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцы подают в три шага: регистрация на портале admissions.kbtu.kz, загрузка документов и прохождение теста по английскому. К заявке на бакалавриат — паспорт, аттестат с приложением, сертификат по английскому (если есть) и мотивационное письмо на английском до 600 слов.",
+      "evidence": "1 step - Register on portal admissions.kbtu.kz/apply 2 step - Complete the Application Form and upload all the required documents (see list of documents below) 3 step - Take an English language test (IELTS, TOEFL, DUOLINGO, KELET)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Английский проверяют своим тестом, а не только сертификатом: на выбор IELTS, TOEFL, DUOLINGO или KELET. Порог по баллам на странице не назван.",
+      "evidence": "3 step - Take an English language test (IELTS, TOEFL, DUOLINGO, KELET)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Сертификат по английскому для приёма на бакалавриат просят, только если он есть, — вместо него сдают тест вуза.",
+      "evidence": "1. Passport 2. Educational document (certificate) with an attachment 3. Certificate of English proficiency (IELTS, TOEFL if available) 4. Motivation letter in English (up to 600 words)",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Внутренние гранты и скидки КБТУ доступны гражданам стран СНГ, Грузии, Украины, Монголии, Пакистана, Индии, Турции и Индонезии, а также этническим казахам из любой страны. Таджикистан входит в СНГ, значит путь открыт. Размер скидки на странице не указан.",
+      "evidence": "Grants/discounts are available for: Citizens of CIS countries, Georgia, Ukraine, Mongolia, Pakistan, India, Turkey, and Indonesia. Ethnic Kazakh citizens from any foreign country.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка на внутренний грант или скидку — отдельный отбор: документы принимают с 1 марта по 1 мая, затем собеседование с приёмной комиссией со 2 по 31 мая. Это даты, названные на странице, — на следующий год вуз вывесит новые.",
+      "evidence": "Admission Process: Document Submission: March 1 - May 1 Interview with the Admissions Committee: May 2 - May 31",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "На внутренний грант к документам добавляют сертификат по английскому (IELTS, TOEFL, Duolingo, STEP или KELET) и мотивационное письмо; порог по баллам не назван.",
+      "evidence": "Language proficiency certificate (IELTS, TOEFL, Duolingo, STEP or KELET)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Разовый студенческий сбор платят один раз при зачислении — 50 000 тенге (10 000 — вступительный сбор, 40 000 — собственно студенческий). Это не плата за обучение, а сбор на студенческие проекты.",
+      "evidence": "the Student Fee is paid by the student once upon admission to the university and amounts to 50,000 tenge",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 50000,
+        "currency": "KZT",
+        "evidence": "the Student Fee is paid by the student once upon admission to the university and amounts to 50,000 tenge"
+      }
+    },
+    {
+      "ru": "Отдельный путь — государственная стипендия Казахстана (Bolashak): покрывает обучение (4 года на бакалавриате) и платит 52 372 тенге в месяц. Виза, жильё, дорога и личные расходы не покрываются. Для бакалавриата нужна средняя оценка аттестата не ниже «хорошо».",
+      "evidence": "What the Scholarship Covers: Education (4 years for a bachelor's degree, 2 years for a master's degree, 3 years for doctoral studies) Monthly scholarship: 52,372 tenge for undergraduate students",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцу придётся пройти нострификацию (признание) документов об образовании в первый семестр учёбы, ориентировочно за 70 долларов США, и сдать анализ на ВИЧ, гепатиты B и C.",
+      "evidence": "Complete the nostrification/recognition procedure during their first semester at KBTU",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Для гражданина Таджикистана виза не нужна: страны СНГ въезжают без визы, но по приезде нужно получить разрешение на временное проживание (TRP). Гражданам стран вне СНГ сначала оформляют учебную визу C9 по приглашению вуза.",
+      "evidence": "Foreign students from CIS and EAEU countries can enter without a visa, but upon arrival in Kazakhstan, they must obtain a Temporary Residence Permit (TRP).",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://kbtu.edu.kz/en/internationalization/international-admissions-internationalization",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Казахстанско-Британский технический университет (КБТУ)"
+    }
+  },
+  "source": {
+    "url": "https://kbtu.edu.kz/en/internationalization/international-admissions-internationalization",
+    "pages": [
+      {
+        "url": "https://kbtu.edu.kz/en/internationalization/international-admissions-internationalization",
+        "contentHash": "sha256:ac5dfa49a234f7e9becd9706c2a8b5300e2dce9ad71f92df3f3f408b2aef3023"
+      },
+      {
+        "url": "https://kbtu.edu.kz/en/students/student-fee-en",
+        "contentHash": "sha256:bb3c6b49e6feb8fe06445879e5792adff96e8f93a6a044204bd71051d4d159c1"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:e5c6c68cf39ca6cec131cd6303980b025d9a2ec887ed6485a8b27831717b8fb6"
+  }
+}

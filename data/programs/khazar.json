@@ -1,0 +1,161 @@
+{
+  "id": "khazar",
+  "status": "published",
+  "name": {
+    "ru": "Университет Хазар (Баку) — приём иностранцев на бакалавриат",
+    "orig": "Khazar University — international undergraduate admissions"
+  },
+  "hostCountry": "AZ",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: 5 000 долларов США в год на всех программах (ветеринария — 6 000), при ранней подаче в цикле Early Bird — 4 500 (ветеринария — 5 400). В стипендию вуз не верит по заявке: каждый абитуриент автоматически рассматривается на скидку 25%, 50% или 75% от платы за обучение, но гарантии нет. Перед началом учёбы иностранцу нужно оплатить заявку и как минимум год обучения (за вычетом скидки). Жильё и дорога не покрываются. Часть полных стипендий — государственные программы Азербайджана (грант имени Гейдара Алиева), это отдельная заявка"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Nationals of all countries can apply to Khazar's undergraduate programs."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: заявку подают напрямую из своей страны, требований к стране школы на странице нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "maxRelative": "applicationYear",
+      "evidence": "In order to be eligible, applicants should have completed their secondary education successfully before the start of the academic year they apply to."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "для бакалавриата минимального балла аттестата не называют; требование к GPA стоит только у стипендии Nailekhanim, а она для магистратуры и докторантуры"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "сертификат по английскому для приёма не обязателен: в списке документов TOEFL/IELTS помечены как Optional"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Документы на бакалавриат: аттестат о среднем образовании, выписка с оценками, мотивационное письмо, CV, медицинская справка, копия загранпаспорта и квитанция об оплате невозвратного сбора за заявку. Сертификат по английскому — по желанию.",
+      "evidence": "Bachelor Admission Requirements Secondary School Certificate Academic Transcripts of Records Statement of Purpose Curriculum Vitae (CV) or Resume Medical Examination Certificate Copy of International Passport Receipt confirming payment of the non-refundable application fee ($25) Optional: Standardized English Language Test Scores (TOEFL/IELTS)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сбор за рассмотрение заявки — 25 долларов США, он невозвратный.",
+      "evidence": "non-refundable application fee ($25)",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 25,
+        "currency": "USD",
+        "evidence": "non-refundable application fee ($25)"
+      }
+    },
+    {
+      "ru": "Сертификат по английскому (TOEFL/IELTS) для поступления не обязателен — его просят как дополнительный документ.",
+      "evidence": "Optional: Standardized English Language Test Scores (TOEFL/IELTS)",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Абитуриент должен окончить среднюю школу до начала учебного года, на который подаёт.",
+      "evidence": "In order to be eligible, applicants should have completed their secondary education successfully before the start of the academic year they apply to.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Год обучения стоит 5 000 долларов США на всех программах, ветеринарная медицина — 6 000. Жильё и расходы на жизнь в эту сумму не входят.",
+      "evidence": "The annual tuition fee for all programmes is USD 5,000 (For BS Veterinary Medicine, the annual tuition fee is USD 6,000).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "При ранней подаче в цикле Early Bird (с 9 января по 1 июня 2026) цена за год ниже: 4 500 долларов на всех программах, ветеринария — 5 400.",
+      "evidence": "For applicants applying during the Early Bird cycle (09.01.2026 09:00 Baku tike - 01.06.2026 18:00 Baku time), the annual tuition fee across all programmes is USD 4,500 (for BS Veterinary Medicine, the annual tuition fee is USD 5,400).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидку на обучение даёт сам вуз: каждый абитуриент автоматически рассматривается на 25%, 50% или 75% от платы за обучение. Отдельную заявку подавать не нужно, но и гарантии, что скидку дадут, нет.",
+      "evidence": "Khazar University offers merit-based scholarships in the amount of 25%, 50% or 75% tuition fee waivers. You do not need to make separate applications for this, each applicant is automatically considered for this scholarship.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Перед началом учёбы иностранный студент обязан оплатить сбор за заявку и минимум год обучения — за вычетом скидки, если её дали.",
+      "evidence": "Before commencing the studies at Khazar University, an international student must pay the application fee and, at least, one year's tuition fee (less scholarship, if applicable).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть и государственные полные стипендии Азербайджана (грант имени Гейдара Алиева и межправительственные программы) — это отдельная заявка через правительство, а не через вуз.",
+      "evidence": "Full Scholarships by the Government of the Republic of Azerbaijan:",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://international.khazar.org/en/page/bachelor",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Хазар"
+    }
+  },
+  "source": {
+    "url": "https://international.khazar.org/en/page/bachelor",
+    "pages": [
+      {
+        "url": "https://international.khazar.org/en/page/bachelor",
+        "contentHash": "sha256:4bce0db2e912a43d55d1edd6c2664a83789f6b59dba11bc3c1682fa7c0c31a31"
+      },
+      {
+        "url": "https://international.khazar.org/en/page/admission-requirements",
+        "contentHash": "sha256:f45d874d7371a41b6004ea0fa6e492c0dc0e93548bdbdcbdab828ae93f561c05"
+      },
+      {
+        "url": "https://international.khazar.org/en/page/fees-and-funding",
+        "contentHash": "sha256:18d5cac42cb16b7acabd7685f0032b2cd2a12b69f9bba168d7ad703a2e042779"
+      },
+      {
+        "url": "https://international.khazar.org/en/page/international-scholarship-program",
+        "contentHash": "sha256:e35385cdf9c42afad173ca17f4489e75ce8604ccc096155231a5856801aa38d4"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:0b5d2ae725edcc306e118d73eb8576eaefbcfe98919ec6e5a61c26f185c63fa6"
+  }
+}

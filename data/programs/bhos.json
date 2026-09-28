@@ -1,0 +1,154 @@
+{
+  "id": "bhos",
+  "status": "published",
+  "name": {
+    "ru": "Baku Higher Oil School (Баку) — приём иностранцев на бакалавриат",
+    "orig": "Baku Higher Oil School — international undergraduate admissions"
+  },
+  "hostCountry": "AZ",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Плату за обучение вуз на сайте не публикует — страница стоимости пустая, поэтому назвать цену нельзя. Подача через государственный портал бесплатная. Полное покрытие даёт только грант имени Гейдара Алиева (государственная программа: обучение, жильё, документы, стажировки) — это отдельная заявка. Межправительственная стипендия Таджикистану не открыта: в списке стран её нет. Жильё и дорога без гранта не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "International applicants must complete the following steps:"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: приём открыт для иностранных абитуриентов, требований к стране школы на страницах нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: нужен аттестат о среднем образовании, требования к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: отбор идёт по документам и собеседованию"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5.0,
+          "parts": true
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 45
+        }
+      ],
+      "evidence": "For bachelor's degree IELTS 5.0 (with a minimum 5.0 score in each of the 4 sections) or TOEFL IBT 45-54 certificates (valid for two years after the test date)"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Заявка — через государственный портал portal.edu.az: создать личный кабинет, внести данные, загрузить документы. Портал официальный, обращаться к посредникам не нужно.",
+      "evidence": "Visit portal.edu.az and create a personal account.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Приём иностранцев идёт раз в год — с мая по август; учебный год начинается в сентябре и заканчивается в мае.",
+      "evidence": "International student admission to BHOS takes place once a year , starting in May and ending in August",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для бакалавриата нужен английский: IELTS 5.0 (не ниже 5.0 в каждой из четырёх частей) или TOEFL iBT 45–54. Сертификат действителен два года.",
+      "evidence": "For bachelor's degree IELTS 5.0 (with a minimum 5.0 score in each of the 4 sections) or TOEFL IBT 45-54 certificates (valid for two years after the test date)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Документы принимают только легализованные или с апостилем и нотариальным переводом: аттестат с оценками, медицинская справка (в том числе об отсутствии ВИЧ, гепатитов B и C), загранпаспорт, справка о несудимости. Дополнительно могут запросить другие медицинские документы.",
+      "evidence": "Secondary School Certificate (for applicants to BEng programmes)/ Bachelor's or Master's degree diploma (for applicants to graduate and Phd programmes) /any other relevant valid education document (duly legalized or Apostiled; translated into English/Russian and duly notarized);",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Платы за подачу на государственном портале нет — вуз специально это подчёркивает.",
+      "evidence": "there is no application fee on portal.edu.az",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Грант имени Гейдара Алиева даёт бесплатное общежитие, бесплатные учебные материалы и спорт, поддержку с документами и стажировки, без требования банковского счёта. Это государственная программа — отдельная заявка, не через вуз.",
+      "evidence": "Free student housing No application fee Free academic materials and athletic amenities",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Межправительственная стипендия открыта для граждан Китая, Сомали, Казахстана, Кыргызстана, Румынии и Узбекистана. Таджикистана в списке нет.",
+      "evidence": "Eligible countries: China Somalia Kazakhstan Kyrgyz Republic Romania Uzbekistan",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://bhos.edu.az/en/page/216/Application",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Baku Higher Oil School"
+    }
+  },
+  "source": {
+    "url": "https://bhos.edu.az/en/page/216/Application",
+    "pages": [
+      {
+        "url": "https://bhos.edu.az/en/page/216/Application",
+        "contentHash": "sha256:1b3d22d786e7499ccbdc7b0513a7a1e9fcc23775f6e6d8677992150a2f7e3ae3"
+      },
+      {
+        "url": "https://bhos.edu.az/en/page/118/international-tuition-costs",
+        "contentHash": "sha256:a8e7983fd4201dce06dddadc874380f8593a9059dfb193a6a9cb69963d2fce19"
+      },
+      {
+        "url": "https://bhos.edu.az/en/page/215/scholarship-opportunities",
+        "contentHash": "sha256:08998f911ce79463d4416e25504a7338f6ef72491afa726fc49e3969e244749e"
+      },
+      {
+        "url": "https://bhos.edu.az/en/page/115/admission-undergraduate",
+        "contentHash": "sha256:6c6d9a81901f48955d69db45e1daedf0768a5d6d403acafd35e619bed6eaad97"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:f92462c9b3625151150893c7cdeddf2ce44726e9073c5bb59a075c28f7910998"
+  }
+}

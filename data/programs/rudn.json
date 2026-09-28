@@ -1,0 +1,147 @@
+{
+  "id": "rudn",
+  "status": "published",
+  "name": {
+    "ru": "РУДН (Москва) — приём иностранцев на бакалавриат",
+    "orig": "RUDN University — international undergraduate admissions"
+  },
+  "hostCountry": "RU",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Бесплатный путь — квота Правительства РФ: отбор идёт через Россотрудничество в своей стране (портал education-in-russia.com), по квоте дают и общежитие. Ещё один путь — Открытая олимпиада РУДН: победители получают место по квоте, призёры — скидку на обучение. На платном (контракт) стипендии нет. Стоимость обучения на этих страницах не названа — уточняется приказами ректора на сайте. Жильё и дорога без квоты не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Foreign citizens may apply for fee-paying (contract) studies:"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: в олимпиаде могут участвовать граждане любой страны, требований к стране школы на страницах нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: принимают и выпускников, и школьников последнего года, нужен документ об образовании"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: отбор идёт по вступительному испытанию (интервью и портфолио), средний балл только учитывается"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "сертификат по языку обязательным не назван: вступительное испытание проходит в форме интервью на русском или английском, сертификат по русскому лишь учитывается"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Платный приём (по контракту) на бакалавриат шёл с 20 июня по 10 августа 2026. Документы: документ об образовании с переводом, паспорт с переводом, медицинская справка об отсутствии противопоказаний и ВИЧ, фото, подтверждения достижений.",
+      "evidence": "For full-time programs: from June 20 to August 10, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Отбор на бакалавриат РУДН идёт своим испытанием: интервью на русском или английском плюс оценка портфолио (средний балл, олимпиады, рекомендации). По каждому испытанию максимум 100 баллов, минимум 30.",
+      "evidence": "In 2026, RUDN University will admit foreign citizens to Bachelor's, Master's, and Specialist's programs based on competitive selection through entrance examinations in the form of an interview (in Russian/English) and an evaluation of the portfolio submitted by the applicant.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Проходной минимум по каждому вступительному испытанию — 30 баллов из 100.",
+      "evidence": "Minimum score: 30",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Квота Правительства РФ: отбор идёт в два этапа, в том числе в стране абитуриента, а оператор — Россотрудничество. Подробности на education-in-russia.com.",
+      "evidence": "The \"Rossotrudnichestvo\" agency serves as the official operator responsible for selecting candidates abroad.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Открытая олимпиада РУДН: участвовать могут иностранные граждане любой страны, в том числе школьники последнего года. Победители учатся по квоте Правительства РФ, призёры получают скидку на обучение.",
+      "evidence": "the winners of the Olympiad get the opportunity to study at RUDN University in the chosen field of study, that correspond to the passed Olympiad subject, under the quota of the Government of the Russian Federation",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Призёрам олимпиады РУДН дают скидку на обучение по выбранному направлению; если после победителей останутся квоты, призёров тоже могут зачислить на квотные места.",
+      "evidence": "the prize-winners of the Olympiad receive a discount on tuition fees on the chosen field of study",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Документы об образовании и паспорт иностранца принимают с нотариальным переводом на русский; оригиналы сдают по приезде.",
+      "evidence": "A copy of the educational certificate or qualification, along with a translation into Russian (if required)",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://international.rudn.ru/undergraduate/kontrakt/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Российский университет дружбы народов (РУДН)"
+    }
+  },
+  "source": {
+    "url": "https://international.rudn.ru/undergraduate/kontrakt/",
+    "pages": [
+      {
+        "url": "https://international.rudn.ru/undergraduate/kontrakt/",
+        "contentHash": "sha256:6744901e300128d381560c30a69cd006d93ae0170a680dee1a162b332bfa44ab"
+      },
+      {
+        "url": "https://international.rudn.ru/undergraduate/kvota-pravitelstva-rossiyskoy-federatsii/",
+        "contentHash": "sha256:788f897da2d058d972b8cc430ce9952bd83e54d950130be964f60618e25e763b"
+      },
+      {
+        "url": "https://international.rudn.ru/undergraduate/byudzhetnye-mesta-otkrytaya-olimpiada-rudn-dlya-inostrannykh-grazhdan/",
+        "contentHash": "sha256:fc30e5e83138943603d86fe2da90bfe694b33c56c41b9a511e4885134e92b82b"
+      },
+      {
+        "url": "https://www.rudn.ru/education/fee-paying-education",
+        "contentHash": "sha256:a338bf7dfc90d026579d75d0537bbe59e30d84c5789ac4cb6ba7f76f34ab304e"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:afd67c04fee6fdfd9391dd990c5b2a3188c467c751b1dde912db295abfaf5457"
+  }
+}

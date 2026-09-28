@@ -2345,3 +2345,247 @@ urls = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-27"
+
+# SDU — Университет имени Сулеймана Демиреля (Казахстан, Каскелен).
+# Домен sdu.edu.kz одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+# Страницы внутри домена выбраны по меню самого сайта: приём иностранцев,
+# плата, финансовая помощь и жизнь иностранного студента.
+[sdu]
+name = "Suleyman Demirel University (Казахстан): приём иностранцев на бакалавриат"
+urls = [
+  "https://sdu.edu.kz/en/international-admissions/",
+  "https://sdu.edu.kz/en/international-students/",
+  "https://sdu.edu.kz/en/tuition-fees/",
+  "https://sdu.edu.kz/en/financial-aid/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# KBTU — Казахстанско-Британский технический университет (Алматы).
+# Домен kbtu.edu.kz одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+# Две страницы: приём иностранцев (шаги, экзамен по английскому, стипендия)
+# и сборы студента. Портал подачи живёт на другом домене
+# (admissions.kbtu.kz) и в источник не входит, пока Мурод его не одобрит.
+[kbtu]
+name = "Kazakh-British Technical University (Казахстан): приём иностранцев на бакалавриат"
+urls = [
+  "https://kbtu.edu.kz/en/internationalization/international-admissions-internationalization",
+  "https://kbtu.edu.kz/en/students/student-fee-en",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# Кыргызско-Турецкий университет «Манас» (Бишкек).
+# Домен manas.edu.kg одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+# Три страницы: приём, стипендии студентов и общая справка о вузе.
+[manas]
+name = "Kyrgyz-Turkish Manas University (Кыргызстан): приём иностранцев на бакалавриат"
+urls = [
+  "https://manas.edu.kg/en/students/admission",
+  "https://www.manas.edu.kg/en/students/students-scholarship",
+  "https://manas.edu.kg/en/about_manas/ktmu_at_a_glance",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# Университет Хазар (Баку, Азербайджан).
+# Домен khazar.org одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+# Приём иностранцев живёт на поддомене international.khazar.org.
+# Четыре страницы: бакалавриат, требования, плата и финансирование,
+# международная стипендиальная программа.
+[khazar]
+name = "Khazar University (Азербайджан): приём иностранцев на бакалавриат"
+urls = [
+  "https://international.khazar.org/en/page/bachelor",
+  "https://international.khazar.org/en/page/admission-requirements",
+  "https://international.khazar.org/en/page/fees-and-funding",
+  "https://international.khazar.org/en/page/international-scholarship-program",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# New Uzbekistan University (Ташкент).
+# Домен newuu.uz одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+# Четыре страницы: требования при поступлении, приём на бакалавриат,
+# стипендии и общая справка об учёбе в Узбекистане.
+[newuu]
+name = "New Uzbekistan University — приём иностранцев на бакалавриат"
+urls = [
+  "https://newuu.uz/en/menu/entry-requirements",
+  "https://newuu.uz/en/undergraduate-admissions",
+  "https://newuu.uz/en/scholarships",
+  "https://newuu.uz/en/menu/study-in-uzbekistan",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# Central Asian University (Ташкент).
+# Домен centralasian.uz одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+# Четыре страницы: иностранные студенты, правила приёма, стоимость обучения,
+# стипендии к набору 2026 года.
+[cau]
+name = "Central Asian University (Ташкент) — приём иностранцев на бакалавриат"
+urls = [
+  "https://centralasian.uz/internationalstudents",
+  "https://centralasian.uz/admissionregulations",
+  "https://centralasian.uz/tuitionfees",
+  "https://centralasian.uz/scholarshipsfor2026entry",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# Tashkent International University (Узбекистан).
+# Домен tiu.uz одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+# Четыре страницы: процесс приёма иностранцев, подача, стоимость, стипендии.
+[tiu]
+name = "Tashkent International University — приём иностранцев на бакалавриат"
+urls = [
+  "https://tiu.uz/en/international/admission-process/",
+  "https://tiu.uz/en/admissions/apply-international",
+  "https://tiu.uz/en/admissions/tuition-fees",
+  "https://tiu.uz/en/admissions/scholarships",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# Kimyo International University in Tashkent (Узбекистан).
+# Домен kiut.uz одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+# Четыре страницы: иностранные студенты, приём, ташкентский приём,
+# стипендии и финансовая помощь.
+[kiut]
+name = "Kimyo International University in Tashkent — приём иностранцев на бакалавриат"
+urls = [
+  "https://kiut.uz/en/admissions/international-students",
+  "https://kiut.uz/en/admissions/international-admission/",
+  "https://kiut.uz/en/admissions/tashkent-admission",
+  "https://kiut.uz/en/programs/scholarship-financial-aid/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# Narxoz University (Алматы, Казахстан) в источники не вписан: домен narxoz.kz
+# сборщику отдаёт пустую страницу (JavaScript-каркас), а en.narxoz.kz не
+# резолвится вовсе. Вуз записан в «Не добавлены».
+
+# Baku Higher Oil School (Азербайджан).
+# Домен bhos.edu.az одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+[bhos]
+name = "Baku Higher Oil School (Азербайджан) — приём иностранцев на бакалавриат"
+urls = [
+  "https://bhos.edu.az/en/page/216/Application",
+  "https://bhos.edu.az/en/page/118/international-tuition-costs",
+  "https://bhos.edu.az/en/page/215/scholarship-opportunities",
+  "https://bhos.edu.az/en/page/115/admission-undergraduate",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# Western Caspian University (Баку, Азербайджан).
+# Домен wcu.edu.az одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+[wcu]
+name = "Western Caspian University (Азербайджан) — приём иностранцев на бакалавриат"
+urls = [
+  "https://wcu.edu.az/en/page/xarici-telebeler-uchun-qebul-qaydalari",
+  "https://wcu.edu.az/en/page/tuition-fee-for-majors",
+  "https://wcu.edu.az/en/page/scholarship",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# Koç University (Стамбул, Турция) в источники не вписан: сайт international.ku.edu.tr
+# отдаёт сборщику 403 Forbidden. Вуз записан в «Не добавлены».
+
+# Sabancı University (Стамбул, Турция).
+# Домен sabanciuniv.edu одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+[sabanci-university]
+name = "Sabancı University (Турция) — приём иностранцев на бакалавриат"
+urls = [
+  "https://iro.sabanciuniv.edu/en/application-requirements",
+  "https://iro.sabanciuniv.edu/en/tuition-fee",
+  "https://iro.sabanciuniv.edu/en/scholarships",
+  "https://iro.sabanciuniv.edu/en/required-examdiploma-list",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# Özyeğin University (Стамбул, Турция).
+# Домен ozyegin.edu.tr одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+[ozyegin-university]
+name = "Özyeğin University (Турция) — приём иностранцев на бакалавриат"
+urls = [
+  "https://admissions.ozyegin.edu.tr/en/admission-process-draft/",
+  "https://admissions.ozyegin.edu.tr/en/tuition-fees-and-scholarship/",
+  "https://www.ozyegin.edu.tr/en/student-services/application-admission/international-student-admission",
+  "https://www.ozyegin.edu.tr/en/student-services/scholarships-and-financial-support/admission-scholarships",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# Istanbul Bilgi University (Турция).
+# Домен bilgi.edu.tr одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+[istanbul-bilgi]
+name = "Istanbul Bilgi University (Турция) — приём иностранцев на бакалавриат"
+urls = [
+  "https://www.bilgi.edu.tr/en/international/international-admissions/",
+  "https://www.bilgi.edu.tr/en/international/international-admissions/admission-requirements/",
+  "https://www.bilgi.edu.tr/en/international/international-admissions/tuition-and-fees/",
+  "https://www.bilgi.edu.tr/en/international/international-admissions/international-students-admission-procedure/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# HSE University (Высшая школа экономики, Россия).
+# Домен hse.ru одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+# Приём иностранцев — на поддомене admissions.hse.ru.
+[hse]
+name = "HSE University (Россия) — приём иностранцев на бакалавриат"
+urls = [
+  "https://admissions.hse.ru/en/undergraduate-apply/",
+  "https://admissions.hse.ru/en/undergraduate-apply/fees",
+  "https://admissions.hse.ru/en/undergraduate-apply/faq_bac",
+  "https://admissions.hse.ru/en/undergraduate-apply/qualifyingevents",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# RUDN University (Российский университет дружбы народов).
+# Домены rudn.ru и international.rudn.ru одобрены Муродом 2026-09-28
+# (список из 50, ответ «да»).
+[rudn]
+name = "RUDN University (Россия) — приём иностранцев на бакалавриат"
+urls = [
+  "https://international.rudn.ru/undergraduate/kontrakt/",
+  "https://international.rudn.ru/undergraduate/kvota-pravitelstva-rossiyskoy-federatsii/",
+  "https://international.rudn.ru/undergraduate/byudzhetnye-mesta-otkrytaya-olimpiada-rudn-dlya-inostrannykh-grazhdan/",
+  "https://www.rudn.ru/education/fee-paying-education",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+# Malaysia, пакет 2026-09-28. Домены usm.my, upm.edu.my, utm.my одобрены
+# Муродом 2026-09-28 (список из 50, ответ «да»). Страницы внутри доменов
+# выбраны по меню приёма иностранцев.
+[usm]
+name = "Universiti Sains Malaysia — международный приём на бакалавриат"
+urls = [
+  "https://admission.usm.my/undergraduate/undergraduate-international/how-to-apply-international",
+  "https://admission.usm.my/index.php/undergraduate/undergraduate-international/fee-ugi",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+[upm]
+name = "Universiti Putra Malaysia — международный приём на бакалавриат"
+urls = [
+  "https://akademik.upm.edu.my/international_student_admission-3955",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
+
+[utm]
+name = "Universiti Teknologi Malaysia — международный приём на бакалавриат"
+urls = [
+  "https://admission.utm.my/undergraduate-international/",
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"

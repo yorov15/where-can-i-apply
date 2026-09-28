@@ -1,0 +1,145 @@
+{
+  "id": "istanbul-bilgi",
+  "status": "published",
+  "name": {
+    "ru": "Стамбульский университет Билги — приём иностранцев на бакалавриат",
+    "orig": "Istanbul Bilgi University — international undergraduate admissions"
+  },
+  "hostCountry": "TR",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное, но цену за 2026/27 вуз вынес отдельным файлом — в тексте страниц числа нет, поэтому назвать её нельзя. Зато вуз прямо пишет, что даёт иностранным студентам скидки по нужде или за заслуги: их надо запросить через форму. Подготовительный год по английскому стоит 12 000 долларов США с налогами, и он не входит в семь лет, отведённых на бакалавриат. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "TR"
+      ],
+      "evidence": "Turkish citizens who have completed their secondary education in Turkey or in The Turkish Republic of Northern Cyprus."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: путь открыт иностранным гражданам из любой страны, отдельного ограничения по стране школы нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: выпускникам и школьникам последнего года дают условное письмо с условием донести аттестат"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "scale": "PERCENT",
+      "min": 50,
+      "evidence": "Tajikistan Attestat o Srednem Obrazovanii 50% High School Diploma 50%"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "If the future international student did not obtain a sufficient score from one of the English Language Competency Examinations, or did not take any test, then the student will be required to take the Istanbul Bilgi University -Institutional Exemption Test (BILET) upon arrival/registration."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Заявка онлайн. Документы: аттестат с выпиской оценок, оценки за последние 4 года школы, загранпаспорт, справка об эквивалентности диплома, сертификат по английскому — если есть.",
+      "evidence": "All High school Transcripts/Grades (last 4 high school years)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Таджикский аттестат принимают со средним баллом не ниже 50%.",
+      "evidence": "Tajikistan Attestat o Srednem Obrazovanii 50% High School Diploma 50%",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский: от подготовительного года освобождают TOEFL iBT от 75, PTE от 60, Cambridge CAE/CPE от C, FCE от B. TOEFL Home не принимают. Без сертификата сдают внутренний тест BILET; не сдал — идёшь в подготовительную программу по английскому.",
+      "evidence": "TOEFL IBT : Minimum Score 75 (*TOEFL Home Edition is not accepted)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Год подготовительной программы по английскому стоит 12 000 долларов США (с налогами).",
+      "evidence": "The annual tuition fee for the English Preparatory Program is 12.000 USD (taxes included).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидки иностранным студентам вуз даёт по нужде или за заслуги — их нужно запросить через форму. Размер на странице не назван.",
+      "evidence": "İstanbul Bilgi University offers need-based or merit-based discounts to international students to ensure equal educational opportunities.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём только один раз в год — осенью; заявки закрывают в конце августа. Это ограничение турецкого совета по высшему образованию.",
+      "evidence": "Turkish Universities can only admit international students once a year. Therefore there is only one intake which is Fall of each academic year.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Вместо международного экзамена годится школьный аттестат по таблице стран (для Таджикистана — 50%). Если сдаёшь SAT, вуз просит прислать результат на код 7293; порог — 1000 из 1600. ACT — от 18, IB — от 28.",
+      "evidence": "ACT (National College Admission Examination) 18 points SAT 1000 points IB (International Baccalaureate) 28 points",
+      "field": "exam",
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.bilgi.edu.tr/en/international/international-admissions/admission-requirements/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Стамбульский университет Билги"
+    }
+  },
+  "source": {
+    "url": "https://www.bilgi.edu.tr/en/international/international-admissions/",
+    "pages": [
+      {
+        "url": "https://www.bilgi.edu.tr/en/international/international-admissions/",
+        "contentHash": "sha256:a9f11f049ac265f2d24112a37f3f761b618a452ddc81a5d28fff38d11dac7487"
+      },
+      {
+        "url": "https://www.bilgi.edu.tr/en/international/international-admissions/admission-requirements/",
+        "contentHash": "sha256:d6448bd104e5e58ca2195d612f5b65409a3f25fe24f3bf062890ba4f1c49d144"
+      },
+      {
+        "url": "https://www.bilgi.edu.tr/en/international/international-admissions/tuition-and-fees/",
+        "contentHash": "sha256:a0aa49cb83535add5d710f5c31a0d38977dc27bd79d90e33670e78dd1e632de9"
+      },
+      {
+        "url": "https://www.bilgi.edu.tr/en/international/international-admissions/international-students-admission-procedure/",
+        "contentHash": "sha256:f2e026f8c055deef87457d466c97ed0ffee66971669ef455b1e63b8f6804d258"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:557e0a8e2486bb73cf0c230df1b3509704889f8f4811bb1ac8971fcd06747c49"
+  }
+}

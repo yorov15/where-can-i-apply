@@ -1,0 +1,159 @@
+{
+  "id": "newuu",
+  "status": "published",
+  "name": {
+    "ru": "New Uzbekistan University (Ташкент) — приём иностранцев на бакалавриат",
+    "orig": "New Uzbekistan University — international undergraduate admissions"
+  },
+  "hostCountry": "UZ",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное, но у вуза есть стипендии, покрывающие плату: однолетние и четырёхлетние (последние закрывают 100% платы за все четыре года). Четырёхлетнюю стипендию можно получить без вступительного экзамена — по высокому баллу SAT/IB/A-Levels по математике и собеседованию. Точных цен за обучение на этих страницах нет (вынесены в отдельный раздел «See more»). Жильё и дорога не покрываются; проживание в Ташкенте вуз оценивает примерно в 315–470 долларов в месяц"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "We welcome international students to our undergraduate and graduate programs at New Uzbekistan University (NewUU)."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: страница для иностранных абитуриентов, требований к стране школы нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: нужен аттестат (школа, лицей или колледж) с оценками, требования к году выпуска на странице нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют; отбор идёт по вступительному экзамену и собеседованию"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5.5
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 46
+        }
+      ],
+      "evidence": "Applicants must meet one of the following: IELTS 5.5, or TOEFL iBT 46"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Для поступления нужен школьный аттестат (школа, академический лицей или профессиональный колледж) с выпиской оценок и нотариальным переводом на английский; плюс загранпаспорт и сертификат по английскому.",
+      "evidence": "Secondary school / academic lyceum / professional college diploma with academic transcripts, Notarized English translation",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Минимальный английский — IELTS 5.5 или TOEFL iBT 46; для части программ порог выше — 6.0 / 60. По TOEFL принимают только экзамен в аккредитованном центре, домашнюю версию (Home Edition) не берут.",
+      "evidence": "Applicants must have an IELTS score of 5.5 or 6.0",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Все иностранные абитуриенты проходят вступительный экзамен по математике и логическому мышлению.",
+      "evidence": "Applicants are required to pass the Math & Logical Thinking entrance exam",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Вместо вступительного экзамена можно получить освобождение и сразу 100% стипендию: SAT Math 780–800, IB Math 5–7 или A-Levels Math от B до A*. Для этого надо выполнить условия по IELTS и пройти собеседование (очно, в Ташкенте, 10–15 минут, один раз).",
+      "evidence": "Applicants with the following certificates have the opportunity to be exempted from the entrance exam and receive a 100% merit-based scholarship.",
+      "field": "exam",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Четырёхлетняя стипендия покрывает 100% платы за обучение за все четыре года (для медицины — шесть лет).",
+      "evidence": "These scholarships cover 100% of tuition fees for all four academic years.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть и однолетние стипендии — они закрывают плату только за один учебный год.",
+      "evidence": "These scholarships cover tuition fees for one academic year only.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём на осень 2026 шёл по срокам: регистрация до 19 июня, экзамен 27 июня, документы — до 13 июля. Это даты текущего цикла; на следующий год вуз вывесит новые, поэтому дата в карточке не проставлена.",
+      "evidence": "19th June Deadline for Registration",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для иностранных студентов нужна учебная виза A-1.",
+      "evidence": "A-1 Student entry visa required (see Visa and Arrival page)",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://newuu.uz/en/undergraduate-admissions",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — New Uzbekistan University"
+    }
+  },
+  "source": {
+    "url": "https://newuu.uz/en/menu/entry-requirements",
+    "pages": [
+      {
+        "url": "https://newuu.uz/en/menu/entry-requirements",
+        "contentHash": "sha256:1e5031455134d3cebb0ac801efe302dfa4ec714f4edb8094c7e7061b34614a3f"
+      },
+      {
+        "url": "https://newuu.uz/en/undergraduate-admissions",
+        "contentHash": "sha256:8deffa60786304c8c879999ead592482bd20539d6e3f9e5d704bd6ffaead5f63"
+      },
+      {
+        "url": "https://newuu.uz/en/scholarships",
+        "contentHash": "sha256:a8ab245c853cc10f7152eb427b7572c4729a7012fa9c12c54410e273b58385a2"
+      },
+      {
+        "url": "https://newuu.uz/en/menu/study-in-uzbekistan",
+        "contentHash": "sha256:82d3cd44f849cbed1fd407dc07edcd185ee54ec07797cd4ca6351ddafef96791"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:050afb8df266a545a6f82f11edd42c95f0178d74119724b42d49a350c8fbf2f9"
+  }
+}

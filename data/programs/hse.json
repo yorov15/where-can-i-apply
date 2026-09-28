@@ -1,0 +1,144 @@
+{
+  "id": "hse",
+  "status": "published",
+  "name": {
+    "ru": "НИУ ВШЭ (Москва) — приём иностранцев на бакалавриат",
+    "orig": "HSE University — international undergraduate admissions"
+  },
+  "hostCountry": "RU",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полное покрытие дают три трека: квота Правительства РФ (Россотрудничество), олимпиады (Международная олимпиада HSE, Open Doors и другие признанные) и победа на вступительных экзаменах HSE. Платно — от 200 000 рублей в год (в Москве дороже, до 1 000 000 за двойные программы). Общежитие на весь срок учёбы дают только поступившим по квоте. Дорога и проживание вне общежития не покрываются; медицинскую страховку покупает студент сам"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Foreign applicants may apply for a state-funded place under the Government of the Russian Federation quota at HSE if they:"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: приём для иностранных граждан, требований к стране школы на страницах нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: нужен документ об образовании с признанием, требования к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возрастных ограничений нет: вуз прямо пишет «There are no age restrictions»"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: отбор идёт по вступительным экзаменам или олимпиадам"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Pass HSE entrance examinations in person or remotely as part of a separate competition for foreign citizens"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Полное покрытие обучения дают три трека: квота Правительства РФ, олимпиады и победа на вступительных экзаменах HSE.",
+      "evidence": "Full scholarships 3 tracks available for admission: HSE International Olympiad",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Платное обучение — от 200 000 рублей в год; программы есть и на русском, и на английском.",
+      "evidence": "Tuition from 200,000 RUB per year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявки на квоту Правительства РФ принимают с 1 ноября 2025 по 20 марта 2026; для платных мест приём шёл с 20 июня по 3 августа 2026, а трек полных стипендий закрывался 13 марта 2026. Это даты текущего цикла — на следующий год вуз вывесит новые.",
+      "evidence": "Applications for the Government of the Russian Federation State Scholarship (quota) are accepted from November 1, 2025 to March 20, 2026.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача целиком онлайн: регистрация в личном кабинете, выбор программы (не больше двух, поменять можно один раз), вступительные экзамены очно или онлайн, признание документа об образовании.",
+      "evidence": "You can select no more than two programmes.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Возрастных ограничений для поступления нет.",
+      "evidence": "There are no age restrictions.",
+      "field": "age",
+      "kind": "note"
+    },
+    {
+      "ru": "Общежитие на весь срок учёбы дают поступившим по квоте Правительства РФ.",
+      "evidence": "Dormitory places are provided for the entire duration of study to students admitted under the Government of the Russian Federation State Scholarship (quota).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Всем иностранным студентам нужно оформить добровольное медицинское страхование (ДМС) до приезда или в первые дни в России.",
+      "evidence": "All foreign citizens (students) are required to purchase voluntary health insurance (VHI/DMS)",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admissions.hse.ru/en/undergraduate-apply/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — НИУ ВШЭ (кампусы в Москве, Санкт-Петербурге, Нижнем Новгороде и Перми)"
+    }
+  },
+  "source": {
+    "url": "https://admissions.hse.ru/en/undergraduate-apply/",
+    "pages": [
+      {
+        "url": "https://admissions.hse.ru/en/undergraduate-apply/",
+        "contentHash": "sha256:aec46821eaecb72dfdcf9a8c29fd82c86ebe8bed3e6e361d44ab58f0ca355952"
+      },
+      {
+        "url": "https://admissions.hse.ru/en/undergraduate-apply/fees",
+        "contentHash": "sha256:7fc755e28e68195b82c3c3e6023b4370b8443ed5693b0a79f72446f7d5662ec6"
+      },
+      {
+        "url": "https://admissions.hse.ru/en/undergraduate-apply/faq_bac",
+        "contentHash": "sha256:5baf7e61a331b1a1c58463024a30ab5e2d481be5a10c314a6139806a1108a7b8"
+      },
+      {
+        "url": "https://admissions.hse.ru/en/undergraduate-apply/qualifyingevents",
+        "contentHash": "sha256:1240a47cfc37dcd3fd05c4074d74412870bb07693c02616d85d06225fa62cca7"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:4002aa01d4b48fc2915ee4bd1312f3e7ac0e318e39f187b8470c1b59c3fc28d1"
+  }
+}

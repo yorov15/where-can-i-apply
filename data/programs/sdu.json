@@ -1,0 +1,176 @@
+{
+  "id": "sdu",
+  "status": "published",
+  "name": {
+    "ru": "Университет имени Сулеймана Демиреля (SDU) — приём иностранцев",
+    "orig": "Suleyman Demirel University (Kazakhstan) — international bachelor admissions"
+  },
+  "hostCountry": "KZ",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Готового бесплатного пути для иностранца на странице нет: учёба платная, цены на 2026/27 вынесены в приложении (файл), в тексте страницы чисел нет. Разовый сбор за приём — 200 долларов США. Стипендии, которые тут перечислены, привязаны к Казахстану: олимпиада SPT — для выпускников школ и колледжей Казахстана (гражданство любое), стипендия Qazaq Republic — для граждан Казахстана. Про жильё и дорогу эти страницы не говорят"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "гражданство не ограничивают: страница адресована иностранным абитуриентам, отдельного условия по стране гражданства на ней нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: принимают иностранных абитуриентов, требований к стране школы на странице нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требуется аттестат о среднем образовании, требования к году выпуска на странице нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: на странице приёма требований к возрасту нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата для приёма иностранца не называют"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Prospective students are expected to undertake a Placement Test and an interview in English."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцы подают в три шага. Заявка — через приёмный портал: паспорт, аттестат со вкладышем, рекомендательное и мотивационное письма, фото. Затем внутренний тест по английскому и собеседование со специальностью, после — письмо о зачислении.",
+      "evidence": "International applicants go through three-step process: Step 1 Online Enrollment Application",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Приём идёт потоками: осенний — заявка до 31 июля 2026, весенний — до 30 ноября 2026. Это даты текущего цикла; на следующий год вуз вывесит новые, поэтому срок в карточке помечен неподтверждённым.",
+      "evidence": "Fall Intake Application Deadline: 31.07.2026 Spring Intake Application Deadline: 30.11.2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сбор за рассмотрение заявки — 200 долларов США, платят все иностранные абитуриенты, включая стипендиатов.",
+      "evidence": "required to pay a Student Fee of 200 USD",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 200,
+        "currency": "USD",
+        "evidence": "required to pay a Student Fee of 200 USD"
+      }
+    },
+    {
+      "ru": "Если есть действующий сертификат по английскому — IELTS от 5.5 (каждая часть не ниже 5.0) — внутренний тест сдавать не нужно, достаточно приложить сертификат.",
+      "evidence": "Applicants who possess an English language certificate such as IELTS 5.5 (each section min 5.0) or above may provide a scanned copy of the certificate to waive the Placement Test requirement.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если сертификата нет, английский проверяют своим тестом (Placement Test как вступительный экзамен) и собеседованием на английском.",
+      "evidence": "Prospective students are expected to undertake a Placement Test and an interview in English.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Если английского не хватает для прямого поступления, предлагают языковой курс или подготовительную программу Foundation.",
+      "evidence": "If the applicant's proficiency level does not meet the required criteria, they are recommended to go through a language course or University Foundation program.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Учат в основном на английском. Отдельные программы — «Право» на казахском и русском, «Журналистика» и «Казахский язык и литература» — на казахском, там английский поток может отличаться.",
+      "evidence": "Most of the programs are instructed in English.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Иностранцу придётся пройти нострификацию (признание) прежних документов об образовании в первый семестр учёбы; вуз обещает помочь с процедурой. Для выпускника таджикской 11-летней школы это главный вопрос — уточняй в приёмной комиссии, как признают его аттестат.",
+      "evidence": "all international students are required to complete the recognition (nostrification) procedure for their previous educational documents within the first semester of study",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Стипендия SDU по олимпиаде SPT — только для выпускников школ и колледжей Казахстана; гражданство может быть любым, но учиться надо в казахстанской школе. Иностранцу из Таджикистана она не подходит.",
+      "evidence": "High school/vocational schools of the Republic of Kazakhstan seniors with any citizenship at their graduating year are eligible to participate.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Qazaq Republic выдаётся только гражданам Казахстана.",
+      "evidence": "awarded to citizens of the Republic of Kazakhstan",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Учёба платная. Точные цены за семестр 2026/27 лежат в приложении к странице, в тексте их нет. Платят по кредитам ECTS: каждый семестр студент выбирает 20–42 кредита и платит по их числу; для бакалавриата нужно набрать 240 кредитов.",
+      "evidence": "First semester tuition fee of the first year (as shown in the attachment)",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-11-30",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://sdu.edu.kz/en/international-admissions/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет имени Сулеймана Демиреля (SDU)"
+    }
+  },
+  "source": {
+    "url": "https://sdu.edu.kz/en/international-admissions/",
+    "pages": [
+      {
+        "url": "https://sdu.edu.kz/en/international-admissions/",
+        "contentHash": "sha256:04f0066990c4304fc0c7cfa6001286af442377f7ea5cd96fdb736791aa6eb4ff"
+      },
+      {
+        "url": "https://sdu.edu.kz/en/international-students/",
+        "contentHash": "sha256:7861fa22a52f98a804c48592af6d8e8717f0f6ff903deeb2938f117ba69fc951"
+      },
+      {
+        "url": "https://sdu.edu.kz/en/tuition-fees/",
+        "contentHash": "sha256:86615468f2691622d72ce80cb8180b341b74500eec4dbadb8b599bfacbdc62ab"
+      },
+      {
+        "url": "https://sdu.edu.kz/en/financial-aid/",
+        "contentHash": "sha256:f08c676c47709f1ba74756b16d9fb17a814339ec0e884cef8471ec9d043850d3"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:132e4351192c5a69c90b88d532e02f803de9db6164bebce1bde962dfb2f76d04"
+  }
+}

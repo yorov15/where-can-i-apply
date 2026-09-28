@@ -1,0 +1,159 @@
+{
+  "id": "kiut",
+  "status": "published",
+  "name": {
+    "ru": "Kimyo International University in Tashkent — приём иностранцев на бакалавриат",
+    "orig": "Kimyo International University in Tashkent — international bachelor admissions"
+  },
+  "hostCountry": "UZ",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное, но дешёвое: почти все программы бакалавриата — 2 000 долларов США в год, медицина, стоматология и педиатрия — 3 500. Иностранцам дают стипендию до 50% платы за первый год по итогам документов и собеседования; с 2026/27 на каждую программу бакалавриата выделяют 10 грантов (полное покрытие) лучшим по вступительным экзаменам. Есть и именные стипендии со 100% покрытием. Для визы нужно внести депозит — 50% годовой платы. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "KIUT accepts foreign citizens who have an education document issued by a foreign educational organization."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: вуз принимает иностранцев с документом об образовании, выданным зарубежной организацией, отдельных требований к стране нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требуется аттестат (лицей, колледж, школа), требования к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: для иностранцев приём идёт по собеседованию"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "сертификат по иностранному языку для иностранного абитуриента не обязателен: в списке документов он помечен «if available», а приём идёт по собеседованию"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "KIUT принимает иностранных граждан, у которых документ об образовании выдан зарубежной организацией; документы на другом языке подают с нотариальным переводом на английский или русский.",
+      "evidence": "KIUT accepts foreign citizens who have an education document issued by a foreign educational organization.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Приём для иностранцев идёт круглый год: осенний набор начинается в сентябре (заявка до 31 июля), весенний — в феврале (заявка до 31 декабря).",
+      "evidence": "Fall Intake Studies begin in September Application deadline July 31 Spring Intake Studies begin in February Application deadline December 31",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача — онлайн через admission.kiut.uz или по почте international@kiut.uz. Отбор: проверка документов, затем собеседование; для иностранцев приём основан только на собеседовании.",
+      "evidence": "For international students, admission is based on an interview only.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы принимают с 10 апреля по 15 августа, собеседование — с 1 по 20 августа, зачисление — до 31 августа. Нострификация аттестата — в первый семестр после зачисления.",
+      "evidence": "Acceptance of documents for the training of foreign citizens is carried out from April 10 to August 15.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сертификат по иностранному языку — по желанию, но с ним проще: IELTS 5.5, TOEFL iBT 60 или TOPIK 3 и выше.",
+      "evidence": "Official foreign language proficiency test certificate \"IELTS (5.5) / TOEFL iBT (60) / TOPIK (3)\" (if available)",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Почти все программы бакалавриата стоят 2 000 долларов США в год; медицина, стоматология и педиатрия — 3 500 долларов в год.",
+      "evidence": "Applied Mathematics $2,000 4",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранным абитуриентам дают стипендию до 50% платы за первый учебный год — по итогам проверки документов и собеседования; дальше её можно сохранить при хорошей учёбе.",
+      "evidence": "Admission Scholarships for International Students Up to a 50% tuition fee waiver for the first academic year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "С 2026/27 на каждую программу бакалавриата выделяют 10 грантов — их получают набравшие больше всех баллов на вступительных экзаменах вуза. Это полное покрытие платы за обучение.",
+      "evidence": "each bachelor's degree program will be allocated 10 grant-funded places",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для получения приглашения на визу нужно подписать договор и внести депозит — 50% стоимости первого года обучения, а также оплатить визовый сбор.",
+      "evidence": "Payment of a deposit of 50% of the total amount of 1 year of study to the university account",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-12-31",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://kiut.uz/en/admissions/international-admission/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Kimyo International University in Tashkent"
+    }
+  },
+  "source": {
+    "url": "https://kiut.uz/en/admissions/international-students",
+    "pages": [
+      {
+        "url": "https://kiut.uz/en/admissions/international-students",
+        "contentHash": "sha256:d887fb6227f433d6f5f997cff4ab8022df23df5e21f9a955943501ef00e6458d"
+      },
+      {
+        "url": "https://kiut.uz/en/admissions/international-admission/",
+        "contentHash": "sha256:94dad17737f00a408ca47ffdeccd242aae62fec4ec69cce994f7f3c92b5f8a6b"
+      },
+      {
+        "url": "https://kiut.uz/en/admissions/tashkent-admission",
+        "contentHash": "sha256:713ad8206b7082a9385c30d7f4bdde631ee09cb0a7a08181c83f79a402c9bf1e"
+      },
+      {
+        "url": "https://kiut.uz/en/programs/scholarship-financial-aid/",
+        "contentHash": "sha256:899c3638d23a918d17492ff20288d2c947c3a887e0e7eda8368c77dbdf944e45"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:8379e8b89734178214c7b24592dae436203a32a12808af69337d38189b861bbb"
+  }
+}

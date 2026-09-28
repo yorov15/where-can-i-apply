@@ -1,0 +1,149 @@
+{
+  "id": "ozyegin-university",
+  "status": "published",
+  "name": {
+    "ru": "Университет Озъегин (Стамбул) — приём иностранцев на бакалавриат",
+    "orig": "Özyeğin University — international undergraduate admissions"
+  },
+  "hostCountry": "TR",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение дорогое: 25 000 долларов США в год почти на всех программах (лётная — 16 500). Скидки дают автоматически по конкурсу: в примерах вуза 40% оставляют 15 000, 50% — 12 500, 60% — 10 000 долларов. На программе Professional Flight скидок нет. Общежитие — примерно от 2 000 долларов в год. Зачисление требует невозвратной предоплаты 1 000 долларов, она идёт в счёт первого семестра. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Prospective students who graduated from a high school that is equivalent of Turkish schools (and eligible Turkish and TRNC students) can directly apply to OzU with the scores of OzU-YOS or an equivalent examination; or with the diploma scores."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: нужна школа, эквивалентная турецкой, ограничения по конкретной стране нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: есть лишь оговорка, что неполный год нужно закрыть до регистрации, требования к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: можно подать по баллам OzU-YOS или другого экзамена либо по оценкам диплома"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "All undergraduate students should complete the English Preparatory Program."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Заявка онлайн через apply.ozyegin.edu.tr. Нужны: загранпаспорт, выписка оценок за все годы школы, диплом (если уже есть), сертификат по английскому (если есть) и мотивационное письмо до двух страниц.",
+      "evidence": "You can complete your application by registering on the portal using your email address.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Приём на осень 2026/27 — до 15 ноября 2026.",
+      "evidence": "International Undergraduate Programs - Fall 2026-2027 Application Deadline: November 15, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "После одобрения нужно внести предоплату 1 000 долларов США, чтобы получить документы для визы. Она не дополнительный сбор — идёт в счёт платы за первый семестр, но невозвратна, если передумаешь (кроме отказа в визе).",
+      "evidence": "a USD 1,000 pre-payment is required",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 1000,
+        "currency": "USD",
+        "evidence": "a USD 1,000 pre-payment is required"
+      }
+    },
+    {
+      "ru": "Год обучения — 25 000 долларов США почти на всех программах; на Professional Flight — 16 500, но на ней скидок нет. Общежитие стоит примерно от 2 000 долларов в год.",
+      "evidence": "Artificial Intelligence and Data Engineering (in English) $25,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидки на обучение дают всем абитуриентам автоматически, без отдельной заявки. В примерах вуза: 40% оставляют 15 000, 50% — 12 500, 60% — 10 000 долларов в год.",
+      "evidence": "40% scholarship $15,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Английский проверяют своим экзаменом (Placement и Trace) в августе и сентябре. IELTS, Duolingo и TOEFL Home не принимают — только TOEFL iBT, PBT или Pearson PTE и подобные. Если экзамен не сдан, год или два учёбы идут в подготовительной программе по той же цене.",
+      "evidence": "Duolingo and TOEFL Home Edition tests are not accepted.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Поступление — по баллам OzU-YOS или другого эквивалентного экзамена либо по оценкам школьного диплома. Квоты для иностранцев объявляет совет по высшему образованию Турции.",
+      "evidence": "Qutoas for the program is announced by OSYM in the OSYS Higher Education Programs for International Students Guide every year.",
+      "field": "exam",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-11-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admissions.ozyegin.edu.tr/en/admission-process-draft/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Озъегин"
+    }
+  },
+  "source": {
+    "url": "https://admissions.ozyegin.edu.tr/en/admission-process-draft/",
+    "pages": [
+      {
+        "url": "https://admissions.ozyegin.edu.tr/en/admission-process-draft/",
+        "contentHash": "sha256:51cc0e76c55357b6fc94621e80e7073e774fed4dadd20b312f5ab7c414c5bc5e"
+      },
+      {
+        "url": "https://admissions.ozyegin.edu.tr/en/tuition-fees-and-scholarship/",
+        "contentHash": "sha256:43e572fec049771b5978c0fedc9cd1a242207f5d49d40f48e2109151d01f5474"
+      },
+      {
+        "url": "https://www.ozyegin.edu.tr/en/student-services/application-admission/international-student-admission",
+        "contentHash": "sha256:6b86cd61b1d2b9a7a95edca070d692ac0bc323275564ac2a2f70e172384df8f3"
+      },
+      {
+        "url": "https://www.ozyegin.edu.tr/en/student-services/scholarships-and-financial-support/admission-scholarships",
+        "contentHash": "sha256:b75fbe88808964c0f0166a361c4718bb7d9663569d17c6387bbee3fc11d13692"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:00883c3ef31a8745422c1a18de867ebcf9851145aaa53ba1dcff881d514d5f9f"
+  }
+}

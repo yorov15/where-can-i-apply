@@ -1,0 +1,165 @@
+{
+  "id": "tiu",
+  "status": "published",
+  "name": {
+    "ru": "Tashkent International University — приём иностранцев на бакалавриат",
+    "orig": "Tashkent International University — international bachelor admissions"
+  },
+  "hostCountry": "UZ",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Подача бесплатная — плату за заявку с иностранцев не берут. Обучение платное: англоязычные программы бакалавриата — 25 млн сум в год (остальные дешевле, 16–19 млн). Есть merit-стипендии до 50% платы, их рассматривают автоматически всем абитуриентам, и отдельно International Excellence Scholarship для иностранцев; государственный и университетский гранты покрывают плату полностью, но это конкурс. Жильё и дорога не покрываются: вуз называет аренду от 200 долларов в месяц и расходы на жизнь 300–500 долларов в месяц"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "TIU welcomes students from all over the world"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: вуз прямо пишет, что берёт студентов со всего мира, требований к стране школы нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требуется аттестат о среднем образовании, требования к году выпуска на странице нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата для приёма не называют; балл важен только для стипендий уже во время учёбы"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5.5
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 65
+        }
+      ],
+      "evidence": "IELTS 5.5+ / TOEFL 65+ for Bachelor's, IELTS 6.0+ / TOEFL 78+ for Master's"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Заявка полностью онлайн и бесплатная. Нужны: загранпаспорт (действителен ещё минимум 12 месяцев), аттестат с выпиской оценок, сертификат по английскому, мотивационное письмо, два фото и медицинская справка. Решение обычно за 10–14 рабочих дней.",
+      "evidence": "passport, transcripts, English certificate, and motivation letter",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Минимальный английский для бакалавриата — IELTS 5.5+ или TOEFL 65+.",
+      "evidence": "IELTS 5.5+ / TOEFL 65+ for Bachelor's, IELTS 6.0+ / TOEFL 78+ for Master's",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Если среднее образование было на английском, от языкового сертификата могут освободить — надо написать в приёмную и подтвердить документами.",
+      "evidence": "If you completed your secondary or university education in English, you may be exempt from the language test requirement.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Плату за заявку с иностранных абитуриентов не берут.",
+      "evidence": "International students pay no application fee.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Год обучения на англоязычных программах бакалавриата — 25 млн сум; на узбекоязычных дешевле, 16–19 млн сум.",
+      "evidence": "Economics Full-time 4 years English Mathematics, Foreign Language 25 000 000 so'm",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Merit-стипендии покрывают до 50% платы за обучение и их рассматривают автоматически — отдельную заявку подавать не нужно.",
+      "evidence": "TIU offers merit-based scholarships covering up to 50% of tuition for high-achieving international applicants.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельно есть государственный грант Узбекистана и университетский грант — они покрывают плату за обучение полностью, но их надо выиграть.",
+      "evidence": "The grant fully covers tuition fees throughout the programme.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Срок подачи для иностранцев — 1 июня 2026 (раньше, чем для своих, из-за визы). Это дата текущего цикла; на следующий год вуз вывесит новую, поэтому в карточке срок не проставлен. Есть два набора: сентябрь и февраль.",
+      "evidence": "International application deadline: 1 June 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Жильё иностранцам дают в приоритете; вуз называет аренду от 200 долларов в месяц и расходы на жизнь в Ташкенте примерно 300–500 долларов в месяц.",
+      "evidence": "starting from $200/month",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://tiu.uz/en/international/admission-process/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Tashkent International University"
+    }
+  },
+  "source": {
+    "url": "https://tiu.uz/en/international/admission-process/",
+    "pages": [
+      {
+        "url": "https://tiu.uz/en/international/admission-process/",
+        "contentHash": "sha256:2f98db33618f3e70a207b2824a60939fcc51d8749728a0492181932b20329f74"
+      },
+      {
+        "url": "https://tiu.uz/en/admissions/apply-international",
+        "contentHash": "sha256:bc852ef5a8d9a1bb7977719e604930e12e654fa7c1e060efd2e1c86e5a3d098d"
+      },
+      {
+        "url": "https://tiu.uz/en/admissions/tuition-fees",
+        "contentHash": "sha256:283b99c7cb9e707af35904780d8b1a966f35d7ecaddc98eb44d01ede54234019"
+      },
+      {
+        "url": "https://tiu.uz/en/admissions/scholarships",
+        "contentHash": "sha256:85fd0ae50b8ffb0cf43d95c95ccb62d1c171305ace576347b705dd5e43f01610"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:92903cdf58c71ef7d19122b558d370eb8f098b105315957d076be4989c8b7cb2"
+  }
+}

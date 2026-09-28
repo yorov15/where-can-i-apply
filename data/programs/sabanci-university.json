@@ -1,0 +1,156 @@
+{
+  "id": "sabanci-university",
+  "status": "published",
+  "name": {
+    "ru": "Университет Сабанджи (Стамбул) — приём иностранцев на бакалавриат",
+    "orig": "Sabancı University — international undergraduate admissions"
+  },
+  "hostCountry": "TR",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение дорогое: 36 500 долларов США в год. Но каждый иностранный абитуриент, проходящий по требованиям, автоматически рассматривается на скидку — 25%, 40%, 50%, 60% или 75% платы за обучение, и отдельно бывают стипендии на общежитие (трёх- и четырёхместные комнаты). Конкуренция большая: балл не гарантирует скидку. Есть государственные стипендии других стран (Азербайджан, Ирак, Оман, Ливия, Пакистан, Катар), но Таджикистана в списке нет. Жильё и дорога без стипендии не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "TR"
+      ],
+      "evidence": "Who hold the citizenship of The Republic of Turkey, and have completed their secondary education in Turkey or in The Turkish Republic of Northern Cyprus"
+    },
+    "schoolCountry": {
+      "allow": "*",
+      "deny": [
+        "TR"
+      ],
+      "evidence": "International students who are currently enrolled in or have graduated from secondary education (high school) institutions in Türkiye"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "maxRelative": "applicationYear",
+      "evidence": "provided that they are in their final year of high school or have already graduated"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: есть только оговорка про нотариальное согласие родителей для тех, кому ещё нет 18"
+    },
+    "gpa": {
+      "scale": "PERCENT",
+      "min": 70,
+      "evidence": "Attestat / General Secondary Education Certificate / Shahodatnoma (Azerbaijan, Ukraine, Moldova, Belarus, Kazakhstan, Kyrgyzstan, Georgia, Tajikistan, Uzbekistan, Turkmenistan, Mongolia, Russia) A minimum average of 70% diploma score*"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "сертификат по английскому не обязателен: в списке документов он «if taken before», а нехватку английского закрывают подготовительным годом (Foundation Development Year)"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Приём идёт онлайн: с 15 декабря 2025 по 28 августа 2026 нужно заполнить форму и загрузить документы. Обязательны выписка оценок за все годы школы (без неё заявку не рассматривают) и один засчитанный экзамен или аттестат.",
+      "evidence": "Application Dates December 15, 2025-August 28, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявка становится действительной только после оплаты сбора — 30 долларов США, невозвратно.",
+      "evidence": "A 30 USD application fee needs to be paid in order for the application to be valid and evaluated.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 30,
+        "currency": "USD",
+        "evidence": "A 30 USD application fee needs to be paid in order for the application to be valid and evaluated."
+      }
+    },
+    {
+      "ru": "Таджикский аттестат вуз принимает как отдельное основание — нужен средний балл не ниже 70%. SAT при этом не обязателен.",
+      "evidence": "Attestat / General Secondary Education Certificate / Shahodatnoma (Azerbaijan, Ukraine, Moldova, Belarus, Kazakhstan, Kyrgyzstan, Georgia, Tajikistan, Uzbekistan, Turkmenistan, Mongolia, Russia) A minimum average of 70% diploma score*",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Если есть иностранный экзамен, вуз засчитывает один из: SAT от 1100 из 1600, ACT от 23, IB от 28, два A-Level по C, AP от 3 по двум предметам и другие. Результат SAT действует два года.",
+      "evidence": "A minimum grade of 1100 out of 1600 (Sabancı University SAT Code: 7100)",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Год обучения для иностранного бакалавриата стоит 36 500 долларов США.",
+      "evidence": "Annual Tuition Fee 36500 USD",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидки на обучение дают всем иностранным абитуриентам автоматически, по конкурсу: 25%, 40%, 50%, 60% или 75% платы. Отдельно бывают стипендии на общежитие.",
+      "evidence": "Our scholarship options cover various percentages of tuition fees, including 25%, 40%, 50%, 60%, and 75%.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Чтобы получить скидку, отдельную заявку подавать не нужно — всех иностранных абитуриентов, прошедших по требованиям, рассматривают автоматически.",
+      "evidence": "All international applicants who meet the application requirements are automatically considered for a scholarship.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Не могут подать граждане Турции, учившиеся в турецкой школе, и те, кто уже учится или окончил среднюю школу в Турции (кроме отдельных посольских школ). Для школьника из Таджикистана путь открыт.",
+      "evidence": "International students who are currently enrolled in or have graduated from secondary education (high school) institutions in Türkiye",
+      "field": "schoolCountry",
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://iro.sabanciuniv.edu/en/application-requirements",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Университет Сабанджи"
+    }
+  },
+  "source": {
+    "url": "https://iro.sabanciuniv.edu/en/application-requirements",
+    "pages": [
+      {
+        "url": "https://iro.sabanciuniv.edu/en/application-requirements",
+        "contentHash": "sha256:7b622ab947d273f4219286e208c67ff97f3d593c9378f5e51dc732289fb99764"
+      },
+      {
+        "url": "https://iro.sabanciuniv.edu/en/tuition-fee",
+        "contentHash": "sha256:90dc1626e44889c9ac78d254a51b6149fc55357c0774fd579bb2fea0859ddbac"
+      },
+      {
+        "url": "https://iro.sabanciuniv.edu/en/scholarships",
+        "contentHash": "sha256:91100560b82de842624a430ae6dbf90bf577481e9b699b75d73764119757fbc2"
+      },
+      {
+        "url": "https://iro.sabanciuniv.edu/en/required-examdiploma-list",
+        "contentHash": "sha256:22acc7ee2846fa622f7ac99c44f097fb0a9d05554561a7af725179d9d0c1f134"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:c5b6c1b00d6a737cd217bf917c8f3fa9dfbce7544c75444d3958172553d040cc"
+  }
+}

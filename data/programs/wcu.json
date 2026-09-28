@@ -1,0 +1,137 @@
+{
+  "id": "wcu",
+  "status": "published",
+  "name": {
+    "ru": "Western Caspian University (Баку) — приём иностранцев на бакалавриат",
+    "orig": "Western Caspian University — international undergraduate admissions"
+  },
+  "hostCountry": "AZ",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное и недорогое: 2 500–4 000 азербайджанских манатов в год в зависимости от специальности. Плату требуют внести полностью до приезда в Азербайджан. Стипендий для иностранцев у вуза нет — раздел «Scholarship» содержит только Erasmus. Есть двойной диплом с немецким вузом Schmalkalden (третий год учёбы в Германии), но плата за него та же — 2 800 манатов. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Admission of foreign citizens to the Western Caspian University is carried out by registering on the website portal.edu.az and submitting an application for the appropriate specialty."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: приём открыт для иностранных граждан, требований к стране школы нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: нужен документ об образовании с оценками, требования к году выпуска нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на страницах приёма нет"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "минимального балла аттестата не называют: отбор идёт по документам и собеседованию"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "сертификат по языку не требуют: в списке документов его нет, английский проверяют на собеседовании"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцы регистрируются на государственном портале portal.edu.az, загружают документы и подают заявку в вуз, после чего проходят онлайн-собеседование с приёмной комиссией. Сканы документов можно отправить и на admission@wcu.edu.az.",
+      "evidence": "After submitting the application, an online interview with the Admissions Committee is held.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Нужны: загранпаспорт (действителен ещё год), два фото 3×4, документ об образовании с апостилем и выпиской оценок, медицинская справка об отсутствии ВИЧ, гепатитов B и C, сертификаты — если есть.",
+      "evidence": "A legalized (apostille) education document and a transcript of academic performance, which indicate the subjects studied at the previous level of education and the grades received for them.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Год обучения стоит от 2 500 до 4 000 манатов в зависимости от специальности (например, международные отношения — 2 800, информационные технологии — 4 000, психология — 3 500).",
+      "evidence": "International Relations 2800",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плату за обучение нужно внести полностью до приезда в Азербайджан.",
+      "evidence": "Tuition fees must be paid in full before arrival in Azerbaijan.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть программа двойного диплома с немецким вузом Schmalkalden: первый, второй и четвёртый курсы — в Баку, третий год — в Германии. Плата за программу — 2 800 манатов.",
+      "evidence": "Personnel training will be carried out within the framework of a dual diploma program with the Schmalkalden University of Applied Sciences of the Federal Republic of Germany.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендий для иностранных студентов вуз не предлагает: единственная стипендия на сайте — Erasmus (обмен), а не оплата обучения.",
+      "evidence": "Erasmus Scholarship",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://wcu.edu.az/en/page/xarici-telebeler-uchun-qebul-qaydalari",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Western Caspian University"
+    }
+  },
+  "source": {
+    "url": "https://wcu.edu.az/en/page/xarici-telebeler-uchun-qebul-qaydalari",
+    "pages": [
+      {
+        "url": "https://wcu.edu.az/en/page/xarici-telebeler-uchun-qebul-qaydalari",
+        "contentHash": "sha256:a948e7c2f9400307ef759731bb5272b4a8c413e5b9e43b6127d7c762c4aa3843"
+      },
+      {
+        "url": "https://wcu.edu.az/en/page/tuition-fee-for-majors",
+        "contentHash": "sha256:e46c434b419b73418f3cebede5ded29c4206bd23534d366859e6f5c6fecd1949"
+      },
+      {
+        "url": "https://wcu.edu.az/en/page/scholarship",
+        "contentHash": "sha256:4b476fce706f75f426cb58020fa6102f2ea2311337f88479933c9f5c94d66930"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:18b00929f7efee373cea76eedd042df776b5e07417ce1aaba31c9d82cb413ddd"
+  }
+}

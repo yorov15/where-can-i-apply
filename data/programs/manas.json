@@ -1,0 +1,133 @@
+{
+  "id": "manas",
+  "status": "published",
+  "name": {
+    "ru": "Кыргызско-Турецкий университет «Манас» — приём иностранцев",
+    "orig": "Kyrgyz-Turkish Manas University — international bachelor admissions"
+  },
+  "hostCountry": "KG",
+  "kind": "university",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение бесплатное — вуз прямо пишет «Tuition is free». Общежитие есть, но покрывает ли вуз жильё и дорогу — эти страницы не говорят. Отдельно есть бесплатные карточки на питание для нуждающихся студентов"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KG",
+        "TR"
+      ],
+      "evidence": "As international applicants are considered citizens of all countries, including Turkic republics and communities, except the Kyrgyz Republic and the Türkiye or have a refugee document issued by the UN."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "страну школы не ограничивают: принимают иностранцев из всех стран, требований к стране школы на странице нет"
+    },
+    "schoolYears": null,
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "года выпуска не ограничивают: требуется диплом о среднем образовании, требования к году выпуска на странице нет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "возраст не ограничивают: требований к возрасту на странице приёма нет"
+    },
+    "gpa": {
+      "scale": "TJ_5",
+      "min": 4,
+      "evidence": "The average score of the certificate/diploma must be at least 70 out of 100, at least 7 out of 10 and at least 4 out of 5."
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-28",
+      "note": "сертификат по языку для приёма не требуют: отбор идёт по вступительным экзаменам вуза, требования к английскому на странице нет"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем считают гражданина любой страны, кроме Кыргызстана и Турции; принимают и обладателей документа беженца, выданного ООН.",
+      "evidence": "As international applicants are considered citizens of all countries, including Turkic republics and communities, except the Kyrgyz Republic and the Türkiye or have a refugee document issued by the UN.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Средний балл аттестата — не ниже 70 из 100, либо 7 из 10, либо 4 из 5.",
+      "evidence": "The average score of the certificate/diploma must be at least 70 out of 100, at least 7 out of 10 and at least 4 out of 5.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Документы на бакалавриат иностранцы отправляют на iro@manas.edu.kg: копию аттестата с указанием предметов и оценок (нотариальный перевод на русский или английский), копию паспорта, два фото 3×4 и сертификат государственного экзамена, если он есть.",
+      "evidence": "Required Documents for International Applicants should be sent to iro@manas.edu.kg:",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки на странице — прошлого цикла: заявки до 17 июля 2024, письменный экзамен 23 июля, собеседование 24–25 июля. На следующий год вуз вывесит новые, поэтому дата в карточке не проставлена — уточняй на сайте.",
+      "evidence": "Application Period Deadline for submission of the application: June 10 July 17,2024 Written Examination: July 23, 2024 Interview: July 24-25, 2024",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Обучение в университете бесплатное.",
+      "evidence": "Tuition is free",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://manas.edu.kg/en/students/admission",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Кыргызско-Турецкий университет «Манас»"
+    }
+  },
+  "source": {
+    "url": "https://manas.edu.kg/en/students/admission",
+    "pages": [
+      {
+        "url": "https://manas.edu.kg/en/students/admission",
+        "contentHash": "sha256:661e74ef5e91a15ba8d071424e6b20a0854c1f20683f8e0b4be80ba22c7d8545"
+      },
+      {
+        "url": "https://www.manas.edu.kg/en/students/students-scholarship",
+        "contentHash": "sha256:28626ca731f74216eda0999c49c33a03dcca89465c0b83f8108fe7364db8ecb4"
+      },
+      {
+        "url": "https://manas.edu.kg/en/about_manas/ktmu_at_a_glance",
+        "contentHash": "sha256:bcda0cd5b0c64544f0f0303752b54fd26e8307583f44065212c7979ea9ebd90e"
+      }
+    ],
+    "lastVerified": "2026-09-28",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  },
+  "leftEmpty": {
+    "schoolYears": "sha256:061dcaf339619ed203b4cd3ee95dc6ddcc366174d741c31ffb440051d24d361b"
+  }
+}
