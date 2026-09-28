@@ -115,21 +115,51 @@ export function resetFilter() {
   apply();
 }
 
+// Сколько в каждой стране программ и сколько из них про конкретный вуз.
+// «Вузом» считается запись типа «университет» или «помощь по достатку»;
+// страновые программы и госстипендии — нет, иначе Германия сводилась бы к
+// одной записи. Две цифры взяты решением Мурода 29.09.2026: одна цифра
+// программ читалась как число вузов и вводила в заблуждение.
+function countByCountry(programs) {
+  const counts = new Map();
+  for (const program of programs) {
+    if (!program.hostCountry) continue;
+    const current = counts.get(program.hostCountry) ?? { programs: 0, universities: 0 };
+    current.programs += 1;
+    if (program.kind === 'university' || program.kind === 'need-aid') current.universities += 1;
+    counts.set(program.hostCountry, current);
+  }
+  return counts;
+}
+
 // Страны берутся из самих программ и сортируются по русскому названию:
-// список не надо вести руками, и лишних стран в нём не бывает.
+// список не надо вести руками, и лишних стран в нём не бывает. Подписи
+// пересобираются при каждой перерисовке: данные могли приехать позже, а
+// счётчики должны совпадать с тем, что реально в списке.
 function fillCountries(programs) {
-  if (ui.country.options.length > 1) return;
-  const codes = [...new Set(programs.map((p) => p.hostCountry).filter(Boolean))];
-  codes.sort((a, b) => countryName(a).localeCompare(countryName(b), 'ru'));
-  for (const code of codes) ui.country.append(new Option(countryName(code), code));
+  const counts = countByCountry(programs);
+  const codes = [...counts.keys()].sort((a, b) => countryName(a).localeCompare(countryName(b), 'ru'));
+  ui.country.textContent = '';
+  ui.country.append(new Option('Все страны', ''));
+  for (const code of codes) {
+    const count = counts.get(code);
+    ui.country.append(
+      new Option(`${countryName(code)} · ${count.programs} программ / ${count.universities} вузов`, code),
+    );
+  }
 }
 
 // Типы берутся в порядке из kinds.js, и только те, что есть в данных: пустой
-// пункт «Университеты (0)» сбивал бы с толку.
+// пункт «Университеты (0)» сбивал бы с толку. В подписи — число программ.
 function fillKinds(programs) {
-  if (ui.kind.options.length > 1) return;
-  const present = new Set(programs.map((p) => p.kind));
-  for (const kind of KINDS) if (present.has(kind)) ui.kind.append(new Option(KIND_FILTER[kind], kind));
+  const counts = new Map();
+  for (const program of programs) counts.set(program.kind, (counts.get(program.kind) ?? 0) + 1);
+  ui.kind.textContent = '';
+  ui.kind.append(new Option('Все типы', ''));
+  for (const kind of KINDS) {
+    if (!counts.has(kind)) continue;
+    ui.kind.append(new Option(`${KIND_FILTER[kind]} (${counts.get(kind)})`, kind));
+  }
 }
 
 // Вызывается после каждой перерисовки карточек: пересчёт идёт на каждое
@@ -138,6 +168,12 @@ export function refreshFilter(programs) {
   if (!ui) return;
   fillCountries(programs);
   fillKinds(programs);
+  // Выбранное могло пропасть из данных (программу сняли). Оставить фильтр
+  // по несуществующему значению нельзя: список стал бы пустым, а в списке
+  // стояло бы «Все страны» — это выглядело как поломка фильтра.
+  const has = (select, value) => [...select.options].some((option) => option.value === value);
+  if (state.country && !has(ui.country, state.country)) state.country = '';
+  if (state.kind && !has(ui.kind, state.kind)) state.kind = '';
   ui.country.value = state.country;
   ui.kind.value = state.kind;
   apply();

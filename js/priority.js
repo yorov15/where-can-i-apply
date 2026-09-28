@@ -13,7 +13,26 @@ import { CHOSEN_MAJORS, majorLabel } from './lib/majors.js';
 
 const NAME = { countries: 'priorityCountry', majors: 'priorityMajor' };
 
-function setupOne(node, key, changed) {
+// Подпись страны — с двумя числами: сколько всего программ и сколько из них
+// называют конкретный вуз. Одна только цифра программ вводила в заблуждение:
+// «Германия · 10» читалось как «10 вузов», хотя часть записей — страновые
+// программы, покрывающие десятки вузов. Решение Мурода 29.09.2026.
+const countryLabel = (value, count) => {
+  const name = countryName(value);
+  if (!count) return name;
+  return `${name} · ${count.programs} программ / ${count.universities} вузов`;
+};
+
+// Счётчик направления включает и записи «любое направление» (вуз целиком):
+// факультеты у такого вуза есть, и человек, выбрав «Инженерия», должен
+// видеть, что под неё подходит и он. Раньше такие записи не считались нигде,
+// и числа были крошечными. Решение Мурода 29.09.2026.
+const majorLabelWithCount = (value, count) => {
+  const name = majorLabel(value) ?? value;
+  return count === undefined ? name : `${name} · ${count}`;
+};
+
+function setupOne(node, key, changed, format) {
   const list = node.querySelector('[data-role="list"]');
   const order = [];
   let choices = [];
@@ -22,11 +41,7 @@ function setupOne(node, key, changed) {
   // Сколько программ стоит за кнопкой. Человек иначе не поймёт, почему
   // выбор не сдвинул список: «Информатика и IT» размечена у нуля записей,
   // и это видно прямо на кнопке, а не выясняется догадкой.
-  const label = (value) => {
-    const name = key === 'countries' ? countryName(value) : majorLabel(value) ?? value;
-    const n = counts.get(value);
-    return n === undefined ? name : `${name} · ${n}`;
-  };
+  const label = (value) => format(value, counts.get(value));
 
   // Скрытые поля в порядке очереди — это и есть приоритет.
   const hidden = () => {
@@ -97,28 +112,37 @@ function setupOne(node, key, changed) {
 export function setupPriority({ countriesNode, majorsNode, countries, onPick }) {
   const changed = () => { if (onPick) onPick(); };
   const pickers = {
-    countries: setupOne(countriesNode, 'countries', changed),
-    majors: setupOne(majorsNode, 'majors', changed),
+    countries: setupOne(countriesNode, 'countries', changed, countryLabel),
+    majors: setupOne(majorsNode, 'majors', changed, majorLabelWithCount),
   };
   pickers.countries.build(countries);
   pickers.majors.build(CHOSEN_MAJORS);
 
   return {
-    // Счётчики считаются по программам, а по направлению — только по тем
-    // записям, где направление названо: «любое направление» подходит под
-    // любое желание и в счётчике одной кнопки ничего не значило бы.
+    // Для каждой страны считаем и программы, и вузы: «вузом» считается
+    // запись про конкретное учебное заведение (тип «университет» или
+    // «помощь по достатку»), а страновые программы и госстипендии — нет,
+    // иначе Германия выглядела бы одним вузом.
     setCountries(values, programs = []) {
       const counts = new Map();
       for (const program of programs) {
-        counts.set(program.hostCountry, (counts.get(program.hostCountry) ?? 0) + 1);
+        if (!program.hostCountry) continue;
+        const current = counts.get(program.hostCountry) ?? { programs: 0, universities: 0 };
+        current.programs += 1;
+        if (program.kind === 'university' || program.kind === 'need-aid') current.universities += 1;
+        counts.set(program.hostCountry, current);
       }
       pickers.countries.build(values, counts);
     },
+    // Запись «любое направление» покрывает вуз целиком, поэтому идёт в счёт
+    // каждого направления; записи с названным направлением — в своё.
     setMajorCounts(programs = []) {
       const counts = new Map(CHOSEN_MAJORS.map((key) => [key, 0]));
       for (const program of programs) {
-        for (const key of program.majors ?? []) {
-          if (counts.has(key)) counts.set(key, counts.get(key) + 1);
+        const majors = program.majors ?? [];
+        const any = majors.includes('any');
+        for (const key of CHOSEN_MAJORS) {
+          if (any || majors.includes(key)) counts.set(key, counts.get(key) + 1);
         }
       }
       pickers.majors.build(CHOSEN_MAJORS, counts);
