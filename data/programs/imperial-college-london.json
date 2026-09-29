@@ -1,0 +1,269 @@
+{
+  "id": "imperial-college-london",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "medicine"
+  ],
+  "name": {
+    "ru": "Imperial College London (Имперский колледж Лондона) — приём иностранцев на бакалавриат",
+    "orig": "Imperial College London"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Плату за обучение иностранец платит полностью, и университет её здесь не называет: сумма стоит только на страницах отдельных курсов. Помощи по достатку семьи иностранцам вуз не даёт: Imperial Bursary и президентские стипендии — только своим студентам с британским статусом оплаты. Из стипендий для иностранцев на этих страницах названа одна — IB Excellence, £5 000 в год, и только тем, кто учится по программе International Baccalaureate"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Страницы приёма Imperial не называют ограничений по гражданству: вуз открыт для иностранцев, отдельного требования к паспорту нет. Смотрели страницы «приём бакалавра», «требования», «принимаемые квалификации», «английский», «сроки»."
+    },
+    "schoolCountry": {
+      "allow": "*",
+      "deny": [
+        "TJ"
+      ],
+      "evidence": "Please note that Imperial does not accept school leaving qualifications from all countries, so please check in this table that your country's national school-leaving qualification is accepted, before you apply."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Числа лет школы страницы приёма не называют — ни 11, ни 12. Вуз судит не по длине школы, а по принимаемой квалификации (A-level, IB и подобные). Про таджикский аттестат и 11 лет нужно писать в приёмную комиссию."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Год выпуска школы страницы приёма не называют: сказано лишь, что большинство подаёт в выпускном классе по прогнозным оценкам. Ограничения по конкретному году выпуска нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Возраст абитуриента на страницах приёма и требований не упоминается: ни минимального, ни максимального."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "United Kingdom A-Levels Standard offers between AAA and A*A*A: please see individual courses for specific requirements."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "IELTS - Academic (Test-Centre/UKVI SELT/Online) Standard Higher 6.5 overall (minimum 6.0 in all elements) 7.0 overall (minimum 6.5 in all elements)"
+        },
+        {
+          "test": "PTE",
+          "min": 62,
+          "parts": true,
+          "evidence": "PTE - Academic (Test-Centre/UKVI SELT) Standard Higher 62 overall (minimum 56 in all elements) 69 overall (minimum 62 in all elements)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 92,
+          "parts": true,
+          "evidence": "92 overall (minimum 20 in all elements) 100 overall (minimum 22 in all elements) 4.5 (minimum 4.5 in all elements) 5.0 (minimum 5.0 in all elements)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "92 overall (minimum 20 in all elements) 100 overall (minimum 22 in all elements) 4.5 (minimum 4.5 in all elements) 5.0 (minimum 5.0 in all elements)"
+        }
+      ],
+      "evidence": "To study with us, all home, EU and overseas applicants must demonstrate they meet the required English language competency level for their chosen course."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "На бакалавриат берут не по таджикскому аттестату как таковому, а по квалификации, которую вуз считает равной британскому A-level. Университет прямо называет это условием поступления.",
+      "evidence": "Undergraduate study at Imperial is for students who hold an accepted qualification equivalent to an A-level and who wish to study at the university full time.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Что именно вуз засчитывает, решает таблица принимаемых квалификаций, а оценки для неё сверены с британской службой UK ENIC.",
+      "evidence": "The following grades allow Imperial to decide if an international qualification is equivalent to 3 UK GCE A Levels. These have been determined using guidance from UK ENIC",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Важное для Таджикистана: национальных аттестатов вуз принимает не из всех стран, и перед подачей сам требует убедиться, что аттестат твоей страны в таблице есть. Таджикистана в таблице принимаемых квалификаций нет, поэтому аттестат таджикской школы сам по себе подачу не открывает — нужно сдавать квалификацию из списка (A-level, IB и подобные) либо письмом спрашивать приёмную комиссию о своём случае.",
+      "evidence": "Please note that Imperial does not accept school leaving qualifications from all countries, so please check in this table that your country's national school-leaving qualification is accepted, before you apply.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Путь в обход — сдать принимаемую международную квалификацию. Британские A-level засчитывают оценка в оценку, обычное требование — от AAA до A*A*A в зависимости от курса; IB принимают от 38 до 42 баллов с шестёрками-семёрками по профильным предметам высокого уровня.",
+      "evidence": "Worldwide International Baccalaureate Overall scores of 38-42, with scores of 6-7 in relevant subjects at higher level.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Средний балл аттестата инструмент не считает: требование выражено оценками A-level (от AAA до A*A*A по конкретному курсу), а не числовой шкалой аттестата. Точный набор оценок стоит на странице выбранного курса.",
+      "evidence": "United Kingdom A-Levels Standard offers between AAA and A*A*A: please see individual courses for specific requirements.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский обязателен для всех — и для иностранцев, и для тех, у кого английский родной. Сдавать его можно уже после подачи, но подтвердить придётся как условие предложения места.",
+      "evidence": "To study with us, all home, EU and overseas applicants must demonstrate they meet the required English language competency level for their chosen course.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог по IELTS — 6.5 в целом (и не ниже 6.0 по каждой части) на базовом уровне и 7.0 (не ниже 6.5 по каждой части) на повышенном. Баллы из разных попыток не складывают: всё должно быть с одной сдачи.",
+      "evidence": "IELTS - Academic (Test-Centre/UKVI SELT/Online) Standard Higher 6.5 overall (minimum 6.0 in all elements) 7.0 overall (minimum 6.5 in all elements)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Какой из двух порогов твой — базовый или повышенный — решает курс, на который подаёшь. Это надо смотреть на странице самого курса.",
+      "evidence": "See our course pages to find out whether you will need to meet the standard or higher level for your chosen course.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Кроме IELTS подходят PTE Academic (62 в целом, не ниже 56 по частям на базовом уровне; 69 и 62 — на повышенном), TOEFL iBT (92 в целом, не ниже 20 по частям; 100 и 22 — повышенный) и новый формат TOEFL с 21 января 2026 (4.5 и 5.0 соответственно).",
+      "evidence": "PTE - Academic (Test-Centre/UKVI SELT) Standard Higher 62 overall (minimum 56 in all elements) 69 overall (minimum 62 in all elements)",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Сдавать язык заранее не обязательно: подать можно без сертификата, а достичь нужного балла — уже после предложения места, как его условие.",
+      "evidence": "Please note, you do not need to meet the English language requirement before making an application. If you apply to us without holding one of these tests/qualifications, we will ask you to achieve one of these as part of your offer conditions.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Освободиться от английского можно только с квалификацией уровня британского диплома из определённых стран. Таджикский школьный аттестат к таким не относится, поэтому сертификат нужен.",
+      "evidence": "You may not need to prove your English speaking knowledge if you have completed a qualification that is equivalent to a UK degree from certain countries.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "На многие курсы, кроме документов, нужен вступительный экзамен. Какой именно — зависит от курса: инженерия и естественные науки сдают ESAT, часть курсов — TMUA, медицина — UCAT, а Medicine (Graduate Entry) — UCAT или GAMSAT.",
+      "evidence": "We use admissions tests as part of the application process for many of our courses.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Большинство подают в выпускном классе школы по предварительным (прогнозным) оценкам учителей. Итоговые оценки присылают только те, кто получил и принял предложение места.",
+      "evidence": "The majority of students apply in their final year of high school, on the basis of grades they are predicted by their teachers to achieve. Only applicants who receive and accept an offer are required to send us their final grades",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Заявка идёт через UCAS: одна заявка покрывает до пяти разных курсов в один год поступления, и к ней прикладывают одно общее личное заявление, которое должно подходить всем выбранным курсам.",
+      "evidence": "Apply online through UCAS Hub . You only need to submit one application to be considered for admission up to five different courses in the same year of entry",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Срок подачи на 2027 год: 13 января 2027, 18:00 по британскому времени — последняя дата, чтобы заявку рассмотрели наравне со всеми (кроме медицины). Для медицины MBBS и Medicine (Graduate Entry) срок раньше — 15 октября 2026.",
+      "evidence": "13 January 2027 (18.00 UK time) - Equal consideration deadline Submit your application by this date to ensure equal consideration for all undergraduate courses (except MBBS Medicine and Graduate Entry Medicine).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Плату за обучение для иностранцев университет устанавливает сам и на этих страницах её не называет — сумма стоит только на страницах отдельных курсов. Ориентироваться нужно по странице выбранного курса, а не по этому обзору.",
+      "evidence": "The tuition fee for Overseas students is set by Imperial and is available on our course pages .",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Британский государственный заём на оплату обучения дают только своим студентам с домашним статусом оплаты. Иностранцу он недоступен, оплата — из своих денег или из внешней стипендии.",
+      "evidence": "Home students can apply for a loan from the UK government to cover the entire cost of tuition for every year of study.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Imperial Bursary, о котором вуз пишет на той же странице, иностранцу не положен: его дают по доходу семьи только своим студентам с домашним статусом оплаты. Для таджикского абитуриента-иностранца это не источник денег.",
+      "evidence": "If your household income is under £70,000 a year, you could receive up to £5,000 every year throughout your course.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Единственная стипендия для иностранцев на этой странице — IB Excellence: £5 000 в год тем, кто платит как иностранец и учится по программе International Baccalaureate. То есть она привязана к конкретной школьной программе, а не к нужде.",
+      "evidence": "These £5,000 per year awards are for Overseas-fee paying students studying the International Baccalaureate (IB) diploma programme.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Президентские стипендии (полное покрытие обучения с менторством) тоже закрыты для иностранцев: они только для студентов с домашним статусом оплаты.",
+      "evidence": "Full-fee scholarships, with mentoring support, for students of Black heritage with Home-fee status.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-01",
+    "closes": "2027-01-13",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.imperial.ac.uk/study/apply/undergraduate/process/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Imperial College London, кампус в Южном Кенсингтоне (Лондон)"
+    }
+  },
+  "source": {
+    "url": "https://www.imperial.ac.uk/study/apply/undergraduate/process/",
+    "pages": [
+      {
+        "url": "https://www.imperial.ac.uk/study/apply/undergraduate/process/",
+        "contentHash": "sha256:2b2ede8bb93331b74a00cee9502068ab8c4f1ac9dd15d9b87ce594cac475ca1e"
+      },
+      {
+        "url": "https://www.imperial.ac.uk/study/apply/undergraduate/entry-requirements/",
+        "contentHash": "sha256:5fcbc16f5573d49164c9a0ca3fdca5e78152b04f09d207476682e141a835ed97"
+      },
+      {
+        "url": "https://www.imperial.ac.uk/study/apply/undergraduate/process/entry-requirements/accepted-qualifications/",
+        "contentHash": "sha256:f4749d4bd6adadb9461fcb60423553da75f5a35a535863d74d9890fc724e73de"
+      },
+      {
+        "url": "https://www.imperial.ac.uk/study/apply/english-language/",
+        "contentHash": "sha256:9264a3f0ee54e7f07be4d299a34ae455328cfc259106ccd738b5bc3e2d4eb09d"
+      },
+      {
+        "url": "https://www.imperial.ac.uk/study/apply/undergraduate/process/deadlines/",
+        "contentHash": "sha256:e844de01001e12099c5dae842d1908978994324c005df2bf7788d26f42af910d"
+      },
+      {
+        "url": "https://www.imperial.ac.uk/study/fees-and-funding/undergraduate/tuition-fees/",
+        "contentHash": "sha256:add0dc9d71baa3806214b3889deec4bf4f0c6f75dce340343f17e82cedecc6af"
+      },
+      {
+        "url": "https://www.imperial.ac.uk/study/fees-and-funding/undergraduate/bursaries-grants-scholarships/",
+        "contentHash": "sha256:8d8bc8fcd0bb3d86074df4df9d05147968b238936dc299ca76f0624071c1c006"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}

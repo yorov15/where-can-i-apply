@@ -5,7 +5,9 @@
 
 ## Где мы
 
-- Ветка `asia-europe-universities`, последний коммит `c6d5c39` (Hanyang), запушен.
+- Ветка `asia-europe-universities`. **Партия 1 (50 вузов по пользе) закрыта 29.09.2026:** 43 вуза
+  закрыты карточками, 7 — в «Не добавлены». Последний коммит `b930d35` (резерв), запушен.
+- Актуальная очередь — «Партия 2: top-50/100 вузов мира» (см. ниже). Партия 1 — история.
 - Конвейер одной программы: `tools/sources.toml` (домен и страницы) → `python -m tools.fetch <id>` (снимок в `raw/`)
   → черновик `proposed/<id>.json` по снимку → `python -m tools.look <id> <слово>` для цитат
   → `python -m tools.review <id> --by-assistant` → `python -m tools.build`.
@@ -32,6 +34,9 @@
 - Страница не читается (скан PDF, JavaScript-каркас, 403) — **не бороться дольше 10 минут**: записать вуз в «Не добавлены» ниже с причиной и идти дальше.
 
 ## Очередь
+
+**Статус: партия 1 (50 вузов) отработана 29.09.2026. Раздел ниже оставлен как история.**
+**Текущая очередь — «Партия 2: top-50/100 вузов мира» в конце раздела «Очередь».**
 
 **Решение Мурода 28.09.2026: не «топ-1000 по рейтингу», а партия из 50 вузов по пользе.**
 Топ-1000 отвергнут: ~900 сессий, 900 одобрений доменов, ежегодная перепроверка, и большинство
@@ -109,9 +114,90 @@
 
 Резерв на замену (не входят в 50): fu-berlin, uni-due, palacky-university, university-of-debrecen, bme-budapest, university-of-szeged, university-of-warsaw, jagiellonian-university, warsaw-university-of-technology, comenius-university, slovak-university-of-technology, university-of-economics-bratislava, cuhk-hongkong, cityu-hongkong, polyu-hongkong, hkbu-hongkong, nus-singapore, bologna-italy, sapienza-italy, polito-italy, lund-sweden, aalto-finland, tartu-estonia, uaeu-uae, aus-uae, ubbcluj-romania, ljubljana-slovenia.
 
+## Партия 2: top-50/100 вузов мира (решение Мурода 29.09.2026)
+
+Новая цель: добавить верх **мирового** рейтинга, а не ещё один регион. Это меняет решение
+от 28.09.2026 (тогда «топ-1000 по рейтингу» был отвергнут как неподъёмный). Теперь берём не
+весь список, а только верхние **50 или 100** — число финально подтверждает Мурод. По умолчанию
+считаем **100**, из них после дедупликации и отсева ждём ~50 новых карточек.
+
+Правила партии 2:
+1. **Рейтинг-источник:** QS World University Rankings, актуальный выпуск на дату сбора (версию
+   года зафиксировать в списке); спорные места сверять с THE и ARWU. Не смешивать выпуски.
+2. **Сначала дедупликация.** В `data/programs` уже **193** записи, и почти весь верх США и
+   Британии собран (Harvard, MIT, Stanford, Princeton, Yale, Columbia, Penn, Cornell, Brown,
+   Dartmouth, JHU, Duke, Rice, Vanderbilt, Northwestern, Tufts, плюс десятки колледжей).
+   В партию 2 идут **только те, кого в базе нет** — сверять с `ls data/programs`.
+3. **Фильтр полезности партии 1 — второй экран, а не отказ.** Платный вуз без помощи для
+   таджикского школьника всё равно заводим: сайт показывает и отказы, и «почему нельзя».
+   Но карточка должна честно говорить, есть ли помощь и сколько стоит.
+4. Обязательства те же: для карточки нужна англоязычная страница приёма; домен одобряет Мурод.
+
+**Шаг 0 партии 2 (делать на `opencode-go/deepseek-v4.1-flash`):** 4–5 подагентов (`task`, тип
+`general`) по блокам рейтинга (1–20, 21–40, 41–60, 61–80, 81–100), каждому одно задание —
+вернуть строки:
+`место — вуз — страна — домен (Wikidata P856) — страница приёма иностранцев — уже в базе? (id / нет) — чем полезен (деньги/цена)`.
+Подагенты только ищут, файлов не трогают. Свести в одну таблицу, вычеркнуть дубли по
+`data/programs`, показать Муроду. Ждать «да» (можно частичное: список мест/стран).
+
+**Шаги 1…N партии 2:** тот же конвейер, что в «Где мы»: один вуз — одна сессия, потом `/new`.
+Сборку вузов НЕ параллелить (`tools.build` и `data/changelog.json` общие, коммиты подерутся).
+
+### Кандидаты партии 2 (QS 2027 топ-100, дедуплицировано по `data/programs`)
+
+Статус: список собран 29.09.2026, домены ещё не подтверждены (у каждого — `?`, тянем при сборе).
+Уже есть в базе и потому вычеркнуты: MIT, Stanford, Harvard, UPenn, Cornell, Yale, JHU, TUM,
+Fudan, Princeton, HKUST, SJTU, SNU, Yonsei, Columbia, Northwestern, Zhejiang, Korea University,
+LMU, Kyoto, KAIST, Brown, Duke, Lund, Osaka, Heidelberg, Politecnico di Milano, HKU, NTU.
+Плюс уже закрыты как нерабочие: NUS, CUHK, CityU (JS/TLS), Tokyo (PEAK закрыт),
+Science Tokyo (TLS).
+Отдельные карточки уже есть, но это узкие программы, не вуз целиком — считаем кандидатами:
+Oxford (`oxford-reach`), Toronto (`utoronto-pearson`), UBC (`ubc-scholars`),
+Nottingham (`nottingham-ningbo`), NYU (`nyuad`/`nyu-shanghai`).
+
+Формат: `id — вуз — страна — домен(? проверить)`.
+
+- Великобритания: imperial-college-london — Imperial College London; oxford — University of Oxford;
+  cambridge — University of Cambridge; ucl — UCL; edinburgh — University of Edinburgh;
+  kcl — King's College London; manchester — University of Manchester; bristol — University of Bristol;
+  lse — LSE; warwick — University of Warwick; birmingham — University of Birmingham;
+  leeds — University of Leeds; glasgow — University of Glasgow; sheffield — University of Sheffield;
+  durham — Durham University; nottingham — University of Nottingham
+- США: caltech — Caltech; uc-berkeley — UC Berkeley; uchicago — University of Chicago;
+  ucla — UCLA; michigan — University of Michigan; cmu — Carnegie Mellon;
+  nyu — New York University; ut-austin — UT Austin; uiuc — UIUC; ucsd — UC San Diego;
+  penn-state — Penn State; uwashington — University of Washington; boston-university — Boston University
+- Европа/прочее: eth-zurich — ETH Zurich; epfl — EPFL; psl — Université PSL;
+  institut-polytechnique-paris — Institut Polytechnique de Paris; sorbonne — Sorbonne University;
+  paris-saclay — Université Paris-Saclay; tudelft — TU Delft; ku-leuven — KU Leuven;
+  uva-amsterdam — University of Amsterdam; uppsala — Uppsala University; kth — KTH;
+  copenhagen — University of Copenhagen; zurich — University of Zurich; uba — Universidad de Buenos Aires
+- Азия/Океания/Канада/Ближний Восток: peking-university — Peking University;
+  tsinghua-university — Tsinghua University; unsw — UNSW Sydney; melbourne — University of Melbourne;
+  sydney — University of Sydney; anu — ANU; monash — Monash University; toronto — University of Toronto;
+  mcgill — McGill; ubc — University of British Columbia; tokyo — University of Tokyo;
+  ntu-taiwan — National Taiwan University; um-malaya — Universiti Malaya; auckland — University of Auckland;
+  uwa — University of Western Australia; adelaide — Adelaide University; uts — UTS;
+  nanjing — Nanjing University; alberta — University of Alberta; kfupm — KF UPM
+
+Итого ~63 кандидата. Мурод одобряет список (можно частично: список `id`), домены тянутся и
+подтверждаются по каждому вузу перед `fetch`.
+
+### Сделано (партия 2)
+
+(дописывай строку после каждого коммита: `id — коммит — что дала карточка`)
+- imperial-college-london — Imperial College London (Великобритания): таджикского аттестата в таблице
+  принимаемых квалификаций нет (нужны A-level AAA–A*A*, IB 38–42), IELTS 6.5/7.0 или PTE/TOEFL,
+  overseas-плата только на страницах курсов, из стипендий для иностранцев — лишь IB Excellence £5 000/год
+
+---
+
+## Партия 1 — итог
+
 ### Сделано
 (дописывай сюда строку после каждого коммита: `id — коммит — что дала карточка`)
-Собрано 28.09.2026, НЕ закоммичено (жду команду Мурода):
+Собрано 28–29.09.2026, **закоммичено** (`2e734ff` … `b930d35`): 43 вуза закрыты карточками,
+7 — в «Не добавлены» ниже.
 - sdu — Suleyman Demirel University (Казахстан): приём иностранцев, IELTS 5.5 или внутренний Placement Test, сбор 200 USD, срок 30.11.2026; помощи иностранцу нет (стипендии привязаны к Казахстану)
 - kbtu — Kazakh-British Technical University (Казахстан): тест по английскому, внутренние гранты/скидки для стран СНГ (Таджикистан в списке), стипендия Bolashak, сбор 50 000 тенге
 - manas — Кыргызско-Турецкий университет «Манас»: обучение бесплатное, иностранцы всех стран кроме Кыргызстана и Турции, средний балл аттестата ≥ 4/5
@@ -170,6 +256,8 @@
 - aus-uae — AUS (ОАЭ): GPA ≥85%, IELTS 6.5/TOEFL 80, 110 876 AED/год, эквивалентность Минобра ОАЭ
 - ubbcluj-romania — UBB (Румыния): оплата частями, плата для не-ЕС в валюте, подготовительный год румынского
 - ljubljana-slovenia — Любляна (Словения): не-ЕС без двустороннего соглашения платят (Таджикистана в списке нет)
+- tu-berlin — TU Berlin (Германия): платы за обучение нет, только семестровый сбор; своих стипендий бакалавру не даёт
+- rwth — RWTH Aachen (Германия): платы за обучение в Северном Рейне-Вестфалии нет, только семестровый сбор (сумма — в личном кабинете), стипендий бакалавру не даёт
 
 ### Не добавлены
 (дописывай: `id — причина`)
