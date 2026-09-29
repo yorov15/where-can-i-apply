@@ -1,0 +1,277 @@
+{
+  "id": "kcl",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "King's College London (KCL) — приём иностранцев на бакалавриат",
+    "orig": "King's College London"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, и суммы для иностранцев эти страницы не называют: на странице платы стоит только домашняя ставка £9 790, а ставка иностранца лежит на странице каждого курса. Стипендий для иностранцев-бакалавров на этих страницах тоже нет — вуз отсылает к поисковой базе стипендий (на момент снимка она не выдала ни одной записи), поэтому помощи в карточке не отмечено"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство страницы приёма King's не ограничивают: вуз прямо приветствует заявки из всех стран и описывает подачу для иностранцев общей через UCAS."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: у вуза есть требования по регионам, а национальные квалификации, не принятые напрямую, ведут на International Foundation. Отдельного запрета по стране нет."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Students undertaking national high school qualifications that are not accepted for direct Undergraduate entry can apply for the International Foundation Course."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента эти страницы не ограничивают: вуз отдельно принимает заявки от взрослых (mature) абитуриентов, ушедших из школы давно."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "UCAS tariff points are not used when assessing applications to our undergraduate programmes."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "IELTS (Academic) 6.5 overall with a minimum of 6.0 in each skill"
+        }
+      ],
+      "evidence": "The level of English language you are required to demonstrate is dependent on the course you have applied for."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "King's принимает иностранцев и широкий набор квалификаций: A-Level, International Baccalaureate и национальные аттестаты других стран.",
+      "evidence": "King's welcomes a wide range of qualifications for Undergraduate admissions, including A-Levels and the International Baccalaureate.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Если национальную школьную квалификацию не принимают на бакалавриат напрямую, путь в обход — годичная программа International Foundation: её окончание открывает вход на бакалавриат по гарантированным маршрутам.",
+      "evidence": "Students undertaking national high school qualifications that are not accepted for direct Undergraduate entry can apply for the International Foundation Course.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Внешние подготовительные программы не засчитывают: вуз прямо перечисляет среди непринимаемых «Non-UK Foundation courses». То есть таджикскому школьнику с 11-летним аттестатом годится только своя программа King's International Foundation, а не сторонний подготовительный год.",
+      "evidence": "Non-UK Foundation courses",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "После King's International Foundation вуз даёт два гарантированных предложения на бакалавриат — при условии выполнения требований перехода.",
+      "evidence": "You will receive two guaranteed offers to one of over 150 degrees at King's, subject to meeting the progression requirements.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Требования выражены квалификациями и оценками, а не средним баллом: официальные условные предложения основаны на трёх A-level.",
+      "evidence": "Our conditional offers are based on three A-level subjects.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Баллы UCAS Tariff при оценке заявлений не используют — смотрят сами квалификации и оценки по предметам.",
+      "evidence": "UCAS tariff points are not used when assessing applications to our undergraduate programmes.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский нужен до начала учёбы и подтверждается сертификатом или подходящей школьной квалификацией. Нужный уровень зависит от выбранного курса.",
+      "evidence": "To study at King's, it is essential that you can communicate effectively in English and are able to do so in an academic environment.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Самый низкий порог для бакалавриата — Band D: IELTS 6.5 в целом и не ниже 6.0 по каждой части. Этот уровень стоит у факультета естественных, математических и инженерных наук и ряда биомедицинских курсов.",
+      "evidence": "IELTS (Academic) 6.5 overall with a minimum of 6.0 in each skill",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Более высокий порог — Band B: IELTS 7.0 в целом и не ниже 6.5 по каждой части. Он у факультетов искусств и гуманитарных наук, общественных наук, медсестринского дела, бизнес-школы, психиатрии и нейронауки, права, медицины и стоматологии, а также у части инженерных и других курсов.",
+      "evidence": "IELTS (Academic) 7.0 overall with a minimum of 6.5 in each skill",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Гражданам стран с большинством носителей английского, окончившим там школу, отдельный языковой экзамен сдавать не нужно. Таджикистана в списке нет, поэтому таджикскому абитуриенту сертификат обычно нужен.",
+      "evidence": "Nationals of the following countries, who have successfully completed a high school level 3 qualification (A-level equivalent) in a majority English speaking country are not required to complete an additional English language test.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Языковой сертификат действителен два года от первого дня месяца начала курса; результат должен быть в одном экзамене, комбинацию из двух зачётов не принимают.",
+      "evidence": "The tests listed below are valid if they have been taken within two years of the start date of your chosen course.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Языковой результат можно донести уже после подачи заявления, но он не должен быть старше двух лет.",
+      "evidence": "All English language test results must be no more than two years old.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Подача идёт только через UCAS — включая переводы из другого вуза.",
+      "evidence": "All applications, including transfers, are made through UCAS.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявки принимают с 1 сентября на следующий осенний приём.",
+      "evidence": "You can apply to UCAS from 1 September for entry the following autumn",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Обычный срок подачи — 13 января 2027, 18:00 по британскому времени. Для медицины и стоматологии срок раньше — 15 октября 2026, 18:00.",
+      "evidence": "The standard deadline for applications is 13 January 2027 18:00 (UK time), but if you are applying for Medicine or Dentistry then the deadline is 15 October 2026 18:00 (UK time).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Через UCAS можно подать максимум на пять курсов в год, но не больше четырёх из них могут быть медицинскими или стоматологическими.",
+      "evidence": "UCAS allows you to apply to a maximum of five courses per year, but only four of those may be Medicine/Dentistry courses.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сам UCAS берёт небольшую плату за подачу, но King's своего дополнительного взноса за рассмотрение не берёт.",
+      "evidence": "UCAS charges a small fee to apply, but King's will not charge UCAS applicants an additional application fee for your application to be considered.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Суммы обучения для иностранца эти страницы не называют: на странице платы стоит только домашняя ставка £9 790, а конкретная ставка — на странице каждого курса. Складывать число не из чего, поэтому в карточке его нет.",
+      "evidence": "All tuition fees can be found on each individual course page on the online course finder.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Домашняя ставка для новых студентов (с сентября 2026) — £9 790.",
+      "evidence": "Home fees for students based in the UK are set at £9,790 for new students starting in September 2026.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Граждане ЕС, ЕЭЗ и Швейцарии, начинающие учиться с 2021 года, больше не имеют права на домашний статус и платят ставку иностранца. Граждан Таджикистана это подтверждает: для них действует иностранная ставка.",
+      "evidence": "The UK government has confirmed that students from the EU, EEA or Switzerland starting their course in 2021 or later will no longer be eligible for home fee status, and will instead pay the international tuition fee rate.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии вуз не перечисляет, а отсылает в поисковую базу, где на момент снимка не было ни одной записи. Помощь иностранцу-бакалавру надо искать через эту базу отдельно.",
+      "evidence": "Our database offers funding opportunities for UK and international students across a range of subjects, with opportunities available for both current and prospective King's students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцы, оплачивающие обучение сами, обычно должны внести депозит, но только после того, как King's выбран «твёрдым» выбором; депозит идёт в счёт платы за первый год.",
+      "evidence": "at undergraduate level deposits are usually only required for Overseas fee-paying offer-holders, and only once you have accepted King's as your 'Firm' choice",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "К заявке в UCAS нужны личное заявление (около 4 000 знаков), полная история обучения и рекомендация.",
+      "evidence": "Your personal statement is a piece of writing - about 4,000 characters or 47 lines of text",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-01",
+    "closes": "2027-01-13",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.kcl.ac.uk/study/undergraduate/how-to-apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: King's College London. Подача общая через UCAS, требования и плата по курсу — на страницах курсов."
+    }
+  },
+  "source": {
+    "url": "https://www.kcl.ac.uk/study/international/region/turkey-and-the-middle-east",
+    "pages": [
+      {
+        "url": "https://www.kcl.ac.uk/study/international/region/turkey-and-the-middle-east",
+        "contentHash": "sha256:eadb21f48260d984aee61863041a78f691093f2a38de4f2607ac998e0de1f6a8"
+      },
+      {
+        "url": "https://www.kcl.ac.uk/study/undergraduate/how-to-apply",
+        "contentHash": "sha256:889151de1d363c8eb5c098d479934f4b5c9c6f61185d90ad28a0a723d10ffd9f"
+      },
+      {
+        "url": "https://www.kcl.ac.uk/study/undergraduate/how-to-apply/entry-requirements",
+        "contentHash": "sha256:f26c124afdbcff6ee226f664f239f87891b9e28636cc029c2262ed557d5008d5"
+      },
+      {
+        "url": "https://www.kcl.ac.uk/study/undergraduate/how-to-apply/english-language-requirements",
+        "contentHash": "sha256:5661309c8745af687bc79c77e42b15acebb6aab247cfd6d174cc120231f8e7e4"
+      },
+      {
+        "url": "https://www.kcl.ac.uk/study/undergraduate/how-to-apply/important-information-for-applying",
+        "contentHash": "sha256:009fbb0516ea1f9f98dddaa5a0f46a28a1879b12526ad754b382c8cc0298dc09"
+      },
+      {
+        "url": "https://www.kcl.ac.uk/study/undergraduate/how-to-apply/important-information-after-receiving-your-decision",
+        "contentHash": "sha256:2dcea889dcdf80da709470399d2c3e51b0b5c8f1d80211ccb527e04508a3361b"
+      },
+      {
+        "url": "https://www.kcl.ac.uk/study/undergraduate/fees-and-funding/tuition-fees",
+        "contentHash": "sha256:9dd238c361984d13e1064abe60f66b32749745ec188055d6dedd335f85314cc3"
+      },
+      {
+        "url": "https://www.kcl.ac.uk/study/undergraduate/fees-and-funding",
+        "contentHash": "sha256:900ef310cbef893baf6570a892d057142575bb6eea8188cd816b651a263c5cbb"
+      },
+      {
+        "url": "https://www.kcl.ac.uk/international-foundation",
+        "contentHash": "sha256:0bea369a0ec93a947d5d8822c784f2bd62f468cedb6345f7388e70a480793523"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}

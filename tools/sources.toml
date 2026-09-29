@@ -3140,10 +3140,22 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
+# Партия 2. Домен kcl.ac.uk одобрен Муродом 2026-09-29. Сайт недоступен
+# сборщику с этой машины (connect timeout и у python, и у curl; другие вузы
+# при этом открываются), поэтому страницы сняты через сторонний
+# читающий сервис (webfetch) и лежат рядом: origin=manual.
 [kcl]
 name = "King's College London (Великобритания): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.kcl.ac.uk/study/international/region/turkey-and-the-middle-east",
+files = [
+  { path = "manual/kcl/region-turkey-central-asia-middle-east.html", url = "https://www.kcl.ac.uk/study/international/region/turkey-and-the-middle-east" },
+  { path = "manual/kcl/how-to-apply.html", url = "https://www.kcl.ac.uk/study/undergraduate/how-to-apply" },
+  { path = "manual/kcl/entry-requirements.html", url = "https://www.kcl.ac.uk/study/undergraduate/how-to-apply/entry-requirements" },
+  { path = "manual/kcl/english-language-requirements.html", url = "https://www.kcl.ac.uk/study/undergraduate/how-to-apply/english-language-requirements" },
+  { path = "manual/kcl/important-information-for-applying.html", url = "https://www.kcl.ac.uk/study/undergraduate/how-to-apply/important-information-for-applying" },
+  { path = "manual/kcl/important-information-after-receiving-your-decision.html", url = "https://www.kcl.ac.uk/study/undergraduate/how-to-apply/important-information-after-receiving-your-decision" },
+  { path = "manual/kcl/tuition-fees.html", url = "https://www.kcl.ac.uk/study/undergraduate/fees-and-funding/tuition-fees" },
+  { path = "manual/kcl/fees-and-funding.html", url = "https://www.kcl.ac.uk/study/undergraduate/fees-and-funding" },
+  { path = "manual/kcl/international-foundation.html", url = "https://www.kcl.ac.uk/international-foundation" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
