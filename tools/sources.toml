@@ -3356,49 +3356,104 @@ files = [
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
+# Партия 2. Под-страницы внутри одобренного домена caltech.edu добавлены
+# ассистентом (требования, тесты, сроки, плата, финпомощь, подача).
+# python.exe не в сети (McAfee) — снято curl, origin=manual.
 [caltech]
 name = "Caltech (США): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.admissions.caltech.edu/apply/first-year-applicants/international-applicants",
+files = [
+  { path = "manual/caltech/00-international-applicants.html", url = "https://www.admissions.caltech.edu/apply/first-year-applicants/international-applicants" },
+  { path = "manual/caltech/01-application-requirements.html", url = "https://www.admissions.caltech.edu/apply/first-year-applicants/application-requirements" },
+  { path = "manual/caltech/02-deadlines.html", url = "https://www.admissions.caltech.edu/apply/first-year-applicants/deadlines" },
+  { path = "manual/caltech/03-academic-requirements.html", url = "https://www.admissions.caltech.edu/apply/first-year-applicants/academic-requirements-for-first-year-applicants" },
+  { path = "manual/caltech/04-standardized-tests.html", url = "https://www.admissions.caltech.edu/apply/first-year-applicants/standardized-tests" },
+  { path = "manual/caltech/05-application-fee-and-waiver.html", url = "https://www.admissions.caltech.edu/apply/first-year-applicants/first-year-application-fee-and-waiver" },
+  { path = "manual/caltech/06-afford.html", url = "https://www.admissions.caltech.edu/afford" },
+  { path = "manual/caltech/07-finaid-costs.html", url = "https://www.finaid.caltech.edu/Costs" },
+  { path = "manual/caltech/08-finaid-international-students.html", url = "https://www.finaid.caltech.edu/applying/international-students" },
+  { path = "manual/caltech/09-finaid-home.html", url = "https://www.finaid.caltech.edu/" },
+  { path = "manual/caltech/10-finaid-newintl-rea.html", url = "https://www.finaid.caltech.edu/applying/how/newinternationalrea" },
+  { path = "manual/caltech/11-finaid-newintl-rd.html", url = "https://www.finaid.caltech.edu/applying/how/newinternationalrd" },
+  { path = "manual/caltech/12-International_Financial_Aid_Statement_of_Intent.pdf", url = "https://www.admissions.caltech.edu/documents/6959/International_Financial_Aid_Statement_of_Intent.pdf" },
+  { path = "manual/caltech/13-first-year-applicants.html", url = "https://www.admissions.caltech.edu/apply/first-year-applicants" },
+  { path = "manual/caltech/14-housing.html", url = "https://www.admissions.caltech.edu/why-caltech/student-life/housing" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
+# Партия 2. Под-страницы внутри одобренного домена berkeley.edu добавлены
+# ассистентом; PDF с требованиями по странам лежит на apply.berkeley.edu.
+# python.exe не в сети (McAfee) — снято curl, origin=manual.
 [uc-berkeley]
 name = "UC Berkeley (США): приём иностранцев на бакалавриат"
-urls = [
-  "https://admissions.berkeley.edu/apply-to-berkeley/international-students/",
+files = [
+  { path = "manual/uc-berkeley/international-students.html", url = "https://admissions.berkeley.edu/apply-to-berkeley/international-students/" },
+  { path = "manual/uc-berkeley/requirements-intl.html", url = "https://admissions.berkeley.edu/apply-to-berkeley/international-students/requirements-for-international-students/" },
+  { path = "manual/uc-berkeley/first-year.html", url = "https://admissions.berkeley.edu/apply-to-berkeley/first-year-applicants-uc-berkeley/" },
+  { path = "manual/uc-berkeley/freshmen-requirements.html", url = "https://admissions.berkeley.edu/apply-to-berkeley/first-year-applicants-uc-berkeley/freshmen-requirements/" },
+  { path = "manual/uc-berkeley/policy-changes.html", url = "https://admissions.berkeley.edu/apply-to-berkeley/first-year-applicants-uc-berkeley/first-year-policy-changes/" },
+  { path = "manual/uc-berkeley/applicant-checklist.html", url = "https://admissions.berkeley.edu/apply-to-berkeley/first-year-applicants-uc-berkeley/applicant-checklist/" },
+  { path = "manual/uc-berkeley/dates-deadlines.html", url = "https://admissions.berkeley.edu/apply-to-berkeley/dates-deadlines/" },
+  { path = "manual/uc-berkeley/basic-admission-requirements.html", url = "https://admissions.berkeley.edu/basic-admission-requirements/" },
+  { path = "manual/uc-berkeley/student-profile.html", url = "https://admissions.berkeley.edu/apply-to-berkeley/student-profile/" },
+  { path = "manual/uc-berkeley/application-faqs.html", url = "https://admissions.berkeley.edu/application-faqs/" },
+  { path = "manual/uc-berkeley/cost.html", url = "https://admissions.berkeley.edu/cost/" },
+  { path = "manual/uc-berkeley/cost-attendance.html", url = "https://financialaid.berkeley.edu/cost-attendance" },
+  { path = "manual/uc-berkeley/nonresident-costs.html", url = "https://financialaid.berkeley.edu/meeting-nonresident-costs" },
+  { path = "manual/uc-berkeley/fa-intl.html", url = "https://financialaid.berkeley.edu/international-students" },
+  { path = "manual/uc-berkeley/intl-scholarships.html", url = "https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/regents-and-chancellors-scholarship/international-student-scholarships/" },
+  { path = "manual/uc-berkeley/bio-expenses.html", url = "https://internationaloffice.berkeley.edu/students/current/expenses" },
+  { path = "manual/uc-berkeley/required-docs-by-country.pdf", url = "https://apply.berkeley.edu/docs/required-docs-by-country.pdf" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
+# Партия 2. Сайт collegeadmissions.uchicago.edu — оболочка Gatsby: текст
+# лежит в page-data.json, поэтому ассистент вынес его в .txt и снял curl.
+# Домен uchicago.edu одобрен; origin=manual.
 [uchicago]
 name = "University of Chicago (США): приём иностранцев на бакалавриат"
-urls = [
-  "https://collegeadmissions.uchicago.edu/apply/international-applicants",
+files = [
+  { path = "manual/uchicago/00-international-applicants.txt", url = "https://collegeadmissions.uchicago.edu/apply/international-applicants/" },
+  { path = "manual/uchicago/01-application.txt", url = "https://collegeadmissions.uchicago.edu/apply/application/" },
+  { path = "manual/uchicago/02-required-materials.txt", url = "https://collegeadmissions.uchicago.edu/apply/application/required-materials/" },
+  { path = "manual/uchicago/03-optional-materials.txt", url = "https://collegeadmissions.uchicago.edu/apply/application/optional-materials/" },
+  { path = "manual/uchicago/04-financial-overview.txt", url = "https://collegeadmissions.uchicago.edu/financial-support/financial-overview/" },
+  { path = "manual/uchicago/05-international-financial-aid.txt", url = "https://collegeadmissions.uchicago.edu/financial-support/international-financial-aid/" },
+  { path = "manual/uchicago/06-applying-for-aid.txt", url = "https://collegeadmissions.uchicago.edu/financial-support/applying-for-aid/" },
+  { path = "manual/uchicago/07-how-we-determine-need.txt", url = "https://collegeadmissions.uchicago.edu/financial-support/how-we-determine-need/" },
+  { path = "manual/uchicago/08-essay.txt", url = "https://collegeadmissions.uchicago.edu/apply/essay/" },
+  { path = "manual/uchicago/09-undergraduate-costs.txt", url = "https://financialaid.uchicago.edu/undergraduate/how-aid-works/undergraduate-costs/" },
+  { path = "manual/uchicago/10-transfer-applicants.txt", url = "https://collegeadmissions.uchicago.edu/apply/transfer-applicants/" },
+  { path = "manual/uchicago/11-scholarships.txt", url = "https://collegeadmissions.uchicago.edu/financial-support/scholarships/" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
+# Партия 2. Под-страницы внутри одобренного домена ucla.edu добавлены
+# ассистентом (требования, плата, финпомощь, сроки; PDF — международный гид).
+# python.exe не в сети (McAfee) — снято curl, origin=manual.
 [ucla]
 name = "UCLA (США): приём иностранцев на бакалавриат"
-urls = [
-  "https://admission.ucla.edu/apply/international-applicants",
+files = [
+  { path = "manual/ucla/international-applicants.html", url = "https://admission.ucla.edu/apply/international-applicants" },
+  { path = "manual/ucla/first-year.html", url = "https://admission.ucla.edu/apply/first-year" },
+  { path = "manual/ucla/first-year-requirements.html", url = "https://admission.ucla.edu/apply/first-year/first-year-requirements" },
+  { path = "manual/ucla/first-year-profile-2025.html", url = "https://admission.ucla.edu/apply/first-year/first-year-profile/2025" },
+  { path = "manual/ucla/tuition-fees.html", url = "https://admission.ucla.edu/tuition-aid/tuition-fees" },
+  { path = "manual/ucla/financial-aid-scholarships.html", url = "https://admission.ucla.edu/tuition-aid/financial-aid-and-scholarships" },
+  { path = "manual/ucla/UCLA-International-Admission-Guide-2026.pdf", url = "https://admission.ucla.edu/sites/default/files/documents/UCLA-International-Admission-Guide-2026.pdf" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
 [michigan]
 name = "University of Michigan (США): приём иностранцев на бакалавриат"
-urls = [
-  "https://admissions.umich.edu/apply/international-applicants",
-  "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines",
-  "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines/requirements-country",
-  "https://admissions.umich.edu/apply/international-applicants/exams-visas",
-  "https://admissions.umich.edu/apply/first-year-applicants/requirements-deadlines",
-  "https://admissions.umich.edu/apply/first-year-applicants/college-preparation",
-  "https://admissions.umich.edu/costs-aid/financial-aid",
-  "https://admissions.umich.edu/i-am/international-students",
+files = [
+  { path = "manual/michigan/requirements-deadlines.html", url = "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines" },
+  { path = "manual/michigan/requirements-country.html", url = "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines/requirements-country" },
+  { path = "manual/michigan/exams-visas.html", url = "https://admissions.umich.edu/apply/international-applicants/exams-visas" },
+  { path = "manual/michigan/international-students.html", url = "https://admissions.umich.edu/i-am/international-students" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
