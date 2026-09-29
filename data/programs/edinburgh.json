@@ -1,0 +1,234 @@
+{
+  "id": "edinburgh",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "University of Edinburgh (Эдинбург) — приём иностранцев на бакалавриат",
+    "orig": "University of Edinburgh"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, и суммы эти страницы не называют: вуз пишет, что плата фиксированная и одинаковая по годам, а конкретные ставки лежат по каждому курсу в degree finder. Полной стипендии для иностранца-бакалавра вуз не обещает: из помощи перечислены отдельные награды под узкие случаи (соискатели убежища, олимпиадники, математики, ветеринария), поэтому помощь в карточке не отмечена"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Гражданство страницы приёма не ограничивают: подача описана как общая для иностранцев, граждан ЕС и британцев, отдельного запрета по паспорту нет."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Страна школы сама по себе вход не закрывает: у вуза есть требования по регионам, и Таджикистан разобран на странице Центральной и Западной Азии. Речь идёт не об отказе, а о маршруте через подготовительный год."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "with a Certificate of Secondary Education would normally be required to complete a foundation year before beginning an undergraduate programme at Edinburgh"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Ограничения по году окончания школы страницы приёма не называют."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Возраст абитуриента на этих страницах не упоминается: ни минимального, ни максимального."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Entry to many areas of the University is very competitive, so high standards of performance are generally required and specific requirements vary from programme to programme."
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "English language requirements vary between degrees. Find the specific requirements for your chosen degree in our degree finder."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Эдинбург принимает иностранцев на тех же условиях, что британцев, и подача у них общая — через UCAS.",
+      "evidence": "The application process is the same for international, EU and UK applicants.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "У вуза есть отдельные страницы требований по регионам, и Центральная и Западная Азия в них есть: Афганистан, Армения, Азербайджан, Грузия, Кыргызстан, Таджикистан, Туркменистан разобраны одной страницей.",
+      "evidence": "Undergraduate entry requirements for applicants from Afghanistan, Armenia, Azerbaijan, Georgia, Kyrgystan, Tajikistan and Turkmenistan.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Одиннадцать классов таджикской школы прямого права на бакалавриат не дают: с аттестатом о среднем образовании (Certificate of Secondary Education) вуз обычно требует сперва окончить подготовительный год. Это не отказ, а условие — маршрут через International Foundation Programme.",
+      "evidence": "with a Certificate of Secondary Education would normally be required to complete a foundation year before beginning an undergraduate programme at Edinburgh",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Путь в обход — International Foundation Programme (IFP): годичная подготовительная программа, после которой открывается вход на многие бакалаврские программы Эдинбурга.",
+      "evidence": "our International Foundation Programme (IFP) offers a route into many undergraduate degree programmes at the University of Edinburgh",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Для Колледжа науки и инженерии есть исключения по странам: часть школьных квалификаций принимают напрямую, но Таджикистана в перечисленных странах нет. У Азербайджана, например, принимают аттестат со средним баллом 4,5 и 5 по профильным предметам плюс внутренний экзамен.",
+      "evidence": "passed the Certificate of Secondary Education with an average of 4.5 overall and 5 in required subjects",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Средний балл аттестата вуз не считает по одной шкале: требования выражены оценками и зависят от программы, каждая область конкурентная и просит высоких результатов.",
+      "evidence": "Entry to many areas of the University is very competitive, so high standards of performance are generally required and specific requirements vary from programme to programme.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский нужен всем, независимо от гражданства и страны проживания. Конкретный порог у каждого курса свой — его смотрят в degree finder.",
+      "evidence": "English language requirements vary between degrees. Find the specific requirements for your chosen degree in our degree finder.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Вуз принимает широкий набор международных языковых сертификатов и экзаменов, а не только IELTS.",
+      "evidence": "We also accept a wide range of international English qualifications and English language tests.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Свежесть сертификата ограничена: IELTS, TOEFL, Trinity ISE, Oxford ELLT или Oxford Test of English Advanced действительны не больше двух лет от первого числа месяца начала программы, независимо от гражданства.",
+      "evidence": "it must be no more than two years old on the first of the month in which the degree begins, regardless of your nationality.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский можно добрать на подготовительной программе: успешное окончание модулей Foundation English for Academic Purposes (FEAP) в одной из программ вуза засчитывают как выполнение языкового требования.",
+      "evidence": "We also accept satisfactory completion of all Foundation English for Academic Purposes (FEAP) modules in one of our International Foundation Programmes as meeting our English language requirements.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Суммы обучения эти страницы не называют: вуз пишет, что плата фиксированная и одинаковая по годам, а ставки лежат по каждому курсу в degree finder. Складывать число не из чего, поэтому в карточке его нет.",
+      "evidence": "You can find information on fees for your chosen programme on our degree finder.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь иностранцам-бакалаврам узкая: например, именная стипендия Rosedale OSSD даёт £10 000 одному студенту на первый год, остальные награды — под конкретные случаи (убежище, олимпиады, математика, ветеринария). Общей стипендии, покрывающей обучение, тут нет.",
+      "evidence": "£10,000 will be awarded to one successful candidate during their first year of studies at the University of Edinburgh.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сверх обучения и жизни нужны расходы на визу: сбор за студенческую визу и иммиграционный сбор за медицинское покрытие.",
+      "evidence": "If you need a Student visa to study in the UK, you will need to pay a visa application fee and healthcare surcharge to give you medical coverage while you're studying here.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача идёт через UCAS — по-другому заявку не примут.",
+      "evidence": "UCAS applications are made through the UCAS website on an easy to use online application system.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки цикла 2027 года: заявки открылись 1 сентября 2026, общий срок равного рассмотрения — 13 января 2027. Для медицины и ветеринарии срок раньше — 15 октября 2026.",
+      "evidence": "15 October 2026 Deadline for all applications to medicine and veterinary medicine.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-01",
+    "closes": "2027-01-13",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.ed.ac.uk/studying/international/applying/undergraduate",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Edinburgh. Подача общая через UCAS, требования по курсу — в degree finder."
+    }
+  },
+  "source": {
+    "url": "https://www.ed.ac.uk/studying/international/applying/undergraduate",
+    "pages": [
+      {
+        "url": "https://www.ed.ac.uk/studying/international/applying/undergraduate",
+        "contentHash": "sha256:d4efe3fa15540ed84e6c8d53d51385390e0d619a9b5d8137b05e5cc7cf24c8a7"
+      },
+      {
+        "url": "https://www.ed.ac.uk/studying/international/entry-requirements",
+        "contentHash": "sha256:3d5f970e4756f530ff60cfe54d7e31a6826bb055dbfb46e732ddb6693ba7a4f3"
+      },
+      {
+        "url": "https://www.ed.ac.uk/studying/international/english",
+        "contentHash": "sha256:e2122a5bd7a2b1274896d726ec951774415da74f8fad12d22947ce915d530a48"
+      },
+      {
+        "url": "https://www.ed.ac.uk/studying/international/finances",
+        "contentHash": "sha256:026cf1d5d990d3a32dd50d4b2cf693b3ea082fe230ab96cc65cbb0b8cf28086f"
+      },
+      {
+        "url": "https://www.ed.ac.uk/studying/international/applying/completing-application",
+        "contentHash": "sha256:b45c5f2e2f40b553681ea5e1f3ea17e24b11f4121758398d7c6440b739f88180"
+      },
+      {
+        "url": "https://www.ed.ac.uk/studying/international/country/asia/central-west-asia/other-countries",
+        "contentHash": "sha256:8ac28db519dd07742ec0328a7650e8bb4ffc7ed5f145b00a689da3c3f77427af"
+      },
+      {
+        "url": "https://www.ed.ac.uk/studying/undergraduate/entry-requirements/english-language",
+        "contentHash": "sha256:d4f6de2164d69004b32edb07365f12921cdc70a89dfc32bb197337c1f3403c05"
+      },
+      {
+        "url": "https://www.ed.ac.uk/student-funding/undergraduate/international",
+        "contentHash": "sha256:c258aa39e6b243812d303fabb9dca70fe093dc4c982f25801568a65a453a94e7"
+      },
+      {
+        "url": "https://www.ed.ac.uk/studying/undergraduate/applying",
+        "contentHash": "sha256:b31df0f905447cafd14797ea04d9f44d862d2b75eb8a32e1382c26078e21c3e5"
+      },
+      {
+        "url": "https://www.ed.ac.uk/studying/undergraduate/fees-funding/fees-costs/international-eu-eea",
+        "contentHash": "sha256:3fda983e8df0c62bf8ba42bc6a7e1ed5300b7f223b733a573aeeab4ee408acd8"
+      },
+      {
+        "url": "https://www.ed.ac.uk/studying/undergraduate/applying/after-you-apply/key-dates-for-2026-applicants",
+        "contentHash": "sha256:65e8b9e7e4c3295ced1c38ca19f8658015a2615f408728014c5babedf2c1b02e"
+      },
+      {
+        "url": "https://www.ed.ac.uk/studying/undergraduate/applying/making-an-application/when-to-apply",
+        "contentHash": "sha256:5f235e3543ae9ea568b3ff9aae488e56837f698b05974e41197ab3b36848c584"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}
