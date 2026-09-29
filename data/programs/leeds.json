@@ -1,0 +1,349 @@
+{
+  "id": "leeds",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "University of Leeds (Лидс) — приём иностранцев на бакалавриат",
+    "orig": "University of Leeds"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, и полной помощи на него эти страницы не обещают. Отдельной ставки для иностранцев на бакалавриате страницы вуза не дают — она указана на странице каждого курса; как ориентир, сниженная ставка за год стажировки или учёбы за рубежом на 2027/28 — £4,575, а домашняя (британская) ставка на 2027/28 — £10,050. Есть скидки на обучение для иностранных бакалавров: Undergraduate International Excellence Scholarships — £3,000, £6,000 или £16,000, Undergraduate International Regional Scholarships — £5,000, для подготовительного года — £3,000. Жильё и дорога не покрываются: жизнь в Лидсе ориентировочно от £6,670 до £18,170 за учебный год (39 недель)"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство страницы приёма не ограничивают: вуз открыт для иностранцев и прямо пишет, что они подают через UCAS тем же порядком, что и британцы, отдельного запрета по паспорту нет. Смотрели хаб с требованиями, страницы приёма, квалификаций по странам, английского, платы, стипендий и сроков."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: у вуза есть отдельные страницы требований по странам, включая Таджикистан, Узбекистан и Казахстан. Страна лишь определяет, какой аттестат признаётся и что нужно дополнительно (подготовительный год), а не закрывает приём — это условие, а не отказ."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "You will need to complete a foundation programme, such as the University of Leeds International Foundation Year , or other level 3 qualifications such as A-levels or the International Baccalaureate"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента эти страницы не ограничивают: ни минимального, ни максимального не названо. Есть отдельная подсказка для тех, кому 21 и больше (mature student), и руководство для тех, кому на 1 октября года заезда меньше 18, но это не запрет."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "An average of 4 in the General Certificate of Secondary Education with 4 in two subjects that are relevant to the intended undergraduate degree programme."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "parts": true,
+          "evidence": "IELTS Academic or IELTS for UKVI (Academic): 6.0 overall with no less than 5.5 in each component."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "parts": true,
+          "evidence": "TOEFL iBT (Test of English as a Foreign Language Internet-Based Test): 80 overall with no less than 18 in reading, 17 in listening, 20 in speaking and 19 in writing (for tests taken before 21 January 2026)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4,
+          "parts": true,
+          "evidence": "4 overall with no less than 4 in each component (for tests taken on or after 21 January 2026)"
+        },
+        {
+          "test": "PTE",
+          "min": 60,
+          "parts": true,
+          "evidence": "PTE (Pearson Test of English) Academic or PTE Academic UKVI: 60 overall with no less than 59 in each component."
+        }
+      ],
+      "evidence": "To study at Leeds, you'll need to meet the academic entry requirements for your course and have a recognised English language qualification."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Заявки из-за рубежа принимают тем же порядком, что и от британцев: гражданство вход не ограничивает.",
+      "evidence": "International students should also apply through the UCAS system in the same way as UK students.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Требования зависят от страны: вуз публикует отдельные страницы по странам и регионам. Страна школы определяет, какой аттестат признаётся, а не закрывает приём.",
+      "evidence": "Check the accepted qualifications for your country or region .",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Школьный аттестат Таджикистана прямого входа на бакалавриат не даёт: на странице страны прямо сказано, что нужно пройти подготовительную программу — например, International Foundation Year Лидса, — либо иметь другие квалификации уровня 3 (A-levels, IB). Это не отказ, а условие.",
+      "evidence": "You will need to complete a foundation programme, such as the University of Leeds International Foundation Year , or other level 3 qualifications such as A-levels or the International Baccalaureate",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь без подготовительного года — другие квалификации уровня 3: A-levels или International Baccalaureate; их принимают напрямую.",
+      "evidence": "or other level 3 qualifications such as A-levels or the International Baccalaureate",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Подготовительный год можно взять встроенным в степень: Bachelor degree with integrated International Foundation Year начинается с подготовительного года, преподают академики Лидса на его кампусе, после успешного года ты переходишь на выбранную программу.",
+      "evidence": "The Bachelor degree with integrated International Foundation Year begins with the International Foundation Year programme.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если не проходишь по требованиям, можно взять подготовительный курс перед степенью — так вуз сам описывает обходной путь для иностранцев.",
+      "evidence": "If you're an international student and you don't currently meet the entry requirements for our undergraduate or postgraduate courses, you can take a foundation course before going on to study for a degree at the University of Leeds.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Чтобы войти в подготовительный год по Таджикистану, нужен аттестат со средним баллом 4 из 5 и 4 по двум профильным предметам.",
+      "evidence": "An average of 4 in the General Certificate of Secondary Education with 4 in two subjects that are relevant to the intended undergraduate degree programme.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Требования по странам различаются: для Узбекистана в подготовительный год берут с оценками 4 и выше в целом и 4 по двум профильным предметам.",
+      "evidence": "Umumiy o'rta ta'lim to'g'risida attestat/ shahodatnoma (Certificate of Completed Secondary Education): Marks of 4 or above overall with 4 in two subjects that are relevant to the intended undergraduate degree programme.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен: чтобы учиться в Лидсе, нужно подтвердить признанную языковую квалификацию.",
+      "evidence": "To study at Leeds, you'll need to meet the academic entry requirements for your course and have a recognised English language qualification.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог IELTS для бакалавриата — 6.0 в целом, не ниже 5.5 по каждой части.",
+      "evidence": "IELTS Academic or IELTS for UKVI (Academic): 6.0 overall with no less than 5.5 in each component.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT принимают по двум шкалам: до 21 января 2026 — 80 в целом, с 21 января 2026 — 4 (новая шкала).",
+      "evidence": "TOEFL iBT (Test of English as a Foreign Language Internet-Based Test): 80 overall with no less than 18 in reading, 17 in listening, 20 in speaking and 19 in writing (for tests taken before 21 January 2026) or 4 overall with no less than 4 in each component (for tests taken on or after 21 January 2026).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "PTE Academic — 60 в целом, не ниже 59 по каждой части.",
+      "evidence": "PTE (Pearson Test of English) Academic or PTE Academic UKVI: 60 overall with no less than 59 in each component.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Языковой сертификат должен быть сдан не раньше чем за два года до старта курса; результат должен быть из одной сдачи (или одной сдачи плюс пересдача одной части).",
+      "evidence": "The test must be taken at a test centre. We cannot accept results from an IELTS test that is over two years old at the start date of the course you intend to study. You must meet the requirements through a single IELTS test, or via a single test and One Skill Retake.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "TOEFL MyBest и бумажное издание TOEFL iBT не принимают.",
+      "evidence": "We do not accept TOEFL MyBest scores or the TOEFL iBT Paper Edition.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "PTE Academic Online не принимают.",
+      "evidence": "We do not accept PTE Academic Online.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Для встроенного подготовительного года английский ниже: IELTS 5.5 по каждой части (для направлений Arts, Social Science, Business, Design, Engineering и Science).",
+      "evidence": "IELTS Academic or IELTS for UKVI (Academic) : 5.5 overall with no less than 5.5 in each component.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Отдельной ставки платы для иностранцев-бакалавров на этих страницах нет: она указана на странице конкретного курса.",
+      "evidence": "International fee information is available on individual course pages. Use our Course search to find the fees for your course.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для сравнения, домашняя (британская) ставка на бакалавриате 2027/28 — £10,050 в год.",
+      "evidence": "Tuition fees for UK undergraduate students starting in 2027/28 are £10,050.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата для иностранца выше домашней, потому что её не субсидирует государство.",
+      "evidence": "The fees are higher than for UK students because they are not subsidised by the UK government.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "За год стажировки или учёбы за рубежом ставка снижена: для иностранцев на 2027/28 — £4,575.",
+      "evidence": "For international students, the reduced fee for a work or study abroad placement year for 2027/28 will be £4,575.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Undergraduate International Excellence Scholarships даёт скидку на обучение £3,000, £6,000 или £16,000 (для иностранцев, открыта).",
+      "evidence": "Undergraduate International Excellence Scholarships Award value £3,000, £6,000 or £16,000 tuition fee discount. Fee status International Status Open",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Undergraduate International Regional Scholarships — скидка £5,000 на обучение для иностранцев.",
+      "evidence": "Undergraduate International Regional Scholarships Award value £5,000 fee reduction Fee status International",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для подготовительного года есть International Foundation Year Excellence Scholarships — скидка £3,000 на обучение (на момент снимка приём на неё закрыт).",
+      "evidence": "International Foundation Year Excellence Scholarships Award value £3,000 tuition fee discount Fee status International Status Closed",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Ориентир по жизни в Лидсе: за 39-недельный учебный год — от £6,670 (нижняя оценка) через £12,480 (средняя) до £18,170 (высокая); плата за обучение сюда не входит.",
+      "evidence": "Academic year (39 weeks) £6,670 £12,480 £18,170",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача на бакалавриат — через UCAS; иностранцы подают так же, как британцы.",
+      "evidence": "Apply online through UCAS for full-time courses. International students should also apply through the UCAS system in the same way as UK students.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Срок для медицины, стоматологии и ветеринарии — до 15 октября 2026.",
+      "evidence": "15 October 2026 - UCAS application deadline for all medicine, dentistry and veterinary medicine/science programmes.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Срок для всех остальных курсов — до 13 января 2027 (равное рассмотрение); после этой даты заявку могут принять, если на курсе остались места.",
+      "evidence": "13 January 2027 - UCAS equal consideration application deadline for all other courses. Applications may be accepted after this deadline if the course still has places available.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "К заявке обычно требуется reference от текущего (или последнего) учебного заведения.",
+      "evidence": "Your application should include a reference from your current (or most recent) educational provider",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "С заявкой можно приложить аттестаты и транскрипты, языковой сертификат и паспорт (для иностранцев).",
+      "evidence": "Academic certificates and transcripts (UK mature and international applicants) English language certificate (international applicants) Passport (international applicants)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "С вопросами по квалификациям вуз направляет в International Office (internationaloffice@leeds.ac.uk), а по стране помогают региональные представители вуза.",
+      "evidence": "We work with a global network of overseas representatives who can provide you with advice, assistance and support throughout the application process.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-13",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.leeds.ac.uk/undergraduate-how-to-apply/doc/apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Leeds. Подача бакалавриата — через UCAS; иностранцы подают тем же порядком. Срок большинства курсов — 13 января 2027, медицины и ветеринарии — 15 октября 2026. Школьный аттестат Таджикистана не даёт прямого входа: нужен подготовительный год (International Foundation Year) либо A-levels/IB. Плата для иностранцев — на странице каждого курса."
+    }
+  },
+  "source": {
+    "url": "https://www.leeds.ac.uk/international-applying/doc/entry-requirements",
+    "pages": [
+      {
+        "url": "https://www.leeds.ac.uk/international-applying/doc/entry-requirements",
+        "contentHash": "sha256:af69f95e8c7f6dc05bb1e7c2fb927ab02e7ce8233cf9c17fa152e9b41069ab89"
+      },
+      {
+        "url": "https://www.leeds.ac.uk/admissions-qualifications/21938/tajikistan",
+        "contentHash": "sha256:f216db7d5b9d0d32e5a188a3b18c536b6447ee21b3fb2400a336f212c7ff1212"
+      },
+      {
+        "url": "https://www.leeds.ac.uk/admissions-qualifications/21952/uzbekistan",
+        "contentHash": "sha256:f94198a9132efb146fe689fa8276b31b85c9517f7b8a42795575e667abf5893e"
+      },
+      {
+        "url": "https://www.leeds.ac.uk/admissions-qualifications/21847/kazakhstan",
+        "contentHash": "sha256:9b3012374238b14561af057e947acf082f2de1b97667aba8415fff734ad13dad"
+      },
+      {
+        "url": "https://www.leeds.ac.uk/international-applying/doc/foundation-routes",
+        "contentHash": "sha256:354d8fa65dc5f541cc1bf330fba631914797efd85326a3cdc0714a511ec9a7f6"
+      },
+      {
+        "url": "https://www.leeds.ac.uk/international-applying/doc/international-how-to-apply",
+        "contentHash": "sha256:58f28edae83d2d83ab15a4ec77ed571dcbd729d66ea1c032b4746e2948f331c3"
+      },
+      {
+        "url": "https://www.leeds.ac.uk/international-foundation-year/doc/ify-entry-requirements",
+        "contentHash": "sha256:b660d557222515ce7627564254d767b224e12de57ec0371d5b19c461635815f3"
+      },
+      {
+        "url": "https://www.leeds.ac.uk/undergraduate-fees/doc/fees-undergraduate-fees",
+        "contentHash": "sha256:d389b58887334ffd43cc46e8f6fc28b9c0dab6043a10dbe7570a124e8e82462b"
+      },
+      {
+        "url": "https://www.leeds.ac.uk/undergraduate-how-to-apply/doc/application-timetable",
+        "contentHash": "sha256:2fe327731026af19de7dbaae8c7aa272c9664da9228d68a1146baf4051b4dff1"
+      },
+      {
+        "url": "https://www.leeds.ac.uk/undergraduate-how-to-apply/doc/apply",
+        "contentHash": "sha256:ccf9180ef7b8bb8c959f7a7e29533e0b1b2545f84a637eec43d86af81e52c96d"
+      },
+      {
+        "url": "https://www.leeds.ac.uk/international-fees-costs/doc/living-expenses",
+        "contentHash": "sha256:bdf2f27f5eb2bc53cee343f297d1e8a43f63352afdbf17ba4e42828c04acefc2"
+      },
+      {
+        "url": "https://www.leeds.ac.uk/scholarships?page=2",
+        "contentHash": "sha256:82d7ee089eea6e494e853825235aa03bea3616b7089fea02a732916026af4643"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}
