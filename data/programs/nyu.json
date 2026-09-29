@@ -1,0 +1,237 @@
+{
+  "id": "nyu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "New York University (США) — приём иностранцев на бакалавриат",
+    "orig": "New York University"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Это редкий случай: помощь по нуждаемости NYU обещает всем первокурсникам нью-йоркского кампуса, независимо от гражданства. Программа The NYU Promise покрывает 100% подтверждённой нужды за счёт стипендий и грантов, а семьям с доходом меньше $100 000 и типичными активами обучение не выставляют вовсе. Обещание распространяется и на иностранцев, включая студентов без документов. Остаётся оговорка: заявку на помощь надо подать в срок (CSS Profile), а часть нужды закрывают ожидаемым заработком студента"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство приём не ограничивает: вуз прямо пишет, что все абитуриенты, независимо от гражданства, оцениваются по одним стандартам."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказa по стране нет, нужна завершённая предуниверситетская программа уровня 12-го класса США; аттестат Таджикистана прямо не назван — эквивалент уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "You are eligible to apply as a first-year student if you will complete your country's pre-university education (equivalent to U.S. 12th grade) before enrolling at NYU."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: наоборот, ED II и Regular подают вскоре после выпуска из школы."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастных ограничений страницы приёма не называют: ни минимального, ни максимального."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Числового порога оценок нет: вуз прямо пишет, что требования к GPA для поступления не устанавливает."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "parts": true,
+          "evidence": "100 and above on the TOEFL iBT taken on or before January 20, 2026."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "parts": true,
+          "evidence": "5 or above (overall score and subscores) on the TOEFL iBT taken on or after January 21, 2026."
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 135,
+          "evidence": "135 and above on the Duolingo English Test"
+        },
+        {
+          "test": "IELTS",
+          "min": 7.5,
+          "evidence": "7.5 and above on the IELTS Academic"
+        },
+        {
+          "test": "PTE",
+          "min": 70,
+          "evidence": "70 and above on the PTE Academic"
+        }
+      ],
+      "evidence": "We don't have minimum score requirements, but competitive applicants will receive:"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "NYU will continue to remain test-optional through the 2027-2028 application cycle."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство приём не ограничивает: все абитуриенты, независимо от гражданства, оцениваются по одним стандартам и проходят один и тот же порядок.",
+      "evidence": "All applicants, regardless of citizenship, are held to the same admissions standards and follow the same general process.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен для не-носителей: порогов-минимумов вуз не ставит, но публикует баллы, которые получают конкурентоспособные абитуриенты.",
+      "evidence": "We don't have minimum score requirements, but competitive applicants will receive:",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Ориентиры: TOEFL iBT 100 (сдача до 20 января 2026) или 5 по новой шкале (с 21 января 2026), Duolingo 135, IELTS 7.5, PTE 70.",
+      "evidence": "100 and above on the TOEFL iBT taken on or before January 20, 2026. 5 or above (overall score and subscores) on the TOEFL iBT taken on or after January 21, 2026. 135 and above on the Duolingo English Test 7.5 and above on the IELTS Academic 70 and above on the PTE Academic",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Тесты SAT/ACT необязательны: NYU остаётся test-optional как минимум до приёмной кампании 2027-2028.",
+      "evidence": "NYU will continue to remain test-optional through the 2027-2028 application cycle.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Оценки: порога GPA нет; академический прогресс нужен только для сохранения федеральной помощи.",
+      "evidence": "There is no GPA requirement, though academic progress is required for federal aid eligibility.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "The NYU Promise: вуз закрывает 100% подтверждённой нужды первокурсникам нью-йоркского кампуса через стипендии и гранты; семьям с доходом меньше $100 000 и типичными активами обучение не выставляют.",
+      "evidence": "every undergraduate-domestic and international-who start as a first-year student admitted to our New York campus will have 100% of their demonstrated need met through a combination of scholarships and grants",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь дают независимо от гражданства: обещание прямо включает иностранных абитуриентов и студентов без документов.",
+      "evidence": "regardless of citizenship status. That includes international applicants, as well as undocumented students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявку на помощь надо подать в срок: для Early Decision I — к 10 ноября, для Early Decision II — к 10 января, для Regular Decision — к 1 февраля. Всем, независимо от гражданства, нужен CSS Profile.",
+      "evidence": "All applicants, regardless of citizenship, should complete the CSS Profile , which is required to be considered for NYU scholarships and grants.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обучение платное: плата и сборы $68,576 за год, полная стоимость года — $100,998 (2026-2027). Эти суммы закрывает помощь по нужде.",
+      "evidence": "Tuition and Fees: $68,576 Food and Housing: $26,438 Indirect Costs Books and Supplies: $1,492 Transportation: $2,438 Personal Expenses: $2,054 Total Cost of Attendance : $100,998",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки приёма: Early Decision I — 1 ноября, Early Decision II — 1 января, Regular Decision — 5 января; решения — 15 декабря, 15 февраля и 1 апреля. Время отсечки — 23:59 по местному времени абитуриента.",
+      "evidence": "Early Decision I November 1 December 15 Early Decision II January 1 February 15 Regular Decision January 5 April 1",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача идёт заранее: ED I подают в самом конце выпускного года, а ED II и Regular — вскоре после выпуска, поэтому процесс надо начинать до окончания школы.",
+      "evidence": "NYU's Early Decision II deadline (January 1) and Regular Decision deadline (January 5) will be shortly after you've graduated from high school.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Собеседования NYU не проводит.",
+      "evidence": "No. NYU does not offer interviews to any candidates.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/international-applicants.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: New York University, нью-йоркский кампус (не Абу-Даби и не Шанхай). Помощь по нужде относят именно к нью-йоркскому кампусу."
+    }
+  },
+  "source": {
+    "url": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/international-applicants.html",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/international-applicants.html",
+        "contentHash": "sha256:9ec6171c26b817ccf521a9c342bc4eb3bd111ba6a8d89fe8ace065781baa2aa1"
+      },
+      {
+        "url": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "contentHash": "sha256:f16567d19ff447e2e5a2616e3984bfd27a617e09bf0b4745b9b6044ee1270a1c"
+      },
+      {
+        "url": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants/high-secondary-school-preparation.html",
+        "contentHash": "sha256:ebab657cb8fa19620aef3b4c3c1c2bc1a73d279dbafda0dfaf8fb5bf9cc787c1"
+      },
+      {
+        "url": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/standardized-tests.html",
+        "contentHash": "sha256:fd16526e22c93c13491f52d448c6915db93a1ae80589a889e8adb1d84c45e7d3"
+      },
+      {
+        "url": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/standardized-tests/english-language-testing.html",
+        "contentHash": "sha256:b52874ae218d3b485c56a3bdc412a1de2de8fc9afe622ad88611f644fa234d3e"
+      },
+      {
+        "url": "https://www.nyu.edu/admissions/financial-aid-and-scholarships/cost-of-attendance.html",
+        "contentHash": "sha256:80a2c203c7426e13f18c26c3cc2943c80378470ea5d5a02edf8ceac0d513b999"
+      },
+      {
+        "url": "https://www.nyu.edu/admissions/financial-aid-and-scholarships/applying-as-a-prospective-undergraduate-student/first-year-applicants.html",
+        "contentHash": "sha256:a27675a976c78082acbb2976dfca82a6f551dbb999a448e191945f52883348a6"
+      },
+      {
+        "url": "https://www.nyu.edu/admissions/financial-aid-and-scholarships/applying-as-a-prospective-undergraduate-student/first-year-applicants/the-nyu-promise.html",
+        "contentHash": "sha256:e7007deef4f5b76c9bb075b8fbac83af4179cd7b4ff3931457c83fc253a6a991"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
