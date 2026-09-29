@@ -3160,10 +3160,22 @@ files = [
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
+# Партия 2. Домен manchester.ac.uk одобрен Муродом 2026-09-29. Под-страницы
+# внутри домена добавлены ассистентом: у одного адреса требований данных для
+# карточки нет (хаб), нужны язык, плата, фонд и порядок подачи.
 [manchester]
 name = "University of Manchester (Великобритания): приём иностранцев на бакалавриат"
 urls = [
   "https://www.manchester.ac.uk/study/international/admissions/undergraduate-application-process/undergraduate-entry-requirements/",
+  "https://www.manchester.ac.uk/study/international/admissions/undergraduate-application-process/",
+  "https://www.manchester.ac.uk/study/international/admissions/language-requirements/",
+  "https://www.manchester.ac.uk/study/international/finance-and-scholarships/",
+  "https://www.manchester.ac.uk/study/international/finance-and-scholarships/fees/",
+  "https://www.manchester.ac.uk/study/international/finance-and-scholarships/funding/",
+  "https://www.manchester.ac.uk/study/international/finance-and-scholarships/funding/global-futures-scholarship/",
+  "https://www.manchester.ac.uk/study/international/finance-and-scholarships/funding/humanitarian-scholarship/",
+  "https://www.manchester.ac.uk/study/undergraduate/fees-and-funding/",
+  "https://www.manchester.ac.uk/study/undergraduate/applying/",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
