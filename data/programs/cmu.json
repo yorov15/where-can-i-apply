@@ -1,0 +1,249 @@
+{
+  "id": "cmu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Carnegie Mellon University (США) — приём иностранцев на бакалавриат",
+    "orig": "Carnegie Mellon University"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное и дорогое: на 2026-27 год вуз называет $69,702 за год (ставка за юнит — $969). Суммы для иностранца не отличаются от домашних, но помощи почти нет: вуз прямо пишет, что финансовую помощь иностранцам не даёт, и семья должна планировать оплатить всю стоимость обучения. Исключения — единичные: программа DACA и небольшие стипендии отдельных стран (например, Behring Foundation для Бразилии). Гражданину Таджикистана рассчитывать не на что, поэтому полное покрытие в карточке не отмечено"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство не ограничивают: вуз отдельно описывает приём иностранцев, и порядок со сроками для них такой же, как для американских школьников."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране нет, требования к квалификации смотрят по программам, а обязателен лишь школьный диплом. Аттестат Таджикистана прямо не назван — эквивалент уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "If admitted, you must provide proof of meeting all requirements for an official high school diploma by the end of May of the year of graduation."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют; упомянут только диплом, который надо подтвердить до конца мая года выпуска."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента не ограничивают: назван лишь технический минимум 13 лет для подачи заявки, верхней границы нет."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Carnegie Mellon is committed to a holistic approach to admission where no single grade, score or activity guarantees or disqualifies any candidate for consideration in the admission review process."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7.5,
+          "parts": true,
+          "evidence": "We require at least a 7.5 overall band score on either the paper-based or computer-delivered Academic Examination and give consideration to those with subscores of 7.5 and above."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 102,
+          "parts": true,
+          "evidence": "For exams taken before Jan. 21, 2026: We require at least a 102 overall score and give consideration to those with subscores of 25 and above in each section."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "parts": true,
+          "evidence": "For exams taken on or after Jan. 21, 2026: We require at least a 5 in the overall score and give consideration to those with subscores of 5 and above in each section."
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 135,
+          "parts": true,
+          "evidence": "We require at least a 135 overall score and give consideration to those with the following integrated subscores and above: Literacy: 135 Conversation: 135 Comprehension: 135"
+        }
+      ],
+      "evidence": "If your native language isn't English, you'll need to submit official results from an English language proficiency test."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Carnegie Mellon's undergraduate admission test policy varies according to college or program: The School of Computer Science requires an SAT or an ACT score."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство приём не ограничивает: для иностранцев порядок и сроки подачи такие же, как для американских школьников.",
+      "evidence": "For international students, the application procedure and timetables are essentially the same as for candidates applying from schools in the U.S.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Аттестат Таджикистана прямо не назван; IB и A-levels вуз упоминает как известные ему квалификации, а к ним просит прислать ожидаемые результаты экзаменов.",
+      "evidence": "If you are preparing for the International Baccalaureate or the General Certificate of Education (GCE) A-level examinations, please send your expected exam results.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Диплом школы обязателен: даже после зачисления нужно доказать выполнение всех требований к официальному школьному диплому до конца мая года выпуска.",
+      "evidence": "If admitted, you must provide proof of meeting all requirements for an official high school diploma by the end of May of the year of graduation.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст: подать заявку можно с 13 лет, верхней границы нет.",
+      "evidence": "You must be at least 13 years old when you submit your application.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский обязателен, если он не родной: нужны официальные результаты одного из тестов.",
+      "evidence": "If your native language isn't English, you'll need to submit official results from an English language proficiency test.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог IELTS — 7.5 в целом, смотрят и на части (7.5 и выше).",
+      "evidence": "We require at least a 7.5 overall band score on either the paper-based or computer-delivered Academic Examination and give consideration to those with subscores of 7.5 and above.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT: до 21 января 2026 года нужен балл 102 (и 25+ по частям).",
+      "evidence": "For exams taken before Jan. 21, 2026: We require at least a 102 overall score and give consideration to those with subscores of 25 and above in each section.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "С 21 января 2026 года TOEFL считается по новой шкале: нужен балл 5 в целом (и 5+ по частям).",
+      "evidence": "For exams taken on or after Jan. 21, 2026: We require at least a 5 in the overall score and give consideration to those with subscores of 5 and above in each section.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Duolingo: порог 135 в целом, смотрят и на части.",
+      "evidence": "We require at least a 135 overall score and give consideration to those with the following integrated subscores and above: Literacy: 135 Conversation: 135 Comprehension: 135",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Тесты SAT/ACT в целом необязательны (можно заменить другими), но Школа информатики требует SAT или ACT.",
+      "evidence": "Carnegie Mellon's undergraduate admission test policy varies according to college or program: The School of Computer Science requires an SAT or an ACT score.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Оценки решают не всё: вуз подчёркивает целостный отбор, где ни одна оценка, балл или активность сами по себе не гарантируют и не закрывают поступление.",
+      "evidence": "Carnegie Mellon is committed to a holistic approach to admission where no single grade, score or activity guarantees or disqualifies any candidate for consideration in the admission review process.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение платное: на 2026-27 год вуз называет $69,702 за год (ставка за юнит — $969). Отдельная строка — полная стоимость года с жильём и питанием $93,614.",
+      "evidence": "Undergraduate Tuition & Fees First-Years Entering Fall 2026 Per-Unit Tuition Rate - $969 RESIDENT COMMUTER Tuition $69,702 $69,702 Housing 1 11,700 0",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Финансовую помощь иностранцам вуз не даёт: семья должна планировать оплатить всю стоимость обучения.",
+      "evidence": "Carnegie Mellon doesn't offer financial aid to international students. If you're an international student who plans to enroll at Carnegie Mellon, you and your family must plan to pay the total cost of attendance",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Из помощи — только исключения: DACA-студенты и небольшой набор студентов отдельных стран могут получить институциональное финансирование; есть стипендия Behring Foundation для Бразилии. Для Таджикистана таких нет.",
+      "evidence": "While only U.S. citizens and permanent residents are eligible for federal and state financial aid programs, Deferred Action for Childhood Arrival (DACA) students and a small number of students from specific countries may be eligible for institutional funding opportunities, like a Carnegie Mellon grant.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки: Early Decision — 2 ноября (решение до 15 декабря), Regular Decision — 4 января (решение не позднее 1 апреля). Для Драмы и Музыки свой срок — 1 декабря. Год приёма на странице не назван.",
+      "evidence": "Early Decision Timeline Deadline: November 2 Notified by: December 15 Enroll by: February 1",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.cmu.edu/admission/admission/international-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Carnegie Mellon University, Питтсбург, штат Пенсильвания. Подача — через Common Application; тесты SAT/ACT большинство колледжей принимают гибко, Школа информатики требует их обязательно."
+    }
+  },
+  "source": {
+    "url": "https://www.cmu.edu/admission/admission/international-applicants",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.cmu.edu/admission/admission/international-applicants",
+        "contentHash": "sha256:02178c9a2806f11bd70a2a2c6e38943297e6709581ba84d2642647770b3e1024"
+      },
+      {
+        "url": "https://www.cmu.edu/admission/admission/undergraduate-admission-requirements",
+        "contentHash": "sha256:d37980e0f38ffc5765e2829fe160f851ba422e8a4346a206652bfdd76f7623e4"
+      },
+      {
+        "url": "https://www.cmu.edu/admission/admission/standardized-testing",
+        "contentHash": "sha256:edd8ff85ddcbbacd51539357da0d08d768afa026fd15256ba48e099920d442b5"
+      },
+      {
+        "url": "https://www.cmu.edu/admission/admission/application-plans-deadlines",
+        "contentHash": "sha256:c209c96abe388572d5de81f635502b5ffb4a80b863fedf04ffe35b8ee408b8a9"
+      },
+      {
+        "url": "https://www.cmu.edu/admission/admission/academic-requirements-college-level-work",
+        "contentHash": "sha256:3192b0e5fcc9228b274efcb5341796808934f59b52d8a09b936c5d4526a7632e"
+      },
+      {
+        "url": "https://www.cmu.edu/admission/admission/apply",
+        "contentHash": "sha256:02e2cf43184b8730afb024b7fbbe5616da28052ef8635bca737d365c30bf5188"
+      },
+      {
+        "url": "https://www.cmu.edu/sfs/tuition/undergraduate/index.html",
+        "contentHash": "sha256:f2983d39271de4b647b562412ab62a23caf85c54b5191e5ccb63885504d50360"
+      },
+      {
+        "url": "https://www.cmu.edu/sfs/financial-aid/international/index.html",
+        "contentHash": "sha256:f5c14c352d4d92f7cd43faa6d55f122bbfd6139ec158db8987cd2ea3d4a1fc68"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
