@@ -1,0 +1,220 @@
+{
+  "id": "ucl",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "UCL (University College London) — приём иностранцев на бакалавриат",
+    "orig": "University College London"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Плату за обучение эти страницы не называют: она зависит от курса и статуса оплаты, суммы лежат в разделе Student Finances и на страницах курсов. Из помощи вуз называет стипендии (их ищут через scholarships finder) и внешние источники; конкретных сумм на этих страницах нет"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Страницы приёма UCL не ограничивают гражданство: вуз прямо приветствует иностранцев и говорит, что процесс для них такой же, как для британцев. Ограничения по паспорту нет."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Страна школы сама по себе не ограничена. UCL судит по эквивалентности квалификации: для каждой страны прописаны эквиваленты в проспектусе курса, а кому квалификацию не принимают, для тех есть подготовительный год UPC. Строки про Таджикистан в снимке нет — эквивалент таджикского аттестата надо смотреть в проспектусе по курсу."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Числа лет школы страницы приёма не называют — ни 11, ни 12. Требования выражены квалификацией и оценками (три A-level или эквивалент), а не длиной школы."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Ограничения по году выпуска страницы приёма не называют."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Возраст абитуриента на этих страницах не упоминается: ни минимального, ни максимального."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Our entrance requirements are based on three A levels. Depending on the degree course, we make standard offers in the range A*A*A-ABB."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "Level 1: Overall score of 6.5 and a minimum of 6.0 in each component"
+        }
+      ],
+      "evidence": "There are five levels of English proficiency needed to meet UCL's English language requirements for undergraduate study"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "UCL принимает иностранцев и ждёт от них квалификацию того же уровня, что у британских абитуриентов. Процесс подачи для иностранца такой же, как для британца.",
+      "evidence": "UCL welcomes students from outside the UK and we expect our international applicants to have qualifications of a similar standard to our UK applicants.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Подавать можно только через UCAS — по-другому заявку в UCL не примут. Срок — общий для всех курсов, кроме медицины.",
+      "evidence": "It is not possible to apply to UCL without completing a UCAS application.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Кроме A-level и International Baccalaureate UCL принимает самые разные национальные квалификации, но не все подряд: эквивалент твоей страны смотрят на странице выбранного курса в проспектусе (там есть выбор страны).",
+      "evidence": "In addition to A Levels and the International Baccalaureate, we consider a range of international qualifications for most courses.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Путь в обход национального аттестата — подготовительный год UCL Undergraduate Preparatory Certificates (UPC), он же International Foundation Year. Он для тех, чью школьную квалификацию UCL для бакалавриата не принимает; подают на UPC напрямую, не через UCAS.",
+      "evidence": "These are for international students who have completed high school with a qualification UCL does not accept for undergraduate entry.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Средний балл аттестата вуз не считает: требования выражены оценками. Основа — три A-level, обычные предложения лежат в диапазоне от A*A*A до ABB по курсу.",
+      "evidence": "Our entrance requirements are based on three A levels. Depending on the degree course, we make standard offers in the range A*A*A-ABB.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский нужен всем, кто не из страны с большинством носителей. У UCL пять уровней требований; самый низкий, Level 1, — IELTS 6.5 в целом и не ниже 6.0 по каждой части. Какой уровень нужен именно тебе, решает курс.",
+      "evidence": "Level 1: Overall score of 6.5 and a minimum of 6.0 in each component",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Пять уровней английского по IELTS: Level 1 — 6.5 (не ниже 6.0 по частям), Level 2 — 7.0 (6.5), Level 3 — 7.0 (7.0), Level 4 — 7.5 (7.0), Level 5 — 8.0 (8.0). Нужный уровень указан на странице курса в проспектусе.",
+      "evidence": "Level 2: Overall score of 7.0 and a minimum of 6.5 in each component Level 3: Overall score of 7.0 and a minimum of 7.0 in each component Level 4: Overall score of 7.5 and a minimum of 7.0 in each component Level 5: Overall score of 8 and a minimum of 8.0 in each component",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский можно не сдавать экзаменом: UCL принимает школьную выпускную квалификацию, в которой есть английский, а также 12 месяцев обучения в стране с большинством носителей. Таджикской школы в списках нет, поэтому этот путь надо отдельно сверять.",
+      "evidence": "Completed a school leaving qualification containing English, accepted by UCL",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Вместо IELTS UCL принимает TOEFL iBT, включая новую шкалу после 21 января 2026. Баллы MyBestScore не засчитывают: нужен один результат.",
+      "evidence": "UCL will continue to accept the TOEFL iBT after 21 January 2026.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Плату за обучение эти страницы не называют — только отсылают к разделу о финансах и к страницам курсов. Складывать число не из чего, поэтому суммы в карточке нет.",
+      "evidence": "There are several scholarships available to undergraduate students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии UCL ищут через scholarships finder: единого списка на страницах нет, набор обновляется.",
+      "evidence": "You can also use the scholarships finder to search for awards that you might be eligible for.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцы могут претендовать на стипендии и награды UCL; часть студентов находит деньги у себя дома — своё правительство или Британский совет.",
+      "evidence": "International students can apply for a range of scholarships and awards.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Срок подачи на большинство курсов — 14 января 2026, 18:00 по британскому времени. Это даты цикла 2026 года; сроки следующего цикла на странице ещё не объявлены, их надо смотреть на странице курса.",
+      "evidence": "Our application deadline for most courses is 18:00 (UK time) on 14 January 2026.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для медицины срок раньше — 15 октября 2025, 18:00 по британскому времени.",
+      "evidence": "The deadline for our Medicine course is 18:00 (UK time) on 15 October 2025.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Английский нужно подтвердить, даже если предложение уже есть: это условие предложения. Для цикла с заездом в 2026 году донести подтверждение можно было до 17:00 3 сентября 2026 — точную дату своего цикла смотри в личном кабинете и письме с предложением.",
+      "evidence": "Applicants have until 17:00 UK time on 3 September 2026 to meet all conditions of their offer including English language requirements.",
+      "field": "language",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/how-apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University College London. Заявка одна (UCAS), требования по курсу и уровню английского смотрят на странице курса в проспектусе."
+    }
+  },
+  "source": {
+    "url": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/how-apply",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/how-apply",
+        "contentHash": "sha256:fe76ba1a02442e0cd6bbd82714b9c31527132197d4c9ba6c7c4a6f10d07f268f"
+      },
+      {
+        "url": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/how-apply/guidance-international-applicants",
+        "contentHash": "sha256:c4e7ef9054e70d089336f0bd2a2c70f796f07ea7af3e9b27defa4fcaea847bf8"
+      },
+      {
+        "url": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/how-apply/entry-requirements",
+        "contentHash": "sha256:33f2236602ad15f11790f7315be4341024a334db52877faefebfc88b1f6f7ed8"
+      },
+      {
+        "url": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/how-apply/english-language-requirements",
+        "contentHash": "sha256:9a318d364a22ed181b6e71c646f1fccda25c99718f4c71cde188d61d55f11a47"
+      },
+      {
+        "url": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/funding-your-studies",
+        "contentHash": "sha256:a7c33256ad76684da5dafb9c994ebd4ea7c9cd885e46d0f968eada76edf64d54"
+      },
+      {
+        "url": "https://www.ucl.ac.uk/scholarships/scholarships-finder",
+        "contentHash": "sha256:ce14818a48b9e98ee09c5deb71aeff836f907c19216760ec7481847af09fd00f"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false
+  }
+}

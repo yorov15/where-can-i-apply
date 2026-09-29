@@ -3102,10 +3102,21 @@ files = [
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
+# Партия 2. Домен ucl.ac.uk одобрен Муродом 2026-09-29. Прежний адрес
+# (prospective-students/undergraduate/how-to-apply/international-students)
+# умер — отдаёт 404; рабочие страницы найдены по навигации сайта.
+#
+# Страницы сохранены через curl, а не сборщиком: McAfee на машине не пускает
+# python.exe в сеть (см. cambridge). Тот же приём, что у Sejong и Sogang.
 [ucl]
 name = "UCL (Великобритания): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.ucl.ac.uk/prospective-students/undergraduate/how-to-apply/international-students",
+files = [
+  { path = "manual/ucl/how-apply.html", url = "https://www.ucl.ac.uk/study/prospective-students/undergraduate/how-apply" },
+  { path = "manual/ucl/guidance-international-applicants.html", url = "https://www.ucl.ac.uk/study/prospective-students/undergraduate/how-apply/guidance-international-applicants" },
+  { path = "manual/ucl/entry-requirements.html", url = "https://www.ucl.ac.uk/study/prospective-students/undergraduate/how-apply/entry-requirements" },
+  { path = "manual/ucl/english-language-requirements.html", url = "https://www.ucl.ac.uk/study/prospective-students/undergraduate/how-apply/english-language-requirements" },
+  { path = "manual/ucl/funding-your-studies.html", url = "https://www.ucl.ac.uk/study/prospective-students/undergraduate/funding-your-studies" },
+  { path = "manual/ucl/scholarships-finder.html", url = "https://www.ucl.ac.uk/scholarships/scholarships-finder" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
