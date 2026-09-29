@@ -1,0 +1,263 @@
+{
+  "id": "bristol",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "University of Bristol (Бристоль) — приём иностранцев на бакалавриат",
+    "orig": "University of Bristol"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, и ставки для иностранца на 2026/27 вуз называет по каждому курсу: от £25,500 за гуманитарные и социальные направления, £31,300–£33,400 за науку и инженерию, £45,800 за медицину, £49,700 за стоматологию, £41,900 за ветеринарию. Полностью обучение эти страницы не покрывают. Помощь есть, но частичная: стипендии Think Big (£6,500 и £13,000 в год до четырёх лет) открыты любому иностранцу по плате за обучение, гражданство Таджикистана не мешает, но приём заявок на 2026 год уже закрыт. Отдельные стипендии привязаны к странам (GREAT — Индия, Мексика, Таиланд; ещё одна — Шри-Ланка), для Таджикистана таких нет. Поэтому покрытие в карточке не отмечено"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство страницы приёма не ограничивают: вуз прямо описывает подачу для иностранцев и приветствует заявки из Узбекистана; единственное упоминание гражданства — список англоязычных стран UKVI, чьим гражданам не нужен отдельный языковой экзамен."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: требования к квалификации смотрят по стране, страницы Таджикистана нет, но отказа по стране нет — эквивалент аттестата надо уточнять в приёмной."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Числа лет школы страницы приёма не называют: требования выражены квалификацией и оценками, а не длиной обучения. Отдельного требования «12 лет» нет; при неполной квалификации есть годичный International Foundation Programme."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента на бакалавриате эти страницы не ограничивают: назван только минимальный возраст 16 для подготовительной программы IFP."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "The A-level or IB Diploma (International Baccalaureate) typical offer shows the grades we usually request when we make an offer."
+    },
+    "language": {
+      "definedBy": "institution",
+      "evidence": "Each course specifies one of six language 'profiles', a profile is the level of English required for entry on to that particular course if English is not your first language."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Требования к школьной квалификации вуз смотрит по стране. Страница Узбекистана есть, а Таджикистана среди страниц стран нет; если квалификация не названа, вуз просит писать в приёмную — это не отказ.",
+      "evidence": "If your qualification is not mentioned or you have any further questions, please contact us for advice.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "С IB Diploma или A-Levels берут на бакалавриат сразу; остальные квалификации рассматривают отдельно.",
+      "evidence": "Applicants with the International Baccalaureate (IB) Diploma or A-Levels will be considered for direct admission to our undergraduate degree programmes.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Аттестат 11-летней школы Таджикистана вуз прямо не называет. Обходной путь — International Foundation Programme: годичная подготовка в вузе, после которой успешно сдавших рассматривают на бакалавриат.",
+      "evidence": "A full-time, one-year university preparation course, designed to prepare international students for degree-level study at the University of Bristol.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский нужен всем, для кого он не первый язык: каждый курс задаёт один из шести языковых профилей.",
+      "evidence": "Each course specifies one of six language 'profiles', a profile is the level of English required for entry on to that particular course if English is not your first language.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Числовых порогов на этих страницах нет: точные баллы по каждому экзамену лежат на странице языкового профиля выбранного курса.",
+      "evidence": "The tests and levels you need to achieve to meet the requirements are on each English language profile page.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Языковой сертификат действителен два года от даты экзамена — он должен быть действующим на начало учёбы.",
+      "evidence": "English language proficiency tests should be obtained within two years of the start date of your programme or course.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "На момент подачи нужный уровень английского иметь не обязательно: вуз даст целевую оценку в оффере.",
+      "evidence": "You do not need to have reached the required level before you apply.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Гражданам англоязычных стран по списку UKVI сертификат может не понадобиться; Таджикистана в списке нет.",
+      "evidence": "If you are a national of an English-speaking country as defined by UK Visas and Immigration, then you may be considered to have the required level.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение платное. Ставка 2026/27 для гуманитарных и социальных направлений начинается от £25,500 за год.",
+      "evidence": "Arts, Law and Social Sciences 1ARCH001U Archaeology and Anthropology (BA) Full-time £25,500",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Наука и инженерия дороже: £31,300–£33,400 за год (пример — Artificial Intelligence, £33,400).",
+      "evidence": "Science and Engineering 4SEMT001U Artificial Intelligence (BEng) Full-time £33,400",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Медицина £45,800, стоматология £49,700 за год.",
+      "evidence": "Health and Life Sciences 8MDYF001U Medicine (MBChB) Full-time £45,800 Health and Life Sciences 8MDYF002U Dental Surgery (BDS) Full-time £49,700",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Ветеринария £41,900 за год.",
+      "evidence": "Health and Life Sciences 8MVSF006U Veterinary Science (BVSc) Full-time £41,900",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Ставка на медицину, стоматологию и ветеринарию не меняется по годам программы.",
+      "evidence": "*Tuition fees for Dentistry (BDS), Medicine (MBChB), and Veterinary Sciences (BVSc) will be the same for each year of your programme, covering both pre-clinical and clinical years of study.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть стипендии Think Big: £6,500 и £13,000 в год, до четырёх лет обучения; всего вложено до £5 млн.",
+      "evidence": "Think Big undergraduate scholarships are valued at £6,500 and £13,000 for up to four years of study.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Право на Think Big даёт статус иностранца по плате за обучение; гражданство Таджикистана не мешает. Предложение вуза на момент подачи заявки не нужно.",
+      "evidence": "These scholarships are for applicants with overseas fee status who have applied for an eligible undergraduate or master",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Медицинские и стоматологические курсы бакалавриата под Think Big не подпадают.",
+      "evidence": "Courses in the Bristol Dental School and the Bristol Medical School are not eligible for Think Big undergraduate scholarships.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём заявок на стипендии на 2026 год закрыт (срок был 10 апреля 2026).",
+      "evidence": "Applications for September 2026 entry are closed.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача бакалавриата только через UCAS; код вуза BRISL B78, максимум пять курсов.",
+      "evidence": "You can apply to study at Bristol through the Universities and Colleges Admissions Service (UCAS).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки 2027 года: заявки с 1 сентября 2026; равное рассмотрение — 13 января 2027, 18:00 по британскому времени; окончательный срок для иностранцев — 30 июня 2027; медицина, стоматология и ветеринария — 15 октября 2026.",
+      "evidence": "The equal consideration deadline for undergraduate applications is 13 January 2027 (6 pm, UK time) in your planned entry year.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для визы на часть научных и инженерных курсов уровня магистра (MEng/MSci) нужен сертификат ATAS; обрабатывают в среднем 20 рабочих дней, оформлять заранее.",
+      "evidence": "If you require a visa and will be studying specific undergraduate science and engineering courses at master's level (MEng or MSci), you may need an Academic Technology Approval Scheme (ATAS) certificate before applying for your visa.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-01",
+    "closes": "2027-01-13",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.bristol.ac.uk/study/undergraduate/apply/international/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Bristol. Подача бакалавриата общая через UCAS (код BRISL B78); на International Foundation Programme заявка идёт напрямую в вуз."
+    }
+  },
+  "source": {
+    "url": "https://www.bristol.ac.uk/study/undergraduate/international/",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.bristol.ac.uk/study/undergraduate/international/",
+        "contentHash": "sha256:32a0b9b7e61f51849dd44d1ab8fc589429a6bfbb1c64c5c2f74b1cf2b3262969"
+      },
+      {
+        "url": "https://www.bristol.ac.uk/study/undergraduate/entry-requirements-qualifications/",
+        "contentHash": "sha256:cee35ce97d89dac6e020c07379699bd15e2224ad72aa72e2c3050ee353dd844c"
+      },
+      {
+        "url": "https://www.bristol.ac.uk/international/countries/uzbekistan.html",
+        "contentHash": "sha256:9d4843db0192e2ffd3636e04b12a168f6a3d5d3db64c5d81810210fc89fcc780"
+      },
+      {
+        "url": "https://www.bristol.ac.uk/study/language-requirements/",
+        "contentHash": "sha256:e618687169ee46659525ba8d860a77e7beae87836dfc4bea55f76d4faa0693b0"
+      },
+      {
+        "url": "https://www.bristol.ac.uk/students/support/finances/tuition-fees/ug/overseas/26-27/2026-starters/",
+        "contentHash": "sha256:6255463a30c1048ca9fbcc9ce1e2d326838e815f2300ecacf892969ff84fce44"
+      },
+      {
+        "url": "https://www.bristol.ac.uk/international/fees-finance/scholarships/",
+        "contentHash": "sha256:98a77dfc42007cd05e03408b0cf1e98379cfc397be5289bdeb9bf8036ad07eb0"
+      },
+      {
+        "url": "https://www.bristol.ac.uk/students/support/finances/scholarships/think-big-scholarships/",
+        "contentHash": "sha256:8fa40b5fb635443a53ce13b16fb32fa867251481c4315b9c18bd537c55e6b4f1"
+      },
+      {
+        "url": "https://www.bristol.ac.uk/study/undergraduate/apply/international/",
+        "contentHash": "sha256:20cb1c61d1a67a9b434ab612f81487177098bb7beb95c219f351ee2c8a70c28e"
+      },
+      {
+        "url": "https://www.bristol.ac.uk/study/undergraduate/apply/dates/",
+        "contentHash": "sha256:cd7fe79900b1060c59d10c8107338f055f585698da0d9ad8e764e02bfb26a2dd"
+      },
+      {
+        "url": "https://www.bristol.ac.uk/academic-language/study/ifp/",
+        "contentHash": "sha256:f851faf7f6e8c8999cd1e974c2c59a0be86961302904e0c1162c0d8f40368b19"
+      },
+      {
+        "url": "https://www.bristol.ac.uk/academic-language/study/ifp/requirements.html",
+        "contentHash": "sha256:8076787cfbc35f787401d3eb578cc40bc18a9defe61710ef937c6ec80554784c"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
