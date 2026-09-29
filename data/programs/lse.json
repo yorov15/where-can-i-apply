@@ -1,0 +1,277 @@
+{
+  "id": "lse",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "natural",
+    "business",
+    "social",
+    "humanities"
+  ],
+  "name": {
+    "ru": "LSE (Лондонская школа экономики) — приём иностранцев на бакалавриат",
+    "orig": "London School of Economics and Political Science"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, и эти страницы не называют ставку для иностранца на обычный учебный год: точные суммы стоят на страницах отдельных программ, а в Table of Fees опубликованы только плата за год за рубежом и за год практики. Плата иностранца фиксируется по году поступления и не растёт в следующие годы, но для каждого нового набора её поднимают. Помощь узкая: LSE Undergraduate Support Scheme даёт по достатку семьи обычно £15 000–£25 000 в год, но денег меньше, чем заявок, и получают не все. Поэтому помощь в карточке не отмечена"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство страницы приёма LSE не ограничивают: вуз открыто принимает иностранцев и делит студентов по статусу оплаты home/overseas, а не по паспорту; требования к паспорту в источниках нет."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы вход не закрывает: LSE смотрит квалификацию, а не страну. Для Таджикистана есть отдельная страница, где сказано, что школьный аттестат напрямую не принимают и надо смотреть альтернативы, — но это про квалификацию, а не запрет страны."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Числа лет школы LSE не называет (ни 11, ни 12): решает квалификация. Таджикский аттестат 11-летней школы напрямую не принимается — путь идёт через принимаемые альтернативы (AP, International Foundation Programme британского вуза, год учёбы в вузе), поэтому точный случай надо уточнять в приёмной."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Год окончания школы не ограничивают: стандартный путь — подача в выпускном классе по прогнозным оценкам, отдельного требования к году выпуска в источниках нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст не ограничивают: ни минимального, ни максимального LSE не называет."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "We express our standard offer in terms of GCE A-levels and the International Baccalaureate Diploma Programme (IB)."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7.0,
+          "parts": true,
+          "evidence": "IELTS Academic (International English Language Testing Service) Including online version 7.0 overall and 7.0 in each component (in one exam sitting only)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "parts": true,
+          "evidence": "TOEFL iBT (including Home and Paper Editions) 100 overall , with a minimum of: 27 in Writing 25 in Reading 24 in Listening 24 in Speaking (in one exam sitting only)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5.5,
+          "parts": true,
+          "evidence": "Updated scale (tests from January 2026)* 5.5 overall , with a minimum of: 5 in Writing 5 in Reading 5 in Listening 5 in Speaking (in one exam sitting only)"
+        },
+        {
+          "test": "PTE",
+          "min": 70,
+          "parts": true,
+          "evidence": "Pearson Test of English (Academic) (PTEA) (in person only) 70 overall with 70 in all components (in one sitting)"
+        }
+      ],
+      "evidence": "All undergraduate students are required to be sufficiently proficient in the English language to benefit from their studies at the School."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Таджикский аттестат о среднем образовании (Certificate of Completed Secondary Education) LSE напрямую не принимает как входную квалификацию — вместо него надо смотреть другие принимаемые международные квалификации.",
+      "evidence": "The Certificate of Completed Secondary Education isn't acceptable as an entry qualification for LSE. Please view information on other accepted international qualifications for alternative options.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Вместо школьного аттестата LSE может рассмотреть: не менее пяти предметов Advanced Placement за максимум три года, квалификацию University of London International, подготовительную программу (foundation) или год учёбы на бакалавриате в другом вузе.",
+      "evidence": "the following are international qualifications with which applicants may be eligible for consideration by LSE:",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Подготовительную программу LSE засчитывает только если её ведёт британский вуз.",
+      "evidence": "LSE will only consider International Foundation Programmes delivered by UK institutions.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Тем, кто предъявляет нетрадиционные или малоизвестные квалификации, LSE может назначить собственный вступительный тест UGAA по английскому и математике.",
+      "evidence": "Some applicants taking non-traditional qualifications or less well-known qualifications may be required to sit the Undergraduate Admissions Assessment (UGAA) as part of their application to LSE.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Общий уровень LSE выражает в оценках GCE A-level и баллах IB; по каждой программе свой стандартный оффер, смотреть надо страницу программы.",
+      "evidence": "We express our standard offer in terms of GCE A-levels and the International Baccalaureate Diploma Programme (IB).",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "По IB проходной диапазон LSE — от 37 баллов (три предмета Higher level на 6 6 6) до 39 баллов (три Higher level на 7 6 6).",
+      "evidence": "The International Baccalaureate is scored out of 45 points and the entry requirements for LSE range from 37 points overall (with three Higher level subjects at grades 6 6 6) to 39 points overall (with three Higher level subjects at grades 7 6 6).",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Предметные требования и желательные комбинации предметов у каждой программы свои — LSE отсылает к страницам программ.",
+      "evidence": "Search our programme pages to find out more about degree specific entry requirements, preferred subject combinations and desirable skills and attributes.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "На юрфак (LLB, код M100) обязателен тест LNAT; для приёма в сентябре 2027 его можно сдать с 1 сентября по 31 декабря 2026.",
+      "evidence": "For entry in September 2027 (or deferred entry in September 2028) the LNAT can be taken between 1 September 2026 and 31 December 2026.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для BSc Economics и BSc Econometrics and Mathematical Economics на приём сентября 2027 тест TMUA обязателен для всех.",
+      "evidence": "For these two programmes for September 2027 entry taking the TMUA is mandatory - all applicants are required to take the test.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Английский нужен всем бакалаврам — уровень должен позволять учиться на английском.",
+      "evidence": "All undergraduate students are required to be sufficiently proficient in the English language to benefit from their studies at the School.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Подтверждать английский нужно не при подаче, а после оффера — сертификат просят получить до срока в июле.",
+      "evidence": "If we make you an offer for one of our undergraduate programmes and we require an English language qualification, we will ask you to obtain one of the acceptable qualifications below before our deadline in July .",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "IELTS Academic (включая онлайн-версию) — 7.0 в целом и 7.0 по каждой части, за один сеанс.",
+      "evidence": "IELTS Academic (International English Language Testing Service) Including online version 7.0 overall and 7.0 in each component (in one exam sitting only)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT (включая Home и Paper) — 100 в целом при минимумах 27 письмо, 25 чтение, 24 аудирование, 24 говорение; по новой шкале с января 2026 — 5.5 в целом и минимум 5 по каждой части.",
+      "evidence": "TOEFL iBT (including Home and Paper Editions) 100 overall , with a minimum of: 27 in Writing 25 in Reading 24 in Listening 24 in Speaking (in one exam sitting only) *Updated scale (tests from January 2026)* 5.5 overall , with a minimum of: 5 in Writing 5 in Reading 5 in Listening 5 in Speaking (in one exam sitting only)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Баллы считают только с одного экзамена: смешивать части из разных тестов нельзя. IELTS, TOEFL и Trinity годны два года и только если сданы не раньше чем за два года до 1 сентября года поступления.",
+      "evidence": "CAE, CPE, IELTS, TOEFL, and Trinity test scores must be achieved from one sitting. We will not accept individual components scores from multiple tests. IELTS, TOEFL, and Trinity are also only valid for two years. Applicants can only use these qualifications if they were taken within two years of the start of your programme, which is 1 September of your year of entry.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Ставку для иностранца на обычный год бакалавриата эти страницы не называют: точные суммы стоят на страницах программ, а уровни платы публикуются в Table of Fees.",
+      "evidence": "Undergraduate tuition fees are listed on the undergraduate degree programme pages",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата иностранца фиксируется по году поступления и не меняется в следующие годы, но для каждого нового набора её поднимают.",
+      "evidence": "The Overseas undergraduate fee, for entrants from 2020/21 onwards, is fixed from the year of entry for subsequent years, i.e. students commencing their studies in 2024/25 will be charged the same fee which is charged in 2024/25 in each subsequent year of study. Fee levels for each new cohort will rise each year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь для иностранцев: LSE Undergraduate Support Scheme даёт обычно £15 000–£25 000 в год, продлевая при успешной учёбе; право имеют студенты с overseas-статусом оплаты и оффером на любую программу. Заявок больше, чем денег, поэтому получают не все.",
+      "evidence": "Award amounts vary depending on individual circumstances but are usually between £15,000 and £25,000 per year. Any award made will be renewed for each year of your programme, subject to satisfactory academic progress.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача только через UCAS; заявки напрямую в школу LSE не рассматривает.",
+      "evidence": "LSE receives all applications via UCAS. We do not consider applications made directly to the School.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "В UCAS Extra и Clearing LSE не участвует — позже срока заявку не примут.",
+      "evidence": "Please note - LSE does not participate in UCAS Extra or Clearing.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Приём 2027 года: цикл UCAS открылся 2 сентября 2026; крайний срок для полного и равного рассмотрения — 13 января 2027, 18:00 GMT.",
+      "evidence": "13 January 2027 (18.00 GMT) UCAS equal consideration deadline.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-02",
+    "closes": "2027-01-13",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.lse.ac.uk/study-at-lse/Undergraduate/Prospective-Students/How-to-Apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: The London School of Economics and Political Science. Подача общая через UCAS, требования по стране, плата и помощь — на страницах приёма LSE."
+    }
+  },
+  "source": {
+    "url": "https://www.lse.ac.uk/study-at-lse/Undergraduate/Prospective-Students/How-to-Apply",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.lse.ac.uk/study-at-lse/Undergraduate/Prospective-Students/How-to-Apply",
+        "contentHash": "sha256:70ae3da7ff5339e41b7166bbb9bc53a34b4e65b294b0b44e26ba7787f7ef590d"
+      },
+      {
+        "url": "https://www.lse.ac.uk/study-at-lse/Undergraduate/Prospective-Students/How-to-Apply/Entry-Requirements",
+        "contentHash": "sha256:7ee9510139c98eced3e0d5199723b582ca23c14ccdde1e52a965415ec11e44d7"
+      },
+      {
+        "url": "https://www.lse.ac.uk/study-at-lse/international-students/country-pages/tajikistan",
+        "contentHash": "sha256:11e79ce538502fbae887d10836d6ebe78dbcc1e16f3ffc6a4d47d04846b1b6e9"
+      },
+      {
+        "url": "https://www.lse.ac.uk/study-at-lse/Undergraduate/Prospective-Students/How-to-Apply/English-language-requirements",
+        "contentHash": "sha256:136505428fdf513c24c0a5747a990bfaab89ed6b0b82b4aff8ae53c091ed70cc"
+      },
+      {
+        "url": "https://www.lse.ac.uk/study-at-lse/Undergraduate/fees-and-funding",
+        "contentHash": "sha256:0ae0c04cbf86fcd38125bae3031d52552cd67365885f9bc1de13bcba6d91658a"
+      },
+      {
+        "url": "https://info.lse.ac.uk/staff/divisions/Planning-Division/Table-of-Fees",
+        "contentHash": "sha256:d542ccb2cd36f1aa5f568be9d41f6e33d8f7636301930069cde0447760365fce"
+      },
+      {
+        "url": "https://www.lse.ac.uk/study-at-lse/Undergraduate/fees-and-funding/LSE-financial-support-Overseas-students",
+        "contentHash": "sha256:86e6a2d3e7b821de9e9558d848255e416c5b404cb1242acceeda5c7aeec56c26"
+      },
+      {
+        "url": "https://www.lse.ac.uk/study-at-lse/Undergraduate/fees-and-funding/undergraduate-support-scheme",
+        "contentHash": "sha256:d4c6b334f68dc6604960fbc54657aa6890d0fe237c2df9f69682321aa6b22bd8"
+      },
+      {
+        "url": "https://www.lse.ac.uk/study-at-lse/Undergraduate/Prospective-Students/How-to-Apply/Admissions-Calendar",
+        "contentHash": "sha256:c665845da06f09a109325a330501de5fef5c097750448cb24f50a42ad958c077"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
