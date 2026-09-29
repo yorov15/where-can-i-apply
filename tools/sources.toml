@@ -3078,10 +3078,26 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
+# Партия 2. Домен undergraduate.study.cam.ac.uk одобрен Муродом 2026-09-29;
+# страницы выбраны по навигации самого сайта (меню «International» и
+# «Applying») — решение Мурода «под-страницы добавляй сам» от 29.09.2026.
+#
+# Страницы сохранены через curl, а не сборщиком: с 29.09.2026 файервол
+# McAfee на машине перестал пускать python.exe в сеть (curl и браузер
+# проходят), поэтому конвейер их не снимает. Тот же приём, что у Sejong и
+# Sogang (manual/README.md); для слежения источник помечается ручным.
 [cambridge]
 name = "University of Cambridge (Великобритания): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.undergraduate.study.cam.ac.uk/international-students",
+files = [
+  { path = "manual/cambridge/international-students.html", url = "https://www.undergraduate.study.cam.ac.uk/international-students" },
+  { path = "manual/cambridge/international-entry-requirements.html", url = "https://www.undergraduate.study.cam.ac.uk/international-students/international-entry-requirements" },
+  { path = "manual/cambridge/entry-requirements.html", url = "https://www.undergraduate.study.cam.ac.uk/apply/before/entry-requirements" },
+  { path = "manual/cambridge/accepted-qualifications.html", url = "https://www.undergraduate.study.cam.ac.uk/apply/before/accepted-qualifications" },
+  { path = "manual/cambridge/international-fees-and-costs.html", url = "https://www.undergraduate.study.cam.ac.uk/international-students/international-fees-and-costs" },
+  { path = "manual/cambridge/financial-support.html", url = "https://www.undergraduate.study.cam.ac.uk/international-students/financial-support" },
+  { path = "manual/cambridge/scholarships-bursaries.html", url = "https://www.undergraduate.study.cam.ac.uk/fees-funding/scholarships-bursaries" },
+  { path = "manual/cambridge/international-applications.html", url = "https://www.undergraduate.study.cam.ac.uk/international-students/international-applications" },
+  { path = "manual/cambridge/application-dates-deadlines.html", url = "https://www.undergraduate.study.cam.ac.uk/apply/application-dates-deadlines" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"

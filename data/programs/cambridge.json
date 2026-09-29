@@ -1,0 +1,267 @@
+{
+  "id": "cambridge",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "University of Cambridge (Кембриджский университет) — приём иностранцев на бакалавриат",
+    "orig": "University of Cambridge"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Иностранец платит полную стоимость: обучение на 2027 год идёт пятью ступенями от £30 798 до £70 554 в год в зависимости от курса, плюс годовой сбор Колледжу и расходы на жизнь. Помощь иностранцам ограничена, в основном частичная и по достатку семьи; полных бакалаврских стипендий почти нет"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Страницы приёма Cambridge не ограничивают гражданство: вуз открыт для иностранцев, отдельного требования к паспорту нет. Про приём по гражданству не сказано ничего; слова об английском относятся к стране с большинством носителей, а не к паспорту. Смотрели международный приём, требования, принимаемые квалификации, плату, финпомощь, сроки."
+    },
+    "schoolCountry": {
+      "allow": "*",
+      "deny": [
+        "TJ"
+      ],
+      "evidence": "If your country/region is not listed, it is likely that your local/national qualifications are not accepted."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Числа лет школы Cambridge не называет — ни 11, ни 12. Вуз судит по квалификации, а не по длине школы. Ближайшая к таджикской строка — аттестат СНГ (Attestat/Svidetel' stvo o Srednem Obrazovanii): он назван недостаточно конкурентным, и вуз советует сначала дополнительное обучение. Свой случай с 11-летней школой надо обсуждать с Колледжем письмом."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Года выпуска страницы приёма не ограничивают: большинство подаёт в выпускном классе по прогнозным оценкам, итоговые оценки присылают только принявшие предложение места. Предела по году выпуска нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-29",
+      "note": "Верхнего предела по возрасту на страницах приёма нет. Числа как такового не стоит: вуз лишь пишет, что Колледжи штатно не берут младше 18 и что с 16 лет бывают дополнительные требования. Медицина — отдельный случай с собственными возрастными правилами."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Most applicants study 3 to 4 A level subjects and our offers are usually based on 3 A levels taken together in Year 13."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7.5,
+          "parts": true,
+          "evidence": "IELTS Academic - normally a minimum overall grade of 7.5, usually with 7.0 or above in each element"
+        }
+      ],
+      "evidence": "your English language skills must be good enough for you to"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Таджикистана в списке стран и квалификаций Cambridge нет. Вуз прямо говорит: если твоей страны/региона в списке нет, местные национальные квалификации, скорее всего, не принимаются. Для выпускника таджикской школы это значит, что одного аттестата для подачи мало — нужна квалификация из списка (A-level, IB, AP) либо письмо в приёмную комиссию выбранного Колледжа о своём случае.",
+      "evidence": "If your country/region is not listed, it is likely that your local/national qualifications are not accepted.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Путь в обход национального аттестата — сдавать то, на что Cambridge смотрит в первую очередь: британские A-level или International Baccalaureate. Именно на них построены требования приёма, и приёмная комиссия оценивает заявку по этой квалификации независимо от страны школы.",
+      "evidence": "We mostly refer to A levels and the International Baccalaureate for our entry requirements.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ориентир по баллам для альтернативных квалификаций: IB обычно просят 41-42 балла из 45 с 776 на профильных предметах Higher Level. Точный набор оценок стоит на странице выбранного курса; часть Колледжей ставит планку выше минимума.",
+      "evidence": "Minimum offer levels are 41-42 points out of 45, with 776 in Higher Level subjects.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Средний балл аттестата вуз не считает: требование выражено оценками A-level/IB. Большинство абитуриентов берут 3-4 предмета A-level, и предложение обычно строят на трёх, сданных вместе в выпускном году; четвёртый предмет преимущества не даёт.",
+      "evidence": "Most applicants study 3 to 4 A level subjects and our offers are usually based on 3 A levels taken together in Year 13.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Числа лет школы источник не называет. Ближайшая к таджикской ситуация — аттестат СНГ (Attestat/Svidetel' stvo o Srednem Obrazovanii): Cambridge пишет, что с одним таким аттестатом поступать не конкурентно и, скорее всего, безуспешно, и советует сначала пройти дополнительное обучение. Свой случай (11 лет школы) надо обсуждать с Колледжем заранее.",
+      "evidence": "Applicants with the Attestat/Svidetel' stvo o Srednem Obrazovanii alone will not be competitive and are unlikely to be successful.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский нужен всем, кто не из страны с большинством носителей. Для зачисления обычный минимум — IELTS Academic 7.5 в целом, как правило не ниже 7.0 по каждой части. Сертификат можно не прикладывать к заявке и досдать уже как условие предложения места.",
+      "evidence": "IELTS Academic - normally a minimum overall grade of 7.5, usually with 7.0 or above in each element",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для собеседования порог ниже: к моменту подачи советуют уровень примерно IELTS Academic 6.5 в целом, не ниже 6.0 по каждой части. Это не порог зачисления — если собеседование пройдено и есть предложение, балл всё равно надо будет поднять до минимума.",
+      "evidence": "To take part in an interview, we recommend that, at the point of application, your English language ability is equivalent to at least IELTS Academic 6.5 overall, with no element below 6.0.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Есть путь без IELTS: сертификат не нужен, если сама школьная выпускная квалификация подтверждает английский уровня C1 — как немецкий Abitur или французский Baccalaureat с английским. Таджикский аттестат вуз к таким не относит, поэтому годится ли твой случай, надо отдельно спрашивать в Колледже.",
+      "evidence": "School-leaving qualifications that demonstrate English language attainment at C1 level or above.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "На часть курсов нужен вступительный экзамен, и его сдают до решения о приёме. ESAT — для химической инженерии, инженерии, естественных наук и ветеринарии; TMUA — для математики; UCAT — для медицины; LNAT — для права. Регистрация и сдача идут осенью, ESAT проходит 12-16 октября.",
+      "evidence": "Applicants for subjects where completing an admissions test is part of the standard undergraduate admissions process will be required to complete that assessment.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Верхнего предела по возрасту нет. Колледжи штатно не берут тех, кому меньше 18 на момент начала учёбы, но это не запрет: вуз просит заранее поговорить с выбранным Колледжем. Медицина — отдельный случай с дополнительными возрастными требованиями.",
+      "evidence": "The Colleges do not routinely admit students under the age of 18.",
+      "field": "age",
+      "kind": "note"
+    },
+    {
+      "ru": "Плата за обучение для иностранца зависит от курса и на 2027 год идёт пятью ступенями: гуманитарные и общественные науки — £30 798, математика — £34 356, архитектура, дизайн, география и музыка — £40 296, инженерия, информатика, естественные науки и менеджмент — £46 872, медицина и ветеринария — £70 554 в год.",
+      "evidence": "Chemical Engineering and Biotechnology; Computer Science; Engineering; Management Studies; Manufacturing Engineering; Natural Sciences; Psychological and Behavioural Sciences £46,872 5 Medical and Veterinary Science (including for this purpose the Second M.B. and Second Vet.M.B. Examinations) £70,554",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сверх платы за обучение иностранцы обычно платят ещё и годовой сбор Колледжу — он свой в каждом Колледже и часто фиксирован на весь срок учёбы. Плюс расходы на жизнь; для визы надо заранее доказать, что можешь всё это оплатить.",
+      "evidence": "All international/overseas fee status students normally have to pay an annual College fee in addition to University tuition fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача платная: большинство иностранцев платят за заявку £60.",
+      "evidence": "Most international applicants* are required to pay an application fee of £60.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 60,
+        "currency": "GBP",
+        "evidence": "Most international applicants* are required to pay an application fee of £60."
+      }
+    },
+    {
+      "ru": "Помощь иностранцам ограничена и в основном частичная: Колледжи, Cambridge Commonwealth, European and International Trust и страновые стипендии. Полных бакалаврских стипендий почти нет, а те, что есть, считают по достатку семьи (means-tested), то есть это не награда за оценки, а расчёт нуждаемости.",
+      "evidence": "The financial support available for international undergraduates is limited but at Cambridge this includes College awards; Cambridge Commonwealth, European and International Trust awards; and country-specific scholarships.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Большая часть поддержки — частичный вклад, а не полное покрытие, и почти всегда с учётом доходов семьи.",
+      "evidence": "Few full undergraduate scholarships are available - most support is a partial contribution and is means-tested.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельно вуз называет стипендии Cambridge Trust: их дают иностранцам, уже принятым Колледжем, и отбор тоже по нужде. Просить их заранее в заявке нельзя — сначала предложение места, потом анкета от Колледжа.",
+      "evidence": "The Cambridge Trust offers awards to overseas students, including affiliated students",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Часть Колледжей даёт иностранцам частичную финансовую поддержку — спрашивать надо в приёмном офисе своего Колледжа.",
+      "evidence": "Some Colleges offer partial financial support for overseas students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Основной срок подачи на 2027 год — 15 октября 2026, 18:00 по британскому времени; заявка идёт через UCAS.",
+      "evidence": "15 October 2026 Deadline to submit your UCAS application (6pm UK time).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "До 22 октября 2026 (18:00 по британскому времени) нужно дослать форму My Cambridge Application — это дополнительная анкета помимо UCAS.",
+      "evidence": "22 October 2026 Deadline to submit My Cambridge Application (6pm UK time).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Собеседования основного тура идут в декабре 2026, а исход заявки объявляют 27 января 2027.",
+      "evidence": "27 January 2027 If you were interviewed in the main interview period (December 2026) you will find out the outcome of your application on this date.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-10-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.undergraduate.study.cam.ac.uk/apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Cambridge. Заявка одна (UCAS), зачисляют и курируют Колледжи, требования по курсу и Колледжу могут отличаться."
+    }
+  },
+  "source": {
+    "url": "https://www.undergraduate.study.cam.ac.uk/international-students",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.undergraduate.study.cam.ac.uk/international-students",
+        "contentHash": "sha256:7039874c087949795c358592e0a5071e4c2d07ae2c86a04ed7d6ecefd53153f2"
+      },
+      {
+        "url": "https://www.undergraduate.study.cam.ac.uk/international-students/international-entry-requirements",
+        "contentHash": "sha256:826c4842ed25949cdb1483668f751d0e37950d3af34d456462e0b9388f2b261a"
+      },
+      {
+        "url": "https://www.undergraduate.study.cam.ac.uk/apply/before/entry-requirements",
+        "contentHash": "sha256:b32fdcf8afad77509fcafcda618168fae31d03cef4c09c61aa83607b25cac2e0"
+      },
+      {
+        "url": "https://www.undergraduate.study.cam.ac.uk/apply/before/accepted-qualifications",
+        "contentHash": "sha256:ea78055987a850da1457c083be27744a484fdd7fcba3c0d854c193cad91d894e"
+      },
+      {
+        "url": "https://www.undergraduate.study.cam.ac.uk/international-students/international-fees-and-costs",
+        "contentHash": "sha256:6238e8836d9b0fbd8d97b3f145478143da98ad561d632cca4f313db142876874"
+      },
+      {
+        "url": "https://www.undergraduate.study.cam.ac.uk/international-students/financial-support",
+        "contentHash": "sha256:0d52413c0d5418785114387d3c468475b7b92721d40429ad7e1eae647297933e"
+      },
+      {
+        "url": "https://www.undergraduate.study.cam.ac.uk/fees-funding/scholarships-bursaries",
+        "contentHash": "sha256:ab1123232612d1daeedf83d96dda870c3f66da77ec82b3086fd3b464cd51a3e6"
+      },
+      {
+        "url": "https://www.undergraduate.study.cam.ac.uk/international-students/international-applications",
+        "contentHash": "sha256:c05faffd73c9082cf29763ea460d9c60f408824d0e49c7d8115dce78e6397180"
+      },
+      {
+        "url": "https://www.undergraduate.study.cam.ac.uk/apply/application-dates-deadlines",
+        "contentHash": "sha256:5d9d9c915fa3c64c8b361c482d620793468d41a0539f2010bf77857e07ed6c5d"
+      }
+    ],
+    "lastVerified": "2026-09-29",
+    "humanChecked": false
+  }
+}
