@@ -1,0 +1,219 @@
+{
+  "id": "ut-austin",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Texas at Austin (США) — приём иностранцев на бакалавриат",
+    "orig": "The University of Texas at Austin"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное. Для иностранца (Non-Resident) вуз называет $42,554–$51,106 за год 2026-27, полная стоимость года — $64,204–$72,916. Часть стипендий выдаётся без учёта нуждаемости, но федеральная и техасская помощь требуют FAFSA/TASFA, а их гражданам Таджикистана не дают; программа Texas Advance Commitment работает только для резидентов Техаса. Отдельных стипендий для иностранцев страница не называет, поэтому полное покрытие в карточке не отмечено"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство приём не ограничивает: для иностранцев описан отдельный порядок подачи, отказа по паспорту нет."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: нужен аттестат, эквивалентный американской школе, но отказа по стране нет; Таджикистан поимённо не назван — эквивалент уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "You must submit documentation showing that you have completed an accredited secondary school series equivalent to that of a U.S. high school."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: важны сроки подачи, а не давность аттестата."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента страницы приёма не ограничивают: ни минимального, ни максимального не названо."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Transcripts should list all of your high school coursework (from 9th-11th grade) as well as your class rank."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 79,
+          "evidence": "Minimum scores acceptable for admission are: TOEFL: 79 (internet-based test) IELTS: An overall band of 6.5 on the Academic Examination DET: 115 minimum overall score"
+        },
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "Minimum scores acceptable for admission are: TOEFL: 79 (internet-based test) IELTS: An overall band of 6.5 on the Academic Examination DET: 115 minimum overall score"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 115,
+          "evidence": "Minimum scores acceptable for admission are: TOEFL: 79 (internet-based test) IELTS: An overall band of 6.5 on the Academic Examination DET: 115 minimum overall score"
+        }
+      ],
+      "evidence": "You must submit Test of English as a Foreign Language (TOEFL), International English Language Testing System (IELTS) or Duolingo English Test (DET) scores unless you graduated from a high school in the United States or in a country where English is the only official language after completing at least three years of study."
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Send at least one official SAT or ACT score directly from the testing agency*."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем вуз считает того, кто не гражданин и не постоянный резидент США и не окончил школу Техаса. Отказа по гражданству нет — для иностранцев описан отдельный, такой же порядок подачи.",
+      "evidence": "You are neither a U.S. citizen or permanent resident. You did not graduate from a Texas high school.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужен аттестат о среднем образовании, эквивалентный американской школе; Таджикистан поимённо не назван.",
+      "evidence": "You must submit documentation showing that you have completed an accredited secondary school series equivalent to that of a U.S. high school.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "В транскрипт должны войти все школьные оценки, начиная с 9-го класса, и место в классе (class rank).",
+      "evidence": "Transcripts should list all of your high school coursework (from 9th-11th grade) as well as your class rank.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский нужен всем, кроме тех, кто окончил школу в стране, где английский — единственный официальный, проучившись там минимум три года; Таджикистана в этом списке нет.",
+      "evidence": "You must submit Test of English as a Foreign Language (TOEFL), International English Language Testing System (IELTS) or Duolingo English Test (DET) scores unless you graduated from a high school in the United States or in a country where English is the only official language after completing at least three years of study.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Пороги английского: TOEFL 79 (iBT), IELTS 6.5 в целом, DET 115.",
+      "evidence": "Minimum scores acceptable for admission are: TOEFL: 79 (internet-based test) IELTS: An overall band of 6.5 on the Academic Examination DET: 115 minimum overall score",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "SAT или ACT обязателен: хотя бы один официальный результат прямо из тестового агентства.",
+      "evidence": "Send at least one official SAT or ACT score directly from the testing agency*.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение платное. Non-Resident Tuition на 2026-27 — $42,554–$51,106 за год; полная стоимость года — $64,204–$72,916.",
+      "evidence": "Non-Resident Tuition $42,554-$51,106 Housing and Food $15,420-$15,580 Transportation $1,840 Books, course materials, supplies and equipment $724 Personal / Miscellaneous $3,666",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за рассмотрение заявки для иностранца — $90, и права на её снятие у иностранцев нет.",
+      "evidence": "What is the application fee? The application fee is $90 for international students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Снятия платы за заявку для иностранцев не бывает.",
+      "evidence": "Note that international students are not eligible for fee waivers.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Чтобы попасть в стипендиальный отбор вуза, надо заполнить Scholarship Interest Form в MyStatus; он же открывает доступ к стипендиям фондов-партнёров, включая полное покрытие стоимости года для нуждающихся.",
+      "evidence": "The Scholarship Interest Form must be completed to indicate your interest in UT Austin institutional scholarships as well as scholarships from some partnering private foundations",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки для летнего/осеннего приёма: открытие 1 августа, ранняя подача — 15 октября (материалы до 22 октября), обычная — 1 декабря (материалы до 10 декабря). Решения — к 15 февраля 2027. Весенний приём: заявка до 1 сентября.",
+      "evidence": "Application Opens August 1 Early Action Deadline October 15 Early Action Deadline for Supplemental Materials October 22 Regular Decision Deadline December 1 Regular Deadline for Supplemental Materials December 10",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-08-01",
+    "closes": "2026-12-01",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://admissions.utexas.edu/apply/international-students/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: The University of Texas at Austin, штат Техас. Подача — через Common App или ApplyTexas; SAT/ACT обязателен."
+    }
+  },
+  "source": {
+    "url": "https://admissions.utexas.edu/apply/international-students/",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://admissions.utexas.edu/apply/international-students/",
+        "contentHash": "sha256:87389882440ed21b7a150d9f443c1552e5e7b38ee646c6a6ce8607cd4d605440"
+      },
+      {
+        "url": "https://admissions.utexas.edu/apply/freshman/",
+        "contentHash": "sha256:3d80458bab950113fb9aacfff2e9cacabb9f5c5b61602f3ec25824cb6207c927"
+      },
+      {
+        "url": "https://admissions.utexas.edu/apply/application-materials/high-school-prerequisites/",
+        "contentHash": "sha256:8785549a4673f880b62f4a48d0639b16eb27107005f7b7cd2a2d28132bf835bc"
+      },
+      {
+        "url": "https://admissions.utexas.edu/cost-aid/cost-tuition-rates/",
+        "contentHash": "sha256:417282593c509171d9a826c29851181cc1c205d0465bab2584ee8176ae091934"
+      },
+      {
+        "url": "https://admissions.utexas.edu/cost-aid/financial-aid/",
+        "contentHash": "sha256:aa13e77042b280b183e536d2e061f9ebd8f5c65d990c8086c676a546bd39683b"
+      },
+      {
+        "url": "https://admissions.utexas.edu/apply/frequently-asked-questions/",
+        "contentHash": "sha256:ae44e5ebecad1b60ae2f7185c9b75ced316efdceaf3cb513693a52359a97e3c8"
+      },
+      {
+        "url": "https://admissions.utexas.edu/info-for/international-students/",
+        "contentHash": "sha256:5a538e14b3af0b5d2403e5b95a8bd3c52c1c5948aa7bdd02ca6976d40c3080e3"
+      },
+      {
+        "url": "https://admissions.utexas.edu/apply/application-materials/transcript-info/",
+        "contentHash": "sha256:816286ba37c38d399984724215306de0572f6445bfb97e93b199bb83271cbf4b"
+      },
+      {
+        "url": "https://onestop.utexas.edu/managing-costs/cost-tuition-rates/cost-of-attendance/",
+        "contentHash": "sha256:7c80a046d098f267aa9d4123b7736c1fc63fee7d8a43deb57c395333a795fd5e"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
