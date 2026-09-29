@@ -1,0 +1,308 @@
+{
+  "id": "ucla",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "UCLA (Калифорнийский университет в Лос-Анджелесе) — приём иностранцев на бакалавриат",
+    "orig": "University of California, Los Angeles (UCLA)"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, и иностранцам UCLA не даёт ни стипендий, ни финансовой помощи на бакалавриате. Стоимость на 2026-27: University Fees $16,430, Nonresident Supplemental Tuition $39,270, итого для нерезидента $84,770 в год (с проживанием в общежитии). Дополнительно нужно доказать наличие средств — минимум около $80,739. Английский подтверждается TOEFL/IELTS/DET. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: UCLA описывает приём иностранцев и определяет их по визе F-1, отдельного запрета по паспорту нет. Смотрели страницы приёма иностранца, первокурсника, требований, стоимость, помощь и PDF-гид."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает, но точный эквивалент аттестата UCLA задаёт по стране и образовательной системе, а эта страница лежит на домене UC (admission.universityofcalifornia.edu), не на ucla.edu. Таджикистан на домене ucla.edu прямо не назван — значит «уточнить в приёмной», а не отказ."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "You must complete 15 A-G courses with at least 11 courses finished prior to the beginning of your last year of high school."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют; сказано лишь, что первокурсником можно подать, пока не зачислялся в вуз после школы."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента эти страницы не ограничивают: ни минимального, ни максимального возраста не названо."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "There is no specific cutoff value assigned to any of the factors we consider."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7.5,
+          "parts": true
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "parts": true
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "parts": true
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 135,
+          "parts": true
+        }
+      ],
+      "evidence": "We look for competitive English proficiency scores, including a TOEFL iBT score of 5 or higher (with sub-scores of 5 or higher) on the revised scale (effective January 21, 2026), or above 100 (with sub-scores above 24) on the previous 120-point scale, as well as 7.5 or above on the IELTS or 135 or higher on the Duolingo English Test (DET)."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "UCLA does not consider SAT or ACT scores for admission or scholarship purposes."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем UCLA считает того, кому нужна виза F-1; гражданство само по себе заявку не закрывает — всех оценивают в контексте их учебной программы.",
+      "evidence": "At UCLA, an international student is defined as someone who requires an F-1 visa to study in the United States. For application review purposes, all students are evaluated within the context of the educational curriculum they are currently enrolled in, regardless of their citizenship.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Точные требования к аттестату зависят от страны и системы образования: UCLA отправляет за ними на страницу country-specific requirements. Таджикистан на домене ucla.edu прямо не назван — это уточнение, а не отказ.",
+      "evidence": "Depending on your country and educational system, you may have to meet additional admission requirements. Learn more about country-specific requirements .",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Для 13-летней школы есть отдельное правило: 13-й год вписывают в графу 12-го класса и идут назад. Для 11-летней системы (как в Таджикистане) правила на этих страницах нет — это уточняется в приёмной.",
+      "evidence": "If you attended school outside of the U.S. where the primary and secondary education totals 13 years, list your 13 year of coursework in the 12th-grade section and work backward through the 11th to 8th-grade sections.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужно закрыть 15 курсов A-G, из них минимум 11 — до начала последнего года школы. Какой именно аттестат это заменяет для Таджикистана, на домене ucla.edu не сказано.",
+      "evidence": "You must complete 15 A-G courses with at least 11 courses finished prior to the beginning of your last year of high school.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Первокурсником считают только того, кто окончил среднюю школу и нигде не учился после неё; обладателей диплома бакалавра и тех, у кого есть три года университетской учёбы, не берут на бакалавриат.",
+      "evidence": "UCLA does not admit students into any undergraduate program who already hold Bachelor's degrees, nor do we admit students who have the equivalent of three years (130 quarter-units or more) of transferable university work.",
+      "field": "graduationYear",
+      "kind": "note"
+    },
+    {
+      "ru": "Минимального GPA UCLA не задаёт: на странице профиля прямо сказано, что конкретного порога нет ни по одному из факторов.",
+      "evidence": "There is no specific cutoff value assigned to any of the factors we consider.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Приведённые баллы — это профиль зачисленных, а не требование: средний невзвешенный GPA 4.0 (у первокурсников 2025), взвешенный — медиана 4.61 при диапазоне 4.44-4.78.",
+      "evidence": "Grades and GPA (4.0 average unweighted GPA for Fall 2025 admits)",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен: чтобы подтвердить владение языком, нужно сдать TOEFL, IELTS или Duolingo English Test.",
+      "evidence": "To demonstrate English language proficiency, students are required to take the Test of English as a Foreign Language (TOEFL), the International English Language Testing Service (IELTS), or the Duolingo English Test .",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Пороги (с минимумами по частям): IELTS 7.5 и выше, TOEFL iBT 5 и выше по новой шкале (с 21 января 2026) или выше 100 по старой 120-балльной шкале, Duolingo 135 и выше.",
+      "evidence": "We look for competitive English proficiency scores, including a TOEFL iBT score of 5 or higher (with sub-scores of 5 or higher) on the revised scale (effective January 21, 2026), or above 100 (with sub-scores above 24) on the previous 120-point scale, as well as 7.5 or above on the IELTS or 135 or higher on the Duolingo English Test (DET).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Если вся средняя школа была на английском, требование по языку не применяют.",
+      "evidence": "If all of your high school/secondary school education was completed in English, you are considered proficient and do not need to satisfy this requirement.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "TOEFL и IELTS можно сдавать в старой и новой шкале, но «My Best Score» и супер-скор не принимают: в заявке UC нужно указать один результат.",
+      "evidence": "A score of 5 (on new scale) or 100 or higher (on old scale). \"My B est Score\" will not be considered or allowed, and students may not report the super-score on their UC Application.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "После зачисления UCLA может обязать сдать свой ESLPE — экзамен по английскому для иностранцев; при слабом результате добавляют языковые курсы или требуют подтянуть язык до начала учёбы.",
+      "evidence": "If you're admitted to UCLA and your native language is not English, we may also require you to take UCLA's English-as-a-Second-Language Placement Examination (ESLPE) immediately before the term in which you enter.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "SAT/ACT не учитывают (test-free): вуз не рассматривает их ни для зачисления, ни для стипендий и не просит указывать в заявке.",
+      "evidence": "UCLA does not consider SAT or ACT scores for admission or scholarship purposes.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Стоимость на 2026-27: University Fees (общий сбор) — $16,430 в год, одинаково для всех вариантов проживания.",
+      "evidence": "University Fees $16,430 $16,430 $16,430",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Надбавка для нерезидента (Nonresident Supplemental Tuition) — $39,270 в год.",
+      "evidence": "Nonresident Supplemental Tuition $39,270 $39,270 $39,270",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Итого для нерезидента-иностранца за год: $84,770 при проживании в общежитии, $87,056 в съёмной квартире, $75,977 при жизни дома (для сравнения, для калифорнийцев — $45,500).",
+      "evidence": "Total - Nonresidents $84,770 $87,056 $75,977",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "UCLA прямо отказывает: ни стипендий, ни финансовой помощи студентам-бакалаврам, которые не граждане и не постоянные резиденты США.",
+      "evidence": "UCLA does not award scholarships or financial aid to undergraduate students who are not citizens or permanent residents of the United States.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "В FAQ подтверждено: на бакалавриате UCLA не выделяет финансирование иностранным студентам; иностранец должен сам доказать наличие средств на учёбу и жизнь.",
+      "evidence": "UCLA doesn't provide funding to international students at the undergraduate level.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для зачисления иностранцу надо доказать наличие средств: поступившим на осень 2026 нужно минимум около $80,739 (плюс рекомендуемые $5,000 на личные и летние расходы), и порог обычно растёт каждый год.",
+      "evidence": "students admitted to Fall Quarter 2026 will need a minimum of about $80,739 (with an additional $5,000 recommended for additional personal expenses, contingencies and summer expenses)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача: заявка открывается 1 августа, окно подачи — 1 октября–30 ноября, крайний срок подачи — 30 ноября. Early action и early decision UCLA не использует; принимают только на осень.",
+      "evidence": "October 1-November 30: Application submission window for fall 2027 . UCLA does not offer early action/early decision",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Крайний срок подачи заявки — 30 ноября.",
+      "evidence": "November 30: Deadline to submit your application",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "На странице First-Year сроки названы противоречиво: во вводном тексте «подать можно 1 октября–1 декабря», а в таблице ниже и в PDF-гиде крайний срок — 30 ноября. Для карточки берём 30 ноября.",
+      "evidence": "Applications can be submitted October 1-December 1.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Подача идёт через онлайн-заявку University of California (UC Application); UCLA принимает только на осенний семестр (quarter-система).",
+      "evidence": "To begin the application process, use the University of California's online application (UC Application).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Personal Insight Questions: из восьми вопросов нужно ответить на четыре, каждый ответ — не больше 350 слов.",
+      "evidence": "As a first-year applicant, you may respond to four of eight questions. Each response is limited to a maximum of 350 words.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "UCLA не работает с агентами и посредниками и не поручает им вести заявку: её должен делать сам абитуриент.",
+      "evidence": "UCLA Undergraduate Admission does not partner with agents to represent the University or to administer any part of the application process.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-10-01",
+    "closes": "2026-11-30",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://admission.universityofcalifornia.edu/apply-now.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: UCLA. Подача — через UC Application, окно 1 октября–30 ноября, крайний срок 30 ноября, только осень. Плата для иностранца 2026-27 — $84,770 в год с общежитием, финансовой помощи иностранцам-бакалаврам нет. Английский — IELTS 7.5 / TOEFL 100 (или 5 в новой шкале) / Duolingo 135, SAT/ACT не учитывают."
+    }
+  },
+  "source": {
+    "url": "https://admission.ucla.edu/apply/international-applicants",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://admission.ucla.edu/apply/international-applicants",
+        "contentHash": "sha256:747cc37ce945580cbb748e24a33cd744cacfe0816570a315eb68b282015a63f8"
+      },
+      {
+        "url": "https://admission.ucla.edu/apply/first-year",
+        "contentHash": "sha256:2b55ebaa3c3e67f5362f39aa6a436b126fd601d126f75ab7fccd8c8d6fcbf9df"
+      },
+      {
+        "url": "https://admission.ucla.edu/apply/first-year/first-year-requirements",
+        "contentHash": "sha256:6bba437a464e877420f5ad0b5c30b7e5468ae8de41c0baea56ab6d8d007190e2"
+      },
+      {
+        "url": "https://admission.ucla.edu/apply/first-year/first-year-profile/2025",
+        "contentHash": "sha256:91496d95c03cfd04074adaaa59e055456a7d99c80d98aa9db0484a0d1192d0be"
+      },
+      {
+        "url": "https://admission.ucla.edu/tuition-aid/tuition-fees",
+        "contentHash": "sha256:6593ca975a59d1a2ff126a01fcfd3e928fce4516b8f7d135b77921e6f9c53aab"
+      },
+      {
+        "url": "https://admission.ucla.edu/tuition-aid/financial-aid-and-scholarships",
+        "contentHash": "sha256:29cd25c06198df80ac4f352d77ebc06b6682080af2e6c194931334603a890d31"
+      },
+      {
+        "url": "https://admission.ucla.edu/sites/default/files/documents/UCLA-International-Admission-Guide-2026.pdf",
+        "contentHash": "sha256:19aa7cd85b66c0bcb6b3c9938e7c69e12861817d6975fa412a34a0eca25f1c6a"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}

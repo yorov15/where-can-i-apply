@@ -1,0 +1,305 @@
+{
+  "id": "uchicago",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Chicago (Чикагский университет) — приём иностранцев на бакалавриат",
+    "orig": "University of Chicago"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Помощь по достатку семьи (need-based). Вуз обещает закрыть 100% заявленной потребности семьи без кредитов, поэтому помощью можно покрыть и обучение, и жильё. Семья с доходом меньше 250 000 долларов в год учится без платы за обучение. Полная стоимость года 2026-27 — 103 821 доллар с проживанием в кампусе. Иностранцу помощь дают только если попросить её вместе с заявкой; после зачисления денег уже не будет. Перевод на бакалавриат для иностранцев платный: помощь им не дают."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство не ограничивает ни приём, ни помощь: все абитуриенты указывают своё гражданство и проходят один и тот же порядок, а иностранцем для помощи считается тот, кто не гражданин и не постоянный житель США. Отдельного запрета по паспорту нет. Смотрели страницы приёма иностранца, заявки, требований, помощи иностранцам и платы."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: заявку читают в контексте страны и школьной системы, квоты по странам нет, а аттестат Таджикистана прямо не назван — эквивалент уточнять в приёмной, это не отказ."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "We will be looking at your academic record across all four years of high school"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента страницы приёма не ограничивают: ни минимального, ни максимального не названо. Встреченное «18 years old or have parental or legal guardian consent» относится к программе AFROTC, а не к приёму на бакалавриат."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Please do not convert your grades into a 4.0 scaled grade-point average."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Students are invited to submit scores from any English proficiency examination they believe represents their English language ability. If you feel as though mastery of the English language is already represented throughout your application, you are not required to submit formal exam scores."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Submitting an SAT or ACT is optional and not required for admission. In addition to being test-optional, UChicago practices a \"No Harm\" policy for application review when considering SAT or ACT scores. Any SAT or ACT score submitted will only be used in review if it will positively affect an applicant's chance of admission."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство на приём не влияет: все указывают своё гражданство при подаче и проходят один и тот же порядок.",
+      "evidence": "All students indicate their citizenship(s) at the time they apply to UChicago and follow the same application process for admission, regardless of citizenship.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Для помощи иностранцем считается тот, кто не гражданин и не постоянный житель США, где бы он ни жил и учился.",
+      "evidence": "The University of Chicago considers you an international applicant for purposes of financial aid if you are neither a U.S. citizen nor a U.S. permanent resident, regardless of where in the world you live and go to school.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Квоты по странам нет: вуз не берёт фиксированную долю студентов из какой-либо страны.",
+      "evidence": "We do not admit a fixed number or percentage of students from each country.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Заявку читают с учётом четырёх лет старшей школы и школьной программы; прямого числа лет школы страницы не называют.",
+      "evidence": "We will be looking at your academic record across all four years of high school",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Оценки не надо переводить в 4.0-шкалу: аттестат оценивают по системе той школы, где ты учился.",
+      "evidence": "Please do not convert your grades into a 4.0 scaled grade-point average.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен: вуз берёт только тех, кто показал очень высокий уровень владения языком.",
+      "evidence": "The University of Chicago only admits students who have demonstrated a superior level of English language competence.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Но конкретного экзамена и балла не требуют: сертификаты можно приложить по желанию, а формальный балл сдавать не обязательно, если язык виден по заявке.",
+      "evidence": "Students are invited to submit scores from any English proficiency examination they believe represents their English language ability. If you feel as though mastery of the English language is already represented throughout your application, you are not required to submit formal exam scores.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Подготовительного пути нет: ни курсов английского, ни условного зачисления вуз не предлагает.",
+      "evidence": "No. Currently, UChicago does not offer ESL courses, and we do not offer conditional admission.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "SAT или ACT не обязателен (test-optional), и балл учитывают только если он улучшает шансы («No Harm»).",
+      "evidence": "Submitting an SAT or ACT is optional and not required for admission. In addition to being test-optional, UChicago practices a \"No Harm\" policy for application review when considering SAT or ACT scores. Any SAT or ACT score submitted will only be used in review if it will positively affect an applicant's chance of admission.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Коды экзаменов: SAT — 1832, ACT — 1152.",
+      "evidence": "UChicago's SAT code is 1832; the ACT code is 1152.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Иностранцы-первокурсники имеют право и на помощь по достатку, и на стипендии; если такому абитуриенту дают место, вуз обещает закрыть 100% заявленной финансовой потребности.",
+      "evidence": "First year international citizens are eligible for need-based and merit-based financial aid. In fact, if you apply for need-based aid, and we offer you admission, we are committed to meeting 100% of your demonstrated financial aid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь дают без кредитов: вуз обещает закрыть 100% заявленной потребности и не заставляет семью брать займы.",
+      "evidence": "We are committed to meeting 100% of your demonstrated need with a loan-free financial aid package if you are admitted and applied for funding.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Единственная форма для неграждан США — Student Financial Aid Worksheet, заполняется онлайн в личном кабинете UChicago Account.",
+      "evidence": "The Student Financial Aid Worksheet should be filled out and submitted online, through a student's [UChicago Account]. Please note that this is the only form available for non-US citizens and non-US permanent residents applying for financial aid at UChicago.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "CSS Profile и FAFSA иностранцы не подают, и форму Certification of Finances прикладывать не нужно.",
+      "evidence": "International aid applicants should not submit the CSS Profile or the FAFSA, and the Certification of Finances form need not be submitted with an applicant's financial aid application.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Просить помощь надо вместе с заявкой на приём: если не попросить сразу, после зачисления денег уже не будет.",
+      "evidence": "The primary difference is if you think you may need financial aid at any time during your four years of college, you must apply for need-based financial aid at the same time you submit an application for admission.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки заявки на помощь: EA, ED I и QuestBridge — до 15 ноября, ED II — до 15 января, Regular Decision — до 15 февраля; выходной сдвигает срок на следующий рабочий день.",
+      "evidence": "Institutional Financial Aid Application Deadlines | Early Action, Early Decision I, Questbridge | *Nov 15 | | Early Decision II | *Jan 15 | | Regular Decision | *Feb 15",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь дают только при полной заявке к сроку своего тура: кто не успел, в первый год права на помощь не имеет.",
+      "evidence": "To be eligible for institutional need-based financial aid, students must submit a complete financial aid application by the deadline associated with their application round.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "За четыре года иностранцам выдали почти 20 миллионов долларов помощи по достатку, а свежий дар в 35 миллионов усилил эту поддержку.",
+      "evidence": "Nearly $20 million in need-based financial aid has been offered to international students at UChicago over the past four years, and a [recent gift of $35 million for international financial aid] has strengthened the University's commitment to enrolling a diverse and talented student body from around the world.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за обучение на 2026-27 — 75 960 долларов в год, одинаково для всех вариантов проживания.",
+      "evidence": "| Tuition | $75,960 | $75,960 | $75,960 |",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полная стоимость года 2026-27: 103 821 доллар с проживанием в кампусе, 100 407 — вне кампуса, 91 407 — для живущих дома.",
+      "evidence": "| TOTAL | $103,821 | $91,407 | $100,407 |",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Семья с доходом меньше 250 000 долларов в год учится без платы за обучение.",
+      "evidence": "Families earning less than $250,000 per year receive free tuition to UChicago",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за подачу — 90 долларов; с просящих помощь по достатку её не берут.",
+      "evidence": "The University of Chicago does not charge an application fee for students applying for need-based financial aid. For students not applying for need-based financial aid, our application fee is $90",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 90,
+        "currency": "USD",
+        "evidence": "our application fee is $90"
+      }
+    },
+    {
+      "ru": "Заявку подают через Apply Coalition (Scoir) или Common Application — оба равнозначны.",
+      "evidence": "UChicago accepts Apply Coalition, Powered by Scoir and the Common Application for both first-year and transfer applicants",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "К заявке идут два сочинения UChicago Supplement: большое на выбор из списка тем и короткое — почему именно этот вуз.",
+      "evidence": "[The University of Chicago Supplement] requires one extended essay of your choice from our list of several prompts and one short essay on why you would like to attend the University of Chicago.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Ранние туры (Early Action и Early Decision I) закрываются 2 ноября 2026 года; обязательный ED I обязывает поступить, необязательный EA — нет.",
+      "evidence": "Application Deadline Nov 2, 2026",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-04",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://collegeadmissions.uchicago.edu/apply/application/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Chicago (The College), Чикаго, штат Иллинойс. Приём первокурсника-иностранца; обучение платное, но есть помощь по достатку семьи."
+    }
+  },
+  "source": {
+    "url": "https://collegeadmissions.uchicago.edu/apply/international-applicants/",
+    "pages": [
+      {
+        "url": "https://collegeadmissions.uchicago.edu/apply/international-applicants/",
+        "contentHash": "sha256:e9c1eabfcf948f64012c368d0f48f20791f10f054f4c5218ba2460265fca7172"
+      },
+      {
+        "url": "https://collegeadmissions.uchicago.edu/apply/application/",
+        "contentHash": "sha256:e4286adbb848355a4aa4ceb20eed8700d23220f05c7895d80f47bf27a6361c59"
+      },
+      {
+        "url": "https://collegeadmissions.uchicago.edu/apply/application/required-materials/",
+        "contentHash": "sha256:e7053965682bee68a312947e8815c03e0e636d78f6e89a118ce7fc291c7f7a8f"
+      },
+      {
+        "url": "https://collegeadmissions.uchicago.edu/apply/application/optional-materials/",
+        "contentHash": "sha256:474e6e362e6dff5ac0d6747bf774672cc9465129c7442adf1949d81ded0dddab"
+      },
+      {
+        "url": "https://collegeadmissions.uchicago.edu/financial-support/financial-overview/",
+        "contentHash": "sha256:01d9f1c36b249889dcf42160477293e082f86676356c0f68efc77964207899f8"
+      },
+      {
+        "url": "https://collegeadmissions.uchicago.edu/financial-support/international-financial-aid/",
+        "contentHash": "sha256:1ed5cc204c64582390fe808d61881a3ca449c24f3eabaab86a583625880e681c"
+      },
+      {
+        "url": "https://collegeadmissions.uchicago.edu/financial-support/applying-for-aid/",
+        "contentHash": "sha256:c5bf1afd0ba871b8ef1a78e129f0af27039b7f798c193a31456097d4ee523530"
+      },
+      {
+        "url": "https://collegeadmissions.uchicago.edu/financial-support/how-we-determine-need/",
+        "contentHash": "sha256:725bc8d48ee6c6ba38ec56900b843929b4b72a64b226a6a8b86ee038a068ab70"
+      },
+      {
+        "url": "https://collegeadmissions.uchicago.edu/apply/essay/",
+        "contentHash": "sha256:08e9589a9dd7f4b4d62345cbeaad237abdb8dbbae34326dd95998e17b1f8c76d"
+      },
+      {
+        "url": "https://financialaid.uchicago.edu/undergraduate/how-aid-works/undergraduate-costs/",
+        "contentHash": "sha256:40b7a709f0ec670226db5a48109397cceb3d71d5ebe91432290ff60ebad3899c"
+      },
+      {
+        "url": "https://collegeadmissions.uchicago.edu/apply/transfer-applicants/",
+        "contentHash": "sha256:3c3bf5c5bcd61b26e6a9cb825c21fb9d529a578b9b09615183d875a139ee6667"
+      },
+      {
+        "url": "https://collegeadmissions.uchicago.edu/financial-support/scholarships/",
+        "contentHash": "sha256:e290bc4d0f30a425e84c82e4368adc4ecdd4bfac9e1a80fe046bd9061ce3a170"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}

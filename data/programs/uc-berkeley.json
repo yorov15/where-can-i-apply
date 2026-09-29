@@ -1,0 +1,324 @@
+{
+  "id": "uc-berkeley",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of California, Berkeley (Беркли) — приём иностранцев на бакалавриат",
+    "orig": "University of California, Berkeley"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, полной помощи на него эти страницы не обещают. Для иностранцев-первокурсников федеральная, штатная и need-based помощь недоступны. Плата за 2025-26 (Berkeley International Office): Non-Resident Supplemental Tuition $37,602, всего за год $60,140, полный годовой бюджет $81,740. По данным финансового отдела на 2026-27 приезжим добавляют Nonresident Supplemental Tuition $39,270 к tuition and fees $18,214. Есть институциональные стипендии (Regents' & Chancellor's, Robinson International Scholars, International Leaders, Swaniker Scholars) — рассматривают автоматически, отдельной заявки не нужно. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не ограничивает: иностранцем для подачи считается тот, кому нужна виза, либо тот, кто оканчивает школу вне США. Таджикистан подпадает под второй случай и подаёт на бакалавриат как first-year. Смотрели страницы международного приёма, требований для иностранцев, политики тестов, сроков, платы, финпомощи и стипендий."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает. Таджикистан прямо назван в официальном списке документов (Certificate of Secondary Education), а аттестат оценивают специалистом по системе образования страны. Отдельно учтено: иностранцы на визе не могут считаться резидентами Калифорнии для платы."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "finish secondary school and earn a certificate of completion, which allows admission to a university in their home country or country of graduation"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: требуется лишь окончить среднюю школу и получить документ о среднем образовании."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента эти страницы не ограничивают: ни минимального, ни максимального не названо. Упоминание «under the age of 24» относится только к классификации резидентства для платы, а не к допуску."
+    },
+    "gpa": {
+      "min": 3.4,
+      "scale": "GPA_4",
+      "evidence": "Have a 3.0 GPA in A-G courses taken in the 10th and 11th grade years. (3.4 GPA for non-residents)"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "International English Language testing System (IELTS) with a minimum score of 6.5"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "evidence": "Test of English as a Foreign Language (TOEFL) with a minimum score of 90/4.5 or better"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 115,
+          "evidence": "DuoLingo English Test (DET) with a minimum score of 115"
+        }
+      ],
+      "evidence": "Proficiency in English is critical to success at UC Berkeley."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем для подачи считается тот, кому нужна виза для учёбы в США, либо тот, кто оканчивает школу вне США.",
+      "evidence": "You will apply as an international applicant if: 1) You require a visa to study in the United States OR 2) You will graduate from a high school outside of the United States",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Для Таджикистана в официальном списке документов указан Certificate of Secondary Education — аттестат о среднем образовании.",
+      "evidence": "Tajikistan Certificate of Secondary Education",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "В каждом кампусе UC, включая Беркли, есть специалист по международному приёму, знающий системы образования других стран: аттестат оценивают в контексте страны и школы.",
+      "evidence": "Each UC campus, including UC Berkeley, has an International Admission Specialist who is familiar with the educational systems of other countries.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Минимум — 3.0 GPA по курсам A-G за 10 и 11 классы, для нерезидентов (в том числе иностранцев) — 3.4. Это минимум UC, а не гарантия поступления.",
+      "evidence": "Have a 3.0 GPA in A-G courses taken in the 10th and 11th grade years. (3.4 GPA for non-residents)",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Оценки не нужно самостоятельно переводить в другую шкалу: в заявке их указывают как в школьном документе.",
+      "evidence": "Do not attempt to convert your grades.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужно окончить среднюю школу и получить документ, дающий право на поступление в вуз у себя в стране.",
+      "evidence": "finish secondary school and earn a certificate of completion, which allows admission to a university in their home country or country of graduation",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Для зачисления требуются школьные документы (записи/транскрипты) за все посещённые годы средней школы — 9–12.",
+      "evidence": "In order to finalize your admission, you are required to submit school leaving documents, which include academic records or transcripts, for all years of secondary school attended, years 9-12.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Одних экзаменов IGCSE/O-level недостаточно: нужно ещё два года — A-level минимум с тремя предметными экзаменами, диплом IB или аналогичная программа.",
+      "evidence": "Students who have only completed the IGCSE or O-level exams have not yet met the requirements for admission at UC Berkeley. The university requires further study, either completion of the two-year A-level program with a minimum of three academic exams, the IB diploma program, or another similar academic curriculum.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "В странах с обязательной военной службой после школы заявку не подают, пока обязательство не выполнено; отсрочку после зачисления Беркли не гарантирует.",
+      "evidence": "Students from countries requiring entry into military service upon completion of secondary education should not submit an application until the obligation has been met.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Пороги по языку: TOEFL — минимум 90/4.5, IELTS — 6.5, Duolingo (DET) — 115. Достаточно одного из них.",
+      "evidence": "Test of English as a Foreign Language (TOEFL) with a minimum score of 90/4.5 or better International English Language testing System (IELTS) with a minimum score of 6.5 DuoLingo English Test (DET) with a minimum score of 115",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Три и более года обучения на английском языке (Language of Instruction) тоже закрывают требование по языку; смешанный язык обучения — нет.",
+      "evidence": "Students who have 3+ years of Language of Instruction (LOI) in English will also satisfy English Proficiency.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский надо подтвердить не позднее 31 января; баллы действительны 2 года с даты зачисления.",
+      "evidence": "Students will need to have satisfied English Proficiency by no later than January 31st.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Экзамены SAT/ACT не учитываются: Беркли объявлен «test-free», баллы не влияют на отбор.",
+      "evidence": "UC Berkeley is test-free",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Плата за заявку — $80 за кампус, для иностранцев и неиммигрантов — $95. Освобождение от платы доступно только гражданам/резидентам и лицам с правом AB540.",
+      "evidence": "The application fee is $80 for each UC campus ($95 for international and non-immigrant applicants).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцы не имеют права на федеральную, штатную и need-based помощь вуза.",
+      "evidence": "International students are ineligible for federal, state, and need-based university financial aid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельную заявку на стипендии подавать не нужно: все зачисленные иностранцы-первокурсники рассматриваются автоматически на доступные им программы.",
+      "evidence": "These scholarships do not require students to submit a separate application- all admitted undergraduate international students are automatically considered for the scholarship programs for which they are eligible.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Главная стипендия вуза — Regents' & Chancellor's Scholarship: денежная награда самым сильным абитуриентам по итогам holistic review.",
+      "evidence": "The Regents' & Chancellor's Scholarship is UC Berkeley's most prestigious undergraduate scholarship, awarded to exceptional students who demonstrate creativity, leadership, service, and strong convictions.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Robinson International Scholars Program: need-based стипендия до четырёх лет для беженцев/апатридов и выпускников школ Африки южнее Сахары и развивающихся стран.",
+      "evidence": "The program includes a need-based scholarship for up to four years.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Swaniker Scholars Program: need-based стипендия, покрывающая до полной стоимости обучения, на четыре года (для участников ALX/African Leadership Academy).",
+      "evidence": "Swaniker Scholars receive a need-based scholarship covering up to the full cost of attendance for four years.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за 2025-26 (Berkeley International Office): Non-Resident Supplemental Tuition для бакалавров — $37,602.",
+      "evidence": "Non-Resident Supplemental Tuition $37,602",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за 2025-26: всего за два семестра $60,140 (бакалавр).",
+      "evidence": "Total All Fees and Tuition $ 60,140",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полный годовой бюджет иностранца-бакалавра за 2025-26 — $81,740 (с проживанием, питанием, книгами и личными расходами).",
+      "evidence": "Total Annual Budget $81,740",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На 2026-27 приезжим добавляют Nonresident Supplemental Tuition $39,270 к tuition and fees.",
+      "evidence": "New out-of-state students pay an additional Nonresident Supplemental Tuition of $39,270.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача — через единую заявку UC (UC application); одной заявкой можно подать сразу в несколько кампусов UC.",
+      "evidence": "Complete the UC application. Apply to as many UC campuses as you like with one application.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Приём заявок — с 1 октября по 30 ноября; все заявки должны быть отправлены не позднее 30 ноября. Ни early action, ни early decision у Беркли нет.",
+      "evidence": "The application filing period is October 1 - November 30. All applications must be submitted by November 30.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-10-01",
+    "closes": "2026-11-30",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://admissions.berkeley.edu/basic-admission-requirements/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of California, Berkeley. Подача — через единую заявку UC (UC application), срок 1 октября — 30 ноября. Иностранцы платят Non-Resident Supplemental Tuition (2025-26: $37,602; 2026-27: $39,270); федеральная и штатная помощь недоступна, есть институциональные стипендии."
+    }
+  },
+  "source": {
+    "url": "https://admissions.berkeley.edu/apply-to-berkeley/international-students/",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://admissions.berkeley.edu/apply-to-berkeley/international-students/",
+        "contentHash": "sha256:fae98497f30e8c14907c1f4ebd832a752c798da85501dcead6c4398891272a7c"
+      },
+      {
+        "url": "https://admissions.berkeley.edu/apply-to-berkeley/international-students/requirements-for-international-students/",
+        "contentHash": "sha256:dad44e593507f51ee469c49cbd774cc9b0fd053a15283b7ab6e7aae61e9c4474"
+      },
+      {
+        "url": "https://admissions.berkeley.edu/apply-to-berkeley/first-year-applicants-uc-berkeley/",
+        "contentHash": "sha256:e362960fb5c8aa55d3660608e9e79b5d9c5dc2c9b03d1493e9f4e7b0aab46a54"
+      },
+      {
+        "url": "https://admissions.berkeley.edu/apply-to-berkeley/first-year-applicants-uc-berkeley/freshmen-requirements/",
+        "contentHash": "sha256:c57d2a45d1d618f6bf529bee2aac968f589569b5427615687d96c200938e4760"
+      },
+      {
+        "url": "https://admissions.berkeley.edu/apply-to-berkeley/first-year-applicants-uc-berkeley/first-year-policy-changes/",
+        "contentHash": "sha256:8495a8966f742d9f849591fdfd2f8621eae13d3bdf34e1c9eace2acb6b58d426"
+      },
+      {
+        "url": "https://admissions.berkeley.edu/apply-to-berkeley/first-year-applicants-uc-berkeley/applicant-checklist/",
+        "contentHash": "sha256:3813bc145bfc0c1a9fbd5895cae30daf6a383528509150b953d26e29eb0e6789"
+      },
+      {
+        "url": "https://admissions.berkeley.edu/apply-to-berkeley/dates-deadlines/",
+        "contentHash": "sha256:5d7985457207f370c677e423afded5eda3eb0ff750fd71a0b2ebfb2c7c928fa7"
+      },
+      {
+        "url": "https://admissions.berkeley.edu/basic-admission-requirements/",
+        "contentHash": "sha256:bd41248ed21b1207631056eb6f3b16e3cac942e896a17f1d6c99e49f21d277a6"
+      },
+      {
+        "url": "https://admissions.berkeley.edu/apply-to-berkeley/student-profile/",
+        "contentHash": "sha256:2a47dad712dc625427380b9a091bbbdc5394fef0e646d84afabbd5adb5016c6c"
+      },
+      {
+        "url": "https://admissions.berkeley.edu/application-faqs/",
+        "contentHash": "sha256:f4e0eefa6696bbd6bc33b805d6fd7803a88045f11c0330d560eb7444896cb8dd"
+      },
+      {
+        "url": "https://admissions.berkeley.edu/cost/",
+        "contentHash": "sha256:5d104467a0676d0ff53254305f5c0d95ec27a3c42da0bc371d3f08c720fb2d7e"
+      },
+      {
+        "url": "https://financialaid.berkeley.edu/cost-attendance",
+        "contentHash": "sha256:4f551eaa16b0b871d2bdc5e2f1ec4b7bbf9399548bf329dec2c4dc36d0003e62"
+      },
+      {
+        "url": "https://financialaid.berkeley.edu/meeting-nonresident-costs",
+        "contentHash": "sha256:50c79a0be050d8c69d1434ad2e3218e5ed900375a2eb7e78248b94037d0d6502"
+      },
+      {
+        "url": "https://financialaid.berkeley.edu/international-students",
+        "contentHash": "sha256:e6142be889a17ba5f67dfbcdd5652c47ca1780d03d63fb3497103f79dd5d891d"
+      },
+      {
+        "url": "https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/regents-and-chancellors-scholarship/international-student-scholarships/",
+        "contentHash": "sha256:cf861bade7614c6d7b59cfd0a90fbb96d04a9eb03bb4c534bfd42b8b148e0d91"
+      },
+      {
+        "url": "https://internationaloffice.berkeley.edu/students/current/expenses",
+        "contentHash": "sha256:c24899925073a8828cde170091064ae7d603d7db51e7a2e535266816a0227afe"
+      },
+      {
+        "url": "https://apply.berkeley.edu/docs/required-docs-by-country.pdf",
+        "contentHash": "sha256:587f23bd6374917249d334034fa4ddba7e190651c1f51ba8d4f61da17b1fcf82"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
