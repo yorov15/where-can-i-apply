@@ -1,0 +1,331 @@
+{
+  "id": "nottingham",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "University of Nottingham (Ноттингем) — приём иностранцев на бакалавриат",
+    "orig": "University of Nottingham"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное; полной помощи на него эти страницы не обещают. Плата для иностранцев на 2027-28 — от £26,200 (гуманитарные и социальные курсы) до £33,500 (инженерия и естественные науки), физиотерапия — £34,800. Домашняя ставка для сравнения — £10,050 в год. Из помощи заявлена автоматическая стипендия £5,000 с первого года платы за AAA или международный эквивалент (без отдельной заявки), но она не для всех направлений. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство страницы приёма не ограничивают: вуз открыт для иностранцев и описывает подачу через UCAS тем же порядком, отдельного запрета по паспорту нет. Смотрели страницы приёма бакалавра, требований, английского, платы, фондов и сроков."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: вуз принимает широкий круг национальных квалификаций и рассматривает нестандартные индивидуально. Таджикистана нет в списке требований по странам, и это значит «уточнить эквивалент в приёмной», а не отказ."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Applicants to degree programmes will usually be expected to have studied three subjects at A level."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента эти страницы не ограничивают: ни минимального, ни максимального не названо. Есть отдельные рекомендации для тех, кому на старте курса меньше 18, но это не запрет."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Overall point equivalencies for three A levels A*AA - 36 AAA - 34 AAB - 32 ABB - 30 BBB - 28 BBC - 26 BCC - 24"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "parts": true,
+          "evidence": "6.0 with no less than 5.5 in each element 6.5 with no less than 6.0 in each element 7.0 with no less than 6.0 in each element"
+        },
+        {
+          "test": "PTE",
+          "min": 65,
+          "parts": true,
+          "evidence": "65 (minimum 59) 71 (minimum 65) 76 (minimum 65)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "parts": true,
+          "evidence": "80 (minimum 17 in Writing and Listening, 18 in Reading and 20 in speaking)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "4.5 overall with no less than 4.0 in each element"
+        }
+      ],
+      "evidence": "When applying to study at the University of Nottingham you must be able to evidence you have met the English Language requirements for your chosen course."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Заявки из-за рубежа принимают тем же порядком, что и от британцев: гражданство вход не ограничивает.",
+      "evidence": "Applications from international students should also be made following the above processes.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Требования выражены в терминах A-level, но вуз принимает и широкий круг других квалификаций.",
+      "evidence": "Although the majority of our applicants will have A levels, we welcome and value a wide range of alternative qualifications.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Список альтернативных квалификаций неполон: квалификации, которых в нём нет, вуз рассматривает индивидуально.",
+      "evidence": "The following list is not exhaustive and the university treats applicants with other qualifications on an individual basis.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Для квалификаций не из Великобритании вуз отправляет на страницы требований по странам. Таджикистана в этом списке нет, поэтому точный эквивалент аттестата известен только от приёмной — это уточнение, а не отказ.",
+      "evidence": "For qualifications from outside the UK, please see our information about entry requirements by country .",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Если квалификация не подходит для прямого входа, путь даёт подготовительный год: он готовит к бакалавриату тех, кого не берут напрямую.",
+      "evidence": "It provides an alternative route to higher education if you're not eligible for direct entry to an undergraduate course.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Для иностранцев есть отдельный международный подготовительный год — для тех, у кого нестандартные или небританские квалификации и кому нужна языковая поддержка.",
+      "evidence": "An international foundation programme is a preparatory course that helps students from overseas prepare for their undergraduate degrees in the UK.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если сдать подготовительный год на нужном уровне, место на выбранной программе Ноттингема гарантировано.",
+      "evidence": "Once you pass your course at the required level, you'll be guaranteed a place on your chosen Nottingham degree.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Международных подготовительных направлений два: «Бизнес, право и социальные науки» и «Наука и инженерия».",
+      "evidence": "There are two foundation pathways to choose from as an international student",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Международные подготовительные программы ведёт партнёр вуза — Kaplan Pathways, на базе University of Nottingham International College.",
+      "evidence": "All international foundation programmes are run by our experienced education partner, Kaplan Pathways",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Требования по оценкам выражают через A-level и IB; для трёх A-level есть таблица соответствия баллам IB: A*AA — 36, AAA — 34, AAB — 32, ABB — 30, BBB — 28, BBC — 26, BCC — 24.",
+      "evidence": "Overall point equivalencies for three A levels A*AA - 36 AAA - 34 AAB - 32 ABB - 30 BBB - 28 BBC - 26 BCC - 24",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "За дополнительную квалификацию (Extended Project, Core Maths, Extended Essay IB и др.) на большинстве курсов снижают требование на один балл — кроме медицины, ветмедицины и физиотерапии, и не ниже минимума вуза BBC.",
+      "evidence": "We are able to make one grade reduced offers to applicants with grade A in one of the following qualifications for most undergraduate courses (excluding medicine, veterinary medicine and physiotherapy courses)",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен: абитуриент должен подтвердить, что выполнил языковые требования своего курса.",
+      "evidence": "When applying to study at the University of Nottingham you must be able to evidence you have met the English Language requirements for your chosen course.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог IELTS зависит от курса: самый низкий — 6.0 (не ниже 5.5 по каждой части), дальше 6.5 (6.0 по части) и 7.0 (6.0 по части). Точный порог — на странице курса.",
+      "evidence": "6.0 with no less than 5.5 in each element 6.5 with no less than 6.0 in each element 7.0 with no less than 6.0 in each element",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Принимают IELTS (включая One Skill Retake и IELTS Online).",
+      "evidence": "IELTs One Skill Retake is accepted. IELTs Online is accepted.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Принимают PTE и TOEFL (IBT), но не PTE Online.",
+      "evidence": "We also accept Pearson Test of English (PTE) and TOEFL (IBT) test certificates (PTE Online is excluded)",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Сертификат должен быть сдан не раньше чем за два года до начала; «лучшие баллы по частям» из разных попыток не принимают.",
+      "evidence": "Must have been taken within the last two years. We do not accept 'best scores' i.e the best scores in each element across multiple tests.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение платное, полной помощи на него эти страницы не обещают. Плата для иностранцев на 2027-28 — от £26,200 до £33,500 в год в зависимости от курса (гуманитарные и социальные дешевле, инженерия и естественные науки дороже), физиотерапия — £34,800. Точная ставка — в таблице платы и на странице курса.",
+      "evidence": "Undergraduate tuition fees 2027/28 Code Qualification Title UK home fee ( see fees note ) International fee N410 BSCH Accountancy BSc Hons ( see fees note ) £10,050 £27,600 H402 BENGH Aerospace Engineering BEng Hons £10,050 £33,500",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата для британских студентов — £10,050 в год; иностранец платит ставку из правой колонки той же таблицы.",
+      "evidence": "The below table gives the fees for full-time UK and international students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Автоматическая стипендия International Undergraduate Excellence Scholarship: £5,000 с первого года платы за AAA или международный эквивалент. Отдельной заявки не нужно — подтверждаешь оценки и получаешь.",
+      "evidence": "If you achieve AAA grades or your international equivalent , you will automatically be awarded a scholarship of £5,000 to be deducted from your first year tuition fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия £5,000 не для всех: исключены ветеринария, фармация, медицина и Foundation Year; подходят BA, BSc/MSci, BEng/MEng, LLB, BArch, MMath, MNutr. Нужно быть self-funded и не иметь другой стипендии вуза.",
+      "evidence": "be studying towards one of the following awards: BA, BSc / MSci, BEng / MEng, LLB, BArch, MMath, or MNutr have achieved AAA grades or international equivalent , assessed at the point of successful admission be self-funded, and not in receipt of any other University award or sponsorship by an external body",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Из подготовительной программы Kaplan на стипендию £5,000 не берут.",
+      "evidence": "Students progressing to the University from Kaplan (University of Nottingham International College or Digital Pathways) are not eligible for this scholarship scheme.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Ориентир по жизни в Ноттингеме: большинство студентов тратят £800–£1,200 в месяц, включая жильё, еду и транспорт.",
+      "evidence": "Most students spend between £800 and £1,200 per month, including accommodation, food, and transport.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача на бакалавриат — только через UCAS. Код Ноттингема — N84.",
+      "evidence": "Our UCAS institution code is N84.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки на приём 2027 года: медицина и ветеринария — до 15 октября 2026, остальные курсы — до 13 января 2027. Сбор UCAS на 2027 — £34.50, один и тот же за одну заявку или за все пять выборов.",
+      "evidence": "Applications for Medicine and Veterinary Medicine must be submitted by 15 October 2026. Applications for other courses must be submitted by 13 January 2027. For 2027, the UCAS application fee is £34.50.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявка идёт через UCAS Hub, можно выбрать до пяти курсов. В личном заявлении 4,000 знаков на три вопроса, не меньше 350 знаков на каждый; нужен reference с predicted grades.",
+      "evidence": "You have 4,000 characters in total to split across the three answers, with a minimum of 350 characters per answer.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-13",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.nottingham.ac.uk/studywithus/ugstudy/applying.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Nottingham. Подача бакалавриата — только через UCAS (код N84); срок большинства курсов 13 января 2027, медицины и ветеринарии — 15 октября 2026. Плата для иностранцев 2027-28 — от £26,200 до £34,800 в год, автоматическая стипендия £5,000 за AAA."
+    }
+  },
+  "source": {
+    "url": "https://www.nottingham.ac.uk/studywithus/international-applicants/index.aspx",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.nottingham.ac.uk/studywithus/international-applicants/index.aspx",
+        "contentHash": "sha256:dd3e04b127761e44f5a9862dc70fe350ba71f166f82b9badb56dc736f5a0c496"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/studywithus/ugstudy/applying/entry-requirements.html",
+        "contentHash": "sha256:1a9a08dfa29eff5a7fce7ddb550082d49f2dbae54bca83c19996d17854e8eca5"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/studywithus/ugstudy/applying.html",
+        "contentHash": "sha256:0b924668deb6711caf9ecfeb5b6503bd552f51ea8e4684c308b324f01461a64d"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/studywithus/ugstudy/articles/our-foundation-programmes.html",
+        "contentHash": "sha256:ed1b3d7496ef4bb0a987f5551bfd6f605a9362eb7e124d0a62bb15c4d2ee7c1a"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/studywithus/international-applicants/english-language/english-language-requirements.aspx",
+        "contentHash": "sha256:54a7641408253d1900f632b557fe4bcd9a9f810d52d651c1aff09ab072e1fb84"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/studywithus/international-applicants/english-language/english-language-equivalencies.aspx",
+        "contentHash": "sha256:19afaaa085afeb41d55bcdcd144cda3c893794d1c7251df5470c883f4cca38f4"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/studywithus/international-applicants/scholarships-funding-finance/fees.aspx",
+        "contentHash": "sha256:dc67585ffff3990e1b71a8ec92c0560854f326c14461b6ada5ac3f0d4461e1c6"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/studywithus/what-next/fees-and-funding.aspx",
+        "contentHash": "sha256:1ea5efd65be5c04102d9d91aa84887bfa8d96b45695d0ed3d6f47794095551a7"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/studywithus/what-next/how-to-apply.aspx",
+        "contentHash": "sha256:5eb4177f6ba16f106c0242df23ac7729aa767b1ecf67a5b8727240edc1b1195a"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/studywithus/international-applicants/scholarships-funding-finance/undergraduate-scholarships.aspx",
+        "contentHash": "sha256:eb0c6dd7e3969d78dd651bcdd9b070b60e1b735e90062571c1230f50bdb907ef"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/studywithus/international-applicants/scholarships-funding-finance/international-undergraduate-excellence-scholarship.aspx",
+        "contentHash": "sha256:1d26d7a69439c6deb8b4c6bac4b06c8e73f50ec8a5f44838cda93d9991d82f02"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/studywithus/international-applicants/scholarships-funding-finance/international-scholarships.aspx",
+        "contentHash": "sha256:25a44f7629bf66328d817b62fe8c15b0363982be865f669bf40b7cf1cb93fe41"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/about/keydates/",
+        "contentHash": "sha256:ef3d9115d338938390640214a6adc534857dddc16712fd10ede8ee6ab4f4d093"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/fees/tuition-fees-student-services.aspx",
+        "contentHash": "sha256:788eae916bca06b8daa05dff196d52d32327487ceda83169f69e3a9aea9e0db1"
+      },
+      {
+        "url": "https://www.nottingham.ac.uk/fees/tuitionfees/202728/undergraduate.aspx",
+        "contentHash": "sha256:ed70621b81476e2ebeeabbd4a1ba1af05de8538299ec12f58fedb10e3a3430d7"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}

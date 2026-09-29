@@ -3233,10 +3233,21 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
+# Партия 2. Сайт birmingham.ac.uk доступен curl, но python.exe без сети
+# (файервол): страницы сняты curl в manual/birmingham/, origin=manual.
 [birmingham]
 name = "University of Birmingham (Великобритания): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.birmingham.ac.uk/study/international",
+files = [
+  { path = "manual/birmingham/international.html", url = "https://www.birmingham.ac.uk/study/international" },
+  { path = "manual/birmingham/international-entry-requirements.html", url = "https://www.birmingham.ac.uk/study/undergraduate/apply/entry-requirements/international-entry-requirements" },
+  { path = "manual/birmingham/how-to-apply.html", url = "https://www.birmingham.ac.uk/study/undergraduate/apply" },
+  { path = "manual/birmingham/how-we-make-offers.html", url = "https://www.birmingham.ac.uk/study/undergraduate/apply/how-we-make-offers" },
+  { path = "manual/birmingham/tuition-fees.html", url = "https://www.birmingham.ac.uk/study/undergraduate/fees-funding/tuition" },
+  { path = "manual/birmingham/international-fees.html", url = "https://www.birmingham.ac.uk/study/international/fees" },
+  { path = "manual/birmingham/scholarships.html", url = "https://www.birmingham.ac.uk/study/international/fees/scholarships" },
+  { path = "manual/birmingham/international-deposits.html", url = "https://www.birmingham.ac.uk/study/international/fees/international-deposits" },
+  { path = "manual/birmingham/paying-your-fees.html", url = "https://www.birmingham.ac.uk/study/applicants/paying-your-fees" },
+  { path = "manual/birmingham/uzbekistan.html", url = "https://www.birmingham.ac.uk/international/students/country/uzbekistan" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
@@ -3273,10 +3284,29 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
+# Партия 2. Одобренный hub у nottingham.ac.uk отдаёт только меню; под-страницы
+# внутри одобренного домена добавлены ассистентом (требования, английский,
+# плата, фонд, стипендии, подача, сроки, подготовительные программы).
+# McAfee снова не пускает python.exe в сеть, страницы сняты curl (см. cambridge),
+# origin=manual.
 [nottingham]
 name = "University of Nottingham (Великобритания): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.nottingham.ac.uk/studywithus/international-applicants/index.aspx",
+files = [
+  { path = "manual/nottingham/hub.html", url = "https://www.nottingham.ac.uk/studywithus/international-applicants/index.aspx" },
+  { path = "manual/nottingham/entry-requirements.html", url = "https://www.nottingham.ac.uk/studywithus/ugstudy/applying/entry-requirements.html" },
+  { path = "manual/nottingham/ug-applying.html", url = "https://www.nottingham.ac.uk/studywithus/ugstudy/applying.html" },
+  { path = "manual/nottingham/foundation-programmes.html", url = "https://www.nottingham.ac.uk/studywithus/ugstudy/articles/our-foundation-programmes.html" },
+  { path = "manual/nottingham/english-language-requirements.html", url = "https://www.nottingham.ac.uk/studywithus/international-applicants/english-language/english-language-requirements.aspx" },
+  { path = "manual/nottingham/english-language-equivalencies.html", url = "https://www.nottingham.ac.uk/studywithus/international-applicants/english-language/english-language-equivalencies.aspx" },
+  { path = "manual/nottingham/fees.html", url = "https://www.nottingham.ac.uk/studywithus/international-applicants/scholarships-funding-finance/fees.aspx" },
+  { path = "manual/nottingham/fees-and-funding.html", url = "https://www.nottingham.ac.uk/studywithus/what-next/fees-and-funding.aspx" },
+  { path = "manual/nottingham/how-to-apply.html", url = "https://www.nottingham.ac.uk/studywithus/what-next/how-to-apply.aspx" },
+  { path = "manual/nottingham/undergraduate-scholarships.html", url = "https://www.nottingham.ac.uk/studywithus/international-applicants/scholarships-funding-finance/undergraduate-scholarships.aspx" },
+  { path = "manual/nottingham/intl-ug-excellence-scholarship.html", url = "https://www.nottingham.ac.uk/studywithus/international-applicants/scholarships-funding-finance/international-undergraduate-excellence-scholarship.aspx" },
+  { path = "manual/nottingham/international-scholarships.html", url = "https://www.nottingham.ac.uk/studywithus/international-applicants/scholarships-funding-finance/international-scholarships.aspx" },
+  { path = "manual/nottingham/keydates.html", url = "https://www.nottingham.ac.uk/about/keydates/" },
+  { path = "manual/nottingham/tuition-fees.html", url = "https://www.nottingham.ac.uk/fees/tuition-fees-student-services.aspx" },
+  { path = "manual/nottingham/tuitionfees-ug.html", url = "https://www.nottingham.ac.uk/fees/tuitionfees/202728/undergraduate.aspx" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
@@ -3341,6 +3371,11 @@ approvedAt = "2026-09-29"
 name = "University of Texas at Austin (США): приём иностранцев на бакалавриат"
 urls = [
   "https://admissions.utexas.edu/apply/international-students/",
+  "https://admissions.utexas.edu/apply/freshman/",
+  "https://admissions.utexas.edu/apply/application-materials/high-school-prerequisites/",
+  "https://admissions.utexas.edu/cost-aid/cost-tuition-rates/",
+  "https://admissions.utexas.edu/cost-aid/financial-aid/",
+  "https://admissions.utexas.edu/apply/frequently-asked-questions/",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
