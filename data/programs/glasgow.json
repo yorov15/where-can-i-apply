@@ -1,0 +1,267 @@
+{
+  "id": "glasgow",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "University of Glasgow (Глазго) — приём иностранцев на бакалавриат",
+    "orig": "University of Glasgow"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, и полной помощи на него эти страницы не обещают. Для иностранцев на 2027/28 вуз называет ставки: Arts and Social Sciences — £28,275 в год, Science, Engineering, Nursing и медико-ветеринарные программы — £33,708, ветеринария — £38,670; на 2026/27 те же направления — £27,720 и £33,210. Из помощи для иностранцев-бакалавров названа World Changers Global Excellence Scholarship — скидка на обучение £7,000 в год (Arts/Social Sciences) или £10,000 (Science and Engineering, MVLS). Полного покрытия нет, поэтому помощь в карточке не отмечена"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз прямо пишет, что принимает студентов со всего мира, и держит страницы требований по странам. Отдельного запрета по паспорту нет. Смотрели хаб подачи, страницу требований, раздел international, страницы платы, английского и список стран."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает. Таджикистана нет в списке стран на странице требований, но вуз отдельно пишет, что приветствует студентов со всего мира и подберёт требования, а для страны без отдельной страницы советует писать на student.recruitment@glasgow.ac.uk. Эквивалентность национальных квалификаций вуз оценивает через UK NARIC."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Country qualifications not accepted, A-levels, IB, Glasgow International College or other accepted qualification required."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют. Отдельно есть правило свежести квалификации: аттестат старше 7 лет до даты заезда вуз может счесть устаревшим — это записано текстовым условием, а не ограничением поля."
+    },
+    "age": {
+      "min": 16,
+      "evidence": "The University cannot sponsor a Student visa for applicants who will be under the age of 16 at the commencement of their studies."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "The Entry Requirement section of each undergraduate programme page states the grades required to be considered for an offer."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "For applicants whose first language is not English, the University sets a minimum English language proficiency level: this can be found in the Entry requirements of each of the programmes listed"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Вуз открыт для иностранцев со всего мира и принимает многие национальные школьные квалификации (европейские, SAT и AP из США, CICSE или CBSE из Индии).",
+      "evidence": "The University welcomes applications and students from all over the world. We do accept many national school qualifications, including many European, SAT & AP if applying from the USA, and CICSE or CBSE if applying from India.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Если страны нет в списке (Таджикистана на страницах требований нет), вуз всё равно приветствует студентов и обещает подобрать требования; для уточнения просит писать на student.recruitment@glasgow.ac.uk. Это не отказ, а шаг «уточни в приёмной».",
+      "evidence": "If your country/region does not have an individual listing then please be assured we welcome students from all over the world and will have entry requirements accordingly. For further information, please email student.recruitment@glasgow.ac.uk",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Национальная школьная квалификация может не приниматься напрямую. Тогда путь — A-levels, IB, Glasgow International College (подготовительный колледж) либо другая признанная квалификация. Для 11-летней школы Таджикистана это условие, а не отказ.",
+      "evidence": "Country qualifications not accepted, A-levels, IB, Glasgow International College or other accepted qualification required.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь без школьного аттестата напрямую — подготовительные программы через Glasgow International College.",
+      "evidence": "A range of Foundation programmes are also available via Glasgow International College",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Эквивалентность иностранных квалификаций вуз оценивает через UK NARIC (National Recognition Information Centre).",
+      "evidence": "We use UK NARIC (National Recognition Information Centre) to assess the equivalency of overseas qualifications.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Квалификация старше 7 лет до даты заезда может считаться устаревшей — вуз вправе это учесть. Обходной путь при устаревшей квалификации — Access-курсы вуза или SWAP.",
+      "evidence": "Qualifications awarded more than 7 years before the proposed date of entry may be considered out of date.",
+      "field": "graduationYear",
+      "kind": "note"
+    },
+    {
+      "ru": "Пороги оценок задаются не общей таблицей, а страницей конкретной программы: раздел Entry Requirements на ней называет нужные оценки.",
+      "evidence": "The Entry Requirement section of each undergraduate programme page states the grades required to be considered for an offer.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен для тех, у кого он не родной: минимальный уровень вуз ставит и указывает на странице каждой программы.",
+      "evidence": "For applicants whose first language is not English, the University sets a minimum English language proficiency level: this can be found in the Entry requirements of each of the programmes listed",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Если язык ниже нужного, можно добрать его на подготовительных (pre-sessional) курсах English for Academic Study — они доводят до уровня входа.",
+      "evidence": "The University's English for Academic Study Unit offers a range of pre-sessional courses to bring you up to entry level.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Для визы вуз может сам оценить английский, поэтому все тесты из языковых требований подходят; для pre-sessional курсов ниже уровня степени нужен UKVI-тест (IELTS for UKVI или Trinity ISE).",
+      "evidence": "all the English language tests listed in the English language entry requirements are suitable to meet this requirement",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Подать документы можно только с 16 лет: младше 16 вуз не может спонсировать студенческую визу.",
+      "evidence": "The University cannot sponsor a Student visa for applicants who will be under the age of 16 at the commencement of their studies.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Абитуриентов младше 18 вуз принимает; тем, кто младше 16 и не нуждается в студенческой визе, назначают дополнительные проверки безопасности.",
+      "evidence": "The University welcomes applications from students under the age of 18",
+      "field": "age",
+      "kind": "note"
+    },
+    {
+      "ru": "Плата за обучение иностранца на 2027/28: Arts and Social Sciences — £28,275 в год; Science, Engineering, Nursing и медико-ветеринарные программы — £33,708; ветеринария (BVMS) — £38,670; стоматология (BDS) и MBChB на момент снимка — TBC.",
+      "evidence": "Arts and Social Sciences programmes £28,275 Science, Engineering, Nursing and College of Medical, Veterinary and Life Sciences programmes £33,708",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата на 2026/27 для сравнения: Arts and Social Sciences — £27,720; Science, Engineering, Nursing и MVLS — £33,210; BDS — £58,500; MBChB и клинические программы — £62,730; BVMS — £37,350.",
+      "evidence": "Science, Engineering, Nursing and College of Medical, Veterinary and Life Sciences programmes £33,210",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия World Changers Global Excellence (для новых иностранных и EU-студентов) — скидка на обучение £7,000 в год для College of Arts and Humanities и College of Social Sciences; для Science and Engineering и MVLS — £10,000 в год.",
+      "evidence": "The scholarship is awarded as a tuition fee discount of £7,000 per year of study for students attending the College of Arts and Humanities and the College of Social Sciences.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На международные стипендии вуз выделил более £15 млн.",
+      "evidence": "we have allocated over £15 million in international scholarships.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Статус платы «International» (то есть высокая ставка) получают те, кто не подходит под Home, Rest of UK или EU, либо подходит под пункты (k)/(l) — например, живёт вне EEA с 1 августа 2023 или нуждается в студенческой визе.",
+      "evidence": "International Applicants who either do not meet ALL necessary criteria for Home or Rest of UK or EU OR who meet (k) OR (l) will be assessed as International",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача — через UCAS (или Common App для Arts, Engineering, Law, Nursing, Science and Social Sciences; на Dentistry, Education, Medicine и Veterinary Medicine — только UCAS).",
+      "evidence": "All applications must be made through UCAS: www.ucas.com or Common App: www.commonapp.org",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Срок подачи на цикл 2027 года: UCAS-дедлайн 13 января 2027, 18:00 (UK time) — после него заявку рассмотрят только при наличии свободных мест.",
+      "evidence": "The UCAS deadline is 13 January 2027 18:00 (UK time).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Ранний дедлайн 15 октября — для Dentistry, Medicine, Veterinary Medicine, а также при подаче в Oxford или Cambridge.",
+      "evidence": "15 October: if including Dentistry, Medicine, Veterinary Medicine or also applying to Oxford or Cambridge",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для иностранцев финальный срок по UCAS — 30 июня (после него начинается Clearing). Обобщённые дедлайны опубликованы на странице подачи по UCAS.",
+      "evidence": "30 June: international students.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-13",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/ucas/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Glasgow. Подача бакалавриата — через UCAS (или Common App для части направлений); требования к квалификации по странам — на странице international, плата — на странице international fees. Таджикистана в списке стран нет, поэтому требования по квалификации смотреть по ближайшей странице ЦА (Казахстан) и уточнять в приёмной."
+    }
+  },
+  "source": {
+    "url": "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/",
+    "pages": [
+      {
+        "url": "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/",
+        "contentHash": "sha256:c1165fe2475bb9ac16197701819d8980d2ce91bea5f4154ac47179dc60e4f51f"
+      },
+      {
+        "url": "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/entry-requirements/",
+        "contentHash": "sha256:cd05a95c88b78451a6f5f1d19ebd9e088494781cd1755d34c970d80142bfb634"
+      },
+      {
+        "url": "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/dates-and-deadlines/",
+        "contentHash": "sha256:9f261e373de2d74bec943ad363859ff85cab217828429372fb4a59b931141581"
+      },
+      {
+        "url": "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/ucas/",
+        "contentHash": "sha256:8e7b0f227b98d843b0ba6e425704c9de5ec741beb9f678867158e969e5fc217c"
+      },
+      {
+        "url": "https://www.gla.ac.uk/undergraduate/fees/",
+        "contentHash": "sha256:81156760d4b6e10fef65f74b449268f0073c0deaa9e017fd58090118edf1d261"
+      },
+      {
+        "url": "https://www.gla.ac.uk/undergraduate/fees/intlfees/",
+        "contentHash": "sha256:aff005b76ff19288270634b1bfcdd9f8f984b94b865f8939edee948475108b41"
+      },
+      {
+        "url": "https://www.gla.ac.uk/undergraduate/fees/policies/feestatus/",
+        "contentHash": "sha256:a346579951dc33c09779759a456477f79808b83f764826a65a60da05316d93d7"
+      },
+      {
+        "url": "https://www.gla.ac.uk/international/englishlanguage/requirements/",
+        "contentHash": "sha256:92da459e76fc9a50a66d78bee1dabe6bcfdffd0e31f194b9ed151e709cb38e74"
+      },
+      {
+        "url": "https://www.gla.ac.uk/international/country/kazakhstan/",
+        "contentHash": "sha256:940f8b342bf617940903a7bb9ea2b050456747757bbf947156f3847578a8821f"
+      },
+      {
+        "url": "https://www.gla.ac.uk/international/country/",
+        "contentHash": "sha256:cbfdfe807ae2bcdac297c21d9967f01bea9d9c7577154a0d2a690dec44f1d0cb"
+      },
+      {
+        "url": "https://www.gla.ac.uk/scholarships/",
+        "contentHash": "sha256:8edb08fd42f44b9043308f3f6b8192a08d609b90bc9b56d3ddbea733606b9ba4"
+      },
+      {
+        "url": "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/entry-requirements/admissions-guidance/",
+        "contentHash": "sha256:14069d355a951caf7d3c39983b82bc25232e43316151d02d62f532391342fed6"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}
