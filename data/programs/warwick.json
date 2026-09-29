@@ -1,0 +1,300 @@
+{
+  "id": "warwick",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "University of Warwick (Уорик) — приём иностранцев на бакалавриат",
+    "orig": "University of Warwick"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, и полной помощи на него эти страницы не обещают. Вуз публикует ставки для иностранцев по «бэндам» курсов и годам: на 2027-28 курсы Band 2 стоят £37,310, Band 1 — £29,260. Из помощи названы только частичные IFP-стипендии £2,000–£3,500 (идут на подготовительный год), ограниченное число международных стипендий и bursary до £2,500 в год для семей с низким доходом. Поэтому помощь в карточке не отмечена"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство страницы приёма не ограничивают: вуз открыт для иностранцев и описывает подачу через UCAS, отдельного запрета по паспорту нет. Смотрели страницы приёма бакалавра, международных квалификаций, требований по английскому, платы и сроков."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: Таджикистан прямо назван среди стран, откуда вуз приветствует заявки на подготовительные и бакалаврские программы. Это не отказ — школьный аттестат просто не принимают напрямую, нужен IFP либо A-levels/IB/два года бакалавриата."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "We would require completion of an approved international foundation programme, such as the Warwick International Foundation Programme"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента эти страницы не ограничивают: ни минимального, ни максимального не названо. Вуз отдельно зовёт на собеседование тех, кому на старте курса меньше 18."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Satisfying the grade requirement of your course is only one aspect of the application and does not guarantee admission."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "parts": true,
+          "evidence": "Band A 6.0 including minimum 5.5 in each component"
+        },
+        {
+          "test": "PTE",
+          "min": 60,
+          "parts": true,
+          "evidence": "Band A 60 with no less than 59 in any of the Communicative Skills"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 110,
+          "parts": true,
+          "evidence": "Band A 110 overall with minimum 100 in each component (Reading, Writing, Speaking and Listening)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 87,
+          "parts": true,
+          "evidence": "Band A 213 (Computer) 87 (iBT or iBT Special Home Edition) with minimum of 21 in Listening, 21 in Writing, 22 in Reading and 23 in Speaking"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "Band A: 4.5 including minimum of 4.5 in each component"
+        }
+      ],
+      "evidence": "All applicants, regardless of their visa requirements, are required to show that their ability to understand and express themselves in both written and spoken English is sufficiently high for them to derive full benefit from their degree course."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Школьный аттестат Таджикистана прямого входа на бакалавриат не даёт: вуз прямо пишет, что школьную квалификацию для входа не рассматривает, и требует пройти одобренный подготовительный год — например, Warwick International Foundation Programme. Это не отказ, а условие.",
+      "evidence": "High School qualification is not considered for entry. We would require completion of an approved international foundation programme, such as the Warwick International Foundation Programme",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь без подготовительного года — внешние экзамены: IB, A Levels, другие европейские или североамериканские системы, либо два года обучения на бакалавриате.",
+      "evidence": "Alternatively IB, A Levels, or other European, North American systems or two years of a Bachelor degree will be considered.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "На странице для Таджикистана вход описан так же: Warwick IFP обязателен, а альтернатива — IB, A-Levels, APs или два года бакалавриата.",
+      "evidence": "Warwick IFP required. Alternatively IB, A-Levels, APs or two years of a Bachelors degree for entry.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Эквиваленты квалификаций — только ориентир, а не гарантия: при сомнении вуз советует писать в приёмную, региональной команде или на кафедру.",
+      "evidence": "Stated equivalents are neither absolute nor complete. If you are in any doubt please contact admissions, your regional team, or your academic department to discuss your application.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Даже выполнив требование по оценкам, поступление не гарантировано: оценки — только один из аспектов заявки.",
+      "evidence": "Satisfying the grade requirement of your course is only one aspect of the application and does not guarantee admission.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен для всех, независимо от визы: вуз требует, чтобы письменный и устный английский был достаточно высок для учёбы на курсе.",
+      "evidence": "All applicants, regardless of their visa requirements, are required to show that their ability to understand and express themselves in both written and spoken English is sufficiently high for them to derive full benefit from their degree course.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог зависит от «бэнда» курса. Самый низкий, Band A, — IELTS 6.0 (не меньше 5.5 по каждой части); Band B — 6.5 (6.0 по части); Band C — 7.0 (6.5 по части). Какой бэнд нужен, указано на странице курса.",
+      "evidence": "Band A 6.0 including minimum 5.5 in each component Band B 6.5 including minimum 6.0 in each component Band C 7.0 including minimum 6.5 in each component",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Вуз не принимает IELTS 'One skill Retake' — пересдачу одной части.",
+      "evidence": "IELTS 'One skill Retake' not acceptable.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Сертификаты (включая IELTS и PTE) должны быть сданы не раньше чем за два года и один месяц до начала курса; иначе нужно пересдавать.",
+      "evidence": "certain English tests (including IELTS and PTE) must be taken within two years and one month prior to the start of your course at Warwick",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Если сдано несколько тестов, вуз принимает только результат самого свежего.",
+      "evidence": "we are only able to accept the results from the most recent test",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Плата за обучение иностранца зависит от «бэнда» курса и года. Для Band 1 на 2027-28 — £29,260 (на 2025-26 было £26,290, на 2026-27 — £27,870). Точная ставка привязана к конкретному курсу.",
+      "evidence": "English Literature and Creative Writing (BA) QW38 Band 1 £26,290 £27,870 £29,260",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для Band 2 (большинство инженерных, естественных и экономических курсов) на 2027-28 — £37,310 (на 2025-26 было £33,520, на 2026-27 — £35,530).",
+      "evidence": "Accounting and Finance (BSc) NN34 Band 2 £33,520 £35,530 £37,310",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата может расти: для продолжающих студентов вуз оставляет за собой право поднимать её в соответствии с инфляцией.",
+      "evidence": "fees for continuing students may be subject to an increase in fees in line with an inflationary uplift",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для подготовительного года (IFP) есть стипендии от £2,000 до £3,500 на обучение; их присуждают конкурентно за академический потенциал, по личному заявлению.",
+      "evidence": "The scholarships will range from £2,000 to £3,500 towards your IFP tuition fees",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для иностранных бакалавров число стипендий ограничено.",
+      "evidence": "If you are an international student, a limited number of scholarships may be available.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Bursary для студентов из семей с низким доходом — до £2,500 в год, возвращать его не нужно.",
+      "evidence": "The Warwick Undergraduate Bursary is an annual award of up to £2,500 per annum.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача на бакалавриат — только через UCAS. Код Уорика — W20.",
+      "evidence": "You can apply for undergraduate courses through Universities and Colleges Admissions Service (UCAS). Our institution code is W20.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Ключевые сроки, названные на странице: приём 2026 года открылся через UCAS 2 сентября 2025, заявку надо подать до 18:00 14 января 2026. Позже заявку могут рассмотреть, но равное рассмотрение не гарантируется. На момент снимка страница называла именно приём 2026 года и сроков на 2027 год не публиковала.",
+      "evidence": "Applications for 2026 entry opened via UCAS on 2 September 2025. In order to guarantee consideration for your preferred course, you must apply by the UCAS deadline at 18:00 on 14 January 2026.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача на подготовительную программу (IFP) платная: при завершении заявки нужно внести 75 фунтов невозвратного взноса за рассмотрение.",
+      "evidence": "£75 non-refundable assessment fee",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 75,
+        "currency": "GBP",
+        "evidence": "£75 non-refundable assessment fee"
+      }
+    },
+    {
+      "ru": "Приём на International Foundation Programme на момент снимка закрыт — форма подачи недоступна.",
+      "evidence": "Applications Closed",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://warwick.ac.uk/study/undergraduate/applying/how-to-apply/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Warwick. Подача бакалавриата — только через UCAS (код W20); требования к квалификации Таджикистана — на странице международных квалификаций, плата — по курсам на странице сборов."
+    }
+  },
+  "source": {
+    "url": "https://warwick.ac.uk/study/undergraduate/applying/international/",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://warwick.ac.uk/study/undergraduate/applying/international/",
+        "contentHash": "sha256:142269493f0d1105c94914fa00a4b10a4f155e4d6d2f05bc79dbbd749959ce43"
+      },
+      {
+        "url": "https://warwick.ac.uk/study/undergraduate/courses/ug-international-qualifications",
+        "contentHash": "sha256:cb499e7e9f0bd5b4644044616a6ea4baca2d3b6b5ed7a0cd282ddf72a1678617"
+      },
+      {
+        "url": "https://warwick.ac.uk/study/international/countryinformation/europe/tajikistan",
+        "contentHash": "sha256:a1c0bbc68125ba2dc9faa37d76b6a8fd402a68726d96e1216b9a11ced729a381"
+      },
+      {
+        "url": "https://warwick.ac.uk/study/undergraduate/applying/english-language-requirements/",
+        "contentHash": "sha256:f03458cf86308305e36e750cfcddfada6a4c1c8e5e58ebd21f425266d44f63f0"
+      },
+      {
+        "url": "https://warwick.ac.uk/services/finance/studentfinance/fees/overseasfees",
+        "contentHash": "sha256:d30dda6c929c1945ec0af49888546457aaecf24a65e9606c53d9e2753cd89f43"
+      },
+      {
+        "url": "https://warwick.ac.uk/study/international/admissions/finance/",
+        "contentHash": "sha256:45761a66fc36d9a7e40080e6493d97a7b64f7de2228314b37f9d7bd4b10af55c"
+      },
+      {
+        "url": "https://warwick.ac.uk/study/international-foundation-programme/scholarships/",
+        "contentHash": "sha256:22190b186297370d4812dd67bb73742ebd243198dd0d8414b112c9611ab8090c"
+      },
+      {
+        "url": "https://warwick.ac.uk/study/undergraduate/fees-and-funding/scholarships-and-bursaries/",
+        "contentHash": "sha256:05426a434e48b1cf5e23bb7c9de57c614dcc9917295f33338be6ee01ffa86416"
+      },
+      {
+        "url": "https://warwick.ac.uk/study/undergraduate/applying/how-to-apply/",
+        "contentHash": "sha256:5e163b790e88dc3d207360e235c20f6b51ceedbc0ed23e037017a07ea2ca6e2f"
+      },
+      {
+        "url": "https://warwick.ac.uk/study/undergraduate/applying/dates/",
+        "contentHash": "sha256:eb976081f518039a1fda720579140c7a4b5df3f097db1ed1defdbfdafcf053bc"
+      },
+      {
+        "url": "https://warwick.ac.uk/study/international-foundation-programme",
+        "contentHash": "sha256:1e41d2526eba2ca41d7cba108b6d7a7ce465504a574c8c3183c0367549ca0e0f"
+      },
+      {
+        "url": "https://warwick.ac.uk/study/international-foundation-programme/application-process/",
+        "contentHash": "sha256:32b5049ec69bc0c53b1d2cd1289a3c46007629ae23f44900329f6b322fcaff00"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
