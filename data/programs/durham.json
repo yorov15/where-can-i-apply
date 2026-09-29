@@ -1,0 +1,275 @@
+{
+  "id": "durham",
+  "status": "published",
+  "kind": "university",
+  "name": {
+    "ru": "Durham University (Дарем) — приём иностранцев на бакалавриат",
+    "orig": "Durham University"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, и полной помощи на обучение и жизнь эти страницы не обещают. Ставки для иностранцев отдельной цифрой не опубликованы: вуз пишет, что плата за полный год иностранца указана в базе курсов, и что она растёт ежегодно до 6% или на рост индекса потребительских цен. Единственная крупная международная бакалаврская стипендия — Durham Inspiring Excellence: конкурентная частичная, £5,000–£10,000 в год скидкой на обучение, число ограничено. Остальные бакалаврские стипендии на странице предназначены британским студентам с низким доходом семьи или жителям Северо-Востока Англии. Поэтому помощь в карточке не отмечена"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство страницы приёма не ограничивают: вуз открыто принимает иностранцев, называет студентов из более чем 120 стран и ведёт подачу через UCAS без отдельного запрета по паспорту. Смотрели международный хаб, страницу международных квалификаций, требования по английскому, плату, стипендии и порядок подачи."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: вуз принимает квалификации со всего мира, а по странам даёт лишь ориентировочные эквиваленты оценок. Таджикистан на региональных страницах отдельно не назван, поэтому аттестат — это вопрос уточнения в приёмной, а не запрет по стране."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "International students who do not meet direct entry requirements have the option of studying an International Foundation Year or a Pre-Masters programme at the Durham University International Study Centre."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: ни минимального, ни максимального года выпуска не указано — важен набор квалификаций и сроки UCAS."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента эти страницы не ограничивают: ни минимального, ни максимального возраста не названо."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "All courses require you to achieve certain grades in your qualifications, and some require prior study and knowledge of specific subjects, which we'll ask you to achieve at a particular grade."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "UKVI/SELT IELTS 6.5 with no component under 6.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "parts": true,
+          "evidence": "Tests taken before 21 Jan 2026 80 with no component under 20"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "Tests taken from 21 Jan 2026 4.5 with no component under 4"
+        },
+        {
+          "test": "PTE",
+          "min": 62,
+          "parts": true,
+          "evidence": "Pearson Academic PTE 62 (with no less than 59 in each Communicative Skill)"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 120,
+          "parts": true,
+          "evidence": "Duolingo English Language Test (DET) 120 overall and no less than 110 in any individual Sub scores (Listening, Reading, Writing and Speaking)"
+        }
+      ],
+      "evidence": "If English is not your first language, then you must provide evidence of your ability in spoken and written English."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Школьный аттестат постсоветской 11-летней школы прямого входа не даёт: на региональной странице для Казахстана сказано, что Attestat o Srednem Obrazovami (Certificate of Secondary Education) не годится для прямого поступления без дополнительных квалификаций. Таджикистан на региональных страницах вообще не назван, поэтому для него это условие «уточни в приёмной» — нужен подготовительный год либо другая квалификация.",
+      "evidence": "The Attestat o Srednem Obrazovami (Certificate of Secondary Education) is not suitable for direct entry without additional qualifications.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь есть: вуз прямо пишет, что принимает ряд программ для входа на бакалавриат тех, у кого нет нужных квалификаций.",
+      "evidence": "If you don't have the qualifications for entry or need extra help with the English language, then we accept a number of courses for entry to our undergraduate degrees.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Иностранцам, не дотягивающим до прямого входа, предлагают International Foundation Year в Durham University International Study Centre; после успешного окончания и нужных оценок студент переходит на выбранную программу бакалавриата.",
+      "evidence": "Once you successfully complete this foundation programme and achieve the required grades, you can progress to your chosen undergraduate degree at Durham University.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Эквиваленты квалификаций есть не для всех: часть требований лежит на региональных страницах, а если своей страны/региона или квалификации там нет — вуз просит связаться с ним. Таджикистана на региональных страницах нет.",
+      "evidence": "Some country and region-specific entry requirements are listed on our regional pages linked below, but if you do not see your country/region or qualification please get in touch with us .",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Требования к оценкам у каждого курса свои, а по некоторым нужны профильные предметы; точные требования — в базе курсов.",
+      "evidence": "Entry requirements per course will differ, and some courses may require previous study in certain subjects.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен: если английский не родной, нужно подтвердить владение устным и письменным английским.",
+      "evidence": "If English is not your first language, then you must provide evidence of your ability in spoken and written English.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог зависит от «бэнда» курса. Большинство бакалаврских программ — Band B: IELTS 6.5 (не ниже 6.0 по каждой части). Band A (в том числе Law) — IELTS 7.0 (6.5 по части), Band C — IELTS 6.0 (5.5 по части). Какой бэнд нужен, указано на странице уровней по предметам.",
+      "evidence": "UKVI/SELT IELTS 6.5 with no component under 6.0",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Освобождение от языкового теста — только для тех, кто недавно закончил квалификацию уровня британской степени в признанной англоязычной стране или сам из такой страны. Таджикистана в списке нет, значит тест нужен.",
+      "evidence": "Recognised English speaking countries You do not need to prove your knowledge of English if you've recently completed a qualification equivalent to a UK degree in one of the listed countries/areas, or are from one of the listed countries/areas.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Есть отдельное освобождение: если уже пройден минимум один полный академический год обучения на степень в Великобритании или другой англоязычной стране и это было не раньше чем за 2 года до старта программы.",
+      "evidence": "If you have already completed or are currently completing a degree where at least 1 full academic year was studied in the UK or in another majority English speaking country, then you may be exempt from an additional English language test if this has been within 2 years of the start date of the programme you are applying to.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "SAT/ACT вуз не требует: для большинства бакалаврских программ дополнительный тест не нужен. Для Law и Mathematics настоятельно советуют профильный тест (LNAT и тесты по математике).",
+      "evidence": "For most undergraduate courses at Durham, you won't need to sit an additional test as part of the selection process.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Плата за обучение иностранцев отдельной цифрой не опубликована: вуз пишет, что ставка для полного года иностранца указана в базе курсов.",
+      "evidence": "Fees for full-time international students are displayed in the course database.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата растёт: для начинающих с 2025/26 она ежегодно индексируется и может подниматься до 6% либо на рост индекса потребительских цен, что выше.",
+      "evidence": "Tuition fees will rise annually by up to the higher of; 6%, or, the latest annual percentage increase in the Consumer Prices Index.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Единственная крупная международная бакалаврская стипендия — Durham Inspiring Excellence: конкурентная частичная, от £5,000 до £10,000 в год (до £15,000–£30,000 за три года) скидкой на обучение; число ограничено и только для self-funded иностранцев, выбравших Durham в качестве Firm Choice. Полной помощи на обучение и жизнь нет.",
+      "evidence": "Each scholarship is a competitive partial scholarship award worth up to £15,000 - £30,000 over three years in tuition fee discounts towards the original tuition fee for an undergraduate programme starting in September 2027.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача на бакалавриат — через UCAS. Дополнительно иностранный абитуриент шлёт сканы квалификаций (включая результат языкового теста) в Recruitment and Admissions Office, указав UCAS PID, имя и дату рождения.",
+      "evidence": "As an international undergraduate applicant, as well as submitting your application through UCAS you will also need to send scanned copies of your qualifications (including your score in any English language test you have undertaken) to our Recruitment and Admissions Office.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Код вуза в UCAS — D86.",
+      "evidence": "Use the institution code D86 for Durham.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки: подавать лучше к январской дате UCAS Equal Consideration; для Oxford, Cambridge и Medicine, Dentistry или Veterinary Science срок — 15 октября. В условиях стипендии Inspiring Excellence названа дата равного рассмотрения 13 января 2027, 18:00 (UK).",
+      "evidence": "if you're applying for Oxford, Cambridge, or Medicine, Dentistry or Veterinary Science, then the application deadline is 15 October.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-13",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.durham.ac.uk/study/undergraduate/how-to-apply/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Durham University. Подача бакалавриата — через UCAS (код D86); требования к квалификации для Центральной и Южной Азии — на региональной странице, языковые пороги — по «бэндам» курсов, плата для иностранцев — в базе курсов."
+    }
+  },
+  "source": {
+    "url": "https://www.durham.ac.uk/study/international/",
+    "pages": [
+      {
+        "url": "https://www.durham.ac.uk/study/international/",
+        "contentHash": "sha256:35fa2108e96c8fe4c0df8fd7e6c3f374009cc21d45e034e0847234433f265a43"
+      },
+      {
+        "url": "https://www.durham.ac.uk/study/international/application-guidance/",
+        "contentHash": "sha256:45337dd52c4b2c091ca7cb8696cf4f8e5aa3005266f4f42cbe895b6146e3e96c"
+      },
+      {
+        "url": "https://www.durham.ac.uk/study/international/entry-requirements/international-qualifications/",
+        "contentHash": "sha256:ca8140c59b9bf352c6bf70538414052982004993f64618945749f12e9f08613c"
+      },
+      {
+        "url": "https://www.durham.ac.uk/study/international/regional-pages/central--south-asia-/",
+        "contentHash": "sha256:ddf3cd2c4d745cbf54b48d17ae01dec08d961d2d49db7c0627daae7c7a8e237e"
+      },
+      {
+        "url": "https://www.durham.ac.uk/study/international/entry-requirements/english-language-requirements/",
+        "contentHash": "sha256:532f8b2fae424d8653ac256f365d2d0cfe5677ec1f6b45b7caa5a48bbc8eed52"
+      },
+      {
+        "url": "https://www.durham.ac.uk/study/international/entry-requirements/english-language-requirements/direct-entry-band-b/",
+        "contentHash": "sha256:45cf3ea48c2d9a6d2f9a055210cbf28e82d11a508474ff4b3ec2bec7b5d585fe"
+      },
+      {
+        "url": "https://www.durham.ac.uk/study/international/entry-requirements/english-language-requirements/exemptions-for-undergraduate-and-postgraduate-taught/",
+        "contentHash": "sha256:0e30442bdbc46542dda152d3922a23f6ec58f5887f4a6013f022672c8f034943"
+      },
+      {
+        "url": "https://www.durham.ac.uk/study/international/fees-and-funding/",
+        "contentHash": "sha256:4d3ec35704e6b369024523ae2abe83eb0361faabc20abe17eefe524338564f23"
+      },
+      {
+        "url": "https://www.durham.ac.uk/study/international/pathway-programmes/international-foundation-year/",
+        "contentHash": "sha256:d4a0f0ab62eb3d197881c830b4ce78ba80be82f1749c1d994c164b6e48d540c1"
+      },
+      {
+        "url": "https://www.durham.ac.uk/study/undergraduate/how-to-apply/",
+        "contentHash": "sha256:5999a5f89b572d9f873934636b78ba478496730c3629fdfb637f958a569dd35f"
+      },
+      {
+        "url": "https://www.durham.ac.uk/study/undergraduate/fees-and-funding/tuition-fees/",
+        "contentHash": "sha256:006f5ab13ca7662be5fd77fc879a9137f507bec20e38324906658b48134443e7"
+      },
+      {
+        "url": "https://www.durham.ac.uk/study/undergraduate/how-to-apply/entry-requirements/",
+        "contentHash": "sha256:a5af76600c6bb1eb1b0cd112fc3b99ae49c5d4d812c6fcdd283d2a80f0a83668"
+      },
+      {
+        "url": "https://www.durham.ac.uk/study/scholarships/international/durham-inspiring-excellence-scholarships/undergraduate/",
+        "contentHash": "sha256:a2aad4fdf0264b9c7ca4eabdc39cba527be1cf0ff4f945d138179fdb61207dc9"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}
