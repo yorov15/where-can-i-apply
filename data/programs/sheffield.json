@@ -1,0 +1,259 @@
+{
+  "id": "sheffield",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "University of Sheffield (Шеффилд) — приём иностранцев на бакалавриат",
+    "orig": "University of Sheffield"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, и полной помощи на него эти страницы не обещают: суммы сборов вуз не публикует, их выдаёт только онлайн-калькулятор платы по выбранному курсу и статусу (домашний/иностранный). Международная стипендия бакалавра 2027 — £2,500 за каждый год (при среднем 60%), максимум £10,000 за четырёхлетнюю программу; отдельно перечислены частные стипендии (Sanctuary, спортивная ESPS, ряд школьных). Полного покрытия нет, поэтому помощь в карточке не отмечена. Для иностранцев действует «fixed fee guarantee»: плата первого года фиксируется на все годы той же программы."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство страницы приёма не ограничивают: вуз прямо пишет, что подать заявку на бакалавриат можно из любой точки мира, и приветствует иностранных абитуриентов. Отдельного запрета по паспорту нет. Смотрели хаб приёма, страницы подачи, международных квалификаций, английского, платы, стипендий и подготовительного года."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: вуз принимает широкий круг международных квалификаций и зовёт подавать из любой страны. Но в A-Z-списке стран сайта Таджикистана нет (из Центральной Азии указан только Казахстан), поэтому конкретный эквивалент школьного аттестата вуз на этих страницах не называет — его надо уточнять в приёмной, а для квалификаций, которых нет в таблицах, описан путь через International Foundation Year."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "We normally expect applicants to offer three full A Levels or accepted equivalent qualifications."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: ни минимального, ни максимального срока давности аттестата нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента эти страницы не ограничивают: ни минимального, ни максимального возраста не названо."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "All courses require you to achieve certain grades in your qualifications, and some require prior study and knowledge of specific subjects."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "Overall score of 6.5 with a minimum of 6.0 in each component"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 88,
+          "parts": true,
+          "evidence": "Overall score of 88 with a minimum of 19 in Listening, 20 in Reading, 22 in Speaking and 19 in Writing"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "Overall score of 4.5 with a minimum of 4.5 in Listening and Speaking and 4.0 in Reading and Writing"
+        },
+        {
+          "test": "PTE",
+          "min": 61,
+          "parts": true,
+          "evidence": "Overall score of 61 with a minimum of 56 in each component"
+        }
+      ],
+      "evidence": "Undergraduate applicants are required to achieve a minimum of IELTS 6.5 with 6.0 in each component or equivalent."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Аттестата Таджикистана в таблицах принимаемых квалификаций нет: вуз называет квалификации стран Европы и мира, но не Таджикистан. Общий вход описан через три полных A Level или эквивалент уровня Level 3 — для не указанных в таблицах стран эквивалент надо уточнять в приёмной. Это не отказ, а условие.",
+      "evidence": "We welcome applications from students studying a range of UK, European and international qualifications at Level 3 or above that offer suitable preparation for study at the University.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Для тех, кто не проходит по академическим требованиям или английскому, есть путь через International Foundation Year в University of Sheffield International College; после успешного окончания он даёт вход на бакалавриат.",
+      "evidence": "For students who do not meet the academic or English Language requirements, the University of Sheffield International College offers pathways to undergraduate and postgraduate study.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Подготовительный год ведёт прямо на бакалавриат: по его успешном окончании можно войти на широкий круг undergraduate-программ университета. Доступны два направления — Business, Social Sciences and Humanities и Science and Engineering.",
+      "evidence": "Upon successful completion of your International Foundation Year programme, you can gain entry into a wide range of world-class undergraduate degree programmes at the University of Sheffield.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Обходной путь без подготовительного года — внешние школьные квалификации: вуз принимает A Level, International Baccalaureate (IB), а также ряд других европейских и мировых систем (для США — APs).",
+      "evidence": "This page lists some of the other qualifications we consider.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если страны или квалификации нет в таблицах, вуз советует смотреть страницы стран; при этом в A-Z-списке Таджикистана нет, поэтому эквивалент аттестата нужно уточнять в приёмной.",
+      "evidence": "If you can't find your country or qualification, more information and contact details are available on our country pages",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Оценки по квалификации должны быть достигнуты, но это только один аспект: вуз предупреждает, что выполнение требований курса не гарантирует предложения места, а типичные условия приёма могут отличаться от выставленных.",
+      "evidence": "Note that these represent our typical offer conditions only - we may make different offers in some cases.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен для всех иностранцев, и порог зависит от курса: разные курсы требуют разного уровня, некоторые кафедры — выше. Указанный минимум IELTS 6.5 (6.0 по каждой части) — это уровень Standard, базовый для большинства курсов.",
+      "evidence": "For most of these tests, different courses require different levels of achievement.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Отдельные кафедры могут требовать более высокий балл, чем базовый.",
+      "evidence": "Some academic departments may require a higher score",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Сертификат английского, сданный как тест, действителен не больше двух лет до начала курса в Шеффилде; более старый нужно пересдавать.",
+      "evidence": "it should have been completed no more than two years before the start date of your Sheffield course",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Подача на бакалавриат — только через UCAS; все программы начинаются в сентябре, январского приёма нет.",
+      "evidence": "All undergraduate degree programmes at the University of Sheffield begin in September each year. We do not have an intake in January or February.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Ключевые сроки на странице названы для приёма сентября 2027: заявку в UCAS нужно подать между 1 сентября 2026 и 13 января 2027, чтобы гарантировать равное рассмотрение. Заявки с 14 января по 30 июня 2027 рассматриваются дальше, но места могут закончиться.",
+      "evidence": "Applications for courses starting in September 2027 (except Medicine and Dentistry) should be submitted to UCAS between: 1 September 2026 and 13 January 2027 to be guaranteed equal consideration with other applicants",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для медицины и стоматологии срок ранний: заявку подают между 1 сентября и 15 октября 2026.",
+      "evidence": "Applications for places on Medicine and Dentistry courses must be submitted between 1 September and 15 October 2026.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Плата зависит от статуса: вуз взимает разные суммы с домашних и иностранных студентов, а конкретную ставку по курсу выдаёт онлайн-калькулятор, а не текстовая страница.",
+      "evidence": "The University of Sheffield charges different tuition fees depending on whether students are classed as Home or Overseas for fee purposes.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для иностранцев действует гарантия фиксированной платы: сумма первого года не меняется на всех последующих годах той же программы (при смене курса плата может отличаться).",
+      "evidence": "International students will pay the same fixed annual tuition fee for each year of the same course.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Международная стипендия бакалавра 2027: £2,500 за каждый год при среднем балле 60%, максимум £10,000 за четырёхлетнюю программу. Приём на стипендию 2026 года уже закрыт.",
+      "evidence": "We are offering scholarships of £2,500 for each year (subject to a 60% average) of your undergraduate degree. The maximum value is £10,000 for four year programmes.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-01",
+    "closes": "2027-01-13",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.sheffield.ac.uk/undergraduate/apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Sheffield. Подача бакалавриата — только через UCAS; требования к квалификации — на странице международных квалификаций (Таджикистана в таблицах нет), английский — по уровням Standard/Good/Advanced/Proficiency, плата — через онлайн-калькулятор, подготовка — International Foundation Year в University of Sheffield International College."
+    }
+  },
+  "source": {
+    "url": "https://www.sheffield.ac.uk/international/applying/undergraduate",
+    "pages": [
+      {
+        "url": "https://www.sheffield.ac.uk/international/applying/undergraduate",
+        "contentHash": "sha256:9634c20e7a131736df6c3ba88457376f2e631f02662b6f35521af816b52044ce"
+      },
+      {
+        "url": "https://www.sheffield.ac.uk/international/country-list",
+        "contentHash": "sha256:25e152dbc1b62908e67216bc5deee57211a3f90e8a2a5f52b76ef3e7e0225658"
+      },
+      {
+        "url": "https://www.sheffield.ac.uk/international/entry-requirements/english-language-requirements",
+        "contentHash": "sha256:978d7732228322fbf16b798da49e2ca248d430800463800431df0d83aa4c40e4"
+      },
+      {
+        "url": "https://www.sheffield.ac.uk/undergraduate/apply/english-language",
+        "contentHash": "sha256:79a6b8aa13dc7565916b399cdcbaa666a801fe75e9c92ac9ac325b884b6bcb50"
+      },
+      {
+        "url": "https://www.sheffield.ac.uk/undergraduate/apply/international-qualifications",
+        "contentHash": "sha256:1c2087875565cc630e1614b00ecc2b347c240b1decc59dd8ebc41e4f9b140b29"
+      },
+      {
+        "url": "https://www.sheffield.ac.uk/undergraduate/apply/requirements",
+        "contentHash": "sha256:03e4b5c9e213cabdabbb7b36caa370e6723438d3cec161659b380368134ad38d"
+      },
+      {
+        "url": "https://www.sheffield.ac.uk/undergraduate/apply",
+        "contentHash": "sha256:609cc031d243d079e5c9fbbb50f778efc2ae30c070cb38609b31cf5a3ec29bec"
+      },
+      {
+        "url": "https://www.sheffield.ac.uk/international/fees-and-funding/tuition-fees",
+        "contentHash": "sha256:9d677a377d492b27290a07a2fad4742f7b4efd0d9b7aeb034ff0b65232f7d759"
+      },
+      {
+        "url": "https://www.sheffield.ac.uk/international/fees-and-funding/scholarships",
+        "contentHash": "sha256:d1519812eecdaffe178fe3717c9c34f8a72f493cc9ee481a9c4d512269eb3e31"
+      },
+      {
+        "url": "https://www.sheffield.ac.uk/international/fees-and-funding/scholarships/undergraduate",
+        "contentHash": "sha256:41d8bc686b08f8bb4a43715c9d8f00bb9ce4ccc8bf822bbf43cc282ca7763b0b"
+      },
+      {
+        "url": "https://www.sheffield.ac.uk/international/applying/foundation",
+        "contentHash": "sha256:0c8e554554b65853fd8e8112d537226dea25e35960b1028c27f9750fce589b84"
+      },
+      {
+        "url": "https://www.sheffield.ac.uk/undergraduate/fees-funding",
+        "contentHash": "sha256:088828ab3d6a7945c828e57dfb89dcc5c264c18dfdc6cb4bdb7e1ec187d73707"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}
