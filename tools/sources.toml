@@ -3254,32 +3254,77 @@ approvedAt = "2026-09-29"
 
 [leeds]
 name = "University of Leeds (Великобритания): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.leeds.ac.uk/international-applying/doc/entry-requirements",
+files = [
+  { path = "manual/leeds/hub.html", url = "https://www.leeds.ac.uk/international-applying/doc/entry-requirements" },
+  { path = "manual/leeds/tajikistan.html", url = "https://www.leeds.ac.uk/admissions-qualifications/21938/tajikistan" },
+  { path = "manual/leeds/uzbekistan.html", url = "https://www.leeds.ac.uk/admissions-qualifications/21952/uzbekistan" },
+  { path = "manual/leeds/kazakhstan.html", url = "https://www.leeds.ac.uk/admissions-qualifications/21847/kazakhstan" },
+  { path = "manual/leeds/foundation-routes.html", url = "https://www.leeds.ac.uk/international-applying/doc/foundation-routes" },
+  { path = "manual/leeds/how-to-apply.html", url = "https://www.leeds.ac.uk/international-applying/doc/international-how-to-apply" },
+  { path = "manual/leeds/ify-entry-requirements.html", url = "https://www.leeds.ac.uk/international-foundation-year/doc/ify-entry-requirements" },
+  { path = "manual/leeds/undergraduate-fees.html", url = "https://www.leeds.ac.uk/undergraduate-fees/doc/fees-undergraduate-fees" },
+  { path = "manual/leeds/application-timetable.html", url = "https://www.leeds.ac.uk/undergraduate-how-to-apply/doc/application-timetable" },
+  { path = "manual/leeds/undergraduate-how-to-apply.html", url = "https://www.leeds.ac.uk/undergraduate-how-to-apply/doc/apply" },
+  { path = "manual/leeds/living-expenses.html", url = "https://www.leeds.ac.uk/international-fees-costs/doc/living-expenses" },
+  { path = "manual/leeds/scholarships-main-p2.html", url = "https://www.leeds.ac.uk/scholarships?page=2" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
 [glasgow]
 name = "University of Glasgow (Великобритания): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/",
+files = [
+  { path = "manual/glasgow/hub.html", url = "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/" },
+  { path = "manual/glasgow/entry-requirements.html", url = "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/entry-requirements/" },
+  { path = "manual/glasgow/dates-and-deadlines.html", url = "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/dates-and-deadlines/" },
+  { path = "manual/glasgow/ucas.html", url = "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/ucas/" },
+  { path = "manual/glasgow/fees.html", url = "https://www.gla.ac.uk/undergraduate/fees/" },
+  { path = "manual/glasgow/international-fees.html", url = "https://www.gla.ac.uk/undergraduate/fees/intlfees/" },
+  { path = "manual/glasgow/fee-status.html", url = "https://www.gla.ac.uk/undergraduate/fees/policies/feestatus/" },
+  { path = "manual/glasgow/english-requirements.html", url = "https://www.gla.ac.uk/international/englishlanguage/requirements/" },
+  { path = "manual/glasgow/kazakhstan.html", url = "https://www.gla.ac.uk/international/country/kazakhstan/" },
+  { path = "manual/glasgow/country.html", url = "https://www.gla.ac.uk/international/country/" },
+  { path = "manual/glasgow/scholarships.html", url = "https://www.gla.ac.uk/scholarships/" },
+  { path = "manual/glasgow/admissions-guidance.html", url = "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/entry-requirements/admissions-guidance/" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
 [sheffield]
 name = "University of Sheffield (Великобритания): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.sheffield.ac.uk/international/applying/undergraduate",
+files = [
+  { path = "manual/sheffield/hub.html", url = "https://www.sheffield.ac.uk/international/applying/undergraduate" },
+  { path = "manual/sheffield/country-list.html", url = "https://www.sheffield.ac.uk/international/country-list" },
+  { path = "manual/sheffield/english-language.html", url = "https://www.sheffield.ac.uk/international/entry-requirements/english-language-requirements" },
+  { path = "manual/sheffield/english-language-qualifications.html", url = "https://www.sheffield.ac.uk/undergraduate/apply/english-language" },
+  { path = "manual/sheffield/international-qualifications.html", url = "https://www.sheffield.ac.uk/undergraduate/apply/international-qualifications" },
+  { path = "manual/sheffield/admissions-requirements.html", url = "https://www.sheffield.ac.uk/undergraduate/apply/requirements" },
+  { path = "manual/sheffield/undergraduate-apply.html", url = "https://www.sheffield.ac.uk/undergraduate/apply" },
+  { path = "manual/sheffield/tuition-fees.html", url = "https://www.sheffield.ac.uk/international/fees-and-funding/tuition-fees" },
+  { path = "manual/sheffield/scholarships.html", url = "https://www.sheffield.ac.uk/international/fees-and-funding/scholarships" },
+  { path = "manual/sheffield/scholarships-undergraduate.html", url = "https://www.sheffield.ac.uk/international/fees-and-funding/scholarships/undergraduate" },
+  { path = "manual/sheffield/foundation.html", url = "https://www.sheffield.ac.uk/international/applying/foundation" },
+  { path = "manual/sheffield/undergraduate-fees-funding.html", url = "https://www.sheffield.ac.uk/undergraduate/fees-funding" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
 [durham]
 name = "Durham University (Великобритания): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.durham.ac.uk/international/study/undergraduate/",
+files = [
+  { path = "manual/durham/international.html", url = "https://www.durham.ac.uk/study/international/" },
+  { path = "manual/durham/application-guidance.html", url = "https://www.durham.ac.uk/study/international/application-guidance/" },
+  { path = "manual/durham/international-qualifications.html", url = "https://www.durham.ac.uk/study/international/entry-requirements/international-qualifications/" },
+  { path = "manual/durham/regional-central-south-asia.html", url = "https://www.durham.ac.uk/study/international/regional-pages/central--south-asia-/" },
+  { path = "manual/durham/english-language-requirements.html", url = "https://www.durham.ac.uk/study/international/entry-requirements/english-language-requirements/" },
+  { path = "manual/durham/band-b.html", url = "https://www.durham.ac.uk/study/international/entry-requirements/english-language-requirements/direct-entry-band-b/" },
+  { path = "manual/durham/exemptions-english-language.html", url = "https://www.durham.ac.uk/study/international/entry-requirements/english-language-requirements/exemptions-for-undergraduate-and-postgraduate-taught/" },
+  { path = "manual/durham/fees-and-funding.html", url = "https://www.durham.ac.uk/study/international/fees-and-funding/" },
+  { path = "manual/durham/international-foundation-year.html", url = "https://www.durham.ac.uk/study/international/pathway-programmes/international-foundation-year/" },
+  { path = "manual/durham/how-to-apply-undergraduate.html", url = "https://www.durham.ac.uk/study/undergraduate/how-to-apply/" },
+  { path = "manual/durham/tuition-fees-undergraduate.html", url = "https://www.durham.ac.uk/study/undergraduate/fees-and-funding/tuition-fees/" },
+  { path = "manual/durham/entry-requirements-undergraduate.html", url = "https://www.durham.ac.uk/study/undergraduate/how-to-apply/entry-requirements/" },
+  { path = "manual/durham/inspiring-excellence-undergraduate.html", url = "https://www.durham.ac.uk/study/scholarships/international/durham-inspiring-excellence-scholarships/undergraduate/" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
@@ -3347,6 +3392,13 @@ approvedAt = "2026-09-29"
 name = "University of Michigan (США): приём иностранцев на бакалавриат"
 urls = [
   "https://admissions.umich.edu/apply/international-applicants",
+  "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines",
+  "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines/requirements-country",
+  "https://admissions.umich.edu/apply/international-applicants/exams-visas",
+  "https://admissions.umich.edu/apply/first-year-applicants/requirements-deadlines",
+  "https://admissions.umich.edu/apply/first-year-applicants/college-preparation",
+  "https://admissions.umich.edu/costs-aid/financial-aid",
+  "https://admissions.umich.edu/i-am/international-students",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
@@ -3355,14 +3407,28 @@ approvedAt = "2026-09-29"
 name = "Carnegie Mellon University (США): приём иностранцев на бакалавриат"
 urls = [
   "https://www.cmu.edu/admission/admission/international-applicants",
+  "https://www.cmu.edu/admission/admission/undergraduate-admission-requirements",
+  "https://www.cmu.edu/admission/admission/standardized-testing",
+  "https://www.cmu.edu/admission/admission/application-plans-deadlines",
+  "https://www.cmu.edu/admission/admission/academic-requirements-college-level-work",
+  "https://www.cmu.edu/admission/admission/apply",
+  "https://www.cmu.edu/sfs/tuition/undergraduate/index.html",
+  "https://www.cmu.edu/sfs/financial-aid/international/index.html",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
 [nyu]
 name = "New York University (США): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/international-applicants.html",
+files = [
+  { path = "manual/nyu/intl.html", url = "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/international-applicants.html" },
+  { path = "manual/nyu/freshmen.html", url = "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html" },
+  { path = "manual/nyu/prep.html", url = "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants/high-secondary-school-preparation.html" },
+  { path = "manual/nyu/tests.html", url = "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/standardized-tests.html" },
+  { path = "manual/nyu/english.html", url = "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/standardized-tests/english-language-testing.html" },
+  { path = "manual/nyu/cost.html", url = "https://www.nyu.edu/admissions/financial-aid-and-scholarships/cost-of-attendance.html" },
+  { path = "manual/nyu/aid-fy.html", url = "https://www.nyu.edu/admissions/financial-aid-and-scholarships/applying-as-a-prospective-undergraduate-student/first-year-applicants.html" },
+  { path = "manual/nyu/promise.html", url = "https://www.nyu.edu/admissions/financial-aid-and-scholarships/applying-as-a-prospective-undergraduate-student/first-year-applicants/the-nyu-promise.html" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
@@ -3376,6 +3442,9 @@ urls = [
   "https://admissions.utexas.edu/cost-aid/cost-tuition-rates/",
   "https://admissions.utexas.edu/cost-aid/financial-aid/",
   "https://admissions.utexas.edu/apply/frequently-asked-questions/",
+  "https://admissions.utexas.edu/info-for/international-students/",
+  "https://admissions.utexas.edu/apply/application-materials/transcript-info/",
+  "https://onestop.utexas.edu/managing-costs/cost-tuition-rates/cost-of-attendance/",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
@@ -3384,6 +3453,16 @@ approvedAt = "2026-09-29"
 name = "University of Illinois Urbana-Champaign (США): приём иностранцев на бакалавриат"
 urls = [
   "https://www.admissions.illinois.edu/international-applicants/",
+  "https://www.admissions.illinois.edu/international-requirements/",
+  "https://www.admissions.illinois.edu/first-year-requirements/",
+  "https://www.admissions.illinois.edu/first-year-dates/",
+  "https://www.admissions.illinois.edu/general-admission-policies/",
+  "https://www.admissions.illinois.edu/first-year-apply/",
+  "https://www.admissions.illinois.edu/class-profile/",
+  "https://www.admissions.illinois.edu/tuition/",
+  "https://www.admissions.illinois.edu/financial-aid/",
+  "https://www.admissions.illinois.edu/scholarships/",
+  "https://osfa.illinois.edu/types-of-aid/other-aid/international-students/",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
