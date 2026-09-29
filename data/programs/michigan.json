@@ -1,0 +1,222 @@
+{
+  "id": "michigan",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Michigan (США) — приём иностранцев на бакалавриат",
+    "orig": "University of Michigan"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное и дорогое: на 2026-27 год вуз называет плату и сборы $67,096 (низшие курсы LSA), полный бюджет года с жильём — $88,394; на старших курсах — $71,798 и $93,096. Помощи для иностранца практически нет: вуз прямо пишет, что студенты на временной визе не имеют права на федеральную помощь и возможностей для стипендий Мичигана очень мало, а оплатить надо всю стоимость обучения. Отдельных стипендий вуз упоминает всего две, и обе привязаны к другим странам (Швейцария и Гватемала). Гражданину Таджикистана рассчитывать не на что"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство приём не ограничивает: для иностранцев описан отдельный порядок подачи, отличающийся от общего лишь набором документов, отказа по паспорту нет."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: аттестат Таджикистана подпадает под раздел СНГ (Matura/Attestat o Srednem (Polnom) Oschchem Obrazovanii) и может быть рассмотрен для приёма на первый курс."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Students holding a national secondary school leaving certificate of high standard may be considered for first-year admission."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: нужно лишь пояснить перерыв в учёбе, если выпуск не в мае-июне."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента страницы приёма не ограничивают: ни минимального, ни максимального не названо."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Числового порога оценок для стран СНГ страницы не ставят: названо общее требование «национальный аттестат высокого уровня», а проценты класса — только для американских школ."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "parts": true,
+          "evidence": "TOEFL (iBT, including the Home Edition): 100 range with section scores 23+ in listening & reading and 21+ in speaking and writing."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "parts": true,
+          "evidence": "TOEFL iBT (launching Jan. 21, 2026): 5-6 range with section scores of 5+ (CEFR C1)"
+        },
+        {
+          "test": "IELTS",
+          "min": 7.0,
+          "parts": true,
+          "evidence": "IELTS / IELTS Indicator: 7.0 range with section scores 6.5+"
+        },
+        {
+          "test": "PTE",
+          "min": 68,
+          "evidence": "PTE Academic: 68 with all sections equally strong"
+        }
+      ],
+      "evidence": "If English is your second language, you must take the TOEFL, IELTS, ECPE, CAE or CPE, PTE Academic, or MET examination and earn a passing score in one of the following acceptable ranges:"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "SAT or ACT score, if available."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство приём не ограничивает: порядок подачи для иностранцев тот же, что и для всех, с небольшими отличиями в документах.",
+      "evidence": "The application process for international students at the University of Michigan is the same process all undergraduate students undertake, with a few key differences.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Аттестат Таджикистана подпадает под раздел СНГ: вуз принимает Matura/Attestat o Srednem (Polnom) Oschchem Obrazovanii. По Европе правило общее: национальный аттестат о среднем образовании высокого уровня может быть рассмотрен для приёма на первый курс.",
+      "evidence": "Commonwealth of Independent States: Matura/Attestat o Srednem (Polnom) Oschchem Obrazovanii",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский нужен всем, для кого он не первый язык: надо сдать один из перечисленных тестов и получить проходной балл.",
+      "evidence": "If English is your second language, you must take the TOEFL, IELTS, ECPE, CAE or CPE, PTE Academic, or MET examination and earn a passing score in one of the following acceptable ranges:",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог TOEFL iBT — 100 (по частям 23+ за чтение и аудирование, 21+ за письмо и речь).",
+      "evidence": "TOEFL (iBT, including the Home Edition): 100 range with section scores 23+ in listening & reading and 21+ in speaking and writing.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "С 21 января 2026 года TOEFL по новой шкале — 5-6 (по частям 5+).",
+      "evidence": "TOEFL iBT (launching Jan. 21, 2026): 5-6 range with section scores of 5+ (CEFR C1)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог IELTS — 7.0 в целом (по частям 6.5+); PTE Academic — 68.",
+      "evidence": "PTE Academic: 68 with all sections equally strong",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Тест можно не сдавать, если недавно проучился минимум четыре года в стране из списка (США, Великобритания, Канада и другие англоязычные); Таджикистана в списке нет.",
+      "evidence": "Exceptions: You can be exempted from taking any of these exams if your SAT Evidence-Based Reading and Writing score is 650 or above (600 or above if presenting an old SAT critical reading score), or if both your ACT Reading and English scores are 27 or above, and if you have recently completed at least four years of rigorous academic study in any of the following countries:",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "SAT или ACT можно не сдавать: баллы принимают, только если они есть.",
+      "evidence": "SAT or ACT score, if available.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение платное: на 2026-27 год низшие курсы LSA — $67,096 платы и сборов и $88,394 полного бюджета года; старшие курсы — $71,798 и $93,096.",
+      "evidence": "Tuition & Fees* $67,096 Living Expenses** $17,220 Books, Course Materials, Supplies & Equipment $1,220 Transportation $400 Miscellaneous Personal Expenses $2,458 Total Budget $88,394",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощи иностранцу почти нет: временная виза закрывает федеральную помощь США, а стипендий Мичигана очень мало.",
+      "evidence": "international undergraduate students who hold temporary visas such as the student visa are not eligible for U.S. federal financial aid and have very limited opportunities for University of Michigan scholarships.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача — через Common Application; плата за рассмотрение $75.",
+      "evidence": "You must apply via the Common Application, along with a $75 application fee.",
+      "field": null,
+      "kind": "steps",
+      "fee": {
+        "amount": 75,
+        "currency": "USD",
+        "evidence": "You must apply via the Common Application, along with a $75 application fee."
+      }
+    },
+    {
+      "ru": "Сроки: Early Action — 1 ноября, Regular Decision (осенний семестр) — 1 февраля. Год приёма на странице не напечатан.",
+      "evidence": "Early Decision—Nov. 1 Early Action—Nov. 1 Regular Decision (fall term)—Feb. 1",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admissions.umich.edu/apply/international-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Michigan, Анн-Арбор, штат Мичиган. Подача — через Common Application."
+    }
+  },
+  "source": {
+    "url": "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines",
+        "contentHash": "sha256:e16cedea4a1163a69685efab87ca6f628d3fdcd9c71f94356492869cee0c233e"
+      },
+      {
+        "url": "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines/requirements-country",
+        "contentHash": "sha256:a625562823324b3befe305456556bd26ae30e0c06cdfbb334941e45b5001dc75"
+      },
+      {
+        "url": "https://admissions.umich.edu/apply/international-applicants/exams-visas",
+        "contentHash": "sha256:415b992658ccb576d736236127df207f9e697b621aca854f39240a4fca6918e2"
+      },
+      {
+        "url": "https://admissions.umich.edu/i-am/international-students",
+        "contentHash": "sha256:cabc69a3c2603c4547c814cacf780c176ef5673db7db64bb766c8e6dff0287c3"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
