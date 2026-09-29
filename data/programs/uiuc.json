@@ -1,0 +1,263 @@
+{
+  "id": "uiuc",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Illinois Urbana-Champaign (США) — приём иностранцев на бакалавриат",
+    "orig": "University of Illinois Urbana-Champaign"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: на 2026-27 год вуз называет для иностранцев плату и сборы $42,248–$53,078, полную стоимость года — $62,146–$72,976. Помощи по нуждаемости иностранцам не дают вовсе: вуз прямо пишет, что need-based aid иностранным бакалаврам недоступна и денег должно хватить на всю учёбу. Остаются только ограниченные стипендии и займы через International Student & Scholar Services и заслуговая стипендия, на которую смотрят автоматически при подаче. Полного покрытия обучения эти страницы не обещают"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство приём не ограничивает: вуз прямо пишет, что требования одинаковы для всех, независимо от гражданства и статуса резидента."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: нужен диплом школы с признанием, эквивалентным полному, но отказа по стране нет; страницы Таджикистана нет — квалификацию уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "For admission to all majors, first-year applicants must present a total of at least 15 units of acceptable college preparatory schoolwork."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента на бакалавриате не ограничивают: упомянутый порог 18 лет относится к экзаменам на эквивалент аттестата, а не к обычному приёму."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Числового порога оценок нет: вуз публикует только профиль поступивших (средние 50% GPA 3.70-4.00), а не минимум."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "parts": true,
+          "evidence": "TOEFL: If taken before January 21, 2026 , minimum total score of 100 with subscores all 20+."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "parts": true,
+          "evidence": "If taken on or after January 21, 2026 , minimum total score of 5 with subscores all 4.5+."
+        },
+        {
+          "test": "IELTS",
+          "min": 7.5,
+          "parts": true,
+          "evidence": "IELTS: Typical total score of 7.5-8, with at least 6 in each module"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 135,
+          "evidence": "Duolingo English Test: 135-145"
+        }
+      ],
+      "evidence": "We require all students, regardless of citizenship, permanent residency, or curriculum type, to demonstrate English proficiency"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Illinois is test-optional. You can choose whether to include ACT or SAT scores."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство приём не ограничивает: английский требуется от всех, независимо от гражданства и статуса резидента.",
+      "evidence": "We require all students, regardless of citizenship, permanent residency, or curriculum type, to demonstrate English proficiency",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужен диплом школы с полным признанием; Таджикистан поимённо не назван.",
+      "evidence": "An enrolled undergraduate student must be a graduate of a regionally accredited high school, a school in Illinois recognized by the state superintendent of education, or a school elsewhere with a rating equivalent to full recognition.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Для поступления нужен набор школьных предметов общим объёмом не менее 15 зачётных единиц.",
+      "evidence": "For admission to all majors, first-year applicants must present a total of at least 15 units of acceptable college preparatory schoolwork.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Числового порога оценок нет; вуз публикует лишь профиль поступивших (средние 50% GPA 3.70–4.00).",
+      "evidence": "Campus Middle 50% GPA: 3.70-4.00",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен всем, независимо от гражданства и программы.",
+      "evidence": "We require all students, regardless of citizenship, permanent residency, or curriculum type, to demonstrate English proficiency",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT: до 21 января 2026 года — минимум 100 (по частям 20+).",
+      "evidence": "TOEFL: If taken before January 21, 2026 , minimum total score of 100 with subscores all 20+.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "С 21 января 2026 года TOEFL по новой шкале — минимум 5 (по частям 4.5+).",
+      "evidence": "If taken on or after January 21, 2026 , minimum total score of 5 with subscores all 4.5+.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "IELTS — обычно 7.5–8 в целом, не ниже 6 по каждому модулю.",
+      "evidence": "IELTS: Typical total score of 7.5-8, with at least 6 in each module",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Duolingo — 135–145.",
+      "evidence": "Duolingo English Test: 135-145",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Результаты английского должны быть не старше двух лет; отменить это требование нельзя.",
+      "evidence": "Scores must be from tests taken within two years of your intended entry term. This requirement cannot be waived.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Приём тестов гибкий: ACT или SAT можно не сдавать (test-optional) — тогда может понадобиться языковой тест.",
+      "evidence": "Illinois is test-optional. You can choose whether to include ACT or SAT scores.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение платное: на 2026-27 плата и сборы для иностранца — $42,248–$53,078, полная стоимость года — $62,146–$72,976.",
+      "evidence": "International Costs Tuition & Fees $42,248-$53,078 Food & Housing $15,858 Books & Supplies $1,200 Other Expenses $2,840 Estimated Total $62,146-$72,976",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощи по нуждаемости иностранцам не дают: денег должно хватить на весь срок учёбы.",
+      "evidence": "Need-based financial aid is not available to international undergraduates at Illinois , meaning you must have sufficient funds for your entire period of study.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Остаются ограниченные стипендии и займы через International Student & Scholar Services, а также заслуговые стипендии, на которые смотрят автоматически при подаче.",
+      "evidence": "However, limited scholarships and loans are available through International Student & Scholar Services (ISSS)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки первого года: подача открывается 1 сентября, ранняя — 1 ноября (материалы до 7 ноября), обычная — 5 января (материалы до 11 января). Ранних решений ждать к 29 января, обычных — к 26 февраля; решение по стипендиям — до 1 апреля, подтверждение зачисления — до 1 мая. Год приёма на странице не напечатан.",
+      "evidence": "Application Opens Sep 1 Apply Early Action or Regular. Start Your Application Early Action Deadline Nov 1 Apply early for top consideration. Non-binding. All required materials due by November 7",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.admissions.illinois.edu/international-applicants/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Illinois Urbana-Champaign, штат Иллинойс. Подача — через общий портал myIllini; тесты ACT/SAT необязательны."
+    }
+  },
+  "source": {
+    "url": "https://www.admissions.illinois.edu/international-applicants/",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.admissions.illinois.edu/international-applicants/",
+        "contentHash": "sha256:710601842975742003994d158eb45ce09cf07aff46749b3456661ff6c77ec78d"
+      },
+      {
+        "url": "https://www.admissions.illinois.edu/international-requirements/",
+        "contentHash": "sha256:d9f07a9cdc74dbdd06e58bd666caa6aa8a66f5067b3cd846774d2bd682ac0762"
+      },
+      {
+        "url": "https://www.admissions.illinois.edu/first-year-requirements/",
+        "contentHash": "sha256:fe952d8d43bd2b977955ab2dd3d6b4d76366b4a880ebd38c2e3598f926c1956e"
+      },
+      {
+        "url": "https://www.admissions.illinois.edu/first-year-dates/",
+        "contentHash": "sha256:7d90d320d5115be4f902732d118193039d4e7b4c079872d03c2c92fff8a75370"
+      },
+      {
+        "url": "https://www.admissions.illinois.edu/general-admission-policies/",
+        "contentHash": "sha256:93ab6f14e5716168a39d6efed4ac37ccc27c5bfebb168c324b793361f937b62e"
+      },
+      {
+        "url": "https://www.admissions.illinois.edu/first-year-apply/",
+        "contentHash": "sha256:4b0a093cc3ee86d1ce2ef75cd51439a0a318881cdf079ebca4dd9b1776ccaa07"
+      },
+      {
+        "url": "https://www.admissions.illinois.edu/class-profile/",
+        "contentHash": "sha256:2c3fbf5dd3c409a1a575cb477c256982fac1b21b4ae7d9eceef2428c71287897"
+      },
+      {
+        "url": "https://www.admissions.illinois.edu/tuition/",
+        "contentHash": "sha256:989c3dfca20b9c404225209fca2a8d919176f1c20d81d570693ffd3802ae44cc"
+      },
+      {
+        "url": "https://www.admissions.illinois.edu/financial-aid/",
+        "contentHash": "sha256:9c4288139321fe1ed86966799e832c20993c3e6f89cb4c3aada474551d97e44c"
+      },
+      {
+        "url": "https://www.admissions.illinois.edu/scholarships/",
+        "contentHash": "sha256:6c97df44b0668db2413975717150f4bdd568b7273152f9defe1b60c94ea60f46"
+      },
+      {
+        "url": "https://osfa.illinois.edu/types-of-aid/other-aid/international-students/",
+        "contentHash": "sha256:b13456b10390f76adca8bf12cbd9001df0cb0693cd985e55efe8c030d2b512f3"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
