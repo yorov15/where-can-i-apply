@@ -1,0 +1,323 @@
+{
+  "id": "birmingham",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
+  "name": {
+    "ru": "University of Birmingham (Бирмингем) — приём иностранцев на бакалавриат",
+    "orig": "University of Birmingham"
+  },
+  "hostCountry": "GB",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, и полной помощи на него эти страницы не обещают. Иностранцу прямо говорят, что он сам оплачивает и обучение, и проживание, и что британские студенческие займы ему недоступны. Вуз называет более £10 млн стипендий для иностранцев, но это конкурсные и частичные награды; среди бакалаврских выделены спортивные стипендии (40 в год, любого гражданства) и стипендии отдельных стран, полного покрытия нет. Точная ставка привязана к курсу и указана в оффере. Поэтому помощь в карточке не отмечена"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство страницы приёма не ограничивают: вуз открыт для иностранцев, описывает подачу через UCAS и отдельно ведёт страницу страны. Отдельного запрета по паспорту нет."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: требования к квалификации вуз смотрит по стране, а для стран без своей страницы просит писать в приёмную. Страницы Таджикистана среди снимков нет, но отказа по стране тоже нет."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Holders of the Certificate of Secondary Education (Attestat o srednem obrazovanii) at grade 11 and a suitable foundation programme (or 2 years study at a recognised higher education institution) will be considered for entry to our Bachelor degree programmes."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента эти страницы не ограничивают: ни минимального, ни максимального возраста не названо. Требования выражены квалификацией и оценками, а не возрастом; отдельные возрастные критерии есть только у внутренних программ Pathways to Birmingham для школьников Year 12/13, но это не общее условие приёма."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "The University of Birmingham makes conditional offers based on grades and not based on UCAS points (e.g. AAB)."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "parts": true,
+          "evidence": "IELTS* 6.0 overall with no less than 5.5 in any band."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "parts": true,
+          "evidence": "Tests taken before January 2026: 80 overall with no less than 19 in Reading, 19 in Listening, 21 in Speaking and 19 in Writing."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "Tests taken from January 2026: 4.5 Overall with no less than 4 in each skill"
+        },
+        {
+          "test": "PTE",
+          "min": 64,
+          "parts": true,
+          "evidence": "Pearson Test of English (PTE) PTE 64 with no less than 59 in all four skills."
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 105,
+          "parts": true,
+          "evidence": "A minimum of 105 in all skills"
+        }
+      ],
+      "evidence": "In order to undertake a programme of study here at the University, you will need to demonstrate that you have a suitable level of English proficiency."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "На бакалавриат вуз рассматривает тех, кто сдал A-level или International Baccalaureate (IB).",
+      "evidence": "We will consider students who have taken A level examinations and the International Baccalaureate (IB) for entrance to undergraduate programmes.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Аттестат о среднем образовании 11-летней школы (в снимке — узбекский Certificate of Secondary Education / Attestat o srednem obrazovanii) сам по себе прямого входа не даёт: нужен подходящий подготовительный год либо два года обучения в признанном вузе. Это условие, а не отказ.",
+      "evidence": "Holders of the Certificate of Secondary Education (Attestat o srednem obrazovanii) at grade 11 and a suitable foundation programme (or 2 years study at a recognised higher education institution) will be considered for entry to our Bachelor degree programmes.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь без подготовительного года — два года обучения в признанном высшем учебном заведении.",
+      "evidence": "(or 2 years study at a recognised higher education institution)",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Для подготовительных программ (Foundation Pathways) вуз может рассмотреть обладателей Diploma of Specialised Secondary Education с общим баллом 4/5, а для инженерно-физического направления — с 4/5 по математике.",
+      "evidence": "Students who have completed the Diploma of Specialised Secondary Education (O'rta Ma'lumot To'g'risida Shahodatnoma) with an overall grade of 4/5, to include 4/5 in Maths for our Engineering and Physical Sciences pathway, may be considered for entry to our Foundation Pathways .",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Вуз приветствует заявки на бакалавриат со всех, у кого есть A-level или эквивалентная иностранная квалификация, включая IB или признанный подготовительный год.",
+      "evidence": "We welcome undergraduate applications from all candidates offering A level or equivalent overseas qualifications (including the International Baccalaureate or a recognised Foundation Programme).",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Сведения на странице страны — только ориентир: их надо применять вместе с общими требованиями вуза и требованиями конкретной программы.",
+      "evidence": "The following information is for guidance only and should be used together with the University's general entrance requirements and any specific degree programme requirements.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский нужен всем: без достаточного уровня английского на программу не возьмут.",
+      "evidence": "In order to undertake a programme of study here at the University, you will need to demonstrate that you have a suitable level of English proficiency.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Минимальные пороги бакалавриата зависят от группы курса. Самая низкая, группа A: IELTS 6.0 (не ниже 5.5 в любой части), TOEFL 80 (до января 2026), TOEFL 4.5 (с января 2026), PTE 64 (не ниже 59 во всех четырёх навыках).",
+      "evidence": "Group A requirements TOEFL Tests taken before January 2026: 80 overall with no less than 19 in Reading, 19 in Listening, 21 in Speaking and 19 in Writing. Tests taken from January 2026: 4.5 Overall with no less than 4 in each skill IELTS* 6.0 overall with no less than 5.5 in any band. Pearson Test of English (PTE) PTE 64 with no less than 59 in all four skills.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Если курс отнесён к группе B, порог выше: IELTS 6.5 (не ниже 6.0 в любой части).",
+      "evidence": "IELTS* 6.5 overall with no less than 6.0 in any band.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Самая строгая, группа D (например, медицина MBChB и стоматология): IELTS 7.0, причём не ниже 7.0 в каждой части.",
+      "evidence": "IELTS* 7.0 overall with no less than 7.0 in any band.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Duolingo на странице указан только для четырёхлетнего бакалавриата со встроенным подготовительным годом: минимум 105 во всех навыках (для Law и English Literature — 115).",
+      "evidence": "A minimum of 105 in all skills",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Языковой сертификат обычно должен быть сдан не раньше чем за два года до начала программы.",
+      "evidence": "English tests/qualifications normally need to have been taken within two years of the start date of your programme.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "В отличие от некоторых вузов, Бирмингем принимает IELTS One Skill Retake (пересдачу одной части).",
+      "evidence": "We accept IELTS One Skill Retakes .",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Зачитывают только самый свежий результат языкового теста.",
+      "evidence": "Please note: we are only able to accept your most recent English language proficiency test score to meet our requirements.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Если английский — условие оффера, есть подготовительные курсы английского (Presessional English) как альтернатива пересдаче IELTS.",
+      "evidence": "If English is a requirement of your offer, we offer Presessional English courses all year round as an alternative route into University of Birmingham study.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Обучение платное: иностранцу нужно оплачивать собственное обучение и проживание.",
+      "evidence": "As an international student, studying at the university will require you to pay for your tuition fees and cover your living expenses.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцы не имеют права на британские студенческие займы и сами финансируют обучение; есть студенческие займы родной страны (например, США, Канада).",
+      "evidence": "International students are not eligible for UK student finance/loans and are responsible for funding their tuition fees themselves.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата первого года фиксируется на весь срок курса без инфляционного повышения; исключения — International Foundation Programme и клинические курсы.",
+      "evidence": "The fee paid in your first year will remain constant with no inflationary increase for the duration of your course, with the exception of the International Foundation Programme and clinical courses.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На стипендии для иностранцев вуз называет более £10 млн; бакалаврские награды есть, но конкурсные и частичные, полного покрытия эти страницы не обещают.",
+      "evidence": "More than £10 million in scholarships is available for international students coming to study at Birmingham.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Среди бакалаврских выделены спортивные стипендии University of Birmingham Sports Scholarships: 40 награждений в год разного размера для спортсменов национального и международного уровня, гражданство не ограничено.",
+      "evidence": "University of Birmingham Sports Scholarships Any country, 40 awards of varying amounts each year to national and international level athletes who come to study at Birmingham.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Депозит за обучение вуз требует только с поступающих на послевузовские программы (postgraduate taught), до выдачи CAS; с бакалавров депозит не берут.",
+      "evidence": "International students undertaking a postgraduate taught degree are required to pay a tuition fee deposit before an electronic Confirmation of Acceptance for Studies (CAS) can be issued.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Платить можно полностью или частями по прямому дебету (нужен британский счёт); если сумма плана больше £9,840, начисляется невозвратная процентная надбавка.",
+      "evidence": "Please note if the total of your tuition fee payment plan is greater than £9,840, a non-refundable interest charge will be applied.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка на бакалавриат — только через UCAS; код кампуса Бирмингема B32.",
+      "evidence": "For all undergraduate courses at Birmingham, you apply online through UCAS. The University of Birmingham's UCAS campus code number is B32 .",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для приёма в сентябре 2027 большинство курсов закрывается 13 января 2027; медицина и стоматология — 15 октября 2026.",
+      "evidence": "September 2027 entry The application deadline for most courses is Wednesday 13 January 2027. For Medicine and Dentistry, the deadline is Thursday 15 October 2026.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Отдельно на странице назван и приём 2026 года: гарантированное равное рассмотрение — заявки до 13 января 2026 (для сентября 2026).",
+      "evidence": "13 January 2026 - this is the deadline for applications to be guaranteed for equal consideration (for September 2026 entry).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Офферы делают по оценкам, а не по баллам UCAS; помимо общего требования курса могут быть отдельные оценки по предметам и GCSE.",
+      "evidence": "The University of Birmingham makes conditional offers based on grades and not based on UCAS points (e.g. AAB).",
+      "field": "gpa",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-13",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.birmingham.ac.uk/study/undergraduate/apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Birmingham. Подача бакалавриата — только через UCAS (код B32); требования к квалификации — на страницах международных требований и стран, плата и стипендии — на страницах международных сборов."
+    }
+  },
+  "source": {
+    "url": "https://www.birmingham.ac.uk/study/international",
+    "pages": [
+      {
+        "url": "https://www.birmingham.ac.uk/study/international",
+        "contentHash": "sha256:c749de3576c24bdd78de2d8afe221be65a365119f6930ec92322dd334910d153"
+      },
+      {
+        "url": "https://www.birmingham.ac.uk/study/undergraduate/apply/entry-requirements/international-entry-requirements",
+        "contentHash": "sha256:4c91cd4b928df25471c7228d4aececf818a4a5394fcdd3caeb5dc261a724fa83"
+      },
+      {
+        "url": "https://www.birmingham.ac.uk/study/undergraduate/apply",
+        "contentHash": "sha256:2846499798d4638336eb7f0816e6ba3fba299d6bb08e3d9c9578890f5e1de1c5"
+      },
+      {
+        "url": "https://www.birmingham.ac.uk/study/undergraduate/apply/how-we-make-offers",
+        "contentHash": "sha256:ad81024cf04bcb2b3eab381a868c3e231436ec53b2fea4bfb60f386555c868d9"
+      },
+      {
+        "url": "https://www.birmingham.ac.uk/study/undergraduate/fees-funding/tuition",
+        "contentHash": "sha256:de44be9583324d7398aefcb1cba9d829a3ff1e6438adc014b1005e1ef375ee1f"
+      },
+      {
+        "url": "https://www.birmingham.ac.uk/study/international/fees",
+        "contentHash": "sha256:590a81951de1e43dfb21ffdaf4c14ab1e93627b367045a2d32c4627d23df7a85"
+      },
+      {
+        "url": "https://www.birmingham.ac.uk/study/international/fees/scholarships",
+        "contentHash": "sha256:c68e16ef69a2f7aaf09fb7c0d064c8f38dd63a1cf594b671e6c3d165dc9067a9"
+      },
+      {
+        "url": "https://www.birmingham.ac.uk/study/international/fees/international-deposits",
+        "contentHash": "sha256:41c2902f95ae11647dc781d1c07eeb64b0bcc16c8f98e8ae6aeb3d97e56aa02c"
+      },
+      {
+        "url": "https://www.birmingham.ac.uk/study/applicants/paying-your-fees",
+        "contentHash": "sha256:26b329c3e7cf2d5f81e6408bc3937f6c91cd6776648f70db950cf67a03697dd6"
+      },
+      {
+        "url": "https://www.birmingham.ac.uk/international/students/country/uzbekistan",
+        "contentHash": "sha256:b3e6ddeb1814e7eb701c36eb3392b42ca038fa6b2293337ad11f7b5e2acdf07f"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}
