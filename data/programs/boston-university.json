@@ -1,0 +1,342 @@
+{
+  "id": "boston-university",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Boston University (США): приём иностранцев на бакалавриат",
+    "orig": "Boston University"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: на 2026/2027 год вуз называет tuition $73,024, а полную стоимость года с жильём, питанием и сборами — $98,419. Помощи по нужде иностранцам нет: вуз прямо пишет, что need-based aid иностранным студентам сейчас не предоставляется, а 100% нужды закрывают только гражданам и постоянным резидентам США. Иностранцу доступны лишь отдельные merit-стипендии за успехи (например Presidential Scholarship — половина стоимости обучения), то есть покрытие частичное и не гарантированное, поэтому полное покрытие в карточке не отмечено"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз прямо определяет иностранца (негражданин или непостоянный резидент США) и описывает для него отдельный порядок и список документов, отказов по паспорту нет. Смотрели страницы приёма иностранцев, первого курса, школьных квалификаций, сроков, стоимости и помощи."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране не названо. Вуз публикует список принимаемых аттестатов по странам через дефис; Таджикистана в нём нет, и для незнакомой страны вуз просит связаться с приёмной — это условие «уточни эквивалент», а не запрет. Смотрели страницы приёма иностранцев, первого курса и Secondary School Credentials."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "For most BU programs, the recommended high school/secondary school curriculum is as follows: 4 years of English 3-4 years of mathematics (precalculus/calculus recommended)* 3-4 years of laboratory science 3-4 years of history and/or social science 2-4 years of a world language"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: сказано лишь, что подают в последний год школы, а аттестат указывают ожидаемый, с предполагаемой датой."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют. Отдельный минимальный возраст упомянут только в технической документации студенческой визы и жилья, к допуску на бакалавриат он не относится."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "A thoughtful and comprehensive review that takes into account your academic achievements and activities inside and outside the classroom within the context of your academic environment, life experiences, and background."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "A total/overall score of 7 or higher will satisfy BU's English Language proficiency requirement for all programs."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "parts": true,
+          "evidence": "Students who are most competitive for admission will have a composite score of at least 90-100 and minimum scores of 20 in each section."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "For the new TOEFL iBT score reports beginning January 21, 2026, students who are most competitive for admission will have a total/overall score of 5.0 or higher."
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 125,
+          "parts": true,
+          "evidence": "Students who are most competitive for admission will have a total score of at least 125-135."
+        }
+      ],
+      "evidence": "If your first language is not English, you must take the Test of English as a Foreign Language Internet Based Test (TOEFL iBT) , International English Language Testing System (IELTS), or the Duolingo English Test (DET)."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Boston University is test optional for first-year applicants applying through fall 2028 and spring 2029. This policy applies to all undergraduate schools and colleges at Boston University as well as all scholarship programs."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство приём не ограничивает: вуз определяет иностранца как негражданина или непостоянного резидента США и описывает для него отдельный список документов.",
+      "evidence": "BU defines an international student to be a non-US citizen or non-US Permanent Resident Green Card Holder.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Иностранцу нужны дополнительные документы помимо общего списка: языковой экзамен, подтверждение финансов, копия паспорта.",
+      "evidence": "International applicants must also submit additional credentials .",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Страна школы прямо не названа: вуз публикует длинный список принимаемых аттестатов по странам, Таджикистана в нём нет, и при незнакомой стране просит связаться с приёмной — это не отказ, а условие «уточни».",
+      "evidence": "If your country is not listed here and you do not know the proper credentials, please contact us.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Документы на других языках должны идти с нотариальным переводом на английский: нужны оба — оригинал и перевод.",
+      "evidence": "All documents written in a world language must be accompanied by a notarized English translation. Please note that both documents are required-the original in your first language and the English translation.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Рекомендованная школьная программа: 4 года английского, 3-4 года математики (советуют precalculus/calculus), 3-4 года естественных наук, 3-4 года истории/обществознания, 2-4 года иностранного языка. Будущим инженерам обязателен год анализа.",
+      "evidence": "For most BU programs, the recommended high school/secondary school curriculum is as follows: 4 years of English 3-4 years of mathematics (precalculus/calculus recommended)* 3-4 years of laboratory science 3-4 years of history and/or social science 2-4 years of a world language",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Официальные школьные транскрипты должен прислать сотрудник школы; при международной программе с национальными экзаменами результаты подают по отдельной странице.",
+      "evidence": "Official copies of your secondary school transcripts must be submitted by a school official. If you are enrolled in an international curriculum with national exams, please see our Secondary School Credentials page for how to submit these official results.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Подающий в выпускной год школы должен заранее указать, какой аттестат и когда он рассчитывает получить.",
+      "evidence": "Students who are applying during their last year of secondary school should clearly state the name of the certificate they expect to receive and when.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен, если он не первый язык: принимают TOEFL iBT, IELTS или Duolingo (DET).",
+      "evidence": "If your first language is not English, you must take the Test of English as a Foreign Language Internet Based Test (TOEFL iBT) , International English Language Testing System (IELTS), or the Duolingo English Test (DET).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Иностранцу для оценки английского обязательно нужен один из тестов TOEFL, IELTS или Duolingo.",
+      "evidence": "International students will be required to submit the TOEFL, IELTS, or DuoLingo English Test as the primary means for evaluating English-language proficiency.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог IELTS: общий балл 7 или выше закрывает языковое требование для всех программ.",
+      "evidence": "A total/overall score of 7 or higher will satisfy BU's English Language proficiency requirement for all programs.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог TOEFL iBT (старая шкала): конкурентные абитуриенты имеют общий балл 90-100 и минимум 20 в каждой секции.",
+      "evidence": "Students who are most competitive for admission will have a composite score of at least 90-100 and minimum scores of 20 in each section.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "С 21 января 2026 года TOEFL iBT считается по новой шкале: нужен общий балл 5.0 или выше.",
+      "evidence": "For the new TOEFL iBT score reports beginning January 21, 2026, students who are most competitive for admission will have a total/overall score of 5.0 or higher.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог Duolingo: конкурентные абитуриенты имеют общий балл 125-135; вуз смотрит и общий балл, и все части.",
+      "evidence": "Students who are most competitive for admission will have a total score of at least 125-135.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для Duolingo вуз требует и общий балл, и все части, и сверяет их между собой.",
+      "evidence": "Please note that BU requires both the total score and all subscores of the test.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Обходной путь по языку: можно запросить снятие языкового требования, но запрос должен прийти до срока подачи и вместе с полной заявкой; решение принимает приёмная комиссия.",
+      "evidence": "Proficiency waiver requests for undergraduate applicants must be received by the application deadline and must accompany a complete application. The decision to waive the English proficiency requirement is at the discretion of the Board of Admissions.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "SAT/ACT необязательны: вуз придерживается test-optional для поступающих до осени 2028 и весны 2029, включая все программы стипендий.",
+      "evidence": "Boston University is test optional for first-year applicants applying through fall 2028 and spring 2029. This policy applies to all undergraduate schools and colleges at Boston University as well as all scholarship programs.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Числового минимума по оценкам нет: вуз оценивает успеваемость целостно, в контексте школы и опыта.",
+      "evidence": "A thoughtful and comprehensive review that takes into account your academic achievements and activities inside and outside the classroom within the context of your academic environment, life experiences, and background.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Стоимость на 2026/2027: tuition $73,024, жильё $13,170, питание $7,570, сборы $1,570; итого прямые расходы $95,334, полная стоимость года $98,419.",
+      "evidence": "Billed expenses for the 2026/2027 academic year* Tuition $73,024 Housing (depending on type of accommodation) $13,170 Food (most dining plans) $7,570 Fees $1,570 TOTAL ESTIMATED BILLED EXPENSES $95,334",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь по нужде иностранцам не дают: 100% продемонстрированной нужды закрывают только гражданам и постоянным резидентам США.",
+      "evidence": "BU meets 100% of demonstrated financial need for all admitted first-year and transfer students who are US citizens or permanent residents.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Вуз прямо пишет, что need-based помощь иностранным студентам сейчас недоступна.",
+      "evidence": "Need-based financial aid from BU is not currently available to international students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Взамен иностранцу доступны отдельные merit-стипендии за успехи; на первой странице приёма отдельно сказано, что иностранцы первого курса могут подавать на merit-стипендии.",
+      "evidence": "First-Year international students are eligible to apply for merit scholarships .",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Из merit-стипендий иностранцу открыта Presidential Scholarship: назначается первокурсникам со всего мира за выдающиеся успехи, покрывает половину стоимости обучения, срок подачи — 1 декабря.",
+      "evidence": "Annual Value: Half tuition* Deadline: December 1 * Effective starting with students entering Fall 2026",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сбор за заявку — $80, платится через Common Application.",
+      "evidence": "Our application fee is $80 and can be paid via the Common Application.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 80,
+        "currency": "USD",
+        "evidence": "Our application fee is $80 and can be paid via the Common Application."
+      }
+    },
+    {
+      "ru": "Сроки регулярного приёма (год на странице не назван): заявка — 5 января, решение — 28 марта, депозит о зачислении — до 1 мая.",
+      "evidence": "First-Year Regular Admission Deadlines Application* January 5 CSS Profile™ and FAFSA** January 5 Notification Date March 28 Enrollment Deposit Due May 1",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки Early Decision: заявку подают до 2 ноября, решение — 15 декабря; это обязывающее согласие только для выпускников школы на осенний приём.",
+      "evidence": "Early Decision Deadlines Early Decision is a binding agreement available only to high school seniors for September admission. Application November 2",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Иностранцу для Early Decision языковой экзамен надо сдать до 15 ноября, для Early Decision 2 — до конца декабря.",
+      "evidence": "International Students: You must take the TOEFL, IELTS, or DET exams by November 15 for Early Decision or by the end of December for Early Decision 2.",
+      "field": "language",
+      "kind": "steps"
+    },
+    {
+      "ru": "Поступающим на визе F-1 или J-1 нужно подтвердить финансы: справки о доступных средствах на год обучения; документы должны быть свежими (не старше 12 месяцев), на английском и ликвидными.",
+      "evidence": "All students who will be studying on an F-1 Student Visa or J-1 Exchange Visitor Visa are required to submit financial documentation and we recommend submitting these items along with your application.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужна копия страницы паспорта с фотографией и данными.",
+      "evidence": "All international students must supply a photocopy of the photo/data page of their current, valid passport.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.bu.edu/admissions/apply/first-year/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Boston University, Бостон, штат Массачусетс. Приём иностранцев на бакалавриат идёт через Common Application (или QuestBridge). SAT/ACT необязательны до осени 2028, но языковой экзамен TOEFL/IELTS/Duolingo обязателен. Обучение платное ($73,024 за 2026/2027, полная стоимость года $98,419), помощи по нужде иностранцам нет — только merit-стипендии, включая Presidential Scholarship (половина стоимости обучения)."
+    }
+  },
+  "source": {
+    "url": "https://www.bu.edu/admissions/apply/international/",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.bu.edu/admissions/apply/international/",
+        "contentHash": "sha256:3f67209884858ebcbca81e375ae79ca3093e7a28e9b5d5658f2f43ac0be33e9a"
+      },
+      {
+        "url": "https://www.bu.edu/admissions/apply/first-year/",
+        "contentHash": "sha256:8388da945b5e641818eeab5cf6e6b68b1c4121e7979824c1dfef7d6f7abadd06"
+      },
+      {
+        "url": "https://www.bu.edu/admissions/apply/international/school-credentials/",
+        "contentHash": "sha256:4f720173106c7ef6247a2cb26cc6dcc3d95ab8b4cd7526da5c9e4e351691be49"
+      },
+      {
+        "url": "https://www.bu.edu/admissions/apply/deadlines/",
+        "contentHash": "sha256:710b0dc434aa3d5c4b75d26f2f44a980696d958fdda8c5720c0f34ad44f7cbf7"
+      },
+      {
+        "url": "https://www.bu.edu/admissions/tuition-aid/tuition/",
+        "contentHash": "sha256:23d816587d7c2de78b9468f446e71fad93e18b32952b4fb050294ec13343cc1c"
+      },
+      {
+        "url": "https://www.bu.edu/admissions/tuition-aid/financial-aid/",
+        "contentHash": "sha256:47415c52b21aa09256c096b21a1fcd0d8025f66aced40c5b04974086b818456a"
+      },
+      {
+        "url": "https://www.bu.edu/admissions/tuition-aid/scholarships-financial-aid/",
+        "contentHash": "sha256:0f858c623f8b7ff08ddcbc7b275b7c45357f1d0a77ef94643d7fdb2433be9c9c"
+      },
+      {
+        "url": "https://www.bu.edu/admissions/tuition-aid/scholarships-financial-aid/first-year-merit/",
+        "contentHash": "sha256:4cc52dabfa28038fd79b156476babe19eef409ce7cc9d3f9dbd50dba1eee462f"
+      },
+      {
+        "url": "https://www.bu.edu/admissions/apply/early-decision/",
+        "contentHash": "sha256:6047b01dd6612f20885e618e924ccffb975d03664fabcc000eeed9bdd19881d7"
+      },
+      {
+        "url": "https://www.bu.edu/admissions/admitted/international/",
+        "contentHash": "sha256:f7e2612e2333bc5df1b502c705a188bc11806780a499b238e31b48076c2f56a2"
+      },
+      {
+        "url": "https://www.bu.edu/admissions/apply/faqs-helpful-forms/",
+        "contentHash": "sha256:7f79e672b76d06c2e6cb7fa5d766b537245dd6ea0ac15614d81b56211f9dda9c"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}

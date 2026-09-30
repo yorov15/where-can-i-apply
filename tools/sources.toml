@@ -3546,13 +3546,28 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
+# Партия 2. Под-страницы внутри одобренного домена bu.edu добавлены
+# ассистентом (приём иностранцев, школьные квалификации, английский, плата,
+# финпомощь, стипендии, сроки, раннее решение, FAQ). python.exe не в сети
+# (McAfee, 30.09.2026) — страницы сняты curl в manual/boston-university/,
+# origin=manual.
 [boston-university]
 name = "Boston University (США): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.bu.edu/admissions/apply/international/",
+files = [
+  { path = "manual/boston-university/00-international.html", url = "https://www.bu.edu/admissions/apply/international/" },
+  { path = "manual/boston-university/01-first-year.html", url = "https://www.bu.edu/admissions/apply/first-year/" },
+  { path = "manual/boston-university/02-school-credentials.html", url = "https://www.bu.edu/admissions/apply/international/school-credentials/" },
+  { path = "manual/boston-university/03-deadlines.html", url = "https://www.bu.edu/admissions/apply/deadlines/" },
+  { path = "manual/boston-university/04-cost.html", url = "https://www.bu.edu/admissions/tuition-aid/tuition/" },
+  { path = "manual/boston-university/05-financial-aid.html", url = "https://www.bu.edu/admissions/tuition-aid/financial-aid/" },
+  { path = "manual/boston-university/06-scholarships.html", url = "https://www.bu.edu/admissions/tuition-aid/scholarships-financial-aid/" },
+  { path = "manual/boston-university/07-first-year-merit.html", url = "https://www.bu.edu/admissions/tuition-aid/scholarships-financial-aid/first-year-merit/" },
+  { path = "manual/boston-university/08-early-decision.html", url = "https://www.bu.edu/admissions/apply/early-decision/" },
+  { path = "manual/boston-university/09-admitted-international.html", url = "https://www.bu.edu/admissions/admitted/international/" },
+  { path = "manual/boston-university/10-faqs.html", url = "https://www.bu.edu/admissions/apply/faqs-helpful-forms/" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
 [eth-zurich]
 name = "ETH Zurich (Швейцария): приём иностранцев на бакалавриат"
