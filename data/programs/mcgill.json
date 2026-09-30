@@ -1,0 +1,303 @@
+{
+  "id": "mcgill",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "McGill University (Канада): приём иностранцев на бакалавриат",
+    "orig": "McGill University"
+  },
+  "hostCountry": "CA",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: для иностранцев на бакалавриате действует гарантированный тариф — фиксированная ставка на всю программу, к базовой квебекской ставке добавляется международная надбавка. Полного покрытия расходов вуз не обещает. Часть расходов можно закрыть стипендиями и помощью: первокурсникам автоматически рассматривают годовую стипендию $3,000 за успехи, крупные стипендии дают от $12,000 до $48,000 ($3,000–$12,000 в год с продлением; вариант с $12,000 в год доступен только гражданам и постоянным резидентам Канады). Помощь по нужде вуз раздаёт будущим и нынешним студентам бакалавриата из Канады, США и других стран; подать на неё можно независимо от гражданства. Жильё и дорогу не покрывают."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз отдельно ведёт приём выпускников школ из-за пределов Канады и США и не называет отказов по паспорту, а помощь и стипендии первого курса открыты независимо от гражданства. Смотрели страницы требований для прочих международных школ, английского, приёма иностранцев, стоимости и помощи."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван. Требование общее — признанный академический предуниверситетский диплом, который в своей стране даёт право на университет; список принимаемых квалификаций по странам Таджикистан не содержит, значит эквивалент аттестата уточнять в приёмной. Смотрели страницы требований для прочих международных школ, приёма иностранцев и английского."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Applicants must have obtained, prior to the start of classes, a recognized, academic, pre-university diploma leading to university studies in their country."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: диплом требуется получить до начала занятий, а в заявке указывают ожидаемую дату выпуска."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют: ни минимального, ни максимального — требования выражены школьным дипломом, профильными предметами и оценками. Смотрели страницы требований для прочих международных школ, английского, сроков, стоимости и помощи."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "While the minimum requirements is the equivalent of a B+ average, most programs will have higher requirements."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "IELTS (International English Language Testing System) - Academic version A band score of 6.5 or better; individual component scores of 6.0 or better."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "parts": true,
+          "evidence": "Agricultural and Environmental Sciences (incl. Dietetics & Human Nutrition), Architecture, Arts, B.A. & Sc., Education, Engineering, Nursing, Physical & Occupational Therapy, Religious Studies, Science, Social Work 90* 4.5*"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "Agricultural and Environmental Sciences (incl. Dietetics & Human Nutrition), Architecture, Arts, B.A. & Sc., Education, Engineering, Nursing, Physical & Occupational Therapy, Religious Studies, Science, Social Work 90* 4.5*"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 125,
+          "evidence": "Duolingo English Test (DET) Score of 125 or better (130 for B.Ed. (TESL), B.Com.)"
+        },
+        {
+          "test": "PTE",
+          "min": 65,
+          "parts": true,
+          "evidence": "Pearson Test of English - Academic Please arrange for your electronic results to be sent to McGill directly by Pearson. Overall score of 65 or better; individual component scores of 60 or better"
+        }
+      ],
+      "evidence": "The language of instruction at McGill University is English. If you don't meet one of the exemptions listed below, you will need to complete an English proficiency test as part of your application."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство вход не закрывает: стипендии и помощь по нужде первого курса открыты всем поступившим независимо от гражданства.",
+      "evidence": "All new first-year students are eligible to apply, regardless of their citizenship.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Главное требование к школе — признанный академический предуниверситетский диплом, который в своей стране даёт право на университет.",
+      "evidence": "Applicants must have obtained, prior to the start of classes, a recognized, academic, pre-university diploma leading to university studies in their country.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Учёба в прикладных, профессиональных или технических школах к рассмотрению обычно не принимается.",
+      "evidence": "Studies in applied programs, or at vocational or technical high schools, are not normally eligible for admission consideration.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Смотрят школьный табель с упором на годовые оценки и результаты по профильным предметам; профильные предметы должны быть пройдены в последние два года школы.",
+      "evidence": "Applicants are reviewed on their high school transcript with particular emphasis on yearly averages and results in prerequisite subjects (prerequisite subjects must have been completed during the last two years of high school).",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Для большинства программ профильные предметы — математика (минимум pre-calculus) и, как правило, два из биологии, химии или физики на старшей ступени школы.",
+      "evidence": "Math (minimum of pre-calculus) and normally two of biology, chemistry or physics at the senior high school level.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Программы Arts и Education (кроме отдельных) особых профильных предметов не требуют.",
+      "evidence": "Arts PREREQUISITES No specific prerequisites",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Аттестат другой страны вуз читает как есть: список принимаемых квалификаций по странам открывает страницу, но Таджикистана в нём нет — эквивалент школьного диплома надо уточнять в приёмной.",
+      "evidence": "Accepted international credentials Country Admission Credentials",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Числовой порог по оценкам — примерно средний балл уровня B+; на большинстве программ планка выше.",
+      "evidence": "While the minimum requirements is the equivalent of a B+ average, most programs will have higher requirements.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский: язык обучения в McGill — английский, и без одного из исключений нужно сдать тест на владение английским.",
+      "evidence": "The language of instruction at McGill University is English. If you don't meet one of the exemptions listed below, you will need to complete an English proficiency test as part of your application.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Исключение из языкового теста — если абитуриент не меньше четырёх лет подряд жил и учился в стране, где английский признан основным языком; Таджикистана в списке таких стран нет.",
+      "evidence": "Have you lived and attended high school and/or university, for at least four consecutive years, in a country where English is the acknowledged primary language?",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Порог IELTS — 6.5 в целом и не ниже 6.0 по каждой части (принимают только Academic).",
+      "evidence": "IELTS (International English Language Testing System) - Academic version A band score of 6.5 or better; individual component scores of 6.0 or better.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог TOEFL: до 20 января 2026 — 90 баллов из 120 (не ниже 21 по каждой из частей); с 21 января 2026 — 4.5 по новой шкале (не ниже 4.5 за чтение, аудирование и письмо и 4.0 за говорение).",
+      "evidence": "Agricultural and Environmental Sciences (incl. Dietetics & Human Nutrition), Architecture, Arts, B.A. & Sc., Education, Engineering, Nursing, Physical & Occupational Therapy, Religious Studies, Science, Social Work 90* 4.5* * Minimum component scores: Reading: 21 Listening: 21 Writing: 21 Speaking: 21 Reading: 4.5 Listening: 4.5 Writing: 4.5 Speaking: 4.0",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог Duolingo English Test — 125; для программ B.Ed. (TESL) и B.Com. — 130.",
+      "evidence": "Duolingo English Test (DET) Score of 125 or better (130 for B.Ed. (TESL), B.Com.)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог Pearson PTE Academic — 65 в целом и не ниже 60 по каждой части.",
+      "evidence": "Pearson Test of English - Academic Please arrange for your electronic results to be sent to McGill directly by Pearson. Overall score of 65 or better; individual component scores of 60 or better",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Принимают и другие подтверждения английского — сертификаты Cambridge C2/C1 (C или лучше / B или лучше), CAEL (70 в целом), а также диплом McGill о владении английским; результаты должны приходить в McGill напрямую от экзаменационной организации.",
+      "evidence": "When a test of English proficiency is required, results must come directly from the examining institution to McGill; applicants are not able to upload the results.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Уровень TOEFL зависит от программы: Education (TESL) и Management — 100 (5.0 по новой шкале), Music — 79-80 (4.0), остальные — 90 (4.5).",
+      "evidence": "Education (TESL), Management 100* 5.0* Agricultural and Environmental Sciences (incl. Dietetics & Human Nutrition), Architecture, Arts, B.A. & Sc., Education, Engineering, Nursing, Physical & Occupational Therapy, Religious Studies, Science, Social Work 90* 4.5* * Minimum component scores: Reading: 21 Listening: 21 Writing: 21 Speaking: 21 Reading: 4.5 Listening: 4.5 Writing: 4.5 Speaking: 4.0 Music 79-80 4.0",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Сроки подачи для выпускников школ вне Канады и США: заявка — 15 января, подтверждающие документы — 1 марта, заявка и документы на крупную стипендию — 21 января; заявка на финансовую помощь McGill — в течение 30 дней с даты зачисления. Год цикла на странице не назван.",
+      "evidence": "DEADLINES Application for admission January 15 Supporting documents March 1 Major Entrance Scholarship application & documents January 21 McGill Financial Aid application 30 days from acceptance date",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Решения по заявкам осени 2026 для школ вне США и Канады приходят с середины ноября по середину мая; у Music и Religious Studies свои сроки подачи — 15 января.",
+      "evidence": "Estimated dates for release of admission decisions for September 2026 High schools outside the U.S. and Canada Mid-November to mid-May",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Обучение для иностранцев платное, но по гарантированному тарифу: ставка фиксируется на всю программу бакалавриата, чтобы не зависеть от ежегодного роста.",
+      "evidence": "Undergraduate students enjoy the benefits of a guaranteed, set tuition rate for the duration of their time at McGill, eliminating the unpredictability of year-over-year increases and making it easier to plan ahead.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии первокурсникам: годовая $3,000 за успехи (без отдельной заявки) и крупные — от $12,000 до $48,000 ($3,000–$12,000 в год с продлением до 4 лет).",
+      "evidence": "One-year Scholarships , valued at $3,000 (non-renewable) Major Entrance Scholarships , valued between $12,000 and $48,000 ($3,000 to $12,000 per annum renewable for up to 4 years provided criteria for renewal are met)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия в $12,000 в год доступна только гражданам и постоянным резидентам Канады.",
+      "evidence": "$12,000 scholarships are only available to Canadian citizens or legal permanent residents of Canada.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь по нужде первого курса (стипендии и bursary): вуз раздаёт её будущим и нынешним студентам бакалавриата из Канады, США и других стран.",
+      "evidence": "Scholarships and Student Aid administers need-based Financial Aid Programs for future and current undergraduates from Canada, US, and abroad.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://future.mcgill.ca/apply/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: McGill University, Монреаль, Канада. Подача через портал McGill Applicant Portal (future.mcgill.ca/apply). Для выпускников школ вне Канады и США заявка — до 15 января, документы — до 1 марта. Обучение платное по гарантированному тарифу для иностранцев; есть стипендии за успехи (годовая $3,000 и крупные до $48,000) и помощь по нужде, открытая независимо от гражданства."
+    }
+  },
+  "source": {
+    "url": "https://www.mcgill.ca/undergraduate-admissions/apply/requirements/international",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.mcgill.ca/undergraduate-admissions/apply/requirements/international",
+        "contentHash": "sha256:e74a05c70259b34a75d33bc955fa2a2f146475c58f040246f98b261daa7a0547"
+      },
+      {
+        "url": "https://www.mcgill.ca/undergraduate-admissions/apply/english-proficiency",
+        "contentHash": "sha256:ff4799cc77b65589bf87be6a93843e0e94d2442b651a6a96a0d6e58c07118fa4"
+      },
+      {
+        "url": "https://www.mcgill.ca/undergraduate-admissions/apply/admission-decision-dates",
+        "contentHash": "sha256:bcf561ec67bb896257925e96ec8ef67d1256b8f4d63c5cc7a0ad44e331388bc7"
+      },
+      {
+        "url": "https://www.mcgill.ca/undergraduate-admissions/international-students",
+        "contentHash": "sha256:828f7fa390127351768420d3b4a6e89dc1dd3342d3f99a82d0888e8f1988f50e"
+      },
+      {
+        "url": "https://www.mcgill.ca/undergraduate-admissions/finances",
+        "contentHash": "sha256:cd10b1b85f909e2af64e909a31f356b2ae9858c622b3158417b8d0687622545b"
+      },
+      {
+        "url": "https://www.mcgill.ca/student-accounts/tuition-fees/general-tuition-and-fees-information/tuition-increases",
+        "contentHash": "sha256:a27b3a218955c979a5d60b56eb5678de1db6000d3219eca96c88115625e47d58"
+      },
+      {
+        "url": "https://www.mcgill.ca/student-accounts/tuition-fees/tuition-and-fees-tables-and-rates/tuition-rates-information/undergraduate-tuition-rates-fallwinter-2026-27",
+        "contentHash": "sha256:7b7dea285ece9e9fb2201f672852f7d0094a819eacca8f71a99099a3883e2caa"
+      },
+      {
+        "url": "https://www.mcgill.ca/studentaid/scholarships-aid/international-students",
+        "contentHash": "sha256:fbb3e56d01f25f9ad90fa0f66aa9c355fb9e5f4e7d9af83489f6e0360546e0f9"
+      },
+      {
+        "url": "https://www.mcgill.ca/studentaid/scholarships-aid/future-undergrads/entrance-scholarships",
+        "contentHash": "sha256:08bf1b89691e28cd23becbbdf03ebacc88d9290e5539a6a9f0a85d6aa6b778b0"
+      },
+      {
+        "url": "https://www.mcgill.ca/undergraduate-admissions/apply/requirements/international/other",
+        "contentHash": "sha256:011bf126e0d0f2b0f095999073b09ce3f88d4bc3f441fcc0d78221f04727a198"
+      },
+      {
+        "url": "https://www.mcgill.ca/undergraduate-admissions/step-step-guide",
+        "contentHash": "sha256:8e34d87a012136cf7642bf28cfa6bc540600d3739c97a7fe129067c01ee62d4b"
+      },
+      {
+        "url": "https://www.mcgill.ca/student-accounts/files/student-accounts/bachelortuitionguaranteerates_communications.pdf",
+        "contentHash": "sha256:c0f1fc949122baddf545ab2ee3ea605c984256d0f81bdec0f882c8e8d78b59e1"
+      },
+      {
+        "url": "https://www.mcgill.ca/undergraduate-admissions/apply/submit-documents",
+        "contentHash": "sha256:e548817034bd0a25e4eec43b19cfb17327719d51c7acc6f1fa1be38a0bf21877"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
