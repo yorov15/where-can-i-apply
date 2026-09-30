@@ -77,6 +77,13 @@ const nodes = {
   onOpenProgram: openProgram,
 };
 
+// На широком экране фильтры лежат в боковой колонке, а не прячутся под
+// «Ещё фильтры»: место есть, а лишний тап не нужен.
+const wide = matchMedia('(min-width: 64rem)');
+const openFilters = () => { if (wide.matches) document.querySelector('.catalog-more')?.setAttribute('open', ''); };
+openFilters();
+wide.addEventListener?.('change', openFilters);
+
 const syncScreen = () => showCatalog(location.hash === '#programs');
 addEventListener('hashchange', syncScreen);
 

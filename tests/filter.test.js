@@ -117,3 +117,9 @@ test('для каждой страны из данных есть русское
   const missing = [...new Set(programs.map((p) => p.hostCountry))].filter((code) => !COUNTRY_RU[code]);
   assert.deepEqual(missing, []);
 });
+
+test('длинные группы режутся страницами, а поиск показывает всё найденное', async () => {
+  const { PAGE, pageLimit } = await import('../js/filter.js');
+  assert.equal(pageLimit(PAGE, false), PAGE);
+  assert.equal(pageLimit(PAGE, true), Infinity);
+});

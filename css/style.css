@@ -528,3 +528,62 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .chips { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-bottom: var(--s-4); }
 .chip { padding: .375rem .75rem; font: inherit; font-size: .9375rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-control); cursor: pointer; }
 .chip[aria-pressed="true"] { color: var(--accent-text); background: var(--accent-soft); border-color: var(--accent); font-weight: 700; }
+
+/* Компактная карточка каталога. Раньше одна карточка занимала около 230px,
+   и список из 200 вузов давал 50 000px прокрутки. Статус уже назван
+   заголовком группы и цветной кромкой, поэтому слово в плашке остаётся
+   только для скринридера. */
+.card-head { display: grid; grid-template-columns: minmax(0, 1fr); gap: .125rem var(--s-3); align-items: start; min-height: 0; padding: .75rem 2.5rem .75rem var(--s-4); }
+.card-head::after { top: 1.25rem; right: 1rem; }
+.card-verdict { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.card-title { font-size: 1.0625rem; line-height: 1.3; }
+.card-reason { font-size: .9375rem; line-height: 1.35; }
+.card-reason-tail { display: none; }
+.card-metas:has(.card-meta:not(:empty)) { margin-top: .25rem; }
+.card-meta { padding: .125rem .55rem; font-size: .8125rem; }
+.group-more { width: 100%; margin: 0 0 var(--s-3); }
+.group-title { font-size: 1.125rem; }
+
+@media (min-width: 40rem) {
+  .card-reason-tail { display: block; }
+  .card-head { grid-template-columns: minmax(0, 1fr) auto; }
+  .card-head > :not(.card-metas):not(.card-verdict) { grid-column: 1; }
+  .card-metas:has(.card-meta:not(:empty)) { grid-column: 2; grid-row: 1 / span 3; flex-direction: column; align-items: flex-end; margin-top: 0; }
+}
+
+/* Телефон: фильтры одной строкой с прокруткой вбок. Раньше кнопки
+   переносились на три строки, а панель поиска липнет к верху экрана и
+   съедала его. */
+@media (max-width: 39.99rem) {
+  .chips { flex-wrap: nowrap; overflow-x: auto; margin: 0 calc(var(--gutter) * -1) var(--s-2); padding: 0 var(--gutter); }
+  .chip { flex: none; min-height: 40px; }
+  .catalog-bar input[type="search"] { min-height: 48px; margin-bottom: var(--s-2); }
+  .card-metas:has(.card-meta:not(:empty)) { gap: .25rem; }
+  .card-title, .card-reason { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-title { -webkit-line-clamp: 2; line-clamp: 2; }
+  .card-reason { -webkit-line-clamp: 1; line-clamp: 1; }
+  .card-meta { font-size: .75rem; }
+}
+
+/* Широкий экран: обычная ширина сайта вместо узкой колонки в центре.
+   Анкета остаётся узкой, потому что длинные строки в форме читать
+   тяжелее, а ответ и каталог получают две колонки. */
+@media (min-width: 64rem) {
+  body { max-width: 74rem; padding-inline: var(--s-6); }
+  .profile-box.wizard { max-width: 44rem; margin-inline: auto; }
+  .hero .lead { max-width: 44rem; }
+
+  #answer:not([hidden]) { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); grid-template-areas: "summary agenda" "button agenda"; column-gap: var(--s-7); align-items: start; }
+  #answer > .summary { grid-area: summary; }
+  #answer > #open-catalog { grid-area: button; }
+  #answer > #agenda { grid-area: agenda; margin-top: var(--s-2); }
+
+  #catalog:not([hidden]) { display: grid; grid-template-columns: 17rem minmax(0, 1fr); grid-template-areas: "back back" "title title" "tools results"; column-gap: var(--s-7); align-items: start; }
+  #catalog > #back-to-answer { grid-area: back; justify-self: start; }
+  #catalog > .catalog-title { grid-area: title; }
+  #catalog > #results { grid-area: results; margin-top: 0; }
+  .catalog-tools { grid-area: tools; display: block; position: sticky; top: var(--s-4); }
+  .catalog-bar { position: static; margin: 0 0 var(--s-3); padding: 0; background: none; }
+  .chips { flex-direction: column; flex-wrap: nowrap; gap: .25rem; margin: 0; padding: 0; overflow: visible; }
+  .chip { justify-content: space-between; width: 100%; }
+}
