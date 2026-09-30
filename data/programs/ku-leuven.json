@@ -1,0 +1,288 @@
+{
+  "id": "ku-leuven",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "KU Leuven (Бельгия): приём иностранцев на бакалавриат",
+    "orig": "KU Leuven"
+  },
+  "hostCountry": "BE",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, отдельных программ покрытия стоимости для иностранца-бакалавра на страницах приёма не названо. На 2026-2027 вуз публикует четыре возможных тарифа за год (фиксированная часть плюс плата за кредит, посчитанную на 60 кредитов): €1 181,40, €3 093,12, €5 613,12 и €9 493,92; какой тариф применяется, зависит от программы и гражданства и определяется калькулятором платы. Сверх обучения — невозвратный сбор за заявку €90. Жизнь в Бельгии вуз оценивает примерно в €1 050-1 400 в месяц, а для визы нужно доказать наличие средств. Вуз ведёт базу стипендий и скидок, но конкретной стипендии для иностранцев-бакалавров на страницах приёма нет; сниженный тариф Master Mind относится к магистратуре."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз отдельно описывает приём для тех, кто получил аттестат вне Фландрии (Бельгии), и не называет ни одного отказа по паспорту или гражданству. Для не-ЕЭЗ студентов есть лишь свои списки документов и обязанностей (паспорт, страховка). Смотрели страницы приёма, инструкций, документов, языка, оплаты, регистрации и регламента оплаты; ограничений по гражданству не названо."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван. Вуз публикует список квалификаций по странам, Таджикистан в списке есть, а для страны вне списка просит связаться с приёмной — это условие «уточни эквивалент», а не запрет. Смотрели страницу минимальных критериев допуска на бакалавриат со списком стран."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Applicants seeking admission to a bachelor's programme can verify whether their secondary qualification meets the minimum eligibility criteria."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: сказано лишь, что если диплом ещё не получен на момент подачи, можно загрузить официальные промежуточные выписки. Смотрели страницы запрошенных документов и критериев допуска."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют ни для бакалавриата, ни в критериях допуска. Возраст по- смыслу упоминается только косвенно — в требованиях к страховке и визе для не-ЕЭЗ студентов, — к допуску на обучение это не относится. Смотрели страницы приёма, документов, регистрации и критериев допуска."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Числового порога по среднему баллу вуз для бакалавриата не называет: требование выражено законченным средним образованием и национальным тестом, а не баллом GPA. Отдельные проценты в списке квалификаций стоят у других стран и к Таджикистану не относятся. Смотрели страницы критериев допуска и запрошенных документов."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "We only accept the IELTS Academic test (including the paper, computer and online test). The minimum overall score is 6.5."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 79,
+          "evidence": "We only accept the TOEFL iBT test (including the Home Edition and Paper Edition). The minimum overall score is 79."
+        }
+      ],
+      "evidence": "All applicants who have not obtained a previous diploma in a programme taught in English in Australia, English-speaking Canada, Ireland, New Zealand, the United Kingdom or the United States of America must submit one of the tests mentioned below, proving their proficiency in English."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство приём не ограничивает: для тех, кто получил аттестат вне Фландрии (Бельгии), есть отдельный порядок заявки перед регистрацией, отказов по паспорту нет.",
+      "evidence": "If you obtained your previous degree(s) outside of the Flemish Community, you must go through the application process before you can register for a KU Leuven programme.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Страну школы вуз проверяет по списку квалификаций; если страны в списке нет, вуз просит связаться с приёмной — это условие «уточни эквивалент», а не запрет.",
+      "evidence": "If you cannot find your country in the list below, and you have doubts about whether or not your qualification makes you eligible to apply for admission to an undergraduate programme at KU Leuven, feel free to contact the Admissions Office",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Для Таджикистана в списке стран указана школьная квалификация: аттестат о полном среднем образовании плюс результаты национального тестирования (National Testing System, NTS).",
+      "evidence": "Certificate of Completed Secondary Education + results from National Testing System (NTS).",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужны диплом и выписка оценок о среднем образовании; если диплом ещё не получен, можно подать официальные промежуточные выписки.",
+      "evidence": "Diploma and transcripts of academic records of your secondary education If you still need to graduate at the time of your application, you can upload your official intermediate transcripts.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Если документы выданы не на одном из перечисленных языков, нужен перевод на английский, нидерландский, французский или немецкий — от учреждения или присяжного переводчика.",
+      "evidence": "If your documents were not officially issued in English, Dutch, French, German, Spanish, Italian, Portuguese, Bulgarian, Polish, or Ukrainian, you must provide a translation into English, Dutch, French, or German, either issued by your institution or by a sworn translator.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "После зачисления оригинал диплома нужно предъявить приёмной комиссии до завершения регистрации (enrolment).",
+      "evidence": "Please note that successful degree seeking applicants will have to present their original diploma(s) to the Admissions Office prior to enrolment.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Английский обязателен, если не пройден дипломный курс на английском в Австралии, англоязычной Канаде, Ирландии, Новой Зеландии, Великобритании или США: нужно сдать один из принимаемых тестов.",
+      "evidence": "All applicants who have not obtained a previous diploma in a programme taught in English in Australia, English-speaking Canada, Ireland, New Zealand, the United Kingdom or the United States of America must submit one of the tests mentioned below, proving their proficiency in English.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "IELTS: принимается только Academic, минимальный общий балл — 6.5.",
+      "evidence": "We only accept the IELTS Academic test (including the paper, computer and online test). The minimum overall score is 6.5.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL: принимается только iBT, минимальный общий балл — 79.",
+      "evidence": "We only accept the TOEFL iBT test (including the Home Edition and Paper Edition). The minimum overall score is 79.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Принимаются только перечисленные вузом тесты; Duolingo не принимается.",
+      "evidence": "The tests mentioned above are the only tests that are accepted by KU Leuven. We do not accept Duolingo test scores.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Указанные баллы — минимальные: конкретная программа может требовать более высокий балл или минимумы по частям.",
+      "evidence": "Please be aware that the scores listed on this page are the minimum scores. The programme you are applying for may require a higher score or specific subscores.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "SAT, ACT, AP Calculus или SOWISO OMPT нужны только там, где их требует программа: тогда балл загружают и подтверждают онлайн.",
+      "evidence": "SAT, ACT, AP Calculus or SOWISO OMPT test results If the programme you are applying for requires one of these tests, please upload your official score report",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Плата за обучение на 2026-2027 устроена как фиксированная часть плюс плата за кредит (на 60 кредитов); вуз публикует четыре возможных итога за год: €1 181,40, €3 093,12, €5 613,12 и €9 493,92. Какой тариф применяется, зависит от программы и гражданства.",
+      "evidence": "Tuition fee Fixed cost Amount per credit € 1181,40 € 305,40 € 14,60 € 3093,12 € 1305,12 € 29,80 € 5613,12 € 1726,92 € 64,77 € 9493,92 € 2376,72 € 118,62",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Повышенную плату вуз может брать по гражданству студента — это прописано в регламенте оплаты обучения.",
+      "evidence": "Increased tuition fees can be charged for advanced master's programmes or based on the student's nationality, as stated in the Higher Education Code.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сбор за заявку — €90, невозвратный, платит каждый абитуриент, кроме отдельных исключений.",
+      "evidence": "All applicants are required to pay the EUR 90 application fee for each application that they submit",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 90,
+        "currency": "EUR",
+        "evidence": "All applicants are required to pay the EUR 90 application fee for each application that they submit"
+      }
+    },
+    {
+      "ru": "Жизнь в Бельгии вуз оценивает примерно в €1 050-1 400 в месяц с учётом жилья, питания, материалов, страховки и транспорта.",
+      "evidence": "To cover your living expenses in Belgium you will need around €1,050 to €1,400 per month.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для долгосрочной визы в Бельгию нужно доказать наличие средств на жизнь; обычный способ — блокированный счёт.",
+      "evidence": "When you apply for a long-term visa for Belgium, you'll have to provide proof of sufficient means of subsistence.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Финансовая помощь есть в виде базы стипендий и скидок; конкретной стипендии для иностранцев-бакалавров на этих страницах не названо.",
+      "evidence": "Scholarships and waivers Need financial support to finance your studies or looking for a tuition fee waiver? Check out our options",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки: у части англоязычных программ жёсткий дедлайн — проверять в инструменте «application window»; для нидерландскоязычных программ дедлайн для не-ЕЭЗ абитуриентов — 1 февраля, для абитуриентов из ЕЭЗ дедлайна нет.",
+      "evidence": "Several English-taught programmes have a fixed application deadline - check yours via the application window tool",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Регистрация после получения письма о зачислении на 2026-2027 идёт с 17 августа по 16 сентября 2026; после 16 сентября действуют правила поздней регистрации.",
+      "evidence": "Registration period: 17 August 2026 - 16 September 2026",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.kuleuven.be/english/apply/application-instructions/apply-to-kuleuven",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: KU Leuven, Бельгия (главный кампус в Лёвене и другие кампусы). Бакалавриат ведут и на английском, и на нидерландском; у каждого направления свои требования и сроки, заявка — через веб-приложение вуза. Сбор за заявку €90, обучение платное, для иностранца нужен языковой сертификат и подтверждение средств."
+    }
+  },
+  "source": {
+    "url": "https://www.kuleuven.be/english/apply/",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.kuleuven.be/english/apply/",
+        "contentHash": "sha256:76c66d1b3589799eba23fcc8d2acfe037c979d95cfde284d894cfaaa6b45b33e"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/apply/application-instructions/apply-to-kuleuven",
+        "contentHash": "sha256:d9be16134e4872a6c2c710ea5bb26015b638a6ad7aacd82b6457d35871b59214"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/apply/requested-documents",
+        "contentHash": "sha256:d0d3117af0f7a6b8a3c4b993b75437b02df7def78bc87a477097a080f1383336"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/apply/requested-documents/eligibility-bachelor",
+        "contentHash": "sha256:0e2c35a7d2fdb6bc0460f315fcb7996901a0d0c78cf074982f02b852770cc776"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/apply/language-requirements/english-proficiency-tests",
+        "contentHash": "sha256:d23c327c2cda6c2e8618d4c23593d749cd98c844cb943b89a979dbc4b5eeb4e1"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/apply/requested-documents/application-fee",
+        "contentHash": "sha256:8d841d937da2a40de39e5bda506ef761c5d137e13aa75745352d71baf5a4e1f3"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/education/student/fees",
+        "contentHash": "sha256:d5a4d52f9c101ca77563ea4f9ff9c01b27e3216f3b201fc71cc580ba9b97c1d3"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/education/student/fees/tuition-fee-breakdown",
+        "contentHash": "sha256:fecdb18eb97e06fcd921c39256e9e2f6367ac1e2d960764496f51b1207d7820f"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/education/student/fees/2026-2027",
+        "contentHash": "sha256:194c17522a2a4f5e8ea6c9b89449fc9a400eae146966065013316bd0d254ae0e"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/apply/registration",
+        "contentHash": "sha256:d981e86368318bad5dad9f0172a1f2d21c5d3d17179fcf06ccf0972bac8fece6"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/apply/degreeverification",
+        "contentHash": "sha256:356d5b497a4e177fb2cd3d954b6aad0fb773761e1901c26b33c0ea98ab86be57"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/about-kuleuven/calendars",
+        "contentHash": "sha256:8c4964b02979025b715bc91b9f75d46fe041671583b0d0677fe9397bca0b3055"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/life-at-ku-leuven/money-matters",
+        "contentHash": "sha256:d9ece94f53b3366b51ac1cc45a2d597f21feb86951d97f5abf2837aa6b16972c"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/life-at-ku-leuven/money-matters/cost-of-living-in-belgium",
+        "contentHash": "sha256:f11742d9063294c7b9985bfe0d701c5f178515ee037ed1af72c18c139baaf46f"
+      },
+      {
+        "url": "https://www.kuleuven.be/english/education/student/fees/regulation",
+        "contentHash": "sha256:1e5cbfbd741cf1da611954bfbeecca57cd86f34cee4966e85041ac6ce05688a8"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
