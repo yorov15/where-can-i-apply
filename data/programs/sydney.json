@@ -1,0 +1,326 @@
+{
+  "id": "sydney",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Sydney (Австралия) — приём иностранцев на бакалавриат",
+    "orig": "The University of Sydney"
+  },
+  "hostCountry": "AU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное и дорогое: для приёма 2027 бакалавриат стоит примерно A$51,700–A$69,200 в год в зависимости от области (например, бизнес — A$59,100–A$63,600). Полной помощи эти страницы не обещают. Есть частичная стипендия Sydney International Student Award — 20% от стоимости обучения на весь срок курса для граждан ряда стран, включая Таджикистан, но это скидка, а не покрытие. Плюс отдельная плата за обработку заявки A$150 (невозвратная), обязательная медицинская страховка OSHC и расходы на жизнь минимум A$24,505 в год. Поэтому покрытие в карточке не отмечено"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз отдельно ведёт страницу подачи иностранцев и описывает для них тот же бакалавриат, отдельного запрета по паспорту нет. Единственное упоминание гражданства — список стран, гражданам которых доступна стипендия Sydney International Student Award (в него входит Таджикистан), но это про стипендию, а не про допуск. Смотрели страницы подачи иностранца, требований, английского, стоимости, сроков и стипендий."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван, требования выражены признанной квалификацией и баллами. У вуза есть список признанных иностранных квалификаций по странам, но аттестата Таджикистана в нём нет — тогда вуз сам оценивает эквивалент. Это уточнение в приёмной, а не отказ."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "To be eligible for admission into one of our undergraduate degrees, you need to have completed one of the qualifications listed on this page"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: требования выражены квалификацией и оценками, а не годом выпуска."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма эти страницы не называют. Отдельно существует тема несовершеннолетних держателей студенческой визы (Under-18 International Student Visa holders), но это про визу и опеку, а не про допуск к поступлению."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "We provide ATAR-equivalent entry scores for some year 12 or secondary qualifications."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "The University's standard English language proficiency requirement is set at an IELTS overall score of 6.5 with no band below 6.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 85,
+          "evidence": "IELTS Academic TOEFL iBT PTE Academic LanguageCert Academic* Cambridge C1 Advanced and Cambridge C2 Proficiency 4.5 43 42 38 5.0 52 46 46 5.5 62 54 54 162 6 73 60 61 169 6.5 85 64 67 176"
+        },
+        {
+          "test": "PTE",
+          "min": 64,
+          "evidence": "IELTS Academic TOEFL iBT PTE Academic LanguageCert Academic* Cambridge C1 Advanced and Cambridge C2 Proficiency 4.5 43 42 38 5.0 52 46 46 5.5 62 54 54 162 6 73 60 61 169 6.5 85 64 67 176"
+        }
+      ],
+      "evidence": "If English is not your first language, you will need to provide proof of your English proficiency before you can commence your studies at the University."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцу нужно выполнить все требования вуза и дополнительно пройти требование Genuine Student (GS), установленное правительством Австралии; в рамках заявки могут попросить отдельную оценку GS.",
+      "evidence": "As an international student, you need to meet all entry requirements set by the University and the Genuine Student (GS) requirement set by the Australian Government. You may be asked to complete an additional GS assessment as part of the application process.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "С иностранной квалификацией подают напрямую в вуз со страницы курса или через авторизованного агента; через UAC подают только те, кто учится на австралийском Year 12 или на IB в Австралии.",
+      "evidence": "Apply directly to the University from your course page or via an authorised agent . Note that you'll need to pay the application processing fee .",
+      "field": "citizenship",
+      "kind": "steps"
+    },
+    {
+      "ru": "Для допуска на бакалавриат нужно окончить одну из признанных квалификаций из списка вуза (в том числе GCE A Levels или IB Diploma).",
+      "evidence": "To be eligible for admission into one of our undergraduate degrees, you need to have completed one of the qualifications listed on this page",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Сверх признанной квалификации нужно выполнить критерии допуска конкретного курса — они указаны на его странице.",
+      "evidence": "On top of a recognised qualification, you also need to meet the admissions criteria, which can be found on your course page.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Признанные иностранные квалификации оценивают по баллам: GCE A Levels — по результатам до четырёх предметов уровня Advanced Level, IB Diploma — по общей сумме баллов.",
+      "evidence": "Admission is based on results in up to four Advanced Level subjects in the GCE-comparable qualifications.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Обходной путь, если нет признанной квалификации или не хватает баллов: подготовительные программы University of Sydney Preparation Programs (в Taylors College) — после их окончания можно подавать на курсы вуза.",
+      "evidence": "You will be eligible to apply for our courses after completing one of our two programs.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Подготовительные программы нужны именно тогда, когда не выполнены минимальные академические требования бакалавриата.",
+      "evidence": "If you're unable to meet the minimum academic requirements for undergraduate study, the University of Sydney Preparation Programs could be your ticket to study with us.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Страна школы вход не закрывает: у вуза есть список признанных иностранных квалификаций по странам; если квалификации страны в списке нет, вуз сам оценивает её эквивалент. Аттестата Таджикистана в списке нет — эквивалент уточнять в приёмной.",
+      "evidence": "If you are applying with one of the non-ATAR qualifications below and would like to know the entry requirement for a course, refer to the course page.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Если английский не первый язык, до начала учёбы нужно доказать владение английским.",
+      "evidence": "If English is not your first language, you will need to provide proof of your English proficiency before you can commence your studies at the University.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Стандартный порог вуза — IELTS 6.5 в целом и не ниже 6.0 по каждой части; для отдельных факультетов и курсов пороги другие, их смотрят на странице курса.",
+      "evidence": "The University's standard English language proficiency requirement is set at an IELTS overall score of 6.5 with no band below 6.0",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Кроме IELTS принимают TOEFL iBT, PTE, LanguageCert Academic (in-person) и Cambridge C1/C2; пересчёт по официальной таблице: IELTS 6.5 = TOEFL iBT 85 = PTE 64 = LanguageCert 67 = Cambridge 176.",
+      "evidence": "IELTS Academic TOEFL iBT PTE Academic LanguageCert Academic* Cambridge C1 Advanced and Cambridge C2 Proficiency 4.5 43 42 38 5.0 52 46 46 5.5 62 54 54 162 6 73 60 61 169 6.5 85 64 67 176",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Принимают только австралийскую версию TOEFL iBT (шкала 0–120); TOEFL Home Edition не принимают, IELTS Online тоже не принимают.",
+      "evidence": "only the TOEFL Australia version is accepted, which is reported on a 0-120 scale. The TOEFL Home Edition is not accepted.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Языковой тест должен быть сдан не более чем за два года до начала курса.",
+      "evidence": "All English tests need to be no more than two years old at the date of course commencement.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Числового порога по оценкам нет: для иностранных квалификаций вуз даёт ATAR-эквивалентные баллы, а требования по конкретному курсу указаны на его странице.",
+      "evidence": "We provide ATAR-equivalent entry scores for some year 12 or secondary qualifications.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение платное и зависит от области: для приёма 2027 бакалавриат стоит примерно A$51,700–A$69,200 в год. Например, бизнес — A$56,300–A$60,600 (2026) и A$59,100–A$63,600 (2027).",
+      "evidence": "Business Course level Full-time fees (guide for 2026 entry) Full-time fees (guide for 2027 entry) Undergraduate A$56,300 - A$60,600 A$59,100 - A$63,600",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для сравнения, инженерное направление на 2027 — A$63,600, а медицинские и health-направления доходят до A$69,200.",
+      "evidence": "Health sciences Course level Full-time fees (guide for 2026 entry) Full-time fees (guide for 2027 entry) Undergraduate A$60,600 - A$65,900 A$63,600 - A$69,200",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за обработку заявки — A$150, невозвратная; она покрывает все заявки, поданные в течение одного года (два семестра или четыре исследовательских периода).",
+      "evidence": "You need to pay a non-refundable application processing fee of A$150.00 . This fee covers all applications made within one year (two semesters or four research periods).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "От платы за заявку освобождают: текущие студенты вуза, получатели полной стипендии или спонсорства, а также отдельные абитуриенты после дней открытых дверей с подписанной формой waiver — по усмотрению вуза.",
+      "evidence": "You don't have to pay the application processing fee if you are any of the following",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для студенческой визы нужно показать способность покрыть расходы на жизнь минимум A$24,505 в год на одного студента.",
+      "evidence": "As a single student you must be able to show you have the financial capacity to cover living costs of at least $24,505 Australian dollars per year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Медицинская страховка Overseas Student Health Cover обязательна для иностранных студентов со студенческой визой.",
+      "evidence": "Overseas student health cover (OSHC) is required for international student visa holders who are studying in Australia.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Sydney International Student Award даёт 20% от стоимости обучения на весь срок курса: это снижение счёта за обучение, деньги напрямую не выплачиваются.",
+      "evidence": "Recipients will be awarded a University contribution of 20 percent of their tuition fee for the duration of their course.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На эту стипендию могут подавать граждане стран из списка, включая Таджикистан и всю Центральную Азию (Афганистан, Армения, Азербайджан, Грузия, Казахстан, Кыргызстан, Туркменистан, Узбекистан).",
+      "evidence": "Central Asia Afghanistan Armenia Azerbaijan Georgia Kazakhstan Kyrgyzstan Tajikistan Turkmenistan Uzbekistan",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия рассчитана на поступление в 2027 году и требует подачи личного заявления (personal statement); MBA/EMBA, study abroad и часть программ не подходят.",
+      "evidence": "This award is not available for the Master of Business Administration (MBA), Executive MBA (EMBA), study abroad, executive education programs, or courses offered in distance mode or to students participating in a Law Dual Degree pathway program.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Ежегодно вуз распределяет более A$135 млн стипендий для студентов разного происхождения и из разных стран.",
+      "evidence": "With over $135 million in scholarships awarded each year, we support education for students from all walks of life, from different countries and varied backgrounds.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельно есть займы родной страны для граждан США, Канады, Швеции, Норвегии и Дании.",
+      "evidence": "If you are from the United States, Canada, Sweden, Norway or Denmark, you may be eligible to apply for education loan schemes from your home country.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки подачи иностранцев: на семестр 1 (февраль) — 1 декабря предыдущего года, на семестр 2 (август) — 29 мая того же года.",
+      "evidence": "Application closing date Semester 1 (Feb) 1 December of the year prior to commencement Semester 2 (Aug) 29 May of the commencing year",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявки, как правило, открываются за два года до начала семестра.",
+      "evidence": "Generally, applications open two years before the semester start date",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Даты начала 2026 года: семестр 1 — 23 февраля 2026, семестр 2 — 3 августа 2026.",
+      "evidence": "2026 start dates Semester 1 23 February 2026 Semester 2 3 August 2026",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.sydney.edu.au/study/applying/how-to-apply/international-students.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: The University of Sydney, Сидней, Австралия. Приём иностранцев на бакалавриат — напрямую через вуз или авторизованного агента; сроки: семестр 1 — 1 декабря, семестр 2 — 29 мая. Обучение на 2027 — примерно A$51,700–A$69,200 в год, плата за заявку A$150, расходы на жизнь от A$24,505 в год. Частичная стипендия Sydney International Student Award (20% обучения) доступна гражданам Таджикистана."
+    }
+  },
+  "source": {
+    "url": "https://www.sydney.edu.au/study/applying/how-to-apply/international-students.html",
+    "pages": [
+      {
+        "url": "https://www.sydney.edu.au/study/applying/how-to-apply/international-students.html",
+        "contentHash": "sha256:a0abf245d5d8ec8d966f15d0685c6de6bb1c9142b8d64c695002cbed13b321dd"
+      },
+      {
+        "url": "https://www.sydney.edu.au/study/applying/how-to-apply/international-students/english-language-requirements.html",
+        "contentHash": "sha256:ad4bff02d5e2f6a3fc9697c968dc5ccb381c72d3cd5cd0087db3dc1da2d99dfc"
+      },
+      {
+        "url": "https://www.sydney.edu.au/study/applying/how-to-apply/undergraduate/recognised-qualifications.html",
+        "contentHash": "sha256:fe66289a6229cfbd207667025b264bf99c80ede388760483dd113cb4ef31de22"
+      },
+      {
+        "url": "https://www.sydney.edu.au/study/applying/application-dates.html",
+        "contentHash": "sha256:2d03b110df2a594fb0379ff49960940db3f4a158f534cb32bef71bd42609ddbb"
+      },
+      {
+        "url": "https://www.sydney.edu.au/study/fees-and-loans/international-student-tuition-fees.html",
+        "contentHash": "sha256:afb673e3ed8cbd980930d70e5d551375905af27ea10a63a711a3adc74bd9a5b8"
+      },
+      {
+        "url": "https://www.sydney.edu.au/scholarships/international.html",
+        "contentHash": "sha256:0d25f39c78a91af1ed55140dbaef686d2b09d3eebed559837da34a63dcfd5ae1"
+      },
+      {
+        "url": "https://www.sydney.edu.au/study/fees-and-loans/other-costs/living-costs.html",
+        "contentHash": "sha256:be9c341bd507059d6c28dbf337a23d914b068e41b4aea04b73c6ede9aa778eff"
+      },
+      {
+        "url": "https://www.sydney.edu.au/study/fees-and-loans/financial-assistance.html",
+        "contentHash": "sha256:ef384ae80fd7adb0d79c09b6b82d44309b62fad44722cff00ddde4393d3331a3"
+      },
+      {
+        "url": "https://www.sydney.edu.au/study/applying/how-to-apply/international-students/preparation-programs.html",
+        "contentHash": "sha256:6aa176b0c202c8b4f6e98f210d69b7140864b6ecdc419e66409aec210b35f229"
+      },
+      {
+        "url": "https://www.sydney.edu.au/study/applying/admission-pathways.html",
+        "contentHash": "sha256:59e0f089ef907fd41e9d54c492ab760e13d0961b8256cbf024c5e68636e4f65b"
+      },
+      {
+        "url": "https://www.sydney.edu.au/study/fees-and-loans/other-costs.html",
+        "contentHash": "sha256:008e83dbc938661adaaafcfdba209a3849c4ce2665480d725e1286b92181b8f5"
+      },
+      {
+        "url": "https://www.sydney.edu.au/study/fees-and-loans/scholarships/sydney-international-student-award.html",
+        "contentHash": "sha256:683a8107cf5d0806de0d4dc2ef341238c3497d51807a802d45e9c3249d092bfd"
+      },
+      {
+        "url": "https://www.sydney.edu.au/content/dam/corporate/documents/study/how-to-apply/english-language-concordance-table-july-2026.pdf",
+        "contentHash": "sha256:88ed7615ebd5d91d7bd412143b04c74a9a88d811f5e08fa2c36f881cb0745214"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}
