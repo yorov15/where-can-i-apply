@@ -1,0 +1,329 @@
+{
+  "id": "zurich",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Zurich (Швейцария) — приём иностранцев на бакалавриат",
+    "orig": "University of Zurich"
+  },
+  "hostCountry": "CH",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное. Бакалавру-иностранцу семестр стоит 1220 CHF: базовая плата 720 CHF плюс обязательная надбавка для иностранцев 500 CHF; сверх этого обязательные семестровые сборы 59 CHF. Подача заявки — 150 CHF с иностранным аттестатом, плата не возвращается. Барьер по языку высокий: основной язык бакалавриата немецкий, нужен сертификат C1. На жизнь вуз в своих расчётах закладывает около 12 000 CHF за семестр (примерно 24 000 CHF в год). Стипендии UZH — только по нужде и через частные фонды, для уже зачисленных, обучение и жизнь полностью не покрывают; кредиты иностранцу недоступны (нужны гражданство Швейцарии или вид на жительство C)."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: отказ по паспорту не назван. Гражданину страны вне ЕС/ЕФТА (Таджикистан) нужна национальная виза D, но правила допуска по аттестату для всех одинаковы, а к обучению иностранца добавляется надбавка. Смотрели страницы бакалавриата, подачи, требований к языку, сроков, стоимости, допуска и въезда."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван. Решает не страна, а признан ли конкретный аттестат; если он не даёт прямого допуска, вуз назначает дополнительный экзамен ECUS, а не отказывает. Признание по стране UZH отдаёт базе swissuniversities и у себя правил по Таджикистану не приводит — это уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "upper secondary school must be designed as a course specifically geared to university studies but not providing subject-specific or vocational training"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют. Есть лишь привязка сроков подачи к семестру, но года выпуска она не связывает."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения страницы приёма не называют — ни минимума, ни максимума."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Depending on the type of certificate, a minimum overall grade determined by the University of Zurich may also have to be achieved."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Foreign-language applicants must prove that they have the necessary German skills of at least level C1 according to the Common European Framework of Reference for Languages (CEFR) ."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство приём не ограничивает: отказ по паспорту не назван. Гражданину страны вне ЕС/ЕФТА (Таджикистан) нужна национальная виза D, но правила допуска по аттестату от гражданства не зависят.",
+      "evidence": "Students from a non EU/EFTA country must have a national \"D\" visa to enter Switzerland",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Признание аттестата по конкретной стране UZH у себя не публикует, а отсылает к базе swissuniversities: там требования по стране и аттестату (набор предметов, proof of admission, экзамен ECUS, минимальный балл, два года вуза). Таджикистан надо проверять там.",
+      "evidence": "The swissuniversities website lists, for individual countries , the upper secondary school-leaving certificates and the specific prerequisites under which they permit admission to a Bachelor's program at the University of Zurich",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Заранее, по телефону или почте, аттестат не оценивают: проверка только после полной подачи заявки.",
+      "evidence": "we are unable to conduct individual assessments of upper secondary school-leaving certificates in advance over the telephone or by e-mail",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Если страна аттестата не подписала Лиссабонскую конвенцию, как правило, надо сдать дополнительный экзамен швейцарских вузов ECUS. Он проходит раз в год в августе, поэтому заявление возможно только на осенний семестр; регистрация — через UZH в рамках поданной заявки. Таджикистан уточнять по списку swissuniversities.",
+      "evidence": "Holders of a non-Swiss upper secondary school-leaving certificate from a country that has not signed the Lisbon Recognition Convention must, as a rule, also pass the complementary examination of the Swiss higher education institutions (ECUS) in order to be admitted to a Bachelor's program.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если страна подписала Лиссабонскую конвенцию, но аттестат лишь частично соответствует швейцарскому по содержанию и длительности, путь — доказать минимум два успешно пройденных года обучения в признанном вузе по тому же направлению.",
+      "evidence": "A non-Swiss upper secondary school-leaving certificate gained in a signatory state to the Lisbon Recognition Convention that only partially corresponds to a Swiss upper secondary school-leaving certificate in terms of educational content and duration may nevertheless allow admission to a Bachelor's program, provided that proof of at least two successfully completed years of study",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Без признанного аттестата попасть на бакалавриат можно через вступительный экзамен UZH: он даёт допуск на все факультеты, кроме медицины и Vetsuisse.",
+      "evidence": "certificate of having passed the University of Zurich's entrance examination",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Аттестат должен быть общеобразовательным, а не профессиональным: не менее 90% обучения на старшей ступени — общие предметы.",
+      "evidence": "At least 90% of the education at upper secondary level consists of general education subjects",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "В последние три школьных года непрерывно изучаются как минимум шесть отдельных предметов: родной язык, иностранный язык, математика, естественная наука, история/география/экономика или право, а также информатика или философия (или ещё один предмет из перечисленных групп). Подробности — в Admission Regulations, § 16.",
+      "evidence": "in the last three school years of upper secondary school, at least six separately identified subjects according to the following list have been taken continuously",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "По длительности обучения аттестат должен соответствовать швейцарскому Matura (не менее 12 лет школы). Таджикский 11-летний аттестат напрямую под это не подходит — это повод уточнить в приёмной, а не автоматический отказ.",
+      "evidence": "the upper secondary school-leaving certificate must correspond to a Swiss maturity certificate",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестат должен быть выдан школой, готовящей к университету, а не к профессии: узкопрофессиональные аттестаты UZH не признаёт, даже если в своей стране они дают право на вуз.",
+      "evidence": "upper secondary school must be designed as a course specifically geared to university studies but not providing subject-specific or vocational training",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Может потребоваться proof of admission: подтверждение, что в своей стране абитуриент имел право начать обучение по выбранному направлению, обычно за тот же семестр.",
+      "evidence": "The proof of admission must apply to on-site study and, as a rule, must be issued for the semester for which a person is applying to the University of Zurich.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Порога по среднему баллу UZH не публикует: сказано, что в зависимости от типа аттестата может потребоваться минимальный общий балл, установленный вузом. Конкретного числа на страницах нет.",
+      "evidence": "Depending on the type of certificate, a minimum overall grade determined by the University of Zurich may also have to be achieved.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Основной язык бакалавриата — немецкий, хотя отдельные модули могут быть на английском.",
+      "evidence": "the main language of instruction for all Bachelor's study programs is German",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Иностранный абитуриент обязан подтвердить немецкий не ниже уровня C1 по CEFR.",
+      "evidence": "Foreign-language applicants must prove that they have the necessary German skills of at least level C1 according to the Common European Framework of Reference for Languages (CEFR) .",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Признаются только сертификаты немецкого уровня C1 и выше из закрытого списка: Goethe-Zertifikat C1 и C2, DSH-2/DSH-3, DSD II, telc Deutsch C1 Hochschule, TestDaF и ÖSD C1/C2.",
+      "evidence": "The University of Zurich recognizes the following language certificates for German that correspond to level C1 or higher in accordance with the Common European Framework of Reference for Languages (CEFR)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TestDaF принимают при среднем результате TDN 4 и не ниже TDN 3 в каждой части экзамена.",
+      "evidence": "TestDaF mit einem Ergebnis von durchschnittlich TDN 4 und mind. TDN 3 in allen Prüfungsteilen.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Кто нуждается в визе (Таджикистан), обязан подать языковой сертификат к сроку заявки для визовых абитуриентов; заявку без признанного сертификата к этому сроку дальше не рассматривают. Остальные могут дослать его после зачисления, но не позже недели до начала занятий.",
+      "evidence": "Applicants who require a visa must submit a language certificate by the application deadline for persons with a visa requirement at the latest.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для вступительного экзамена UZH, если немецкий не родной, нужен сертификат C1 и выше — его подают вместе с регистрацией.",
+      "evidence": "Proof of proficiency at the C1 or a higher level in accordance with the Common European Framework of Reference for Languages (CEFR) must be submitted with your registration, if German ist not your primary or main language.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Пороги по английскому относятся только к программам, где основной язык обучения — английский (почти все такие программы магистерские): IELTS Academic 7 в целом, но не ниже 6.5 за Speaking и Writing. Для бакалавриата английский не требуется.",
+      "evidence": "IELTS Academic (not older than 2 years) Required score: 7. Minimum 6.5 in Speaking and Writing.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "TOEFL iBT для англоязычных программ: 100 до 21 января 2026 года (Speaking не ниже 25, Writing не ниже 26), с 21 января 2026 — 5 по новой шкале 1–6 (Speaking и Writing не ниже 5). Результаты должны прийти в UZH напрямую от ETS, код 0348.",
+      "evidence": "Required score: Test date before 21 January 2026: 100. Minimum 25 in Speaking and 26 in Writing. Test date from 21 January 2026 onwards: 5. Minimum 5 in Speaking and Writing.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Плата за подачу для абитуриентов с иностранным аттестатом — 150 CHF (с 1 января 2025), для остальных 100 CHF. Плата не возвращается и не зачитывается.",
+      "evidence": "Bachelor's and Master's Degree for applicants with foreign qualifications (from 1 January 2025) 150.-",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за подачу не возвращается, в том числе если заявку отклонили или вы её отозвали.",
+      "evidence": "Application fees will not be refunded",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обучение — 720 CHF за семестр, плюс надбавка для иностранцев на бакалавриате 500 CHF за семестр, итого 1220 CHF за семестр.",
+      "evidence": "Students 720.- PhD students 150.- Surcharge for foreign students at Bachelor level 500.-",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "К обучению добавляются обязательные семестровые сборы — всего 59 CHF за семестр.",
+      "evidence": "Total Mandatory Semester Contributions 59.-",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обычный срок подачи на бакалавриат в осенний семестр — с 1 января по 30 апреля.",
+      "evidence": "1 January until 30 April",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Кто нуждается в визе (Таджикистан), подаёт на осенний семестр с 1 января по 28 февраля — раньше общего срока, чтобы успеть получить решение к оформлению визы.",
+      "evidence": "1 January until 28 February",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Визовым абитуриентам решение о приёме нужно за три месяца до въезда, чтобы успеть оформить национальную визу D; поэтому срок для них короче, а саму визовую заявку подают минимум за три месяца до въезда.",
+      "evidence": "Applicants with Visa Requirements Please note that prospective students who require a visa need the admission decision three months before their planned entry",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача только через онлайн-портал UZH; заявку нужно отправить до полуночи последнего дня срока, а плата должна пройти, иначе заявку не обрабатывают.",
+      "evidence": "You must send your application by 12 midnight of the last day of the application period at the latest.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Стипендии UZH — только по нужде и через частные фонды, для уже зачисленных: одинокому студенту без детей вуз считает нормой около 12 000 CHF за семестр. Обучение и жизнь они полностью не покрывают.",
+      "evidence": "We assume that a single person without children needs around CHF 12,000 per semester.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Кредиты UZH иностранцу недоступны: их дают только гражданам Швейцарии или обладателям вида на жительство C.",
+      "evidence": "you need to be a Swiss citizen or in possession of a C permit in order to receive either type of loan",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Срок подачи на стипендию — 15 августа (осенний семестр) и 1 февраля (весенний); на кредиты — те же даты плюс 1 ноября и 1 апреля.",
+      "evidence": "Scholarships 15 August 1 February Loans 15 August 1 November 1 February 1 April",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На медицину и Vetsuisse действует ограничение приёма: места распределяются по aptitude-тесту swissuniversities, и подача на бакалавриат медицины возможна только в осенний семестр.",
+      "evidence": "Degree programs at the Faculty of Medicine and the Vetsuisse Faculty are subject to restrictions on admission",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.uzh.ch/en/studies/application/apply.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Zurich (Universität Zürich), Цюрих. Бакалавриат в основном на немецком, нужен сертификат C1. С иностранным аттестатом подача онлайн с 1 января по 28 февраля (визовые) или по 30 апреля (остальные); плата 150 CHF. Если аттестат не даёт прямого допуска — дополнительный экзамен ECUS (раз в год, август). Обучение для иностранца на бакалавриате — 1220 CHF за семестр."
+    }
+  },
+  "source": {
+    "url": "https://www.uzh.ch/en/studies/application/bachelor.html",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.uzh.ch/en/studies/application/bachelor.html",
+        "contentHash": "sha256:46f619b84b311059a425a52a82bf74f5f7ec8181c8667fc54210089553e824f2"
+      },
+      {
+        "url": "https://www.uzh.ch/en/studies/application/apply.html",
+        "contentHash": "sha256:1e8132d3461a97b69da18f887942428aff0bc43c1c810bcc205417d2980c35fa"
+      },
+      {
+        "url": "https://www.uzh.ch/en/studies/application/bachelor/entrancexamination.html",
+        "contentHash": "sha256:306631c3178d869898ce75ecc7f3680af2c23ca601a4905ceed8eee9115b2187"
+      },
+      {
+        "url": "https://www.uzh.ch/en/studies/application/deadlines.html",
+        "contentHash": "sha256:38ee7f078758711ce745797989950efab875e1773fa9e9b240c461d04961e3cf"
+      },
+      {
+        "url": "https://www.uzh.ch/en/studies/application/languagerequirements.html",
+        "contentHash": "sha256:c934db8d90dd2ed9e9982fd0734169899cc8e8bd9d7a5477aedf3ad85eeff238"
+      },
+      {
+        "url": "https://www.uzh.ch/en/studies/application/legalbasis.html",
+        "contentHash": "sha256:ed9b160c3cac5996b361b6b2524ea6929fdde54ab4b09fe1ff2218ab63c2f895"
+      },
+      {
+        "url": "https://www.uzh.ch/en/studies/application/fees.html",
+        "contentHash": "sha256:93d1c80b511fc98f53b74eec5f608e6e4919dfa572c911f3f49cd23b1fd56dda"
+      },
+      {
+        "url": "https://www.internationals.uzh.ch/en.html",
+        "contentHash": "sha256:50e58ba45413e8206dacc91d154986b0dfca874a19281f634083b239a9eb39d6"
+      },
+      {
+        "url": "https://www.studienfinanzierung.uzh.ch/en.html",
+        "contentHash": "sha256:75616396195d6b478440d9f1483581e85d9d0d63487ebc011f58e02c6afffb44"
+      },
+      {
+        "url": "https://www.studienfinanzierung.uzh.ch/en/application_deadlines.html",
+        "contentHash": "sha256:29cd3821bb8e84d7539613b9a5b65f2953de1871bc0f4a8d1129251f423046d7"
+      },
+      {
+        "url": "https://www.studienfinanzierung.uzh.ch/en/faq/faq_scholarships_loans_requests.html",
+        "contentHash": "sha256:522eba5ad5199098528610cb646fcd695fb03e943800356e54fcb44a312ae2a6"
+      },
+      {
+        "url": "https://www.uzh.ch/en/studies/application/entry.html",
+        "contentHash": "sha256:6a307946bde69f895da9756d0c9fee300404e9f6601e4c5e6a7d2d2cdfab1c04"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
