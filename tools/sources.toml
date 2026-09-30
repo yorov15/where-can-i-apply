@@ -3815,8 +3815,21 @@ approvedAt = "2026-09-29"
 
 [uwa]
 name = "University of Western Australia (Австралия): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.uwa.edu.au/study/how-to-apply/international-applicants",
+files = [
+  { path = "manual/uwa/00-international-applicants.html", url = "https://www.uwa.edu.au/study/how-to-apply/international-applicants" },
+  { path = "manual/uwa/01-how-to-apply.html", url = "https://www.uwa.edu.au/study/how-to-apply" },
+  { path = "manual/uwa/02-undergraduate.html", url = "https://www.uwa.edu.au/study/how-to-apply/undergraduate" },
+  { path = "manual/uwa/03-pathways.html", url = "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility" },
+  { path = "manual/uwa/04-english.html", url = "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility/english-language-requirements" },
+  { path = "manual/uwa/05-entry-standards.html", url = "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility/entry-standards" },
+  { path = "manual/uwa/06-intl-pathways.html", url = "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility/entry-pathways/international-student-pathways" },
+  { path = "manual/uwa/07-ib.html", url = "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility/international-baccalaureate" },
+  { path = "manual/uwa/08-intl-fees.html", url = "https://www.uwa.edu.au/study/scholarships-and-fees/international-student-fees" },
+  { path = "manual/uwa/09-scholarships.html", url = "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships" },
+  { path = "manual/uwa/10-intl-scholarships.html", url = "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships" },
+  { path = "manual/uwa/11-global-excellence.html", url = "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship" },
+  { path = "manual/uwa/12-calc-fees.html", url = "https://www.uwa.edu.au/study/scholarships-and-fees/calculate-your-fees" },
+  { path = "manual/uwa/13-overseas-quals.html", url = "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility/international-and-overseas-qualifications" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
