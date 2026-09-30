@@ -1,0 +1,324 @@
+{
+  "id": "anu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Australian National University (Австралия): приём иностранцев на бакалавриат",
+    "orig": "The Australian National University"
+  },
+  "hostCountry": "AU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное. Иностранный бакалавриат стоит от 47 940 до 64 130 австралийских долларов за полный год (48 единиц) в зависимости от направления — это годовая ставка 2027 года, точную сумму вуз называет по каждой программе в каталоге Programs and Courses, и она ежегодно индексируется. Полной помощи по нужде для иностранцев нет: есть только конкурсные скидки за успехи — ANU International Achievement Award до 50% стоимости обучения на срок до четырёх лет и Vice-Chancellor's International Achievement Award 20% за первый год, обе назначают автоматически при подаче. Жильё и дорогу вуз не покрывает, отдельная заявка на плату за обучение — AUD$150."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: ANU отдельно определяет иностранного абитуриента (не гражданин Австралии или Новой Зеландии и без австралийского ВНЖ) и описывает для него тот же порядок подачи, что и для местных; отдельного запрета по паспорту нет. Есть только проверка намерения учиться (Genuine Student) для всех заявителей. Смотрели страницы приёма иностранцев, оценки/требований, английского, стоимости, стипендий и сроков."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван, требования выражены квалификацией и баллами, а не паспортом. Главный список квалификаций (страница минимальных индикативных баллов) аттестат Таджикистана и страны Центральной Азии не называет, поэтому эквивалент надо уточнять в приёмной — это не автоматический отказ. Смотрели страницы требований, оценок, документов и приёма иностранцев."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "To be considered for entry to an undergraduate coursework degree, you need to meet the University's minimum academic requirement through your senior secondary studies, or after having completed one year of an Australian Bachelor Degree or other qualification accepted by ANU as comparable to an Australian Bachelor Degree as per the Australian Qualification Framework."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: требуется подтвердить завершение среднего образования, а для некоторых программ (IB, A-Level, HKDSE) разрешено подавать по прогнозируемым результатам, но только на семестр 2. Числового правила по году выпуска нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы ANU не называют: вуз прямо пишет, что принимает иностранцев младше 18 лет при одобренных условиях проживания и опеки (CAAW), верхней границы нет. Отдельная страница про студентов до 18 лет — это про визу и опеку, а не про допуск к поступлению."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "We use your academic qualification or sequence of study to give you an ANU Selection Rank out of 99.95."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "Overall score: 6.5 Reading: 6.0 Writing: 6.0 Listening: 6.0 Speaking: 6.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "parts": true,
+          "evidence": "Overall score: 80"
+        },
+        {
+          "test": "PTE",
+          "min": 64,
+          "parts": true,
+          "evidence": "Overall score: 64 Communicative Skills: Reading: 55 Writing: 55 Listening: 55 Speaking: 55"
+        }
+      ],
+      "evidence": "To be eligible to study at the Australian National University (ANU), you need to demonstrate in your application that you meet the English language requirements."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем ANU считает того, кто не гражданин Австралии или Новой Зеландии и не имеет австралийского вида на жительство или гуманитарной визы.",
+      "evidence": "You are an international applicant if you are: Not an Australian or New Zealand Citizen Not holding an Australian permanent resident or permanent humanitarian visa",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Страна не закрывает вход, но есть проверка подлинности намерения учиться: всех заявителей ANU обязан оценить как Genuine Student до выдачи подтверждения о зачислении (CoE), могут попросить финансовые доказательства или личное заявление.",
+      "evidence": "all applicants to The Australian National University (ANU) must be assessed as Genuine Students (GS) before receiving a Confirmation of Enrolment (CoE).",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Аттестат Таджикистана в списке признаваемых квалификаций на странице минимальных баллов не назван: ANU просит найти свою квалификацию в списке и проверить минимальный индикативный балл; страны Центральной Азии в списке нет, поэтому эквивалент аттестата надо уточнять в приёмной.",
+      "evidence": "Please refer to the qualification that is applicable to you and check the minimum indicative score required to be considered for undergraduate degrees at ANU.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Для бакалавриата нужно выполнить минимальное академическое требование через старшую школу (или год австралийского бакалавриата / признанного эквивалента). Конкретные предметы зависят от программы.",
+      "evidence": "To be considered for entry to an undergraduate coursework degree, you need to meet the University's minimum academic requirement through your senior secondary studies, or after having completed one year of an Australian Bachelor Degree or other qualification accepted by ANU as comparable to an Australian Bachelor Degree as per the Australian Qualification Framework.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен школьный транскрипт, подтверждающий завершение среднего образования; документы должны быть на английском или с полным переводом от признанного переводчика.",
+      "evidence": "you will need to provide an academic transcript that shows that you have completed your secondary studies.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Оценки ANU пересчитывает в свой ANU Selection Rank по шкале до 99.95 — это не GPA и не аттестат Таджикистана напрямую; для части программ есть дополнительные требования (предметы, портфолио).",
+      "evidence": "We use your academic qualification or sequence of study to give you an ANU Selection Rank out of 99.95.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен для всех поступающих — и для иностранцев, и для местных.",
+      "evidence": "To be eligible to study at the Australian National University (ANU), you need to demonstrate in your application that you meet the English language requirements.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Есть несколько способов подтвердить английский: учёба в школе или вузе на английском либо один из признанных тестов (IELTS, TOEFL iBT, Cambridge C1 Advanced, PTE Academic); можно также по гражданству англоязычной страны (Group A) вместе с обучением в ней.",
+      "evidence": "There are multiple ways for you to demonstrate that you meet the English language requirements, including those below: Completion of prior secondary or tertiary qualifications in English Providing an acceptable English proficiency test.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "IELTS Academic: общий балл 6.5 и не ниже 6.0 по каждой части (чтение, письмо, аудирование, речь).",
+      "evidence": "Overall score: 6.5 Reading: 6.0 Writing: 6.0 Listening: 6.0 Speaking: 6.0",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT (старая шкала 0-120): для обучения до 1 января 2027 года общий балл 80 (чтение 20, письмо 20, аудирование 18, речь 18); с 21 января 2026 принимается только TOEFL iBT Australia.",
+      "evidence": "Overall score: 80",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "С 1 января 2027 порог TOEFL iBT меняется: общий балл 81 и другие минимумы по частям (чтение 16, письмо 19, аудирование 16, речь 19).",
+      "evidence": "Overall score: 81 Reading: 16 Writing: 19 Listening: 16 Speaking: 19",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "PTE Academic: общий балл 64 и не ниже 55 по коммуникативным навыкам (для обучения до 1 января 2027 года).",
+      "evidence": "Overall score: 64 Communicative Skills: Reading: 55 Writing: 55 Listening: 55 Speaking: 55",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "С 1 января 2027 порог PTE Academic по частям поднимается с 55 до 60 (общий балл остаётся 64).",
+      "evidence": "Overall score: 64 Communicative Skills: Reading: 60 Writing: 60 Listening: 60 Speaking: 60",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст для приёма не ограничен, но студентов младше 18 лет вуз принимает только при одобренных бытовых и опекунских условиях до подачи визы: ANU должен выдать подтверждение о жилье и опеке (CAAW), обычно проживание в кампусе или с родителем/опекуном.",
+      "evidence": "ANU will admit international students under the age of 18 where adequate welfare arrangements have been made.",
+      "field": "age",
+      "kind": "note"
+    },
+    {
+      "ru": "Часть программ имеет дополнительные критерии отбора: Bachelor of Music, Bachelor of Design и Bachelor of Visual Arts с семестра 1 2027 оценивают по минимальному selection rank 80 (портфолио может дать до 10 баллов), а Bachelor of Health Science требует обязательную дополнительную форму.",
+      "evidence": "In addition to submitting a Bachelor or Master degree application, the following three programs (Bachelor of Music, Bachelor of Design and Bachelor of Visual Arts) no longer have compulsory additional selection criteria from Semester 1 2027 onwards.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Для Bachelor of Health Science нужна обязательная дополнительная форма; 30% мест для местных студентов зарезервированы за выпускниками из сельской местности.",
+      "evidence": "Entry to the Bachelor of Health Science is based on meeting the minimum selection rank requirement and involves an assessment of suitability based on the questions included in the Bachelor of Health Science Supplementary Form.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "У части программ есть предварительные предметы или портфолио — их надо проверять на странице конкретной программы в каталоге Programs and Courses.",
+      "evidence": "Some programs have additional entry requirements such as prerequisites or portfolios.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Подача стоит AUD$150 за каждую заявку, вносится при отправке онлайн-заявления.",
+      "evidence": "You must pay an application fee of AUD$150 upon submission of each application you make to the University.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подать можно не более чем на три программы, расставив их в порядке предпочтения; при успехе придёт одно предложение на наиболее приоритетную программу, на которую хватает баллов.",
+      "evidence": "You can apply for up to three programs, check our programs and courses catalogue to list the programs in order of preference. If successful, you will receive an offer to your highest eligible preference.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Стоимость года иностранного бакалавриата на 2027 год: от AUD$47 940 (направления Education, Society & Culture, Creative Arts) до AUD$64 130 (Medical Science) за 48 единиц; большинство точных, экономических, инженерных и IТ-направлений — AUD$57 640.",
+      "evidence": "Table 2: International Band fee rates (ISF) Band Fee per 48 units Fee per unit (rounded to nearest $10) 1 $47,940 $1000 2 $51,170 $1,070 3 $54,540 $1,140 4 $57,640 $1,200 5 $60,870 $1,270 6 $64,130 $1,340",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата зависит от направления: Management and Commerce отнесён к band 4 (AUD$57 640 за 48 единиц), Natural & Physical Sciences, IT, Engineering, Agriculture и Health — тоже band 4.",
+      "evidence": "Management and Commerce, including Master of Business Administration Management and Commerce 08 4 4 3 3 E3 4",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Точную стоимость программы вуз публикует в каталоге Programs and Courses, и плата ежегодно индексируется — с каждым годом обучения она может расти.",
+      "evidence": "Indicative international program tuition fees, as well as tuition fees for individual courses are published on the Programs and Courses website. All fees are subject to annual reviews and indexation.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "ANU International Achievement Award снимает до 50% стоимости обучения на срок до четырёх лет, назначается автоматически при подаче, отдельная заявка не нужна.",
+      "evidence": "ANU International Achievement Award Reward your hard work with up to 50% off your tuition, for up to four years. Open to high-achieving international students and awarded automatically when you apply - no separate application needed.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Vice-Chancellor's International Achievement Award даёт 20% скидки за первый год обучения, тоже назначается автоматически при подаче.",
+      "evidence": "ANU Vice-Chancellor's International Achievement Award Great results deserve to be recognised. Awarded in the Vice-Chancellor's name, this scholarship welcomes academically talented international students with 20% off their first-year tuition - and you're considered automatically when you apply to ANU.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельной финансовой помощи иностранцам почти нет: на странице платы для иностранцев перечислены только внешние источники — канадские студенческие займы, стипендии DFAT Australia Awards, внешние спонсоры исследований и частные займы.",
+      "evidence": "Financial Aid for International Students Canadian student loans » DFAT Australia Awards » External International HDR Sponsorship Opportunities » Private loans (international students) » US Veterans Affairs benefits",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки подачи для семестра 1 2027: приём открыт и закрывается 15 декабря 2026; для семестра 2 2027 — 15 мая 2027. Для программ Crawford School свой срок — 31 октября 2026. Принятие предложения для семестра 1 — 15 января (из-за границы) или 31 января (в Австралии).",
+      "evidence": "Applications are now open and will close on the 15 December 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявки рассматривают непрерывно, обычно в течение десяти рабочих дней; до полного комплекта документов могут выдать условное предложение (conditional offer).",
+      "evidence": "We may consider you for a conditional offer if we have not received sufficient documents to complete the assessment of your application on all criteria including academic, language proficiency and document requirement.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Замечание про 11 лет школы: отдельного требования «12 лет» на страницах ANU нет, но и аттестат Таджикистана в списке квалификаций не назван — этот вопрос решает приёмная, а не автоматический отказ.",
+      "evidence": "Please refer to the qualification that is applicable to you and check the minimum indicative score required to be considered for undergraduate degrees at ANU.",
+      "field": "schoolCountry",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-12-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://study.anu.edu.au/apply/international-applications",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: The Australian National University (ANU), Канберра, Австралия. Приём иностранцев на бакалавриат напрямую через портал ANU (или UAC для Australian Year 12, IB и NCEA). Заявка AUD$150, до трёх программ. Английский — IELTS 6.5 или TOEFL iBT 80 или PTE 64. Сроки: семестр 1 2027 — 15 декабря 2026, семестр 2 2027 — 15 мая 2027."
+    }
+  },
+  "source": {
+    "url": "https://study.anu.edu.au/apply/international-applications",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://study.anu.edu.au/apply/international-applications",
+        "contentHash": "sha256:eb347ca24ba136743784cc92bcca73d078fb98bef04965c9dc913140bd483315"
+      },
+      {
+        "url": "https://study.anu.edu.au/apply/international-applications/assessment",
+        "contentHash": "sha256:b1c51906dbb5f18e869e0105f63c5341be27eaef786284b985b6a681be8c7075"
+      },
+      {
+        "url": "https://study.anu.edu.au/apply/english-language-requirements",
+        "contentHash": "sha256:6c7632fbaf6e1b54e4eda912460be3bf5d9a54920bee5b8b9d104e223614d14a"
+      },
+      {
+        "url": "https://study.anu.edu.au/apply/international-applications/documentation-requirements",
+        "contentHash": "sha256:c2a925e564d53c4aa8b2d252973dd87229fec9271acd2b223b7cf518ad2bea9b"
+      },
+      {
+        "url": "https://study.anu.edu.au/node/11000",
+        "contentHash": "sha256:da14e0a7f15b51ad5f5be900a88ee841b6738ead5e8cf0d4eeb9016b0f3fcce2"
+      },
+      {
+        "url": "https://study.anu.edu.au/apply/anu-programs-additional-selection-criteria",
+        "contentHash": "sha256:35ec6dc1a8f0f68010eeafcae3da6726316f803be44b43b467b48a1c96377e1d"
+      },
+      {
+        "url": "https://study.anu.edu.au/apply/international-students-under-18-years-age",
+        "contentHash": "sha256:a3665a5103cb0993d8ac29f87aa707731724b4a3530333af52586e4ffd8c01e4"
+      },
+      {
+        "url": "https://www.anu.edu.au/study/fees-payments",
+        "contentHash": "sha256:434e865d011716291e7904b946e0b4935c733e1683470523ce87ec99472e3b78"
+      },
+      {
+        "url": "https://www.anu.edu.au/scholarships",
+        "contentHash": "sha256:3545eec7959212d9847ccd12742fc0031efe23b1aedf3a188aeea36048334892"
+      },
+      {
+        "url": "https://policies.anu.edu.au/ppl/pdfdownload/1801",
+        "contentHash": "sha256:a99795399cd3a4c0b762065126995b5a7b5c9f55e6e2dd63b51a008cdf0fafb6"
+      },
+      {
+        "url": "https://www.anu.edu.au/students/program-administration/fees-payments/international-tuition-fees",
+        "contentHash": "sha256:7c9c633c7281c2a2fffd91791deb2dcab38d0426c76353dd68d0a0b84aa0cf89"
+      },
+      {
+        "url": "https://d1zkbwgd2iyy9p.cloudfront.net/files/2026-09/Schedule%20of%20Tuition%20fees%202027.pdf",
+        "contentHash": "sha256:511bea6fa44315b76d3727222e28112e222a138d117fb2a3ad62ae94f1055cbd"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
