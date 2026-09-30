@@ -1,0 +1,323 @@
+{
+  "id": "monash",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Monash University (Австралия): приём иностранцев на бакалавриат",
+    "orig": "Monash University"
+  },
+  "hostCountry": "AU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное и одинаково платное для иностранца: стипендий, закрывающих всю стоимость бакалавриата, нет, поэтому полное покрытие не отмечено. Monash не даёт одной цифры на весь вуз — стоимость обучения публикуется отдельно по каждому курсу (общие страницы отправляют на страницы курсов). Иностранцу автоматически рассматривают стипендии: Monash International Merit Scholarship даёт $15,000 в год (до $75,000, 20 мест в год) за успехи при поступлении, плюс International Study Grants. Помощи по нужде для иностранцев вуз не заявляет."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз определяет иностранца как негражданина и непостоянного резидента Австралии/Новой Зеландии и описывает для него тот же прямой порядок подачи; отказа по паспорту нет. Отдельная процедура (подача через зарегистрированного агента) касается только восьми перечисленных стран, Таджикистана среди них нет. Смотрели страницы приёма иностранцев, процесса подачи, требований, английского, стоимости и стипендий."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы вход не закрывает: отказа по стране не названо, требования выражены уровнем аттестата (австралийский Year 12 или эквивалент) и пререквизитами курса. Таджикистан прямо не упомянут; для отдельных стран (Крым, Куба, Донецк, Иран, Луганск, Северная Корея, Сирия, Южный Судан) есть только требование подавать через агента — это не отказ. Эквивалент 11-летнего аттестата уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Monash undergraduate courses require successful completion of a minimum of an Australian Year 12 qualification and achieving the required academic entry score, or equivalent."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: сказано лишь, что нужен законченный австралийский Year 12 или эквивалент и требуемый академический балл. Прямого запрета на подачу в год выпуска нет."
+    },
+    "age": {
+      "min": 17,
+      "evidence": "You must be at least 17 years of age to enrol in a Monash course."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "To be considered for a course at Monash University, you must meet the minimum entry requirements. Many courses have higher entry requirements, prerequisite studies or extra requirements such as interviews."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "IELTS Online (Academic) 6.5 Reading: 6.0 Listening: 6.0 Writing: 6.0 Speaking: 6.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 79,
+          "parts": true,
+          "evidence": "TOEFL iBT (0-20 scale) 79 Reading: 13 Listening: 12 Writing: 21 Speaking: 18"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4,
+          "parts": true,
+          "evidence": "TOEFL iBT (1-6 scale) 4 Reading: 3.5 Listening: 3 Writing: 4.5 Speaking: 3.5"
+        },
+        {
+          "test": "PTE",
+          "min": 58,
+          "parts": true,
+          "evidence": "Pearson Test of English (Academic) Pearson Test of English (Academic) UKVI 58 No PTE communicative skills score below 50"
+        }
+      ],
+      "evidence": "the most common way to demonstrate your English proficiency is to achieve the required score in one of the following English tests:"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем Monash считает того, кто не гражданин и не постоянный резидент Австралии или Новой Зеландии (включая двойное гражданство и гуманитарную визу).",
+      "evidence": "You're an international student if you're not an: Australian or New Zealand citizen (including dual citizen of Australia or New Zealand) Australian permanent resident (including holder of Australian permanent humanitarian visa).",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Гражданство вход не закрывает: иностранец подаёт напрямую через портал Monash или через уполномоченного агента, отдельного запрета по паспорту нет. Отдельный порядок только для восьми стран: находящимся в Крыму, на Кубе, в Донецке, Иране, Луганске, Северной Корее, Сирии или Южном Судане надо подавать через зарегистрированного агента Monash.",
+      "evidence": "If you're located in Crimea, Cuba, Donetsk, Iran, Luhansk, North Korea, Syria or South Sudan, you'll need to apply for a course through a registered Monash agent (or an IDP office in your region if a Monash agent isn't available).",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Аттестат школы обязателен: для бакалавриата нужно успешно закончить минимум австралийский Year 12 (12 лет школы) и набрать требуемый академический балл, либо зарубежный эквивалент. 11-летнюю школу Таджикистана это прямо не запрещает — эквивалент уточнять в приёмной.",
+      "evidence": "Monash undergraduate courses require successful completion of a minimum of an Australian Year 12 qualification and achieving the required academic entry score, or equivalent.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Кроме общего аттестата у части курсов есть обязательные предметы-пререквизиты: их список зависит от курса и лежит во вкладке entry requirement страницы курса.",
+      "evidence": "Prerequisite subjects differ from course to course, and can be found in the 'entry requirement' tab of the relevant course pages.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Обходной путь, если прямой проходной балл не набран: подготовительная программа Foundation Year в Monash College даёт гарантированный вход в первый год любого бакалавриата при успешном окончании и выполнении остальных требований.",
+      "evidence": "If you're an international student, Foundation Year gives you the best preparation and support for success at Monash University. It's a pre-university program offered through Monash College, and if you successfully complete it and meet the other entry requirements, we guarantee you entry into first year of any degree at Monash University.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский обязателен: Monash ведёт обучение на английском, и уровень надо подтвердить. Принимают, среди прочего, IELTS (Academic), TOEFL iBT и Pearson PTE.",
+      "evidence": "the most common way to demonstrate your English proficiency is to achieve the required score in one of the following English tests:",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Пороги английского: IELTS (Academic) — 6.5 в целом (Reading/Listening/Writing/Speaking по 6.0); TOEFL iBT (старая шкала 0-20) — 79 в целом (Reading 13, Listening 12, Writing 21, Speaking 18); TOEFL iBT (шкала 1-6, с 21.01.2026) — 4 в целом (Reading 3.5, Listening 3, Writing 4.5, Speaking 3.5); PTE Academic — 58 в целом (ни одна коммуникативная часть не ниже 50).",
+      "evidence": "Minimum English test score requirements English test Minimum overall score Minimum band scores IELTS (Academic) IELTS (Academic) UKVI IELTS One Skill Retake (Academic) IELTS One Skill Retake (Academic) UKVI IELTS Online (Academic) 6.5 Reading: 6.0 Listening: 6.0 Writing: 6.0 Speaking: 6.0 TOEFL iBT (0-20 scale) 79 Reading: 13 Listening: 12 Writing: 21 Speaking: 18 TOEFL iBT (1-6 scale) 4 Reading: 3.5 Listening: 3 Writing: 4.5 Speaking: 3.5 TOEFL Essentials 8 Reading: 7 Listening: 7 Writing: 9 Speaking: 7 Pearson Test of English (Academic) Pearson Test of English (Academic) UKVI 58 No PTE communicative skills score below 50",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог IELTS (Academic): 6.5 в целом и не ниже 6.0 по каждой из четырёх частей.",
+      "evidence": "IELTS Online (Academic) 6.5 Reading: 6.0 Listening: 6.0 Writing: 6.0 Speaking: 6.0",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Освобождение от языкового экзамена: если человек до 19 лет проучился шесть лет в англоязычной школе англоязычной страны, требование можно закрыть иначе (школьной оценкой по английскому или прежней учёбой на английском).",
+      "evidence": "If you've completed six years of schooling at an English medium institution in an English-speaking country (including Australia) before the age of 19, you can meet the English language requirements in one of the following ways.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Срок давности языкового экзамена действует только на тех, кто не доказал шесть лет англоязычного школьного обучения до 19 лет.",
+      "evidence": "Time limits only apply if you can't demonstrate that you have completed at least six years of schooling at an English medium institution in an English-speaking country (including Australia) before the age of 19.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Обходной путь по языку: если не хватает только балла языкового теста (остальные требования выполнены), можно пройти курс Monash English и закрыть требование им.",
+      "evidence": "International students who do not meet the English language requirement based on their English test results (but meet all other entry requirements) may want to consider completing Monash English .",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Возраст: на момент зачисления в Monash должно быть не меньше 17 лет; возможны исключения (например, 16 лет при отдельных условиях).",
+      "evidence": "You must be at least 17 years of age to enrol in a Monash course.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Оценки смотрятся целостно: единого числового минимума нет, нужно выполнить минимальные требования приёма, а у многих курсов порог выше или есть дополнительные требования (пререквизиты, интервью).",
+      "evidence": "To be considered for a course at Monash University, you must meet the minimum entry requirements. Many courses have higher entry requirements, prerequisite studies or extra requirements such as interviews.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Приём идёт по курсам, и стоимость обучения тоже указана по курсам: общей цифры на весь вуз нет, tuition у domestic и international различается.",
+      "evidence": "Tuition fees for domestic and international students are listed for each course. These fees may vary depending on your circumstances.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за заявку для иностранца — $125, к заявке прикладывают подтверждение оплаты.",
+      "evidence": "International applicants need to pay a $125 application fee and attach proof of payment.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плату за заявку могут снять: по коду waiver от сотрудника Monash или для спонсируемых одним из перечисленных спонсоров.",
+      "evidence": "We may waive the application fee if: a Monash staff member has given you an application fee waiver code at an exhibition, seminar or interview session that you've attended, or you're sponsored by one of our listed sponsors",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцам автоматически рассматривают стипендии: подавшимся напрямую или через одобренного агента доступен набор международных стипендий.",
+      "evidence": "International students who apply directly to Monash, or through an approved agent, are automatically considered for a range of international scholarships. We want as many bright minds as possible to benefit from a Monash education. Which is why we offer one of the most generous scholarship programs in Australia.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Monash International Merit Scholarship: иностранцам со всех стран, получившим предложение на бакалавриат, назначают $15,000 в год на весь срок обучения; общая ценность — до $75,000, 20 мест в год.",
+      "evidence": "International students from all countries who have received an undergraduate course offer from Monash will automatically be considered for the Monash International Merit Scholarship. As a scholarship recipient, you will receive $15,000 per annum for the duration of your degree. Total scholarship value Up to $75,000 Number offered 20 per year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для International Merit Scholarship нужно иметь безусловное предложение Monash и учиться full-time на бакалавриате в Австралии; текущим студентам Monash и учащимся Australian Year 12 стипендия не положена.",
+      "evidence": "You must have received a full Monash course offer with no conditions You must intend to enrol full-time in an undergraduate degree at a Monash campus in Australia",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Условие сохранения International Merit Scholarship: держать средний балл distinction (70% и выше) каждый семестр.",
+      "evidence": "You must maintain a distinction average (70% or above) each semester.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "International Study Grants: иностранных абитуриентов бакалавриата и магистратуры автоматически оценивают на эту субсидию.",
+      "evidence": "International applicants are also automatically assessed for International Study Grants.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача: иностранцы-не-выпускники школы могут подавать заявку в любое время года; учёба начинается в семестр 1 (начало марта) или семестр 2 (середина июля).",
+      "evidence": "International students can apply for a place anytime throughout the year. Teaching starts: Semester one: early March Semester two: mid-July",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Прямой вход — основной путь: большинство студентов-бакалавров поступают напрямую, имея австралийский Year 12 или зарубежный эквивалент.",
+      "evidence": "Most of our undergraduate students enter via direct entry. That means they've completed Year 12 in Australia, or have an equivalent qualification from overseas.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "К заявке нужны документы: аттестат/транскрипт школы, а при наличии — результаты IELTS/TOEFL и рекомендации; оригиналы или заверенные копии предоставляют по запросу, иначе зачисление могут отменить.",
+      "evidence": "secondary school results certificate, official academic record/transcript, and if applicable, IELTS or TOEFL test results and employer references.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Monash обязан проверять, что человек — настоящий студент, въезжающий в Австралию временно ради учёбы.",
+      "evidence": "Monash is obligated to check that you're a genuine applicant seeking temporary entry into Australia for study purposes.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Для студенческой визы нужно выполнить все базовые визовые критерии (genuine student, хорошая репутация, здоровье); может потребоваться подтверждение финансов.",
+      "evidence": "When applying for your student visa, you will need to meet all core visa criteria, such as the genuine student requirement, good character, and health criteria. Financial capacity documentation may also be required.",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.monash.edu/admissions/apply/international-ug",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Monash University, Мельбурн, Австралия. Приём иностранцев на бакалавриат идёт напрямую через портал Monash (или через уполномоченного агента). Языковые пороги: IELTS 6.5, TOEFL iBT 79 (или 4 по новой шкале 1-6), PTE 58. Возраст — не младше 17 лет. Обучение платное, стоимость указана по курсам; иностранцам автоматически рассматривают стипендии (International Merit Scholarship — $15,000/год до $75,000)."
+    }
+  },
+  "source": {
+    "url": "https://www.monash.edu/study/international",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.monash.edu/study/international",
+        "contentHash": "sha256:620a0da2f24b5227131cfb7ffc70e84d8dc8d30bb30248a2b6f6fa01285aa2a1"
+      },
+      {
+        "url": "https://www.monash.edu/admissions/apply/international-ug",
+        "contentHash": "sha256:b9c8b6e37988ddfb7e45c3a122e892f790f9d1f0f7aab29de14e7c24c446d3b2"
+      },
+      {
+        "url": "https://www.monash.edu/study/how-to-apply/application-process/international-students",
+        "contentHash": "sha256:611380b0fb8d2663523904f4d446579b0e5d3dbf3491dd71ebed50e6059f5920"
+      },
+      {
+        "url": "https://www.monash.edu/study/how-to-apply/entry-requirements",
+        "contentHash": "sha256:e5d93853ccb7e6d486249e1c1805ffb781c4bafb5d4e714c1096459830d3a1e7"
+      },
+      {
+        "url": "https://www.monash.edu/admissions/entry-requirements/english-language",
+        "contentHash": "sha256:f40eb5a525dc4d5f3037ed5d4ab5670a1497791c079c9274b957be98b2edb814"
+      },
+      {
+        "url": "https://www.monash.edu/admissions/entry-requirements/english-language/tabs-english-language-requirements",
+        "contentHash": "sha256:c8fb9cac203061ab480ad2bde470a9181f64ed72ab6068370a01054db2980620"
+      },
+      {
+        "url": "https://www.monash.edu/study/courses/entry-pathways-international",
+        "contentHash": "sha256:039cd76e56a86dfe0544c5f149a561e86ca6cdee93dc25a5d0c020f3ade78d6d"
+      },
+      {
+        "url": "https://www.monash.edu/admissions/apply/online",
+        "contentHash": "sha256:450aa65a21cad525352e984dd3ea40d79a81582b356d45c77ab7337562440dd3"
+      },
+      {
+        "url": "https://www.monash.edu/study/fees-scholarships",
+        "contentHash": "sha256:c7c0643ff77d80d9a356e5308d09be1fbccaa7f987139f8ed9beae0618106be6"
+      },
+      {
+        "url": "https://www.monash.edu/study/fees-scholarships/fees",
+        "contentHash": "sha256:24ad907e5de55155ba4bb57c3bf58c8635ebed360734879e44244a30422d8a69"
+      },
+      {
+        "url": "https://www.monash.edu/study/fees-scholarships/scholarships",
+        "contentHash": "sha256:4da21e20a7ff9fb5cf7596eff4eb3e09d63f397b47d15bfa8b72a5e3c8c7ca31"
+      },
+      {
+        "url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770",
+        "contentHash": "sha256:25f925f6bdf331e8d4f45921f8581c30b430d19c7deb14cb83ca363077ec2fb2"
+      },
+      {
+        "url": "https://www.monash.edu/admissions/entry-requirements",
+        "contentHash": "sha256:2333cf2309999214db9cfc4bca43a8943d7ab8aa63f09297951280a2244a2bd9"
+      },
+      {
+        "url": "https://www.monash.edu/admissions/entry-requirements/age-requirements",
+        "contentHash": "sha256:ad4004aa8323e6e50defca8c8b914fc8c2dbd9a5a5f24221f408910d1f1c0c56"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
