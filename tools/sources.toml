@@ -3787,8 +3787,28 @@ approvedAt = "2026-09-29"
 
 [auckland]
 name = "University of Auckland (Новая Зеландия): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.auckland.ac.nz/en/study/international-students.html",
+files = [
+  { path = "manual/auckland/00-international-hub.html", url = "https://www.auckland.ac.nz/en/study/international-students.html" },
+  { path = "manual/auckland/01-entry-international.html", url = "https://www.auckland.ac.nz/en/study/international-students/entry-requirements-international-students.html" },
+  { path = "manual/auckland/02-how-to-apply.html", url = "https://www.auckland.ac.nz/en/study/international-students/how-to-apply.html" },
+  { path = "manual/auckland/03-entry-requirements.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements.html" },
+  { path = "manual/auckland/04-intl-fees.html", url = "https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/international-student-fees.html" },
+  { path = "manual/auckland/05-scholarships.html", url = "https://www.auckland.ac.nz/en/study/international-students/scholarships-loans-and-funding.html" },
+  { path = "manual/auckland/06-important-dates.html", url = "https://www.auckland.ac.nz/en/students/academic-information/important-dates.html" },
+  { path = "manual/auckland/07-apply-now.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/apply-now.html" },
+  { path = "manual/auckland/08-english.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/english-language-requirements.html" },
+  { path = "manual/auckland/09-ug-english.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/undergraduate-english-language-requirements.html" },
+  { path = "manual/auckland/10-overseas-secondary.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/overseas-secondary-school-applicants.html" },
+  { path = "manual/auckland/11-ug-entry.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements.html" },
+  { path = "manual/auckland/12-ug-closing.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/how-to-apply/undergraduate-application-closing-dates.html" },
+  { path = "manual/auckland/13-ug-intl-fees.html", url = "https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/international-student-fees/undergraduate-international-fees.html" },
+  { path = "manual/auckland/14-ug-scholarships.html", url = "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/scholarships-for-international-students/undergraduate-scholarships-for-international-students.html" },
+  { path = "manual/auckland/15-how-to-apply.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/how-to-apply.html" },
+  { path = "manual/auckland/17-supporting-docs.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/how-to-apply/supporting-documents.html" },
+  { path = "manual/auckland/18-country-funding.html", url = "https://www.auckland.ac.nz/en/study/international-students/scholarships-loans-and-funding/country-specific-scholarships-and-funding0.html" },
+  { path = "manual/auckland/19-programme-A-I.pdf", url = "https://www.auckland.ac.nz/assets/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/overseas-secondary-school-applicants/2027+Undergraduate-programme-specific-entry-requirements-A-I.pdf" },
+  { path = "manual/auckland/20-programme-J-Z.pdf", url = "https://www.auckland.ac.nz/assets/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/overseas-secondary-school-applicants/2027+Undergraduate-programme-specific-entry-requirements-J-Z.pdf" },
+  { path = "manual/auckland/21-bsc.html", url = "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-science-bsc.html" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
