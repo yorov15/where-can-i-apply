@@ -1,0 +1,260 @@
+{
+  "id": "kfupm",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "King Fahd University of Petroleum and Minerals (KFUPM, Саудовская Аравия): приём иностранцев на бакалавриат",
+    "orig": "King Fahd University of Petroleum and Minerals"
+  },
+  "hostCountry": "SA",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Иностранцу, живущему вне Саудовской Аравии, вуз прямо снимает плату за обучение и даёт полную стипендию: бесплатное общежитие на кампусе, месячная стипендия, медицинское обслуживание в клинике кампуса и бесплатные учебники (страница пишет «Scholarship benefits may include» — то есть это возможные, а не гарантированные все до одной льготы). Дорога в списке для бакалавров не названа. Важно: стипендия именно для приезжающих из-за границы. Не-саудовцы, уже живущие в КСА с видом на жительство, учатся по платной программе «Fee-study program», и жильё там за номинальную плату."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз прямо пишет, что принимает студентов со всего мира («welcomes students from across the Kingdom and around the world»), а на странице для иностранцев — что в составе студентов более 75 национальностей. Ограничения по стране нигде нет. Единственное исключение — трек Олимпиады, он только для саудовцев и не-саудовцев с матерью-гражданкой Саудовской Аравии, но иностранцу он и не нужен: есть SAT-путь (SAT от 1350) и трек для победителей ISEF. Смотрели страницы: International Students, Apply as an International Student, Admission Tracks, FAQ."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы вход не закрывает: отказа по стране нет, требуется лишь аттестат средней школы с естественно-научным уклоном (или международной программы, Natural Sciences), а если аттестат выдан вне Королевства — его заверение в Министерстве образования. Таджикистан на снятых страницах не упомянут, отдельного списка стран нет. Смотрели страницы: Apply as an International Student, Admission Tracks, FAQ, брошюра 2027."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Число лет школы не задано: вуз требует оконченное среднее образование (high school graduate) с естественно-научным уклоном, но ни 11, ни 12 лет не называет и требований к предметам по годам не выставляет. Смотрели страницы: Admission Tracks, Apply as an International Student, брошюра 2027."
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "The applicant must be a graduate of high school (General, Computer science and engineering, Health and life) or an International Curriculum (Natural sciences) in the year of admission or the previous two years."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст не ограничивают: на снятых страницах приёма требований к возрасту нет — ни минимума, ни максимума, возраст нигде не назван. Смотрели страницы: Admission Tracks, Apply as an International Student, FAQ, брошюра 2027."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Требования к среднему баллу нет: на SAT-пути оценки школы прямо не учитываются («High school grades are not considered when evaluating applicants for the SAT Track»), а на остальных треках решение идёт по тестам Qudrat и Tahsili (в треке Vacancies школьный балл весит лишь 10%), объявленного минимума GPA нигде нет. Смотрели страницы: Admission Tracks, FAQ, брошюра 2027."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 4.5,
+          "evidence": "Achieve a minimum score of 65 on the STEP test or its equivalent in other tests (IELTS 4.5, Duolingo 80, or TOEFL iBT 3 (45 out of 120 under the old scoring system)."
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 80,
+          "evidence": "Achieve a minimum score of 65 on the STEP test or its equivalent in other tests (IELTS 4.5, Duolingo 80, or TOEFL iBT 3 (45 out of 120 under the old scoring system)."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 45,
+          "evidence": "Achieve a minimum score of 65 on the STEP test or its equivalent in other tests (IELTS 4.5, Duolingo 80, or TOEFL iBT 3 (45 out of 120 under the old scoring system)."
+        }
+      ],
+      "evidence": "Is an English language test required to obtain admission? Yes, achieve a minimum score of 65 on the STEP test or its equivalent in other tests (IELTS 4.5, Duolingo 80, or TOEFL iBT 3 (45 out of 120 under the old scoring system)."
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": 1350
+        }
+      ],
+      "evidence": "The minimum SAT score required for admission is 1350 or above."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "SAT-путь — основной для иностранцев из-за границы: нужно окончить международную школу (в год подачи или в предыдущий год), уклон — естественные науки, и набрать по SAT от 1350.",
+      "evidence": "Undergraduate Students SAT Track Your academic requirements: Graduate from an international high school (current or previous year) Your studies should have a natural sciences focus/track SAT score: 1350 or above",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "SAT отправляют в KFUPM напрямую через College Board, после проверки балла вуз приглашает на собственный математический тест; только после этого заполняют заявление.",
+      "evidence": "Submit your SAT scores through College Board directly to KFUPM Once we verify your SAT score, we'll invite you to take our KFUPM math assessment Complete your application through our Admission Website",
+      "field": "exam",
+      "kind": "steps"
+    },
+    {
+      "ru": "Балл 1350 только допускает к конкурсу и ничего не гарантирует: отбор конкурсный, мест мало, решает балл SAT вместе с математическим тестом вуза. Суперскоринг SAT не принимают — балл должен быть за одно прохождение.",
+      "evidence": "Meeting the minimum score does not guarantee admission; seats are limited, and admission will be competitive.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Для SAT-пути тесты Qudrat, Tahsili и экзамен по английскому не нужны — только SAT и математический тест вуза. Но выпускной балл школы тут тоже не смотрят.",
+      "evidence": "Do I need to submit scores from the General Aptitude Test, the Achievement Test, or an English proficiency test? No. These scores are not required when applying through the SAT Track.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Школу надо окончить в год подачи или в предыдущие два года; уклон — естественные науки. Если аттестат выдан вне Королевства, его нужно заверить в Министерстве образования или другом уполномоченном органе.",
+      "evidence": "The applicant must be a graduate of high school (General, Computer science and engineering, Health and life) or an International Curriculum (Natural sciences) in the year of admission or the previous two years.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский нужен для обычных треков: STEP 65 или эквивалент (IELTS 4.5, Duolingo 80, TOEFL iBT 45 по старой шкале). Это правило действует для всех треков, кроме SAT и Олимпиады.",
+      "evidence": "Achieve a minimum score of 65 on the STEP test or its equivalent in other tests (IELTS 4.5, Duolingo 80, or TOEFL iBT 3 [45 out of 120 under the old scoring system). This applies to all admission tracks, except for SAT and Olympiad.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявления и документы принимают электронно, приезжать не нужно; баллы Tahsili и Qudrat вуз берёт из центра Qiyas сам.",
+      "evidence": "The required documents are submitted electronically through the submission site.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Поступить можно только один раз: кто раньше учился в KFUPM или его колледже, заявление не принимают.",
+      "evidence": "The applicant has never studied at King Fahd University of Petroleum and Minerals or the university's community college.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны аттестат о среднем образовании и рекомендательное письмо от администрации школы; кандидата могут пригласить на личное собеседование.",
+      "evidence": "Admission candidates may be required to attend a personal interview.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Победители ISEF (Гран-при, до четырёх человек в год) получают гарантированное зачисление и полную стипендию с правом выбрать любой факультет.",
+      "evidence": "ISEF Winners Track Spaces are offered to the top four winners each year.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Весь первый курс — подготовительный год (английский, математика и другое); его можно частично или полностью пропустить по программе SkipPrep.",
+      "evidence": "New students are accepted into the preparatory year program for one academic year, with the opportunity to take advantage of the \"SkipPrep\" program to partially or completely skip this year.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Обучение бесплатно: для иностранца из-за границы плата за обучение снимается и он получает полную стипендию.",
+      "evidence": "As an international student living outside Saudi Arabia, your tuition fees are waived. You will receive a full scholarship to attend KFUPM.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Что даёт стипендия: бесплатное общежитие на кампусе, бесплатные учебники, месячная стипендия и медицинское обслуживание в клинике кампуса. Вуз пишет «may include» — набор льгот может отличаться.",
+      "evidence": "Scholarship benefits may include: Free On-Campus Housing : Enjoy comfortable, fully-equipped dorms just steps away from your classrooms. Complimentary Course Texts : Borrow the books you need- at no cost. Monthly Stipend : Focus on your studies with financial support for your academic journey. Medical services : Your healthcare needs are taken care of through the on-campus medical clinic.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Не-саудовцы, уже живущие в КСА (с видом на жительство), идут по платной программе «Fee-study program» — стипендия приезжающим из-за границы на них не распространяется.",
+      "evidence": "Can non-Saudis register at the university? Yes, non-Saudi students can register for Fee-study program.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Виза: после зачисления вуз сам оформляет студенческую визу — нужно прислать медицинский отчёт из своей страны, действующий паспорт (не менее 6 месяцев) и документы; виза приходит по электронной почте.",
+      "evidence": "Once you've been admitted, simply email us copies of your documents and our admissions team will handle the student visa application on your behalf.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки приёма: основной трек — с 10 по 24 января 2027, SAT-трек — с 1 по 11 февраля 2027, трек Олимпиады — с 1 мая по 1 июля 2027. Результаты визовых и школьных документов должны успеть к срокам трека.",
+      "evidence": "Primary Admission Track: January 10-24, 2027 SAT Admission Track: February 1-11, 2027 Olympiad Admission Track: May 1 - July 1, 2027",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2027-02-01",
+    "closes": "2027-02-11",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://apply.kfupm.edu.sa/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Университет нефти и минералов имени короля Фахда (KFUPM), Дахран, Саудовская Аравия. Подача — через портал apply.kfupm.edu.sa; приём иностранцев на бакалавриат идёт по треку SAT (SAT от 1350 плюс математический тест вуза) и по треку для победителей ISEF."
+    }
+  },
+  "source": {
+    "url": "https://www.kfupm.edu.sa/study/international-students",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.kfupm.edu.sa/study/international-students",
+        "contentHash": "sha256:efc76f27c86d91f0da1740ed71532594d2f3c68c4979550065bf35b069250a79"
+      },
+      {
+        "url": "https://www.kfupm.edu.sa/study/international-students/apply-as-an-international-student",
+        "contentHash": "sha256:67a067544529228204c30920127a9631f45558fd0fd6e2cb328951471ca2e33d"
+      },
+      {
+        "url": "https://www.kfupm.edu.sa/study/international-students/fees-and-scholarships",
+        "contentHash": "sha256:2919e4e436f5040f7f07e41f8a88161024825330d549be7d780624494f9b3ad8"
+      },
+      {
+        "url": "https://admissions.kfupm.edu.sa/en/new-admission/admission's-tracks",
+        "contentHash": "sha256:0f24ff34856a527a81a2211a5dcbd4fdde46c224c9166d9b9be3c01f7f92fa65"
+      },
+      {
+        "url": "https://admissions.kfupm.edu.sa/en/important-dates",
+        "contentHash": "sha256:bec6b9a8689351e04463a169e7a8d6efe0369de33ff990c9b04ef82e82b8b827"
+      },
+      {
+        "url": "https://admissions.kfupm.edu.sa/en/faq's",
+        "contentHash": "sha256:33d2d62205557cfed28ca37713cdcdc72dc01fa71f23267162873db406eaa377"
+      },
+      {
+        "url": "https://admissions.kfupm.edu.sa/en/new-admission/admissions-procedures",
+        "contentHash": "sha256:13dde8d71bc706e6a2391c38166b7da7350c0288eb11271351a3b24b25f91729"
+      },
+      {
+        "url": "https://admissions.kfupm.edu.sa/en/home",
+        "contentHash": "sha256:7e7642fd73a70837be5b4ba8a5cedeaa73ab0a85eeecc59a5ffdfef8c685b05a"
+      },
+      {
+        "url": "https://admissions.kfupm.edu.sa/docs/default-source/default-document-library/digital-version_en_2026.pdf",
+        "contentHash": "sha256:839f34e1cf8b404fc8e1ce0ebc2d5af364bd71446fc5d3e4641c8da859d55029"
+      },
+      {
+        "url": "https://www.kfupm.edu.sa/study/bachelor-of-science",
+        "contentHash": "sha256:8550af4b056968f34ffb5fb3b9d5a39e175aec8c26bd3222b4070d752948b1ce"
+      },
+      {
+        "url": "https://admissions.kfupm.edu.sa/en/new-admission/fee-study-program",
+        "contentHash": "sha256:64da3e88edd297a92e5b766494956eae8ca4864401b9ef242f178c47f01fe875"
+      },
+      {
+        "url": "https://www.kfupm.edu.sa/study/international-students/visa-requirements",
+        "contentHash": "sha256:d55fc6ef11f1c9b8840e8e122d72236e52ed8e067c7c67dba9209613fe0435c6"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
