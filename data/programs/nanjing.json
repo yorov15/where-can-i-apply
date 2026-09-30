@@ -1,0 +1,284 @@
+{
+  "id": "nanjing",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Nanjing University (Китай): приём иностранцев на бакалавриат",
+    "orig": "Nanjing University (南京大学)"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: 21 000 ¥/год на гуманитарных программах, 24 000 ¥/год на естественных и бизнес-направлениях, 32 000 ¥/год в Институте программного обеспечения и 42 000 ¥/год на медицинском факультете. Плюс разовый сбор за заявку 500 ¥, страховка 400 ¥/семестр и общежитие (Сяньлин — 3000 ¥/семестр за место, Гулоу — 52–67 ¥/сутки). Для Таджикистана отдельных стипендий нет: есть разовая стипендия города Нанкин 10 000 ¥, но её дают уже зачисленным студентам NJU, и узкая стипендия для международных преподавателей китайского языка. Значит, семье нужно планировать всю стоимость года."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "General: 18 years of age or above, in good health with valid Non-Chinese passport"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы вход не закрывает: отказ по стране школы или по стране обучения не назван. Требование одно — быть негражданином Китая; про Китай, Гонконг, Макао и Тайвань сказано лишь то, что их жители подчиняются правилам Минобразования КНР, а это не про таджикского школьника. Смотрели страницу Bachelor's Programs, китайскую «自费申报指南» (приём на бакалавриат), Q&A и страницы стипендий."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "三年全日制高中毕业证书"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы нет: страницы не требуют, чтобы аттестат был получен в конкретном году. Нужен аттестат о средней школе (или справка об ожидаемом выпуске для тех, кто ещё учится), но год выпуска нигде не задан. Смотрели страницу Bachelor's Programs, китайскую «自费申报指南» и Q&A."
+    },
+    "age": {
+      "min": 18,
+      "max": 30,
+      "evidence": "申请者年龄在18周岁以上(不超过30周岁)"
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "1. 材料审核 ( 根据高中阶段成绩、语言水平、综合能力等择优录取)"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "HSK",
+          "min": 180,
+          "evidence": "Copy of HSK certificate, score at least 180 on the HSK (level 5)"
+        }
+      ],
+      "evidence": "applicants need to have good chinese proficiency."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Standardized test scores such as A-Level, AP, ACT, IB, SAT, and AST can be submitted, with a validity period of two years."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут только неграждане Китая: нужен действующий паспорт иностранца, здоровье в порядке и оконченная средняя школа или выше.",
+      "evidence": "General: 18 years of age or above, in good health with valid Non-Chinese passport, and an educational background of completed high school or above",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст на бакалавриат — от 18 до 30 лет.",
+      "evidence": "申请者年龄在18周岁以上(不超过30周岁)",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат о трёхлетней очной средней школе и табель за все три года. Таджикская школа — 11 лет, поэтому, соответствует ли её аттестат этому требованию, уточняйте в приёмной.",
+      "evidence": "三年全日制高中毕业证书",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Отбор по баллам: смотрят оценки за старшую школу, языковой уровень и общие способности, выбирают лучших.",
+      "evidence": "1. 材料审核 ( 根据高中阶段成绩、语言水平、综合能力等择优录取)",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Все программы бакалавриата преподаются на китайском языке: нужен хороший уровень китайского.",
+      "evidence": "All majors in the undergraduate program are taught in Chinese. applicants need to have good chinese proficiency.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен сертификат HSK 5 уровня не ниже 180 баллов (для специальности «китайский язык» — HSK 4, 180 баллов).",
+      "evidence": "Copy of HSK certificate, score at least 180 on the HSK (level 5)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявителю на специальность «английский язык» дополнительно нужен IELTS 5.5 или TOEFL 70 (код NJU для TOEFL — C288).",
+      "evidence": "Major of English applicants : English Proficiency Level IELTS test score 5.5 or above / TOEFL test score 70 or above.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "С 2026/2027 учебного года все иностранцы, подающие на бакалавриат, обязаны сдать CSCA (China Scholastic Competency Assessment) и подать результат; тест проводит Китайский стипендиальный совет, 5 сессий в год.",
+      "evidence": "applicants are required to take the China Scholastic Competency Assessment (CSCA), and submit the test report.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Отбор: сначала проверка документов; на математический, компьютерный факультеты, факультет иностранных языков, бизнес-школу и в Институт международного образования — письменный экзамен и собеседование.",
+      "evidence": "2. 笔试面试 （ 数学学院、计算机学院、海外教育学院、外国语学院、商学院 ）",
+      "field": "exam",
+      "kind": "steps"
+    },
+    {
+      "ru": "Пакет документов: анкета, паспорт, аттестат (или справка об ожидаемом выпуске), табель за все годы, сертификат HSK, результат CSCA, две рекомендации от учителей и план учёбы на бакалавриате.",
+      "evidence": "Two letters of recommendation (must be original in Chinese or English); ⑧ Personal Statement",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявки принимаются с 1 марта по 15 мая. В июне–августе — проверка статуса, уведомление о зачислении и визовые документы; в сентябре — регистрация по расписанию университета.",
+      "evidence": "申报时间 3月1日至5月15日",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки цикла, названные на английской странице: заявка и документы — с марта по май, зачисление и виза — с июня по август, регистрация — в сентябре.",
+      "evidence": "June to August Check the application progress, receive admission notice and visa form.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Обучение: 21 000 ¥/год — гуманитарные программы; 24 000 ¥/год — естественные и бизнес-направления; 32 000 ¥/год — программы Института программного обеспечения; 42 000 ¥/год — программы медицинского факультета.",
+      "evidence": "Tuition Fee: ￥21,000 per academic year for liberal arts programs; ￥24,000 per academic year for science and business programs; ￥32,000 per academic year for programs of the Software Institute; ￥42,000 per academic year for programs of the Medical School.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за заявку — 500 ¥, разовая и невозвратная.",
+      "evidence": "Online Application Fee: ￥500",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 500,
+        "currency": "CNY",
+        "evidence": "Online Application Fee: ￥500"
+      }
+    },
+    {
+      "ru": "Страховка — 400 ¥ за семестр или 800 ¥ за учебный год.",
+      "evidence": "Insurance Fee 400 RMB per semester 800 RMB per academic year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общежитие: Сяньлин — 3000 ¥/семестр за место в двухместном номере; Гулоу — 52 ¥/сутки в двухместном или 67 ¥/сутки в одноместном; залог за комнату — 600 ¥.",
+      "evidence": "Accommodations Xianlin Campus: International Students Apartment Building (Building 21), 3000 RMB per semester ( one bed in double room ) . Gulou Campus: Xiyuan International Student Building, 52 RMB per day (one bed in double room) ，67 RMB per day (single room). Deposit for Campus Rooms: 600 RMB for room facilities.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия города Нанкин: бакалавру разово 10 000 ¥. Но её дают уже зачисленным студентам Нанкинского университета, а получать её одновременно с другими государственными, местными или организационными стипендиями нельзя.",
+      "evidence": "Undergraduate student: CNY 10,000 one-time reward",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На стипендию города Нанкин может претендовать уже зачисленный студент NJU не старше 30 лет на бакалавриате; получатели других стипендий — нет. Приём заявок на странице указан за 2024 год (1–31 июля), свежих сроков нет.",
+      "evidence": "Applicants cannot be recipients of other scholarships offered by Chinese government, local governments or other organizations simultaneously.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельный узкий путь финансирования — стипендия для международных преподавателей китайского языка (до 4 лет на степень бакалавра по китайскому языку и литературе): нужен HSK 4 (210 баллов) и HSKK среднего уровня (60), возраст 16–35 лет (на бакалавриат обычно до 25), подача через chinese.cn и istudy.nju.edu.cn.",
+      "evidence": "The program commences in September 2026, and the scholarship is provided for a maximum of four academic years. Applicants shall hold a senior high school diploma and have a minimum score of 210 on the HSK Test (Level 4) and 60 on the HSKK test (Intermediate Level).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Срок этой стипендии для программ, начинающихся в сентябре, — 15 мая.",
+      "evidence": "For programs commencing in September 2026, applicants must complete their applications by May 15.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://istudy.nju.edu.cn/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Nanjing University (南京大学), Нанкин, Китай. Приём иностранцев на бакалавриат ведёт Институт международного образования (Institute for International Students); заявка онлайн через istudy.nju.edu.cn. Обучение на китайском языке, нужен HSK 5 (180), с 2026/2027 — обязательный тест CSCA; обучение 21 000–42 000 ¥/год. Отдельной помощи для Таджикистана нет."
+    }
+  },
+  "source": {
+    "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Admissions/BachelorsPrograms/index.html",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Admissions/BachelorsPrograms/index.html",
+        "contentHash": "sha256:7e94745788f17960f693c8c9816aa1edfece36e8b416891fc04b25ea7663662f"
+      },
+      {
+        "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Admissions/DegreeProgramsTaughtinEnglish/index.html",
+        "contentHash": "sha256:18eb9c21792b11680b2306102a8c48db8dc1425f381f2aa48351699dfbf95aa6"
+      },
+      {
+        "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Costs/Tuition/index.html",
+        "contentHash": "sha256:9edc3a12472bdebadb46a36d388b1e4a5b843b8bfa0cff8fc6881ba2180e3cf7"
+      },
+      {
+        "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Costs/RegistrationFee/index.html",
+        "contentHash": "sha256:636e3cc5be8c4da97920141195a8422d90caa1b840e7f6c97cab29985bdc8682"
+      },
+      {
+        "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Costs/OtherCosts/index.html",
+        "contentHash": "sha256:3433cc9699deb0534a1697f1976e216f286e7aae570b3b6ff206eec907195deb"
+      },
+      {
+        "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Downloads/Downloads/index.html",
+        "contentHash": "sha256:8fe6001293844171b5c679f09aec12e075a0830d6fd52addf289fdccd711e459"
+      },
+      {
+        "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Scholarships/ChineseGovernmentScholarship/index.html",
+        "contentHash": "sha256:1b61200555dc60f3af9f00a47fcaeb3b236628aabf9f50adb32d70c32f868931"
+      },
+      {
+        "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Scholarships/NanjingMunicipalScholarship/index.html",
+        "contentHash": "sha256:d9055e07a35d27abe33ad61fd64779b7f0e123d29149c1a2ac8b4c0f3c34c50c"
+      },
+      {
+        "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Application/QAQA/index.html",
+        "contentHash": "sha256:8318c6251f477f19af8de7720f7ce4bb0a8194dfc87db9b037402300f1c6a3da"
+      },
+      {
+        "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Admissions/index.html",
+        "contentHash": "sha256:14ea9e27e89231064fa9c3786b776b62135513a8796212aa0a4133f3cb84fc83"
+      },
+      {
+        "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Admissions/FeaturedPrograms/index.html",
+        "contentHash": "sha256:931d99826fb3ee9151e417712e9897af823d1aa1824887df2173100070977dbc"
+      },
+      {
+        "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Scholarships/InternationalChineseLanguageTeachersScholarship/index.html",
+        "contentHash": "sha256:972d97ffbf863b9a33d1351c1ace4c5350d9e868ab9b6130f5b8485346edf0a8"
+      },
+      {
+        "url": "https://hwxy.nju.edu.cn/lxnd/zsxx/bkxm/sbzn/index.html",
+        "contentHash": "sha256:11570b48b472af26be8dd0a3bc1f18af55881e4cc5fde54b878a83af1e340c1f"
+      },
+      {
+        "url": "https://hwxy.nju.edu.cn/lxnd/zsxx/bkxm/zyml/index.html",
+        "contentHash": "sha256:d793942bc66b614df07f103832e323e23ac553e40359f67ba5b6366792467e2f"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
