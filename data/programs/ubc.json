@@ -1,0 +1,306 @@
+{
+  "id": "ubc",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of British Columbia (Канада): приём иностранцев на бакалавриат",
+    "orig": "University of British Columbia"
+  },
+  "hostCountry": "CA",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение для иностранца платное и считается за кредит (ставки за 2026 год — около $1,700-$2,200 за кредит, канадские доллары), плюс сборы и жизнь. Полного покрытия приём не даёт: стипендии за успехи частичные (IMES и OIS — $10,000-$25,000, на год или разово) и полную стоимость не закрывают. Помощь по нужде есть отдельно — International Scholars Program, но у неё своя карточка и срок 15 ноября. Поэтому здесь ничего не покрыто: семья планирует платить сама."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство доступ к приёму не закрывает: UBC прямо пишет, что принимает иностранцев из любой страны, а гражданство (не канадское) влияет только на плату за обучение — иностранные ставки — и на право на отдельные стипендии для иностранцев. Отдельного запрета по стране гражданства нет. Смотрели страницы требований приёма, международных школьников, английского языка, определения платы за обучение, стипендий для иностранцев и календарь приёма."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы вход не закрывает: вуз принимает хорошо подготовленных выпускников признанных средних школ из любой страны и отказа по стране не называет. Аттестат Таджикистана прямо не описан — Таджикистана нет в списке стран, поэтому действуют базовые требования «если твоей страны нет в списке». Смотрели страницы требований, международных школьников и раздел приёма в календаре UBC."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "The minimum academic qualification for admission is secondary school graduation from a recognized secondary school."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы требования не называют: есть только сроки документов (документы для приёма — до 15 марта, английский — до 15 февраля) и оценки за Grade 11 и Grade 12. Отдельного «окончи школу не раньше такого-то года» нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного порога требования приёма не называют: на снятых страницах нет условия «с такого-то возраста»; правила выражены школьным образованием, оценками и английским. Для школьника-абитуриента возрастных ограничений не заявлено."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "UBC considers your grades in all Grade 11 (junior level) and Grade 12 (senior level) classes, paying special attention to courses that relate to the degree you're applying to."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "International English Language Testing System (Academic) 6.5, with no part less than 6.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "parts": true,
+          "evidence": "Internet based test (1-120): Overall score: 90"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "Internet based test (1-6): Overall score: 4.5"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 125,
+          "parts": true,
+          "evidence": "DET Duolingo English Test Overall: 125"
+        },
+        {
+          "test": "PTE",
+          "min": 65,
+          "parts": true,
+          "evidence": "Pearson Test of English (Academic) Overall: 65"
+        }
+      ],
+      "evidence": "All prospective students are required to demonstrate a minimum level of English before they're admitted."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Английский обязателен: до зачисления нужно доказать минимальный уровень (ELAS).",
+      "evidence": "All prospective students are required to demonstrate a minimum level of English before they're admitted.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "IELTS Academic: 6.5 в целом и не ниже 6.0 ни по одной части.",
+      "evidence": "International English Language Testing System (Academic) 6.5, with no part less than 6.0",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT по старой шкале (1-120): не ниже 90 в целом, с минимумами по частям (22/22/21/21).",
+      "evidence": "Internet based test (1-120): Overall score: 90",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT по новой шкале (1-6): не ниже 4.5 в целом, с минимумами по частям.",
+      "evidence": "Internet based test (1-6): Overall score: 4.5",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Duolingo English Test: не ниже 125 в целом, с минимумами по частям.",
+      "evidence": "DET Duolingo English Test Overall: 125",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "PTE Academic: 65 в целом и не ниже 60 по каждой части.",
+      "evidence": "Pearson Test of English (Academic) Overall: 65",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Документы об английском (ELAS) нужно сдать до 15 февраля.",
+      "evidence": "The deadline to submit documents showing you meet the ELAS is February 15.",
+      "field": "language",
+      "kind": "steps"
+    },
+    {
+      "ru": "Английского не хватает — есть Vantage One: год подготовки с зачислением в UBC. Это другая дверь, а не отказ.",
+      "evidence": "UBC's Vantage One program is for academically strong international students whose English language proficiency does not yet meet the requirements for direct admission into UBC.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Смотрят оценки за Grade 11 и Grade 12 (11-й и 12-й годы школы). В 11-летней школе Таджикистана 12-го года нет — это не отказ, а повод заранее уточнить в приёмной, какие годы зачтут.",
+      "evidence": "Academic assessment for the purpose of admission are based on final or in-progress Grade 11 and Grade 12 (or equivalent) course grades available in the spring.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Таджикистана нет в списке стран на странице требований — значит применяются базовые требования (вариант «если твоей страны нет в списке»). Что в них входит, страница подгружает скриптом, так что это надо смотреть на сайте.",
+      "evidence": "Basic requirements (if your country is not listed)",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Числового порога по среднему баллу нет: вуз целостно оценивает оценки за Grade 11 и Grade 12 и сравнивает абитуриентов между собой, а не режет по баллу.",
+      "evidence": "UBC considers your grades in all Grade 11 (junior level) and Grade 12 (senior level) classes, paying special attention to courses that relate to the degree you're applying to.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Почти всем абитуриентам-школьникам обязателен личный профиль (несколько эссе) и две рекомендации.",
+      "evidence": "You must complete a personal profile as part of your online application if:",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача открывается в начале октября 2026 и закрывается 15 января 2027 (Winter Session 2027).",
+      "evidence": "January 15, 2027 (11:59 p.m. PST) Applications due",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявление на study permit подавай сразу после принятия предложения — оформление занимает несколько месяцев.",
+      "evidence": "Getting a study permit can take several months, so be sure to apply for a study permit as soon as you accept your offer of admission.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Обучение платное и считается за кредит. Для поступивших с 2026 года международные ставки, например: Science — $1,769.40 за кредит, Arts — $1,717.68, Commerce — $2,222.61 (канадские доллары; далее рост не больше 3% в год).",
+      "evidence": "Science $1,769.40 $1,752.39 $1,719.01 $1,686.27 $1,654.15 $1,622.35 $1,591.15",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "При подтверждении зачисления студент на study permit платит депозит $3,000 (канадцы и постоянные жители — $500).",
+      "evidence": "$500 for Canadian citizens and permanent residents $3,000 for students on a study permit",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за подачу для абитуриента на study permit — $173.25 (для канадцев и постоянных жителей — $78.50).",
+      "evidence": "Applicants who will be studying on a Study Permit (e.g., non-Canadian citizens and non-Permanent Residents) and presenting transcripts from institutions within or outside of BC $173.25",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии за успехи частичные: International Major Entrance Scholarship — $10,000-$25,000 в год, продлевается до трёх дополнительных лет; рассматривают автоматически при подаче в срок.",
+      "evidence": "For the 2026/2027 academic year, IMES awards will be valued at $10,000 - $25,000/year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Outstanding International Student Award — разовая стипендия $10,000-$25,000 за успехи.",
+      "evidence": "For the 2025/2026 academic year, OIS awards will be valued at $10,000 - $25,000.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии за успехи не покрывают полную стоимость обучения — семье нужно планировать остальное самому.",
+      "evidence": "these awards do not cover the full cost of education",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельно есть International Scholars Program — помощь по нужде: её получают сильные ученики с доказанной финансовой нуждой, у программы своя карточка и срок 15 ноября.",
+      "evidence": "International Scholars are high academic achievers with significant financial need",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://you.ubc.ca/apply/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — University of British Columbia, кампусы в Ванкувере и Оканагане (Британская Колумбия, Канада). Приём иностранцев на первый курс бакалавриата (first-year undergraduate)."
+    }
+  },
+  "source": {
+    "url": "https://you.ubc.ca/applying-ubc/requirements/",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://you.ubc.ca/applying-ubc/requirements/",
+        "contentHash": "sha256:ad49320e613f9b3ef4d2136632af448baeeb0a208057d369b6f8571efc06e9c7"
+      },
+      {
+        "url": "https://you.ubc.ca/applying-ubc/requirements/international-high-schools/",
+        "contentHash": "sha256:47e6af40dd8f1cbd10f28b2755de93b0aaea786b12ccc4d6a7302c9632c3f7f2"
+      },
+      {
+        "url": "https://you.ubc.ca/applying-ubc/requirements/english-language-competency/",
+        "contentHash": "sha256:19c439f298344cea77285ddf8aa56f4666f7e3c4069607bf2c49b03aaa8e4934"
+      },
+      {
+        "url": "https://you.ubc.ca/financial-planning/tuition-fees/",
+        "contentHash": "sha256:96a6cb776d74d4c31b5cb2ad137122b042c2f46caf05d10a7cfbb16e450cf235"
+      },
+      {
+        "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/",
+        "contentHash": "sha256:d39bc73d244de4a2e202d61e1ca589dfec90242d6e05038664bddd5d83a36659"
+      },
+      {
+        "url": "https://you.ubc.ca/applying-ubc/dates-deadlines/",
+        "contentHash": "sha256:44b7e1d16cc163eda6c70a7add5a6a6dbc0c0d32b169b9d87b9c262394da73f3"
+      },
+      {
+        "url": "https://you.ubc.ca/applying-ubc/how-to-apply/",
+        "contentHash": "sha256:2fb3bfc86c0549506c36da10cb5e4eb111c814937df58f12516c40ead3ab9add"
+      },
+      {
+        "url": "https://you.ubc.ca/applying-ubc/application-evaluation/",
+        "contentHash": "sha256:54b6688fc32ecd98a3f2b1c8b6fec8e4a9861c56ebc637198c4a53d1d4b58a92"
+      },
+      {
+        "url": "https://you.ubc.ca/applying-ubc/how-to-apply/personal-profile/",
+        "contentHash": "sha256:f0b10b80e76419af2c0ff453bcb00dd798597fd7e8e0f7c001f75f68147a9fb4"
+      },
+      {
+        "url": "https://you.ubc.ca/international/",
+        "contentHash": "sha256:000ee6a6e02a40558b6d325cf2caf4a1ace2ec2408c7622ec9ab6e5c0c4ad7f7"
+      },
+      {
+        "url": "https://you.ubc.ca/financial-planning/financial-schedule/",
+        "contentHash": "sha256:2f28c36fe4039be8c1040fac1ea3c79940cf24239ac5a2854800b9c87d39d858"
+      },
+      {
+        "url": "https://vancouver.calendar.ubc.ca/fees/tuition-fees/undergraduate",
+        "contentHash": "sha256:43bac3c0fa97f539049bb352e1220d1cc4446523ff4bb6d242a6264bc2ec0b53"
+      },
+      {
+        "url": "https://vancouver.calendar.ubc.ca/fees/application-and-administrative-fees",
+        "contentHash": "sha256:950ed648661d1ab3e76dd214b04ac99009846af37b4c846bf4d4ad70b3730c2e"
+      },
+      {
+        "url": "https://vancouver.calendar.ubc.ca/admissions/international-applicants",
+        "contentHash": "sha256:82af693320978ae57420d67aab32626ab59deee2149f04b9791018eec14e5476"
+      },
+      {
+        "url": "https://vancouver.calendar.ubc.ca/admissions/admission-secondary-school-applicants",
+        "contentHash": "sha256:c919a58ece88e826d68f4fa12ed7a2642aa9160144042beeb102c50b227ab5bc"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
