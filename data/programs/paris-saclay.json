@@ -1,0 +1,248 @@
+{
+  "id": "paris-saclay",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Université Paris-Saclay (Франция) — приём иностранцев на бакалавриат",
+    "orig": "Université Paris-Saclay"
+  },
+  "hostCountry": "FR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, но недорогое: национальный тариф бакалавриата на 2025-2026 год — €178 в год (магистратура €254, докторантура €397). Студенты не из ЕС формально платят «дифференцированный» тариф, но Université Paris-Saclay даёт частичное освобождение, приводящее ставку к домашней, поэтому на деле цена близка к €178; отдельно можно получить полное или частичное освобождение от платы. Жильё и дорогу вуз не покрывает. Стипендии самого университета (International Master's Scholarships) и Eiffel — только для магистратуры, бакалавру помощи нет."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство доступ не закрывает: вуз отдельно описывает приём иностранцев и не называет ни одной страны-исключения. Процедура зависит от паспорта, страны проживания и программы, но отказа по гражданству нет. Смотрели страницы приёма иностранцев на бакалавриат, порядок подачи, тарифы, стипендии и программу физики."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван, требования выражены школьным дипломом, а маршрут подачи зависит от страны проживания (Еtudes en France или DAP), а не от гражданства. Аттестат Таджикистана прямо не упомянут — эквивалент уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "DAP - Dossier blanc (white) : The Dossier Blanc (white) is for applicants who are not French nationals, who do not hold or will not hold a French or European baccalaureate and who live abroad."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: сказано лишь, что подают заранее (DAP — с ноября по январь перед годом учёбы), а диплом должен быть французским, европейским или эквивалентным. Никакой границы «не раньше такого-то года» нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения страницы приёма не называют — ни минимума, ни максимума. Смотрели страницы приёма, порядок подачи, регистрацию, тарифы и программу физики."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Числового требования к среднему баллу (GPA) страницы приёма не содержат: отбор идёт по школьному диплому, а для второго/третьего года — по dossier на платформе eCandidat. Конкретного порога ни по GPA, ни по процентам нигде не названо."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Most of our undergraduate degrees are taught in French. A good level of French (B2 or C1) is required to attend the courses."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство само по себе доступ не ограничивает: порядок подачи зависит от паспорта, страны проживания и выбранной программы, отдельного запрета по стране нет.",
+      "evidence": "It will depend on your nationality, your country of residence and the courses you choose.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Маршрут зависит от страны проживания, а не гражданства: если страна покрыта программой Études en France (есть офис Campus France) — подача через неё, включая визу; список стран сайт вуза не приводит.",
+      "evidence": "The Études en France platform is an online process which makes it possible to manage all the steps involved in enrolling in a higher education establishment through to visa application.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Если страна проживания покрыта Études en France, иностранец без французского или европейского бакалавриата подаёт через платформу Études en France: она ведёт весь путь от заявки до визы, помогает офис Campus France в стране.",
+      "evidence": "You do not have a French or European BAC, you are a foreign student who is not a national of the E.U., the E.E.E., the Swiss Confederation, Monaco or Andorra and you reside in a country covered by the Etudes en France (Eef - Studying in France) programme.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Если страна проживания НЕ покрыта Études en France, иностранцу без французского/европейского бакалавриата нужно оформить предварительный запрос на допуск (DAP) на первый год лиценциата.",
+      "evidence": "You must complete a Preliminary Request for Admission (Demande d'Admission Préalable) (DAP) to apply for the first year of a Licence 1 at Université Paris-Saclay.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "За пределами Франции это DAP «Dossier blanc» (белый): для неграждан Франции без французского/европейского бакалавриата, живущих за границей; запрос подают в отдел сотрудничества и культурной деятельности посольства Франции.",
+      "evidence": "DAP - Dossier blanc (white) : The Dossier Blanc (white) is for applicants who are not French nationals, who do not hold or will not hold a French or European baccalaureate and who live abroad.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Срок подачи DAP — с ноября по январь, предшествующие учебному году начала учёбы; точные даты сайт вуза не называет, отправляет на сайт министерства.",
+      "evidence": "This request must be made between the November and January preceding the academic year in which you wish to start your studies in France.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "На второй и третий год лиценциата иностранцы подают через платформу eCandidat; процедура состоит из двух шагов.",
+      "evidence": "The application procedure for international students to L2 and L3 takes place in 2 steps.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Допуск на первый год строится на школьном дипломе: французский или европейский бакалавриат, а без него — эквивалент через предварительный запрос DAP.",
+      "evidence": "DAP - Dossier blanc (white) : The Dossier Blanc (white) is for applicants who are not French nationals, who do not hold or will not hold a French or European baccalaureate and who live abroad.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Стоимость обучения на бакалавриате на 2025-2026 год — €178 в год (национальный тариф, Master €254, Doctorat €397); тарифы на 2026-2027 ещё не опубликованы.",
+      "evidence": "For the 2025-2026 academic year, tuition fees are set as follows (2026-2027 fees coming soon): Bachelor level Master level Doctoral level €178 €254 €397",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Студенты не из ЕС, формально платящие «дифференцированный» тариф, имеют право на частичное освобождение, приводящее плату к домашнему уровню — то есть на деле цена как у французов.",
+      "evidence": "As part of this policy, non-EU students who are subject to differentiated fees are eligible for a partial exemption, which brings the differentiated registration fees in line with the fees applicable to domestic students, in accordance with the conditions laid down by the Board of Governors Resolution No. CA-2026-013 of 3 February 2026.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "От платы можно освободиться полностью или частично — автоматически по законному основанию (например, стипендия по нужде) либо по решению вуза по индивидуальным обстоятельствам.",
+      "evidence": "You may be exempted, either fully or partially, from paying tuition fees: automatically, if you are entitled to a statutory exemption (for example, if you receive a need-based grant or an annual specific financial support allowance), or on the basis of criteria related to your individual circumstances and determined by the institution.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии для иностранцев (International Master's Scholarships) вуз даёт только на магистерские программы, не на бакалавриат.",
+      "evidence": "Université Paris-Saclay aims to promote access for international students to its Master's programmes, delivered by its member institutions, and to make it easier for highly-qualified international students to join the University, especially for those wishing to develop an academic project through research up to the doctoral level.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Eiffel — отдельная от вступительного отбора, очень конкурсная и тоже ориентирована на лучших иностранных студентов, а не на бакалавриат.",
+      "evidence": "The Eiffel Excellence Scholarship Programme is to enable French higher education institutions attract top foreign students. Highly selective, the Eiffel Excellence Scholarships are only awarded to the best students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Бакалавриат в основном на французском: нужен хороший уровень французского — B2 или C1; английского экзамена (IELTS/TOEFL/Duolingo) для бакалавриата вуз не требует.",
+      "evidence": "Most of our undergraduate degrees are taught in French. A good level of French (B2 or C1) is required to attend the courses.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Англоязычное обучение на бакалавриате есть, но частично: кафедра физики даёт большой выбор курсов на английском на 3-м курсе бакалавриата (и в магистратуре).",
+      "evidence": "The physics department is particularly open to international students, and provides a large choice of English taught courses at the 3rd year Bachelor's level as well as at the Master's level.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "По языкам: B2 французского настоятельно нужен для курсов на французском, B2 английского — для курсов на английском; отдельного порога IELTS/TOEFL вуз не публикует.",
+      "evidence": "However, a B2 language level in French is highly recommended to attend courses in French, and a B2 language level in English to attend courses in English.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Часть подразделений прямо требует подтверждённый уровень языка: кафедра физики — B2 по французскому и B2 по английскому (документ о подаче).",
+      "evidence": "Physics department - Faculty of Sciences B2 B2",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Курсы на английском на 3-м курсе рассчитаны прежде всего на обмен: партнёрский вуз отбирает и номинирует студента, а не прямое поступление школьника.",
+      "evidence": "The partner university selects students based on performance, commitment and language skills and nominates them for the exchange by sending a notification of nomination to the Incoming Mobility Officer at Université Paris-Saclay",
+      "field": "language",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.universite-paris-saclay.fr/en/admissions/applying-undergraduate-programmes",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Université Paris-Saclay (Франция). Бакалавриат почти весь на французском (нужен B2/C1); англоязычные курсы — только у кафедры физики с 3-го курса. Иностранец без французского/европейского бакалавриата подаёт через Études en France (страны Campus France) или через DAP «Dossier blanc» (остальные), срок — ноябрь–январь."
+    }
+  },
+  "source": {
+    "url": "https://www.universite-paris-saclay.fr/en/admissions/applying-undergraduate-programmes",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.universite-paris-saclay.fr/en/admissions/applying-undergraduate-programmes",
+        "contentHash": "sha256:7ed13e554fb00d48da255d338a924fb3b0e4aba5d551b1a2b71002e0fb710e4d"
+      },
+      {
+        "url": "https://www.universite-paris-saclay.fr/en/admission/international-students",
+        "contentHash": "sha256:69abd355436e3d5374f524b438739c1be518f9bde7d52180f05a3da2ae171c9a"
+      },
+      {
+        "url": "https://www.universite-paris-saclay.fr/en/node/42117",
+        "contentHash": "sha256:a195a5fa79f844cd6c2a6e32ff779cd742e1ad4b82181d89adbc0d3ecb8c361f"
+      },
+      {
+        "url": "https://www.universite-paris-saclay.fr/en/education/premier-cycle",
+        "contentHash": "sha256:61b70e968d148e0d12be87b57b261f79ba4cac881e106b9955e597f361391f98"
+      },
+      {
+        "url": "https://www.universite-paris-saclay.fr/en/education/licence-undergraduate-programme/physique",
+        "contentHash": "sha256:90ea7e88d523ab1258c15a9f38421e2d086214e1f0ef62c2db7f70b912b698c6"
+      },
+      {
+        "url": "https://www.universite-paris-saclay.fr/en/education/licence-undergraduate-programme/physique/l3-physique",
+        "contentHash": "sha256:d5fff45f1b93ba61abf503563478d52d870dbdc1ad40441de59fe3f600aa980c"
+      },
+      {
+        "url": "https://www.universite-paris-saclay.fr/en/admission/tuition-fees",
+        "contentHash": "sha256:792ad9e212acf200f7d45970001d4258e350a929e04c75ea5f7e767777e611d5"
+      },
+      {
+        "url": "https://www.universite-paris-saclay.fr/en/admission/scholarships-and-financial-support",
+        "contentHash": "sha256:a2e584bbcc8ea54cd3a9f1715395f1705dc4231c630955294d1fde2dd4a6b629"
+      },
+      {
+        "url": "https://www.universite-paris-saclay.fr/en/admission/undergraduate-application-and-registration",
+        "contentHash": "sha256:9f3689bbeebd64eff8035c99be8d0e1deb09a236a9b940b7ae17dfb24bf4bd74"
+      },
+      {
+        "url": "https://www.universite-paris-saclay.fr/sites/default/files/2022-04/online_application_guide_en.pdf",
+        "contentHash": "sha256:23191a4277ca09906805c6cdb67d22a52c9896f3179c6d96066074ef4ab51897"
+      },
+      {
+        "url": "https://www.universite-paris-saclay.fr/sites/default/files/2021-03/V3_Catalogue%20formation%20anglais20%20web.pdf",
+        "contentHash": "sha256:66c0b2bc0eab1d4d62464a92e77b73e148c184cb9a774bea4b2c754af9a3918d"
+      },
+      {
+        "url": "https://www.universite-paris-saclay.fr/en/admissions/scholarships-and-financial-support/international-masters-scholarships",
+        "contentHash": "sha256:1f7f0ff0b76280ca4225131a2e41c9b98038add77c399e14860d5f2c90d2f83a"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
