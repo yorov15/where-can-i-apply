@@ -16,6 +16,8 @@ export const COUNTRY_RU = {
   GB: 'Великобритания', QA: 'Катар', RO: 'Румыния', RU: 'Россия', RS: 'Сербия',
   SK: 'Словакия', HU: 'Венгрия',
   FI: 'Финляндия', SE: 'Швеция', NL: 'Нидерланды', AT: 'Австрия', SI: 'Словения',
+  CH: 'Швейцария', BE: 'Бельгия', DK: 'Дания', AR: 'Аргентина', AU: 'Австралия',
+  TW: 'Тайвань', NZ: 'Новая Зеландия', SA: 'Саудовская Аравия',
 };
 
 // Незнакомый код показывается как есть: лучше «BR» в списке, чем страна,
@@ -37,6 +39,13 @@ export function matchesFilter(item, { query, bucket, country, kind }) {
   return words.every((word) => haystack.includes(word));
 }
 
+// Сколько карточек группы показывать сразу. Длинный список (94 и 99
+// программы) превращал страницу в 50 000 пикселей прокрутки, а нужное человек
+// находит поиском и фильтрами, которые сразу показывают всё найденное.
+export const PAGE = 12;
+
+export const pageLimit = (limit, filtered) => (filtered ? Infinity : limit);
+
 export function bucketCounts(items) {
   const counts = { all: items.length, plan: 0, yes: 0, likely: 0, check: 0, no: 0 };
   for (const item of items) {
@@ -50,6 +59,9 @@ export function bucketCounts(items) {
 
 const state = { query: '', bucket: 'all', country: '', kind: '' };
 let ui = null;
+// Сколько карточек открыто в каждой группе (по классу группы). Хранится вне
+// перерисовки: renderResults пересобирает список на каждое нажатие в анкете.
+const shownIn = new Map();
 
 const itemOf = (card) => ({
   title: card.dataset.title ?? '',
@@ -80,21 +92,45 @@ function apply() {
     if (option.value) option.textContent = `${KIND_FILTER[option.value]} (${byKind.filter((item) => item.kind === option.value).length})`;
   }
 
+  const active = state.query.trim() !== '' || state.bucket !== 'all' || state.country !== '' || state.kind !== '';
+  const searching = state.query.trim() !== '' || state.country !== '' || state.kind !== '';
+
   let shown = 0;
   cards.forEach((card, i) => {
-    const show = matchesFilter(items[i], state);
-    card.hidden = !show;
-    if (show) shown += 1;
+    const match = matchesFilter(items[i], state);
+    card.dataset.match = match ? '1' : '0';
+    card.hidden = !match;
+    if (match) shown += 1;
   });
 
   for (const group of ui.resultsNode.querySelectorAll('.group')) {
-    const visible = group.querySelectorAll('details.card:not([hidden])').length;
-    group.hidden = visible === 0;
+    const matched = [...group.querySelectorAll('details.card')].filter((card) => card.dataset.match === '1');
+    group.hidden = matched.length === 0;
     const title = group.querySelector('.group-title');
-    if (title?.dataset.base) title.textContent = `${title.dataset.base} (${visible})`;
+    if (title?.dataset.base) title.textContent = `${title.dataset.base} (${matched.length})`;
+
+    const key = group.className;
+    const limit = pageLimit(shownIn.get(key) ?? PAGE, searching);
+    matched.forEach((card, i) => { card.hidden = i >= limit; });
+    const rest = Math.max(matched.length - limit, 0);
+    let more = group.querySelector('.group-more');
+    if (rest > 0) {
+      if (!more) {
+        more = document.createElement('button');
+        more.type = 'button';
+        more.className = 'button button-quiet group-more';
+        more.addEventListener('click', () => {
+          shownIn.set(key, (shownIn.get(key) ?? PAGE) + PAGE * 2);
+          apply();
+        });
+        group.append(more);
+      }
+      more.textContent = `Показать ещё ${Math.min(rest, PAGE * 2)} из ${rest}`;
+    } else if (more) {
+      more.remove();
+    }
   }
 
-  const active = state.query.trim() !== '' || state.bucket !== 'all' || state.country !== '' || state.kind !== '';
   ui.reset.hidden = !active;
   ui.status.textContent = !active
     ? ''

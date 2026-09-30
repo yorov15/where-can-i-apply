@@ -3522,35 +3522,77 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-29"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [ucsd]
 name = "UC San Diego (США): приём иностранцев на бакалавриат"
-urls = [
-  "https://admissions.ucsd.edu/international/index.html",
+files = [
+  { path = "manual/ucsd/00-international.html", url = "https://admissions.ucsd.edu/international/index.html" },
+  { path = "manual/ucsd/01-first-year.html", url = "https://admissions.ucsd.edu/first-year/index.html" },
+  { path = "manual/ucsd/02-apply.html", url = "https://admissions.ucsd.edu/apply/index.html" },
+  { path = "manual/ucsd/03-cost-aid.html", url = "https://admissions.ucsd.edu/why/cost-aid/index.html" },
+  { path = "manual/ucsd/04-faq.html", url = "https://admissions.ucsd.edu/faq/index.html" },
+  { path = "manual/ucsd/05-application-requirements.html", url = "https://admissions.ucsd.edu/first-year/application-requirements.html" },
+  { path = "manual/ucsd/06-application-review.html", url = "https://admissions.ucsd.edu/first-year/application-review.html" },
+  { path = "manual/ucsd/07-application-timeline.html", url = "https://admissions.ucsd.edu/first-year/application-timeline.html" },
+  { path = "manual/ucsd/08-cost-of-attendance.html", url = "https://fas.ucsd.edu/cost-of-attendance/undergraduates/index.html" },
+  { path = "manual/ucsd/09-financial-aid-types.html", url = "https://students.ucsd.edu/finances/financial-aid/types/index.html" },
+  { path = "manual/ucsd/10-scholarships.html", url = "https://fas.ucsd.edu/types/scholarships/index.html" },
+  { path = "manual/ucsd/11-tuition-stability.html", url = "https://fas.ucsd.edu/cost-of-attendance/undergraduates/tuition-stability-plan/index.html" },
+  { path = "manual/ucsd/12-entering-freshmen-scholarships.html", url = "https://fas.ucsd.edu/types/scholarships/entering-freshmen.html" },
+  { path = "manual/ucsd/13-registration-fees.html", url = "https://students.ucsd.edu/finances/fees/registration/index.html" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [penn-state]
 name = "Penn State University (США): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.psu.edu/admission/undergraduate/how-to-apply/international-students",
+files = [
+  { path = "manual/penn-state/00-home.html", url = "https://www.psu.edu/admission/undergraduate" },
+  { path = "manual/penn-state/00b-apply.html", url = "https://www.psu.edu/admission/undergraduate/how-to-apply" },
+  { path = "manual/penn-state/01-international.html", url = "https://www.psu.edu/admission/undergraduate/how-to-apply/international-students" },
+  { path = "manual/penn-state/02-first-year.html", url = "https://www.psu.edu/admission/undergraduate/how-to-apply/first-year-students" },
+  { path = "manual/penn-state/03-tuition-costs.html", url = "https://www.psu.edu/admission/undergraduate/tuition-costs" },
+  { path = "manual/penn-state/04-admission-requirements.html", url = "https://www.psu.edu/resources/international-students/admission-requirements" },
+  { path = "manual/penn-state/05-application-review.html", url = "https://www.psu.edu/resources/international-students/application-review" },
+  { path = "manual/penn-state/07-deadlines.html", url = "https://www.psu.edu/resources/international-students/deadlines" },
+  { path = "manual/penn-state/08-steps-to-apply.html", url = "https://www.psu.edu/resources/international-students/steps-to-apply" },
+  { path = "manual/penn-state/09-first-year-deadlines.html", url = "https://www.psu.edu/resources/first-year-students/deadlines" },
+  { path = "manual/penn-state/10-first-year-requirements.html", url = "https://www.psu.edu/resources/first-year-students/requirements" },
+  { path = "manual/penn-state/13-scholarships.html", url = "https://www.psu.edu/costs-aid/types-of-aid/scholarships" },
+  { path = "manual/penn-state/16-global-financial.html", url = "https://global.psu.edu/page/financial-guarantee-requirements" },
+  { path = "manual/penn-state/20-financial-guarantee-up.pdf", url = "https://psuglobalprod.prod.acquia-sites.com/sites/default/files/pdf/2026-2027-up-hy-gv-financial-guarnatee.pdf" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [uwashington]
 name = "University of Washington (США): приём иностранцев на бакалавриат"
-urls = [
-  "https://admit.washington.edu/apply/first-year/how-to-apply/",
+files = [
+  { path = "manual/uwashington/00-first-year.html", url = "https://admit.washington.edu/apply/first-year/" },
+  { path = "manual/uwashington/01-apply.html", url = "https://admit.washington.edu/apply/" },
+  { path = "manual/uwashington/02-how-to-apply.html", url = "https://admit.washington.edu/apply/freshman/how-to-apply/" },
+  { path = "manual/uwashington/03-english-proficiency.html", url = "https://admit.washington.edu/apply/freshman/how-to-apply/english-proficiency/" },
+  { path = "manual/uwashington/04-cadr.html", url = "https://admit.washington.edu/apply/freshman/cadr/" },
+  { path = "manual/uwashington/05-dates-deadlines.html", url = "https://admit.washington.edu/apply/dates-deadlines/" },
+  { path = "manual/uwashington/06-costs.html", url = "https://admit.washington.edu/costs/" },
+  { path = "manual/uwashington/07-coa.html", url = "https://admit.washington.edu/costs/coa/" },
+  { path = "manual/uwashington/08-aid.html", url = "https://admit.washington.edu/costs/aid/" },
+  { path = "manual/uwashington/09-scholarships.html", url = "https://admit.washington.edu/costs/scholarships/" },
+  { path = "manual/uwashington/10-app-fee.html", url = "https://admit.washington.edu/apply/first-year/how-to-apply/app-fee/" },
+  { path = "manual/uwashington/11-husky-promise.html", url = "https://admit.washington.edu/costs/husky-promise/" },
+  { path = "manual/uwashington/12-holistic-review.html", url = "https://admit.washington.edu/apply/first-year/holistic-review/" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
-# Партия 2. Под-страницы внутри одобренного домена bu.edu добавлены
-# ассистентом (приём иностранцев, школьные квалификации, английский, плата,
-# финпомощь, стипендии, сроки, раннее решение, FAQ). python.exe не в сети
-# (McAfee, 30.09.2026) — страницы сняты curl в manual/boston-university/,
-# origin=manual.
 [boston-university]
 name = "Boston University (США): приём иностранцев на бакалавриат"
 files = [
@@ -3569,101 +3611,259 @@ files = [
 approvedBy = "human"
 approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [eth-zurich]
 name = "ETH Zurich (Швейцария): приём иностранцев на бакалавриат"
-urls = [
-  "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate.html",
+files = [
+  { path = "manual/eth-zurich/00-bachelor.html", url = "https://ethz.ch/en/studies/bachelor.html" },
+  { path = "manual/eth-zurich/01-application.html", url = "https://ethz.ch/en/studies/bachelor/application.html" },
+  { path = "manual/eth-zurich/02-non-swiss-certificate.html", url = "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate.html" },
+  { path = "manual/eth-zurich/03-language-requirements.html", url = "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate/language-requirements.html" },
+  { path = "manual/eth-zurich/04-dates.html", url = "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate/dates.html" },
+  { path = "manual/eth-zurich/05-financial.html", url = "https://ethz.ch/en/studies/financial.html" },
+  { path = "manual/eth-zurich/06-scholarships.html", url = "https://ethz.ch/students/en/studies/financial/scholarships.html" },
+  { path = "manual/eth-zurich/07-scholarships-cost-of-living.html", url = "https://ethz.ch/students/en/studies/financial/scholarships/cost-of-living.html" },
+  { path = "manual/eth-zurich/08-tuition-fees.pdf", url = "https://ethz.ch/content/dam/ethz/main/education/finanzielles/files-en/tuition-fees.pdf" },
+  { path = "manual/eth-zurich/09-cost-of-living.pdf", url = "https://ethz.ch/content/dam/ethz/main/education/finanzielles/files-en/cost-of-living.pdf" },
+  { path = "manual/eth-zurich/10-scholarships-international.pdf", url = "https://ethz.ch/content/dam/ethz/main/education/finanzielles/files-en/guidelines-scholarships.pdf" },
+  { path = "manual/eth-zurich/11-language-certificates.txt", url = "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate/language-requirements/_jcr_content/par/table.tableComp.json" },
+  { path = "manual/eth-zurich/12-dates-2027-without-exam.txt", url = "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate/dates/_jcr_content/par/table_83420306_copy_.tableComp.json" },
+  { path = "manual/eth-zurich/13-dates-2027-with-exam.txt", url = "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate/dates/_jcr_content/par/table_1322192949_cop_1566530997.tableComp.json" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [epfl]
 name = "EPFL (Швейцария): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.epfl.ch/education/admission/admission-2/bachelor-admission-criteria-and-application/",
+files = [
+  { path = "manual/epfl/00-bachelor-admission.html", url = "https://www.epfl.ch/education/admission/admission-2/bachelor-admission-criteria-and-application/" },
+  { path = "manual/epfl/01-admission-overview.html", url = "https://www.epfl.ch/education/admission/admission-2/" },
+  { path = "manual/epfl/02-how-to-apply.html", url = "https://www.epfl.ch/education/admission/admission-2/bachelor-admission-criteria-and-application/how-to-apply/" },
+  { path = "manual/epfl/03-admission-examination.html", url = "https://www.epfl.ch/education/admission/admission-2/bachelor-admission-criteria-and-application/admission-examination/" },
+  { path = "manual/epfl/04-faq.html", url = "https://www.epfl.ch/education/admission/admission-2/frequently-asked-questions/" },
+  { path = "manual/epfl/05-teaching-languages.html", url = "https://www.epfl.ch/education/studies/en/rules-and-procedures/teaching_languages/" },
+  { path = "manual/epfl/06-tuition-fees.html", url = "https://www.epfl.ch/education/studies/en/rules-and-procedures/study-taxes/" },
+  { path = "manual/epfl/07-financing-study.html", url = "https://www.epfl.ch/education/studies/en/financing-study/" },
+  { path = "manual/epfl/08-cms-preparatory.html", url = "https://www.epfl.ch/education/cms-preparatory-year/" },
+  { path = "manual/epfl/09-academic-calendar.html", url = "https://www.epfl.ch/education/studies/en/rules-and-procedures/academic-calendar/" },
+  { path = "manual/epfl/10-conditions-cms.pdf", url = "https://www.epfl.ch/education/admission/wp-content/uploads/2019/01/Conditions-CMS.pdf" },
+  { path = "manual/epfl/11-tuition-fee-other.html", url = "https://www.epfl.ch/education/studies/en/rules-and-procedures/study-taxes/tuition-fee-other-fees/" },
+  { path = "manual/epfl/12-scholarships.html", url = "https://www.epfl.ch/education/studies/en/support-scholarships/" },
+  { path = "manual/epfl/13-bachelor-excellence.html", url = "https://www.epfl.ch/education/bachelor/bachelor-excellence-fellowships/" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [psl]
 name = "Université PSL (Франция): приём иностранцев на бакалавриат"
-urls = [
-  "https://psl.eu/en/education/admissions",
+files = [
+  { path = "manual/psl/00-home.html", url = "https://www.psl.eu/en" },
+  { path = "manual/psl/01-undergraduate-admissions.html", url = "https://www.psl.eu/en/education/admissions/undergraduate-admissions" },
+  { path = "manual/psl/02-international-students.html", url = "https://www.psl.eu/en/education/international-students" },
+  { path = "manual/psl/03-bachelors-degree.html", url = "https://www.psl.eu/en/education/find-your-curriculum/bachelors-degree" },
+  { path = "manual/psl/04-admissions.html", url = "https://www.psl.eu/en/education/admissions" },
+  { path = "manual/psl/05-financial-aid.html", url = "https://www.psl.eu/en/lifepsl/campus-life-paris/financial-aids" },
+  { path = "manual/psl/06-applying-bachelors.html", url = "https://www.psl.eu/en/education/applying-bachelors-degree" },
+  { path = "manual/psl/07-international-procedures.html", url = "https://www.psl.eu/en/international-admissions-procedures-psl" },
+  { path = "manual/psl/08-faq-undergrad.html", url = "https://www.psl.eu/en/education/faq-undergraduate-admissions" },
+  { path = "manual/psl/09-international-bachelor-science-ai.html", url = "https://www.psl.eu/en/education/international-bachelor-science-ai" },
+  { path = "manual/psl/10-sustainability-sciences.html", url = "https://www.psl.eu/en/education/psl-bachelors-degree-sustainability-sciences" },
+  { path = "manual/psl/11-ibe3.html", url = "https://www.psl.eu/en/education/international-bachelor-environmentally-engaged-engineering-i-be3" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [institut-polytechnique-paris]
 name = "Institut Polytechnique de Paris (Франция): приём иностранцев на бакалавриат"
-urls = [
-  "https://programmes.polytechnique.edu/en/bachelor/admissions/admissions-criteria-and-procedure",
+files = [
+  { path = "manual/institut-polytechnique-paris/00-bachelor-of-science.html", url = "https://programmes.polytechnique.edu/en/bachelor/about-the-bachelor/bachelor-of-science" },
+  { path = "manual/institut-polytechnique-paris/01-admissions-criteria.html", url = "https://programmes.polytechnique.edu/en/bachelor/admissions/admissions-criteria-and-procedure" },
+  { path = "manual/institut-polytechnique-paris/02-faq.html", url = "https://programmes.polytechnique.edu/en/bachelor/admissions/faq" },
+  { path = "manual/institut-polytechnique-paris/03-interview.html", url = "https://programmes.polytechnique.edu/en/bachelor/admissions/interview" },
+  { path = "manual/institut-polytechnique-paris/04-tuition-fees.html", url = "https://programmes.polytechnique.edu/en/bachelor/costs-and-funding/tuition-fees" },
+  { path = "manual/institut-polytechnique-paris/05-scholarships.html", url = "https://programmes.polytechnique.edu/en/bachelor/costs-and-funding/scholarships-and-financial-aid" },
+  { path = "manual/institut-polytechnique-paris/06-structure.html", url = "https://programmes.polytechnique.edu/en/bachelor/program-details/structure-of-the-bachelor" },
+  { path = "manual/institut-polytechnique-paris/07-international-students.html", url = "https://programmes.polytechnique.edu/en/about/ecole-polytechnique/international-students" },
+  { path = "manual/institut-polytechnique-paris/08-ip-paris-bachelor.html", url = "https://www.ip-paris.fr/en/education/bachelor-science" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [sorbonne]
 name = "Sorbonne University (Франция): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.sorbonne-universite.fr/en/education/study-sorbonne-university/degree-seeking-students/international-application-and/applying",
+files = [
+  { path = "manual/sorbonne/00-international-application-and-registration.html", url = "https://www.sorbonne-universite.fr/en/Study%20at%20Sorbonne%20University/degree-seeking-students/international-application-and-registration-1" },
+  { path = "manual/sorbonne/01-registration-procedures-international.html", url = "https://www.sorbonne-universite.fr/en/news/registration-procedures-international-students" },
+  { path = "manual/sorbonne/02-admission-first-year-bachelor.html", url = "https://international-welcome-desk.sorbonne-universite.fr/join-sorbonne-university/study/admission-to-the-first-year/" },
+  { path = "manual/sorbonne/03-science-first-year-licence.html", url = "https://sciences.sorbonne-universite.fr/en/apply/licences/first-year-licence-l1" },
+  { path = "manual/sorbonne/04-enrolment-procedures-tuition-fees.html", url = "https://www.sorbonne-universite.fr/en/education/study-sorbonne-university/enrolment-procedures-and-tuition-fees" },
+  { path = "manual/sorbonne/05-grants-financial-assistance.html", url = "https://www.sorbonne-universite.fr/en/education/student-life/grants-and-financial-assistance" },
+  { path = "manual/sorbonne/06-finding-financial-aid.html", url = "https://international-welcome-desk.sorbonne-universite.fr/managing-your-finances/your-budget/finding-financial-aid/" },
+  { path = "manual/sorbonne/07-french-language-courses.html", url = "https://www.sorbonne-universite.fr/en/french-language-courses" },
+  { path = "manual/sorbonne/08-french-language-certification.html", url = "https://www.sorbonne-universite.fr/en/french-language-certification" },
+  { path = "manual/sorbonne/09-special-assistance-international.html", url = "https://www.sorbonne-universite.fr/en/campus-life/social-financial-assistance/special-assistance-international-students" },
+  { path = "manual/sorbonne/10-science-welcoming-degree-seeking.html", url = "https://sciences.sorbonne-universite.fr/en/international-1/welcoming-degree-seeking-students-faculty" },
+  { path = "manual/sorbonne/11-information-international-students.html", url = "https://www.sorbonne-universite.fr/en/information-international-students" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [paris-saclay]
 name = "Université Paris-Saclay (Франция): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.universite-paris-saclay.fr/en/admissions/applying-undergraduate-programmes",
+files = [
+  { path = "manual/paris-saclay/00-applying-undergraduate.html", url = "https://www.universite-paris-saclay.fr/en/admissions/applying-undergraduate-programmes" },
+  { path = "manual/paris-saclay/01-international-students.html", url = "https://www.universite-paris-saclay.fr/en/admission/international-students" },
+  { path = "manual/paris-saclay/02-undergraduate-programmes.html", url = "https://www.universite-paris-saclay.fr/en/node/42117" },
+  { path = "manual/paris-saclay/03-premier-cycle.html", url = "https://www.universite-paris-saclay.fr/en/education/premier-cycle" },
+  { path = "manual/paris-saclay/04-physique.html", url = "https://www.universite-paris-saclay.fr/en/education/licence-undergraduate-programme/physique" },
+  { path = "manual/paris-saclay/05-l3-physique.html", url = "https://www.universite-paris-saclay.fr/en/education/licence-undergraduate-programme/physique/l3-physique" },
+  { path = "manual/paris-saclay/06-tuition-fees.html", url = "https://www.universite-paris-saclay.fr/en/admission/tuition-fees" },
+  { path = "manual/paris-saclay/07-scholarships.html", url = "https://www.universite-paris-saclay.fr/en/admission/scholarships-and-financial-support" },
+  { path = "manual/paris-saclay/08-undergraduate-application-registration.html", url = "https://www.universite-paris-saclay.fr/en/admission/undergraduate-application-and-registration" },
+  { path = "manual/paris-saclay/09-online-application-guide.pdf", url = "https://www.universite-paris-saclay.fr/sites/default/files/2022-04/online_application_guide_en.pdf" },
+  { path = "manual/paris-saclay/10-sciences-english-catalogue.pdf", url = "https://www.universite-paris-saclay.fr/sites/default/files/2021-03/V3_Catalogue%20formation%20anglais20%20web.pdf" },
+  { path = "manual/paris-saclay/11-intl-masters-scholarships.html", url = "https://www.universite-paris-saclay.fr/en/admissions/scholarships-and-financial-support/international-masters-scholarships" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [tudelft]
 name = "TU Delft (Нидерланды): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma",
+files = [
+  { path = "manual/tudelft/00-bsc-overview.html", url = "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma" },
+  { path = "manual/tudelft/01-admission-requirements.html", url = "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/admission-requirements" },
+  { path = "manual/tudelft/02-required-documents.html", url = "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/required-documents" },
+  { path = "manual/tudelft/03-country-specific.html", url = "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/admission-requirements/country-specific-requirements" },
+  { path = "manual/tudelft/04-application-procedure.html", url = "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/application-procedure" },
+  { path = "manual/tudelft/05-dates-deadlines.html", url = "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/dates-deadlines" },
+  { path = "manual/tudelft/06-tuition-finances.html", url = "https://www.tudelft.nl/en/education/study-programme-orientation/practical-matters/tuition-fee-finances" },
+  { path = "manual/tudelft/07-scholarships.html", url = "https://www.tudelft.nl/en/education/study-programme-orientation/practical-matters/scholarships" },
+  { path = "manual/tudelft/08-scholarships-other.html", url = "https://www.tudelft.nl/en/education/study-programme-orientation/practical-matters/scholarships/scholarships-from-other-providers" },
+  { path = "manual/tudelft/09-numerus-clausus.html", url = "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/numerus-clausus-programmes" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [ku-leuven]
 name = "KU Leuven (Бельгия): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.kuleuven.be/english/prospective-students/choose-your-programme",
+files = [
+  { path = "manual/ku-leuven/00-apply.html", url = "https://www.kuleuven.be/english/apply/" },
+  { path = "manual/ku-leuven/01-application-instructions.html", url = "https://www.kuleuven.be/english/apply/application-instructions/apply-to-kuleuven" },
+  { path = "manual/ku-leuven/02-requested-documents.html", url = "https://www.kuleuven.be/english/apply/requested-documents" },
+  { path = "manual/ku-leuven/03-eligibility-bachelor.html", url = "https://www.kuleuven.be/english/apply/requested-documents/eligibility-bachelor" },
+  { path = "manual/ku-leuven/04-english-proficiency.html", url = "https://www.kuleuven.be/english/apply/language-requirements/english-proficiency-tests" },
+  { path = "manual/ku-leuven/05-application-fee.html", url = "https://www.kuleuven.be/english/apply/requested-documents/application-fee" },
+  { path = "manual/ku-leuven/06-tuition-fees.html", url = "https://www.kuleuven.be/english/education/student/fees" },
+  { path = "manual/ku-leuven/07-tuition-fee-breakdown.html", url = "https://www.kuleuven.be/english/education/student/fees/tuition-fee-breakdown" },
+  { path = "manual/ku-leuven/08-fees-special-2026-2027.html", url = "https://www.kuleuven.be/english/education/student/fees/2026-2027" },
+  { path = "manual/ku-leuven/09-registration.html", url = "https://www.kuleuven.be/english/apply/registration" },
+  { path = "manual/ku-leuven/10-degree-verification.html", url = "https://www.kuleuven.be/english/apply/degreeverification" },
+  { path = "manual/ku-leuven/11-academic-calendar.html", url = "https://www.kuleuven.be/english/about-kuleuven/calendars" },
+  { path = "manual/ku-leuven/12-money-matters.html", url = "https://www.kuleuven.be/english/life-at-ku-leuven/money-matters" },
+  { path = "manual/ku-leuven/13-cost-of-living.html", url = "https://www.kuleuven.be/english/life-at-ku-leuven/money-matters/cost-of-living-in-belgium" },
+  { path = "manual/ku-leuven/14-tuition-regulation.html", url = "https://www.kuleuven.be/english/education/student/fees/regulation" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [uva-amsterdam]
 name = "University of Amsterdam (Нидерланды): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.uva.nl/en/education/admissions/bachelors/applying-for-a-bachelors-programme.html",
+files = [
+  { path = "manual/uva-amsterdam/00-applying-bachelors.html", url = "https://www.uva.nl/en/education/admissions/bachelors/applying-for-a-bachelors-programme.html" },
+  { path = "manual/uva-amsterdam/01-tuition-fees.html", url = "https://www.uva.nl/en/education/fees-and-funding/tuition-fees/tuition-fees.html" },
+  { path = "manual/uva-amsterdam/02-bachelors-scholarships.html", url = "https://www.uva.nl/en/education/fees-and-funding/bachelors-scholarships-and-loans/bachelors-scholarships.html" },
+  { path = "manual/uva-amsterdam/03-amsterdam-merit-scholarship.html", url = "https://www.uva.nl/en/education/fees-and-funding/bachelors-scholarships-and-loans/amsterdam-merit-scholarship/amsterdam-merit-scholarship.html" },
+  { path = "manual/uva-amsterdam/04-entry-requirements-international.html", url = "https://www.uva.nl/en/education/admissions/bachelors/entry-requirements-for-international-qualifications.html" },
+  { path = "manual/uva-amsterdam/05-application-after-1-may.html", url = "https://www.uva.nl/en/education/bachelor-s/application-after-1-may/application-after-1-may.html" },
+  { path = "manual/uva-amsterdam/06-diploma-finder-data.txt", url = "https://www.uva.nl/webfiles/1779862044324/includes/diploma-finder/country_data.js" },
+  { path = "manual/uva-amsterdam/07-fees-and-funding.html", url = "https://www.uva.nl/en/education/fees-and-funding/fees-and-funding.html" },
+  { path = "manual/uva-amsterdam/08-admissions.html", url = "https://www.uva.nl/en/education/admissions/admissions.html" },
+  { path = "manual/uva-amsterdam/09-uva-matching.html", url = "https://www.uva.nl/en/education/admissions/bachelors/uva-matching/uva-matching.html" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [uppsala]
 name = "Uppsala University (Швеция): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.uu.se/en/study/bachelors-studies/bachelors-programmes",
+files = [
+  { path = "manual/uppsala/00-bachelors-studies.html", url = "https://www.uu.se/en/study/bachelors-studies" },
+  { path = "manual/uppsala/01-application.html", url = "https://www.uu.se/en/study/bachelors-studies/application" },
+  { path = "manual/uppsala/02-application-guide.html", url = "https://www.uu.se/en/study/bachelors-studies/application/application-guide" },
+  { path = "manual/uppsala/03-entry-requirements.html", url = "https://www.uu.se/en/study/bachelors-studies/application/entry-requirements" },
+  { path = "manual/uppsala/04-fees.html", url = "https://www.uu.se/en/study/bachelors-studies/fees" },
+  { path = "manual/uppsala/05-scholarships.html", url = "https://www.uu.se/en/study/bachelors-studies/scholarships" },
+  { path = "manual/uppsala/06-scholarships-uu.html", url = "https://www.uu.se/en/study/bachelors-studies/scholarships/uppsala-university-scholarships" },
+  { path = "manual/uppsala/07-scholarships-guide.html", url = "https://www.uu.se/en/study/bachelors-studies/scholarships/application-guide" },
+  { path = "manual/uppsala/08-bachelors-programmes.html", url = "https://www.uu.se/en/study/bachelors-studies/bachelors-programmes" },
+  { path = "manual/uppsala/09-living-financing.html", url = "https://www.uu.se/en/study/bachelors-studies/living-in-sweden/financing" },
+  { path = "manual/uppsala/10-fees-how-to-pay.html", url = "https://www.uu.se/en/study/bachelors-studies/fees/how-do-i-pay" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [kth]
 name = "KTH Royal Institute of Technology (Швеция): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.kth.se/en/studies/bachelor/how-to-apply-for-bachelor-s-studies-1.450312",
+files = [
+  { path = "manual/kth/00-bachelor-overview.html", url = "https://www.kth.se/en/studies/bachelor/bachelor-s-degree-studies-at-kth-1.437576" },
+  { path = "manual/kth/01-how-to-apply.html", url = "https://www.kth.se/en/studies/bachelor/how-to-apply-for-bachelor-s-studies-1.450312" },
+  { path = "manual/kth/02-entry-requirements.html", url = "https://www.kth.se/en/studies/bachelor/entry-requirements-for-information-and-communication-technology-1.450313" },
+  { path = "manual/kth/03-fees.html", url = "https://www.kth.se/en/studies/bachelor/information-communication-technology/fees-1.646274" },
+  { path = "manual/kth/04-programme-ict.html", url = "https://www.kth.se/en/studies/bachelor/information-communication-technology/bsc-information-and-communication-technology-1.437049" },
+  { path = "manual/kth/05-payment-of-tuition-fees.html", url = "https://www.kth.se/en/student/studier/tuition-fees/payment-of-tuition-fees-1.323881" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [copenhagen]
 name = "University of Copenhagen (Дания): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.ku.dk/studies/bachelor/admission-requirements/non-eu-eea-and-non-nordic-countries",
+files = [
+  { path = "manual/copenhagen/00-admission-requirements.html", url = "https://www.ku.dk/studies/admission/bachelor" },
+  { path = "manual/copenhagen/01-non-eu-eea.html", url = "https://www.ku.dk/studies/admission/bachelor/non-eu-eea-and-non-nordic-countries" },
+  { path = "manual/copenhagen/02-quota-1-2.html", url = "https://www.ku.dk/studies/bachelor/quota-1-and-quota-2" },
+  { path = "manual/copenhagen/03-quota-2.html", url = "https://www.ku.dk/studies/admission/bachelor/quota-2" },
+  { path = "manual/copenhagen/04-tuition-fees.html", url = "https://www.ku.dk/studies/admission/application-deposit-fee-and-tuition-fees" },
+  { path = "manual/copenhagen/05-ib-diplomas.html", url = "https://www.ku.dk/studies/admission/bachelor/ib-and-other-international-diplomas" },
+  { path = "manual/copenhagen/06-preliminary-assessment.html", url = "https://www.ku.dk/studies/admission/bachelor/preliminary-assessment" },
+  { path = "manual/copenhagen/07-bachelor.html", url = "https://www.ku.dk/studies/bachelor" },
+  { path = "manual/copenhagen/08-all-programmes.html", url = "https://www.ku.dk/studies/bachelor/all-programmes" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
 [zurich]
 name = "University of Zurich (Швейцария): приём иностранцев на бакалавриат"
