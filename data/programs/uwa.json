@@ -1,0 +1,340 @@
+{
+  "id": "uwa",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Western Australia (Австралия): приём иностранцев на бакалавриат",
+    "orig": "The University of Western Australia"
+  },
+  "hostCountry": "AU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: все иностранцы принимаются как full fee-paying, а сумма зависит от курса и набора предметов (точную цену даёт Fee Calculator). Полного покрытия для иностранцев-бакалавров вуз не обещает. Из помощи — только частичные скидки на обучение: Global Excellence Scholarship доступна студентам всех стран (Таджикистан подходит) и даёт 10% при ATAR-эквиваленте 85 или 20% при 90 на весь срок курса; International Student Award (10%) доступна только гражданам из отдельного списка, Таджикистана в нём нет. Отдельные строки расходов: невозвратная плата за заявку $150, обязательный сбор SSAF, страховка OSHC и расходы на жизнь в Перте."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз ведёт отдельный раздел для иностранных абитуриентов и описывает для них тот же бакалавриат, что и для местных, отдельного запрета по паспорту нет. Единственное упоминание гражданства — список стран International Student Award (стипендия), в него Таджикистан не входит, но это про стипендию, а не про допуск. Смотрели страницы приёма иностранцев, требований, английского, квалификаций, стоимости, стипендий и сроков."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван, требования выражены признанной квалификацией, минимальным входным баллом и пререквизитами курса. У вуза есть список признанных иностранных квалификаций по странам, но аттестата Таджикистана в нём нет (в регионе назван, например, узбекский Academic Lyceum) — тогда вуз рассматривает квалификацию индивидуально. Эквивалент 11-летнего аттестата уточнять в приёмной, это не отказ."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Have studied or completed a recognised qualification to meet our academic requirements."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: требования выражены квалификацией, входным баллом и пререквизитами, а не годом выпуска. Прямого запрета подавать в год выпуска нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют. Встречается только альтернативный путь для людей старше 20 лет (сдача STAT), но это дополнительная возможность, а не общее требование допуска."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Entry to most courses is assessed on your ATAR or equivalent"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "Minimum standard ELC requirements - a minimum overall score of 6.5 with no band less than 6.0."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 82,
+          "parts": true,
+          "evidence": "Minimum standard ELC requirements - a minimum overall score of 82 with a minimum score of 20 in the Speaking and Writing sections, and a minimum score of 17 in the Listening and Reading sections."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "Minimum standard ELC requirements - a minimum overall score of 4.5 with a minimum score of 4 in the Writing section and a minimum score of 3.5 in the Listening, Speaking and Reading sections."
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 125,
+          "parts": true,
+          "evidence": "Minimum standard ELC requirements - an overall score of 125 with a minimum score of 115 in Speaking, 125 in Writing, 115 in Reading and 110 in Listening."
+        },
+        {
+          "test": "PTE",
+          "min": 64,
+          "parts": true,
+          "evidence": "Minimum standard ELC requirements - a minimum overall score of 64 with no band score less than 60."
+        }
+      ],
+      "evidence": "At UWA, English is the language of instruction and assessment. You will need to meet the English language requirements of the University to be eligible for a place."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцу нужно выполнить три вещи: пройти по английскому, выполнить пререквизиты курса и иметь признанную академическую квалификацию.",
+      "evidence": "To be eligible for entry into UWA, you will need to demonstrate that you: Meet our English language requirements . Please note that some courses may have higher English language requirements. Meet any prerequisites for your course. For undergraduate students, some majors have certain prerequisites which must be met before you can receive an offer. Check individual major pages for more information. Have studied or completed a recognised qualification to meet our academic requirements.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Допуск опирается на признанную школьную квалификацию, а для части специальностей есть обязательные предметы-пререквизиты: их надо закрыть до получения оффера.",
+      "evidence": "UWA accepts a wide range of overseas secondary education qualifications for entry into our undergraduate degrees. You'll need to meet UWA's minimum entry score, as well as any specific prerequisites for your chosen course. You can find prerequisite details on each major's webpage.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестата Таджикистана в списке признанных иностранных квалификаций вуза нет (в регионе назван, например, узбекский Academic Lyceum). Если квалификации страны в списке нет, вуз рассматривает её индивидуально — это уточнение в приёмной, а не отказ.",
+      "evidence": "Other programs or qualifications can be considered on an individual basis.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Обходной путь, если школьной квалификации или балла не хватает: подготовительная программа UWA Foundation Program в UWA College ведёт на первый курс бакалавриата.",
+      "evidence": "The UWA Foundation Program is delivered by UWA College and is designed specifically for international students. This program will help you improve your subject knowledge and English language skills so you can progress to the first year of your bachelor's degree at UWA.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ещё один обходной путь — дипломная программа: успешно окончив одобренный Diploma, можно попасть сразу на второй год бакалавриата UWA.",
+      "evidence": "By successfully completing an approved Diploma program, you can secure entry into the second year of a UWA bachelor's degree.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Для IB Diploma отдельные условия: нужно успешно окончить программу и набрать минимум 24 балла.",
+      "evidence": "Applicants completing the International Baccalaureate (IB) are required to successfully complete the diploma program. To be eligible to UWA, IB graduates will require a minimum score of 24 or higher.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен: UWA ведёт обучение и оценку на английском, поэтому без выполнения языкового требования место не дадут.",
+      "evidence": "Since English is the language of instruction and assessment at UWA, you'll need to meet our English language requirements to secure a place in your chosen course.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог для бакалавриата и coursework — минимальный стандарт: IELTS 6.5 (не ниже 6.0 по части), TOEFL iBT старой шкалы 82 (Speaking/Writing 20, Listening/Reading 17), TOEFL iBT новой шкалы 1-6 — 4.5 (Writing 4, Listening/Speaking/Reading 3.5), Duolingo 125 (Speaking 115, Writing 125, Reading 115, Listening 110), PTE Academic 64 (не ниже 60 по каждой части).",
+      "evidence": "Cambridge C1 Advanced or Cambridge C2 Proficiency Minimum standard ELC requirements - a minimum overall grade of 170 with a minimum grade of 175 in the Speaking and Writing sections, and a minimum grade of 165 in the Listening and Reading sections. Higher standard ELC requirements - a minimum overall grade of 180 with a minimum grade of 185 in the Speaking and Writing sections, and a minimum grade of 170 in the Listening and Reading sections. Duolingo Minimum standard ELC requirements - an overall score of 125 with a minimum score of 115 in Speaking, 125 in Writing, 115 in Reading and 110 in Listening. IELTS (Academic) IELTS for UKVI (Academic) IELTS One Skill Retake Minimum standard ELC requirements - a minimum overall score of 6.5 with no band less than 6.0. Higher standard ELC requirements - a minimum overall score of 7.0 with no band less than 6.5.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "У части курсов английские пороги выше: есть Higher standard и Accreditation-требования, они прописаны в правилах конкретного курса.",
+      "evidence": "Some courses have Higher standard or Accreditation ELC requirements which are listed in their course rules.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Результат языкового теста действителен два года с даты сдачи.",
+      "evidence": "The below Tests of English meet the University's Minimum Standard English Language Competence requirement and are valid for two years from the test date .",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь по языку: не добрав английского для прямого входа, можно пройти Academic English and Study Skills Bridging course в UWA CELT.",
+      "evidence": "International applicants who do not meet the English language requirement for direct entry may consider an Academic English and Study Skills Bridging course at the UWA Centre for English Language Teaching (UWA CELT).",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "SAT и ACT вуз принимает как основание для допуска только вместе с признанной школьной квалификацией (путь выпускников школ США); обязательными для всех иностранцев эти экзамены не названы.",
+      "evidence": "Students completing US College Board SAT or ACT in conjunction with a recognised high school qualification are eligible for admission to UWA.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Числового порога по оценкам для иностранца эти страницы не дают: допуск оценивают по ATAR-эквиваленту и пререквизитам курса, а не по единому GPA.",
+      "evidence": "Entry to most courses is assessed on your ATAR or equivalent , as well as English language requirements . For some courses there are additional entry requirements and/or prerequisites.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Все иностранцы принимаются как платные места полной стоимости.",
+      "evidence": "All international students are offered as full fee-paying places.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за обучение иностранца зависит от курса и набора предметов, а не от программы в целом; точную годовую сумму считает Fee Calculator вуза.",
+      "evidence": "The amount you will need to pay as an international student for tuition fees depends on the course of study and your enrolment.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка стоит $150 (невозвратный сбор); без успешной оплаты заявку не рассматривают.",
+      "evidence": "International students applying directly to UWA and agents applying on behalf of students to study at UWA will need to pay a non-refundable fee of $150. The application will not be processed until the Application Fee has been charged successfully.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Каждый год учёбы взимается обязательный Student Services and Amenities Fee (SSAF).",
+      "evidence": "At UWA, a compulsory Student Services and Amenities Fee (SSAF) is payable for each year or part-year of your study.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Медицинская страховка Overseas Student Health Cover (OSHC) обязательна на весь срок студенческой визы.",
+      "evidence": "The Department of Home Affairs requires all international students to have Overseas Student Health Cover (OSHC) for the whole duration of their student visa.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Global Excellence Scholarship доступна студентам всех стран (включая Таджикистан): нужен оффер на подходящий бакалаврский или postgraduate-курс 2027 года и финальный транскрипт для начисления.",
+      "evidence": "Students from all countries are eligible. You will need to have received an offer for an eligible undergraduate or postgraduate course for 2027 at The University of Western Australia.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Размер скидки Global Excellence зависит от ATAR-эквивалента: 85 — это 10% скидки на обучение, 90 — 20%; скидка идёт на весь нормативный срок курса.",
+      "evidence": "minimum ATAR* 85.00 for 10% off your tuition fees minimum ATAR* 90.00 for 20% off your tuition fees",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Global Excellence Scholarship действует для наборов 2027–2029 годов, поэтому оффер можно отложить на 2028 без потери стипендии.",
+      "evidence": "The Global Excellence Scholarship is in place for 2027 - 2029 intakes, so you can defer your commencement to 2028 with confidence that your scholarship and place at UWA is there for when you are ready to join us.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "International Student Award (10% скидки на весь срок курса) доступна только гражданам перечисленных стран; Таджикистана в этом списке нет.",
+      "evidence": "To be eligible for the International Student Award, you will need to: Be a citizen from Argentina, Bangladesh, Bhutan, Bolivia, Brazil, Chile, China, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Honduras, India, Kenya, Maldives, Mexico, Nepal, Nicaragua, Panama, Paraguay, Peru, Sri Lanka, Uruguay, Venezuela",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём идёт двумя путями: напрямую через UWA Application Portal или через агента UWA; можно подать не раньше чем за два года до начала учёбы.",
+      "evidence": "you can apply direct online through the UWA Application Portal or through an agent. Our global network of agents can help with your application to UWA, provide advice on life in Perth, as well as assist with obtaining a visa. Once you've applied, you can track the progress of your application in the UWA Application Portal.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "К заявке нужны: копия академических результатов, копия результатов языкового теста и копия паспорта.",
+      "evidence": "You'll need to prepare the following supporting documents for your application: A copy of your academic results A copy of your English test results A copy of your passport",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявку можно подать вплоть до двух лет до предполагаемого старта; по некоторым курсам сроки закрытия другие — их смотрят на странице курса.",
+      "evidence": "You can apply to UWA up to two years before your intended start date. Please note that some courses may not be available to international students.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки подачи на 2026 и 2027 годы для большинства стран: семестр 1 — 19 января 2026 и 11 января 2027, семестр 2 — 8 июня 2026 и 7 июня 2027.",
+      "evidence": "All other countries 19 January 2026 8 June 2026 11 January 2027 7 June 2027",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Таджикистан входит в отдельный список стран с более ранними сроками подачи: семестр 1 — 29 декабря 2025 и 28 декабря 2026, семестр 2 — 11 мая 2026 и 24 мая 2027.",
+      "evidence": "Tajikistan Tanzania Togo Tunisia Turkmenistan Uganda Uzbekistan Vietnam Western Sahara Yemen Zambia Zimbabwe 29 December 2025 11 May 2026 28 December 2026 24 May 2027",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "После зачисления иностранцу самому нужно оформить дорогу и студенческую визу; в некоторых странах визу можно получить электронно.",
+      "evidence": "You're required to make your own travel and student visa arrangements. UWA's overseas representatives can help with these arrangements if you need any additional advice or assistance. In some countries, student visas can be obtained electronically.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-12-28",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.uwa.edu.au/study/how-to-apply/international-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: The University of Western Australia (UWA), Перт, Западная Австралия. Приём иностранцев на бакалавриат — напрямую через UWA Application Portal или через агента UWA. Английский: минимум IELTS 6.5 (не ниже 6.0 по части), TOEFL iBT 82 или 4.5 по новой шкале 1-6, Duolingo 125, PTE 64. Обучение платное, цена зависит от курса; полного покрытия нет, из помощи — Global Excellence Scholarship (до 20% скидки, доступна Таджикистану). Плата за заявку $150. Срок для Таджикистана на семестр 1 2027 — 28 декабря 2026."
+    }
+  },
+  "source": {
+    "url": "https://www.uwa.edu.au/study/international-students",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.uwa.edu.au/study/international-students",
+        "contentHash": "sha256:47fbf4b9d1c60e26f59c8f67d1b97c5bf556b6ee0ac41de858064c980155a39b"
+      },
+      {
+        "url": "https://www.uwa.edu.au/study/how-to-apply/international-applicants",
+        "contentHash": "sha256:d3f7f010395fe515be2eed0ef419e4c3107ae202a9484a5898c46676efc932c4"
+      },
+      {
+        "url": "https://www.uwa.edu.au/study/how-to-apply/undergraduate",
+        "contentHash": "sha256:de7e2321fc687c48c8b023e1a6bb19c28cfdcc523a87e0877ec17f8e0b5a6a91"
+      },
+      {
+        "url": "https://www.uwa.edu.au/study/how-to-apply",
+        "contentHash": "sha256:0bb3c5c96b7075d65616e1efea3e35720593115b53be75086db12d0e3495a93f"
+      },
+      {
+        "url": "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility/english-language-requirements",
+        "contentHash": "sha256:452aed61a9f4d2172daed1d3298a682e9bf1f91b029bf99be3048e9714fd658f"
+      },
+      {
+        "url": "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility/entry-standards",
+        "contentHash": "sha256:3e702fca927ec016928befa71181a2b944e931e93e165c96f9ac7b03641c16ef"
+      },
+      {
+        "url": "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility/international-and-overseas-qualifications",
+        "contentHash": "sha256:781f3a918145cae91c448a37c7bc0e2bd1efedf8fd5cd403906ca51e9b444f79"
+      },
+      {
+        "url": "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility/entry-pathways/international-student-pathways",
+        "contentHash": "sha256:d5939ea25cee2ae7a5ca508d92eef84cadb472ed3d51731b1b030d0f5b829d72"
+      },
+      {
+        "url": "https://www.uwa.edu.au/study/scholarships-and-fees/international-student-fees",
+        "contentHash": "sha256:419054c2401d14135755fe9225db596167832b9eb1157aecaeda06b82ec1e491"
+      },
+      {
+        "url": "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships",
+        "contentHash": "sha256:58ff03e9be5ad41a30bc72831064d556a9a02ca708dd2dccd3f16a82b33ef545"
+      },
+      {
+        "url": "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships",
+        "contentHash": "sha256:304618b91948a7a7edc0063cf375e09c07a754f01db3a4ef1e80314c5ad32dd3"
+      },
+      {
+        "url": "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship",
+        "contentHash": "sha256:a3875ce70be9e1271d33a270d4c028f4c79ee6101412821e0b09b711fea502f6"
+      },
+      {
+        "url": "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/international-student-award",
+        "contentHash": "sha256:f6e1670b69f30c9b856a79af1e8d9fc70acfde0a5a2b25afb588f29aaa72cc77"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
