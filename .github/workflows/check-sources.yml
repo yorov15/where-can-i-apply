@@ -48,7 +48,11 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/programs
+          # Сайт читает не data/programs, а собранные index.json, details.json,
+          # conditions/ и feed.xml. Без пересборки новая дата проверки
+          # доехала бы до сайта только после чьей-то ручной сборки.
+          python -m tools.build
+          git add data feed.xml
           git commit -m "Слежение: источники проверены $(date -u +%Y-%m-%d)"
           # Не роняем прогон, если записать не дали: цвет прогона должен
           # означать «требования изменились», и ничего больше. Иначе он
