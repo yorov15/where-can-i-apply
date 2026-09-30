@@ -1,0 +1,315 @@
+{
+  "id": "tokyo",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Tokyo (Япония) — приём иностранцев на бакалавриат",
+    "orig": "The University of Tokyo"
+  },
+  "hostCountry": "JP",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: разовый вступительный взнос 282 000 иен, годовое обучение 642 960 иен (суммы названы как предварительные). Плата за подачу — 17 000 иен. Собственной гарантированной помощи иностранцу на бакалавриате нет: освобождение от платы дают только по нужде и в очень ограниченном объёме (вуз предупреждает, что бюджет жёсткий, отказ вероятен и платить надо быть готовым заранее). Государственная стипендия MEXT (подаётся через посольство Японии) при назначении снимает плату и даёт содержание, но она не привязана к Университету Токио и не гарантирует поступление именно туда. Жильё и дорогу вуз не покрывает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "JP"
+      ],
+      "evidence": "① 出願および入学の時点で、日本国籍を有さず、日本国の永住許可を得ていな いこと。"
+    },
+    "schoolCountry": {
+      "allow": "*",
+      "deny": [
+        "JP"
+      ],
+      "evidence": "④ 外国において学校教育12年の課程の最終学校に、外国に在住しながら、原則 として1年以上在学し、修了すること。"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "ア 外国において、学校教育12年の課程の最終学校を修了した者及び修了見込み の者、又はこれに準ずる者で文部科学大臣の指定したもの（12年未満の課程を 修了する場合は、文部科学省により指定された準備教育課程又は研修施設の課 程を修了する必要があります。）"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "2022年4月1日から2027年3月31日までの間に、次の基礎資格を初めて取得し、か つ、要件を満たしている者とします。"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Общего возрастного минимума для приёма страницы не называют. Возраст 18 лет упомянут только как условие отдельных маршрутов: в правилах специального отбора — у 3-й базовой квалификации («сдал эквивалентный экзамен и достиг 18 лет»), а в англоязычной программе College of Design — «не младше 18 лет на 31 августа 2027 года» и как допуск к индивидуальному расмотрению заявки. Для обычного маршрута 12-летняя школа такого условия в тексте нет. Смотрели страницы специального отбора, его правила 2027 года (PDF) и англоязычной программы College of Design."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "提出された出願書類を総合的に審査し、選考を行います。"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": null
+        },
+        {
+          "test": "IELTS",
+          "min": null
+        }
+      ],
+      "evidence": "③ TOEFL iBT又はIELTS（国際英語能力テスト。アカデミックモジュール）を出 願開始日前2年以内に受験していること。"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "PEAK — прежняя англоязычная программа бакалавриата — закрыта навсегда: приём на сентябрь 2026 был последним, новых заявок не принимают.",
+      "evidence": "The applications for September 2026 enrollment are now closed. As announced before, this was the final student recruitment for PEAK, and no further applications will be accepted.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Главный открытый путь для иностранца — «специальный отбор для выпускников зарубежных школ, 1-й вид (частно финансируемые иностранные студенты)», и учатся на нём на японском. Поступившие по этому отбору попадают в те же потоки и слушают те же лекции, что и японцы, — то есть основное обучение идёт по-японски.",
+      "evidence": "Please note that students accepted under the Class 1 or 2 Screenings or general admissions are expected to take courses offered primarily in Japanese, while students admitted through PEAK are expected to take courses offered primarily in English.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обязателен экзамен EJU (日本留学試験) со всеми предписанными предметами — сдать надо один из двух сезонов 2026 года. Вопросы можно писать на японском или английском, но предмет «японский язык» входит в обязательный набор.",
+      "evidence": "② 独立行政法人日本学生支援機構が実施する日本留学試験（2026年6月、2026 年11月実施のいずれか）の所定の科目を全て受験していること（日本語・英語 いずれの出題言語でも受験可）。",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Наборы предметов EJU: для гуманитарных направлений — японский язык, обществознание и математика (курс 1); для естественных — японский язык, два предмета из физики/химии/биологии и математика (курс 2).",
+      "evidence": "文科各類 「日本語」「総合科目」「数学（コース1）」 理科各類 「日本語」「理科（物理・化学・生物から2科目）」 「数学（コース2）」",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Наряду с EJU обязателен TOEFL iBT или IELTS (Academic), сданный не раньше чем за два года до начала приёма. Пороговый балл не назван — требуется сам факт сданного экзамена.",
+      "evidence": "③ TOEFL iBT又はIELTS（国際英語能力テスト。アカデミックモジュール）を出 願開始日前2年以内に受験していること。",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Экзамен вуза тоже на японском: письменное эссе (小論文) сдают в феврале и отвечают на оба вопроса по-японски.",
+      "evidence": "2問とも日本語で解答してください。",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Собеседование проходит на японском языке, индивидуально.",
+      "evidence": "日本語で行い、個人面接とします。",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Базовая квалификация: окончить последнюю школу 12-летнего курса за границей (или ожидать окончания). Если школьный курс короче 12 лет, нужен подготовительный курс или учебное заведение, назначенное министерством образования Японии, — то есть 11-летняя школа сама по себе не отказ, а повод сначала пройти назначенную подготовку.",
+      "evidence": "ア 外国において、学校教育12年の課程の最終学校を修了した者及び修了見込み の者、又はこれに準ずる者で文部科学大臣の指定したもの（12年未満の課程を 修了する場合は、文部科学省により指定された準備教育課程又は研修施設の課 程を修了する必要があります。）",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Квалификацию надо получить впервые в окне с 1 апреля 2022 по 31 марта 2027 — то есть окончившие школу слишком давно не подходят.",
+      "evidence": "2022年4月1日から2027年3月31日までの間に、次の基礎資格を初めて取得し、か つ、要件を満たしている者とします。",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Гражданство: 1-й вид отбора прямо исключает японских граждан и обладателей вида на жительство в Японии. Для гражданина Таджикистана ограничения нет.",
+      "evidence": "① 出願および入学の時点で、日本国籍を有さず、日本国の永住許可を得ていな いこと。",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Школа должна быть за границей и окончена там, причём в последнем классе нужно было учиться за границей не менее года. Если этому мешают война, конфликт или стихийное бедствие — до подачи обратиться в приёмную.",
+      "evidence": "④ 外国において学校教育12年の課程の最終学校に、外国に在住しながら、原則 として1年以上在学し、修了すること。",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Отбор двухступенчатый: сначала рассматривают документы, затем у прошедших — эссе и собеседование. Числового порога по оценкам нет, отбор целостный.",
+      "evidence": "提出された出願書類を総合的に審査し、選考を行います。",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Отдельно открыта новая англоязычная программа UTokyo College of Design (5 лет, бакалавриат вместе с магистратурой, первый набор — сентябрь 2027). Всё обучение на английском, поступление возможно по Route B — по стандартизированным экзаменам (IB, A-levels и другие). Это пока единственный подтверждённый полностью англоязычный приём на первый курс.",
+      "evidence": "All courses are taught in English, and students will construct their own learning pathways following their own interests, unconstrained by and transcending conventional disciplines.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Заявки в College of Design на сентябрь 2027 принимают с 15 октября по 5 ноября 2026 года (JST).",
+      "evidence": "From October 15 at 9:00 AM to November 5 at 5:00 PM, 2026 (JST)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "По этой англоязычной программе пороги по английскому (ожидаемый уровень, не жёсткий отсекающий балл): TOEFL iBT выше 80 по старой шкале и выше 4 по новой, IELTS выше 6.0, Duolingo выше 110.",
+      "evidence": "TOEFL (Test of English as a Foreign Language) iBT® test, including Home Edition Greater than 80 (tests taken before January 21, 2026) Greater than 4 (tests taken on and after January 21, 2026) IELTS (International English Language Test System) Academic Module, including IELTS online Greater than 6.0",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Вуз прямо оговаривает, что эти баллы — ожидаемый уровень, а не отсекающий порог.",
+      "evidence": "Expected scores are not cut-off scores.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "На College of Design и на общий японский отбор (включая специальный отбор 1-го вида) одновременно подавать нельзя.",
+      "evidence": "Applicants for UTokyo College of Design September 2027 Enrollment can NOT apply to other programs at the University of Tokyo for April 2027 Enrollment.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Ограничения по гражданству у College of Design нет ни для одного из маршрутов.",
+      "evidence": "There are no nationality restrictions for either route.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Для 11-летних школьных систем (как в Таджикистане) вуз отсылает к списку стран, чьё 11-летнее образование министерство образования Японии признаёт достаточным для поступления в японские вузы, — принадлежность Таджикистана к списку надо проверять в приёмной.",
+      "evidence": "Note: MEXT approves some 11-year formal school education systems in specific countries as eligible for admission to universities in Japan.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Отбор 1-го вида: заявки принимают с 1 по 7 декабря 2026 года (17:00 по Японии, обязательно прибытие документов). Экзамены — эссе 25 февраля 2027, собеседование 4 марта 2027, на кампусе Хонго.",
+      "evidence": "出願期間 2026年12月1日(火)から12月7日(月)まで 12月7日（月）17時必着。（日本時間）",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Обучение платное: вступительный взнос 282 000 иен, годовое обучение 642 960 иен (суммы предварительные).",
+      "evidence": "(1) 入学料：282,000円（予定額） (2) 授業料：642,960円（年額・予定額）",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Та же цена на официальной странице оплаты: вступительный взнос для бакалавриата ¥282 000, годовое обучение ¥642 960.",
+      "evidence": "Admission fee ¥282,000 ¥282,000 ¥282,000 Tuition fee (annual) ¥642,960",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за подачу заявки на специальный отбор — 17 000 иен.",
+      "evidence": "検定料17,000円を支払ってください。",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия японского правительства (MEXT) при назначении освобождает от платы за обучение и части других сборов.",
+      "evidence": "Note: Students receiving a scholarship from the Japanese government (Ministry of Education, Culture, Sports, Science and Technology) do not need to pay tuition and certain other fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Освобождение от платы существует, но денег на него мало: вуз предупреждает, что отказ вероятен, платить надо быть готовым заранее, а шанс на освобождение от вступительного взноса особенно низок.",
+      "evidence": "we operate the exemption program under a very tight budget. Your application may not be approved. Please be prepared to pay the fees in advance. In particular, the possibility of receiving an admission fee exemption is quite low.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия MEXT на бакалавриат подаётся через посольство Японии заранее и включает год подготовительного обучения японскому языку в школе, назначенной министерством.",
+      "evidence": "Each undergraduate student will be enrolled at a preparatory school designated by MEXT for a one-year intensive course in the Japanese language and other subjects necessary for preparation for proceeding to university.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Вуз предупреждает, что стипендиат MEXT не обязательно сможет сдавать вступительные экзамены именно в Университет Токио — вуз определяет министерство.",
+      "evidence": "applicants who wish to enter UTokyo may not necessarily be able to take the entrance examinations for UTokyo.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Есть ещё англоязычный путь в бакалавриат через перевод: программа Global Science Course (GSC) принимает студентов, уже окончивших два курса вуза за пределами Японии, сразу на 3-й курс факультета науки. Это не приём на первый курс.",
+      "evidence": "GSC is an all-English undergraduate transfer program. Under GSC, transfer students who have completed at least 2 years of undergraduate studies at universities outside of Japan are admitted into the 3rd in the Faculty of Science.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-12-01",
+    "closes": "2026-12-07",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.u-tokyo.ac.jp/ja/admissions/undergraduate/e01_02_04.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Университет Токио (The University of Tokyo), Япония. Основной путь для иностранца на бакалавриат — специальный отбор для выпускников зарубежных школ, 1-й вид (частно финансируемые иностранные студенты), с обязательным EJU и обучением на японском; прежняя англоязычная программа PEAK закрыта. Отдельно открыт англоязычный набор UTokyo College of Design (дизайн, 5 лет, старт сентября 2027, приём по Route B со стандартизированными экзаменами, заявки 15 октября — 5 ноября 2026)."
+    }
+  },
+  "source": {
+    "url": "https://www.u-tokyo.ac.jp/en/prospective-students/undergraduate.html",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.u-tokyo.ac.jp/en/prospective-students/undergraduate.html",
+        "contentHash": "sha256:20208b6ccc6cbe08e91535d45b5df56938da36ee6dacd9c2efd33ec8980e2f7b"
+      },
+      {
+        "url": "https://www.u-tokyo.ac.jp/en/prospective-students/undergraduate_english.html",
+        "contentHash": "sha256:31acf7d1345958a74dd08732d2d92b5b6694d659db845861fe92e4fa048bc72f"
+      },
+      {
+        "url": "https://www.u-tokyo.ac.jp/en/prospective-students/undergraduate_admissions.html",
+        "contentHash": "sha256:9779ad20d3bd215c6d4dc94c4e6ac5431156736efa631c70e1329fc826850de2"
+      },
+      {
+        "url": "https://www.u-tokyo.ac.jp/en/prospective-students/tuition_fees.html",
+        "contentHash": "sha256:1181ade371fa9951db2fde57de0ed7fa325d8d3b5f259aa2bcdeffd1fe0f62de"
+      },
+      {
+        "url": "https://www.u-tokyo.ac.jp/en/prospective-students/exemptions.html",
+        "contentHash": "sha256:89135449cd6a7f318591c2d2bfdfc266300b7698d7df51c4df3be592c345937f"
+      },
+      {
+        "url": "https://www.u-tokyo.ac.jp/en/prospective-students/scholarships.html",
+        "contentHash": "sha256:22905c3f6bd5aee840c984c5768494f6045d835160d8611ca2c62dd1610b2af2"
+      },
+      {
+        "url": "https://www.u-tokyo.ac.jp/en/prospective-students/mext_scholarship.html",
+        "contentHash": "sha256:099b2fed6672fc3d4e638d129cdc847edae1ea73e37232106efc472841809a9e"
+      },
+      {
+        "url": "https://peak.c.u-tokyo.ac.jp/",
+        "contentHash": "sha256:a84f019c59c4681d9eef2246b51c11ec09298b58c7be59314120e6009b9e870b"
+      },
+      {
+        "url": "https://www.u-tokyo.ac.jp/ja/admissions/undergraduate/e01_02_04.html",
+        "contentHash": "sha256:40b956f24d253fcb419a72cf4143b56899f003a5db8a5223e60802410bb97338"
+      },
+      {
+        "url": "https://www.u-tokyo.ac.jp/content/400291798.pdf",
+        "contentHash": "sha256:5eb5e68475de591633c27ca52b28b24d63b80190e9a0f56d782860078323e8e5"
+      },
+      {
+        "url": "https://design.adm.u-tokyo.ac.jp/admissions/",
+        "contentHash": "sha256:164401fd529ae3dcd249fe93ef20905337c001689b8f8e5f1ac956fca9bf18a6"
+      },
+      {
+        "url": "https://design.adm.u-tokyo.ac.jp/admissions/admissions-overview-2027/",
+        "contentHash": "sha256:ae4dab6c47d5123b215722d5eb3732970450a3c59aa1247794b6336843c7d471"
+      },
+      {
+        "url": "https://www.s.u-tokyo.ac.jp/GSC/admissions/eligibility.html",
+        "contentHash": "sha256:e225e7c1867f005c19fd94655389caa3190e506d37474e42db1017311d06e73a"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
