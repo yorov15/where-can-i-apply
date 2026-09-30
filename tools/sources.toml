@@ -3853,8 +3853,17 @@ approvedAt = "2026-09-29"
 
 [uts]
 name = "University of Technology Sydney (Австралия): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants",
+files = [
+  { path = "manual/uts/00-international.html", url = "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants" },
+  { path = "manual/uts/01-academic-entry.html", url = "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants/academic-entry-requirements" },
+  { path = "manual/uts/02-english.html", url = "https://www.uts.edu.au/for-students/admissions-entry/eligibility/english-language-requirements" },
+  { path = "manual/uts/03-intl-fees.html", url = "https://www.uts.edu.au/for-students/admissions-entry/fees-costs/international-fees" },
+  { path = "manual/uts/04-pathways-intl.html", url = "https://www.uts.edu.au/for-students/admissions-entry/pathways/international" },
+  { path = "manual/uts/05-scholarships.html", url = "https://www.uts.edu.au/for-students/admissions-entry/scholarships" },
+  { path = "manual/uts/06-eligibility.html", url = "https://www.uts.edu.au/for-students/admissions-entry/eligibility" },
+  { path = "manual/uts/07-accepting.html", url = "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants/accepting-offers" },
+  { path = "manual/uts/08-agents.html", url = "https://www.uts.edu.au/for-students/international/student-recruitment-agents" },
+  { path = "manual/uts/09-ug-form.pdf", url = "https://www.uts.edu.au/globalassets/shared-media/documents/international/uts-international-undergraduate-application-form-sept-26.pdf" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"

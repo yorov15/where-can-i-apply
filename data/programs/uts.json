@@ -1,0 +1,313 @@
+{
+  "id": "uts",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Technology Sydney (Австралия): приём иностранцев на бакалавриат",
+    "orig": "University of Technology Sydney"
+  },
+  "hostCountry": "AU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: суммы вуз называет только в поиске по курсам, платят вперёд за каждую сессию. Помощи по достатку на общих страницах нет. Сбор за заявку A$100, обязательная страховка OSHC и сбор SSAF. Стипендии для иностранцев есть (Vice-Chancellor's Merit, Outstanding Achievement), но размеры не названы, поэтому покрытие в карточке не отмечено."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз принимает иностранцев по общему порядку, агент необязателен. Смотрели страницы для иностранцев, требований, английского, стоимости, стипендий, путей поступления и агентов."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране не названо. Опубликованный список квалификаций по странам таджикского аттестата не содержит, для ряда стран региона (например России) требуется год вуза; это условие «уточни», а не запрет. Смотрели страницы требований, английского и путей поступления."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Число лет школы вуз числом не задаёт: требования выражены по квалификации и баллами курса. Про 11-летнюю школу ничего не сказано — уточнять. Смотрели страницы требований, подачи и путей поступления."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы не называют: сроки принимаемых результатов заданы только для тестов английского. Смотрели страницы подачи, требований и английского."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения страницы не называют; для младше 18 лет есть отдельная страница о попечении и проживании, это не запрет. Смотрели страницы подачи, требований, путей поступления и стоимости."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "A general guide of competitive results in a number of international qualifications accepted for entry into undergraduate coursework at UTS."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "IELTS (academic/online/OSR) 6.5 6.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 79,
+          "parts": true,
+          "evidence": "TOEFL (internet-based/Home Edition; 0-120) 79 21"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4,
+          "parts": true,
+          "evidence": "TOEFL (internet-based/Home Edition; 1-6) 4 4.5"
+        },
+        {
+          "test": "PTE",
+          "min": 58,
+          "parts": true,
+          "evidence": "PTE (academic) 58 50"
+        }
+      ],
+      "evidence": "If your previous education was not conducted in English, you are required to demonstrate proficiency in English by completing an English language test or program recognised by UTS."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Вуз публикует список принимаемых школьных и вузовских квалификаций по странам; Таджикистана в нём нет, так что таджикский аттестат нужно уточнять в приёмной.",
+      "evidence": "Before you apply to UTS, you should check that your qualification can be accepted for assessment.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Для ряда стран региона, например России, школьного аттестата недостаточно: нужен минимум один полный год бакалавриата в признанном вузе. Для Таджикистана правила не названы.",
+      "evidence": "Russia Successful completion of at least one full-time year at bachelor's degree level at a recognised university or tertiary institution.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Без национальной квалификации из списка подходят международные: полный IB Diploma с проходной суммой или британские A-Level (три лучших предмета, A*=6 … E=1).",
+      "evidence": "Award of the full International Baccalaureate Diploma where the total aggregate score including bonus and penalty points meets entry standard.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Через британские A-Level: расчёт по трём лучшим предметам, A*=6, A=5, B=4, C=3, D=2, E=1.",
+      "evidence": "GCE A Levels - An overall aggregate score will be calculated based on the best three Advanced Level (A2) subjects where A*=6, A=5, B=4, C=3, D=2, E=1.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Австралийские диплом или foundation-программа тоже засчитываются, в том числе из UTS College.",
+      "evidence": "UTS also accepts diplomas and advanced diplomas from Australian Qualifications Framework (AQF) recognised tertiary institutions in Australia, as well as most Australian foundation studies programs.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Не проходишь по баллам или квалификации — вуз предлагает pathway-программы: Diploma и Foundation Studies в UTS College (принадлежит UTS), переход с зачётом из других вузов и совместные программы.",
+      "evidence": "UTS College, owned by UTS, provides various pathway programs to support a smooth transition into university life.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Через articulation-программы часть степени можно пройти в другом вузе и перенести зачёты в UTS, это сокращает срок и цену.",
+      "evidence": "External articulations allow you to complete part of your degree at one institution and transfer those credits to UTS to complete your degree.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Помимо общих условий у многих курсов есть особые требования, которых нет на общей странице; их надо смотреть на странице курса.",
+      "evidence": "Please also note that some courses have special entry requirements that are not listed here.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Число лет школы вуз не задаёт: принимают по общему минимуму (matriculation) и баллам курса, а его можно получить также по прошлой учёбе или опыту работы.",
+      "evidence": "Matriculation is the minimum standard that applicants at UTS must satisfy to study a course.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский подтверждают тестом, если школа была не на английском. Порог зависит от курса; для большинства бакалаврских — IELTS 6.5 (письмо 6.0).",
+      "evidence": "If your previous education was not conducted in English, you are required to demonstrate proficiency in English by completing an English language test or program recognised by UTS.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Результат теста действует, если получен не раньше чем за два года до подачи.",
+      "evidence": "English language proficiency test scores are recognised if they were obtained less than 2 years before you applied to UTS",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог у разных курсов разный: у большинства бакалаврских общая таблица, у образования, науки, бизнеса — выше, у сестринского дела и акушерства — ещё выше; проверять надо по курсу.",
+      "evidence": "Each course at UTS requires different English language test results to satisfy the language requirement.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский можно засчитать по прошлой учёбе на английском: полный год средней или вузовской программы уровня Year 12 и выше, с документом от учебного заведения о языке обучения.",
+      "evidence": "If you have successfully completed no less than the equivalent of one year full-time study of a secondary/post-secondary course that is taught in English",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский засчитывают и по IB: предметы English A literature или English A language and literature, даже если программа шла не на английском.",
+      "evidence": "Successful completion of the International Baccalaureate Diploma Program subjects 'English A: literature' or 'English A: language and literature.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Проходной балл у каждого курса свой: вуз публикует таблицы direct entry scores для бакалавриата в PDF, без цифр для таджикского аттестата.",
+      "evidence": "A general guide of competitive results in a number of international qualifications accepted for entry into undergraduate coursework at UTS.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Сбор за заявку — A$100, невозвратный, платится за любую заявку иностранца; освобождены только нынешние студенты UTS и UTS College.",
+      "evidence": "A non-refundable A$100 application fee is payable with all applications for study as an international student at UTS.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обучение платное, суммы зависят от курса и меняются по годам; платится вперёд за каждую сессию. Цифр на страницах приёма нет — их даёт поиск по курсам.",
+      "evidence": "Tuition fees for international students vary between courses, and from year to year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Тем, кто принял предложение, нужно внести депозит за обучение, чтобы получить eCoE — документ для визы.",
+      "evidence": "you'll need to pay a tuition deposit to guarantee your place and receive an Electronic Confirmation of Enrolment (eCoE)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для студенческой визы обязательна медицинская страховка OSHC; кроме того платится ежегодный сбор SSAF.",
+      "evidence": "To be granted a student visa, international students are required to take out Overseas Student Health Cover (OSHC).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии для иностранцев есть (например Vice-Chancellor's Merit и Outstanding Achievement, гуманитарная), но размеры и условия на общих страницах не названы.",
+      "evidence": "Discover specialised scholarships for international students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Срок подачи для живущих вне Австралии: на осенний набор (февраль–март) до 30 ноября, на июльский до 30 апреля, на ноябрьский до 30 августа; год страница не называет.",
+      "evidence": "Application closing dates Sessions Applicants based outside Australia Applicants based in Australia",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявку подают в онлайн-портале UTS или бумажной формой; загружают заверенные копии документов, переводы на английский с печатью и подписью переводчика.",
+      "evidence": "you can apply for a full coursework degree in two different ways: directly with UTS via the UTS Application Portal (online) or by filling out an application form",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы, поданные в вуз, не возвращают, а простые сканы или ксерокопии не принимают — нужны заверенные.",
+      "evidence": "Simple scans or standard photocopies are not accepted.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы не на английском подают в оригинале с официальным переводом; перевод должен иметь печать и подпись переводчика.",
+      "evidence": "Documents not in English If your documents are in another language, you must provide the original language version plus an official English translation.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Полную заявку рассматривают обычно одну-две недели.",
+      "evidence": "The application processing time for complete applications is normally around one to two weeks.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Агент не обязателен: подавать можно самому; агенты есть по странам, а если в твоей стране агента нет, поможет агент из соседней.",
+      "evidence": "If there isn't an agent in your country, an adviser in a neighbouring country may be able to assist.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Technology Sydney, Сидней, Австралия. Срок подачи для живущих вне Австралии: 30 ноября (осенний набор, февраль–март), 30 апреля (июльский), 30 августа (ноябрьский); год страница не называет. Обучение платное, сумма зависит от курса; сбор за заявку A$100."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants",
+    "pages": [
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants",
+        "contentHash": "sha256:036369dabfec48eadbb4e73649145e3e9a913aab21ea02468ce3eae443b54cab"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants/academic-entry-requirements",
+        "contentHash": "sha256:2164fc920caab7c8c4343f557654b8d023fe56b0946c29e0cfe2920edf3cf8dc"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/eligibility/english-language-requirements",
+        "contentHash": "sha256:d39535af529441b32c93a741b78b7afea4a7fbc49a55331fa7de888b1073141f"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/fees-costs/international-fees",
+        "contentHash": "sha256:60c7830e64a2f52dd5cc0b3d7dd2fbcb5aa399efc9889d015dc96e1a4b2ad340"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/pathways/international",
+        "contentHash": "sha256:19eabd9e7ae89227b9e6c27dd1963741b0302f410a1c07ed14cf0d4e638fc4a3"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/scholarships",
+        "contentHash": "sha256:b8dd6ffbc2207b19a25e588c68c6701d8d253537d9923509da02d75e62069cee"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/eligibility",
+        "contentHash": "sha256:1f3ad5d1d9cb6c2b46c81a80da477c1c461da089a94beb60a9ee66090ccc6d3b"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants/accepting-offers",
+        "contentHash": "sha256:ecfbbf055865413b31dab7675ffb1d13d2b6813b6c0c40cafe262d645bcc8ba4"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/international/student-recruitment-agents",
+        "contentHash": "sha256:e13cc12362275f64e87be0f5e18f1bd85761d23d59a7d8c1453fe48472e77556"
+      },
+      {
+        "url": "https://www.uts.edu.au/globalassets/shared-media/documents/international/uts-international-undergraduate-application-form-sept-26.pdf",
+        "contentHash": "sha256:b82e357e1227b5663669db0e067c90a3d181f3c9ab908756be85c34337990d81"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
