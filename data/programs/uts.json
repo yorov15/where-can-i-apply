@@ -1,0 +1,323 @@
+{
+  "id": "uts",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Technology Sydney (UTS, Австралия): приём иностранцев на бакалавриат",
+    "orig": "University of Technology Sydney"
+  },
+  "hostCountry": "AU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: стоимость для иностранца зависит от курса и меняется год от года, платить надо вперёд за каждый семестр — одной цифры на весь вуз UTS не даёт, сумму смотрят на странице курса. Полного покрытия по нужде для иностранцев нет: финансовая помощь из дома доступна только гражданам Канады, Дании, Германии, Норвегии, Швеции и США, а спонсорские программы родных стран перечислены лишь для Колумбии, Эквадора, Индонезии, Мексики, Перу и Вьетнама. Из стипендий: UTS Vice-Chancellor's International Undergraduate Scholarship — полная оплата обучения на весь срок, но она конкурсная и требует отдельной заявки (на осенний семестр 2027 — с 1 октября по 2 ноября 2026, средний балл 85%); UTS Academic Excellence International Scholarship — 30% стоимости обучения и рассматривается автоматически; есть ещё 50%, 20% и страновые стипендии. Поэтому полное покрытие в карточке не отмечено: оно не гарантировано и доступно единицам."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: UTS не называет запрета по паспорту, отдельно определяет иностранного абитуриента как негражданина и непостоянного резидента Австралии/Новой Зеландии и описывает для него порядок подачи (напрямую в UTS или через агента). Отдельных «плохих» паспортов в правилах нет. Смотрели страницы приёма иностранцев, академических требований, английского, стоимости, стипендий и финансовой помощи."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы вход не закрывает: отказа по стране не названо, требования выражены школьной квалификацией и конкурсными ориентирами. UTS признаёт квалификации по всему миру и публикует список accepted qualifications по странам, но Таджикистана в этом списке нет — это не запрет, а повод уточнить эквивалент 11-летнего аттестата в приёмной. Смотрели страницы требований приёма, международных академических требований и путей поступления."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Academic entry requirements range from your final high school qualification to any secondary or tertiary education qualifications you may hold, such as a bachelor's or Master's degree."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: сказано лишь, что нужна законченная школьная квалификация. Требование «школа окончена не более 3 лет назад» относится только к отдельной конкурсной стипендии Vice-Chancellor's International Undergraduate, а не к приёму."
+    },
+    "age": {
+      "min": 16,
+      "evidence": "At UTS, we welcome international students aged 16 and over, and we have clear welfare and accommodation arrangements in place to make sure you're looked after while you study in Sydney."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Entry into a UTS degree requires you to meet specific academic and English language requirements that vary depending on the course and level of study."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "IELTS (academic/online/OSR) 6.5 6.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 79,
+          "parts": true,
+          "evidence": "TOEFL (internet-based/Home Edition; 0-120) 79 21"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4,
+          "parts": true,
+          "evidence": "TOEFL (internet-based/Home Edition; 1-6) 4 4.5"
+        },
+        {
+          "test": "PTE",
+          "min": 58,
+          "parts": true,
+          "evidence": "PTE (academic) 58 50"
+        }
+      ],
+      "evidence": "If your previous education was not conducted in English, you are required to demonstrate proficiency in English by completing an English language test or program recognised by UTS."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем UTS считает того, кто не гражданин Австралии и не её постоянный резидент; такой абитуриент подаёт coursework-степень двумя путями — напрямую через UTS Application Portal (онлайн) или по бумажной форме.",
+      "evidence": "As a non-Australian citizen, you can apply for a full coursework degree in two different ways: directly with UTS via the UTS Application Portal (online) or by filling out an application form.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Отказа по стране нет: UTS признаёт квалификации со всего мира и сверяет их с общим списком accepted qualifications. Таджикистана в этом списке нет, поэтому эквивалент школьного аттестата надо уточнять в приёмной.",
+      "evidence": "UTS recognises qualifications from across the globe. Before you apply to UTS, you should check that your qualification can be accepted for assessment.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Для входа на бакалавриат нужна законченная школьная квалификация (уровня австралийского Year 12); какие именно квалификации засчитывают — зависит от страны и курса.",
+      "evidence": "Academic entry requirements range from your final high school qualification to any secondary or tertiary education qualifications you may hold, such as a bachelor's or Master's degree.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь, если не дотягиваешь до академических или языковых требований: UTS College — подготовительные программы, дипломы и английский, которые ведут в UTS.",
+      "evidence": "UTS College, owned by UTS, provides various pathway programs to support a smooth transition into university life. Whether you're looking to strengthen your academic skills, improve your English, or fast-track your studies, UTS College is your way into UTS.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если предыдущее обучение было не на английском, нужно подтвердить английский сданным тестом (IELTS, TOEFL и другие) или признанной программой.",
+      "evidence": "If your previous education was not conducted in English, you are required to demonstrate proficiency in English by completing an English language test or program recognised by UTS.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Базовые пороги для большинства программ бакалавриата: IELTS (Academic/Online/OSR) 6.5 в целом и 6.0 за письмо; TOEFL iBT (0-120) 79 в целом и 21 за письмо; TOEFL iBT (1-6) 4 в целом и 4.5 за письмо; PTE Academic 58 в целом и 50 за письмо.",
+      "evidence": "IELTS (academic/online/OSR) 6.5 6.0 TOEFL (internet-based/Home Edition; 0-120) 79 21 TOEFL (internet-based/Home Edition; 1-6) 4 4.5 PTE (academic) 58 50",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь по языку: тест можно не сдавать, если есть минимум год очного обучения на английском в аккредитованном и признанном UTS заведении (уровень австралийского Year 12 или выше) и официальное подтверждение языка обучения.",
+      "evidence": "If you have successfully completed no less than the equivalent of one year full-time study of a secondary/post-secondary course that is taught in English (equivalent to the level of Australian Year 12 or higher), you satisfy UTS's minimum English language requirements.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Результат языкового теста принимают, если он получен меньше чем за 2 года до подачи в UTS.",
+      "evidence": "English language proficiency test scores are recognised if they were obtained less than 2 years before you applied to UTS .",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст: UTS принимает иностранцев с 16 лет; верхней границы нет.",
+      "evidence": "At UTS, we welcome international students aged 16 and over, and we have clear welfare and accommodation arrangements in place to make sure you're looked after while you study in Sydney.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Единого числового порога по оценкам нет: требования по успеваемости зависят от курса и уровня подготовки, а по странам UTS публикует лишь конкурентоспособные ориентиры.",
+      "evidence": "Entry into a UTS degree requires you to meet specific academic and English language requirements that vary depending on the course and level of study.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Заявка стоит A$100, сбор невозвратный.",
+      "evidence": "A non-refundable A$100 application fee is payable with all applications for study as an international student at UTS.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сбор за заявку снимают текущим студентам UTS и студентам UTS College.",
+      "evidence": "The application fee will be waived if one of the following conditions apply: you are a current UTS student you are a current UTS College student.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стоимость обучения для иностранца зависит от курса и меняется год от года; платить нужно вперёд за каждый семестр.",
+      "evidence": "Tuition fees for international students vary between courses, and from year to year. All tuition fees must be paid in advance each session.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для студенческой визы обязательна медицинская страховка иностранного студента (OSHC) — за свой счёт.",
+      "evidence": "To be granted a student visa, international students are required to take out Overseas Student Health Cover (OSHC).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Ежегодный студенческий сбор SSAF платят иностранные студенты.",
+      "evidence": "The student services and amenities fee (SSAF) is payable by international students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Большинство стипендий не требует отдельной заявки: UTS сам оценивает поступающих и выдаёт стипендию при соответствии критериям.",
+      "evidence": "Did you know that the majority of scholarships don't require an application? At UTS, you will be automatically assessed and offered a scholarship if you meet the eligibility criteria and unless otherwise stated.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Список стипендий для иностранцев-бакалавров: 50% стоимости обучения (GCE A Level/IB и UTS College to UTS Pathways), 30% (Academic Excellence), полная оплата обучения (Vice-Chancellor's International Undergraduate), 20% (International Articulation и College to UTS Transfer).",
+      "evidence": "Undergraduate scholarships and grants GCE A Level and International Baccalaureate Scholarship - 50% tuition fees scholarship for the standard course duration. UTS Academic Excellence International Scholarship - 30% tuition fees scholarship for the standard course duration. UTS College to UTS Pathways Scholarship - 50% tuition fees scholarship for the remaining standard course duration at UTS. UTS Vice-Chancellor's International Undergraduate Scholarship - Full tuition scholarship for the standard course duration.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "UTS Academic Excellence International Scholarship даёт 30% стоимости обучения; рассматривают автоматически, отдельная заявка и документы не нужны.",
+      "evidence": "UTS Future Learner Recruitment and Admissions will automatically consider all commencing international students applying for an undergraduate or postgraduate coursework program at UTS in Sydney for this Scholarship. There is no separate scholarship application or documentation in addition to what is required for the course application.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Vice-Chancellor's International Undergraduate — полная оплата обучения, но она конкурсная и с отдельной заявкой; нужно иметь средний балл 85% при проходном 50%.",
+      "evidence": "Have an overall average of 85% where the pass mark is 50% or equivalent in a UTS recognized high school qualification",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки заявок на эту стипендию для осеннего семестра 2027 (старт в феврале 2027): с четверга 1 октября 2026 по понедельник 2 ноября 2026, 23:55 AEST.",
+      "evidence": "Scholarship application period for: Autumn session 2027 (February 2027 commencement): Thursday 01 October 2026 to Monday 02 November 2026 11.55pm AEST",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Финансовую помощь из родной страны дают только гражданам Канады, Дании, Германии, Норвегии, Швеции и США; для Таджикистана такой программы нет.",
+      "evidence": "If you are from one of the following countries you may be eligible for some form of financial aid to support your studies at the University of Technology Sydney. Canada: Canadian Provincial / Federal Loans (opens an external site) UTS Code is VUSL Denmark: SU (opens an external site) Germany: Bafög (opens an external site) Norway: Lånekassen (opens an external site) Sweden: CSN (opens an external site) United States of America (USA): US Financial Aid",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Спонсорские стипендии родных стран перечислены только для Колумбии, Эквадора, Индонезии, Мексики, Перу и Вьетнама; Таджикистана среди них нет.",
+      "evidence": "A number of countries offer scholarships or sponsorship opportunities to their citizens who wish to study in Australia. Check your sponsorship eligibility Use the buttons to expand or collapse the section. If you are from one of the following countries, you may be eligible for a scholarship or financial aid to support your studies at UTS. Note: There may also be other scholarship and sponsorship options that are not listed below. Please check in your home country.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки подачи для иностранцев, находящихся вне Австралии: осенний семестр (старт февраль/март) — 30 ноября, весенний (старт июль) — 30 апреля, летний (старт ноябрь) — 30 августа. Для находящихся в Австралии дедлайны другие.",
+      "evidence": "Autumn session - February/March start 30 November 15 January Spring s ession - July start 30 April 31 May S ummer session - November start 30 August 30 September",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Порядок подачи: подтвердить соответствие требованиям, собрать документы, оплатить сбор, подать заявку, принять оффер; решение по полной заявке обычно за 1–2 недели.",
+      "evidence": "Confirm your eligibility Provide relevant documentation Pay the application fee Submit your application Accept your offer",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы не на английском принимают только вместе с заверенным официальным переводом.",
+      "evidence": "If your documents are in another language, you must provide the original language version plus an official English translation.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Если поступающий младше 18 лет, нужны одобренные опека и жильё; административный сбор за это — A$550 (жильё оплачивается отдельно).",
+      "evidence": "Evidence of Under 18 Accommodation and Welfare arrangement administration fee (AUD 550)",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://student-uts.studylink.com/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Technology Sydney (UTS), Сидней, Австралия. Приём иностранцев на бакалавриат: заявка через UTS Application Portal (или бумажную форму), английский по базовому порогу (IELTS 6.5 / TOEFL iBT 79 или 4 по шкале 1-6 / PTE 58), возраст с 16 лет. Обучение платное, стоимость по курсам; срокам подачи для поступающих из-за рубежа — 30 ноября, 30 апреля и 30 августа по семестрам. Есть стипендии, включая полную оплату обучения (Vice-Chancellor's International Undergraduate, по конкурсу и отдельной заявке) и 30% Academic Excellence (автоматически)."
+    }
+  },
+  "source": {
+    "url": "https://www.uts.edu.au/for-students/international",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.uts.edu.au/for-students/international",
+        "contentHash": "sha256:9f2b7915cbf8746ddf5ec1559f69c5064bb9628920d93b4d7879bc5270a120a7"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants",
+        "contentHash": "sha256:036369dabfec48eadbb4e73649145e3e9a913aab21ea02468ce3eae443b54cab"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants/academic-entry-requirements",
+        "contentHash": "sha256:2164fc920caab7c8c4343f557654b8d023fe56b0946c29e0cfe2920edf3cf8dc"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/eligibility",
+        "contentHash": "sha256:1f3ad5d1d9cb6c2b46c81a80da477c1c461da089a94beb60a9ee66090ccc6d3b"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/fees-costs/international-fees",
+        "contentHash": "sha256:60c7830e64a2f52dd5cc0b3d7dd2fbcb5aa399efc9889d015dc96e1a4b2ad340"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/scholarships/international",
+        "contentHash": "sha256:3b5173d41e59770d5d0718808acd0e83efdeb092e8fb4be382d853a17e81da0b"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply",
+        "contentHash": "sha256:03a23008aeb885168727c6df79d91a790b93549a642793064f359028b9f97362"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/eligibility/english-language-requirements",
+        "contentHash": "sha256:d39535af529441b32c93a741b78b7afea4a7fbc49a55331fa7de888b1073141f"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/fees-costs/international-fees/financial-aid",
+        "contentHash": "sha256:84318972eaeb09a004f8a1b424bb73c6cb42fe0284d398937b1cf61b249a54cc"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/pathways/international",
+        "contentHash": "sha256:19eabd9e7ae89227b9e6c27dd1963741b0302f410a1c07ed14cf0d4e638fc4a3"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/scholarships/international/home-country-sponsored-scholarships",
+        "contentHash": "sha256:e88927b115fef231a43e949d1c4360efb2eb6f91eaf25566e044d9c4c5a57136"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/scholarships/scholarships-search/uts-academic-excellence-international-scholarship",
+        "contentHash": "sha256:63bcc7b64d6c2cbebb27bcc734db2ad4caa9100552bfddb00c9dcdb4eaf0dc2d"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/scholarships/scholarships-search/uts-vice-chancellors-international-undergraduate-scholarship",
+        "contentHash": "sha256:f1a5bae77a5defbdec150b5e7689548d5b376eb2aabc09885bddd0b2350ad5cb"
+      },
+      {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants/welfare-arrangements-students-under-18",
+        "contentHash": "sha256:4d7f0750a8c9002e346db2ec16f1a23142668400f3917309d7c67f73a9bdf080"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
