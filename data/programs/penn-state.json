@@ -1,0 +1,340 @@
+{
+  "id": "penn-state",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Pennsylvania State University (Penn State, США): приём иностранцев на бакалавриат",
+    "orig": "The Pennsylvania State University"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: это государственный вуз, и иностранцы платят ставку не-резидента Пенсильвании. На 2026-27 год в официальной финансовой гарантии для приезжих (University Park) вуз называет для 1-2 курса: tuition и сборы $46,700, проживание $21,900, обязательная страховка $4,000, итого $72,600 на первый год. Помощи по нужде иностранцам нет: стипендии Penn State назначаются в основном тем, кто заполнил FAFSA (это доступно лишь гражданам и постоянным резидентам США), а названные на странице приёмные награды идут жителям Пенсильвании или американским не-резидентам штата. Полное покрытие в карточке не отмечено"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз определяет иностранца как того, кому для учёбы нужна виза, и описывает для него тот же порядок заявки, что и для американцев, плюс языковое подтверждение и финансовую гарантию; отказа по паспорту нет, отдельного запрета для граждан каких-либо стран не названо. Смотрели страницы приёма иностранцев, требований, шагов подачи, обзора заявки, сроков, стоимости и помощи."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы вход сама по себе не закрывает: отказа по стране не названо, требования выражены успешным прохождением предметов (математика, физика, обществознание, язык) и официальными документами школы. Таджикистан на страницах прямо не назван — эквивалент аттестата уточнять в приёмной. Смотрели страницы требований, обзора заявки, шагов подачи и школьных требований первого курса."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "In reviewing a first-year application, we look for students who have successfully completed courses or examinations in the core subjects of mathematics, physical science, social science, and language in all years of high school."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: сказано лишь, что подают, пока учатся в школе или окончили её недавно, а абитуриент первого курса определяется статусом в школе. Упоминание «graduated from high school five or fewer years ago» относится только к праву самостоятельно сообщать баллы SAT/ACT, а не к допуску."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют: ни минимума, ни максимума возраста среди требований к первокурснику-иностранцу нет. Правило про возраст 24 года встретилось только в классификации резидентства для платы за обучение (и не про допуск). Смотрели страницы требований, обзора заявки, шагов подачи и стоимости."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "The application evaluation for first-year international students is a comprehensive review, focusing on all the required credentials of the application."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "A minimum IELTS score of 6.5 on the academic test"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "evidence": "TOEFL exams taken before January 21, 2026: A minimum TOEFL score of 80 on the internet-based TOEFL (code #2660)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "evidence": "TOEFL exams taken after January 21, 2026: A minimum TOEFL score of 4.5 on the internet-based TOEFL (code #2660)"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 120,
+          "evidence": "A minimum score of 120 is required"
+        }
+      ],
+      "evidence": "All international students whose native language is not English must submit proof of English language proficiency."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Penn State is test-optional, so submitting scores is not required for your application, unless you are using them for your proof of English Language Proficiency."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем вуз считает того, кому для учёбы нужна виза: отдельного запрета по паспорту нет, порядок заявки тот же, что для американцев, плюс языковое подтверждение и финансовые документы.",
+      "evidence": "You are an international student if you require any type of visa to attend Penn State.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Все документы заявки должны быть официальными: оригиналы или заверенные копии (печать/подпись школы, экзаменационной комиссии, министерства образования или консульства). Нотариальные копии официальными не считаются.",
+      "evidence": "All documents submitted for review must be official, that is, they must be either originals or copies certified by the examining board, an official at the institution, the Ministry of Education, or consulate.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Документы не на английском обязаны идти с заверенным построчным переводом на английский.",
+      "evidence": "All documents in languages other than English must be accompanied by a certified line-by-line, literal English translation.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Вуз смотрит, что абитуриент успешно прошёл предметы (или экзамены) по математике, физике, обществознанию и языку во все годы школы; без этого в приёме может быть отказано.",
+      "evidence": "In reviewing a first-year application, we look for students who have successfully completed courses or examinations in the core subjects of mathematics, physical science, social science, and language in all years of high school.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны два года одного иностранного языка, кроме английского; нехватку можно закрыть уже в вузе.",
+      "evidence": "Two units in a single world language other than English are required.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Часть программ требует дополнительной математики в школе; статистика эту математику не закрывает.",
+      "evidence": "Some colleges and majors require the completion of additional math in high school in order to be eligible for admission.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Школьные документы обязательны, но первокурсник, заполнивший self-reported отчёт, присылает их после согласия на зачисление.",
+      "evidence": "Secondary records are required for both first-year and transfer international students, but first-year international students who completed a SRAR do not need to provide them until after they accept an offer of admission.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен для всех иностранцев, чей родной язык не английский; граждане и постоянные резиденты США его не сдают.",
+      "evidence": "All international students whose native language is not English must submit proof of English language proficiency.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог IELTS — 6.5 по академическому модулю.",
+      "evidence": "A minimum IELTS score of 6.5 on the academic test",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT, сданный до 21 января 2026 года: минимум 80 по старой шкале.",
+      "evidence": "TOEFL exams taken before January 21, 2026: A minimum TOEFL score of 80 on the internet-based TOEFL (code #2660)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT, сданный после 21 января 2026 года: минимум 4.5 по новой шкале.",
+      "evidence": "TOEFL exams taken after January 21, 2026: A minimum TOEFL score of 4.5 on the internet-based TOEFL (code #2660)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог Duolingo English Test — 120.",
+      "evidence": "A minimum score of 120 is required",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Вместо языкового теста английский можно подтвердить другими способами: SAT — от 570 по секции чтения и письма, ACT — от 24 по английской секции, GCSE/GCE — A, B или C, IB English A — от 5.",
+      "evidence": "SAT : a score of 570 or higher on the Evidence-Based Reading and Writing section (code #2660) ACT : Score of 24 or higher on the English section (code #3656)",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "SAT/ACT необязательны: вуз test-optional и не требует баллы, кроме случая, когда ими подтверждают английский.",
+      "evidence": "Penn State is test-optional, so submitting scores is not required for your application, unless you are using them for your proof of English Language Proficiency.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Числового порога по оценкам нет: заявку читают целостно, по всем присланным документам.",
+      "evidence": "The application evaluation for first-year international students is a comprehensive review, focusing on all the required credentials of the application.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Сроки: заявка на осень и лето открывается 1 августа, на весну — 1 июня; для Early Action подают до 1 ноября (решение к 24 декабря), рекомендованный срок для всех заявок — 1 декабря. Год приёма на странице не назван.",
+      "evidence": "For Early Action: Apply by November 1 in order to receive a decision by December 24 Recommended submission deadline for all applications: December 1",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Early Action — главный срок: после 1 ноября заявки рассматривают в порядке поступления, и шансы, особенно в кампусе University Park, падают.",
+      "evidence": "For first-year applicants, Penn State only has one big deadline to remember - our Early Action Deadline is November 1.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Плата за заявку для иностранца — $75, невозвратная, платится картой.",
+      "evidence": "The application requires international applicants to pay a nonrefundable application fee of $75 via credit card.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 75,
+        "currency": "USD",
+        "evidence": "The application requires international applicants to pay a nonrefundable application fee of $75 via credit card."
+      }
+    },
+    {
+      "ru": "Для визы и I-20 вуз требует финансовую гарантию: подтверждение средств на первый год (и указание, кто оплатит последующие годы); справка должна быть не старше 6 месяцев и покрывать хотя бы первый год.",
+      "evidence": "Your financial guarantee must be current (not more than 6 months old) and show at least the estimated first-year cost.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Первое требование к финансам сформулировано государством: вуз должен убедиться, что человек оплатит учёбу, не прибегая к нелегальной работе или госсредствам.",
+      "evidence": "The U.S. government requires schools to determine that individuals can meet expenses without resorting to unlawful employment or public funds.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Оценка стоимости года для гарантии (University Park, 2026-27, 1-2 курс): tuition и сборы $46,700 (сборы студенческого союза и международный сбор уже включены), проживание $21,900, страховка $4,000, итого $72,600. Это ориентир для I-20, а не точный счёт.",
+      "evidence": "Student Initiated & International Undergraduate Fees included.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Суммы в гарантии — широкие оценки: они нужны только для определения требований к финансам на 9-месячный учебный год, реальные расходы на жизнь зависят от обстоятельств и растут каждый год.",
+      "evidence": "Figures are broad estimates used only to determine financial guarantee requirements for the 9 month academic year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии Penn State назначаются в основном тем, кто подал FAFSA (федеральную заявку на помощь) — то есть гражданам и постоянным резидентам США; иностранцу этот путь закрыт.",
+      "evidence": "All students who are offered admission and submit a Free Application for Federal Student Aid (FAFSA) to Penn State are considered for scholarships",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для иностранца вуз не обещает никакой помощи: крупные приёмные награды (Academic, Commonwealth, Discover, Provost) названы для жителей Пенсильвании и американских не-резидентов штата.",
+      "evidence": "The Penn State Academic Award The Academic Award is offered annually to first-time, first-year students who are residents of Pennsylvania and enroll in a baccalaureate degree at Penn State University Park for the fall semester immediately following their high school graduation.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Ставки зависят от кампуса, программы, уровня и резидентства; вуз при этом государственный, поэтому для приезжих действует ставка не-резидента.",
+      "evidence": "Penn State's tuition rates vary by campus, program, student level, and residency.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Вуз не сотрудничает с агентами и посредниками: они не представляют Penn State и не ведут приём; по вопросам заявки пишут напрямую в приёмную.",
+      "evidence": "Penn State does not partner with agents to help represent the University or to administer any part of the application process.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.psu.edu/admission/undergraduate/how-to-apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Pennsylvania State University (Penn State), University Park, штат Пенсильвания. Приём иностранцев на бакалавриат через MyPennState или Common App; SAT/ACT необязательны, но языковой тест обязателен (IELTS 6.5 / TOEFL 80 по старой шкале, 4.5 по новой / Duolingo 120). Обучение платное: гарантия на первый год для 1-2 курса University Park — $72,600 (2026-27), помощи по нужде иностранцам нет."
+    }
+  },
+  "source": {
+    "url": "https://www.psu.edu/admission/undergraduate",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.psu.edu/admission/undergraduate",
+        "contentHash": "sha256:766226a1f7a6c44e47eb6595d4185f79ebae9d3429582ad2d8e06840df5ff0e1"
+      },
+      {
+        "url": "https://www.psu.edu/admission/undergraduate/how-to-apply",
+        "contentHash": "sha256:bef58c7175d2716bf54f5d7ca586daa0857e0e5761347cf8af3e0d7a6b7e1899"
+      },
+      {
+        "url": "https://www.psu.edu/admission/undergraduate/how-to-apply/international-students",
+        "contentHash": "sha256:d3df4f1f8fb4bb491e781520442549b25ce42850afbab1b70bb65858689adee2"
+      },
+      {
+        "url": "https://www.psu.edu/admission/undergraduate/how-to-apply/first-year-students",
+        "contentHash": "sha256:c7b2a1ad84814c07893d432a3ed481400ec4d21a7b0dae8c7922d7ec7772cce1"
+      },
+      {
+        "url": "https://www.psu.edu/admission/undergraduate/tuition-costs",
+        "contentHash": "sha256:81de32d97cea22839828bc95f718dca20a0727a4789c09f5798474dc2475e946"
+      },
+      {
+        "url": "https://www.psu.edu/resources/international-students/admission-requirements",
+        "contentHash": "sha256:7005b7f62d039592da747515a84b35219f2a9cb4fec47ef4660525c19977380f"
+      },
+      {
+        "url": "https://www.psu.edu/resources/international-students/application-review",
+        "contentHash": "sha256:8ff4ae88dfe0861103734c847daab094c296362f1ae9df2cd26ec7486b3997c2"
+      },
+      {
+        "url": "https://www.psu.edu/resources/international-students/deadlines",
+        "contentHash": "sha256:1ecd70928932b00df690d65e8ce77d8ccfe14a634f9e60fea86e889cc859f53b"
+      },
+      {
+        "url": "https://www.psu.edu/resources/international-students/steps-to-apply",
+        "contentHash": "sha256:613e4a3f59c7c9f5557a07937fb7a45971c68b80157ec69dbe7a035b59c448f1"
+      },
+      {
+        "url": "https://www.psu.edu/resources/first-year-students/deadlines",
+        "contentHash": "sha256:7c345f1df422c082c458a6b30f04c50e287734ce1c0c5b2c19834de198609f7c"
+      },
+      {
+        "url": "https://www.psu.edu/resources/first-year-students/requirements",
+        "contentHash": "sha256:502f014f1a0edb04bd90cba685e59b99f23d793fbe27c3827515ae46c3fe1b45"
+      },
+      {
+        "url": "https://www.psu.edu/costs-aid/types-of-aid/scholarships",
+        "contentHash": "sha256:d0cd08a875821e5af354af17f56602dcdbb4e1abf09a8bb9945be5a470d090f5"
+      },
+      {
+        "url": "https://global.psu.edu/page/financial-guarantee-requirements",
+        "contentHash": "sha256:0ccbd440455a9a4422f27036114c0152aab5b96b12820311e18d5b7df5494de6"
+      },
+      {
+        "url": "https://psuglobalprod.prod.acquia-sites.com/sites/default/files/pdf/2026-2027-up-hy-gv-financial-guarnatee.pdf",
+        "contentHash": "sha256:2c1e9035cbe5510431ec0756721c63868d097dcfa567f37b202538b7b520d3a3"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
