@@ -3072,8 +3072,14 @@ approvedAt = "2026-09-29"
 
 [oxford]
 name = "University of Oxford (Великобритания): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.ox.ac.uk/admissions/undergraduate/applying/for-international-students",
+files = [
+  { path = "manual/oxford/00-for-international-students.html", url = "https://www.ox.ac.uk/admissions/undergraduate/applying/for-international-students" },
+  { path = "manual/oxford/01-international-qualifications.html", url = "https://www.ox.ac.uk/admissions/undergraduate/courses/admissions-requirements/international-qualifications" },
+  { path = "manual/oxford/02-english-language-requirements-visas.html", url = "https://www.ox.ac.uk/admissions/undergraduate/applying/for-international-students/english-language-requirements-visas" },
+  { path = "manual/oxford/03-admissions-timeline.html", url = "https://www.ox.ac.uk/admissions/undergraduate/applying/admissions-timeline" },
+  { path = "manual/oxford/04-course-fees.html", url = "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/course-fees" },
+  { path = "manual/oxford/05-oxford-bursaries-and-scholarships.html", url = "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships" },
+  { path = "manual/oxford/06-reach-oxford.html", url = "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships/reach-oxford" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
