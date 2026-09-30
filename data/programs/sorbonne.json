@@ -1,0 +1,236 @@
+{
+  "id": "sorbonne",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Sorbonne University (Франция): приём иностранцев на бакалавриат",
+    "orig": "Sorbonne Université"
+  },
+  "hostCountry": "FR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, но недорогое: национальная ставка на бакалавриате на 2026/2027 — €178 в год, плюс обязательный ежегодный взнос CVEC. Однако с 2019 года для не-граждан ЕС действуют дифференцированные (повышенные) тарифы; точную сумму для иностранца страница не называет. От дифференцированного тарифа и от платы за обучение можно просить освобождение — комиссия вуза рассматривает заявку по финансовому положению, здоровью, удалённости семьи и т. п., но это не гарантия. Своих бакалаврских стипендий вуз не называет: иностранцу доступны французские государственные стипендии через Campus France страны. Полного покрытия нет, поэтому в карточке tuition/living/travel не отмечены."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: отдельного запрета по паспорту нет. Процедура зависит от гражданства и страны проживания (внутри ЕС или вне), но для гражданина Таджикистана отказа по стране не названо. Смотрели страницы приёма иностранцев, приёма на первый курс бакалавриата, процедуры Campus France и стоимости обучения."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы вход не закрывает: список стран и отказ по стране не названы, аттестат Таджикистана прямо не упомянут. Требуется диплом о среднем образовании, эквивалентный французскому бакалавриату, поэтому эквивалентность надо уточнять в приёмной комиссии или местном офисе Campus France. Смотрели страницы приёма на L1, процедуры Campus France и приёма иностранцев."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Would you like to join Sorbonne University after your secondary school leaving certificate, equivalent to the French Baccalaureate? You must first be admitted to the first year of your Bachelor's degree."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют; сказано лишь, что для зачисления на первый курс нужен аттестат о среднем образовании. Смотрели страницы приёма на первый курс, процедуры Campus France и регистрации иностранных студентов."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для допуска страницы не называют. Упоминания возраста относятся только к визе и виду на жительство несовершеннолетних и к поступлению не относятся. Смотрели страницы приёма, процедуры регистрации иностранных студентов и помощи."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Числового порога по оценкам страницы не называют: GPA и требования к среднему баллу не упомянуты. Решение о зачислении принимает педагогическая комиссия по прежней учёбе. Смотрели страницы приёма на первый курс, процедуры Campus France и стоимости."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "in the first year of the Bachelor's degree, courses are taught in French across all faculties of Sorbonne University. A minimum B2 level of French proficiency is required for enrolment."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Правила приёма зависят от гражданства и страны проживания: для гражданина Таджикистана это отдельная процедура, но отказ по гражданству нигде не назван.",
+      "evidence": "Depending on your profile (for example, intra- or extra-EU student), the admission procedure will vary.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Подача идёт не напрямую в вуз, а через французскую национальную процедуру «Études en France» (EEF), которую ведёт Campus France.",
+      "evidence": "To apply for a French Higher Education Institution (HEI) you must follow the Campus France \"Études en France\" procedure (EEF).",
+      "field": "citizenship",
+      "kind": "steps"
+    },
+    {
+      "ru": "Иностранец из страны, не подключённой к Campus France, подаёт «белую папку» DAP — её сдают дипломатической миссии Франции в стране проживания.",
+      "evidence": "Your application is subject to the white hard-copy Prior Admission Application (Demande d'Admission Préalable - DAP) procedure (to be submitted to the French diplomatic mission in your country of residence).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Первокурсник бакалавриата («Licence 1») заполняет «белую папку» (dossier blanc), а не «зелёную» (dossier vert), которая нужна для 2–3 курса и магистратуры.",
+      "evidence": "Depending on the level of your studies, you must fill in the white file (dossier blanc) if you are applying for 1st year of bachelor (\"Licence 1\") or the green file (\"dossier vert\") for a 2nd or 3rd year of Bachelor or for a Master.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Процедуру советуют начинать в ноябре года, предшествующего году зачисления.",
+      "evidence": "In order to avoid missing deadlines, we highly recommend you start your procedure in November preceding the academic year you wish to join Sorbonne University.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Барьер языка: на первом курсе бакалавриата обучение идёт на французском на всех факультетах, и для зачисления нужен французский не ниже уровня B2.",
+      "evidence": "in the first year of the Bachelor's degree, courses are taught in French across all faculties of Sorbonne University. A minimum B2 level of French proficiency is required for enrolment.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Нефранкофону нужен сертификат о сдаче французского теста (например, TCF, TEF или DELF); требуемый уровень — от B2 до C1 в зависимости от программы.",
+      "evidence": "Please note that if you do not come from a francophone country, you need a certificate proving your successful completion of a French language test (for example TCF, TEF or DELF). The required level of French for studies at Sorbonne University may range from B2 to C1 depending on the program.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Бакалаврских программ на английском вуз не предлагает — английский путь для бакалавриата закрыт.",
+      "evidence": "Sorbonne University does not currently offer bachelor's programs in English.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Обходной путь по языку: подтянуть французский можно на интенсивных языковых курсах самого вуза.",
+      "evidence": "If you're in need of upgrading your language skills in order to complete your studies, you can register for intensive language courses at Sorbonne University.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Нужен аттестат о среднем образовании, эквивалентный французскому бакалавриату; чтобы попасть на первый курс, надо сначала быть зачисленным.",
+      "evidence": "Would you like to join Sorbonne University after your secondary school leaving certificate, equivalent to the French Baccalaureate? You must first be admitted to the first year of your Bachelor's degree.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Национальная ставка обучения на 2026/2027: бакалавриат — €178 в год (магистратура €255, докторантура €398, инженерные программы €630).",
+      "evidence": "Enrolment fees for the 2026/2027 academic year*: Bachelor's degree programmes: €178 Master's degree programmes: €255 Doctoral programmes: €398 Engineering programmes: €630",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для не-граждан ЕС с 2019 года действуют дифференцированные (повышенные) тарифы на обучение; точная сумма на странице не названа.",
+      "evidence": "Since 2019, the French government has introduced differentiated tuition fees for non-EU students enrolling in higher education institutions to obtain a national degree.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "От дифференцированного тарифа можно просить освобождение: заявку рассматривает комиссия вуза по финансовому положению, здоровью, удалённости от семьи и другим обстоятельствам.",
+      "evidence": "Non-EU students who are subject to differentiated tuition fees but are not automatically exempt may apply for an exemption. The Exemption Committee will assess each application on the basis of the information provided",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "До зачисления надо оплатить обязательный ежегодный взнос за студенческую жизнь (CVEC) в CROUS.",
+      "evidence": "Before enrolling at the university, all students enrolling in an initial higher education programme must pay the compulsory annual Student and Campus Life Contribution (CVEC) to the CROUS.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии иностранцам (в том числе из Таджикистана) — французские государственные, от министерства иностранных дел; узнавать о программах нужно в местном офисе Campus France. Своих бакалаврских стипендий вуз не называет.",
+      "evidence": "The French Ministry for Europe and Foreign Affairs (MEAE) awards a large number of scholarships to international students from Bachelor to Doctorate levels. Contact the local Campus France office in your country to find out which scholarship programmes apply to you.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Календарь DAP на приём 2026/2027: старт 1 октября 2025, дедлайн заявки в Espace Campus France — 15 декабря 2025.",
+      "evidence": "DAP pre-admission applications (white and yellow files): 1st October 2025 - Application process begins 15 December 2025 - Application deadline at Espace Campus France (ECF)",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.sorbonne-universite.fr/en/Study%20at%20Sorbonne%20University/degree-seeking-students/international-application-and-registration-1",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Sorbonne Université (Sorbonne University), Париж, Франция. Первый курс бакалавриата — только на французском (не ниже B2); гражданин Таджикистана подаёт через процедуру DAP «Études en France» (белая папка), дипломы-аттестат должны быть эквивалентны французскому бакалавриату. Обучение платное: €178 в год по национальной ставке, но для не-граждан ЕС с 2019 года действуют дифференцированные тарифы с возможностью освобождения."
+    }
+  },
+  "source": {
+    "url": "https://www.sorbonne-universite.fr/en/Study%20at%20Sorbonne%20University/degree-seeking-students/international-application-and-registration-1",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.sorbonne-universite.fr/en/Study%20at%20Sorbonne%20University/degree-seeking-students/international-application-and-registration-1",
+        "contentHash": "sha256:264499b0e43039b1495649a9c6d16260c4e58fafe315948b0e56b7ac5595475a"
+      },
+      {
+        "url": "https://www.sorbonne-universite.fr/en/news/registration-procedures-international-students",
+        "contentHash": "sha256:d92cd0b922ced3ecd9659a4922677b7655a0cfe885de8dd331f7bc178edabcf9"
+      },
+      {
+        "url": "https://international-welcome-desk.sorbonne-universite.fr/join-sorbonne-university/study/admission-to-the-first-year/",
+        "contentHash": "sha256:7c7553660736ecea84638692999e2fcbb074fa1a20a4302a4b683f06df3de0e7"
+      },
+      {
+        "url": "https://sciences.sorbonne-universite.fr/en/apply/licences/first-year-licence-l1",
+        "contentHash": "sha256:46db2e56838deed5e299b2db56b4a1a19a423d6b67bb28d91bf8a356497bfe68"
+      },
+      {
+        "url": "https://www.sorbonne-universite.fr/en/education/study-sorbonne-university/enrolment-procedures-and-tuition-fees",
+        "contentHash": "sha256:de1cb9968733214d0afa2a02866621aad6b618ad8da0f3c617289fbf9d80ebb1"
+      },
+      {
+        "url": "https://www.sorbonne-universite.fr/en/education/student-life/grants-and-financial-assistance",
+        "contentHash": "sha256:f2e364fcc2bcf651e909def3bcacac2f99a86f88f3a80614df31cd3e3a9f5db2"
+      },
+      {
+        "url": "https://international-welcome-desk.sorbonne-universite.fr/managing-your-finances/your-budget/finding-financial-aid/",
+        "contentHash": "sha256:a5e23a8c8f45a2bfaf9137d564cf2cff29889ab5f63538e24d3e8035b3ab1455"
+      },
+      {
+        "url": "https://www.sorbonne-universite.fr/en/french-language-courses",
+        "contentHash": "sha256:b019a3fc496299c0cf04b0552ab35413aa4a9c1d2b9d215f16c642eeb96e5736"
+      },
+      {
+        "url": "https://www.sorbonne-universite.fr/en/french-language-certification",
+        "contentHash": "sha256:855d3993a26d786af1bdd2b0e48055c346efbe7dfe8c448ac3f96f07db120283"
+      },
+      {
+        "url": "https://www.sorbonne-universite.fr/en/campus-life/social-financial-assistance/special-assistance-international-students",
+        "contentHash": "sha256:07d9b37e6a4f64c56e5d54f7aeab92ba0ad8cf33867cff42eee6a03feb000448"
+      },
+      {
+        "url": "https://sciences.sorbonne-universite.fr/en/international-1/welcoming-degree-seeking-students-faculty",
+        "contentHash": "sha256:78269aa53f56374ab880a0194d343970877681dc9199690795482f2539a697b2"
+      },
+      {
+        "url": "https://www.sorbonne-universite.fr/en/information-international-students",
+        "contentHash": "sha256:283b9d79a8b85927b19bf3ee56f9457f97b18e87331cf0654dfdf8833c10341f"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
