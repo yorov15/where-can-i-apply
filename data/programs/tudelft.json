@@ -1,0 +1,264 @@
+{
+  "id": "tudelft",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Delft University of Technology (Нидерланды) — приём иностранцев на бакалавриат",
+    "orig": "Delft University of Technology"
+  },
+  "hostCountry": "NL",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное. Для тех, у кого нет гражданства ЕС/ЕЭЗ (и нет вида на жительство с правом на статутную ставку), действует институциональная ставка: на 2026/2027 год бакалавриат стоит €19 906 в год. Сверх этого иностранцу из-за пределов ЕС нужно заложить проживание €14 200 в год, сбор за вид на жительство €254 и жильё €285 — полный обязательный платёж на 2026/2027 год вуз называет €34 106. Плюс разовый невозвратный сбор за подачу €100. Полных стипендий для бакалавров вуз не даёт: все его стипендии — для магистратуры."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: странового отказа нет, ограничений по гражданству на страницах приёма бакалавриата не названо. Смотрели admission requirements, country specific requirements, application procedure, dates & deadlines, tuition & finances, scholarships."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы вход сама по себе не закрывает: отказ по стране не назван, требуется лишь аттестат, эквивалентный нидерландскому VWO, с обязательными предметами. Таджикистана в страновом списке нет — эквивалентность аттестата оценивает сам вуз по полной заявке через Studielink и Osiaan."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "To be eligible for admission, you must hold a secondary school diploma that is considered equivalent to the Dutch pre-university VWO diploma. In addition, specific (national) examination subjects are required."
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "You must fulfil all graduation requirements for your diploma prior to the start of the academic year at TU Delft; it is not allowed to have results pending after 31 August."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст абитуриента на страницах приёма бакалавриата не ограничен: ни нижней, ни верхней границы нет. Упомянут только colloquium doctum — отдельный строгий путь для тех, кому 21 год и больше на момент начала программы; это не ограничение обычного приёма."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Порог среднего балла для выпускников школы не назван: GPA 75% встречается только на другом пути — для перевода/приёма после первого курса университета (в том числе для отдельных стран, например Канады), а не для поступающих со школьным аттестатом. Для школьного аттестата требования к GPA нет."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "IELTS (Academic version) with an overall band score of at least 6.5."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "evidence": "TOEFL test reports obtained before January 21, 2026: A TOEFL iBT with an overall band score of at least 90 ."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "TOEFL test reports obtained from January 21, 2026: A TOEFL iBT with an overall band score of 5 ."
+        }
+      ],
+      "evidence": "BSc programmes with language of instruction English: Aerospace Engineering, Computer Science and Engineering English Track, Earth, Climate and Technology (Applied Earth Sciences), Nanobiology"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужен школьный аттестат, признанный эквивалентным нидерландскому додипломному VWO-аттестату.",
+      "evidence": "To be eligible for admission, you must hold a secondary school diploma that is considered equivalent to the Dutch pre-university VWO diploma. In addition, specific (national) examination subjects are required.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "К аттестату нужны обязательные выпускные предметы: математика для всех программ, физика — почти для всех, химия и/или биология — для отдельных (Earth Sciences, Clinical Technology, Life Science, Nanobiology).",
+      "evidence": "In addition, specific (national) examination subjects are required.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Если аттестата Таджикистана нет в списке страновых соответствий, вуз всё равно рассматривает заявку: её подают через Studielink и Osiaan, и аттестат оценивают индивидуально.",
+      "evidence": "Is your diploma not listed above? Please submit a complete application through Studielink and Osiaan.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Аттестат должен быть получен до начала учебного года: результатов, оставшихся несданными после 31 августа, быть не должно.",
+      "evidence": "You must fulfil all graduation requirements for your diploma prior to the start of the academic year at TU Delft; it is not allowed to have results pending after 31 August.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский требуют только программы с английским языком обучения (Aerospace Engineering, Computer Science and Engineering English Track, Earth Climate and Technology, Nanobiology). Остальные бакалаврские программы читаются по-нидерландски.",
+      "evidence": "BSc programmes with language of instruction English: Aerospace Engineering, Computer Science and Engineering English Track, Earth, Climate and Technology (Applied Earth Sciences), Nanobiology",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Для англоязычных программ нужен один из тестов по английскому; IELTS — не ниже 6.5 в целом.",
+      "evidence": "IELTS (Academic version) with an overall band score of at least 6.5.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT, сданный до 21 января 2026 года, — не ниже 90 в целом.",
+      "evidence": "TOEFL test reports obtained before January 21, 2026: A TOEFL iBT with an overall band score of at least 90 .",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT, сданный с 21 января 2026 года, считается по новой шкале — не ниже 5 в целом.",
+      "evidence": "TOEFL test reports obtained from January 21, 2026: A TOEFL iBT with an overall band score of 5 .",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Вместо IELTS/TOEFL принимают Cambridge C1 Advanced (Certificate of Advanced English) — без порога по баллам.",
+      "evidence": "Cambridge Assessment English: at least a C1 Advanced (Certificate of Advanced English; there are no requirements regarding the scores).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "От теста по английскому освобождают гражданство и диплом США, Великобритании, Ирландии, Австралии, Новой Зеландии или Канады, а также ряд школьных квалификаций (британские A levels, IB и другие).",
+      "evidence": "The following applicants are exempted from the English test requirement:",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Для бакалаврских программ на нидерландском языке нужен нидерландский на уровне додипломного VWO, и удовлетворить это требование надо до начала учёбы.",
+      "evidence": "A good command of the Dutch language is required. For the Dutch taught Bachelor programmes the entrance requirement is Dutch at pre-university VWO level.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Разовый невозвратный сбор за подачу — €100, платят все абитуриенты.",
+      "evidence": "A non-refundable application fee of €100 applies to all applicants.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 100,
+        "currency": "EUR",
+        "evidence": "A non-refundable application fee of €100 applies to all applicants."
+      }
+    },
+    {
+      "ru": "Обучение платное: институциональная ставка для бакалавриата на 2026/2027 год — €19 906 в год для тех, у кого нет гражданства ЕС/ЕЭЗ, Швейцарии или Суринама.",
+      "evidence": "Institutional rate BSc € 19.906",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сверх обучения нерезиденту из-за пределов ЕС вуз закладывает проживание €14 200, сбор за вид на жительство €254 и жильё €285; полный платёж на 2026/2027 год — €34 106.",
+      "evidence": "BSc non-EU (incl UK) €19.906 €14.200* €254** €285** €34.106",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полных стипендий бакалаврам TU Delft не даёт: все его стипендии (Justus & Louise van Effen Excellence, Electrical Engineering) — только для магистратуры.",
+      "evidence": "At TU Delft, we embody the principal of creating impact for a better society and aim to attract the brightest, most talented, and highly motivated students worldwide to our MSc programmes.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём по обычным бакалаврским программам идёт с 15 октября по 1 апреля; заявка должна быть полностью подана, а документы загружены до 1 апреля (23:59 CEST). Неполные и опоздавшие заявки не рассматривают.",
+      "evidence": "15 October - 1 April Application period for regular BSc programmes.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Программы с ограниченным числом мест (numerus clausus: Aerospace Engineering, Architecture, Clinical Technology, Computer Science and Engineering) принимают до 15 января (23:59 CET), отбор идёт с 15 января по 15 апреля.",
+      "evidence": "The application deadline for all Numerus Clausus programmes is 15 January (23:59 CET).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "За один учебный год можно подать заявку только на одну бакалаврскую программу; для конкурсной программы разрешена одна запасная.",
+      "evidence": "You may apply for one BSc programme per academic year.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявку абитуриент подаёт сам; пользоваться платными посредниками вуз не рекомендует.",
+      "evidence": "Applicants must submit their own application for admission. We strongly recommend not using external agencies or representatives who offer application services.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/application-procedure",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Delft University of Technology (TU Delft), Нидерланды. Заявка подаётся самим абитуриентом через Studielink и внутренний портал Osiaan. Английский язык обучения — у части программ; большинство бакалаврских программ читается по-нидерландски."
+    }
+  },
+  "source": {
+    "url": "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma",
+        "contentHash": "sha256:6941591308575f4e02ed25d838612c56776c87b579adcbafc115d35e163b937c"
+      },
+      {
+        "url": "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/admission-requirements",
+        "contentHash": "sha256:e4f14bd72b7db8f9db11a6832e6046d10a15e35ff4f4960a61aeede37040a3ef"
+      },
+      {
+        "url": "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/required-documents",
+        "contentHash": "sha256:5bd185d3c1be7b6792bba32039529c09fb94d4b602dc2454ea695239d5a0eeb5"
+      },
+      {
+        "url": "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/admission-requirements/country-specific-requirements",
+        "contentHash": "sha256:77d3bb8d7503533037e391e8a51abfa1068b68080dba1f3da8d4e4b77cacd77f"
+      },
+      {
+        "url": "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/application-procedure",
+        "contentHash": "sha256:4b84266e9038fb33e6e6151dab0c201c2497a9d96217f8578e08deaf0035dd03"
+      },
+      {
+        "url": "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/dates-deadlines",
+        "contentHash": "sha256:74eadf7126125ee02932f5f593a3e196368d2a15a91f4d33879fccb7829166e9"
+      },
+      {
+        "url": "https://www.tudelft.nl/en/education/study-programme-orientation/practical-matters/tuition-fee-finances",
+        "contentHash": "sha256:e6313da2f41217df13481b4862b082d9b65b55b8e69f6b255fcbf5f89bdd7cb3"
+      },
+      {
+        "url": "https://www.tudelft.nl/en/education/study-programme-orientation/practical-matters/scholarships",
+        "contentHash": "sha256:f2d7355e16e9dd00ed976635d00d70243f4f56f19cfea0db046715f639aed411"
+      },
+      {
+        "url": "https://www.tudelft.nl/en/education/study-programme-orientation/practical-matters/scholarships/scholarships-from-other-providers",
+        "contentHash": "sha256:60a08c60cc6b84683d305837262eb1bef933bb4d1fd04721a25efcc2d791ace2"
+      },
+      {
+        "url": "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/numerus-clausus-programmes",
+        "contentHash": "sha256:58c1942eef880c7b1123dd0fe190770b4c9dd99297729da79819e2b7f2f275bd"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
