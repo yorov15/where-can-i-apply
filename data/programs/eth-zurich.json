@@ -1,0 +1,334 @@
+{
+  "id": "eth-zurich",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "ETH Zurich (Швейцария) — приём иностранцев на бакалавриат",
+    "orig": "ETH Zurich"
+  },
+  "hostCountry": "CH",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное. Иностранцы, которые приезжают в Швейцарию ради учёбы, платят ставку «группы 2»: 2 190 CHF за семестр с осени 2025 года (до этого 730). Плюс обязательные семестровые сборы около 74 CHF (спорт, фонд стипендий, студсоюз). На жизнь в Цюрихе вуз советует считать 20 000–26 000 CHF в год; документ о стоимости жизни даёт 28 100 CHF в год для группы 2. Стипендии только по нужде и вспомогательные: они не покрывают обучение и жизнь полностью, требуют, чтобы студент уже учился в ETH и был резидентом Швейцарии, и чтобы были сданы экзамены первого года. Отдельная стипендия для иностранцев выдаётся после сдачи базовой сессии первого курса, окно подачи 1 сентября — 31 октября."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: ETH прямо пишет, что подача в бакалавриат «в принципе открыта всем», отдельного запрета по паспорту нет. Иностранный абитуриент — это тот, у кого не-швейцарский аттестат, и для него есть отдельная страница приёма и свой порядок. Смотрели страницы бакалавриата, подачи, приёма с не-швейцарским аттестатом, требований к языку, сроков, стоимости и стипендий."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван, ключевое — признан ли конкретный аттестат. Если аттестат не даёт прямого допуска, вуз назначает вступительный экзамен, а не отказывает. Признание по стране вуз делегирует базе swissuniversities и на своей странице правил по Таджикистану не приводит — это стоит уточнить в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Submission of upper secondary school-leaving certificate"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют. Диплом нужно подать сразу после получения, не позже 31 августа года зачисления, но года выпуска это не связывает."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения страницы приёма не называют — ни минимума, ни максимума."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Числового порога по среднему баллу страницы не задают: допуск строится либо на признанном аттестате о среднем образовании, либо на вступительном экзамене ETH, а не на проходном GPA. Признание аттестата — по базе swissuniversities, и оно может зависеть от оценок; это уточнять в приёмной."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "The German C1 language certificate must be submitted by the application deadline (=31 March) at the latest."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство приём не ограничивает: подача в бакалавриат «в принципе открыта всем».",
+      "evidence": "Application to Bachelor's degree studies at ETH Zurich is in principle open to all.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Если аттестат не даёт прямого допуска, путь — сдать вступительный экзамен ETH Zurich перед началом учёбы.",
+      "evidence": "It is possible, however, that certain applicants must pass an ETH Zurich entrance examination before they may commence their studies.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Признание аттестата по конкретной стране ETH не публикует, а отсылает к базе swissuniversities: там требования по стране и аттестату. Таджикистан стоит проверить там.",
+      "evidence": "** if required, see external page swissuniversities (country- and certificate-specific admission requirements)",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Диплом о среднем образовании надо подать сразу после получения, не позже 31 августа года зачисления.",
+      "evidence": "immediately upon receipt, until 31.08.2027 at the latest",
+      "field": "schoolYears",
+      "kind": "steps"
+    },
+    {
+      "ru": "Основной язык бакалавриата — немецкий, и без владения английским вуз прямо говорит, что не обойтись.",
+      "evidence": "The main teaching language in all Bachelor's degree programmes is German. However, a command of English is indispensable.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Для допуска нужен немецкий на уровне C1: сертификат подают не позже срока заявки (31 марта).",
+      "evidence": "The German C1 language certificate must be submitted by the application deadline (=31 March) at the latest.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявку с недействительным, недостаточным или отсутствующим языковым сертификатом отклоняют после 31 марта по формальным причинам.",
+      "evidence": "Applications with invalid, insufficient or missing language certificate will be rejected after 31 March on formal grounds.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Немецкий придётся готовить и сдавать самому: ETH не даёт ни языковых курсов, ни своих языковых экзаменов.",
+      "evidence": "ETH Zurich offers no German courses or language certification examinations. The preparation, timely organisation and sitting of the German certification examination is the applicant's responsibility.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Список принимаемых сертификатов закрытый: Goethe-Zertifikat C1 (в среднем не менее 80 баллов, все модули сданы за 12 месяцев) и C2, TestDaF, ÖSD C1/C2, DSH-3, DSD второй ступени (минимум C1 по каждой части) и telc Deutsch C1 Hochschule. Сертификаты вне списка или с недостаточным баллом не принимают.",
+      "evidence": "The following list contains all of the German language certificates which qualify the holder for admission to Bachelor's degree studies, and potential grounds for a waiver. Any certificates not listed, or those showing insufficient grades/points, are not accepted.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Goethe-Zertifikat C1 принимают при среднем балле не ниже 80 (все модули должны быть сданы в течение 12 месяцев).",
+      "evidence": "at least 80 points",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TestDaF: нужен TDN 5 в трёх разделах и TDN 4 в одном разделе одной и той же сессии.",
+      "evidence": "score 5 (TDN 5) in three exam sections and score 4 (TDN 4) in one exam section",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "DSH-3 — только зарегистрированный DSH для допуска иностранных абитуриентов к вузу.",
+      "evidence": "Deutsche Sprachprüfung für den Hochschulzugang ausländischer Studienbewerber",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Сертификат C1 действителен не дольше 2 лет на момент начала приёма; Goethe C2 и ÖSD C2 — не дольше 5 лет.",
+      "evidence": "The C1 German language certificate may be no older than 2 years at the start of the application period. The Goethe certificate C2 and the",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "От сертификата освобождают: немецкий как родной (или двуязычие на уровне C2), немецкий Abitur из Германии или немецкоязычной Швейцарии, австрийский Reifeprüfungszeugnis, люксембургский диплом, и ряд других случаев из списка.",
+      "evidence": "Applicants who meet one of the under mentioned requirements do not need to submit a German language certificate",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Плата за подачу с не-швейцарским аттестатом — 150 CHF (с швейцарским — 50).",
+      "evidence": "with Swiss matriculation certificate non-Swiss matriculation certificate 50 150",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцы, приехавшие ради учёбы, платят ставку «группы 2»: 2 190 CHF за семестр с осени 2025 года (раньше 730).",
+      "evidence": "Regular enrolment (incl. Master thesis) 730 Until FS 2025: 730 As of HS 2025: 2190",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "«Группа 2» — это те, кто обосновался в Швейцарии или Лихтенштейне ради учёбы, либо не живёт ни там, ни там. Именно к ней относится гражданин Таджикистана.",
+      "evidence": "Students who establish residence in Switzerland or the Principality of Liechtenstein for the purpose of their studies or who are not resident in either country.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "К обучению добавляются обязательные семестровые взносы: спорт 35 CHF, фонд стипендий 7 CHF, студсоюз 32 CHF за семестр.",
+      "evidence": "Academic Sports Association Zurich (ASVZ) 35 Scholarship fund 7 VSETH (ETH Zurich Student Union), fee for general services 32",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сводная страница вуза называет обучение вместе с семестровыми сборами как 804 CHF за семестр.",
+      "evidence": "ETH tuition and semester fees sum up to CHF 804/semester.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На жизнь в Цюрихе вуз советует закладывать 20 000–26 000 CHF в год.",
+      "evidence": "We recommend to calculate 20",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Документ о стоимости жизни для иностранцев даёт полную годовую стоимость обучения и жизни 28 100 CHF (для группы 2, без архитектуры) и 31 400 CHF для архитектуры.",
+      "evidence": "Total study and living costs per year Group 1 Group 2 All, except D-ARCH 25'200 28'100 D-ARCH 28'500 31'400",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Вступительный экзамен платный: комплексный — 800 CHF, сокращённый — 550 CHF.",
+      "evidence": "Comprehensive entrance examination 800 Reduced entrance examination 550",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии ETH вспомогательные и не покрывают обучение и жизнь целиком.",
+      "evidence": "ETH Zurich Scholarships do not completely cover all living and study costs.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Социальная стипендия по нужде — только для уже зачисленных студентов бакалавриата и магистратуры, и предполагается, что они резиденты Швейцарии.",
+      "evidence": "ETH Zurich offers social scholarships for enrolled ETH bachelor's and master's students in financial need. This assumes that they must be residents of Switzerland.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сначала надо искать финансирование в своей стране и показать эти попытки, и лишь потом просить стипендию ETH.",
+      "evidence": "Therefore, students must apply for scholarships and/or student loans in their home country first and demonstrate proof of these efforts.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Окно подачи на стипендию для иностранцев на 2026/2027 — с 1 сентября по 31 октября 2026.",
+      "evidence": "You can submit your complete application for the academic year 2026/2027 from: September 1 to October 31, 2026.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия для иностранцев доступна бакалавру только после успешной сдачи экзаменов первого года обучения (базовой сессии).",
+      "evidence": "Bachelorstudents are eligible after passing successfully the first year examination in all parts.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обычный срок подачи на осенний семестр 2027 — с 1 декабря 2026 по 31 марта 2027.",
+      "evidence": "01.12.2026 - 31.03.2027",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Немецкий сертификат нужно загрузить не позже 31 марта 2027.",
+      "evidence": "until 31.03.2027 at the latest",
+      "field": "language",
+      "kind": "steps"
+    },
+    {
+      "ru": "Сессия вступительного экзамена для осеннего семестра 2027 проходит 17–27 января 2028.",
+      "evidence": "17.01.2028 - 27.01.2028",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Регистрация на вступительный экзамен — с 15 сентября по 15 октября 2027.",
+      "evidence": "15.09.2027 - 15.10.2027",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-12-01",
+    "closes": "2027-03-31",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: ETH Zurich (ETH Zürich), Цюрих. Бакалавриат идёт в основном на немецком. С не-швейцарским аттестатом подача через eApply с 1 декабря по 31 марта; нужен немецкий C1 к 31 марта. Если аттестат не даёт прямого допуска — вступительный экзамен ETH (комплексный 800 CHF). Обучение для иностранцев — 2 190 CHF за семестр."
+    }
+  },
+  "source": {
+    "url": "https://ethz.ch/en/studies/bachelor.html",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://ethz.ch/en/studies/bachelor.html",
+        "contentHash": "sha256:0fbdd5d1f807be683dfc3ddd0924ff4af53db19dad10809c5d0faab113c8941b"
+      },
+      {
+        "url": "https://ethz.ch/en/studies/bachelor/application.html",
+        "contentHash": "sha256:e2c6cf2c50b53aebc7cf6d8132180a51e162b42d1bbf8001ea9bf2708f79dd6f"
+      },
+      {
+        "url": "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate.html",
+        "contentHash": "sha256:acdfbac3fc1b4a4ee6181818ccc12f2714fb95f5688e6eedc6ce28c2c3357f63"
+      },
+      {
+        "url": "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate/language-requirements.html",
+        "contentHash": "sha256:fbce3e2f14ca51917a7ec65b21812d01d6cfe3244be2de31fd5b6215a05e7c2b"
+      },
+      {
+        "url": "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate/dates.html",
+        "contentHash": "sha256:278d2ae964e705eb2d412e553af5907a98f963e478f34b2a87298130696772c7"
+      },
+      {
+        "url": "https://ethz.ch/en/studies/financial.html",
+        "contentHash": "sha256:1843d24f4e4abdb06de6be0d0c52176b910a02f4f514f5543ea97e6649272143"
+      },
+      {
+        "url": "https://ethz.ch/students/en/studies/financial/scholarships.html",
+        "contentHash": "sha256:c5cafbf2d81c20076b3e0d79545af914c91f9696c9096b44ddca9882c81e9b44"
+      },
+      {
+        "url": "https://ethz.ch/students/en/studies/financial/scholarships/cost-of-living.html",
+        "contentHash": "sha256:0a002887639e287f0b1524a6d76be20454c5cfdfb5f6a6a310834ab4cd6a6a48"
+      },
+      {
+        "url": "https://ethz.ch/content/dam/ethz/main/education/finanzielles/files-en/tuition-fees.pdf",
+        "contentHash": "sha256:a09874ce7f817bff98174af7d62c876af10a61e9243111d169c12be18365e5ae"
+      },
+      {
+        "url": "https://ethz.ch/content/dam/ethz/main/education/finanzielles/files-en/cost-of-living.pdf",
+        "contentHash": "sha256:b78e980ef813febd1a1739c1b296fd756d26ed88b25a9c87a53e318590dbd048"
+      },
+      {
+        "url": "https://ethz.ch/content/dam/ethz/main/education/finanzielles/files-en/guidelines-scholarships.pdf",
+        "contentHash": "sha256:dac9b600dc05de63e0cde0e3fcd3cf6ba84352473465f7cdfdf9fc5388f478b6"
+      },
+      {
+        "url": "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate/language-requirements/_jcr_content/par/table.tableComp.json",
+        "contentHash": "sha256:84ed270720b6e00680c577369e05d724dae7b424491957aa20e629d6e45bc9de"
+      },
+      {
+        "url": "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate/dates/_jcr_content/par/table_83420306_copy_.tableComp.json",
+        "contentHash": "sha256:388e05f040ea238ed6930a279af877d04baefe41499181ffecea1d8f958f595f"
+      },
+      {
+        "url": "https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate/dates/_jcr_content/par/table_1322192949_cop_1566530997.tableComp.json",
+        "contentHash": "sha256:14b5ef11f013a3e5ba98afb5b195942ecee8a134ca0f377fe6a4777187401b2d"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
