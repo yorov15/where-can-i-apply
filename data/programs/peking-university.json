@@ -1,0 +1,233 @@
+{
+  "id": "peking-university",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Peking University (Китай): приём иностранцев на бакалавриат",
+    "orig": "Peking University (北京大学)"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, но точной цены вуз на снятых страницах не называет: под заголовком «Tuition fee» стоит «Further notice will be given after approval». Сбор за заявку — 800 юаней, невозвратный. Есть стипендии, которые снимают плату за обучение, а иногда дают жильё, страховку и ежемесячные деньги на жизнь: государственная стипендия Китая (CSC, оформляется через посольство), стипендия правительства Пекина и стипендия самого Пекинского университета (по итогам приёма). Без стипендии жильё и дорога — за свой счёт, поэтому полное покрытие в карточке не отмечено."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "The applicant must be a non-Chinese citizen holding a valid foreign passport, meeting the relevant provisions of the Nationality Law of the People's Republic of China."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране на снятых страницах нет, требуется лишь не-китайское гражданство и аттестат о полном среднем образовании. Отдельный список стран есть только в Appendix 2 («национальные экзамены» для пути без вступительного экзамена): там Китай, Австрия, Австралия, Германия, Франция, Финляндия, Нидерланды, Канада, Испания, Новая Зеландия, Корея, Малайзия, Сингапур, Бразилия, ЮАР, Иран. Таджикистана в этом списке нет, но он ничего не запрещает: таджикский выпускник идёт либо через вступительный экзамен самого вуза, либо через международные баллы (SAT, IB, A-Level, ACT). Смотрели страницы: 2026 Undergraduate Program Entrance Examination (id=818), 2026 Undergraduate Program Without Written Examination (id=813), Score Requirements (id=816)."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "have graduated from high school or above"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы на снятых страницах нет: вуз требует лишь полное среднее образование («have graduated from high school or above»), а тем, кто ещё учится, разрешает подать со справкой об ожидаемом выпуске. Года выпуска ни числом, ни оговоркой не задают. Смотрели страницы: 2026 Undergraduate Program Entrance Examination (id=818) и 2026 Undergraduate Program Without Written Examination (id=813)."
+    },
+    "age": {
+      "min": 18,
+      "max": 25,
+      "evidence": "In principle, applicants must be between the ages of 18 and 25 (calculated from 1 September 2001 to 1 September 2008)"
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "The applicant must have comprehensive qualities, excellent academic performance, lofty aspirations, possessing excellent development potential, strong sense of social responsibility, and broad international vision."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "HSK",
+          "min": 6,
+          "parts": true,
+          "evidence": "HSK 6 with score ≥ 210"
+        }
+      ],
+      "evidence": "The applicant must have the required certificate of Chinese proficiency, test scores of international or national university entrance exams."
+    },
+    "exam": {
+      "alternative": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": 1400,
+          "evidence": "Total SAT score≥ 1400；Results from three AP courses must additionally be submitted; the subjects must not be similar or identical AP score ≥ 4."
+        },
+        {
+          "test": "ACT",
+          "min": 30,
+          "evidence": "Total score ≥ 30，and the writing component is required."
+        }
+      ],
+      "evidence": "The program without written examination refers to the admission path for applicants with international or national standardized test scores that meet the requirements to enter the secondary examination assessment of Peking University undergraduate programs for international students."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подать может только не-гражданин Китая с действующим зарубежным паспортом, с учётом норм закона КНР о гражданстве. Гражданство Таджикистана требованию соответствует, отказа по стране нет.",
+      "evidence": "The applicant must be a non-Chinese citizen holding a valid foreign passport, meeting the relevant provisions of the Nationality Law of the People's Republic of China.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Отдельное условие для тех, кто родился за границей в семье китайских граждан или сам раньше был гражданином Китая (материкового, Гонконга, Макао, Тайваня) и получил иностранное гражданство: нужно доказать более двух лет фактического проживания за границей с 30 апреля 2022 по 30 апреля 2026 и приложить документы о гражданстве. Таджикского абитуриента это не касается, но при двойном гражданстве вопрос решает китайская сторона.",
+      "evidence": "(1) If the applicant obtains foreign nationality upon birth in a foreign country and both parents or one of the parents is Chinese citizen at the time of birth, the applicant's parents (Chinese citizens) must obtain permanent residency in a foreign country before the applicant's birth, and the applicant must have a record of actual residence abroad for more than 2 years from April 30, 2022 to April 30, 2026",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст на 2026 год приёма: от 18 до 25 лет (считается с 1 сентября 2001 по 1 сентября 2008). Граница указана для этого набора.",
+      "evidence": "In principle, applicants must be between the ages of 18 and 25 (calculated from 1 September 2001 to 1 September 2008)",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужно полное среднее образование: диплом о среднем образовании обязателен, а те, кто ещё учится, приносят справку об ожидаемом выпуске. Таджикские 11 классов дают аттестат о среднем образовании и подпадают под «graduated from high school»; число лет школы вуз прямо не называет, поэтому при сомнении эквивалентность уточнять в приёмной.",
+      "evidence": "Proof of full-time high school education. Students expected to graduate should provide an official certificate for graduation expectation.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение идёт на китайском языке — это язык преподавания бакалавриата для иностранцев.",
+      "evidence": "with Chinese as the medium of instruction",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Китайский обязателен: для пути без вступительного экзамена нужен HSK 6 с баллом не ниже 210 (для языковых программ HSK 6 также можно заменить оценкой 6 по китайскому IB HL или оценкой A по китайскому A-Level). Для пути со вступительным экзаменом отдельного сертификата HSK не требуется, но китайский проверяется письменным экзаменом.",
+      "evidence": "HSK 6 with score ≥ 210",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Основной путь — вступительный экзамен самого вуза: письменный экзамен по китайскому, английскому и математике (конец марта) и второй этап-собеседование (середина апреля).",
+      "evidence": "Subjects for the written examination: Chinese, English and Mathematics.",
+      "field": "exam",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Обходной путь без письменного экзамена: подать можно с международными или национальными баллами — SAT от 1400 плюс три курса AP с оценкой от 4, диплом IB с тремя предметами HL и суммой от 36, A-Level с тремя предметами и оценками не ниже ABB или ACT от 30 с письменной частью. Плюс HSK 6 (от 210).",
+      "evidence": "The courses taken must be relevant to the intended major, with results from at least three subjects, and no grade lower than ABB.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявка подаётся онлайн в системе Пекинского университета для иностранных студентов (studyatpku.com), раздел «Degree Students». Срок для пути со вступительным экзаменом: с 12:00 1 января 2026 до 23:59 28 февраля 2026 (по пекинскому времени).",
+      "evidence": "The online application system will be open from 12:00 on 1 January 2026 to 23:59 on 28 February 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Путь без письменного экзамена идёт двумя потоками, выбрать можно только один: первый — с 12:00 19 декабря 2025 до 23:59 28 февраля 2026, второй — с 12:00 12 июня 2026 до 23:59 10 июля 2026.",
+      "evidence": "Round 2: The online application system will be open from 12:00 on 12 June 2026 (Friday) to 23:59 on 10 July 2026 (Friday)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Плата за подачу — 800 юаней, вносится онлайн при отправке заявки и не возвращается.",
+      "evidence": "Application fee.800 RMB, payable online upon submission of the online application. The application fee is non-refundable.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 800,
+        "currency": "CNY",
+        "evidence": "Application fee.800 RMB, payable online upon submission of the online application. The application fee is non-refundable."
+      }
+    },
+    {
+      "ru": "Плата за обучение не названа: вуз пишет, что объявит её после утверждения. Оплата — только онлайн, картой UnionPay или наличными в юанях.",
+      "evidence": "Tuition fee. Further notice will be given after approval.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии снимают плату за обучение: государственная стипендия Китая (CSC) освобождает от оплаты обучения, даёт жильё, медстраховку и ежемесячные деньги на жизнь; стипендия Пекинского университета снимает обучение полностью или частично и даёт медстраховку и ежемесячные деньги; стипендия правительства Пекина трёх типов — от полного покрытия до освобождения только от обучения. По CSC подавать надо через посольство Китая в своей стране.",
+      "evidence": "Exemption from tuition fees, provision of accommodation, provision of medical insurance, and monthly payment of living expenses.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Если школьный аттестат не дотягивает, есть подготовительный год/два Yuke: программа доводит китайский и профильные знания, а успешно сдавшие выпускной экзамен зачисляются на бакалавриат без отдельного конкурса.",
+      "evidence": "After preparatory studies, international students who pass the final examination and meet the admission standards are automatically admitted and can enter Peking University's undergraduate program.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Комплект для пути без экзамена включает две письменные рекомендации, табель за все годы школы и личное заявление; документы на китайском или английском, иначе нужен заверенный перевод.",
+      "evidence": "Two written letters of recommendation.",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-01-01",
+    "closes": "2027-02-28",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "http://www.studyatpku.com",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Пекинский университет (Peking University), Пекин. Подача — онлайн через систему studyatpku.com; бакалавриат для иностранцев ведётся на китайском языке."
+    }
+  },
+  "source": {
+    "url": "https://isd.pku.edu.cn/en/detail.php?id=818",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://isd.pku.edu.cn/en/detail.php?id=818",
+        "contentHash": "sha256:74ad0df1976f7e412eb795db908ea8b502c64c90e03952918d5577d10c528a2b"
+      },
+      {
+        "url": "https://isd.pku.edu.cn/en/detail.php?id=813",
+        "contentHash": "sha256:9f04b178aeecf47b36591a42b55df85c97d6c146a26a4233668d3861d3dcaa1a"
+      },
+      {
+        "url": "https://isd.pku.edu.cn/en/detail.php?id=816",
+        "contentHash": "sha256:31e103d7e6cec226e71f2d02e64e9a59d0422ae72a9046a1b66098463846be74"
+      },
+      {
+        "url": "https://isd.pku.edu.cn/en/undergraduate.php",
+        "contentHash": "sha256:704c0eb5ba4321ed15dfbb3a9437deef41fffaeb7796a8c29df376778574ab87"
+      },
+      {
+        "url": "https://isd.pku.edu.cn/en/scholarship.php",
+        "contentHash": "sha256:f2ecc2e6f5397d7daf31240a5c3ceedae0913166365e498deda20d0f7622c619"
+      },
+      {
+        "url": "https://isd.pku.edu.cn/en/yuke_pre_university_program.php",
+        "contentHash": "sha256:da1f5a0ae68a98ef872071c08e3101774cb0b9b8bce1a1c4b6ef63412c230781"
+      },
+      {
+        "url": "https://isd.pku.edu.cn/en/detail.php?id=529",
+        "contentHash": "sha256:a1432529b6e066932d7acbafc6649490457fe7e7c0ef34aa978fb4fdbef01cb5"
+      },
+      {
+        "url": "https://isd.pku.edu.cn/en/about.php",
+        "contentHash": "sha256:f3c8b0f14e1e1a4aa086dd0f2e716216e631789b6908a84eac1ee69e7b3ca38c"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
