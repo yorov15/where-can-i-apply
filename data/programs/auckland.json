@@ -1,0 +1,287 @@
+{
+  "id": "auckland",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Auckland (Новая Зеландия): приём иностранцев на бакалавриат",
+    "orig": "The University of Auckland"
+  },
+  "hostCountry": "NZ",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное. На 2027 год вуз называет ориентировочную стоимость года (120 пунктов) для иностранцев: от NZ$42,236.40 (Bachelor of Arts) до NZ$60,909.60 (Bachelor of Engineering (Honours)), у Bachelor of Science — NZ$49,581.60-$60,909.60; плюс Student Services Fee $9.44 за пункт (около $1,132.80 за полный год). Жильё и дорогу вуз не покрывает. Стипендий для граждан Таджикистана в списках нет: страновые стипендии перечислены только для Канады, Чили, Китая, Колумбии, Германии, Индии, Индонезии, Малайзии, Мексики, Таиланда, Тонги и США, а бакалаврские стипендии для иностранцев в основном рассчитаны на выпускников новозеландских школ либо на отдельные страны (Индия, Малайзия)."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз отдельно определяет иностранного абитуриента (не гражданин Новой Зеландии или Австралии, без вида на жительство) и описывает для него обычный порядок подачи; отказа по паспорту нет. Смотрели страницы приёма иностранцев, требований, английского, стоимости и сроков."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране не названо, требования к аттестату определяет программа, а конкретные условия по стране вуз предлагает смотреть на странице «Find a study option». Таджикистан отдельно не назван — эквивалент иностранного аттестата уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "If you are applying for admission based on an overseas secondary school qualification you must meet admission, programme and undergraduate English language requirements"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного порога для бакалавриата страницы приёма не называют. Есть отдельная страница «Applicants under 16», но её текст мы не снимали, поэтому её условий не утверждаем. Отдельно: Special Admission — только для лиц 20 лет и старше, граждан или постоянных резидентов Новой Зеландии или Австралии, к иностранцу не относится."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Числового порога по GPA/среднему баллу вуз не публикует: допуск определяется иностранной школьной квалификацией и требованиями программы, а не проходным баллом аттестата. Поздние заявки рассматривают «по академическим заслугам», но конкретной шкалы в источнике нет."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "parts": true,
+          "evidence": "IELTS (Academic) Overall score of 6.0 and no bands below 5.5"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "parts": true,
+          "evidence": "Internet-based TOEFL (iBT): 120-point scale Overall score of 80 and a writing score of 21"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.0,
+          "parts": true,
+          "evidence": "Internet-based TOEFL (iBT): 6-point Overall score of 4.0 and a writing score of 4.0"
+        },
+        {
+          "test": "PTE",
+          "min": 50,
+          "parts": true,
+          "evidence": "Pearson Test of English (PTE) Academic * Overall score of 50 and no PTE Communicative score below 42"
+        }
+      ],
+      "evidence": "If you're an international applicant and your first language is not English, you will need to provide proof of your English proficiency."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем вуз считает того, кто не гражданин Новой Зеландии или Австралии, не имеет вида на жительство в них и не является новозеландским гражданином с островов Кука, Токелау или Ниуэ. Ограничения по стране гражданства нет: для иностранца описан обычный порядок подачи.",
+      "evidence": "You are an international applicant if you: Are not a New Zealand or Australian citizen Have not gained Residency status in New Zealand or Australia Are not a New Zealand citizen from the Cook Islands, Tokelau or Niue",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Требования к допуску зависят от прежней учёбы, а конкретные условия для программы по стране смотрят на странице «Find a study option». Отказа по стране аттестата нет; Таджикистан отдельно не назван.",
+      "evidence": "Entry requirements are based on your prior study and we provide specific requirements for qualifications our international students have most frequently achieved.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "С аттестатом иностранной школы нужно выполнить требования допуска, требования программы и требования по английскому; программы разбирают, какие именно иностранные квалификации принимают (PDF по A-I и J-Z).",
+      "evidence": "If you are applying for admission based on an overseas secondary school qualification you must meet admission, programme and undergraduate English language requirements",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "По стране программу смотрят через «Find a study option»: отдельного списка для Таджикистана нет, требования к иностранной школе заданы программой.",
+      "evidence": "To see the entry requirements (by country) for your intended programme(s), visit Find a study option",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен: если первый язык не английский, нужны подтверждённые результаты одного из одобренных тестов или пройденная учёба на английском.",
+      "evidence": "If you're an international applicant and your first language is not English, you will need to provide proof of your English proficiency.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Минимум для бакалавриата — IELTS (Academic) 6.0 в целом и не ниже 5.5 по каждой части.",
+      "evidence": "IELTS (Academic) Overall score of 6.0 and no bands below 5.5",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT по старой 120-балльной шкале: 80 в целом и 21 за письмо.",
+      "evidence": "Internet-based TOEFL (iBT): 120-point scale Overall score of 80 and a writing score of 21",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT по новой 6-балльной шкале (с января 2026 года): 4.0 в целом и 4.0 за письмо.",
+      "evidence": "Internet-based TOEFL (iBT): 6-point Overall score of 4.0 and a writing score of 4.0",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "PTE Academic: 50 в целом и не ниже 42 по коммуникативным навыкам.",
+      "evidence": "Pearson Test of English (PTE) Academic * Overall score of 50 and no PTE Communicative score below 42",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Граждане стран, где английский считается первым языком (Канада, Ирландия, Сингапур, Великобритания, США), как правило, освобождаются от подтверждения английского — если вуз не попросит отдельно.",
+      "evidence": "English is considered the first language of citizens of: Canada Ireland Singapore The United Kingdom The United States of America",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Обходной путь по английскому: требования можно закрыть, успешно окончив языковую программу вуза — Foundation Certificate in English for Academic Purposes (FCertEAP) или English Pathway for Undergraduate Studies (EPUS). Обучение на этих программах платное, за свой счёт.",
+      "evidence": "You can meet undergraduate English-language requirements by successfully completing either: The Foundation Certificate in English for Academic Purposes (FCertEAP) The English Pathway for Undergraduate Studies (EPUS)",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если академические требования уже выполнены, а английский ещё не сдан, вуз может выдать условный оффер (conditional offer) с условием добрать английский.",
+      "evidence": "If you have met the University's academic entry requirements and are waiting on your English language requirement, you may be issued with a conditional offer, subject to meeting the English language requirement.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение платное: на 2027 год вуз даёт ориентировочную стоимость года для иностранцев. Bachelor of Arts (кроме исполнительских и научных курсов) — NZ$42,236.40; Bachelor of Architectural Studies — NZ$54,754.80; дороже всего Bachelor of Engineering (Honours) — NZ$60,909.60.",
+      "evidence": "2027 fees Programme Estimated fees Bachelor of Architectural Studies NZ$54,754.80",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Дополнительно к обучению — Student Services Fee: в 2026 году $9.44 за пункт, около $1,132.80 за полный год (120 пунктов).",
+      "evidence": "In 2026, you will also pay a Student Services Fee of $9.44 per point, estimated at $1,132.80 for full-time study (120 points).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Среди страновых стипендий и финансовой помощи Таджикистана нет: вуз перечисляет Канаду, Чили, Китай, Колумбию, Германию, Индию, Индонезию, Малайзию, Мексику, Таиланд, Тонгу и США.",
+      "evidence": "On this page: Canada Chile China Colombia Germany India Indonesia Malaysia Mexico Thailand Tonga United States of America",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Бакалаврские стипендии для иностранцев в основном привязаны к новозеландской школе или к отдельным странам: например, стипендия до $20,000 — только тем, кто учился в новозеландской средней школе, и отдельная стипендия для абитуриентов из Индии. Таджикистану такие условия не подходят.",
+      "evidence": "A Scholarship of up to $20,000 toward compulsory tuition fees for new international students who have attended a New Zealand secondary school or kura, and who are enrolling in the first year of an undergraduate degree at Waipapa Taumata Rau, University of Auckland.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки подачи на первый семестр 2027 года у большинства программ — 8 декабря 2026 (Arts, Commerce, Science, Engineering, Law (Part I) и др.). Есть более ранние сроки: медицина, оптометрия, фармация и медицинская визуализация — 1 июля 2026; сестринское дело для иностранцев — 1 ноября 2026.",
+      "evidence": "Semester One 2027 application closing dates Programme of study Application closing date Arts and Education Bachelor of Arts 8 December 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Иностранцам советуют подавать как можно раньше, чтобы успеть оформить визу.",
+      "evidence": "International students The application process should be started as soon as possible so there is enough time to apply for a visa.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Поздние заявки по большинству программ принимают после срока, но рассматривают по академическим заслугам и только при наличии мест.",
+      "evidence": "Late applications Applications will be accepted after the closing date for most programmes but will be considered on the basis of academic merit, if places are available.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-12-08",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.auckland.ac.nz/en/study/applications-and-admissions/apply-now.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: The University of Auckland (Waipapa Taumata Rau), Окленд, Новая Зеландия. Приём иностранцев на бакалавриат — через Application to Study (Apply now); допуск с иностранного аттестата определяется программой и страной, английский подтверждается тестом или языковой программой вуза. Обучение платное, для граждан Таджикистана отдельных стипендий нет."
+    }
+  },
+  "source": {
+    "url": "https://www.auckland.ac.nz/en/study/international-students/entry-requirements-international-students.html",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.auckland.ac.nz/en/study/international-students/entry-requirements-international-students.html",
+        "contentHash": "sha256:1f290f3a810ba7c9efe122b8ac35d32ee186d274d8d88735de71c73cc2597eb2"
+      },
+      {
+        "url": "https://www.auckland.ac.nz/en/study/international-students/how-to-apply.html",
+        "contentHash": "sha256:383b4fa095a4187dc0e9a28fa73c05db6f3462804a9c91f715673f48c00fe60b"
+      },
+      {
+        "url": "https://www.auckland.ac.nz/en/study/international-students/scholarships-loans-and-funding.html",
+        "contentHash": "sha256:6fec84bace12f1f5a3d52f15f116cc81d69d110ef29919879f74f73aa67d14a4"
+      },
+      {
+        "url": "https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/international-student-fees.html",
+        "contentHash": "sha256:f6e59ae70232c3a1b056ed14d4789ea1eac1ae56573a4345a3ac3d8e0238dafc"
+      },
+      {
+        "url": "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements.html",
+        "contentHash": "sha256:f21fb29f19f061dbb4087b10fa184341256508e9e1d545466d239ff21419d41c"
+      },
+      {
+        "url": "https://www.auckland.ac.nz/en/study/applications-and-admissions/apply-now.html",
+        "contentHash": "sha256:6326284c1a78611ebde595c95495c9b369dc486042085c4d4f9663fb8c608293"
+      },
+      {
+        "url": "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements.html",
+        "contentHash": "sha256:5ca57c44a35a4305ce64863223572095330077e4224a4d54df8972cda71e7e28"
+      },
+      {
+        "url": "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/overseas-secondary-school-applicants.html",
+        "contentHash": "sha256:ecdc778614243361f9170435acb162cb9ea5538db90d27f9ae0ad9cbfc4d7f65"
+      },
+      {
+        "url": "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/undergraduate-english-language-requirements.html",
+        "contentHash": "sha256:a0e43b759bf2779a852d5e45f52d3482504a3530ad3f1f1c6ac7d6981b36bd73"
+      },
+      {
+        "url": "https://www.auckland.ac.nz/en/study/applications-and-admissions/how-to-apply/undergraduate-application-closing-dates.html",
+        "contentHash": "sha256:669b759ca705ea00c2d7b484c19e74d918c4d8fd862e685397b2a0b16e739e8a"
+      },
+      {
+        "url": "https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/international-student-fees/undergraduate-international-fees.html",
+        "contentHash": "sha256:1a856ea6e212874c1c4886c1e6909f7a6c374ceee1bff9880fd92acacaeefbbc"
+      },
+      {
+        "url": "https://www.auckland.ac.nz/en/study/international-students/scholarships-loans-and-funding/country-specific-scholarships-and-funding0.html",
+        "contentHash": "sha256:8e71cc0d55d5f57ef9dac76a77b6979a0f000ecced88e97ac87603bdfe95d769"
+      },
+      {
+        "url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/scholarships-for-international-students/undergraduate-scholarships-for-international-students.html",
+        "contentHash": "sha256:c4d1cca2774df6405130c16eafbc23ca220e22c2b695c0387ec9fffdd92c67ff"
+      },
+      {
+        "url": "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/special-admission.html",
+        "contentHash": "sha256:fca98c0fbd3e231885c0eb5359bcbdb378af31557135ac7f1285b4e536721ae1"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
