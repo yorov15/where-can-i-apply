@@ -3865,178 +3865,502 @@ files = [
 approvedBy = "human"
 approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [zurich]
 name = "University of Zurich (Швейцария): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.uzh.ch/en/studies/application/bachelor.html",
+files = [
+  { path = "manual/zurich/00-bachelor.html", url = "https://www.uzh.ch/en/studies/application/bachelor.html" },
+  { path = "manual/zurich/01-apply.html", url = "https://www.uzh.ch/en/studies/application/apply.html" },
+  { path = "manual/zurich/02-entrance-examination.html", url = "https://www.uzh.ch/en/studies/application/bachelor/entrancexamination.html" },
+  { path = "manual/zurich/03-deadlines.html", url = "https://www.uzh.ch/en/studies/application/deadlines.html" },
+  { path = "manual/zurich/04-language-requirements.html", url = "https://www.uzh.ch/en/studies/application/languagerequirements.html" },
+  { path = "manual/zurich/05-legal-basis.html", url = "https://www.uzh.ch/en/studies/application/legalbasis.html" },
+  { path = "manual/zurich/06-fees.html", url = "https://www.uzh.ch/en/studies/application/fees.html" },
+  { path = "manual/zurich/07-internationals.html", url = "https://www.internationals.uzh.ch/en.html" },
+  { path = "manual/zurich/08-financing.html", url = "https://www.studienfinanzierung.uzh.ch/en.html" },
+  { path = "manual/zurich/09-financing-deadlines.html", url = "https://www.studienfinanzierung.uzh.ch/en/application_deadlines.html" },
+  { path = "manual/zurich/10-financing-faq.html", url = "https://www.studienfinanzierung.uzh.ch/en/faq/faq_scholarships_loans_requests.html" },
+  { path = "manual/zurich/11-entry-residence.html", url = "https://www.uzh.ch/en/studies/application/entry.html" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [uba]
 name = "Universidad de Buenos Aires (Аргентина): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.uba.ar/estudiantesextranjeros",
+files = [
+  { path = "manual/uba/00-estudiantes-extranjeros.html", url = "https://www.uba.ar/estudiantesextranjeros" },
+  { path = "manual/uba/01-ingreso-uba.html", url = "https://www.uba.ar/ingresouba" },
+  { path = "manual/uba/02-preguntas-frecuentes.html", url = "https://www.uba.ar/preguntasfrecuentes" },
+  { path = "manual/uba/03-becas-grado.html", url = "https://www.uba.ar/becas-grado" },
+  { path = "manual/uba/04-tramites.html", url = "https://www.uba.ar/tramites" },
+  { path = "manual/uba/05-facultades.html", url = "https://www.uba.ar/facultades" },
+  { path = "manual/uba/06-ubaxxi-inscripciones.html", url = "https://ubaxxi.uba.ar/inscripciones/" },
+  { path = "manual/uba/07-ubaxxi-calendario.html", url = "https://ubaxxi.uba.ar/calendario-academico/" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [peking-university]
 name = "Peking University (Китай): приём иностранцев на бакалавриат"
-urls = [
-  "https://isd.pku.edu.cn/en/",
+files = [
+  { path = "manual/peking-university/00-exam-2026.html", url = "https://isd.pku.edu.cn/en/detail.php?id=818" },
+  { path = "manual/peking-university/01-noexam-2026.html", url = "https://isd.pku.edu.cn/en/detail.php?id=813" },
+  { path = "manual/peking-university/02-noexam-scores.html", url = "https://isd.pku.edu.cn/en/detail.php?id=816" },
+  { path = "manual/peking-university/03-undergraduate.html", url = "https://isd.pku.edu.cn/en/undergraduate.php" },
+  { path = "manual/peking-university/04-scholarship.html", url = "https://isd.pku.edu.cn/en/scholarship.php" },
+  { path = "manual/peking-university/05-yuke.html", url = "https://isd.pku.edu.cn/en/yuke_pre_university_program.php" },
+  { path = "manual/peking-university/06-admission-catalogue.html", url = "https://isd.pku.edu.cn/en/detail.php?id=529" },
+  { path = "manual/peking-university/07-about.html", url = "https://isd.pku.edu.cn/en/about.php" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [tsinghua-university]
 name = "Tsinghua University (Китай): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.tsinghua.edu.cn/en/Admissions/International_Students1/Overview.htm",
+files = [
+  { path = "manual/tsinghua-university/00-eligibility.html", url = "https://international.join-tsinghua.edu.cn/Admission1/Eligibility.htm" },
+  { path = "manual/tsinghua-university/01-application-procedures.html", url = "https://international.join-tsinghua.edu.cn/Admission1/Application_Procedures.htm" },
+  { path = "manual/tsinghua-university/02-schedule.html", url = "https://international.join-tsinghua.edu.cn/Admission1/Schedule.htm" },
+  { path = "manual/tsinghua-university/03-fees.html", url = "https://international.join-tsinghua.edu.cn/Admission1/Fees.htm" },
+  { path = "manual/tsinghua-university/04-scholarships.html", url = "https://international.join-tsinghua.edu.cn/Admission1/Freshmen_Scholarships1.htm" },
+  { path = "manual/tsinghua-university/05-faq.html", url = "https://international.join-tsinghua.edu.cn/Admission1/FAQ.htm" },
+  { path = "manual/tsinghua-university/06-programs-overview.html", url = "https://international.join-tsinghua.edu.cn/Admission1/Undergraduate_Programs_Overview.htm" },
+  { path = "manual/tsinghua-university/07-english-taught.html", url = "https://international.join-tsinghua.edu.cn/English_Taught_Programs.htm" },
+  { path = "manual/tsinghua-university/08-guide-zhishan.html", url = "https://international.join-tsinghua.edu.cn/info/1082/1183.htm" },
+  { path = "manual/tsinghua-university/09-guide-science.html", url = "https://international.join-tsinghua.edu.cn/info/1082/1185.htm" },
+  { path = "manual/tsinghua-university/10-guide-urban.html", url = "https://international.join-tsinghua.edu.cn/info/1082/1184.htm" },
+  { path = "manual/tsinghua-university/11-arts-design.html", url = "https://international.join-tsinghua.edu.cn/Admission1/Undergraduate_Programs_of_Academy_of_Arts___Desi.htm" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [unsw]
 name = "UNSW Sydney (Австралия): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.unsw.edu.au/study/international-students",
+files = [
+  { path = "manual/unsw/00-international.html", url = "https://www.unsw.edu.au/study/how-to-apply/international" },
+  { path = "manual/unsw/01-english.html", url = "https://www.unsw.edu.au/study/how-to-apply/english-language-requirements" },
+  { path = "manual/unsw/02-fees.html", url = "https://www.unsw.edu.au/study/how-to-apply/fees" },
+  { path = "manual/unsw/03-financial-aid.html", url = "https://www.unsw.edu.au/study/how-to-apply/fees/financial-aid" },
+  { path = "manual/unsw/04-scholarships.html", url = "https://www.unsw.edu.au/study/how-to-apply/scholarships" },
+  { path = "manual/unsw/05-apply-faqs.html", url = "https://www.unsw.edu.au/study/how-to-apply/apply-online-faqs" },
+  { path = "manual/unsw/06-admissions-info.html", url = "https://www.unsw.edu.au/study/international-students/admissions-info" },
+  { path = "manual/unsw/07-admission-pathways.html", url = "https://www.unsw.edu.au/study/how-to-apply/international/admission-pathways" },
+  { path = "manual/unsw/08-entry-requirements.html", url = "https://www.unsw.edu.au/study/how-to-apply/undergraduate/entry-requirements" },
+  { path = "manual/unsw/09-accepted-qualifications.html", url = "https://www.unsw.edu.au/study/how-to-apply/accepted-qualifications" },
+  { path = "manual/unsw/10-international-student-award.html", url = "https://www.scholarships.unsw.edu.au/international-student-award" },
+  { path = "manual/unsw/11-isa-eligible-countries.txt", url = "https://www.scholarships.unsw.edu.au/sites/default/files/2026-04/International%20Student%20Award_List%20of%20Eligible%20Countries.pdf" },
+  { path = "manual/unsw/12-accepted-qualifications-by-country.txt", url = "https://www.unsw.edu.au/content/dam/pdfs/future-students/2021-10-qualifications/20220331-FSR-accepted-qualifications_4.csv" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [melbourne]
 name = "University of Melbourne (Австралия): приём иностранцев на бакалавриат"
-urls = [
-  "https://study.unimelb.edu.au/how-to-apply/international-students",
+files = [
+  { path = "manual/melbourne/00-entry-requirements.html", url = "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/entry-requirements" },
+  { path = "manual/melbourne/01-applications.html", url = "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/applications" },
+  { path = "manual/melbourne/02-english-language-requirements.html", url = "https://study.unimelb.edu.au/how-to-apply/english-language-requirements" },
+  { path = "manual/melbourne/03-undergraduate-english-language-requirements.html", url = "https://study.unimelb.edu.au/how-to-apply/english-language-requirements/undergraduate-english-language-requirements" },
+  { path = "manual/melbourne/04-fees-and-payments.html", url = "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/fees-and-payments" },
+  { path = "manual/melbourne/05-international-fee-tables-2027.pdf", url = "https://study.unimelb.edu.au/__data/assets/pdf_file/0034/462949/2027InternationalFeeTables.pdf" },
+  { path = "manual/melbourne/06-offers-and-enrolment.html", url = "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/offers-and-enrolments" },
+  { path = "manual/melbourne/07-student-definitions.html", url = "https://study.unimelb.edu.au/how-to-apply/domestic-and-international-student-definitions" },
+  { path = "manual/melbourne/08-recognised-qualifications.html", url = "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/recognised-vce-equivalent-qualifications" },
+  { path = "manual/melbourne/09-subject-prerequisites.html", url = "https://study.unimelb.edu.au/how-to-apply/satisfy-subject-prerequisites" },
+  { path = "manual/melbourne/10-under-18-students.html", url = "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/under-18-international-students" },
+  { path = "manual/melbourne/11-genuine-student-requirement.html", url = "https://study.unimelb.edu.au/how-to-apply/genuine-student-requirement" },
+  { path = "manual/melbourne/12-melbourne-international-undergraduate-scholarship.html", url = "https://scholarships.unimelb.edu.au/awards/melbourne-international-undergraduate-scholarship" },
+  { path = "manual/melbourne/13-guaranteed-and-minimum-entry-scores.html", url = "https://study.unimelb.edu.au/how-to-apply/guaranteed-and-minimum-entry-scores-for-international-students" },
+  { path = "manual/melbourne/14-international-students.html", url = "https://study.unimelb.edu.au/student-life/international-students" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [sydney]
 name = "University of Sydney (Австралия): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.sydney.edu.au/study/applying/how-to-apply/international-students.html",
+files = [
+  { path = "manual/sydney/00-international-apply.html", url = "https://www.sydney.edu.au/study/applying/how-to-apply/international-students.html" },
+  { path = "manual/sydney/01-english.html", url = "https://www.sydney.edu.au/study/applying/how-to-apply/international-students/english-language-requirements.html" },
+  { path = "manual/sydney/02-recognised-qualifications.html", url = "https://www.sydney.edu.au/study/applying/how-to-apply/undergraduate/recognised-qualifications.html" },
+  { path = "manual/sydney/03-application-dates.html", url = "https://www.sydney.edu.au/study/applying/application-dates.html" },
+  { path = "manual/sydney/04-tuition-fees.html", url = "https://www.sydney.edu.au/study/fees-and-loans/international-student-tuition-fees.html" },
+  { path = "manual/sydney/05-scholarships.html", url = "https://www.sydney.edu.au/scholarships/international.html" },
+  { path = "manual/sydney/06-living-costs.html", url = "https://www.sydney.edu.au/study/fees-and-loans/other-costs/living-costs.html" },
+  { path = "manual/sydney/07-financial-assistance.html", url = "https://www.sydney.edu.au/study/fees-and-loans/financial-assistance.html" },
+  { path = "manual/sydney/08-preparation-programs.html", url = "https://www.sydney.edu.au/study/applying/how-to-apply/international-students/preparation-programs.html" },
+  { path = "manual/sydney/09-admission-pathways.html", url = "https://www.sydney.edu.au/study/applying/admission-pathways.html" },
+  { path = "manual/sydney/10-additional-costs.html", url = "https://www.sydney.edu.au/study/fees-and-loans/other-costs.html" },
+  { path = "manual/sydney/11-scholarship-award.html", url = "https://www.sydney.edu.au/study/fees-and-loans/scholarships/sydney-international-student-award.html" },
+  { path = "manual/sydney/12-concordance.pdf", url = "https://www.sydney.edu.au/content/dam/corporate/documents/study/how-to-apply/english-language-concordance-table-july-2026.pdf" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [anu]
 name = "Australian National University (Австралия): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.anu.edu.au/study/apply",
+files = [
+  { path = "manual/anu/00-international-applications.html", url = "https://study.anu.edu.au/apply/international-applications" },
+  { path = "manual/anu/01-assessment.html", url = "https://study.anu.edu.au/apply/international-applications/assessment" },
+  { path = "manual/anu/02-english-language-requirements.html", url = "https://study.anu.edu.au/apply/english-language-requirements" },
+  { path = "manual/anu/03-documentation-requirements.html", url = "https://study.anu.edu.au/apply/international-applications/documentation-requirements" },
+  { path = "manual/anu/04-minimum-scores-ug.html", url = "https://study.anu.edu.au/node/11000" },
+  { path = "manual/anu/05-additional-selection-criteria.html", url = "https://study.anu.edu.au/apply/anu-programs-additional-selection-criteria" },
+  { path = "manual/anu/06-under-18.html", url = "https://study.anu.edu.au/apply/international-students-under-18-years-age" },
+  { path = "manual/anu/07-fees-payments.html", url = "https://www.anu.edu.au/study/fees-payments" },
+  { path = "manual/anu/08-scholarships.html", url = "https://www.anu.edu.au/scholarships" },
+  { path = "manual/anu/10-english-language-policy.pdf", url = "https://policies.anu.edu.au/ppl/pdfdownload/1801" },
+  { path = "manual/anu/11-international-tuition-fees.html", url = "https://www.anu.edu.au/students/program-administration/fees-payments/international-tuition-fees" },
+  { path = "manual/anu/12-schedule-tuition-fees-2027.pdf", url = "https://d1zkbwgd2iyy9p.cloudfront.net/files/2026-09/Schedule%20of%20Tuition%20fees%202027.pdf" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [monash]
 name = "Monash University (Австралия): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.monash.edu/study/how-to-apply",
+files = [
+  { path = "manual/monash/00-international.html", url = "https://www.monash.edu/study/international" },
+  { path = "manual/monash/01-apply-international-ug.html", url = "https://www.monash.edu/admissions/apply/international-ug" },
+  { path = "manual/monash/02-application-process-intl.html", url = "https://www.monash.edu/study/how-to-apply/application-process/international-students" },
+  { path = "manual/monash/03-entry-requirements.html", url = "https://www.monash.edu/study/how-to-apply/entry-requirements" },
+  { path = "manual/monash/04-english-language.html", url = "https://www.monash.edu/admissions/entry-requirements/english-language" },
+  { path = "manual/monash/05-english-tabs.html", url = "https://www.monash.edu/admissions/entry-requirements/english-language/tabs-english-language-requirements" },
+  { path = "manual/monash/06-entry-pathways-intl.html", url = "https://www.monash.edu/study/courses/entry-pathways-international" },
+  { path = "manual/monash/07-apply-online.html", url = "https://www.monash.edu/admissions/apply/online" },
+  { path = "manual/monash/08-fees-hub.html", url = "https://www.monash.edu/study/fees-scholarships" },
+  { path = "manual/monash/09-fees.html", url = "https://www.monash.edu/study/fees-scholarships/fees" },
+  { path = "manual/monash/10-scholarships.html", url = "https://www.monash.edu/study/fees-scholarships/scholarships" },
+  { path = "manual/monash/11-merit-scholarship.html", url = "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770" },
+  { path = "manual/monash/12-min-entry-requirements.html", url = "https://www.monash.edu/admissions/entry-requirements" },
+  { path = "manual/monash/13-age-requirements.html", url = "https://www.monash.edu/admissions/entry-requirements/age-requirements" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [toronto]
 name = "University of Toronto (Канада): приём иностранцев на бакалавриат"
-urls = [
-  "https://future.utoronto.ca/international-students/",
+files = [
+  { path = "manual/toronto/00-international-students.html", url = "https://future.utoronto.ca/international-students" },
+  { path = "manual/toronto/01-requirements-international-high-schools.html", url = "https://future.utoronto.ca/requirements-international-high-schools" },
+  { path = "manual/toronto/02-requirements-international-students.html", url = "https://future.utoronto.ca/requirements-international-students" },
+  { path = "manual/toronto/03-english-language-requirements.html", url = "https://future.utoronto.ca/english-language-requirements" },
+  { path = "manual/toronto/04-fees.html", url = "https://future.utoronto.ca/fees" },
+  { path = "manual/toronto/05-scholarships.html", url = "https://future.utoronto.ca/scholarships" },
+  { path = "manual/toronto/06-international-student-financial-aid.html", url = "https://future.utoronto.ca/international-student-financial-aid" },
+  { path = "manual/toronto/07-deadlines.html", url = "https://future.utoronto.ca/deadlines" },
+  { path = "manual/toronto/08-admissions-timelines.html", url = "https://future.utoronto.ca/admissions-timelines" },
+  { path = "manual/toronto/09-applying.html", url = "https://future.utoronto.ca/applying" },
+  { path = "manual/toronto/10-required-documents.html", url = "https://future.utoronto.ca/required-documents" },
+  { path = "manual/toronto/11-admission-awards.html", url = "https://future.utoronto.ca/admission-awards" },
+  { path = "manual/toronto/12-country-requirements.html", url = "https://future.utoronto.ca/international-high-school-requirements-country" },
+  { path = "manual/toronto/13-country-requirements-p6.html", url = "https://future.utoronto.ca/international-high-school-requirements-country?page=6" },
+  { path = "manual/toronto/14-fee-schedule.html", url = "https://studentaccount.utoronto.ca/tuition-fees/current-fall-winter-fee-refund-schedules/" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [mcgill]
 name = "McGill University (Канада): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.mcgill.ca/undergraduate-admissions/international-students",
+files = [
+  { path = "manual/mcgill/00-requirements-international.html", url = "https://www.mcgill.ca/undergraduate-admissions/apply/requirements/international" },
+  { path = "manual/mcgill/01-english-proficiency.html", url = "https://www.mcgill.ca/undergraduate-admissions/apply/english-proficiency" },
+  { path = "manual/mcgill/02-admission-dates.html", url = "https://www.mcgill.ca/undergraduate-admissions/apply/admission-decision-dates" },
+  { path = "manual/mcgill/03-international-students.html", url = "https://www.mcgill.ca/undergraduate-admissions/international-students" },
+  { path = "manual/mcgill/04-finances.html", url = "https://www.mcgill.ca/undergraduate-admissions/finances" },
+  { path = "manual/mcgill/05-tuition-increases.html", url = "https://www.mcgill.ca/student-accounts/tuition-fees/general-tuition-and-fees-information/tuition-increases" },
+  { path = "manual/mcgill/06-tuition-rates.html", url = "https://www.mcgill.ca/student-accounts/tuition-fees/tuition-and-fees-tables-and-rates/tuition-rates-information/undergraduate-tuition-rates-fallwinter-2026-27" },
+  { path = "manual/mcgill/07-scholarships-international.html", url = "https://www.mcgill.ca/studentaid/scholarships-aid/international-students" },
+  { path = "manual/mcgill/08-entrance-scholarships.html", url = "https://www.mcgill.ca/studentaid/scholarships-aid/future-undergrads/entrance-scholarships" },
+  { path = "manual/mcgill/09-other-international.html", url = "https://www.mcgill.ca/undergraduate-admissions/apply/requirements/international/other" },
+  { path = "manual/mcgill/10-step-by-step.html", url = "https://www.mcgill.ca/undergraduate-admissions/step-step-guide" },
+  { path = "manual/mcgill/11-tuition-guarantee.pdf", url = "https://www.mcgill.ca/student-accounts/files/student-accounts/bachelortuitionguaranteerates_communications.pdf" },
+  { path = "manual/mcgill/12-submit-documents.html", url = "https://www.mcgill.ca/undergraduate-admissions/apply/submit-documents" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [ubc]
 name = "University of British Columbia (Канада): приём иностранцев на бакалавриат"
-urls = [
-  "https://you.ubc.ca/applying-ubc/",
+files = [
+  { path = "manual/ubc/00-requirements.html", url = "https://you.ubc.ca/applying-ubc/requirements/" },
+  { path = "manual/ubc/01-international-high-schools.html", url = "https://you.ubc.ca/applying-ubc/requirements/international-high-schools/" },
+  { path = "manual/ubc/02-english-language.html", url = "https://you.ubc.ca/applying-ubc/requirements/english-language-competency/" },
+  { path = "manual/ubc/03-tuition-fees.html", url = "https://you.ubc.ca/financial-planning/tuition-fees/" },
+  { path = "manual/ubc/04-scholarships-intl.html", url = "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/" },
+  { path = "manual/ubc/05-dates-deadlines.html", url = "https://you.ubc.ca/applying-ubc/dates-deadlines/" },
+  { path = "manual/ubc/06-how-to-apply.html", url = "https://you.ubc.ca/applying-ubc/how-to-apply/" },
+  { path = "manual/ubc/07-application-evaluation.html", url = "https://you.ubc.ca/applying-ubc/application-evaluation/" },
+  { path = "manual/ubc/08-personal-profile.html", url = "https://you.ubc.ca/applying-ubc/how-to-apply/personal-profile/" },
+  { path = "manual/ubc/09-international.html", url = "https://you.ubc.ca/international/" },
+  { path = "manual/ubc/10-financial-schedule.html", url = "https://you.ubc.ca/financial-planning/financial-schedule/" },
+  { path = "manual/ubc/11-ubc-tuition-undergraduate.html", url = "https://vancouver.calendar.ubc.ca/fees/tuition-fees/undergraduate" },
+  { path = "manual/ubc/12-ubc-application-fees.html", url = "https://vancouver.calendar.ubc.ca/fees/application-and-administrative-fees" },
+  { path = "manual/ubc/13-cal-intl-admissions.html", url = "https://vancouver.calendar.ubc.ca/admissions/international-applicants" },
+  { path = "manual/ubc/14-cal-secondary-school.html", url = "https://vancouver.calendar.ubc.ca/admissions/admission-secondary-school-applicants" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [tokyo]
 name = "University of Tokyo (Япония): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.u-tokyo.ac.jp/en/prospective-students/prospective_students.html",
+files = [
+  { path = "manual/tokyo/00-undergraduate.html", url = "https://www.u-tokyo.ac.jp/en/prospective-students/undergraduate.html" },
+  { path = "manual/tokyo/01-undergraduate-english-gsc.html", url = "https://www.u-tokyo.ac.jp/en/prospective-students/undergraduate_english.html" },
+  { path = "manual/tokyo/02-undergraduate-admissions.html", url = "https://www.u-tokyo.ac.jp/en/prospective-students/undergraduate_admissions.html" },
+  { path = "manual/tokyo/03-tuition-fees.html", url = "https://www.u-tokyo.ac.jp/en/prospective-students/tuition_fees.html" },
+  { path = "manual/tokyo/04-exemptions.html", url = "https://www.u-tokyo.ac.jp/en/prospective-students/exemptions.html" },
+  { path = "manual/tokyo/05-scholarships.html", url = "https://www.u-tokyo.ac.jp/en/prospective-students/scholarships.html" },
+  { path = "manual/tokyo/06-mext-scholarship.html", url = "https://www.u-tokyo.ac.jp/en/prospective-students/mext_scholarship.html" },
+  { path = "manual/tokyo/07-peak-closed.html", url = "https://peak.c.u-tokyo.ac.jp/" },
+  { path = "manual/tokyo/08-special-screening-ja.html", url = "https://www.u-tokyo.ac.jp/ja/admissions/undergraduate/e01_02_04.html" },
+  { path = "manual/tokyo/09-guidelines-2027.pdf", url = "https://www.u-tokyo.ac.jp/content/400291798.pdf" },
+  { path = "manual/tokyo/10-design-admissions.html", url = "https://design.adm.u-tokyo.ac.jp/admissions/" },
+  { path = "manual/tokyo/11-design-overview-2027.html", url = "https://design.adm.u-tokyo.ac.jp/admissions/admissions-overview-2027/" },
+  { path = "manual/tokyo/12-gsc-eligibility.html", url = "https://www.s.u-tokyo.ac.jp/GSC/admissions/eligibility.html" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [ntu-taiwan]
 name = "National Taiwan University (Тайвань): приём иностранцев на бакалавриат"
-urls = [
-  "https://admissions.ntu.edu.tw/overseas-students/",
+files = [
+  { path = "manual/ntu-taiwan/00-international-students.html", url = "https://admissions.ntu.edu.tw/apply/degree-students/international-students/" },
+  { path = "manual/ntu-taiwan/01-admission-information.html", url = "https://admissions.ntu.edu.tw/apply/degree-students/admission-information/" },
+  { path = "manual/ntu-taiwan/02-academic-requirements.html", url = "https://admissions.ntu.edu.tw/apply/degree-students/admission-information/academic-requirements/" },
+  { path = "manual/ntu-taiwan/03-application-timeline.html", url = "https://admissions.ntu.edu.tw/apply/degree-students/admission-information/application-timeline/" },
+  { path = "manual/ntu-taiwan/04-language-proficiency.html", url = "https://admissions.ntu.edu.tw/apply/degree-students/admission-information/language-proficiency-requirements/" },
+  { path = "manual/ntu-taiwan/05-student-status.html", url = "https://admissions.ntu.edu.tw/apply/degree-students/admission-information/student-status/" },
+  { path = "manual/ntu-taiwan/06-conditional-admission.html", url = "https://admissions.ntu.edu.tw/apply/degree-students/conditional-admission/" },
+  { path = "manual/ntu-taiwan/07-tuition-fees.html", url = "https://admissions.ntu.edu.tw/fees-scholarships/tuition-fees/" },
+  { path = "manual/ntu-taiwan/08-scholarships.html", url = "https://admissions.ntu.edu.tw/fees-scholarships/scholarships/" },
+  { path = "manual/ntu-taiwan/09-cost-of-living.html", url = "https://admissions.ntu.edu.tw/fees-scholarships/cost-of-living/" },
+  { path = "manual/ntu-taiwan/10-faq.html", url = "https://admissions.ntu.edu.tw/apply/faq/" },
+  { path = "manual/ntu-taiwan/11-taught-programs.html", url = "https://admissions.ntu.edu.tw/learn/taught-programs/" },
+  { path = "manual/ntu-taiwan/12-study-at-ntu-2027.pdf", url = "https://admissions.ntu.edu.tw/wp-content/uploads/Study-at-NTU_2027-Entry_0820.pdf" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [um-malaya]
 name = "Universiti Malaya (Малайзия): приём иностранцев на бакалавриат"
-urls = [
-  "https://study.um.edu.my/how-to-apply",
+files = [
+  { path = "manual/um-malaya/00-study-home.html", url = "https://study.um.edu.my/" },
+  { path = "manual/um-malaya/01-how-to-apply.html", url = "https://study.um.edu.my/how-to-apply" },
+  { path = "manual/um-malaya/02-international-student.html", url = "https://study.um.edu.my/international-student" },
+  { path = "manual/um-malaya/03-programmes.html", url = "https://study.um.edu.my/programmes" },
+  { path = "manual/um-malaya/04-faqs.html", url = "https://study.um.edu.my/faqs-amp-info" },
+  { path = "manual/um-malaya/05-aasd-faq-admission.html", url = "https://aasd.um.edu.my/faq-admission" },
+  { path = "manual/um-malaya/06-aasd-faq-ug-international.html", url = "https://aasd.um.edu.my/faq-ug-international-admission" },
+  { path = "manual/um-malaya/07-financial-aid-undergraduate.html", url = "https://aasd.um.edu.my/financial-aid-for-undergraduate" },
+  { path = "manual/um-malaya/08-student-pass.html", url = "https://aasd.um.edu.my/new-student-pass-overview" },
+  { path = "manual/um-malaya/09-apply.html", url = "https://apply.um.edu.my/" },
+  { path = "manual/um-malaya/10-programme-iss.html", url = "https://study.um.edu.my/bachelor-of-arts-international-and-strategic-studies" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [auckland]
 name = "University of Auckland (Новая Зеландия): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.auckland.ac.nz/en/study/international-students.html",
+files = [
+  { path = "manual/auckland/00-intl-entry.html", url = "https://www.auckland.ac.nz/en/study/international-students/entry-requirements-international-students.html" },
+  { path = "manual/auckland/01-intl-apply.html", url = "https://www.auckland.ac.nz/en/study/international-students/how-to-apply.html" },
+  { path = "manual/auckland/02-intl-scholarships.html", url = "https://www.auckland.ac.nz/en/study/international-students/scholarships-loans-and-funding.html" },
+  { path = "manual/auckland/03-intl-fees.html", url = "https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/international-student-fees.html" },
+  { path = "manual/auckland/04-entry-requirements.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements.html" },
+  { path = "manual/auckland/05-apply-now.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/apply-now.html" },
+  { path = "manual/auckland/06-undergrad-entry.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements.html" },
+  { path = "manual/auckland/07-overseas-secondary.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/overseas-secondary-school-applicants.html" },
+  { path = "manual/auckland/08-undergrad-english.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/undergraduate-english-language-requirements.html" },
+  { path = "manual/auckland/09-closing-dates.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/how-to-apply/undergraduate-application-closing-dates.html" },
+  { path = "manual/auckland/10-undergrad-intl-fees.html", url = "https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/international-student-fees/undergraduate-international-fees.html" },
+  { path = "manual/auckland/11-country-scholarships.html", url = "https://www.auckland.ac.nz/en/study/international-students/scholarships-loans-and-funding/country-specific-scholarships-and-funding0.html" },
+  { path = "manual/auckland/12-undergrad-intl-scholarships.html", url = "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/scholarships-for-international-students/undergraduate-scholarships-for-international-students.html" },
+  { path = "manual/auckland/13-special-admission.html", url = "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/special-admission.html" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [uwa]
 name = "University of Western Australia (Австралия): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.uwa.edu.au/study/how-to-apply/international-applicants",
+files = [
+  { path = "manual/uwa/00-international.html", url = "https://www.uwa.edu.au/study/international-students" },
+  { path = "manual/uwa/01-apply-international.html", url = "https://www.uwa.edu.au/study/how-to-apply/international-applicants" },
+  { path = "manual/uwa/02-apply-undergraduate.html", url = "https://www.uwa.edu.au/study/how-to-apply/undergraduate" },
+  { path = "manual/uwa/03-how-to-apply.html", url = "https://www.uwa.edu.au/study/how-to-apply" },
+  { path = "manual/uwa/04-english-language.html", url = "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility/english-language-requirements" },
+  { path = "manual/uwa/05-entry-standards.html", url = "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility/entry-standards" },
+  { path = "manual/uwa/06-overseas-qualifications.html", url = "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility/international-and-overseas-qualifications" },
+  { path = "manual/uwa/07-pathways.html", url = "https://www.uwa.edu.au/study/how-to-apply/pathways-and-eligibility/entry-pathways/international-student-pathways" },
+  { path = "manual/uwa/08-international-fees.html", url = "https://www.uwa.edu.au/study/scholarships-and-fees/international-student-fees" },
+  { path = "manual/uwa/09-scholarships.html", url = "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships" },
+  { path = "manual/uwa/10-international-scholarships.html", url = "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships" },
+  { path = "manual/uwa/11-global-excellence.html", url = "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship" },
+  { path = "manual/uwa/12-international-student-award.html", url = "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/international-student-award" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [adelaide]
 name = "Adelaide University (Австралия): приём иностранцев на бакалавриат"
-urls = [
-  "https://adelaide.edu.au/study/international-students/how-to-apply/",
+files = [
+  { path = "manual/adelaide/00-how-to-apply.html", url = "https://adelaide.edu.au/study/international-students/how-to-apply/" },
+  { path = "manual/adelaide/01-entry-requirements.html", url = "https://adelaide.edu.au/study/international-students/how-to-apply/entry-requirements/" },
+  { path = "manual/adelaide/02-english-language.html", url = "https://adelaide.edu.au/study/international-students/how-to-apply/entry-requirements/english-language-proficiency/" },
+  { path = "manual/adelaide/03-apply-now.html", url = "https://adelaide.edu.au/study/international-students/how-to-apply/apply-now/" },
+  { path = "manual/adelaide/04-pathway-providers.html", url = "https://adelaide.edu.au/study/international-students/pathway-providers/" },
+  { path = "manual/adelaide/05-meeting-conditions.html", url = "https://adelaide.edu.au/study/international-students/how-to-apply/accepting-your-offer/meeting-the-conditions-of-your-offer/" },
+  { path = "manual/adelaide/06-scholarships-international.html", url = "https://adelaide.edu.au/study/scholarships/international-students-scholarships/" },
+  { path = "manual/adelaide/07-non-tuition-fees.html", url = "https://adelaide.edu.au/study/how-to-apply/entry-requirements/non-tuition-fees/" },
+  { path = "manual/adelaide/08-preparing-to-come.html", url = "https://adelaide.edu.au/study/international-students/preparing-to-come-to-australia/" },
+  { path = "manual/adelaide/09-admission-by-country.html", url = "https://adelaide.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/AU_Undergraduate_Admission_By_Country.pdf" },
+  { path = "manual/adelaide/10-sponsored-students.html", url = "https://adelaide.edu.au/study/international-students/international-sponsored-students/" },
+  { path = "manual/adelaide/11-merit-scholarship-15.html", url = "https://adelaide.edu.au/study/scholarships/int/adelaide-merit-scholarship-15/" },
+  { path = "manual/adelaide/12-excellence-scholarship-50.html", url = "https://adelaide.edu.au/study/scholarships/int/adelaide-academic-excellence-scholarship-50/" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [uts]
 name = "University of Technology Sydney (Австралия): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants",
+files = [
+  { path = "manual/uts/00-international.html", url = "https://www.uts.edu.au/for-students/international" },
+  { path = "manual/uts/01-how-apply-intl.html", url = "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants" },
+  { path = "manual/uts/02-academic-entry.html", url = "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants/academic-entry-requirements" },
+  { path = "manual/uts/03-eligibility.html", url = "https://www.uts.edu.au/for-students/admissions-entry/eligibility" },
+  { path = "manual/uts/04-intl-fees.html", url = "https://www.uts.edu.au/for-students/admissions-entry/fees-costs/international-fees" },
+  { path = "manual/uts/05-scholarships-intl.html", url = "https://www.uts.edu.au/for-students/admissions-entry/scholarships/international" },
+  { path = "manual/uts/06-how-apply.html", url = "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply" },
+  { path = "manual/uts/07-english.html", url = "https://www.uts.edu.au/for-students/admissions-entry/eligibility/english-language-requirements" },
+  { path = "manual/uts/08-financial-aid.html", url = "https://www.uts.edu.au/for-students/admissions-entry/fees-costs/international-fees/financial-aid" },
+  { path = "manual/uts/09-pathways-intl.html", url = "https://www.uts.edu.au/for-students/admissions-entry/pathways/international" },
+  { path = "manual/uts/10-scholarships-home-country.html", url = "https://www.uts.edu.au/for-students/admissions-entry/scholarships/international/home-country-sponsored-scholarships" },
+  { path = "manual/uts/11-scholarship-academic-excellence.html", url = "https://www.uts.edu.au/for-students/admissions-entry/scholarships/scholarships-search/uts-academic-excellence-international-scholarship" },
+  { path = "manual/uts/12-scholarship-vc-undergrad.html", url = "https://www.uts.edu.au/for-students/admissions-entry/scholarships/scholarships-search/uts-vice-chancellors-international-undergraduate-scholarship" },
+  { path = "manual/uts/13-under18.html", url = "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants/welfare-arrangements-students-under-18" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [nanjing]
 name = "Nanjing University (Китай): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.nju.edu.cn/en/Admission.htm",
+files = [
+  { path = "manual/nanjing/00-bachelors.html", url = "https://hwxy.nju.edu.cn/English/StudyatNJU/Admissions/BachelorsPrograms/index.html" },
+  { path = "manual/nanjing/01-english-programs.html", url = "https://hwxy.nju.edu.cn/English/StudyatNJU/Admissions/DegreeProgramsTaughtinEnglish/index.html" },
+  { path = "manual/nanjing/02-tuition.html", url = "https://hwxy.nju.edu.cn/English/StudyatNJU/Costs/Tuition/index.html" },
+  { path = "manual/nanjing/03-registration-fee.html", url = "https://hwxy.nju.edu.cn/English/StudyatNJU/Costs/RegistrationFee/index.html" },
+  { path = "manual/nanjing/04-other-costs.html", url = "https://hwxy.nju.edu.cn/English/StudyatNJU/Costs/OtherCosts/index.html" },
+  { path = "manual/nanjing/05-downloads.html", url = "https://hwxy.nju.edu.cn/English/StudyatNJU/Downloads/Downloads/index.html" },
+  { path = "manual/nanjing/06-csc.html", url = "https://hwxy.nju.edu.cn/English/StudyatNJU/Scholarships/ChineseGovernmentScholarship/index.html" },
+  { path = "manual/nanjing/07-nanjing-scholarship.html", url = "https://hwxy.nju.edu.cn/English/StudyatNJU/Scholarships/NanjingMunicipalScholarship/index.html" },
+  { path = "manual/nanjing/08-qa.html", url = "https://hwxy.nju.edu.cn/English/StudyatNJU/Application/QAQA/index.html" },
+  { path = "manual/nanjing/09-admissions.html", url = "https://hwxy.nju.edu.cn/English/StudyatNJU/Admissions/index.html" },
+  { path = "manual/nanjing/10-featured-programs.html", url = "https://hwxy.nju.edu.cn/English/StudyatNJU/Admissions/FeaturedPrograms/index.html" },
+  { path = "manual/nanjing/11-chinese-teachers-scholarship.html", url = "https://hwxy.nju.edu.cn/English/StudyatNJU/Scholarships/InternationalChineseLanguageTeachersScholarship/index.html" },
+  { path = "manual/nanjing/12-bachelor-guide-zh.html", url = "https://hwxy.nju.edu.cn/lxnd/zsxx/bkxm/sbzn/index.html" },
+  { path = "manual/nanjing/13-bachelor-catalog-zh.html", url = "https://hwxy.nju.edu.cn/lxnd/zsxx/bkxm/zyml/index.html" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [alberta]
 name = "University of Alberta (Канада): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.ualberta.ca/admissions/international/index.html",
+files = [
+  { path = "manual/alberta/00-international-undergraduate-admission.html", url = "https://www.ualberta.ca/en/admissions/international-undergraduate-admission.html" },
+  { path = "manual/alberta/01-admission-requirements.html", url = "https://www.ualberta.ca/en/admissions/how-to-apply/admission-requirements/index.html" },
+  { path = "manual/alberta/02-international-admission-requirements.html", url = "https://www.ualberta.ca/en/admissions/how-to-apply/international-admission-requirements/index.html" },
+  { path = "manual/alberta/03-language-requirements.html", url = "https://www.ualberta.ca/en/admissions/how-to-apply/admission-requirements/language-requirements/index.html" },
+  { path = "manual/alberta/04-competitive-requirements.html", url = "https://www.ualberta.ca/en/admissions/how-to-apply/admission-requirements/competitive-requirements.html" },
+  { path = "manual/alberta/05-international-tuition-and-fees.html", url = "https://www.ualberta.ca/en/admissions/tuition-and-scholarships/international-tuition-and-fees.html" },
+  { path = "manual/alberta/06-tuition-and-fees.html", url = "https://www.ualberta.ca/en/admissions/tuition-and-scholarships/tuition-and-fees.html" },
+  { path = "manual/alberta/07-international-entrance-scholarships.html", url = "https://www.ualberta.ca/en/admissions/tuition-and-scholarships/international-entrance-scholarships/index.html" },
+  { path = "manual/alberta/08-entrance-scholarships.html", url = "https://www.ualberta.ca/en/admissions/tuition-and-scholarships/entrance-scholarships/index.html" },
+  { path = "manual/alberta/09-dates-deadlines.html", url = "https://www.ualberta.ca/en/admissions/how-to-apply/dates-deadlines/index.html" },
+  { path = "manual/alberta/10-international-transcripts-and-documents.html", url = "https://www.ualberta.ca/en/admissions/how-to-apply/after-you-apply/international-transcripts-and-documents.html" },
+  { path = "manual/alberta/11-international-students-in-canada.html", url = "https://www.ualberta.ca/en/admissions/how-to-apply/international-students-in-canada.html" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
 
+# Партия 2. Под-страницы внутри одобренного домена добавлены
+# ассистентом (требования, английский, плата, фонд, сроки).
+# python.exe не в сети (McAfee 30.09.2026) — снято curl, origin=manual.
 [kfupm]
 name = "King Fahd University of Petroleum and Minerals (Саудовская Аравия): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.kfupm.edu.sa/",
+files = [
+  { path = "manual/kfupm/00-international-students.html", url = "https://www.kfupm.edu.sa/study/international-students" },
+  { path = "manual/kfupm/01-apply-international.html", url = "https://www.kfupm.edu.sa/study/international-students/apply-as-an-international-student" },
+  { path = "manual/kfupm/02-fees-scholarships.html", url = "https://www.kfupm.edu.sa/study/international-students/fees-and-scholarships" },
+  { path = "manual/kfupm/03-admission-tracks.html", url = "https://admissions.kfupm.edu.sa/en/new-admission/admission's-tracks" },
+  { path = "manual/kfupm/04-important-dates.html", url = "https://admissions.kfupm.edu.sa/en/important-dates" },
+  { path = "manual/kfupm/05-faq.html", url = "https://admissions.kfupm.edu.sa/en/faq's" },
+  { path = "manual/kfupm/06-admissions-guide.html", url = "https://admissions.kfupm.edu.sa/en/new-admission/admissions-procedures" },
+  { path = "manual/kfupm/07-admissions-home.html", url = "https://admissions.kfupm.edu.sa/en/home" },
+  { path = "manual/kfupm/08-brochure-2027.pdf", url = "https://admissions.kfupm.edu.sa/docs/default-source/default-document-library/digital-version_en_2026.pdf" },
+  { path = "manual/kfupm/09-undergraduate-bsc.html", url = "https://www.kfupm.edu.sa/study/bachelor-of-science" },
+  { path = "manual/kfupm/10-fee-study-program.html", url = "https://admissions.kfupm.edu.sa/en/new-admission/fee-study-program" },
+  { path = "manual/kfupm/11-visa.html", url = "https://www.kfupm.edu.sa/study/international-students/visa-requirements" },
 ]
 approvedBy = "human"
-approvedAt = "2026-09-29"
+approvedAt = "2026-09-30"
+
