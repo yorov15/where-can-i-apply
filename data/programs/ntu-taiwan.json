@@ -1,0 +1,271 @@
+{
+  "id": "ntu-taiwan",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "National Taiwan University (Тайвань): приём иностранцев на бакалавриат",
+    "orig": "National Taiwan University"
+  },
+  "hostCountry": "TW",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное и платится за семестр: у иностранного бакалавра это TWD 50 460–62 100 за семестр в зависимости от колледжа (год — два семестра). Жильё, страховка и жизнь оплачиваются отдельно. Есть стипендия для иностранных студентов: покрытие обучения до TWD 100 000 (USD 3 333) за семестр плюс месячная выплата TWD 8 000 (USD 267), но её нужно указывать при подаче, и она не гарантирует зачисления. Полного покрытия для гражданина Таджикистана карточка не подтверждает"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "You only hold foreign nationality."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы вход не закрывает: отказа по стране обучения нигде не названо, принимают аттестат средней школы или эквивалент, в том числе эквивалент, выданный в Гонконге, Макао или другой стране. Единственное географическое условие — проживание за границей перед подачей (не менее 6 лет для держателей двух паспортов), и оно относится к статусу студента, а не к стране школы. Смотрел страницы Academic Requirements, Student Status и International Students."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "High school graduates must submit academic transcripts for grades 10 to 12."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы нет: страницы его не называют. Наоборот, прямо разрешено подавать тем, кто выпускается уже после подачи, но до начала семестра, заменив диплом справкой об ожидаемом выпуске. Смотрел страницы Academic Requirements и International Students."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возраст не ограничивают: ни минимального, ни максимального возраста на снятых страницах приёма (Academic Requirements, International Students, Student Status) нет. Условие о проживании за границей — про гражданство, а не про возраст."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Минимального балла аттестата вуз не называет: в требованиях сказано только про аттестат средней школы или эквивалент и табели за 10–12 классы, никакого порога GPA или среднего балла на страницах Academic Requirements и International Students нет."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5.5,
+          "evidence": "LANGUAGE PROFICIENCY English Programs / CEFR B2+ Chinese Programs / CEFR A2+ HSK: Level 4 / TOCFL: Band A Level 2 TOEFL iBT: 72 / IELTS (Academic): 5.5 / TOEIC (Public Testing Programme): 785 / TOEFL ITP: 543 / Cambridge English: First (FCE)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 72,
+          "evidence": "LANGUAGE PROFICIENCY English Programs / CEFR B2+ Chinese Programs / CEFR A2+ HSK: Level 4 / TOCFL: Band A Level 2 TOEFL iBT: 72 / IELTS (Academic): 5.5 / TOEIC (Public Testing Programme): 785 / TOEFL ITP: 543 / Cambridge English: First (FCE)"
+        },
+        {
+          "test": "HSK",
+          "min": 4,
+          "evidence": "LANGUAGE PROFICIENCY English Programs / CEFR B2+ Chinese Programs / CEFR A2+ HSK: Level 4 / TOCFL: Band A Level 2 TOEFL iBT: 72 / IELTS (Academic): 5.5 / TOEIC (Public Testing Programme): 785 / TOEFL ITP: 543 / Cambridge English: First (FCE)"
+        }
+      ],
+      "evidence": "Depending on your program, you may need to submit language proficiency certificates for either Mandarin Chinese or English."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "The transcripts of national entrance examination such as SPM, STPM, SAT, or these categories of exams such as A-Level, O-Level, IBDP are only considered supporting documents."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подать как иностранец может только обладатель иностранного гражданства. У кого есть и тайваньский паспорт (Китайской Республики), тот должен доказать, что никогда не имел прописки на Тайване и прожил за границей не меньше шести лет подряд (для медицины, стоматологии и китайской медицины — восемь лет). Гражданин Таджикистана без тайваньского паспорта проходит по первому условию.",
+      "evidence": "In order to be permitted to apply as an international student, applicants must meet one of the following conditions: You only hold foreign nationality. You hold both R.O.C. nationality (see note 1) and a foreign nationality, must have never had household registration in Taiwan, and in the immediate past, have resided overseas (outside Taiwan, Mainland China, Hong Kong, and Macao) continuously for at least six years (see note 2).",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "На бакалавриат нужен как минимум аттестат средней школы (или эквивалент); выпускники подают табели за 10–12 классы.",
+      "evidence": "Undergraduate Programs : At least a high school diploma or equivalent",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Одиннадцатилетняя школа — не отказ: если год выпуска абитуриента по уровню равен второму классу старшей школы Тайваня, его считают достаточно подготовленным, принимают с табелями за 7–11 классы, но после зачисления он обязан добрать 12 дополнительных кредитов.",
+      "evidence": "High school graduates whose graduating year is academically equivalent to the second grade of a senior secondary school in Taiwan of a comparable academic level and nature is considered to have adequate academic ability and may apply for an undergraduate degree program. They must submit academic transcripts for grades 7 to 11. If admitted, they will be required to take 12 supplementary credits before graduation, in addition to their initial graduate credit requirements.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Языковой сертификат зависит от языка программы: для англоязычных программ нужен английский, для китайскоязычных — китайский.",
+      "evidence": "Depending on your program, you may need to submit language proficiency certificates for either Mandarin Chinese or English.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для англоязычных программ порог — CEFR B2+: IELTS Academic 5.5, TOEFL iBT 72 (также принимают TOEIC 785, TOEFL ITP 543, Cambridge FCE).",
+      "evidence": "LANGUAGE PROFICIENCY English Programs / CEFR B2+ Chinese Programs / CEFR A2+ HSK: Level 4 / TOCFL: Band A Level 2 TOEFL iBT: 72 / IELTS (Academic): 5.5 / TOEIC (Public Testing Programme): 785 / TOEFL ITP: 543 / Cambridge English: First (FCE)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для китайскоязычных программ порог — CEFR A2+, HSK 4 или TOCFL Band A Level 2.",
+      "evidence": "LANGUAGE PROFICIENCY English Programs / CEFR B2+ Chinese Programs / CEFR A2+ HSK: Level 4 / TOCFL: Band A Level 2 TOEFL iBT: 72 / IELTS (Academic): 5.5 / TOEIC (Public Testing Programme): 785 / TOEFL ITP: 543 / Cambridge English: First (FCE)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Если сертификата языка нет или балл ниже порога, вуз может дать условное зачисление: английский сертификат нужно досдать в течение года, а подающим на сентябрьский приём 2027 — до конца мая 2027.",
+      "evidence": "2027 September entry applicants who submit the language proficiency certificate by the end of May, 2027 may enroll in the original intended entry.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Обучение платное, счёт выставляют за семестр (учебный год — два семестра). Для иностранного бакалавра за семестр: гуманитарные, социальные науки и право — TWD 50 460; естественные науки и агрономия — 58 520; инженерия и информатика — 58 940; медицина и общественное здоровье — 62 100; менеджмент — 51 220; науки о жизни — 60 520. Стипендия и проживание считаются отдельно.",
+      "evidence": "Home / Fees & Scholarships / Tuition Fees Tuition Fees Tuition is billed each semester (one academic year consists of two semesters). This page is for reference only. Please refer to the latest information on the website of the Office of Academic Affairs for the actual fees for each academic year. Undergraduate Graduate USD 1 ≒ TWD 30 (estimated conversion) College International/ Mainland Chinese Overseas Chinese/ Hong Kong & Macau TWD USD TWD USD Liberal Arts, Social Sciences, Law 50,460 1,682 25,230 841 Science, Bio-resources & Agriculture 58,520 1,951 29,260 975 Engineering, Electrical Engineering & Computer Science 58,940 1,965 29,470 982 Medicine 1 , Public Health 62,100 2,070 31,050 1,035 Department of Medicine - - 39,560 1,319 Department of Dentistry - - 36,170 1,206 Management 51,220 1,708 25,610 854 Life Science 60,520 2,017 30,260 1,009 International College Global Undergraduate Program in Semiconductors 60,000 2,000 30,000 1,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть стипендии для иностранных студентов, их указывают вместе с подачей заявки; их дают правительство Тайваня, другие организации и сами колледжи. Стипендия не гарантирует зачисления, а зачисление — стипендии.",
+      "evidence": "NTU has many scholarships available for overseas students that can be applied for along with submitting your application. The government of Taiwan, other organizations, and your respective colleges also provide scholarships for international students. Being offered a scholarship does not guarantee admission to NTU, and vice versa.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Размер стипендии иностранному студенту: покрытие обучения до TWD 100 000 (USD 3 333) за семестр плюс месячная выплата TWD 8 000 (USD 267).",
+      "evidence": "SCHOLARSHIPS Overseas Student Scholarship Tuition Waiver: up to TWD 100,000 ( USD 3,333) / semester + Monthly Stipend of TWD 8,000 ( USD 267)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за подачу — NT$2 000 или $80 за каждую программу (колледж/отделение); с третьей заявки — NT$1 500 или $60 за каждую следующую.",
+      "evidence": "The application fee for first-time applicants is NTD 2,000 or USD 80 per department/graduate institute. Where an applicant applies for three or more departments/graduate institutes, the fee is NTD 1,500 or USD 60 per additional application from the third application onward.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 80,
+        "currency": "USD",
+        "evidence": "The application fee for first-time applicants is NTD 2,000 or USD 80 per department/graduate institute."
+      }
+    },
+    {
+      "ru": "Приём на сентябрь 2027 идёт двумя раундами: первый — 29 сентября 2026 (11:00) — 5 ноября 2026 (16:00), второй — 1 декабря 2026 (11:00) — 19 января 2027 (16:00). Все сроки — по тайваньскому времени (GMT+8).",
+      "evidence": "2027 September Entry (1st Round) Open Application Period: September 29 (11AM) - November 5, 2026 (4PM) Application Link 2027 September Entry (2nd Round) Not Yet Application Period: December 1, 2026 (11AM) - January 19, 2027 (4PM)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Бакалавриат принимают только на сентябрьский приём; февральский приём — только для магистратуры и докторантуры.",
+      "evidence": "Bachelor's degree students can only enroll in the September entry.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Результаты вступительных экзаменов (SAT, ACT, A-Level, O-Level, IBDP и подобные) вуз считает только вспомогательными документами — отдельного требования сдать SAT или ACT нет.",
+      "evidence": "The transcripts of national entrance examination such as SPM, STPM, SAT, or these categories of exams such as A-Level, O-Level, IBDP are only considered supporting documents.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Для проверки права на подачу нужны: диплом (или справка об ожидаемом выпуске), табели, доказательство гражданства, языковой сертификат NTU, рекомендации, фото, чек об оплате, декларация и финансовая справка.",
+      "evidence": "Documents Required for Eligibility Check Graduation certificate: Students who are graduating in the current year should submit the provisional graduation certificate or the certificate of enrollment officially issued by the school. Transcripts Proof of nationality Language proficiency required by NTU",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Расходы за семестр без обучения: жильё на кампусе от TWD 7 900, вне кампуса 48 000–72 000, страховка TWD 4 956; всё вместе примерно TWD 66 000–157 000.",
+      "evidence": "Estimated expenses per semester (not including tuition fees): Books TWD 5,000 - 8,000 USD 166 - 266 Housing On campus: Prince House: TWD 22,480 - 42,280 Guo Qing Dorm: TWD 11,900 - 12,900 General Dorms: TWD 7,900 - 12,900 On campus: Prince House: USD 750 - 1,410 Guo Qing Dorm: USD 397 - 430 General Dorms: USD 263 - 430 Off-campus: TWD 48,000 - 72,000 Off-campus: USD 1,600 - 2,400 National Health Insurance (degree students only) TWD 4,956 USD 165 Living expenses TWD 48,000 - 72,000 USD 1,600 - 2,400 Estimated total TWD 66,000 - 157,000 USD 2,200 - 5,233",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-29",
+    "closes": "2027-01-19",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://oiasystem.ntu.edu.tw/globaladmission/foreign/index/index/id/xa24yoi5De3z?lang=en",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — National Taiwan University (Тайвань). Приём иностранцев на бакалавриат ведёт Office of International Affairs, подача через онлайн-систему NTU; заявку можно подать сразу на пять отделений."
+    }
+  },
+  "source": {
+    "url": "https://admissions.ntu.edu.tw/apply/degree-students/international-students/",
+    "pages": [
+      {
+        "url": "https://admissions.ntu.edu.tw/apply/degree-students/international-students/",
+        "contentHash": "sha256:b24444ecaef642b3ea05e4495de522a0b30d0feef937fc56c7741cbc2a69b6cc"
+      },
+      {
+        "url": "https://admissions.ntu.edu.tw/apply/degree-students/admission-information/",
+        "contentHash": "sha256:e332086766242dc379818ff374a17dbb8d0331777d4daaf3154abf212316920d"
+      },
+      {
+        "url": "https://admissions.ntu.edu.tw/apply/degree-students/admission-information/academic-requirements/",
+        "contentHash": "sha256:487b22d7f2d0272e8fe77a5899ae684be53f83d2810f356a0d68ffe518fa0808"
+      },
+      {
+        "url": "https://admissions.ntu.edu.tw/apply/degree-students/admission-information/application-timeline/",
+        "contentHash": "sha256:1d31e32f1706bd033ab75f521194c29bf8794e408651be1060763a8a13e206fa"
+      },
+      {
+        "url": "https://admissions.ntu.edu.tw/apply/degree-students/admission-information/language-proficiency-requirements/",
+        "contentHash": "sha256:98c4b6c52c4c831f3eb5261cd1d6ebc196514ff327c75d8e41eb0209083b84ee"
+      },
+      {
+        "url": "https://admissions.ntu.edu.tw/apply/degree-students/admission-information/student-status/",
+        "contentHash": "sha256:5f50cf2a4ecc9ca780f9f5b859d174add7cc548d42bc2be485af3a7d4d129cd0"
+      },
+      {
+        "url": "https://admissions.ntu.edu.tw/apply/degree-students/conditional-admission/",
+        "contentHash": "sha256:054c75691580bfb8d25f366281f7abc8479c55387b30e9b258a19fea78619b37"
+      },
+      {
+        "url": "https://admissions.ntu.edu.tw/fees-scholarships/tuition-fees/",
+        "contentHash": "sha256:8768dfc1eb4d91f568bedc8a124d86fa15ea4489d27c028211974c91813609ad"
+      },
+      {
+        "url": "https://admissions.ntu.edu.tw/fees-scholarships/scholarships/",
+        "contentHash": "sha256:a94d66d645296aa17ad5c98fff8ed0b4dab6d4e0c13eca97c7c6399ff05b3e22"
+      },
+      {
+        "url": "https://admissions.ntu.edu.tw/fees-scholarships/cost-of-living/",
+        "contentHash": "sha256:df1374e4ec445ef02d994a4e8b9681b2f5143c6333f48d2793d98801819349ea"
+      },
+      {
+        "url": "https://admissions.ntu.edu.tw/apply/faq/",
+        "contentHash": "sha256:072ef1e69125928ba2becaf85472858d1edb2e8a41e56334f46d6806c1cdee5c"
+      },
+      {
+        "url": "https://admissions.ntu.edu.tw/learn/taught-programs/",
+        "contentHash": "sha256:aca765ca41e018f52ad71ebb8e525e0be58acf6b185cecb638cef1a7f1607690"
+      },
+      {
+        "url": "https://admissions.ntu.edu.tw/wp-content/uploads/Study-at-NTU_2027-Entry_0820.pdf",
+        "contentHash": "sha256:3b84d7fdb73d5c7b76b313eb9bbe9af1cfe6cafef8ff3de85b1412ca8a4a6fc5"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}
