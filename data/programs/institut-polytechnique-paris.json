@@ -1,0 +1,293 @@
+{
+  "id": "institut-polytechnique-paris",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Institut Polytechnique de Paris — Bachelor of Science (Франция): приём иностранцев на бакалавриат",
+    "orig": "Institut Polytechnique de Paris - Bachelor of Science"
+  },
+  "hostCountry": "FR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: для не-ЕС студентов — €19,600 в год, для ЕС/ЕЭЗ — €15,900; плата не меняется за три года программы. Приём ведётся по принципу need-blind, но помощь ограничена и покрывает лишь часть расходов: освобождение от платы за обучение и беспроцентный займ по нужде, стипендия Excellence и Women in Science по €4,800 в год, полная стипендия олимпиадникам (до €87,900). Всем студентам всё равно надо оплатить часть обучения, большую часть жизни и невозвратный административный сбор €1,500 в год; подрабатывать во время учёбы нельзя. Дорогу вуз не покрывает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз прямо пишет, что квот по национальностям нет, и принимает студентов со всего мира; отдельного запрета по паспорту нет. Смотрели страницы приёма, критериев, FAQ, стоимости и стипендий."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: годится школьный аттестат, признанный в своей стране или международно, отдельного отказа по стране нет. Аттестат Таджикистана и список стран прямо не названы — эквивалент уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "have an overall strong academic average take advanced mathematics courses, and at least one advanced science course"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы не называют: подавать можно, пока учишься на последнем году, и после получения диплома; конкретного года выпуска страницы не требуют."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют — ни минимума, ни максимума. Искали по словам age, born, years old, citizen: упоминается только срок давности языкового сертификата («less than two years old»), границы возраста нет. Смотрели критерии приёма, порядок подачи, FAQ, стоимость и стипендии."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "For the moment, there are no minimum grades required to be able to apply for the programs. However, as with all of École Polytechnique's academic programs, the Bachelor programs are designed for top students with very high potential and we require them to have a strong overall academic average."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "evidence": "The minimum grades required are: TOEFL iBT............................................. 90"
+        },
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "IELTS...................................................... 6,5 (minimum grade per each language skill: 6)"
+        }
+      ],
+      "evidence": "Candidates must prove their excellent knowledge of English via an internationally recognized English language certificate. The International English Language Testing System (IELTS) and the Internet-based Test of English as a Foreign Language (TOEFL iBT) are accepted, along with the following Cambridge English tests: Advanced (CAE) and Proficiency (CPT). The test result should be less than two years old upon entering the Bachelor Program. We do not accept IGCSE as an English-level certificate."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство приём не ограничивает: набор открыт для студентов со всего мира, квот по национальностям нет.",
+      "evidence": "nor are there any quotas based on nationalities",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Страна школы вход не закрывает: годится школьный аттестат, признанный в своей стране или международно; в списке примеров — французский бакалавриат, IB, швейцарская матура. Аттестат Таджикистана прямо не назван — эквивалент уточнять в приёмной.",
+      "evidence": "General Admission Requirements Applicants must meet one of the following requirements: Currently be studying for a high school leaving certificate, recognized either internationally or in the candidate's home country (French Baccalaureate, OIB, International Baccalaureate, Swiss high-school maturité certificate, European high-school certificate…) OR Currently be studying for a scientific university entrance certificate OR Have already obtained an entrance certificate to study science at a higher education institution (scientific university, specialized institute, French preparatory class…)",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Школьная подготовка: нужна сильная общая успеваемость, продвинутые курсы математики и минимум один продвинутый естественнонаучный предмет.",
+      "evidence": "have an overall strong academic average take advanced mathematics courses, and at least one advanced science course",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Уровень математики смотрят по программе школы: для IB — Mathematics HL и ещё один научный предмет HL; для любых программ годится вариант, где математика и ещё один научный предмет изучены на высоком уровне.",
+      "evidence": "All curricula may be relevant provided that mathematics and at least one other scientific subject have been studied at a high level.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Принимают только на первый год: переводом на 2-й или 3-й год не берут.",
+      "evidence": "Applications are only considered for admission to Year 1. We do not accept transfer students in Years 2 and 3.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Английский обязателен: принимают IELTS или TOEFL iBT (а также Cambridge CAE/CPE), результат — не старше двух лет на момент поступления.",
+      "evidence": "Candidates must prove their excellent knowledge of English via an internationally recognized English language certificate. The International English Language Testing System (IELTS) and the Internet-based Test of English as a Foreign Language (TOEFL iBT) are accepted, along with the following Cambridge English tests: Advanced (CAE) and Proficiency (CPT). The test result should be less than two years old upon entering the Bachelor Program. We do not accept IGCSE as an English-level certificate.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Пороги английского: TOEFL iBT — 90, IELTS — 6,5 (минимум 6 по каждой части), Cambridge CAE/CPE — B (176, минимум 169 по части).",
+      "evidence": "The minimum grades required are: TOEFL iBT............................................. 90 IELTS...................................................... 6,5 (minimum grade per each language skill: 6) Cambridge test - (CAE/CPE)................. B - 176 (minimum grade per each language skill: 169)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Знание французского для подачи не нужно, но при уровне ниже B2 студент обязан ходить на занятия французским: B2 — условие выпуска.",
+      "evidence": "No prior knowledge of French is necessary to be able to apply. However, depending on their level (less than level B2 in the Common European Framework of Reference for Languages), students will have to take French classes during the program as a B2 level is a graduation prerequisite.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Если результатов теста по английскому ещё нет, подать всё равно можно: зачисление будет условным — до получения сертификата нужного уровня.",
+      "evidence": "If you have not yet received your test results when completing your online application, you may still apply to the Program. However, please note that any admission offer will be conditional upon receiving one of the English language certifications indicated above, at the required level.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "От языкового экзамена освобождают носители английского (по паспорту англоязычной страны) и те, кто последние два года учился в школе или вузе полностью на английском; решение подтверждает приёмная комиссия.",
+      "evidence": "Native English-speaking candidates (need to provide a passport from an English-speaking country) or those who have followed a high school diploma or higher education course taught entirely in English for at least the two years preceding their entry into the Program may be exempted from providing such English-level certification.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Оценки решают не всё: отбор целостный — смотрят и баллы по математике и наукам, и достижения вне учёбы (олимпиады, спорт, искусство, лидерство, волонтёрство).",
+      "evidence": "Students are selected using a holistic approach to admissions. The Admissions Committee considers not only academics (i.e. strong academic performance in high school, especially in mathematics and science), but also non-academic factors .",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение платное и не зависит от гражданства: для не-ЕС — €19,600 в год, для ЕС/ЕЭЗ — €15,900; плата не меняется в течение программы.",
+      "evidence": "ANNUAL TUITION FEES EU and EEA Students €15,900 / year Non-EU Students €19,600 / year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за заявку — €105 с каждого абитуриента, картой или переводом.",
+      "evidence": "Each applicant will be asked to pay an application fee of €105, payable by credit card or bank transfer.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "После зачисления два депозита по €1,500 идут в счёт первого года обучения; они невозвратные.",
+      "evidence": "There are two tuition deposits of €1,500 each that will be deducted from your first year total tuition fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Ежегодный административный сбор €1,500 платят все студенты, он невозвратный и не покрывается стипендией.",
+      "evidence": "The 1,500 Euro annual administration fee is due by all students and non-refundable.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полная стипендия олимпиадникам: покрывает обучение и жизнь, максимум €87,900 для не-ЕС/ЕЭЗ и €78,750 для ЕС/ЕЭЗ; медаль — за два года до зачисления, приоритет золоту.",
+      "evidence": "Maximum scholarship limit (tuition fees plus living allowance) is 87,900 Euros per non-EU/EEA student and 78,750 Euros per EU/EEA student.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Excellence — €4,800 в год три года, только зачисленным с отличием (admission with honors).",
+      "evidence": "The Excellence Scholarship amounts to 4,800 Euros in total per year, for 3 years.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Women in Science — €4,800 в год три года для принятых девушек.",
+      "evidence": "The Women in Science Scholarship amounts to 4,800 Euros in total per year, for 3 years.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь по нужде неполная: иностранцам доступны освобождение от платы за обучение и/или беспроцентный займ от фонда École Polytechnique; CROUS — только французским и приравненным студентам (граждане ЕС/ЕЭЗ со второго года).",
+      "evidence": "All other candidates, i.e. international, European and French students not entitled to the CROUS bursary , may benefit from need-based financial aid proposed directly by Ecole Polytechnique and by the Foundation of Ecole Polytechnique, in the form of: a tuition fee waiver granted by Ecole Polytechnique and/or an interest-free loan supported by Ecole Polytechnique Foundation.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь ограничена и выдаётся в порядке ранних раундов; студент всё равно должен оплатить часть обучения и большую часть жизни.",
+      "evidence": "As the amount of aid is limited, students needing financial aid are encouraged to apply in early admissions rounds.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для визы нужно предъявить французским властям состоятельный финансовый план: без него визу на учёбу не дадут.",
+      "evidence": "Please keep in mind that you will have to provide a financial plan to the French Authorities in order to receive your visa. Without a sound financial plan, you will not be able to get your visa to study at Ecole Polytechnique.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подрабатывать во время программы не получится: учебная нагрузка не оставляет на это времени.",
+      "evidence": "the academic workload is such that it is not possible to have a student job during the program.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка — через собственную онлайн-систему вуза; Campus France не участвует, и заявка через него не рассматривается.",
+      "evidence": "We are not in contact with Campus France , and you do not need to apply for a pre-registration to undergraduate studies with them. Any application to the Bachelor Program made through Campus France will not be examined by our Admissions Committee.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки приёма: три раунда — 17 сентября–20 октября 2026, 21 октября 2026–6 января 2027, 7 января–8 февраля 2027.",
+      "evidence": "Rounds Application Deadlines Interview Dates (for shortlisted candidates only) Final Admission Results Round 1 September 17, 2026 to October 20, 2026 at 11:59 PM (CEST) First two weeks of December January 2027 Round 2 October 21, 2026 to January 6, 2027 at 11:59 PM (CET) Feb-Mar, 2027 March 2027 Round 3 January 7, 2027 to February 8, 2027 at 2 PM (CET) Mar-Apr, 2027 April 2027",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "В заявке нужны официальные транскрипты, личное заявление, CV, удостоверение личности, фото, плата и контакты двух рекомендателей; минимум один рекомендатель — учитель математики.",
+      "evidence": "Applicants must submit official academic transcripts, a personal statement, a CV, a form of ID, a photo, the application fee and contact details for two referents.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Собеседование (для отобранных) — онлайн, около 50 минут, только на английском; проверяют математику и научную культуру.",
+      "evidence": "The interview will last around 50 minutes and will be conducted entirely in English.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-17",
+    "closes": "2027-02-08",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://candidatures.polytechnique.fr/candidatures-mutualisees/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Institut Polytechnique de Paris — Bachelor of Science, трёхлетняя англоязычная программа, которую ведёт École Polytechnique (Палезо, Франция). Три раунда подачи, приём только на первый год; Campus France не участвует."
+    }
+  },
+  "source": {
+    "url": "https://programmes.polytechnique.edu/en/bachelor/about-the-bachelor/bachelor-of-science",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://programmes.polytechnique.edu/en/bachelor/about-the-bachelor/bachelor-of-science",
+        "contentHash": "sha256:03b34e855d5e985773e55b87614bffa19bfbed40139167f14642ff01fa9da78e"
+      },
+      {
+        "url": "https://programmes.polytechnique.edu/en/bachelor/admissions/admissions-criteria-and-procedure",
+        "contentHash": "sha256:05fbbd6ff8a975551e3899546315107a0d49917649b7fb0e7b1bd292bd871c5a"
+      },
+      {
+        "url": "https://programmes.polytechnique.edu/en/bachelor/admissions/faq",
+        "contentHash": "sha256:3b7247b84dd591f1c494b75c7bc4950ec3fc9340716e220bc4a1a85c6f2b1746"
+      },
+      {
+        "url": "https://programmes.polytechnique.edu/en/bachelor/admissions/interview",
+        "contentHash": "sha256:fba62008a7e4378405d06c40207427266d79fa1c6842350aeabdecc5c5f73b6b"
+      },
+      {
+        "url": "https://programmes.polytechnique.edu/en/bachelor/costs-and-funding/tuition-fees",
+        "contentHash": "sha256:ed65ca192bdf15526a98fd26af5a239fd5336d2a321e52e07734b24ed2a38f88"
+      },
+      {
+        "url": "https://programmes.polytechnique.edu/en/bachelor/costs-and-funding/scholarships-and-financial-aid",
+        "contentHash": "sha256:0e86758190c1dd33e6546554ae39e8e64620ada8a6d8b65f5750db27b6c40376"
+      },
+      {
+        "url": "https://programmes.polytechnique.edu/en/bachelor/program-details/structure-of-the-bachelor",
+        "contentHash": "sha256:22664bbf539d030cf6fffca1269a88e0b486b2ebbdf0399e42ff823d9d7e6ec4"
+      },
+      {
+        "url": "https://programmes.polytechnique.edu/en/about/ecole-polytechnique/international-students",
+        "contentHash": "sha256:223debcabf9524141f81c1999fcec36a5b38ae21bbc2c087f4f442c9523b03be"
+      },
+      {
+        "url": "https://www.ip-paris.fr/en/education/bachelor-science",
+        "contentHash": "sha256:654619349b79d33f0e1d11a10f31b683f8bb09eb7f206e5ba6320d2642488631"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
