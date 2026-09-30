@@ -3878,8 +3878,18 @@ approvedAt = "2026-09-29"
 
 [alberta]
 name = "University of Alberta (Канада): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.ualberta.ca/admissions/international/index.html",
+files = [
+  { path = "manual/alberta/00-international.html", url = "https://www.ualberta.ca/admissions/international/index.html" },
+  { path = "manual/alberta/01-how-to-apply.html", url = "https://www.ualberta.ca/admissions/how-to-apply/index.html" },
+  { path = "manual/alberta/02-intl-requirements.html", url = "https://www.ualberta.ca/admissions/how-to-apply/international-admission-requirements/index.html" },
+  { path = "manual/alberta/03-intl-curricula.html", url = "https://www.ualberta.ca/admissions/how-to-apply/international-admission-requirements/international-curricula/index.html" },
+  { path = "manual/alberta/04-dates.html", url = "https://www.ualberta.ca/admissions/how-to-apply/dates-deadlines/index.html" },
+  { path = "manual/alberta/05-intl-fees.html", url = "https://www.ualberta.ca/admissions/tuition-and-scholarships/international-tuition-and-fees.html" },
+  { path = "manual/alberta/06-intl-scholarships.html", url = "https://www.ualberta.ca/admissions/tuition-and-scholarships/international-entrance-scholarships/index.html" },
+  { path = "manual/alberta/07-intl-documents.html", url = "https://www.ualberta.ca/admissions/how-to-apply/after-you-apply/international-transcripts-and-documents.html" },
+  { path = "manual/alberta/08-ib.html", url = "https://www.ualberta.ca/admissions/how-to-apply/ib-students/index.html" },
+  { path = "manual/alberta/09-advising.html", url = "https://www.ualberta.ca/admissions/support-and-advising/international-student-advising.html" },
+  { path = "manual/alberta/10-language.html", url = "https://www.ualberta.ca/admissions/how-to-apply/admission-requirements/language-requirements/index.html" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"

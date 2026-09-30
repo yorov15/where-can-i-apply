@@ -1,0 +1,329 @@
+{
+  "id": "alberta",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Alberta (Канада): приём иностранцев на бакалавриат",
+    "orig": "University of Alberta"
+  },
+  "hostCountry": "CA",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: сумму даёт калькулятор вуза, после предложения она фиксируется на весь срок программы. Помощи по достатку для всех нет. Есть стипендии: автоматическая до CAN $10,000 по баллу, крупные по заявке до 10 января (до CAN $120,000 за 4 года на 25 студентов в год), полное покрытие только у узкой группы — выпускников Aga Khan Academies. Сбор за заявку CAN $150, депозит CAN $5,000 при принятии предложения."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз принимает иностранцев по общему порядку, ограничений по паспорту страницы не называют. Смотрели страницы для иностранцев, требований, языка, дат, стоимости и стипендий."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы не закрывает вход: таджикский аттестат прямо назван в списке принимаемых квалификаций (Attestat и Transcript of final results). Смотрели страницу списка учебных программ по странам и страницу требований."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Число лет школы вуз числом не задаёт; про 11-летнюю школу для Таджикистана ничего не сказано — уточнять. Для Армении отдельно написано про школу до 10-го класса, для Таджикистана такого условия нет. Смотрели страницы списка программ по странам, требований и документов."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы не называют: указаны только сроки подачи и добора документов. Смотрели страницы требований, документов и дат."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения страницы приёма не называют. Смотрели страницы требований, документов, дат, стоимости и стипендий."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "The minimum admission average to be accepted to the U of A varies depending on the faculty and program of your choice. The averages change each year."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "A score of at least 6.5 on the IELTS Academic (International English Language Testing System) with no band less than 6.0."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "For tests taken on or after January 21, 2026, only the 1-6 score scale is considered: Overall score of at least 4.5, with no individual band score below 4.5"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "parts": true,
+          "evidence": "For tests taken before January 21, 2026: Total score of 90 with no section less than 21"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 120,
+          "parts": true,
+          "evidence": "At least 120 for English Language Proficiency, with no integrated subscore below 100."
+        },
+        {
+          "test": "PTE",
+          "min": 61,
+          "parts": true,
+          "evidence": "At least 61, with no less than 60 in each communicative skill"
+        }
+      ],
+      "evidence": "All undergraduate applicants, regardless of citizenship status, are required to fulfill language proficiency requirements."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Таджикский аттестат вуз прямо называет в списке принимаемых квалификаций: нужны Attestat и Transcript of final results (табель итоговых оценок).",
+      "evidence": "Tajikistan Attestat and Transcript of final results",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Приём идёт по трём пунктам: обязательные предметы, английский и оценки.",
+      "evidence": "Admission is based on your complete academic history and achievement in three main areas: completion of required subjects, your English proficiency, and your grades.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужно показать пять пройденных академических предметов; какие именно, зависит от программы и факультета — смотреть в поиске по программам.",
+      "evidence": "Students applying for admission from high school must show that they have or will have successfully completed five academic subjects.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Если обязательных предметов не хватает, иностранцу предлагают Year One Foundation Program — очная программа в кампусе, после которой берут на второй курс.",
+      "evidence": "This is a full-time, on-campus program that sets you up to enter a degree program in your second year.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Число лет школы вуз числом не задаёт. Для некоторых стран сказано отдельно: при школе до 10-го класса нужен первый курс университета; про Таджикистан такого условия нет.",
+      "evidence": "If applicants finish high school after Grade 10: First-Year University Completion result from an accredited institution",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Пока учишься в школе, вуз просит записи о курсах последнего года и результаты прошлых лет; итоговые документы нужны до 1 августа.",
+      "evidence": "If you are still in high school we require your final-year course registrations as well as your previous years results.",
+      "field": "schoolYears",
+      "kind": "steps"
+    },
+    {
+      "ru": "Английский нужен всем, независимо от гражданства и страны.",
+      "evidence": "regardless of citizenship status or country of origin",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "IELTS Academic: общий балл не ниже 6.5 и ни одной части ниже 6.0; результаты IELTS One Skill Retake вуз не принимает.",
+      "evidence": "A score of at least 6.5 on the IELTS Academic (International English Language Testing System) with no band less than 6.0.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT: для тестов с 21 января 2026 шкала 1–6, общий балл не ниже 4.5 и ни одной части ниже 4.5; TOEFL Essential не принимают.",
+      "evidence": "For tests taken on or after January 21, 2026, only the 1-6 score scale is considered: Overall score of at least 4.5, with no individual band score below 4.5",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для TOEFL iBT, сданного до 21 января 2026: сумма 90 и ни одной секции ниже 21.",
+      "evidence": "For tests taken before January 21, 2026: Total score of 90 with no section less than 21",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Duolingo: не ниже 120 по английскому и ни одной интегральной оценки ниже 100.",
+      "evidence": "At least 120 for English Language Proficiency, with no integrated subscore below 100.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "PTE Academic: не ниже 61 и ни одного навыка ниже 60.",
+      "evidence": "At least 61, with no less than 60 in each communicative skill",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский можно засчитать по учёбе: три года и больше очной учёбы на английском (по 5 предметов за год) там, где английский основной язык обучения.",
+      "evidence": "Three or more years of full-time education in English in Canada or another country/institution where English is recognized as the official/primary language of instruction.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Пять факультетов предлагают Bridging Program: английский добирают курсами EAP в первый год, одновременно учась на кредитах (не на всех программах).",
+      "evidence": "The Bridging Program allows eligible students to complete the ELP requirement by taking English for Academic Purposes (EAP) courses during their first year of study",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Даже выполнив условия, поступление не гарантировано; вуз оставляет за собой право потребовать дополнительный тест английского.",
+      "evidence": "Fulfillment of the listed requirements does not guarantee admission.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Для образования и медицинских специальностей (например Nursing) нужен ещё тест устного английского Spoken English Proficiency.",
+      "evidence": "Spoken English Proficiency is required in some programs at the University of Alberta, such as the Faculty of Education and in some Health Science-related fields (such as Nursing).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Минимальный проходной средний балл у каждого факультета и программы свой и меняется по годам; единой цифры на страницах нет.",
+      "evidence": "The minimum admission average to be accepted to the U of A varies depending on the faculty and program of your choice. The averages change each year.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Сбор за заявку — CAN $150 для новых заявителей, невозвратный; у профессиональных программ он может быть другим.",
+      "evidence": "In order to submit your application, you must submit an application fee of either CAN $150 (for new applicants to the U of A) or CAN $100 (for current or previous U of A students).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Чтобы принять предложение, большинство новых студентов вносит депозит CAN $5,000; он нужен и для письма Provincial Attestation Letter, без которого нет разрешения на учёбу.",
+      "evidence": "For most new applicants, the $5,000 tuition deposit is required in order to accept the admission offer, receive your Provincial Attestation Letter, which you need for your study permit application and become eligible to register in courses.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стоимость обучения для иностранцев не фиксирована на странице: её считает калькулятор; после предложения цена не растёт весь срок программы (tuition guarantee).",
+      "evidence": "International undergraduate students will receive a tuition guarantee (annual and program total) for the duration of their program.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "International Admission Scholarship даётся автоматически по среднему баллу поступления, до CAN $10,000; отдельной заявки не требует.",
+      "evidence": "Top students could receive up to CAN $10,000 based on admission average.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Крупные стипендии — за отдельную заявку до 10 января: например President's International Distinction для 25 студентов в год, до CAN $120,000 за 4 года.",
+      "evidence": "Each year 25 students with a superior admission average and demonstrated leadership qualities entering their first year of an undergraduate degree on a student visa permit receive up to CAN $120,000 (payable over 4 years).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявку на стипендии можно подать только после заявки на степень; срок стипендиальных заявок — 10 января.",
+      "evidence": "The deadline for application-based scholarships is January 10.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Приём заявок на 2027 год открывается 1 октября 2026; крайний срок для большинства программ — 1 марта 2027, у некоторых факультетов (медицина, право, стоматология и др.) сроки другие.",
+      "evidence": "March 1, 2027 Deadline to submit application for admission for most programs.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы присылает напрямую в Registrar та школа или организация, что их выдала; присланное вуз не возвращает, поэтому невосполнимое лучше слать заверенной копией.",
+      "evidence": "Official documentation must be sent directly to the Office of the Registrar",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы не на английском или французском подают с официальным переводом сертифицированного переводчика; переводы на другие языки не принимаются.",
+      "evidence": "Documents not originally issued in English or French must be accompanied by an official English translation completed by a certified translator.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Не присылай документы, которых нет в твоём чек-листе Launchpad: их не рассматривают и уничтожают.",
+      "evidence": "Do not submit any unsolicited/unrequested documentation as it will not be reviewed and it will be destroyed.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-10-01",
+    "closes": "2027-03-01",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.ualberta.ca/admissions/how-to-apply/index.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Alberta, Эдмонтон, Канада. Заявки на осень 2027 принимают с 1 октября 2026, для большинства программ срок — 1 марта 2027. Таджикский аттестат прямо назван в списке принимаемых. Обучение платное, стипендии до CAN $10,000 автоматически и крупные по заявке до 10 января."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.ualberta.ca/admissions/international/index.html",
+    "pages": [
+      {
+        "url": "https://www.ualberta.ca/admissions/international/index.html",
+        "contentHash": "sha256:c345a6245648e254796232c60f1df54544cff678e1fc2d404002e20c92e23b96"
+      },
+      {
+        "url": "https://www.ualberta.ca/admissions/how-to-apply/index.html",
+        "contentHash": "sha256:3d1107f63f78a6e5796f2c49ca5759716bfed4ba52248c971ab74c883429b56c"
+      },
+      {
+        "url": "https://www.ualberta.ca/admissions/how-to-apply/international-admission-requirements/index.html",
+        "contentHash": "sha256:086003d73b43bf30a3bd70f080ca43168cf897e293de21c0ef2dc3215bc79cc9"
+      },
+      {
+        "url": "https://www.ualberta.ca/admissions/how-to-apply/international-admission-requirements/international-curricula/index.html",
+        "contentHash": "sha256:ad6216cde351f8ca9a77df12d8dae960c5d85febfc45a5e99e214f9e965a8bc3"
+      },
+      {
+        "url": "https://www.ualberta.ca/admissions/how-to-apply/dates-deadlines/index.html",
+        "contentHash": "sha256:271b7f07feaa2560a75df02dd528f1278f8671216e1be800ea049cbbdd345a96"
+      },
+      {
+        "url": "https://www.ualberta.ca/admissions/tuition-and-scholarships/international-tuition-and-fees.html",
+        "contentHash": "sha256:2762df08bda43b0597c5a122a2d0fc4512465ebe500c6a6a2bdc4ea865013ed2"
+      },
+      {
+        "url": "https://www.ualberta.ca/admissions/tuition-and-scholarships/international-entrance-scholarships/index.html",
+        "contentHash": "sha256:c02cc084ff0869ef566c083c7ae322ecb56eb98d1330fc8d9b11b6e810418bbe"
+      },
+      {
+        "url": "https://www.ualberta.ca/admissions/how-to-apply/after-you-apply/international-transcripts-and-documents.html",
+        "contentHash": "sha256:7b88cc28b559e51ade6a1a0597d8cd8cc97561a577534b26c721de48a12d42ed"
+      },
+      {
+        "url": "https://www.ualberta.ca/admissions/how-to-apply/ib-students/index.html",
+        "contentHash": "sha256:8bc2117333ba1f6e045a676acfef15cec24a57df68eaea252c8b536d26794226"
+      },
+      {
+        "url": "https://www.ualberta.ca/admissions/support-and-advising/international-student-advising.html",
+        "contentHash": "sha256:373e605bb68148836cc9f321df91b44d5c4b92649db38ff3cd00ea2887b9b3fc"
+      },
+      {
+        "url": "https://www.ualberta.ca/admissions/how-to-apply/admission-requirements/language-requirements/index.html",
+        "contentHash": "sha256:23c9c1d4ee90cc1858c5ca89e0458b46c7a1aad94ca88fc5388ef95741eac395"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
