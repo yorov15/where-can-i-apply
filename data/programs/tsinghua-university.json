@@ -1,0 +1,226 @@
+{
+  "id": "tsinghua-university",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Tsinghua University (Китай): приём иностранцев на бакалавриат",
+    "orig": "Tsinghua University"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное. Англоязычные программы — 100 000 юаней в год; китайско-английские — 30 000 (инженерия, информатика и др.) или 26 000 (экономика, право, часть колледжей), искусство 40 000, медицина от 40 000. Сбор за заявку 800 юаней (невозвратный), страховка 800 юаней в год, общежитие бронируется отдельно. Помощь есть, но не гарантирована: государственная стипендия Китая (CSC) — через посольство КНР, и стипендия для иностранных первокурсников Tsinghua (в 2026 году её получили примерно 45% первокурсников-иностранцев) покрывает первый год полностью, наполовину или частично. Жильё и дорогу не покрывают"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Applicants must be foreign nationals who do not hold Chinese nationality in accordance with the Nationality Law of the People's Republic of China ."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы вход не закрывает: отказ по стране не назван, требования выражены аттестатом и успеваемостью, а не страной. Аттестат Таджикистана прямо не упомянут — эквивалент уточнять в приёмной. Смотрели страницы допуска, порядка подачи, английского, стоимости, стипендий и сроков, а также приёмные руководства англоязычных программ."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "hold a valid high school graduation certificate. The educational qualification must have been obtained through full-time, in-person education."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "года выпуска не ограничивают: требований к году окончания школы на снятых страницах нет, нужен лишь аттестат о среднем образовании"
+    },
+    "age": {
+      "min": 18,
+      "evidence": "Aged 18 or above (by September 1, 202 7)."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Applicants should demonstrate outstanding academic performance, supported through by (but not limited to) the following document(s):"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "A high level of English language proficiency is required. Applicants whose native language is not English must provide official English language proficiency test results (e.g. TOEFL/IELTS/others)."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Заявитель — иностранец, не гражданин Китая (по Закону о гражданстве КНР). Отказавшимся от китайского гражданства нужны отдельные документы и проверка статуса.",
+      "evidence": "Applicants must be foreign nationals who do not hold Chinese nationality in accordance with the Nationality Law of the People's Republic of China .",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Обязателен аттестат о среднем образовании, полученный очно, на дневной форме.",
+      "evidence": "hold a valid high school graduation certificate. The educational qualification must have been obtained through full-time, in-person education.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужна сильная успеваемость: её подтверждают транскриптом, аттестатом о сдаче национального выпускного экзамена и результатами международных тестов.",
+      "evidence": "Applicants should demonstrate outstanding academic performance, supported through by (but not limited to) the following document(s):",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Для англоязычных программ — высокий уровень английского; кто учился не на английском, присылает сертификат (TOEFL/IELTS и другие). Конкретный порог вуз не называет.",
+      "evidence": "A high level of English language proficiency is required. Applicants whose native language is not English must provide official English language proficiency test results (e.g. TOEFL/IELTS/others).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для англоязычных программ знание китайского не требуется.",
+      "evidence": "Proof of Chinese language proficiency is not required.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Для китайско-английских программ нужен HSK 5 и выше, по 60+ в каждом разделе (аудирование, чтение, письмо). Родной китайский или школа с обучением на китайском — основание отказаться от HSK.",
+      "evidence": "Applicants must demonstrate Chinese language proficiency at HSK Level 5 or above, with scores above 60 in each of the following categories: Listening, Reading, and Writing.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст — 18 лет и старше на 1 сентября 2027 года. Младше 18 — при регистрации нужны документы и гарантия опекуна в Китае.",
+      "evidence": "Aged 18 or above (by September 1, 202 7).",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "SAT/ACT обязательными не названы: вуз просит приложить результаты стандартизированных тестов (CSCA/SAT/ACT/A-Level/AP/IB и другие) как подтверждающие материалы.",
+      "evidence": "Results of international standard ized tests (e.g. CSCA / SAT/ACT/A-Level /AP/IB/others).",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Сбор за заявку — 800 юаней, невозвратный.",
+      "evidence": "Pay the non-refundable application fee (800 RMB) online and submit the application.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 800,
+        "currency": "CNY",
+        "evidence": "Pay the non-refundable application fee (800 RMB) online and submit the application."
+      }
+    },
+    {
+      "ru": "Англоязычные программы: обучение 100 000 юаней в год, страховка 800 юаней в год.",
+      "evidence": "Tuition Fee (Per Year) Application Fee (one time) Medical Insurance (Per Year) 100,000.00 800.00 800.00",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Китайско-английские программы дешевле: 30 000 юаней в год (инженерия, информатика и др.), 26 000 (экономика, право, часть колледжей), искусство 40 000.",
+      "evidence": "30,000.00 / Per Year 1. Economics, Finance and Management 2. Law 3. Xinya College 4. Rixin C ollege 5. Zhishan College 26,000.00 / Per Year Arts 40,000.00 / Per Year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Государственная стипендия Китая (CSC) — через посольство или консульство КНР в своей стране (тип A); приём обычно с ноября 2026 по апрель 2027 и различается по странам.",
+      "evidence": "The scholarship application should be directed to the local Chinese Embassy or Consulate (Type A). The application period is usually from November 202 6 to April 202 7 (var ying from country to country).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия для иностранных первокурсников Tsinghua: в 2026 году её получили примерно 45% иностранных первокурсников; покрывает полную, половину или часть стоимости первого года. Со второго курса можно претендовать на другие стипендии, включая Пекинскую.",
+      "evidence": "In 2026, approximately 45% of international undergraduate freshmen were awarded this scholarship. Outstanding international freshmen who apply for and are awarded the scholarship through the application system will receive financial support for their first academic year, including full-tuition, half-tuition, and partial-tuition scholarships.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Два раунда подачи: первый — 30 сентября 2026 – 20 ноября 2026, второй — 21 ноября 2026 – 28 февраля 2027. Дизайн и изящные искусства Академии искусств — только первый раунд; совместная программа с CUHK — только второй.",
+      "evidence": "Online application (Beijing Time): 8:00 AM September 30, 2026-5:00 PM November 20, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Англоязычные программы бакалавриата: Zhishan College (Politics, Economics and Sociology for Global Leaders in Smart Society) и Zijing College (Global Talents in Science and Engineering; Urban Regeneration and Design).",
+      "evidence": "Tsinghua University Zhishan College Politics, Economics and Sociology for Global Leaders in Smart Society Program Admission Guide 2027",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-30",
+    "closes": "2027-02-28",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://apply.join-tsinghua.edu.cn/international",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Tsinghua University (Пекин, Китай). Подача через онлайн-систему вуза, два раунда приёма."
+    }
+  },
+  "source": {
+    "url": "https://international.join-tsinghua.edu.cn/Admission1/Eligibility.htm",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://international.join-tsinghua.edu.cn/Admission1/Eligibility.htm",
+        "contentHash": "sha256:612f6d0c962da8124bb8187733008c562de4cc95b162f1b7ba752661b26c1c1a"
+      },
+      {
+        "url": "https://international.join-tsinghua.edu.cn/Admission1/Application_Procedures.htm",
+        "contentHash": "sha256:85538d2aa8c3167298c437bf71339ec23f87e54322edafb902a1ad44580311b4"
+      },
+      {
+        "url": "https://international.join-tsinghua.edu.cn/Admission1/Schedule.htm",
+        "contentHash": "sha256:e73527a2ec7e1ef0e17e6d279a7368d8be96f3aaf7b5c95cd8bfed2970245666"
+      },
+      {
+        "url": "https://international.join-tsinghua.edu.cn/Admission1/Fees.htm",
+        "contentHash": "sha256:05659a1b29575dca556b653eccf0670289ab0af0a3cc659befee73ca24a16ffe"
+      },
+      {
+        "url": "https://international.join-tsinghua.edu.cn/Admission1/Freshmen_Scholarships1.htm",
+        "contentHash": "sha256:825f9a4aa67272443652daf05e4e46c76a8d4d5bad032a8790a16ea0e9b02c72"
+      },
+      {
+        "url": "https://international.join-tsinghua.edu.cn/Admission1/FAQ.htm",
+        "contentHash": "sha256:4f88f3aa067a079befc1730e8cc1f4b591e8e3bb01c15a66bb268b34ef0e5e4f"
+      },
+      {
+        "url": "https://international.join-tsinghua.edu.cn/Admission1/Undergraduate_Programs_Overview.htm",
+        "contentHash": "sha256:f8f22e6b93a495811a7feb8a127d2431cbad211ccef06b7daf10d928bc4f3ce4"
+      },
+      {
+        "url": "https://international.join-tsinghua.edu.cn/English_Taught_Programs.htm",
+        "contentHash": "sha256:f45f096741ad3d7a725ed0158432c9ad6d3823c705f6662a2b577e86d7b28503"
+      },
+      {
+        "url": "https://international.join-tsinghua.edu.cn/info/1082/1183.htm",
+        "contentHash": "sha256:0f455399739935e8f4769d9ef7e96617df33eacb598905998f4297a84f2e26d5"
+      },
+      {
+        "url": "https://international.join-tsinghua.edu.cn/info/1082/1185.htm",
+        "contentHash": "sha256:ca67493411895e189cf6dadd43b7cec1b2fbf9a8e4d8266de06cf4b85477f469"
+      },
+      {
+        "url": "https://international.join-tsinghua.edu.cn/info/1082/1184.htm",
+        "contentHash": "sha256:4cd43b155952a2bf822212ce2b7a91a30f799bbd45f6b710eaeefa000e5ca493"
+      },
+      {
+        "url": "https://international.join-tsinghua.edu.cn/Admission1/Undergraduate_Programs_of_Academy_of_Arts___Desi.htm",
+        "contentHash": "sha256:56cb0cd8a98e79411d63b0ce051200e74b061383be407512001cbd1733f40810"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
