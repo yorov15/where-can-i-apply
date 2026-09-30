@@ -1,0 +1,371 @@
+{
+  "id": "unsw",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "UNSW Sydney (Австралия) — приём иностранцев на бакалавриат",
+    "orig": "UNSW Sydney"
+  },
+  "hostCountry": "AU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, отдельной повышенной ставки для иностранцев нет: стоимость считают по выбранным курсам и факультету, точная сумма — на странице конкретной степени. Полного покрытия по нужде для иностранцев вуз не даёт. Из помощи: International Student Award — 20% скидки на обучение каждый год для граждан отобранных стран (Таджикистан входит), на 2026 и 2027 год; International Scientia Coursework Scholarship — полная оплата обучения на весь срок или A$20,000 в год; Australia's Global University Award — A$10,000 на один год; плюс поддержка при непредвиденных трудностях (беспроцентные займы и гранты). Отдельная сложность: к школьным аттестатам Таджикистана прямого поступления нет — есть +5 баллов к ATAR (IADP) и подготовительные программы UNSW College."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз сам определяет иностранного студента и описывает для него отдельный порядок подачи, запрета по паспорту нет. Смотрели страницы приёма иностранцев, требований, английского, стоимости, стипендий и сроков."
+    },
+    "schoolCountry": {
+      "allow": "*",
+      "deny": [
+        "TJ"
+      ],
+      "evidence": "\"Tajikistan\",\"We do not accept secondary qualifications from this country. We may accept tertiary study results. Please call or email us for further advice.\""
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Overseas secondary qualifications considered equivalent to Australian studies"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: сказано лишь, что учитывают самую свежую квалификацию, а квалификации старше 5 лет не рассматривают (кроме Medicine). Требования «окончи школу не позже такого-то года» нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют. Отдельные пороги встречаются только у альтернативных путей (21 год для TAFE TPC, Open Foundation и STAT), но это не общий допуск на бакалавриат, поэтому требования по возрасту нет."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Admission to UNSW is based on academic merit. As such, we need something to assess you on."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "parts": true,
+          "evidence": "6.0 overall (min. 5.5 in each subtest)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 79,
+          "parts": true,
+          "evidence": "79 overall (min. 21 in writing, 12 in reading, 11 in listening, 17 in speaking)"
+        },
+        {
+          "test": "PTE",
+          "min": 50,
+          "parts": true,
+          "evidence": "50 overall (min. 42 in each subtest)"
+        }
+      ],
+      "evidence": "You need to meet both the academic and English language requirements of your desired degree to study at UNSW."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Students who meet program entry requirements based on their SAT, AP, or ACT results are now eligible to receive a full or conditional on English offer ahead of their final high school result and proof of and completion of high school studies."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем UNSW считает того, кто не гражданин Австралии или Новой Зеландии, не постоянный резидент Австралии и не держатель постоянной гуманитарной визы. Гражданство Таджикистана для иностранного приёма подходит.",
+      "evidence": "You are an international student if you are NOT: an Australian or New Zealand citizen (including dual citizens) a permanent resident of Australia a holder of a permanent Australian humanitarian visa.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Подача идёт онлайн через UNSW Applicant Portal; в своей стране можно обратиться к местному агенту UNSW, который проведёт по процессу.",
+      "evidence": "Alternatively, you can find a local UNSW agent in your region, and they will guide you through the process.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для Таджикистана вуз прямо не принимает школьные (средние) аттестаты этой страны для прямого поступления на бакалавриат. Может принять результаты уже начатого высшего образования — просят связаться с приёмной. Обходные пути — Foundation Studies и диплом UNSW College.",
+      "evidence": "\"Tajikistan\",\"We do not accept secondary qualifications from this country. We may accept tertiary study results. Please call or email us for further advice.\"",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Таджикистан входит в список стран International Student Award: абитуриенты-бакалавры из них автоматически попадают в International Admissions Diversity Pathway и получают +5 баллов к международному ATAR (кроме заявок на Bachelor of Medical Studies/Doctor of Medicine).",
+      "evidence": "Applicants from International Student Award (ISA) eligible countries applying for undergraduate programs at UNSW Sydney are automatically included in our new International Admissions Diversity Pathway, which provides applicants with an additional 5 points towards their International ATAR* when applying for admission to UNSW Sydney (excluding applicants for the Bachelor of Medical Studies/Doctor of Medicine).",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Чтобы получить эти +5 баллов, нужен международный ATAR не ниже 75.",
+      "evidence": "A minimum score equivalent to an international ATAR of 75 is required.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Если школьный аттестат не подходит напрямую, путь — программы UNSW College: диплом (12 месяцев) даёт прямой вход сразу на второй год любого бакалавриата UNSW.",
+      "evidence": "Diplomas Stay on track to your university goals with our 12-month diploma programs, offering direct entry into the second year of any UNSW bachelor's degree.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Foundation Studies в UNSW College строит академическую базу для входа на первый курс любого бакалавриата UNSW.",
+      "evidence": "Foundation Studies Build a solid academic foundation to prepare for entry into the first year of any UNSW bachelor's degree.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если уже начато высшее образование, вуз может принять минимум один год полного обучения (от 0.75 FTE) в бакалавриате признанного университета — это альтернативный путь при непринятой школьной квалификации.",
+      "evidence": "You may be eligible for admission based on the completion of at least one year of full-time study (or the part-time equivalent) in a bachelor's degree or equivalent or higher, at a recognised university or non-university higher education provider.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Из двух школьных квалификаций учитывают самую свежую; квалификации старше 5 лет не рассматривают (кроме Bachelor of Medical Studies/Doctor of Medicine).",
+      "evidence": "If you have two secondary qualifications, your most recent one will be considered. Qualifications older than 5 years will not be considered unless applying for the Bachelor of Medical Studies/Doctor of Medicine or Bachelor of Medical Studies/Doctor of Medicine/Bachelor of Arts.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Для поступления принимают подготовительные программы только Group of Eight (включая UNSW College); отдельно для иностранцев принимают NCUK International Foundation Year.",
+      "evidence": "UNSW only accepts Group of Eight (Go8) Foundation programs",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен: нужно выполнить и академические, и языковые требования выбранной степени (у некоторых программ есть особые условия).",
+      "evidence": "You need to meet both the academic and English language requirements of your desired degree to study at UNSW.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Принимают тесты: IELTS Academic (включая One Skill Retake и UKVI; онлайн-версия не принимается), TOEFL iBT (включая Home Edition), PTE Academic и другие из списка.",
+      "evidence": "List of test we accept: IELTS (International English Language Testing System) - Academic version, IELTS One Skill Retake and IELTS UKVI only. Online version is not accepted TOEFL iBT (Test of English as a Foreign Language - internet-based), including TOEFL iBT Home Edition (TOEFL for Australia version only) PTE (Pearson Test of English - Academic)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Языковой тест должен быть сдан не раньше чем за два года до начала учёбы в UNSW.",
+      "evidence": "You may need to submit results from an acceptable English language test taken in the last two years prior to starting at UNSW.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Базовый порог для большинства программ (включая бакалавриат): IELTS 6.0 (не ниже 5.5 по каждой части), TOEFL iBT 79 (21 письмо, 12 чтение, 11 аудирование, 17 устная часть), PTE 50 (не ниже 42 по каждой части).",
+      "evidence": "All programs except where specified below 6.0 overall (min. 5.5 in each subtest) 79 overall (min. 21 in writing, 12 in reading, 11 in listening, 17 in speaking) 500 overall (min. 4.5 in TWE) 50 overall (min. 42 in each subtest)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для всех программ Business и Law (bachelor и postgraduate coursework, кроме UNSW Canberra и Bachelor of Criminology & Criminal Justice) порог выше: IELTS 6.5 (не ниже 6.0 по частям), TOEFL iBT 90 (23 письмо, 22 остальные части).",
+      "evidence": "6.5 overall (min. 6.0 in each subtest) 90 overall (min. 23 in writing, 22 in reading, listening and speaking)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский можно не сдавать через English waiver: вуз может снять языковое требование по жизненному опыту и обстоятельствам — нужно выполнить любые два условия из списка.",
+      "evidence": "An English waiver is a decision by UNSW to waive the English language requirements based on life experience and circumstances.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Приём по заслугам: нужна квалификация, которую можно оценить; единого числового порога GPA/ATAR для всех программ нет (зависит от программы и потока).",
+      "evidence": "Admission to UNSW is based on academic merit. As such, we need something to assess you on.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "SAT, AP и ACT вуз принимает как основание для оценки и может выдать полный или условный (по английскому) оффер до финальных школьных результатов, если школа пришлёт справку об ожидаемом выпуске. Обязательными эти экзамены не названы.",
+      "evidence": "Students who meet program entry requirements based on their SAT, AP, or ACT results are now eligible to receive a full or conditional on English offer ahead of their final high school result and proof of and completion of high school studies.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Подача онлайн стоит A$150, сбор невозвратный, платится картой.",
+      "evidence": "An online application costs A$150.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стоимость обучения для иностранцев считают по выбранным курсам (units of credit) и факультету, а не по программе в целом; ориентировочные суммы за год и за весь курс даны на странице конкретной степени.",
+      "evidence": "At UNSW, tuition fees are calculated based on the courses (subjects) you select, rather than on the degree (program) you choose.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Ежегодный обязательный студенческий сбор SSAF платят все иностранные студенты; максимум на 2025 год — A$365, платится сразу.",
+      "evidence": "The maximum SSAF for 2025 is A$365",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Медицинская страховка OSHC обязательна на весь срок студенческой визы (исключение — студенты из Бельгии, Норвегии и Швеции).",
+      "evidence": "If you are in Australia on a student visa you will need to pay for health insurance through the Overseas Student Health Cover (OSHC) scheme and maintain insurance for the duration of your visa.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для студенческой визы нужно показать средства на проживание не менее A$29,710 в год на одного студента.",
+      "evidence": "a single student must show they have the financial capacity to cover the living costs of at least A$29,710 per year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "International Student Award даёт 20% скидки на обучение каждый год программы. Право есть у граждан отобранных стран, включая Таджикистан; доступна поступающим в 2026 и 2027 году.",
+      "evidence": "Receive 20% toward tuition fees for every year of your program.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Таджикистан входит в официальный список стран International Student Award (20% за обучение).",
+      "evidence": "Suriname Tajikistan Tanzania Timor-Leste Togo Tonga Tunisia Turkmenistan Tuvalu Uganda Ukraine Uzbekistan",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для International Student Award нужно приложить личное заявление не длиннее 500 слов с причинами учиться на выбранной программе; подаётся вместе с заявкой.",
+      "evidence": "To apply for the UNSW International Student Award applicants must submit a personal statement of no more than 500 words outlining their reasons to study the proposed program at UNSW.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "International Scientia Coursework Scholarship — флагманская стипендия: полная оплата обучения на весь срок программы или A$20,000 в год на обучение.",
+      "evidence": "Receive full tuition fee support for the duration of your degree or receive a $20,000 contribution (per year) to tuition fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Australia's Global University Award — A$10,000 на один год; выплата идёт на обучение во втором триместре первого года.",
+      "evidence": "Receive $10,000 for one year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Финансовая помощь или займы от родной страны доступны только гражданам США, Бельгии, Канады, Дании, Германии, Норвегии и Швеции. Остальным, включая Таджикистан, остаётся только поддержка при непредвиденных трудностях.",
+      "evidence": "If you are a citizen of the United States, Belgium, Canada, Denmark, Germany, Norway or Sweden, you may be eligible to access financial aid or student loan schemes from your home country to support your studies at UNSW Sydney.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "При непредвиденных финансовых трудностях UNSW даёт иностранцам беспроцентные займы и гранты — это не покрытие стоимости обучения.",
+      "evidence": "At UNSW, we have a range of financial support options to help you manage unexpected financial hardship during your studies.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём на все потоки 2027 года открыт; заявки рассматривают по раундам, и часть программ набора 2026 уже закрыта для новых иностранных студентов. Советуют подавать заранее.",
+      "evidence": "Applications to all 2027 intakes are open.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для Term 1 2027 (старт в феврале) сроки подачи по раундам: первый — 14 мая 2026, далее 16 июля, 20 августа и 24 сентября 2026; офферы и дедлайны принятия идут следом.",
+      "evidence": "Term 1 2027 Both Thursday, 14 May 2026 Thursday, 13 August 2026 Thursday, 8 October 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Даты закрытия заявок различаются по программе и потоку — их надо смотреть на странице конкретной степени.",
+      "evidence": "Application closing dates vary by program and intake.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://apply.unsw.edu.au/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: UNSW Sydney (University of New South Wales), Сидней, Австралия. Приём иностранцев на бакалавриат по заслугам (ATAR/эквивалент), подача онлайн через UNSW Applicant Portal, до трёх программ в заявке. Гражданство вход не закрывает, но к школьным аттестатам Таджикистана прямого поступления нет — есть +5 баллов к ATAR для отобранных стран (IADP), программы UNSW College и путь через уже начатое высшее образование. Помощь: International Student Award (20% обучения), Scientia, Australia's Global University Award."
+    }
+  },
+  "source": {
+    "url": "https://www.unsw.edu.au/study/how-to-apply/international",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.unsw.edu.au/study/how-to-apply/international",
+        "contentHash": "sha256:b8372bc337416b9782e97795aa81a4b9a2caa75fafbeb4df563b3c49c110adbb"
+      },
+      {
+        "url": "https://www.unsw.edu.au/study/how-to-apply/english-language-requirements",
+        "contentHash": "sha256:92fa3fc7f2bd61ff1a489e5d42e647384cd771bc329aa95ab22774761bedda63"
+      },
+      {
+        "url": "https://www.unsw.edu.au/study/how-to-apply/fees",
+        "contentHash": "sha256:b5666ab93212a42d462be92f125254b8779d35a300bdd3887c0538b54078d0e0"
+      },
+      {
+        "url": "https://www.unsw.edu.au/study/how-to-apply/fees/financial-aid",
+        "contentHash": "sha256:8681472afa2e20aeb4e42f741af7e059695705c9e8dddc1a1aa57d098266cb77"
+      },
+      {
+        "url": "https://www.unsw.edu.au/study/how-to-apply/scholarships",
+        "contentHash": "sha256:5779428fda0e1cd834f43f5864a0d664e3b201dd226559fc6d5bfb71d60c4cc9"
+      },
+      {
+        "url": "https://www.unsw.edu.au/study/how-to-apply/apply-online-faqs",
+        "contentHash": "sha256:8afabe16f41d74dd7c14ee4a05207fcecf8f19e8f1a516cd9c1211d989667aba"
+      },
+      {
+        "url": "https://www.unsw.edu.au/study/international-students/admissions-info",
+        "contentHash": "sha256:b8bc233de08341393dbf036d0d65ea68dcf55b435d898b7c95277aa5387c4e33"
+      },
+      {
+        "url": "https://www.unsw.edu.au/study/how-to-apply/international/admission-pathways",
+        "contentHash": "sha256:919fc73bc88ae737a8838dc06692f081e0fbe798f480267d1c950bac10730840"
+      },
+      {
+        "url": "https://www.unsw.edu.au/study/how-to-apply/undergraduate/entry-requirements",
+        "contentHash": "sha256:31979df75c970b5a427500f9fdee24b965d6c0d37658ad972fdb3eb6dbf6d477"
+      },
+      {
+        "url": "https://www.unsw.edu.au/study/how-to-apply/accepted-qualifications",
+        "contentHash": "sha256:f9275ecb4696e04ef2ab18b45d78c041a94a2b1d5c99b410e03aa6c68a51448b"
+      },
+      {
+        "url": "https://www.scholarships.unsw.edu.au/international-student-award",
+        "contentHash": "sha256:55b0813cfe53fa14e72d579ddfa62da96823fd8f30e4bd2e07a20d8aa787388b"
+      },
+      {
+        "url": "https://www.scholarships.unsw.edu.au/sites/default/files/2026-04/International%20Student%20Award_List%20of%20Eligible%20Countries.pdf",
+        "contentHash": "sha256:5fcc3a69ce581bd6f28b675cc68ac7aea059dc49164818d6925a5a2ee82d8039"
+      },
+      {
+        "url": "https://www.unsw.edu.au/content/dam/pdfs/future-students/2021-10-qualifications/20220331-FSR-accepted-qualifications_4.csv",
+        "contentHash": "sha256:013a9d7324b244be718fc8d9aa49ee9d20538ee4ade4fc72938de3728143c50c"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}

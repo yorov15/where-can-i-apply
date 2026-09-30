@@ -1,0 +1,284 @@
+{
+  "id": "um-malaya",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Universiti Malaya (Малайзия) — приём иностранцев на бакалавриат",
+    "orig": "Universiti Malaya"
+  },
+  "hostCountry": "MY",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: отдельная стипендия для иностранцев-бакалавров вузом не предусмотрена. Приём иностранцев на бакалавриат идёт через International Channel / MAYA Portal; заявка стоит MYR 500 и невозвратна, сборы за заявку и зачисление не отменяются. Обучение считается по программе: например, Bachelor of Arts International and Strategic Studies для иностранца — RM 65,100 за весь курс, плюс 6% налога SST; по другим факультетам суммы выше (инженерия и медицина заметно дороже). Жильё и дорогу студент оплачивает сам. Единственная найденная мера для иностранцев — PTE x Universiti Malaya Scholarship 2026 на £3,000 в счёт обучения (заявка до 31 декабря 2026)."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз отдельно описывает International Channel, прямо открытый для иностранных студентов, отдельного запрета по паспорту нет. Особые правила есть только по квалификации для граждан Китая (Gaokao), для остальных стран ограничений не названо. Смотрели страницы приёма иностранцев, требований, английского, сроков и стоимости."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван, требования выражены квалификацией (STPM/A-Level/IB/High School/Grade 12 или признанный диплом), а не страной. Отдельная страница есть только для Китая (Gaokao, минимум 80%); Таджикистан и Центральная Азия прямо не названы, поэтому эквивалент аттестата надо уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "The minimum undergraduate entry qualification is completed and passed a minimum of twelve (12) years of study and obtained the following qualifications : Passed the Sijil Tinggi Persekolahan Malaysia (STPM)/A-Level/IB/High School/Grade 12/Equivalent; OR Possess a Diploma that is recognized by the University with at least a CGPA of 3.00"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: требуется завершённая учёба (незавершённые заявки аннулируют), но числового правила по году выпуска нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма нет: вуз прямо пишет, что принимает студентов всех возрастных групп и не устанавливает возрастных ограничений. Смотрели страницы требований, приёма иностранцев, сроков и стоимости."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Единого порога по среднему баллу для иностранцев-бакалавров страницы не называют: требования выражены квалификацией и оценками по предметам программ. Дипломный путь упоминает CGPA 3.00, но это условие для дипломников, а не общий порог GPA."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5.0,
+          "evidence": "Band of 5.0 and above in IELTS (Academic)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 60,
+          "evidence": "Score of 500 (PBT), 173 (CBT) or 60 (IBT) and above in TOEFL"
+        },
+        {
+          "test": "PTE",
+          "min": 41,
+          "evidence": "Score 41 and above in Pearson Test of Academic English (PTE Academic)"
+        }
+      ],
+      "evidence": "English Proficiency Certificate - Mandatory to meet the English language requirements set specifically for each programme."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Приём иностранцев идёт отдельным каналом International Channel, заявки — только через портал MAYA.",
+      "evidence": "The International Channel is an admission pathway offered directly by Universiti Malaya, open to international students, with applications submitted exclusively through the MAYA Portal.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Минимум для бакалавриата: не меньше 12 лет школы и аттестат уровня STPM/A-Level/IB/High School/Grade 12 или эквивалент; либо признанный диплом со средним баллом (CGPA) не ниже 3.00. Таджикские 11 лет школы — это повод уточнить эквивалент в приёмной, а не автоматический отказ.",
+      "evidence": "The minimum undergraduate entry qualification is completed and passed a minimum of twelve (12) years of study and obtained the following qualifications : Passed the Sijil Tinggi Persekolahan Malaysia (STPM)/A-Level/IB/High School/Grade 12/Equivalent; OR Possess a Diploma that is recognized by the University with at least a CGPA of 3.00",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь, если школьного аттестата за 12 лет нет: можно подать с признанным дипломом, если средний балл по нему не ниже CGPA 3.00.",
+      "evidence": "OR Possess a Diploma that is recognized by the University with at least a CGPA of 3.00",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский обязателен: сертификат о владении английским надо представить, порог зависит от конкретной программы.",
+      "evidence": "English Proficiency Certificate - Mandatory to meet the English language requirements set specifically for each programme.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Общий минимум по английскому: IELTS Academic 5.0; TOEFL 500 (PBT) / 173 (CBT) / 60 (iBT); PTE Academic 41. Дополнительно принимают MUET (band 3), английский GCE A-Level или O-Level (grade C) и Cambridge FCE (grade C).",
+      "evidence": "Band of 5.0 and above in IELTS (Academic) ; or Score of 500 (PBT), 173 (CBT) or 60 (IBT) and above in TOEFL; or Band of 3 and above in Malaysian University English Test (MUET); or Score 41 and above in Pearson Test of Academic English (PTE Academic); or Grade C and above in English for General Certificate of Education (A Level), University of Cambridge",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для ряда программ (инженерия, информатика, медицина, фармация, бухгалтерия/бизнес, TESL, стоматология, английская филология и др.) нужен более высокий балл по английскому, чем общий минимум.",
+      "evidence": "There is an exception in the English requirements for the following listed programmes",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Освобождение от языкового экзамена дают только поступающим в магистратуру/докторантуру; на бакалавриате сертификат обязателен.",
+      "evidence": "exemptions will be granted only for Postgraduates applicants in the following categories",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Без сертификата по английскому подать можно: вуз может дать условный оффер (Conditional Offer), но результат теста надо досдать к указанному в оффере сроку, иначе оффер отзовут.",
+      "evidence": "Conditional Offer letter may be considered for applicants who have not submitted their English Language Requirements but have met the General and Specific Entry Requirements",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Формат IELTS Indicator, TOEFL Home Edition и TOEFL ITP для приёма не принимают — нужен официальный тест.",
+      "evidence": "IELTS Indicator, TOEFL (Home Edition, and TOEFL ITP are not accepted for admission purposes.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Подавать можно только после полного завершения текущей учёбы: незавершённые заявки аннулируют.",
+      "evidence": "Applicants who have not completed their current studies should refrain from applying , as incomplete applications will be void.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Документы не на английском или малайском должны быть официально переведены.",
+      "evidence": "Official translations are required for any documents not originally in English or Malay",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявку подают онлайн через портал apply.um.edu.my (MAYA Portal).",
+      "evidence": "All applications must be submitted online via e-application.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Обязательно выполнить и общие, и специфические требования программы; иначе заявку отклоняют.",
+      "evidence": "Applicants must fulfil all general and specific entry requirements set by the university to be considered.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Возрастных ограничений нет: принимают студентов всех возрастов.",
+      "evidence": "We do not impose any age-related restrictions on admission",
+      "field": "age",
+      "kind": "note"
+    },
+    {
+      "ru": "Принятым иностранцам обязателен курс малайского языка до окончания программы.",
+      "evidence": "All International students accepted into any program will also be required to undergo a course in the Malay language",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Сроки подачи для иностранцев: основной приём (Semester I, октябрь) — с 9 февраля 2026 по 30 августа 2026; весенний приём (Semester II, март) — с 7 сентября 2026 по 30 января 2027.",
+      "evidence": "UNDERGRADUATE - FOR INTERNATIONAL 09 Feb 2026 30 Aug 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Окно подачи на весенний приём: с 7 сентября 2026 по 30 января 2027.",
+      "evidence": "07 Sept 2026 30 Jan 2027",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сбор за заявку для иностранца — MYR 500 за одну заявку (бакалавриат, foundation, магистратура, докторантура), оплачивается до подачи.",
+      "evidence": "MYR 500.00 per one (1) application - Foundation, Bachelor's Degree, Master's Degree & Doctoral Degree Only",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Снятия платы за заявку или за зачисление нет — сборы обязательны.",
+      "evidence": "We regret to inform you that no fee waiver are available for application or admission fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стоимость обучения зависит от программы; для Bachelor of Arts International and Strategic Studies иностранцу — RM 65,100 за курс, плюс 6% SST.",
+      "evidence": "International RM 65,100 ( Note: Not inclusive of 6% Sales and Service Tax (SST))",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Вуз прямо пишет, что стипендий иностранцам-бакалаврам не предоставляет.",
+      "evidence": "We do not offer scholarship to the Undergraduate International Students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Единственная найденная мера для иностранцев — стипендия PTE x Universiti Malaya Scholarship 2026 на £3,000 в счёт обучения; срок заявки 31 декабря 2026.",
+      "evidence": "a unique opportunity for international students to receive £3,000 towards their tuition fees at Universiti Malaya.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-30",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://apply.um.edu.my",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Universiti Malaya (UM), Куала-Лумпур, Малайзия — старейший и первый по рейтингу (QS) вуз страны. Приём иностранцев на бакалавриат идёт через International Channel / MAYA Portal; общие требования — 12 лет школы и аттестат уровня Grade 12 / A-Level / IB, английский от IELTS 5.0 (для части программ выше). Обучение платное, отдельной стипендии для иностранцев-бакалавров вуз не даёт."
+    }
+  },
+  "source": {
+    "url": "https://study.um.edu.my/",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://study.um.edu.my/",
+        "contentHash": "sha256:a06786974e6c449a175fa94c2d8d74a8f14594530aa990e49ee98b22709c1c56"
+      },
+      {
+        "url": "https://study.um.edu.my/how-to-apply",
+        "contentHash": "sha256:8b1acd305516c9684282308ce2a89417c29ef9cb268c989854a187a978a45421"
+      },
+      {
+        "url": "https://study.um.edu.my/international-student",
+        "contentHash": "sha256:19f6b8fcb8b14a61e9fea9896499cdc8299e262a02c20e8d1b367a8583fd4139"
+      },
+      {
+        "url": "https://study.um.edu.my/programmes",
+        "contentHash": "sha256:f6c18c934feed94e46c4ec16a16dd7ec49da4619d68cf5b6c9600e06d2e0f776"
+      },
+      {
+        "url": "https://study.um.edu.my/faqs-amp-info",
+        "contentHash": "sha256:e3ca04a085a99b84ff6d2011aafcb2f7b7c9e8ca04cea3383922cde42047628e"
+      },
+      {
+        "url": "https://aasd.um.edu.my/faq-admission",
+        "contentHash": "sha256:f9ea76700383b5bbdfea5d8b79a671cfda864c973e45e9e464fb70794ff3fef5"
+      },
+      {
+        "url": "https://aasd.um.edu.my/faq-ug-international-admission",
+        "contentHash": "sha256:93d4ae1fac2face171ec9b0dee8ea85b429d32a0ebf15a751187da2d88fdc3ab"
+      },
+      {
+        "url": "https://aasd.um.edu.my/financial-aid-for-undergraduate",
+        "contentHash": "sha256:a65a00fc4c651caa515815550fc5aa38afbbbd16ab8b3b6298cd1b607bd6a904"
+      },
+      {
+        "url": "https://aasd.um.edu.my/new-student-pass-overview",
+        "contentHash": "sha256:cf60257f22afcf006fb0bee602504ba8a3c3e6c381bff04e8395cdc832cf941b"
+      },
+      {
+        "url": "https://apply.um.edu.my/",
+        "contentHash": "sha256:89806019e6ef09458c491de403656b83907ccac56507b4d2d44b0e5c590b4155"
+      },
+      {
+        "url": "https://study.um.edu.my/bachelor-of-arts-international-and-strategic-studies",
+        "contentHash": "sha256:82dbf02323afc56e707eb6a82f03bcd2561500acfdc0b31e708429b19e8e9da0"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}

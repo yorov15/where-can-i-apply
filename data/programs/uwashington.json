@@ -1,0 +1,324 @@
+{
+  "id": "uwashington",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Washington (США): приём иностранцев на бакалавриат",
+    "orig": "University of Washington"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, и помощи иностранцам нет: вуз прямо пишет, что не даёт финансовую помощь и стипендии иностранным студентам бакалавриата, и просит быть готовыми покрыть все расходы. Иностранцы платят по ставке нерезидента — $44,460 за год; полная стоимость девяти месяцев 2026-27 с жильём и питанием — $67,800 (при проживании с родителями $55,098). Программа полного покрытия Husky Promise и большинство стипендий требуют статуса резидента Вашингтона или гражданства США. Поэтому покрытие в карточке не отмечено."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз описывает для иностранцев тот же порядок подачи через Common App и те же сроки, что и для американцев, отдельного запрета по паспорту нет. Ограничение по срокам есть только по кварталу: на зимний и весенний кварталы иностранцев на первый курс не принимают. Смотрели страницы first-year, how-to-apply, English proficiency, costs, aid и scholarships."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван, требования выражены предметными кредитами (CADR) и оценками. Школам за пределами США, следующим национальной программе, вуз прямо предписывает порядок подачи транскрипта за 9 класс и выше, а требование по мировым языкам для выпускников неанглоязычных стран (кроме перечисленных англоязычных) считается выполненным. Аттестат Таджикистана и Таджикистан прямо не упомянуты — эквивалент уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Subject Credits required English 4 Mathematics 3 Social sciences/social studies 3 World languages 2 Science, including 2 years of lab science 3* Senior year math-based quantitative course 1 Fine, visual or performing arts .5 Academic elective .5"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: сказано лишь, что заявку подают в последний год школы, а итоговый официальный транскрипт требуется только после зачисления. Смотрели страницы how-to-apply, first-year и CADRs."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют. Отдельные возрастные рамки (17-30 лет) есть только у стипендий Army ROTC, и это условие службы, а не допуска к поступлению. Смотрели страницы how-to-apply, first-year, costs, aid и scholarships."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "An overall strong level of academic achievement, as demonstrated by grades, depth and breadth and rigor of curriculum."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "Test score requirement TOEFL (iBT) (prior to Jan. 21, 2026) TOEFL (iBT) (effective Jan. 21, 2026) IELTS Duolingo (DET) Minimum score required 76 4.0 6.0 110"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 76,
+          "evidence": "Test score requirement TOEFL (iBT) (prior to Jan. 21, 2026) TOEFL (iBT) (effective Jan. 21, 2026) IELTS Duolingo (DET) Minimum score required 76 4.0 6.0 110"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.0,
+          "evidence": "Test score requirement TOEFL (iBT) (prior to Jan. 21, 2026) TOEFL (iBT) (effective Jan. 21, 2026) IELTS Duolingo (DET) Minimum score required 76 4.0 6.0 110"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 110,
+          "evidence": "Test score requirement TOEFL (iBT) (prior to Jan. 21, 2026) TOEFL (iBT) (effective Jan. 21, 2026) IELTS Duolingo (DET) Minimum score required 76 4.0 6.0 110"
+        }
+      ],
+      "evidence": "As an international student, you are required to submit an official TOEFL, IELTS or Duolingo English Test (DET) score that meets the UW's minimum English proficiency requirement."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "The UW no longer requires SAT or ACT scores for most applicants. Homeschooled applicants and applicants who come from schools with non-standard grading practices that do not have letter or numeric grades are still required to submit SAT or ACT scores."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранец подаёт через тот же Common App и на те же сроки, что и американец; отдельного запрета по гражданству нет. На зимний квартал иностранцев на первый курс не принимают, весной — тоже.",
+      "evidence": "Winter/Spring: international first-year applications not accepted",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Иностранец обязан сдать официальный TOEFL, IELTS или Duolingo и набрать минимум по английскому.",
+      "evidence": "As an international student, you are required to submit an official TOEFL, IELTS or Duolingo English Test (DET) score that meets the UW's minimum English proficiency requirement.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Пороги по английскому: TOEFL iBT (до 21.01.2026) — 76; TOEFL iBT (с 21.01.2026, новая шкала) — 4.0; IELTS — 6.0; Duolingo — 110.",
+      "evidence": "Test score requirement TOEFL (iBT) (prior to Jan. 21, 2026) TOEFL (iBT) (effective Jan. 21, 2026) IELTS Duolingo (DET) Minimum score required 76 4.0 6.0 110",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Языковой экзамен надо сдать не позднее 31 декабря года подачи и отправить баллы из тестового агентства напрямую в UW.",
+      "evidence": "Exams must be taken on or before December 31 of the year of application, and scores must be sent directly from the testing agency to the UW.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Условного приёма нет: кто не сдал языковой минимум к 31 декабря, не рассматривается.",
+      "evidence": "The UW does not offer conditional admissions. All applicants must submit qualifying English proficiency exam scores by the December 31 exam deadline.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь по английскому: вместо языкового теста можно закрыть требование баллами SAT/ACT — средняя оценка B по английскому письму/литературе в 10-12 классах и SAT Evidence-Based Reading and Writing 580 или ACT English 22.",
+      "evidence": "A minimum average grade of B in all high-school-level English writing or literature courses where English is the primary language of instruction for all grade 10-12 classes taught at the school and A minimum SAT Evidence-Based Reading and Writing score of 580 or ACT English score of 22.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Исключение: если всё среднее образование прошло в Австралии, Канаде (англоязычные провинции), Великобритании, Ирландии, Новой Зеландии или США, языковой экзамен не нужен.",
+      "evidence": "Exception : If your primary and secondary education took place in Australia, Canada (English-speaking provinces), the United Kingdom, Ireland, New Zealand or the U.S., you are exempt from this requirement.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Требуется минимум по шести предметам (CADR): английский 4 кредита, математика 3, общественные науки 3, мировые языки 2, естественные науки 3 (включая 2 года лабораторных), математико-количественный курс в выпускном классе 1, искусство 0.5, академический выбор 0.5.",
+      "evidence": "Subject Credits required English 4 Mathematics 3 Social sciences/social studies 3 World languages 2 Science, including 2 years of lab science 3* Senior year math-based quantitative course 1 Fine, visual or performing arts .5 Academic elective .5",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Предметные требования надо выполнить до первого квартала обучения; не хватающие курсы можно добрать колледжными до зачисления.",
+      "evidence": "CADRs are admission requirements. Therefore, they must be satisfactorily completed before the first quarter of enrollment at the UW.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Записи из школы за пределами США: если школа следует национальной программе, надо загрузить скан неофициального транскрипта за 9 класс и выше; записи должны быть на английском или с официальным переводом.",
+      "evidence": "If you have attended a school outside of the U.S. that follows a national compulsory curriculum, you are required to upload a scanned, unofficial copy of your transcript for grade levels 9 and higher as part of your Common App application. Records from schools outside the U.S. must be in English or in the native language and accompanied by official English translations.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь по математике: если школьной подготовки не хватило, недостающий курс закрывают колледжным курсом intermediate algebra или тригонометрии с оценкой C (2.0) и выше.",
+      "evidence": "A course in intermediate algebra. At Washington community colleges, qualifying courses in intermediate algebra are listed as equivalent to MATH 098 in the UW Equivalency Guide . The course must be completed with a grade of C (2.0) or better, even though it does not transfer to the UW as college credit and the grade earned in the course is not used in computing the transfer GPA.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Требование по мировым языкам (2 кредита) считается выполненным для тех, кто закончил 7 класс в стране, где английский не был языком обучения и это не перечисленные англоязычные страны.",
+      "evidence": "The world languages requirement will be considered satisfied for applicants who complete their education through the seventh grade in school(s): where English was not the language of instruction and in countries other than Australia, Canada, Ireland, New Zealand, the United Kingdom and the U.S.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "SAT/ACT большинству больше не нужен; но домашним ученикам и тем, чья школа не ставит буквенных или числовых оценок, сдавать SAT или ACT обязательно.",
+      "evidence": "The UW no longer requires SAT or ACT scores for most applicants. Homeschooled applicants and applicants who come from schools with non-standard grading practices that do not have letter or numeric grades are still required to submit SAT or ACT scores.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Числового порога по GPA нет: смотрят общий уровень успеваемости, глубину и строгость программы.",
+      "evidence": "An overall strong level of academic achievement, as demonstrated by grades, depth and breadth and rigor of curriculum.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение для иностранца — по ставке нерезидента: $44,460 за год; полная стоимость девяти месяцев 2026-27 — $67,800 (при проживании с родителями $55,098).",
+      "evidence": "Non-resident tuition $44,460 $44,460 $44,460 Non-resident total costs $55,098 $67,800 $72,648",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцы платят по ставке нерезидента.",
+      "evidence": "International students pay non-resident tuition.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Вуз не даёт финансовую помощь и стипендии иностранным студентам бакалавриата: готовьтесь покрыть все расходы.",
+      "evidence": "The UW does not provide financial aid or scholarships to undergraduate international students. Undergraduate international students should be prepared to cover all expenses.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за заявку для иностранца — $95, невозвратная и платится при каждой подаче.",
+      "evidence": "The application fee is nonrefundable and must be submitted each time you apply for admission. It cannot be transferred to another quarter, to another campus of the UW or to another student. Application fee: $95",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 95,
+        "currency": "USD",
+        "evidence": "Application fee: $95"
+      }
+    },
+    {
+      "ru": "Снятие платы за заявку (fee waiver) иностранцам недоступно.",
+      "evidence": "Fee waivers are not available for international applicants.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Husky Promise — гарантия полного покрытия tuition и стандартных сборов, но только для резидентов штата Вашингтон.",
+      "evidence": "The Husky Promise is our guarantee that we will not let financial challenges stand in the way of Washington residents' ability to discover your potential and achieve a UW degree. It assures that full tuition and standard fees will be covered by grant or scholarship support for eligible students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки первого курса: заявка открывается 15 августа, дедлайн 15 ноября, экзамены до 31 декабря, решения 1-15 марта, подтверждение до 1 мая.",
+      "evidence": "August 15: Application opens November 15 : Application deadline for summer and autumn quarters December 31 : Test score deadline for summer and autumn quarters February 1 : UW FAFSA + WASFA priority date March 1-15 : Admission decision notification period for summer and autumn quarter May 1 : National College Decision Day",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Вуз не участвует в early decision/early action: решения принимают только после просмотра всех заявок.",
+      "evidence": "Admission decisions are made only after all first-year applications have been reviewed. The UW does not participate in early decision or early action admission.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявка через Common App, эссе (до 650 слов) обязательно, а курсы и оценки подаются самоотчётом через STARS после подачи заявки.",
+      "evidence": "The Common App essay, often referred to as the personal essay, is a required and important part of your application. It has a 650-word maximum word limit, and there are seven prompts to choose from.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Вуз не проводит собеседований и не учитывает демонстрируемый интерес; письма рекомендаций и портфолио просят не присылать.",
+      "evidence": "The UW does not conduct formal interviews or consider demonstrated interest in the admission decision.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admit.washington.edu/apply/first-year/how-to-apply/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Washington, Сиэтл, штат Вашингтон. Приём иностранцев на первый курс через Common App; заявка открывается 15 августа, дедлайн 15 ноября, языковой экзамен до 31 декабря. Иностранцы платят по ставке нерезидента ($44,460 за год), помощи и стипендий вуз им не даёт."
+    }
+  },
+  "source": {
+    "url": "https://admit.washington.edu/apply/first-year/",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://admit.washington.edu/apply/first-year/",
+        "contentHash": "sha256:1fe34a5c8b1f2c43e1aca157bca4bc60479a2453fc8eb7df341d011205751f82"
+      },
+      {
+        "url": "https://admit.washington.edu/apply/",
+        "contentHash": "sha256:252b5cf20aabe583ed68eb1315df4d2e8888f7372b50a36d406303a594cc4c5e"
+      },
+      {
+        "url": "https://admit.washington.edu/apply/freshman/how-to-apply/",
+        "contentHash": "sha256:e86e1a47b317d222eff602eac1df42ac1995dd9773d370cb9ce2396c0953af2f"
+      },
+      {
+        "url": "https://admit.washington.edu/apply/freshman/how-to-apply/english-proficiency/",
+        "contentHash": "sha256:39df8c62909dc9ffd74153d35767e8fa582c15bfa8222841e3e26bc6d2085dc8"
+      },
+      {
+        "url": "https://admit.washington.edu/apply/freshman/cadr/",
+        "contentHash": "sha256:e88ad11d574a5d5137bab384e648124b966bbc778f453a55a66d81a8f000d1e2"
+      },
+      {
+        "url": "https://admit.washington.edu/apply/dates-deadlines/",
+        "contentHash": "sha256:64370d196663c4102edf8793269e066c024a19d81ba0784cdffc947bdc2532ee"
+      },
+      {
+        "url": "https://admit.washington.edu/costs/",
+        "contentHash": "sha256:4b4ab0ee9a884f176ca03f642ccd4d30e5565bcc1e2676d127dabb0132b7ddce"
+      },
+      {
+        "url": "https://admit.washington.edu/costs/coa/",
+        "contentHash": "sha256:c0dfb45cd87ce038187230a258438a51894001ef0bf9db2a534abb6d9f2f0dea"
+      },
+      {
+        "url": "https://admit.washington.edu/costs/aid/",
+        "contentHash": "sha256:db0e6e7ef734e82666f2534d4d0bae2dceb8c3cdf809f1a0934676428fb7c13f"
+      },
+      {
+        "url": "https://admit.washington.edu/costs/scholarships/",
+        "contentHash": "sha256:c94a566593ba722c37dc56bfa385dd2af4923799c19c5587f65e3f8ccc4250d3"
+      },
+      {
+        "url": "https://admit.washington.edu/apply/first-year/how-to-apply/app-fee/",
+        "contentHash": "sha256:e95930c4954e90b444f6d5ec240fcc2a9efb658f1d55fdc23299c32dfc1e6582"
+      },
+      {
+        "url": "https://admit.washington.edu/costs/husky-promise/",
+        "contentHash": "sha256:c2ba59dde8b3274c7ec6a350d83385d6175467a31d405af361f622ab641cffa2"
+      },
+      {
+        "url": "https://admit.washington.edu/apply/first-year/holistic-review/",
+        "contentHash": "sha256:d441596668592d02b0e1343ebc611855c08c587ffe16b069ea8559243d6b5dd0"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}

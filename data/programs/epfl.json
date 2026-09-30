@@ -1,0 +1,295 @@
+{
+  "id": "epfl",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "EPFL (École Polytechnique Fédérale de Lausanne) (Швейцария) — приём иностранцев на бакалавриат",
+    "orig": "École Polytechnique Fédérale de Lausanne"
+  },
+  "hostCountry": "CH",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное. Обычная плата — 730 CHF за семестр, но иностранцам, приехавшим в Швейцарию ради учёбы, с осени 2025 её утроили до 2190 CHF за семестр, и полный счёт за семестр выходит 2240 CHF. Расходы на жизнь — около 29 000 CHF в год сверх обучения. Стипендий для иностранцев-первокурсников у EPFL нет: Bachelor excellence fellowships дают только владельцам швейцарской матуры, а фонды вроде Hans Wilsdorf иностранцу доступны лишь после первого года и при жизни в кантоне Женева. Дорогу не покрывают."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: отказ по паспорту страницы приёма не называют, ограничение введено по стране школьного аттестата и по числу мест на первом году бакалавриата (3000). Смотрели страницы приёма, критериев, экзамена, языка, стоимости и стипендий."
+    },
+    "schoolCountry": {
+      "allow": "*",
+      "evidence": "Applicants holding an upper secondary school certificate from a country that is not a member of EU, EFTA, nor UK can be accepted, following the evaluation of their application and within the places available, in the Cours de mathématiques spéciales (foundation year), provided that their title fulfils all of the following conditions:"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "the certificate is granted after at least twelve years of primary and secondary education (excluding kindergarten), including at least three years of upper secondary education"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Требования по году окончания школы страницы приёма не называют: указано только, что подают в последний год школы, а аттестат можно донести до 30 сентября года зачисления. Ограничения по году выпуска нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения страницы приёма не называют: ни минимума, ни максимума. Смотрели критерии приёма, порядок подачи, экзамен, FAQ, CMS, язык, стоимость и стипендии."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "The general average (or total number of points scored) of the school-leaving certificate will be used to rank and select the applicants."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "EPFL considers that level B2 in French (according to the Common European Framework of Reference for Languages ) is required to follow its Bachelor's programs. Level C1 is highly recommended. Foreign applicants who have not studied French as part of their upper secondary education will need to attest their level upon application."
+    },
+    "exam": {
+      "notMeasured": true,
+      "evidence": "Holders of an upper secondary school certificate from a country that is not a member of EU, EFTA, nor UK and does not appear in that document can only be accepted through the entrance exam"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Аттестата Таджикистана нет в списке стран из документа EPFL о допуске в подготовительный год (CMS): с таким аттестатом путь только один — вступительный экзамен EPFL.",
+      "evidence": "Holders of an upper secondary school certificate from a country that is not a member of EU, EFTA, nor UK and does not appear in that document can only be accepted through the entrance exam",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Без аттестата из перечня (или диплома о высшем образовании) в бакалавриат EPFL не принимают.",
+      "evidence": "Applicants who do not hold one of the upper secondary school-leaving certificates or higher education diplomas listed above cannot be accepted to a Bachelor's program at EPFL.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "С 2025 года и минимум на четыре года EPFL ограничил число мест на первом году бакалавриата (3000); зачисление идёт по конкурсу, гарантию имеют лишь отдельные категории (например, швейцарская матура).",
+      "evidence": "EPFL introduces a limitation on the number of students in the first year of the Bachelor's programs (3000).",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Отбор идёт по средней оценке (или сумме баллов) школьного аттестата.",
+      "evidence": "The general average (or total number of points scored) of the school-leaving certificate will be used to rank and select the applicants.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Для допуска в подготовительный год CMS итоговые оценки по математике и физике и общая средняя должны быть не ниже 80% от максимума (это прямой путь, а не путь через экзамен).",
+      "evidence": "the final grades in mathematics and physics are at least 80% of the maximum grade the general average is at least 80% of the maximum grade",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Для прямого допуска нужно, чтобы аттестат был получен после минимум 12 лет школы; таджикская 11-летняя школа под это буквально не подходит — это повод уточнить в приёмной, а не отказ.",
+      "evidence": "the certificate is granted after at least twelve years of primary and secondary education (excluding kindergarten), including at least three years of upper secondary education",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужен научный профиль: математика, физика, официальный язык страны аттестата, второй иностранный, химия или биология, история/география/экономика и ещё один предмет (прикладная математика, информатика, философия или третий язык); минимум шесть из семи, включая математику и физику.",
+      "evidence": "the following subjects were studied during the upper secondary education: 1) mathematics, 2) physics, 3) official language of the country granting the certificate, 4) second modern language, 5) chemistry or biology, 6) history, geography, or economics, and 7) applied mathematics, computer science, philosophy, or third modern language",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Математику и физику надо изучать и сдавать на максимально возможном уровне, а аттестат — научного профиля.",
+      "evidence": "mathematics and physics were studied and examined at the highest possible level (see below) and the certificate is in a scientific stream (should streams be offered by the country granting the certificate)",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Бакалавриат EPFL читается в основном на французском: нужен уровень французского B2 (рекомендуют C1), а иностранцы, не изучавшие французский в школе, должны подтвердить уровень при подаче.",
+      "evidence": "EPFL considers that level B2 in French (according to the Common European Framework of Reference for Languages ) is required to follow its Bachelor's programs. Level C1 is highly recommended. Foreign applicants who have not studied French as part of their upper secondary education will need to attest their level upon application.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "В списке документов на подачу — сертификат о владении французским (кроме тех, кто учился в швейцарской или франкоязычной школе).",
+      "evidence": "language competence certificate in French (except for applicants with a Swiss or francophone education)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Основной язык обучения — французский: большинство курсов бакалавриата на французском, и в принципе не больше одного курса за семестр на английском.",
+      "evidence": "Most courses are given in French. In principle, there is a maximum of one course given in English per semester.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Со второго года до 50% курсов могут идти на английском; EPFL советует абитуриентам уровень C1 как минимум по языкам обучения.",
+      "evidence": "From the second year, study plans may include up to 50% of courses given in English.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Вступительный экзамен EPFL открыт для владельцев аттестата страны вне ЕС, ЕФТА и Великобритании (без ограничения мест): научные экзамены 18–22 января 2027, гуманитарные — август–сентябрь 2027, регистрация с 1 октября по 1 декабря 2026, отзыв до 11 января 2027.",
+      "evidence": "the EPFL entrance exam is currently open only to holders of a Swiss maturité professionnelle or maturité spécialisée as well as holders of an upper secondary school certificate from a country that is not a member of EU, EFTA, nor UK",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки вступительного экзамена: научные предметы — 18–22 января 2027, гуманитарные — август–сентябрь 2027; регистрация с 1 октября по 1 декабря 2026.",
+      "evidence": "Exam dates (scientific subjects): from January 18th to 22nd, 2027 Exam dates (general-knowledge subjects): August-September, 2027 Registration period: from October 1st to December 1st, 2026",
+      "field": "exam",
+      "kind": "steps"
+    },
+    {
+      "ru": "Сдача подготовительного года CMS приравнивается к сдаче вступительного экзамена.",
+      "evidence": "Passing the CMS ( Cours de mathématiques spéciales ) is equivalent to passing the entrance examination.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Плата за заявку на бакалавриат: 50 CHF со швейцарским аттестатом или дипломом и 150 CHF с иностранным; плату не возвращают.",
+      "evidence": "These fees are CHF 50.- for a holder of a Swiss certificate or diploma and CHF 150.- for holders of a foreign certificate or diploma.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за вступительный экзамен: регистрационный сбор 150 CHF с иностранным аттестатом и 50 CHF с остальными; сам экзамен — 550 CHF за сокращённый и 800 CHF за полный.",
+      "evidence": "The registration tax for the entrance exam is CHF 150.- for holders of a foreign school-leaving certificate,and CHF 50.- for other applicants.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обучение платное: обычная плата — 730 CHF за семестр, но иностранцам, приехавшим в Швейцарию ради учёбы, её утроили до 2190 CHF за семестр с осеннего семестра 2025.",
+      "evidence": "only the CHF 730 semester tuition fee is tripled by this measure (it is thus raised to CHF 2190 per semester)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полный счёт за семестр — 780 CHF (2240 CHF для части студентов с осени 2025): 730 CHF обучение (2190 CHF для части студентов), 25 CHF членство AGEPoly, 16 CHF спорт, 9 CHF социальный фонд.",
+      "evidence": "The total amount due per semester invoice is CHF 780 (CHF 2240 for some students from the fall semester, 2025; see above): CHF 730 in tuition fee (CHF 2190 for some students from the fall semester, 2025; see above)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На жизнь нужно около 29 000 CHF в год сверх платы за обучение.",
+      "evidence": "plan for approximately 29'000.- CHF per year to cover your living expenses, PLUS the tuition fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцам вне ЕС медицинская страховка обходится минимум в 113–120 CHF в месяц.",
+      "evidence": "Out of EU: need to join a health insurance scheme costing minimum 113.-/120.- CHF per month",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия EPFL Bachelor excellence fellowships — только для владельцев швейцарской матуры, иностранцу она недоступна.",
+      "evidence": "In order to encourage holders of a Swiss high-school maturity diploma and holders of a Swiss vocational maturity diploma undertaking the CMS in their scientific ambitions, EPFL offers excellence fellowships to talented students starting their Bachelor's degree, regardless of the field of studies they choose.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия фонда Hans Wilsdorf иностранцу доступна только после успешного первого года в EPFL и при проживании в кантоне Женева.",
+      "evidence": "International students : - As of the successful completion of the first year cycle and after spending at least one year at EPFL.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявку на бакалавриат подают с середины ноября по 30 апреля, чтобы начать учёбу в сентябре следующего года.",
+      "evidence": "Applications can be submitted from mid-November to the 30th of April to start your studies at EPFL the following September.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Все документы — на английском, французском, немецком или итальянском; перевод на другой язык надо заверить, иначе заявку отклонят.",
+      "evidence": "All documents should be in English, French, German, or Italian . Please join a legalized translation of all documents in another language. Your application will be rejected without these translations.",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.epfl.ch/education/admission/admission-2/bachelor-admission-criteria-and-application/how-to-apply/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: EPFL (École Polytechnique Fédérale de Lausanne), Лозанна, Швейцария. Бакалавриат в основном на французском; первый год ограничен 3000 местами, а аттестат Таджикистана принимают только через вступительный экзамен EPFL."
+    }
+  },
+  "source": {
+    "url": "https://www.epfl.ch/education/admission/admission-2/bachelor-admission-criteria-and-application/",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.epfl.ch/education/admission/admission-2/bachelor-admission-criteria-and-application/",
+        "contentHash": "sha256:2c1ca8bdd09039dc22212ca46cf5a2c5a59706309528fb8fa4c448aec8f06a46"
+      },
+      {
+        "url": "https://www.epfl.ch/education/admission/admission-2/",
+        "contentHash": "sha256:0bbbe43383f92629cf098e446a82f9740945fe67825a89edcf59a4535b8002ae"
+      },
+      {
+        "url": "https://www.epfl.ch/education/admission/admission-2/bachelor-admission-criteria-and-application/how-to-apply/",
+        "contentHash": "sha256:03d8b2b755c74d11e99879863ad59aeebcd1675a9ba64f9532693657efeff3fc"
+      },
+      {
+        "url": "https://www.epfl.ch/education/admission/admission-2/bachelor-admission-criteria-and-application/admission-examination/",
+        "contentHash": "sha256:8a8eb332b714d253e4fcd100140e375a611aa53e926873a987c06f3117e4649d"
+      },
+      {
+        "url": "https://www.epfl.ch/education/admission/admission-2/frequently-asked-questions/",
+        "contentHash": "sha256:d8909e5cb5db79af48c15009479beb999287f8a64d85e4bfac630fdd3e935416"
+      },
+      {
+        "url": "https://www.epfl.ch/education/studies/en/rules-and-procedures/teaching_languages/",
+        "contentHash": "sha256:a430093ea32fe196d8f191a1fa79efcf57c3ea284529c5c5a24016519cff493c"
+      },
+      {
+        "url": "https://www.epfl.ch/education/studies/en/rules-and-procedures/study-taxes/",
+        "contentHash": "sha256:4942783d75102d31bc2b946aa652491584c30ff88885b33d039a1c0a9afcaaa6"
+      },
+      {
+        "url": "https://www.epfl.ch/education/studies/en/financing-study/",
+        "contentHash": "sha256:aadb3fe7609131a36952f57c9c353638508c1331bf258ba046cc674d7763bc74"
+      },
+      {
+        "url": "https://www.epfl.ch/education/cms-preparatory-year/",
+        "contentHash": "sha256:44b0a052a142d416080688fd8e54509427787860e7d70edbb96dfcf15c23b941"
+      },
+      {
+        "url": "https://www.epfl.ch/education/studies/en/rules-and-procedures/academic-calendar/",
+        "contentHash": "sha256:256a8f4ccfa756b43ae837e5a08d9593bdc0b5c746bf7f1349d6bd5a05d12579"
+      },
+      {
+        "url": "https://www.epfl.ch/education/admission/wp-content/uploads/2019/01/Conditions-CMS.pdf",
+        "contentHash": "sha256:1f273b25a04474fc17670b12aca6974a8c1b9e204c4f1bfc3180e481e2d149b7"
+      },
+      {
+        "url": "https://www.epfl.ch/education/studies/en/rules-and-procedures/study-taxes/tuition-fee-other-fees/",
+        "contentHash": "sha256:9c5fbec814656c952927bf71c30c1c0e1d4015399b31cdb18e5fc53529d29dc2"
+      },
+      {
+        "url": "https://www.epfl.ch/education/studies/en/support-scholarships/",
+        "contentHash": "sha256:f79757562f0347e23505557a249122ebaee9fe3ae7efe98c255db8aff1b12b03"
+      },
+      {
+        "url": "https://www.epfl.ch/education/bachelor/bachelor-excellence-fellowships/",
+        "contentHash": "sha256:19e632df19b5afc14f8dd2052b1cb050da0633659b4966e6bb5b42fd7b2a7a9c"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}

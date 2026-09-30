@@ -1,0 +1,282 @@
+{
+  "id": "ucsd",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "UC San Diego (Калифорнийский университет в Сан-Диего, США) — приём иностранцев на бакалавриат",
+    "orig": "University of California San Diego"
+  },
+  "hostCountry": "US",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, помощи на обучение иностранцу-бакалавру вуз не даёт. Иностранец платит tuition плюс Nonresident Supplementary Tuition (надбавку для нерезидента), а также отдельный International Student Visa Administration Fee. Точных сумм на снятых страницах нет: калькулятор стоимости грузится скриптом и текста с числами не отдаёт. Единственная доступная поддержка для иностранца — отдельные университетские стипендии, в частности Triton Scholars для первокурсников-нерезидентов ($5,000-$20,000 в год до 4 лет, отдельная заявка не нужна). Федеральную и штатовскую финансовую помощь (FAFSA/CADAA) иностранец получить не может, и для визы обязан доказать наличие средств на всё время учёбы в США."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз отдельно описывает приём иностранцев и пишет, что они подают на тех же условиях, что и все остальные, плюс обязаны подтвердить английский. Отдельного запрета по паспорту нет. Смотрели страницы приёма иностранца на admissions.ucsd.edu/international, требования первого курса, FAQ, стоимость. Иностранец здесь преимущественно тот, кому нужна виза F-1 (это видно по требованию доказать средства для визы), но это не отказ по гражданству."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван, требования выражены школьным аттестатом и предметами A-G. Аттестат Таджикистана прямо не назван, Таджикистана нет в выпадающем списке стран — для незакрытой списком страны вуз советует обратиться к международным специалистам приёмной (это уточнение, а не отказ). Смотрели страницы приёма иностранца, требования первого курса, обзор заявки, FAQ."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you must have completed secondary school with a superior average in academic subjects and have earned a certificate of completion that enables you to be admitted to a university in your home country and is equivalent to a U.S. high school diploma."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: сказано лишь, что нужно окончить среднюю школу и получить аттестат до зачисления, а первокурсником считается тот, кто ещё не учился в вузе на полную ставку. Конкретного «окончи в таком-то году» нет. Смотрели страницы приёма иностранца, требования первого курса, обзор заявки, сроки."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют: ни минимального, ни максимального. Ни на одной снятой странице требования, обзора заявки, приёма иностранца или FAQ возраст абитуриента не упомянут."
+    },
+    "gpa": {
+      "min": 3.4,
+      "scale": "GPA_4",
+      "evidence": "Non-California residents, including International applicants, must earn a GPA of 3.4 (or better) with no grade lower than a \"C.\""
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7,
+          "evidence": "International English Language Testing System (IELTS) 7"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 83,
+          "evidence": "Test of English as a Foreign Language (TOEFL) 4.5 or better (Internet-based test) or 83 or higher (internet-based tests completed prior to January 2026)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "evidence": "Test of English as a Foreign Language (TOEFL) 4.5 or better (Internet-based test) or 83 or higher (internet-based tests completed prior to January 2026)"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 115,
+          "evidence": "Duolingo English Test (DET) 115"
+        }
+      ],
+      "evidence": "Demonstration of English proficiency is required if your native language is not English and your secondary/high school education was in a country where English is not the language of instruction."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "UC San Diego will not consider SAT or ACT test scores as a factor in admissions decisions."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство само по себе заявку не закрывает: иностранцы подают на тех же условиях, что и все остальные, плюс обязаны подтвердить английский.",
+      "evidence": "International applicants must meet the same first-year or transfer requirements for admission as any other applicant in addition to the following requirements:",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Требования к аттестату зависят от страны: вуз разбирает их по выпадающему списку стран. Таджикистана в списке нет — для такой страны вуз советует обратиться к его международным специалистам, это уточнение, а не отказ.",
+      "evidence": "If the country or region where you studied is not listed above, or if you have questions about what specific documentation is required in your situation, contact our International Specialists in the UC San Diego Office of Undergraduate Admissions:",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Чтобы поступить, надо окончить среднюю школу с сильным средним баллом по академическим предметам и получить аттестат, дающий право поступления в вуз в своей стране и равный американскому школьному диплому.",
+      "evidence": "you must have completed secondary school with a superior average in academic subjects and have earned a certificate of completion that enables you to be admitted to a university in your home country and is equivalent to a U.S. high school diploma.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Первокурсником считают только того, кто окончил среднюю школу и нигде не учился после неё на полную ставку; кто уже учился в вузе на полную ставку — подаёт как переводчик.",
+      "evidence": "You are considered a first-year university student if you have completed your secondary education and earned a certificate of completion that enables you to be admitted to a university in your home country and is equivalent to a U.S. High School Diploma and have never been enrolled full-time as a college or university student.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Для 13-летней школьной системы вуз требует окончить все 13 лет и не берёт раньше. Про 11-летнюю систему (как в Таджикистане) правила на этих страницах нет — это условие «уточни в приёмной».",
+      "evidence": "If pre-university education is 13 years long in your country, you must complete all 13 years before entering UC San Diego.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Минимальный GPA для нерезидентов, включая иностранцев, — 3.4 по 4-балльной шкале, и ни одна оценка не ниже C.",
+      "evidence": "Non-California residents, including International applicants, must earn a GPA of 3.4 (or better) with no grade lower than a \"C.\"",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский обязателен, если родной язык не английский и школа была в стране, где преподавание не на английском.",
+      "evidence": "Demonstration of English proficiency is required if your native language is not English and your secondary/high school education was in a country where English is not the language of instruction.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Принимают TOEFL, IELTS или Duolingo (DET). Пороги: TOEFL 4.5 по новой шкале (экзамен с января 2026) либо 83 по старой, IELTS 7, Duolingo 115.",
+      "evidence": "Test of English as a Foreign Language (TOEFL) 4.5 or better (Internet-based test) or 83 or higher (internet-based tests completed prior to January 2026) International English Language Testing System (IELTS) 7 Duolingo English Test (DET) 115",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "SAT и ACT не учитывают при зачислении: вуз прямо пишет, что не рассматривает их как фактор отбора. Баллы можно прислать, но они влияют только на зачёт предметов или размещение по курсам после зачисления.",
+      "evidence": "UC San Diego will not consider SAT or ACT test scores as a factor in admissions decisions. If you choose to submit test scores as part of your application, they may be used as an alternative method of fulfilling minimum requirements for eligibility or for course placement after you enroll.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Иностранцы-бакалавры не получают ни федеральную, ни штатовскую финансовую помощь (FAFSA/CADAA).",
+      "evidence": "International students are not eligible to receive federal or state financial aid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для получения визы иностранец обязан доказать наличие средств на все расходы на учёбу в США.",
+      "evidence": "To be granted a visa, international students must prove sufficient funds to meet all expenses for studying in the U.S.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сверх обычной платы нерезидент (и иностранец) платит Nonresident Supplementary Tuition — надбавку для нерезидента.",
+      "evidence": "What is Included Tuition Student services fee Non-resident supplementary tuition",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для иностранцев есть отдельный сбор — International Student Visa Administration Fee.",
+      "evidence": "Additional Fees: International Student Visa Administration Fee",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Единственная явно доступная иностранцу стипендия — Triton Scholars для первокурсников-нерезидентов: от $5,000 до $20,000 в год до 4 лет, рассматривают автоматически по заявке UC, отдельная заявка не нужна; стипендию Renew продлевают только пока студент остаётся нерезидентом.",
+      "evidence": "The Triton Scholars Award is a renewable scholarship for incoming first-year non-resident students who demonstrate academic excellence and bring unique perspectives to the campus community. Awards range from $5,000 to $20,000 per year for up to four years of undergraduate study. Eligible students are automatically considered through the UC application for admission-no separate application is required.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Многие стипендии для первокурсников ограничены гражданством/резидентством: например, Chancellor's Associates требует быть резидентом Калифорнии и подать FAFSA/CADAA. Иностранцу такие недоступны — остаётся в основном Triton Scholars.",
+      "evidence": "Additionally, students must be California residents, have a total family income below $80,000, demonstrate financial need, eligibility for institutional need-based grants and submit the FAFSA or CADAA by the March 2 deadline to be considered.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка на осенний приём 2027 открывается 1 августа; окно подачи — 1 октября – 30 ноября, крайний срок 30 ноября. Приём только на осень.",
+      "evidence": "The Fall 2027 Application opens on August 1 and applications may be submitted October 1 - November 30.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Крайний срок подачи заявки UC — 30 ноября; подача идёт через одну общую заявку University of California.",
+      "evidence": "October 1 - November 30 Submit Your Application Submit the University of California Application by the November 30 deadline.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-10-01",
+    "closes": "2026-11-30",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://apply.universityofcalifornia.edu/my-application/login",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: UC San Diego (University of California San Diego), Ла-Хойя, Калифорния. Подача — через общую заявку University of California, окно 1 октября – 30 ноября, только осень. Обучение платное, помощи иностранцу-бакалавру почти нет (кроме стипендии Triton Scholars для нерезидентов). Английский: IELTS 7 / TOEFL 83 (или 4.5 в новой шкале с 2026) / Duolingo 115; SAT и ACT не учитывают при отборе."
+    }
+  },
+  "source": {
+    "url": "https://admissions.ucsd.edu/international/index.html",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://admissions.ucsd.edu/international/index.html",
+        "contentHash": "sha256:b0279611a6e5439a5fce524c517dc4bb64e4f931969df2902345430f682f33c8"
+      },
+      {
+        "url": "https://admissions.ucsd.edu/first-year/index.html",
+        "contentHash": "sha256:6c8837c3f0c77e2d7708b03a03b08c6e1d022056d6c7b3ac1054fc0977f91c4c"
+      },
+      {
+        "url": "https://admissions.ucsd.edu/apply/index.html",
+        "contentHash": "sha256:c2a66e18437858e8f7fb5c041a5b56495b7a0cab329ac8006ea8f978af233087"
+      },
+      {
+        "url": "https://admissions.ucsd.edu/why/cost-aid/index.html",
+        "contentHash": "sha256:b89b8d6329befd5513b9638ec1b5eef59e042ba32325c31e9a2b8927e801df7f"
+      },
+      {
+        "url": "https://admissions.ucsd.edu/faq/index.html",
+        "contentHash": "sha256:b029d9a930de2138ca41dfb632b434c83181d1e9fb263f143716fc070b2bae84"
+      },
+      {
+        "url": "https://admissions.ucsd.edu/first-year/application-requirements.html",
+        "contentHash": "sha256:841d109fe8230391981321783f8052cf71c146bd6475f3f127d2da4b5df2af49"
+      },
+      {
+        "url": "https://admissions.ucsd.edu/first-year/application-review.html",
+        "contentHash": "sha256:e0e1c28bdefc0673fb5994ba55119406eaf84a1a7e7fb8697636dbf1bbfa42a8"
+      },
+      {
+        "url": "https://admissions.ucsd.edu/first-year/application-timeline.html",
+        "contentHash": "sha256:4d69df3cd3fda12d5c547a722954b3410df054d23e37e974debf6df173397e94"
+      },
+      {
+        "url": "https://fas.ucsd.edu/cost-of-attendance/undergraduates/index.html",
+        "contentHash": "sha256:219a922be7e977a3ed134542ebb16b81130f4b994715334727dab366e985b85a"
+      },
+      {
+        "url": "https://students.ucsd.edu/finances/financial-aid/types/index.html",
+        "contentHash": "sha256:856c8e5d0fecc03d4a7db3bf68824ebe5dd8040f25007ed389b3e7a3f042189f"
+      },
+      {
+        "url": "https://fas.ucsd.edu/types/scholarships/index.html",
+        "contentHash": "sha256:07033448930ef6eca6a6d7d7ffcd2cc2c116d7a79eb9b6ef64accea6a0198d91"
+      },
+      {
+        "url": "https://fas.ucsd.edu/cost-of-attendance/undergraduates/tuition-stability-plan/index.html",
+        "contentHash": "sha256:f7bba020cfea8ce9607a308f4c4ba20a0d2a66f1fa1b5d908172884dc9352c50"
+      },
+      {
+        "url": "https://fas.ucsd.edu/types/scholarships/entering-freshmen.html",
+        "contentHash": "sha256:b673176d0fffef445347b19d70612786a425a1c4ea7dd5626501f8fb8a25164a"
+      },
+      {
+        "url": "https://students.ucsd.edu/finances/fees/registration/index.html",
+        "contentHash": "sha256:13b50c76cd73501581abd92ff48a899ca71e5470342cc35ec6bc3be6eb060ca9"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}

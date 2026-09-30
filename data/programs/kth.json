@@ -1,0 +1,219 @@
+{
+  "id": "kth",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "KTH Royal Institute of Technology (Швеция): приём иностранцев на бакалавриат",
+    "orig": "KTH Royal Institute of Technology"
+  },
+  "hostCountry": "SE",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное и помощи нет. Полная стоимость трёхлетней программы для гражданина вне ЕС/ЕЭЗ/Швейцарии — SEK 423 000, плюс плата за подачу SEK 900. Стипендий для бакалавриата вуз не предлагает вовсе (ни своих, ни внешних), жильё и дорогу не покрывает. Семья должна планировать оплатить всё сама."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз отдельно описывает приём иностранцев на бакалавриат и приглашает студентов со всего мира, отказа по паспорту нигде не названо. Отличие по гражданству одно — плата за обучение для граждан вне ЕС/ЕЭЗ/Швейцарии. Смотрели страницы: обзор бакалавриата, как подать, требования приёма, стоимость и оплата обучения."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране нет, требования выражены законченным средним образованием, предметами (математика и физика) и английским. В списке эквивалентности для стран Таджикистана нет, и вуз для таких стран просит писать в приёмную — соответствие аттестата уточнять там. Смотрели страницу требований и её раздел эквивалентности для стран и систем."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Documented knowledge in Mathematics and Physics corresponding to Mathematics 4 (advanced level of mathematics) and Physics 2 (advanced level of physics). In each of the subjects, applicants must have at least a passing grade."
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Conditional admission for applicants in their final year of upper secondary school is not possible and predicted grades are not accepted."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют: есть только требования по образованию, предметам и языку, возраст нигде не упомянут. Смотрели страницы требований приёма, как подать и обзор программы."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Selection is based on upper secondary education grade point average (GPA)."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "an IELTS total score of 6.5 with no section below 5.5"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "parts": true,
+          "evidence": "a TOEFL total score of 90 with score of 20 (scale 0-30) in the writing section (test results 20 January 2026 and earlier)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "TOEFL total score of 4.5 (scale 1-6) with no section less than 4 (test results 21 January 2026 and later)"
+        }
+      ],
+      "evidence": "English proficiency equivalent to Swedish upper secondary course English 6/English Level 2 is required."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Обязательно законченное среднее образование: подать полную заявку из выпускного класса нельзя.",
+      "evidence": "A completed upper secondary education is required.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны документированные знания математики и физики уровня Mathematics 4 и Physics 2 шведской школы, по каждому предмету — минимум зачёт.",
+      "evidence": "Documented knowledge in Mathematics and Physics corresponding to Mathematics 4 (advanced level of mathematics) and Physics 2 (advanced level of physics). In each of the subjects, applicants must have at least a passing grade.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Вступительных экзаменов и подготовительных курсов вуз не предлагает: соответствие требованиям подтверждают документами школы.",
+      "evidence": "KTH does not offer any entrance exams/tests, bridging or preparatory courses to meet these requirements.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Условный приём для выпускников текущего года невозможен, прогнозные оценки не принимаются: нужны полные документы о законченном среднем образовании.",
+      "evidence": "Conditional admission for applicants in their final year of upper secondary school is not possible and predicted grades are not accepted.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Для стран, которых нет в списке эквивалентности (Таджикистана в нём нет), вуз просит писать в приёмную info@kth.se, чтобы уточнить, какие курсы школьной программы засчитываются.",
+      "evidence": "If your country is not available below you can email us at info@kth.se for support in finding out what courses from our country's upper secondary system are approved.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский нужен на уровне English 6/English Level 2 шведской школы.",
+      "evidence": "English proficiency equivalent to Swedish upper secondary course English 6/English Level 2 is required.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Пороги английского: IELTS 6.5 (ни одна часть ниже 5.5); TOEFL 90 с 20 за письмо для результатов до 21 января 2026; TOEFL 4.5 по новой шкале 1–6 (ни одна часть ниже 4) для результатов с 21 января 2026.",
+      "evidence": "You can meet the requirement with an English test, for example an IELTS total score of 6.5 with no section below 5.5, a TOEFL total score of 90 with score of 20 (scale 0-30) in the writing section (test results 20 January 2026 and earlier) or TOEFL total score of 4.5 (scale 1-6) with no section less than 4 (test results 21 January 2026 and later)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Отбор идёт по среднему баллу школьного аттестата (GPA); рекомендательные и мотивационные письма не рассматриваются и на шансы не влияют.",
+      "evidence": "Selection is based on upper secondary education grade point average (GPA). Recommendation letters, motivation letters or similar are not considered and can not influence your chances of admission.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Подача идёт через University Admissions — общий портал шведских вузов.",
+      "evidence": "Applications are made through University Admissions, an online application portal for all Swedish universities.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Раунд 1 (для граждан вне ЕС/ЕЭЗ/Швейцарии): заявка открывается 16 октября 2026, последний день подачи — 15 января, документы и плата за подачу — к 1 февраля, результаты — 8 апреля, учёба — в августе.",
+      "evidence": "16 October (2026): Application opens 15 January: Last day to apply 1 February: Submit documents and, if required, pay application fee 8 April: Admission results announced August: Arrival and study start",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Плата за подачу для граждан вне ЕС/ЕЭЗ — SEK 900; оплатить нужно до конца января, иначе заявку не рассматривают.",
+      "evidence": "For non-EU/EEA citizens, there is an application fee of SEK 900.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полная стоимость обучения для граждан вне ЕС/ЕЭЗ/Швейцарии — SEK 423 000 за программу; плата вносится авансом за каждый семестр.",
+      "evidence": "The full programme tuition fee for non-EU/EEA/Swiss citizens studying the bachelor's programme in Information and Communication Technology is SEK 423,000.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендий для бакалавриата вуз не даёт.",
+      "evidence": "We do not offer any scholarships for bachelor's studies.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Единственная англоязычная бакалаврская программа KTH — Information and Communication Technology, три года (180 ECTS).",
+      "evidence": "This is a three year programme (180 ECTS credits) given in English.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Конкурс высокий: в 2024 году приняли 10 % из тех, кто подошёл под требования (71 из 684).",
+      "evidence": "The acceptance rate for the bachelor's programme in Information and Communication Technology for 2024 was 10 %.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-10-16",
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.universityadmissions.se/en/apply-to-bachelors/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: KTH Royal Institute of Technology, Стокгольм, Швеция. Англоязычный бакалавриат — только Information and Communication Technology (3 года, 180 ECTS). Заявка через University Admissions, раунд 1 для граждан вне ЕС закрывается 15 января; обучение для них — SEK 423 000, стипендий на бакалавриате нет."
+    }
+  },
+  "source": {
+    "url": "https://www.kth.se/en/studies/bachelor/bachelor-s-degree-studies-at-kth-1.437576",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.kth.se/en/studies/bachelor/bachelor-s-degree-studies-at-kth-1.437576",
+        "contentHash": "sha256:f30bed6b3fb8e07964c94f61554ab3c4686c2fe8229fe4a33b1d8afe1f522184"
+      },
+      {
+        "url": "https://www.kth.se/en/studies/bachelor/how-to-apply-for-bachelor-s-studies-1.450312",
+        "contentHash": "sha256:8b55e8524b40c07835e9e2e534da662a8053afe03b2903ee907d4992b1897a9a"
+      },
+      {
+        "url": "https://www.kth.se/en/studies/bachelor/entry-requirements-for-information-and-communication-technology-1.450313",
+        "contentHash": "sha256:d9a3ed05e5adc7fee91fc0d2b5523d914cf192378cf3b2115bb8ca48b625c72a"
+      },
+      {
+        "url": "https://www.kth.se/en/studies/bachelor/information-communication-technology/fees-1.646274",
+        "contentHash": "sha256:a63bfc79588909a8b99cb107e8341021b64f7859f74652560f2f2a1ec9f47d11"
+      },
+      {
+        "url": "https://www.kth.se/en/studies/bachelor/information-communication-technology/bsc-information-and-communication-technology-1.437049",
+        "contentHash": "sha256:59dabe41d7287ef0251c7d8e937dd7ed7ce434500a216d3c310873eb00842c38"
+      },
+      {
+        "url": "https://www.kth.se/en/student/studier/tuition-fees/payment-of-tuition-fees-1.323881",
+        "contentHash": "sha256:3c570091ccd3ccb48e1dcc80acdd75a26fc37e289b5319862ecfc98a1baa9586"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "id": "toronto",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Toronto (Канада) — приём иностранцев на бакалавриат",
+    "orig": "University of Toronto"
+  },
+  "hostCountry": "CA",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: иностранцы платят по международному тарифу, суммы вуз публикует в интерактивном инструменте Tuition Explorer и в тарифах года. Помощи по нужде иностранцам нет — государственный вуз прямо пишет, что не может давать прямую финансовую помощь иностранным студентам, и советует искать финансирование в своей стране. Вступительные стипендии есть и присуждаются автоматически, но они очень конкурентные и большинство не покрывают полную стоимость обучения. Отдельная возможность — стипендия Пирсона (своя карточка): она покрывает обучение и общежитие на четыре года, но выдвигает школа и получают её около 37 человек в год на весь мир."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз отдельно приглашает заявки со всего мира и пишет, что иностранцы поступают так же, как канадцы. Отдельного запрета по паспорту или гражданству нет. Смотрели страницы приёма иностранцев, требований, английского, стоимости, сроков, стипендий и финпомощи."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: вуз принимает заявки независимо от школьной программы, а аттестат Таджикистана назван в списке минимальных требований по странам. Отказа по стране нет — эквивалентность конкретной школы уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "All applicants are required to present a senior/Grade 12 English course for admission consideration."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: подают в выпускной год, вуз может дать условное зачисление по оценкам прошлого года и промежуточным результатам. Верхней или нижней границы по году выпуска нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют: ни минимума, ни максимума нет ни в требованиях, ни в английских требованиях, ни в документах. Отдельная страница есть только для «mature students», но это про другой путь подачи, а не про запрет по возрасту."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Admission is based on your academic record in the curriculum you are completing."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "The minimum requirement is an overall band of 6.5, with no band below 6.0."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 89,
+          "parts": true,
+          "evidence": "the minimum requirement is a total score of 89 with 22 in each of Speaking and Writing"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "The minimum requirement is an overall score of 4.5 with 4.5 in Writing and 4.0 in Speaking."
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 120,
+          "parts": true,
+          "evidence": "The minimum requirement for tests completed on or after July 1st, 2024 is an overall score of 120 with a score of 120 in Production."
+        },
+        {
+          "test": "PTE",
+          "min": 65,
+          "parts": true,
+          "evidence": "The minimum requirement is an overall score of 65 with no part below 60."
+        }
+      ],
+      "evidence": "If English is not your first language (i.e. is not the first language you learned at home as a child), you will need to provide evidence of adequate English facility for admission consideration, unless you qualify for an exemption."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Students who have written SAT or ACT tests, and wish to have these considered in their assessment, may submit their scores."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцы поступают так же, как канадцы: сначала заявка через центр OUAC, потом личный кабинет абитуриента, где надо загрузить документы и следить за статусом.",
+      "evidence": "Applying to U of T is a two-step process, and international students apply the same way as Canadian students.",
+      "field": "citizenship",
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявки принимают со всего мира и независимо от того, по какой школьной программе учился человек — отдельного запрета по стране школы нет.",
+      "evidence": "We invite applications from well-qualified students from around the world, regardless of what high school curriculum you may have completed.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Таджикский аттестат Торонто принимает как есть: для Таджикистана минимум приёма — Attestat o Srednem (Polnom) Obshchem Obrazovanii. Признания образования или подготовительного года не требуется.",
+      "evidence": "Tajikistan Minimum Admission Requirements: Attestat o Srednem (Polnom) Obshchem Obrazovanii",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Аттестат Таджикистана даёт 11 лет школы; U of T принимает его как минимальную квалификацию и считает по нему средний балл, поэтому документ подходит, но окончательное признание эквивалентности всё равно за приёмной.",
+      "evidence": "Tajikistan Minimum Admission Requirements: Attestat o Srednem (Polnom) Obshchem Obrazovanii",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Для всех программ обязателен курс английского выпускного уровня (senior/Grade 12 English); его оценка идёт в средний балл при отборе. Остальные профильные предметы нужны на уровне выпускного класса.",
+      "evidence": "All applicants are required to present a senior/Grade 12 English course for admission consideration.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны полные документы (транскрипты) обо всей полученной средней и послешкольной учёбе — не только о выпускном классе.",
+      "evidence": "You must provide full documentation (transcripts) for all secondary and post-secondary studies attempted.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Если документы не на английском или французском, нужны заверенные переводы.",
+      "evidence": "If your documents are in a language other than English or French, you will also need to provide notarized translations.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Экзамен по английскому нужен, если английский не первый язык: подтверждение владения английским обязательно, кроме случаев освобождения.",
+      "evidence": "If English is not your first language (i.e. is not the first language you learned at home as a child), you will need to provide evidence of adequate English facility for admission consideration, unless you qualify for an exemption.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь: от экзамена освобождают, если человек проучился четыре года и больше в англоязычной школе в стране, где английский — основной язык. Освобождение запрашивают после подачи заявки.",
+      "evidence": "You have completed/are completing four or more years of full-time study in an English language school located in a country where the dominant language is English",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Порог IELTS Academic: общий балл 6.5, ни одна часть не ниже 6.0; результат должен быть получен за один раз.",
+      "evidence": "The minimum requirement is an overall band of 6.5, with no band below 6.0.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Пороги остальных тестов: TOEFL до 21.01.2026 — 89 (по 22 за Speaking и Writing), TOEFL с 21.01.2026 — 4.5 (4.5 Writing, 4.0 Speaking), Duolingo — 120 (120 Production), PTE Academic — 65, ни одна часть не ниже 60.",
+      "evidence": "The minimum requirement is an overall score of 65 with no part below 60.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Если по английскому не дотягиваешь, но академически подходишь, вуз предлагает переходные программы английского языка (от шести недель до восьми месяцев).",
+      "evidence": "If you’re academically qualified but don’t yet meet our English language requirement, our English language transition programs can help.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "SAT и ACT для большинства программ не обязательны: их можно прислать по желанию, чтобы их учли. Но абитуриенты инженерного факультета обязаны раскрыть все результаты тестов.",
+      "evidence": "Applicants to Engineering are required to fully disclose all test scores.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Год окончания школы ограничением не является: подают в выпускной год, и вуз может дать условное зачисление по оценкам прошлого года и текущим промежуточным результатам.",
+      "evidence": "Most students apply in their final year of high school. We may make a conditional offer of admission based on your previous year’s grades and your in-term or mid-term results.",
+      "field": "graduationYear",
+      "kind": "note"
+    },
+    {
+      "ru": "Сроки подачи на приём 2027: рекомендованная дата — 7 ноября, крайний срок заявки — 15 января (для Applied Science & Engineering тоже 15 января).",
+      "evidence": "Applied Science & Engineering November 7 January 15",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подал до 7 ноября — документы желательно успеть к 1 декабря; это даёт право на рассмотрение в первом раунде зачислений. Крайние сроки документов — 15 января или 1 февраля в зависимости от программы.",
+      "evidence": "If you submitted your application by our November 7 recommended application date , we encourage you to submit required documents that are available to you by December 1 .",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Вуз государственный и не может давать прямую финансовую помощь иностранным студентам; деньги советуют искать в своей стране.",
+      "evidence": "As a publicly funded institution, the university is not able to offer direct financial aid to international students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцы платят по международному тарифу, а не по домашнему; точные суммы за 2026-27 и 2025-26 лежат в интерактивном инструменте Tuition Explorer, а не таблицей на странице.",
+      "evidence": "Students who are not Canadian citizens or permanent residents are charged the international student fee",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Все зачисленные, включая иностранцев, автоматически попадают в список на вступительные стипендии — отдельная заявка для большинства не нужна.",
+      "evidence": "All admitted students, including international applicants, are automatically considered for admission scholarships-no separate application required for most of them.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии для иностранцев есть, но они очень конкурентные, и большинство не покрывают полную стоимость обучения — нужен запасной план финансирования.",
+      "evidence": "While there are many scholarships available for international students, they are highly competitive and most do not cover the full cost of tuition.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Вступительные награды оценивают автоматически по успеваемости при подаче заявки; часть наград для канадцев требует отдельной заявки через Awards Profile.",
+      "evidence": "Admission awards are based on academic performance and are automatically assessed as part of the admissions process.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://future.utoronto.ca/how-to-apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Toronto (U of T), Торонто, Канада, с тремя кампусами (St. George, Mississauga, Scarborough). Приём иностранцев на бакалавриат идёт через OUAC, крайний срок заявки на приём 2027 — 15 января, рекомендованная дата — 7 ноября. Обучение платное по международному тарифу, помощи по нужде иностранцам нет, есть автоматические вступительные стипендии и отдельная стипендия Пирсона."
+    }
+  },
+  "source": {
+    "url": "https://future.utoronto.ca/international-students",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://future.utoronto.ca/international-students",
+        "contentHash": "sha256:ded9c687ad26bba0544869bcafc025871d00dc8c73b22defa5298079116cfda3"
+      },
+      {
+        "url": "https://future.utoronto.ca/requirements-international-high-schools",
+        "contentHash": "sha256:cb0d1028e1a012d2611a2b324fa012c9e1f0e48079d64b8462538fda68d28d5a"
+      },
+      {
+        "url": "https://future.utoronto.ca/requirements-international-students",
+        "contentHash": "sha256:b0deeae35923cc6c454dbdbf9a0321e6f11dcd39561f9cd860cfb5ddaa965e4e"
+      },
+      {
+        "url": "https://future.utoronto.ca/english-language-requirements",
+        "contentHash": "sha256:bad081455ba92b1b9af0783c65008e19fcdacb289bea5c1839d6d6d636f836b1"
+      },
+      {
+        "url": "https://future.utoronto.ca/fees",
+        "contentHash": "sha256:34663086d0208c2bcb1e45a66224b9f6501b8e562e819ed4a8ed8baa3af7a0fa"
+      },
+      {
+        "url": "https://future.utoronto.ca/scholarships",
+        "contentHash": "sha256:1729a27c9bcc4563c1f6f6765fd178521fa5f77ec04de96ff8d1165828803eac"
+      },
+      {
+        "url": "https://future.utoronto.ca/international-student-financial-aid",
+        "contentHash": "sha256:6dc501829792b5809ee945a6d9ba938a7ba46200fc11e37f6931d56574ed1f49"
+      },
+      {
+        "url": "https://future.utoronto.ca/deadlines",
+        "contentHash": "sha256:b2aebb8a6b5be1e0b05a73ef68bb92207dd163e7b5d4d06948fcf1ddb0623710"
+      },
+      {
+        "url": "https://future.utoronto.ca/admissions-timelines",
+        "contentHash": "sha256:43697ba41c67ef2055604c5bc47e41fe443d741eaea954958026b0bc46ed5aaf"
+      },
+      {
+        "url": "https://future.utoronto.ca/applying",
+        "contentHash": "sha256:98f15800b8a4421e75ca4ba6596013a73bf80cae5f3252db5556f13d6208474c"
+      },
+      {
+        "url": "https://future.utoronto.ca/required-documents",
+        "contentHash": "sha256:f3d1a2174662208ab863ab60bdb5ccdaa495db2652260f271ecd227753a64a9c"
+      },
+      {
+        "url": "https://future.utoronto.ca/admission-awards",
+        "contentHash": "sha256:35337daa41e5f2a37f4fd8dbc3e1cad1cd879fab33abfdfec8a39d4883b31588"
+      },
+      {
+        "url": "https://future.utoronto.ca/international-high-school-requirements-country",
+        "contentHash": "sha256:7bd8b785eea23ed7a879d11a8cffe4333721c4d8c0b3c125a9f45131d0b9f2eb"
+      },
+      {
+        "url": "https://future.utoronto.ca/international-high-school-requirements-country?page=6",
+        "contentHash": "sha256:a14b8ad197d1611522c7bdd5eb12d9bc6c5cd4350a50cb7d4c8dbe726aaff4a1"
+      },
+      {
+        "url": "https://studentaccount.utoronto.ca/tuition-fees/current-fall-winter-fee-refund-schedules/",
+        "contentHash": "sha256:b848d3e2df55136a196465afc4cfe8a9f3e6e6f319d9d566a26c70b6436afe87"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}

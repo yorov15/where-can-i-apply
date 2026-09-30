@@ -1,0 +1,178 @@
+{
+  "id": "uba",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Universidad de Buenos Aires (Аргентина): приём иностранцев на бакалавриат",
+    "orig": "Universidad de Buenos Aires"
+  },
+  "hostCountry": "AR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение на бакалавриате бесплатное: бакалаврские программы UBA не арендованы, платить за поступление, учёбу и экзамены не нужно, плата берётся только на некоторых магистратурах. Но язык обучения — испанский: если аттестат выдан в неиспаноязычной стране, нужен сертификат испанского уровня C1 (SIELE GLOBAL или Certificado de Español Avanzado UBA). Ежемесячная помощь по нужде (Beca Sarmiento) требует аргентинского гражданства или постоянного резидентства, поэтому иностранцу без ВНЖ недоступна. Жильё и дорогу вуз не покрывает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз отдельно описывает приём иностранцев (любой паспорт), вступительного экзамена для них нет, а для записи нужен лишь документ, удостоверяющий личность, — аргентинский DNI или документ страны происхождения. Отказа по стране гражданства нигде не названо. Смотрели страницы студентов-иностранцев, поступления в UBA, вопросов-ответов, инскрипций и календаря UBA XXI."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: ни одна страна не названа запрещённой. Страна влияет только на способ признания аттестата: если у неё есть соглашение с Аргентиной (большинство Латинской Америки) — Convalidación Министерства образования; если нет — Reconocimiento de estudios, и то, и другое легализует UBA. Аттестат Таджикистана отдельно не назван; конкретный способ признания уточнять в приёмной и в министерстве."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "acercate a cualquier sede del CBC con el DNI argentino vigente, el certificado de inscripción y tu título secundario. Si todavía no lo emitieron, podés presentar una constancia de estudios secundarios completos en trámite."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: сказано лишь, что документы подают по окончании средней школы, а вместо аттестата до его выдачи принимают справку о завершении средней школы в процессе оформления. Жёсткого «окончи школу в таком-то году» нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для поступления на бакалавриат снятые страницы не называют: ни минимального, ни максимального возраста среди требований нет. Возраст упомянут только как ограничение получателя стипендии (Beca Sarmiento — до 23 лет), это относится к помощи, а не к допуску."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Числового порога по среднему баллу для поступления на бакалавриат не называют: требования выражены наличием оконченной средней школы и легализованного аттестата, без минимального GPA. Средний балл встречается только как условие стипендии (Beca Sarmiento — средний не ниже 4), а не как условие допуска."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "tenés que presentar alguno de estos dos certificado de idioma español: - Certificado SIELE GLOBAL - nivel C1 - Certificado de Español Avanzado de la Facultad de Filosofía y Letras -UBA-, equivalente a nivel C1."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Обучение на бакалавриате бесплатное: бакалаврские программы UBA не арендованы, то есть платить за поступление, учёбу и экзамены не нужно. Плата есть только на магистратурах — там цену узнают в каждом факультете.",
+      "evidence": "Las carreras de grado de la UBA no son aranceladas, es decir, que no hay que abonar para inscribirse, cursar o rendir.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть помощь по нужде — Beca Sarmiento: ежемесячная выплата в течение 2 лет и освобождение от всех сборов за справки и титул. Но право на неё даёт только аргентинское гражданство (по рождению или по выбору) либо постоянное резидентство, поэтому иностранцу без ВНЖ эта стипендия недоступна.",
+      "evidence": "- Nacionalidad argentina (nativa o por opción) o con residencia permanente.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Если аттестат выдан в неиспаноязычной стране, нужно подтвердить испанский: сертификат SIELE GLOBAL уровня C1 либо Certificado de Español Avanzado факультета философии и литературы UBA, эквивалентный уровню C1. Переходно (первый семестр 2024) разрешали начать с уровня B2 по единому исключению.",
+      "evidence": "tenés que presentar alguno de estos dos certificado de idioma español: - Certificado SIELE GLOBAL - nivel C1 - Certificado de Español Avanzado de la Facultad de Filosofía y Letras -UBA-, equivalente a nivel C1.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Если школа окончена в стране с соглашением об образовании с Аргентиной (большинство стран Латинской Америки), нужна Convalidación от Министерства образования Аргентины; если в стране соглашения нет — Reconocimiento de estudios. И Convalidación, и Reconocimiento должны быть легализованы UBA.",
+      "evidence": "Si terminaste el nivel secundario en un país con convenio con Argentina (la mayoría en Latinoamérica), tenés que presentar la Convalidación expedida por el Ministerio de Educación argentino",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Документы иностранца: действующий аргентинский DNI или документ страны происхождения, удостоверяющий личность.",
+      "evidence": "Debés presentar DNI argentino actualizado o Documento del país de origen que acredite tu identidad",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Поступление без вступительного экзамена: иностранные абитуриенты не сдают examen de admisión, запись идёт через Ciclo Básico Común.",
+      "evidence": "los/as aspirantes extranjeros no tienen que efectuar examen de admisión",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Запись идёт в Ciclo Básico Común (CBC) — это первый курс всех бакалавриатов UBA; учиться можно очно в CBC или дистанционно через UBA XXI.",
+      "evidence": "La inscripción debe realizarse en el Ciclo Básico Común, que constituye el primer ciclo de los estudios universitarios para todas las carreras de la Universidad de Buenos Aires.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Порядок поступления: сначала Pre-ingreso на платформе, затем сдача документов в филиале CBC, затем запись на предметы в SIU Guaraní.",
+      "evidence": "El proceso de inscripción a UBA XXI es online y consta de tres pasos: Inscripción a la UBA (Pre-ingreso) Entrega de documentación en sede del CBC Inscripción a materias de UBA XXI",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Приём открывается дважды в год, перед каждым семестром. В 2026: Pre-ingreso 02–18 февраля и 26 июня – 13 июля; запись на предметы UBA XXI 13 февраля – 1 марта и 8–26 июля. Даты следующего цикла публикуют в академическом календаре.",
+      "evidence": "Inscripciones 2026 Febrero Pre-ingreso UBA : desde 02/02 hasta 18/02",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.cbc.uba.ar/inscripciones",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Universidad de Buenos Aires (UBA), Аргентина. Бакалавриат — более 114 программ на 13 факультетах (Agronomía, Arquitectura Diseño y Urbanismo, Ciencias Económicas, Ciencias Exactas y Naturales, Ciencias Sociales, Ciencias Veterinarias, Derecho, Farmacia y Bioquímica, Filosofía y Letras, Ingeniería, Ciencias Médicas, Odontología, Psicología). Обучение бесплатное, но на испанском; поступление через CBC, без вступительного экзамена."
+    }
+  },
+  "source": {
+    "url": "https://www.uba.ar/estudiantesextranjeros",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.uba.ar/estudiantesextranjeros",
+        "contentHash": "sha256:ac299397fd12a24b341365199298c0ee6fe156e6a8baeee0d0e8a2e66ecada5e"
+      },
+      {
+        "url": "https://www.uba.ar/ingresouba",
+        "contentHash": "sha256:411ab04cc9f1f17710fef6b780acaeb5a31104819152d31ad64244f2e5a20432"
+      },
+      {
+        "url": "https://www.uba.ar/preguntasfrecuentes",
+        "contentHash": "sha256:74bd7a9fbf09ade7b8241b3574b8921cdb037a5e3426fab8f6ca14189831d674"
+      },
+      {
+        "url": "https://www.uba.ar/becas-grado",
+        "contentHash": "sha256:4340834404809a68fb3dafccbc33cd7cb4fb22b48169b0209b33784ef6347bbe"
+      },
+      {
+        "url": "https://www.uba.ar/tramites",
+        "contentHash": "sha256:bf48c63061f1ecd427f0662e3f6cb872bb33b3fc8b14b4a4a5823afa9d8d5e42"
+      },
+      {
+        "url": "https://www.uba.ar/facultades",
+        "contentHash": "sha256:c0299bd1a1d93b185bdc63324ad88a01d3ede05309b64efaab845466ad0570b9"
+      },
+      {
+        "url": "https://ubaxxi.uba.ar/inscripciones/",
+        "contentHash": "sha256:0aef23146631542eb8c57dcc775baf2aff8a5a7f0a11b8a4d21ad3eabee59140"
+      },
+      {
+        "url": "https://ubaxxi.uba.ar/calendario-academico/",
+        "contentHash": "sha256:62c0eca0cba6bbf55ab1572cc10011e9b56806c1bf84621d99419d670c5e84a7"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
