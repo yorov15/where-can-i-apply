@@ -1,0 +1,291 @@
+{
+  "id": "melbourne",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Melbourne (Австралия): приём иностранцев на бакалавриат",
+    "orig": "University of Melbourne"
+  },
+  "hostCountry": "AU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: иностранец зачисляется на Overseas Fee place. На 2027 год типичная плата за первый год бакалавриата — от примерно AUD$44,356 (Arts) до AUD$65,920 (Biomedicine), по всему курсу — от ~AUD$142k до ~AUD$225k в зависимости от дисциплины. При принятии оффера нужен депозит AUD$17,000 и Overseas Student Health Cover. Жильё и дорогу вуз не покрывает (средний годовой расход на жизнь в Мельбурне — около AUD$20,000). Из помощи на бакалавриате иностранцу доступна в основном Melbourne International Undergraduate Scholarship — скидка 20% на обучение (около 225 мест, отбор по результатам школы, отдельная заявка не нужна); полного покрытия нет, поэтому все флаги сняты."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: отказ по паспорту не назван, наоборот — вуз отдельно определяет иностранного абитуриента (гражданин любой страны, кроме Австралии и Новой Зеландии) и описывает для него тот же путь подачи, что и для остальных. Смотрели страницы приёма иностранцев, требований, английского, стоимости и определений domestic/international."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране нет. Список признанных зарубежных школьных квалификаций Таджикистан не включает, а для не перечисленных квалификаций допуск оценивают индивидуально в ходе подачи — это условие «уточни в приёмной», а не отказ. Прямого упоминания Таджикистана ни на одной из снятых страниц нет."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "you'll need to have: Completed the Victorian Certificate of Education (VCE) or an equivalent recognised international or Australian qualification Achieved the minimum ATAR (or equivalent score) required for entry to the course Completed and achieved the required marks in each of the prerequisite subjects for the course"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: требуется законченное среднее образование (VCE или эквивалент) и минимальный вступительный балл, а год выпуска как условие нигде не задан. Подать можно в последний год школы по текущим результатам."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют: ни минимального, ни максимального возраста нет. Отдельное правило есть только для тех, кому на момент въезда ещё нет 18 лет — одобренные жильё и опека и программа надзора, но это условие визы и проживания, а не допуска к поступлению."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "In addition to meeting course and subject prerequisites and English language requirements, you will need to meet the minimum entry score for the degree."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 81,
+          "parts": true
+        },
+        {
+          "test": "PTE",
+          "min": 64,
+          "parts": true
+        }
+      ],
+      "evidence": "Level 1 6.5 Overall, with at least 6.0 Writing 6.0 Speaking 6.0 Reading 6.0 Listening 81 Overall, with at least 19 Writing 19 Speaking 16 Reading 16 Listening 64 Overall, with at least 60 Writing 60 Speaking 60 Reading 60 Listening"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство приём не ограничивает: иностранцем считается гражданин любой страны, кроме Австралии и Новой Зеландии (а также обладатели некоторых виз), и для него описан отдельный порядок подачи и оплаты.",
+      "evidence": "You're considered an international student if you're currently one of the following: a citizen of any country other than Australia or New Zealand a permanent resident of New Zealand or any country other than Australia a temporary resident of Australia (this includes all temporary visa types, not just student visas).",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Страна школы сама по себе вход не закрывает: отказа по стране нет. Но если школьный аттестат не входит в список признанных квалификаций, допуск оценивают индивидуально в ходе подачи.",
+      "evidence": "If you've completed a secondary school qualification that is not listed on the Recognised qualifications page, your eligibility for entry to an undergraduate course will be assessed on a case-by-case basis during the application process.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужен аттестат, равнозначный викторианскому VCE (законченное среднее образование уровня 12 лет), плюс минимальный вступительный балл (ATAR или эквивалент) и сданные профильные предметы.",
+      "evidence": "you'll need to have: Completed the Victorian Certificate of Education (VCE) or an equivalent recognised international or Australian qualification Achieved the minimum ATAR (or equivalent score) required for entry to the course Completed and achieved the required marks in each of the prerequisite subjects for the course",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Профильные предметы подтверждают через VCE Units 3 и 4 или эквивалент: при другой школьной программе эквивалент сверяют конвертером VTAC, а спорные предметы оценивают по программе (syllabus) при подаче.",
+      "evidence": "must have completed VCE Units 3 and 4 to meet the subject prerequisite and achieve the minimum study score published on the entry requirements tab for your course.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь, если квалификации нет в признанном списке или не хватает предметов: подготовительная программа (foundation studies), в том числе гарантированный путь через Trinity College Foundation Studies.",
+      "evidence": "If your qualification is not listed in the accepted overseas high school qualifications above, you may need to complete a foundation studies program as a pathway to study at the University of Melbourne.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский обязателен: нужно выполнить требования университета к английскому для выбранного курса.",
+      "evidence": "You must satisfy the University's English language requirements for the course(s) you apply for.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Базовый уровень (Level 1, для большинства бакалавриатов): IELTS 6.5 (не ниже 6.0 по каждой части), TOEFL iBT 81 (Writing 19, Speaking 19, Reading 16, Listening 16), PTE Academic 64 (не ниже 60 по частям). Отдельные курсы, например Bachelor of Oral Health, требуют выше (Level 2b, IELTS 7.0).",
+      "evidence": "Level 1 6.5 Overall, with at least 6.0 Writing 6.0 Speaking 6.0 Reading 6.0 Listening 81 Overall, with at least 19 Writing 19 Speaking 16 Reading 16 Listening 64 Overall, with at least 60 Writing 60 Speaking 60 Reading 60 Listening",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Принимают IELTS (включая One Skill Retake), TOEFL iBT (шкала 0-120), PTE Academic, Cambridge English CAE/CPE, LanguageCert Academic и Michigan English Test; домашние (онлайн) версии тестов университет не принимает.",
+      "evidence": "The University of Melbourne accepts several English language proficiency tests for undergraduate entry, including IELTS, TOEFL iBT, Pearson Test of English (PTE Academic), Cambridge English (CAE/CPE), LanguageCert Academic and the Michigan English Test.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Результат теста действителен обычно два года с даты сдачи — на момент подачи он должен быть ещё годен.",
+      "evidence": "English language test results are generally valid for two years from the date of the test.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Тест можно не сдавать, если обучение шло на английском: школа или вуз полностью на английском в признанной англоязычной стране либо гражданство/10-летнее резидентство такой страны.",
+      "evidence": "If you're from an English-speaking background, you can meet the undergraduate requirement through approved study at secondary or tertiary level. Otherwise, you can qualify by taking an English language proficiency test or by completing a pathway, such as a foundation or bridging program.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Если балла не хватает, можно получить условный оффер и пройти языковую подготовку (UMELBP / UMELBP Prep) или foundation; для близких к порогу есть packaged offer (IELTS 5.5 или 6.0) с одной студенческой визой.",
+      "evidence": "If your English test score is below the requirement, you may still be able to apply. Depending on your level and course, you can complete a pathway program to reach the required standard",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Числового порога оценок в общем виде нет: вместо GPA нужен минимальный вступительный балл (ATAR или эквивалент) для конкретного курса; требования к нему зависят от квалификации и отбора.",
+      "evidence": "In addition to meeting course and subject prerequisites and English language requirements, you will need to meet the minimum entry score for the degree.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Возрастного ограничения для приёма нет. Если на момент въезда ещё не исполнилось 18 лет, до студенческой визы надо устроить одобренные жильё и опеку и зарегистрироваться в программе надзора Under 18 (за отдельную плату).",
+      "evidence": "If you're an international student and will be under 18 years of age when you arrive to study at the University of Melbourne, you must have appropriate accommodation, support and welfare arrangements in place before you can be issued a student visa by the Department of Home Affairs.",
+      "field": "age",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение платное. Типичная плата за первый год бакалавриата (иностранец) на 2027 год: Arts $44,356-57,764, Biomedicine $58,084-65,288, Commerce $56,451-62,464, Agriculture $54,848; за весь курс — от примерно $142,535 до $224,905.",
+      "evidence": "Course name 2027 indicative first year fee 2027 indicative total course fee Bachelor of Agriculture $54,848 $176,331 - $180,265 Bachelor of Arts $44,356 - $57,764 $142,535 - $187,154 Bachelor of Biomedicine $58,084 - $65,288 $204,306 - $224,905 Bachelor of Commerce $56,451 - $62,464 $180,714 - $200,139",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "При принятии оффера нужен депозит AUD$17,000 — он зачитывается в первый взнос за обучение; студенту на визе также нужно оформить Overseas Student Health Cover.",
+      "evidence": "a minimum deposit of AUD$17,000. The deposit payment is credited as the first instalment towards your tuition fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь иностранцу на бакалавриате: Melbourne International Undergraduate Scholarship. С 2027 года это скидка 20% на обучение на весь курс, число мест вырастет до 225 (сейчас минимум 110) — то есть частичное покрытие, не полное.",
+      "evidence": "Scholarships awarded before 2027 provide a 25 per cent fee sponsorship for the duration of the course. From 2027, the scholarships provides a 20 per cent fee sponsorship for the duration of the course and the number of scholarships will increase to 225.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Право на эту стипендию даёт гражданство страны с ВВП на душу населения не выше US$10,000 по данным Всемирного банка; отбор — по лучшим результатам школы, отдельная заявка не нужна.",
+      "evidence": "Be a citizen of a country with a Gross Domestic Product per capita of US$10,000 or less based on data published by the World Bank.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Жильё и жизнь университетом не покрываются: средний годовой расход на жизнь в Мельбурне оценивается примерно в AUD$20,000, аренда жилья — отдельно.",
+      "evidence": "The average annual expense of living in Melbourne is AUD $20,000 but this can vary depending on your lifestyle.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для студенческой визы надо показать, что семья может оплатить обучение и проживание на весь срок (Genuine Student requirement): университет может запросить декларацию, подтверждающие документы и пригласить на собеседование.",
+      "evidence": "able to fund tuition fees and living costs for the duration of their proposed stay.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки для иностранцев: прямой приём на стартовый семестр 2027 (Semester 1) — до 30 ноября 2026; mid-year 2026 — 31 мая 2026; mid-year 2027 — 31 мая 2027. Через VTAC подача открывается в начале августа, а своевременные заявки закрываются в конце сентября.",
+      "evidence": "Applications close: Mid-year intake 2026 (Semester 2/July): 31 May 2026 Start year intake 2027 (Semester 1/February/March): 30 November 2026 Mid-year intake 2027 (Semester 2/July): 31 May 2027.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Иностранцы с зарубежным школьным аттестатом (кроме австралийского Year 12 и IB в Австралии/NZ) подают напрямую через онлайн-портал вуза; эти две категории — через VTAC.",
+      "evidence": "All other international students - including those completing overseas secondary qualifications or applying for non-start-year intakes - must apply directly to the University of Melbourne through the online application portal.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-11-30",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://study.unimelb.edu.au/how-to-apply/your-online-application",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Melbourne, Парквиль (Мельбурн, Австралия). Для иностранца с зарубежным аттестатом подача прямая через онлайн-портал; приём на Semester 1 2027 закрывается 30 ноября 2026. Обучение платное (Overseas Fee place), на 2027 год первый год бакалавриата — примерно AUD$44k-66k, депозит AUD$17,000; из помощи доступна скидка 20% по Melbourne International Undergraduate Scholarship."
+    }
+  },
+  "source": {
+    "url": "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/entry-requirements",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/entry-requirements",
+        "contentHash": "sha256:f6249d1719eb148101f02d153fde8da9324df74d992cea258f0fb43161d98361"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/applications",
+        "contentHash": "sha256:0d30b429a9d4cb744f078d58f7cf0050b27a800f49bc0f38ce6b364fc361fdfd"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/english-language-requirements",
+        "contentHash": "sha256:6fc166dee3d28531d26821657d4bd2b6db9e9a9ae91376a96fc1ad7757fc1fdb"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/english-language-requirements/undergraduate-english-language-requirements",
+        "contentHash": "sha256:f40ae09895ebe4d4105ab49b7d14ae08f3b1c01123c4ac698fa683990bd1e13e"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/fees-and-payments",
+        "contentHash": "sha256:80c8a1d73f933ad2296b8ac5f8d21b42dbbba997a925ed025ad202e1136707c6"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/__data/assets/pdf_file/0034/462949/2027InternationalFeeTables.pdf",
+        "contentHash": "sha256:b8f9024f3acf30bcecbbb32c4d11db1c3330bd819e9a79319b66179c27f5718c"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/offers-and-enrolments",
+        "contentHash": "sha256:dd19396d2734fc2e32e4a52d6f509a16125e32f03209705cf7076e8a4332a249"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/domestic-and-international-student-definitions",
+        "contentHash": "sha256:4aa0b54c6a6b5aa1cc689d054282876f7b9f9fe5084ac953ed03d8ff086d44cc"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/recognised-vce-equivalent-qualifications",
+        "contentHash": "sha256:7e566e9b85e47e60b6fce28f39555799f30f7d99f05b30e107d6fe60b5495b99"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/satisfy-subject-prerequisites",
+        "contentHash": "sha256:a898d04ea61ca5c7690416965028b205d0c6093a0465428b72cb7121880b60e4"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/under-18-international-students",
+        "contentHash": "sha256:0e826021953fec4bec8325ec7561dd9cef4400ad64b135435edaaa5658544c2f"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/genuine-student-requirement",
+        "contentHash": "sha256:fd1f95f21617cb9289895625d2dcffee4c5b205a3d1f276398cafe8923d671a8"
+      },
+      {
+        "url": "https://scholarships.unimelb.edu.au/awards/melbourne-international-undergraduate-scholarship",
+        "contentHash": "sha256:de0b9f02809f95c1046d7b19ad01f7ff6def1d5e34e4d164ad37fc16095f59be"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/guaranteed-and-minimum-entry-scores-for-international-students",
+        "contentHash": "sha256:dbd1afbeec76d88f67ff9613b53cb24c1f67dee68c28b3481712b733058436e8"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/student-life/international-students",
+        "contentHash": "sha256:7320031a50e6419505ba07534f19cf047e3eed2c729ee5d75dca7050f8b9cffb"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
