@@ -1,0 +1,218 @@
+{
+  "id": "copenhagen",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Copenhagen (Дания): приём иностранцев на бакалавриат",
+    "orig": "Københavns Universitet"
+  },
+  "hostCountry": "DK",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: гражданин страны вне ЕС/ЕЭЗ обязан платить за обучение, и вуз прямо пишет, что финансовой поддержки и стипендий иностранным студентам не даёт. Точной суммы на снятых страницах нет — стоимость выбирается отдельным списком программ на странице оплаты, плата берётся за 60 ECTS (учебный год). Жизнь в Копенгагене оценивается примерно в EUR 1 280–1 800 в месяц. Дорогу вуз не оплачивает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство доступ к приёму не закрывает: вуз прямо пишет, что правила допуска зависят от страны, где получено образование, а не от паспорта, и что гражданство важно только для платы за обучение. Отдельного запрета по стране гражданства нет. Смотрели страницы приёма на бакалавриат, требований для стран вне ЕС/ЕЭЗ, квоты 1 и 2, теста квоты 2, оплаты обучения и предварительной оценки."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране не названо, требования выражены уровнями предметов и индивидуальной оценкой диплома. Аттестат Таджикистана и Средняя Азия прямо не упомянуты; где школьного образования мало (примеры стран — США, Китай, Россия, Турция), вуз просит добрать один-два года вуза или два курса уровня A и B. Смотрели страницы требований, не-ЕС/ЕЭЗ, IB и предварительной оценки."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Please note that for some countries, the upper secondary (high) school education is not enough, and you need to supplement. You can supplement by either one or two years of higher education or two courses: at least one A level subject and at least one B level subject."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют. Есть только сроки документов: диплом школы нужно загрузить до 5 июля, а если он выдаётся позже — до 15 августа, с письмом из школы к 15 марта. Отдельного требования «окончи школу в таком-то году» нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют: слова «age», «years old», «minimum age» не встречаются ни на одной из девяти снятых страниц. Требования к абитуриенту выражены школьным образованием, уровнями предметов и датским языком."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Числового порога по среднему баллу для Таджикистана нет: для экзаменов вне ЕС/ЕЭЗ средний балл не пересчитывается в датский, поэтому поступить можно только через квоту 2, а не по GPA. порог 6.0 из страницы квоты 1 относится к пересчёту GPA скандинавских и стран ЕС/ЕЭЗ и к нашему абитуриенту не применяется. Смотрели страницы не-ЕС/ЕЭЗ, квоты 1 и 2, теста квоты 2 и IB."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Consequently, all applicants with foreign and international examinations need to fulfil Danish language qualifications, which means having academic language skills in Danish."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Весь бакалавриат в Копенгагене преподаётся по-датски: иностранцу нужно подтвердить знание датского на высоком уровне, английского экзамена вуз не требует.",
+      "evidence": "Be aware, at the University of Copenhagen all bachelor programmes are taught in Danish and require the highest level in Danish or documentation for academic language skills in Danish.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Датский подтверждается экзаменом Studieprøven i dansk: его надо сдать минимум на 02 по каждой из трёх дисциплин (для медицины, стоматологии и дантистов-гигиенистов — на 07).",
+      "evidence": "The test consists of an oral examination, a listening, reading and a written examination and must be passed with at least grade 02 in each of all the 3 examination disciplines.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Гражданство на правила приёма не влияет — важно, где получено образование; паспорт учитывается только для платы за обучение.",
+      "evidence": "Please note that it is the country where you have completed your education, and not your nationality or citizenship, that determines what rules apply to you. Your citizenship is only relevant in regards to tuition fees.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Страна школы сама по себе вход не закрывает, но правила зависят от того, где получен аттестат: для части стран школьного образования недостаточно.",
+      "evidence": "The general admission requirement is that you have completed upper secondary (high) school education, but this requirement may vary depending on where you got your education.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Для части стран школьного аттестата мало: вуз может потребовать добрать один-два года высшего образования либо два курса — минимум один предмет уровня A и один уровня B.",
+      "evidence": "Please note that for some countries, the upper secondary (high) school education is not enough, and you need to supplement. You can supplement by either one or two years of higher education or two courses: at least one A level subject and at least one B level subject.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Абитуриент из страны вне ЕС/ЕЭЗ (в том числе из Таджикистана) может подавать только через квоту 2 — по тесту и собеседованию, а не по среднему баллу.",
+      "evidence": "However, with an upper secondary (high) school education from a non-EU/EEA country and a non-Nordic country, you are only able to apply through quota 2.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Тест квоты 2 сдаётся по-датски и состоит из языковых и математико-логических заданий; без сданного теста заявку не рассматривают, а на тест нужно записаться отдельно до марта.",
+      "evidence": "The test consists of language-related and mathematical-logical tasks in Danish.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Заявку с иностранным аттестатом надо подать до 15 марта, 12:00; документы можно донести до 5 июля, 12:00.",
+      "evidence": "All applicants with foreign or international examinations and diplomas (regardless of nationality) must submit their online application along with necessary documentation before the application deadline on 15 March at 12:00.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача идёт через датский портал optagelse.dk, форма открывается 1 февраля.",
+      "evidence": "You are welcome to send your application from 1 February, when the application period at optagelse.dk starts.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы должны быть официальными, с подписью и печатью школы; не на европейском языке — только заверенный перевод, оригинал всё равно нужен.",
+      "evidence": "If the documents are not in one of the major European languages or in Norwegian or Swedish, they must be accompanied, not substituted, by officially translated and certified copies.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Итог по зачислению сообщают 28 июля; приём на бакалавриат — раз в год, занятия начинаются в сентябре.",
+      "evidence": "On 28 July you will know if you are admitted to UCPH.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Обучение платное: гражданин страны вне ЕС/ЕЭЗ обязан платить за обучение, если у него нет вида на жительство, освобождающего от платы.",
+      "evidence": "If you have a citizenship from a country outside EU/EEA/Scandinavia, you need to pay tuition fees for your studies , unless you have a residence permit which exempts you from paying tuition fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендий и финансовой поддержки иностранным студентам вуз не даёт — за стипендиями отправляет в Датское агентство по науке и высшему образованию.",
+      "evidence": "The University of Copenhagen does not offer financial support or scholarships to foreign students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Жизнь в Копенгагене оценивается примерно в EUR 1 280–1 800 в месяц.",
+      "evidence": "Living in Copenhagen is estimated at EUR 1,280-1,800 per month.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "До подачи можно пройти предварительную оценку иностранного диплома (для приёма 2027 — с 2 сентября по 22 октября): вуз скажет, чего не хватает, но гарантией зачисления это не будет.",
+      "evidence": "If you wish to apply for admission for next year and your exam or diploma is not Danish, the University of Copenhagen offers a preliminary assessment.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.ku.dk/studies/admission/bachelor",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Copenhagen (Københavns Universitet), Копенгаген, Дания. Бакалавриат только на датском языке, поэтому иностранцу нужны датские языковые квалификации. Абитуриент из страны вне ЕС/ЕЭЗ (Таджикистан) подаёт только через квоту 2 — с тестом и собеседованием по-датски; заявка до 15 марта, документы до 5 июля. Обучение платное, стипендий вуз не даёт."
+    }
+  },
+  "source": {
+    "url": "https://www.ku.dk/studies/admission/bachelor",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.ku.dk/studies/admission/bachelor",
+        "contentHash": "sha256:a2b0e88e6745cd57f97306e91f3fed856b830d0b478d897c621da6caf7988632"
+      },
+      {
+        "url": "https://www.ku.dk/studies/admission/bachelor/non-eu-eea-and-non-nordic-countries",
+        "contentHash": "sha256:afed96539df12dd1b6f40347f5e2534b34bd1c61b55dafefbe8de7892619ecf0"
+      },
+      {
+        "url": "https://www.ku.dk/studies/bachelor/quota-1-and-quota-2",
+        "contentHash": "sha256:9b330edf5362e164225191be6652e0fc7224e9c96f27a80bcaae961a194c844a"
+      },
+      {
+        "url": "https://www.ku.dk/studies/admission/bachelor/quota-2",
+        "contentHash": "sha256:cca4bb2d2fee0a0234603f6e806e958ac4f8c6888083ef173bae3d3faf3e9381"
+      },
+      {
+        "url": "https://www.ku.dk/studies/admission/application-deposit-fee-and-tuition-fees",
+        "contentHash": "sha256:5c2238c70fd182a5f728f1a7cf588e0cbfa9dceb7f3cb0d0f530b088aa9283af"
+      },
+      {
+        "url": "https://www.ku.dk/studies/admission/bachelor/ib-and-other-international-diplomas",
+        "contentHash": "sha256:9591fcbc7e8b22b77393d88c045a87e99d53db19b81530f1d4841cd247dce9bd"
+      },
+      {
+        "url": "https://www.ku.dk/studies/admission/bachelor/preliminary-assessment",
+        "contentHash": "sha256:45ed21fbd29c45ae9e05156b0859f0b0fd96455a44d743f6025cf0610c1459b7"
+      },
+      {
+        "url": "https://www.ku.dk/studies/bachelor",
+        "contentHash": "sha256:627b760d49338bf4bcf1cfe7d33d9d392f635671cb55aa8a9137f8d1e9ad2c9c"
+      },
+      {
+        "url": "https://www.ku.dk/studies/bachelor/all-programmes",
+        "contentHash": "sha256:c366610b2161deb43b70d9df60de44f228dcc49b2fefb7f1e22bef19eb73816e"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
