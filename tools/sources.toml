@@ -3836,8 +3836,17 @@ approvedAt = "2026-09-29"
 
 [adelaide]
 name = "Adelaide University (Австралия): приём иностранцев на бакалавриат"
-urls = [
-  "https://adelaide.edu.au/study/international-students/how-to-apply/",
+files = [
+  { path = "manual/adelaide/00-how-to-apply.html", url = "https://adelaide.edu.au/study/international-students/how-to-apply/" },
+  { path = "manual/adelaide/01-entry-requirements.html", url = "https://adelaide.edu.au/study/international-students/how-to-apply/entry-requirements/" },
+  { path = "manual/adelaide/02-apply-now.html", url = "https://adelaide.edu.au/study/international-students/how-to-apply/apply-now/" },
+  { path = "manual/adelaide/03-intl-scholarships.html", url = "https://adelaide.edu.au/study/scholarships/international-students-scholarships/" },
+  { path = "manual/adelaide/04-scholarships.html", url = "https://adelaide.edu.au/study/scholarships/" },
+  { path = "manual/adelaide/05-entry-pathways.html", url = "https://adelaide.edu.au/study/how-to-apply/entry-pathways/" },
+  { path = "manual/adelaide/06-intl-students.html", url = "https://adelaide.edu.au/study/international-students/" },
+  { path = "manual/adelaide/07-pathway-providers.html", url = "https://adelaide.edu.au/study/international-students/pathway-providers/" },
+  { path = "manual/adelaide/08-english-centre.html", url = "https://adelaide.edu.au/study/english-language-centre/" },
+  { path = "manual/adelaide/09-admission-by-country.pdf", url = "https://adelaide.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/AU_Undergraduate_Admission_By_Country.pdf" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"

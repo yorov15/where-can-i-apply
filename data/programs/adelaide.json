@@ -1,0 +1,270 @@
+{
+  "id": "adelaide",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Adelaide University (Австралия): приём иностранцев на бакалавриат",
+    "orig": "Adelaide University"
+  },
+  "hostCountry": "AU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, суммы вуз называет на странице каждой степени. Помощи по достатку нет; вуз прямо пишет, что не оплатит расходы и не снимет плату. Есть скидки за успехи: Academic Excellence 50% (мест ограниченно, отдельная форма), Emerging Leaders 25% и Merit 15% — автоматически, так что полное покрытие в карточке не отмечено. Сбор за заявку AUD $150."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: вуз принимает иностранцев по общему порядку, агент обязателен только жителям некоторых регионов, и Центральная Азия среди них не названа. Смотрели страницы для иностранцев, требований, подачи, стипендий и путей поступления."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране не названо. В таблице зачисления по странам Таджикистана нет, для стран вне списка вуз даёт глобальные строки IB и A-Level; это условие «уточни или подавай через IB/A-Level», а не запрет. Смотрели страницы требований, PDF «Undergraduate admission by country» и пути поступления."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Число лет школы вуз числом не задаёт: требования выражены баллами по квалификации и предметными prerequisites. Про 11-летнюю школу ничего не сказано — уточнять. Смотрели страницы требований, подачи и PDF по странам."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы не называют: принимают завершивших среднюю школу («recent secondary education»), года не задают. Смотрели страницы требований и подачи."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения страницы приёма не называют. Смотрели страницы требований, подачи, путей поступления и стипендий."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "In cases where there are more eligible applicants than available places, admission will be competitive with ranks based on the entry criteria."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6,
+          "evidence": "The minimum English language requirement for entry to an Adelaide University undergraduate program is an International English Language Testing System (IELTS) Academic overall score of 6.0 or equivalent."
+        }
+      ],
+      "evidence": "To be admitted to a coursework program at Adelaide University, International students from non-English speaking backgrounds must meet our minimum English language requirements."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Минимальный балл вуз задаёт по стране завершения школы; таблица есть для десятков стран, Таджикистана в ней нет, а для стран вне списка даны глобальные строки — IB и A-Level.",
+      "evidence": "To be eligible, an applicant must have achieved the minimum entry score based on their country of academic completion and demonstrate they fulfil any prerequisite and essential criteria for admission.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Без национальной квалификации из списка: IB Diploma с суммой не меньше 25 баллов.",
+      "evidence": "Global / IB International Baccalaureate (IB) Diploma Minimum total score of 25",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Или британские A-Level: три лучших предмета (или два A-Level и один AS) с суммой не меньше 7 баллов по шкале A=5 … E=1.",
+      "evidence": "Global / UK GCE Advanced Levels Best three A Level subjects or best two A Level subjects plus one AS Level subject with a minimum 7 points.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Приём конкурсный: при большем числе подходящих заявок места распределяют по рангу.",
+      "evidence": "In cases where there are more eligible applicants than available places, admission will be competitive with ranks based on the entry criteria.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Тем, кто не проходит по баллам, вуз предлагает pathway-программы: Foundation Studies, Diploma и другие через партнёров Eynesbury College и Kaplan International College.",
+      "evidence": "Eynesbury College provides pathways into a wide range of Adelaide University bachelor degrees and select master's degrees. You can choose to study Foundation Studies, Diploma or Graduate Certificate programs.",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Помимо общего балла нужны предметные prerequisites и «essential requirements» выбранной программы; проверять надо на странице степени.",
+      "evidence": "And the following essential program requirements for Admission: Prerequisites Assumed knowledge.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Документы не на английском подают вместе с заверенным переводом и заверенной копией оригинала.",
+      "evidence": "If your official documents are in a language other than English, you will also need to provide certified translations of these documents, in addition to certified copies of the original non-English documents.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Минимум по английскому для бакалавриата — IELTS Academic 6.0 (или эквивалент); у части степеней он выше и указан на странице степени.",
+      "evidence": "The minimum English language requirement for entry to an Adelaide University undergraduate program is an International English Language Testing System (IELTS) Academic overall score of 6.0 or equivalent.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Требования по английскому зависят от степени, поэтому точный порог надо смотреть на странице выбранной программы.",
+      "evidence": "However, English language entry requirements are degree specific, and some degrees have higher English language requirements.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Результат теста (IELTS, PTE) должен быть получен не раньше чем за два года до зачисления.",
+      "evidence": "taken within the last two years prior to admission",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Не набрал английский — можно подать заявку и получить условное предложение вместе с подготовительной программой Pre-Enrolment English Program (PEP) в English Language Centre.",
+      "evidence": "If you don't meet the minimum English language requirements, you can still apply for a program and if you meet the academic eligibility requirements for admission, we can send you a conditional offer packaged with an English language preparatory program from our English Language Centre.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский можно подтвердить и прошлой учёбой на английском (например IB) или рабочим опытом, но нужны заверенные документы от вуза или работодателя.",
+      "evidence": "In some cases, you can also meet minimum language requirements using your previous academic qualifications (e.g. a Diploma completed in Australia) or through practical application of your English skills in a professional environment.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Порогов оценок для таджикского аттестата вуз не публикует; для стран из таблицы минимумы разные по шкалам, у остальных — IB или A-Level.",
+      "evidence": "In cases where there are more eligible applicants than available places, admission will be competitive with ranks based on the entry criteria.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Сбор за заявку — AUD $150, невозвратный, платится за каждую заявку.",
+      "evidence": "Note A non-refundable application fee of AUD $150* applies to every application.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Вуз проверяет финансовую состоятельность: студент обязан показать, что покроет tuition и жизнь в Австралии; освободить от платы или оплатить расходы вуз не будет.",
+      "evidence": "This means that you must be able to meet the cost of tuition fees and your living expenses, and that you understand that you will not be able to ask the University to waive your tuition fees, or pay any of your costs while you are living in Australia.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сумм обучения на страницах приёма нет: они указаны на странице каждой степени.",
+      "evidence": "Adelaide University offers a range of scholarships of up to 50% for international students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Adelaide Academic Excellence Scholarship — скидка 50% на tuition, мест ограниченно (нужна высокая средняя оценка), подаётся отдельной формой.",
+      "evidence": "Recipients are offered a 50% tuition fee reduction. There are limited places for those with a high distinction average. To apply, international students need to complete an application form.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Adelaide Emerging Leaders Award — 25% (средний балл distinction), Adelaide Merit Scholarship — 15% (credit average); оба назначаются автоматически.",
+      "evidence": "Recipients are offered a 25% tuition fee reduction and the award is automatically assessed and granted to those with a distinction average.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка подаётся онлайн в Online Application System; через агента обязательно подавать только жителям некоторых регионов (Ближний Восток, Северная и Африка южнее Сахары, Южная Азия, Филиппины, Латинская Америка) — Центральная Азия в списке не названа.",
+      "evidence": "Students from the following regions require an Education Agent to apply: The Middle East North Africa Sub-Saharan Africa South Asia (Bangladesh, India, Maldives, Nepal, Pakistan and Sri Lanka) Philippines Latin America.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Срок подачи у разных степеней разный и указан на странице степени; на общих страницах приёма даты нет.",
+      "evidence": "Please note some degrees have different application deadlines. We recommend you check the specific deadline for your chosen degree on the program page.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Оценка заявки занимает до двух недель при большом потоке, с оценкой кредитов — до четырёх.",
+      "evidence": "so it may take up to two weeks for us to complete the assessment.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для студенческой визы нужно пройти требование Genuine Student; к предложению могут добавить условие и интервью.",
+      "evidence": "Your offer may include a condition requiring satisfaction of Adelaide University's Genuine Student requirement. We will undertake further checks of your application and you may be asked to book and complete an interview as part of this process.",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://adelaide.edu.au/study/international-students/how-to-apply/apply-now/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Adelaide University, Аделаида, Австралия (новый вуз на базе университетов Аделаиды и Южной Австралии). Приём иностранцев на бакалавриат идёт онлайн; общей даты закрытия нет, срок у каждой степени свой. Для школ вне таблицы стран нужен IB от 25 баллов или A-Level от 7 баллов. Обучение платное, скидки за успехи 15–50%."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://adelaide.edu.au/study/international-students/how-to-apply/",
+    "pages": [
+      {
+        "url": "https://adelaide.edu.au/study/international-students/how-to-apply/",
+        "contentHash": "sha256:8d90b69bd2187806d5308e27591f372925cc0fe72459c3a7c4c159b9d1d2a6a1"
+      },
+      {
+        "url": "https://adelaide.edu.au/study/international-students/how-to-apply/entry-requirements/",
+        "contentHash": "sha256:bde65c8a4fc7d4224ba5a9e5ee27483ea137b14bd4851037f0ed6161bcab50fd"
+      },
+      {
+        "url": "https://adelaide.edu.au/study/international-students/how-to-apply/apply-now/",
+        "contentHash": "sha256:1f4e46495b0daf0cb2b7a6224ac13e2dadecb0c05e11424b4a3723d19c9a59c0"
+      },
+      {
+        "url": "https://adelaide.edu.au/study/scholarships/international-students-scholarships/",
+        "contentHash": "sha256:aba93d36a6c0a1ffe6270ed75b0456fa58012bc0d6275d44638580f87791587c"
+      },
+      {
+        "url": "https://adelaide.edu.au/study/scholarships/",
+        "contentHash": "sha256:6a08d6de0d5320bd63bce783c3564aa737b5b8990fae0bb75eef8857404e698b"
+      },
+      {
+        "url": "https://adelaide.edu.au/study/how-to-apply/entry-pathways/",
+        "contentHash": "sha256:00bad33bcf78a90ca34283a4a84903c73bc12b7e4b756de752c0581f81187a6f"
+      },
+      {
+        "url": "https://adelaide.edu.au/study/international-students/",
+        "contentHash": "sha256:def20fe858026d7352af90199cbdabc1c030c9f65543850bd55c281ba908976b"
+      },
+      {
+        "url": "https://adelaide.edu.au/study/international-students/pathway-providers/",
+        "contentHash": "sha256:a6f11c262401f60d72218dd8aef6cb5af6f2fc99a4a9f0a37146139ef9791971"
+      },
+      {
+        "url": "https://adelaide.edu.au/study/english-language-centre/",
+        "contentHash": "sha256:6d850c96c1d52aded449fe7e2c8be4e28426cb0f17ad9f1a80d8aefe80f4dec3"
+      },
+      {
+        "url": "https://adelaide.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/AU_Undergraduate_Admission_By_Country.pdf",
+        "contentHash": "sha256:4de428e39dfb23299280c7020d4d0fb67b264a3ff261efaebea770bbad258282"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
