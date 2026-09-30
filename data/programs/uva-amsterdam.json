@@ -1,0 +1,285 @@
+{
+  "id": "uva-amsterdam",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Amsterdam (Нидерланды): приём иностранцев на бакалавриат",
+    "orig": "University of Amsterdam"
+  },
+  "hostCountry": "NL",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное. Гражданину Таджикистана достаётся не государственный тариф 2 694 евро, а институциональный: от 13 900 евро в год на экономике до 34 700 на медицине (2026-2027). Полного покрытия вуз не обещает: есть Amsterdam Merit Scholarship для выдающихся студентов не из ЕЭК и стипендии отдельных факультетов, но размер и условия задаёт факультет, автоматически их не дают. Жильё тоже не гарантировано — вуз прямо пишет, что комнат в UvA Housing на всех иностранцев не хватает. Считай, что платишь сам."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Гражданство вход не закрывает: отдельного запрета по паспорту нет, приём иностранцев описан тем же порядком, что и для всех, отличие лишь в тарифе (институциональный вместо государственного) и сроках. Смотрели страницы подачи на бакалавриат, стоимости обучения, стипендий и сроков."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван. Вуз проверяет не страну, а эквивалент аттестата уровню VWO через diploma finder; Таджикистана в этом списке нет (из Центральной Азии есть только Казахстан с Nazarbayev Intellectual Schools Grade 12), но страница прямо говорит, что при отсутствии страны подавать всё равно можно — документы оценят индивидуально. Это условие «уточни эквивалент в приёмной», а не запрет. Смотрели страницы подачи на бакалавриат, требований к иностранным квалификациям и их данные по странам."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Students applying for one of our Bachelor's programmes should hold a Dutch VWO diploma, a Dutch HBO propaedeuse or an international diploma that is equivalent to one of these diplomas."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: сказано лишь, что подают в последний год школы, а если диплом ещё не получен, вместо него загружают табель и справку школы об ожидаемом выпуске."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-09-30",
+      "note": "Возрастного ограничения для приёма страницы не называют — ни для иностранцев, ни для своих. Упоминается только техническая сторона (виза, жильё), к допуску на бакалавриат она не относится."
+    },
+    "gpa": {
+      "definedBy": "institution",
+      "evidence": "The Central Admissions Office will assess your documents on an individual basis."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "parts": true,
+          "evidence": "IELTS Academic 6.5 overall Each section score: 6"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 92,
+          "parts": true,
+          "evidence": "TOEFL iBT 0-120 92 overall Each section score: 22"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "parts": true,
+          "evidence": "TOEFL iBT 1-6 4.5 overall Reading: 4.5 Listening: 5.0 Speaking: 4.0 Writing: 4.5"
+        },
+        {
+          "test": "PTE",
+          "min": 71,
+          "parts": true,
+          "evidence": "Pearson PTE Academic 71 overall Each section score: 65"
+        }
+      ],
+      "evidence": "Applicants are therefore required to submit proof of sufficient proficiency in English."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужен аттестат уровня нидерландского VWO (или пропедевтика HBO, или иностранный эквивалент). Начальный уровень голландского вуза выше, чем в большинстве стран вне Западной Европы, поэтому таджикский аттестат оценивают по существу, а не по названию.",
+      "evidence": "Students applying for one of our Bachelor's programmes should hold a Dutch VWO diploma, a Dutch HBO propaedeuse or an international diploma that is equivalent to one of these diplomas.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Таджикистана в списке diploma finder нет (из Центральной Азии там только Казахстан). Вуз прямо пишет: если твоей страны или квалификации в списке нет, подавать всё равно можно — документы оценят индивидуально в Central Admissions Office. Это не отказ по стране, а условие «уточни эквивалент в приёмной».",
+      "evidence": "The Central Admissions Office will assess your documents on an individual basis.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Для сравнения: у соседнего Казахстана в diploma finder назван конкретный принимаемый аттестат — Nazarbayev Intellectual Schools (NIS) Grade 12 Certificate. Для Таджикистана такого пункта нет, поэтому эквивалент таджикского аттестата определяет приёмная.",
+      "evidence": "Nazarbayev Intellectual Schools (NIS) Grade 12 Certificate",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен и подтверждается одним из тестов. Пороги на 2027-2028: IELTS Academic — 6,5 в целом и минимум 6 по каждой части; TOEFL iBT (старая шкала 0-120) — 92 в целом и 22 по каждой части; TOEFL iBT (новая шкала 1-6) — 4,5 в целом (Reading 4,5, Listening 5,0, Speaking 4,0, Writing 4,5); Pearson PTE Academic — 71 в целом и 65 по каждой части. Ещё принимают Cambridge C1 Advanced (175, части 170), Cambridge C2 Proficiency (сдано, 180, части 170) и LanguageCert Academic (70, части 65).",
+      "evidence": "The approved tests and minimum scores are as follows and are subject to change on a yearly basis: English test requirements 2027-2028 Tests Scores Sub scores Cambridge C1 Advanced 175 overall Each section score: 170 Cambridge C2 Proficiency Pass overall (180) Each section score: 170 IELTS Academic 6.5 overall Each section score: 6 Language Cert Academic 70 overall Each section score: 65 Pearson PTE Academic 71 overall Each section score: 65 TOEFL iBT 0-120 92 overall Each section score: 22 TOEFL iBT 1-6 4.5 overall Reading: 4.5 Listening: 5.0 Speaking: 4.0 Writing: 4.5",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Список тестов закрытый: посторонние не принимают. Duolingo вуз не принимает, как и IELTS Online, IELTS Indicator, IELTS One Skill Retake, LanguageCert Academic Online, Pearson PTE Academic online, TOEFL Home Edition и TOEFL MyBestScores.",
+      "evidence": "Other tests than the ones mentioned above are not accepted. Examples of tests that cannot be accepted include but are not limited to: IELTS Indicator, IELTS One Skill Retake, IELTS Online, LanguageCert Academic Online, Pearson PTE Academic online, TOEFL Home Edition, TOEFL MyBestScores.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Сертификат английского должен быть сдан менее чем за два года до 1 сентября года начала учёбы — просроченный не примут.",
+      "evidence": "The test must have been taken less than two years before the start date (1 September) of the Bachelor's programme.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Срок сдачи сертификата английского: для не-ЕЭК (в том числе Таджикистана) — до 1 апреля, для граждан ЕЭК — до 1 мая. Позаботься о тесте заранее.",
+      "evidence": "The deadline for providing the UvA with an English language proficiency test certificate with sufficient scores is 1 April for non-EU/EEA applicants, and 1 May for EU/EEA applicants.",
+      "field": "language",
+      "kind": "steps"
+    },
+    {
+      "ru": "Крайний срок подачи для всех — 1 мая. Год на странице не напечатан (это цикл 2027-2028, приём на сентябрь 2027), поэтому дату подтверждай на сайте ближе к подаче.",
+      "evidence": "The final deadline for all applicants is 1 May.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для всех с иностранным школьным образованием рекомендованный срок — 1 апреля. Если нужна виза или жильё через UvA, подавай до этой даты: после неё вуз не гарантирует, что успеет оформить документы.",
+      "evidence": "The advisory deadline for all students with international prior education is 1 April",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "На программы с фиксированным числом мест (numerus fixus) — Business Administration, Economics and Business Economics, Political Science, Psychology — приём открыт с 1 октября по 15 января, и это раньше общего срока. Если желающих больше, чем мест, с 15 января по 15 апреля идёт отбор.",
+      "evidence": "Application is open from 1 October until 15 January.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "На отборочные программы Liberal Arts & Sciences (AUC) и PPLE (Politics, Psychology, Law and Economics) свой срок — 1 февраля.",
+      "evidence": "Applicants for selective programmes Liberal Arts & Sciences 1 February PPLE (Politics, Psychology, Law and Economics) 1 February",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявка стоит 100 евро — невозвратный взнос за рассмотрение, платят все, у кого иностранный аттестат. Подаёшь на несколько программ в один год — взнос платится один раз. Без оплаты заявку не примут.",
+      "evidence": "All students applying for a Bachelor's degree programme with an international diploma are required to pay a non-refundable €100 application fee",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 100,
+        "currency": "EUR",
+        "evidence": "a non-refundable €100 application fee"
+      }
+    },
+    {
+      "ru": "Государственный тариф 2 694 евро в год (2026-2027) таджикистанцу не положен: его платят граждане ЕЭК, ЕС, Швейцарии и Суринама, у кого есть подходящий вид на жительство.",
+      "evidence": "Statutory tuition fees 2026-2027 full-time students €2,694",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Тариф для не-ЕЭК на бакалавриате (институциональный) на 2026-2027: экономика — 13 900 евро, социальные и поведенческие науки — 16 670, гуманитарные науки и право — 17 500, Amsterdam University College — 20 430, естественные науки, химия, физика — 21 800, медицина и стоматология — 34 700. Сумма зависит от факультета, тариф одинаков для очной и заочной формы.",
+      "evidence": "Institutional fee for non-EEA students Bachelor's €13,900",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Единственная общеуниверситетская стипендия для бакалавриата — Amsterdam Merit Scholarship (AMS): подать могут обладатели паспорта не из ЕЭК, уже подавшиеся на программу. Размер и условия задаёт факультет, автоматически её не дают, полного покрытия вуз не обещает.",
+      "evidence": "Outstanding students from outside the EU/EEA can apply for an Amsterdam Merit Scholarship (AMS).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Кроме AMS у отдельных факультетов есть свои стипендии для иностранцев (Economics and Business, Social and Behavioural Sciences) — смотреть на страницах факультетов.",
+      "evidence": "Several faculties also have a variety of scholarships aimed at international students.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "В пакет заявки входят: аттестат и табель оценок за среднее образование (и за высшее, если оно есть), сертификат английского (если нужен) и CV. Если диплом ещё не получен, вместо него загружают последний табель и справку школы об ожидаемых экзаменах и оценках.",
+      "evidence": "Diploma(s) and transcript(s) of grades for secondary and, if applicable, higher education English language proficiency test certificate (if required) Curriculum vitae / resume",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы не на английском, нидерландском, французском или немецком нужно приложить в официальном переводе — таджикские документы без перевода не примут.",
+      "evidence": "If your documents are not in English, Dutch, French or German, please upload an official translation of all documents as well.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "UvA Matching (знакомство с программой) — обязательная часть процедуры приёма для всех, кто окончил школу не в Нидерландах.",
+      "evidence": "UvA Matching is a mandatory part of the application procedure for all prospective Bachelor's students who have completed their prior education at a non-Dutch educational institution.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Рассмотрение на неотборочных программах идёт по мере поступления заявок: подашь раньше — раньше рассмотрят. Если твоей квалификации нет в diploma finder, полная проверка может занять до восьми недель, поэтому подавай с запасом.",
+      "evidence": "Full review and verification of qualifications not on this list may take up to eight weeks.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Жильё вуз не предоставляет: кампусного жилья нет, а комнат в UvA Housing на всех иностранцев не хватает. Искать жильё в Амстердаме надо самому и заранее.",
+      "evidence": "The UvA does not offer student housing on our campuses.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-05-01",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.uva.nl/en/education/admissions/bachelors/applying-for-a-bachelors-programme.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Amsterdam (UvA), Амстердам, Нидерланды. Подача через Studielink плюс собственный онлайн-портал, заявка стоит 100 евро, срок для иностранцев — 1 мая (рекомендованный — 1 апреля), английский подтверждается IELTS/TOEFL/PTE/Cambridge. Обучение для не-ЕЭК — от 13 900 до 34 700 евро в год, помощь только конкурсная (AMS и факультетские стипендии)."
+    }
+  },
+  "source": {
+    "url": "https://www.uva.nl/en/education/admissions/bachelors/applying-for-a-bachelors-programme.html",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.uva.nl/en/education/admissions/bachelors/applying-for-a-bachelors-programme.html",
+        "contentHash": "sha256:3a548964565fbd98c5d41c5c6ceb0233cc9123d58e6e9ba86d93b46f985a8515"
+      },
+      {
+        "url": "https://www.uva.nl/en/education/fees-and-funding/tuition-fees/tuition-fees.html",
+        "contentHash": "sha256:ba4bf01201440bb2c831abe344b18b39367472490088d26a5a106577f0de4582"
+      },
+      {
+        "url": "https://www.uva.nl/en/education/fees-and-funding/bachelors-scholarships-and-loans/bachelors-scholarships.html",
+        "contentHash": "sha256:6fb824a644d48ca1fc7c120e06bb5cfc7a00eae391b3ba060ebf246b63888761"
+      },
+      {
+        "url": "https://www.uva.nl/en/education/fees-and-funding/bachelors-scholarships-and-loans/amsterdam-merit-scholarship/amsterdam-merit-scholarship.html",
+        "contentHash": "sha256:462d9ea3bb4da45dbae617d5e32d163cad6027db348b9e84ccacbfb0120ffb6e"
+      },
+      {
+        "url": "https://www.uva.nl/en/education/admissions/bachelors/entry-requirements-for-international-qualifications.html",
+        "contentHash": "sha256:634d081d86eb639c3977d430075788065e80967c07c576a1960729089f201b15"
+      },
+      {
+        "url": "https://www.uva.nl/en/education/bachelor-s/application-after-1-may/application-after-1-may.html",
+        "contentHash": "sha256:645e325b80fe4cf5394c7071d89e89b9661df22bfb865f8aaf6cbf760a4b387a"
+      },
+      {
+        "url": "https://www.uva.nl/webfiles/1779862044324/includes/diploma-finder/country_data.js",
+        "contentHash": "sha256:6abe4e3cc8456ba9529098d08226985412a9099bf7cd90f4fc6f082b9907280b"
+      },
+      {
+        "url": "https://www.uva.nl/en/education/fees-and-funding/fees-and-funding.html",
+        "contentHash": "sha256:24400c5a8d602acf6520aa9b0ca6fddec7d3275149064187e8cfe076b4f21e9d"
+      },
+      {
+        "url": "https://www.uva.nl/en/education/admissions/admissions.html",
+        "contentHash": "sha256:61da26de7237d13835d9e7a7a0c537cd68c7a99246a0c131152e52ea7f3112cd"
+      },
+      {
+        "url": "https://www.uva.nl/en/education/admissions/bachelors/uva-matching/uva-matching.html",
+        "contentHash": "sha256:fd66dfb157c7b7f21e0725a53becc5216f98ce7517288310b65ec729f2532143"
+      }
+    ],
+    "lastVerified": "2026-09-30",
+    "humanChecked": false
+  }
+}
