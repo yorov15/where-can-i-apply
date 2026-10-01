@@ -1,0 +1,243 @@
+{
+  "id": "islamic-university-madinah",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Islamic University of Madinah (Саудовская Аравия): приём иностранцев на бакалавриат",
+    "orig": "Islamic University of Madinah"
+  },
+  "hostCountry": "SA",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Иностранцу, живущему вне Саудовской Аравии, вуз даёт полную (внешнюю) стипендию: обучение бесплатное, плюс месячная стипендия, двухмесячное пособие на обустройство при приезде, трёхмесячное пособие на выпуск для отправки книг, бесплатное общежитие, удешевлённое питание, бесплатное медицинское обслуживание и льготный билет эконом-класса в конце каждого учебного года по кратчайшему пути к месту жительства (с условием, что билет не оплачен другой стороной). Не-саудовцы, уже живущие в Королевстве с законным видом на жительство (внутренняя, частичная стипендия), получают только освобождение от платы за обучение — стипендии, жилья и билетов у них нет."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство вход не закрывает: ограничения по стране нет, отдельного списка стран вуз не публикует. Полная (внешняя) стипендия прямо предназначена не-саудовцам, живущим за пределами Королевства; гражданство поступающего нигде не ограничивается (кроме того, что гражданам и резидентам Саудовской Аравии этот путь не адресован). Таджикистан нигде не упомянут и ничем не выделен. Смотрели страницы: Qualifications required for international students, Deanship of Admission and Registration, Scholarship Admission (араб.), долид приёма 1448 (араб. и англ. PDF)."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы вход не закрывает: аттестат о среднем образовании принимают «from within or outside the Kingdom», отказа по стране нет и списка стран на снятых страницах нет. Таджикистан не упомянут отдельно. Смотрели страницы: Qualifications required for international students, Scholarship Admission (араб.), долид приёма 1448 (англ. PDF)."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Educational Background: Applicants must hold a general secondary certificate (high school diploma) or its equivalent, obtained either within or outside the Kingdom of Saudi Arabia."
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "Certificate Recency: The secondary school certificate (or equivalent) should have been obtained within the last five years. However, the university president has the right of exemption when deems necessary."
+    },
+    "age": {
+      "min": 17,
+      "max": 25,
+      "evidence": "Age: Applicants should be between 17 and 25 years of age."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Требования к среднему баллу (GPA) нет: для внешней (полной) стипендии объявленного минимума GPA вуз не публикует, а конкурсный «взвешенный» балл (аттестат + GAT + Achievement Test) относится только к внутренним (частичным) стипендиям для уже живущих в Королевстве. Смотрели страницы: Qualifications required for international students, Scholarship Admission (араб.), долид приёма 1448 (англ. PDF)."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "For scientific faculties: Applicants for external scholarships whose previous studies were not conducted in English, or who are not from countries where English is an official or primary language, must provide an accredited certificate proving English proficiency (such as IELTS, TOEFL, or their equivalent)."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Полная (внешняя) стипендия — для неграждан Саудовской Аравии, живущих за пределами Королевства; гражданам и обладателям саудовского вида на жительство этот путь не предназначен.",
+      "evidence": "The applicant for a full scholarship must not be residing in the Kingdom of Saudi Arabia.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "По внешней стипендии обучение бесплатное: для иностранца, живущего вне Королевства, она покрывает полную стоимость бакалавриата.",
+      "evidence": "These scholarships are granted to non-Saudi students residing outside the Kingdom of Saudi Arabia to pursue full-time undergraduate studies at no cost.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Что даёт полная стипендия: месячная стипендия, двухмесячное пособие на обустройство при приезде, трёхмесячное пособие на выпуск для отправки книг и льготный билет эконом-класса в конце каждого учебного года по кратчайшему пути к месту жительства.",
+      "evidence": "Financial Benefits Monthly stipend. Two-month arrival allowance. Three-month graduation allowance for shipping books. A discounted economy class ticket when traveling at the end of each academic year via the nearest route to the country of residence provided the student has not obtained a travel ticket from another party.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полная стипендия включает жильё и питание: университетское общежитие и удешевлённые блюда, а также бесплатное медицинское обслуживание.",
+      "evidence": "Services Provided University housing. Subsidized meals.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Частичная (внутренняя) стипендия — только для не-саудовцев с законным видом на жительство в Королевстве; она даёт лишь освобождение от платы за обучение, без стипендии, жилья и билетов.",
+      "evidence": "2. Partial Scholarships (Internal Scholarships) These scholarships are designated for non-Saudi students legally residing within the Kingdom of Saudi Arabia to pursue full-time undergraduate studies.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявку подают сами через государственную платформу «Учись в Саудовской Аравии» (Study in Saudi Arabia); у университета нет в мире посредников и представительств.",
+      "evidence": "Admission applications to the Islamic University are submitted through the (Study in Saudi Arabia) platform via the following link:",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки приёма: с 19 апреля 2026 года (2-11-1447 х.) по 21 мая 2026 года (4-12-1447 х.).",
+      "evidence": "Application Period: From 2-11-1447 AH corresponding to 19-4-2026 AD To 4-12-1447 AH corresponding to 21-5-2026 AD",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Возраст поступающего — от 17 до 25 лет.",
+      "evidence": "The applicant must not be younger than (17) years or older than (25) years.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестат о среднем образовании (или его эквивалент) должен быть получен не более пяти лет назад; но президент университета может сделать исключение.",
+      "evidence": "No more than five years must have passed since the applicant obtained the General Secondary School Certificate or its equivalent.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат о среднем образовании или его эквивалент, полученный в Королевстве или за его пределами.",
+      "evidence": "The applicant must have obtained a General Secondary School Certificate or its equivalent from within or outside the Kingdom.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Для научных (инженерных, IT, естественно-научных) факультетов аттестат должен быть по естественно-научному профилю.",
+      "evidence": "For admission to the scientific-track colleges, the student must have obtained a General Secondary School Certificate or its equivalent in the \"Scientific\" specialization.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Поступление в научные факультеты требует английского: если предыдущее обучение было не на английском и страна не англоязычная, нужен аккредитованный языковой сертификат (IELTS, TOEFL или эквивалент). Конкретный балл вуз не публикует.",
+      "evidence": "For scientific faculties: Applicants for external scholarships whose previous studies were not conducted in English, or who are not from countries where English is an official or primary language, must provide an accredited certificate proving English proficiency (such as IELTS, TOEFL, or their equivalent).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Язык обучения: теоретические факультеты учат на арабском, научные — на английском.",
+      "evidence": "Instruction in theoretical colleges is conducted in Arabic, while instruction in scientific colleges is conducted in English.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "При поступлении могут назначить вступительные экзамены или собеседования, объявленные университетом в период приёма.",
+      "evidence": "University Examinations: Applicants must successfully pass any entrance examinations announced by the university during the application period.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужна рекомендация от признанной организации, учреждения или научного деятеля из своей страны.",
+      "evidence": "Recommendation: Applicants must provide a letter of recommendation from recognized body, institution, or academic figure in their home country.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен полный пакет документов: аттестат, выписка оценок, паспорт, свидетельство о рождении, справка о несудимости, медицинский отчёт, две рекомендации, свежее фото, подтверждение английского для научных факультетов.",
+      "evidence": "Copy of the original high school certificate. Copy of the academic transcript. Copy of passport. Copy of birth certificate or age verification document. Criminal record clearance certificate. Medical report confirming good health and absence of infectious diseases or disabilities.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для факультета Священного Корана нужно выучить весь Коран наизусть и пройти устный экзамен.",
+      "evidence": "Faculty of the Holy Qur'an: Admission to the Faculty of the Holy Qur'an requires complete memorization of the Holy Qur'an, confirmed through a successful oral examination.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Перевод с одного факультета на другой после зачисления запрещён: зачисление окончательное.",
+      "evidence": "Scholarship students are not permitted to transfer from one faculty to another after admission.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Выпускник школы внутри Саудовской Аравии, даже подающий на внешнюю стипендию, рассматривается как внутренний стипендиат и обязан сдать GAT, а для научных факультетов — Achievement Test (Qiyas).",
+      "evidence": "Applicants who graduated from schools within the Kingdom of Saudi Arabia, even if they apply for an external scholarship, will be treated as internal scholarship applicants for all admission and selection purposes. They must submit the General Aptitude Test (GAT) and, for science faculties (such as IT, science, and engineering), the Achievement Test (Qiyas). Applications that do not include these requirements will not be considered.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Знание арабского проверяют отдельным тестом: он не обязателен для всех, но по его итогу могут направить на подготовительный курс арабского языка при институте, а не сразу в вуз.",
+      "evidence": "Learning Arabic at the university's institute is a preparatory stage for admission into the faculties. It is not a separate program chosen by the student. Placement is determined by the university according to the student's level of Arabic proficiency.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-04-19",
+    "closes": "2026-05-21",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://studyinsaudi.sa/en",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Исламский университет Медины (Islamic University of Madinah), Медина, Саудовская Аравия. Приём иностранцев на бакалавриат идёт по государственной стипендии: полной (внешней) — для живущих вне Королевства, и частичной (внутренней) — для не-саудовцев с видом на жительство. Заявку подают через платформу «Учись в Саудовской Аравии» (studyinsaudi.sa)."
+    }
+  },
+  "source": {
+    "url": "https://iu.edu.sa/en-us",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://iu.edu.sa/en-us",
+        "contentHash": "sha256:fd7cb8d0ff5954b3a161ac8c7cf27c082de1961a319c85cf65ea38611e3351b7"
+      },
+      {
+        "url": "https://iu.edu.sa/%D8%A7%D9%84%D9%85%D9%88%D9%87%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B7%D9%84%D9%88%D8%A8%D8%A9-%D9%84%D9%84%D8%B7%D9%84%D8%A7%D8%A8-%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A%D9%8A%D9%86-0",
+        "contentHash": "sha256:37a29f0cd7bb687084c797e6ab168faba07c471f2345708b05e8047c17acfe7f"
+      },
+      {
+        "url": "https://iu.edu.sa/%D9%82%D8%A8%D9%88%D9%84-%D8%B7%D9%84%D8%A7%D8%A8-%D8%A7%D9%84%D9%85%D9%86%D8%AD-%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%D8%A9",
+        "contentHash": "sha256:4291240e0172d02d089026adaa7b5b85507ebd2b1411854507baf1563f1e7427"
+      },
+      {
+        "url": "https://iu.edu.sa/%D9%82%D8%A8%D9%88%D9%84-%D8%B7%D9%84%D8%A7%D8%A8-%D8%A7%D9%84%D9%85%D9%86%D8%AD-%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%D8%A9-%D8%A7%D9%84%D8%AF%D8%A7%D8%AE%D9%84%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A%D8%A9-%D9%84%D9%84%D8%B9%D8%A7%D9%85-%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D9%8A-1448%D9%87%D9%80",
+        "contentHash": "sha256:bb5d708317a191b53244273b887333d2384f926ffd3695a2e6e989c23636d9e6"
+      },
+      {
+        "url": "https://iu.edu.sa/en-us/Deanship-Admission-Registration",
+        "contentHash": "sha256:87a9ff5f0e309db4c97e2d47dca3f59296758142ccf804725dd2b976c20cdfd0"
+      },
+      {
+        "url": "https://iu.edu.sa/Deanship-Admission-Registration",
+        "contentHash": "sha256:1286294267758e4334b7a236bcdf55756e3dfebd03e0410d64cebdce9155a729"
+      },
+      {
+        "url": "https://iu.edu.sa/media/%D8%B9%D9%85%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%82%D8%A8%D9%88%D9%84%20%D9%88%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84/Undergraduate%20Admission%20Guide%20for%20Scholarship%20Students%20%201448%20AH.pdf",
+        "contentHash": "sha256:e9f753b4163e8d6349943ef3622cc6193bebb3d5bc25d48132b438e66841a149"
+      },
+      {
+        "url": "https://iu.edu.sa/media/%D8%B9%D9%85%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%82%D8%A8%D9%88%D9%84%20%D9%88%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84/%D8%AF%D9%84%D9%8A%D9%84%20%D8%A7%D9%84%D9%82%D8%A8%D9%88%D9%84%20%D9%84%D9%85%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A7%D9%84%D8%A8%D9%83%D8%A7%D9%84%D9%88%D8%B1%D9%8A%D9%88%D8%B3%20%20%D9%84%D8%B7%D9%84%D8%A7%D8%A8%20%D8%A7%D9%84%D9%85%D9%86%D8%AD%20%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%D8%A9%201448%D9%87%D9%80.pdf",
+        "contentHash": "sha256:ae8e83617eb4a4af1d81f88803024c0fbb197a34916f381b4c13a764a91901cd"
+      },
+      {
+        "url": "https://iu.edu.sa/ANnounce1446115-1",
+        "contentHash": "sha256:e7c6efd5ff820073f87f151a394f9bb1b50b3758bb0b659c0970104d049ad9cc"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
