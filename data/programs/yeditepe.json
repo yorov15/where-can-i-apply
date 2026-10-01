@@ -1,0 +1,291 @@
+{
+  "id": "yeditepe",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Yeditepe University (Турция): приём иностранцев на бакалавриат",
+    "orig": "Yeditepe University"
+  },
+  "hostCountry": "TR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Частный вуз, обучение платное и в долларах. На 2026-2027 год бакалавриат стоит 16 000-30 000 $ в год (инженерия и дизайн — 20 000 $, компьютерная инженерия — 30 000 $, гуманитарные программы — 16 000 $), медицина — 45 000 $, стоматология — 73 000 $, фармация — 24 000 $; подготовительный английский — 18 000 $ в год. Цена действует при оплате всего года сразу, при рассрочке добавляют 15%. Автоматической помощи иностранцу нет: обучение и стипендии для иностранцев вуз определяет ежегодно решением попечительского совета, стипендии здесь только за успехи (при GPA ниже 2.00 их снимают). Жильё и дорогу вуз не покрывает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство вход не закрывает: регламент описывает приём иностранных студентов и не называет ни одного паспорта, которому отказано. Таджикистан прямо входит в список принимаемых документов (Attestat). Отдельный путь для граждан Турции (YKS) на этих страницах не описан — для таджикского школьника ограничений нет. Смотрели страницы приёма иностранцев, регламент приёма иностранцев, правила по экзаменам и документам, английский, стоимость, стипендии и FAQ."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы вход не закрывает: отказ по стране не назван, приём идёт по признанным экзаменам и дипломам, среди которых отдельной строкой стоит аттестат для Таджикистана. Для стран без отдельной строки регламент оставляет оценку факультету, а не отказ. Смотрели регламент приёма иностранцев (список экзаменов и дипломов), страницу приёма иностранцев, правила документов и английского."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "(b) High School Diploma (c) Transcript showing all courses and grades obtained during high school"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы страницы не называют: сказано лишь, что нужен оригинал школьного диплома, а если он ещё не выдан — оригинал временной справки о выпуске; диплом представляют при регистрации. То есть подать можно до выпуска. Смотрели регламент приёма иностранцев, страницы приёма, документов и регистрации."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения для приёма страницы не называют: ни в регламенте приёма иностранцев, ни на страницах требований, английского, стоимости, стипендий, FAQ и академического календаря возраст абитуриента не упомянут."
+    },
+    "gpa": {
+      "min": 60,
+      "scale": "PERCENT",
+      "evidence": "Attestat (Azerbaijan, Russia, Ukraine, Moldova, Belarus, Kazakhstan, Kyrgyzstan, Georgia, Tajikistan, Uzbekistan, Turkmenistan) A minimum 60% diploma score*"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 79,
+          "evidence": "Students who, within the two years preceding the exam date, document a score of 79 (0-120) or 4 (1-6) on the TOEFL iBT exam or 66 or above on one of the YDS / e-YDS / YÖKDİL / e-YÖKDİL exams are exempt from the English Proficiency Exam."
+        }
+      ],
+      "evidence": "Students who cannot provide evidence of sufficient English proficiency through documents* accepted by the University are required to take the English Proficiency Exam administered by the English Preparatory Program."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": 960,
+          "evidence": "Total minimum score Math- Reading Writing. 960/1600 (Some areas of study may require above-average scores)) A minimum score for Faculty of Medicine, Dentistry, Pharmacy 1300/1600."
+        },
+        {
+          "test": "ACT",
+          "min": 21,
+          "evidence": "A minimum score of 21 out of 36 (60%)"
+        }
+      ],
+      "evidence": "Candidates who possess the exam types or diploma grades specified in Appendix (1), either national or international, can apply."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Приём иностранцев описан отдельным регламентом: он определяет порядок зачисления на программы бакалавриата и предбакалавриата (associate) для иностранных студентов.",
+      "evidence": "The purpose and scope of this guideline are to determine the procedures and principles related to the admission of international students to the associate and undergraduate programs of Yeditepe University.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Аттестат Таджикистана принимают: в списке признаваемых документов отдельной строкой стоит Attestat (в том числе Таджикистан) с минимумом 60% среднего балла. 11-летняя таджикская школа этим путём закрывается, требование 12 лет не названо.",
+      "evidence": "Attestat (Azerbaijan, Russia, Ukraine, Moldova, Belarus, Kazakhstan, Kyrgyzstan, Georgia, Tajikistan, Uzbekistan, Turkmenistan) A minimum 60% diploma score*",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Нужен школьный диплом и транскрипт со всеми курсами и оценками за среднюю школу; диплом можно дослать позже.",
+      "evidence": "(b) High School Diploma (c) Transcript showing all courses and grades obtained during high school",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Если аттестата ещё нет, принимают оригинал временной справки о выпуске, а оригинал диплома представляют при регистрации.",
+      "evidence": "Original high school diploma or, if not yet issued, the original temporary graduation certificate",
+      "field": "graduationYear",
+      "kind": "note"
+    },
+    {
+      "ru": "Все документы должны быть на турецком или английском; иначе нужен заверенный перевод в дополнение к копиям оригиналов.",
+      "evidence": "(2) If the application documents are in languages other than Turkish or English, certified translations in Turkish or English must also be provided in addition to copies of the originals.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужна фотокопия страницы загранпаспорта с фото и данными.",
+      "evidence": "(e) Photocopy of the passport page with the photo and identity information",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Английский подтверждают до приёма: сертификат TOEFL IBT либо результат экзамена, признанный подготовительной школой вуза.",
+      "evidence": "(d) English language proficiency document (TOEFL IBT) or the exam result document accepted by Yeditepe University's English Preparatory School",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь без TOEFL: сдать собственный экзамен по английскому при Yeditepe (English Proficiency Exam), порог — 60 из 100 (на специальностях арт-дизайна 50, на ELT, английской литературе и переводе 65).",
+      "evidence": "A student is considered successful in the English Proficiency Exam if they receive a minimum score of 60 out of 100.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "TOEFL iBT от 79 (или 4 по новой шкале) освобождает от экзамена по английскому, если сдан не раньше чем за два года до экзамена.",
+      "evidence": "Students who, within the two years preceding the exam date, document a score of 79 (0-120) or 4 (1-6) on the TOEFL iBT exam or 66 or above on one of the YDS / e-YDS / YÖKDİL / e-YÖKDİL exams are exempt from the English Proficiency Exam.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "IELTS вуз не принимает: ни IELTS, ни TOEFL Home Edition не считаются подтверждением английского.",
+      "evidence": "TOEFL HOME EDITION and IELTS exam results are not accepted by our institution.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "SAT и ACT не обязательны: зачисление идёт по одному из признанных экзаменов или дипломов. Аттестат Таджикистана — минимум 60%, TR-YÖS — 350 из 500 для обычных факультетов и 425 из 500 для медицины, стоматологии и фармации.",
+      "evidence": "Candidates who possess the exam types or diploma grades specified in Appendix (1), either national or international, can apply.",
+      "field": "exam",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Порог SAT — 960 из 1600 (для медицины, стоматологии и фармации — 1300 из 1600), ACT — 21 из 36.",
+      "evidence": "Total minimum score Math- Reading Writing. 960/1600 (Some areas of study may require above-average scores)) A minimum score for Faculty of Medicine, Dentistry, Pharmacy 1300/1600.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "У экзаменов на окончание школы (Abitur, IB, GCE, Tawjihi) срока годности нет, у вступительных экзаменов (TR-YÖS, SAT) — два года.",
+      "evidence": "There is no validity period limitation for exams recognized as high school completion exams (e.g., Abitur, International Baccalaureate, GCE, Tawjihi). The validity period for university entrance exams (e.g., TR -YÖS, SAT) is two years.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "TR-YÖS — государственный экзамен для иностранцев (OSYM): для медицины, стоматологии и фармации нужен балл не ниже 425 из 500, для остальных факультетов — 350 из 500.",
+      "evidence": "Türkiye TR-YÖS- etrance exam made by OSYM A total score of at least 425 out of 500 points (85%) for the Faculty of Medicine, Dentistry, Pharmacy A total score of at least 350 out of 500 points (70%) for Other Faculties",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "В дипломе или справке должен быть средний балл по 100-балльной шкале; если его нет, нужно отдельное подтверждение среднего балла.",
+      "evidence": "A diploma or high school certificate should include CGPA out of 100; if not, it is required to submit a formal document bearing a CGPA together with a diploma or high school certificate.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявка подаётся электронно через страницу подачи в объявленные сроки, вместе с пакетом документов.",
+      "evidence": "Applications are made electronically through the application page during the announced application dates, along with the required documents listed below.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявки открыты, идёт регистрация на все факультеты.",
+      "evidence": "Online applications are open! Don't miss it out. Registration has started for all departments",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Иностранцы могут подавать на бакалавриат: нужны школьный диплом (транскрипт) и сертификат по английскому.",
+      "evidence": "Foreign students can apply to our undergraduate programs. Students will be required to submit documents such as a high school diploma (transcript) and an English proficiency certificate.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение платное: на 2026-2027 год стоматология — 73 000 $, медицина — 45 000 $, фармация — 24 000 $, гуманитарные программы — 16 000 $ в год.",
+      "evidence": "Faculty of Dentistry 73.000$ 54.750$ - - Faculty of Education 16.000$ - 8.000$ - Faculty of Law 20.000$ - 10.000$ - Faculty of Medicine 45.000$ - - - Faculty of Pharmacy 24.000$ 18.000$ - -",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Компьютерная инженерия стоит 30 000 $ в год — это верхняя планка бакалавриата; подготовительный английский — 18 000 $ в год.",
+      "evidence": "Computer Engineering (Bachelor) 30.000$ - 15.000$ -",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подготовительный английский (English Preparatory Program) стоит 18 000 $ в год.",
+      "evidence": "English Preparatory Program 18.000$ - 9.000$ -",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Цена указана с НДС; она действует при оплате всего года сразу — при рассрочке добавляют 15%.",
+      "evidence": "Açıklanan öğretim ücretleri; bankadan EFT-havale ile yıllık ücretin tamamının peşin ödenmesi, ya da kredi kartı ile yıllık ücretin tamamının tek çekim olarak ödenmesi halinde geçerli olup taksitli ödemelerde %15 ekleme yapılır.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обучение и стипендии для иностранцев вуз определяет ежегодно по представлению ректората решением попечительского совета — фиксированной помощи при поступлении нет.",
+      "evidence": "The tuition fees and scholarships to be provided to international students admitted to higher education programs at Yeditepe University are determined annually based on the recommendations of the Rectorate by the Board of Trustees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии за успехи сохраняются весь срок обучения, если нет дисциплинарных взысканий; при GPA ниже 2.00 стипендию снимают и возвращают, когда GPA снова станет 2.00 и выше.",
+      "evidence": "Scholarships granted to students are merit -based. Students lose their scholarship rights if their GPA falls below 2.00 . The scholarship is reinstated at the end of the academic year, in which the student raises their GPA to 2.00 or above.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://apply.yeditepe.edu.tr/s/login/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Yeditepe University, Стамбул, частный, обучение на английском. Приём иностранцев на бакалавриат идёт по отдельному регламенту: заявка онлайн через apply.yeditepe.edu.tr, нужны школьный диплом и транскрипт, загранпаспорт, мотивационное письмо и подтверждение английского. Для Таджикистана принимают Attestat со средним баллом не ниже 60% (или SAT 960, ACT 21, TR-YÖS 350); английский — TOEFL iBT 79 либо собственный экзамен вуза на 60 из 100 (IELTS не принимают). Обучение на 2026-2027 — 16 000-30 000 $ в год, медицина 45 000 $, стоматология 73 000 $; помощь иностранцам не гарантирована, стипендии только за успехи."
+    }
+  },
+  "source": {
+    "url": "https://international.yeditepe.edu.tr/admission",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://international.yeditepe.edu.tr/admission",
+        "contentHash": "sha256:d7ce39e80ac9700aacb406ad3d4d68835cb7d1f64c9849d6bbd40e5b43ad54c3"
+      },
+      {
+        "url": "https://yeditepe.edu.tr/sites/default/files/2024-08/international-student-admission-guidelines.pdf",
+        "contentHash": "sha256:fe5a4185314489cd8bd43e6df7e8105d1b2570bfcd0fadd97be751c69e932906"
+      },
+      {
+        "url": "https://yabancidiller.yeditepe.edu.tr/en/english-preparatory-program",
+        "contentHash": "sha256:ee7b934dad779c62bea5d4f2cbc02efa55cb543a17aafa632c4b87ef272031c8"
+      },
+      {
+        "url": "https://www.yeditepe.edu.tr/en/prospective-students/fees",
+        "contentHash": "sha256:a8ff6058a54405acc9591df512750be57cd331d8d9009e8834f4efd33869c850"
+      },
+      {
+        "url": "https://www.yeditepe.edu.tr/en/prospective-students/scholarships",
+        "contentHash": "sha256:2b203464f91c16f1ed2b9e422d1ae9835bed2cd94012d934291db90df9624770"
+      },
+      {
+        "url": "https://www.yeditepe.edu.tr/en/prospective-students/faq",
+        "contentHash": "sha256:2b07e3113588e90d27756dbeee103817f6ecbf5c242303fa3d474cecf489c6ba"
+      },
+      {
+        "url": "https://www.yeditepe.edu.tr/en/announcements/international-student-admission-examination-tr-yos",
+        "contentHash": "sha256:8b9ffe86928fd97ff5fb169be7a7247cd7897aec8169bc71f8725c7bc643f76f"
+      },
+      {
+        "url": "https://www.yeditepe.edu.tr/en/academic/academic-calendar",
+        "contentHash": "sha256:10e9fa38127a52cdc0d5a51601b915020d1d884a758e80506e62b4792c4a7fc6"
+      },
+      {
+        "url": "https://www.yeditepe.edu.tr/en/prospective-students",
+        "contentHash": "sha256:b1571eda30f750971a422b4d514b38f4cd5aafdf3807b7b0354ba8e365e553d3"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}

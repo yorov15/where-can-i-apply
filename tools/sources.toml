@@ -4780,3 +4780,21 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[yeditepe]
+name = "Yeditepe University (Турция)"
+files = [
+  { path = "manual/yeditepe/03-admission.html", url = "https://international.yeditepe.edu.tr/admission" },
+  { path = "manual/yeditepe/18-intl-guidelines.pdf", url = "https://yeditepe.edu.tr/sites/default/files/2024-08/international-student-admission-guidelines.pdf" },
+  { path = "manual/yeditepe/19-english-prep.html", url = "https://yabancidiller.yeditepe.edu.tr/en/english-preparatory-program" },
+  { path = "manual/yeditepe/04-fees.html", url = "https://www.yeditepe.edu.tr/en/prospective-students/fees" },
+  { path = "manual/yeditepe/05-scholarships.html", url = "https://www.yeditepe.edu.tr/en/prospective-students/scholarships" },
+  { path = "manual/yeditepe/11-faq.html", url = "https://www.yeditepe.edu.tr/en/prospective-students/faq" },
+  { path = "manual/yeditepe/13-tryos.html", url = "https://www.yeditepe.edu.tr/en/announcements/international-student-admission-examination-tr-yos" },
+  { path = "manual/yeditepe/20-academic-calendar.html", url = "https://www.yeditepe.edu.tr/en/academic/academic-calendar" },
+  { path = "manual/yeditepe/10-prospective.html", url = "https://www.yeditepe.edu.tr/en/prospective-students" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
