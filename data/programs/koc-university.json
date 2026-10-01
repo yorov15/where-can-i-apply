@@ -1,0 +1,302 @@
+{
+  "id": "koc-university",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Koç University (Турция): бакалавриат для иностранцев",
+    "orig": "Koç University"
+  },
+  "hostCountry": "TR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: $38 000 в год для большинства программ, медицина $59 000. Всех иностранцев автоматически рассматривают на стипендию за заслуги 25–100% обучения (кроме медицины), но жильё и жизнь она не покрывает. Полное покрытие даёт государственная стипендия Türkiye Bursları, на которую вуз советует подаваться отдельно (кроме медицины и права). Поэтому покрытие в карточке не отмечено."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство вход не закрывает: иностранцев принимают по общему порядку, особые правила есть для граждан Турции и ТРСК. Смотрели страницы подачи, стоимости, стипендий и вопросов."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы вход не закрывает: аттестат страны принимают, только если она есть в списке, а список на странице выпадающий и в текст не попал. Про таджикский аттестат ничего не сказано — уточнять; путь есть через международные SAT, ACT, A-level. Смотрели страницы подачи, вопросов и программ."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы вуз числом не задаёт: смотрят оценки по всем классам, какие есть. Про 11-летнюю школу ничего не сказано — уточнять. Смотрели страницы подачи и вопросов."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы страницы не называют: результаты стандартных тестов действуют 2 года, дипломы без срока. Смотрели страницы подачи и вопросов."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения страницы подачи не называют. Смотрели страницы подачи, вопросов, стоимости и стипендий."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Candidates are evaluated in a holistic manner taking into account their academic performance in high school, entry qualifications, extra-curricular activities, recommendation letters, and the motivation to join Koç University and one of our undergraduate programs."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "evidence": "Exams taken on or after January 21, 2026: Minimum 4.5 (total)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "parts": true,
+          "evidence": "Exams taken before January 21, 2026: Minimum 80 total and 20 in Writing"
+        },
+        {
+          "test": "PTE",
+          "min": 67,
+          "evidence": "Pearson PTE Academic 67 Not applicable"
+        }
+      ],
+      "evidence": "IELTS is not accepted as a valid English proficiency exam as per The Council of Higher Education (YÖK) regulations."
+    },
+    "exam": {
+      "alternative": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": 1200,
+          "evidence": "SAT (Scholastic Aptitude Test) College of Administrative Sciences and Economics, College of Social Sciences and Humanities, School of Nursing 1200 out of 1600"
+        },
+        {
+          "test": "ACT",
+          "min": 25,
+          "evidence": "ACT (American College Testing) College of Administrative Sciences and Economics ,College of Social Sciences and Humanities, School of Nursing 25 out of 36"
+        }
+      ],
+      "evidence": "As an international student, you are qualified to apply only with one qualification using either \"A\" OR \"B\""
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Национальные аттестаты принимают только из списка стран, а он на странице выпадающий и в текст не попал. Про таджикский аттестат ничего не сказано — спрашивать приёмную. Если страны нет в списке, нужна международная квалификация: SAT, ACT, A-level и другие.",
+      "evidence": "If your country isn't listed above, it means that your national qualification is not accepted by Koç University, and hence you must submit one of the international qualifications stated above, with your application.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Подаёшься одной квалификацией: либо международной (SAT, ACT, AP, A-level, IB, европейский бакалавриат), либо национальной из списка страны.",
+      "evidence": "As an international student, you are qualified to apply only with one qualification using either \"A\" OR \"B\"",
+      "field": "schoolCountry",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если оценки или баллы ниже минимума, предложения не будет, а выполнение минимума не гарантирует его.",
+      "evidence": "If you have one of the eligible test scores or diplomas, but with scores below our minimum criteria, you will not be offered admission.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Число лет школы вуз числом не задаёт: смотрят оценки за 9, 10, 11 и 12 классы, если есть. Про 11-летнюю школу ничего не сказано — уточнять.",
+      "evidence": "High school transcripts or predicted results from every attended grade (9th, 10th, 11th, and if available 12th grades).",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "SAT: для экономики, гуманитарных наук и сестринского дела не ниже 1200 из 1600, для естественных наук 1260, для инженерии 1300, для права 1420, для медицины 1450. Результат действует 2 года, сложение лучших сессий не принимают.",
+      "evidence": "SAT (Scholastic Aptitude Test) College of Administrative Sciences and Economics, College of Social Sciences and Humanities, School of Nursing 1200 out of 1600",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Вместо SAT подходит ACT: для гуманитарных и экономики 25 из 36, для инженерии 28, для естественных наук 27, для права 32, для медицины 33. Эссе не нужно, нужна одна сессия.",
+      "evidence": "ACT (American College Testing) College of Administrative Sciences and Economics ,College of Social Sciences and Humanities, School of Nursing 25 out of 36",
+      "field": "exam",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Через A-level: три предмета, для экономики и гуманитарных не ниже B, для инженерии A по математике и B ещё по двум, для права и медицины A. Можно подаваться с прогнозными оценками.",
+      "evidence": "College of Engineering 3 A-Levels with grades A or higher in Math and B or higher in 2 other relevant subjects",
+      "field": "exam",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Результаты стандартных тестов (SAT, ACT, AP и других) действуют 2 года; для дипломов срок не ограничен. Если результат проверяется онлайн, получателем нужно указать Koç University.",
+      "evidence": "All standardized test scores (e.g., SAT, ACT, MCAT, AP, EGE, ENT, CBSE, CISCE, ATAR, …) are valid for 2 years.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Есть и турецкий вступительный экзамен TR-YÖS: для экономики и гуманитарных не ниже 425 из 500, для инженерии и наук 450; для права его не принимают. Экзамены YÖS других вузов не подходят.",
+      "evidence": "College of Administrative Sciences and Economics, College of Social Sciences and Humanities, School of Nursing A total score of at least 425 out of 500 points (85%)",
+      "field": "exam",
+      "kind": "workaround"
+    },
+    {
+      "ru": "TOEFL iBT: для тестов с 21 января 2026 — не ниже 4.5 по шкале 1–6; для сданных раньше — 80 и не ниже 20 по Writing. Home Edition и MyBest Score не принимают; отчёт ETS отправляют с кодом вуза 0163.",
+      "evidence": "Exams taken on or after January 21, 2026: Minimum 4.5 (total) Exams taken before January 21, 2026: Minimum 80 total and 20 in Writing",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "PTE Academic: не ниже 67; тест не старше 2 лет; отчёт присылает сам Pearson.",
+      "evidence": "Pearson PTE Academic 67 Not applicable Electronic score reports should be sent directly by Pearson to Koç University.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "IELTS как подтверждение английского не принимают — это требование турецкого совета высшего образования YÖK.",
+      "evidence": "IELTS is not accepted as a valid English proficiency exam as per The Council of Higher Education (YÖK) regulations.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Тест не нужен, если последние три года школы прошли в странах с английским основным языком (США, Великобритания, Канада кроме Квебека, Австралия, Новая Зеландия, Ирландия и ряд карибских).",
+      "evidence": "Students who completed the last 3 years of high school education in an eligible majority English-speaking country* will be exempted from submitting a valid English Proficiency Exam Result and will directly begin their undergraduate courses.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Собственный экзамен по английскому для иностранцев вуз больше не проводит; тесты, сданные в частных центрах в Турции, не принимают.",
+      "evidence": "Koç University will no longer offer an internal English proficiency exam for international students.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Проходного балла числом нет: оценивают всё вместе — оценки, экзамены, внеучебное, рекомендации, мотивацию.",
+      "evidence": "Candidates are evaluated in a holistic manner taking into account their academic performance in high school, entry qualifications, extra-curricular activities, recommendation letters, and the motivation to join Koç University and one of our undergraduate programs.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Заявка только онлайн-формой; документы по почте и на email не присылают. Нужны школьные оценки по всем классам, письмо мотивации на 1–2 страницы и рекомендации: рекомендатель получает письмо от вуза и заполняет форму.",
+      "evidence": "You should not email or post any documents to the university during the application process.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Каждому подавшему дают случайный вопрос и просят записать ответ на видео; это не значит, что тебя отобрали.",
+      "evidence": "All applicants are asked to provide an online interview and it does not imply that you have been shortlisted.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сбор за заявку невозвратный, освобождений от него для иностранцев нет; сумма публикуется в форме подачи.",
+      "evidence": "There are no application fee waivers for undergraduate international applications.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки прошлого цикла (осень 2026): ранняя подача 1 января – 1 марта, обычная 2 марта – 31 мая, поздняя 1 июня – 15 июля (продлевали до 5 августа); медицина — 15 апреля – 31 мая. Сроки на осень 2027 страница пока не называет.",
+      "evidence": "Early Application: 01 January 2026 - 01 March 2026 Regular Application: 02 March 2026 - 31 May 2026 Late Application: 01 June - 15 July 2026 (Extended deadline: 05 August 2026)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Обучение для иностранцев на 2025/26 — $38 000 в год для большинства программ (и инженерия, и бизнес), медицина дороже. Общежитие и жильё не входят.",
+      "evidence": "College of Engineering (CE) BSc Computer Engineering (COMP) 38000 1.700.000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Медицина стоит $59 000 в год, и на неё нет ни заслуг-, ни нужда-стипендий для иностранцев.",
+      "evidence": "School of Medicine (SOM) MD Medicine (MEDI) 59000 2.520.000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Всех иностранцев автоматически рассматривают на стипендию за заслуги на 25%, 50%, 75% или 100% обучения; отдельной заявки нет, решение приходит с предложением. Жильё и жизнь она не покрывает.",
+      "evidence": "Koç University awards merit-based tuition scholarships of 25%, 50%, 75%, or 100% to outstanding candidates each year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть оговорка: чёткого балла, который автоматически даёт стипендию, нет, а пересмотр решения невозможен.",
+      "evidence": "There are no specific test scores or GPAs that automatically award a full or partial merit scholarship.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Вуз прямо советует подаваться ещё и на государственную стипендию Турции Türkiye Bursları (кроме медицины и права): она даёт 100% обучения, общежитие, ежемесячную выплату и перелёты — этого стипендия вуза не даёт.",
+      "evidence": "We strongly encourage all international undergraduate applicants to also submit an application to the Turkish Scholarships program (except for Medicine and Law)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для права нужен турецкий не ниже C1, для медицины — B1 до второго курса и C1 до четвёртого.",
+      "evidence": "Students applying to the Law undergraduate program must demonstrate at least C1 level proficiency in the Turkish language",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://international.ku.edu.tr/undergraduate-programs/how-to-apply/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Koç University, Стамбул, Турция. Обучение платное ($38 000 в год), но всех иностранцев автоматически рассматривают на стипендию 25–100%. Нужен SAT 1200+ или другая международная квалификация; про таджикский аттестат страница молчит. Сроки на осень 2027 пока не названы (в прошлом цикле — с 1 января по 15 июля)."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://international.ku.edu.tr/undergraduate-programs/how-to-apply/",
+    "pages": [
+      {
+        "url": "https://international.ku.edu.tr/undergraduate-programs/how-to-apply/",
+        "contentHash": "sha256:56406a42dc33adc374e57455f780cce2063468406c2c3eecd69eb201543534e6"
+      },
+      {
+        "url": "https://international.ku.edu.tr/undergraduate-programs/tuition-and-scholarships/",
+        "contentHash": "sha256:c32dc06f2965052705e7ac7d7dcfe5b59699610abd63b5a7258b367658cec66d"
+      },
+      {
+        "url": "https://international.ku.edu.tr/undergraduate-programs/application-faqs/",
+        "contentHash": "sha256:90495915bc51ae0c47ce3dbf37ec610607ee50b47f37e74e67a9f0c01d572c03"
+      },
+      {
+        "url": "https://international.ku.edu.tr/undergraduate-programs/programs-offered/",
+        "contentHash": "sha256:145aa8a3684032b7af19beb7400689c8f07de19ff3fa243f44e5807d281f2579"
+      },
+      {
+        "url": "https://international.ku.edu.tr/undergraduate-programs/admission-statistics/",
+        "contentHash": "sha256:3ac73e6712516df25f6d83f4b201dc58f1585f79427e19c46813f241c7ebfac7"
+      },
+      {
+        "url": "https://international.ku.edu.tr/scholarships/overview/",
+        "contentHash": "sha256:8ce0d11d546fe815345f1c41a2237ec533eed01a26661a1c7b94570bc6362008"
+      },
+      {
+        "url": "https://international.ku.edu.tr/scholarships/turkish-scholarships-program-at-koc-university/",
+        "contentHash": "sha256:fbdc3cb083244b0e2e3e17e33a9c80bc90c37aa11d2508fd948d532f3e438e3f"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}

@@ -4370,3 +4370,18 @@ files = [
 approvedBy = "human"
 approvedAt = "2026-09-30"
 
+# Koç University (Турция): бакалавриат для иностранцев.
+# Домен ku.edu.tr одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+[koc-university]
+name = "Koç University (Турция): бакалавриат для иностранцев"
+files = [
+  { path = "manual/koc-university/00-how-to-apply.html", url = "https://international.ku.edu.tr/undergraduate-programs/how-to-apply/" },
+  { path = "manual/koc-university/01-tuition-scholarships.html", url = "https://international.ku.edu.tr/undergraduate-programs/tuition-and-scholarships/" },
+  { path = "manual/koc-university/02-faqs.html", url = "https://international.ku.edu.tr/undergraduate-programs/application-faqs/" },
+  { path = "manual/koc-university/03-programs.html", url = "https://international.ku.edu.tr/undergraduate-programs/programs-offered/" },
+  { path = "manual/koc-university/04-admission-stats.html", url = "https://international.ku.edu.tr/undergraduate-programs/admission-statistics/" },
+  { path = "manual/koc-university/05-scholarships-overview.html", url = "https://international.ku.edu.tr/scholarships/overview/" },
+  { path = "manual/koc-university/06-turkish-scholarships.html", url = "https://international.ku.edu.tr/scholarships/turkish-scholarships-program-at-koc-university/" },
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
