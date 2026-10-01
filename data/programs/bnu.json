@@ -1,0 +1,164 @@
+{
+  "id": "bnu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Beijing Normal University (Китай): бакалавриат на китайском со стипендией вуза",
+    "orig": "Beijing Normal University"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: 24 000 юаней в год на гуманитарных и 27 700 на естественных, технических и художественных специальностях. Стипендия вуза для новых иностранных студентов даёт освобождение от платы, ежемесячное содержание и страховку, но для неё нужны отличные результаты вступительного экзамена; точный порог и размер содержания на актуальной странице не названы. Жильё, виза и дорога — за счёт студента, если их не покрывает стипендия."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Applicants should be non-Chinese citizens with valid foreign passports"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по стране школы брошюра не называет. Смотрели брошюру приёма и страницу стипендии."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы не названо: нужен аттестат, равный китайскому аттестату о среднем образовании. Про 11-летнюю школу ничего не сказано. Смотрели брошюру приёма."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Года выпуска не называют: выпускники и те, кто подаёт до выпуска, с ожидаемым аттестатом. Смотрели брошюру приёма."
+    },
+    "age": {
+      "min": 18,
+      "max": 40,
+      "evidence": "between the ages of 18 to 40"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Минимального среднего балла брошюра не называет: нужен табель за все годы и по всем предметам. Смотрели брошюру приёма и страницу стипендии."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "HSK",
+          "min": 5,
+          "evidence": "for other majors, a minimum score of 180 in HSK Level 5 is required"
+        }
+      ],
+      "evidence": "for other majors, a minimum score of 180 in HSK Level 5 is required"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Подают иностранцы с действующим иностранным паспортом, без судимости и в хорошем здоровье. Если один или оба родителя граждане Китая и живут за границей, действуют дополнительные правила о сроке иностранного гражданства и проживания за рубежом.",
+      "evidence": "Applicants should be non-Chinese citizens with valid foreign passports",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат, равный китайскому аттестату о среднем образовании, или выше; число лет школы не названо. Подают оригинал нотариально заверенного аттестата (или справку об ожидаемом выпуске) и табель за все годы по всем предметам.",
+      "evidence": "Applicants should have a certificate equivalent to a Chinese high school graduation certificate or above.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст — от 18 до 40 лет (родившимся после 31 августа 1986). Тем, кому нет 18 на 1 сентября 2026, нужен опекун в Китае с нотариальной справкой.",
+      "evidence": "between the ages of 18 to 40",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Бакалавриат целиком на китайском. Нужен HSK: для «Китайский как второй язык» и «Преподавание китайского» — 4-й уровень не ниже 180, для остальных специальностей — 5-й уровень не ниже 180. Сертификат не старше 1 ноября 2023.",
+      "evidence": "for other majors, a minimum score of 180 in HSK Level 5 is required",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен экзамен CSCA (его проводит Китайский совет по стипендиям); предметы зависят от специальности (смотреть каталог специальностей). Затем очное собеседование в БНУ; если подаёшь на две специальности — собеседование по обеим.",
+      "evidence": "Applicant must attend the China Scholastic Competency Assessment (CSCA) held by the China Scholarship Council.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение платное: гуманитарные и социальные специальности — 24 000 юаней в год (12 400 за семестр), естественные, технические и искусства — 27 700 юаней в год (14 250 за семестр). Сбор за заявку 500 юаней, не возвращается.",
+      "evidence": "Tuition Fee for Science, Engineering, and Arts majors: 14,250 RMB per semester, 27,700 RMB per academic year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия вуза «BNU New International Student Scholarship» даёт освобождение от платы, ежемесячное содержание и медицинскую страховку на весь срок учёбы; нужно пройти ежегодную проверку в мае. Подают вместе с заявкой на поступление. Размер содержания на актуальной странице не назван.",
+      "evidence": "Provide living stipend during the study period",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Условия новой стипендии: нужны «отличные результаты вступительного экзамена» (проходной уровень не назван), нельзя иметь другую стипендию или финансирование от правительства, вуза или организации; к моменту подачи абитуриент уже должен быть принят в БНУ в этом году.",
+      "evidence": "Undergraduate students: Those with excellent scores in the entrance examination",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "В цикле 2026 онлайн-подача была с 15 ноября 2025 по 15 марта 2026; после предварительной проверки нужно выслать бумажные документы, затем экзамен и собеседование. Результаты — с июня 2026. Сроки 2027 года ещё не опубликованы.",
+      "evidence": "Online Application: November 15, 2025 - March 15, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Стипендии Правительства Китая (CSC), Пекинского правительства и «Шёлковый путь Мудо» подают отдельно: CSC — через сайт Китайского совета по стипендиям или посольство Китая в своей стране.",
+      "evidence": "For applications for Chinese Government Scholarships, please refer to the website of the China Scholarship Council",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-03-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admission-is.bnu.edu.cn/english/admissionprogram/bachelordegreeprogram/admissionbrochure/index.html",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Beijing Normal University, кампусы в Пекине и Чжухае, 40 специальностей на китайском. Нужны HSK 5 (180 баллов) и экзамен CSCA; платное обучение с возможной стипендией вуза за высокий результат экзамена. Цикл 2026 закрылся 15 марта 2026; сроки на 2027 ещё не опубликованы."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://admission-is.bnu.edu.cn/english/international/bnuscholarships/studentscholarship1/index.html",
+    "pages": [
+      {
+        "url": "https://admission-is.bnu.edu.cn/english/international/bnuscholarships/studentscholarship1/index.html",
+        "contentHash": "sha256:43febb25f17091d7cef71fafb3c9ba9c009ceb569534e4f66d4b3c44a9e91784"
+      },
+      {
+        "url": "https://admission-is.bnu.edu.cn/english/admissionprogram/bachelordegreeprogram/admissionbrochure/index.html",
+        "contentHash": "sha256:db8754e1695f8ee055dfc3ef5b0aa7091014954ab1bef1e5cbc8b9a35fbaa8ca"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}

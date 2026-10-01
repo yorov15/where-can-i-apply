@@ -4494,3 +4494,14 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Beijing Normal University (Китай).
+# Домен admission-is.bnu.edu.cn одобрен Муродом 2026-10-01 (список из 27 кандидатов, ответ «1» — весь список, кроме КазНУ).
+[bnu]
+name = "Beijing Normal University (Китай)"
+files = [
+  { path = "manual/bnu/00-scholarship.html", url = "https://admission-is.bnu.edu.cn/english/international/bnuscholarships/studentscholarship1/index.html" },
+  { path = "manual/bnu/01-brochure.html", url = "https://admission-is.bnu.edu.cn/english/admissionprogram/bachelordegreeprogram/admissionbrochure/index.html" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
