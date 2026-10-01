@@ -1,0 +1,149 @@
+{
+  "id": "kangwon",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Kangwon National University (Южная Корея): приём иностранцев на бакалавриат",
+    "orig": "Kangwon National University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное (около 1,7–3,4 млн вон в год вместе со вступительными сборами), но вуз снимает 50% платы при TOPIK 4 (или IELTS 6.5 / TOEFL 79) и 100% при TOPIK 5 (или IELTS 7.0 / TOEFL 94). Отдельно платят за успеваемость (до 100% платы). Жильё стипендией не покрывается."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "A foreigner whose parents are both foreigners"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы не ограничена прямо, но требуется образование, соответствующее корейским начальной, средней и старшей школе, полученное за пределами Кореи. Отдельного списка стран нет."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "A foreigner who has completed the education courses corresponding to Korea's primary, secondary, and upper secondary education in countries outside Korea."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы нет: нужен аттестат (или ожидаемый аттестат) старшей школы, конкретный год не назван."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения на страницах приёма нет: ни минимум, ни максимум не указаны."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Порога среднего балла для приёма нет: GPA упоминается только как условие стипендии за успеваемость, а не как требование допуска."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOPIK",
+          "min": 3,
+          "evidence": "An applicant holding level 3 or higher in the Test of Proficiency in Korean (TOPIK)"
+        },
+        {
+          "test": "IELTS",
+          "min": 5.5,
+          "evidence": "An applicant who has an official English score of at least TOEFL iBT 71, IELTS 5.5, CEFR B2, TEPS 600 (New TEPS 326), or TOEIC 700"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 71,
+          "evidence": "An applicant who has an official English score of at least TOEFL iBT 71, IELTS 5.5, CEFR B2, TEPS 600 (New TEPS 326), or TOEIC 700"
+        }
+      ],
+      "evidence": "An applicant who has an official English score of at least TOEFL iBT 71, IELTS 5.5, CEFR B2, TEPS 600 (New TEPS 326), or TOEIC 700"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать может иностранец, у которого оба родителя — иностранцы, и который прошёл школьное образование, соответствующее корейским начальной, средней и старшей школе, за пределами Кореи. Нужен аттестат об окончании старшей школы (или ожидаемый).",
+      "evidence": "A foreigner whose parents are both foreigners",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Язык: корейский TOPIK 3 и выше, либо английский — TOEFL iBT 71 / IELTS 5.5 / CEFR B2 / TEPS 600 / TOEIC 700. Часть направлений (например, искусство) требует год корейского языкового курса при вузе Кореи.",
+      "evidence": "An applicant holding level 3 or higher in the Test of Proficiency in Korean (TOPIK)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Плата за обучение на бакалавриате (по состоянию на 2025 год, включая вступительные сборы) — примерно от 1 470 000 до 3 400 000 вон в год в зависимости от направления; базовая строка таблицы — 1 712 000 вон.",
+      "evidence": "Tuition Undergraduate 1,712,000 1,470,000 ~ 2,100,000 2,218,000 3,066,000 ~ 3,400,000 2,218,000 2,309,000 Including Admission Fees",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Вступительная стипендия: TOPIK 4 (или IELTS 6.5 / TOEFL 79) снимает 50% платы, TOPIK 5 и выше (или IELTS 7.0 / TOEFL 94) — 100%.",
+      "evidence": "TOPIK level 5 or above (English Track: IELTS 7.0, TOEFL 94 or Higher) Exemption 100% exemption",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия за успеваемость: за прошлый семестр нужно не меньше 12 кредитов и GPA не ниже 2,5; лучшим по GPA снимают от 30% до 100% платы.",
+      "evidence": "GPA Top 30% Exemption",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки приёма на странице даны только месяцами без года: весенний семестр (март) — подача октябрь–декабрь, осенний (сентябрь) — апрель–июнь. Точные даты текущего цикла страница не называет.",
+      "evidence": "Spring Semester in March October November - December Mid-December December Fall Semester in September April May - June Mid-June June",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://global.kangwon.ac.kr/global/conts/1188/web.do",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Kangwon National University (KNU), государственный вуз Южной Кореи, кампус Чхунчхон. Приёмом иностранцев занимается Отдел международных связей (OIA)."
+    }
+  },
+  "source": {
+    "url": "https://global.kangwon.ac.kr/global/conts/1188/web.do",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://global.kangwon.ac.kr/global/conts/1188/web.do",
+        "contentHash": "sha256:a5e4d4961c072bd84df2ca8b63ad7aa0443ecce49108126ac32419d9ecd49939"
+      },
+      {
+        "url": "https://global.kangwon.ac.kr/global/conts/1203/web.do",
+        "contentHash": "sha256:274f6f6313048d49060860836b221546a43216eeeb739b44060b54f8653c8767"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
