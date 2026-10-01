@@ -1,0 +1,282 @@
+{
+  "id": "hbku",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "engineering",
+    "cs"
+  ],
+  "name": {
+    "ru": "Hamad Bin Khalifa University (HBKU, Катар): приём иностранцев на бакалавриат",
+    "orig": "Hamad Bin Khalifa University"
+  },
+  "hostCountry": "QA",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное. Инженерный бакалавриат CSE стоит QAR 2,250 за кредитный час, или QAR 290,250-294,750 за всю четырёхлетнюю программу. Помощь по нужде для бакалавров существует, но её описывают одной фразой: подавать можно только после решения о зачислении, сумм нет. Отдельная страница стипендий прямо говорит, что помощь для бакалавриата на ней не расписана и про финпомощь надо писать в фонд Qatar Foundation (fao@qf.org.qa). Страница оплаты упоминает конкурсные снятия платы и частичные стипендии колледжей, но тоже без сумм и без гарантий. Жильё и дорогу вуз не покрывает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство приём не закрывает: отдельного запрета по паспорту нет, абитуриент-иностранец подаёт по тем же правилам, что и катарец (нужна лишь копия паспорта, а гражданам и резидентам Катара — ещё и катарский ID). Смотрели страницы бакалаврского приёма, требований CSE, программы, стоимости, стипендий, финансовой информации и политику приёма."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране не названо, требования выражены аттестатом («или его эквивалент»), предметами, оценками и языковым экзаменом. Аттестат Таджикистана (11 лет школы) прямо не упомянут — это условие «уточни в приёмной»: вуз просит признанную школу и минимум три года математики и естественных наук в старшей школе."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Earned a general secondary school certificate or its equivalent from a recognized high school. Applicants are expected to have at least three years of high school mathematics and science"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы страницы приёма не называют; сказано лишь, что нужен аттестат о среднем образовании и итоговые транскрипты всех доступных лет старшей школы, а подать можно до 1 марта."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения для приёма страницы не называют — ни минимума, ни максимума; отдельного правила про возраст нет."
+    },
+    "gpa": {
+      "min": 2.5,
+      "scale": "GPA_4",
+      "evidence": "Minimum GPA of 2.5 or equivalent on the final high school year."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "Hamad Bin Khalifa University requires a minimum IELTS result of a 6.5 composite score."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 79,
+          "evidence": "Applicants must earn a minimum TOEFL score of 79 or equivalent, taken within the last two years"
+        }
+      ],
+      "evidence": "Applicants are required to take the IELTS or TOEFL exam in order to demonstrate their proficiency in the English language."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "The IELTS/TOEFL are mandatory. However, for the SAT/ACT we have a test-optional policy."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Аттестат о среднем образовании обязателен: признанная школа и «эквивалент» аттестата; ожидают не меньше трёх лет математики и естественных наук в старшей школе.",
+      "evidence": "Earned a general secondary school certificate or its equivalent from a recognized high school. Applicants are expected to have at least three years of high school mathematics and science",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны итоговые аттестаты за все годы старшей школы (10, 11 и 12 классы), доступные на момент подачи; не на английском или арабском — с официальным переводом.",
+      "evidence": "Final transcripts of all high school years (grades 10, 11, and 12) that are available at the time of application.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог оценок — минимум GPA 2.5 (или эквивалент) за последний год школы.",
+      "evidence": "Minimum GPA of 2.5 or equivalent on the final high school year.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский экзамен обязателен: IELTS или TOEFL; SAT или ACT, наоборот, лишь рекомендуют.",
+      "evidence": "Applicants are required to take the IELTS or TOEFL exam in order to demonstrate their proficiency in the English language. Applicants are highly encouraged to take the SAT or ACT exam.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог IELTS — 6.5 по общему баллу.",
+      "evidence": "Hamad Bin Khalifa University requires a minimum IELTS result of a 6.5 composite score.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог TOEFL — 79 (или эквивалент), результат не старше двух лет.",
+      "evidence": "Applicants must earn a minimum TOEFL score of 79 or equivalent, taken within the last two years",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "SAT/ACT необязательны: у вуза политика test-optional, студент сам решает, прикладывать ли баллы.",
+      "evidence": "The IELTS/TOEFL are mandatory. However, for the SAT/ACT we have a test-optional policy. This means you can choose whether to submit standardized test scores.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Оговорка: в официальной политике приёма (PDF) результаты SAT или ACT всё ещё перечислены как обязательный пункт — это старый документ, свежая страница приёма называет их необязательными.",
+      "evidence": "Submit standardized test results (SAT or ACT)",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Сроки: приём открывается 1 сентября и закрывается 1 марта; заявки на весенний семестр не принимают.",
+      "evidence": "Online undergraduate admission application opens to the public 01 Sep 2026 Admission application deadline for undergraduate applicants 01 Mar 2027",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Учиться можно только с осени: берут лишь тех, кто начинает в осеннем семестре.",
+      "evidence": "Students are only eligible for admission to undergraduate programs that begin classes at the start of the Fall term.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Отсрочка невозможна: чтобы отложить старт на год, надо подаваться заново на следующий год.",
+      "evidence": "Deferrals are not permitted for undergraduate students.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Решения принимают только после закрытия срока подачи; ранних решений нет, ответ обычно к середине-концу апреля.",
+      "evidence": "Decisions are made after the application deadline has closed. We do not make early decisions, so all admissions decisions are typically made by mid to late April.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Можно подать максимум на две программы за один учебный год.",
+      "evidence": "You can apply to up to two programs per academic year.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Нужны два рекомендательных письма: одно от школьного консультанта, одно от учителя математики или естественно-научного предмета.",
+      "evidence": "Two recommendation letters, including one from the school counselor, and one from a mathematics or science teacher.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужна электронная копия паспорта; граждане и резиденты Катара дополнительно прикладывают катарский ID.",
+      "evidence": "An electronic copy of the passport. Nationals and residents of Qatar should also submit a valid Qatari ID.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Плата за подачу — невозвратные QAR 250.",
+      "evidence": "Non-refundable application fee (QAR 250)",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 250,
+        "currency": "QAR",
+        "evidence": "Non-refundable application fee (QAR 250)"
+      }
+    },
+    {
+      "ru": "Обучение платное: инженерный бакалавриат стоит QAR 2,250 за кредитный час, вся программа (128-131 кредит, 4 года) — примерно QAR 290,250-294,750.",
+      "evidence": "Bachelor of Science in Mechanical Engineering QAR 290,250 QAR 2,250 129 4 years",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь по нужде для бакалавров есть, но её деталей на сайте нет: подавать на неё можно только после решения о зачислении.",
+      "evidence": "there is need-based financial aid available for students who are admitted to HBKU, which you can apply for after admissions decisions are made",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Страница стипендий расписывает поддержку только магистратуры: про помощь для бакалавриата там прямо сказано, что её нет, и отсылают в Qatar Foundation (fao@qf.org.qa).",
+      "evidence": "This page outlines the financial support provided to graduate students at HBKU. Information on financial support for Bachelor's degrees is not included on this page.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Снятия платы и частичные стипендии колледжей выдаются на конкурсной основе, без гарантии.",
+      "evidence": "Tuition waivers or partial scholarships are offered by HBKU colleges on a competitive basis.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Информацию о финансировании студента вуз перенаправляет на программу финпомощи Qatar Foundation.",
+      "evidence": "For information about student funding opportunities, please visit: https://www.qf.org.qa/education/higher-education/financial-aid",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-01",
+    "closes": "2027-03-01",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://hbkuqa.elluciancrmrecruit.com/Apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Hamad Bin Khalifa University (HBKU), Доха, Катар — государственный по духу, но платный вуз Фонда Катара. Бакалавриат только инженерный, в College of Science and Engineering: Computer, Electrical, Chemical, Mechanical Engineering и Artificial Intelligence and Data Engineering. Приём иностранцев общий, отдельной страницы для них нет: IELTS/TOEFL обязателен (IELTS 6.5 или TOEFL 79), SAT/ACT необязательны, порог GPA 2.5 за последний год школы. Приём с 1 сентября по 1 марта, только на осенний семестр."
+    }
+  },
+  "source": {
+    "url": "https://www.hbku.edu.qa/en/undergraduate-admissions",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.hbku.edu.qa/en/undergraduate-admissions",
+        "contentHash": "sha256:f59a15a9680be124917b6f5d6e723fb3c653e3947e8766c884921a69094ab813"
+      },
+      {
+        "url": "https://www.hbku.edu.qa/en/cse/bs-programs/admission-requirements?tabid=programs_and_requirements",
+        "contentHash": "sha256:a2b1fca2dd6829c941b75a8c0d290b52bef9311b4417118327e86d4de38ef9bf"
+      },
+      {
+        "url": "https://www.hbku.edu.qa/en/cse/bs-mechanical-engineering",
+        "contentHash": "sha256:586128cbef9a2b2b54054e033d2135589a0f732a9e6f4536ff446db5e1aa2060"
+      },
+      {
+        "url": "https://www.hbku.edu.qa/en/admissions",
+        "contentHash": "sha256:4cb76a3e91e2684c3e9ee24106c38a43e6dbfdfe11286feff5d1028dd0d7b2bd"
+      },
+      {
+        "url": "https://www.hbku.edu.qa/en/programs?program_category=328",
+        "contentHash": "sha256:62c38b4f4ffffdbf093f3830c0a55c096ef626cd6ff05fd5dc896e00eba22040"
+      },
+      {
+        "url": "https://www.hbku.edu.qa/en/tuition-fees",
+        "contentHash": "sha256:1513b900a2c24d5e1f23096ab5469696d0fe9947c2075a16dded64a4cf331dc2"
+      },
+      {
+        "url": "https://www.hbku.edu.qa/en/scholarship",
+        "contentHash": "sha256:ef57bf0ffcba7b8deecb320af3ae116133d06bd0bb31bec3f15030524a886115"
+      },
+      {
+        "url": "https://www.hbku.edu.qa/en/student-financial-information",
+        "contentHash": "sha256:26ace2effb34d1b025602d1699d0d687969e7f3008957b09927e846e69a29793"
+      },
+      {
+        "url": "https://www.hbku.edu.qa/sites/default/files/academics/ac-u-01.v01.pdf",
+        "contentHash": "sha256:3f23842139cf86a7062e36e90a894f5304fb49597a653328f4310ebd29d5aa7d"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
