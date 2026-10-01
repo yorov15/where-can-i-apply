@@ -4468,3 +4468,15 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# СПбГУ (Россия): бакалавриат на бюджет по квоте правительства России.
+# Домен abiturient.spbu.ru одобрен Муродом 2026-10-01 (список из 27 кандидатов, ответ «1» — весь список, кроме КазНУ).
+[spbu]
+name = "СПбГУ (Россия): бакалавриат на бюджет по квоте правительства России"
+files = [
+  { path = "manual/spbu/00-budget.html", url = "https://abiturient.spbu.ru/reception-foreign/budget/" },
+  { path = "manual/spbu/01-foreign.html", url = "https://abiturient.spbu.ru/reception-foreign/" },
+  { path = "manual/spbu/02-info.html", url = "https://abiturient.spbu.ru/reception-foreign/info/" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
