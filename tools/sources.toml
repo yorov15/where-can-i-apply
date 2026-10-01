@@ -4815,3 +4815,25 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[medipol]
+name = "Istanbul Medipol University (Турция)"
+files = [
+  { path = "manual/medipol/00-undergraduate-admissions.html", url = "https://www.medipol.edu.tr/en/prospective-students/admissions/undergraduate-admissions" },
+  { path = "manual/medipol/01-prospective-students.html", url = "https://www.medipol.edu.tr/en/prospective-students" },
+  { path = "manual/medipol/02-faq.html", url = "https://www.medipol.edu.tr/en/active-students/frequently-asked-questions" },
+  { path = "manual/medipol/03-scholarships.html", url = "https://www.medipol.edu.tr/en/ogrenci/aday-ogrenci/egitim-firsatlari/burs-firsatlari" },
+  { path = "manual/medipol/04-road-map.html", url = "https://mio.medipol.edu.tr/international-students-road-map" },
+  { path = "manual/medipol/05-requirements.html", url = "https://mio.medipol.edu.tr/requirements" },
+  { path = "manual/medipol/06-annual-tuition-rates.html", url = "https://mio.medipol.edu.tr/annual-tuitions-rates" },
+  { path = "manual/medipol/07-scholarship.html", url = "https://mio.medipol.edu.tr/scholarship" },
+  { path = "manual/medipol/08-how-to-apply.html", url = "https://mio.medipol.edu.tr/how-to-apply" },
+  { path = "manual/medipol/09-english-proficiency.html", url = "https://mio.medipol.edu.tr/international-english-proficiency-exams-and-minimum-scores" },
+  { path = "manual/medipol/10-regulations.html", url = "https://mio.medipol.edu.tr/regulations-application-and-admission-international-students" },
+  { path = "manual/medipol/11-turkish-prep.html", url = "https://www.medipol.edu.tr/en/academics/units-affiliated-to-the-rectorate/office-turkish-preparatory-program" },
+  { path = "manual/medipol/12-tuition-2026-2027-en.pdf", url = "https://mio.medipol.edu.tr/sites/mio.medipol.edu.tr/files/document/2026-2027%20Academic%20Intake%20Tuition%20Fee%20List_EN_1.pdf" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

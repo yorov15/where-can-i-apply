@@ -1,0 +1,289 @@
+{
+  "id": "medipol",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Istanbul Medipol University (Турция): приём иностранцев на бакалавриат",
+    "orig": "Istanbul Medipol University"
+  },
+  "hostCountry": "TR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное, стоимость фиксируется вузом на год и публикуется на его сайте: на 2026–2027 год для иностранцев медицина (100% English) стоит $40 000, стоматология — $36 000, фармация — $18 000, а большинство инженерных и бизнес-программ — $4 500–6 500 за год. Полного покрытия нет, но иностранцам дают скидки: 15% по «Special Country Scholarship» (Таджикистан в списке), до 15% за балл SAT, 10% за разовую оплату, 10% за второго члена семьи, плюс стипендии по успеваемости и спорту. Жильё и дорогу не покрывают."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "The application process is same for all international applicants regardless of citizenship status or country of residence."
+    },
+    "schoolCountry": {
+      "allow": "*",
+      "evidence": "The application process is same for all international applicants regardless of citizenship status or country of residence."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "High school graduation or its equivalent is a prerequisite for admission to any program at Istanbul Medipol University."
+    },
+    "graduationYear": {
+      "maxRelative": "applicationYear",
+      "evidence": "On condition that they either final year students or graduates from high school"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения для приёма страницы не называют: перечислены требования к гражданству, школе и экзаменам, но не к возрасту. Смотрели страницы приёма иностранцев на бакалавриат, требований, правил приёма и допуска, английского, FAQ, стоимости и стипендий."
+    },
+    "gpa": {
+      "min": 3,
+      "scale": "TJ_5",
+      "evidence": "Tacikistan Attestat o Srednem Obrazovanji (Certificate of General Secondary Education) 5 üzerinden 3"
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Нет отдельного языкового экзамена, который закрывал бы приём: на англоязычных программах студент обязан подтвердить достаточный английский до начала учёбы, но при нехватке уровня его зачисляют на интенсивную подготовительную программу английского (минимум два семестра) — то есть отказ из-за английского не ставится. Освобождают от подготовки документы IELTS 6.5, TOEFL iBT 84, PTE 71 и др., либо собственный экзамен вуза на 75. Смотрели страницы английского, приёма, требований и турецкой подготовки."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": 1000,
+          "evidence": "SAT I total minimum score of 1000"
+        },
+        {
+          "test": "ACT",
+          "min": 20,
+          "evidence": "In the ACT (American College Test) exam; for School of Medicine, Dentistry and Pharmacy at least 22, and for the other universities at least 20"
+        }
+      ],
+      "evidence": "SAT Reasoning Test (SAT1) and IB examination scores are strongly recommended but not required for admission."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство приём не ограничивает: порядок подачи одинаков для всех иностранных абитуриентов, независимо от гражданства и страны проживания.",
+      "evidence": "The application process is same for all international applicants regardless of citizenship status or country of residence.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Для поступления достаточно школьного диплома или его эквивалента — страна школы вход не закрывает.",
+      "evidence": "High school graduation or its equivalent is a prerequisite for admission to any program at Istanbul Medipol University.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "В страновом списке документов для Таджикистана вуз прямо называет аттестат о среднем образовании: 11-летняя школа Таджикистана принимается, отдельных требований к 12 годам нет.",
+      "evidence": "Tacikistan Attestat o Srednem Obrazovanji (Certificate of General Secondary Education) 5 üzerinden 3",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Для таджикского аттестата минимальный балл — 3 из 5.",
+      "evidence": "Tacikistan Attestat o Srednem Obrazovanji (Certificate of General Secondary Education) 5 üzerinden 3",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Общее правило по оценкам — средний балл аттестата не ниже 60 из 100.",
+      "evidence": "High school grade point average (GPA) should be at least 60 out of 100",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "SAT и IB для поступления не обязательны: их рекомендуют, но выбор без них не ставит абитуриента в невыгодное положение.",
+      "evidence": "SAT Reasoning Test (SAT1) and IB examination scores are strongly recommended but not required for admission.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Из международных экзаменов вуз засчитывает, среди прочего, SAT I от 1000 из 1600 (результат действует 2 года).",
+      "evidence": "SAT I total minimum score of 1000",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "ACT: для Medicine, Dentistry и Pharmacy — не менее 22, для остальных факультетов — не менее 20.",
+      "evidence": "In the ACT (American College Test) exam; for School of Medicine, Dentistry and Pharmacy at least 22, and for the other universities at least 20",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский приём не закрывает: студент обязан подтвердить достаточный английский до начала учёбы на англоязычной программе, но при нехватке уровня его зачисляют на интенсивную подготовку.",
+      "evidence": "Upon registration, students must prove sufficient English proficiency before beginning their education in these programs. Students who do not yet have required English proficiency will have to attend and successfully complete an intensive English program.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Обходной путь вместо языкового экзамена: подготовительная программа английского (минимум два семестра), после её успешного окончания студент переходит на выбранную программу.",
+      "evidence": "Students who do not yet have required English proficiency will have to attend and successfully complete an intensive English program.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Чтобы не идти на подготовительный английский, нужен документ: IELTS Academic 6.5 (IELTS Online не принимают), TOEFL iBT 84 (Home Edition не принимают), Pearson PTE Academic 71, YDS/E-YDS 70, Cambridge, Oxford Test of English 121.",
+      "evidence": "IELTS ACADEMIC (Overall): 6.5 and above (IELTS Online is not accepted.) YDS / E-YDS: 70 YÖKDİL / E-YÖKDİL: 70 Cambridge C2 Proficiency: C Cambridge C1 Advanced: B Cambridge Linguaskill General: 160 TOEFL IBT: 84 (TOEFL IBT Home Edition is not accepted.) PEARSON PTE Academic: 71 (Not accepted online) Oxford Test of English: 121",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Вместо сертификата можно сдать собственный экзамен-освобождение вуза на 75 баллов (или документ, равный YDS 70).",
+      "evidence": "Students who get a passing grade of 75 in the Medipol University Preparatory Program Exemption Exam or who present a document equivalent to YDS 70 points from any equivalency exam approved by YÖK are exempted from the Preparatory Program, provided that the document is verified and the validity period is appropriate.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для Medicine и Dentistry подтверждение английского обязательно: например, TOEFL (код вуза 3619).",
+      "evidence": "Candidates applying to the Faculty of Medicine and Dentistry are required to prove their English proficiency. For example, TOEFL DI: 3619",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение платное; цены 2026–2027 для иностранцев (доллары США за год): Медицина 100% English — $40 000, Стоматология — $36 000, Фармация — $18 000; турецкоязычные аналоги дешевле.",
+      "evidence": "School of Medicine 100% English $ 40.000 School of Medicine 30% English & 70% Turkish $ 34.000 School of Dentistry 100% English $ 36.000 School of Dentistry 30% English 70% Turkish $ 33.000 School of Pharmacy 100% English $ 18.000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидка «Special Country Scholarship» даёт 15% платы за обучение.",
+      "evidence": "The special country scholarship rate is 15% for each student who has one of the following nationalities below;",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Таджикистан входит в список стран этой 15%-скидки.",
+      "evidence": "› Somalia › Sudan › Syria › Tajikistan › Tanzania › Tunisia › Ukraine › Uzbekistan › Yemen",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "За балл SAT начисляют дополнительную скидку: 1100–1240 — 5%, 1250–1400 — 10%, 1410–1600 — 15% (для Medicine/Dentistry/Pharmacy при 1400+ — 10%).",
+      "evidence": "Other Programs 1100 - 1240 5% Other Programs 1250 - 1400 10% Other Programs 1410 - 1600 15%",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "За полную разовую оплату года — скидка 10%.",
+      "evidence": "Lump sum advanced payment discount rate is 10%.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за подачу заявки не взимается.",
+      "evidence": "Students applying directly or via an intermediary institution to university, cannot be charged for their application.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "После одобрения заявки нужно оплатить невозвратный авансовый депозит, чтобы получить официальное письмо о зачислении; депозит затем засчитывается в плату за обучение.",
+      "evidence": "If your application is approved, you will receive a Conditional Acceptance Letter via email. To receive your Official Acceptance Letter, you must pay the advance tuition deposit by the specified deadline.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём на 2026–2027 годы уже открыт.",
+      "evidence": "2026 - 2027 Applications Are Open Now !",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "У бакалавриата только осенний набор; у магистратуры есть и весенний приём.",
+      "evidence": "Please be aware that graduate programs offer both Fall and Spring intakes, while undergraduate programs only have a Fall intake.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявка подаётся онлайн и рассматривается не дольше недели.",
+      "evidence": "Once you submit the online application form, it will be reviewed within a maximum of one week.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://mio.medipol.edu.tr/apply-now",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Istanbul Medipol University, Стамбул, Турция. Частный вуз; приём иностранцев на бакалавриат идёт онлайн через International Students Office (mio.medipol.edu.tr), заявка бесплатная. Часть программ ведётся 100% на английском (медицина, стоматология, фармация, инженерия, бизнес, психология, архитектура), нехватку английского закрывает подготовительный год."
+    }
+  },
+  "source": {
+    "url": "https://www.medipol.edu.tr/en/prospective-students/admissions/undergraduate-admissions",
+    "pages": [
+      {
+        "url": "https://www.medipol.edu.tr/en/prospective-students/admissions/undergraduate-admissions",
+        "contentHash": "sha256:09b716a33b0dd7e4ba75ecf5fb61eed5151beffb04a43f9db541c7eac71c9fb5"
+      },
+      {
+        "url": "https://www.medipol.edu.tr/en/prospective-students",
+        "contentHash": "sha256:d8c1983aa1c2fb971da88e385b94242c73976b07cc7bbe4832531cf26f9d7a5c"
+      },
+      {
+        "url": "https://www.medipol.edu.tr/en/active-students/frequently-asked-questions",
+        "contentHash": "sha256:e6a72616c00c1772fb5ef4085b364f7e418832784545004956d01129363980a2"
+      },
+      {
+        "url": "https://www.medipol.edu.tr/en/ogrenci/aday-ogrenci/egitim-firsatlari/burs-firsatlari",
+        "contentHash": "sha256:be54ce7255d92baf7e163e8934fda6b7fa4f1c84116d912e225b35954a7b0e78"
+      },
+      {
+        "url": "https://mio.medipol.edu.tr/international-students-road-map",
+        "contentHash": "sha256:19ae2e925a646275335e7a3c56d6e83702d49d052b067f8df1c67b7156f92942"
+      },
+      {
+        "url": "https://mio.medipol.edu.tr/requirements",
+        "contentHash": "sha256:7f40f7b4df47e2abf274f5948f7b539db4c8b53260f60b96118e1044ce3767e6"
+      },
+      {
+        "url": "https://mio.medipol.edu.tr/annual-tuitions-rates",
+        "contentHash": "sha256:9571a4e30fbf4c7e5eee8796387f7f753ee1ac4d5a1e3be99a3d1849dc28f6d7"
+      },
+      {
+        "url": "https://mio.medipol.edu.tr/scholarship",
+        "contentHash": "sha256:0970adecfec74605b2566c029d8a45b54186cba33f4be146209cf43025bb7faa"
+      },
+      {
+        "url": "https://mio.medipol.edu.tr/how-to-apply",
+        "contentHash": "sha256:dc2592d0484649469df929334910fbdd26462dfe65dfe4c48bd5d5544d562b1c"
+      },
+      {
+        "url": "https://mio.medipol.edu.tr/international-english-proficiency-exams-and-minimum-scores",
+        "contentHash": "sha256:717eae7797f464f0b9e6e085fa55da9ab1185e26d432fe50fd96ecf8214afe08"
+      },
+      {
+        "url": "https://mio.medipol.edu.tr/regulations-application-and-admission-international-students",
+        "contentHash": "sha256:d898bad7bf984cfd3838337fc36387dc50f922ff42ac37459692e49b78eeea15"
+      },
+      {
+        "url": "https://www.medipol.edu.tr/en/academics/units-affiliated-to-the-rectorate/office-turkish-preparatory-program",
+        "contentHash": "sha256:39486108f9f45418212d503388e7fb6d0d607a7970a048d683347a031e50232a"
+      },
+      {
+        "url": "https://mio.medipol.edu.tr/sites/mio.medipol.edu.tr/files/document/2026-2027%20Academic%20Intake%20Tuition%20Fee%20List_EN_1.pdf",
+        "contentHash": "sha256:6895ac3bf8da16deca23262e742d80011651737f6f79767d9b62351df70411d2"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}
