@@ -4538,3 +4538,23 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[itmo]
+name = "ITMO University (Россия)"
+files = [
+  { path = "manual/itmo/00-bachelors.html", url = "https://int.ifmo.ru/en/bachelors_programs" },
+  { path = "manual/itmo/01-opportunities.html", url = "https://int.ifmo.ru/en/opportunities_for_applicants" },
+  { path = "manual/itmo/02-foundation.html", url = "https://int.ifmo.ru/en/foundation_program" },
+  { path = "manual/itmo/03-documents.html", url = "https://int.ifmo.ru/en/important_documents" },
+  { path = "manual/itmo/04-abit-bachelor.html", url = "https://abit.itmo.ru/en/bachelor" },
+  { path = "manual/itmo/05-abit-programs.html", url = "https://abit.itmo.ru/en/programs/bachelor" },
+  { path = "manual/itmo/06-abit-ai.html", url = "https://abit.itmo.ru/en/program/bachelor/ai" },
+  { path = "manual/itmo/07-abit-scores.html", url = "https://abit.itmo.ru/en/page/73/" },
+  { path = "manual/itmo/08-opendoors-bach.html", url = "https://int.ifmo.ru/en/opendoors_bach" },
+  { path = "manual/itmo/09-stars.html", url = "https://int.ifmo.ru/en/opportunities_for_applicants_bach" },
+  { path = "manual/itmo/10-faq.html", url = "https://int.ifmo.ru/en/faq" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

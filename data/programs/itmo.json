@@ -1,0 +1,262 @@
+{
+  "id": "itmo",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "ITMO University (Россия): приём иностранцев на бакалавриат",
+    "orig": "ITMO University"
+  },
+  "hostCountry": "RU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: студент сам оплачивает обучение, авиабилеты, жильё, проживание и медицинскую страховку. Годовая плата зависит от программы — например, 679 000 рублей по программе AI360 (очная форма, язык обучения русский). Бесплатно учиться можно по нескольким путям: квота Правительства РФ (госстипендия через Россотрудничество), конкурс Open Doors (раннее зачисление без вступительных экзаменов, обучение за счёт государственного финансирования РФ) и конкурс ITMO.STARS. Отдельно важно для Таджикистана: граждане Таджикистана, а также Беларуси, Казахстана и Кыргызстана могут поступать на бюджетные (бесплатные) места наравне с гражданами России — у граждан остальных стран такого права нет. Всем иностранным студентам предоставляют общежитие; ориентир расходов на жизнь в Санкт-Петербурге — 20 000–30 000 рублей в месяц. Покрытие в карточке не отмечено, потому что обычный путь платный, а бесплатные места дают по конкурсу или квоте."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Foreign citizens can enroll into tuition-free and fee-based places at ITMO University based on their results of the Unified State Exam or ITMO University's own entrance examinations."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране на страницах приёма нет. Нужен документ об образовании с выпиской оценок, легализованный и переведённый на русский. Аттестат Таджикистана и число лет школы прямо не названы — эквивалентность уточнять в приёмной. Смотрели страницы приёма бакалавриата, возможностей для абитуриентов, Foundation Program, важные документы, Open Doors и FAQ."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы на страницах не названо: требуется аттестат о среднем образовании (или справка о том, что обучение завершается) с выпиской изученных предметов и оценок. Правило про обязательные 12 лет не заявлено, поэтому 11-летний аттестат Таджикистана — вопрос к приёмной, а не отказ."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: указано лишь, что документ об образовании обязателен и что подают с ним; требований к конкретному году выпуска нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения страницы приёма не называют: ни минимального, ни максимального возраста для поступления на бакалавриат не заявлено. Возраст упоминается только косвенно — для проживания в общежитии и миграционных процедур, но не как условие допуска."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Числового порога по среднему баллу аттестата на страницах нет: отбор на бюджетные и платные места идёт по результатам ЕГЭ или собственных вступительных экзаменов ITMO (минимум 60 из 100 по предмету). Средний балл упомянут только как один из критериев отбора на квоту Правительства РФ, без порога."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "As all ITMO University's Bachelor's programs are currently taught in Russian, you will need to take an entrance exam in Russian."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Все бакалаврские программы ITMO идут на русском языке, поэтому нужен вступительный экзамен по русскому.",
+      "evidence": "As all ITMO University's Bachelor's programs are currently taught in Russian, you will need to take an entrance exam in Russian.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь для тех, кто не знает русского: подготовительное отделение Foundation Program — девятимесячный интенсив по русскому языку, готовящий к учёбе в России.",
+      "evidence": "Our special Foundation Program is an intensive nine-month Russian language course that will equip you with all the skills you'll need for your studies in Russia.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Выпускники Foundation Program получают языковые сертификаты, необходимые для поступления в ITMO.",
+      "evidence": "Program graduates also receive language proficiency certificates required for entering ITMO.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Граждане Таджикистана, а также Беларуси, Казахстана, Кыргызстана и соотечественники, живущие в странах СНГ, могут поступать на бюджетные (бесплатные) места наравне с гражданами России; гражданам остальных стран доступны только платные места или квота Правительства РФ.",
+      "evidence": "Citizens of Belarus, Kazakhstan, Kyrgyzstan and Tajikistan, as well as compatriots residing in the CIS countries can apply to tuition-free positions along with Russian citizens. Citizens of other countries can only apply for fee-based or government quota positions.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Гражданам Таджикистана и ряда стран СНГ виза и приглашение для въезда в Россию не нужны.",
+      "evidence": "Citizens of the following countries do not require a visa or an invitation: Azerbaijan Armenia Belarus Kazakhstan Kyrgyzstan Moldova Tajikistan Uzbekistan Ukraine Georgia",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Бесплатное обучение по квоте Правительства РФ (госстипендия): иностранцы имеют право поступать на бюджетные места бакалавриата через Россотрудничество; ITMO участвует только во втором этапе отбора.",
+      "evidence": "Foreign citizens have the right to enroll in tuition-free positions of ITMO University's Bachelor's programs through the Rossotrudnichestvo federal agency as part of a Russian Government scholarship.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Конкурс Open Doors для бакалавриата даёт раннее зачисление без вступительных экзаменов и бесплатное обучение за счёт государственного финансирования РФ; ITMO — соорганизатор конкурса.",
+      "evidence": "Open Doors Scholarship Project for Prospective Bachelor's Students International academic competition Open Doors gives international prospective Bachelor's students a unique opportunity of early enrollment in one of ITMO University's cutting-edge Bachelor's programs without entrance examinations and with tuition fees covered by the Russian Federation's state funding.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "В конкурсе Open Doors может участвовать гражданин любой страны, кроме России; все этапы проходят онлайн.",
+      "evidence": "All of the competition rounds are held online, and it is open for participation to citizens of any country in the world (except Russia).",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Сроки Open Doors (бакалавриат) 2026: первый этап — портфолио и тестирование 2–12 ноября 2026; второй этап — решение задач 17 ноября — 7 декабря 2026.",
+      "evidence": "The first (selection) stage - a competition of portfolios and entrance testing on November 2-12, 2026. The second stage - a problem-solving challenge (test) from November 17 to December 7, 2026.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Конкурс ITMO.STARS даёт разовое бесплатное обучение на выбранной программе; проводится на русском языке.",
+      "evidence": "ITMO.STARS contest gives you a one-off opportunity to get free tuition at the program of your choice. Please note that the contest is held in Russian.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём 2026 на бюджетные места: с 20 июня, окончание — 10 июля (для сдающих внутренние экзамены ITMO) или 25 июля (с результатами ЕГЭ или школьных олимпиад). Это даты цикла 2026 — на следующий год вуз опубликует новые.",
+      "evidence": "The 2026 application period for tuition-free positions will start on June 20 and end on: July 10 (5 PM, GMT+3) - for those applying via ITMO's internal exams; July 25 (5 PM, GMT+3) - for those applying with Unified State Exam (USE) results or via school competitions.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача документов на платное обучение — до 18 августа.",
+      "evidence": "Applications for fee-based studies can be submitted until August 18 .",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Иностранцы поступают на бюджетные и платные места по результатам ЕГЭ или собственных вступительных экзаменов ITMO.",
+      "evidence": "Foreign citizens can enroll into tuition-free and fee-based places at ITMO University based on their results of the Unified State Exam or ITMO University's own entrance examinations.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Минимальный проходной балл по каждому предмету вступительных экзаменов ITMO на бакалавриат в 2026 году — 60 из 100.",
+      "evidence": "Russian Language Минимальное количество баллов 60",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "По отдельным программам порог выше: по Computer Technologies (01.03.02) минимум по математике и информатике — 75 из 100.",
+      "evidence": "Russian Language Минимальное количество баллов 60 Общеобразовательный предмет Math Минимальное количество баллов 75 Общеобразовательный предмет Computer Science Минимальное количество баллов 75",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Пример годовой стоимости обучения иностранца: 679 000 рублей в год по программе AI360 (очная форма, язык обучения — русский).",
+      "evidence": "Annual tuition fee 679 000 ₽",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обучение платное: студент сам оплачивает обучение, авиабилеты, жильё и проживание, а также медицинскую страховку.",
+      "evidence": "Students are responsible for paying their tuition fees, airplane tickets, housing and living expenses, as well as health insurance.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Ориентировочные расходы на жизнь в Санкт-Петербурге — от 20 000 до 30 000 рублей в месяц.",
+      "evidence": "An average student needs from 20,000 to 30,000 rubles per month.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Всем иностранным студентам предоставляют общежитие по мере необходимости.",
+      "evidence": "All foreign citizens are provided accommodation in the dorms as required.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Документы об образовании, полученные вне России, нужно легализовать, если иное не предусмотрено международным договором; нужен нотариальный перевод на русский.",
+      "evidence": "Documents obtained in countries other than Russia must be legalized, unless otherwise provided by an international treaty of the Russian Federation or the legislation of the Russian Federation.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Для заявки на квоту нужны фото 3×4, скан паспорта и скан документа об образовании с оценками; все документы переводят на русский и заверяют.",
+      "evidence": "a 3x4 cm photo; a scanned copy of your ID (passport); a scanned copy of your degree certificate or certificate of study with grades;",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://abitlk.itmo.ru/en/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: ITMO University (Университет ИТМО, Санкт-Петербург, Россия). Приём иностранцев на бакалавриат: все программы на русском языке, отбор по ЕГЭ или собственным вступительным экзаменам. Бесплатные пути — квота Правительства РФ, конкурс Open Doors и конкурс ITMO.STARS; граждане Таджикистана могут также поступать на бюджетные места наравне с россиянами. Обучение платное (пример — 679 000 рублей в год), общежитие предоставляют."
+    }
+  },
+  "source": {
+    "url": "https://int.ifmo.ru/en/bachelors_programs",
+    "pages": [
+      {
+        "url": "https://int.ifmo.ru/en/bachelors_programs",
+        "contentHash": "sha256:56db9953942ef15c0597ebacf93e422df0ad89554a57c1de935ca9ef7fe6f5fe"
+      },
+      {
+        "url": "https://int.ifmo.ru/en/opportunities_for_applicants",
+        "contentHash": "sha256:ff30738006e26b91371f0e192bcdfc46551f94aba23540fad197aec8b66d7516"
+      },
+      {
+        "url": "https://int.ifmo.ru/en/foundation_program",
+        "contentHash": "sha256:33f0a1c2f43badf74be70421829fb7606caa058386fa79399e96ce50a3b11a9f"
+      },
+      {
+        "url": "https://int.ifmo.ru/en/important_documents",
+        "contentHash": "sha256:288d02e3f1731259b8c3c6184c87f7cdf3225fa85bc23f1e078e3ef85a18a85b"
+      },
+      {
+        "url": "https://abit.itmo.ru/en/bachelor",
+        "contentHash": "sha256:49cd0f7c9cd1d64ce772fceef2befa22caae0ce56c9f370346ac1a268f2a509d"
+      },
+      {
+        "url": "https://abit.itmo.ru/en/programs/bachelor",
+        "contentHash": "sha256:cbd41d7c081c19048a9f80882fee824c960fe10e7625467650ef8832be44c423"
+      },
+      {
+        "url": "https://abit.itmo.ru/en/program/bachelor/ai",
+        "contentHash": "sha256:b930cd3d4afcbdb2098b2cdd77353e08de0b22671d092f710e983f13b4d92cb5"
+      },
+      {
+        "url": "https://abit.itmo.ru/en/page/73/",
+        "contentHash": "sha256:54e0d14201f6f57ba492af7660c0cb25dd5ac6beec66dba040243971ce862d1c"
+      },
+      {
+        "url": "https://int.ifmo.ru/en/opendoors_bach",
+        "contentHash": "sha256:11ffb166df0ed8d02ffeba21aa91f0e7b2b259fbe7aad141edc7c0ecd28e77d8"
+      },
+      {
+        "url": "https://int.ifmo.ru/en/opportunities_for_applicants_bach",
+        "contentHash": "sha256:e813a5dbe3472453abb60b33c6655a0412fb842ecfb911bc828db0f2dca876b8"
+      },
+      {
+        "url": "https://int.ifmo.ru/en/faq",
+        "contentHash": "sha256:9c5b16d8a178bd529eca1ae741f50fd0a71e734adb3422f0b87f1fc0ef7c061a"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}
