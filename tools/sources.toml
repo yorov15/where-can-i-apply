@@ -4928,3 +4928,22 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[enu]
+name = "L.N. Gumilyov Eurasian National University (Казахстан)"
+files = [
+  { path = "manual/enu/00-applicants-ru.html", url = "https://enu.kz/ru/page/applicants" },
+  { path = "manual/enu/01-applicants-en.html", url = "https://enu.kz/en/page/applicants" },
+  { path = "manual/enu/02-bachelor-ru.html", url = "https://enu.kz/ru/page/applicants/bachelor" },
+  { path = "manual/enu/03-bachelor-en.html", url = "https://enu.kz/en/page/applicants/bachelor" },
+  { path = "manual/enu/04-foreign-ru.html", url = "https://enu.kz/ru/page/applicants/for-foreign-citizens" },
+  { path = "manual/enu/05-foreign-en.html", url = "https://enu.kz/en/page/applicants/for-foreign-citizens" },
+  { path = "manual/enu/06-tuition-ru.html", url = "https://enu.kz/ru/page/applicants/tuition-fees" },
+  { path = "manual/enu/07-tuition-en.html", url = "https://enu.kz/en/page/applicants/tuition-fees" },
+  { path = "manual/enu/08-foundation-ru.html", url = "https://enu.kz/ru/page/applicants/foundation" },
+  { path = "manual/enu/09-calendar-ru.html", url = "https://enu.kz/ru/page/applicants/calendar-of-events" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
