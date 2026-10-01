@@ -1,0 +1,305 @@
+{
+  "id": "itu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Istanbul Technical University (Турция): приём иностранцев на бакалавриат",
+    "orig": "Istanbul Teknik Üniversitesi (Istanbul Technical University)"
+  },
+  "hostCountry": "TR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное для всех иностранцев, принятых по международной квоте. На 2026-2027 год вуз публикует плату: большинство инженерных и архитектурных факультетов — 94 500, менеджмент — 86 500, судостроение/морское дело/текстиль — 119 000, естественные науки — 79 000, консерватория — 264 000 (для принятых с 2023-2024; для принятых раньше — 48 000 и ниже). Валюта на странице не напечатана; платят двумя равными частями в Vakıfbank. Стипендий для иностранцев основного кампуса не объявлено: варианты «%50 Scholarship» и «Full Scholarship» есть только у программ кампуса ITU-TRNC на Северном Кипре. От платы освобождают лишь тех, чья стипендия прямо включает такую льготу; скидка 25 % — только братьям/сёстрам и по особым условиям. Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Foreign nationals, (provided that they have not attended / graduated from secondary education (high school) institutions in Türkiye)"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страну школы вход не закрывает: вуз принимает иностранных граждан со школьным дипломом, эквивалентным турецкому, отдельного запрета по стране нет. Аттестат Таджикистана в таблице экзаменов/дипломов не назван, поэтому одного аттестата мало — нужен экзамен из списка (SAT/ACT/IB и др.), а эквивалентность диплома подтверждают в Минобразования Турции. Смотрели страницы приёма, требований, английского, платы и квот"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "International students who are currently seniors or have graduated from a secondary school that offers a curriculum equivalent to a Turkish High School and who satisfy the requirements below may apply to undergraduate programs at Istanbul Technical University."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Год окончания школы не ограничивают: подают и выпускники, и ученики последнего года; тем, у кого аттестата ещё нет, достаточно справки об ожидаемой дате выпуска"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения страницы приёма не называют: условие только одно — быть выпускником или учеником последнего года школы с программой, эквивалентной турецкой"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Минимального среднего балла аттестата не называют: отбор идёт по баллам экзамена или диплома из таблицы статьи B, а не по среднему баллу школы"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "An English Proficiency test result accepted by ITU Senate need to be submitted during registration to take courses at undergraduate programs. Students who cannot provide an English Proficiency exam score will be required to complete English Preparation Course in ITU's School of Foreign Languages for one year."
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": 1200,
+          "evidence": "SAT 1 (Scholastic Assessment Test) Total 1200 / 1600 Math 650 / 800 Total Minimum Point 1200 Math Minimum 650"
+        },
+        {
+          "test": "ACT",
+          "min": 26,
+          "evidence": "ACT \"American College Testing\" 26/36"
+        }
+      ],
+      "evidence": "Application must be made with one of the valid exam/diploma scores that can be seen in article B. It is not possible to apply with any other exams or test scores lower than those presented in article B."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Путь открыт иностранным гражданам, которые не учились и не оканчивали школу в Турции; турецкие граждане, прошедшие среднюю школу в Турции, в международную квоту не попадают.",
+      "evidence": "Foreign nationals, (provided that they have not attended / graduated from secondary education (high school) institutions in Türkiye)",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Заявка подаётся только онлайн, через сайт приёмной комиссии; зачисление — по приоритету выбора абитуриента, разрешено максимум три программы.",
+      "evidence": "Applications to undergraduate programs are made online, usually in August every year, through the website of the ITU Registrar's Office.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "К заявке загружают: аттестат с заверенным переводом, официальный транскрипт по всем предметам и оценкам, заверенный школой, действующий результат экзамена/диплома, копию паспорта. Документов на другом языке без заверенного перевода не принимают.",
+      "evidence": "All candidate students apply by uploading the following documents to the ITU system. Please make sure that the documents you upload are readable, in the required standards, complete and in PDF format.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Официальный транскрипт должен быть заверен дирекцией школы; без перевода на турецкий или английский нужен заверенный перевод вместе с оригиналом.",
+      "evidence": "The applicants need to upload the official transcripts including all courses and grades and the transcripts must be approved by their high school directorate.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестат обязателен; кто его ещё не получил — грузит официальный документ с ожидаемой датой выпуска.",
+      "evidence": "High School Diploma:The original high school diploma and its approved translation (Turkish or English) need to be uploaded.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Подавать можно только с одним из экзаменов/дипломов из списка (статья B); другими экзаменами и баллами ниже указанных подать нельзя. Аттестата Таджикистана в списке нет.",
+      "evidence": "Application must be made with one of the valid exam/diploma scores that can be seen in article B. It is not possible to apply with any other exams or test scores lower than those presented in article B.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог SAT: 1200 из 1600 в целом и 650 из 800 по математике.",
+      "evidence": "SAT 1 (Scholastic Assessment Test) Total 1200 / 1600 Math 650 / 800 Total Minimum Point 1200 Math Minimum 650",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог ACT — 26 из 36.",
+      "evidence": "ACT \"American College Testing\" 26/36",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Другие допустимые пути вместо SAT/ACT: диплом IB — от 30 из 45, TR-YÖS — от 400 из 500, а также Abitur, французский бакалавриат, AP, GCE A-Level и национальные экзамены отдельных стран (Казахстан, Россия и др.).",
+      "evidence": "IB \"International Baccalaureate\" 30/45",
+      "field": "exam",
+      "kind": "workaround"
+    },
+    {
+      "ru": "TR-YÖS — не ниже 400 из 500.",
+      "evidence": "TR YÖS 400/500",
+      "field": "exam",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский нужен при регистрации, чтобы учиться на программе; у кого нет принятого сертификата — обязательный годичный подготовительный курс английского в School of Foreign Languages.",
+      "evidence": "An English Proficiency test result accepted by ITU Senate need to be submitted during registration to take courses at undergraduate programs. Students who cannot provide an English Proficiency exam score will be required to complete English Preparation Course in ITU's School of Foreign Languages for one year.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Порог TOEFL iBT по старой шкале — 72 из 120 (до 21 января 2026); с 21 января 2026 действует новая шкала, где этому уровню соответствует 4 из 6.",
+      "evidence": "*TOEFL iBT 2 Years 72 - 90 / 120 (Before 21 January 2026)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Порог PTE Academic — 55 из 90 (до осени 2026-2027; с этого семестра — 59 из 90).",
+      "evidence": "**PTE Academic 2 Years 55 - 74 / 90 (Before the start of the 2026-2027 fall semester)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Свой экзамен ITU Proficiency: 60 из 100 даёт нижний уровень, 75 из 100 — верхний. IELTS и Duolingo в таблице принимаемых экзаменов ITU не значатся.",
+      "evidence": "ITU Proficiency 2 Years 60 - 74 / 100 75 - 100 / 100",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Подготовительный год по языку преподавания обязателен, если иностранцу нечем подтвердить язык; сдавшие языковой экзамен вуза сразу зачисляются на первый курс. Подготовительный год не входит в срок обучения.",
+      "evidence": "The compulsory one year Preparatory Program is applied in the language of instruction of the program, and those who pass the proficiency exam in the relevant language at the end of the program are directly enrolled in the first year.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Для регистрации нужен сертификат эквивалентности аттестата: его берут в Минобразования Турции или в турецком посольстве и подтверждают соответствие диплома турецкому школьному. Аттестат Таджикистана (11 лет школы) в таблице экзаменов не назван — по годам обучения уточни в приёмной.",
+      "evidence": "The applicants need to submit an Equivalency Certificate taken from the Turkish Ministry of Education or Turkish Embassies in their countries and confirming the equivalency of the applicant's diploma to a Turkish high school diploma during registration.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Плата для иностранцев, принятых по международной квоте, на 2026-2027: инженерные и архитектурные факультеты — 94 500, менеджмент — 86 500, судостроение/морское дело/текстиль — 119 000, естественные науки — 79 000, консерватория — 264 000. Для принятых с 2023-2024 это 94 500 и выше, для принятых раньше — 48 000. Валюта на странице не указана.",
+      "evidence": "TUITION FEES FOR STUDENTS ADMITTED THROUGH THE INTERNATIONAL STUDENT QUOTA IN THE 2026-2027 ACADEMIC YEAR Faculty/Institute Students Admitted in the 2022-2023 Academic Year and Earlier Students Admitted in the 2023-2024, 2024-2025, 2025-2026 and 2026-2027 Academic Years Faculty of Civil Engineering 48000 94500",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Платить обязаны все иностранные студенты: плата вносится при регистрации на кафедру Vakıfbank, двумя равными частями за год.",
+      "evidence": "All international students are required to pay a student fee /tuition fee during their registration at the University in accordance with the relevant regulations of the Council of Higher Education, Turkey.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Освобождение от платы вуз даёт только тем, чья стипендия прямо включает льготу по плате за обучение; отдельной стипендии для иностранцев основного кампуса в правилах не названо.",
+      "evidence": "Scholarship students who are within the duration of the program and whose scholarship include fee/ tuition fee exemption are exempt from fee / tuition fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Варианты «%50 Scholarship» и «Full Scholarship» есть только у программ кампуса ITU-TRNC (Северный Кипр), не у стамбульских программ; там есть и платные места.",
+      "evidence": "ITU-TRNC Architecture (%100 English) (%50 Scholarship) ITU-TRNC Architecture (%100 English) (Full Scholarship)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидка 25 % на плату иностранцам даётся только братьям/сёстрам: если двое из одной семьи учатся в государственном вузе Турции и у обоих с семьёй есть вид на жительство; заявление — до 17:00 2 октября 2026 в приёмную.",
+      "evidence": "a sibling discount shall be applied to the tuition fee of international students admitted within the international student admission quotas, provided that both the student and their family hold a residence permit in Türkiye and that more than one student belonging to the same family is continuing their associate or bachelor's degree education at a state higher education institution. At our University, this discount is applied at the rate of 25%.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельная канцелярия стипендий и общежитий (Scholarships and Dormitories Coordinatorship) распределяет стипендии на 12 548 студентов и деньги частично за счёт фондов ITU, частных лиц и организаций; на странице не сказано, что стипендия доступна иностранцам основного кампуса.",
+      "evidence": "59 Million TL Amount Of Scholarship Given To 12548 Students",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки подачи на 2026-2027: основная заявка онлайн — с 24 апреля по 26 июня 2026; дополнительный раунд для иностранцев — с 3 по 6 сентября 2026. Оба окна указаны за приём 2026-2027.",
+      "evidence": "Application Process of Undergraduate Programs Application Process of Graduate Programs Application for Micro-Credentials April 24, 2026 09:00 - June 26, 2026 17:00 (UTC/GMT+3)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Дополнительный раунд для иностранцев на бакалавриат: 03 сентября 09:00 - 06 сентября 2026 23:59 (UTC/GMT+3).",
+      "evidence": "2nd Round Application Conditions to Undergraduate Programs for International Students 03 September 09:00 - 06 September 2026 23:59 (UTC/GMT+3)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Квоты, требования и суммы в таблице приёма могут меняться по решениям Совета по высшему образованию Турции.",
+      "evidence": "The quotas, requirements and fees stated in the table are subject to change in reference to the decisions of Turkish Higher Education Council.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-04-24",
+    "closes": "2026-06-26",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.sis.itu.edu.tr/onkayitlar/lsyabanci/basvuru/index.php?islem=guncelle_login",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Istanbul Technical University (İstanbul Teknik Üniversitesi), Стамбул, Турция. Приём иностранцев на бакалавриат — по международной квоте, онлайн; отбор по баллам экзамена или диплома (SAT/ACT/IB/TR-YÖS и др.). Английский не закрывает доступ: без сертификата обязателен годичный подготовительный курс. Плата для иностранцев на 2026-2027 — от 79 000 до 264 000 (валюта на странице не указана), отдельных стипендий для основного кампуса нет"
+    }
+  },
+  "source": {
+    "url": "https://www.sis.itu.edu.tr/EN/student/intenational-students/application.php",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.sis.itu.edu.tr/EN/student/intenational-students/application.php",
+        "contentHash": "sha256:f2cd1de8fb26a3e1348b9697620a2f52d86a7e64878a9687c6eecf4a625c1cf2"
+      },
+      {
+        "url": "https://www.sis.itu.edu.tr/EN/regulations/valid-exam-results.php",
+        "contentHash": "sha256:80205e4c2cf640c2f6344e9e646ba6e64071b7117226995417e9188f7316e5f5"
+      },
+      {
+        "url": "https://www.sis.itu.edu.tr/EN/regulations/valid-english-tests-and-minimum-scores.php",
+        "contentHash": "sha256:bd1f831ee292a2a8627105e4d0a2daf86a654b2c0f3b8872a7a3ea59863c3590"
+      },
+      {
+        "url": "https://www.sis.itu.edu.tr/EN/student/tuition-fee/fees/20271020/tutionfees.php",
+        "contentHash": "sha256:628211f9bc13a6280e556b5292a3c838a73ca2a7fe146a8a5844c50956973708"
+      },
+      {
+        "url": "https://www.sis.itu.edu.tr/EN/student/tuition-fee/tuition-fee.php",
+        "contentHash": "sha256:234c6f52ceed0953d6fca6a1c85276d364556db7f32104de0e30e244322810d6"
+      },
+      {
+        "url": "https://www.sis.itu.edu.tr/EN/application-admission/application-admission.php",
+        "contentHash": "sha256:5710b38d9ab9aed27d109ecfc5f4c6bf09718f9913e56baf1766a6877313fd68"
+      },
+      {
+        "url": "https://www.sis.itu.edu.tr/EN/student/intenational-students/undergraduate.php",
+        "contentHash": "sha256:431fc6e550743c6599d8eb97f544e8b7bd5eb5e064faf2e4634792cf1a8c99f4"
+      },
+      {
+        "url": "https://www.sis.itu.edu.tr/EN/student/intenational-students/international-students.php",
+        "contentHash": "sha256:7b2005ea2e5316197286704fedfb2d4b46b43f04b7221423e84c79354e5f56de"
+      },
+      {
+        "url": "https://www.sis.itu.edu.tr/onkayitlar/lsyabanci/basvuru/index.php?islem=kontenjanlar-sartlar",
+        "contentHash": "sha256:47ce22e4c0f25b9c1a3279e2ad03380f2cc10f7835f2c62812bcbfd421af4faa"
+      },
+      {
+        "url": "https://yurtburs.itu.edu.tr/en/home-page",
+        "contentHash": "sha256:c6dcfefb7300543bf6e67594e5bc36efef238e8a4046865cded496a73f1fdc55"
+      },
+      {
+        "url": "https://www.sis.itu.edu.tr/EN/student/intenational-students/registration.php",
+        "contentHash": "sha256:9646c12546760c5830417ce0af5f7b1c5546f42fe34bb12796079434b8150560"
+      },
+      {
+        "url": "https://www.sis.itu.edu.tr/EN/student/equivalence-document/equivalence-document.php",
+        "contentHash": "sha256:a3432cafaaa2d386f6ef238c6e828de261a75b641d70b2657d28394c56b0afd4"
+      },
+      {
+        "url": "https://www.sis.itu.edu.tr/EN/student/intenational-students/tuitions.php",
+        "contentHash": "sha256:92cfa03b268ca39f5e75dcf66a83196676626fdd5cce672d216bf425820386de"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}

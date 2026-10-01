@@ -4736,3 +4736,25 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[itu]
+name = "Istanbul Technical University (Турция)"
+files = [
+  { path = "manual/itu/00-application.html", url = "https://www.sis.itu.edu.tr/EN/student/intenational-students/application.php" },
+  { path = "manual/itu/01-exam-requirements.html", url = "https://www.sis.itu.edu.tr/EN/regulations/valid-exam-results.php" },
+  { path = "manual/itu/02-english.html", url = "https://www.sis.itu.edu.tr/EN/regulations/valid-english-tests-and-minimum-scores.php" },
+  { path = "manual/itu/03-tuition-fees.html", url = "https://www.sis.itu.edu.tr/EN/student/tuition-fee/fees/20271020/tutionfees.php" },
+  { path = "manual/itu/04-tuition-explained.html", url = "https://www.sis.itu.edu.tr/EN/student/tuition-fee/tuition-fee.php" },
+  { path = "manual/itu/05-admission-dates.html", url = "https://www.sis.itu.edu.tr/EN/application-admission/application-admission.php" },
+  { path = "manual/itu/06-undergraduate.html", url = "https://www.sis.itu.edu.tr/EN/student/intenational-students/undergraduate.php" },
+  { path = "manual/itu/07-international.html", url = "https://www.sis.itu.edu.tr/EN/student/intenational-students/international-students.php" },
+  { path = "manual/itu/08-quotas.html", url = "https://www.sis.itu.edu.tr/onkayitlar/lsyabanci/basvuru/index.php?islem=kontenjanlar-sartlar" },
+  { path = "manual/itu/09-scholarships.html", url = "https://yurtburs.itu.edu.tr/en/home-page" },
+  { path = "manual/itu/10-registration.html", url = "https://www.sis.itu.edu.tr/EN/student/intenational-students/registration.php" },
+  { path = "manual/itu/11-equivalence.html", url = "https://www.sis.itu.edu.tr/EN/student/equivalence-document/equivalence-document.php" },
+  { path = "manual/itu/12-tuitions.html", url = "https://www.sis.itu.edu.tr/EN/student/intenational-students/tuitions.php" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
