@@ -4698,3 +4698,21 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[ecnu]
+name = "East China Normal University (Китай)"
+files = [
+  { path = "manual/ecnu/00-admission-list.html", url = "https://lxs.ecnu.edu.cn/en/admission/list.htm" },
+  { path = "manual/ecnu/01-undergraduate-program.html", url = "https://lxs.ecnu.edu.cn/en_admission_degree_programs_undergraduate_program/list.htm" },
+  { path = "manual/ecnu/02-scholarship-list.html", url = "https://lxs.ecnu.edu.cn/en/scholarship/list.htm" },
+  { path = "manual/ecnu/03-scholarship-undergraduate.html", url = "https://lxs.ecnu.edu.cn/en_scholarship_undergraduate/list.htm" },
+  { path = "manual/ecnu/04-fee-list.html", url = "https://lxs.ecnu.edu.cn/en_feespayment_feelist/list.htm" },
+  { path = "manual/ecnu/05-sch-csc-a.html", url = "https://lxs.ecnu.edu.cn/en_scholarship_undergraduate_chinese_government_scholarship_type_a/list.htm" },
+  { path = "manual/ecnu/06-sch-shanghai.html", url = "https://lxs.ecnu.edu.cn/en_scholarship_undergraduate_shanghai_government_scholarship/list.htm" },
+  { path = "manual/ecnu/07-sch-excellent-freshmen.html", url = "https://lxs.ecnu.edu.cn/en_scholarship_undergraduate_excellent_freshmen_scholarship/list.htm" },
+  { path = "manual/ecnu/08-sch-iclc.html", url = "https://lxs.ecnu.edu.cn/en_scholarship_undergraduate_international_chinese_language_teachers_scholarship/list.htm" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
