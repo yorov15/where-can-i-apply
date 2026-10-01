@@ -4837,3 +4837,26 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[kadir-has]
+name = "Kadir Has University (Турция)"
+files = [
+  { path = "manual/kadir-has/00-application-requirements.html", url = "https://www.khas.edu.tr/en/inter-application-requirements-for-undergraduate-programs" },
+  { path = "manual/kadir-has/01-how-to-apply.html", url = "https://www.khas.edu.tr/en/inter-how-to-apply-for-undergraduate-programs" },
+  { path = "manual/kadir-has/02-tuition-scholarships.html", url = "https://www.khas.edu.tr/en/inter-tuition-fee-and-scholarships-for-undergraduate-programs" },
+  { path = "manual/kadir-has/03-registration-process.html", url = "https://www.khas.edu.tr/en/inter-registration-process-for-undergraduate-programs-2" },
+  { path = "manual/kadir-has/04-admission-ug.html", url = "https://www.khas.edu.tr/en/admission-to-undergraduate-programs-2" },
+  { path = "manual/kadir-has/05-intl-home.html", url = "https://international.khas.edu.tr/" },
+  { path = "manual/kadir-has/06-applications-open.html", url = "https://www.khas.edu.tr/en/applications-for-the-2026-2027-fall-and-spring-semesters-are-now-open" },
+  { path = "manual/kadir-has/07-scholarships-and-fees.html", url = "https://www.khas.edu.tr/en/scholarships-and-fees" },
+  { path = "manual/kadir-has/08-education-support-scholarship.html", url = "https://www.khas.edu.tr/en/education-support-scholarship-and-earthquake-support" },
+  { path = "manual/kadir-has/09-english-preparatory-program.html", url = "https://www.khas.edu.tr/en/english-preparatory-program-epp" },
+  { path = "manual/kadir-has/10-english-faq.html", url = "https://www.khas.edu.tr/en/ydy-faq" },
+  { path = "manual/kadir-has/11-international-office.html", url = "https://www.khas.edu.tr/en/international/" },
+  { path = "manual/kadir-has/12-apply-portal.html", url = "https://apply.khas.edu.tr/s/" },
+  { path = "manual/kadir-has/13-tuition-fees.pdf", url = "https://www.khas.edu.tr/wp-content/uploads/2025/11/13_69088b66553ed.pdf" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

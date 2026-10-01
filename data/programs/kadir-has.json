@@ -1,0 +1,278 @@
+{
+  "id": "kadir-has",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Kadir Has University (Турция): приём иностранцев на бакалавриат",
+    "orig": "Kadir Has University"
+  },
+  "hostCountry": "TR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: вуз называет $20 000 за год для бакалавриата. Скидка есть, но частичная — по программе стипендий международные студенты получают от 50% до 65% (итого $10 000, $9 000, $8 000 или $7 000 в год), а на главной международного офиса обещают «полные и частичные стипендии до 75%». Полное покрытие не обещано никому, поэтому в карточке не отмечено ни обучение, ни жильё, ни дорога. Если английского не хватает, сначала обязательна платная годичная программа подготовки — за неё отдельная плата. Жизнь в Стамбуле, по оценке вуза, стоит около 1000–1300 USD в месяц (аренда однушки в центре 500–600 USD, еда ~200 USD)."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство вход не закрывает: у вуза есть отдельный международный офис с требованиями, стоимостью и порядком подачи для иностранцев, на сайте прямо сказано, что иностранцы составляют 16.5% студентов. Отказа по гражданству ни на одной из снятых страниц нет. Смотрели страницы требований, подачи, стоимости и стипендий, регистрации и главную международного офиса."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы сама по себе вход не закрывает: требования выражены документами и уровнем английского, а не страной; отказа по стране не названо. Нужны школьный диплом, транскрипт, паспорт и языковой результат. Отдельной страницы Таджикистана или Центральной Азии у вуза нет; аттестат Таджикистана прямо не упомянут, а турецкий эквивалент диплома (Denklik) надо уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Applicants must be graduated from High School or those who are expected to graduate must successfully complete their studies prior to the enrollment date to be able to enroll in the university."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы снятые страницы приёма не называют: сказано лишь, что зачисляют уже окончивших школу или тех, кто окончит её до даты зачисления. Конкретного «не ранее такого-то года» или «в год подачи» в тексте нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения для приёма на бакалавриат снятые страницы не называют: ни минимума, ни максимума для абитуриента-иностранца в тексте нет."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Числового порога по оценкам страницы приёма не называют: в требованиях перечислены только документы (диплом, транскрипт, языковой результат), а про оценки сказано лишь про «well-qualified international students» в связи со стипендией. Минимального GPA или среднего балла для допуска на бакалавриат в тексте нет."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4,
+          "evidence": "TOEFL-IBT min. 4, 2 years valid"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 72,
+          "evidence": "*The minimum total score accepted for the former TOEFL-IBT test, taken before 21 January 2026, is 72."
+        },
+        {
+          "test": "PTE",
+          "min": 59,
+          "evidence": "PTE Academic min. 59, 2 years valid"
+        }
+      ],
+      "evidence": "The following examination results are accepted by Kadir Has University:"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Приём иностранцев открыт: у вуза есть отдельный международный офис с требованиями, стоимостью и порядком подачи для иностранцев, и на сайте прямо сказано, что иностранцы составляют 16.5% студентов. Отказа по гражданству страницы не называют.",
+      "evidence": "International students make up 16.5% of the total population",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Страна школы вход напрямую не закрывает: требования выражены документами и знанием английского, а не страной. Нужны школьный диплом, транскрипт, паспорт и, если есть, результаты языкового экзамена. Аттестат Таджикистана отдельно не описан — эквивалент уточнять в приёмной.",
+      "evidence": "High School Diploma (if already obtained) High School Transcript Passport copy English Proficiency exam results (if applicable) Reference letter (if applicable) Motivation letter (if applicable)",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужен школьный диплом: зачисляют тех, кто уже окончил школу, либо тех, кто окончит её до даты зачисления.",
+      "evidence": "Applicants must be graduated from High School or those who are expected to graduate must successfully complete their studies prior to the enrollment date to be able to enroll in the university.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "При регистрации обязателен турецкий эквивалент школьного диплома (Denklik). У абитуриента из Таджикистана школа 11 лет, а не 12, поэтому проходит ли его аттестат на Denklik — уточняй в приёмной до подачи, это условие регистрации, а не отказ.",
+      "evidence": "2. High School Equivalence paper (Denklik) High School Equivalence paper is required to be submitted during the registartion process for Undergraduate programs.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский нужен обязательно: если уровень не подтверждён, студент обязан сначала пройти годичную программу подготовки KHAS English Preparatory Program, прежде чем начать бакалавриат.",
+      "evidence": "Students who cannot demonstrate sufficient English proficiency must attend the KHAS English Preparatory Program for a minimum 1 year before they can start their undergraduate program.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь вместо международного экзамена — свой экзамен вуза: KHAS English Proficiency exam можно сдать до регистрации.",
+      "evidence": "Alternatively, students can attend KHAS English Proficiency exam prior to registration to University.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Новый TOEFL iBT (с 21 января 2026) принимают от 4 баллов, срок действия 2 года.",
+      "evidence": "TOEFL-IBT min. 4, 2 years valid",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Старый TOEFL iBT (сданный до 21 января 2026) принимают от 72 баллов из 120.",
+      "evidence": "*The minimum total score accepted for the former TOEFL-IBT test, taken before 21 January 2026, is 72.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "PTE Academic принимают от 59 баллов, срок действия 2 года.",
+      "evidence": "PTE Academic min. 59, 2 years valid",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "IELTS в списке принимаемых экзаменов на этой странице не назван: вуз принимает TOEFL iBT, Cambridge C2/C1, Cambridge Linguaskill, Oxford Test of English и PTE Academic, либо свой экзамен.",
+      "evidence": "English Language Proficiency for Undergraduate Students: The following examination results are accepted by Kadir Has University:",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Программы, где обучение идёт на турецком, требуют турецкого языка: TÖMER C1 (центр при государственном турецком вузе или официальный центр TÖMER) либо тест института Юнуса Эмре уровня C1.",
+      "evidence": "TÖMER min. C1, the testing center has to be at the State Turkish University or at the official TÖMER center",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Все программы идут на английском (кроме юридических — там 30% английского), поэтому английский нужен всем, независимо от факультета.",
+      "evidence": "All programs in English (Law programs; 30% in English)",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Стоимость бакалавриата для иностранца — $20 000 за учебный год (обучение платное).",
+      "evidence": "Programs Tuition Fee (per year) Scholarships Undergraduate 20,000$ Scholarships Available",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия частичная, а не полная: скидки по программе стипендий — 50%, 55%, 60% или 65%, то есть платить остаётся $10 000, $9 000, $8 000 или $7 000 в год.",
+      "evidence": "Scholarships %50 %55 %60 %65 %50 %55 %60 %65 Scholarships",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На главной международного офиса обещают полные и частичные стипендии для иностранных студентов бакалавриата и магистратуры — вплоть до 75%.",
+      "evidence": "Full, partial scholarships for international undergraduate and graduate students (up to 75%)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Программа английской подготовки платная: за обучение в ней нужно платить отдельно.",
+      "evidence": "Attendance to this program is subject to the payment of separate fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Жизнь в Стамбуле, по оценке вуза, стоит около $1000–1300 в месяц: аренда однушки в центре 500–600 USD, еда ~200 USD, транспорт для студента 7–10 USD, коммунальные платежи отдельно.",
+      "evidence": "The average rent in Istanbul for a one-bedroom apartment in the city centre is between 500-600 USD per month.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Порядок подачи: проверить требования, собрать документы, подать онлайн-заявку, получить Conditional Letter, внести депозит для закрепления места (в квитанции указать номер заявки) и получить полный пакет зачисления.",
+      "evidence": "Check the requirements before submitting an application form Prepare the required documents for your application Submit an Online Application. Click to Apply Now! Receive the Conditional Letter Arrange the deposit payment in order to secure your offer PS: Application number has to be stated on the payment receipt! Receive the Full Acceptance Package",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "При регистрации после приезда нужны оригиналы с переводом: диплом и транскрипт на турецком или английском, эквивалент диплома (Denklik), результаты языкового экзамена, паспорт и 2 фотографии, а также оплата первого взноса.",
+      "evidence": "High School Diploma (original and translation to Turkish or English) High School Transcript (original and translation to Turkish or English) High School Equivalence paper (Denklik) International/Local Exam score (if the applicant has), in Turkish or English English proficiency exam results accepted by Kadir Has University / KHAS English Proficiency exam results Passport copy 2 photographs",
+      "field": "schoolYears",
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.khas.edu.tr/en/inter-how-to-apply-for-undergraduate-programs",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Kadir Has University, частный университет в Стамбуле (район Фатих, кампус Cibali). Приём иностранцев на бакалавриат — онлайн-заявка, Conditional Letter, депозит. Обучение на английском, стоимость $20 000 в год, стипендии частичные (50–75%). Отдельного международного экзамена-вступления (SAT/ACT) нет; нужен школьный диплом и подтверждение английского либо платная программа подготовки."
+    }
+  },
+  "source": {
+    "url": "https://www.khas.edu.tr/en/inter-application-requirements-for-undergraduate-programs",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.khas.edu.tr/en/inter-application-requirements-for-undergraduate-programs",
+        "contentHash": "sha256:a7dd8c89236b18bbfbd2bf62512a91c343488ad0055f884e940cdf5611037465"
+      },
+      {
+        "url": "https://www.khas.edu.tr/en/inter-how-to-apply-for-undergraduate-programs",
+        "contentHash": "sha256:f6ba59fac28d1edca5082ff50d62b7aa76f99520df2e12718c9d5ef528ac1b18"
+      },
+      {
+        "url": "https://www.khas.edu.tr/en/inter-tuition-fee-and-scholarships-for-undergraduate-programs",
+        "contentHash": "sha256:b1d500a8a55c44a958d168d082c4764de5e82729eeab76014792034a32a5a4c1"
+      },
+      {
+        "url": "https://www.khas.edu.tr/en/inter-registration-process-for-undergraduate-programs-2",
+        "contentHash": "sha256:8aa28d97b4cca4deef4fc7fed1d495821965e43555d4db112b2dff7ea472d0b1"
+      },
+      {
+        "url": "https://www.khas.edu.tr/en/admission-to-undergraduate-programs-2",
+        "contentHash": "sha256:be73f6edd78602fd9a07259f648f645110b462bb8002d9844548f1c54998003d"
+      },
+      {
+        "url": "http://international.khas.edu.tr/",
+        "contentHash": "sha256:e91493b7856c9975d6b87b335556b0e038f58b6af18bb5c9310fbbc9ef83cb7a"
+      },
+      {
+        "url": "https://www.khas.edu.tr/en/applications-for-the-2026-2027-fall-and-spring-semesters-are-now-open",
+        "contentHash": "sha256:a04113e7d75724c063f3137bc7be2593021f2e30376d7650b110a3ad068b0a12"
+      },
+      {
+        "url": "https://www.khas.edu.tr/en/scholarships-and-fees",
+        "contentHash": "sha256:9fff3d73279e90869b12cc9cdb4932b8c263ee73d7a3cdf4714be434883544fd"
+      },
+      {
+        "url": "https://www.khas.edu.tr/en/education-support-scholarship-and-earthquake-support",
+        "contentHash": "sha256:b1e40be90ec380b823c5a7fac86552a0e49a422746553b5a66a94371880a635e"
+      },
+      {
+        "url": "https://www.khas.edu.tr/en/english-preparatory-program-epp",
+        "contentHash": "sha256:785ec5b4a6f125016aa92e3011eab8521c72012d9f63b23a7433b7ca54126898"
+      },
+      {
+        "url": "https://www.khas.edu.tr/en/ydy-faq",
+        "contentHash": "sha256:897faac710b268f575816fc0db1b980889998156323eea30a199ec00b02a72a2"
+      },
+      {
+        "url": "https://www.khas.edu.tr/en/international/",
+        "contentHash": "sha256:e91493b7856c9975d6b87b335556b0e038f58b6af18bb5c9310fbbc9ef83cb7a"
+      },
+      {
+        "url": "https://apply.khas.edu.tr/s/",
+        "contentHash": "sha256:557e321c30e56aa22e1a66ab98c5ca4666acb26d1b3a5204caafbd4ac89924d3"
+      },
+      {
+        "url": "https://www.khas.edu.tr/wp-content/uploads/2025/11/13_69088b66553ed.pdf",
+        "contentHash": "sha256:16d0db5777b10313988a8a925d15fba4621fdcc7c41e99b8e5a3b99d6b0fcea8"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
