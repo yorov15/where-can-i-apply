@@ -1,0 +1,252 @@
+{
+  "id": "umm-al-qura",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Umm Al-Qura University (Саудовская Аравия): приём иностранцев на бакалавриат",
+    "orig": "Umm Al-Qura University"
+  },
+  "hostCountry": "SA",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Иностранец из-за границы подаётся на государственную «внешнюю стипендию» (المنح الخارجية) — это полное содержание: вуз перечисляет месячную стипендию, жильё с научной, социальной и культурной опекой, питание со скидкой, медицинскую помощь, дорогу туда-обратно в конце каждого учебного года, пособие на обустройство (два месячных оклада), пособие отличникам и выпускное пособие (три оклада) на отправку книг. Освобождение от платы за обучение отдельной строкой на странице стипендии не выписано, но это государственная стипендия с полным набором льгот. Если поступить вне стипендии, обучение платное: по международному справочнику вуза — от 8 000 до 12 000 саудовских риалов за семестр в зависимости от колледжа."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "External Scholarships: For non-Saudi students coming from outside the Kingdom of Saudi Arabia ."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы вход не закрывает: отказа по стране нет. Внешняя стипендия открыта для студентов из-за границы вообще, отдельного списка стран или упоминания Таджикистана нет; требуется лишь аттестат о среднем образовании своей страны (или эквивалент) и согласие правительства страны учебы в Королевстве, если оно требуется и от саудовских студентов. Смотрели страницы: External Scholarships, International Students Section, Bachelor's Programs (EN и AR), объявление о старте приёма, международный справочник вуза."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "The student must hold a General Secondary Certificate or its equivalent in his/her country."
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "No more than five years should have passed since obtaining the secondary school certificate."
+    },
+    "age": {
+      "min": 17,
+      "max": 25,
+      "evidence": "The student's age must not be less than 17 years and not more than 25 years for undergraduate studies, 30 years for Master's degree, and 35 years for PhD."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Требования к среднему баллу на приём по внешней стипендии нет: страница условий внешних стипендий средний балл не называет. Взвешенные проценты (97% и 95%) и средний балл 3.9/3.75 из 4 относятся только к внутренним стипендиям для уже живущих в стране и к их продолжению, а на внешнюю стипендию не распространяются. Смотрели страницы: External Scholarships, Internal paid scholarships, Bachelor's Programs, международный справочник вуза."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Proving mastering the language of the study in writing, reading and comprehension through the results of certified standard tests required."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство вход не закрывает, но внешняя стипендия предназначена не-саудовцам, приезжающим из-за границы; для уже живущих в стране с видом на жительство есть отдельные внутренние стипендии.",
+      "evidence": "External Scholarships: For non-Saudi students coming from outside the Kingdom of Saudi Arabia .",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Возраст на бакалавриат по внешней стипендии — от 17 до 25 лет (для магистратуры до 30, для докторантуры до 35).",
+      "evidence": "The student's age must not be less than 17 years and not more than 25 years for undergraduate studies, 30 years for Master's degree, and 35 years for PhD.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат о среднем (полном) образовании своей страны или его эквивалент.",
+      "evidence": "The student must hold a General Secondary Certificate or its equivalent in his/her country.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "С момента получения аттестата должно пройти не больше пяти лет.",
+      "evidence": "No more than five years should have passed since obtaining the secondary school certificate.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Страна школы не ограничивает, но если государство требует такого согласия и для саудовских студентов, нужно согласие вашего правительства на учёбу в Королевстве.",
+      "evidence": "The government of the applicant's country must approve studying in the Kingdom (if such approval is required for Saudi students as well).",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Нельзя одновременно иметь другую стипендию от какого-либо учебного заведения в Саудовской Аравии.",
+      "evidence": "The student must not already be holding another scholarship from one of the educational institutions in the Kingdom.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестат и остальные документы нужно заверить в уполномоченных органах, которые определяет вуз.",
+      "evidence": "Certificates and documents must be authenticated by the designated authorities as determined by the university.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужна справка об отсутствии судимости из органов безопасности вашей страны.",
+      "evidence": "The student must provide a certificate of good conduct from the security authorities in his/her country.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нельзя быть отчисленным из какого-либо учебного заведения в Королевстве.",
+      "evidence": "The student must not have been dismissed from any educational institution in the Kingdom.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужно пройти медицинский осмотр по правилам и инструкциям вуза.",
+      "evidence": "The student must pass the medical examination determined by the regulations and instructions.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Вуз может дополнительно потребовать рекомендацию от определённых органов, учреждений или лиц.",
+      "evidence": "The university may stipulate that the applicant be recommended by certain authorities, institutions, or individuals.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Что даёт внешняя стипендия: жильё с научной, социальной и культурной опекой, дорога туда-обратно в конце каждого учебного года и месячная стипендия; отдельно перечислены питание со скидкой, пособие на обустройство (два оклада), премия отличникам, выпускное пособие (три оклада) на отправку книг и медицинская помощь.",
+      "evidence": "Provision of suitable accommodation and scientific, social, cultural, and training care. Round-trip tickets for the student at the end of each academic year according to specific regulations. A monthly stipend.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "По внешней стипендии нельзя переводиться в другой университет.",
+      "evidence": "The student may not transfer from one university to another.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Стипендиатам запрещено работать в компаниях, учреждениях или у частных лиц во время учёбы.",
+      "evidence": "Scholarship students are prohibited from working in companies, institutions, or individuals during the study period.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Иностранец без стипендии платит за обучение: по международному справочнику вуза — 8 000 риалов за семестр в одних колледжах, 10 000 и 12 000 — в других.",
+      "evidence": "Tuition fees for one semester are 8000 SAR",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для учебной визы нужно доказать владение языком обучения (письмо, чтение, понимание) результатами признанных стандартных тестов; конкретный тест и порог в справочнике не названы.",
+      "evidence": "Proving mastering the language of the study in writing, reading and comprehension through the results of certified standard tests required.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявка подаётся через государственную платформу «Учись в Саудовской Аравии» (Study in Saudi); вуз публикует ссылку на неё.",
+      "evidence": "رابط التقديم عبر منصة",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Внутренние стипендии — для не-саудовцев, уже живущих в стране с видом на жительство: полная (взвешенная оценка не ниже 97%), частичная со скидкой 50% (не ниже 95%) или полностью платная.",
+      "evidence": "حصول الطالب / الطالبة على نسبة موزونة لا تقل عن 97%.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отбор идёт по конкурсу: приём и стипендии очень конкурентные, мест мало.",
+      "evidence": "Studies and admissions at Umm Al Qura University are competitive",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Проходной балл на бакалавриат считается как 40% аттестат, 30% общий тест способностей и 30% итоговый тест; для медицинских и научных специальностей нужен STEP не ниже 60, для английского — 50.",
+      "evidence": "يتم احتساب النسبة الموزونة للتخصصات العلمية (طلاب و طالبات )كالتالي : 40% ثانوية عامة - 30% القدرات العامة - 30% التحصيلي .",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Иностранцу без стипендии для учебной визы нужно подтвердить финансовую состоятельность или предоставить банковскую гарантию.",
+      "evidence": "Confirming financial capacity or submitting a bank guarantee.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общее условие учебной визы — возраст от 16 лет, действующий паспорт и медицинский отчёт об отсутствии инфекционных заболеваний.",
+      "evidence": "The applicant's age should be 16 years plus.",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://uqu.edu.sa/en/dar/141156",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Umm Al-Qura University (جامعة أم القرى), Мекка, Саудовская Аравия, с филиалами в Эль-Джмум, Эль-Кунфуза, Эль-Лейсе и Адхаме. Приём иностранцев на бакалавриат идёт через государственную программу внешних стипендий: заявку подают на платформе «Учись в Саудовской Аравии» (Study in Saudi), а отбор и оформление ведёт отдел международных студентов департамента приёма и регистрации. Отдельного приёма по странам нет — стипендия открыта для студентов из-за границы."
+    }
+  },
+  "source": {
+    "url": "https://uqu.edu.sa/en/dar/141156",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://uqu.edu.sa/en/dar/141156",
+        "contentHash": "sha256:f8c4b9a41cf67829db330344c42f595831ec489358edecbf33fb67b075e36667"
+      },
+      {
+        "url": "https://uqu.edu.sa/en/dar/141135",
+        "contentHash": "sha256:905996a4b2ec33521bd1043ee889d01804da42dd3c7d65822d9800b895f54c6c"
+      },
+      {
+        "url": "https://uqu.edu.sa/en/dar/382",
+        "contentHash": "sha256:d1f20e2015172cf148093ef447992fddbdc7073e27369ec90b400530600b2299"
+      },
+      {
+        "url": "https://uqu.edu.sa/dar/382",
+        "contentHash": "sha256:feac1914e0e6a67602f3768e01dc2bc8d6ee34d4533e70ed28583fcfe58da4c8"
+      },
+      {
+        "url": "https://uqu.edu.sa/dar/114885",
+        "contentHash": "sha256:81def11a8cb6badb72e17370b6eaa1ebd05be79f444be37bf1d4d2246479ccf6"
+      },
+      {
+        "url": "https://uqu.edu.sa/en/dar",
+        "contentHash": "sha256:baa161d0d22456c46282f859cc5edf55b7bf4152777cf7cea71979f5e3faf2c6"
+      },
+      {
+        "url": "https://uqu.edu.sa/App/News/173783",
+        "contentHash": "sha256:e8bac74688aa0c712ff474505c3053b11ffcd55b5894094b022a65947d439258"
+      },
+      {
+        "url": "https://drive.uqu.edu.sa/_/dadregis/files/45/1/Q/STUDY%20AT%20UMM%20AL-QURA%20UNIVERSITY.pdf",
+        "contentHash": "sha256:7f9bde95a90308ad6d81a7e55a9c06989a21502af60b03f0c1491fdb6d413dd4"
+      },
+      {
+        "url": "https://uqu.edu.sa/App/Admission",
+        "contentHash": "sha256:933d62af0bcef82c22f59bd3cd11ff8035a7e8312bc760438258e5ddcdc000aa"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
