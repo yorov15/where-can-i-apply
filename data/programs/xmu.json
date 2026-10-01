@@ -1,0 +1,162 @@
+{
+  "id": "xmu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Xiamen University (Китай): бакалавриат на китайском, стипендия на оплату обучения",
+    "orig": "Xiamen University"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: 24 000–26 000 юаней в год на китайском. Стипендия вуза для новых студентов на бакалавриате покрывает только плату за обучение и даётся всего 5 студентам на весь вуз; проживание и содержание — за счёт студента. Полное покрытие (обучение, жильё, содержание, страховка) даёт только правительственная стипендия Китая, она подаётся отдельно."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Applicants must be non-Chinese citizens aged between 18 and 30 by September 1st, 2026"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по стране школы вуз не называет. Смотрели страницы приёма и стипендии."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы не названо: нужен аттестат о старшей школе. Про 11-летнюю школу ничего не сказано. Смотрели страницу приёма."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Года выпуска не называют: подают выпускники и те, кто оканчивает школу в этом году. Смотрели страницу приёма."
+    },
+    "age": {
+      "min": 18,
+      "max": 30,
+      "evidence": "aged between 18 and 30 by September 1st, 2026"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Минимального среднего балла вуз не называет: нужна «удовлетворительная успеваемость» и табель. Смотрели страницы приёма и стипендии."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "HSK",
+          "min": 4,
+          "evidence": "Programs in Sciences, Engineering, Medicine and Physical Education : HSK 4 with a score of 210 or better"
+        }
+      ],
+      "evidence": "Programs in Sciences, Engineering, Medicine and Physical Education : HSK 4 with a score of 210 or better"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Подают иностранцы с действующим обычным паспортом, 18–30 лет на 1 сентября 2026, здоровые. Тем, у кого родители граждане Китая и живут за границей, нужно не меньше 4 лет иностранного паспорта и 2 лет фактической жизни за рубежом за последние 4 года.",
+      "evidence": "Applicants must be non-Chinese citizens aged between 18 and 30 by September 1st, 2026",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат о старшей школе или справка об ожидаемом выпуске, с хорошей успеваемостью. Число лет школы не названо; оригинал аттестата показывают при регистрации.",
+      "evidence": "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст — от 18 до 30 лет на 1 сентября 2026. Тем, кому нет 18, нужна гарантийная справка; у каждой стипендии могут быть свои возрастные пределы.",
+      "evidence": "aged between 18 and 30 by September 1st, 2026",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Программы на китайском: гуманитарные, экономика, менеджмент, право и искусство — HSK 5 с баллом не ниже 210; естественные, технические, медицина и физкультура — HSK 4 с баллом не ниже 210. Либо справка школы, где китайский был основным языком обучения. Для программ на английском — TOEFL iBT 80 или IELTS 6.0.",
+      "evidence": "Programs in Sciences, Engineering, Medicine and Physical Education : HSK 4 with a score of 210 or better",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен отчёт экзамена CSCA: математика обязательна, китайский обязателен для программ на китайском, физика и/или химия — для естественных, технических, сельскохозяйственных и медицинских. Язык экзамена должен совпадать с языком программы.",
+      "evidence": "China Scholastic Competency Assessment (CSCA) score report",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение платное: программы на китайском — 24 000 юаней в год (гуманитарные) или 26 000 (естественные, технические, медицина, экономика, менеджмент, право, искусство); MBBS на английском — 38 000; дизайн на английском — 90 000. Сбор за заявку 400 юаней. Питание 1 000–1 500 юаней в месяц, страховка 800 юаней в год.",
+      "evidence": "Application Fee: RMB 400 for long-term students",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия вуза для новых иностранных студентов на бакалавриате — «второй класс»: покрывает только плату за обучение, всего 5 мест на весь вуз. Проживание и содержание она не покрывает. Подают после зачисления.",
+      "evidence": "Second-class Tuition fee only.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки цикла 2026: правительственная стипендия Китая — с 1 декабря 2025 по 15 февраля 2026; стипендия вуза, провинции Фуцзянь — до 10 апреля 2026; самоплатные — до 10 мая 2026. Подача через онлайн-систему application.xmu.edu.cn, результаты в июне–июле. Сроки 2027 ещё не названы.",
+      "evidence": "Dec. 1, 2025 Feb. 15, 2026 Chinese Government Scholarships",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы: паспорт, свидетельство о рождении, документы родителей, аттестат и табель, языковой сертификат, отчёт CSCA, рекомендательное письмо, личное письмо (не меньше 800 слов), справка о здоровье, гарантия финансовой поддержки, справка об отсутствии судимости.",
+      "evidence": "Personal Statement (minimum 800 words)",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2025-12-01",
+    "closes": "2026-04-10",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Xiamen University, три кампуса в провинции Фуцзянь (Сымин, Чжанчжоу, Сян’ань). Бакалавриат на китайском: HSK 4 для естественных и технических, HSK 5 для гуманитарных программ, плюс экзамен CSCA. Стипендия вуза на обучение — всего 5 мест. Цикл 2026 закрыт; сроки 2027 ещё не опубликованы."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+    "pages": [
+      {
+        "url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+        "contentHash": "sha256:6d6a31957d7cb9614e4f20518186d8dbfdda7aee9e52a6efefd574551cca58ed"
+      },
+      {
+        "url": "https://admissions.xmu.edu.cn/info/1061/3880.htm",
+        "contentHash": "sha256:d2f51d2475ad549453294546df1b17f281d3f4122b45b9219addff814d9fb060"
+      },
+      {
+        "url": "https://admissions.xmu.edu.cn/Admissions/Costs.htm",
+        "contentHash": "sha256:38f34275ced645e56d173c5b4aa87bdaea488ca456c6c4520041835ff36f4d4c"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}

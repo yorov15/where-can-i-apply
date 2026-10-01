@@ -4526,3 +4526,15 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Xiamen University.
+# Домен admissions.xmu.edu.cn одобрен Муродом 2026-10-01 (список из 55 кандидатов, ответ «ok delay spisok» — весь список).
+[xmu]
+name = "Xiamen University"
+files = [
+  { path = "manual/xmu/01-guide.html", url = "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm" },
+  { path = "manual/xmu/00-schol.html", url = "https://admissions.xmu.edu.cn/info/1061/3880.htm" },
+  { path = "manual/xmu/02-costs.html", url = "https://admissions.xmu.edu.cn/Admissions/Costs.htm" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
