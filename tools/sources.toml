@@ -4480,3 +4480,17 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# DGIST (Корея): бакалавриат для иностранцев, обучение бесплатно и стипендия.
+# Домен www.dgist.ac.kr одобрен Муродом 2026-10-01 (список из 27 кандидатов, ответ «1» — весь список, кроме КазНУ).
+[dgist]
+name = "DGIST (Корея): бакалавриат для иностранцев, обучение бесплатно и стипендия"
+files = [
+  { path = "manual/dgist/00-scholarships.html", url = "https://www.dgist.ac.kr/iuadm/sub04_01.do" },
+  { path = "manual/dgist/01-eligibility.html", url = "https://www.dgist.ac.kr/iuadm/sub02_01.do" },
+  { path = "manual/dgist/02-timeline.html", url = "https://www.dgist.ac.kr/iuadm/sub02_02.do" },
+  { path = "manual/dgist/03-process.html", url = "https://www.dgist.ac.kr/iuadm/sub02_03.do" },
+  { path = "manual/dgist/04-docs.html", url = "https://www.dgist.ac.kr/iuadm/sub02_04.do" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

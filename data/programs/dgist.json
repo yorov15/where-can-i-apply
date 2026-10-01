@@ -1,0 +1,163 @@
+{
+  "id": "dgist",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "DGIST (Корея): бакалавриат для иностранцев, обучение бесплатно и стипендия",
+    "orig": "Daegu Gyeongbuk Institute of Science and Technology"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Всем иностранным бакалаврам обучение бесплатно (8 семестров), каждый месяц пособие 328 500 вон и стипендия 330 000 вон, разовое пособие на обустройство 500 000 вон; до 17,5 млн вон (около 12 000 долларов) за первый год. Страницы не описывают жильё, питание и перелёт подробно, дорогу вуз не оплачивает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "deny": [
+        "KR"
+      ],
+      "evidence": "Applicants who hold Korean citizenship (dual citizenship) are NOT ELIGIBLE to apply as international students"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по стране школы нет: нужна иностранная школа, не международная школа в Корее. Смотрели страницы требований, сроков и стипендий для иностранных бакалавров."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы не названо: нужен аттестат, признанный как иностранная старшая школа. Про 11-летнюю школу ничего не сказано. Смотрели страницы требований, сроков и стипендий для иностранных бакалавров."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Года выпуска не называют: можно подать с справкой об ожидаемом выпуске. Смотрели страницы требований, сроков и стипендий для иностранных бакалавров."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения страницы не называют. Смотрели страницы требований, сроков и стипендий для иностранных бакалавров."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Минимального среднего балла страницы не называют: оценивают документы и интервью. Смотрели страницы требований, сроков и стипендий для иностранных бакалавров."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Optional Documents : For All Applicants 1 English Proficiency Test Score Report"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужно иностранное гражданство и чтобы ни один из родителей не был гражданином Кореи. Корейцы по происхождению могут подать, только если вся школа (начальная, средняя, старшая) пройдена вне Кореи. Двойное гражданство с Кореей — отказ.",
+      "evidence": "Applicants who hold Korean citizenship (dual citizenship) are NOT ELIGIBLE to apply as international students",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужно окончить или окончить к сроку регистрации старшую школу. Аттестаты GED, домашнее и онлайн-обучение не признают; международные школы внутри Кореи тоже не считаются иностранными. Число лет школы не названо.",
+      "evidence": "Applicants who have graduated or will graduate from his/her high school by the registration deadline",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Сертификат по английскому в списке необязательных документов: вуз не требует его для подачи, но можно приложить; все документы должны быть на английском или с нотариальным переводом.",
+      "evidence": "Optional Documents : For All Applicants 1 English Proficiency Test Score Report",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Результаты стандартных тестов (в списке — стандартизированный тест) тоже необязательны. Кроме документов проводят оценку заявки и интервью; кто не пришёл на интервью, тот отсеивается.",
+      "evidence": "Applicants who do not participate in the admission interview will be disqualified",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Всем иностранным бакалаврам обучение бесплатно (3 967 000 вон за семестр), восемь семестров, без особых условий.",
+      "evidence": "Tuition Fee Fully Waived - 3,967,000 KRW / Semester For all international students without special conditions Granted for 8 semesters only",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Каждый месяц выплачивают пособие 328 500 вон (не в каникулы; нужно набрать больше 10 кредитов, не быть на испытательном сроке) и стипендию DGISTep 330 000 вон (в том числе в каникулы). За отличные оценки (GPA выше 3,7 из 4,3 на первом курсе, выше 4,0 дальше и 15 кредитов) — ещё 1 500 000 вон за семестр. Разовое пособие на обустройство 500 000 вон. В общем вуз называет до 17,5 млн вон (около 12 000 долларов) за первый год.",
+      "evidence": "Financial Aid - 328,500KRW / Month Granted for 8 semesters only, excluding vacation periods",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка подаётся онлайн через портал Study in Korea с начала декабря до конца января, сбор за заявку 50 000 вон (не возвращается). Все документы в одном PDF до 10 МБ, на английском или с нотариальным переводом. Потом оценка заявки и интервью до апреля, итоги до мая, учёба с конца августа или начала сентября. Перенести поступление на другой семестр нельзя.",
+      "evidence": "Application fee : 50,000 KRW",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Обязательные документы: аттестат (или справка об ожидаемом выпуске), школьные оценки, копии паспортов заявителя и родителей, официальный документ о родстве.",
+      "evidence": "Mandatory Documents : For All Applicants 1 High School Diploma (or Certification of expected graduation)",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.dgist.ac.kr/iuadm/sub04_01.do",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: DGIST, Тэгу — корейский университет науки и техники, преподавание на английском. Всем иностранным бакалаврам обучение бесплатно и платят пособие, отдельной заявки на стипендию нет. Приём с начала декабря до конца января, сбор за заявку 50 000 вон; точные даты на 2027 год вуз ещё не опубликовал."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.dgist.ac.kr/iuadm/sub04_01.do",
+    "pages": [
+      {
+        "url": "https://www.dgist.ac.kr/iuadm/sub04_01.do",
+        "contentHash": "sha256:8649631a562dc245f6493de3589a1487d1ea20fde89f15c0166060529770e177"
+      },
+      {
+        "url": "https://www.dgist.ac.kr/iuadm/sub02_01.do",
+        "contentHash": "sha256:7217d74a361ab46a04143ee7eeda3e347aee7301f4248ce686c4986de22295fc"
+      },
+      {
+        "url": "https://www.dgist.ac.kr/iuadm/sub02_02.do",
+        "contentHash": "sha256:3b0a58599e3ce1924dd9132359d1d9b97d13af3e13a9a960866e31df0d645f50"
+      },
+      {
+        "url": "https://www.dgist.ac.kr/iuadm/sub02_03.do",
+        "contentHash": "sha256:3f57c8bcdf533b99db716eeceb1d2a18f1504caf6e9423cfe9324fd1b6d94a0b"
+      },
+      {
+        "url": "https://www.dgist.ac.kr/iuadm/sub02_04.do",
+        "contentHash": "sha256:20a782e609b50d5e2a9e21622c284382d183d2033897911fe3e549536ad02e9e"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
