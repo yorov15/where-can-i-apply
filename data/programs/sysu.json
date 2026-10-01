@@ -1,0 +1,163 @@
+{
+  "id": "sysu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Sun Yat-sen University (Китай): бакалавриат со стипендией вуза",
+    "orig": "Sun Yat-sen University"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Платить за обучение нужно, если стипендии нет: 26 000–48 000 юаней в год по направлению. Стипендия вуза (на неё нужна рекомендация агентства или амбассадора вуза) бывает трёх классов: первый — обучение и 30 000 юаней в год на жизнь, второй — только обучение, третий — скидка 50% на обучение. Жильё, коммунальные, страховку, визу, перелёт и медосмотр платит студент."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Applicants must be non-Chinese citizens who hold a valid foreign passport"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по стране школы на страницах нет. Смотрели страницы приёма самостоятельных абитуриентов и стипендии."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы не названо: нужен аттестат о полном среднем образовании или равный ему. Смотрели страницы приёма и стипендии."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Года выпуска не называют: выпускники текущего года подают со справкой. Смотрели страницы приёма и стипендии."
+    },
+    "age": {
+      "maxExclusive": 25,
+      "evidence": "Undergraduate applicants for the scholarship must be high school graduates and under 25 years of age"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Минимального среднего балла страницы не называют: стипендиат должен иметь «отличную успеваемость», оценивают в целом. Смотрели страницы приёма и стипендии."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "HSK",
+          "min": 4,
+          "evidence": "Applicants applying for undergraduate programs taught in Chinese Language must have a minimum score of 180 at HSK Level 4 or above."
+        }
+      ],
+      "evidence": "Applicants applying for undergraduate programs taught in Chinese Language must have a minimum score of 180 at HSK Level 4 or above."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужен действующий иностранный паспорт (не гражданин Китая), хорошее здоровье, отсутствие судимостей и нарушений. Выходцам из Китая, Гонконга, Макао и Тайваня нужны дополнительные документы об отказе от китайского гражданства и пребывании за рубежом.",
+      "evidence": "Applicants must be non-Chinese citizens who hold a valid foreign passport",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат о полном среднем образовании или выше; выпускники этого года подают со справкой о предстоящем выпуске, настоящий документ — до зачисления, иначе приглашение теряет силу. Число лет школы не названо.",
+      "evidence": "Applicants must have completed senior high school or higher education, or an equivalent level of education.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Для стипендии вуза на бакалавриате — до 25 лет. Для самого поступления возрастной предел на этой странице не назван; если нет 18 лет на 1 сентября 2026 года, нужно заявление опекуна, который живёт в провинции Гуандун.",
+      "evidence": "Undergraduate applicants for the scholarship must be high school graduates and under 25 years of age",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен китайский: HSK не ниже 4-го уровня с 180 баллами для программ на китайском; для остальных — не ниже 5-го уровня с 180 баллами. Тем, кто окончил школу с преподаванием на китайском, справка школы заменяет HSK.",
+      "evidence": "Applicants applying for undergraduate programs taught in Chinese Language must have a minimum score of 180 at HSK Level 4 or above.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "С 2026 года всем бакалаврам нужен экзамен CSCA (China Scholastic Competency Assessment), его проводит Китайский совет по стипендиям. Предметы и язык работ зависят от программы. Для первого раунда принимают результаты, полученные до 1 марта 2026, для второго — до 1 мая 2026.",
+      "evidence": "Applicants must participate in the China Scholastic Competency Assessment (hereinafter referred to as the “CSCA Test”) for undergraduate admission",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Для стипендии вуза обязательна рекомендация от агентства или представителя (амбассадора) вуза в стране заявителя, плюс два рекомендательных письма (директор школы и учитель) и план обучения. Без такой рекомендации подать на эту стипендию нельзя.",
+      "evidence": "Applicants must obtain a recommendation from an agency or an international students recruitment ambassador in their home country recognized by Sun Yat-sen University",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Стипендия вуза трёх классов. Первый: обучение бесплатно и 30 000 юаней в год на жизнь (бакалавриат). Второй: обучение бесплатно. Третий: скидка 50% на обучение. Жильё, коммунальные, страховку, визу, перелёт туда и обратно и медосмотр платит студент.",
+      "evidence": "Students are responsible for covering the following expenses: accommodation, utilities, insurance, visa fees, round-trip airfare, and physical examination fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Без стипендии обучение на бакалавриате в 2026 году стоит в год: гуманитарные 26 000 юаней, естественные науки, инженерия и агрономия 33 800, медицина 48 000. Сбор за заявку 400 юаней, невозвратный.",
+      "evidence": "The application fee is RMB 400. Once paid, it is non-refundable.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём в цикле 2026: первый раунд с 1 января по 28 февраля, второй с 1 марта по 30 апреля. Дальше проверка документов и интервью (общие способности и язык), предварительные итоги через 15 дней после интервью, письма о зачислении с июля.",
+      "evidence": "First Round: January 1-February 28, 2026 Second Round: March 1-April 30, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Стипендию вуза не получают те, у кого уже есть стипендия правительства Китая, стипендия Института Конфуция (CLEC) или стипендия Министерства торговли.",
+      "evidence": "Recipients of the following scholarships are not eligible for the SYSU scholarship for international students",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-01-01",
+    "closes": "2026-04-30",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://iso.sysu.edu.cn/en/application/selffunded/1420575.htm",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Университет имени Сунь Ятсена (SYSU), Гуанчжоу. Учёба в основном на китайском (HSK 4–5), нужен экзамен CSCA. Своя стипендия вуза — трёх классов, но требует рекомендации агентства или амбассадора вуза. Цикл 2026: приём с 1 января по 30 апреля; сроки 2027 года пока не опубликованы."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://iso.sysu.edu.cn/en/application/selffunded/1420575.htm",
+    "pages": [
+      {
+        "url": "https://iso.sysu.edu.cn/en/application/selffunded/1420575.htm",
+        "contentHash": "sha256:9b7b35502870fd78f14d3a07f99502f5d752d1e414693eabe8d35d73ac108f71"
+      },
+      {
+        "url": "https://iso.sysu.edu.cn/en/application/scholarship/1420586.htm",
+        "contentHash": "sha256:d36d6da81a58fe7b4db4ddffa605742b498405c7ab61aa3d83f6bbd07b1f49dd"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}

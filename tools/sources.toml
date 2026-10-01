@@ -4435,3 +4435,14 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Sun Yat-sen University (Китай): бакалавриат со стипендией вуза.
+# Домен iso.sysu.edu.cn одобрен Муродом 2026-10-01 (список из 27 кандидатов, ответ «1» — весь список, кроме КазНУ).
+[sysu]
+name = "Sun Yat-sen University (Китай): бакалавриат со стипендией вуза"
+files = [
+  { path = "manual/sysu/00-selffunded.html", url = "https://iso.sysu.edu.cn/en/application/selffunded/1420575.htm" },
+  { path = "manual/sysu/01-scholarship.html", url = "https://iso.sysu.edu.cn/en/application/scholarship/1420586.htm" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
