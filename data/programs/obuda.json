@@ -1,0 +1,340 @@
+{
+  "id": "obuda",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Óbuda University (Венгрия): приём иностранцев на бакалавриат",
+    "orig": "Óbuda University"
+  },
+  "hostCountry": "HU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение платное: для граждан вне ЕЭП семестр бакалавриата стоит 2 700-3 200 евро в зависимости от программы (информатика 3 200, бизнес и большинство инженерных 2 900, электротехника 3 000, инженерный менеджмент 2 700); для граждан ЕЭП - 2 000. Плюс обязательный сбор за заявку 150 евро, он не возвращается. Своего финансирования обучения вуз не даёт: на вопрос о стипендиях и скидках он отвечает, что для них надо подаваться на государственную Stipendium Hungaricum (отдельная заявка). Она покрывает обучение полностью, жильё и страховку, но доступна только гражданам стран-участниц программы. Жильё и дорогу вуз не оплачивает"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство вход не закрывает: вуз открыт для иностранцев, отдельных правил для не-ЕС стран региона нет, квот по странам для платных студентов тоже нет. Смотрели страницы how-to-apply, application-deadlines, required-documents, undergraduate-programs, tuition-fees, FAQ, visa-information."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван, требования выражены школьным аттестатом и вступительным экзаменом. Таджикистан и страны Центральной Азии на страницах прямо не упомянуты - эквивалентность аттестата и полный список нужных документов уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Applicants are requested to either have completed high school/senior secondary school before the time of application, or to currently attend the last year of high school/secondary school."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы нет: вуз принимает и тех, кто уже окончил среднюю школу, и тех, кто учится в выпускном классе; аттестат тогда нужно загрузить до 1 августа года подачи. Предела по паузе после школы источник не называет (решение о приёме паузы в учёбе отдано учебному комитету)."
+    },
+    "age": {
+      "min": 18,
+      "asOf": {
+        "relativeTo": "applicationYear",
+        "monthDay": "09-30"
+      },
+      "evidence": "Applicants must be at least 18 years old by the start of the study period in the Fall semester of Year 1 at the University, i.e., by the end of September 2026."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Obuda University seeks students who possess a strong background and interest in STEM fields, a good command of English, and a strong motivation to study at Obuda University."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5.5,
+          "evidence": "IELTS 5.5 5.5 7.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 72,
+          "evidence": "TOEFL IBT 72 72 95"
+        }
+      ],
+      "evidence": "You are required to have at least a B2 level English language certificate."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Отдельных правил для абитуриентов из конкретных стран региона нет: действует общий международный порядок приёма.",
+      "evidence": "Currently, there are no separate procedures or regulations for non-EU applicants from these regions; the standard international admission process applies.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Для платных (self-financing) студентов квот по странам нет.",
+      "evidence": "We do not have quotas for different countries for self-financing students.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Стипендия Stipendium Hungaricum доступна гражданам стран-участниц программы: список стран и подача - на сайте стипендии, а не вуза.",
+      "evidence": "The programme is open to citizens of countries participating in the Stipendium Hungaricum Programme.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "К моменту подачи нужно либо уже окончить среднюю школу, либо учиться в выпускном классе.",
+      "evidence": "Applicants are requested to either have completed high school/senior secondary school before the time of application, or to currently attend the last year of high school/secondary school.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Если аттестат ещё не получен, его нужно загрузить в онлайн-систему вуза до 1 августа года подачи.",
+      "evidence": "In the latter case, the Matriculation / School Leaving Certificate has to be uploaded into the University's online application system by the 1st of August the year of application.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат о среднем образовании (G.C.E. или эквивалент) с нотариально заверенным переводом на английский.",
+      "evidence": "General certificate of education - G.C.E. or any equivalent secondary high school diploma (notarized English translation required)",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "За выпускные классы нужен табель с оценками по математике, физике и английскому (с заверенным переводом).",
+      "evidence": "Secondary High School report card, with reference to Mathematics, Physics and English language (notarized English translation required)",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Если не хватает знаний, можно сначала пройти подготовительную программу PreBSc (год английского и STEM), а потом поступать на бакалавриат.",
+      "evidence": "Recommended for those: who wish to pursue their bachelor degree in English at Obuda University, but are uncertain about their current level of knowledge.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "К началу учебного года (первый курс бакалавриата, осенний семестр) должно быть не меньше 18 лет, то есть к концу сентября.",
+      "evidence": "Applicants must be at least 18 years old by the start of the study period in the Fall semester of Year 1 at the University, i.e., by the end of September 2026.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Обязателен сертификат английского не ниже уровня B2.",
+      "evidence": "You are required to have at least a B2 level English language certificate.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Пороги для бакалавриата: IELTS 5.5; TOEFL IBT 72 (CBT 173, PBT 543).",
+      "evidence": "Required English Language Test Scores: Test Type BSc MSc PhD TOEFL IBT 72 72 95 TOEFL CBT 173 173 213 TOEFL PBT 543 543 627 IELTS 5.5 5.5 7.0",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Кроме IELTS и TOEFL принимают сертификаты уровня B2 для бакалавриата: Cambridge FCE, ECL B2, Euroexam B2, Oxford 111, PTE General B2, telc B2.",
+      "evidence": "Cambridge FCE FCE CAE, CPE ECL B2 B2 C1 Euroexam B2 B2 C1 Oxford 111 111 141 PTE General B2 B2 C1 telc B2 B2 C1",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Duolingo как подтверждение английского не принимают.",
+      "evidence": "NOTE: Obuda University does not accept Duolingo English Test as a proof of English Language Proficiency.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Требование по английскому могут снять, если предыдущее образование полностью велось на английском и подтверждено документами, выданными изначально на английском.",
+      "evidence": "The English language proficiency requirement can be waived in case of previous studies completed fully in English with qualification documents (i.e. high school diploma or undergraduate degree in case of applications to graduate programs) issued originally in English.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Вступительный экзамен - часть приёма на бакалавриат.",
+      "evidence": "Entrance Tests are part of the application process for Bachelor studies at Obuda University.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "После проверки документов вуз открывает доступ к онлайн-вступительным тестам; по их итогам зачисляют на 1-й курс бакалавриата.",
+      "evidence": "During the application process, once your entry documents get verified positively by Obuda University, you will be given access to Entrance Test(s). They are online tests that enable us to assign you to an appropriate study path: entering 1st year of Bachelor studies.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Набор экзамена зависит от программы: бизнес - математика; информатика - математика, физика или информатика; инженерия - математика и физика; плюс устный экзамен.",
+      "evidence": "Level Program Specialisation(s) Entrance Exam Requirements BSc Business Administration and Management Digital manager Mathematics, Oral exam",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Вступительные экзамены и собеседования идут с марта по июнь.",
+      "evidence": "Entrance examinations and interviews begin in March and continue through June.",
+      "field": "exam",
+      "kind": "steps"
+    },
+    {
+      "ru": "Сбор за заявку - 150 евро, платится при подаче и не возвращается.",
+      "evidence": "Application fee: 150 EUR",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 150,
+        "currency": "EUR",
+        "evidence": "Application fee: 150 EUR"
+      }
+    },
+    {
+      "ru": "Сбор за заявку обязателен для каждой заявки и не возвращается; при новой подаче (например, после отказа в визе или в другой набор) его платят снова.",
+      "evidence": "If an applicant submits a new application (for example, reapplying after a visa refusal or for a later intake), the application fee must be paid again.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за обучение зависит от программы: в таблице отдельные колонки для граждан ЕЭП и вне ЕЭП.",
+      "evidence": "Level Program Specialisation(s) Tuition Fee/semester EU/EEA Non-EEA",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Информатика (Computer Science Engineering): для граждан вне ЕЭП 3 200 евро за семестр, для граждан ЕЭП - 2 000.",
+      "evidence": "Tuition Fee Non-EEA 3,200 EUR/semester EU/EEA 2,000 EUR/semester",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Бизнес-программы (Business Administration and Management): для граждан вне ЕЭП 2 900 евро за семестр, для граждан ЕЭП - 2 000.",
+      "evidence": "Tuition Fee Non-EEA 2,900 EUR/semester EU/EEA 2,000 EUR/semester",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "При отказе от зачисления до зачисления удерживают 15% уже оплаченного обучения; после официального зачисления удержание - 20%.",
+      "evidence": "a 15% Earnest money of the paid tuition fee will be deducted from the total sum, regardless of the circumstances",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Оплатить сбор за заявку и обучение нужно в течение 10 дней (срок задаётся в онлайн-системе, можно просить продление).",
+      "evidence": "The deadline is 10 days for both the application and tuition fee payments (as set in the online system).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Stipendium Hungaricum (государственная, отдельная заявка) покрывает обучение полностью, даёт ежемесячную стипендию, жильё или общежитие и медстраховку.",
+      "evidence": "Full tuition fee exemption Monthly scholarship allowance Accommodation support or dormitory placement Health insurance coverage (Hungarian social security - TAJ card)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка на Stipendium Hungaricum на 2027/2028 учебный год появится на сайте стипендии в ноябре 2026 года.",
+      "evidence": "will be available on the scholarship programme's website in November 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Отдельная стипендия для христианской молодёжи из кризисных регионов покрывает обучение, стипендию, жильё, страховку и дорогу; заявки принимают осенью каждого года.",
+      "evidence": "Tuition-free education Monthly stipend Monthly accommodation contribution Medical insurance Reimbursement of travel costs",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подготовительная программа PreBSc: для граждан вне ЕЭП 3 000 евро за семестр, для граждан ЕЭП - 1 900.",
+      "evidence": "Tuition Fee: Non-EAA 3,000 EUR/semester EU/EAA 1,900 EUR/semester",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Срок подачи на осенний семестр - 31 мая; на странице указан 31 мая 2026 года.",
+      "evidence": "Fall Semester Application deadline: 31th May, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Виза типа D для учёбы оформляется только в стране гражданства или в ближайшем посольстве Венгрии; в Венгрии её получить нельзя.",
+      "evidence": "Students who are required to apply for a visa entitling them to a residence permit can only obtain this type of visa (D-type) in their country of origin or at the Hungarian Embassy closest to their place of residence",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-05-31",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://mobility.uni-obuda.hu/en/register",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Óbuda University (Óbudai Egyetem), Будапешт, Венгрия. Государственный технический университет; на бакалавриате 8 англоязычных программ (информатика, инженерия, бизнес), срок обучения 7 семестров. Приём иностранцев платный, заявка через онлайн-портал вуза; помощь по обучению - только через отдельную государственную стипендию Stipendium Hungaricum."
+    }
+  },
+  "source": {
+    "url": "https://uni-obuda.hu/how-to-apply/",
+    "pages": [
+      {
+        "url": "https://uni-obuda.hu/how-to-apply/",
+        "contentHash": "sha256:1e9bb73e8de12edb6f81a085c4e69c51b94ad11761c962b7b7f13388a18a209e"
+      },
+      {
+        "url": "https://uni-obuda.hu/application-deadlines/",
+        "contentHash": "sha256:da9fabd06eead4219bee3675c54e130a90b284703cac28a35199f7d765ff1795"
+      },
+      {
+        "url": "https://uni-obuda.hu/required-documents/",
+        "contentHash": "sha256:b91aebfc0c88d0c3ac5e78522ed3a28bc346fa49f1d866dcce94d7115ea5f016"
+      },
+      {
+        "url": "https://uni-obuda.hu/entrance-tests/",
+        "contentHash": "sha256:3459528aaf9a1017163700fadd1253ab2b464e5a2a0090fe49918f682d7dcbf0"
+      },
+      {
+        "url": "https://uni-obuda.hu/undergraduate-programs/",
+        "contentHash": "sha256:ff906408d5e71be52fead031c7ac97425d06bd8a909605a364e593c38f38d1bb"
+      },
+      {
+        "url": "https://uni-obuda.hu/tuition-fees/",
+        "contentHash": "sha256:e2b2d2a415aef7d316f24acf2fdde4caeca8eec5f0384ef94e1dfbf77a5eede0"
+      },
+      {
+        "url": "https://uni-obuda.hu/stipendium-hungaricum/",
+        "contentHash": "sha256:c1df62d5a0fe2ff7cb06b432c23ab8145703590857ecbe18c40b13b0aadd19ff"
+      },
+      {
+        "url": "https://uni-obuda.hu/fees-and-scholarships/",
+        "contentHash": "sha256:5b22a3932c5b54ee79ae5fd1c1f2f3641171fd36a218d5457c1a32de98bdd1ae"
+      },
+      {
+        "url": "https://uni-obuda.hu/preparatory-undergraduate-program-prebsc/",
+        "contentHash": "sha256:eae05e6d4e96d654e4ac5a01ecf8b285d1ed0da564c9c31fad6258d70f870fcf"
+      },
+      {
+        "url": "https://uni-obuda.hu/faq/",
+        "contentHash": "sha256:af1cd160f4b8cd06ebc01b14c86db8342cca869c3214ce6437b6d690d30cc639"
+      },
+      {
+        "url": "https://uni-obuda.hu/visa-information/",
+        "contentHash": "sha256:0b7cfd81cac6647977a0622b09795729614bf67845f8ad5bd83ca361fadc02f4"
+      },
+      {
+        "url": "https://uni-obuda.hu/scholarship-for-christian-young-people/",
+        "contentHash": "sha256:dce5c3aec42d26e0029698b981879ecf7f6fe78ed35b37e81304d2bc89c4046a"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}

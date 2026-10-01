@@ -4907,3 +4907,24 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[obuda]
+name = "Óbuda University (Венгрия)"
+files = [
+  { path = "manual/obuda/01-how-to-apply.html", url = "https://uni-obuda.hu/how-to-apply/" },
+  { path = "manual/obuda/02-application-deadlines.html", url = "https://uni-obuda.hu/application-deadlines/" },
+  { path = "manual/obuda/03-required-documents.html", url = "https://uni-obuda.hu/required-documents/" },
+  { path = "manual/obuda/04-entrance-tests.html", url = "https://uni-obuda.hu/entrance-tests/" },
+  { path = "manual/obuda/05-undergraduate-programs.html", url = "https://uni-obuda.hu/undergraduate-programs/" },
+  { path = "manual/obuda/06-tuition-fees.html", url = "https://uni-obuda.hu/tuition-fees/" },
+  { path = "manual/obuda/07-stipendium-hungaricum.html", url = "https://uni-obuda.hu/stipendium-hungaricum/" },
+  { path = "manual/obuda/08-fees-and-scholarships.html", url = "https://uni-obuda.hu/fees-and-scholarships/" },
+  { path = "manual/obuda/10-preparatory-undergraduate.html", url = "https://uni-obuda.hu/preparatory-undergraduate-program-prebsc/" },
+  { path = "manual/obuda/11-faq.html", url = "https://uni-obuda.hu/faq/" },
+  { path = "manual/obuda/12-visa-information.html", url = "https://uni-obuda.hu/visa-information/" },
+  { path = "manual/obuda/16-scholarship-christian.html", url = "https://uni-obuda.hu/scholarship-for-christian-young-people/" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
