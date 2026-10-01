@@ -1,0 +1,278 @@
+{
+  "id": "webster-tashkent",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Webster University in Tashkent (Узбекистан): приём иностранцев на бакалавриат",
+    "orig": "Webster University in Tashkent"
+  },
+  "hostCountry": "UZ",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, и для иностранца дороже: на 2026-2027 год бакалавриат стоит 50 350 000 сумов в год (кроме Nursing, Biology, Chemistry), направления Nursing, Biology, Chemistry, Psychology — 53 000 000 сумов, а иностранцы платят на 25% больше местных (отдельной ставки в сумах страница для них не называет). Стипендий и помощи по нужде для иностранцев страницы не описывают: раздел «Grants» — это исследовательские гранты, а скидка 50% на первый год в Nursing/Biology/Chemistry/Psychology — только для местных студентов. Жильё и дорогу вуз не покрывает. Чтобы подтвердить зачисление, нужно внести 50% стоимости первого семестра."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Webster accepts applications from citizens of all countries who meet eligibility requirements."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы вход не закрывает: отдельного отказа по стране нет, требования сведены к школьному документу (аттестат или диплом), GPA и английскому, а заявки принимают от граждан всех стран. Аттестат Таджикистана прямо не назван, но вуз упоминает «attestat or diploma» и табель за 10-й и 11-й годы — эквивалент 11-летней школы уточнять в приёмной. Смотрели страницы приёма и требований (webstertashkent.uz/admissions, ciep.webster.uz/en/bachelor-degree.php, ciep.webster.uz/en/international.php)."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Complete your secondary education: graduate a lyceum, school, or college (specialized high school in Uzbekistan)."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: сказано лишь, что нужно подтвердить окончание средней школы (аттестат или диплом), а тем, кто ещё учится, можно подать табель за 10-й и 11-й годы и получить сначала предварительное решение. Смотрели страницы приёма и требований."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения для приёма на бакалавриат страницы не называют: ни минимума, ни максимума нет. Смотрели страницы приёма, требований и FAQ (webstertashkent.uz/admissions, ciep.webster.uz/en/faq.php)."
+    },
+    "gpa": {
+      "min": 2.5,
+      "scale": "GPA_4",
+      "evidence": "Demonstrate a grade point average (GPA) of 2.5 (on a 4.0 scale)."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "IELTS: 6.0 minimum score (5.5 for admission conditional on completion of the ESL Bridge program)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "evidence": "TOEFL iBT: 80 minimum score (69-79 for admission conditional on completion of the ESL Bridge program)"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 120,
+          "evidence": "Duolingo: 120 minimum score (100 for admission conditional on completion of the ESL Bridge program)"
+        },
+        {
+          "test": "PTE",
+          "min": 53,
+          "evidence": "Pearson (PTE): 53 minimum score"
+        }
+      ],
+      "evidence": "Each applicant needs to demonstrate their ability to undertake the Webster program, which will be taught in English."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство вход не закрывает: вуз принимает заявки от граждан всех стран, кто проходит требования.",
+      "evidence": "Webster accepts applications from citizens of all countries who meet eligibility requirements.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Webster in Tashkent приглашает иностранных студентов, прошедших требования приёма на бакалавриат и магистратуру.",
+      "evidence": "Webster University in Tashkent welcomes international students who meet the admissions criteria for our undergraduate and graduate programs.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Окончание школы нужно подтвердить документом — аттестатом или дипломом.",
+      "evidence": "Each applicant must submit a document certifying he or she has completed high school, such as an attestat or diploma.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Среднее образование должно быть получено в аккредитованном учебном заведении, признаваемом Webster University, с выполнением требований программы.",
+      "evidence": "Applicants considered for admission to undergraduate studies at Webster University must complete their high school education in an accredited educational institution recognized by Webster University, and meet all program admission standards.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Тем, кто ещё учится, можно подать табель за 10-й и 11-й годы школы; решение сначала будет предварительным и станет полным после финального табеля. Это путь для 11-летней школы.",
+      "evidence": "If you are still in school, you may submit a transcript of your grades from your 10th and 11th years of studies. You will receive a provisional admission decision.",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Все документы должны быть на английском; иначе нужен заверенный перевод, который подаётся вместе со сканом оригинала.",
+      "evidence": "All documents must be in English. If these documents are not originally in English, please get a notarized translation and submit the scanned version of the original and translation.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Для полного зачисления нужен средний балл не ниже 2.5 по 4-балльной шкале.",
+      "evidence": "Applicants must have a grade point average (GPA) of 2.5 (on a 4.0 scale) for full admission.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Программа преподаётся на английском, поэтому каждый абитуриент должен показать владение языком на достаточном уровне.",
+      "evidence": "Each applicant needs to demonstrate their ability to undertake the Webster program, which will be taught in English.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Пороги для полного зачисления: IELTS 6.0, TOEFL iBT 80, Duolingo 120, Pearson (PTE) 53, LanguageCert C1; для условного зачисления ниже — IELTS 5.5, TOEFL iBT 69-79, Duolingo 100, iTEP 3.5-3.6.",
+      "evidence": "IELTS: 6.0 minimum score (5.5 for admission conditional on completion of the ESL Bridge program) TOEFL iBT: 80 minimum score (69-79 for admission conditional on completion of the ESL Bridge program) Duolingo: 120 minimum score (100 for admission conditional on completion of the ESL Bridge program) SAT: at least a 450 in the Evidence-Based Reading and Writing Section iTEP: 3.7 minimum score (3.5-3.6 for admission conditional on completion of the ESL Bridge program) Pearson (PTE): 53 minimum score LanguageCert: C1 minimum level",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Если английский ниже порога, могут принять условно на программу ESL: курсы идут первые два семестра, они бесплатны и засчитываются как элективы.",
+      "evidence": "Applicants who do not meet our English requirements may be conditionally accepted as English as a Second Language (ESL) students. ESL courses are taken during the first two semesters. These classes are provided at no additional cost to support students in increasing academic English skills.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский можно подтвердить и баллом SAT не ниже 450 по разделу Evidence-Based Reading and Writing.",
+      "evidence": "SAT: at least a 450 in the Evidence-Based Reading and Writing Section",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Приём идёт потоком: подать заявку можно дважды в год, в удобное время.",
+      "evidence": "we maintain a rolling admissions policy, meaning you can apply twice a year, as early as it is convenient for you",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "У бакалавриата три набора в год; осенний семестр начинается в августе, на весенний (январь) можно подать позже, есть и летний семестр.",
+      "evidence": "Webster Tashkent has three intakes a year for undergraduate applicants Applicants can choose any intake. The fall semester starts in August, and students can still apply for the Spring semester to start their classes the following January.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Опубликованный срок относится к потоку Fall 2025: старт занятий 18 августа 2025, а подать документы и местные, и иностранные студенты должны до 31 июля 2025. Для иностранцев срок тот же, что для местных.",
+      "evidence": "Undergraduate Application Deadlines Intakes: Class start date: Uzbekistan students apply by: International students apply by: Fall 2025 Aug. 18 , 2025 Jul. 31, 2025 Jul. 31, 2025",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Все заявки в Webster University in Tashkent подаются онлайн.",
+      "evidence": "All applications to Webster University in Tashkent are submitted online.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Плата за 2026-2027: бакалавриат 50 350 000 сумов в год (кроме Nursing, Biology, Chemistry); Nursing, Biology, Chemistry, Psychology — 53 000 000 сумов; иностранцы платят на 25% больше местных.",
+      "evidence": "Full-time undergraduate tuition per year (excluding nursing, biology and chemistry) 50,350,000 Uzbek soums flat fee Full-time undergraduate tuition for the following programs: Nursing, Biology, Chemistry and Psychology (local students) 53,000,000 Uzbek soums flat fee Full-time undergraduate tuition per year (foreign students) 25% more than locals",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранные студенты платят на 25% больше местных; отдельной ставки в сумах страница для них не называет.",
+      "evidence": "Full-time undergraduate tuition per year (foreign students) 25% more than locals",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидка 50% на первый год для Nursing, Biology, Chemistry и Psychology — только для местных студентов; иностранцам её не дают.",
+      "evidence": "Full-time undergraduate tuition for the first year (50% discount included) for the following programs: Nursing, Biology, Chemistry and Psychology (local students) 26,500,000 Uzbek soums flat fee with 50% discount included",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "После зачисления нужно внести 50% стоимости первого семестра — это подтверждает намерение учиться; зачисление в группы только после оплаты.",
+      "evidence": "Once an applicant is admitted, they are required to submit the first semester's tuition fee. The 50% of the fee confirms intent to enroll at the University.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Раздел «Grants» — это исследовательские гранты, а не оплата обучения; стипендий и помощи по нужде для иностранцев-бакалавров страницы не описывают.",
+      "evidence": "Undergraduate Research Grants: Designed to support undergraduate students in conducting independent research projects under the guidance of faculty mentors.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцу нужна студенческая виза для зачисления; вуз помогает с оформлением, но получает её сам студент, и начинать процесс надо за 10-12 недель до начала семестра.",
+      "evidence": "A student visa is required for enrollment in Webster Tashkent. Our staff will guide you through the visa application process; however, it is your responsibility to obtain your student visa prior to your arrival. Prepare to begin the visa process 10-12 weeks prior to the start of your semester.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://applywu.webster.edu/portal/tashkent_bachelors",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Webster University in Tashkent, Ташкент, Узбекистан (американский вуз, кампус Webster University). Приём иностранцев на бакалавриат: заявка онлайн, аттестат или диплом, GPA 2.5 из 4.0, английский (IELTS 6.0 / TOEFL iBT 80 / Duolingo 120 / PTE 53, с условным зачислением на ESL ниже порога). У бакалавриата три набора в год; опубликованный срок (Fall 2025) — до 31 июля. Обучение платное: с 2026-2027 бакалавриат 50,35 млн сумов в год, иностранцам +25%."
+    }
+  },
+  "source": {
+    "url": "https://www.webstertashkent.uz/admissions/index.php",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.webstertashkent.uz/admissions/index.php",
+        "contentHash": "sha256:9ddc55d823c0899ef2e2c13009567239b55ac98418ce5c1141fc3faefa6c2a68"
+      },
+      {
+        "url": "https://www.webstertashkent.uz/financialinformation/tuitionandfees.php",
+        "contentHash": "sha256:f9f082e638f0eddec5840f76727671165da2406294f360e198d083539fb516ff"
+      },
+      {
+        "url": "https://www.webstertashkent.uz/financialinformation/financialaid.php",
+        "contentHash": "sha256:8fca4f63855f129a56b97a2af71e735fadb5b7ffbd57ba5faa84740878e1784c"
+      },
+      {
+        "url": "https://www.webstertashkent.uz/academics/undergraduate/index.php",
+        "contentHash": "sha256:4208a5c9dbd4aaa440e7770e1c8b1184a332a4df5b1a49fe360963e1b42b8ca7"
+      },
+      {
+        "url": "https://www.webstertashkent.uz/academics/academic-calendar.php",
+        "contentHash": "sha256:f1ee08e24dab36a479b0eb9e6104d810f46488a4e32849529dcb53f7ea6398a5"
+      },
+      {
+        "url": "https://ciep.webster.uz/en/international.php",
+        "contentHash": "sha256:4b7b431eda5539f01bf4cc7bcbad7cc715694e800931aabbb39a635fd73493b0"
+      },
+      {
+        "url": "https://ciep.webster.uz/en/apply_en.php",
+        "contentHash": "sha256:ca60c2f5cc19be067fd4b32ed1e0de2be749a16da58e8418146ef6aec7311b56"
+      },
+      {
+        "url": "https://ciep.webster.uz/en/tuition-fee.php",
+        "contentHash": "sha256:d34bd397fb560d71a8805e71d6f370cfef66b3d08f38609072c4870be071310c"
+      },
+      {
+        "url": "https://ciep.webster.uz/en/grants.php",
+        "contentHash": "sha256:0df6ab4f8321a4cd3a48a67b220e33cbba975e60bec55ec4de66fa572671b1eb"
+      },
+      {
+        "url": "https://ciep.webster.uz/en/faq.php",
+        "contentHash": "sha256:01ff2635b49c23fea0c3695f823bfca0cf206cee9829f3baf5fb2916c3bbe82f"
+      },
+      {
+        "url": "https://ciep.webster.uz/en/bachelor-degree.php",
+        "contentHash": "sha256:03eca3a16667ca4a52c0d80304d4f30160f8403e5bdb0ab3c44e63c3c6306362"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
