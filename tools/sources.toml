@@ -2842,11 +2842,11 @@ approvedAt = "2026-09-28"
 
 [comenius-university]
 name = "Comenius University Bratislava (Словакия): бакалавриат"
-urls = [
-  "https://www.fm.uniba.sk/en/study",
-  "https://fphil.uniba.sk/en/study/student/study-fees",
-  "https://fns.uniba.sk/en/study/applicant/admission-instructions-bachelor-level/",
-  "https://uniba.sk/en",
+files = [
+  { path = "manual/comenius-university/00-medicine.html", url = "https://www.fm.uniba.sk/en/study" },
+  { path = "manual/comenius-university/01-fees.html", url = "https://fphil.uniba.sk/en/study/student/study-fees" },
+  { path = "manual/comenius-university/02-natural-sciences.html", url = "https://fns.uniba.sk/en/study/applicant/admission-instructions-bachelor-level/" },
+  { path = "manual/comenius-university/03-main.html", url = "https://uniba.sk/en" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"

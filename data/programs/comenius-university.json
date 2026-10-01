@@ -1,0 +1,180 @@
+{
+  "id": "comenius-university",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Comenius University Bratislava (Словакия): бакалавриат",
+    "orig": "Univerzita Komenského v Bratislave"
+  },
+  "hostCountry": "SK",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Полного покрытия нет. На английском менеджмент (бакалавриат) стоит 1 990 € в год, плюс сбор за заявку 80 €. Программы на словацком на философском факультете бесплатны в пределах нормативного срока, но требуют знания словацкого. Жильё и дорогу вуз не оплачивает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство не ограничивает: иностранцы любой страны учатся на тех же условиях, что и граждане Словакии. Смотрели страницы менеджмента, философского и естественно-научного факультетов."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы не ограничена, но аттестат зарубежной школы нужно признать в Словакии (нострификация). Смотрели страницу естественно-научного факультета."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы страницы не называют: условие — оконченная средняя школа и нострификация. Про 11-летнюю школу ничего не сказано. Смотрели страницы менеджмента и естественно-научного факультета."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы страницы не называют: выпускники прошлых лет прилагают заверенную справку об экзаменах. Смотрели страницу естественно-научного факультета."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения страницы не называют. Смотрели страницы менеджмента, философского и естественно-научного факультетов."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Минимального балла аттестата числом страницы не называют: оценки за 1–3 годы старшей школы вносят в заявку, при избытке заявок решение принимают по набору оценок и экзамену. Смотрели страницу естественно-научного факультета."
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Английский не ниже B2 (аттестат с экзаменом по английскому или международный сертификат), конкретных тестов и баллов страницы не называют. Смотрели страницу естественно-научного факультета."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство не ограничивает: по закону Словакии иностранцы из любой страны учатся на тех же условиях, что и граждане Словакии.",
+      "evidence": "According to Slovak laws and regulations foreign students (from any country in the world) are entitled to study at Slovak universities under the same conditions as Slovak citizens.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Основное условие — школьный аттестат об окончании средней школы; число лет страницы не называют. Для выпускников зарубежных школ обязательна нострификация (признание аттестата в Словакии): без неё на первый курс не зарегистрируют. Процесс занимает 1–3 месяца, поэтому подавать на нострификацию надо сразу после получения аттестата.",
+      "evidence": "The basic condition for admission is the successful completion of secondary school with a high school diploma.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Без нострификации записаться на первый курс в сентябре нельзя, а если не успеть и к запасному сроку, зачисление отменят. Таджикская школа 11-летняя: примет ли Словакия такой аттестат, страницы не говорят — спрашивай факультет и региональное управление школ в Братиславе.",
+      "evidence": "Without nostrification, it is not possible to register for the 1st year of study with us in September!",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Для программ на английском нужен английский не ниже B2: аттестат с выпускным экзаменом по английскому либо международный сертификат. Конкретные тесты и баллы страницы не называют.",
+      "evidence": "including a high school diploma with the English language final exam or an internationally recognized certificate in the English language (min. level B2).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Вступительный экзамен на естественных науках проводят только если заявок больше мест: тогда онлайн-тест на английском (экологические науки: биология, химия, география по трети; биохимия: биология и химия по половине). Если заявок не больше мест, принимают без экзамена.",
+      "evidence": "For all bachelor study programs (English and Slovak) at the Faculty of Natural Sciences CU, applicants will be admitted without admission exams, if the number of registered applicants does not exceed the capacity of the study program",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "На менеджменте экзамен тоже есть: даты в прошлом цикле — май или июль 2026, решение приёмной комиссии в течение трёх дней после экзамена.",
+      "evidence": "Entrance examination deadline: May/July 2026 (depending on the application)",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Заявка через портал e-prihlaska: электронная форма с оценками за 1–3 годы старшей школы, печатная копия с печатью школы по почте, резюме, платёж сбора и копия паспорта. Нужен действующий email: связь идёт только по почте.",
+      "evidence": "Required attachments : 1/ CV, 2/ confirmation of payment of administration fee, 3/verified copies of exam reports, 4/ copy of page of passport with photo and personal details (in color and high resolution)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки прошлого цикла (2026/27): менеджмент — первый тур до 31 марта 2026, второй до 31 мая (мог не открыться из-за мест); естественные науки — приём заявок с 15 января по 16 марта 2026, экзамен 11 июня, решение в конце июня, подтверждение интереса до 31 июля, нострификация до 16 сентября. Сроки 2027/28 страницы пока не называют.",
+      "evidence": "Deadline for submission of applications 16. 3. 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Менеджмент на английском (бакалавриат, 3 года): обучение 1 990 € в год, сбор за заявку 80 €.",
+      "evidence": "The Tuition Fee for one whole academic year to students in English program is 1990,00 €.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Естественные науки: сбор за заявку 20 € за программу при электронной подаче, 50 € при бумажной; невозвратный. Плата за обучение на этих страницах не названа.",
+      "evidence": "electronic application: €20 for each study program",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На философском факультете студенты из любой страны не платят за обучение, если укладываются в нормативный срок (3 года на бакалавриате, на востоковедении 4 года); за каждый лишний год — 1 400 €. Это относится к программам на словацком, на английских программах платят по тарифу вуза.",
+      "evidence": "they are not obliged to pay any tuition fees in case they manage to complete the programme within the standard length",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.fm.uniba.sk/en/study",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Comenius University, Братислава, Словакия; в карточке два английских факультета — менеджмент (1 990 € в год) и естественные науки. Нужен аттестат с нострификацией и английский не ниже B2. Сроки на 2027/28 пока не названы: в прошлом цикле заявки закрывались в марте."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.fm.uniba.sk/en/study",
+    "pages": [
+      {
+        "url": "https://www.fm.uniba.sk/en/study",
+        "contentHash": "sha256:62734345e50f53e2cda8f57df5b5373d1aca0ddee5f20f58084edbab802fd8cf"
+      },
+      {
+        "url": "https://fphil.uniba.sk/en/study/student/study-fees",
+        "contentHash": "sha256:ebc2efaa27920fd4bcd52d1b324427f51978303842f40de763241d061ac3e502"
+      },
+      {
+        "url": "https://fns.uniba.sk/en/study/applicant/admission-instructions-bachelor-level/",
+        "contentHash": "sha256:72acd6443de026385c5f989ce95cac608b5e746abecbc90b1783eb73f055a8a8"
+      },
+      {
+        "url": "https://uniba.sk/en",
+        "contentHash": "sha256:0792917bfdd08da3bd4f143ae6b331abadb9946ef8a55324ce766a47003398e3"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
