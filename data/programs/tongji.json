@@ -1,0 +1,269 @@
+{
+  "id": "tongji",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Tongji University (Китай): приём иностранцев на бакалавриат",
+    "orig": "Tongji University"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение для иностранцев платное. Китайскоязычные программы бакалавриата: 24 600 юаней в год (естественно-научные), 20 000 (право, гуманитарные, языки), 28 700 (архитектура, медицина, дизайн). Англоязычные: Architecture (International Class) — 33 800, Civil Engineering (International Class) — 35 000, MBBS — 45 000 юаней в год. Сбор за заявку 600 юаней (невозвратный), страховка 400 юаней за семестр. Помощь есть, но не гарантирована: Tongji University International Student Excellence Scholarship (только англоязычный бакалавриат) — полное обучение, страховка, общежитие (или 700 юаней/мес) и 2 500 юаней/мес; Shanghai Municipal Government Scholarship (только китайскоязычный бакалавриат) — Category A: полное обучение, страховка, жильё и 2 500 юаней/мес, Category B: обучение и страховка; Chinese Government Scholarship (Bilateral / Type A, только китайскоязычный бакалавриат) — через посольство КНР. Дорогу не покрывают."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Non-Chinese citizens who have graduated from high school(Only regular full-time high school graduates are accepted; online or equivalent qualification programs are not eligible.) or above and are in good health;"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы вход не закрывает: отказа по стране гражданства или школы в правилах приёма нет, требования выражены аттестатом о среднем образовании и языковыми сертификатами. Аттестат Таджикистана прямо не упомянут — нужно лишь, чтобы школа была очной и полноценной, а эквивалентность 11-летнего аттестата уточнять в приёмной. Смотрели страницу приёма иностранцев на бакалавриат (Enrollment Guide for International Students in 2026), требования к языку, стипендии Excellence, Shanghai Municipal Government Scholarship и CSC, стоимость и сроки подачи."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Non-Chinese citizens who have graduated from high school(Only regular full-time high school graduates are accepted; online or equivalent qualification programs are not eligible.)"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Год окончания школы не ограничивают: на снятых страницах требования к году выпуска нет, нужен лишь аттестат о среднем образовании. Новым выпускникам разрешено подавать справку об ожидаемом окончании школы."
+    },
+    "age": {
+      "min": 18,
+      "evidence": "Scholarship Applicants: applicants aged between 18 and 25 Self-supporting Applicants: applicants aged between 18 and 35 (up to and including December 31 in the year of application)"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Числового порога по среднему баллу в общих правилах приёма бакалавров нет: вуз просит лишь приложить транскрипты всех курсов школы и советует добавить описание системы оценивания. Порог «средний балл ≥85/100 или GPA ≥3.8/5.0» встречается только среди критериев стипендии Tongji University International Student Excellence Scholarship для англоязычного бакалавриата, поэтому в поле gpa он не вынесен. Смотрели Enrollment Guide for International Students in 2026, страницу стипендии Excellence и правила стипендий."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "For English taught majors: Copy of English proficiency certificate: IELTS 6.5 / TOEFL IBT 85 or above."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 85,
+          "evidence": "For English taught majors: Copy of English proficiency certificate: IELTS 6.5 / TOEFL IBT 85 or above."
+        },
+        {
+          "test": "HSK",
+          "min": 5,
+          "evidence": "Certificate of HSK5 Chinese Proficiency Test with a score of 180 (inclusive) or above (valid for 2 years)."
+        }
+      ],
+      "evidence": "5. Proof of language proficiency"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранец — не гражданин КНР. Бывшие китайские граждане, а также родившиеся за границей у китайских родителей проходят проверку гражданства вузом, а после зачисления — органами въезда-выезда; не прошедшие считаются сами отозвавшими заявку.",
+      "evidence": "Applicants who are immigrants from the Chinese mainland, Hong Kong, Macao, and Taiwan (China) and are a foreign national, or whose parents are both Chinese citizens and have settled abroad, or who have been a foreign national since birth must meet the requirements of the Ministry of Education's Jiao Wai Han [2020] No.12;",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат о среднем образовании, полученный очно на дневной форме; онлайн-программы и им эквивалентные не принимаются. Эквивалентность 11-летнего аттестата Таджикистана уточнять в приёмной.",
+      "evidence": "Non-Chinese citizens who have graduated from high school(Only regular full-time high school graduates are accepted; online or equivalent qualification programs are not eligible.)",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст: соискатели стипендии — 18–25 лет, идущие за свой счёт — 18–35 лет (включительно до 31 декабря года подачи).",
+      "evidence": "Scholarship Applicants: applicants aged between 18 and 25 Self-supporting Applicants: applicants aged between 18 and 35 (up to and including December 31 in the year of application)",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Кандидатам младше 18 лет (на 31 августа 2026) нужен опекун, живущий в материковом Китае, со стабильным доходом и подтверждением вклада.",
+      "evidence": "Applicants under the age of 18 (before August 31, 2026) must have a guardian living in mainland China with a stable source of income.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Для англоязычных программ: IELTS 6.5 или TOEFL iBT 85 и выше; оригинал сертификата предъявляется при регистрации.",
+      "evidence": "For English taught majors: Copy of English proficiency certificate: IELTS 6.5 / TOEFL IBT 85 or above.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для китайскоязычных программ: HSK5 не ниже 180 баллов, срок действия сертификата — 2 года.",
+      "evidence": "Certificate of HSK5 Chinese Proficiency Test with a score of 180 (inclusive) or above (valid for 2 years).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Носители английского языка и выпускники школ с обучением на английском освобождены от сертификата по английскому. Обучение в школе на китайском освобождает от HSK.",
+      "evidence": "(Applicants who are native English-speakers or have studied in English-medium high schools are not required to submit English proficiency certificates.)",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Всем иностранным бакалаврам — и стипендиатам, и платным, и на китайском, и на английском — до подачи заявки обязателен экзамен CSCA (China Scholastic Competency Assessment); сертификат загружается в систему, набор предметов зависит от специальности.",
+      "evidence": "All undergraduate program applicants (including those applying for various scholarships, self-funded students, and programs taught in Chinese or English) must take the \"China Scholastic Competency Assessment \" (CSCA) for Undergraduate Admission, organized by the China Scholarship Council under the Ministry of Education, before submitting their application to our university.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Общего числового порога по оценкам в правилах приёма нет; вуз советует приложить описание системы оценивания в транскрипте. Порог среднего балла (≥85/100 или GPA ≥3.8/5.0) стоит только в критериях стипендии Excellence для англоязычного бакалавриата.",
+      "evidence": "We recommend that you attach a description of the evaluation criteria of the transcripts.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение за год: китайскоязычные программы — 24 600 юаней (естественно-научные), 20 000 (право, гуманитарные, языки), 28 700 (архитектура, медицина, дизайн).",
+      "evidence": "Undergraduate Students Science Chinese 24600 RMB Arts / Humanities(Broadcast Journalism,Advertising ) 20000 RMB Architecture,Medicine, Film ， Dance, Performing Arts, Animation, Radio and TV 28700 RMB College of Design and Innovation 28700 RMB",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Англоязычные программы: Architecture (International Class) — 33 800, Civil Engineering (International Class) — 35 000, MBBS — 45 000 юаней в год.",
+      "evidence": "International Class of Architecture and Urban Planning English 33800 RMB Medicine M BBS（ Taught in English ） 4 5000 RMB Civil Engineering（Taught in English） 3 5000 RMB",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сбор за заявку — 600 юаней, невозвратный; платят онлайн в системе или переводом с загрузкой квитанции. Без оплаты заявку не рассматривают.",
+      "evidence": "Application fee: RMB600 (nonrefundable)",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 600,
+        "currency": "CNY",
+        "evidence": "Application fee: RMB600 (nonrefundable)"
+      }
+    },
+    {
+      "ru": "Страховка от несчастного случая и госпитализации — 400 юаней за семестр (800 юаней в год), платится при регистрации.",
+      "evidence": "Insurance Fee 400 RMB / Semester",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия Tongji University International Student Excellence Scholarship (только англоязычный бакалавриат): полное освобождение от платы за обучение, медстраховка, общежитие или 700 юаней/мес на жильё и 2 500 юаней/мес содержания. Приём заявок — с октября предыдущего года по май года зачисления.",
+      "evidence": "3. English-Taught Undergraduate Students  Full tuition waiver  Comprehensive medical insurance  On-campus housing or an off-campus housing subsidy of 700 CNY/month  Living allowance: 2,500 CNY/month",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Shanghai Municipal Government Scholarship (только китайскоязычный бакалавриат): Category A — полное обучение, страховка, бесплатное общежитие и 2 500 юаней/мес; Category B — полное обучение и страховка. Возраст на бакалавриат — не старше 25 лет.",
+      "evidence": "Category A: Full coverage on tuition fee, free on Comprehensive Medical Insurance and living allowance (undergraduate student: 2500 RMB/month; postgraduate student: 3000 RMB/month, Doctoral student: 3500 RMB/month)； Free on-campus accommodation",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Shanghai Municipal Government Scholarship, Category B: полное покрытие платы за обучение и медстраховки.",
+      "evidence": "2. Category B: Full coverage on tuition fee and Comprehensive Medical Insurance",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Chinese Government Scholarship (Bilateral Program / Type A) — только китайскоязычный бакалавриат: полная или частичная стипендия от Минобразования КНР, сроки у каждой страны свои (обычно ноябрь–март), подача через посольство или консульство КНР; вуз по запросу выдаёт предварительное зачисление.",
+      "evidence": "The Ministry of Education of China provides full or partial scholarships in accordance with educational cooperation and exchange agreements or MOUs signed with relevant governments, institutions, schools, and international organizations. The application time of each country is different (usually between November and March). Please consult the Chinese embassy (consulate) abroad and relevant departments.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача набора осени 2026: 10 января — 31 марта 2026 через онлайн-систему вуза study-info.tongji.edu.cn.",
+      "evidence": "Application Time January 10 ,2026 to March 31, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "В одной заявке можно выбрать только одну специальность.",
+      "evidence": "Each applicant may choose only one major.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Отбор идёт по документам, профильный институт проводит онлайн-собеседование для проверки языка и академических способностей.",
+      "evidence": "The relevant college will organize online interviews for applicants who meet the college's professional study requirements to assess the students' language, academic, and other comprehensive abilities.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Указанное окно (10 января — 31 марта 2026) относится к набору осени 2026; новый цикл и точные сроки вуз публикует на study.tongji.edu.cn, а стипендиальный путь Excellence принимает с октября предыдущего года по май года зачисления.",
+      "evidence": "The application period runs from October of the year prior to enrollment until May of the enrollment year.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-01-10",
+    "closes": "2026-03-31",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "http://study-info.tongji.edu.cn",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Tongji University (Шанхай, Китай). Приём иностранцев на бакалавриат через онлайн-систему вуза study-info.tongji.edu.cn; в заявке одна специальность, обязателен экзамен CSCA. Китайскоязычные и англоязычные программы, обучение от 20 000 до 45 000 юаней в год; стипендии Excellence (англоязычный бакалавриат), Shanghai Municipal Government и CSC (китайскоязычный бакалавриат)."
+    }
+  },
+  "source": {
+    "url": "https://study.tongji.edu.cn/en/CURRENT_STUDENTS/Free_Costs.htm",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://study.tongji.edu.cn/en/CURRENT_STUDENTS/Free_Costs.htm",
+        "contentHash": "sha256:78929e02d244ee886e24317323a4b68e005ceaf685a4a1b8d8e3cd9abf05d48e"
+      },
+      {
+        "url": "https://study.tongji.edu.cn/__local/6/AE/A6/66E0A7D71A250672DFF40ED4048_3682FBF2_3762E.pdf",
+        "contentHash": "sha256:ca1fc5be00f0a631befbeed9bd4721cda282347f0b87b012a65d75db5e4c3235"
+      },
+      {
+        "url": "https://study.tongji.edu.cn/__local/7/40/E6/33242F66C35759EE3833FC51C5A_31D69880_20DD6.pdf",
+        "contentHash": "sha256:9c8a46c890d39582b421b2a2cc9e30b0703963889baedd13cf6c1d2226fcaa1a"
+      },
+      {
+        "url": "https://study.tongji.edu.cn/en/info/1049/1002.htm",
+        "contentHash": "sha256:8ea7cd30b832a85b73bac96c2453f63fd9f8c229ebf6a5fc1b646de535a1ce35"
+      },
+      {
+        "url": "https://study.tongji.edu.cn/en/info/1049/1273.htm",
+        "contentHash": "sha256:dff847830884f9ceb99aad87b6c4d6d24637e9ff95bdb102079e545b14e88fb0"
+      },
+      {
+        "url": "https://study.tongji.edu.cn/en/ADMISSION/Application_Information_Updates.htm",
+        "contentHash": "sha256:43449faf6fa9674225911412866f8eccea5439a1625fec56e216e78f97e62b7a"
+      },
+      {
+        "url": "https://study.tongji.edu.cn/en/Admission_Information/Scholarship/School_Scholarship.htm",
+        "contentHash": "sha256:6795cbb9bf4fecb3ad28b4960ee4b1d4f8d3c10a711ca3222be4c82336af9bed"
+      },
+      {
+        "url": "https://study.tongji.edu.cn/en/ADMISSION/Undergraduate_Programs/Degree_programs_Chinese_taught.htm",
+        "contentHash": "sha256:8178eaf9c1dc2e4b2a505b868001ea30a12054b5f694d65b422634299d4b7489"
+      },
+      {
+        "url": "https://study.tongji.edu.cn/en/ADMISSION/Degree_Programs_English_Taught/Undergraduate_Programs.htm",
+        "contentHash": "sha256:3c537d1ed381db9853ef65a0e7905953db06876ad8f7045b9f7f2d18e32a0266"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}

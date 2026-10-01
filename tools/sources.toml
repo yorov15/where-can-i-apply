@@ -4642,3 +4642,21 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[tongji]
+name = "Tongji University (Китай)"
+files = [
+  { path = "manual/tongji/06-fees.html", url = "https://study.tongji.edu.cn/en/CURRENT_STUDENTS/Free_Costs.htm" },
+  { path = "manual/tongji/13-undergrad-guide-2026.pdf", url = "https://study.tongji.edu.cn/__local/6/AE/A6/66E0A7D71A250672DFF40ED4048_3682FBF2_3762E.pdf" },
+  { path = "manual/tongji/20-excellence-scholarship.pdf", url = "https://study.tongji.edu.cn/__local/7/40/E6/33242F66C35759EE3833FC51C5A_31D69880_20DD6.pdf" },
+  { path = "manual/tongji/sch-1002.html", url = "https://study.tongji.edu.cn/en/info/1049/1002.htm" },
+  { path = "manual/tongji/sch-1273.html", url = "https://study.tongji.edu.cn/en/info/1049/1273.htm" },
+  { path = "manual/tongji/04-application-updates.html", url = "https://study.tongji.edu.cn/en/ADMISSION/Application_Information_Updates.htm" },
+  { path = "manual/tongji/05-school-scholarship.html", url = "https://study.tongji.edu.cn/en/Admission_Information/Scholarship/School_Scholarship.htm" },
+  { path = "manual/tongji/02-undergrad-chinese-taught.html", url = "https://study.tongji.edu.cn/en/ADMISSION/Undergraduate_Programs/Degree_programs_Chinese_taught.htm" },
+  { path = "manual/tongji/03-undergrad-english-taught.html", url = "https://study.tongji.edu.cn/en/ADMISSION/Degree_Programs_English_Taught/Undergraduate_Programs.htm" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
