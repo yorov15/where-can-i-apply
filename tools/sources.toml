@@ -4716,3 +4716,23 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[scu]
+name = "Sichuan University (Китай)"
+files = [
+  { path = "manual/scu/00-entry-requirement.html", url = "https://en.scu.edu.cn/Admissions/Admission_Requirements_for_Degree_Programs/Bachelor_s/Entry_Requirement.htm" },
+  { path = "manual/scu/01-application.html", url = "https://en.scu.edu.cn/Admissions/Admission_Requirements_for_Degree_Programs/Bachelor_s/Application.htm" },
+  { path = "manual/scu/02-fees.html", url = "https://en.scu.edu.cn/Admissions/Admission_Requirements_for_Degree_Programs/Bachelor_s/Fees.htm" },
+  { path = "manual/scu/03-accomodation.html", url = "https://en.scu.edu.cn/Campus_Life/Accomodation.htm" },
+  { path = "manual/scu/04-prearrival.html", url = "https://en.scu.edu.cn/Admissions/Pre_arrival_Information_for_International_Studen.htm" },
+  { path = "manual/scu/05-application-period.txt", url = "https://global.scu.edu.cn/oso/article/index/1111" },
+  { path = "manual/scu/06-scholarship-study-at-scu.txt", url = "https://global.scu.edu.cn/oso/article/details/9dfcd5bf-f620-402f-97a1-54caa31312e5" },
+  { path = "manual/scu/07-csc-scholarship.txt", url = "https://global.scu.edu.cn/oso/article/details/ffb69423-aba9-4731-a263-b37f66604a29" },
+  { path = "manual/scu/08-csca.txt", url = "https://global.scu.edu.cn/oso/article/details/80828db8-7e01-4963-a245-2833733671b6" },
+  { path = "manual/scu/09-apply-process.txt", url = "https://global.scu.edu.cn/oso/article/index/1114" },
+  { path = "manual/scu/10-application-fee.txt", url = "https://global.scu.edu.cn/oso/article/index/1084" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

@@ -1,0 +1,306 @@
+{
+  "id": "scu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Sichuan University (Китай): приём иностранцев на бакалавриат",
+    "orig": "Sichuan University (四川大学)"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: год бакалавриата для иностранца — 17 500–45 000 юаней в год в зависимости от направления (гуманитаристика, экономика и менеджмент — 17 500; наука и инженерия, археология — 22 000; фармация и общественное здоровье — 29 250; стоматология — 36 000; клиническая медицина MBBS и искусство/спорт — 45 000). Жильё тоже платное: общежитие от 17 до 60 юаней с человека в сутки, на кампусе Jiang'an — 4 500–18 000 юаней за место в год; жизнь в Чэнду вуз оценивает примерно в 5 000 юаней в месяц. Есть стипендии: государственная стипендия Китая (CSC) покрывает обучение, общежитие и медстраховку и даёт бакалавру 2 500 юаней в месяц, но оформляется через посольство своей страны и по конкурсу; фирменная стипендия «Study at SCU» — частичная, до 20 000 юаней в год. Гарантированного полного покрытия для иностранца-бакалавра нет, поэтому покрытие в карточке не отмечено."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Applicants (at least 18 years old; under 25 years old in principle) must be non-Chinese citizens with good physical and mental health and holding valid foreign passports in accordance with Nationality Law of the People's Republic of China."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы вход не закрывает: отказ по стране не назван, требования выражены гражданством (только не-гражданин Китая), школьным аттестатом и языковыми сертификатами, а не страной школы. Аттестат Таджикистана прямо не упомянут — эквивалентность числа лет школы уточнять в приёмной. Смотрели страницы требований приёма бакалавриата, подачи, стоимости и стипендий."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Applicants must have a high school degree in minimum with good academic records."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Год окончания школы вход не ограничивает: принимают и тех, кто ещё учится, — вместо диплома можно подать справку о предстоящем выпуске с указанием даты выпуска. Смотрели страницы требований приёма и подачи бакалавриата."
+    },
+    "age": {
+      "min": 18,
+      "max": 25,
+      "evidence": "Applicants (at least 18 years old; under 25 years old in principle)"
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Applicants must have a high school degree in minimum with good academic records."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "HSK",
+          "min": 5,
+          "parts": true,
+          "evidence": "Scored 180 or above at HSK Level 5"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "evidence": "TOEFL certificate (scored 80 or above)"
+        },
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "IELTS certificate (scored 6.0 or above)"
+        }
+      ],
+      "evidence": "4. Language proficiency requirements:"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Подать может только не-гражданин Китая с действующим зарубежным паспортом, по нормам закона КНР о гражданстве. Гражданство Таджикистана требованию соответствует, отказа по стране нет.",
+      "evidence": "Applicants (at least 18 years old; under 25 years old in principle) must be non-Chinese citizens with good physical and mental health and holding valid foreign passports in accordance with Nationality Law of the People's Republic of China.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Для тех, кто раньше был гражданином Китая и получил иностранное гражданство, действует отдельный порядок по уведомлению Минобразования КНР; таджикского абитуриента это не касается.",
+      "evidence": "For applicants who were Chinese citizens and are now foreign citizens, their applications will be handled in accordance with the Notice on Standardizing Acceptance of International Students at Chinese Higher Education Institutions by the Ministry of Education.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Возраст для бакалавриата: не моложе 18 и, как правило, не старше 25 лет.",
+      "evidence": "Applicants (at least 18 years old; under 25 years old in principle)",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен как минимум школьный аттестат с хорошими оценками; число лет школы вуз не называет. Таджикские 11 классов дают аттестат о среднем образовании — при сомнении эквивалентность уточнять в приёмной.",
+      "evidence": "Applicants must have a high school degree in minimum with good academic records.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Вместо диплома можно подать заверенную школой справку о предстоящем выпуске, но в ней должна стоять дата выпуска.",
+      "evidence": "High school graduation certificate or pre-graduation certificate (sealed by the school). Applicants applying with a pre-graduation certificate must denote the graduation date;",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Оценки отдельным порогом не заданы: требование выражено словами «хорошие академические результаты».",
+      "evidence": "with good academic records",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Китайский обязателен для программ на китайском: HSK 5 уровня (не ниже 180 баллов) или сертификат, подтверждающий обучение на китайском.",
+      "evidence": "Scored 180 or above at HSK Level 5",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский обязателен для программ на английском для тех, для кого он не родной: TOEFL не ниже 80 или IELTS не ниже 6.0 (либо сертификат обучения на английском).",
+      "evidence": "Applicants who are not native speakers of English must provide a TOEFL certificate (scored 80 or above), or IELTS certificate (scored 6.0 or above), or other certificates demonstrating an equivalent level of English proficiency;",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Носители английского от сертификата английского освобождены.",
+      "evidence": "Applicants who are native speakers of English are exempt from English proficiency certificates.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Для бакалаврской программы «Китайский язык» сертификат HSK не обязателен.",
+      "evidence": "(3) HSK certificate is not mandatory for applicants who are first-year students of the undergraduate program of Chinese Language by School of Overseas Education.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Отдельное вступительное требование: на бакалавриат надо сдать экзамен CSCA и приложить его баллы (по программам — разные предметы).",
+      "evidence": "Applicants to Sichuan University's undergraduate programs must provide CSCA scores.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Гуманитарные программы на английском требуют CSCA по математике.",
+      "evidence": "For Liberal Arts programs (English-taught), CSCA scores (Mathematics) are required.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Естественно-научные и инженерные программы на английском требуют CSCA по математике и физике.",
+      "evidence": "For Science/Engineering programs (English-taught), CSCA scores (Mathematics and Physics) are required.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Медицинские программы на английском требуют CSCA по математике, физике и химии.",
+      "evidence": "For Medical programs (English-taught), CSCA scores (Mathematics, Physics, and Chemistry) are required.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Комплект документов: паспорт, аттестат или справка о выпуске, школьный табель, личное заявление, языковые сертификаты, медосмотр (не старше 6 месяцев), подтверждение средств, справка о несудимости; неполные заявки не рассматривают.",
+      "evidence": "9. Non-Criminal Record Certificate. Applicants should provide a Non-Criminal Record Certificate issued by the local public security authority, which should be no more than six months before the date of application.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение платное; годовые ставки по направлениям: гуманитаристика, экономика и менеджмент — 17 500; наука и инженерия, археология — 22 000; фармация и общественное здоровье — 29 250; стоматология — 36 000; клиническая медицина (MBBS) и искусство/спорт — 45 000 юаней за год.",
+      "evidence": "Undergraduate Program Tuition Fees Category of majors Majors Annual tuition (RMB/year) Humanities, economics, and management All 17,500 Science and engineering All 22,000 Medicine Pharmacy / public health 29,250 Stomatology 36,000 Clinical medicine (MBBS) 45,000 Arts and sports All 45,000 Archeology All 22,200",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общежитие платное: на кампусе Wangjiang одноместная комната — 50 юаней, обычная — 36 юаней с человека в сутки; на кампусе Jiang'an место в комнате на 4 человек — 4 500 юаней в год, на 3 — 6 000, на 2 — 9 000, одноместная — 18 000.",
+      "evidence": "Rate of Hongwa Student Apartment at Wangjiang Campus Room Type Facilities Rate(RMB) Single room air conditioner, furniture, free WIFI, shared laundry, shared kitchen, broadband network interface, etc. RMB 50/person/day Single room (large) RMB 52/person/day Standard room RMB 36/person/day Standard room (large) RMB 40/person/day Suite (including two detached rooms) RMB 48/person/day",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Место в общежитии на кампусе Jiang'an: одноместная комната — 18 000 юаней в год, двухместная — 9 000 за место, трёхместная — 6 000, четырёхместная — 4 500.",
+      "evidence": "4. Rate of Student Apartment at Jiang ' an Campus Room Type Facilities Rate (RMB) Single room air conditioner, furniture, free WIFI, shared laundry, shared kitchen, broadband network interface, etc. RMB18,000/room/year Double room RMB9,000/bed/year Triple room RMB6,000/bed/year Quadruple room RMB4,500/bed/year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Жизнь в Чэнду вуз оценивает примерно в 5 000 юаней в месяц с жильём, едой и транспортом.",
+      "evidence": "Our estimation for the average cost of living per month in Chengdu is 5,000 RMB (housing, food and transportation included).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за подачу — 600 юаней; она нужна и при подаче на стипендию, и не возвращается.",
+      "evidence": "5. Application fee: 600RMB (Please note: Application fee is also required for scholarship applications.)",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 600,
+        "currency": "CNY",
+        "evidence": "5. Application fee: 600RMB (Please note: Application fee is also required for scholarship applications.)"
+      }
+    },
+    {
+      "ru": "Нужно подтвердить средства: справка о вкладе семьи или о доходе родителей; рекомендуемая сумма — не меньше 5 000 долларов США. Подающие на полную стипендию от этого освобождены.",
+      "evidence": "with a recommended amount of no less than 5,000 US dollars.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Государственная стипендия Китая (CSC) для бакалавра покрывает обучение и общежитие и даёт 2 500 юаней в месяц; оформляется через посольство своей страны, а не через вуз.",
+      "evidence": "III. Scholarship Coverage 1. Tuition fees; 2. Free university dormitory or accommodation subsidy; 3. Stipend: Undergraduates: CNY 2,500 per month; Master's students/general scholars: CNY 3,000 per month; Doctoral students/senior scholars: CNY 3,500 per month.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия вуза «Study at SCU» для бакалавра — частичная, максимум до 20 000 юаней в год.",
+      "evidence": "Undergraduate Students : Partial scholarship, up to a maximum of 20,000 RMB/year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "По стипендии «Study at SCU» для бакалавров возраст — как правило, от 18 до 22 лет (на 1 сентября 2025); это условие стипендии, а не приёма.",
+      "evidence": "Undergraduate applicants should generally be 18 to 22 years old.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Срок подачи на бакалавриат: с 1 января по 30 мая (для набора 2026 указан прямо: с 1 января 2026 по 30 мая 2026).",
+      "evidence": "Sichuan University's application period for the 2026 undergraduate programs is from January 1, 2026, to May 30, 2026.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявку подают онлайн в системе для иностранных студентов вуза.",
+      "evidence": "Applicants shall apply online via the international student application website of Sichuan University at https://scu.17gz.org/member/login.do within the specified application period.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-01-01",
+    "closes": "2026-05-30",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://scu.17gz.org/member/login.do",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Sichuan University (四川大学), Чэнду, Китай. Приём иностранцев на бакалавриат ведёт Overseas Students Office; заявка онлайн через систему вуза. Обучение и жильё платные, есть государственная стипендия Китая (CSC) и частичная стипендия вуза «Study at SCU». Срок подачи на бакалавриат — с 1 января по 30 мая."
+    }
+  },
+  "source": {
+    "url": "https://en.scu.edu.cn/Admissions/Admission_Requirements_for_Degree_Programs/Bachelor_s/Entry_Requirement.htm",
+    "lastVerified": "2026-10-01",
+    "humanChecked": false,
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://en.scu.edu.cn/Admissions/Admission_Requirements_for_Degree_Programs/Bachelor_s/Entry_Requirement.htm",
+        "contentHash": "sha256:dd668dcc10041c4c52c8616e25430460fc1a0e938612b160037919988c2dfccb"
+      },
+      {
+        "url": "https://en.scu.edu.cn/Admissions/Admission_Requirements_for_Degree_Programs/Bachelor_s/Application.htm",
+        "contentHash": "sha256:d831b611760e4a103609bc603fe69fefa9766466c2b6df9633befd3a4381f6d5"
+      },
+      {
+        "url": "https://en.scu.edu.cn/Admissions/Admission_Requirements_for_Degree_Programs/Bachelor_s/Fees.htm",
+        "contentHash": "sha256:5476d5dd7e3a46a5e4ddbbd2fd22eda9775d0a86dee1fdc9039fc894eb28226d"
+      },
+      {
+        "url": "https://en.scu.edu.cn/Campus_Life/Accomodation.htm",
+        "contentHash": "sha256:40ffa599b37a19130b7e95c7be8aa2509df45d8e0ef07465d2a33f302ddc6eb4"
+      },
+      {
+        "url": "https://en.scu.edu.cn/Admissions/Pre_arrival_Information_for_International_Studen.htm",
+        "contentHash": "sha256:09e1f3b412fdf09f21d5b76f14bb4e507fe976fe2a8564a744b78bb26f9b44c9"
+      },
+      {
+        "url": "https://global.scu.edu.cn/oso/article/index/1111",
+        "contentHash": "sha256:c2badf227bd2ee7ea85d665904c8b11acc45567f7a379a13ef33790d7c72c1ac"
+      },
+      {
+        "url": "https://global.scu.edu.cn/oso/article/details/9dfcd5bf-f620-402f-97a1-54caa31312e5",
+        "contentHash": "sha256:4b5a7b7a7654cd932b57f7fbecf72fc2c16c9b1f758f0aad14569d2a0deeaf1e"
+      },
+      {
+        "url": "https://global.scu.edu.cn/oso/article/details/ffb69423-aba9-4731-a263-b37f66604a29",
+        "contentHash": "sha256:f4333689f7b76d970ae7c2a54ec39980090e0780d0bbf65c4d8f2eb276bcd5f9"
+      },
+      {
+        "url": "https://global.scu.edu.cn/oso/article/details/80828db8-7e01-4963-a245-2833733671b6",
+        "contentHash": "sha256:738b3278ef494afe5c3f9cc6c8d5366f993842ffcfe589d231f4d8089db82187"
+      },
+      {
+        "url": "https://global.scu.edu.cn/oso/article/index/1114",
+        "contentHash": "sha256:dbe00affc59f0b5e90f670318babe4e70f143b2a99d4aa35419f920b159d0611"
+      },
+      {
+        "url": "https://global.scu.edu.cn/oso/article/index/1084",
+        "contentHash": "sha256:7f74a815804b32f232378f6053e577975cc55539cd72e86301e06357a3a34c95"
+      }
+    ]
+  }
+}
