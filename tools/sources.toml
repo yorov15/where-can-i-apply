@@ -4660,3 +4660,21 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[beihang]
+name = "Beihang University (Китай)"
+files = [
+  { path = "manual/beihang/00-undergraduate-2026.html", url = "https://is.buaa.edu.cn/en/lxsq/Undergraduate.htm" },
+  { path = "manual/beihang/03-undergraduate-info.html", url = "https://is.buaa.edu.cn/en/info/1027/3061.htm" },
+  { path = "manual/beihang/05-foundation-bachelor.html", url = "https://is.buaa.edu.cn/en/lxsq/fb.htm" },
+  { path = "manual/beihang/06-scholarships.html", url = "https://is.buaa.edu.cn/en/jxj.htm" },
+  { path = "manual/beihang/07-beijing-gov-scholarship.html", url = "https://is.buaa.edu.cn/en/jxj/bjwglxsjxj.htm" },
+  { path = "manual/beihang/08-beihang-scholarship.html", url = "https://is.buaa.edu.cn/en/jxj/bhwglxsjxj.htm" },
+  { path = "manual/beihang/09-self-supported-scholarship.html", url = "https://is.buaa.edu.cn/en/info/1041/1937.htm" },
+  { path = "manual/beihang/10-csca-subjects.pdf", url = "https://is.buaa.edu.cn/2026nianbeijinghangkonghangtiandaxueguojixueshengbenkezhuanyeCSCAceshikemuyaoqiu.pdf" },
+  { path = "manual/beihang/04-ev-undergraduate.html", url = "https://ev.buaa.edu.cn/Admissions/Undergraduate_Program.htm" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

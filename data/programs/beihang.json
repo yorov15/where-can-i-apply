@@ -1,0 +1,255 @@
+{
+  "id": "beihang",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Beihang University (Китай): приём иностранцев на бакалавриат",
+    "orig": "Beihang University (北京航空航天大学)"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение для иностранцев платное: китайскоязычные программы — 25 000 юаней в год (наука, инженерия, менеджмент, литература, право), биомедицинская инженерия, визуальная коммуникация и живопись — 30 000, англоязычные программы — 30 000 юаней в год. Плюс страховка 3 200 юаней за четыре года и общежитие (Пекин — около 30 юаней за койко-место в сутки). Есть конкурсные стипендии, которые полностью или частично снимают плату за обучение, а лучшие (Outstanding Talents, CSC) дают ещё общежитие и ежемесячные деньги, но это не гарантировано и заявляется вместе с заявкой на приём до 30 мая. Без стипендии жильё и дорога — за свой счёт, поэтому полное покрытие не отмечено."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Applicants must be non-Chinese citizen with a valid passport, meet the conditions set by the Nationality Law of the PRC, Document No. 12 (2020) of Ministry of Education of the PRC ."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране на снятых страницах нет, требуется лишь не-китайское гражданство и аттестат о среднем образовании. Отдельного требования к стране школы или списка стран нет; Таджикистан прямо не упомянут, эквивалент таджикского аттестата уточнять в приёмной. Смотрели страницы: Undergraduate Program of Beihang University 2026 (is.buaa.edu.cn/en/lxsq/Undergraduate.htm), Foundation+Bachelor (is.buaa.edu.cn/en/lxsq/fb.htm), CSCA Subjects Requirement for International Undergraduate Students 2026."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "have attained a senior high school diploma"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы нет: вуз требует только аттестат о среднем образовании («have attained a senior high school diploma») и принимает справку об ожидаемом выпуске. Года выпуска ни числом, ни оговоркой страницы не задают. Смотрели страницы: Undergraduate Program of Beihang University 2026 (is.buaa.edu.cn/en/lxsq/Undergraduate.htm) и Foundation+Bachelor (is.buaa.edu.cn/en/lxsq/fb.htm)."
+    },
+    "age": {
+      "min": 18,
+      "max": 22,
+      "evidence": "between the ages of 18 and 22"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Числового порога по оценкам нет: в требованиях названы только аттестат о среднем образовании и возраст, GPA не упоминается вовсе. Качественные слова о хорошей успеваемости и «outstanding performance in the entrance integrative test» относятся к отбору на стипендии, а не к порогу допуска. Смотрели страницы: Undergraduate Program of Beihang University 2026 (is.buaa.edu.cn/en/lxsq/Undergraduate.htm), Foundation+Bachelor (is.buaa.edu.cn/en/lxsq/fb.htm), Application Procedures for Self-Supported Foreign Students Scholarship (is.buaa.edu.cn/en/info/1041/1937.htm)."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "HSK",
+          "min": 5,
+          "evidence": "HSK Level 5(or above) reports with a score of no less than 180 points (inclusive) within two years"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "evidence": "TOEFL（90 or above）"
+        },
+        {
+          "test": "IELTS",
+          "min": 6,
+          "evidence": "IELTS（6 or above）"
+        }
+      ],
+      "evidence": "For Chinese Taught Program： Applicants are required to provide HSK Level 5(or above) reports with a score of no less than 180 points (inclusive) within two years"
+    },
+    "exam": {
+      "notMeasured": true,
+      "evidence": "Applicants must take the China Scholastic Competency Assessment(CSCA) organized by the China Scholarship Council (CSC) under the Ministry of Education of the People's Republic of China and obtain the test scores"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подать может только не-гражданин Китая с действующим загранпаспортом, с учётом законов КНР о гражданстве. Гражданство Таджикистана этому требованию соответствует, отказа по стране нет.",
+      "evidence": "Applicants must be non-Chinese citizen with a valid passport, meet the conditions set by the Nationality Law of the PRC, Document No. 12 (2020) of Ministry of Education of the PRC .",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст на приём: от 18 до 22 лет, и обязателен аттестат о среднем образовании.",
+      "evidence": "between the ages of 18 and 22, and have attained a senior high school diploma",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен диплом об окончании средней школы; тем, кто ещё учится, принимают справку об ожидаемом выпуске, а оригинал диплома проверят при регистрации. Число лет школы вуз прямо не называет — эквивалент таджикских 11 классов уточнять в приёмной.",
+      "evidence": "High School Graduation Certificate (expected graduation certificate from the high school currently studying at can also be accepted, the original copy of high school graduation certificate will be verified at the time of registration)",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Китайскоязычные программы требуют HSK 5 или выше с баллом не ниже 180 (срок действия отчёта — два года); англоязычные — TOEFL 90+, IELTS 6+ либо справку, что все предметы в школе преподавались на английском.",
+      "evidence": "For English Taught Program ：Applicants whose native language is not English should submit an English proficiency certificate within two years, such as the result of TOEFL（90 or above）, IELTS（6 or above）or proof of all courses taught in English issued by high school or other English proficiency certificate.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обязателен вступительный тест CSCA (China Scholastic Competency Assessment) от CSC: оценки надо сдать в систему вуза не позднее 30 мая 2026. Предметы CSCA зависят от специальности и языка обучения.",
+      "evidence": "Applicants must take the China Scholastic Competency Assessment(CSCA) organized by the China Scholarship Council (CSC) under the Ministry of Education of the People's Republic of China and obtain the test scores and must submit the CSCA transcript to the Beihang International Student Application System no later than May 30 th , 2026.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Сроки: подача открыта с 1 ноября 2025 до 30 июня 2026. Предварительные решения — март, апрель и июнь 2026; официальное зачисление — июль 2026; регистрация — август или сентябрь 2026.",
+      "evidence": "Online Application Start Date November 1, 2025 Application Deadline （Applicants need to complete online application Information, submit scanned copies of application materials, supplement returned application materials before this date） June 30, 2026 Pre - admission 1 st Batch March, 2026 2 nd Batch April, 2026 3 rd Batch June, 2026 Official A dmission July, 2026 Registration Date （The specific date will be published on the admission notice） August or September, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Плата за заявку — 400 юаней, вносится онлайн и не возвращается ни в каком случае.",
+      "evidence": "Application Fee: 400 Yuan (pay online) The application fee is non-refundable in all cases, regardless of whether the application is successful or not.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 400,
+        "currency": "CNY",
+        "evidence": "Application Fee: 400 Yuan (pay online) The application fee is non-refundable in all cases, regardless of whether the application is successful or not."
+      }
+    },
+    {
+      "ru": "Обучение: китайскоязычные программы — 25 000 юаней в год (наука, инженерия, менеджмент, литература, право); биомедицинская инженерия, визуальная коммуникация и живопись — 30 000; англоязычные программы — 30 000 юаней в год.",
+      "evidence": "Programs taught in Chinese: Science, Engineering, Management, and Literature, Law majors: 25000 Yuan/Year Biomedical Engineering, Visual Communication Design and Painting Majors: 30,000 Yuan /Year Programs taught in English: 30,000 Yuan /Year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Страховка — 3 200 юаней за 4 года, обязательна при регистрации. Общежитие: Пекин — 30 юаней за койко-место в сутки, кампус Ханчжоу — 2 000–2 500 юаней за учебный год за койко-место; бронировать заранее, коммунальные не включены.",
+      "evidence": "Insurance: 3,200 Yuan /4 Yr. (All students must buy a four-year comprehensive medical insurance when registering.) Accommodation Fee * Campuses in Beijing: Double rooms, 30 RMB/ Day, per bed Hangzhou International Campus: Double rooms, 2,000~2,500 RMB per academic year per bed",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Нужна справка финансового поручителя: депозит не меньше стоимости 4 лет обучения либо подтверждённый годовой доход не меньше 30 000 юаней.",
+      "evidence": "Financial guarantor proof (bank deposit of no less than 4 years tuition fee or annual income of no less than 30000 RMB)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия «Outstanding Talents» для свежих выпускников школы: полное обучение, общежитие и ежемесячные деньги на жизнь (4 года, с ежегодным продлением). Стипендия Program and Cooperation — 100 %, 80 %, 50 % или 20 % обучения. Заявки на обе — до 30 мая 2026.",
+      "evidence": "Deadline: May 30 th , 2026 • Full Tuition Fee • Accommodation Fee • Living Allowance Program and Cooperation Foreign Students Scholarship of Beihang University",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия правительства Пекина снимает полную плату за обучение и даёт комплексную медстраховку; для неё нужно хорошо учиться и показать себя на вступительном испытании. Заявка до 30 мая 2026.",
+      "evidence": "Application Deadline: May 30 th , 2026 • Full Tuition Fee • Comprehensive Medical Insurance Apply for academic year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Государственная стипендия Китая (CSC-Bilateral, тип A) — только для китайскоязычных программ, полная или частичная; подавать надо через ведомство своей страны.",
+      "evidence": "Chinese Government Scholarship-Bilateral Program (Type A) (Only for programs taught in Chinese)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия вуза для иностранцев, обучающихся за свой счёт: полная (обучение, общежитие, страховка и проживание по нормам CSC) или частичная (скидка 20 %, 50 %, 80 % или 100 % на обучение, а также частично общежитие и проживание).",
+      "evidence": "Full Scholarship: includes tuition fee, accommodation fee, insurance fee and living expenses (refer to the standard of Chinese government scholarship (CSC) students); Partial Scholarship: Overall or partial tuition fees (reduce 20%, 50%, 80& or 100% tuition fee), overall or partial accommodation fee and overall or partial living expenses.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Форму на стипендию надо подать вместе с материалами заявки на приём через онлайн-систему вуза, иначе считается, что на стипендию ты не подавал.",
+      "evidence": "please submit the corresponding application form together with the admission application materials through Beihang online application system, otherwise it will be deemed not to apply for scholarship.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обходной путь, если школа или язык слабее: программа «Foundation+Bachelor» в Ханчжоу — подготовительный курс с апреля по июль 2026 (обучение и жильё 8 000 юаней), затем 4 года бакалавриата (30 000 юаней в год) по направлениям информатика (AI и большие данные), международная экономика и торговля, биомедицинская инженерия. Заявка до 10 марта 2026; чтобы перейти на бакалавриат, надо сдать CSCA, все экзамены курса, посещать не менее 95 % занятий и пройти собеседование с экзаменом вуза.",
+      "evidence": "Foundation Course: April to July, 2026 Bachelor Degree: 4 Years, start from August/September 2026",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Кто младше 18 лет на 1 сентября 2026, приносит нотариальное поручительство опекуна — взрослого с доходом, проживающего в городе кампуса (Пекин или Ханчжоу).",
+      "evidence": "Applicants under the age of 18 as of Sept 1 st , 2026 should submit a notarized Guardian Guarantee Letter. The guardian should be an adult who resides in the city where the campus is located (Beijing or Hangzhou) with a source of income.",
+      "field": "age",
+      "kind": "note"
+    },
+    {
+      "ru": "Документы должны быть на английском или китайском, иначе нужен заверенный перевод; принимают сканы оригиналов, бумажные копии не требуются.",
+      "evidence": "The language of documents should be in English or Chinese or attached with Notarized translation document in English or Chinese.",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": "2025-11-01",
+    "closes": "2026-06-30",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "http://admission.buaa.edu.cn",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Beihang University (BUAA, 北京航空航天大学), Пекин и кампус в Ханчжоу. Приём иностранцев на бакалавриат на китайском и английском языках; подача — онлайн через admission.buaa.edu.cn, срок — до 30 июня 2026. Обязателен тест CSCA, аттестат о среднем образовании и справка о финансах. Обучение платное (25 000–30 000 юаней в год) с конкурсными стипендиями."
+    }
+  },
+  "source": {
+    "url": "https://is.buaa.edu.cn/en/lxsq/Undergraduate.htm",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://is.buaa.edu.cn/en/lxsq/Undergraduate.htm",
+        "contentHash": "sha256:83c5bd1a54269fc10ac67bc6a05d3ee25f7b74585a52971b182cfc9abc15956d"
+      },
+      {
+        "url": "https://is.buaa.edu.cn/en/info/1027/3061.htm",
+        "contentHash": "sha256:1c961dc338b116a81183e1ed751e0016b3a4105c13560d3f9625fbd9faea3159"
+      },
+      {
+        "url": "https://is.buaa.edu.cn/en/lxsq/fb.htm",
+        "contentHash": "sha256:892111719cb5ea4767b2dfa1978c308a30c4b68a08189c764c5926c766a89ffc"
+      },
+      {
+        "url": "https://is.buaa.edu.cn/en/jxj.htm",
+        "contentHash": "sha256:5ec045fde3892cfbb3d0730ccad39b6b64c588f590567f33d287b1d7f9603215"
+      },
+      {
+        "url": "https://is.buaa.edu.cn/en/jxj/bjwglxsjxj.htm",
+        "contentHash": "sha256:2accb90bf8e90dfc1259ad8f18a14702849b6b1be5e739f6d7bcccb5cfd01fcc"
+      },
+      {
+        "url": "https://is.buaa.edu.cn/en/jxj/bhwglxsjxj.htm",
+        "contentHash": "sha256:0e19db009d2c85d85c8b2deb005c78c8f33131f25e238e15feff989c50a4b600"
+      },
+      {
+        "url": "https://is.buaa.edu.cn/en/info/1041/1937.htm",
+        "contentHash": "sha256:4af38aa8c09383f0c52160a05b622b480864c9b6dd1c35d5cde1a23724aab708"
+      },
+      {
+        "url": "https://is.buaa.edu.cn/2026nianbeijinghangkonghangtiandaxueguojixueshengbenkezhuanyeCSCAceshikemuyaoqiu.pdf",
+        "contentHash": "sha256:5523f373c4ee8f2249c5dbd2f97ceb9dd7920adad73ab51f07e862b3306b09eb"
+      },
+      {
+        "url": "https://ev.buaa.edu.cn/Admissions/Undergraduate_Program.htm",
+        "contentHash": "sha256:3dc5f68449e3700795958a22d7866cc2550956eb73045ae7295a36a6a18ab688"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
