@@ -4884,3 +4884,26 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[mate]
+name = "Hungarian University of Agriculture and Life Sciences, MATE (Венгрия)"
+files = [
+  { path = "manual/mate/00-application-procedure.html", url = "https://en.uni-mate.hu/application-procedure-for-bsc-msc" },
+  { path = "manual/mate/01-bsc-msc-programmes.html", url = "https://en.uni-mate.hu/bsc-and-msc-programmes-in-english" },
+  { path = "manual/mate/02-foundation-course.html", url = "https://en.uni-mate.hu/foundation-course-for-studies-in-english" },
+  { path = "manual/mate/03-scholarships.html", url = "https://en.uni-mate.hu/scholarships" },
+  { path = "manual/mate/04-faq-admissions.html", url = "https://en.uni-mate.hu/faq-admissions" },
+  { path = "manual/mate/05-faq-funding.html", url = "https://en.uni-mate.hu/faq-funding-and-scholarships" },
+  { path = "manual/mate/06-sh-rules.html", url = "https://en.uni-mate.hu/sh-rules-procedures" },
+  { path = "manual/mate/07-scyp-rules.html", url = "https://en.uni-mate.hu/scyp-rules-procedures" },
+  { path = "manual/mate/08-diaspora-scholarship.html", url = "https://en.uni-mate.hu/hungarian-diaspora-scholarship-rules-procedures" },
+  { path = "manual/mate/09-misp-rules.html", url = "https://en.uni-mate.hu/misp-rules-procedures" },
+  { path = "manual/mate/10-accommodation.html", url = "https://en.uni-mate.hu/accommodation" },
+  { path = "manual/mate/11-welcome-information.html", url = "https://en.uni-mate.hu/welcome-information" },
+  { path = "manual/mate/12-language-certificate.html", url = "https://en.uni-mate.hu/language-certificate-application" },
+  { path = "manual/mate/13-refund-policy.html", url = "https://en.uni-mate.hu/refund-policy" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

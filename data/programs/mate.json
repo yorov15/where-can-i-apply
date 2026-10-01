@@ -1,0 +1,341 @@
+{
+  "id": "mate",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "MATE (Венгрия): приём иностранцев на бакалавриат",
+    "orig": "Hungarian University of Agriculture and Life Sciences (Magyar Agrár- és Élettudományi Egyetem)"
+  },
+  "hostCountry": "HU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Обучение на английском платное: семестр бакалавриата стоит 1500–2500 евро в зависимости от программы (дешевле всего Film and media studies — 1500, дороже всего Landscape Management and Garden Construction Engineering — 2500). Сбор за заявку 100 евро, первый год нужно оплатить до зачисления. Полное покрытие даёт государственная стипендия Stipendium Hungaricum (отдельная заявка, для граждан стран-партнёров) и собственная стипендия вуза MISP (без ограничений по гражданству). Жильё и дорога не покрываются"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "гражданство не ограничивают: вуз ведёт отдельный приём иностранцев, а у стипендии MISP ограничений по стране нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "страну школы не ограничивают: принимают документы о среднем образовании разных систем, лишь бы они были переведены и заверены"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Сколько лет школы требует вуз — на страницах приёма не сказано. Названо только, что абитуриент бакалавриата обязан загрузить official copy of their secondary school final examination (аттестат о среднем образовании), без числа лет. Для подготовительного Foundation Course достаточно Successful completion of secondary education. При 11-летней школе Таджикистана это условие «уточни в приёмной»: смотрели страницы application-procedure-for-bsc-msc, bsc-and-msc-programmes-in-english, foundation-course-for-studies-in-english, faq-admissions — требования в 12 лет нигде нет."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "ограничения по году окончания школы на страницах приёма не называют: требуется только аттестат о среднем образовании"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "предела возраста для платных студентов нет; возрастные рамки бывают только у отдельных стипендий, а тем, кому меньше 18, родители оформляют зачисление и визу"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "минимального балла аттестата не называют: оценивают всю заявку — успеваемость, мотивационное письмо, рекомендации и язык"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5.5,
+          "evidence": "IELTS 5.5"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 72,
+          "evidence": "TOEFL min. of 550 on PBT 72 on iBT"
+        },
+        {
+          "test": "PTE",
+          "min": 59,
+          "evidence": "Pearson PTE min. 59"
+        }
+      ],
+      "evidence": "Upload evidence of their English ability - B2 level of English is required"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Аттестат о среднем образовании обязателен, но о числе лет школы страницы не пишут. При 11-летней школе Таджикистана уточни в приёмной; если подготовки не хватает, есть годичный подготовительный Foundation Course.",
+      "evidence": "BSc applicants must upload an official copy of their secondary school final examination.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский обязателен на уровне B2; принимают сертификаты IELTS, TOEFL, PTE и ряд других.",
+      "evidence": "Upload evidence of their English ability - B2 level of English is required",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "IELTS — от 5.5.",
+      "evidence": "IELTS 5.5",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL — 550 на бумажном или 72 на интернет-тесте (iBT).",
+      "evidence": "TOEFL min. of 550 on PBT 72 on iBT",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Pearson PTE Academic — от 59.",
+      "evidence": "Pearson PTE min. 59",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Duolingo (DET) и EF SET не принимают.",
+      "evidence": "DUOLINGO (DET) or EF SET Test NOT ACCEPTABLE",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Если вся учёба в школе шла на английском, вместо сертификата принимают справку о языке обучения или аттестат с указанием языка.",
+      "evidence": "Certificate of secondary education accomplished in English may also be taken into account.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Нужен вступительный экзамен: письменный тест и/или собеседование, где спрашивают мотивацию и профильные предметы.",
+      "evidence": "Yes, an entrance exam is required for admission.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Числового проходного балла нет: оценивают всю заявку — академическую успеваемость, мотивационное письмо, рекомендации и языковую подготовку; некоторые программы добавляют собеседование или экзамен.",
+      "evidence": "Applicants are evaluated based on several criteria, including academic performance, the quality of the motivation letter, recommendation letters, and language proficiency",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Предела возраста для платников нет; ограничения бывают только у отдельных стипендий, а тем, кому меньше 18, родители оформляют зачисление и визу.",
+      "evidence": "those who are under 18 need their parents' to arrange enrolment and visa procedures.",
+      "field": "age",
+      "kind": "note"
+    },
+    {
+      "ru": "Иностранцев принимают без ограничений по стране: у стипендии MISP ограничений по гражданству нет.",
+      "evidence": "No, there is not any nationality limitation for MISP",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение платное. Таблица относится к студентам, начинающим учёбу в 2026–2027 учебном году.",
+      "evidence": "The tuition fees listed in the table below apply to students beginning their studies in the 2026-2027 academic year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Самый дешёвый бакалавриат — Film and media studies (Капошвар): 1500 евро за семестр.",
+      "evidence": "Film and media studies Kaposvár 6 Stipendium Hungaricum, Hungarian Diaspora Scholarship yes 1500 Euro/semester",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Самый дорогой бакалавриат — Landscape Management and Garden Construction Engineering (Будапешт): 2500 евро за семестр.",
+      "evidence": "Landscape Management and Garden Construction Engineering Budapest 7 Stipendium Hungaricum yes 2500 Euro/semester",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Например, Agricultural Engineering (Гёдёллё) — 2200 евро за семестр.",
+      "evidence": "Agricultural Engineering Gödöllő 7 Stipendium Hungaricum, Scholarship for Christian Young People, Hungarian Diaspora Scholarship yes 2200 Euro/semester",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Первый год (два семестра) платят до зачисления и въезда в Венгрию — это условие решения о приёме; после зачисления можно платить по семестрам.",
+      "evidence": "Tuition fees for the first two semesters of the programme shall be paid before admission and entering Hungary. It is the condition of receiving the decision of admission.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сбор за заявку — 100 евро, невозвратный.",
+      "evidence": "Payment of 100 EUR Application Fee via SimplePay on the application platform",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для письма о зачислении оплачивают первый год целиком; после зачисления можно платить по семестрам.",
+      "evidence": "Payment of the first annual tuition fee is required in order to receive the Letter of Acceptance.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Если визу не дали, оплату за два семестра возвращают за вычетом 10% от стоимости первого семестра.",
+      "evidence": "the prepaid tuition fee for two semesters may be refunded after deducting a 10% administrative fee from the first semester's tuition fee.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полное обучение покрывает государственная стипендия Венгрии Stipendium Hungaricum — она для абитуриентов из более чем 100 стран-партнёров и подаётся отдельно.",
+      "evidence": "providing fully funded scholarship opportunities for students from over 100 sending partners",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "MISP — собственная стипендия вуза для талантливых иностранцев; ограничений по гражданству нет.",
+      "evidence": "The MATE International Scholarship Program is the University's own scholarship programme to attract talented students from around the world.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Если подготовки или английского не хватает, есть Foundation Course (Гёнглёш) для тех, кому не хватает навыков и английского для бакалавриата: английский от B1, стоимость 4100 евро за учебный год.",
+      "evidence": "Tuiton fee: 4100 EUR",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общежитие Foundation Course — около 45 000 форинтов (~150 евро) в месяц на студента; страховка в стоимость обучения не входит и оплачивается отдельно.",
+      "evidence": "Dormitory: 45 000 HUF (approx. 150 EUR)/student/month",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подготовительный курс открыт для тех, чьих профессиональных навыков и знания английского не хватает для зачисления на бакалавриат.",
+      "evidence": "We offer a preparatory course for students whose professional skills and knowledge of English are not sufficient for enrolment in Bachelor's or Master's degree programmes",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Заявка на платное обучение в 2026/27 учебном году была открыта до 3 июля 2026 (23:59 CET).",
+      "evidence": "Application for academic year 2026/2027 is open again until 3 July 2026 (23.59 CET)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "После проверки заявки приглашают на собеседование, затем присылают предварительное письмо о приёме и счёт; после оплаты — официальное письмо о приёме, с ним подаётся виза на учёбу.",
+      "evidence": "After the successful interview we'll send you the Preliminary Letter of Acceptance with the details of paying the tuition fee for the first two semesters",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Все документы — на английском и заверены; переводы с других языков должны быть заверенными.",
+      "evidence": "All documentation must be in English and authenticated.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "По стипендии Stipendium Hungaricum можно подать до двух программ.",
+      "evidence": "Under Stipendium Hungaricum (SH) scholarship, applicants are allowed to apply for up to two programmes",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Условный приём снимают, если не досдать документы, подтверждение языка или итоговые оценки в срок.",
+      "evidence": "Failure to meet conditions usually results in withdrawal of the offer.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-07-03",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://apply.uni-mate.hu/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Hungarian University of Agriculture and Life Sciences (MATE) с пятью кампусами (Гёдёллё, Будапешт, Гёнглёш, Кестхей, Капошвар). Подача — через DreamApply."
+    }
+  },
+  "source": {
+    "url": "https://en.uni-mate.hu/application-procedure-for-bsc-msc",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://en.uni-mate.hu/application-procedure-for-bsc-msc",
+        "contentHash": "sha256:eff5e23719700c137020a6a16e62fe2447459efd8ef5967f93485724c3ecddb1"
+      },
+      {
+        "url": "https://en.uni-mate.hu/bsc-and-msc-programmes-in-english",
+        "contentHash": "sha256:b00a2378485252aad295aec369c587ea5fe271f8e0d103612b4d92c4d1d17061"
+      },
+      {
+        "url": "https://en.uni-mate.hu/foundation-course-for-studies-in-english",
+        "contentHash": "sha256:a16d345c155023bc97306a1a4acec140d1e53f901c1ffa3c99c104cd7ffd2888"
+      },
+      {
+        "url": "https://en.uni-mate.hu/scholarships",
+        "contentHash": "sha256:af4fc8915da451df02939fbcdcc7f20c493a4bc27ff612a6d7127fa53e531200"
+      },
+      {
+        "url": "https://en.uni-mate.hu/faq-admissions",
+        "contentHash": "sha256:15052347a841bfbd45ef939188a663265528fb1b93c26e5d6b68073e9794f56f"
+      },
+      {
+        "url": "https://en.uni-mate.hu/faq-funding-and-scholarships",
+        "contentHash": "sha256:91d2034951c457845a18a120bce0e8e9318469ab169851b98a3747040657dbcc"
+      },
+      {
+        "url": "https://en.uni-mate.hu/sh-rules-procedures",
+        "contentHash": "sha256:5bbf423871358bf69ac76cb0a43f7f4c61bc4079065bc27a72c857df7dbcbf37"
+      },
+      {
+        "url": "https://en.uni-mate.hu/scyp-rules-procedures",
+        "contentHash": "sha256:d37d3519983a4f6a28d432174930395f35f7d55d6182d80a757044b19e6de30d"
+      },
+      {
+        "url": "https://en.uni-mate.hu/hungarian-diaspora-scholarship-rules-procedures",
+        "contentHash": "sha256:2c2f2d2ba717af6abf3e96a46527d61850ceea07ac4786dc5a13e77ee27099b1"
+      },
+      {
+        "url": "https://en.uni-mate.hu/misp-rules-procedures",
+        "contentHash": "sha256:eba5514c4fdeeaca4266384903ca2582000f5a7860901c36e5c7d9820e40dd36"
+      },
+      {
+        "url": "https://en.uni-mate.hu/accommodation",
+        "contentHash": "sha256:3ac4015ac5da61c503cbf68a640c6ec2656dde1edf6fbd98a670f66a64a89079"
+      },
+      {
+        "url": "https://en.uni-mate.hu/welcome-information",
+        "contentHash": "sha256:80ec4433e277a4cdb90ac8c4d8e9bf001ea53705fae0fa36d3a0db6cc4309d7f"
+      },
+      {
+        "url": "https://en.uni-mate.hu/language-certificate-application",
+        "contentHash": "sha256:d9d6dfa049e18f75b2bf45abd5b545df7c44aa1e289397d4154e450c35cd2ee6"
+      },
+      {
+        "url": "https://en.uni-mate.hu/refund-policy",
+        "contentHash": "sha256:e129ce4aea88a2b3c67a0930c59ede6b428e2f45bc45cad1cfd41062bbd1fa5f"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
