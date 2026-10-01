@@ -1,0 +1,270 @@
+{
+  "id": "nthu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "National Tsing Hua University (Тайвань): приём иностранцев на бакалавриат",
+    "orig": "National Tsing Hua University"
+  },
+  "hostCountry": "TW",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное, счёт выставляют за семестр (учебный год — два семестра). Для иностранного бакалавра за семестр: естественные, инженерные и смежные колледжи (College of Science, Engineering, Electrical Engineering and Computer Science, Nuclear Science, Life Sciences & Medicine, Arts, часть College of Education) — TWD 53 200; гуманитарные и социальные науки, College of Technology Management, Tsing Hua College — TWD 46 100. Сверху обязательные сборы (страховка около TWD 3 000 за семестр, интернет 800, спортзал 200) и общежитие от TWD 7 410 до 27 800 за семестр. Есть стипендия самого вуза NTHU International Student Scholarship: бакалавру она покрывает обучение и кредитные сборы, а Type A добавляет TWD 5 000 в месяц; её отмечают при подаче, решение выносят по конкурсу в декабре, и каждый год её надо подтверждать заново. Гарантированного полного покрытия для гражданина Таджикистана нет"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Applicants must be foreign nationals who have never held Taiwan citizenship and do not possess Overseas Chinese student status."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы вход не закрывает: отказа по стране обучения нигде не названо. Условие одно — абитуриент должен быть иностранцем, никогда не иметь тайваньского гражданства и не числиться «зарубежным китайцем»; отдельно оговорены лишь Гонконг, Макао и материковый Китай, и то в сторону разрешения. Требование к старшей школе — «соответствовать системе образования страны, где находится школа», то есть оценивается по стране школы, а не по белом списку. Смотрел страницы Students Eligibility (01) и Application Guidelines Spring 2027 (07), раздел Eligibility."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "secondary school academic credential shall have spent a total period undertaking the senior secondary program that satisfies the regulations of the education system in the country where the school they attended is located."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы нет: страницы его не называют. Наоборот, тем, кто ещё учится, прямо разрешено подавать, заменив диплом справкой об ожидаемом выпуске с указанием срока и степени. Смотрел страницы Students Eligibility (01), Joint Admission 2027 Spring (00) и Application Guidelines Spring 2027 (07), разделы Eligibility и Required Documents."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возраст не ограничивают: ни минимального, ни максимального возраста на снятых страницах приёма нет. Единственное условие про сроки касается не возраста, а проживания за границей для держателей тайваньского паспорта (не менее 6 лет), и к гражданину Таджикистана оно не относится. Смотрел страницы Students Eligibility (01), Joint Admission (00) и Application Guidelines Spring 2027 (07), раздел Eligibility."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Минимального среднего балла вуз не называет: в правилах приёма на бакалавриат есть диплом школы и требование к сроку обучения в старшей школе, но никакого порога GPA или среднего балла на страницах Students Eligibility (01), Joint Admission (00) и Application Guidelines Spring 2027 (07) нет. Отбор идёт по документам и табелю целиком, без объявленного числового порога."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 5.5,
+          "evidence": "Certificate of CEFR B2 level or above. TOEFL iBT 4.0 Scale: 4.0 (Legacy TOEFL iBT score minimum: 71; TOEFL Home Edition and TOEFL ITP are not accepted.) TOEIC(Public Testing Programme): 750 IELTS (Academic): 5.5"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 71,
+          "evidence": "Certificate of CEFR B2 level or above. TOEFL iBT 4.0 Scale: 4.0 (Legacy TOEFL iBT score minimum: 71; TOEFL Home Edition and TOEFL ITP are not accepted.) TOEIC(Public Testing Programme): 750 IELTS (Academic): 5.5"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4,
+          "evidence": "Certificate of CEFR B2 level or above. TOEFL iBT 4.0 Scale: 4.0 (Legacy TOEFL iBT score minimum: 71; TOEFL Home Edition and TOEFL ITP are not accepted.) TOEIC(Public Testing Programme): 750 IELTS (Academic): 5.5"
+        },
+        {
+          "test": "HSK",
+          "min": 4,
+          "evidence": "Test of Chinese as a Foreign Language TOCFL A2 level or HSK L4 or above, or other official credentials for equivalent Chinese language competency."
+        }
+      ],
+      "evidence": "The minimal language requirements are set according to the language taught by the program."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Подать как иностранец может тот, кто имеет иностранное гражданство, никогда не имел тайваньского гражданства и не числится «зарубежным китайцем» (僑生). Гражданин Таджикистана проходит по этому условию; исключения и послабления касаются тех, у кого есть или был паспорт Китайской Республики.",
+      "evidence": "Applicants must be foreign nationals who have never held Taiwan citizenship and do not possess Overseas Chinese student status.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "На бакалавриат нужен диплом средней школы: абитуриент с дипломом школы вправе подавать на четырёхлетнюю бакалаврскую программу.",
+      "evidence": "Applicants with a high school diploma are eligible to apply for the four-year undergraduate programs.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Числа лет школы вуз не ставит: срок обучения в старшей школе должен соответствовать правилам системы образования страны, где находится школа. Для 11-летней школы Таджикистана это значит, что требование выполняется по местным нормам — 11 лет не отказ, а повод уточнить в приёмной комиссии.",
+      "evidence": "secondary school academic credential shall have spent a total period undertaking the senior secondary program that satisfies the regulations of the education system in the country where the school they attended is located.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Ограничения по году окончания школы нет: тем, кто ещё учится, вместо диплома разрешают приложить справку об ожидаемом выпуске с указанием срока и степени.",
+      "evidence": "Applicants who are in the process of completing studies must submit a certificate of expected graduation from the school clearly stating the anticipated credit obtained, graduation date, and degree.",
+      "field": "graduationYear",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Языковой сертификат зависит от языка программы: для англоязычных программ нужен английский, для китайскоязычных — китайский; если программа целиком на китайском, английский сертификат не требуется.",
+      "evidence": "The minimal language requirements are set according to the language taught by the program.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для англоязычных программ минимум вуза — CEFR B2: TOEFL iBT (старая шкала) 71, IELTS Academic 5.5, TOEIC 750. С 21 января 2026 года TOEFL iBT считается по новой шкале, и её минимум — 4.0.",
+      "evidence": "Certificate of CEFR B2 level or above. TOEFL iBT 4.0 Scale: 4.0 (Legacy TOEFL iBT score minimum: 71; TOEFL Home Edition and TOEFL ITP are not accepted.) TOEIC(Public Testing Programme): 750 IELTS (Academic): 5.5",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для китайскоязычных программ нужен китайский: TOCFL A2 (基礎級二級) или HSK 4 и выше.",
+      "evidence": "Test of Chinese as a Foreign Language TOCFL A2 level or HSK L4 or above, or other official credentials for equivalent Chinese language competency.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Это минимальные пороги университета: каждый факультет вправе поднять требование по языку выше — конкретные цифры надо смотреть в требованиях выбранной программы.",
+      "evidence": "Minimal Language Requirements are set by NTHU. However, each program may raise requirement to achieve their need.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Вступительных экзаменов (SAT/ACT) нет: отбор идёт по документам, а письменные, устные тесты или интервью возможны только если их отдельно назначит факультет.",
+      "evidence": "All application materials are reviewed in the selection process. Additional written tests, oral tests or interviews are dependent upon the department/program policy.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Плата за подачу: TWD 2 000 за одну или две программы, TWD 4 000 за три или четыре. Заявителям из наименее развитых стран (LDC, 44 страны по списку ООН) подача бесплатна.",
+      "evidence": "申請1個系所 Apply for 1 program TWD 2,000 申請2個系所 Apply for 2 programs TWD 2,000 申請3個系所 Apply for 3 programs TWD 4,000 申請4個系所 Apply for 4 programs TWD 4,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Нужна финансовая справка: остаток на счёте не меньше TWD 120 000 или USD 4 000 (либо подтверждение уже полученной стипендии), выписка банка не старше трёх месяцев.",
+      "evidence": "All applicants are required to provide either an official bank final balance statement (NTD 120,000 or USD 4,000) or proof of granted scholarship that shows their financial sustainability for study in Taiwan.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обучение платное, счёт за семестр. Для иностранного бакалавра: инженерные, естественные и смежные колледжи — TWD 53 200 за семестр; гуманитарные и социальные науки, технологический менеджмент, Tsing Hua College — TWD 46 100 за семестр.",
+      "evidence": "Undergraduate College International/ Mainland Chinese Overseas Chinese/ Hong Kong & Macau TWD USD TWD USD Science 53,200 1,613 28,630 868 Engineering Life Sciences & Medicine Nuclear Science Electrical Engineering and Computer Science Education (Special Education, Mathematics and Science Education, Kinesiology, Interdisciplinary Program of Education) Arts Humanities and Social Sciences 46,100 1,397 24,370 739 Technology Management Tsing Hua Interdisciplinary Program Education (Education and Learning Technology, Childhood Education, Education Psychology and Counseling, English Instruction, Environmental and Cultural Resources) Tsing Hua College",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Университетская стипендия NTHU International Student Scholarship для бакалавра: обучение и кредитные сборы покрываются, плюс (в варианте Type A) TWD 5 000 в месяц. Её отмечают при подаче, решение по конкурсу в декабре, и каждый год её подтверждают заново.",
+      "evidence": "Bachelor students: NTD 5,000 per month Tuition and Credit fee waived",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельно есть государственные стипендии. Taiwan Scholarship (МОЕ/МИД): бакалавру TWD 15 000 в месяц, обучение МОЕ покрывает до TWD 40 000 за семестр, остаток доплачивает студент. Подают через посольство Тайваня или Taipei Economic and Cultural Office.",
+      "evidence": "Bachelor students: NTD 15,000 per month ● MOE will pay up to NTD40,000 each semester for each recipient's approved tuition, the remaining amount must be paid by the student.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сверх обучения — обязательные платежи: страховка студента TWD 195 за семестр, международная страховка TWD 3 000 за семестр (или нацстраховка TWD 826 в месяц), интернет TWD 800 за семестр, спортзал TWD 200 за семестр.",
+      "evidence": "Additional Costs: Student Insurance Fee TWD 195 (per semester), International Student Insurance Fee TWD 3000 (per semester) or National Health Insurance Fee TWD 826 (per month), Internet User Fee TWD 800 (per semester), Sport Facilities Fee TWD 200 (per semester).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общежитие на кампусе оплачивается отдельно: одноместное от TWD 16 920 до 27 800 за семестр, двухместное 10 920–16 600, четырёхместное 7 410–11 250 (без залога и платы за кондиционер).",
+      "evidence": "the dormitory (NTHU campus) expense is about TWD 16,920 to 27,800 for a single room, TWD10,920 to 16,600 for a 2-bed rooms and TWD 7,410 to 11,250 for a 4-bed room per semester.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём идёт двумя циклами в год. Ближайший объявленный на сайте — весна 2027: подача 3 августа — 30 сентября 2026 (до 15:00 по Тайваню), результаты 1 декабря 2026. Осенний набор 2026 шёл 25 ноября 2025 — 31 января 2026; по этой же схеме осенний приём обычно открывается в конце ноября и закрывается в конце января.",
+      "evidence": "August 3, 2026 Online Application Starts September 30, 2026 15:00 (Taiwan Time) Application Deadline December 1, 2026 Admission Results Announced",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы для бакалавра: диплом школы, школьный табель с таблицей пересчёта оценок, цель обучения (statement of purpose), две рекомендации онлайн, финансовая справка и паспорт. Все документы — на английском или китайском.",
+      "evidence": "Applicants for Bachelor programs: high school diploma ■ Applicants for Master programs: bachelor degree 's diploma ■ Applicants for the Ph.D. programs: master degree 's diploma.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Две рекомендации заполняются только онлайн: заявитель вносит двух рекомендателей в систему, и они сами загружают письмо до дедлайна; бумажные письма не принимают.",
+      "evidence": "Complete the information for two recommenders on the online application sys tem. Preferably, recommenders are teachers who can evaluate your academic qualifications and research potential.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Цель обучения (statement of purpose) бакалавр пишет на английском или китайском по инструкции для иностранных абитуриентов.",
+      "evidence": "Bachelor Applicants: Please download the \"statement of purpose instructions for international applicants\" and you may write in C hinese or English.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-08-03",
+    "closes": "2026-09-30",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://nthuoga-admission.vm.nthu.edu.tw/student/index/portal",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — National Tsing Hua University (NTHU), Синьчжу, Тайвань. Приём иностранцев ведёт Division of International Talent Cultivation (Office of Global Affairs), подача через онлайн-систему NTHU; можно подать на несколько программ (TWD 2 000 за 1–2 программы, TWD 4 000 за 3–4)"
+    }
+  },
+  "source": {
+    "url": "https://apply.nthu.edu.tw/en/article/70-international-students",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://apply.nthu.edu.tw/en/article/70-international-students",
+        "contentHash": "sha256:1fdcf722eccd5a2f61138bf9c65d9fdd3610828bca0f6273ed8f3dc629e23b39"
+      },
+      {
+        "url": "https://apply.nthu.edu.tw/en/article/94-eligibility",
+        "contentHash": "sha256:7c3309d17759f546cadca9ff70b9c68f93baceb28d910fb0bc95c5e9cffcfa81"
+      },
+      {
+        "url": "https://apply.nthu.edu.tw/en/article/112-tuition-fees",
+        "contentHash": "sha256:093ca068126927696e2a9c31b41dbe1319ef881808421ad4b101d17b14cf5c78"
+      },
+      {
+        "url": "https://apply.nthu.edu.tw/en/article/102-nthu-scholarship",
+        "contentHash": "sha256:cf6a395904fa294e9e4b574b74991be28525131435ae983e3f08641eb1f10240"
+      },
+      {
+        "url": "https://apply.nthu.edu.tw/en/article/103-taiwan-government",
+        "contentHash": "sha256:b0de9d35b84091fc2680c79e7283562d1dc88e4ff947690f1ed77efd0f5ca923"
+      },
+      {
+        "url": "https://apply.nthu.edu.tw/en/faq/list",
+        "contentHash": "sha256:0b630ed5743e436de01414db82f5c610f0d9b738f67a5751383dbe151b630f62"
+      },
+      {
+        "url": "https://apply.nthu.edu.tw/en/article/172-2026-fall-undergraduate",
+        "contentHash": "sha256:88331afb96f8c3316e8d5ce86e77048c81c9af9905edd0c981dc03152f308121"
+      },
+      {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      },
+      {
+        "url": "https://apply.nthu.edu.tw/en/article/147-campus-life",
+        "contentHash": "sha256:bdc877c31ebc0203a5e6ab0e9344a422cb690f98647115d91183f89f2bfad754"
+      },
+      {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/471347603.pdf",
+        "contentHash": "sha256:8ac369002630e00f7e247cdc4820c53c81dbcb1f0f438cba4831cf5f8bbd5d80"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
