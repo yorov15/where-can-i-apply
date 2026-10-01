@@ -4456,3 +4456,15 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# МФТИ (Россия): бакалавриат на бюджетные места для граждан Таджикистана.
+# Домен pk.mipt.ru одобрен Муродом 2026-10-01 (список из 27 кандидатов, ответ «1» — весь список, кроме КазНУ).
+[mipt]
+name = "МФТИ (Россия): бакалавриат на бюджетные места для граждан Таджикистана"
+files = [
+  { path = "manual/mipt/00-foreign.html", url = "https://pk.mipt.ru/foreign/" },
+  { path = "manual/mipt/01-foreign-rules.html", url = "https://pk.mipt.ru/bachelor/foreign-rules/" },
+  { path = "manual/mipt/02-rules2026.html", url = "https://pk.mipt.ru/bachelor/2026_rules/" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
