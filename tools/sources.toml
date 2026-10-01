@@ -2638,11 +2638,10 @@ approvedAt = "2026-09-28"
 
 [science-tokyo]
 name = "Institute of Science Tokyo (Япония): GSEP — инженерия на английском"
-urls = [
-  "https://admissions.isct.ac.jp/en/013/undergraduate/programs/gsep",
-  "https://www.tse.ens.titech.ac.jp/~gsep/",
-  "https://www.tse.ens.titech.ac.jp/~gsep/faq/",
-  "https://www.titech.ac.jp/english/admissions/pdf/gsep2025-applicationguideline-20240814-1.pdf",
+files = [
+  { path = "manual/science-tokyo/00-gsep-admissions.html", url = "https://admissions.isct.ac.jp/en/013/undergraduate/programs/gsep" },
+  { path = "manual/science-tokyo/01-gsep-home.html", url = "https://www.tse.ens.titech.ac.jp/~gsep/" },
+  { path = "manual/science-tokyo/02-gsep-faq.html", url = "https://www.tse.ens.titech.ac.jp/~gsep/faq/" },
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"

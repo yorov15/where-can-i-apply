@@ -1,0 +1,191 @@
+{
+  "id": "science-tokyo",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Institute of Science Tokyo (Япония): GSEP — инженерия на английском",
+    "orig": "Institute of Science Tokyo, Global Scientists and Engineers Program"
+  },
+  "hostCountry": "JP",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полного покрытия нет у всех: из примерно 18 мест 8 занимают стипендиаты правительства Японии (MEXT) — им вуз не берёт вступительный взнос и плату за обучение, платят 120 000 иен в месяц на четыре года и дают билет. Остальные до 10 студентов платят сами: 282 000 иен вступительный взнос и 635 400 иен в год за обучение; им доступна конкурсная стипендия JASSO 48 000 иен в месяц на один год."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданам Японии и постоянным жителям Японии подаваться нельзя, остальным можно; на стипендию MEXT не претендуют уже живущие в Японии. Смотрели страницы приёма и вопросов GSEP."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы не ограничена: подходит школа любой страны, главное — 12 лет учёбы или признание отдельной оценкой. Смотрели страницы приёма и вопросов GSEP."
+    },
+    "schoolYears": {
+      "min": 12,
+      "evidence": "Applicants must have graduated from the 12-year regular school education by March each year."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания: диплом должен быть выдан не позже 31 марта года поступления, дальнейших рамок не названо. Смотрели страницы приёма и вопросов GSEP."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Верхний предел есть только у стипендии MEXT, числа на страницах нет; на платном пути предела нет, нижняя граница 18 лет к зачислению. Смотрели страницу вопросов GSEP."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "There is no minimum requirement for high school transcript scores."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "There is no minimum score requirement."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданам Японии и людям с постоянным видом на жительство в Японии подаваться нельзя; остальные иностранцы подходят. На стипендию правительства Японии (MEXT) не могут претендовать те, кто уже живёт в Японии к дедлайну: им остаётся платный путь.",
+      "evidence": "Applicants who have a Japanese nationality or permanent resident status can't apply for GSEP.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужно закончить 12 лет обычной школы к марту года поступления; в дипломе дата выпуска не позже 31 марта. Таджикская школа 11-летняя, прямо этот пункт она не закрывает.",
+      "evidence": "Applicants must have graduated from the 12-year regular school education by March each year.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Если в стране школа короче 12 лет, вуз в прошлые годы оценивал таких абитуриентов по отдельности и признавал их подготовку равной японской старшей школе. Заявку на такую оценку подают заранее (в цикле 2027 — с 7 июля по 6 августа 2026); условия смотри в последнем руководстве, раздел 4. Результат не гарантирован.",
+      "evidence": "In the previous years' application, the applicants whose countries do not require 12 years of regular school education are individually assessed and recognized by Science Tokyo as having academic ability equivalent to or higher than that of the graduates of a Japanese high school.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Диплом IB или международный A-level принимают без отдельной оценки (одних O-level или AS-level мало).",
+      "evidence": "You don't have to apply for the Individual assessment of the Admission Eligibility.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Для стипендии MEXT есть верхний возрастной предел, цифры на этих страницах нет. На платный путь предела нет; нужно быть не младше 18 лет к зачислению, а при 12 годах школы можно и моложе.",
+      "evidence": "An upper age limit is imposed for the MEXT scholarship application under GSEP.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Вступительного теста вроде SAT нет: после проверки документов идут письменный экзамен (математика, физика, химия школьного уровня, эссе на критическое мышление) и собеседование. Примеров заданий вуз не даёт.",
+      "evidence": "applicants who pass the initial screening will take a written exam including essay questions to assess critical thinking.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "SAT, ACT, AP, EJU, A-level и IB можно приложить по желанию: на собеседовании их считают важным подспорьем, но не обязательным.",
+      "evidence": "Although the submission is optional, these will be considered an important reference, and applicants are encouraged to submit them.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужен сертификат: TOEFL iBT (в том числе Home Edition), TOEIC L&R или IELTS Academic; не старше двух лет на последний день приёма. Минимального балла нет. TOEFL ITP, TOEIC IP и онлайн-IELTS не принимают.",
+      "evidence": "There is no minimum score requirement.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Тест не нужен только гражданам Австралии, Канады, Ирландии, Новой Зеландии, Великобритании и США; обучение в школе на английском не освобождает.",
+      "evidence": "Nationals of the following countries where English is used as a native language are eligible for exemption from submitting English test scores upon submission of a document specified by Science Tokyo.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Минимального балла аттестата нет.",
+      "evidence": "There is no minimum requirement for high school transcript scores.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Заявка в онлайн-системе по-английски: табель, аттестат, сертификат английского, копия паспорта, рекомендация директора школы (направляет сам директор). Сначала платят сбор за подачу 17 000 иен, он невозвратный.",
+      "evidence": "the \"Applicant Evaluation and Recommendation Form\" must be submitted directly by the school principal, etc., and not by the applicant.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Цикл на апрель 2027 прошёл: подача 12–21 августа 2026, второй этап 28 сентября – 23 октября 2026, итоги 13 ноября 2026. Для набора 2028 порядок отбора меняется, подробности вуз вынес в отдельный документ; дат ещё нет.",
+      "evidence": "The admission selection process for the Global Scientists and Engineers Program (GSEP) is scheduled to change starting with the AY 2028 enrollment (selection to be conducted in AY 2027).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Платно: сбор за подачу 17 000 иен, вступительный взнос 282 000 иен, обучение 635 400 иен в год.",
+      "evidence": "Application Fee JPY 17,000 Enrollment Fee JPY 282,000 Annual Tuition JPY 635,400",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Восемь лучших получают стипендию правительства Японии (MEXT) на четыре года: без вступительного взноса и платы за обучение, 120 000 иен в месяц и билет туда-обратно на условиях MEXT. Остальные (до 10 мест) платят сами; можно подать на стипендию JASSO 48 000 иен в месяц на один год.",
+      "evidence": "Eight (8) outstanding applicants who passed the examination for the GSEP program will be recommended for the MEXT scholarship.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендию MEXT пересматривают каждый год: при среднем балле ниже 2,3 выплаты прекращают. Нельзя одновременно подавать на MEXT через посольство или на JASSO: одну из них придётся отклонить.",
+      "evidence": "Failure to obtain a minimum grade point average of 2.3 or to meet academic standards set by Science Tokyo will result in disqualification from receiving further scholarship stipends.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://admissions.isct.ac.jp/en/013/undergraduate/programs/gsep",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Institute of Science Tokyo (бывший Tokyo Tech), Токио. Программа GSEP полностью на английском, степень Bachelor of Engineering. До 18 мест в год, из них 8 со стипендией правительства Японии. Нужны 12 лет школы (для 11-летней — отдельная оценка), письменный экзамен и собеседование. Цикл 2027 закрыт 21 августа 2026; порядок отбора на 2028 меняется."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://admissions.isct.ac.jp/en/013/undergraduate/programs/gsep",
+    "pages": [
+      {
+        "url": "https://admissions.isct.ac.jp/en/013/undergraduate/programs/gsep",
+        "contentHash": "sha256:26ac42335a10620ff664e70854b4ec2a915ccce6be57e47e62907f85a6f53bfb"
+      },
+      {
+        "url": "https://www.tse.ens.titech.ac.jp/~gsep/",
+        "contentHash": "sha256:9a932ec0634bcf00cb782d908d8cb59f4b27ec5620cc01e473d55bea74ea12ed"
+      },
+      {
+        "url": "https://www.tse.ens.titech.ac.jp/~gsep/faq/",
+        "contentHash": "sha256:22c6f150bc20777eee5572afc1c53609c75bdcfdebf72659741871bb002a150a"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
