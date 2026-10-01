@@ -5167,18 +5167,6 @@ approvedBy = "human"
 approvedAt = "2026-10-01"
 
 # Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
-[gyeongsang]
-name = "Gyeongsang National University (Южная Корея): приём иностранцев на бакалавриат"
-urls = [
-  "https://www.gnu.ac.kr/international/cm/cntnts/cntntsView.do?cntntsId=4367&mi=8327",
-  "https://www.gnu.ac.kr/international/cm/cntnts/cntntsView.do?cntntsId=4402&mi=8380",
-  "https://www.gnu.ac.kr/international/cm/cntnts/cntntsView.do?mi=8379&cntntsId=4322",
-  "https://www.gnu.ac.kr/international/na/ntt/selectNttList.do?bbsId=2737&mi=8211",
-]
-approvedBy = "human"
-approvedAt = "2026-10-01"
-
-# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
 [bocconi]
 name = "Bocconi University (Италия): приём иностранцев на бакалавриат"
 urls = [
@@ -5214,6 +5202,22 @@ name = "Kangwon National University (Южная Корея): приём инос
 urls = [
   "https://global.kangwon.ac.kr/global/conts/1188/web.do",
   "https://global.kangwon.ac.kr/global/conts/1203/web.do",
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+[gyeongsang]
+name = "Gyeongsang National University (Южная Корея): приём иностранцев на бакалавриат"
+urls = [
+  "https://www.gnu.ac.kr/international/cm/cntnts/cntntsView.do?cntntsId=4367&mi=8327",
+  "https://www.gnu.ac.kr/international/cm/cntnts/cntntsView.do?cntntsId=4402&mi=8380",
+  "https://www.gnu.ac.kr/international/cm/cntnts/cntntsView.do?mi=8379&cntntsId=4322",
+  "https://www.gnu.ac.kr/international/na/ntt/selectNttList.do?bbsId=2737&mi=8211",
+]
+files = [
+  { path = "manual/gyeongsang/77338.bin", url = "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=77338" },
+  { path = "manual/gyeongsang/77397.bin", url = "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=77397" },
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"

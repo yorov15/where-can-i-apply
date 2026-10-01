@@ -1,0 +1,167 @@
+{
+  "id": "gyeongsang",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Gyeongsang National University (Южная Корея): приём иностранцев на бакалавриат (Global Interdisciplinary Studies)",
+    "orig": "Gyeongsang National University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Самый щедрый путь — поступление на Division of Global Interdisciplinary Studies: с TOPIK 4 и выше обучение полностью бесплатно (с TOPIK 3 — 50%), плюс оплата авиабилета до ₩1 000 000 и полное содержание общежития, а при отказе от общежития — выплата ₩1 400 000 за семестр. Со второго семестра скидку сохраняют по GPA."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "An applicant and both their parents should have non-Korean nationality."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по стране школы нет: принимают тех, кто прошёл начальную, среднюю и старшую школу в Корее или за рубежом."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Applicants who have completed the full elementary, middle, and high school curriculum in Korea or abroad"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы нет: принимают выпускников и тех, кто выпускается в августе 2026; конкретный год выпуска не ограничен."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения на страницах и в справочнике приёма нет: ни минимум, ни максимум не указаны."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Порога среднего балла для приёма нет: GPA упоминается только как условие стипендии (3,0–4,0 для скидки), а не как требование допуска."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOPIK",
+          "min": 3,
+          "evidence": "TOPIK Level 3 or higher (Level 2 or higher for Arts/Physical Education)"
+        }
+      ],
+      "evidence": "TOPIK Level 3 or higher (Level 2 or higher for Arts/Physical Education)"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранец и оба его родителя должны иметь некорейское гражданство; при двойном гражданстве (у абитуриента или родителя) подавать нельзя — корейское гражданство нужно отменить до срока подачи.",
+      "evidence": "An applicant and both their parents should have non-Korean nationality.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Язык: TOPIK 3 и выше (для искусства и физкультуры — TOPIK 2). Принимают также Sejong Institute Intermediate 1, KIIP Level 3 и другие подтверждения корейского.",
+      "evidence": "TOPIK Level 3 or higher (Level 2 or higher for Arts/Physical Education)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Стипендия на первый семестр: TOPIK 4 и выше — полное снятие платы за обучение, TOPIK 3 — 50%.",
+      "evidence": "TOPIK Level 4 or higher: Full tuition waiver",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Дополнительно: авиабилет до ₩1 000 000 и полное содержание общежития (в пределах фактических расходов); при отказе от общежития — выплата ₩1 400 000 за семестр.",
+      "evidence": "Airfare support up to ₩1,000,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Со второго семестра стипендию сохраняют по GPA (при TOPIK 4+): GPA 3,0 — 50% платы, GPA 3,5 — две трети, GPA 4,0 — полное снятие.",
+      "evidence": "GPA 3.0 or higher: 50% tuition waiver",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за обучение на 2026 год (корейские воны, за год): гуманитарные направления — 1 899 000.",
+      "evidence": "Humanities 1,899,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для поступающих на Division of Global Interdisciplinary Studies сбор за подачу (₩70 000) не взимают.",
+      "evidence": "No application fee (₩70, 000)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём (дополнительный набор на осень 2026): онлайн-подача 30 июня — 3 июля 2026, затем документы и оплата. Даты прошлого цикла; следующий набор на странице пока не объявлен.",
+      "evidence": "Online Application Jun. 30 - Jul. 3, 2026",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.gnu.ac.kr/eng/main.do",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Gyeongsang National University (GNU), государственный вуз Южной Кореи. Международный приём ведёт Отдел международного сотрудничества, справочник приёма — на домене gnu.ac.kr."
+    }
+  },
+  "source": {
+    "url": "https://www.gnu.ac.kr/international/cm/cntnts/cntntsView.do?cntntsId=4367&mi=8327",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.gnu.ac.kr/international/cm/cntnts/cntntsView.do?cntntsId=4367&mi=8327",
+        "contentHash": "sha256:6fb065027c419f1235b32816aafc7be8d57cff984f20ad7de75efdb2778ccee8"
+      },
+      {
+        "url": "https://www.gnu.ac.kr/international/cm/cntnts/cntntsView.do?cntntsId=4402&mi=8380",
+        "contentHash": "sha256:f468e50899c5c83d8b7418eb149b2bbcbde490bb68b7c183c4ff6c92968be75b"
+      },
+      {
+        "url": "https://www.gnu.ac.kr/international/cm/cntnts/cntntsView.do?mi=8379&cntntsId=4322",
+        "contentHash": "sha256:756f9d1433e36423117124e95b973735448c5ca1613bdc7aaabd92beb9a4165c"
+      },
+      {
+        "url": "https://www.gnu.ac.kr/international/na/ntt/selectNttList.do?bbsId=2737&mi=8211",
+        "contentHash": "sha256:36e701a66caf7d97dc27cf400b07250c2aee2fe5b4f8b4437b5149221debac45"
+      },
+      {
+        "url": "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=77338",
+        "contentHash": "sha256:0b0a21016952a5f1ff2e85fe55b5949294903f145381766890659c180b23a7a9"
+      },
+      {
+        "url": "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=77397",
+        "contentHash": "sha256:be970c48eb71300fc177c1d6460d870f1677dd5af800418dbf826a28757c3592"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
