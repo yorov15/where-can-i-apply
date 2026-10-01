@@ -4446,3 +4446,13 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Beijing Institute of Technology (Китай): англоязычный бакалавриат со стипендией вуза.
+# Домен isc.bit.edu.cn одобрен Муродом 2026-10-01 (список из 27 кандидатов, ответ «1» — весь список, кроме КазНУ).
+[bit]
+name = "Beijing Institute of Technology (Китай): англоязычный бакалавриат со стипендией вуза"
+files = [
+  { path = "manual/bit/00-apply.html", url = "https://isc.bit.edu.cn/aboutbit/faq/70fe36ccf5f64defb9ecda409efd2b71.htm" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

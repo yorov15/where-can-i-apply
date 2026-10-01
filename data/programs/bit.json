@@ -1,0 +1,170 @@
+{
+  "id": "bit",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Beijing Institute of Technology (Китай): англоязычный бакалавриат со стипендией вуза",
+    "orig": "Beijing Institute of Technology"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: 30 000 юаней в год на английском (23 000 на китайском). Своя стипендия вуза даёт от 25% обучения до полного покрытия; точные условия по призам зависят от уровня премии, срок подачи 1 мая. Стипендия правительства Китая (CSC) идёт только на китайские программы. Страховка, виза, жильё и дорога — за счёт студента, если их не покрывает приз."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "non-Chinese citizens with valid foreign passport and in good health"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по стране школы страница не называет. Смотрели страницу приёма для бакалавров."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы не названо: нужен аттестат о среднем образовании, с которым можно поступать. Смотрели страницу приёма для бакалавров."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Года выпуска не называют: подают выпускники школы и выше. Смотрели страницу приёма для бакалавров."
+    },
+    "age": {
+      "min": 18,
+      "max": 25,
+      "evidence": "Aged between 18 and 25"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Минимального среднего балла страница не называет. Смотрели страницу приёма для бакалавров."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "IELTS≥6.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 85,
+          "evidence": "TOEFL≥85"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 110,
+          "evidence": "Duolingo≥110"
+        }
+      ],
+      "evidence": "IELTS≥6.0/ TOEFL≥85/ Duolingo≥110 or other language certificate recognized by BIT"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужен действующий иностранный паспорт (не гражданин Китая), хорошее здоровье, соблюдение китайских законов и правил вуза.",
+      "evidence": "non-Chinese citizens with valid foreign passport and in good health",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат о среднем образовании или выше, с которым можно поступать в университет. Число лет школы не названо.",
+      "evidence": "High school graduate or above who is qualified to apply for university",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст — от 18 до 25 лет. Тем, кому нет 18, нужна справка опекуна, у которого есть пекинская регистрация.",
+      "evidence": "Aged between 18 and 25",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Для программ на английском: IELTS 6.0, TOEFL 85 или Duolingo 110 (или другой сертификат, который признаёт вуз); носители английского освобождены. Для программ на китайском — HSK 5 не ниже 180.",
+      "evidence": "IELTS≥6.0/ TOEFL≥85/ Duolingo≥110 or other language certificate recognized by BIT",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен экзамен CSCA (China Scholastic Competency Assessment): для всех английских программ математика, для технических — математика плюс физика. Результат нужно загрузить до итогового интервью; если ещё нет, достаточно подтверждения регистрации на экзамен.",
+      "evidence": "China Scholastic competency Assessment (CSCA) transcript needs to be uploaded before Comprehensive interview.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение: 30 000 юаней в год на английском, 23 000 на китайском. Сбор за заявку 600 юаней, страховка 800–1 800 в год, виза 400 в год. Общежитие в Пекине — от 500 до 1 350 юаней в месяц за место, в Чжухае — от 500 до 900.",
+      "evidence": "Chinese taught program tuition : CNY23,000/year; English taught program tuition : CNY30,000/year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия правительства Китая (CSC) здесь только для программ на китайском: заявку подают в посольство Китая в своей стране, выбрав тип A и BIT первым вузом. Для англоязычных программ есть собственная стипендия вуза.",
+      "evidence": "Chinese Government Scholarship (only for Chinese-taught program)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Собственная стипендия BIT для иностранцев даёт призы четырёх уровней: на четыре года (первая–третья премии) и на один год (первая–четвёртая); за четвёртый-годичный приз покрывают 25% обучения, за третий — 50%. Победителям на четыре года нужно проходить ежегодную проверку. Для получения подают форму заявки на стипендию вместе с заявкой на поступление.",
+      "evidence": "4-year scholarship holder needs to pass the annual review to guarantee the scholarship benefits of the following academic year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Срок подачи в цикле 2026 — 1 июня 2026; на стипендии вуза, Пекинскую и Гуандунскую — до 1 мая 2026. Подача онлайн; сбор 600 юаней платят после предварительной проверки, затем интервью и предварительное зачисление.",
+      "evidence": "Application Deadline: June 1, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Английские программы в Пекине: авиакосмическая техника, автоматизация, информатика, мехатроника, электроника, машиностроение (математика + физика) и международная экономика и торговля (математика). В Чжухае — искусственный интеллект (математика + физика).",
+      "evidence": "International Economics and Trade Mathematics",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-06-01",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://isc.bit.edu.cn/aboutbit/faq/70fe36ccf5f64defb9ecda409efd2b71.htm",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Пекинский технологический институт (BIT), кампусы в Пекине и Чжухае. Есть 7 англоязычных программ в Пекине (техника, информатика, экономика) и ИИ в Чжухае; нужен экзамен CSCA и английский IELTS 6.0 или эквивалент. Своя стипендия вуза — до полного покрытия, на неё подают до 1 мая; цикл 2026 закрылся 1 июня 2026."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://isc.bit.edu.cn/aboutbit/faq/70fe36ccf5f64defb9ecda409efd2b71.htm",
+    "pages": [
+      {
+        "url": "https://isc.bit.edu.cn/aboutbit/faq/70fe36ccf5f64defb9ecda409efd2b71.htm",
+        "contentHash": "sha256:fefb3efe2ffccde5a649d442c39ea72180bb133e00db49dbc599571b23e196e5"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
