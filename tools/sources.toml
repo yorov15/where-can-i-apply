@@ -4418,8 +4418,9 @@ approvedAt = "2026-10-01"
 # Домен elte.hu одобрен Муродом 2026-10-01 (список из 27 кандидатов, ответ «1» — весь список, кроме КазНУ).
 [elte]
 name = "Eötvös Loránd University, ELTE (Венгрия): бакалавриат"
-urls = [
-  "https://www.elte.hu/en/current-students/stipendium-hungaricum/before",
+files = [
+  { path = "manual/elte/00-sh-before.html", url = "https://www.elte.hu/en/current-students/stipendium-hungaricum/before" },
+  { path = "manual/elte/02-how-to-apply.html", url = "https://www.elte.hu/en/how-to-apply" },
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
