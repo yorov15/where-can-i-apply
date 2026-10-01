@@ -1,0 +1,149 @@
+{
+  "id": "moe-taiwan",
+  "status": "published",
+  "kind": "government",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "MOE Taiwan Scholarship (Тайвань): государственная стипендия иностранным студентам",
+    "orig": "Ministry of Education Taiwan Scholarship"
+  },
+  "hostCountry": "TW",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": false,
+    "note": {
+      "ru": "Стипендия Министерства образования Тайваня бакалавру: NT$15 000 в месяц на жизнь и до NT$40 000 за семестр на обучение и сборы; если обучение дороже, разницу оплачивает сам студент. Дорога не покрывается. Даётся на срок до 4 лет (бакалавриат), при этом общий срок получения любых тайваньских стипендий — не больше 5 лет."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Each applicant shall be a foreign national who has a graduation certificate or diploma from a secondary school or post-secondary educational institution"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы не ограничена: стипендия открыта иностранцам независимо от страны обучения; для граждан Таджикистана подача идёт через представительство в Анкаре."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Each applicant shall be a foreign national who has a graduation certificate or diploma from a secondary school or post-secondary educational institution"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы нет: нужен диплом об окончании средней или средней специальной школы, конкретный год выпуска не назван."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения на страницах программы нет: ни минимум, ни максимум не указаны."
+    },
+    "gpa": {
+      "min": 3.0,
+      "scale": "GPA_4_5",
+      "evidence": "an applicant whose GPA is on a scale with a highest possible score of 4.5 who wants to do a bachelor's degree shall have an average grade of at least 3.0"
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Applicants shall submit a photocopy of their TOCFL test results or certificate of having passed at Band B level or higher."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Стипендия только для иностранцев: граждане Тайваня (в том числе «зарубежные соотечественники») и студенты из материкового Китая, Гонконга и Макао участвовать не могут.",
+      "evidence": "to encourage outstanding students from outside Taiwan (with the exception of students from the Mainland Area, Hong Kong, and Macau)",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Средний балл: для бакалавриата нужен GPA не ниже 3.0 по шкале с максимумом 4.5. Стипендию могут снять, если средний балл упадёт ниже 70.",
+      "evidence": "an applicant whose GPA is on a scale with a highest possible score of 4.5 who wants to do a bachelor's degree shall have an average grade of at least 3.0",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Язык: для программ не на английском нужен китайский TOCFL уровня Band B (Level 3) и выше, сертификаты других китайских тестов не принимают. Для полностью англоязычных программ — TOEFL или иной признанный тест. Стипендию снимают, если к концу второго семестра нет сертификата TOCFL.",
+      "evidence": "Applicants shall submit a photocopy of their TOCFL test results or certificate of having passed at Band B level or higher.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Стипендия: NT$15 000 в месяц для бакалавра и покрытие обучения и сборов до NT$40 000 за семестр; остаток за обучение платит студент.",
+      "evidence": "The MOE provides each scholarship recipient undertaking a bachelor's degree a monthly stipend of NTD 15,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общая сумма стипендии на бакалавриате — до 4 лет; общий срок всех тайваньских стипендий для одного человека — не более 5 лет.",
+      "evidence": "The Ministry of Education (MOE) Taiwan Scholarship Program provides tuition and miscellaneous expenses of up to NTD 40,000 each semester and a monthly living allowance of NTD 15,000 or NTD 20,000.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявку подают не в министерство, а в представительство Тайваня, ответственное за граждан страны подачи. Для граждан Таджикистана это представительство в Анкаре (в его зоне — Казахстан, Узбекистан, Туркменистан, Кыргызстан, Таджикистан, Грузия).",
+      "evidence": "Applicants shall lodge their application at the representative office in their country of nationality or that is also responsible for handling applications from citizens of the applicant's country.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Срок подачи: с 1 февраля по 31 марта каждый год. Сначала нужно самостоятельно поступить в тайваньский вуз в тот же срок, затем подать на стипендию.",
+      "evidence": "In principle, the application period is from February 1 to March 31 each year.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2027-02-01",
+    "closes": "2027-03-31",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://taiwanscholarship.moe.gov.tw/Apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": null,
+    "note": {
+      "ru": "Государственная стипендия Министерства образования Тайваня; выдаётся на обучение в тайваньских вузах, которые принимают иностранцев. Отбор конкурсный, стипендию назначает вуз-получатель."
+    }
+  },
+  "source": {
+    "url": "https://english.moe.gov.tw/fp-24-16833-23C09-1.html",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://english.moe.gov.tw/fp-24-16833-23C09-1.html",
+        "contentHash": "sha256:a7963b1927fb850613fdaa2798f25e967d70903ca2bb16823d2dbf1780456cc3"
+      },
+      {
+        "url": "https://edu.law.moe.gov.tw/EngLawContent.aspx?lan=E&id=20492",
+        "contentHash": "sha256:b9a49fbccd6a192357b8b65830bd31574ea64c35ff362c500200aca332647cdf"
+      },
+      {
+        "url": "https://taiwanscholarship.moe.gov.tw/web/pages.aspx?p=7",
+        "contentHash": "sha256:c3403ffa66a97d8be665e31eb7c23d397cf3fea246d8b124251d7b930f7e5d33"
+      },
+      {
+        "url": "https://taiwanscholarship.moe.gov.tw/web/pages.aspx?p=8",
+        "contentHash": "sha256:50b3889ee9586b4ea7a9f86c58d3cdf801ba7152abf2479c42836866d6cf3ea9"
+      },
+      {
+        "url": "https://www.roc-taiwan.org/tr_tr/post/4666.html",
+        "contentHash": "sha256:37817e977ecf4a38991593dd9740c6c407c4dc37bdee09c6997145c1992ab6e5"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
