@@ -1,0 +1,254 @@
+{
+  "id": "king-saud",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "King Saud University (Саудовская Аравия): приём иностранцев на бакалавриат",
+    "orig": "King Saud University"
+  },
+  "hostCountry": "SA",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Основной путь для иностранца, живущего вне Саудовской Аравии, — внешняя стипендия (external scholarship), и она полная: вуз снимает плату за обучение, даёт общежитие и питание со скидкой, ежемесячную стипендию (SR 1 000 на естественно-научных направлениях, SR 850 на гуманитарных), медицинское обслуживание, пособие на обустройство (два оклада) и на выпуск (три оклада), а также бесплатный авиабилет при зачислении и в конце каждого учебного года. Стипендия не гарантирована: мест мало, отбор конкурсный и число мест зависит от гражданства. Есть и второй, платный путь для нерезидента — только программы по наукам о здоровье, где студент платит сам (для медицины нужен SAT от 1200); суммы платы на снятых страницах не названы, они на приёмном портале."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство вход не закрывает: вуз прямо называет себя принимающим студентов со всего мира («KSU seeks to attract distinguished students from around the world»), в 2025 году в нём учились студенты 99 национальностей, и отдельного запрета по стране нигде нет. Единственное упоминание страны — конкурсный отбор, где число мест зависит от гражданства, но это не отказ. Смотрели страницы: Admission for Non Saudi Students, External Scholarships (ISD), Frequently Asked Questions About Admission, ISD Home Page."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы вход не закрывает: принимают аттестат, полученный как внутри Королевства, так и за его пределами («from within or outside the Kingdom of Saudi Arabia»), при условии заверения и признания квалификации. Отказа по конкретной стране нет, Таджикистан отдельно не упомянут, списка стран нет. Смотрели страницы: Admission for Non Saudi Students, External Scholarships (ISD), Frequently Asked Questions About Admission."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы не задано: требование сформулировано как оконченный аттестат средней школы (high school diploma) или его эквивалент, ни 11, ни 12 лет не названы, требований к предметам по годам нет. Смотрели страницы: Admission for Non Saudi Students, External Scholarships (ISD), Scholarship Flyer (PDF), Admission Guide 2026/2027 (PDF)."
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "The applicant must have obtained their high school diploma within the last five years."
+    },
+    "age": {
+      "min": 17,
+      "max": 25,
+      "evidence": "The applicant must be between 17 and 25 years of age."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "The applicant must have completed high school or have an equivalent degree, and the overall grade must be at least very good."
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Языкового теста (IELTS/TOEFL/STEP/Duolingo) для приёма иностранца на бакалавриат на снятых страницах не требуется: единственный тест, который называют для внешней стипендии, — SAT, а не языковой экзамен. Английский отдельно не проверяют; для не-арабоязычных предусмотрена сначала дипломная программа владения арабским языком. Порог STEP 65 на сайте вуза относится к аспирантуре (Deanship of Graduate Studies), а не к бакалавриату. Смотрели страницы: Admission for Non Saudi Students, External Scholarships (ISD), Frequently Asked Questions About Admission, Scholarship Flyer (PDF)."
+    },
+    "exam": {
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": 1010
+        }
+      ],
+      "evidence": "The applicant must obtain a valid SAT (Scholastic Assessment Test) score of no less than 1010."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Для иностранца, живущего вне Саудовской Аравии, есть два пути: внешняя стипендия (бесплатно) и платные программы по наукам о здоровье. Обычный путь — внешняя стипендия.",
+      "evidence": "Non-residents may apply through two tracks; external scholarships and fee-based bachelor's programs in Health Sciences.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Внешняя стипендия открыта иностранцам, живущим за пределами Королевства, и покрывает обучение целиком.",
+      "evidence": "King Saud University offers external scholarships to international applicants residing outside the Kingdom of Saudi Arabia.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для внешней стипендии обязателен SAT — не ниже 1010.",
+      "evidence": "The applicant must obtain a valid SAT (Scholastic Assessment Test) score of no less than 1010.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Возраст: не младше 17 и не старше 25 лет.",
+      "evidence": "The applicant must be between 17 and 25 years of age.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестат школы должен быть получен не более пяти лет назад (на момент подачи).",
+      "evidence": "The applicant must have obtained their high school diploma within the last five years.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен оконченный аттестат средней школы (или эквивалент) с общим баллом не ниже «very good» (хорошо с отличием).",
+      "evidence": "The applicant must have completed high school or have an equivalent degree, and the overall grade must be at least very good.",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестат должен быть признан для выбранной программы; все сертификаты и документы заверяются уполномоченными органами, как определит вуз.",
+      "evidence": "All certificates and supporting documents must be properly attested by the relevant authorities as determined by the university.",
+      "field": "schoolCountry",
+      "kind": "must"
+    },
+    {
+      "ru": "Если страна требует согласия своего правительства на учёбу в Саудовской Аравии, такое согласие нужно получить.",
+      "evidence": "The applicant's home country government must approve study in the Kingdom of Saudi Arabia, for countries that impose this requirement on Saudi students.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Нужны справка о хорошем поведении от органов безопасности своей страны и медицинское освидетельствование по правилам вуза.",
+      "evidence": "The applicant must provide a certificate of good conduct from the security authorities in his country.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Кандидат обязан пройти медицинское обследование, предусмотренное правилами; вуз может запросить рекомендацию от организации или известного лица.",
+      "evidence": "The university may require the applicant to provide a recommendation from a recognized body, institution, or public figure.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Для медицины и стоматологии нужно пройти личное собеседование, для архитектуры и планирования — письменный тест.",
+      "evidence": "The applicant must successfully pass the personal interview for admission to the Colleges of Medicine and Dentistry, and the written test for admission to the College of Architecture and Planning",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Не-арабоязычные студенты сначала зачисляются на дипломную программу владения арабским языком; только после неё переходят на бакалавриат. Программа интенсивная: четыре семестра, 20 часов в неделю.",
+      "evidence": "Non-Arabic-speaking applicants nominated for admission to any track of Common First Year or bachelor's degree programs will first be admitted to the Diploma Program of Proficiency in the Arabic Language.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача — онлайн через стипендиальный портал si.ksu.edu.sa; сроки приёмной кампании публикуются на самом портале.",
+      "evidence": "Apply online through the scholarship admission portal si.ksu.edu.sa.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Отбор конкурсный: приём зависит от числа мест, которое распределяется по гражданству.",
+      "evidence": "Acceptance is determined by a competitive process and the number of seats available based on nationality.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Внешняя стипендия полная: обучение бесплатно, дают общежитие и питание со скидкой, ежемесячную стипендию, пособие на обустройство (два оклада), медицинское обслуживание студента и членов семьи, а также бесплатный авиабилет при зачислении и в конце каждого учебного года.",
+      "evidence": "Exemption from tuition fees. Providing housing and discounted meals. A free flight ticket upon acceptance and ticket provided at the end of each academic year as per the specified regulations. A monthly stipend to support students throughout their university studies. Two-month allowance as a down payment upon arrival. Healthcare benefits for the student and family members.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Размер ежемесячной стипендии: SR 1 000 на естественно-научных направлениях, SR 850 на гуманитарных и социальных.",
+      "evidence": "Undergraduate students majoring in science fields receive a monthly stipend of SR 1,000, while those majoring in humanities and social sciences receive a monthly stipend of SR 850.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общежитие предоставляется всем стипендиатам; по прибытии оплачивается пособие на обустройство в размере двух окладов и Graduation allowance в три оклада — на пересылку книг.",
+      "evidence": "University housing is provided for all scholarship students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Медицинское обслуживание: вуз открывает стипендиату медкарту в университетской больнице и следит за здоровьем в течение учёбы.",
+      "evidence": "The University provides comprehensive health care to scholarship students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Не-саудовцы с видом на жительство (Iqama) поступают иначе — по внутренним стипендиям или на платные программы бакалавриата; для нерезидента платный путь ограничен науками о здоровье, а для медицины нужен SAT от 1200.",
+      "evidence": "The university allows non-Saudi residents in the Kingdom of Saudi Arabia, who hold a valid legal residency (Iqama), to apply for admission to bachelor's programs on a fee-paying basis, in accordance with the admission percentages determined through the national platform for unified admission.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Платный путь по медицине: SAT от 1200, и для College of Medicine аттестат должен быть получен не более двух лет назад.",
+      "evidence": "A minimum SAT score of 1200 is required to be considered for admission to the Medicine and Surgery program.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://si.ksu.edu.sa",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: King Saud University (Университет короля Сауда), Эр-Рияд, Саудовская Аравия. Подача иностранцев из-за границы — по внешней стипендии через портал si.ksu.edu.sa; на 2026 год в вузе учились студенты 99 национальностей."
+    }
+  },
+  "source": {
+    "url": "https://dar.ksu.edu.sa/en/overseas",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://dar.ksu.edu.sa/en/overseas",
+        "contentHash": "sha256:f1f0f9c45a96608eb3fd2114398133bf7a8555194f5922941f8d8075e15fcd0b"
+      },
+      {
+        "url": "https://dar.ksu.edu.sa/en/FAQ",
+        "contentHash": "sha256:1e6645b24d04d6fea366c053e92e6ee111ecbcf992cbe944fb1b0b84527c4674"
+      },
+      {
+        "url": "https://dar.ksu.edu.sa/en/faqs",
+        "contentHash": "sha256:80c14f4feb888d72d16fb24d0f335b639a708b217f7f62f0475d8ae002982f16"
+      },
+      {
+        "url": "https://dar.ksu.edu.sa/en/ksu-admission",
+        "contentHash": "sha256:d425d437f544c6674486639eb9ff828a2cf65c58d0398f3e985ca32d5aae4e45"
+      },
+      {
+        "url": "https://isd.ksu.edu.sa/en/node/3091",
+        "contentHash": "sha256:e71acf2feef44a24c8f47dedd243f9ce79cdb8fe0d11fc7355fcf408afca71db"
+      },
+      {
+        "url": "https://isd.ksu.edu.sa/en",
+        "contentHash": "sha256:25c537f4bc8b29dd02e4059afd62a28d79ecdc58096175ba372dabaec5a96442"
+      },
+      {
+        "url": "https://isd.ksu.edu.sa/en/node/3063",
+        "contentHash": "sha256:d413d89c46fc2d1f033becc11d273cd3784555411b5cf96b744459aa0a23a5c2"
+      },
+      {
+        "url": "https://faculty.ksu.edu.sa/sites/default/files/KSU%20Scholarship%20Flyer%20EN.pdf",
+        "contentHash": "sha256:8d2de6162b1621b1fd83f8d613cc65b89ca0ec18fd59ad639974d46a538c4b36"
+      },
+      {
+        "url": "https://dar.ksu.edu.sa/sites/dar.ksu.edu.sa/files/2026-06/admgen.pdf",
+        "contentHash": "sha256:0f9fdf0fa263250ff01d850218dcacb5533a67ad84cf10ca567d3a0d9fdcc193"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
