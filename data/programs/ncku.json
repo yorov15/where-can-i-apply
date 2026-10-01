@@ -1,0 +1,161 @@
+{
+  "id": "ncku",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "National Cheng Kung University (Тайвань): приём иностранцев на бакалавриат",
+    "orig": "National Cheng Kung University"
+  },
+  "hostCountry": "TW",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Своя стипендия для иностранцев-бакалавров снимает плату за обучение и даёт ежемесячную выплату (размер определяет колледж); по прошлому циклу бакалавру снимали обучение плюс NT$8 000 в месяц. Государственные стипендии Тайваня добавляют жильё и билет. Полный набор зависит от конкурса."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "To be eligible to apply, applicants must qualify for legal international student status of the Ministry of Education"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы для доступа не ограничена: в требованиях сказано только, что нужен аттестат о среднем образовании, дающий доступ к бакалавриату. Ограничения по стране школы на страницах не нашёл."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Applicants with a high school diploma are eligible to apply for four-year undergraduate programs"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы в требованиях нет: сказано, что аттестат нужен к зачислению, а доучивающиеся подают справку об ожидаемом выпуске. Конкретный год не назван."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения на страницах приёма нет: ни минимальный, ни максимальный возраст не указан."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Порога среднего балла аттестата для допуска нет: GPA упоминается только как условие части стипендий, а не как требование приёма."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Applicants must submit proof of English proficiency at CEFR B1 level or above"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать может иностранец, который никогда не имел гражданства Китайской Республики (Тайвань) и не имеет статуса «зарубежного китайского студента». Вуз принимает абитуриентов с аттестатом о среднем образовании.",
+      "evidence": "A person of foreign nationality who has never held Republic of China",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "11-летняя школа: если уровень выпускника школы равен лишь второму (предпоследнему) классу тайваньской старшей школы, после зачисления нужно добрать не менее 12 кредитов сверх требований кафедры, чтобы окончить вуз.",
+      "evidence": "For applicants whose high school graduating level is only equivalent to Taiwan's high school second grade, once admitted, at least 12 credits at NCKU in addition to each department's credit requirement are required before graduation.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Порог языка зависит от языка программы: на англоязычных программах нужен английский CEFR B1 и выше; на китайско-английских — китайский TOCFL A2 и английский B1; на китайских — только TOCFL A2. Кафедры могут поднимать порог выше (например, TOEFL iBT 72–80, IELTS 5.5 без части ниже 5.0).",
+      "evidence": "Applicants must submit proof of English proficiency at CEFR B1 level or above",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Плата за обучение для иностранцев на цикл Fall 2026/Spring 2027 на странице не объявлена; вуз просит ориентироваться на ставки 2025/2026, которые публикует регистрационный отдел.",
+      "evidence": "The tuition and miscellaneous fees for international students for the Fall 2026/Spring 2027 have not yet been announced.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия NCKU Distinguished International Student Scholarship для бакалавров: снятие платы за обучение и ежемесячная стипендия, размер которой определяет колледж. По опубликованным ранее суммам бакалавру снимали обучение (без сборов и вступительного взноса) и платили NT$8 000 в месяц.",
+      "evidence": "Undergraduate Students: Tuition fees waiver, and monthly stipend with amount determined by respective college.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельная merit-стипендия для поступающих на математику, естественные науки и бизнес (только бакалавриат) платит ежемесячно 12 месяцев и освобождает от обучения и сборов: уровень 1 — NT$12 000, уровень 2 — NT$10 000, уровень 3 — NT$8 000 в месяц.",
+      "evidence": "Level 1 (ranked in 1-15): a monthly scholarship of NTD$12,000.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сбор за подачу — NT$2 000, оплата переводом или картой. Первокурсникам дополнительно: NT$1 200 за интернет в первом семестре и NT$600 за языковую лабораторию.",
+      "evidence": "Pay the application fee of NT$2,000 by bank transfer or credit card.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём идёт по семестрам: на осенний семестр (сентябрь) заявки принимают с 20 декабря по 15 марта, на весенний (февраль) — с 1 июля по 15 сентября. Даты ниже — прошлый цикл; следующий ожидается по той же схеме.",
+      "evidence": "Application Period December 20, 2025 ~ March 15, 2026 July 1, 2026 ~ September 15, 2026",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-12-20",
+    "closes": "2027-03-15",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://management.oia.ncku.edu.tw/intladmission",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — National Cheng Kung University (NCKU), Тайвань. Приёмом иностранцев занимается Отдел международных связей (OIA)."
+    }
+  },
+  "source": {
+    "url": "https://oia.ncku.edu.tw/p/404-1032-232639.php?Lang=en",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://oia.ncku.edu.tw/p/404-1032-232639.php?Lang=en",
+        "contentHash": "sha256:c1dae28cb089ce5977f36ca3543eeff34e98940da6acea1c29586ece6ee3a3f6"
+      },
+      {
+        "url": "https://oia.ncku.edu.tw/p/404-1032-229816.php?Lang=en",
+        "contentHash": "sha256:e09e66549ca421a35fdeb40998036f710594cacbb1ab553b6878f70469e16c02"
+      },
+      {
+        "url": "https://oia.ncku.edu.tw/p/404-1032-230753.php?Lang=en",
+        "contentHash": "sha256:2d42b6aa649c3258244597076a5d3072e99faddc92a9c5f4576866c73957b629"
+      },
+      {
+        "url": "https://oia.ncku.edu.tw/p/404-1032-229890.php?Lang=en",
+        "contentHash": "sha256:05b58cff5b63c03ca10004c66c0ddce254951d31a1185837f1ab7b4a819c5f7b"
+      },
+      {
+        "url": "https://oia.ncku.edu.tw/p/404-1032-229817.php?Lang=en",
+        "contentHash": "sha256:dff6b97e52e4642b0ad1c20d36817b00a9e71bdc66b97d0de286c0afbb895e0c"
+      },
+      {
+        "url": "https://oia.ncku.edu.tw/var/file/32/1032/img/5041/NCKUAdmissionProspectusforInternationalStudentsFall2026Spring2027v5-3.pdf",
+        "contentHash": "sha256:e5b3d69094435bc81b4fe9665fd6cbaef9ecae06d8527c42643dcb5d0f6ae9d2"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
