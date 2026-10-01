@@ -1,0 +1,279 @@
+{
+  "id": "bahcesehir",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Bahçeşehir University (Турция): приём иностранцев на бакалавриат",
+    "orig": "Bahçeşehir University (BAU)"
+  },
+  "hostCountry": "TR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Частный вуз, обучение платное: на 2026-2027 год бакалавриат стоит от $8,500 в год (инженерия и естественные науки — $9,000, право — $10,000, пилотирование — $9,000 + €22,000, медицина — $28,000, стоматология — $24,000, фармация — $15,000). Плату за год вносят двумя частями. После одобрения нужно внести невозвратную предоплату за обучение, чтобы получить официальное письмо о зачислении. Автоматической скидки при поступлении нет: иностранцу дают только скидку 10% для братьев/сестёр и отдельные стипендии факультетов; крупная стипендия (100% или 50%) появляется лишь на третий год — за первое-второе место в потоке после четырёх семестров. Жильё и дорогу вуз не покрывает"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Applications from the following are accepted: 1) Foreign nationals;"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы вход не закрывает: требования к аттестату заданы отдельно для каждой страны (для Таджикистана — Attestat, минимум 3 из 5), отказа по стране нет. Смотрели страницы приёма иностранцев, страновых требований (общую и по Таджикистану), правил приёма иностранцев, английского, стоимости, стипендий и сроков."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "On condition that they are in their final year of high school or about to graduate"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы страницы не называют: сказано лишь, что подают в последний год школы или накануне выпуска, а если аттестата ещё нет — можно подать с последним транскриптом и дослать диплом после выпуска. Смотрели страницы приёма иностранцев на бакалавриат, как подать, страновых требований (общую и по Таджикистану) и правил приёма иностранцев."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения для приёма страницы не называют: ни на странице приёма иностранцев, ни в правилах приёма иностранцев, ни в страновых требованиях по Таджикистану возраст не упомянут."
+    },
+    "gpa": {
+      "min": 3,
+      "scale": "TJ_5",
+      "evidence": "Attestat / Certificate of Secondary Education Minimum Score: 3 (Out of 5)"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 72,
+          "evidence": "TOEFL (For Undergraduate Programs Min. Score: IBT 72, Graduate Programs Min. Score: IBT 79)"
+        },
+        {
+          "test": "PTE",
+          "min": 55,
+          "evidence": "Pearson PTE Academic: 55"
+        }
+      ],
+      "evidence": "If English is not your first language, or you do not have an internationally recognised English qualification, you will need to provide evidence of your English language ability."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        }
+      ],
+      "evidence": "Supportive Documents (if any) e.g. SAT, TOEFL IBT, National Examination Result, Certificates, Reference Letters"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подача только онлайн, через портал: заполни форму, выбери срок и уровень, введи номер загранпаспорта. На один приём — одна заявка, программы расставь по приоритету: одобрят только одну.",
+      "evidence": "All applicants must fill out the Online Application Form",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Нужны: загранпаспорт, школьный транскрипт за все годы, аттестат (если уже на руках), мотивационное письмо (для медицины) и подтверждающие документы (SAT, TOEFL, результаты национального экзамена и т.п.).",
+      "evidence": "Passport High School Transcripts High School Diploma (if out) Letter of Motivation (for Medicine applicants)",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "На Cartoon and Animation, Textile and Fashion Design и программы Консерватории нужно загрузить портфолио.",
+      "evidence": "Applicants who are applying for Cartoon and Animation, Textile and Fashion Design or Conservatory programs must upload their portfolio as well.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Для бакалавриата есть только осенний приём. Приём на осень 2026 продлён: заявки и регистрация открыты до 30 ноября 2026 (при наличии мест на программе).",
+      "evidence": "applications and registration have been extended until November 30, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Оценки и диплом решают не всё: проходного балла мало, приёмная комиссия смотрит программу школы, успехи по профильным предметам и выбранную программу. Соответствие минимуму зачисления не гарантирует.",
+      "evidence": "Please be aware that meeting the minimum requirements does not guarantee approval of your application.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Для Таджикистана нужен аттестат (Attestat / Certificate of Secondary Education) со средним баллом не ниже 3 из 5. Таджикская школа 11-летняя — эквивалентность диплома уточни в приёмной.",
+      "evidence": "Attestat / Certificate of Secondary Education Minimum Score: 3 (Out of 5)",
+      "field": "gpa",
+      "kind": "must"
+    },
+    {
+      "ru": "Школьный диплом нужен, но его можно дослать: если аттестата ещё нет, подают с последним транскриптом, а итоговый диплом представляют после выпуска.",
+      "evidence": "On condition that they are in their final year of high school or about to graduate",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "По гражданству приём иностранцев не закрыт: принимают иностранцев, а также тех, кто получил гражданство Турции и двойных граждан. Исключение — турки, полностью учившиеся в Турции, и граждане ТРСК; для гражданина Таджикистана ограничений нет.",
+      "evidence": "Applications from the following are not accepted: 1) Turkish citizens who have completed their entire education in Turkey or NCTR",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "На шаге подачи сертификат по английскому не требуется — языковой уровень подтверждают уже после зачисления в Стамбуле.",
+      "evidence": "Language proficiency certificate is not required for the application step.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский всё равно нужен: вуз англоязычный, и после зачисления надо подтвердить уровень — своим экзаменом BAU или признанным международным тестом. IELTS, Duolingo, TOEFL Home Edition и PTE Academic Online вуз не принимает.",
+      "evidence": "Depending on the language of the program you are enrolling in, you will be required to provide language proficiency after completing your enrollment in Istanbul. BAU accepts certain international language proficiency examinations as well as its own language proficiency exams for freshman students.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Пороги для бакалавриата: TOEFL iBT — 72 (для стоматологии и фармации 85, для медицины, ELT и перевода 96), Pearson PTE Academic — 55 (для тех же программ 71 и 78).",
+      "evidence": "TOEFL IBT: 72 TOEFL IBT: 85 TOEFL IBT: 96 2 Pearson PTE Academic: 55 Pearson PTE Academic: 71 Pearson PTE Academic: 78 2",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "IELTS, TOEFL Home Edition, PTE Academic Online и Duolingo вуз не принимает как подтверждение английского.",
+      "evidence": "Please also note that IELTS, TOEFL Special Home Edition, PTE Academic Online and Duolingo test results are not acceptable proficiency scores at BAU.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Обходной путь без сертификата: после регистрации можно сдать собственный экзамен BAU (порог 60 из 100). Сдать его можно только один раз.",
+      "evidence": "If you don't have any acceptable proficiency score, you are free to enter BAU Proficiency exam after registration.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если английский не подтверждён, учёба начинается с подготовительной программы: для бакалавриата её успешное прохождение обязательно.",
+      "evidence": "As Bahçeşehir University is an English medium educational institution, successfully completing the Preparatory Program is mandatory for undergraduate students.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "SAT и другие экзамены — не обязательны, а лишь подтверждающие документы: зачисление идёт по страновым требованиям к аттестату.",
+      "evidence": "Supportive Documents (if any) e.g. SAT, TOEFL IBT, National Examination Result, Certificates, Reference Letters",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение на 2026-2027: бакалавриат от $8,500 в год — инженерия и естественные науки $9,000, право $10,000, пилотирование $9,000 + €22,000, медицина $28,000, стоматология $24,000, фармация $15,000.",
+      "evidence": "Undergraduate Programs School of Medicine 6 Years $28,000 per year School of Dentistry 5 Years $24,000 per year School of Pharmacy 5 Years $15,000 per year School of Health Sciences 4 Years $8,500 per year Artificial Intelligence Engineering 4 Years $12,000 per year School of Engineering & Natural Sciences 4 Years $9,000 per year School of Economics, Administrative and Social Sciences 4 Years $8,500 per year School of Architecture & Design 4 Years $8,500 per year School of Communication 4 Years $8,500 per year School of Educational Sciences 4 Years $8,500 per year Pilotage 4 Years $9,000 + €22,000 per year School of Law 4 Years $10,000 per year Gastronomy & Culinary Arts 4 Years $8,500 per year Conservatory 4 Years $8,500 per year Vocational School of Health Sciences 2 Years $3,500 per year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плату за год на бакалавриате вносят двумя частями.",
+      "evidence": "Undergraduate students should pay their yearly tuition fee in two installments.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "После одобрения заявки нужно внести предоплату за обучение в указанный срок, чтобы получить официальное письмо о зачислении. Предоплата невозвратная, но идёт в счёт платы за обучение при регистрации в Стамбуле.",
+      "evidence": "An advance tuition deposit amount should be paid by the mentioned deadline in order to receive an Official Acceptance Letter. This non-refundable deposit will be considered a guarantee of the applicant's intent to enroll at BAU and deducted from the tuition fee at registration in İstanbul.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Автоматической скидки при поступлении нет. Крупная стипендия возможна только с третьего года: после четырёх семестров занявшему первое место в потоке дают 100%, второе — 50% на следующий год.",
+      "evidence": "Success Scholarship: This scholarship is awarded to a student at the end of their second year, if they rank the first or second in their department, on a list published by the university. If they are placed first in their department, they receive a 100% scholarship. if they are ranked second, they are awarded a 50% scholarship for the following year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидка 10% для братьев и сестёр, которые учатся на одном уровне (бакалавриат или магистратура).",
+      "evidence": "Siblings Discount: a 10% discount is given to siblings who are studying in the same level; undergraduate, or Graduate.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-11-30",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://applyonline.bau.edu.tr/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Bahçeşehir University (BAU), Стамбул, частный, обучение на английском. Приём иностранцев на бакалавриат — только осенний, заявка онлайн через applyonline.bau.edu.tr. Для Таджикистана нужен Attestat со средним баллом не ниже 3 из 5; английский подтверждают после зачисления тестом (TOEFL iBT 72 / PTE 55) или экзаменом BAU (60), иначе — обязательная подготовительная программа."
+    }
+  },
+  "source": {
+    "url": "https://int.bau.edu.tr/admission/undergraduate-applicants/",
+    "pages": [
+      {
+        "url": "https://int.bau.edu.tr/admission/undergraduate-applicants/",
+        "contentHash": "sha256:3ce175bbf6a5d3f009abbe271d29925ba472d6d0247d71c4ee6c81862030b9c9"
+      },
+      {
+        "url": "https://int.bau.edu.tr/admission/how-to-apply",
+        "contentHash": "sha256:03d62fe25e748b88047eff5cae6ccefe19f45f75733b646a9e241486ed9b03d1"
+      },
+      {
+        "url": "https://int.bau.edu.tr/country-requirements",
+        "contentHash": "sha256:8b74b6aec4a3ff890e1293da2afec5e27bbe5e0abab24f90b6b4c48dc28a8173"
+      },
+      {
+        "url": "https://int.bau.edu.tr/country-requirements/tajikistan",
+        "contentHash": "sha256:3fb041257f92d20900f1241175197d8d30e13e46d006d9752c732de89b45c558"
+      },
+      {
+        "url": "https://bau.edu.tr/content/2429-principles-for-the-acceptance-of-foreign-students",
+        "contentHash": "sha256:66b6a22ed27b651b1595239957d1a9dfe120d9dd57420b9d2db8f5b2bad5c53a"
+      },
+      {
+        "url": "https://bau.edu.tr/content/11506-english-preparatory-program-bau-prep",
+        "contentHash": "sha256:76d20f9a1204e0f1c65b92b00922204624903039f05a0e56d26696b823ae62d5"
+      },
+      {
+        "url": "https://int.bau.edu.tr/admission/tuition-fees",
+        "contentHash": "sha256:8e3f66f110fcd533ac2f824ff165e7ace0c9935e33708b1b430f49a2f3d96b4b"
+      },
+      {
+        "url": "https://int.bau.edu.tr/faq/does-bau-offer-any-scholarships-2",
+        "contentHash": "sha256:ea7d701550d3e0cf161042471e8232b8f64276a9a367c44954f0dfbb3d763083"
+      },
+      {
+        "url": "https://int.bau.edu.tr/faq/does-bau-offer-any-payment-plans-2",
+        "contentHash": "sha256:cb63f69cb841dd4fcb5e287e2dad1cf57965024928e3de5ecb3ea01adb54b1b6"
+      },
+      {
+        "url": "https://int.bau.edu.tr/news/applications-open",
+        "contentHash": "sha256:fcbd643e275dab2b25aab5ac670b8102d78636d8c6c589804a7561b8f7c04ba6"
+      },
+      {
+        "url": "https://bau.edu.tr/content/18786-2026-2027-academic-year-associate-and-undergraduate-degree-academic-calendar",
+        "contentHash": "sha256:d2c2891bc8d6e1e42f79ad32c169f255c9ee832b641ed2be98836a6064b8da70"
+      },
+      {
+        "url": "https://int.bau.edu.tr/admission/language-proficiency",
+        "contentHash": "sha256:d15bf613286bf4de5b6368e0308a1afc6bd765d26d9b55072301df2a2cd1cebc"
+      },
+      {
+        "url": "https://bau.edu.tr/content/18760-prospective-student-support-and-scholarship-processes",
+        "contentHash": "sha256:b961b46e0168fab40d8a821249e0041b27a00427bcb20172f83a96e2f9ff28b1"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}

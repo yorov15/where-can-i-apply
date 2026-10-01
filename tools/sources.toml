@@ -4758,3 +4758,25 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[bahcesehir]
+name = "Bahçeşehir University (Турция)"
+files = [
+  { path = "manual/bahcesehir/00-undergraduate-applicants.html", url = "https://int.bau.edu.tr/admission/undergraduate-applicants/" },
+  { path = "manual/bahcesehir/01-how-to-apply.html", url = "https://int.bau.edu.tr/admission/how-to-apply" },
+  { path = "manual/bahcesehir/02-country-requirements.html", url = "https://int.bau.edu.tr/country-requirements" },
+  { path = "manual/bahcesehir/03-country-requirements-tajikistan.html", url = "https://int.bau.edu.tr/country-requirements/tajikistan" },
+  { path = "manual/bahcesehir/04-principles-foreign-students.html", url = "https://bau.edu.tr/content/2429-principles-for-the-acceptance-of-foreign-students" },
+  { path = "manual/bahcesehir/05-english-prep.html", url = "https://bau.edu.tr/content/11506-english-preparatory-program-bau-prep" },
+  { path = "manual/bahcesehir/06-tuition-fees.html", url = "https://int.bau.edu.tr/admission/tuition-fees" },
+  { path = "manual/bahcesehir/07-scholarships-faq.html", url = "https://int.bau.edu.tr/faq/does-bau-offer-any-scholarships-2" },
+  { path = "manual/bahcesehir/09-payment-plans.html", url = "https://int.bau.edu.tr/faq/does-bau-offer-any-payment-plans-2" },
+  { path = "manual/bahcesehir/11-applications-open.html", url = "https://int.bau.edu.tr/news/applications-open" },
+  { path = "manual/bahcesehir/12-academic-calendar.html", url = "https://bau.edu.tr/content/18786-2026-2027-academic-year-associate-and-undergraduate-degree-academic-calendar" },
+  { path = "manual/bahcesehir/13-language-proficiency.html", url = "https://int.bau.edu.tr/admission/language-proficiency" },
+  { path = "manual/bahcesehir/16-scholarship-processes.html", url = "https://bau.edu.tr/content/18760-prospective-student-support-and-scholarship-processes" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
