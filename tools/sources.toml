@@ -4424,3 +4424,14 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# University of Science and Technology of China (Китай): бакалавриат со стипендией USTC.
+# Домен ic.ustc.edu.cn одобрен Муродом 2026-10-01 (список из 27 кандидатов, ответ «1» — весь список, кроме КазНУ).
+[ustc]
+name = "University of Science and Technology of China (Китай): бакалавриат со стипендией USTC"
+files = [
+  { path = "manual/ustc/00-fellowship.html", url = "https://ic.ustc.edu.cn/en/v7info.php?Nav_x=17" },
+  { path = "manual/ustc/01-guide.html", url = "https://ic.ustc.edu.cn/en/v7info.php?Nav_x=5" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

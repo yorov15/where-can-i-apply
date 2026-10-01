@@ -1,0 +1,157 @@
+{
+  "id": "ustc",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Science and Technology of China (Китай): бакалавриат со стипендией USTC",
+    "orig": "University of Science and Technology of China"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Стипендия USTC уровня A покрывает обучение, медицинскую страховку, 2 500 юаней в месяц и компенсацию за жильё; уровень B — только обучение. Какой уровень дадут, решает вуз. Дорогу не оплачивают. Учёба в основном на китайском, нужен HSK 5; англоязычные программы страница не описывает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Non-Chinese citizens with a valid passport, in good physical and mental health."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по стране школы на страницах не названо: нужен аттестат, равный китайскому. Смотрели страницы стипендии и приёма для бакалавров."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы не названо: нужен аттестат, равный китайскому, к июлю 2026 года. Смотрели страницу стипендии для бакалавров."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Года выпуска не называют: выпускники 2026 года подают со справкой о предстоящем выпуске. Смотрели страницу стипендии для бакалавров."
+    },
+    "age": {
+      "maxExclusive": 30,
+      "evidence": "Applicants must be under the age of 30 by September 1st, 2026."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Минимального среднего балла страница не называет: оценивают заявку в целом и по интервью. Смотрели страницу стипендии для бакалавров."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "HSK",
+          "min": 5,
+          "evidence": "Having passed new HSK Level 5 or above"
+        }
+      ],
+      "evidence": "Having passed new HSK Level 5 or above; applicants whose native language is Chinese, or can provide proof of studying at a high school where the teaching language is Chinese, can apply for HSK test exemption."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужен иностранный паспорт и хорошее здоровье. Выходцы из материкового Китая, Гонконга, Макао и Тайваня подают как иностранцы, только если получили иностранное гражданство до 30 апреля 2022 и прожили за рубежом не меньше двух лет с тех пор.",
+      "evidence": "Non-Chinese citizens with a valid passport, in good physical and mental health.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен китайский HSK нового образца не ниже 5-го уровня. Освобождаются только носители китайского и те, кто окончил школу с преподаванием на китайском. Основное обучение — на китайском: английский вуз для этой стипендии не называет.",
+      "evidence": "Having passed new HSK Level 5 or above; applicants whose native language is Chinese, or can provide proof of studying at a high school where the teaching language is Chinese, can apply for HSK test exemption.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат об окончании школы (равный китайскому) к июлю 2026 года; выпускники этого года подают со справкой о предстоящем выпуске, оригинал аттестата нужен при регистрации. Число лет школы не названо.",
+      "evidence": "Applicants must hold a high school diploma (equivalent to high school diploma in China) by July of 2026.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "На 1 сентября 2026 года должно быть меньше 30 лет. Если на 1 сентября 2026 года нет 18, нужно заявление опекуна, который будет жить в Хэфэе всё время учёбы.",
+      "evidence": "Applicants must be under the age of 30 by September 1st, 2026.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Результаты SAT, IB, A-Level, ACT или AST можно приложить, они действуют два года с даты экзамена; обязательным вступительным экзаменом они не названы.",
+      "evidence": "If any of the following test score reports are submitted, the results are valid for two years from the date of the examination: SAT, IB, GCE A-Level, ACT, or AST.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Стипендия USTC двух уровней. Уровень A: освобождение от платы за обучение, медицинская страховка, 2 500 юаней в месяц и компенсация за жильё. Уровень B: только освобождение от платы за обучение. Решение о том, какой уровень дать, вуз принимает сам по итогам общей оценки заявки.",
+      "evidence": "Level A, funded by USTC, includes tuition waiver, comprehensive medical insurance, monthly stipend of 2,500 RMB and accommodation subsidy;",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявку подают онлайн в системе вуза: аккаунт, анкета, заверенные копии аттестата и оценок, сертификат HSK, медосмотр по форме, рекомендательное письмо школы. В цикле 2026 приём шёл с 14 ноября 2025 по 31 марта 2026; после подачи вуз присылает приглашение на онлайн-интервью.",
+      "evidence": "Application time: November 14, 2025 — March 31, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Кто уже получил другую китайскую стипендию на 2026–2027, на эту подавать не может; одному человеку дают только одну стипендию.",
+      "evidence": "Each applicant can only be supported by one scholarship.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Вуз предлагает 35 бакалаврских программ на 13 направлениях (математика, физика, химия, материалы, биология, инженерия, электроника, информатика, геофизика, экология, менеджмент, кибербезопасность, ядерная техника).",
+      "evidence": "The University currently offers 35 undergraduate programs across 13 disciplines for international students",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://ic.ustc.edu.cn/en/v7info.php?Nav_x=17",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Научно-технический университет Китая (USTC), Хэфэй. Стипендия вуза покрывает обучение (уровень A — ещё страховку, 2 500 юаней в месяц и жильё), но нужен HSK 5. Цикл 2026 закрылся 31 марта 2026; сроки на 2027 год ещё не опубликованы."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://ic.ustc.edu.cn/en/v7info.php?Nav_x=17",
+    "pages": [
+      {
+        "url": "https://ic.ustc.edu.cn/en/v7info.php?Nav_x=17",
+        "contentHash": "sha256:3dc7b207cc619e5903d8418a0c2ae31cd1a1b799781fe6702f88f7b3cf131195"
+      },
+      {
+        "url": "https://ic.ustc.edu.cn/en/v7info.php?Nav_x=5",
+        "contentHash": "sha256:119abcea83c708b73a743e8ea2e08ed04af2d7a2775e0c4d685ae68fc6e03548"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
