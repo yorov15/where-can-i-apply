@@ -1,0 +1,262 @@
+{
+  "id": "nsu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Novosibirsk State University (Новосибирский государственный университет, Россия): приём иностранцев на бакалавриат",
+    "orig": "Novosibirsk State University"
+  },
+  "hostCountry": "RU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Сам вуз учит платно: бакалавриат — 4500 долларов в год (таблица 2024-2025, без НДС). Бесплатный путь один и государственный — стипендия Правительства РФ: она покрывает полную стоимость обучения и платит ежемесячную стипендию, но дорогу, проживание и медицинскую страховку не покрывает. Стипендия конкурсная, число мест зависит от страны, заявку подают через сайт russia.study и Россотрудничество. Общежитие очень дешёвое — около 1200 рублей (~20 долларов) в месяц, но платит его студент сам."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство вход не закрывает: вуз описывает общий порядок приёма иностранцев и не называет ни одной запрещённой страны. Есть лишь список стран с соглашениями об отмене легализации документов (Таджикистан в нём) и оговорка, что число стипендий зависит от страны, — но это не запрет на подачу. Смотрели страницы приёма, порядка подачи, стипендий и стоимости."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране не названо, требования выражены документом об образовании и его признанием, а не страной школы. Аттестат Таджикистана прямо не упомянут — эквивалент и признание уточнять в приёмной (Рособрнадзор или процедура признания в NSU)."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "To be admitted to an educational program in the Russian Federation, foreign applicant must provide recognized international academic credentials."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы страницы приёма не называют: нужен документ об образовании и его признание, требования выпуститься в конкретный год нет."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения для приёма страницы приёма не называют: ни минимума, ни максимума."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Минимального среднего балла аттестата страницы не называют: отбор идёт по документам и вступительным экзаменам, числового порога по оценкам нет."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Please note, for enrollment to any Russian-taught Bachelor's program your Russian language level should be at least B2 to pass entrance exams in Russian language."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Для поступления на любую русскоязычную программу бакалавриата нужен русский язык не ниже B2 — вступительные экзамены сдаются на русском языке. Англоязычного бакалавриата у NSU нет: все программы бакалавриата ведутся на русском.",
+      "evidence": "Please note, for enrollment to any Russian-taught Bachelor's program your Russian language level should be at least B2 to pass entrance exams in Russian language.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Вступительные экзамены на бакалавриат проходят на русском языке; требования сдать SAT или ACT на страницах приёма нет.",
+      "evidence": "for enrollment to any Russian-taught Bachelor's program your Russian language level should be at least B2 to pass entrance exams in Russian language.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Заявка на бакалавриат подаётся онлайн: после заполнения анкеты отборочная комиссия рассматривает её в течение 2 недель.",
+      "evidence": "After you have filled out the application form, a selection committee will examine your application within 2 weeks.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "При зачислении документы об образовании надо легализовать: для стран Гаагской конвенции — апостиль, для остальных — два штампа (МИД страны выпуска и консульство/посольство РФ).",
+      "evidence": "All international students coming to Russia for studies have to legalize their education documents",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Документы из стран с соглашениями об отмене легализации принимают без неё; Таджикистан входит в этот список, значит аттестату из Таджикистана апостиль не нужен.",
+      "evidence": "Documents issued in member countries of the multilateral or bilateral agreements, which abolish the requirement of legalization of documents, are accepted without legalization.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Легализованные документы об образовании переводят на русский и нотариально заверяют; копии шлют в приёмную комиссию NSU (foreign@lab.nsu.ru, interstudy@nsu.ru). Процедура легализации может занимать до месяца.",
+      "evidence": "Legalized education documents have to be translated into Russian and notarized.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Зачисленному иностранцу нужно признание иностранного образования: либо свидетельство Рособрнадзора, либо процедура признания прямо в NSU (в первый месяц после зачисления подать документы в кабинет 2324).",
+      "evidence": "Or they can apply for Recognition Procedure at NSU*.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "После зачисления вуз выставляет договор на регистрационный сбор (виза-приглашение, миграционный учёт, продление визы после приезда) — 130 долларов; платится в рублях по приезде в кассу.",
+      "evidence": "The contract for the registration fee has to be paid in rubles after your arrival at the University Casher's Office. Cost: 130 dollars.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Паспорт должен быть действителен ещё 1,5 года на момент въезда в Россию.",
+      "evidence": "Your passport should be valid for 1.5 years before you enter the Russian Federation.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Полное покрытие даёт стипендия Правительства РФ: она покрывает полную стоимость обучения и платит ежемесячную стипендию; дорога, проживание и медицинская страховка не входят. Стипендия конкурсная, число мест зависит от страны, приём заявок стартует в январе, срок зависит от страны (март-июнь).",
+      "evidence": "Every year foreign students have an opportunity to apply for the Russian Government Scholarship which covers full tuition and monthly living allowance. Travel costs, living expenses and health insurance policy are not included. The Scholarship is granted on a competitive basis. Selection criteria and procedure as well as the number of scholarships depend on the applicant's country of origin. Application procedure starts in January. Deadline depends on the country of applicant (March-June).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявку на стипендию Правительства РФ подают через сайт russia.study: регистрируются, заполняют анкету и отмечают Новосибирский государственный университет первым выбором; дальше уточняют порядок в представительстве Россотрудничества или посольстве РФ.",
+      "evidence": "Register on the website russia.study , complete your application and mark Novosibirsk National Research State University as your first choice.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Все документы (анкета, паспорт, диплом с приложением, медсправка и тест на ВИЧ, рекомендации, сертификаты экзаменов) переводят на русский и нотариально заверяют.",
+      "evidence": "All the documents have to be translated into Russian and notarized .",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Стипендию Правительства РФ дают на конкурсной основе, а число мест зависит от страны абитуриента; для Таджикистана это отдельная квота через Россотрудничество.",
+      "evidence": "The Scholarships are granted on a competitive basis. Selection criteria and procedure as well as the number of scholarships depend on the country of applicant.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Платное обучение (таблица 2024-2025, без НДС): бакалавриат — 4500 долларов в год, специалитет — 6500, магистратура — 3600-6500, аспирантура и стажировки — 5500, ординатура — 12000.",
+      "evidence": "Fees and financial support 2024-2025 Tuition fees USA dollars (without VAT) Bachelor's degree programs 4500 Specialist's degree programs 6500 Master's programs 3600 - 6500 PhD programs, internships 5500 Residency 12000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общежитие стоит 1200 рублей в месяц (примерно 20 долларов) и оплачивается самими студентами, платежи раз в семестр; комнаты блочного типа с общей кухней на этаже.",
+      "evidence": "Cost for accommodation is 1,200 roubles per month and must be paid by the students themselves.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Единственная англоязычная программа первого уровня — «General Medicine» (специалитет, 6 лет): первые три года учат на английском с интенсивным русским, с 4-го курса всё на русском. Плата — 650 000 рублей в год, срок подачи — до 15 июля, вступительные экзамены по химии и английскому языку.",
+      "evidence": "Qualifying exam in Chemistry Qualifying exam in English language",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Медицина (General Medicine): срок подачи документов — до 15 июля, обучение стоит 650 000 рублей в год.",
+      "evidence": "Tuition fees is 650.000 roubles per year Application deadline 15 July",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Проект «Открытые двери» (Open Doors) — олимпиада для уже имеющих степень бакалавра: победителям дают полную стипендию на магистратуру, на приём школьника на бакалавриат он не влияет.",
+      "evidence": "Novosibirsk State University invites undergraduate students to participate in the \"Open Doors\" Russian Scholarship Project held by Association \"Global Universities\" and win a full scholarship to study Master's program at one of the leading Russian universities.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "По партнёрским программам студент вуза-партнёра может учиться в NSU бесплатно.",
+      "evidence": "If you are a student at one of the following universities , you have an opportunity to attend NSU free of charge.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://english.nsu.ru/admission/apply/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Новосибирский государственный университет (NSU), Академгородок, Новосибирск, Россия. Бакалавриат только на русском (нужен русский не ниже B2); платно 4500 долларов в год, бесплатно — только по стипендии Правительства РФ через russia.study и Россотрудничество."
+    }
+  },
+  "source": {
+    "url": "https://english.nsu.ru/",
+    "pages": [
+      {
+        "url": "https://english.nsu.ru/",
+        "contentHash": "sha256:b291c988be715ae508d4a4d9b1d3edea7b6a9dc689de13ce99758e9fc61dec36"
+      },
+      {
+        "url": "https://english.nsu.ru/admission/",
+        "contentHash": "sha256:489067b8286a9e7bfbc0142b12bb50d08f29267b52aa9828bad17a0a70961a05"
+      },
+      {
+        "url": "https://english.nsu.ru/admission/programs/",
+        "contentHash": "sha256:d9ecd84ad59f68009c1a964b3957583d356cc5a2da34f7ac061e6c05433a7162"
+      },
+      {
+        "url": "https://english.nsu.ru/admission/admission-procedure/",
+        "contentHash": "sha256:47ec0ea7df4e68961191421e125adc9dea9a63c914bfc14a3853d82d406433fb"
+      },
+      {
+        "url": "https://english.nsu.ru/admission/apply/",
+        "contentHash": "sha256:f9f1d41286ba4866afe01be36dac0dce42bd3643ebaba149a0c0631a61e234b4"
+      },
+      {
+        "url": "https://english.nsu.ru/admission/grants-scholarships/",
+        "contentHash": "sha256:715caf467753552270eb69d9ae8189f221e078d2662bbf36188d350ea651a142"
+      },
+      {
+        "url": "https://english.nsu.ru/admission/new-students/",
+        "contentHash": "sha256:3e0149e973cb1c6dc7660dd4d3094ed5dd5e19b06fe83496c1a91caed392528e"
+      },
+      {
+        "url": "https://english.nsu.ru/admission/programs/specialist-degree-program-english/",
+        "contentHash": "sha256:b9f1e345fce1634bf069ae83e83a50041aec0de6d99ac9a806943a9ff9ab454f"
+      },
+      {
+        "url": "https://english.nsu.ru/admission/programs/bachelor-s-degree-programs-russian/",
+        "contentHash": "sha256:f7deba5f870160f46c476f9c00f44d69486564c7f3c4cdd59172bfcfb0e60886"
+      },
+      {
+        "url": "https://english.nsu.ru/admission/apply/countries/",
+        "contentHash": "sha256:bebdf9a6fed23559c82e6d714f38180be7f2170946cde941cf30dcb2543ff764"
+      },
+      {
+        "url": "https://english.nsu.ru/admission/new-students/living-costs/",
+        "contentHash": "sha256:66b856ade0d558fc6e0147a490dbaec1f00b758d1ec8ca9932f2420510ebf221"
+      },
+      {
+        "url": "https://english.nsu.ru/admission/new-students/accommodation/",
+        "contentHash": "sha256:4b3990c64b71c02eed55b71830bbc2356d5028696f41be7061f2a18d7b0fcdfe"
+      },
+      {
+        "url": "https://english.nsu.ru/admission/programs/russian-language-literature-and-culture-for-foreigners/",
+        "contentHash": "sha256:f99da15ea41f63675fcf5554dd43b8fd64c07acf7dceea39d1bbb420beb3992f"
+      },
+      {
+        "url": "https://english.nsu.ru/admission/programs/courses/",
+        "contentHash": "sha256:3ea0acac163856eb2931eeeaba199f2a2a47c90c9a526850b43aad417956eae0"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}

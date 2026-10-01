@@ -4558,3 +4558,26 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[nsu]
+name = "Novosibirsk State University (Россия)"
+files = [
+  { path = "manual/nsu/00-home.html", url = "https://english.nsu.ru/" },
+  { path = "manual/nsu/01-admission.html", url = "https://english.nsu.ru/admission/" },
+  { path = "manual/nsu/02-programs.html", url = "https://english.nsu.ru/admission/programs/" },
+  { path = "manual/nsu/03-admission-procedure.html", url = "https://english.nsu.ru/admission/admission-procedure/" },
+  { path = "manual/nsu/04-apply.html", url = "https://english.nsu.ru/admission/apply/" },
+  { path = "manual/nsu/05-grants-scholarships.html", url = "https://english.nsu.ru/admission/grants-scholarships/" },
+  { path = "manual/nsu/06-new-students.html", url = "https://english.nsu.ru/admission/new-students/" },
+  { path = "manual/nsu/08-specialist-english.html", url = "https://english.nsu.ru/admission/programs/specialist-degree-program-english/" },
+  { path = "manual/nsu/09-bachelor-russian.html", url = "https://english.nsu.ru/admission/programs/bachelor-s-degree-programs-russian/" },
+  { path = "manual/nsu/10-apply-countries.html", url = "https://english.nsu.ru/admission/apply/countries/" },
+  { path = "manual/nsu/11-living-costs.html", url = "https://english.nsu.ru/admission/new-students/living-costs/" },
+  { path = "manual/nsu/12-accommodation.html", url = "https://english.nsu.ru/admission/new-students/accommodation/" },
+  { path = "manual/nsu/13-russian-lang-foreigners.html", url = "https://english.nsu.ru/admission/programs/russian-language-literature-and-culture-for-foreigners/" },
+  { path = "manual/nsu/14-courses.html", url = "https://english.nsu.ru/admission/programs/courses/" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
