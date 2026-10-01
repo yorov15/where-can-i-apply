@@ -1,0 +1,161 @@
+{
+  "id": "chungbuk",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Chungbuk National University (Южная Корея): приём иностранцев на бакалавриат",
+    "orig": "ChungBuk National University"
+  },
+  "hostCountry": "KR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Государственный вуз. Обучение платное (около 2,0–2,7 млн вон за семестр), но вуз снимает плату по TOPIK: 20% за уровень 3, 40% за уровень 4, 80% за уровень 5. Общежитие студент оплачивает сам. Полное содержание даёт только внешняя стипендия GKS."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Nationality (Foreigners whose parents are both non-Korean)"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы не ограничена: принимают тех, кто прошёл образование, равное корейской начальной и средней школе, в Корее или за рубежом."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Foreigners who have completed their entire education equivalent to South Korea's elementary and secondary education(domestic and overseas)"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы нет: нужен аттестат (или ожидаемый аттестат) старшей школы, конкретный год не назван."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения на страницах приёма нет: ни минимум, ни максимум не указаны."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Порога среднего балла для приёма нет: GPA упоминается только как условие стипендии (80 баллов за прошлый семестр), а не как требование допуска."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOPIK",
+          "min": 3,
+          "evidence": "Must submit either 1) or 2) 1) TOPIK Level 3 or higher 2) CBNU Korean Language Program(KLP) level 4 completion"
+        }
+      ],
+      "evidence": "Must submit either 1) or 2) 1) TOPIK Level 3 or higher 2) CBNU Korean Language Program(KLP) level 4 completion"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать может иностранец, у которого оба родителя — не корейцы, и который прошёл всё школьное образование, соответствующее корейской начальной и средней школе (в Корее или за рубежом).",
+      "evidence": "Nationality (Foreigners whose parents are both non-Korean)",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Язык: нужен либо TOPIK 3 и выше, либо окончание 4-го уровня корейского языкового курса при CBNU (KLP). Некоторые кафедры (например, корейский язык и литература) уровень KLP не принимают — только TOPIK 4.",
+      "evidence": "Must submit either 1) or 2) 1) TOPIK Level 3 or higher 2) CBNU Korean Language Program(KLP) level 4 completion",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Плата за обучение — в корейских вонах за семестр; например, гуманитарные направления около 2 029 000 вон, инженерные (электротехника, информатика) около 2 696 000 вон за семестр.",
+      "evidence": "Tuition [Monetary Unit: Korean Won(￦), per semester]",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Скидка на обучение по TOPIK: уровень 3 — 20% платы, уровень 4 — 40%, уровень 5 — 80%. Со второго семестра к уровню добавляется требование к оценкам (A+, A0, B+).",
+      "evidence": "Level of scholarship C grade : 20% of tuition B2 grade : 40% of tuition B1 grade : 80% of tuition",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сбор за подачу — KRW 72 000.",
+      "evidence": "Application fee: KRW 72,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём на весну 2027 (School of International Studies): онлайн-подача 12–30 октября 2026 (первый раунд) и 23 ноября – 11 декабря 2026 (второй раунд). Общий справочник для бакалавриата обещают опубликовать в середине октября 2026.",
+      "evidence": "Online ApplicationOct. 12 (Mon) - Oct. 30 (Fri), by 18:00Nov. 23 (Mon) - Dec. 11 (Fri), by 18:00",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы об образовании нужны с апостилем, консульской легализацией или нотариальной копией; также требуется справка о финансовой поддержке и банковский вклад.",
+      "evidence": "original apostille or consular authentication or original notarized copy",
+      "field": null,
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-10-12",
+    "closes": "2026-12-11",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://enter.jinhakapply.com/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — ChungBuk National University (CBNU), государственный вуз Южной Кореи, кампус в Чхонджу. Приёмом иностранцев занимается Отдел международных связей (OIA)."
+    }
+  },
+  "source": {
+    "url": "https://oia.cbnu.ac.kr/home/sub.do?menukey=7867",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://oia.cbnu.ac.kr/home/sub.do?menukey=7867",
+        "contentHash": "sha256:f049556d61916d3daf3ece4875e247560a4c9760b72f245dabe3978022f8f425"
+      },
+      {
+        "url": "https://oia.cbnu.ac.kr/home/sub.do?menukey=7676",
+        "contentHash": "sha256:c54ac797d909e970c00741273a4c4e6e2e378bb4a8ffd64291edc376723f7ae7"
+      },
+      {
+        "url": "https://oia.cbnu.ac.kr/home/sub.do?menukey=7893",
+        "contentHash": "sha256:2ea0d41e20746c22166b242fa14d0836e35bc8a4e93989222a837456bba7bfe2"
+      },
+      {
+        "url": "https://oia.cbnu.ac.kr/home/sub.do?menukey=7882",
+        "contentHash": "sha256:0041cf89dcc737b24734e125a5f074ee20e74cef4839f8e7fe89f6de325cba65"
+      },
+      {
+        "url": "https://oia.cbnu.ac.kr/home/sub.do?menukey=7885",
+        "contentHash": "sha256:853924edfda2b4e4033c3ed9157b75ba6b49dc40ee3ea91652c4d07ec17a3950"
+      },
+      {
+        "url": "https://oia.cbnu.ac.kr/home/main.do",
+        "contentHash": "sha256:6f322410375772abb2a6b5b082daff51a76ef0aadf23f7c678e5c6fed6fa3abf"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
