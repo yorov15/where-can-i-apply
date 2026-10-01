@@ -1,0 +1,164 @@
+{
+  "id": "corvinus",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Corvinus University of Budapest (Венгрия): бакалавриат",
+    "orig": "Budapesti Corvinus Egyetem"
+  },
+  "hostCountry": "HU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Полное покрытие даёт не сам вуз, а государственная программа Stipendium Hungaricum (отдельная заявка): бесплатное обучение, ежемесячная выплата и жильё или 40 000 форинтов на жильё. Без неё обучение платное; размер платы на странице вуза не назван. Для платных абитуриентов сбор за заявку 100 €. Дорогу вуз не оплачивает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство не ограничено: принимают граждан любой страны, для граждан ЕС отдельные условия; стипендия Stipendium Hungaricum — только для стран-партнёров программы. Смотрели страницы вуза про поступление и стипендию."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы не ограничена: нужен аттестат страны проживания уровня венгерской матуры, IB, Cambridge или GED. Смотрели страницу вуза про поступление."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы не названо: нужен оконченный средний курс и итоговый аттестат. Про 11-летнюю школу ничего не сказано. Смотрели страницу вуза про поступление."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Года выпуска не называют: можно подать с промежуточными оценками, итоговый аттестат нужен к зачислению. Смотрели страницу вуза про поступление."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения на странице вуза нет. Смотрели страницы поступления и стипендии."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "For general admission, there are no overall GPA requirements at Corvinus"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "IELTS language certificate, minimum score: 6.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 72,
+          "evidence": "TOEFL iBT language certificate, minimum score: 72"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 100,
+          "evidence": "Duolingo English Test language certificate, minimum score: 100"
+        }
+      ],
+      "evidence": "Corvinus accepts the following proof of English language proficiency (minimum equivalent B2 level) submitted no later than 1 August"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Нужен оконченный средний курс в своей стране и итоговый аттестат к моменту зачисления; общего порога по среднему баллу нет. Число лет школы не названо. Если ещё учишься, можно подать с промежуточными оценками (не меньше двух лет табелей).",
+      "evidence": "For general admission, there are no overall GPA requirements at Corvinus, you simply need to have completed your secondary education in your country of residence and received your final certificate by the time of enrolment.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский не ниже B2, документ нужен не позже 1 августа: IELTS 6.0, TOEFL iBT 72 (в том числе Home Edition), Duolingo 100, Cambridge First, TOEIC 785, SkillCert EGP 96. Учёба на английском сама по себе не освобождает: нужны справки школы, что все экзамены сдавались на английском.",
+      "evidence": "IELTS language certificate, minimum score: 6.0 TOEFL language certificate, minimum score: 65 TOEFL iBT language certificate, minimum score: 72",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для экономики, бизнес-информатики, менеджмента, науки о данных в бизнесе, международного бизнеса и PPE нужна математика: AP 3+, ACT по математике 27+, IB, A-level B, или онлайн-экзамен Corvinus (26 вопросов, 60 минут, нужно набрать 40 из 100).",
+      "evidence": "ACT exam (mathematics component), minimum score: 27",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Для коммуникации и медиа, международных отношений и PPE вместо математики или вместе с ней идёт онлайн-собеседование 10–15 минут в Teams: знания, навыки по программе, мотивация. Для PPE нужны оба этапа.",
+      "evidence": "Both examination components must be passed to be admitted to this programme.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Максимум на вступительных — 100 баллов; порог для каждой программы декан задаёт каждый год, прохождение порога не гарантирует место.",
+      "evidence": "Applicants scoring above the points threshold will be conditionally accepted - the points thresholds can vary from year-to-year and programme-to-programme.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Для стипендиатов Stipendium Hungaricum экзамены обычно в апреле–мае, итоги присылают через платформу Tempus Foundation до конца мая; сбор за заявку с них не берут. Нужно мотивационное письмо.",
+      "evidence": "Stipendium Hungaricum and Diaspora applicants will be notified of their results via the Tempus Foundation application platform by the end of May.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Самофинансирующиеся платят сбор за заявку 100 € (невозвратный). Размер платы за обучение на этой странице не назван; бесплатное обучение и стипендию даёт только Stipendium Hungaricum (отдельная заявка до середины января).",
+      "evidence": "Application fee €100 compulsory and non-refundable for fee-paying applicants",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендиат Stipendium Hungaricum получает ежемесячную выплату на жильё 40 000 форинтов или место в общежитии (мест ограниченно); обучение для него бесплатное.",
+      "evidence": "Stipendium Hungaricum Scholarship holders receive a monthly allowance of 40.000 HUF towards their housing expenses or a dormitory placement depending on availability.",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.uni-corvinus.hu/post/landing-page/application/admissions-requirements/?lang=en",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Corvinus University of Budapest, Будапешт — экономика, бизнес, международные отношения, социология. Обучение платное, но через Stipendium Hungaricum бесплатно со стипендией. Английский от B2, для экономических программ нужна математика, для гуманитарных — собеседование. Сроков на 2027 год страница вуза не называет."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.uni-corvinus.hu/post/landing-page/application/admissions-requirements/?lang=en",
+    "pages": [
+      {
+        "url": "https://www.uni-corvinus.hu/post/landing-page/application/admissions-requirements/?lang=en",
+        "contentHash": "sha256:201fecc9247fb39cc5c76dddb470f9ac0ebfbd0691e965b581a4047ceb6c6cb5"
+      },
+      {
+        "url": "https://www.uni-corvinus.hu/ind/international-and-administrative-student-services/stipendium-hungaricum-hungarian-diaspora-program/?lang=en",
+        "contentHash": "sha256:25151fdfcd74bd1e84a7bbee2deec5307a43e2c778be2da7a015452d08b7adf8"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}

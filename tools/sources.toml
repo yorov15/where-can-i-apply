@@ -4402,3 +4402,24 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
+
+# Corvinus University of Budapest (Венгрия): бакалавриат.
+# Домен uni-corvinus.hu одобрен Муродом 2026-10-01 (список из 27 кандидатов, ответ «1» — весь список, кроме КазНУ).
+[corvinus]
+name = "Corvinus University of Budapest (Венгрия): бакалавриат"
+files = [
+  { path = "manual/corvinus/00-admissions-requirements.html", url = "https://www.uni-corvinus.hu/post/landing-page/application/admissions-requirements/?lang=en" },
+  { path = "manual/corvinus/03-sh-program.html", url = "https://www.uni-corvinus.hu/ind/international-and-administrative-student-services/stipendium-hungaricum-hungarian-diaspora-program/?lang=en" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
+
+# Eötvös Loránd University, ELTE (Венгрия): бакалавриат.
+# Домен elte.hu одобрен Муродом 2026-10-01 (список из 27 кандидатов, ответ «1» — весь список, кроме КазНУ).
+[elte]
+name = "Eötvös Loránd University, ELTE (Венгрия): бакалавриат"
+urls = [
+  "https://www.elte.hu/en/current-students/stipendium-hungaricum/before",
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
