@@ -4384,3 +4384,21 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
+
+# KIMEP University (Казахстан): бакалавриат.
+# Домен kimep.kz одобрен Муродом 2026-09-28 (список из 50, ответ «да»).
+[kimep]
+name = "KIMEP University (Казахстан): бакалавриат"
+files = [
+  { path = "manual/kimep/00-high-school-graduates.html", url = "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/" },
+  { path = "manual/kimep/01-deadlines.html", url = "https://www.kimep.kz/prospective-students/en/admission/application-deadlines/" },
+  { path = "manual/kimep/02-financial-aid.html", url = "https://www.kimep.kz/prospective-students/en/financial-aid/" },
+  { path = "manual/kimep/03-tuition.html", url = "https://www.kimep.kz/prospective-students/en/tuition-and-fees/" },
+  { path = "manual/kimep/04-nostrification.html", url = "https://www.kimep.kz/prospective-students/en/admission/nostrification/" },
+  { path = "manual/kimep/05-tests.html", url = "https://www.kimep.kz/prospective-students/en/admission/kimep-university-tests-schedule/" },
+  { path = "manual/kimep/06-scholarships-new.html", url = "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/" },
+  { path = "manual/kimep/07-funding.html", url = "https://www.kimep.kz/prospective-students/en/financial-aid/funding-opportunities/" },
+  { path = "manual/kimep/08-tuition-2026-27.pdf", url = "https://www.kimep.kz/prospective-students/files/2026/05/Tuition-and-fees-eng-2026-27.pdf" },
+]
+approvedBy = "human"
+approvedAt = "2026-09-28"
