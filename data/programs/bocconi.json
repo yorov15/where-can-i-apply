@@ -1,0 +1,183 @@
+{
+  "id": "bocconi",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Bocconi University (Италия): приём иностранцев на бакалавриат",
+    "orig": "Bocconi University"
+  },
+  "hostCountry": "IT",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Платный вуз (около €17 000 в год), но есть помощь по нужде и успехам: Bocconi4Access to Education даёт полное или частичное снятие платы (20–100%). Проживание и дорогу вуз не покрывает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "students who are not Italian citizens and are not residents in Italy"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы не ограничена: диплом должен давать доступ к бакалавриату в стране школы; для не-ЕС дипломов есть требование 12 лет обучения и, при национальном вступительном экзамене (гаокао, YKS и т.п.), его нужно сдать."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "The diploma must be awarded after at least 12 years of education (starting from the first year of primary school)"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы нет: диплом нужно предоставить к концу июля перед началом учебного года (для британских квалификаций — к концу августа), конкретный год выпуска не назван."
+    },
+    "age": {
+      "min": 17,
+      "asOf": {
+        "relativeTo": "applicationYear",
+        "monthDay": "09-01"
+      },
+      "evidence": "and who will be under the age of 17 as of 1 September 2027"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Порога среднего балла школы нет: средний балл за два предпоследних года составляет 45% оценки отбора, но минимума для допуска не установлено."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Bocconi English language proficiency test with level B2 or higher"
+    },
+    "exam": {
+      "alternative": true,
+      "anyOf": [
+        {
+          "test": "SAT"
+        },
+        {
+          "test": "ACT"
+        }
+      ],
+      "evidence": "The accepted selection tests for programs of the Undergraduate school are: Bocconi online test , SAT or ACT"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Отбор идёт по вступительному тесту (или SAT/ACT), а не по среднему баллу аттестата: на английских программах до 50–55% мест зарезервировано за иностранцами.",
+      "evidence": "students who are not Italian citizens and are not residents in Italy",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "11-летний аттестат (как в Таджикистане) Bocconi напрямую не принимает: диплом должен быть выдан после минимум 12 лет обучения, поэтому нужен ещё год вуза/постсреднего образования со всеми сданными экзаменами.",
+      "evidence": "1 full year of University/post-secondary education with all the exams passed (for 11-year diplomas)",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Моложе 17 лет на 1 сентября года поступления не берут; тем, кому 17–18 лет и кто не живёт в Италии, обязательно назначить опекуна.",
+      "evidence": "appointing a legal guardian is a mandatory requirement",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Вступительный тест: Bocconi online test или SAT/ACT (для права — ещё LSAT или Bocconi test Law). Минимальный проходной балл Bocconi-теста — 17.",
+      "evidence": "If you have achieved a score of 17 or higher (the minimum score required to apply)",
+      "field": "exam",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский: для англоязычных программ нужен уровень B2 и выше (тест Bocconi или признанный внешний сертификат). Для программ на итальянском достаточно B1.",
+      "evidence": "Bocconi English language proficiency test with level B2 or higher",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение на первом курсе бакалавриата в 2026/27 — €17 000 в год; сумма на 2027/28 ещё не опубликована.",
+      "evidence": "For 2026-27 a.y., for students enrolled to their first year in a Bachelor of Science or Law programme, tuition and fees at Bocconi are set at € 17,000 per year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Bocconi4Access to Education: полное или частичное снятие платы за обучение по нужде и успехам (уровни 100%, 80%, 60%, 40%, 20%); заявка одна, помощь распределяют до исчерпания бюджета.",
+      "evidence": "Each opportunity consists of a full or partial tuition waiver, based on the student's and family's economic needs.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сбор за каждую заявку — €100, оплачивается только через портал и не возвращается.",
+      "evidence": "an application fee of €100 is required",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём на 2027/28 идёт в две сессии: ранняя — 2–29 сентября 2026 (уже прошла), зимняя — 25 ноября 2026 – 26 января 2027.",
+      "evidence": "Winter Session 25 November 2026 - 26 January 2027 (3:00pm Italian time)",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-11-25",
+    "closes": "2027-01-26",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.unibocconi.it/en/applying-bocconi/bachelor-and-law-programs/application-and-admissions",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — Bocconi University (Università Bocconi), Милан, Италия. Заявки — через портал Apply2B."
+    }
+  },
+  "source": {
+    "url": "https://www.unibocconi.it/en/applying-bocconi/bachelor-and-law-programs/application-and-admissions",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://www.unibocconi.it/en/applying-bocconi/bachelor-and-law-programs/application-and-admissions",
+        "contentHash": "sha256:05565dfc693616985a062788054eaa504916c1772676a7a8b8825ccad019ae06"
+      },
+      {
+        "url": "https://www.unibocconi.it/en/applying-bocconi/bachelor-and-law-programs/application-and-admissions/admissions",
+        "contentHash": "sha256:ec4952edef396aa1180d895b583badebed598110d8a01488dc1cc44e08cc26ae"
+      },
+      {
+        "url": "https://www.unibocconi.it/en/applying-bocconi/bachelor-and-law-programs/application-and-admissions/secondary-school-diplomas",
+        "contentHash": "sha256:f4f9d8a4586312000a948f870f43150b4d4a11fd24c80234eefcac8b021dd66f"
+      },
+      {
+        "url": "https://www.unibocconi.it/en/applying-bocconi/bachelor-and-law-programs/application-and-admissions/results-and-enrollment",
+        "contentHash": "sha256:61bf9a9432ec408fa6770660f6517dc3a71fd6ec85a7a43723bf4d4f88adf1a3"
+      },
+      {
+        "url": "https://www.unibocconi.it/en/applying-bocconi/bachelor-and-law-programs/application-and-admissions/online-bocconi-test",
+        "contentHash": "sha256:57adf6f6f00fb3a6aca84f83419dfed0da2c183d153436d7435bd0df61ef8be1"
+      },
+      {
+        "url": "https://www.unibocconi.it/en/applying-bocconi/bachelor-and-law-programs/fees",
+        "contentHash": "sha256:bac681bb8bbbeea2c77ec3083741f4fe3d07d96aca3ad73529f20257b9082358"
+      },
+      {
+        "url": "https://www.unibocconi.it/en/applying-bocconi/bachelor-and-law-programs/funding",
+        "contentHash": "sha256:61ed3843dd1e8bfd056ab8724d1ae6bfabb9a84198c67aeebb63f706d852499f"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
