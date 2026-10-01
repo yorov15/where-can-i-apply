@@ -4505,3 +4505,13 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# МИФИ, Москва (Россия).
+# Домен eng.mephi.ru одобрен Муродом 2026-10-01 (список из 55 кандидатов, ответ «ok delay spisok» — весь список).
+[mephi]
+name = "МИФИ, Москва (Россия)"
+files = [
+  { path = "manual/mephi/00-budget.html", url = "https://eng.mephi.ru/academics/admissions" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

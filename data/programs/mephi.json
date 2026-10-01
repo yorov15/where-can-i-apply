@@ -1,0 +1,134 @@
+{
+  "id": "mephi",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "МИФИ (Россия): бакалавриат на бюджетные места для граждан Таджикистана",
+    "orig": "National Research Nuclear University MEPhI"
+  },
+  "hostCountry": "RU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Для граждан Таджикистана есть бюджетные места на равных условиях с россиянами: обучение за счёт федерального бюджета. Жильё, стипендию и дорогу страница не описывает. Остальные иностранцы идут по квоте правительства России или на платные места."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": [
+        "BY",
+        "KZ",
+        "KG",
+        "TJ"
+      ],
+      "evidence": "citizens of the Republic of Belarus, the Republic of Kazakhstan, the Kyrgyz Republic and the Republic of Tajikistan"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по стране школы страница не называет. Смотрели страницу бюджетного приёма."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы страница не называет: нужны копии документов об образовании. Про 11-летнюю школу ничего не сказано. Смотрели страницу бюджетного приёма."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Года выпуска страница не называет. Смотрели страницу бюджетного приёма."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения страница не называет. Смотрели страницу бюджетного приёма."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Среднего балла страница не называет: на равных условиях решают результаты вступительных испытаний. Смотрели страницу бюджетного приёма."
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Русский язык нужен (обучение на русском), но порога и тестов в кодах инструмента страница не называет. Смотрели страницу бюджетного приёма."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Граждане Таджикистана (как Беларуси, Казахстана и Кыргызстана) могут поступать в МИФИ на бюджетные места на равных условиях с гражданами России. Остальные иностранцы идут по квоте правительства России (через представительство Россотрудничества или посольство в своей стране) или на платные места.",
+      "evidence": "citizens of the Republic of Belarus, the Republic of Kazakhstan, the Kyrgyz Republic and the Republic of Tajikistan",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Бакалавриат в МИФИ идёт на русском. В заявке на квоту указывают уровень русского; для тех, кто не знает русский, вуз предлагает подготовительный факультет.",
+      "evidence": "your level of Russian language proficiency",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Бюджетное место — обучение за счёт федерального бюджета. Страница не называет стипендию, жильё и дорогу для тех, кто поступает на равных условиях с россиянами; для квоты правительства России условия определяет Россотрудничество.",
+      "evidence": "Quota of the Government of the Russian Federation",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём документов на бакалавриат в 2026 году: начало 20 июня, срок для тех, кто сдаёт вступительные испытания, — 10 июля, без испытаний — 25 июля; списки 27 июля, согласие на зачисление на приоритетном этапе до 1 августа, на основном до 5 августа.",
+      "evidence": "July 10 Deadline for applicants required to take entrance examinations",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Путь по квоте правительства России: заявку подают через представительство Россотрудничества или посольство России в своей стране, указывая до 6 вузов (МИФИ рекомендуют ставить первым), копию паспорта (действителен не меньше 18 месяцев) и копии документов об образовании.",
+      "evidence": "You can choose up to 6 higher educational institutions of the Russian Federation in which you want to study.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-06-20",
+    "closes": "2026-07-10",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://eng.mephi.ru/academics/admissions",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: МИФИ, Москва (есть и институт в Обнинске). Граждане Таджикистана поступают на бюджет на равных условиях с россиянами, остальные — по квоте правительства России. Приём 2026 года шёл с 20 июня до 10 июля; сроки 2027 года появятся в новых правилах приёма."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://eng.mephi.ru/academics/admissions",
+    "pages": [
+      {
+        "url": "https://eng.mephi.ru/academics/admissions",
+        "contentHash": "sha256:82bf6a2e38ae326c6b07d5af30f6af2c9e90933985f8a40e7afc7ccaee808f22"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
