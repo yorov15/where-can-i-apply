@@ -4678,3 +4678,23 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[renmin]
+name = "Renmin University of China (Китай)"
+files = [
+  { path = "manual/renmin/bba-guide.pdf", url = "https://iso.ruc.edu.cn/docs/2025-11/759ddbbb34f44a8583a7223a0015753e.pdf" },
+  { path = "manual/renmin/bba-fees.html", url = "https://globalbba.rmbs.ruc.edu.cn/FeesFunding/index.htm" },
+  { path = "manual/renmin/bba-process.html", url = "https://globalbba.rmbs.ruc.edu.cn/Admissions/ApplicationProcess/index.htm" },
+  { path = "manual/renmin/bba-key.html", url = "https://globalbba.rmbs.ruc.edu.cn/Admissions/KeyTimelines/index.htm" },
+  { path = "manual/renmin/bba-req.html", url = "https://globalbba.rmbs.ruc.edu.cn/Admissions/Requirements/index.htm" },
+  { path = "manual/renmin/bba-faq.html", url = "https://globalbba.rmbs.ruc.edu.cn/Admissions/FAQs/index.htm" },
+  { path = "manual/renmin/ug-guide.pdf", url = "https://iso.ruc.edu.cn/docs/2025-11/e603910401c54121bb1438b3f3c534ec.pdf" },
+  { path = "manual/renmin/ug-majors.pdf", url = "https://iso.ruc.edu.cn/docs/2025-11/f56a13d809c24fd289d566fc35fac570.pdf" },
+  { path = "manual/renmin/tuition.pdf", url = "https://iso.ruc.edu.cn/docs/2026-07/e52dc0d5b0d246eea303762d9a9460ad.pdf" },
+  { path = "manual/renmin/notice.pdf", url = "https://iso.ruc.edu.cn/docs/2025-12/5150ae16946847d59d84fb419420d1bc.pdf" },
+  { path = "manual/renmin/nationality.pdf", url = "https://iso.ruc.edu.cn/docs/2025-11/7344a99fd8c9438f88f72c7649244a00.pdf" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

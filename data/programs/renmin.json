@@ -1,0 +1,306 @@
+{
+  "id": "renmin",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Renmin University of China (Китай): приём иностранцев на бакалавриат",
+    "orig": "Renmin University of China (中国人民大学)"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное. Китайскоязычный бакалавриат — 24 000–30 000 юаней в год (точная ставка — в каталоге специальностей), англоязычная программа Global BBA (бизнес-администрирование) — 36 000 юаней в год (примерно 5 000 $). Сбор за заявку 800 юаней, невозвратный. Скидки есть, но неполные: на Global BBA часть первокурсников получает освобождение от платы за первый год по конкурсу (около 40 % первокурсников — за первый год или за половину года), со 2-го курса можно подать на стипендию за успеваемость; отдельно названа стипендия правительства Пекина, условия и суммы которой на снятых страницах не расписаны. Полного бесплатного обучения для иностранцев-бакалавров и покрытия жилья и дороги на снятых страницах нет. Общежитие — примерно 1 300–3 600 $ в год. Отказ по стране не назван, но 11-летнюю школу Таджикистана нужно сверить с требованием полного среднего образования в приёмной."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "NOT have Chinese nationality; Hold a valid ordinary passport"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране на снятых страницах нет. Требование одно — не иметь китайского гражданства и держать обычный паспорт; страна аттестата не названа ни в белом, ни в чёрном списке. Программы бакалавриата открыты иностранцам без ограничения по стране школы, а международные баллы (SAT, ACT, IB, AP, A-level) и национальные экзамены более чем ста стран принимаются как доказательство академической подготовки. Отдельная страница Таджикистана или Центральной Азии на сайте не публикуется. Смотрели 2026 Application Guide on Global BBA, страницы Requirements, Application Process, Key Timelines и FAQ, а также 2026 年国际学生本科生（中文授课）招生简章 и 学费标准."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Have a full-time high school diploma or higher education level, and are eligible to apply for university"
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "You need begin the process during the last academic year of secondary education before University."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного минимума или максимума для приёма на бакалавриат снятые страницы не называют: требование к возрасту ни числом, ни оговоркой не задано. Единственное возрастное правило — про документы: абитуриентам младше 18 лет (родившимся 1 сентября 2008 года или позже), чьи родители не живут в Китае, нужен нотариально заверенный документ об опекуне в Китае; это условие подачи, а не отказ. Смотрели 2026 Application Guide on Global BBA, страницы Requirements, Application Process, Key Timelines и FAQ."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Although the admission staff does not have a minimum test score or class rank in our evaluation process, we pay particular attention to your high school curriculum and your performance in that curriculum."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "evidence": "a valid IELTS Academic overall score of 6.0 or above"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "evidence": "a valid TOEFL iBT overall score of 90 or above"
+        }
+      ],
+      "evidence": "Demonstrate English proficiency through one of the following: a valid IELTS Academic overall score of 6.0 or above, or a valid TOEFL iBT overall score of 90 or above."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Good records of standardized tests will be a plus, which we think demonstrate students' willingness to take on challenges."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать может только негражданин Китая с действующим обычным паспортом; гражданство Таджикистана требованию соответствует, отказа по стране нет.",
+      "evidence": "NOT have Chinese nationality; Hold a valid ordinary passport",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Паспорт должен быть действителен как минимум до 31 марта 2027 года.",
+      "evidence": "The validity of the passport must be later than March 31, 2027.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Отдельная проверка национальности для тех, кто родился с иностранным гражданством, но у кого один или оба родителя — граждане Китая, либо кто ранее был жителем материкового Китая, Гонконга, Макао или Тайваня и получил иностранное гражданство: нужно доказать иностранное гражданство по требованиям Минобразования КНР.",
+      "evidence": "对于本人出生即具有外国国籍且出生时父母双方或一方为中国公民， 或原 为中国大陆（内地） 、香港、澳门和台湾居民、后移民国外并获得外国国籍的申 请人， 须符合中国教育部教外函 〔2020〕12号文件的要求， 并按照学校的招生要 求提供相关证明材料。",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужен аттестат о полном среднем образовании (full-time high school diploma) или более высокий уровень. Таджикская школа — 11 лет; соответствует ли её аттестат требованию полного среднего образования, уточняйте в приёмной.",
+      "evidence": "Have a full-time high school diploma or higher education level, and are eligible to apply for university",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Если абитуриент ещё учится в школе, вместо аттестата можно подать справку об ожидаемом выпуске (Certificate of Expected Graduation), а сам аттестат донести до регистрации.",
+      "evidence": "If the applicant is currently a student at school, please submit the Certificate of Expected Graduation issued by their current high school.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Начинать подачу нужно в последний учебный год средней школы перед университетом.",
+      "evidence": "You need begin the process during the last academic year of secondary education before University.",
+      "field": "graduationYear",
+      "kind": "must"
+    },
+    {
+      "ru": "Абитуриентам младше 18 лет (родившимся 1 сентября 2008 года или позже), чьи родители не живут в Китае, нужен нотариально заверенный документ об опекуне в Китае. Отказом это не является.",
+      "evidence": "applicants under the age of 18 (born on or after September 1, 2008) whose parents do not reside in China must submit a notarized document of a guardian in China",
+      "field": "age",
+      "kind": "note"
+    },
+    {
+      "ru": "Числового порога по оценкам нет: вуз прямо пишет, что у приёмной комиссии нет минимального балла теста или ранга в классе, но смотрит на школьную программу и успеваемость по ней.",
+      "evidence": "Although the admission staff does not have a minimum test score or class rank in our evaluation process, we pay particular attention to your high school curriculum and your performance in that curriculum.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Англоязычная программа Global BBA требует английский: IELTS Academic не ниже 6.0 или TOEFL iBT не ниже 90.",
+      "evidence": "Demonstrate English proficiency through one of the following: a valid IELTS Academic overall score of 6.0 or above, or a valid TOEFL iBT overall score of 90 or above.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский экзамен можно не сдавать, если родной язык английский, если абитуриент может подтвердить эквивалентный уровень или если он минимум три года учился на английском языке и представил подтверждение.",
+      "evidence": "Applicants who can provide proof of equivalent language proficiency meeting the required standards, are native English speakers, or have completed at least three years of full-time education in English with relevant documentation, are not required to submit TOEFL or IELTS scores.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Китайскоязычный бакалавриат требует китайский: для специальности «китайский язык» — HSK 4 с баллом 180 и выше; для других гуманитарных и общественных специальностей — HSK 6 с баллом 180 и выше; для естественно-научных и технических — HSK 5 с баллом 210 и выше. Носителям китайского и тем, у кого прошлое образование было на китайском, сертификат можно не сдавать.",
+      "evidence": "申请汉语言本科专业的申请人汉语 水平须达到HSK四级180分（含）以上；申请其他人文社科类专业的申请人汉语 水平须达到HSK六级180分（含）以上；申请理工类专业的申请人汉语水平须达 到HSK五级210分（含）以上。",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для англоязычной программы Global BBA китайский не нужен: обучение целиком на английском.",
+      "evidence": "The Global BBA program is delivered entirely in English, so we do not require Chinese language proficiency.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Все абитуриенты бакалавриата обязаны сдать China Scholastic Competency Assessment (CSCA) и подать результат. Обязательный предмет — математика, тест проводится на английском.",
+      "evidence": "Take the China Scholastic Competency Assessment (CSCA) organized by the China Scholarship Council on behalf of the Ministry of Education of People's Republic of China, and submit the score report.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "SAT и ACT не обязательны: хорошие баллы стандартизированных тестов — плюс, а не условие. Принимают также IB, AP, A-level и национальные экзамены более чем ста стран.",
+      "evidence": "Good records of standardized tests will be a plus, which we think demonstrate students' willingness to take on challenges.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Минимального балла SAT или ACT нет: вуз прямо пишет, что не устанавливает минимальный балл стандартизированного теста для рассмотрения заявки.",
+      "evidence": "Renmin Business School does not have a minimum standardized test score that a student needs to meet in order for his or her application to be reviewed.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Сбор за заявку — 800 юаней, платится онлайн в системе подачи и не возвращается.",
+      "evidence": "The application fee is CNY 800. The application fee will not be refunded.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 800,
+        "currency": "CNY",
+        "evidence": "The application fee is CNY 800. The application fee will not be refunded."
+      }
+    },
+    {
+      "ru": "Плата за обучение китайскоязычного бакалавриата — 24 000–30 000 юаней в год: 26 000 у права, международных отношений, журналистики, бизнеса, экономики, финансов и прикладной экономики, 30 000 у искусств, 24 000 у остальных факультетов.",
+      "evidence": "本科生 (中文授课) 普通进修生 法学院、国际关系学院、新闻学院、商学院、 经济学院、财政金融学院、应用经济学院 26000元 艺术学院 30000元 其他学院 24000元",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата за обучение англоязычной программы Global BBA (商学院) — 36 000 юаней в год.",
+      "evidence": "本科生 (英文授课) 商学院 Global BBA 36000元",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Global BBA: 36 000 юаней в год (примерно 5 000 $), за четыре года — 144 000 юаней. Часть первокурсников получает частичное освобождение от платы за первый год по конкурсу, со 2-го по 4-й курс есть стипендии за успеваемость.",
+      "evidence": "Tuition per year CNY 36,000 (roughly USD 5,000) 4-year total CNY 144,000 (roughly USD 20,000) Scholarships Qualified freshmen may receive a partial tuition waiver for the first year on a competitive basis. Merit-based scholarships in Year 2-4",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Около 40 % первокурсников Global BBA получают освобождение от платы за первый год или за половину года по итогам собеседования и материалов заявки; на следующих трёх курсах можно подать на стипендию за успеваемость.",
+      "evidence": "around 40% of freshmen will be waived first-year or half-year tuition based on our Admission Committee's evaluation of students' overall performance in interviews and qualifications as demonstrated in their application materials.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Отдельно названа стипендия правительства Пекина для иностранных студентов, но её условия и суммы на снятых страницах не расписаны — обещают сообщить дополнительно.",
+      "evidence": "Beijing Government Scholarship established by the People's Government of Beijing Municipality, supports excellent international students to study or conduct research at universities in Beijing. The application requirements and procedure will be further notified.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём Global BBA на 2026 год: окно подачи с 1 января по 31 мая 2026 года, рассмотрение и собеседования идут непрерывно.",
+      "evidence": "The application window is January 1 - May 31, 2026.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Приём китайскоязычного бакалавриата на 2026 год: онлайн-заявка с 1 января по 31 марта 2026 года.",
+      "evidence": "网上申请：2026 年 1 月 1 日-2026 年 3 月 31 日",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Все документы должны быть на китайском или английском; документы на другом языке — с нотариально заверенным переводом на китайский или английский.",
+      "evidence": "All application documents shall be in Chinese or English, documents in languages other than Chinese or English must be accompanied by notarized Chinese or English translations.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Вуз предупреждает, что не работает с посредниками и не берёт «агентских сборов» или «гарантийных депозитов»; обещания зачисления от имени «партнёрских агентств» к вузу отношения не имеют.",
+      "evidence": "Our university does not collect any form of \"agency fees\" or \"guarantee deposits.\"",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-01-01",
+    "closes": "2026-05-31",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://international.ruc.edu.cn/application",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Renmin University of China (中国人民大学), Пекин. Приём иностранцев на бакалавриат ведёт Офис международных студентов; заявка онлайн через international.ruc.edu.cn/application. Основной бакалавриат — китайскоязычный (HSK 4–6), на английском ведётся только Global BBA (бизнес-администрирование, 36 000 ¥/год). Обязателен тест CSCA. Сбор за заявку 800 ¥. Есть частичные скидки и стипендии, полного бесплатного обучения нет."
+    }
+  },
+  "source": {
+    "url": "http://iso.ruc.edu.cn/docs/2025-11/759ddbbb34f44a8583a7223a0015753e.pdf",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "http://iso.ruc.edu.cn/docs/2025-11/759ddbbb34f44a8583a7223a0015753e.pdf",
+        "contentHash": "sha256:aab8b679f7a8b516dd57bc36e347b126b6073b698d89ccee2948c7e9bf364b47"
+      },
+      {
+        "url": "http://globalbba.rmbs.ruc.edu.cn/FeesFunding/index.htm",
+        "contentHash": "sha256:8fc2eb4e5fa36d8464a95bca6cc29cf5a678cb2abd2dba3d3027b44db98dc8e4"
+      },
+      {
+        "url": "http://globalbba.rmbs.ruc.edu.cn/Admissions/ApplicationProcess/index.htm",
+        "contentHash": "sha256:4d17d30837f6ec53e080b33e7f5b3b2ac5da65d6ae0b676812467c60c2238887"
+      },
+      {
+        "url": "http://globalbba.rmbs.ruc.edu.cn/Admissions/KeyTimelines/index.htm",
+        "contentHash": "sha256:99f9dde04b752aaadc7d306f26f636070cd5b9ce4383c4f080862ca9f20e5f77"
+      },
+      {
+        "url": "http://globalbba.rmbs.ruc.edu.cn/Admissions/Requirements/index.htm",
+        "contentHash": "sha256:507140f9d9b49bfc11e3465dbe57275ae97d97b48ad95d618d203ba5def08eed"
+      },
+      {
+        "url": "http://globalbba.rmbs.ruc.edu.cn/Admissions/FAQs/index.htm",
+        "contentHash": "sha256:6ad06923ba704eeb0253c104a3301d378f36faaa412dc3b688cfe594667773b8"
+      },
+      {
+        "url": "http://iso.ruc.edu.cn/docs/2025-11/e603910401c54121bb1438b3f3c534ec.pdf",
+        "contentHash": "sha256:f465336bd172eb9e34bd30aae0c9fa30c55c9311a7e6b79c4fe9fb8e45bf105a"
+      },
+      {
+        "url": "http://iso.ruc.edu.cn/docs/2025-11/f56a13d809c24fd289d566fc35fac570.pdf",
+        "contentHash": "sha256:a5a6a6b53719a98a55cbef325f53f9adfc507dc8806142a0a7681c3135bcd189"
+      },
+      {
+        "url": "http://iso.ruc.edu.cn/docs/2026-07/e52dc0d5b0d246eea303762d9a9460ad.pdf",
+        "contentHash": "sha256:5d68f98a39f2db64adba4fb9727439b942b5fadce854d75ca69ae6c8886cf8f5"
+      },
+      {
+        "url": "http://iso.ruc.edu.cn/docs/2025-12/5150ae16946847d59d84fb419420d1bc.pdf",
+        "contentHash": "sha256:eead828ecffd46e21d5d6e7b641fd4849178a1b35877bbdef7d7071cf5d79858"
+      },
+      {
+        "url": "http://iso.ruc.edu.cn/docs/2025-11/7344a99fd8c9438f88f72c7649244a00.pdf",
+        "contentHash": "sha256:a4ecb70ecda9f6cf1e5c6e4f1e78f42a89edaa862ecfdb3bdc5645b4c348ee0c"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
