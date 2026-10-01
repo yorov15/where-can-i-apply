@@ -1,0 +1,157 @@
+{
+  "id": "nccu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "National Chengchi University (Тайвань): приём иностранцев на бакалавриат",
+    "orig": "National Chengchi University"
+  },
+  "hostCountry": "TW",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "У вуза есть свои стипендии: полное освобождение от платы за обучение и кредиты, а по полной стипендии для новых иностранцев — ещё NT$150 000 в год на жизнь с обратным билетом (до NT$30 000). Государственная стипендия Тайваня даёт NT$15 000 в месяц и покрывает обучение в пределах NT$40 000 за семестр."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Individuals holding foreign nationality and who have never held the nationality of the Republic of China"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по стране школы нет: поданные из-за рубежа документы об образовании вуз оценивает по правилам признания иностранных квалификаций. Страна школы в требованиях не названа."
+    },
+    "schoolYears": {
+      "definedBy": "institution",
+      "evidence": "Academic credentials obtained from institutes outside of regions referred to in the preceding two Items shall be subject to the"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы нет: конкретный год выпуска в требованиях не указан."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения на страницах приёма нет: ни минимальный, ни максимальный возраст не указаны."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Порога среднего балла для приёма нет; средний балл упоминается только как условие сохранения стипендии (например, не ниже 75 баллов), а не для допуска."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "applicants are mandated to showcase English proficiency at CEFR B1 level or beyond."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать может иностранец, никогда не имевший гражданства Китайской Республики (Тайвань); тот, у кого двойное гражданство, должен никогда не иметь прописки на Тайване.",
+      "evidence": "A person who at the time of their application also holds dual R.O.C. nationality shall have never had household registration in Taiwan.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Порог языка зависит от языка программы: на китайских программах нужен китайский уровня TOCFL A2 и выше, на англоязычных — английский CEFR B1 и выше. Точных баллов IELTS/TOEFL страница не называет; аттестат, полученный вне Тайваня, вуз признаёт по своим правилам оценки иностранных документов.",
+      "evidence": "applicants are mandated to showcase English proficiency at CEFR B1 level or beyond.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Своя стипендия вуза может полностью освободить от платы за обучение и кредиты.",
+      "evidence": "Full exemption from tuition fees and credit fees",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полная стипендия для новых иностранцев: снятие платы за обучение плюс NT$150 000 в год на проживание (внутри — NT$10 000 в месяц и обратный билет до NT$30 000).",
+      "evidence": "Full Scholarship: tuition waiver and living allowance of NT$150,000 per academic year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Государственная стипендия Тайваня для бакалавра: NT$15 000 в месяц на жизнь и NT$40 000 за семестр на обучение; если обучение дороже, разницу добирает вуз.",
+      "evidence": "Bachelor: Monthly living stipend of NTD15,000 and per semester tuition subsidy of NTD40,000.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Плата для иностранца, не подпадающего под льготные категории, не может быть ниже ставки частных вузов того же уровня; конкретную сумму страница не называет.",
+      "evidence": "The fee standard of an international student who does not qualify under the preceding 2 Subparagraphs may not be lower than the standard adopted by private schools at the same level.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для зачисления нужна банковская справка об остатке свыше NTD 200 000 (USD 7 000).",
+      "evidence": "An official bank statement (in either Chinese or English) showing an account balance exceeding NTD$200,000 (USD$7,000).",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём на 2027 год: первый раунд — с 22 сентября по 15 октября 2026 (сейчас открыт), второй — с 19 января по 4 марта 2027. Подача только одна: иностранец может подать заявку лишь в один вуз.",
+      "evidence": "Online application: September 22, 2026 - October 15, 2026, 5:00 pm (Taiwan time).",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-22",
+    "closes": "2026-10-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://admission.nccu.edu.tw/intladmission",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — National Chengchi University (NCCU), Тайвань. Приёмом иностранцев занимается Отдел международного сотрудничества (OIC)."
+    }
+  },
+  "source": {
+    "url": "https://nccuadmission.nccu.edu.tw/Post/331",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://nccuadmission.nccu.edu.tw/Post/331",
+        "contentHash": "sha256:22da10e5ff2ddd078ef7f0defcf169ede6910479bdf531a2c53baa7657fa48ba"
+      },
+      {
+        "url": "https://admission.nccu.edu.tw/intladmission",
+        "contentHash": "sha256:0082c787af40e142725502642eeaa59f143fbc200e835fd4a29a182b6d746a90"
+      },
+      {
+        "url": "https://oic.nccu.edu.tw/Upload/FileManager/ecf8752e-9af9-4bf7-91df-d23221e53223.pdf",
+        "contentHash": "sha256:c307cfa9e41b9274489e29512cea3f980e0999004548b942eb007725104f8c67"
+      },
+      {
+        "url": "https://oic.nccu.edu.tw/Post/1074",
+        "contentHash": "sha256:0428ab823860dc8c5a0abac076beb84a51b6add36f90dcef32705121723e05e5"
+      },
+      {
+        "url": "https://oic.nccu.edu.tw/Post/15404",
+        "contentHash": "sha256:97b9fe139538fc7d7a3b747ae9e629dd70554cd219f090a623f3cb74eddebb16"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
