@@ -1,0 +1,298 @@
+{
+  "id": "nankai",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Nankai University (Китай): приём иностранцев на бакалавриат",
+    "orig": "Nankai University (南开大学)"
+  },
+  "hostCountry": "CN",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: 20 000–35 000 ¥/год (точная ставка — в каталоге программ). Плюс разовый сбор за заявку 400 ¥, общежитие 1 000–3 000 ¥/мес и обязательная страховка 800 ¥/год. Помощь есть, но не по нужде, а по конкурсу: государственная стипендия Китая (CSC) снимает плату за обучение, даёт бесплатное жильё или субсидию, медстраховку и ежемесячную стипендию; есть также стипендии правительства Тяньцзиня и самого Нанькая с субсидией на обучение. Для Таджикистана открыты общие стипендии (CSC типа A через посольство и CSC типа B через вуз), а отдельная программа CSC «Silk Road» Таджикистан в списке стран не называет. Без стипендии семья платит всю стоимость года сама, дорогу никто не покрывает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Non-Chinese citizens with valid passport, in good physical and mental health, born before September 1, 2008."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы вход не закрывает: в требованиях названо только «негражданин Китая с действующим паспортом», Таджикистан отдельно не упомянут и отказов по стране нет. Смотрели страницы: приём иностранцев на бакалавриат 2026 (ensie.nankai.edu.cn/info/1089/1167.htm), общий FAQ (info/1103/1240.htm), стипендии CSC типа A/B, «Silk Road», MOFCOM, двустороннюю программу и стипендии Тяньцзиня/Нанькая. Отдельная программа CSC «Silk Road» перечисляет страны (без Таджикистана) — это ограничение только этой программы, а не приёма в вуз."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Hold a senior high school diploma with excellent academic performance."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы страницы не называют. Сказано лишь, что нужен аттестат о среднем образовании, а тем, кто ещё учится, можно подать справку об ожидаемом выпуске и донести аттестат не позднее регистрации. Смотрели страницы приёма на бакалавриат 2026 и FAQ."
+    },
+    "age": {
+      "min": 18,
+      "evidence": "Applicants must be over 18 years old."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Applicants must be non-Chinese citizens in good physical and mental health, with no criminal record, strong academic performance, and a friendly attitude toward China."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "HSK",
+          "min": 180,
+          "evidence": "Chinese proficiency at HSK Level 4 (minimum score 180)."
+        }
+      ],
+      "evidence": "Chinese proficiency at HSK Level 4 (minimum score 180)."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать может только негражданин Китая с действующим паспортом, здоровый физически и психически, родившийся до 1 сентября 2008 года. Гражданство Таджикистана требованию соответствует, отказа по стране нет.",
+      "evidence": "Non-Chinese citizens with valid passport, in good physical and mental health, born before September 1, 2008.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Паспорт должен быть действителен как минимум до 1 сентября 2027 года.",
+      "evidence": "Copy of passport information page (valid until at least September 1, 2027).",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат о среднем образовании (senior high school) и хорошая успеваемость. Таджикская школа — 11 лет; соответствует ли её аттестат требованию, уточняйте в приёмной.",
+      "evidence": "Hold a senior high school diploma with excellent academic performance.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Бакалавриат по модели «1+3»: первый год — общая подготовка в Школе международного образования, затем три года по специальности.",
+      "evidence": "Nankai University welcomes international students to its undergraduate programs through a unique \"1+3\" educational pathway.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Возраст для иностранных абитуриентов — старше 18 лет (общий FAQ вуза).",
+      "evidence": "Applicants must be over 18 years old.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Дополнительное условие набора 2026 года: родиться до 1 сентября 2008 года.",
+      "evidence": "Non-Chinese citizens with valid passport, in good physical and mental health, born before September 1, 2008.",
+      "field": "age",
+      "kind": "note"
+    },
+    {
+      "ru": "Числового порога по оценкам нет: отбор идёт по успеваемости, языку и общим способностям, зачисляют лучших.",
+      "evidence": "Hold a senior high school diploma with excellent academic performance.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Язык бакалавриата — китайский, поэтому нужен HSK 4 с баллом не ниже 180. Сертификат входит и в обязательный пакет документов.",
+      "evidence": "Chinese proficiency at HSK Level 4 (minimum score 180).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "До выпуска все студенты китайскоязычных программ обязаны сдать HSK 6 уровня с баллом не ниже 180.",
+      "evidence": "All students in Chinese-taught programs must obtain HSK Level 6 with a minimum score of 180 before graduation.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Программы бакалавриата для иностранцев преподаются на китайском языке (41 программа, 4 года; медицина — 5 лет); англоязычные программы есть только на магистратуре и докторантуре.",
+      "evidence": "Nankai University offers 41 undergraduate programs taught in Chinese, with duration of 4 years (5 years for medical programs).",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Все абитуриенты бакалавриата обязаны сдать CSCA (China Scholastic Competency Assessment) и подать результат; тест проверяет предметы по выбранной специальности, регистрация на csca.cn.",
+      "evidence": "CSCA Examination Requirement: All applicants must take the China Scholastic Competency Assessment (CSCA), which evaluates students' academic readiness and core competencies.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Отчёт CSCA входит в обязательный пакет документов вместе с аттестатом, табелем за все годы школы, личным заявлением, одной рекомендацией, медосмотром, справкой о несудимости и подтверждением финансов.",
+      "evidence": "CSCA examination score report.",
+      "field": "exam",
+      "kind": "steps"
+    },
+    {
+      "ru": "Кто прошёл проверку документов, проходит собеседование; на нём оценивают языковой уровень и общие способности.",
+      "evidence": "Applicants who pass the preliminary document review will proceed to the interview stage.",
+      "field": "exam",
+      "kind": "steps"
+    },
+    {
+      "ru": "Приём заявок набора 2026 года: с 20 октября 2025 по 30 июня 2026.",
+      "evidence": "Oct. 20th , 2025 - Jun. 30th , 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Все документы должны быть на китайском или английском; заявку с неполным пакетом не рассматривают.",
+      "evidence": "All documents must be in Chinese or English. Applications with incomplete documentation will not be processed.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Сбор за заявку для бакалавриата — 400 юаней, платится на этапе регистрации и не возвращается; получатели государственной стипендии Китая его не платят.",
+      "evidence": "Application Fee: 400RMB (Pay at registration stage. Chinese Government Scholarship winners don't need to pay).",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 400,
+        "currency": "CNY",
+        "evidence": "Application Fee: 400RMB (Pay at registration stage. Chinese Government Scholarship winners don't need to pay)."
+      }
+    },
+    {
+      "ru": "Плата за обучение — от 20 000 до 35 000 юаней в год; точная ставка указана в каталоге программ.",
+      "evidence": "Tuition: 20,000 to 35,000RMB/year. Please refer to the program catalog for specific rates.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Общежитие — от 1 000 до 3 000 юаней в месяц, в зависимости от типа комнаты и кампуса.",
+      "evidence": "Accommodation: 1,000 to 3,000RMB/Month, varying by room type and campus.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Медицинская страховка обязательна для всех иностранных студентов — 800 юаней в год.",
+      "evidence": "Medical Insurance: 800 RMB /year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Государственная стипендия Китая типа B (через сам вуз) — полная: освобождение от платы за обучение, бесплатное общежитие или субсидия на жильё, стипендия на жизнь по нормативу и комплексная медстраховка. Срок подачи — с 20 октября 2025 по 20 марта 2026.",
+      "evidence": "Tuition waiver, free on-campus accommodation, living stipend (bachelor: 2,500 RMB/month; master: 3,000 RMB/month), and comprehensive medical insurance.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия правительства Тяньцзиня и стипендия Study-at-NKU оформляются галочкой в заявке; покрытие включает субсидию на обучение и другие сборы. Их дают только прошедшим отбор Нанькая, срок подачи — 30 мая 2026.",
+      "evidence": "Prospective applicants for either the Tianjin Government Scholarship or the Study-at-NKU Scholarship should check the corresponding \"Scholarship Application\" option when completing the online application form. Funding Coverage: Includes tuition subsidies and other fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Государственная стипендия Китая типа A оформляется напрямую через посольство или консульство Китая в своей стране, параллельно с онлайн-заявкой в Нанькай; срок обычно с ноября по начало февраля.",
+      "evidence": "Applicants should apply directly through the Chinese embassy or consulate in their home country and concurrently complete the Nankai University online application for international students.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Отдельная программа CSC «Silk Road» набирает только из Вьетнама, Малайзии, Таиланда, Мьянмы, Пакистана, Монголии, Индонезии, Узбекистана, Казахстана и Колумбии — Таджикистана в списке нет.",
+      "evidence": "Countries: Vietnam, Malaysia, Thailand, Myanmar, Pakistan, Mongolia, Indonesia, Uzbekistan, Kazakhstan, Colombia",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Стипендия MOFCOM (Минторга КНР) — только магистратура и докторантура, бакалавру не подходит.",
+      "evidence": "MOFCOM Scholarship-CSC Program mainly sponsors the young and the middle-aged talents from recipient countries to pursue their postgraduate degree education in China.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обходной путь, если аттестата на руках ещё нет: подать справку об ожидаемом выпуске, а сам аттестат донести не позднее регистрации.",
+      "evidence": "Yes, you can submit a certificate of expected graduation first, and submit it to the college immediately after obtaining the graduation certificate, but not later than the registration time.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Сроки стипендий: CSC типа B — до 20 марта 2026, CSC «Silk Road» — до 18 мая 2026, стипендии Тяньцзиня и Нанькая — до 30 мая 2026.",
+      "evidence": "Application Deadline: May 30, 2026",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2026-06-30",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "http://nankai.at0086.cn/StuApplication/Login.aspx",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Nankai University (南开大学), Тяньцзинь, Китай. Приём иностранцев на бакалавриат ведёт Школа международного образования; заявка онлайн через nankai.at0086.cn. 41 китайскоязычная программа бакалавриата (медицина — 5 лет), обязательный тест CSCA, HSK 4 (180) для поступления, обучение 20 000–35 000 ¥/год. Есть государственные (CSC типа A и B), городские (Тяньцзинь) и вузовские стипендии."
+    }
+  },
+  "source": {
+    "url": "https://ensie.nankai.edu.cn/info/1089/1167.htm",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://ensie.nankai.edu.cn/info/1089/1167.htm",
+        "contentHash": "sha256:681d6063fa22aef14c5becf8c217b6310390272b32d92f3c533f6667b762b1c1"
+      },
+      {
+        "url": "https://ensie.nankai.edu.cn/info/1090/1327.htm",
+        "contentHash": "sha256:6100fbe5ae219658e107662366bc341abc14e7dff028c34b2775c9561c4e7782"
+      },
+      {
+        "url": "https://ensie.nankai.edu.cn/info/1046/1336.htm",
+        "contentHash": "sha256:d7810823570ead6ed3836c9e19004c57063c306615a906a7d40fa0a493c4f0d7"
+      },
+      {
+        "url": "https://ensie.nankai.edu.cn/info/1047/1347.htm",
+        "contentHash": "sha256:4a1c72a0e0181fe83471a50af1ca5075a5cf6dbe8306bd4e271a61fd19a171ed"
+      },
+      {
+        "url": "https://ensie.nankai.edu.cn/info/1046/1337.htm",
+        "contentHash": "sha256:f8fcb5b4d35cfea541f58a44a8a3a145a8b730823a06bd48368863975fbcf4a3"
+      },
+      {
+        "url": "https://ensie.nankai.edu.cn/info/1050/1128.htm",
+        "contentHash": "sha256:48707b0911c34649177fb1da1cc2b95fe320cc1fa5fb128b26d3f53f3783d5ca"
+      },
+      {
+        "url": "https://ensie.nankai.edu.cn/info/1048/1048.htm",
+        "contentHash": "sha256:3c72478da588323765cd772f61796b2b9e272b6a37a7f9ce4fab6319fc3bc8b0"
+      },
+      {
+        "url": "https://ensie.nankai.edu.cn/info/1049/1127.htm",
+        "contentHash": "sha256:835c3d7ad1eea5c69dfbfdc7e4f79ca049e6a20ba965e3bd0b6241ae8e3a50a0"
+      },
+      {
+        "url": "https://ensie.nankai.edu.cn/SCHOLARSHIP/CHINESE_GOVERNMENT_SCHOLARSHIP.htm",
+        "contentHash": "sha256:5bcc2cae563251652a6d0127988e9fdc27ef996ea961726892e5f2590248e674"
+      },
+      {
+        "url": "https://ensie.nankai.edu.cn/SCHOLARSHIP.htm",
+        "contentHash": "sha256:10ed52f391f377215be4b7970b7b3afa76859f9161e6e527fdb7d37ce9b1db38"
+      },
+      {
+        "url": "https://ensie.nankai.edu.cn/DEGREE_PROGRAMS/UNDERGRADUATE.htm",
+        "contentHash": "sha256:91b35f0d01a3a088edc84f38a27d57e3ab0664a0c22bb3345d5d816acf56b8a0"
+      },
+      {
+        "url": "https://ensie.nankai.edu.cn/info/1103/1240.htm",
+        "contentHash": "sha256:cb9f82b7bc29875357a8c40f94e351f3ae419fdbb020e2e4d7b059dd886a804c"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}

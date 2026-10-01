@@ -4621,3 +4621,24 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[nankai]
+name = "Nankai University (Китай)"
+files = [
+  { path = "manual/nankai/00-bachelor-1167.html", url = "https://ensie.nankai.edu.cn/info/1089/1167.htm" },
+  { path = "manual/nankai/10-catalog.html", url = "https://ensie.nankai.edu.cn/info/1090/1327.htm" },
+  { path = "manual/nankai/13-csc-typeb.html", url = "https://ensie.nankai.edu.cn/info/1046/1336.htm" },
+  { path = "manual/nankai/11-csc-silkroad.html", url = "https://ensie.nankai.edu.cn/info/1047/1347.htm" },
+  { path = "manual/nankai/12-csc-overview.html", url = "https://ensie.nankai.edu.cn/info/1046/1337.htm" },
+  { path = "manual/nankai/14-mofcom.html", url = "https://ensie.nankai.edu.cn/info/1050/1128.htm" },
+  { path = "manual/nankai/16-bilateral.html", url = "https://ensie.nankai.edu.cn/info/1048/1048.htm" },
+  { path = "manual/nankai/15-exchange.html", url = "https://ensie.nankai.edu.cn/info/1049/1127.htm" },
+  { path = "manual/nankai/05-csc.html", url = "https://ensie.nankai.edu.cn/SCHOLARSHIP/CHINESE_GOVERNMENT_SCHOLARSHIP.htm" },
+  { path = "manual/nankai/04-scholarship.html", url = "https://ensie.nankai.edu.cn/SCHOLARSHIP.htm" },
+  { path = "manual/nankai/01-undergraduate.html", url = "https://ensie.nankai.edu.cn/DEGREE_PROGRAMS/UNDERGRADUATE.htm" },
+  { path = "manual/nankai/17-faq-article.html", url = "https://ensie.nankai.edu.cn/info/1103/1240.htm" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
