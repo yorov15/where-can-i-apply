@@ -4515,3 +4515,14 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Уральский федеральный университет, Екатеринбург (Россия).
+# Домен urfu.ru одобрен Муродом 2026-10-01 (список из 55 кандидатов, ответ «ok delay spisok» — весь список).
+[urfu]
+name = "Уральский федеральный университет, Екатеринбург (Россия)"
+files = [
+  { path = "manual/urfu/00-schol.html", url = "https://urfu.ru/en/scholarships-for-foreigners/" },
+  { path = "manual/urfu/01-od.html", url = "https://urfu.ru/en/open-doors-russian-scholarship-project/" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

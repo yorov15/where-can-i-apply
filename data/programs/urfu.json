@@ -1,0 +1,145 @@
+{
+  "id": "urfu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Уральский федеральный университет (Россия): бакалавриат по олимпиаде «Открытые двери» и госстипендии",
+    "orig": "Ural Federal University"
+  },
+  "hostCountry": "RU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Победители олимпиады «Открытые двери» учатся бесплатно, а государственная стипендия правительства России покрывает обучение, ежемесячную выплату и общежитие на весь срок. Дорогу страницы не называют. Участникам финала олимпиады, не получившим бесплатного места, УрФУ даёт скидку 25% на плату."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Foreign citizens Stateless persons Compatriots living abroad"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничений по стране школы страницы не называют. Смотрели страницы УрФУ про стипендии для иностранцев и олимпиаду «Открытые двери»."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы не названо: нужно законченное общее среднее образование. Про 11-летнюю школу ничего не сказано. Смотрели страницы УрФУ про стипендии для иностранцев и олимпиаду «Открытые двери»."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Года выпуска страницы не называют. Смотрели страницы УрФУ про стипендии для иностранцев и олимпиаду «Открытые двери»."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения для бакалавриата страницы не называют. Смотрели страницы УрФУ про стипендии для иностранцев и олимпиаду «Открытые двери»."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Среднего балла страницы не называют: победителей определяют по баллам заданий. Смотрели страницы УрФУ про стипендии для иностранцев и олимпиаду «Открытые двери»."
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Язык обучения на выбор — русский или английский по профилю олимпиады; порогов и тестов страницы не называют. Смотрели страницы УрФУ про стипендии для иностранцев и олимпиаду «Открытые двери»."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Подавать могут иностранные граждане, лица без гражданства и соотечественники за рубежом; гражданство не ограничено. Отбор по государственной стипендии ведёт Россотрудничество через свои представительства и посольства России в разных странах.",
+      "evidence": "Foreign citizens Stateless persons Compatriots living abroad",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Для бакалавриата в олимпиаде «Открытые двери» нужно законченное общее среднее образование; число лет школы не названо.",
+      "evidence": "For Bachelor's track – a completed general secondary education",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Государственная стипендия правительства России покрывает обучение на весь срок, ежемесячную стипендию независимо от оценок и место в общежитии кампуса. Подают на сайте программы, отбирают Россотрудничество и посольства России.",
+      "evidence": "tuition fees for the full period of study",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Победители олимпиады «Открытые двери» учатся бесплатно, можно выбрать программу на английском или русском по профилю олимпиады. Победителями считаются те, кто набрал достаточно баллов за два этапа и вошёл в лучшие 25%; запасные участники получают место, если победители не подали документы или отказались.",
+      "evidence": "The winners of the Open Doors have the right to tuition-free education.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Участникам финала «Открытых дверей» УрФУ даёт скидку 25% на плату за обучение, если бесплатного места нет.",
+      "evidence": "receive a 25% discount on their tuition-fee",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Цикл 2026–27: регистрация и портфолио с 20 августа до 1 ноября 2026, итоги первого этапа 13 ноября, второй этап 13 ноября – 21 декабря (регистрация на него до 16 ноября), итоги 21 декабря. Для бакалавров третьего этапа нет.",
+      "evidence": "August 20 – November 1 Registration and portfolio submission",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявку на олимпиаду подают на сайте od.globaluni.ru; для государственной стипендии заявку подают на сайте программы, а отбор ведёт Россотрудничество через представительства и посольства России.",
+      "evidence": "Registration on the website https://od.globaluni.ru",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-08-20",
+    "closes": "2026-11-01",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://urfu.ru/en/open-doors-russian-scholarship-project/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: УрФУ, Екатеринбург. Бесплатное обучение — через олимпиаду «Открытые двери» (регистрация 20 августа – 1 ноября 2026) или через государственную стипендию правительства России. Программы на русском и английском; число лет школы страницы не называют."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://urfu.ru/en/scholarships-for-foreigners/",
+    "pages": [
+      {
+        "url": "https://urfu.ru/en/scholarships-for-foreigners/",
+        "contentHash": "sha256:d1abd66edd0cfa89158f311e958532c08a4d58021a925f0d63ab60797e2d54ff"
+      },
+      {
+        "url": "https://urfu.ru/en/open-doors-russian-scholarship-project/",
+        "contentHash": "sha256:6d83dae02956bfc7c7b2bcdd2609d6406fa0b36cac701827ed4f947d4b3548ba"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
