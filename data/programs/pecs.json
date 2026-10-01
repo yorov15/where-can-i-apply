@@ -1,0 +1,335 @@
+{
+  "id": "pecs",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "University of Pécs (Венгрия): приём иностранцев на бакалавриат",
+    "orig": "University of Pécs / Pécsi Tudományegyetem"
+  },
+  "hostCountry": "HU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Англоязычный бакалавриат платный: семестр стоит 2 500–3 900 евро (информатика 2 500, бизнес 2 750 для не-ЕС, психология 3 900 для не-ЕС) или 3 400 долларов (гражданское строительство); сбор за заявку 100–150 евро, он невозвратный. Помощь идёт в основном через государственную стипендию Stipendium Hungaricum — полное освобождение от платы за обучение, стипендия на жизнь 43 700 форинтов в месяц, общежитие или 40 000 форинтов на жильё и медстраховка; но её дают по двусторонней квоте через Tempus Public Foundation и только с номинацией от страны. Есть также Scholarship for Christian Young People, Diaspora Scholarship, Bilateral State Scholarships и факультетские стипендии. Жильё вне стипендии и дорогу вуз не покрывает"
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство вход не закрывает: иностранные программы открыты для иностранных граждан и для тех, у кого аттестат выдан не в Венгрии, отказа по конкретной стране нет. Смотрели страницы How to Apply, Entry requirements, Scholarships, англоязычные программы бакалавриата (информатика, психология, бизнес, гражданское строительство), правила приёма (Admission Guide) и языковые требования."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы сама по себе вход не закрывает: требования выражены полнотой средней школы и языком, а список признанных аттестатов оговаривает лишь, что страну без записи в списке рассматривают по общим условиям (12 лет или 11 там, где это стандарт). Таджикистан в списке не назван, но и отказа для него нет — эквивалент аттестата уточнять в приёмной. Смотрели General admission requirements PDF, Entry requirements, FAQ и страницы программ."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Certifies at least twelve years of education (or eleven in systems where that is the standard)"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы не названы: на снятых страницах приёма нет требования к году выпуска или максимальной паузе после школы, только условие успешно окончить среднюю школу до зачисления."
+    },
+    "age": {
+      "min": 18,
+      "evidence": "The applicant must turn 18 years old or should be older by the day of enrolment to the current BSc study program."
+    },
+    "gpa": {
+      "notMeasured": true,
+      "evidence": "Grades, subject relevance, and academic performance are also considered."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.0,
+          "parts": true,
+          "evidence": "IELTS (Overall Band Score) 6.0, no skill below 5.5"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 90,
+          "evidence": "TOEFL (iBT internet-based) 4,5 (on a 1-6 scale) or 90 (on the traditional scale)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "evidence": "TOEFL (iBT internet-based) 4,5 (on a 1-6 scale) or 90 (on the traditional scale)"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 115,
+          "evidence": "Duolingo English Test 115"
+        },
+        {
+          "test": "PTE",
+          "min": 59,
+          "evidence": "Pearson PTE Academic 59"
+        }
+      ],
+      "evidence": "Applicants must demonstrate at least CEFR B2 level proficiency in the language of instruction, verified during the admission process."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранные программы открыты для иностранных граждан или для тех, у кого школьный аттестат выдан не в Венгрии.",
+      "evidence": "foreign language programs offered exclusively for foreign citizens",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Для бакалавриата нужно успешно окончить среднюю школу (верхнюю ступень) и подтвердить минимальный уровень языка.",
+      "evidence": "In order to be offered a place in a bachelor's (first cycle or undergraduate) program, you must have successfully completed your upper secondary (high school) education and be able to demonstrate the minimum language requirement.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Если страны нет в списке признанных аттестатов (Таджикистан там не назван), диплом всё равно могут принять при условии, что он подтверждает не менее 12 лет обучения — или 11 лет там, где это стандарт страны. В Таджикистане школа 11-летняя, поэтому соответствие уточняй в приёмной.",
+      "evidence": "Certifies at least twelve years of education (or eleven in systems where that is the standard)",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Английский обязателен на уровне не ниже B2, уровень проверяют в ходе приёма. Для факультетов здравоохранения, инженерии и информатики, фармации и медшколы английский дополнительно проверяют своим онлайн-тестом или собеседованием.",
+      "evidence": "Applicants must demonstrate at least CEFR B2 level proficiency in the language of instruction, verified during the admission process.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "От языкового экзамена освобождают те, кто получил среднее образование на английском в США, Великобритании, Ирландии, на Мальте, в Новой Зеландии, Австралии, Канаде, Сингапуре или ЮАР; обладатели диплома IB; выпускники Cambridge, Pearson Edexcel или OxfordAQA (IGCSE + A-levels); а также те, у кого высшее образование было на английском (кроме отдельных магистратур).",
+      "evidence": "Applicants may be exempt from the language examination requirement if they meet any of the following criteria:",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Порог IELTS — 6.0 в целом, ни одна часть не ниже 5.5.",
+      "evidence": "IELTS (Overall Band Score) 6.0, no skill below 5.5",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "TOEFL iBT: 90 по старой шкале (0–120) или 4,5 по новой шкале (1–6).",
+      "evidence": "TOEFL (iBT internet-based) 4,5 (on a 1-6 scale) or 90 (on the traditional scale)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Duolingo English Test — от 115 баллов.",
+      "evidence": "Duolingo English Test 115",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Pearson PTE Academic — от 59 баллов.",
+      "evidence": "Pearson PTE Academic 59",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Есть вступительный экзамен: обязательный онлайн-тест по математике, за который ставят 0–10 баллов (ниже 50 % — отказ).",
+      "evidence": "You must complete a Mathematics test being part of the admission criteria.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "После документов и теста — устное онлайн-собеседование с комиссией (около 10 минут): о биографии, планах и мотивации.",
+      "evidence": "An oral interview (online) is scheduled with eligible applicants and carried out by a committee.",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "К моменту зачисления абитуриенту должно исполниться 18 лет.",
+      "evidence": "The applicant must turn 18 years old or should be older by the day of enrolment to the current BSc study program.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Конкретный порог среднего балла зависит от программы: например, для психологии нужна успеваемость выше 3.5 из 5, выше 2.7 из 4, выше 70 % или C+.",
+      "evidence": "5.0 scale: > 3.5 4.0 scale: > 2.7 Percentage: > 70% U.S. letter grade: C+ or above",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Информатика: обучение 2 500 евро за семестр, сбор за заявку 140 евро.",
+      "evidence": "Tuition fee: EUR 2,500/sem. Application fee: EUR 140",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Психология: 3 900 евро за семестр для не-ЕС (2 900 для граждан ЕС), сбор за заявку 140 евро.",
+      "evidence": "Tuition fee: EUR 3900/semester (for non-EU students); EUR 2900/semester (for EU students)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Бизнес-администрирование: 2 750 евро за семестр для не-ЕС (1 150 для граждан ЕС), сбор за заявку 150 евро.",
+      "evidence": "Tuition fee: EUR 2,750/sem. (for non-EU students), 1150 EUR (for EU students)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Гражданское строительство: 3 400 долларов за семестр, сбор за заявку 150 долларов.",
+      "evidence": "Tuition fee: USD 3,400/sem. Application fee: USD 150",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сбор за заявку невозвратный независимо от результата.",
+      "evidence": "the application fee is non-refundable regardless of the outcome of the application.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Stipendium Hungaricum полностью освобождает от платы за обучение.",
+      "evidence": "Tuition-free education: exemption from the payment of tuition fees.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На бакалавриате Stipendium Hungaricum платит стипендию на жизнь 43 700 форинтов в месяц в течение 12 месяцев в году.",
+      "evidence": "Monthly stipend : non-degree, bachelor, master, and one-tier master level: monthly HUF 43 700",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Stipendium Hungaricum даёт общежитие либо 40 000 форинтов в месяц на жильё и медстраховку.",
+      "evidence": "Accommodation : dormitory placement OR a monthly contribution of HUF 40 000 to accommodation costs",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Stipendium Hungaricum не дают гражданам Венгрии и повторно поступающим на тот же уровень, где стипендия уже была получена; подача идёт через Tempus Public Foundation и требует номинации от страны.",
+      "evidence": "Applications will not be considered in the following cases: Hungarian citizens (including those with dual citizenships)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Кроме Stipendium Hungaricum вуз перечисляет факультетские и внешние стипендии, Scholarship for Christian Young People, Diaspora Scholarship и Bilateral State Scholarships.",
+      "evidence": "Faculty Scholarships Various faculty scholarships External Scholarships Various external scholarships",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявку подают на сайте apply.pte.hu; подача платная и невозвратная.",
+      "evidence": "Applications are processed directly by the University of Pécs through its own admission procedure (apply.pte.hu).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Общий период подачи — с 1 февраля по 15 августа, а для стран, которым нужна виза (в том числе Таджикистана), — с 1 февраля по 15 июля. Точный срок каждый факультет назначает сам.",
+      "evidence": "Generally, the application period must fall between February 1 and August 15, and for visa-required countries, between February 1 and July 15.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Заявку на Stipendium Hungaricum надо подать до 15 января, отдельно от платной заявки вуза.",
+      "evidence": "submit your application by 15 January",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Таджикистан не назван в списке признанных аттестатов (PDF General admission requirements for Undergraduate programs).",
+      "evidence": "International diplomas",
+      "field": "schoolCountry",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-06-30",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://apply.pte.hu/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: University of Pécs (Pécsi Tudományegyetem), Венгрия. Англоязычный бакалавриат: информатика, бизнес, инженерия, психология, гуманитарные и социальные науки, здоровье. Подача — через apply.pte.hu; сбор за заявку 140–150 евро. Обучение платное, полное покрытие даёт государственная стипендия Stipendium Hungaricum (по квоте и через номинацию страны)."
+    }
+  },
+  "source": {
+    "url": "https://international.pte.hu/admission",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://international.pte.hu/admission",
+        "contentHash": "sha256:d632e0a4d41b8dd06a4b1f02044bbaa1f0890a25b38bd7332115eb22482cebf3"
+      },
+      {
+        "url": "https://international.pte.hu/study-programs",
+        "contentHash": "sha256:7cfb49d866334db0c1c411b7c8988b111b70c2d59440d612efe3c813f8eabef9"
+      },
+      {
+        "url": "https://international.pte.hu/admission/how-apply",
+        "contentHash": "sha256:f731372d67221c83c39e60954096b1cbfc0485cda1347b4fdc71aa70ab584f59"
+      },
+      {
+        "url": "https://international.pte.hu/admission/entry-requirements",
+        "contentHash": "sha256:1f4504e00cac05b1b284b6d95828f531a32c9028a87e1cb574929a5996ddee69"
+      },
+      {
+        "url": "https://international.pte.hu/admission/scholarship",
+        "contentHash": "sha256:8eec705e1096f5da82a77b0ca931eb3b24a731582b44897425f53021a348cb21"
+      },
+      {
+        "url": "https://international.pte.hu/admission/prepare-your-stay/cost-living",
+        "contentHash": "sha256:982f86e86fc9eb3224444db637e50042b9738c1e342d3ea9ca627a15c4fc6ac7"
+      },
+      {
+        "url": "https://international.pte.hu/admission/faqs",
+        "contentHash": "sha256:0d5ef8267ad9603b7235a1b945af321215b4f1c28516ffd3827c13f0c2edd73b"
+      },
+      {
+        "url": "https://international.pte.hu/sites/international.pte.hu/files/2025-10/general-admission-diploma-requirements_1.pdf",
+        "contentHash": "sha256:fa9b95989c641868e3584ee31a9943caec54bda452ff42a39ab0b5847223ba63"
+      },
+      {
+        "url": "https://international.pte.hu/sites/international.pte.hu/files/doc/Language%20Proficiency%20Requirements.pdf",
+        "contentHash": "sha256:ce68e4a5c34f1b982e6bb50daeab8c147e88588345bcee868056b419d4dbcfa0"
+      },
+      {
+        "url": "https://international.pte.hu/sites/international.pte.hu/files/2025-12/University_of_Pecs_Admission_Guide_Compliant.pdf",
+        "contentHash": "sha256:7ce55b39c337edcf466413697aa8b743fea684bf835b4323cb2ca0270bceccd6"
+      },
+      {
+        "url": "https://international.pte.hu/stipendium-hungaricum-scholarship-program",
+        "contentHash": "sha256:21d3fdb38d9928d853b7e06c26b648376954b4759fed24d19b8c57ea66c14fa8"
+      },
+      {
+        "url": "https://international.pte.hu/study-programs/bsc-computer-science",
+        "contentHash": "sha256:162cdbbeefc1a7fa65a4887446c8b9cdf2257060cf5189a47e8974dc50bcbb27"
+      },
+      {
+        "url": "https://international.pte.hu/study-programs/ba-psychology",
+        "contentHash": "sha256:3c51e8697575e080557c41c8512d54d93844776dbef570d3eee2095a56f8aec8"
+      },
+      {
+        "url": "https://international.pte.hu/study-programs/bsc-business-administration-and-management",
+        "contentHash": "sha256:31f01c2873b75fdf2e83406df39109288264c45c8b287e732a92cf9367842bbf"
+      },
+      {
+        "url": "https://international.pte.hu/study-programs/bsc-civil-engineering",
+        "contentHash": "sha256:4d8d8cbe32ef32c6c6ab141951ae430c0f3420e3062514a5554291acc7cf42bd"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}

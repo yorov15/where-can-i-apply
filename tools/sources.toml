@@ -4860,3 +4860,27 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[pecs]
+name = "University of Pécs (Венгрия)"
+files = [
+  { path = "manual/pecs/02-admission.html", url = "https://international.pte.hu/admission" },
+  { path = "manual/pecs/03-study-programs.html", url = "https://international.pte.hu/study-programs" },
+  { path = "manual/pecs/04-how-apply.html", url = "https://international.pte.hu/admission/how-apply" },
+  { path = "manual/pecs/05-entry-requirements.html", url = "https://international.pte.hu/admission/entry-requirements" },
+  { path = "manual/pecs/06-scholarship.html", url = "https://international.pte.hu/admission/scholarship" },
+  { path = "manual/pecs/07-cost-living.html", url = "https://international.pte.hu/admission/prepare-your-stay/cost-living" },
+  { path = "manual/pecs/08-faqs.html", url = "https://international.pte.hu/admission/faqs" },
+  { path = "manual/pecs/09-general-admission-ug.pdf", url = "https://international.pte.hu/sites/international.pte.hu/files/2025-10/general-admission-diploma-requirements_1.pdf" },
+  { path = "manual/pecs/10-language-requirements.pdf", url = "https://international.pte.hu/sites/international.pte.hu/files/doc/Language%20Proficiency%20Requirements.pdf" },
+  { path = "manual/pecs/11-admission-guide.pdf", url = "https://international.pte.hu/sites/international.pte.hu/files/2025-12/University_of_Pecs_Admission_Guide_Compliant.pdf" },
+  { path = "manual/pecs/12-stipendium.html", url = "https://international.pte.hu/stipendium-hungaricum-scholarship-program" },
+  { path = "manual/pecs/13-bsc-computer-science.html", url = "https://international.pte.hu/study-programs/bsc-computer-science" },
+  { path = "manual/pecs/14-ba-psychology.html", url = "https://international.pte.hu/study-programs/ba-psychology" },
+  { path = "manual/pecs/15-bsc-business-admin.html", url = "https://international.pte.hu/study-programs/bsc-business-administration-and-management" },
+  { path = "manual/pecs/16-bsc-civil-engineering.html", url = "https://international.pte.hu/study-programs/bsc-civil-engineering" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
