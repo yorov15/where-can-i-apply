@@ -1,0 +1,155 @@
+{
+  "id": "ntut",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "National Taipei University of Technology (Тайвань): приём иностранцев на бакалавриат",
+    "orig": "National Taipei University of Technology"
+  },
+  "hostCountry": "TW",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Своя стипендия President Award новому иностранному первокурснику полностью снимает плату за обучение и платит NT$8 000 или NT$15 000 в месяц первый год; за успехи платят и дальше (до 3 лет). Общежитие и сборы студент оплачивает сам."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "A person of foreign nationality who has NEVER held Republic of China"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по стране школы нет: требуется аттестат зарубежной средней школы, признанной вузом. Страна школы в требованиях не названа."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Applicants who apply for an undergraduate program must hold a certificate of graduation obtained from a certified foreign high school"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы нет: нужен аттестат о среднем образовании к зачислению, конкретный год не указан."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения на страницах приёма нет: ни минимум, ни максимум не указаны."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Порога среднего балла для допуска нет: средний балл упоминается только как условие стипендии (например, 70 баллов для Hua Yu), а не как требование приёма."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "English proficiency certificate at CEFR B2 or above"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем для приёма считается тот, кто имеет иностранное гражданство и никогда не имел гражданства Китайской Республики (Тайвань). Держателям только паспорта КНР, только гонконгского/макаоского паспорта или тайваньского гражданства подавать как иностранцу нельзя.",
+      "evidence": "you are not eligible to apply as an International Student",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Язык приёма: китайские программы требуют TOCFL уровня A2 и выше, англоязычные и международные — сертификат английского уровня CEFR B2. Точные баллы по IELTS/TOEFL кафедры задают в справочнике; от теста освобождают тех, кто оканчивал школу в англоязычной стране.",
+      "evidence": "English-taught programs require IELTS or TOEFL",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение платное. Цифры на странице — примерная плата за один семестр (два семестра в год) и не включают страховку, общежитие и прочие сборы; например, машиностроение — NT$54 837, бизнес — NT$47 378 за семестр.",
+      "evidence": "The following figures represent the approximate tuition costs for one semester",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "President Award для новых иностранных бакалавров: 1 год учёбы полностью без платы за обучение плюс ежемесячная стипендия NT$8 000 или NT$15 000; её назначают кафедры и колледжи при приёме. Есть и стипендия за успехи (до 3 лет), и Hua Yu Scholarship — снятие 50% платы за год.",
+      "evidence": "1 year - Full tuition waiver + Monthly stipend NT$8,000 or NT$15,000",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Для студенческой визы нужно подтвердить средства: минимум NTD 150 000 (или USD 5 000).",
+      "evidence": "Minimum of NTD 1 50,000 (or USD 5,000) is required.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача бесплатная: в графе «APPLICATION FEE» указано «None».",
+      "evidence": "None.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявку подают онлайн через систему Taipei Tech. В справочнике на 2027 год указано окно подачи на весенний семестр — с 1 августа по 30 сентября 2026; на осенний приём (открыт для всех программ) окно — февраль–апрель.",
+      "evidence": "Please complete online application at Taipei Tech Online Application System between Aug. 1, 2026 to Sep. 30, 2026.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://taipeitech.oia.ntut.edu.tw/foreign/index/index/lang/en",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — National Taipei University of Technology (Taipei Tech), Тайвань. Приёмом иностранцев занимается Отдел международных связей (OIA)."
+    }
+  },
+  "source": {
+    "url": "https://oia.ntut.edu.tw/p/412-1032-13828.php?Lang=en",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://oia.ntut.edu.tw/p/412-1032-13828.php?Lang=en",
+        "contentHash": "sha256:e767852024f4b96ea5d94da29d633a0cb6c4e7cd187de897353c06a3ced76556"
+      },
+      {
+        "url": "https://oia.ntut.edu.tw/p/412-1032-13792.php?Lang=en",
+        "contentHash": "sha256:87b3eb5e59bccc8a7b85068c80a6027abe997436ede5de39c138f917ff436bbb"
+      },
+      {
+        "url": "https://oia.ntut.edu.tw/p/412-1032-13790.php?Lang=en",
+        "contentHash": "sha256:cc48c83a7b15f83fb15798f4e73b2c02e262454118a092392bd836965fe75917"
+      },
+      {
+        "url": "https://oia.ntut.edu.tw/p/412-1032-13793.php?Lang=en",
+        "contentHash": "sha256:b503ac67e6ea528bb1e8bc00922923fa562187486283df7e8d0c5f558b7952ce"
+      },
+      {
+        "url": "https://oia.ntut.edu.tw/p/412-1032-13829.php?Lang=en",
+        "contentHash": "sha256:35ce674fd08a91d0fcb80bb29b667cd34e4f809593046373eaf8dc87989e2b88"
+      },
+      {
+        "url": "https://oia.ntut.edu.tw/var/file/32/1032/img/2027SpringAdmissionHandbook.pdf",
+        "contentHash": "sha256:fb3f7cfdec3624483e2cd5c8567a94f05e74bf1e88dbbbd43c223ad798019515"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
