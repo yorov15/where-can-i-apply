@@ -4798,3 +4798,20 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[ibn-haldun]
+name = "Ibn Haldun University (Турция)"
+files = [
+  { path = "manual/ibn-haldun/01-intl-home.html", url = "https://international.ihu.edu.tr/en" },
+  { path = "manual/ibn-haldun/05-undergraduate.html", url = "https://international.ihu.edu.tr/en/undergraduate" },
+  { path = "manual/ibn-haldun/06-undergrad-requirements.html", url = "https://international.ihu.edu.tr/en/undergraduate-application-requirements-international" },
+  { path = "manual/ibn-haldun/07-intl-faq.html", url = "https://international.ihu.edu.tr/en/faq" },
+  { path = "manual/ibn-haldun/09-undergrad-programs.html", url = "https://international.ihu.edu.tr/en/undergraduate-programs" },
+  { path = "manual/ibn-haldun/20-oidb-faq.html", url = "https://oidb.ihu.edu.tr/en/deneme-sayfa" },
+  { path = "manual/ibn-haldun/23-oidb-reg-intl.html", url = "https://oidb.ihu.edu.tr/en/undergraduate-programs-registration-guide-for-international-students" },
+  { path = "manual/ibn-haldun/25-academic-calendar.html", url = "https://oidb.ihu.edu.tr/en/2026-2027-academic-calendar" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

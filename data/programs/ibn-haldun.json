@@ -1,0 +1,249 @@
+{
+  "id": "ibn-haldun",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Ibn Haldun University (Турция): приём иностранцев на бакалавриат",
+    "orig": "Ibn Haldun University"
+  },
+  "hostCountry": "TR",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: вуз заявляет годовую плату для иностранных бакалавров 10 000 USD и 50%-ю стипендию; по итогам отбора зачисляют либо полностью платно, либо со скидкой 25%, 50% или 75% — полного покрытия обучения не обещают. Обязательная английская подготовительная программа идёт за отдельную плату. Жильё и дорогу вуз не оплачивает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство вход не закрывает: иностранный абитуриент подаёт через International Office, отдельного запрета по паспорту не названо, YÖS не требуется. Смотрели страницы приёма иностранцев, требований, регистрации и FAQ."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы сама по себе вход не закрывает: отказ по стране не назван. Аттестат Таджикистана требует справки об эквивалентности турецкому — это уточнять в приёмной. Смотрели страницы требований, регистрации и FAQ по иностранцам."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "Equivalency certificate is a document showing that the education degree of the secondary school you have graduated is equivalent to those in Turkey. Without this certificate, it is not possible to enroll in any university in our country."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году окончания школы страницы не называют: требуется лишь аттестат и справка об эквивалентности на момент регистрации. Смотрели страницы требований, регистрации и академический календарь."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения для приёма не названо; для абитуриентов младше 18 лет без студенческой визы есть лишь дополнительный список документов (свидетельство о рождении и согласие родителей), а не отказ. Смотрели FAQ по иностранцам и страницу требований."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Числового порога оценок страницы не называют: аттестат и транскрипт за все годы обязательны, но минимальный GPA не задан. Отбор ведёт International Student Admission Commission по комплекту документов и присланным результатам экзаменов, а не по пороговому баллу. Смотрели страницу требований (UNDERGRADUATE REQUIRED DOCUMENTS, п. 3 Transcript), страницу регистрации иностранцев и FAQ по иностранным студентам."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "evidence": "TOEFL iBT: 80"
+        },
+        {
+          "test": "PTE",
+          "min": 60,
+          "evidence": "PTE Academic: 60"
+        }
+      ],
+      "evidence": "Students are required to provide proof of English proficiency through one of the following exams with the minimum scores indicated below:"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Приём иностранцев ведёт International Office: вступительный экзамен для иностранцев YÖS не требуется, но присланные результаты экзаменов учитываются при отборе, а решения принимает International Student Admission Commission.",
+      "evidence": "YÖS (International Student Exam) results are not requested from the students wishing to enroll in our University but the exam results that the students can submit during application are taken into consideration for success evaluation.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Страна школы вход не закрывает, но аттестат должен быть признан эквивалентным турецкому: без справки об эквивалентности зачисление невозможно. Для 11-летней школы Таджикистана порядок признания уточняй в приёмной.",
+      "evidence": "Equivalency certificate is a document showing that the education degree of the secondary school you have graduated is equivalent to those in Turkey. Without this certificate, it is not possible to enroll in any university in our country.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Справка об эквивалентности входит в обязательные документы при регистрации.",
+      "evidence": "High school equivalency certificate and its copy",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестат и транскрипт принимают на турецком или английском; иначе нужен нотариально заверенный перевод, иначе документ не примут.",
+      "evidence": "2. Diploma: High school diplomas must be submitted in Turkish or English.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Английский надо подтвердить одним из принимаемых экзаменов; кто не может предъявить сертификат — обязан пройти английскую подготовительную программу.",
+      "evidence": "Students who cannot present a valid language proficiency certificate from any of these exams are required to enroll in the English Preparatory Program",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Пороги английского: TOEFL iBT 80, PTE Academic 60, а также кембриджские CPE/CAE (C) и FCE (B). IELTS в списке принимаемых не назван.",
+      "evidence": "TOEFL iBT: 80 PTE Academic: 60 CPE: C CAE: C FCE: B",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обходной путь без международного сертификата: сдать внутренний тест вуза Pearson Versant на минимум 55.",
+      "evidence": "Alternatively, students without one of the above certificates must achieve a minimum score of 55 on the Pearson Versant Placement Test administered by Ibn Haldun University.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Для программ на турецком (Islamic Studies, Law) нужен сертификат C1 TÖMER.",
+      "evidence": "Students enrolling in the Islamic Studies and Law program are required to provide a C1-level TÖMER certificate.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Приём на бакалавриат открыт раз в год, заявка подаётся онлайн через Online Application System.",
+      "evidence": "Applications for Undergraduate Programs at Ibn Haldun University are open once a year. Applications are submitted online via our Online Application System.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки приёма иностранцев на 2026-2027: 8 апреля - 31 августа 2026; регистрация зачисленных — 9 апреля - 4 сентября 2026.",
+      "evidence": "Application Period for Undergraduate Programs for International Students Application Period for Undergraduate Programs for International Students April 8 - August 31, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Стипендия для иностранцев по итогам отбора: зачисляют либо полностью платно, либо со скидкой 25%, 50% или 75%.",
+      "evidence": "international students can be admitted as full fee-paying students, or with 25%, %50 or 75% discount.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обучение для иностранных бакалавров — 10 000 USD в год; вуз заявляет 50%-ю стипендию.",
+      "evidence": "Annual tuition fees are 10.000 USD. However, the university offers a 50% scholarship.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцам предлагают 50%-ю стипендию.",
+      "evidence": "Yes, the university offers a 50% scholarship",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцы с частичной стипендией или без неё вносят оплату за семестр или год при регистрации.",
+      "evidence": "International students with partial scholarships or without scholarships must submit the payment receipt for one semester or one year of tuition fees on the registration day.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Английская подготовительная программа — за отдельную плату.",
+      "evidence": "which is subject to an additional tuition fee",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Документы для регистрации: оригинал аттестата с переводом, справка об эквивалентности, транскрипт за все годы, паспорт, вид на жительство, студенческая виза, 4 фото, языковой сертификат.",
+      "evidence": "Original high school diploma/graduation certificate and its copy",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Абитуриентам младше 18 лет без студенческой визы нужно согласие обоих родителей (Muvafakatname), оформленное в турецком консульстве, и свидетельство о рождении с турецким переводом.",
+      "evidence": "The consent letter should be prepared at a Turkish consulate/embassy.",
+      "field": "age",
+      "kind": "note"
+    },
+    {
+      "ru": "8 из 10 бакалаврских программ — полностью на английском языке.",
+      "evidence": "We have 10 undergraduate programs, 8 of which are being taught in 100% English",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Для всех бакалаврских программ английская подготовительная программа обязательна, арабская — по желанию.",
+      "evidence": "Our university has a compulsory English Preparatory Program and an optional Arabic Preparatory Program for all undergraduate programs.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-04-08",
+    "closes": "2026-08-31",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://international.ihu.edu.tr/en/undergraduate-application-requirements-international",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Ibn Haldun University, Стамбул (Башакшехир), Турция. Приём иностранцев на бакалавриат ведёт International Office; подача онлайн раз в год, приём на 2026-2027 — 8 апреля - 31 августа 2026. Обучение платное (10 000 USD/год для иностранцев), есть частичные стипендии и внутренний языковой тест Pearson Versant вместо IELTS."
+    }
+  },
+  "source": {
+    "url": "https://international.ihu.edu.tr/en",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://international.ihu.edu.tr/en",
+        "contentHash": "sha256:68fb38d2d1be336a705de3e414ddbb8771c6937b5b00da8a4e3092bd2752397c"
+      },
+      {
+        "url": "https://international.ihu.edu.tr/en/undergraduate",
+        "contentHash": "sha256:68616613c58c34c2fbcad5a05ecb889c7b9d88eefa37725176940b065b973d20"
+      },
+      {
+        "url": "https://international.ihu.edu.tr/en/undergraduate-application-requirements-international",
+        "contentHash": "sha256:1ef98047449046e3bc1d2545a79ea34c19d97d72171b635d45adc8001858b9bf"
+      },
+      {
+        "url": "https://international.ihu.edu.tr/en/faq",
+        "contentHash": "sha256:79d93fb0bf6e6a7c25c0b86ce9bbbefec7bca031964d26e2219f95c4034d0377"
+      },
+      {
+        "url": "https://international.ihu.edu.tr/en/undergraduate-programs",
+        "contentHash": "sha256:7978851bc5931fc8c45f5457bce9ae10f16da2f5f38615b4325b638e2ef972a9"
+      },
+      {
+        "url": "https://oidb.ihu.edu.tr/en/deneme-sayfa",
+        "contentHash": "sha256:3a883b778eeea494ff5280b12f49b265ea1925fd3bf482fb9ed6abf2de011ab1"
+      },
+      {
+        "url": "https://oidb.ihu.edu.tr/en/undergraduate-programs-registration-guide-for-international-students",
+        "contentHash": "sha256:56495f15e2aed2302f80fdef9eb07a56b0a299e1247139c9835ad0bbc7f5bdbc"
+      },
+      {
+        "url": "https://oidb.ihu.edu.tr/en/2026-2027-academic-calendar",
+        "contentHash": "sha256:474264775e7e1d253892e00512c4bfe0cd3e8d512286a7c750b1bb185b38939b"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
