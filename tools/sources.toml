@@ -4600,3 +4600,24 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[bauman]
+name = "Bauman Moscow State Technical University (Россия)"
+files = [
+  { path = "manual/bauman/00-foreigners-bachelor.txt", url = "https://bmstu.ru/foreigners-bachelor" },
+  { path = "manual/bauman/01-guide.txt", url = "https://bmstu.ru/foreigners-bachelor/podrobnyy_gayd_po_postupleniyu_inostrantsev" },
+  { path = "manual/bauman/02-preparatory.txt", url = "https://bmstu.ru/foreigners-bachelor/preparatory_department" },
+  { path = "manual/bauman/03-arrival.txt", url = "https://bmstu.ru/foreigners-bachelor/arrival_at_the_university" },
+  { path = "manual/bauman/05-spravochnik.txt", url = "https://bmstu.ru/foreigners-bachelor/spravochnik_abiturienta_ino" },
+  { path = "manual/bauman/06-platnoe.txt", url = "https://bmstu.ru/bachelor/platnoe-obuchenie" },
+  { path = "manual/bauman/08-examinations.txt", url = "https://bmstu.ru/bachelor/examinations" },
+  { path = "manual/bauman/09-scholarship.txt", url = "https://bmstu.ru/foreigners-scholarship" },
+  { path = "manual/bauman/11-tuition-order.pdf", url = "https://bmstu.ru/svedendoc/sveden/document/platnoe_obrazovanie/%D0%9F%D1%80%D0%B8%D0%BA%D0%B0%D0%B7_%D0%9E%D0%B1_%D1%83%D1%82%D0%B2%D0%B5%D1%80%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B8_%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8_%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D1%85_%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D1%83%D1%81%D0%BB%D1%83%D0%B3_%D1%81%D0%BE_%D1%88%D1%82%D0%B0%D0%BC%D0%BF%D0%BE%D0%BC_%D0%AD%D0%9F.pdf" },
+  { path = "manual/bauman/12-tuition-app1.pdf", url = "https://bmstu.ru/svedendoc/sveden/document/platnoe_obrazovanie/%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_1_%D0%BA_%D0%BF%D1%80%D0%B8%D0%BA%D0%B0%D0%B7%D1%83_%D0%9E%D0%B1_%D1%83%D1%82%D0%B2%D0%B5%D1%80%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B8_%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8_%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D1%85_%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D1%83%D1%81%D0%BB%D1%83%D0%B3.pdf" },
+  { path = "manual/bauman/13-presentation.pdf", url = "https://api.www.bmstu.ru/upload/document/480/6440f1f63087a.pdf" },
+  { path = "manual/bauman/14-majors-foreign.pdf", url = "https://api.www.bmstu.ru/upload/document/440/632c74394dc14.pdf" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
