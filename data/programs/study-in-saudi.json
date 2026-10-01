@@ -1,0 +1,206 @@
+{
+  "id": "study-in-saudi",
+  "status": "published",
+  "kind": "government",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Study in Saudi Arabia (Саудовская Аравия): приём иностранцев на бакалавриат",
+    "orig": "Study in Saudi Arabia"
+  },
+  "hostCountry": "SA",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "У платформы три пути. Полная стипендия покрывает всё: «Tuition, housing & living - all covered» — обучение, жильё и жизнь. Частичная стипендия закрывает лишь часть стоимости обучения. Самофинансирование не покрывает ничего: студент сам платит за обучение и жизнь (в каталоге бакалавриат Al Yamamah University стоит 36 800 за семестр). Стипендию даёт не платформа, а конкретный вуз по заявке на поступление, и она конкурентная; дорога нигде не названа."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство вход не закрывает: платформа обращена к иностранным студентам «from over 170 countries» и нигде не перечисляет запретных стран. Единственные исключения касаются тех, у кого уже есть стипендия на ту же ступень («A student cannot receive two scholarships for the same academic degree»), а не гражданства. Для граждан Таджикистана отдельного запрета нет. Смотрели страницы: Home, FAQ, Visa & Pathways, Institutions, Programs, руководство Министерства образования."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы вход не закрывает: отказа по стране нет, платформа требует аттестат и заверенные документы «per the educational institution's requirements», а список стран не приводит. Таджикистан нигде не упомянут, требований отдельно к странам Центральной Азии тоже нет — состав документов и их заверение задаёт конкретный вуз. Смотрели страницы: Home, FAQ, Visa & Pathways, руководство Министерства образования."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Число лет школы не задано: платформа говорит только об аттестате и заверенных документах, ни 11, ни 12 лет не называет и требований по годам или предметам не выставляет. Это относится к приёмной конкретного вуза. Смотрели страницы: Home, FAQ, Visa & Pathways, руководство Министерства образования."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Год выпуска не ограничен: на снятых страницах нет ни требования окончить школу в год подачи, ни ограничения по числу лет после выпуска. Указано лишь, что нужен аттестат (Attested certificates) и решение принимает вуз. Смотрели страницы: Home, FAQ, Visa & Pathways, руководство Министерства образования."
+    },
+    "age": {
+      "min": 16,
+      "evidence": "The applicant must be 16 years of age or older."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Требования к среднему баллу нет: платформа не называет ни шкалы, ни минимума. Она прямо пишет, что заявку рассматривает вуз и решение выносит он, а отказ приходит, если не выполнены «admission requirements for the program or educational institution» — то есть порог задаёт конкретный вуз, а не платформа. Смотрели страницы: Home, FAQ, Programs, руководство Министерства образования."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Proof of proficiency in the language of study, except for those wishing to study Arabic"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Подача идёт только через государственную платформу Study in Saudi Arabia (studyinsaudi.sa): анкету заполняют онлайн, там же выбирают вуз и программу.",
+      "evidence": "You can apply through the \"Study in Saudi Arabia\" platform at: https://studyinsaudi.sa",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "После отправки заявку рассматривает выбранный вуз; если он одобряет, документы завершают вуз и Министерство образования. Стипендию даёт не платформа, а конкретный вуз.",
+      "evidence": "After submission, the application is forwarded to the selected educational institution for review. Once approved by the institution, it is processed by both the institution and the Ministry of Education to complete the final admission procedures.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Стипендию просят, подавая обычное заявление на поступление в конкретный вуз: вуз рассматривает его и выносит решение. Отдельной общей стипендиальной заявки нет.",
+      "evidence": "You can apply for a scholarship through the educational institution where you wish to study by submitting an admission application. The institution will review your application and issue an admission decision accordingly.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Полная стипендия закрывает обучение, жильё и жизнь — на странице путей прямо написано «Tuition, housing & living - all covered».",
+      "evidence": "Tuition, housing & living - all covered",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Частичная стипендия закрывает лишь часть стоимости обучения.",
+      "evidence": "Scholarships covering part of tuition costs with diverse educational opportunities for international students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Самофинансирование — обычный платный путь: студент сам платит за обучение и жизнь. Например, бакалавриат Al Yamamah University стоит 36 800 за семестр.",
+      "evidence": "Paid Study The student bears all tuition and living costs. 36,800 / per semester",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Две стипендии на одну и ту же ступень получить нельзя.",
+      "evidence": "A student cannot receive two scholarships for the same academic degree.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Аттестат и документы нужно заверить; их состав и правила заверения задаёт конкретный вуз.",
+      "evidence": "Attested certificates and required documents per the educational institution's requirements.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Длинная студенческая виза (на год и больше) требует: 16 полных лет, паспорт с запасом не менее 6 месяцев, приглашение (admission) от лицензированного вуза, подтверждение денег на обучение и жизнь или финансовую гарантию, письменное согласие опекуна для тех, кому меньше 18, медицинский отчёт об отсутствии инфекционных болезней, медстраховку и подтверждение владения языком обучения (кроме тех, кто изучает арабский).",
+      "evidence": "Applicant must be 16 years of age or older A valid passport with at least 6 months validity from the intended date of entry to the Kingdom. Acceptance from a licensed and accredited educational institution in the Kingdom. Proof of financial ability to cover tuition and living expenses or a financial guarantee. Written consent of the guardian and companions for visa holders under 18 years of age. A medical report confirming freedom from infectious diseases Medical insurance document for the visa holder and dependents Proof of proficiency in the language of study, except for those wishing to study Arabic",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Минимальный возраст — 16 лет: это требование и для учебной визы, и для поступления.",
+      "evidence": "The applicant must be 16 years of age or older.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Приём на второй семестр 2026 года: с 16 сентября по 6 октября 2026 — это окно для иностранных и уже живущих в стране студентов.",
+      "evidence": "Second Semester Academic Calendar 2026 September 16 Start of application period for international and resident students October 06 End of application period for international and resident students",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Платформа объединяет больше 50 государственных и частных университетов Саудовской Аравии.",
+      "evidence": "Saudi Arabia has more than 50 public and private universities",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Программы идут на арабском, английском, арабо-английском, китайском и французском — язык обучения зависит от программы, как и требования к языку.",
+      "evidence": "All Languages Arabic Arabic | English Chinese English French",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "По инструкции Министерства образования сначала создают аккаунт и заполняют профиль, затем на главной нажимают «Apply to study now», указывают тип заявки (долгая/академическая или короткая), ступень и предпочтения, а во втором шаге выбирают вузы.",
+      "evidence": "After creating the account and filling out the personal file, go to the home page and click on the Apply to study now icon to submit a study application",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "В заявке указывают тип запроса, нужную академическую ступень и предпочтения, после чего выбирают университеты.",
+      "evidence": "specify the type of request, the required academic degree, and preference details",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-16",
+    "closes": "2026-10-06",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://studyinsaudi.sa/en",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": null,
+    "note": {
+      "ru": "Свыше 50 государственных и частных вузов Саудовской Аравии. Заявка идёт в конкретный вуз и на конкретную программу, которые выбирают в анкете на платформе."
+    }
+  },
+  "source": {
+    "url": "https://studyinsaudi.sa/en",
+    "approvedBy": "assistant",
+    "pages": [
+      {
+        "url": "https://studyinsaudi.sa/en",
+        "contentHash": "sha256:249589e54f6a4c200099c2523ab78975f533081d11e845c4fd053888444e9b9e"
+      },
+      {
+        "url": "https://studyinsaudi.sa/en/Faq",
+        "contentHash": "sha256:2017f95fc344850932b2dd647a6e5374f253427ab1612c6b4790561b772d4508"
+      },
+      {
+        "url": "https://studyinsaudi.sa/en/Institutions",
+        "contentHash": "sha256:c588fa01045f562834c0e4696b5d41cf7f9ef5e935bd0df62085bfeeaf0f77f9"
+      },
+      {
+        "url": "https://studyinsaudi.sa/en/Programs",
+        "contentHash": "sha256:c191e1cde7cdfac5934aa972b078abf61ef9ecbbaa86b5b15dbb38ee6e20b854"
+      },
+      {
+        "url": "https://studyinsaudi.sa/en/VisaOptions",
+        "contentHash": "sha256:6651bbd68752b38527042cfae35475dafcdd9778c66161a1c3f8ab1933eb0999"
+      },
+      {
+        "url": "https://object.moe.gov.sa/studyinsaudi/Manual_en.pdf",
+        "contentHash": "sha256:1b8f56ac1ac3cd0aa24eeeed634615fae43e4611a9ba878dfeccea7a4e00988b"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
