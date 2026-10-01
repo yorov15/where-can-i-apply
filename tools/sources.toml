@@ -4581,3 +4581,22 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
+[tsu]
+name = "Tomsk State University (Россия)"
+files = [
+  { path = "manual/tsu/00-international-cooperation.html", url = "https://en.tsu.ru/international_cooperation/" },
+  { path = "manual/tsu/01-russian-language-course.html", url = "https://en.tsu.ru/international_cooperation/the_russian_language_course.php" },
+  { path = "manual/tsu/02-bachelor-steps.html", url = "https://info.abiturient.tsu.ru/en/node/6" },
+  { path = "manual/tsu/03-separate-quota.html", url = "https://info.abiturient.tsu.ru/en/node/16047" },
+  { path = "manual/tsu/04-outreach-commissions.html", url = "https://info.abiturient.tsu.ru/en/node/16057" },
+  { path = "manual/tsu/05-pravila-priema-bachelor.pdf", url = "https://info.abiturient.tsu.ru/sites/default/files/pravila_priyoma_na_programmy_bazovogo_vysshego_obrazovaniya_bakalavriata_spvo_-_magistratury.pdf" },
+  { path = "manual/tsu/06-tuition-orders.html", url = "https://www.tsu.ru/education/opou/stoimost_obucheniya.php" },
+  { path = "manual/tsu/07-russian-testing-center.html", url = "https://test.tsu.ru/ru/" },
+  { path = "manual/tsu/08-sveden-abitur.html", url = "https://www.tsu.ru/sveden/abitur/" },
+  { path = "manual/tsu/09-admissions-home.html", url = "https://info.abiturient.tsu.ru/en" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
