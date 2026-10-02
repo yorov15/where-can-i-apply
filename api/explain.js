@@ -102,7 +102,6 @@ const DEFAULT_MODELS = [
   'google/gemma-4-26b-a4b-it:free',
   'qwen/qwen3.8-27b:free',
   'poolside/laguna-s-2.1:free',
-  'thinkingmachines/inkling:free',
   'nvidia/nemotron-3-super-120b-a12b:free',
   'apodex/apodex-1.1-mini:free',
   'openrouter/free',
@@ -154,7 +153,7 @@ async function askOnce(models, { system, user }, timeoutMs) {
   return text;
 }
 
-const callModel = (prompt, trace) => callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 40000, perGroupMs: 10000 });
+const callModel = (prompt, trace) => callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 30000, perGroupMs: 9000 });
 
 function send(res, status, json, headers = {}) {
   res.statusCode = status;
