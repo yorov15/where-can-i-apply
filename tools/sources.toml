@@ -5404,3 +5404,15 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# City University of Hong Kong.
+# Домен cityu.edu.hk одобрен Муродом 2026-10-01 (список из 55 кандидатов, ответ «ok delay spisok» — весь список).
+[cityu-hk]
+name = "City University of Hong Kong"
+files = [
+  { path = "manual/cityu-hk/00-intl.html", url = "https://www.cityu.edu.hk/admo/admissions/international-admissions" },
+  { path = "manual/cityu-hk/01-fees.html", url = "https://www.cityu.edu.hk/admo/fees-and-scholarships?kind=nonlocal" },
+  { path = "manual/cityu-hk/02-schol.html", url = "https://www.cityu.edu.hk/admo/entrance-scholarship-international-students" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

@@ -1,0 +1,162 @@
+{
+  "id": "cityu-hk",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "City University of Hong Kong (Гонконг): бакалавриат на английском со вступительными стипендиями",
+    "orig": "City University of Hong Kong"
+  },
+  "hostCountry": "HK",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: 240 000 гонконгских долларов в год. Вступительные стипендии для иностранцев даются автоматически за успехи без заявки: Top — полное обучение и до 60 000 в год на жильё и жизнь, Full — полное обучение, Half — половина. Дорога, виза и остальные расходы — за счёт студента, если их не покрывает стипендия."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "The University welcomes applications from non-local applicants."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Список принимаемых аттестатов по странам длинный, Таджикистана в нём нет; общие правила — 12 лет школы. Смотрели страницу международного приёма."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Требование 12 лет школы названо, но способа засчитать 11-летний аттестат на страницах нет: нужно спросить приёмную. Смотрели страницу международного приёма."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Года выпуска не называют. Смотрели страницу международного приёма."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Возрастного ограничения на страницах приёма не названо. Смотрели страницы международного приёма и стипендий."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Единого порога среднего балла нет: стипендии даются по конкурсу, порог для разных аттестатов не опубликован для Таджикистана. Смотрели страницы международного приёма и стипендий."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "Overall band score of 6.5 or above (Academic Module)"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 79,
+          "evidence": "Minimum total score of 79 out of 120 in the Internet-based test (iBT)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4.5,
+          "evidence": "Minimum total score of 4.5 out of 6 in the Internet-based test (iBT)"
+        }
+      ],
+      "evidence": "Applicants with international qualifications are expected to fulfil the English Language Requirements."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцы подают по отдельному маршруту для «non-local» (не местных): местных и иностранцев рассматривают по разным правилам. Гражданство Таджикистана отдельно не упомянуто.",
+      "evidence": "The University welcomes applications from non-local applicants.",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Для поступления на первый курс нужен школьный аттестат в 12 лет учёбы (или частично оконченный колледж); 13-летний аттестат даёт ещё и вход с зачётом кредитов. Таджикская школа — 11 лет, поэтому нужно спросить приёмную комиссию, подойдёт ли аттестат.",
+      "evidence": "Applicants holding a 12-year school-leaving qualification, or a partially completed sub-degree qualification",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение на английском. Нужен IELTS Academic 6.5 или TOEFL iBT: 79 из 120 (тест сдан до 21 января 2026) или 4.5 из 6 (после этой даты). Тест не старше двух лет на начало семестра A; домашние и онлайн-версии (IELTS Online, TOEFL Home Edition) не принимают.",
+      "evidence": "Overall band score of 6.5 or above (Academic Module)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Обучение платное: 240 000 гонконгских долларов в год; сбор за заявку 600 (до двух программ), взнос при принятии предложения 20 000 (потом засчитывается в плату за обучение). Жизнь — 50 000–60 000 в год, общежитие — 20 800.",
+      "evidence": "Tuition Fee (Non-local Students) HK$240,000 per academic year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Вступительные стипендии для иностранцев дают автоматически за успехи, подавать отдельно не нужно: «Top» — полное обучение плюс до 60 000 на жильё и жизнь в год, «Full» — полное обучение, «Half» — половина. Для продления нужен минимальный CGPA каждый год.",
+      "evidence": "Applicants do not have to apply for these scholarships.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Есть грант разнообразия 30 000 гонконгских долларов в год (всего 120 000 за 4 года) для студентов из недостаточно представленных стран (кроме получивших Top). Список стран на странице не назван, Таджикистан в нём может быть или не быть.",
+      "evidence": "All non-local students admitted from underrepresented nationalities except Top Scholarship recipients will be eligible for the grant.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Цикл 2027/28: приём открыт с 24 сентября 2026, ранний раунд до 15 ноября 2026 (итоги в декабре), основной раунд до 15 января 2027 (итоги февраль–май 2027). Начало семестра — 30 августа 2027.",
+      "evidence": "15 Nov 2026 Early Round Application Deadline",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-09-24",
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.cityu.edu.hk/admo/admissions/international-admissions",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: City University of Hong Kong, Коулун. Бакалавриат на английском, IELTS 6.5 или TOEFL; плата 240 000 гонконгских долларов в год, но вступительные стипендии (до полного обучения плюс содержание) даются автоматически за успехи. Нужен 12-летний аттестат, для 11-летней школы — спросить приёмную. Цикл 2027/28: ранний раунд до 15 ноября 2026, основной до 15 января 2027."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.cityu.edu.hk/admo/admissions/international-admissions",
+    "pages": [
+      {
+        "url": "https://www.cityu.edu.hk/admo/admissions/international-admissions",
+        "contentHash": "sha256:fa0a1370ebfc03e5a57577f2d21e17106e7c066d7f85af4bba4e9ab8f94f8bd8"
+      },
+      {
+        "url": "https://www.cityu.edu.hk/admo/fees-and-scholarships?kind=nonlocal",
+        "contentHash": "sha256:7c0673eb0db4a98efdb7b2ed250e7a58d9bf9e8a64cf363455ca735d5fba216e"
+      },
+      {
+        "url": "https://www.cityu.edu.hk/admo/entrance-scholarship-international-students",
+        "contentHash": "sha256:2e4967a9dedd4a32de0e52e3f56bb1a82acc35749e40a040eefd53ef1a77bd1c"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}
