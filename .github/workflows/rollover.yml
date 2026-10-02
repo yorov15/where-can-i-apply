@@ -1,0 +1,49 @@
+# Смена цикла — раз в неделю, на машине GitHub.
+#
+# Ежедневное слежение (check-sources) ловит изменение страниц, но у
+# закрытой программы страница меняется по любому поводу. Здесь вопрос
+# уже: не назвала ли страница год следующего цикла. Если назвала,
+# робот заводит один Issue со списком, и GitHub присылает письмо.
+# Робот ничего не пишет в карточки сам: срок вносит человек, с цитатой.
+name: Смена цикла
+
+on:
+  schedule:
+    # Понедельник, 05:30 UTC — 10:30 в Душанбе.
+    - cron: "30 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  rollover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Найти закрытые программы с датами нового цикла
+        run: python -m tools.rollover --out report.md
+
+      - name: Завести, обновить или закрыть Issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Смена цикла: у закрытых программ появились даты нового года"
+          number=$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number')
+          if [ -s report.md ]; then
+            if [ -n "$number" ]; then
+              gh issue edit "$number" --body-file report.md
+            else
+              gh issue create --title "$title" --body-file report.md
+            fi
+          elif [ -n "$number" ]; then
+            gh issue close "$number" --comment "На страницах закрытых программ год нового цикла больше не встречается."
+          fi
