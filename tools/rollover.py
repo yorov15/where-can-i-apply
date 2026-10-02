@@ -24,19 +24,31 @@ from tools.sources import load_sources
 MAX_PAGES = 10
 SNIPPET = 90
 
+# Год рядом с этими словами — про приём; рядом с этими — про паспорт, визу
+# или семестр уже идущего года, и в отчёте он только шумит.
+ADMISSION_WORDS = re.compile(
+    r"apply|application|deadline|admission|intake|enrol|call for|приём|прием|подач|набор|접수|모집",
+    re.IGNORECASE,
+)
+NOISE_WORDS = re.compile(
+    r"passport|valid|expir|visa|residence|permit|fee for|tuition fee|护照|有效", re.IGNORECASE
+)
+
 
 def next_year(closes: str) -> int:
     return int(closes[:4]) + 1
 
 
 def year_hits(text: str, year: int, limit: int = 2) -> list[str]:
-    """Куски текста с годом как отдельным числом (не частью другого)."""
+    """Куски текста с годом как отдельным числом, где речь о приёме."""
     flat = re.sub(r"\s+", " ", text)
-    pattern = re.compile(rf"(?<!\d){year}(?!\d)")
-    return [
+    # «2026/2027» — текущий учебный год, а не следующий цикл.
+    pattern = re.compile(rf"(?<!\d)(?<!\d{{4}}/)(?<!\d{{4}}-)(?<!\d{{4}}–){year}(?!\d)")
+    snippets = (
         flat[max(0, m.start() - SNIPPET) : m.end() + SNIPPET].strip()
         for m in pattern.finditer(flat)
-    ][:limit]
+    )
+    return [s for s in snippets if ADMISSION_WORDS.search(s) and not NOISE_WORDS.search(s)][:limit]
 
 
 def page_urls(entry: dict) -> list[str]:

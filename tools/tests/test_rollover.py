@@ -16,7 +16,19 @@ class TestYearHits(unittest.TestCase):
         self.assertEqual(year_hits("Order 120275 and 20271", 2027), [])
 
     def test_limits_hits(self):
-        self.assertEqual(len(year_hits("2027 2027 2027 2027", 2027)), 2)
+        self.assertEqual(len(year_hits("apply 2027 apply 2027 apply 2027 apply 2027", 2027)), 2)
+
+    def test_skips_passport_validity(self):
+        self.assertEqual(year_hits("Passport must be valid until March 2027 to apply.", 2027), [])
+
+    def test_skips_academic_year_range_ending_in_year(self):
+        self.assertEqual(year_hits("Application for 2026/2027 and 2026-2027 is open", 2027), [])
+
+    def test_keeps_range_starting_in_year(self):
+        self.assertEqual(len(year_hits("Applications for 2027/2028 are open", 2027)), 1)
+
+    def test_skips_year_without_admission_words(self):
+        self.assertEqual(year_hits("Copyright 2027 Example University", 2027), [])
 
 
 class TestNextYear(unittest.TestCase):
