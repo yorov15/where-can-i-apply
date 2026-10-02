@@ -5327,3 +5327,22 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена сняты вручную (Cloudflare режет сборщика), origin=manual.
+[emory]
+name = "Emory — помощь по нужде для считанных иностранцев, полного покрытия не обещают"
+files = [
+  { path = "manual/emory/00.html", url = "https://apply.emory.edu/apply/international" },
+  { path = "manual/emory/01.html", url = "https://apply.emory.edu/apply/requirements" },
+  { path = "manual/emory/02.html", url = "https://studentaid.emory.edu/undergraduate/apply/new-students/international.html" },
+  { path = "manual/emory/03.html", url = "https://studentaid.emory.edu/undergraduate/apply/new-students/index.html" },
+  { path = "manual/emory/04.html", url = "https://apply.emory.edu/apply/requirements/exams" },
+  { path = "manual/emory/05.html", url = "https://apply.emory.edu/apply/first-year" },
+  { path = "manual/emory/06.html", url = "https://apply.web.emory.edu/apply/first-year/plans-deadlines/index.html" },
+  { path = "manual/emory/09.html", url = "https://apply.emory.edu/sites/emoryadmission/files/2026-09/Emory%20University%20-%20International%20Credential%20Recommendations%20Fall%202024.pdf" },
+  { path = "manual/emory/11.html", url = "https://studentaid.emory.edu/_includes/documents/sections/undergraduate/apply/cost-of-attendance-worksheet.pdf" },
+  { path = "manual/emory/12.html", url = "https://apply.emory.edu/financial-aid/index.html" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

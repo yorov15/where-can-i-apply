@@ -1,0 +1,286 @@
+{
+  "id": "emory",
+  "status": "published",
+  "kind": "need-aid",
+  "majors": [
+    "any"
+  ],
+  "level": "bachelor",
+  "name": {
+    "ru": "Emory — помощь по нужде для считанных иностранцев, полного покрытия не обещают",
+    "orig": "Emory University — need-based financial aid for international students"
+  },
+  "hostCountry": "US",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": false,
+    "note": {
+      "ru": "Помощь по нужде дают лишь части иностранцев: Emory прямо пишет «избранной группе» и советует просить деньги, только если больше взять неоткуда. Прошение возможно лишь в обычном туре Regular Decision. 100% посчитанной нужды Emory закрывает американцам и обладателям грин-карты, иностранцам — не гарантирует. В 2026/27 учёба стоит 70 300 долларов tuition и 97 948 долларов полной стоимости в год, плюс обязательная страховка около 5 592 долларов. Дорогу домой и обратно студент оплачивает сам."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "International students apply as first-year applicants and complete the same application requirements, along with additional requirements for English proficiency and financial documentation."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страну школы не ограничивают: Emory оценивает заявку в контексте образовательной среды и публикует список признанных национальных систем. Список неполный — Таджикистана в нём нет, спорные случаи предлагают решать с региональным приёмным офицером."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Числа лет школы страницы не называют. В PDF «Recommended Credentials for International Schooling Systems» перечислены аттестаты по странам, но список неполный и Таджикистана в нём нет: 11-летнюю школу разбирают вместе с заявкой, а не отсекают по числу лет."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Год выпуска страницы приёма не называют."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возраста страницы приёма и помощи не называют."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Порога по среднему баллу нет: Emory смотрит оценки в контексте программы твоей школы и заявку целиком."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7.5,
+          "evidence": "Expected overall band score: 7.5 (not a strict cutoff)."
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "Expected score: 100 on the previous 0-120 scale (not a strict cutoff)."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5.5,
+          "evidence": "Recommended score on the new scale: 5.5 or higher."
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "Emory's most competitive applicants typically score above 130 out of 160 on the scored portion of the test."
+        }
+      ],
+      "advisory": true,
+      "evidence": "While the university does not use strict score cutoffs, the following scores are recommended to demonstrate readiness for college-level coursework."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Emory University is test optional for first-year students who would start in fall 2027. SAT/ACT scores are not required."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Помощь по нужде дают не всем иностранцам, а «избранной группе»: бюджет ограничен, отбор отдельный.",
+      "evidence": "Each year we offer need-based financial aid packages to a select group of international students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Просить деньги советуют, только если больше взять их неоткуда: Emory прямо предупреждает, что рассчитывает на собственные средства семьи.",
+      "evidence": "We recommend that you apply for need-based financial aid only if you have no other resources to fund your education.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Прошение о деньгах возможно только в обычном туре Regular Decision — в ранние туры (ED I и ED II) за помощью не пойдёшь.",
+      "evidence": "To be considered for need-based financial aid, please apply under our Regular Decision plan",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь дают один раз на входе: кто не просил её в первый год, на стипендию позже не претендует.",
+      "evidence": "Only students who apply for and receive financial aid in their first year will be eligible for aid in the future.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "100% посчитанной нужды Emory закрывает только американцам и держателям грин-карты: бесплатная учёба до 200 000 долларов дохода — для граждан США. Иностранцы в это не входят.",
+      "evidence": "To qualify, students must be domestic, first-degree undergraduates eligible for federal financial aid (i.e., US citizens)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Прошение о нужде — через CSS Profile (код 5187) и налоговые документы в IDOC. Хотя в тексте стоит 5 февраля, в таблице для обычного тура стоит 10 февраля; документы переводят на английский, в доллары и с курсом пересчёта.",
+      "evidence": "Complete the CSS Profile before February 5th if you think you will need financial assistance at any time during your education",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Дорогу домой и обратно Emory в помощь не закладывает: студент должен сам планировать эти расходы.",
+      "evidence": "Create a plan for contributing financially for your education, including paying for travel to and from home",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Колебания курса валют и потеря прежних источников денег (родня, спонсоры, государство) — забота студента: Emory их не компенсирует.",
+      "evidence": "Emory cannot assume financial responsibility for currency fluctuations or replace any current financial support that may be lost in the future",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сертификат по английскому нужен, если английский тебе не родной: свободный письменный и устный английский требуется уже к моменту подачи.",
+      "evidence": "Applicants who do not use English as their primary language must demonstrate the ability to be successful in a rigorous English-speaking environment.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Есть три обходных пути вместо языкового экзамена: SAT 700+ по чтению и письму, ACT 30+ по английской части или четыре последних года в школе с английским языком обучения. Подходит любой один.",
+      "evidence": "Spending the most recent four years in a school where English is the language of instruction for all academic subjects (excluding global/world language)",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Баллы по языку названы рекомендованными, а не жёстким порогом: IELTS 7.5, TOEFL iBT 100 по старой шкале или 5.5 по новой, Duolingo 130. Формально ниже — не автоматический отказ.",
+      "evidence": "While the university does not use strict score cutoffs, the following scores are recommended to demonstrate readiness for college-level coursework.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "SAT и ACT необязательны для поступающих осенью 2027: не сдашь — заявку рассмотрят.",
+      "evidence": "Emory University is test optional for first-year students who would start in fall 2027. SAT/ACT scores are not required.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Интервью InitialView необязательно и не заменяет языковой экзамен: это лишь дополнительный материал.",
+      "evidence": "Please note that the InitialView interview is separate from and does not replace English language proficiency testing",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Есть также стипендии за заслуги через Scholar Programs: отбор очень конкурентный и денег мало. Просить надо до декабря, крайний срок программы — 15 ноября.",
+      "evidence": "International Students interested in Emory's merit scholarships should apply through the University's Scholar programs before December.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки набора на осень 2027: ранний тур ED I — до 1 ноября, ED II и обычный тур — до 1 января 2027. Помощь просят позже: ED I — до 2 декабря, ED II — до 6 января, обычный тур — до 10 февраля.",
+      "evidence": "Regular Decision January 1 February 10 By April 1",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача стоит 75 долларов, но для тех, кому платить тяжело, есть снятие платы (fee waiver).",
+      "evidence": "Submit a $75 application fee or request a fee waiver.",
+      "field": null,
+      "kind": "steps",
+      "fee": {
+        "amount": 75,
+        "currency": "USD",
+        "evidence": "Submit a $75 application fee or request a fee waiver."
+      }
+    },
+    {
+      "ru": "Документ о финансах нужен всем иностранцам, но просящим помощь не обязательно показывать деньги на весь первый год — можно указать сумму от нуля и до полной стоимости.",
+      "evidence": "your documentation does not need to show you have sufficient funds to fully cover your first year at Emory.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Обучение в 2026/27 стоит 70 300 долларов в год (tuition), а полная стоимость года — 97 948 долларов без обязательной страховки.",
+      "evidence": "Tuition $35,150 $70,300",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полная стоимость года по расчёту самого Emory — 97 948 долларов; страховка EUSHIP добавляет примерно 5 592 доллара в год.",
+      "evidence": "TOTAL (ESTIMATED) $48,974 *$97,948",
+      "field": null,
+      "kind": "money"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-01",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://apply.emory.edu/apply/international",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Emory University: Emory College of Arts and Sciences (Атланта) и Oxford College (Оксфорд, Джорджия) — одна заявка, можно выбрать один колледж или оба"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://apply.emory.edu/apply/international",
+    "pages": [
+      {
+        "url": "https://apply.emory.edu/apply/international",
+        "contentHash": "sha256:e2cd27142a3262b25beb245a4e28cd479edd918e5f518888205bbcabdbb358d4"
+      },
+      {
+        "url": "https://apply.emory.edu/apply/requirements",
+        "contentHash": "sha256:1595b24b808c634045ce9aa29208fbee9f69605e3c9213c3cbfcafdbb6e82564"
+      },
+      {
+        "url": "https://studentaid.emory.edu/undergraduate/apply/new-students/international.html",
+        "contentHash": "sha256:98039732a5b6990cc409631cabb081a0c4e11511502156d53cb49e8167264f31"
+      },
+      {
+        "url": "https://studentaid.emory.edu/undergraduate/apply/new-students/index.html",
+        "contentHash": "sha256:79e8877788167bd3832b4f291d9ce7381d0438327c0e76cc299614132c03c1f7"
+      },
+      {
+        "url": "https://apply.emory.edu/apply/requirements/exams",
+        "contentHash": "sha256:7568aa31e9091a34299ce6834401bd972a4f4fc65081a04c3e67acd9176103c1"
+      },
+      {
+        "url": "https://apply.emory.edu/apply/first-year",
+        "contentHash": "sha256:2aafc945d5dfc75f910849ccf4c8ddbb25cbc82b904e1bafe6ad4861b2726f1a"
+      },
+      {
+        "url": "https://apply.web.emory.edu/apply/first-year/plans-deadlines/index.html",
+        "contentHash": "sha256:f406728f3cc78d5aed94eec73d8a19cf4f5056bc0a716ca2c166313ee30c8c48"
+      },
+      {
+        "url": "https://apply.emory.edu/sites/emoryadmission/files/2026-09/Emory%20University%20-%20International%20Credential%20Recommendations%20Fall%202024.pdf",
+        "contentHash": "sha256:4d590f2c50153cde729e719cf5c8fee0b5e8b97a12b5b1dd458fe776f2ce7239"
+      },
+      {
+        "url": "https://studentaid.emory.edu/_includes/documents/sections/undergraduate/apply/cost-of-attendance-worksheet.pdf",
+        "contentHash": "sha256:2f7c2ba341b0935424cee0210a547584fd26c3370839cb618ddcee8496775997"
+      },
+      {
+        "url": "https://apply.emory.edu/financial-aid/index.html",
+        "contentHash": "sha256:d60de1b80f1fd4d92042d72d4806a712fe779e5b869c9127fd336edb44070648"
+      }
+    ],
+    "lastVerified": "2026-10-02",
+    "humanChecked": false
+  }
+}
