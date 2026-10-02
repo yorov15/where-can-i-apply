@@ -110,11 +110,17 @@
       "evidence": "original apostille or consular authentication or original notarized copy",
       "field": null,
       "kind": "must"
+    },
+    {
+      "ru": "Вуз принимает иностранцев и на весну, и на осень, но даты осеннего набора 2027 пока не объявлены: объявленные раунды (12–30 октября и 23 ноября – 11 декабря 2026) относятся к весне 2027.",
+      "evidence": "the university offers international admissions for both the spring and fall semesters",
+      "field": null,
+      "kind": "steps"
     }
   ],
   "deadline": {
-    "opens": "2026-10-12",
-    "closes": "2026-12-11",
+    "opens": null,
+    "closes": null,
     "recurring": "annual",
     "confidence": "expected"
   },
