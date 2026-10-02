@@ -5346,3 +5346,19 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена сняты вручную (Cloudflare режет сборщика), origin=manual.
+[oberlin]
+name = "Оберлин — нужду закрывают полностью, но при отборе смотрят на деньги"
+files = [
+  { path = "manual/oberlin/00.html", url = "https://www.oberlin.edu/admissions-and-aid/arts-and-sciences/first-year-applicants" },
+  { path = "manual/oberlin/01.html", url = "https://www.oberlin.edu/admissions-and-aid/financial-aid/applying-aid-international-students" },
+  { path = "manual/oberlin/02.html", url = "https://www.oberlin.edu/admissions-and-aid/international-students" },
+  { path = "manual/oberlin/03.html", url = "https://www.oberlin.edu/admissions-and-aid/tuition-and-fees" },
+  { path = "manual/oberlin/04.html", url = "https://www.oberlin.edu/financial-aid/basics/scholarships-offered" },
+  { path = "manual/oberlin/05.html", url = "https://www.oberlin.edu/admissions-and-aid/financial-aid" },
+  { path = "manual/oberlin/06.html", url = "https://www.oberlin.edu/admissions-and-aid/arts-and-sciences/testing-policy" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

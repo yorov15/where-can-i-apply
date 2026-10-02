@@ -1,0 +1,297 @@
+{
+  "id": "oberlin",
+  "status": "published",
+  "kind": "need-aid",
+  "majors": [
+    "any"
+  ],
+  "level": "bachelor",
+  "name": {
+    "ru": "Оберлин — нужду закрывают полностью, но при отборе смотрят на деньги",
+    "orig": "Oberlin College — need-based financial aid for international students (need-aware)"
+  },
+  "hostCountry": "US",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Один из немногих американских колледжей, кто даёт иностранцам серьёзную помощь: принятым закрывают 100% посчитанной нужды. Но отбор — need-aware: просьба о деньгах учитывается и ставит тебя в самый конкурентный поток (приём иностранцев около 8%). Бюджет помощи ограничен, поэтому самые сильные заявки — у тех, кто может вносить хотя бы 35 000 долларов в год. В последние годы помощь получала примерно половина иностранцев, а средний пакет закрывал около двух третей стоимости обучения. Просить помощь надо вместе с заявкой: после зачисления права на неё уже нет. Своя форма — CSS Profile (код 1587) или бесплатная замена ISAFA. Пакет трёхчастный: гранты колледжа, работа в кампусе и (для иностранцев ограниченно) кредиты. Полная стоимость 2026/27 — 92 162 доллара (обучение 70 320, жильё 10 270, питание 10 430, сборы 1 142), сверх — книги, личные расходы, страховка и дорога. Дорогу страницы не называют ни в пакете, ни отдельно."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "гражданство не ограничивают: иностранцем считается тот, у кого нет гражданства США или вида на жительство, и списка запрещённых стран на страницах приёма и помощи нет"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Прочитаны страницы приёма иностранцев, требований первого курса, языкового теста, помощи иностранцам, стоимости, стипендий и обзора помощи: списка принимаемых стран или школ и запрета по стране школы нет. Наоборот, приёмная комиссия прямо говорит, что знакома с разными национальными системами образования и оценивает заявку в контексте школы абитуриента."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Числа лет школы страницы не называют. Есть только просьба о сильной программе — не меньше 20 основных академических курсов к выпуску — и отдельный путь для тех, кто оканчивает школу раньше четырёх лет. Требования «12 лет» нет, поэтому поле пустое; предпочтение по курсам вынесено условием."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "требования к году выпуска страницы не называют; наоборот, принимают и тех, кто собирается окончить школу раньше четырёх лет"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Общего требования к возрасту нет. Единственное число — «не младше 16 лет к началу занятий» — стоит только в разделе об обходном пути для тех, кто выпускается раньше четырёх лет, а не для обычного первого курса. Это условие вынесено текстом (schoolYears/workaround), а поле возраста оставлено пустым."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Числового порога по среднему баллу нет: страница прямо говорит «There are no set numerical requirements for admission». Диапазон GPA 3.54–3.87 у зачисленных иностранцев — описательная середина, а не требование, поэтому вынесен текстом, а поле пустое."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "To satisfy this requirement, we accept official score reports from TOEFL iBT (including iBT Home Edition), IELTS, or Duolingo's English Test (DET)."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Oberlin College has been test optional since 2020, which means that applicants can choose whether or not to submit their SAT and/or ACT scores."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Деньги учитывают при отборе: колледж не need-blind для иностранцев. Просьба о помощи — не запрет, но она ставит заявку в самый конкурентный поток.",
+      "evidence": "As a need-aware institution, Oberlin considers a student's financial circumstances when making admissions decisions.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Принятым закрывают 100% посчитанной нужды — независимо от гражданства. Пакет собирают из грантов, стипендий, работы в кампусе и, ограниченно, кредитов.",
+      "evidence": "Oberlin provides grants, scholarships, loans, and on-campus employment to meet 100% of calculated financial need for all international students who apply for financial aid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "В последние годы помощь получала примерно половина иностранцев, а средний пакет закрывал около двух третей полной стоимости обучения.",
+      "evidence": "about half of our international students received institutional financial aid, with the average aid package covering about two-thirds of the cost of attendance",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Бюджет помощи иностранцам не безграничен, поэтому отбор очень жёсткий — особенно для тех, кому нужно много денег.",
+      "evidence": "The international financial aid budget is not unlimited.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Самые конкурентные заявки — у тех, кто может вносить хотя бы 35 000 долларов в год. Приём иностранцев — около 8%.",
+      "evidence": "Applicants who can contribute at least $35,000 USD per year towards their educational expenses are the most competitive for admission.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Просить помощь надо вместе с заявкой. Кто не попросил до решения о приёме, права на помощь по нужде уже не получает — без исключений.",
+      "evidence": "students who do not apply for financial aid at the time of admission are not eligible for aid in future years",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Вклад семьи фиксируется на все годы одинаковым: помощь не растёт ни от смены обстоятельств, ни от курса валют.",
+      "evidence": "International students will be expected to contribute the same amount of out of pocket expense each year they attend Oberlin.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полная стоимость 2026/27 — 92 162 доллара: обучение 70 320, жильё 10 270, питание 10 430, сборы 1 142. Сверх — книги, личные расходы, страховка и дорога.",
+      "evidence": "Total $92,162",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Если за помощью не обращаться, надо показать способность вносить 90 000 долларов в год (ожидаемая сумма на 2027/28). Колледж предупреждает, что стоимость растёт на 3–5% в год.",
+      "evidence": "If a student is not applying for financial aid, the expected amount of support for the 2027-2028 year is $90,000.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь просят через CSS Profile (код колледжа 1587). Если заплатить за него тяжело, вместо него принимают свою форму ISAFA — на право на помощь это не влияет.",
+      "evidence": "International applicants are required to submit the CSS Profile (code 1587) to apply for financial aid.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Если CSS Profile не подходит или платить за него тяжело, заполни и загрузи International Student Application for Financial Assistance (ISAFA) в личном кабинете заявителя.",
+      "evidence": "you may complete and upload the International Student Application for Financial Assistance (ISAFA) instead",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки набора на осень 2027: ранний тур I и раннее действие — до 1 ноября 2026, ранний тур II — до 5 января 2027, обычный тур — до 15 января 2027. Дедлайн помощи совпадает с дедлайном заявки.",
+      "evidence": "Application Deadline November 1 January 5 November 1 January 15",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача бесплатная — платы за заявку нет, и дополнительного эссе колледж не требует.",
+      "evidence": "Oberlin does not charge an application fee, nor do we require SAT/ACT results.",
+      "field": null,
+      "kind": "steps",
+      "fee": {
+        "amount": 0,
+        "currency": "USD",
+        "evidence": "Oberlin does not charge an application fee, nor do we require SAT/ACT results."
+      }
+    },
+    {
+      "ru": "Дополнительного эссе к заявке не нужно — только личное эссе из Common App или Coalition.",
+      "evidence": "Oberlin does not require any additional supplemental essays",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Сертификат по английскому обязателен, если английский не первый язык и школа не учит на английском. Таджикская школа под исключение не подходит.",
+      "evidence": "If English is not your first language, or you do not go to a secondary school where English is the primary language of instruction, you'll need to demonstrate that you possess the level of communication skills necessary to succeed in Oberlin's rigorous academic environment.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Принимают TOEFL iBT (включая Home Edition), IELTS и Duolingo. Твёрдого минимального балла колледж не публикует; у зачисленных иностранцев середина по TOEFL — 106–112, по IELTS — 7.5–8.5, по Duolingo — 120–140. Если заплатить за тест не можешь, заявку рассмотрят и без него.",
+      "evidence": "To satisfy this requirement, we accept official score reports from TOEFL iBT (including iBT Home Edition), IELTS, or Duolingo's English Test (DET).",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Если сдать языковой тест нет возможности, заявку всё равно рассмотрят без него — но с баллом шансы выше.",
+      "evidence": "If you cannot afford an English proficiency test, we will review your application without it.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "SAT и ACT необязательны: колледж тест-опциональный с 2020 года. Пришлёшь баллы — их учтут, не пришлёшь — на отбор это не влияет, и на merit-стипендии тоже.",
+      "evidence": "Oberlin College has been test optional since 2020, which means that applicants can choose whether or not to submit their SAT and/or ACT scores.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Числового порога по среднему баллу нет: решения принимают целостно по оценкам, программе школы, рекомендациям и эссе. У зачисленных иностранцев середина GPA — 3.54–3.87.",
+      "evidence": "There are no set numerical requirements for admission",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Числа лет школы страницы не называют. Вместо этого просят сильную программу: не меньше 20 основных академических курсов к выпуску (обычно четыре года английского, математики, естественных наук, обществознания и языка). Если школа таких предметов не даёт, это учитывают, а не отказывают.",
+      "evidence": "we strongly prefer to see a minimum of 20 core academic courses by graduation",
+      "field": "schoolYears",
+      "kind": "note"
+    },
+    {
+      "ru": "Обходной путь для тех, кто оканчивает школу раньше четырёх лет: колледж принимает такие заявки, если выполнить требования штата к диплому и быть не младше 16 лет к началу занятий. Это подходит и 11-летнему аттестату.",
+      "evidence": "we do accept applications from students who plan to graduate in fewer than four years",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Интервью с колледжем доступно только гражданам США и обладателям вида на жительство. Иностранцам советуют записать независимое интервью через InitialView или Vericant — оно платное, но повышает шансы.",
+      "evidence": "Due to limited availability, interviews are reserved for United States citizens or permanent residents only.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Результаты национальных экзаменов тоже просят приложить к заявке.",
+      "evidence": "Results of any national examinations you have taken should also be submitted.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Всех зачисленных автоматически смотрят на merit-стипендии, отдельная заявка не нужна. Минимум — возобновляемая Oberlin Commitment Scholarship 10 000 долларов в год. Есть и три именные стипендии для иностранцев (до 10 000 долларов), но они привязаны к гражданству стран Африки или Японии.",
+      "evidence": "Oberlin College has three merit-based scholarships for which eligible international students may be considered.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Первый год на визе F-1 работать можно только в кампусе, не больше 20 часов в неделю во время учёбы. Полная занятость в кампусе разрешена в каникулы.",
+      "evidence": "On-campus employment must not exceed 20 hours a week while school is in session.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Виза оформляется после согласия учиться: колледж пришлёт форму I-20, обычно в середине мая, с ней надо идти в консульство США.",
+      "evidence": "The Office of International Students will send you a Certificate of Eligibility (I-20 Form) after you accept an offer of admission",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.oberlin.edu/admissions-and-aid/arts-and-sciences/first-year-applicants",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один колледж: Oberlin College (College of Arts and Sciences), Оберлин, штат Огайо, США"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.oberlin.edu/admissions-and-aid/arts-and-sciences/first-year-applicants",
+    "pages": [
+      {
+        "url": "https://www.oberlin.edu/admissions-and-aid/arts-and-sciences/first-year-applicants",
+        "contentHash": "sha256:818128c4f5d3e3043a37386cdf36f61dcbc62d8fa1f7c31834dfaff82e51ab76"
+      },
+      {
+        "url": "https://www.oberlin.edu/admissions-and-aid/financial-aid/applying-aid-international-students",
+        "contentHash": "sha256:99971574c3b26b4f5402ab2ac4918610626a1d9f97aaddecb9d6323d9d8acccd"
+      },
+      {
+        "url": "https://www.oberlin.edu/admissions-and-aid/international-students",
+        "contentHash": "sha256:52dffeb40479daf37773fdbe2104cf543f87382ed57b43a91137abe11766e0f1"
+      },
+      {
+        "url": "https://www.oberlin.edu/admissions-and-aid/tuition-and-fees",
+        "contentHash": "sha256:d4b905b2ad20bc23c49f85ef631aa46e4fc51cbb68865b69ae250a51e6a33ccb"
+      },
+      {
+        "url": "https://www.oberlin.edu/financial-aid/basics/scholarships-offered",
+        "contentHash": "sha256:64ea014be7eafcb7e8073891148b003430d558cff6dff00322149599abe2f78d"
+      },
+      {
+        "url": "https://www.oberlin.edu/admissions-and-aid/financial-aid",
+        "contentHash": "sha256:44e6634f9a2435ac4bc7d818e959b6be95daac92f98593e06398a7e7f52dda3e"
+      },
+      {
+        "url": "https://www.oberlin.edu/admissions-and-aid/arts-and-sciences/testing-policy",
+        "contentHash": "sha256:05e79a5846e43f9cb5dc14d8cbc2e14d6e410159bdb47f8b6aa5d05248b01e1c"
+      }
+    ],
+    "lastVerified": "2026-10-02",
+    "humanChecked": false
+  }
+}
