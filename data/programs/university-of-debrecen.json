@@ -104,13 +104,19 @@
       "evidence": "In case of non-medical applicants to foundation or undergraduate programs, the study gap cannot be longer than 4 years.",
       "field": "graduationYear",
       "kind": "must"
+    },
+    {
+      "ru": "Набор на сентябрь 2027: приём откроется позже в 2026 году, окончательный срок подачи — 15 мая 2027. Даты по отдельным программам на странице пока не названы.",
+      "evidence": "the final application deadline will be May 15, 2027",
+      "field": null,
+      "kind": "steps"
     }
   ],
   "deadline": {
     "opens": null,
-    "closes": "2026-06-15",
+    "closes": "2027-05-15",
     "recurring": "annual",
-    "confidence": "expected"
+    "confidence": "confirmed"
   },
   "applyUrl": "https://edu.unideb.hu/p/application-and-admission",
   "coversInstitutions": {
