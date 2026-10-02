@@ -1,0 +1,162 @@
+{
+  "id": "od",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Open Doors (Россия): олимпиада, победа даёт бесплатное обучение по квоте",
+    "orig": "Open Doors: Russian Scholarship Project"
+  },
+  "hostCountry": "RU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Участие бесплатное. Победители бакалаврского трека получают право учиться в России за счёт федерального бюджета (по квоте для иностранцев), в том числе на подготовительном факультете; призёры — при наличии мест. Стипендия по Постановлению № 1837 возможна, размер на странице не назван. Жильё, дорога и виза отдельно."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Foreign citizens and stateless persons, including compatriots residing abroad, who consent to the processing of their personal data are eligible to participate in the Open Doors"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Ограничений по стране школы нет: подходит любой аттестат, дающий право поступать в вуз в стране ученика. Смотрели страницу правил."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Число лет школы не названо: нужен аттестат, дающий право поступать в вуз в стране ученика. Про 11-летнюю школу ничего не сказано. Смотрели страницу правил."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Года выпуска страница не называет: нужен аттестат или его получение в год олимпиады. Смотрели страницу правил."
+    },
+    "age": {
+      "min": 16,
+      "max": 23,
+      "evidence": "they are between 16 and 23 years of age"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Порога среднего балла нет: отбор — портфолио, вступительный тест и онлайн-задания. Смотрели страницу правил и главную страницу."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "Language proficiency is confirmed or assessed by the admitting higher education institution at the time of enrollment."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Участвуют иностранные граждане и лица без гражданства, включая соотечественников за рубежом; гражданин Таджикистана — иностранец для России, значит подходит.",
+      "evidence": "Foreign citizens and stateless persons, including compatriots residing abroad, who consent to the processing of their personal data are eligible to participate in the Open Doors",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Бакалаврский трек: от 16 до 23 лет на дату открытия регистрации (20 августа 2026), без диплома бакалавра, специалиста или магистра.",
+      "evidence": "they are between 16 and 23 years of age",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Нужен аттестат, который даёт право поступать в вуз по законам страны, где учится участник, или он будет получен в год олимпиады. Число лет школы не названо.",
+      "evidence": "an educational qualification that makes them eligible for admission to a higher education institution under the national legislation of the country in which they study",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Язык обучения выбирает победитель при подаче; владение языком подтверждает или оценивает принимающий вуз при зачислении. Если русского не хватает, подготовительный факультет оплачивается из федерального бюджета.",
+      "evidence": "Language proficiency is confirmed or assessed by the admitting higher education institution at the time of enrollment.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Победители получают право учиться по квоте для иностранцев с оплатой обучения из федерального бюджета России; приоритет выбора программы — в вузах-организаторах (24 вуза). Вторые места — то же право, но только если остались места после победителей.",
+      "evidence": "Winners of the Open Doors in the Bachelor",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подготовительный факультет (если нужен русский) тоже оплачивается из федерального бюджета, место в программе на русском гарантировано при нужном уровне русского после курса.",
+      "evidence": "The preparatory program is funded from the federal budget",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Победители и призёры могут подать на грант правительства РФ по Постановлению № 1837 от 20 ноября 2025, если получили право учиться по квоте и готовы к очному обучению на русском. Размер выплат на странице не назван.",
+      "evidence": "are eligible to apply for grant support from the Government of the Russian Federation in accordance with Resolution No. 1837",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Участие бесплатное, взноса за участие нет.",
+      "evidence": "No fee is charged for participation in the Open Doors.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Цикл 2026/27: регистрация с 20 августа до 1 ноября 2026; первый этап (портфолио, вступительный тест, мотивационное письмо) до 13 ноября; второй этап (онлайн под наблюдением, 180 минут) с 13 ноября по 21 декабря 2026. Итоги публикуют в личном кабинете.",
+      "evidence": "is open from August 20 to November 1, 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "После объявления победителей: документы для регистрации в системе Минобрнауки russia-edu.minobrnauki.gov.ru, выбор языка обучения и до шести вузов по порядку предпочтения. Право можно использовать в год олимпиады или на следующий год.",
+      "evidence": "may exercise their right to admission within the Quota either in the year in which the Open Doors is held or in the year following the award of winner status",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-08-20",
+    "closes": "2026-11-01",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://od.globaluni.ru/rules",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Олимпиада, а не вуз: проходит онлайн, бесплатно. Бакалаврский трек — 16–23 года, портфолио и онлайн-задания; победитель получает бесплатное обучение по квоте в одном из вузов-организаторов (24 вуза). Регистрация 20 августа – 1 ноября 2026; победителей объявят после второго этапа."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://od.globaluni.ru/rules",
+    "pages": [
+      {
+        "url": "https://od.globaluni.ru/rules",
+        "contentHash": "sha256:58fb87adfbc10d88e5583ee9792ed3279cb0ccb862a6afb6a77c6a9e81fa8c08"
+      },
+      {
+        "url": "https://od.globaluni.ru/",
+        "contentHash": "sha256:4ea2466bdacb0931d490e3a3b9f4c30ef4c409e86fba74d7e3d0b7ee775a706a"
+      },
+      {
+        "url": "https://od.globaluni.ru/about",
+        "contentHash": "sha256:99013daf13812c705422b7030d0ba6dfbe677085ab72c2ec96da444ab0562fd7"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}

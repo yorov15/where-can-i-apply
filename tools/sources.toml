@@ -5427,3 +5427,15 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Open Doors (Russian Scholarship Project).
+# Домен od.globaluni.ru одобрен Муродом 2026-10-02 (ответ «open doors odobryayu delay»).
+[od]
+name = "Open Doors (Russian Scholarship Project)"
+files = [
+  { path = "manual/od/00-rules.html", url = "https://od.globaluni.ru/rules" },
+  { path = "manual/od/01-main.html", url = "https://od.globaluni.ru/" },
+  { path = "manual/od/02-about.html", url = "https://od.globaluni.ru/about" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-02"
