@@ -106,7 +106,7 @@ def feed_xml(entries, names, limit: int = FEED_LIMIT, today: str | None = None) 
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru">',
-        "  <title>Куда я могу подать документы: что изменилось</title>",
+        "  <title>Lumo: что изменилось в программах</title>",
         "  <subtitle>Правки в правилах, сроках и условиях программ. Лента ничего не знает о своих читателях.</subtitle>",
         f'  <link href="{BASE}"/>',
         f'  <link rel="self" type="application/atom+xml" href="{BASE}feed.xml"/>',
