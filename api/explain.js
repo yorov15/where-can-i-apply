@@ -101,10 +101,10 @@ const DEFAULT_MODELS = [
   'google/gemma-4-31b-it:free',
   'google/gemma-4-26b-a4b-it:free',
   'qwen/qwen3.8-27b:free',
-  'z-ai/glm-5.2:free',
+  'poolside/laguna-s-2.1:free',
+  'thinkingmachines/inkling:free',
   'nvidia/nemotron-3-super-120b-a12b:free',
-  'nex-agi/nex-n2.5-pro:free',
-  'deepseek/deepseek-v4-flash-0731:free',
+  'apodex/apodex-1.1-mini:free',
   'openrouter/free',
 ];
 const CONFIGURED = (process.env.EXPLAIN_MODELS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
@@ -133,7 +133,7 @@ async function askOnce(models, { system, user }, timeoutMs) {
       Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
       'Content-Type': 'application/json',
       'HTTP-Referer': 'https://github.com/yorov15/where-can-i-apply',
-      'X-Title': 'Kuda ya mogu podat dokumenty',
+      'X-Title': 'Nerio',
     },
     body: JSON.stringify({
       models,
@@ -154,7 +154,7 @@ async function askOnce(models, { system, user }, timeoutMs) {
   return text;
 }
 
-const callModel = (prompt, trace) => callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 44000, perGroupMs: 15000 });
+const callModel = (prompt, trace) => callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 40000, perGroupMs: 10000 });
 
 function send(res, status, json, headers = {}) {
   res.statusCode = status;
