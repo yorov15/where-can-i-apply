@@ -62,7 +62,7 @@ export function planText(programs, today, urls = {}) {
     const url = safeHttpUrl(urls[program.id] ?? program.applyUrl);
     if (url) lines.push(`   ${url}`);
   });
-  lines.push('', 'Даты сверяй на сайте программы. Собрано на kuda-podat.vercel.app');
+  lines.push('', 'Даты сверяй на сайте программы. Собрано на nerio-app.vercel.app');
   return lines.join('\n');
 }
 

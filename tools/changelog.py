@@ -16,7 +16,10 @@ from datetime import date
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-BASE = "https://kuda-podat.vercel.app/"
+BASE = "https://nerio-app.vercel.app/"
+# Идентификатор ленты остаётся прежним: смени он значение, читалки решат,
+# что это другая лента, и покажут все записи заново как новые.
+FEED_ID = "https://kuda-podat.vercel.app/"
 FEED_LIMIT = 40
 
 # Как поле допуска называется в ленте. Порядок — как в анкете.
@@ -110,7 +113,7 @@ def feed_xml(entries, names, limit: int = FEED_LIMIT, today: str | None = None) 
         "  <subtitle>Правки в правилах, сроках и условиях программ. Лента ничего не знает о своих читателях.</subtitle>",
         f'  <link href="{BASE}"/>',
         f'  <link rel="self" type="application/atom+xml" href="{BASE}feed.xml"/>',
-        f"  <id>{BASE}</id>",
+        f"  <id>{FEED_ID}</id>",
         f"  <updated>{updated}</updated>",
     ]
     for entry in shown:
