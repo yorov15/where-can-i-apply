@@ -5221,3 +5221,21 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена сняты вручную (Cloudflare режет сборщика), origin=manual.
+[haverford]
+name = "Хэверфорд — помощь по достатку семьи, нужду закрывают на 100%, но денег на иностранцев мало"
+files = [
+  { path = "manual/haverford/00.html", url = "https://www.haverford.edu/admission/applying/international-students" },
+  { path = "manual/haverford/01.html", url = "https://www.haverford.edu/admission/applying/application-instructions" },
+  { path = "manual/haverford/02.html", url = "https://www.haverford.edu/admission/applying/application-checklist" },
+  { path = "manual/haverford/03.html", url = "https://www.haverford.edu/admission/applying/application-timeline" },
+  { path = "manual/haverford/04.html", url = "https://www.haverford.edu/admission/tuition-and-aid" },
+  { path = "manual/haverford/05.html", url = "https://www.haverford.edu/financial-aid/international-applicants" },
+  { path = "manual/haverford/06.html", url = "https://www.haverford.edu/financial-aid/frequently-asked-questions/international-students-faq" },
+  { path = "manual/haverford/07.html", url = "https://www.haverford.edu/financial-aid/cost-of-attendance" },
+  { path = "manual/haverford/08.html", url = "https://www.haverford.edu/financial-aid/determining-your-financial-need" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

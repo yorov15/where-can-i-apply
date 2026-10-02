@@ -1,0 +1,302 @@
+{
+  "id": "haverford",
+  "status": "published",
+  "name": {
+    "ru": "Хэверфорд — помощь по достатку семьи, нужду закрывают на 100%, но денег на иностранцев мало",
+    "orig": "Haverford College — need-based financial aid for international first-year students"
+  },
+  "hostCountry": "US",
+  "kind": "need-aid",
+  "majors": [
+    "any"
+  ],
+  "level": "bachelor",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": false,
+    "note": {
+      "ru": "Помощь только по нужде. Принятым иностранцам закрывают 100% посчитанной нужды, но денег на иностранцев выделено ограниченно, поэтому поступить с просьбой о помощи особенно трудно. В пакет входят грант Хэверфорда, работа в кампусе и ожидание летних сбережений; дорогу из-за границы и проживание в каникулы не оплачивают. Если помощь не дали на первом курсе, позже её получить нельзя. Стоимость 2026/27 для первого курса — 96 347 долларов (обучение 74 930); средний грант по колледжу — 70 469 долларов, помощь получают 51% студентов (данные по всем студентам, не только иностранцам)."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "гражданство не ограничивают: страницы определяют иностранца как того, у кого нет гражданства США или вида на жительство, и не заводят списка запрещённых стран"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "страну школы не ограничивают: приёмная комиссия сравнивает абитуриентов из разных школьных систем, отдельной таблицы стран нет"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "число лет школы (11 или 12) страницы не называют; сказано лишь, что обычно у абитуриента за спиной строгая программа: четыре года английского, три года математики, три года иностранного языка, три года естественных наук, три года истории"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "требования к году выпуска страницы не называют; разрешают поступать даже после 11-го класса ('after completing your junior year of high school')"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "возраст на страницах приёма и помощи не упоминается"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "порога по среднему баллу страницы не называют: оценки разбирают вместе со строгостью программы школы, эссе, рекомендациями и экзаменами"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7.0,
+          "evidence": "IELTS Academic: minimum score of 7.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "Haverford requires a minimum score of 100 on the internet-based TOEFL, 7 on the IELTS, or 130 on the Duolingo English Test."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "TOEFL iBT: minimum score of 100 on the previous 0-120 scale or 5 on the new 1-6 scale"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "Duolingo English Test: minimum score of 130"
+        }
+      ],
+      "evidence": "Applicants whose first language is not English and who have never attended a secondary school where English is the primary language of instruction are required to submit results from one of the following English proficiency exams:"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Haverford's admission process is test-optional - it is entirely your choice as the applicant whether or not to submit standardized test scores."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Колледж обещает закрывать полную посчитанную нужду всем принятым — включая иностранцев, переводящихся и принятых из листа ожидания.",
+      "evidence": "Haverford meets the full demonstrated financial need of all admitted students-including international students, transfers, and students admitted from the waiting list.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощи на иностранцев выделено ограниченно, поэтому поступить с просьбой о деньгах особенно трудно. Но если приняли — нужду закрывают на 100%.",
+      "evidence": "There is limited aid available for international students, making admission for such students especially competitive; however, we do meet 100% of the demonstrated need of all admitted students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Если на первом курсе помощи не дали, на следующих курсах её уже не получить: все деньги заранее распределены между немногими.",
+      "evidence": "If you do not receive Haverford College financial aid when you are admitted to the College as a Regular Decision student, you will not be eligible to receive aid in any subsequent year of attendance.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцам, поступающим переводом, помощь не дают вовсе: деньги всегда уходят на первый курс.",
+      "evidence": "International students who apply and are admitted as transfer students will not receive financial aid because the available funds are always allocated to incoming first-year applicants.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь не покрывает дорогу из-за границы и проживание в каникулы, когда колледж не работает.",
+      "evidence": "Financial aid does not cover international travel expenses, nor will it cover living expenses for periods when the College is not in session.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На дорогу из-за границы в бюджете помощи не заложено ничего (в отличие от переезда внутри США дальше 300 миль).",
+      "evidence": "No allowance is made for travel from a foreign country.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Из семьи ждут вклад, а сверх него — работа в кампусе в учебном году и обязательно накопления за лето (летние сбережения колледж не финансирует).",
+      "evidence": "Both the student savings expectation and job earnings expectations apply to international students",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Нужду считают так: общую стоимость обучения и сборов уменьшают на вычисленный вклад семьи, остальное и есть нужда.",
+      "evidence": "The Financial Aid Office determines need by subtracting the calculated family contribution from the total tuition and fees amount.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Семьям с доходом ниже 60 000 долларов в год кредиты в пакет не включают; выше этой границы — от 1 500 до 3 000 долларов в год.",
+      "evidence": "Students with family income below $60,000/year will not have loans included in their financial aid package",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "По всему колледжу (не только среди иностранцев) помощь получают 51% студентов, средний общий грант — 70 469 долларов в год. Отдельной цифры именно по иностранцам страницы не дают.",
+      "evidence": "$70,469 average total grant aid",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцу, живущему вне США, для помощи нужно заполнить CSS Profile на 2027–2028 год. Если онлайн-форма не по силам, вместо неё принимают заявку самого колледжа (ISFAA). FAFSA иностранцу заполнять не надо.",
+      "evidence": "If you are a citizen of a foreign country residing outside the United States, complete the 2027-2028 CSS Profile.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки заявки на помощь: ранний тур I — до 15 ноября 2026, ранний тур II — до 5 января 2027, обычный — до 10 января 2027.",
+      "evidence": "Regular Decision applicants must file no later than January 10, 2027.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Просить помощь можно в любой тур — ранний I, ранний II или обычный, — но только поступая на первый курс; переводом с помощью не берут.",
+      "evidence": "International students who need financial aid may apply Early Decision I, Early Decision II, or Regular Decision. They cannot enter as a transfer student.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки набора на осень 2027: ранний тур — до 15 ноября 2026, ранний тур II — до 5 января 2027, обычный — до 10 января 2027.",
+      "evidence": "January 10 Deadline for Regular Decision.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Ранний тур связывает обязательством: если примут, остальные заявки надо отозвать и поехать в Хэверфорд.",
+      "evidence": "You also agree, if admitted, to withdraw your Regular Decision applications from other colleges and to enroll at Haverford.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача стоит 65 долларов; плату снимают по просьбе — письмо от школьного советника или другого работника школы.",
+      "evidence": "$65 application fee or fee waiver",
+      "field": null,
+      "kind": "steps",
+      "fee": {
+        "amount": 65,
+        "currency": "USD",
+        "evidence": "$65 application fee or fee waiver"
+      }
+    },
+    {
+      "ru": "Сертификат по английскому обязателен, если английский не родной и школа не была англоязычной. Таджикская школа под исключение не подходит. Какой из трёх экзаменов сдавать — неважно.",
+      "evidence": "Students whose first language is not English, and who have never attended a secondary school where English is the primary language of instruction, must also take the TOEFL, IELTS, or Duolingo English Test.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Интервью не обязательно, но колледж его настоятельно советует.",
+      "evidence": "Haverford interviews are optional but highly recommended.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "SAT и ACT не обязательны: это полностью выбор абитуриента, отказа нет.",
+      "evidence": "Haverford's admission process is test-optional - it is entirely your choice as the applicant whether or not to submit standardized test scores.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Взнос за зачисление колледж не берёт: принятый лишь сообщает о намерении учиться до 1 мая.",
+      "evidence": "no financial deposit is required of students who are accepted to Haverford and decide to attend",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Порога по среднему баллу нет, но ждут строгую школьную программу: обычно это четыре года английского, три года математики, три года иностранного языка, три года естественных наук и три года истории.",
+      "evidence": "Typically applicants will have taken a rigorous college preparatory program that includes at least: four years of English, three years of mathematics, three years of one foreign language, three years of laboratory science, and three years of history or social studies.",
+      "field": "gpa",
+      "kind": "note"
+    },
+    {
+      "ru": "Учиться можно начать и после 11-го класса: заявку принимают от тех, кто уходит из школы на год раньше, но просят письмо с объяснением причин и интервью.",
+      "evidence": "If you want to enroll at Haverford after completing your junior year of high school, you may apply to do so through any of our application processes.",
+      "field": "graduationYear",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-10",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.haverford.edu/admission/applying/international-students",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один колледж: Haverford College, штат Пенсильвания, США"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.haverford.edu/admission/applying/international-students",
+    "pages": [
+      {
+        "url": "https://www.haverford.edu/admission/applying/international-students",
+        "contentHash": "sha256:904267e1cbf74eb6dec2488df64652da13a8bfc5dad218face477b8a47b2c130"
+      },
+      {
+        "url": "https://www.haverford.edu/admission/applying/application-instructions",
+        "contentHash": "sha256:0ab01c709ebc27f5ebc7aa9964608737f16436c06a477e05567b31b4cff5bb90"
+      },
+      {
+        "url": "https://www.haverford.edu/admission/applying/application-checklist",
+        "contentHash": "sha256:41f3cc0f58e4a02610378c8ba66f885faea2f75ffaeec44c602dd309dff28fd2"
+      },
+      {
+        "url": "https://www.haverford.edu/admission/applying/application-timeline",
+        "contentHash": "sha256:072552d0b469b633d6f5f702a10bcd78af8494d3335a16778f037bf53624b265"
+      },
+      {
+        "url": "https://www.haverford.edu/admission/tuition-and-aid",
+        "contentHash": "sha256:841ffd2e3dd225961a260140cf57d80d7a1c0673e40b94ed347349b4d3b64486"
+      },
+      {
+        "url": "https://www.haverford.edu/financial-aid/international-applicants",
+        "contentHash": "sha256:0b471ab8da8a0844742f3bfd697378043b48c3099c74c36748604e34d812f3d2"
+      },
+      {
+        "url": "https://www.haverford.edu/financial-aid/frequently-asked-questions/international-students-faq",
+        "contentHash": "sha256:b85b456f00292371d02e187f28e173eac63e3a310075ca6eb7009e346de2babb"
+      },
+      {
+        "url": "https://www.haverford.edu/financial-aid/cost-of-attendance",
+        "contentHash": "sha256:d5d0ed8913d06ab15599165ec6a93f138bf23adfcae77008852afa95caad02ea"
+      },
+      {
+        "url": "https://www.haverford.edu/financial-aid/determining-your-financial-need",
+        "contentHash": "sha256:4b4f0d10554d9ea11f60ed777fc60aceb208fcbdcdc49554fb91777c881a1f33"
+      }
+    ],
+    "lastVerified": "2026-10-02",
+    "humanChecked": false
+  }
+}
