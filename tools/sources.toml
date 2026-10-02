@@ -2988,17 +2988,6 @@ urls = [
 approvedBy = "human"
 approvedAt = "2026-09-28"
 
-[tartu-estonia]
-name = "University of Tartu (Эстония): англоязычный бакалавриат"
-urls = [
-  "https://ut.ee/en/content/bachelors-and-masters-studies-university-tartu",
-  "https://ut.ee/en/content/cost-tuition",
-  "https://ut.ee/en/content/scholarship-information",
-  "https://ut.ee/en/english-language-requirements",
-]
-approvedBy = "human"
-approvedAt = "2026-09-28"
-
 [uaeu-uae]
 name = "United Arab Emirates University (ОАЭ): приём иностранцев"
 urls = [
@@ -5236,6 +5225,26 @@ files = [
   { path = "manual/haverford/06.html", url = "https://www.haverford.edu/financial-aid/frequently-asked-questions/international-students-faq" },
   { path = "manual/haverford/07.html", url = "https://www.haverford.edu/financial-aid/cost-of-attendance" },
   { path = "manual/haverford/08.html", url = "https://www.haverford.edu/financial-aid/determining-your-financial-need" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена сняты вручную (Cloudflare режет сборщика), origin=manual.
+[tartu-estonia]
+name = "University of Tartu (Эстония): приём иностранцев на бакалавриат"
+files = [
+  { path = "manual/tartu-estonia/00.html", url = "https://ut.ee/en/content/bachelors-and-masters-studies-university-tartu" },
+  { path = "manual/tartu-estonia/01.html", url = "https://ut.ee/en/content/country-specific-requirements" },
+  { path = "manual/tartu-estonia/02.html", url = "https://ut.ee/en/english-language-requirements" },
+  { path = "manual/tartu-estonia/03.html", url = "https://ut.ee/en/content/cost-tuition" },
+  { path = "manual/tartu-estonia/04.html", url = "https://ut.ee/en/curriculum/business-administration" },
+  { path = "manual/tartu-estonia/05.html", url = "https://ut.ee/en/curriculum/science-and-technology" },
+  { path = "manual/tartu-estonia/06.html", url = "https://ut.ee/en/application-fee" },
+  { path = "manual/tartu-estonia/07.html", url = "https://ut.ee/en/content/frequently-asked-questions" },
+  { path = "manual/tartu-estonia/08.html", url = "https://ut.ee/en/content/scholarship-information" },
+  { path = "manual/tartu-estonia/09.html", url = "https://ut.ee/en/scholarships-and-other-stipends" },
+  { path = "manual/tartu-estonia/10.html", url = "https://ut.ee/en/content/how-improve-your-university-tartu-application-common-mistakes-avoid" },
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
