@@ -1,0 +1,290 @@
+{
+  "id": "soka",
+  "status": "published",
+  "kind": "need-aid",
+  "majors": [
+    "any"
+  ],
+  "level": "bachelor",
+  "name": {
+    "ru": "Сока — обучение бесплатно при доходе до 200 000 долларов, иностранцам помощь по нужде",
+    "orig": "Soka University of America — need-based aid and the Soka Opportunity Plan for international students"
+  },
+  "hostCountry": "US",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Приём не зависит от кошелька и от гражданства — вуз называет себя need-blind для всех, включая иностранцев. План поддержки Soka Opportunity Plan с 2027/28 гарантирует покрытие обучения по доходу семьи: до 200 000 долларов — 100% обучения, до 250 000 — 50%, до 300 000 — 25%. Студентам с большой нуждой гранты могут дополнительно закрывать жильё, питание, книги и дорогу в пределах полной стоимости. Каждому зачисленному независимо от дохода дают стипендию за заслуги. Иностранцы оформляют помощь по нужде через свою форму Soka International Student Financial Aid Application (CSS Profile не нужен). Полная стоимость 2026/27 на кампусе — 63 674 доллара (обучение 38 486, жильё 16 000); прямые счёты от вуза — 57 016 долларов. Обязательный семестр за границей входит в обучение и доплаты не требует. Помощь иностранцу дают без кредитов федеральных программ, но можно взять институциональный Soka Loan. Дорогу из своей страны страницы не оплачивают."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "We extend our need-blind admissions policy and holistic application review to all students without regard to citizenship or immigration status.",
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "гражданство не ограничивают: страницы прямо пишут, что приём и целостный разбор заявки не зависят от гражданства или иммиграционного статуса"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "страну школы не ограничивают: для документов из-за границы есть дополнительные требования (оценка аттестата, экзамены страны), но списка стран или школ нет"
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "a) have completed high school/secondary school or equivalent or b) will complete high school/secondary school or equivalent by July 8th in the year they are applying to.",
+      "note": "числа лет школы (11 или 12) страницы не называют; сказано лишь, что к зачислению нужен аттестат о среднем образовании или его признанный эквивалент — для 11-летней школы это уточняется в приёмной"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "требования к году выпуска нет: подать можно до получения оценок за первый семестр выпускного класса"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "возрастного порога страницы приёма и помощи не называют"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "порога по среднему баллу страницы не называют: заявку разбирают целостно, вместе с программой школы, эссе, рекомендациями и экзаменами"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "TOEFL_IBT",
+          "min": 80,
+          "evidence": "It is preferred for applicants to pass the TOEFL iBT exam with a minimum score of 4 (prior to January 2026, a minimum score of 80)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4,
+          "evidence": "It is preferred for applicants to pass the TOEFL iBT exam with a minimum score of 4 (prior to January 2026, a minimum score of 80)"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 115,
+          "evidence": "pass the Duolingo English Test with a minimum score of 115 (160 scale)"
+        }
+      ],
+      "advisory": true,
+      "evidence": "It is preferred for applicants to pass the TOEFL iBT exam with a minimum score of 4 (prior to January 2026, a minimum score of 80) or pass the Duolingo English Test with a minimum score of 115 (160 scale)."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Official SAT or ACT test scores are not required for admission consideration."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Приём не зависит от кошелька: вуз называет себя need-blind и разбирает заявку без учёта гражданства или иммиграционного статуса. Просьба о помощи не снижает шансы.",
+      "evidence": "We extend our need-blind admissions policy and holistic application review to all students without regard to citizenship or immigration status.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "С 2027/28 План поддержки Soka Opportunity Plan гарантирует минимальное покрытие обучения по доходу семьи: 200 000 долларов или меньше — 100% обучения, 200 001–250 000 — 50%, 250 001–300 000 — 25%. Для цикла осени 2027 действуют именно эти уровни.",
+      "evidence": "$200,000 or less 100% tuition covered $200,001-$250,000 50% tuition covered $250,001-$300,000 25% tuition covered",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Каждый зачисленный независимо от дохода семьи автоматически получает стипендию за заслуги при поступлении. Отдельную заявку подавать не нужно.",
+      "evidence": "You'll automatically receive a Merit Scholarship upon admission, regardless of family income, based on the strength of your admission application.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцы имеют право на помощь по нужде через свою форму — Soka International Student Financial Aid Application. Это редкость для вузов США, где иностранцам помощь обычно недоступна.",
+      "evidence": "International students are eligible for need-based financial aid through the Soka International Student Financial Aid Application.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Студентам с большой нуждой гранты могут дополнительно закрывать жильё, питание, книги, дорогу и другие расходы в пределах полной стоимости — сверх гарантии по обучению.",
+      "evidence": "may qualify for additional grant assistance to help offset housing, meals, books, transportation, and other educational",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полная стоимость 2026/27 на кампусе — 63 674 доллара; прямые счёты от вуза (обучение, жильё и питание, страховка) — 57 016 долларов, из них обучение 38 486 долларов в год. Иностранцу федеральные кредиты недоступны, но можно взять институциональный Soka Loan.",
+      "evidence": "Direct costs are billed by Soka and include tuition, living expenses, and health insurance - a total of $57,016 for 2026-27.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стоимость обучения на 2026/27 — 38 486 долларов в год, жильё и питание на кампусе — 16 000 долларов, всего на кампусе 63 674 доллара.",
+      "evidence": "TOTAL $63,674 $74,242 $60,624",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцам-бакалаврам доступен институциональный кредит Soka Loan: без процентов, пока учишься, и без комиссии, но брать его не обязательно — принимать кредит или нет, решаешь сам.",
+      "evidence": "International and Dreamer students may apply annually for a Soka institutional loan.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендия имени Икеды — самая престижная: три награды в год, каждая закрывает полную стоимость одного учебного года.",
+      "evidence": "Each covers the full cost of attendance for one academic year.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки приёма на осень 2027: подача открывается 1 августа 2026, ранний тур — до 1 ноября 2026, обычный — до 15 января 2027.",
+      "evidence": "The application and document deadline for Early Action is November 1 and January 15 for Regular Admission.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки заявки на помощь: открывается 1 октября, приоритетный срок для новых студентов — 15 февраля, крайний срок — 2 марта, подтверждающие документы — до 1 мая. Решение о помощи приходит в марте, проверенный пакет — в июне.",
+      "evidence": "Financial Aid Applications Open Oct 1 Priority Deadline - New Applicants Feb 15 Financial Aid Application Deadline Mar 2 Supporting Materials Due May 1",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача стоит 30 долларов (для онлайн-заявки и Common App). Принимают отмены платы от Common App, College Board и NACAC.",
+      "evidence": "A $30 (USD) nonrefundable application fee (paid by check or money order only) is required when submitting a Soka Online Application or Common Application.",
+      "field": null,
+      "kind": "steps",
+      "fee": {
+        "amount": 30,
+        "currency": "USD",
+        "evidence": "A $30 (USD) nonrefundable application fee (paid by check or money order only) is required when submitting a Soka Online Application or Common Application."
+      }
+    },
+    {
+      "ru": "Сертификат по английскому обязателен, если английский тебе не родной. Принимают только TOEFL iBT и Duolingo, письма напрямую в приёмную. IELTS и Cambridge English не принимают вовсе, а результаты старше двух лет недействительны.",
+      "evidence": "Applicants for whom English is not their native language will need to demonstrate English proficiency by submitting TOEFL (Test of English as a Foreign Language) or Duolingo English Test results.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Баллы названы предпочтительными, а не жёстким порогом: TOEFL iBT 4 по новой шкале (или 80 по старой до января 2026) либо Duolingo 115. IELTS и Cambridge English не принимают.",
+      "evidence": "It is preferred for applicants to pass the TOEFL iBT exam with a minimum score of 4 (prior to January 2026, a minimum score of 80) or pass the Duolingo English Test with a minimum score of 115 (160 scale).",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "От сертификата по английскому освобождают, если ты не носитель, но отучился в школе с английским языком обучения не меньше трёх лет или окончил такую школу. Это не экзамен вуза, а снятие требования — годится как обходной путь.",
+      "evidence": "If you are a non-native English speaker who has completed at least three years of high school or graduated from a high school where English is the primary language of instruction, the TOEFL may be waived.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "SAT и ACT необязательны: прикладывать баллы или нет — твой выбор, они не требуются для рассмотрения.",
+      "evidence": "Official SAT or ACT test scores are not required for admission consideration.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Документы из другой страны: аттестат и оценки принимают только в оригинале в запечатанном конверте школы и напрямую от неё; могут потребовать экзамены страны, дипломы и другие местные документы. Всё не на английском переводят заверенно, сам студент или родня переводить не могут.",
+      "evidence": "Documents not in English will require English translations. Applicants must provide the original document and an English translation that meets our criteria.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Обязательный семестр за границей на третьем курсе входит в обучение: отдельной платы и заявки нет, жильё и учёба идут через одобренные программы вуза.",
+      "evidence": "Study abroad is covered by your standard cost of attendance. There's no supplemental program fee or separate application cost.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "К зачислению нужен аттестат о среднем образовании (или его эквивалент) либо его получение до 8 июля года поступления. Для 11-летней школы это уточняется в приёмной.",
+      "evidence": "a) have completed high school/secondary school or equivalent or b) will complete high school/secondary school or equivalent by July 8th in the year they are applying to.",
+      "field": "schoolYears",
+      "kind": "must"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-08-01",
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.soka.edu/admissions-aid/how-apply",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Soka University of America, Алисо-Вьехо, Калифорния, США"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.soka.edu/admissions-aid/how-apply",
+    "pages": [
+      {
+        "url": "https://www.soka.edu/admissions-aid/how-apply",
+        "contentHash": "sha256:9cca0fc42befecb78b00b97b671db38ab1e979d5a6cf6d03fbe922953c6c5f81"
+      },
+      {
+        "url": "https://www.soka.edu/admissions-aid/aid-international-undergraduate-students",
+        "contentHash": "sha256:4a360d4941f167084af3a4b60492884459b185bb8e54f49b5c8277b536322f23"
+      },
+      {
+        "url": "https://www.soka.edu/admissions-aid/admission-policies-and-faq",
+        "contentHash": "sha256:7ec32b26170cbb93639af1847779d0500a5fcaac648962e06d22a6ba9cea7985"
+      },
+      {
+        "url": "https://www.soka.edu/admissions-aid/financial-aid/soka-opportunity-plan",
+        "contentHash": "sha256:ee37dbcd5936d381d7c52a98be9884ea44f514a276678323e67673cfffa216e2"
+      },
+      {
+        "url": "https://www.soka.edu/admissions-aid/cost-attendance",
+        "contentHash": "sha256:f4eb0b6579630a9bdae2d1675678a6ebd47f4cd2498451e90ec65ce1945dffaa"
+      },
+      {
+        "url": "https://www.soka.edu/academics/undergraduate-studies/study-abroad",
+        "contentHash": "sha256:bec72fb5baa6f7e9cd3fcdd2b0c9809f31017d922b6d75177f381f45359297a3"
+      },
+      {
+        "url": "https://www.soka.edu/financial-aid/types-of-aid",
+        "contentHash": "sha256:b09de43cb4fa95d9ab9245000352e56cef0232240cf67a4b2c77be56e03fae53"
+      },
+      {
+        "url": "https://catalog.soka.edu/applying-for-undergraduate-admission",
+        "contentHash": "sha256:3ebb1bf390bdd22a99e6ed4901451d846ddf6e1883a1424b51b037d6038fb962"
+      },
+      {
+        "url": "https://www.soka.edu/admissions-aid/financial-aid-faqs",
+        "contentHash": "sha256:f7558e4cd67e0de70feb09f0a96ba818a1ab7123cdb5fbbbdc7a9087bce5823f"
+      },
+      {
+        "url": "https://www.soka.edu/admissions-aid/how-apply-financial-aid",
+        "contentHash": "sha256:357fa5063a779cb40e7d58f3a78d81566eaf319d95574ab9a37e0e13ecc2f78f"
+      },
+      {
+        "url": "https://www.soka.edu/undocumented-and-daca-applicants",
+        "contentHash": "sha256:2519894d71c63d86228728622f2f504b59fc3300df765c6278415164a71bd957"
+      },
+      {
+        "url": "https://www.soka.edu/apply-now",
+        "contentHash": "sha256:45d23f64d83ea87b3acbad7c0ca9a005fac4d1e2300162a8eda73cfe7e02df5b"
+      }
+    ],
+    "lastVerified": "2026-10-02",
+    "humanChecked": false
+  }
+}

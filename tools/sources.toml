@@ -5362,3 +5362,24 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена сняты вручную (Cloudflare режет сборщика), origin=manual.
+[soka]
+name = "Сока — обучение бесплатно при доходе до 200 000 долларов, иностранцам помощь по нужде"
+files = [
+  { path = "manual/soka/00.html", url = "https://www.soka.edu/admissions-aid/how-apply" },
+  { path = "manual/soka/01.html", url = "https://www.soka.edu/admissions-aid/aid-international-undergraduate-students" },
+  { path = "manual/soka/02.html", url = "https://www.soka.edu/admissions-aid/admission-policies-and-faq" },
+  { path = "manual/soka/03.html", url = "https://www.soka.edu/admissions-aid/financial-aid/soka-opportunity-plan" },
+  { path = "manual/soka/04.html", url = "https://www.soka.edu/admissions-aid/cost-attendance" },
+  { path = "manual/soka/05.html", url = "https://www.soka.edu/academics/undergraduate-studies/study-abroad" },
+  { path = "manual/soka/06.html", url = "https://www.soka.edu/financial-aid/types-of-aid" },
+  { path = "manual/soka/07.html", url = "https://catalog.soka.edu/applying-for-undergraduate-admission" },
+  { path = "manual/soka/08.html", url = "https://www.soka.edu/admissions-aid/financial-aid-faqs" },
+  { path = "manual/soka/09.html", url = "https://www.soka.edu/admissions-aid/how-apply-financial-aid" },
+  { path = "manual/soka/10.html", url = "https://www.soka.edu/undocumented-and-daca-applicants" },
+  { path = "manual/soka/11.html", url = "https://www.soka.edu/apply-now" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
