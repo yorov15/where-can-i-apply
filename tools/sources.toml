@@ -5248,3 +5248,22 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена сняты вручную (Cloudflare режет сборщика), origin=manual.
+[vilnius]
+name = "Vilnius University (Вильнюсский университет) — приём иностранцев на бакалавриат"
+files = [
+  { path = "manual/vilnius/00.html", url = "https://www.vu.lt/en/admissions/admissions-to-bachelor-studies" },
+  { path = "manual/vilnius/01.html", url = "https://www.vu.lt/en/required-attachments" },
+  { path = "manual/vilnius/02.html", url = "https://admissions.vu.lt/how-to-apply" },
+  { path = "manual/vilnius/03.html", url = "https://www.vu.lt/en/studies/bachelor-studies/multilingualism-and-digital-technologies" },
+  { path = "manual/vilnius/04.html", url = "https://www.vu.lt/en/students/services-for-students/finance" },
+  { path = "manual/vilnius/05.html", url = "https://www.vu.lt/en/students/services-for-students/finance/IIRPS-masters" },
+  { path = "manual/vilnius/06.html", url = "https://www.vu.lt/en/studies/bachelor-studies/lithuanian-studies" },
+  { path = "manual/vilnius/07.html", url = "https://admissions.vu.lt/" },
+  { path = "manual/vilnius/08.html", url = "https://www.vu.lt/en/admissions/state-funded-bachelor-s-admission" },
+  { path = "manual/vilnius/09.html", url = "https://admissions.vu.lt/en/all-news/study-without-financial-burden-vilnius-university-offers-a-variety-of-funding-opportunities-1" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

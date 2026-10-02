@@ -1,0 +1,243 @@
+{
+  "id": "vilnius",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Vilnius University (Вильнюсский университет) — приём иностранцев на бакалавриат",
+    "orig": "Vilnius University"
+  },
+  "hostCountry": "LT",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": false,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Обучение платное: не-ЕС/EFTA, у кого нет вида на жительство в Литве, учатся за свой счёт. Ориентир по одной из программ — 4 201 евро в год за место без госфинансирования. Государственные места на бакалавриате дают только гражданам Литвы, ЕС/EFTA и обладателям ПМЖ в Литве (а также украинцам с литовским аттестатом) — гражданам Таджикистана их не дают. Единственное полное снятие платы для иностранца-бакалавра — waiver Института международных отношений и политологии (IIRPS) для программы Politics of Global Challenges (не-ЕС/EEA); общей стипендии бакалавра для не-ЕС вуз не объявляет. Жильё и дорогу вуз не покрывает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство вход не закрывает: вуз открыт для иностранцев из разных стран, отдельного запрета по паспорту нет. Гражданам не-ЕС/EFTA назначен свой срок подачи — 1 мая, гражданам ЕС/EFTA — 1 июля."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы сама по себе вход не закрывает: вуз принимает иностранцев из разных стран, а для тех, кого нет в списке особых стран, действуют общие требования. Таджикистан в списке особых стран есть, поэтому для таджикского аттестата действует свой набор документов, а не отказ."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Числа лет школы (11 или 12) страницы не называют: требование — оконченная средняя школа (или эквивалент), дающая доступ к вузу в своей стране. Для Таджикистана вуз принимает аттестат о среднем образовании вместе с результатами национального центрального теста; отдельного правила «нужно 12 лет» нет."
+    },
+    "graduationYear": {
+      "notMeasured": true,
+      "evidence": "For applicants from non-EU and non-EFTA countries, the period between obtaining your last secondary or higher education qualification and your application may not exceed 5 years"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Возраст не упоминается ни на страницах приёма бакалавриата (общие требования, требуемые документы, страницы программ), ни на страницах финансов и госмест: ни минимального, ни максимального возраста не названо."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Числового порога по среднему баллу нет. Критерии приёма названы как «grades, motivation letter, English proficiency test results» — оценки входят в отбор, но минимального среднего балла страницы не устанавливают."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 6.5,
+          "evidence": "IELTS Academic 6.5+, TOEFL iBT 81+, Cambridge English Exam 176+, Pearson PTE Academic 59+, LanguageCert IESOL B2, Duolingo English Test 120+, Password Skills Plus 6.5+"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 81,
+          "evidence": "IELTS Academic 6.5+, TOEFL iBT 81+, Cambridge English Exam 176+, Pearson PTE Academic 59+, LanguageCert IESOL B2, Duolingo English Test 120+, Password Skills Plus 6.5+"
+        },
+        {
+          "test": "PTE",
+          "min": 59,
+          "evidence": "IELTS Academic 6.5+, TOEFL iBT 81+, Cambridge English Exam 176+, Pearson PTE Academic 59+, LanguageCert IESOL B2, Duolingo English Test 120+, Password Skills Plus 6.5+"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 120,
+          "evidence": "IELTS Academic 6.5+, TOEFL iBT 81+, Cambridge English Exam 176+, Pearson PTE Academic 59+, LanguageCert IESOL B2, Duolingo English Test 120+, Password Skills Plus 6.5+"
+        }
+      ],
+      "evidence": "The following language certificates are accepted for study programmes taught in English: IELTS Academic 6.5+, TOEFL iBT 81+, Cambridge English Exam 176+, Pearson PTE Academic 59+, LanguageCert IESOL B2, Duolingo English Test 120+, Password Skills Plus 6.5+"
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Гражданство вход не закрывает: вуз открыт для иностранцев из разных стран, отдельного запрета по паспорту нет. Гражданам не-ЕС/EFTA назначен свой срок подачи — 1 мая.",
+      "evidence": "1 May | for applicants from non-EU/EFTA countries",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Страна школы сама вход не закрывает: для стран, которых нет в особом списке, действуют общие требования, а для части стран есть отдельный список документов — Таджикистан в нём есть.",
+      "evidence": "If your country is not listed, the general requirements apply.",
+      "field": "schoolCountry",
+      "kind": "note"
+    },
+    {
+      "ru": "Для Таджикистана нужен аттестат о среднем образовании (Шаходатнома) с приложением оценок и официальные результаты центрального вступительного теста Национального центра тестирования.",
+      "evidence": "Official results of the centralized examination for admission to higher education institutions in Tajikistan organised by National Testing Centre",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Если государственные вступительные экзамены не сданы или не пройдены, вуз сам проводит тест знаний и способностей, чтобы оценить подготовку к выбранной программе.",
+      "evidence": "When the State entrance examinations are not taken or passed, the University applies a knowledge and ability test to determine the person's preparation to study in the selected program.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Для не-ЕС/EFTA между получением последней квалификации (школьной или вузовской) и подачей заявки должно пройти не больше 5 лет; стаж работы этот разрыв не закрывает.",
+      "evidence": "For applicants from non-EU and non-EFTA countries, the period between obtaining your last secondary or higher education qualification and your application may not exceed 5 years",
+      "field": "graduationYear",
+      "kind": "note"
+    },
+    {
+      "ru": "Английский обязателен для программ на английском: принимают IELTS Academic 6.5+, TOEFL iBT 81+, PTE Academic 59+ или Duolingo 120+ (либо другой сертификат уровня B2).",
+      "evidence": "IELTS Academic 6.5+, TOEFL iBT 81+, Cambridge English Exam 176+, Pearson PTE Academic 59+, LanguageCert IESOL B2, Duolingo English Test 120+, Password Skills Plus 6.5+",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Освобождение от языкового теста даётся, если английский — первый язык или если есть диплом о высшем образовании на английском.",
+      "evidence": "If your first language is English and/or if you have a university degree in English, you will be exempt from providing an English language test score.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Обучение платное: ориентир по программе Multilingualism and Digital Technologies — 4 201 евро в год за место без госфинансирования.",
+      "evidence": "Annual tuition fee for a state non-funded place 4 201 EUR",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Государственное финансирование бакалавриата доступно только гражданам Литвы, ЕС/EFTA, обладателям ПМЖ в Литве и украинцам с литовским аттестатом; всем остальным иностранцам — учёба за свой счёт.",
+      "evidence": "If the above criteria are not satisfied, foreign nationals and stateless persons may be admitted through a competitive admission process to study at their own expense.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Единственное полное снятие платы для иностранца-бакалавра — waiver Института международных отношений и политологии (IIRPS) для программы Politics of Global Challenges, для граждан не-ЕС/EEA; заявка — до 15 мая, решение — до 1 июля.",
+      "evidence": "Tuition waiver will be awarded to the most motivated and competent international non-EU/EEA student applying for the Bachelor's degree programme of Politics and of Global Challenges",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача стоит 100 евро за одну заявку (до трёх программ), плата невозвратная и оплачивается через Flywire; освобождения от неё нет.",
+      "evidence": "The application fee is 100 EUR per application.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Приём на 2027/28 открывается 1 декабря 2026.",
+      "evidence": "which opens on 1 December 2026",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Крайний срок подачи для граждан не-ЕС/EFTA — 1 мая 2027 (для граждан ЕС/EFTA и безвизовых — 1 июля 2027).",
+      "evidence": "1 May | for applicants from non-EU/EFTA countries",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "К заявке нужны мотивационное письмо (1200–4000 знаков), копия паспорта и языковой сертификат; прошедших отбор зовут на мотивационное интервью.",
+      "evidence": "The applicant is required to submit a motivation letter (1200-4000 characters).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "В одной заявке можно выбрать до трёх программ, но зачислить могут только на одну; плата 100 евро покрывает все три.",
+      "evidence": "each applicant can choose up to three study programmes in one application, but you can only get admitted to one programme",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-12-01",
+    "closes": "2027-05-01",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://apply.vu.lt",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Vilnius University (Вильнюсский университет), Литва. Заявки — через apply.vu.lt (DreamApply), до трёх программ в одной заявке. Для граждан не-ЕС/EFTA срок — 1 мая 2027, для ЕС/EFTA — 1 июля 2027; приём открывается 1 декабря 2026. Для таджикского аттестата нужен национальный центральный тест; если он не сдан, вуз проводит свой тест знаний и способностей."
+    }
+  },
+  "source": {
+    "url": "https://www.vu.lt/en/admissions/admissions-to-bachelor-studies",
+    "pages": [
+      {
+        "url": "https://www.vu.lt/en/admissions/admissions-to-bachelor-studies",
+        "contentHash": "sha256:43a388c719122e934ddd57d7ba470b34e997126d2363168ba0fe3e1c98d1dd02"
+      },
+      {
+        "url": "https://www.vu.lt/en/required-attachments",
+        "contentHash": "sha256:3c2941226236b0ed3172ee28cb90292612c2195a577418cc45cb6290d7b24bea"
+      },
+      {
+        "url": "https://admissions.vu.lt/how-to-apply",
+        "contentHash": "sha256:b6a0a656d477c9fe776395876abbda1560d8730ee4a0ac740b3a0afe2c4dfaa2"
+      },
+      {
+        "url": "https://www.vu.lt/en/studies/bachelor-studies/multilingualism-and-digital-technologies",
+        "contentHash": "sha256:d143c2f187de6f96e158a144d7403694cb1919c5e3da99904442e76ee96e56bb"
+      },
+      {
+        "url": "https://www.vu.lt/en/students/services-for-students/finance",
+        "contentHash": "sha256:b33f39fe7b3271fec38c1026bcc0c7e10fca1d601e56c91b16517a595d723e74"
+      },
+      {
+        "url": "https://www.vu.lt/en/students/services-for-students/finance/IIRPS-masters",
+        "contentHash": "sha256:434b1b522fb4bc30ee0519ce7a54cd050e94ab8d0ccae653c4f1234e0f08f932"
+      },
+      {
+        "url": "https://www.vu.lt/en/studies/bachelor-studies/lithuanian-studies",
+        "contentHash": "sha256:3648260a2b59b0e2f5b3249a825d8ae78c00a50cbd9f5c336ece4a60567f1cd7"
+      },
+      {
+        "url": "https://admissions.vu.lt/",
+        "contentHash": "sha256:0e4e10b66ae7afe927cf80aa7da611482a435bbeac78d68732173757f899717d"
+      },
+      {
+        "url": "https://www.vu.lt/en/admissions/state-funded-bachelor-s-admission",
+        "contentHash": "sha256:87e172181ef367bea2277c622d06c55d9c34f2ffad34e562c9938e87f3d354c6"
+      },
+      {
+        "url": "https://admissions.vu.lt/en/all-news/study-without-financial-burden-vilnius-university-offers-a-variety-of-funding-opportunities-1",
+        "contentHash": "sha256:805bc706d08984b60c5d064dd3eba71f78ce5aba23fe0f73d3ab5352ee2b8f94"
+      }
+    ],
+    "lastVerified": "2026-10-02",
+    "humanChecked": false,
+    "approvedBy": "assistant"
+  }
+}
