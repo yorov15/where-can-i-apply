@@ -1,0 +1,139 @@
+{
+  "id": "kfu",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "name": {
+    "ru": "Казанский федеральный университет (Россия): бакалавриат, бюджет по квоте и договор",
+    "orig": "Kazan Federal University"
+  },
+  "hostCountry": "RU",
+  "level": "bachelor",
+  "coverage": {
+    "tuition": null,
+    "living": null,
+    "travel": null,
+    "note": {
+      "ru": "Бесплатный путь — бюджет по квоте Правительства РФ (Постановление № 891) или по международным договорам; ежегодно выделяют 15 000 стипендий для иностранцев. Размер выплат и порог отбора на странице вуза не названы. Платное обучение — по договору, сумма на странице не указана; для граждан «безвизовых» стран СНГ плата такая же, как для россиян. Жильё, дорога и виза отдельно."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "Foreign applicants and stateless persons have several way to get the right to receive higher education"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Ограничений по стране школы страницы не называют. Смотрели страницы вуза про приём и стипендии."
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Число лет школы не названо; нужен аттестат с приложением и нотариальный перевод. Про 11-летнюю школу ничего не сказано. Смотрели страницу вуза про приём."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Года выпуска страницы не называют. Смотрели страницу вуза про приём."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Возрастного ограничения на страницах приёма нет. Смотрели страницы вуза про приём и стипендии."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Порога среднего балла нет: отбор — вступительные экзамены вуза или ЕГЭ. Смотрели страницы вуза про приём и стипендии."
+    },
+    "language": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Язык обучения и требуемый уровень русского на этих страницах не указаны; вступительные экзамены внутренние. Смотрели страницы вуза про приём и стипендии."
+    },
+    "exam": null
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцам и лицам без гражданства открыты платный путь и три бесплатных: бюджет по международным договорам или федеральным законам, бюджет по квоте Правительства РФ, олимпиады и статус соотечественника.",
+      "evidence": "Foreign applicants and stateless persons have several way to get the right to receive higher education",
+      "field": "citizenship",
+      "kind": "must"
+    },
+    {
+      "ru": "Плата для граждан «безвизовых» стран СНГ такая же, как для россиян; для остальных — общая плата для иностранцев. Список стран на странице не назван: проверить, входит ли Таджикистан.",
+      "evidence": "Applicants from the «visa-free» CIS countries are admitted to the KFU on special financial terms.",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Бесплатно по квоте: иностранцы вправе получить высшее образование за счёт федерального бюджета по Постановлению Правительства РФ № 891 от 8 октября 2013; Правительство ежегодно выделяет 15 000 таких стипендий. Размер выплат на странице вуза не назван.",
+      "evidence": "Annually, Russian Government allocates 15 000 scholarships for foreign nationals.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Платное обучение — по договору; размер платы на странице не назван (лежит в приложении «План приёма 2026/2027 (контракт)»). Договор подписывают в личном кабинете на Госуслугах, нужно оплатить 100% платы.",
+      "evidence": "tuition fee for them is the same as for citizens of the Russian Federation",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача на цикл 2026/27: электронные документы с 20 июня по 25 июля 2026 (экзамены вуза или результаты ЕГЭ), согласие на зачисление до 3 августа 2026. Через Госуслуги (если есть СНИЛС), через систему RUID (если нет) или newlk.kpfu.ru — для квоты Минобрнауки.",
+      "evidence": "Electronic Documents Admission June 20 – July 25",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Документы: загранпаспорт (не меньше 18 месяцев до окончания срока), нотариальный перевод на русский, аттестат и приложение с оценками, нотариальный перевод, фото 3×4; свидетельство о признании образования — по необходимости. Оригиналы аттестата сдают в течение первого года.",
+      "evidence": "International passport (must have at least 18 months before the expiration date from the date of intended entry into the Russian Federation)",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-06-20",
+    "closes": "2026-07-25",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://eng.kpfu.ru/bachelor-specialist/programs-and-tuition-fees/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Казанский федеральный университет, Казань. Бакалавриат и специалитет на русском; бюджет по квоте Правительства РФ (15 000 стипендий в год на всю страну), платно по договору. Цикл 2026/27 закрыт 25 июля 2026; даты на 2027 ещё не опубликованы."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://eng.kpfu.ru/bachelor-specialist/programs-and-tuition-fees/",
+    "pages": [
+      {
+        "url": "https://eng.kpfu.ru/bachelor-specialist/programs-and-tuition-fees/",
+        "contentHash": "sha256:d4894e8653ed63f5bfe91a777fc6c38e5530c69452ca9ab2ba48ae3667222d9b"
+      },
+      {
+        "url": "https://eng.kpfu.ru/scholarships/",
+        "contentHash": "sha256:d78bf73d8d931faa657ba03c27c3c33b7d9cca7ad362bcaa3e97259615236c74"
+      }
+    ],
+    "lastVerified": "2026-10-01",
+    "humanChecked": false
+  }
+}

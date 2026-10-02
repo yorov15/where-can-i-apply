@@ -5416,3 +5416,14 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Kazan Federal University.
+# Домен eng.kpfu.ru одобрен Муродом 2026-10-01 (список из 55 кандидатов, ответ «ok delay spisok» — весь список).
+[kfu]
+name = "Kazan Federal University"
+files = [
+  { path = "manual/kfu/00-fees.html", url = "https://eng.kpfu.ru/bachelor-specialist/programs-and-tuition-fees/" },
+  { path = "manual/kfu/01-schol.html", url = "https://eng.kpfu.ru/scholarships/" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"
