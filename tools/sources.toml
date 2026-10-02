@@ -5307,3 +5307,23 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена сняты вручную (Cloudflare режет сборщика), origin=manual.
+[washu]
+name = "Washington University in St. Louis (WashU) — помощь по нужде иностранцам, но приём для них need-aware"
+files = [
+  { path = "manual/washu/00.html", url = "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/" },
+  { path = "manual/washu/01.html", url = "https://admissions.wustl.edu/how-to-apply/application-dates-deadlines/" },
+  { path = "manual/washu/02.html", url = "https://financialaid.wustl.edu/apply-for-aid/international-applicant-process/" },
+  { path = "manual/washu/03.html", url = "https://financialaid.wustl.edu/how-aid-works/common-questions/" },
+  { path = "manual/washu/04.html", url = "https://financialaid.wustl.edu/how-washu-helps/need-blind-policy" },
+  { path = "manual/washu/05.html", url = "https://financialaid.wustl.edu/costs" },
+  { path = "manual/washu/06.html", url = "https://admissions.wustl.edu/common-questions" },
+  { path = "manual/washu/07.html", url = "https://admissions.wustl.edu/how-to-apply/english-testing-requirements/" },
+  { path = "manual/washu/08.html", url = "https://admissions.wustl.edu/cost-aid/" },
+  { path = "manual/washu/09.html", url = "https://admissions.wustl.edu/financial-documentation/" },
+  { path = "manual/washu/10.html", url = "https://admissions.wustl.edu/life-at-washu/our-students/" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

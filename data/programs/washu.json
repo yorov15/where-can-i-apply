@@ -1,0 +1,345 @@
+{
+  "id": "washu",
+  "status": "published",
+  "kind": "need-aid",
+  "majors": [
+    "any"
+  ],
+  "level": "bachelor",
+  "name": {
+    "ru": "Washington University in St. Louis (WashU) — помощь по нужде иностранцам, но приём для них need-aware",
+    "orig": "Washington University in St. Louis — Need-based financial aid for international first-year applicants"
+  },
+  "hostCountry": "US",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+      "ru": "Помощь по достатку семьи: принятым закрывают 100% посчитанной нужды без кредитов — в пакете стипендия и работа в кампусе. Но обещание «не смотреть на кошелёк» (need-blind) на иностранцев не распространяется: у них приём need-aware, и нужда может влиять на решение. Просить помощь можно только вместе с заявкой на первом курсе, позже права уже нет. Средняя помощь по вузу — $75 000 в год. Университетские сборы на 2026/27 — $96 994 (обучение $71 310, жильё и питание в среднем $24 272), с книгами, дорогой и личными расходами — около $102 260; для визы берут $105 183 в год. Про дорогу домой страницы не говорят, поэтому travel не отмечено."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство вход не закрывает: вуз отдельно определяет иностранного абитуриента (гражданин или постоянный резидент другой страны, приезжающий по временной визе) и описывает для него тот же порядок заявки. Отказа по паспорту нет, но приём для иностранцев need-aware. Смотрели страницы приёма иностранцев, требований, английского, помощи, стоимости и сроков."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы сама по себе вход не закрывает: отказа по стране вуз не называет, требования выражены школьными предметами и годами учёбы, а заявку читают в контексте школы. Аттестат Таджикистана и 11-летняя школа прямо не названы — эквивалент уточнять в приёмной."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "The successful completion of a minimum of 12 years of primary and secondary studies is required for admission to any program of study leading to a bachelor's degree at WashU."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году выпуска страницы не называют: подают в последний год школы или после выпуска, если ещё не учились в вузе полный срок."
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Возрастного ограничения для приёма страницы не называют: ни минимального, ни максимального."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Числового порога оценок для поступления страницы не называют: смотрят оценки и место в классе в контексте школы вместе с эссе, рекомендациями и экзаменами. Цифра 2.0 на странице помощи — условие продления стипендии, а не приёма."
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7.0,
+          "evidence": "IELTS Academic score of 7.0"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "For exams taken prior to January 21, 2026, a minimum score of 100 is recommended."
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5.0,
+          "evidence": "For exams taken on January 21, 2026 or later, a minimum score of 5.0 is recommended"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "Duolingo score of 130"
+        }
+      ],
+      "advisory": true,
+      "evidence": "our most competitive undergraduate applicants share scores in the following ranges or above:"
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "WashU has adopted a test optional policy. If you opt to submit scores, we accept the following standardized tests: SAT Test ACT Test"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Иностранцем вуз считает гражданина или постоянного резидента другой страны, который будет учиться по временной визе; порядок заявки для него тот же, что у американцев.",
+      "evidence": "are citizens or permanent residents of countries other than the United States who will be studying on a temporary visa",
+      "field": "citizenship",
+      "kind": "note"
+    },
+    {
+      "ru": "Для бакалавриата нужен минимум 12 лет начальной и средней школы и аттестат (или эквивалент). Школа в Таджикистане 11 лет — это условие «уточни в приёмной», а не отказ.",
+      "evidence": "The successful completion of a minimum of 12 years of primary and secondary studies is required for admission to any program of study leading to a bachelor's degree at WashU.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Приём для иностранцев need-aware: обещание «не смотреть на кошелёк» (need-blind) на них не распространяется, нужда может влиять на решение. Принятым при этом обещают закрыть 100% посчитанной нужды.",
+      "evidence": "Not included in this program are international applicants, transfer students, and students admitted from our wait list, although we meet 100% of need for these students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Принятым закрывают 100% посчитанной нужды без кредитов: помощь — стипендия и работа в кампусе.",
+      "evidence": "WashU is committed to meeting 100% of demonstrated financial need without loans for all admitted undergraduate students.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранец может просить помощь только вместе с заявкой на приём: если не подать к сроку, то ни после зачисления, ни в следующие годы помощь не дадут.",
+      "evidence": "International first-year students who do not apply by the financial aid deadline will not be considered for financial aid after receiving their admission decision, or during their years of undergraduate study at WashU.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Средняя помощь по нужде по вузу — $75 000 в год. Это цифра по всем студентам; отдельной статистики по иностранцам на страницах нет.",
+      "evidence": "$75K average need-based financial aid offer",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцы — 13% набора.",
+      "evidence": "13% International students",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Помощь просят через CSS Profile (код вуза 6929). Профиль обязателен для всех, кто подаёт на помощь по нужде.",
+      "evidence": "WashU's CSS Profile Code: 6929",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "CSS Profile нужен с обоих домов биологических родителей, если они в разводе; если связи со вторым родителем нет, можно запросить освобождение.",
+      "evidence": "WashU requires the CSS Profile from both biological parent households when parents are separated or divorced.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Если оплатить CSS Profile не по силам, можно просить помощь по внутренней форме вуза — она открывается в WashU Pathway с октября, после подачи заявки.",
+      "evidence": "If an international applicant is unable to pay the fee to submit the CSS Profile, they may apply for financial aid from WashU using our institutional form.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Если помощь не просишь, всё равно надо заполнить International Financial Information form в WashU Pathway — без неё заявка не считается полной.",
+      "evidence": "you must submit our International Financial Information form in the WashU Pathway",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "После зачисления для визы (I-20) нужно доказать средства: университетские сборы со страховкой на 2026/27 — $75 645, жизнь — минимум $29 538 за 12 месяцев, всего $105 183 в год.",
+      "evidence": "The total of $105,183 per year is the figure used for visa processing.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обучение на 2026/27 — $71 310, сбор за активность $712, медицинский сбор $700, жильё и питание в среднем $24 272; итого университетские сборы $96 994. Книги, дорога и личные расходы — ещё около $5 266.",
+      "evidence": "Tuition $71,310 Student activity fee $712 Student health and wellness fee $700 Average housing and food (university meal plan)* $24,272 Total university charges $96,994",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Личные расходы и дорога в оценку не входят; дорогу на каникулы считают как четыре поездки за учебный год. Поэтому покрытие дороги не отмечено.",
+      "evidence": "Expenses for clothing, recreation, and incidentals are variable, and the cost of travel outside St. Louis is not included.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Если английский ниже порога, могут обязать платную English Language Program — её стоимость в оценку годовых расходов не входит.",
+      "evidence": "English Language Program (required for students who do not meet English proficiency standards)",
+      "field": "language",
+      "kind": "money"
+    },
+    {
+      "ru": "Заявка стоит $75 и сбор невозвратный; тем, кто просит помощь, его снимают.",
+      "evidence": "The $75 nonrefundable application fee is required to complete your application.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Вуз снимает $75 за заявку всем, кто подаёт на помощь по нужде, и тем, кому сбор не по силам.",
+      "evidence": "WashU will waive the $75 admission application fee for all students who apply for financial aid",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Английский экзамен обязателен, если английский не родной: TOEFL, IELTS или Duolingo. Исключение сделано для DACA/undocumented.",
+      "evidence": "International students for whom English is a second language are required to submit the TOEFL (Test of English as a Foreign Language), IELTS (International English Language Testing System), or Duolingo English Test .",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Баллы названы рекомендованными для конкурентоспособной заявки, а не жёстким порогом: IELTS 7.0, TOEFL 100 (до 21.01.2026) или 5.0 (с 21.01.2026 по новой шкале), Duolingo 130.",
+      "evidence": "our most competitive undergraduate applicants share scores in the following ranges or above:",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Освободить от языкового экзамена могут тех, кто 3+ года учился в англоязычной программе или школе в США с сильными оценками; онлайн-школы обычно не считаются. Таджикская школа под это не подходит.",
+      "evidence": "Students who have completed three or more years of study in an English-medium academic program or high school in the United States and have a demonstrated strong academic performance may be exempted.",
+      "field": "language",
+      "kind": "workaround"
+    },
+    {
+      "ru": "С приёма на осень 2027 баллы SAT/ACT больше не принимают вместо языкового экзамена.",
+      "evidence": "Beginning with students applying for Fall 2027 admission, SAT or ACT scores will no longer be accepted in lieu of English proficiency exam scores.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Последние тесты для осени 2027 — декабрьские 2026 (для Early Action/ED I — октябрьские).",
+      "evidence": "The tests administered in December 2026 will be the last ones accepted for fall 2027 admission (October if applying Early Action or Early Decision I).",
+      "field": "language",
+      "kind": "steps"
+    },
+    {
+      "ru": "SAT и ACT необязательны (test optional). Иностранцам можно вместо них прислать национальные экзамены, IB, A-Levels или три балла AP.",
+      "evidence": "you may choose to submit the following: SAT; or ACT; or Predicted or actual results from national examinations",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Сроки набора на осень 2027: заявка открыта с 1 августа 2026; Early Action и Early Decision I — до 2 ноября 2026; Early Decision II и Regular Decision — до 4 января 2027. Заявку на помощь подают отдельно: до 17 ноября, 11 января или 1 февраля.",
+      "evidence": "Application due Common Application or Coalition Application Early Action Nov. 2 Early Decision I Nov. 2 Early Decision II Jan. 4 Regular Decision Jan. 4",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Early Decision — обязательство поступить: если приняли, надо отозвать заявки из других вузов. Ранний тур даёт решение и помощь раньше.",
+      "evidence": "Your Early Decision application is a commitment that you will attend WashU if admitted.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Оценочных интервью вуз не проводит; можно прислать стороннее интервью (например, InitialView), но это не обязательно.",
+      "evidence": "While WashU does not conduct nor offer evaluative interviews for admission, students are strongly encouraged to submit third-party interview supplements",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Федеральных кредитов в пакете помощи не будет: нужду закрывают стипендией и работой в кампусе.",
+      "evidence": "Because WashU meets demonstrated financial need with grant/scholarship aid and/or Federal Work Study, you will not see federal loans in your financial aid offer.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Работать вне кампуса на студенческой визе в первый год нельзя; заработок не считают источником средств.",
+      "evidence": "Students admitted to the United States on student visas are not permitted to work off campus during the first academic year",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Помощь продлевают при успеваемости: обычно 2.0 GPA и достаточно кредитов, чтобы выпуститься в срок. Это условие удержания помощи, а не приёма.",
+      "evidence": "This is generally defined as maintaining a 2.0 GPA and earning enough credits to graduate on time.",
+      "field": "gpa",
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-08-01",
+    "closes": "2027-01-04",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Washington University in St. Louis (WashU), Сент-Луис, штат Миссури, США. Приём иностранцев на бакалавриат через Common App или Coalition App; сроки осени 2027 — EA/ED I 2 ноября 2026, ED II/RD 4 января 2027. Помощь по нужде иностранцам-первокурсникам есть (100% нужды без кредитов), но приём для них need-aware."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+    "pages": [
+      {
+        "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+        "contentHash": "sha256:5e4892961a7cb9ff37be0447082adf62ec762a911e8077e9d3e9b1343c371f2e"
+      },
+      {
+        "url": "https://admissions.wustl.edu/how-to-apply/application-dates-deadlines/",
+        "contentHash": "sha256:162ff47d887433b5b10f5fe38edaca2b0fb0851745a7d461915f3ec0748e6150"
+      },
+      {
+        "url": "https://financialaid.wustl.edu/apply-for-aid/international-applicant-process/",
+        "contentHash": "sha256:99dc453c20510bf6e8ceabfed679aac27ed8b05c75556884bc47c344120496cf"
+      },
+      {
+        "url": "https://financialaid.wustl.edu/how-aid-works/common-questions/",
+        "contentHash": "sha256:b1443118d36777a8c3335c8bcffd647860663f16dfad28f4039b4417eb99409e"
+      },
+      {
+        "url": "https://financialaid.wustl.edu/how-washu-helps/need-blind-policy",
+        "contentHash": "sha256:aa159d467e3aad28f760b1f4b977cb25338a418439b203baad11e87d4e59b438"
+      },
+      {
+        "url": "https://financialaid.wustl.edu/costs",
+        "contentHash": "sha256:1731c9a4e71007e14a009d9d7fd5bcd13637f86c7f6373586643e865b5b7223e"
+      },
+      {
+        "url": "https://admissions.wustl.edu/common-questions",
+        "contentHash": "sha256:9e08fa07b2a31a89cbd775a7d80e7954e92916c5023ed19a45b4d1a905fd33bc"
+      },
+      {
+        "url": "https://admissions.wustl.edu/how-to-apply/english-testing-requirements/",
+        "contentHash": "sha256:9c69e13fc87f7e4e3ee56fb0de67b5c1acc33cf0f1068cf74cc6a43e088537a9"
+      },
+      {
+        "url": "https://admissions.wustl.edu/cost-aid/",
+        "contentHash": "sha256:8d997df2fc805b43e7a38c8b76925b1d0b87b321b5ad3bb86bc15a59d99c1272"
+      },
+      {
+        "url": "https://admissions.wustl.edu/financial-documentation/",
+        "contentHash": "sha256:851f7639ab00087c99ce4643f731ffa25510a69cf544796d379fb5265bf8fd19"
+      },
+      {
+        "url": "https://admissions.wustl.edu/life-at-washu/our-students/",
+        "contentHash": "sha256:d9c127a3a13479519e09741a7110a7cf2e1ca9075eb27390fb62b2437a005d1c"
+      }
+    ],
+    "lastVerified": "2026-10-02",
+    "humanChecked": false
+  }
+}
