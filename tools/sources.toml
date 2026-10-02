@@ -5288,3 +5288,22 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена сняты вручную (Cloudflare режет сборщика), origin=manual.
+[bates]
+name = "Бейтс — нужду закрывают на 100%, но деньги считают при отборе"
+files = [
+  { path = "manual/bates/00.html", url = "https://www.bates.edu/admission/apply/international-students/" },
+  { path = "manual/bates/01.html", url = "https://www.bates.edu/admission/apply/application-options/" },
+  { path = "manual/bates/02.html", url = "https://www.bates.edu/admission/apply/optional-testing/" },
+  { path = "manual/bates/03.html", url = "https://www.bates.edu/admission/apply/apply/" },
+  { path = "manual/bates/04.html", url = "https://www.bates.edu/financial-services/financial-aid/international-undergraduates/" },
+  { path = "manual/bates/05.html", url = "https://www.bates.edu/financial-services/financial-aid/first-year-applicants/" },
+  { path = "manual/bates/06.html", url = "https://www.bates.edu/admission/apply/frequently-asked-questions/" },
+  { path = "manual/bates/07.html", url = "https://www.bates.edu/financial-services/costs-and-payment" },
+  { path = "manual/bates/08.html", url = "https://catalog.bates.edu/admissions/" },
+  { path = "manual/bates/09.html", url = "https://www.bates.edu/financial-services/your-bates-financial-aid-offer/" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

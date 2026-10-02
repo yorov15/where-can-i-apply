@@ -1,0 +1,264 @@
+{
+  "id": "bates",
+  "status": "published",
+  "kind": "need-aid",
+  "majors": [
+    "any"
+  ],
+  "level": "bachelor",
+  "name": {
+    "ru": "Бейтс — нужду закрывают на 100%, но деньги считают при отборе",
+    "orig": "Bates College — need-based financial aid for international students (need-aware)"
+  },
+  "hostCountry": "US",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": false,
+    "note": {
+      "ru": "Помощь только по нужде — заслуг и спорта не бывает. Принятым закрывают 100% посчитанной нужды на все четыре года независимо от гражданства, но при отборе нужду учитывают: вуз need-aware, и для иностранца это значит, что просьба о деньгах может снизить шансы. В пакет входят грант, который не возвращают, и работа в кампусе до 20 часов в неделю; кредитов иностранцам не дают, помощь — на 8 семестров. Просить её надо вместе с заявкой: после зачисления просьбы не принимают. Форма своя — Bates International Student Application for Financial Aid (BISAFA), CSS Profile иностранцу не нужен. Полная стоимость 2026/27 — 94 560 долларов одной суммой (обучение 73 760, жильё и питание 20 800), медицинская страховка обязательна. Средний грант по нужде у зачисленных класса 2029 — 58 518 долларов; на гранты уходит больше 47 млн в год. Дорогу до кампуса студент оплачивает сам."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "гражданство не ограничивают: страница помощи определяет иностранца как того, у кого нет гражданства США или вида на жительство, и не заводит списка запрещённых стран"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Прочитаны страницы приёма иностранцев, чек-лист, таймлайн, экзамены, страницы помощи и каталог: нигде нет списка принимаемых стран или школ и нет запрета по стране школы. Международная комиссия прямо разбирает заявки в контексте школы абитуриента, отдельного перечня стран нет."
+    },
+    "schoolYears": {
+      "notMeasured": true,
+      "evidence": "The college requires successful completion of high school, GED program, or equivalent for enrollment to Bates."
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "требования к году выпуска страницы не называют; наоборот, прямо приглашают способных начать учёбу до окончания полной четырёхлетней школы"
+    },
+    "age": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Возраст не упоминается ни на страницах приёма (иностранцы, чек-лист, таймлайн, экзамены), ни на страницах помощи (иностранцы, заявка на первый курс, стоимость, условия помощи), ни в каталоге."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Числового порога по среднему баллу нет. Оценки разбирают целостно вместе с программой школы, эссе и рекомендациями; рекомендация набора предметов (четыре года английского и т. п.) — не минимальный балл."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "If English is neither the native language nor the primary language of secondary school instruction for four years, then results of an English proficiency test are required."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "The SAT and the ACT is optional for all students applying to Bates."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Деньги учитывают при отборе: вуз не need-blind для иностранцев. Денег на них выделено много, но просьба о помощи — фактор, который комиссия принимает во внимание при отборе.",
+      "evidence": "Additionally, though Bates has a generous pool of need-based financial aid for non-U.S. citizens, financial need will be a factor that is considered during admission selection.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Принятым закрывают 100% посчитанной нужды независимо от гражданства и на все четыре года. Ранний тур размер помощи не меняет: пакет одинаков во всех турах.",
+      "evidence": "Bates meets the full calculated financial need for all admitted students, regardless of citizenship status.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "В пакете для иностранца нет кредитов: только грант, который не возвращают, и работа в кампусе до 20 часов в неделю. Помощь дают на 8 семестров.",
+      "evidence": "Bates does not include loans in the aid awards for non-U.S. citizens.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Просить помощь надо вместе с заявкой, до решения о приёме. После зачисления просьбы не принимают — без исключений.",
+      "evidence": "Requests for need-based financial aid after a student has been admitted to Bates will not be considered.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "На гранты уходит больше 47 млн долларов в год, а средний грант по нужде у зачисленных класса 2029 — 58 518 долларов. Отдельной цифры именно по иностранцам страницы не дают.",
+      "evidence": "We provide more than $47 million in grant aid to our students every year, and the average need-based grant for enrolling students in the Class of 2029 was $58,518.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцу CSS Profile не нужен: помощь просят через свою форму Bates International Student Application for Financial Aid (BISAFA) в портале заявки, сразу на все четыре года. Канадцам и американцам — CSS Profile.",
+      "evidence": "The CSS Profile is not needed to apply to Bates as an international student.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сроки набора на осень 2027: ранний тур I — до 15 ноября 2026 (связывает обязательством), ранний тур II и обычный — до 10 января 2027. Ранний тур II и обычный закрываются в один день.",
+      "evidence": "The deadline for EDI is November 15, and the EDII deadline is January 10.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача бесплатная — платы за заявку нет.",
+      "evidence": "Everyone can apply to Bates for free (there is no application fee).",
+      "field": null,
+      "kind": "steps",
+      "fee": {
+        "amount": 0,
+        "currency": "USD",
+        "evidence": "Everyone can apply to Bates for free (there is no application fee)."
+      }
+    },
+    {
+      "ru": "Сертификат по английскому обязателен, если английский не родной и не был языком обучения в средней школе четыре года. Таджикская школа под исключение не подходит. Принимают TOEFL, IELTS и Duolingo, только официальные копии; минимального балла вуз не публикует.",
+      "evidence": "If English is neither the native language nor the primary language of secondary school instruction for four years, then results of an English proficiency test are required.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Зачёт по английскому без объявленного порога: вуз принимает TOEFL, IELTS и Duolingo, берёт лучший результат и все версии этих экзаменов. Минимальные баллы, которые называют сторонние сайты, самим вузом не опубликованы.",
+      "evidence": "Bates accepts the TOEFL, IELTS, and Duolingo English Test.",
+      "field": "language",
+      "kind": "note"
+    },
+    {
+      "ru": "Нужно успешно окончить среднюю школу (или GED/эквивалент), но числа лет школа не называет: 11-летний таджикский аттестат отдельно не запрещён. Рекомендуют четыре года английского, математики, естественных наук, социальных наук и иностранного языка.",
+      "evidence": "The college requires successful completion of high school, GED program, or equivalent for enrollment to Bates.",
+      "field": "schoolYears",
+      "kind": "must"
+    },
+    {
+      "ru": "Учиться можно начать и раньше окончания полной четырёхлетней школы: вуз прямо приглашает способных, кто готов к колледжу до выпуска. Это и есть обходной путь для 11-летки.",
+      "evidence": "Extremely capable students may be ready for college before they have completed the normal four-year secondary school program.",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "SAT и ACT необязательны для всех: вуз тест-опциональный с 1984 года. Пришлёшь баллы — учтут и посчитают лучший результат по частям; не пришлёшь — на отбор это прямо не влияет. При зачислении официальные баллы всё равно понадобятся, если сдавал.",
+      "evidence": "The SAT and the ACT is optional for all students applying to Bates.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Собеседование не требуется. Есть необязательные информационные разговоры с выпускниками, а иностранцам советуют записать интервью InitialView или Vericant — оно повышает шансы.",
+      "evidence": "Bates College Admission does not require interviews as part of our application review process.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "Медицинская страховка обязательна, иностранцев записывают в неё автоматически; расходы можно закрыть грантом полностью или наполовину в зависимости от вклада семьи.",
+      "evidence": "international students are automatically enrolled in the Bates SHIP",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полная стоимость 2026/27 — 94 560 долларов одной суммой (обучение 73 760, жильё и питание 20 800). Сверх неё — книги, личные расходы, дорога и страховка.",
+      "evidence": "Single Fee (includes $73,760 for tuition and $20,800 for food and housing) $94,560",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Дорогу до кампуса студент оплачивает сам. Если вклад семьи нулевой и нужна помощь с первым перелётом, просят написать в офис финансовой помощи.",
+      "evidence": "you are expected to cover the costs associated with your flight or other means of transportation to campus",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Заявку подают через Common App или Coalition (Scoir); подача открывается 1 августа. Дополнительного эссе у Bates нет, а часть материалов может дойти и после дедлайна.",
+      "evidence": "Common Application submissions begin August 1 and remain open until the application deadline.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Принявшим надо вернуть решение вступительным взносом 300 долларов. Иностранцы могут внести его уже по приезде, но ответить согласием всё равно обязаны до 1 мая.",
+      "evidence": "You can submit your U.S. $300 enrollment deposit through your Bates application portal.",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-10",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.bates.edu/admission/apply/",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один колледж: Bates College, Льюистон, штат Мэн, США"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.bates.edu/admission/apply/international-students/",
+    "pages": [
+      {
+        "url": "https://www.bates.edu/admission/apply/international-students/",
+        "contentHash": "sha256:942b6d59ebbe59706edaeada0762cc37f2fbb384763630f448d35d6d1b43800b"
+      },
+      {
+        "url": "https://www.bates.edu/admission/apply/application-options/",
+        "contentHash": "sha256:da57d8ad851a3173ee6c3717fee3bfff4816d3ef9c7ff54223c67378516217a2"
+      },
+      {
+        "url": "https://www.bates.edu/admission/apply/optional-testing/",
+        "contentHash": "sha256:fd4bc4f3c3535671076e6c123f05e1903ec44af41e86528cdcc01ef8ba8ed595"
+      },
+      {
+        "url": "https://www.bates.edu/admission/apply/apply/",
+        "contentHash": "sha256:67e4ea73e994e346744386d358d96cc5f4cba624bd35623bc2a565722e1a47a7"
+      },
+      {
+        "url": "https://www.bates.edu/financial-services/financial-aid/international-undergraduates/",
+        "contentHash": "sha256:0d6d268d4fed0115fb1d54ae485aba6744459341ed2578ee09d56dcbd4bb35ed"
+      },
+      {
+        "url": "https://www.bates.edu/financial-services/financial-aid/first-year-applicants/",
+        "contentHash": "sha256:f14c38197907663896e997be55d80f0efcb5489d1d930b83e262288c75d25f31"
+      },
+      {
+        "url": "https://www.bates.edu/admission/apply/frequently-asked-questions/",
+        "contentHash": "sha256:4caf2175144362c0d776d5089add64f21a8015a4949c2f09f8eb6c3bc46151a2"
+      },
+      {
+        "url": "https://www.bates.edu/financial-services/costs-and-payment",
+        "contentHash": "sha256:7b5c2fb45bb47480fdaa1835cc8416103c45e0a6a8bc959b87c852cf4368d9e8"
+      },
+      {
+        "url": "https://catalog.bates.edu/admissions/",
+        "contentHash": "sha256:5f215977287a19067a7451fe7a3868597747153a3bf95b8bb44646aa8d594734"
+      },
+      {
+        "url": "https://www.bates.edu/financial-services/your-bates-financial-aid-offer/",
+        "contentHash": "sha256:c48b5161493d67133b446f64e8b5fc2de39eb1b9a978350e2d584929dd5fa797"
+      }
+    ],
+    "lastVerified": "2026-10-02",
+    "humanChecked": false
+  }
+}
