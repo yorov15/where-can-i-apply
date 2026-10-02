@@ -5267,3 +5267,24 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена сняты вручную (Cloudflare режет сборщика), origin=manual.
+[wesleyan]
+name = "Уэслианский университет — помощь по нужде без кредитов, но иностранцу с просьбой о деньгах поступить очень трудно"
+files = [
+  { path = "manual/wesleyan/00.html", url = "https://www.wesleyan.edu/admission/undergraduate-admission/international" },
+  { path = "manual/wesleyan/01.html", url = "https://www.wesleyan.edu/admission/application-process.html" },
+  { path = "manual/wesleyan/02.html", url = "https://www.wesleyan.edu/admission/undergraduate-admission/first-year.html" },
+  { path = "manual/wesleyan/03.html", url = "https://www.wesleyan.edu/admission/affordability-and-aid/cost-of-attendance.html" },
+  { path = "manual/wesleyan/04.html", url = "https://www.wesleyan.edu/finaid/faqs-resources/faqs.html" },
+  { path = "manual/wesleyan/05.html", url = "https://www.wesleyan.edu/studentaccounts/tuition.html" },
+  { path = "manual/wesleyan/06.html", url = "https://www.wesleyan.edu/admission/affordability-and-aid/applying-for-aid.html" },
+  { path = "manual/wesleyan/07.html", url = "https://www.wesleyan.edu/finaid/current-students/current-international.html" },
+  { path = "manual/wesleyan/08.html", url = "https://www.wesleyan.edu/admission/affordability-and-aid/types-of-aid.html" },
+  { path = "manual/wesleyan/09.html", url = "https://www.wesleyan.edu/oisa/intl_def.html" },
+  { path = "manual/wesleyan/10.pdf", url = "https://www.wesleyan.edu/finaid/Guide-ED-26-27.pdf" },
+  { path = "manual/wesleyan/11.html", url = "https://www.wesleyan.edu/about/at-a-glance.html" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

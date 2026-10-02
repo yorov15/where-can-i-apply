@@ -1,0 +1,344 @@
+{
+  "id": "wesleyan",
+  "status": "published",
+  "kind": "need-aid",
+  "majors": [
+    "any"
+  ],
+  "level": "bachelor",
+  "name": {
+    "ru": "Уэслианский университет — помощь по нужде без кредитов, но иностранцу с просьбой о деньгах поступить очень трудно",
+    "orig": "Wesleyan University — need-based financial aid for international students"
+  },
+  "hostCountry": "US",
+  "coverage": {
+    "tuition": true,
+    "living": true,
+    "travel": true,
+    "note": {
+      "ru": "Помощь только по нужде: стипендий за успехи, спорт или таланты нет. Принятым закрывают 100% посчитанной нужды, и кредитов в пакет не кладут — нужду покрывают стипендией и работой в кампусе. Полная стоимость 2026/27 для первого курса — 101 080 долларов (обучение 75 916, жильё и питание 21 660). Сверх стипендии от студента ждут летний заработок: не меньше 2 000 долларов в первый год. Дорогу иностранцам, которым дали помощь, закладывают в бюджет: одна поездка к началу первого курса и обратная — в конце четвёртого. Помощь получают лишь 25% иностранцев, средняя — 83 185 долларов в год (данные 2023/24). Переводом с помощью не берут вовсе."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "allow": "*",
+      "evidence": "candidates from all countries will be considered for need-based financial aid",
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "гражданство не ограничивают списком: страницы прямо пишут, что заявки на помощь по нужде рассматривают из всех стран, и не заводят перечня запрещённых стран"
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "страну школы не ограничивают: приёмная комиссия разбирает заявку в контексте программы и ресурсов твоей школы, отдельного списка стран или школ нет"
+    },
+    "schoolYears": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "число лет школы (11 или 12) страницы не называют; сказано лишь, что нужен аттестат о среднем образовании или его признанный эквивалент (GED, государственный сертификат, двухлетняя программа с зачётом в бакалавриат)"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "требования к году выпуска страницы не называют; берут тех, у кого есть аттестат или кто уже старше возраста обязательного школьного обучения"
+    },
+    "age": {
+      "notMeasured": true,
+      "evidence": "All first-year applicants must have earned a high school diploma or its recognized equivalent or be beyond the age of compulsory school attendance (17) and meet the criteria for homeschooled students.",
+      "note": "порога по возрасту нет: нужен аттестат о среднем образовании (или его признанный эквивалент) либо возраст старше 17 лет — возраста обязательного школьного обучения"
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "порога по среднему баллу страницы не называют: оценки разбирают вместе с программой школы, эссе, рекомендациями и экзаменами целиком"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "test": "IELTS",
+          "min": 7.5,
+          "evidence": "IELTS Academic (in person or Online) 7.5"
+        },
+        {
+          "test": "TOEFL_IBT",
+          "min": 100,
+          "evidence": "TOEFL iBT (in person or Home Edition) 5/6 or 100/120"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 5,
+          "evidence": "TOEFL iBT (in person or Home Edition) 5/6 or 100/120"
+        },
+        {
+          "test": "DUOLINGO",
+          "min": 130,
+          "evidence": "Duolingo English Test 130"
+        }
+      ],
+      "advisory": true,
+      "evidence": "Submission of English proficiency testing is optional, but strongly recommended for international applicants whose first language is not English."
+    },
+    "exam": {
+      "optional": true,
+      "anyOf": [
+        {
+          "test": "SAT",
+          "min": null
+        },
+        {
+          "test": "ACT",
+          "min": null
+        }
+      ],
+      "evidence": "Wesleyan does not require most students to submit SAT or ACT scores as part of the application for admission."
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "Принятым закрывают 100% посчитанной нужды, и берут не по кошельку, а по заявке — но с деньгами для иностранцев очень тесно, поэтому просьба о помощи резко повышает планку отбора. Страну не ограничивают: заявки из всех стран рассматривают на помощь по нужде.",
+      "evidence": "Wesleyan offers need-based financial aid, meeting 100% of every admitted student's demonstrated need. While admission for international students seeking financial aid is extremely competitive, candidates from all countries will be considered for need-based financial aid.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "В пакете помощи нет кредитов: нужду закрывают стипендией и работой в кампусе, а не займом. Это обещание для всех, кому положена помощь по нужде, независимо от дохода семьи.",
+      "evidence": "Our Promise We pledge to meet 100% of a student's demonstrated financial need-without loans-for all who are eligible for need-based financial aid, regardless of family income.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь просят только при поступлении. Если при подаче не отметить, что нужны деньги, получить их уже не выйдет — ни на втором курсе, ни позже.",
+      "evidence": "International applicants who do not indicate prior to admission are ineligible for Wesleyan financial aid throughout their four years at Wesleyan.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендий за успехи, спорт или таланты нет вовсе: любая помощь — строго по достатку семьи.",
+      "evidence": "Any financial assistance provided by the Financial Aid Office is based strictly on financial need.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Помощь получают 25% иностранцев (84 человека), средняя — 83 185 долларов в год. Данные за 2023/24.",
+      "evidence": "25% of international students (84) receive financial aid Average financial aid for international non-resident students is $83,185 annualy",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "В пакет первого курса включают работу в кампусе на 2 750 долларов в год. Иностранцам доступна институциональная работа в кампусе (не федеральная).",
+      "evidence": "For first-year students, a work-study component of $2,750 will be included in your financial aid package.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "От студента ждут вклад из летних заработков: не меньше 2 000 долларов в первый год и 2 200 — в следующие.",
+      "evidence": "The minimum student contribution from summer earnings varies by year: $2,000 for first year $2,200 each year thereafter",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Если вклад родителей ниже 10 000 долларов, ожидание от студента снижают до 1 200 долларов.",
+      "evidence": "If Parent Contribution is below $10,000: Student contribution = $1,200 plus contribution from student assets (if any)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Если родители дают 7 000 долларов или меньше, вклад студента на первый год заменяют дополнительной стипендией — платить из летних заработков не нужно.",
+      "evidence": "Students whose parents contribute $7,000 or less to Wesleyan will have their $1,200 Student Contribution from income (SC) replaced with additional grant funding for first year only.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Первокурсникам из семей с вкладом 7 000 долларов и меньше дают разовую стипендию 500 долларов на стартовые расходы.",
+      "evidence": "Small start-up grants of $500 are provided to first-year students whose parents are contributing $7,000 or less to Wesleyan",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Переводом с помощью не берут вовсе: деньги всегда уходят на первый курс.",
+      "evidence": "Please note that there is no financial aid available to international students wishing to transfer to Wesleyan University.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Полная стоимость 2026/27 для первого курса — 101 080 долларов, из них обучение 75 916, жильё и питание 21 660.",
+      "evidence": "TOTAL: $101,080 (frosh) / $100,780 (continuing students)",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Иностранцам с большой нуждой страховку закрывают стипендией автоматически, если у них нет сравнимого полиса.",
+      "evidence": "These grants are awarded automatically to independent, undocumented, DACA and international students",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки заявки на помощь на осень 2027: ранний тур I — до 15 ноября 2026, ранний тур II — до 1 января 2027, обычный — до 15 января 2027.",
+      "evidence": "Financial Aid Application for 2027-28 Applying as: Deadline: Early Decision I November 15th Early Decision II January 1st Regular Decision January 15th",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Иностранец, которому нужны деньги, не может подать в ранний тур: его заявку всё равно перенесут в обычный. В ранний тур берут только тех, кто за помощью не идёт.",
+      "evidence": "Please note that international citizens may apply in the Early Decision rounds only if they are not applying for financial aid. Any international citizen who is seeking financial aid and is competitive for admission will be deferred to Regular Decision for consideration.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Помощь просят через CSS Profile (код 3959). Если Profile недоступен или платить за него тяжело, вместо него принимают форму ISFAA — на шансы получить помощь это не влияет.",
+      "evidence": "If you are unable to submit the CSS Profile or Noncustodial Parent Profile due to financial concerns or if the Profile is not available to you in your country, please complete the International Student Financial Aid Application (ISFAA).",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Подача стоит 65 долларов, но всем, кто просит помощь, плату снимают.",
+      "evidence": "$65 Application Fee or Fee Waiver Wesleyan will waive the application fee for all applicants who apply for financial aid.",
+      "field": null,
+      "kind": "steps",
+      "fee": {
+        "amount": 65,
+        "currency": "USD",
+        "evidence": "$65 Application Fee or Fee Waiver Wesleyan will waive the application fee for all applicants who apply for financial aid.",
+        "waivedForAid": true
+      }
+    },
+    {
+      "ru": "Кто просит помощь, форму о финансах (COF) при подаче не заполняет: её требуют только с тех, кто за помощью не идёт.",
+      "evidence": "International citizens (excluding dual U.S. citizens and U.S. permanent residents) who do NOT need financial aid must submit documentation at the time of application for admission, verifying sufficient personal resources or outside scholarships for four years at Wesleyan.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Иностранцам не нужно подтверждать доходы каждый год: помощь сохраняют по первой заявке, пересмотр — только по просьбе семьи.",
+      "evidence": "International students: No. Ordinarily, we will utilize the documentation provided during the admission process unless a re-review is requested.",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сертификат по английскому формально необязателен, но его настоятельно советуют иностранцам, для которых английский не родной. Ориентиры: IELTS Academic 7.5, TOEFL iBT 100 (или 5 из 6 по новой шкале), Duolingo 130. Вуз может сам попросить результат, если без него не решает.",
+      "evidence": "Submission of English proficiency testing is optional, but strongly recommended for international applicants whose first language is not English.",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Документы не на английском принимают только с заверенным переводом вместе с копией оригинала.",
+      "evidence": "If any of your required documents are not already in English, you must provide certified translations alongside copies of the original documents.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Если школа учит по экзаменационной программе (A-level, французский бакалавриат, IB, ISC, WASSCE и подобные), баллы по ней обязательны: школа шлёт фактические или прогнозные оценки, а фактические — как только появятся.",
+      "evidence": "Candidates studying in an international exam-based curriculum (A level, French Baccalaureate, International Baccalaureate, ISC, WASSCE, etc.) are required to provide their scores.",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "Оценочных интервью в отборе нет. Можно прислать запись InitialView или Vericant.",
+      "evidence": "Wesleyan does not conduct evaluative interviews as part of the admission application process. We will, however, accept InitialView or Vericant interviews as part of your application.",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "SAT и ACT необязательны: решать, прикладывать ли баллы, можно самому. Баллы SAT/ACT можно заодно зачесть как подтверждение английского.",
+      "evidence": "Wesleyan does not require most students to submit SAT or ACT scores as part of the application for admission.",
+      "field": "exam",
+      "kind": "note"
+    },
+    {
+      "ru": "Порога по возрасту нет: нужен аттестат о среднем образовании (или его признанный эквивалент) либо возраст старше 17 лет — возраста обязательного школьного обучения.",
+      "evidence": "All first-year applicants must have earned a high school diploma or its recognized equivalent or be beyond the age of compulsory school attendance (17) and meet the criteria for homeschooled students.",
+      "field": "age",
+      "kind": "note"
+    },
+    {
+      "ru": "Полные стипендии African Scholars (около 10 человек в год) и Freeman Asian (около 11 человек в год) — только для граждан стран Африки и Восточной Азии; Таджикистан в их число не входит. Но помощь по нужде рассматривают для всех стран.",
+      "evidence": "Financial aid applicants who are citizens or permanent residents of any of Africa's 54 countries will be considered for the Wesleyan African Scholars Program .",
+      "field": null,
+      "kind": "note"
+    },
+    {
+      "ru": "При зачислении нужен невозвратный взнос 250 долларов.",
+      "evidence": "The non-refundable Wesleyan enrollment deposit is $250 and is payable electronically.",
+      "field": null,
+      "kind": "note"
+    }
+  ],
+  "deadline": {
+    "opens": null,
+    "closes": "2027-01-01",
+    "recurring": "annual",
+    "confidence": "confirmed"
+  },
+  "applyUrl": "https://www.wesleyan.edu/admission/undergraduate-admission/international",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз: Wesleyan University, штат Коннектикут, США"
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.wesleyan.edu/admission/undergraduate-admission/international",
+    "pages": [
+      {
+        "url": "https://www.wesleyan.edu/admission/undergraduate-admission/international",
+        "contentHash": "sha256:cb0dd2071d482dacd2b2a18371aacb133eba0c960ec434167e694ee11bfd6edb"
+      },
+      {
+        "url": "https://www.wesleyan.edu/admission/application-process.html",
+        "contentHash": "sha256:2cd31df92b5d1ccc0ba8571c4c3a1cb64e1335af93d2371de994349926c65eb7"
+      },
+      {
+        "url": "https://www.wesleyan.edu/admission/undergraduate-admission/first-year.html",
+        "contentHash": "sha256:5d5367eef7b13599b411182606be003d18657884666cb7aa304ef71025b39fa3"
+      },
+      {
+        "url": "https://www.wesleyan.edu/admission/affordability-and-aid/cost-of-attendance.html",
+        "contentHash": "sha256:b2509b7654a2febed8d0cba1c02abcbf3b8620c5dc36e7f454ee49b56a9a10f5"
+      },
+      {
+        "url": "https://www.wesleyan.edu/finaid/faqs-resources/faqs.html",
+        "contentHash": "sha256:290a124e3457353b69c5eed06d1e4b2cc57b5ba6d32d3e051b936efe774d534e"
+      },
+      {
+        "url": "https://www.wesleyan.edu/studentaccounts/tuition.html",
+        "contentHash": "sha256:b47dec22cb95399ea1dd8f92363d31cfcdfa39eb984fc232418b59651078c502"
+      },
+      {
+        "url": "https://www.wesleyan.edu/admission/affordability-and-aid/applying-for-aid.html",
+        "contentHash": "sha256:e2356bc5c13cbd2de6da58972c833c05104f4bd5a72b8b9a37b15bffa68bcd98"
+      },
+      {
+        "url": "https://www.wesleyan.edu/finaid/current-students/current-international.html",
+        "contentHash": "sha256:c8094c18cb028f08df953029719c17c69922aeb2a4081ef8c9c752177ccab9ad"
+      },
+      {
+        "url": "https://www.wesleyan.edu/admission/affordability-and-aid/types-of-aid.html",
+        "contentHash": "sha256:b64a4cdd85279f54e2a4bc0fd5a242522304cd16da008b896baf07e9d517de00"
+      },
+      {
+        "url": "https://www.wesleyan.edu/oisa/intl_def.html",
+        "contentHash": "sha256:11187c43c0c390ae3f2f681b3a709a00af389416b60e575b87629ade7bc42db9"
+      },
+      {
+        "url": "https://www.wesleyan.edu/finaid/Guide-ED-26-27.pdf",
+        "contentHash": "sha256:d0a5a64bfd847d597e86b525067be553eee826dbab2c62130ad96a5eb6bcd020"
+      },
+      {
+        "url": "https://www.wesleyan.edu/about/at-a-glance.html",
+        "contentHash": "sha256:5b962553d120ce46f6e4a3af59cfaece2fbb9aa19c3f19655c76cbd3df939621"
+      }
+    ],
+    "lastVerified": "2026-10-02",
+    "humanChecked": false
+  }
+}
