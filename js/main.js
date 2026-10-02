@@ -2,6 +2,7 @@ import { loadProfile, saveProfile, emptyProfile, profileReady, STORAGE_KEY } fro
 import { readForm, writeForm, onProfileChange, setupProfileBox } from './form.js';
 import { setupWizard } from './steps.js';
 import { setupCatalogFilter } from './filter.js';
+import { setupBarHide } from './barscroll.js';
 import { setupPriority } from './priority.js';
 import { loadIndex, loadDetails, loadConditions } from './data.js';
 import { renderResults } from './render.js';
@@ -47,6 +48,7 @@ const catalogFilter = setupCatalogFilter({
   root: document.getElementById('catalog-tools'),
   resultsNode: document.getElementById('results'),
 });
+setupBarHide(document.querySelector('.catalog-bar'));
 
 // План живёт отдельно от анкеты: анкету можно поправить, не потеряв отмеченное.
 const plan = {

@@ -2,18 +2,9 @@
    (латиница урезана до знаков, которые встречаются в тексте). Запасной шрифт системный. */
 @font-face { font-family: Onest; font-style: normal; font-weight: 400 800; font-display: swap; src: url("../fonts/onest-cyrillic.woff2") format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
 @font-face { font-family: Onest; font-style: normal; font-weight: 400 800; font-display: swap; src: url("../fonts/onest-latin.woff2") format("woff2"); unicode-range: U+0020-007E, U+00A0, U+00AB, U+00B7, U+00BB, U+2013, U+2014, U+2018-201D, U+2026, U+2212; }
-/* Система «яркий акцент». Мобильный вперёд. Один системный шрифт: подключаемые
-   стоят трафика, которого у аудитории нет, а CSP шрифтов из сети всё равно не
-   пустит.
-
-   Цвета два вида. Фирменный кобальт (--accent) ведёт по интерфейсу: шапка,
-   кнопки, выбранные чипы, шаги, фокус, главная цифра. Цвета вердиктов
-   (зелёный, бирюзовый, янтарный, красный) заняты только вердиктом, поэтому
-   кобальт с ними не смешивается. Вердикт не различается только цветом: у
-   каждого есть слово и значок (✓ ≈ ! ✕).
-
-   Скругления: 12px у кнопок и полей, 20px у контейнеров, пилюля у вердикта,
-   чипов и плашек. Анимируются transform и opacity. */
+/* Яркий акцент, мобильный вперёд. Кобальт (--accent) ведёт по интерфейсу, цвета вердиктов
+   заняты только вердиктом и не смешиваются с ним; у каждого вердикта есть слово и значок.
+   Скругления: 12px поля и кнопки, 20px контейнеры, пилюля у чипов. Анимируются только transform и opacity. */
 :root {
   color-scheme: light dark;
 
@@ -61,7 +52,7 @@
   --s-6: 2rem;
   --s-7: 3rem;
   --s-8: 4rem;
-  --gutter: 1rem;
+  --gutter: clamp(.875rem, 4.5vw, 1.5rem);
 
   --ease: cubic-bezier(.16, 1, .3, 1);
   --dur: .18s;
@@ -71,8 +62,7 @@
   --z-skip: 30;
 }
 
-/* Тёмная палитра: сине-чернильная, поверхности заметно светлее фона, шапка яркая.
-   Записана дважды (по системе и по ручному выбору): у CSS нет способа поделить блок между @media и атрибутом. */
+/* Тёмная палитра записана дважды (по системе и по ручному выбору): блок нельзя поделить между @media и атрибутом. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0b0e1a;
@@ -151,11 +141,12 @@
 /* Без этого display у .button и других перебивает атрибут hidden. */
 [hidden] { display: none !important; }
 
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: var(--tint); }
+a, button, summary, label, select, input { touch-action: manipulation; }
 
 body {
   margin: 0 auto;
-  padding: var(--s-4) var(--gutter) 5rem;
+  padding: var(--s-4) max(var(--gutter), env(safe-area-inset-right)) calc(5rem + env(safe-area-inset-bottom)) max(var(--gutter), env(safe-area-inset-left));
   max-width: 42rem;
   font: 1rem/1.55 Onest, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
   color: var(--fg);
@@ -194,8 +185,7 @@ summary:focus-visible { outline-offset: -3px; }
 .brand { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; margin-right: auto; font-weight: 800; letter-spacing: -.02em; color: var(--fg); text-decoration: none; }
 .brand::before { content: ""; width: .75rem; height: .75rem; border-radius: 50%; background: linear-gradient(140deg, var(--hero-from), var(--accent)); }
 .topbar nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--s-2); font-weight: 500; color: var(--fg); text-decoration: none; border-radius: var(--r-control); }
-.theme-toggle { min-height: 44px; padding: 0 var(--s-3); font: inherit; font-size: .9375rem; font-weight: 600; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-pill); box-shadow: var(--shadow); cursor: pointer; transition: transform var(--dur) var(--ease), background var(--dur) var(--ease); }
-.theme-toggle { display: inline-flex; align-items: center; gap: var(--s-2); }
+.theme-toggle { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; padding: 0 var(--s-3); font: inherit; font-size: .9375rem; font-weight: 600; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-pill); box-shadow: var(--shadow); cursor: pointer; transition: transform var(--dur) var(--ease), background var(--dur) var(--ease); }
 .theme-toggle::before { content: ""; width: 1rem; height: 1rem; border: 2px solid currentColor; border-radius: 50%; background: linear-gradient(90deg, currentColor 50%, transparent 50%); }
 .theme-toggle:active { transform: scale(.98); }
 @media (hover: hover) { .topbar nav a:hover, .theme-toggle:hover { background: var(--hover); } }
@@ -374,7 +364,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .catalog-title { margin: var(--s-3) 0 var(--s-2); font-size: clamp(2rem, 1.5rem + 3vw, 2.75rem); font-weight: 800; letter-spacing: -.035em; line-height: 1.05; }
 .catalog-bar input[type="search"] { min-height: 56px; margin: 0 0 var(--s-3); font-size: 1.0625rem; background: var(--soft); border-color: transparent; -webkit-appearance: none; appearance: none; }
 .catalog-bar input[type="search"]:focus-visible { background: var(--surface); }
-.chips { display: flex; gap: .375rem; margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter); overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; }
+.chips { display: flex; gap: .375rem; margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter); overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; scroll-padding-inline: var(--gutter); }
 .chips::-webkit-scrollbar { display: none; }
 .chip { flex: none; display: inline-flex; align-items: center; gap: .3rem; min-height: 44px; padding: .375rem .85rem; font: inherit; font-size: .9375rem; color: var(--fg); background: var(--soft); border: 0; border-radius: var(--r-pill); cursor: pointer; scroll-snap-align: start; transition: transform var(--dur) var(--ease); }
 .chip:active { transform: scale(.97); }
@@ -417,8 +407,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 
 /* Выдача */
 .group { margin: 0 0 var(--s-6); }
-.group-title { display: flex; gap: var(--s-2); align-items: baseline; font-size: 1.375rem; font-weight: 800; letter-spacing: -.025em; line-height: 1.3; margin: 0 0 var(--s-3); }
-.group-title { align-items: center; }
+.group-title { display: flex; gap: var(--s-2); align-items: center; font-size: 1.375rem; font-weight: 800; letter-spacing: -.025em; line-height: 1.3; margin: 0 0 var(--s-3); }
 .group-title::before { flex: none; display: grid; place-items: center; width: 2rem; height: 2rem; font-size: 1.125rem; font-weight: 800; background: var(--soft); border-radius: 50%; }
 .group.yes .group-title::before { background: var(--yes-bg); content: "✓"; color: var(--yes); }
 .group.likely .group-title::before { background: var(--likely-bg); content: "≈"; color: var(--likely); }
@@ -435,23 +424,11 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
    Его выдаёт пунктир и подпись «Приём закрыт». */
 .card.closed { background: var(--soft); box-shadow: none; outline: 1px dashed var(--line-strong); outline-offset: -1px; }
 
-.card-head { list-style: none; cursor: pointer; display: flex; flex-direction: column; align-items: flex-start; gap: .375rem; min-height: 60px; padding: var(--s-4) 3rem var(--s-4) var(--s-4); position: relative; border-radius: var(--r-container); }
+.card-head { list-style: none; cursor: pointer; position: relative; border-radius: var(--r-container); }
 .card-head::-webkit-details-marker { display: none; }
 .card-head::after { content: ""; position: absolute; right: 1.25rem; top: 1.5rem; width: .5rem; height: .5rem; border: solid var(--muted); border-width: 0 2px 2px 0; transform: rotate(45deg); transition: transform var(--dur) var(--ease); }
 .card[open] > .card-head::after { transform: rotate(-135deg); }
 @media (hover: hover) { .card-head:hover { background: var(--hover); } }
-
-/* Вердикт: слово и значок в плашке, первое, что видно в карточке. */
-.card-verdict { display: inline-flex; align-items: center; gap: .4rem; padding: .25rem .75rem .25rem .625rem; font-size: .9375rem; font-weight: 650; line-height: 1.4; border-radius: var(--r-pill); }
-.card-verdict::before { font-weight: 800; }
-.card.yes .card-verdict { color: var(--yes); background: var(--yes-bg); }
-.card.yes .card-verdict::before { content: "✓"; }
-.card.likely .card-verdict { color: var(--likely); background: var(--likely-bg); }
-.card.likely .card-verdict::before { content: "≈"; }
-.card.check .card-verdict { color: var(--check); background: var(--check-bg); }
-.card.check .card-verdict::before { content: "!"; }
-.card.no .card-verdict { color: var(--no); background: var(--no-bg); }
-.card.no .card-verdict::before { content: "✕"; }
 
 /* Тип и страна: что за программа. Стоит между вердиктом и названием и
    тише названия, чтобы не спорить с ответом. */
@@ -512,7 +489,6 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 }
 
 @media (min-width: 40rem) {
-  :root { --gutter: 1.5rem; }
   body { padding-top: var(--s-7); }
   .card-body > .button { width: auto; }
   .chips { flex-wrap: wrap; overflow: visible; }
@@ -533,9 +509,10 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
    и список из 200 вузов давал 50 000px прокрутки. Статус уже назван
    заголовком группы и цветной кромкой, поэтому слово в плашке остаётся
    только для скринридера. */
-.card-head { display: grid; grid-template-columns: minmax(0, 1fr); gap: .125rem var(--s-3); align-items: start; min-height: 0; padding: .75rem 2.5rem .75rem var(--s-4); }
+.card-head { display: grid; grid-template-columns: minmax(0, 1fr); gap: .125rem var(--s-3); align-items: start; padding: .75rem 2.5rem .75rem var(--s-4); }
 .card-head::after { top: 1.25rem; right: 1rem; }
-.card-verdict { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* Статус называет заголовок группы и цветная кромка, слово вердикта читает только скринридер. */
+.card-verdict { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .card-title { font-size: 1.0625rem; line-height: 1.3; }
 .card-reason { font-size: .9375rem; line-height: 1.35; }
 .card-reason-tail { display: none; }
@@ -586,4 +563,49 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
   .catalog-bar { position: static; margin: 0 0 var(--s-3); padding: 0; background: none; }
   .chips { flex-direction: column; flex-wrap: nowrap; gap: .25rem; margin: 0; padding: 0; overflow: visible; }
   .chip { justify-content: space-between; width: 100%; }
+}
+
+/* Панель поиска уходит вверх при прокрутке вниз (js/barscroll.js) и не прячется, пока в ней поле ввода. */
+@media (max-width: 63.99rem) {
+  .catalog-bar { transition: transform .22s var(--ease); }
+  .catalog-bar.is-away:not(:focus-within) { transform: translateY(-100%); }
+}
+
+/* Телефон и ландшафт: шапка и панель кнопок компактные, чтобы первый вопрос анкеты был виден
+   без прокрутки даже на 320×568, а липкие полосы не съедали низкий экран. */
+@media (max-width: 39.99rem), (max-height: 32rem) {
+  .hero { margin-bottom: var(--s-3); padding: var(--s-3) var(--s-4); }
+  .profile-box form { padding-top: var(--s-4); }
+  .profile-box.wizard .wizard-head, .profile-box.wizard legend { margin-bottom: var(--s-4); }
+  .hero h1, .hero-page h1 { font-size: clamp(1.5rem, 1.1rem + 2vw, 2rem); }
+  .hero .lead { font-size: .9375rem; line-height: 1.45; }
+  .profile-box.wizard .wizard-nav { padding-block: var(--s-3) calc(var(--s-3) + env(safe-area-inset-bottom)); }
+  .wizard-nav .button { min-height: 48px; }
+}
+@media (max-height: 32rem) {
+  body { padding-top: var(--s-2); }
+  .catalog-bar { position: static; }
+  .profile-box.wizard .wizard-nav { position: static; margin: 0; padding: 0; background: none; }
+  .summary-number { font-size: 3.5rem; }
+}
+
+/* До 420px: кнопки переносят текст (длинная «Объяснить простыми словами (ИИ)» шире экрана), а поле балла уходит под
+   подпись и показывается, когда экзамен отмечен или в поле уже есть число. */
+@media (max-width: 26.25rem) {
+  .button { white-space: normal; text-align: center; line-height: 1.25; }
+  .plan-toggle { margin-left: 0; }
+  .card-body > .button + .button { margin-top: var(--s-2); }
+  label.row { grid-template-columns: 1.5rem minmax(0, 1fr); row-gap: var(--s-2); }
+  label.row input[type="number"] { display: none; grid-column: 2; min-height: 48px; }
+  label.row:has(:checked) input[type="number"], label.row input[type="number"]:not(:placeholder-shown) { display: block; }
+}
+
+/* Совсем узкие экраны (320 и ниже, обложка складного): всё в одну строку. */
+@media (max-width: 22.5rem) {
+  .brand::before { display: none; }
+  .topbar nav a { padding: 0 var(--s-1); }
+  .theme-toggle { gap: .375rem; padding: 0 .625rem; font-size: .875rem; }
+  .summary-number { font-size: 3.25rem; }
+  .summary-label { font-size: 1.0625rem; }
+  .agenda-item { column-gap: var(--s-3); padding-inline: var(--s-2); }
 }
