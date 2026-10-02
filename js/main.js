@@ -3,6 +3,7 @@ import { readForm, writeForm, onProfileChange, setupProfileBox } from './form.js
 import { setupWizard } from './steps.js';
 import { setupCatalogFilter } from './filter.js';
 import { setupBarHide } from './barscroll.js';
+import { setupTabbar } from './tabbar.js';
 import { setupPriority } from './priority.js';
 import { loadIndex, loadDetails, loadConditions } from './data.js';
 import { renderResults } from './render.js';
@@ -32,6 +33,8 @@ function showCatalog(on) {
   answerScreen.hidden = on || !finished;
   catalogScreen.hidden = !on || !finished;
   if (lead) lead.hidden = finished;
+  tabbar.show(finished);
+  tabbar.sync();
 }
 
 function openProgram(id) {
@@ -49,6 +52,23 @@ const catalogFilter = setupCatalogFilter({
   resultsNode: document.getElementById('results'),
 });
 setupBarHide(document.querySelector('.catalog-bar'));
+
+// Нижняя панель вкладок (телефон). Экраны переключаются адресом, как и кнопками.
+const tabbar = setupTabbar({
+  bar: document.getElementById('tabbar'),
+  isCatalog: () => location.hash === '#programs',
+  bucket: () => document.querySelector('#catalog-tools .chip[aria-pressed="true"]')?.dataset.bucket,
+  watch: document.getElementById('catalog-tools'),
+  go(name) {
+    if (name === 'answer') {
+      if (location.hash === '#programs') location.hash = '';
+    } else {
+      catalogFilter.showBucket(name === 'plan' ? 'plan' : 'all');
+      location.hash = 'programs';
+    }
+    window.scrollTo({ top: 0 });
+  },
+});
 
 // План живёт отдельно от анкеты: анкету можно поправить, не потеряв отмеченное.
 const plan = {
@@ -184,6 +204,7 @@ finishButton.addEventListener('click', (event) => {
 function refresh(profile = readForm(form)) {
   saveProfile(profile, localStorage);
   profileBox.update(profile);
+  tabbar.setPlanCount(plan.ids.length);
   renderResults(nodes, profile, programs, today, details);
 }
 

@@ -539,7 +539,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
   .card-title, .card-reason { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
   .card-title { -webkit-line-clamp: 2; line-clamp: 2; }
   .card-reason { -webkit-line-clamp: 1; line-clamp: 1; }
-  .card-meta { font-size: .75rem; }
+  .card-meta { font-size: .8125rem; }
 }
 
 /* Широкий экран: обычная ширина сайта вместо узкой колонки в центре.
@@ -609,3 +609,18 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
   .summary-label { font-size: 1.0625rem; }
   .agenda-item { column-gap: var(--s-3); padding-inline: var(--s-2); }
 }
+
+/* Нижняя панель разделов: на телефоне палец лежит внизу, а «Назад» вверху. */
+.tabbar { display: none; }
+@media (max-width: 63.99rem) {
+  .tabbar:not([hidden]) { position: fixed; inset: auto 0 0; z-index: var(--z-bar); display: grid; grid-template-columns: repeat(3, 1fr); padding-bottom: env(safe-area-inset-bottom); background: var(--surface); border-top: 1px solid var(--line); }
+  body:has(.tabbar:not([hidden])) { padding-bottom: calc(3.5rem + env(safe-area-inset-bottom)); }
+  body:has(.tabbar:not([hidden])) #back-to-answer { display: none; }
+  .tab { min-height: 52px; font: inherit; font-size: .9375rem; font-weight: 600; color: var(--muted); background: none; border: 0; cursor: pointer; }
+  .tab[aria-current] { color: var(--accent-text); box-shadow: inset 0 3px 0 var(--accent); }
+  .tab-count:not(:empty) { margin-left: .25rem; padding: 0 .4rem; color: var(--on-accent); background: var(--accent); border-radius: var(--r-pill); font-size: .8125rem; }
+}
+@media (max-height: 32rem) { .tab { min-height: 44px; } }
+
+/* Отклик на касание: на телефоне hover нет, и нажатие иначе молчит. */
+@media (hover: none) { .card-head:active, .agenda-item:active, .faq > summary:active, .tab:active { background: var(--tint); } }
