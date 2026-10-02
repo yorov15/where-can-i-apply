@@ -51,14 +51,14 @@ def year_hits(text: str, year: int, limit: int = 2) -> list[str]:
     return [s for s in snippets if ADMISSION_WORDS.search(s) and not NOISE_WORDS.search(s)][:limit]
 
 
-def page_urls(entry: dict) -> list[str]:
+def page_urls(entry: dict, limit=MAX_PAGES) -> list[str]:
     urls = list(entry.get("urls", [])) + [f["url"] for f in entry.get("files", [])]
     seen, out = set(), []
     for url in urls:
         if url not in seen:
             seen.add(url)
             out.append(url)
-    return out[:MAX_PAGES]
+    return out[:limit]
 
 
 def closed_programs(programs_dir: Path, today: str) -> list[dict]:

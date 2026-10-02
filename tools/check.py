@@ -10,6 +10,8 @@ from datetime import date, timedelta
 from pathlib import Path
 
 from tools.fetch import http_fetch, page_to_text, with_retries
+from tools.livewatch import load_state, save_state, watch_pages
+from tools.rollover import page_urls
 from tools.snapshot import sha256_of_text, strip_volatile
 from tools.sources import load_sources
 
@@ -33,13 +35,17 @@ def frequency_for(deadline: dict, today: str) -> str:
     return "monthly"
 
 
-def is_due(program: dict, today: str) -> bool:
-    last = (program.get("source") or {}).get("lastVerified")
+def is_due_since(last, deadline: dict, today: str) -> bool:
     if not last:
         return True
-    frequency = frequency_for(program.get("deadline") or {}, today)
+    frequency = frequency_for(deadline or {}, today)
     due_on = date.fromisoformat(last) + timedelta(days=INTERVAL_DAYS[frequency])
     return date.fromisoformat(today) >= due_on
+
+
+def is_due(program: dict, today: str) -> bool:
+    last = (program.get("source") or {}).get("lastVerified")
+    return is_due_since(last, program.get("deadline") or {}, today)
 
 
 def compare_pages(pages, volatile, fetcher):
@@ -103,9 +109,38 @@ def main(argv=None) -> int:
         print("Программ пока нет.")
         return 0
 
+    watch_path = root / "watch" / "live-hashes.json"
+    watch_state = load_state(watch_path)
     checked = 0
     for path in paths:
         program = json.loads(path.read_text(encoding="utf-8"))
+        entry = sources.get(program["id"], {})
+        if entry.get("files"):
+            # Ручной источник: страницу кладёт человек, но слежение всё равно
+            # скачивает адреса сама и сверяет с прошлой загрузкой.
+            record = watch_state.get(program["id"], {})
+            if not force and not is_due_since(record.get("checked"), program.get("deadline") or {}, today):
+                continue
+            urls = page_urls(entry, limit=None)
+            pages, changed, unreachable = watch_pages(
+                urls, entry.get("volatile", []), record.get("pages", {}),
+                # Одна попытка: недоступных страниц у ручных программ много,
+                # и три попытки по 30 секунд на каждую растягивали прогон на часы.
+                with_retries(http_fetch, attempts=1),
+            )
+            watch_state[program["id"]] = {"checked": today, "pages": pages}
+            if changed:
+                stale.append(program["id"])
+                print(f"{program['id']}: СТРАНИЦА ИЗМЕНИЛАСЬ (ручной источник) — перепроверить требования")
+                for page_url in changed:
+                    print(f"   {page_url}")
+            if unreachable and len(unreachable) == len(urls):
+                manual.append(program["id"])
+                print(f"{program['id']}: ни одна страница не скачалась — пересохрани файлы вручную")
+            elif not changed:
+                print(f"{program['id']}: без изменений (ручной источник)")
+            continue
+
         if not force and not is_due(program, today):
             continue
 
@@ -115,15 +150,6 @@ def main(argv=None) -> int:
             print(f"{program['id']}: в записи нет страниц источника — перезапиши через review")
             continue
         url = source.get("url") or pages[0]["url"]
-
-        # Ручной источник перекачать нельзя — его и брали руками потому,
-        # что программе он недоступен. Слежение всё равно работает: срок
-        # считается так же, а пересохранить файл человек должен сам.
-        if sources.get(program["id"], {}).get("files"):
-            manual.append(program["id"])
-            print(f"{program['id']}: источник ручной — пересохрани файл и запусти fetch")
-            print(f"   {url}")
-            continue
 
         checked += 1
         volatile = sources.get(program["id"], {}).get("volatile", [])
