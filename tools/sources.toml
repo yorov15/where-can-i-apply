@@ -5383,3 +5383,24 @@ files = [
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
+
+# Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
+# Страницы внутри одобренного домена сняты вручную (Cloudflare режет сборщика), origin=manual.
+[trento]
+name = "Университет Тренто (Италия) — приём иностранцев на бакалавриат"
+files = [
+  { path = "manual/trento/00.html", url = "https://www.unitn.it/en/international/coming-unitrento/degree-seeking-student/admission-requirements-international-qualifications" },
+  { path = "manual/trento/01.html", url = "https://www.unitn.it/en/check-your-category" },
+  { path = "manual/trento/02.html", url = "https://www.unitn.it/en/international/coming-unitrento/admission-how-it-works" },
+  { path = "manual/trento/03.html", url = "https://www.unitn.it/en/international/coming-unitrento/admission-how-it-works/admission-process" },
+  { path = "manual/trento/04.html", url = "https://www.unitn.it/en/node/1433" },
+  { path = "manual/trento/05.html", url = "https://www.unitn.it/en/admission-courses-taught-italian" },
+  { path = "manual/trento/06.html", url = "https://www.unitn.it/en/study/fees-scholarships-accommodation/tuition-fees/non-eu-citizens" },
+  { path = "manual/trento/07.html", url = "https://www.unitn.it/en/study/fees-scholarships-accommodation/tuition-fees/non-eu-citizens/degree-programmes-english" },
+  { path = "manual/trento/08.html", url = "https://www.unitn.it/en/study/fees-scholarships-accommodation/scholarships-and-awards/scholarships-international-students" },
+  { path = "manual/trento/09.html", url = "https://www.unitn.it/en/international/coming-unitrento/degree-seeking-student/rit-raise-your-international-talent-trento" },
+  { path = "manual/trento/10.html", url = "https://www.unitn.it/sites/default/files/2025-11/Entry_requirements.pdf" },
+  { path = "manual/trento/11.html", url = "https://corsi.unitn.it/sites/cds/files/2025-12/call-admission-disi-26-27_eng.pdf" },
+]
+approvedBy = "human"
+approvedAt = "2026-10-01"

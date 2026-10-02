@@ -1,0 +1,246 @@
+{
+  "id": "trento",
+  "status": "published",
+  "kind": "university",
+  "majors": [
+    "any"
+  ],
+  "level": "bachelor",
+  "name": {
+    "ru": "Университет Тренто (Италия) — приём иностранцев на бакалавриат",
+    "orig": "University of Trento"
+  },
+  "hostCountry": "IT",
+  "coverage": {
+    "tuition": true,
+    "living": false,
+    "travel": false,
+    "note": {
+      "ru": "Плата за обучение для не-ЕС зависит от балла за вступительный тест: при 90/100 и выше — полное освобождение, ниже — от €1 000 до максимум €6 000 в год. Дополнительно есть merit-стипендии UniTrento: €7 200 в год (€8 500 — девушкам на STEM), при стипендии плата за обучение снимается. Жильё вуз бронирует для всех принятых не-ЕС на первый год, но оно платное; дорогу вуз не оплачивает."
+    }
+  },
+  "eligibility": {
+    "citizenship": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Гражданство не ограничивают: есть отдельный порядок приёма для граждан стран вне ЕС, проживающих за границей (квота мест и стипендий), но ни одна страна не исключена. Граждане не-ЕС, живущие в Италии или имеющие вид на жительство, идут по пути «европейцев и приравненных»."
+    },
+    "schoolCountry": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Страна школы не ограничена: иностранный аттестат должен давать доступ к университету в стране получения и признаваться эквивалентным итальянскому; отдельных требований к стране нет."
+    },
+    "schoolYears": {
+      "min": 12,
+      "evidence": "such as a high school diploma, awarded after at least 12 years of schooling"
+    },
+    "graduationYear": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-01",
+      "note": "Ограничения по году выпуска нет: диплом должен быть получен (или ожидаться) к 31 июля года поступления, конкретный год окончания школы не назван."
+    },
+    "age": {
+      "notMeasured": true,
+      "evidence": "Exclusively for non-EU candidates: must have reached the age of majority by September 30, 2026."
+    },
+    "gpa": {
+      "noLimit": true,
+      "evidence": null,
+      "checkedBy": "assistant",
+      "checkedAt": "2026-10-02",
+      "note": "Порога среднего балла школы нет: на снятых страницах приёма и в call департамента DISI (2026/27) названы только пороги вступительного теста (TOLC/CEnT-S: 16/45, 18/50) и балл за тест для платы, требования к школьным оценкам/среднему баллу не установлено."
+    },
+    "language": {
+      "notMeasured": true,
+      "evidence": "an international certification attesting to a B2 level of Englis**h in the four skills (speaking, writing, reading, and listening)"
+    },
+    "exam": {
+      "notMeasured": true,
+      "evidence": "a CISIA test, a test organized by UniTrento, or a test organized at national level"
+    }
+  },
+  "textConditions": [
+    {
+      "ru": "11-летний аттестат (как в Таджикистане) сам по себе доступа не даёт: если школа длилась меньше 12 лет, нужен ещё один документ — год вуза за границей с пройденными экзаменами, или оконченный foundation-год, или постсреднее образование по профилю.",
+      "evidence": "If you have obtained your diploma after less than 12 years of study, to be able to enroll in a degree programme you must also submit one of the following",
+      "field": "schoolYears",
+      "kind": "workaround"
+    },
+    {
+      "ru": "Если в стране аттестата есть обязательный национальный экзамен для доступа в вуз, нужно приложить свидетельство о его сдаче. Для Таджикистана такой экзамен в списке примеров не назван, но правило общее (примеры в тексте — Gao Kao, YKS).",
+      "evidence": "certificate showing you passed the national exam to access university if in the country where you obtained the diploma there is a mandatory national exam",
+      "field": null,
+      "kind": "must"
+    },
+    {
+      "ru": "К заявке прикладывают аттестат (или справку, если он ещё не выдан) и табель с предметами за последние два года школы; документы не на английском/итальянском/испанском/французском/немецком нужно перевести. Вуз может дополнительно запросить справку о сопоставимости от CIMEA.",
+      "evidence": "by the secondary school certifying the subjects of study of the last two years",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Английский: с 2026/27 для визы нужно предъявить международный сертификат уровня B2 по английскому во всех четырёх навыках (говорение, письмо, чтение, аудирование). На странице не назван конкретный тест — порог задан уровнем B2.",
+      "evidence": "an international certification attesting to a B2 level of Englis**h in the four skills (speaking, writing, reading, and listening)",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Для программ на итальянском нужен итальянский уровня B2 (документ «Conoscenza della lingua italiana - livello B2»).",
+      "evidence": "Conoscenza della lingua italiana - livello B2",
+      "field": "language",
+      "kind": "must"
+    },
+    {
+      "ru": "Поступление идёт через вступительный тест CISIA: для англоязычных бакалавриатов (Computer Science, Computer, Communications and Electronic Engineering) не-ЕС сдают CEnT-S по английскому; для итальянских программ — TOLC. Зачисляют по рейтингу. Минимальный проходной балл CEnT-S для не-ЕС — 16 из 45 (что приравнено к 50/100).",
+      "evidence": "a CISIA test, a test organized by UniTrento, or a test organized at national level",
+      "field": "exam",
+      "kind": "must"
+    },
+    {
+      "ru": "Не-ЕС за границей должны достичь совершеннолетия к 30 сентября года поступления.",
+      "evidence": "Exclusively for non-EU candidates: must have reached the age of majority by September 30, 2026.",
+      "field": "age",
+      "kind": "must"
+    },
+    {
+      "ru": "Плата за обучение для не-ЕС считается по баллу за тест: за первый год — 90 и выше: освобождение; 70–89: €1 000; 60–69: €2 000; 50–59: €4 500. Это данные за 2025/2026.",
+      "evidence": "90 or more: exemption from tuition fees; * 70-89: €1.000; * 60-69: €2.000; * 50-59: €4.500",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Максимальная плата за обучение для граждан не-ЕС, не живущих в Италии, — €6 000 в год.",
+      "evidence": "The maximum tuition fee for non-European Union students not residing in Italy is €6,000.00 per academic year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Merit-стипендия UniTrento для не-ЕС, живущих за границей: €7 200 в год (€8 500 — девушкам на STEM-программах); при стипендии плата за обучение снимается. Стипендия сохраняется максимум 3 года на бакалавриате при сдаче экзаменов.",
+      "evidence": "The yearly amount of the scholarship is 8500 Euros for female students enrolled in STEM programmes, and 7200 Euros for all others programme.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Подача заявки бесплатна (для бакалаврских программ департамента DISI). Регистрация на тест CEnT-S в CISIA стоит €55.",
+      "evidence": "Submission of the application is free of charge.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": "EUR",
+        "evidence": "Submission of the application is free of charge."
+      }
+    },
+    {
+      "ru": "Тест CISIA — платный: регистрация на CEnT-S стоит €55.",
+      "evidence": "pay a registration fee of €55.00",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 55,
+        "currency": "EUR",
+        "evidence": "pay a registration fee of €55.00"
+      }
+    },
+    {
+      "ru": "Жильё: вуз бронирует место для всех принятых не-ЕС на первый год обучения, но проживание платное.",
+      "evidence": "UniTrento reserves accommodation for all non-EU students admitted to an undergraduate or master's degree for the first academic year. Accommodation is not free",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Сроки подачи: приём для не-ЕС открывается в декабре и закрывается в марте следующего года; точные даты публикуют в call для каждой программы. В 2026/27 единственная сессия для не-ЕС закрывалась 23 марта 2026.",
+      "evidence": "Calls for admission open in December and close in March",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "После отбора: предзачисление на сайте UniversItaly и заявка на учебную визу; с 2026/27 к визе нужны сертификат английского B2 и справка CIMEA (или Declaration of Value).",
+      "evidence": "submit your pre-enrollment application on",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Отдельный проект RIT (набор школьников из Южной Америки) уже открыл цикл 2027/28: вступительный тест для итальянских бакалавриатов — 21–22 октября 2026 онлайн, заявка — до 12 октября 2026. Для Таджикистана этот путь не предназначен, но подтверждает, что приём 2027/28 уже готовится.",
+      "evidence": "by 12 October 2026 (23:59 - Italian time)",
+      "field": null,
+      "kind": "steps"
+    }
+  ],
+  "deadline": {
+    "opens": "2026-12-01",
+    "closes": "2027-03-23",
+    "recurring": "annual",
+    "confidence": "expected"
+  },
+  "applyUrl": "https://www.unitn.it/en/international/coming-unitrento/admission-how-it-works",
+  "coversInstitutions": {
+    "kind": "list",
+    "approxCount": 1,
+    "note": {
+      "ru": "Один вуз — University of Trento (Università di Trento), Тренто, Италия. Заявки — через портал Apply UniTrento (webapps.unitn.it/Apply) и тест CISIA; предзачисление — на UniversItaly."
+    }
+  },
+  "source": {
+    "approvedBy": "assistant",
+    "url": "https://www.unitn.it/en/international/coming-unitrento/degree-seeking-student/admission-requirements-international-qualifications",
+    "pages": [
+      {
+        "url": "https://www.unitn.it/en/international/coming-unitrento/degree-seeking-student/admission-requirements-international-qualifications",
+        "contentHash": "sha256:65332dd900ae0e07094193305cb0cbc2037c176120fb66a4d706f5aa2ca6269d"
+      },
+      {
+        "url": "https://www.unitn.it/en/check-your-category",
+        "contentHash": "sha256:a14d4770440163e5b5129122c2287ea13035d13d8ba280c031d772eddfa4f59b"
+      },
+      {
+        "url": "https://www.unitn.it/en/international/coming-unitrento/admission-how-it-works",
+        "contentHash": "sha256:794cace8912e2c3e6d4bdab204f0a02d2b4e305aeccef1536e460ebfbcf55c46"
+      },
+      {
+        "url": "https://www.unitn.it/en/international/coming-unitrento/admission-how-it-works/admission-process",
+        "contentHash": "sha256:a55b1842072788d1caa0206e3aad33786a367f978810309cfc987d6461cd99b7"
+      },
+      {
+        "url": "https://www.unitn.it/en/node/1433",
+        "contentHash": "sha256:49d0860f7e41dd22bf5a96727c6687177d8dd9dd5533ca8841dca39883d23903"
+      },
+      {
+        "url": "https://www.unitn.it/en/admission-courses-taught-italian",
+        "contentHash": "sha256:24ccd91f3c2724dbbf361bdf617844fc3d11f5a76ad3abb63711293945f79fca"
+      },
+      {
+        "url": "https://www.unitn.it/en/study/fees-scholarships-accommodation/tuition-fees/non-eu-citizens",
+        "contentHash": "sha256:9d4b4251d47a220389da0e32fbc4962a85cf02611217dbd62dc3ee2088e40f41"
+      },
+      {
+        "url": "https://www.unitn.it/en/study/fees-scholarships-accommodation/tuition-fees/non-eu-citizens/degree-programmes-english",
+        "contentHash": "sha256:93e4bcf7f674a3ed43eed3e44787c8d9286a9fb8638a611180b2c46a1fe273df"
+      },
+      {
+        "url": "https://www.unitn.it/en/study/fees-scholarships-accommodation/scholarships-and-awards/scholarships-international-students",
+        "contentHash": "sha256:03ca85d8302a2a0c3d6ebbd20c89f4eb8acaf24191bab1e1ddab914ffdc40082"
+      },
+      {
+        "url": "https://www.unitn.it/en/international/coming-unitrento/degree-seeking-student/rit-raise-your-international-talent-trento",
+        "contentHash": "sha256:ac61a8f097e3c5c550cc202f3694747076451ed7ba9b3911f9bf609e58487cda"
+      },
+      {
+        "url": "https://www.unitn.it/sites/default/files/2025-11/Entry_requirements.pdf",
+        "contentHash": "sha256:91e0711af737b607544fd8d39b32073e8e89d306c48537e8907d4eb22d823fb4"
+      },
+      {
+        "url": "https://corsi.unitn.it/sites/cds/files/2025-12/call-admission-disi-26-27_eng.pdf",
+        "contentHash": "sha256:1b3df42728b9e3a7f241abeaf61f826562d86d420356ddad08ee227aeb1f095e"
+      }
+    ],
+    "lastVerified": "2026-10-02",
+    "humanChecked": false
+  }
+}
