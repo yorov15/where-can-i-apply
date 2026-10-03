@@ -5,11 +5,14 @@
 // задачу незачем. Зависимостей у функции нет, только fetch.
 //
 // Настройка в Vercel (Settings → Environment Variables):
-//   OPENROUTER_API_KEY — обязательно
+//   OPENCODE_API_KEY   — ключ подписки OpenCode Go (opencode.ai/auth); если
+//                        он есть, модели идут сначала через неё
+//   OPENROUTER_API_KEY — бесплатные модели OpenRouter; запасной путь. Нужен
+//                        хотя бы один из двух ключей
 //   EXPLAIN_MODELS     — модели через запятую, первая основная, остальные
-//                        запасные (до девяти); по умолчанию бесплатные.
-//                        Когда сайт станет популярным — сюда можно
-//                        поставить платную, например deepseek/deepseek-chat
+//                        запасные (до девяти). Имя вида `go/deepseek-v4-flash`
+//                        идёт в OpenCode Go, любое другое — в OpenRouter.
+//                        По умолчанию: три модели Go и бесплатные OpenRouter
 //   ALLOWED_ORIGINS    — адреса сайта через запятую (по умолчанию
 //                        https://yorov15.github.io, https://nerio-app.vercel.app и прежний https://kuda-podat.vercel.app)
 //   DATA_BASE_URL      — где лежат data/index.json и details.json (по
@@ -97,7 +100,8 @@ const allowed = configured.length ? configured : ['https://yorov15.github.io', '
 // Порядок: сначала те, что лучше пишут по-русски и не рассуждают вслух.
 // Модели пробуются по одной: каждый ответ проверяется (isUsableAnswer), и
 // занятая или болтливая модель просто уступает место следующей.
-const DEFAULT_MODELS = [
+const GO_MODELS = ['go/deepseek-v4-flash', 'go/glm-5.3-flash', 'go/qwen3.8-flash'];
+const FREE_MODELS = [
   'google/gemma-4-31b-it:free',
   'google/gemma-4-26b-a4b-it:free',
   'qwen/qwen3.8-27b:free',
@@ -107,7 +111,11 @@ const DEFAULT_MODELS = [
   'openrouter/free',
 ];
 const CONFIGURED = (process.env.EXPLAIN_MODELS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
-const groups = chunk((CONFIGURED.length ? CONFIGURED : DEFAULT_MODELS).slice(0, 9), 1);
+// Без ключа поставщика его модели не пробуем: иначе каждая тратила бы
+// попытку на заведомый отказ.
+const usable = (name) => (name.startsWith('go/') ? Boolean(process.env.OPENCODE_API_KEY) : Boolean(process.env.OPENROUTER_API_KEY));
+const pickModels = () => (CONFIGURED.length ? CONFIGURED : [...GO_MODELS, ...FREE_MODELS]).filter(usable).slice(0, 9);
+const modelGroups = () => chunk(pickModels(), 1);
 
 // След обращения: какая модель, за сколько и чем кончилось. Собирается на
 // каждый запрос отдельно и отдаётся только тому, кто попросил заголовком
@@ -126,16 +134,18 @@ async function askGroup(models, { system, user }, timeoutMs, trace) {
 }
 
 async function askOnce(models, { system, user }, timeoutMs) {
-  const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+  // Подписка Go отвечает по тому же протоколу, но берёт одну модель за запрос.
+  const go = models[0].startsWith('go/');
+  const res = await fetch(go ? 'https://opencode.ai/zen/go/v1/chat/completions' : 'https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+      Authorization: `Bearer ${go ? process.env.OPENCODE_API_KEY : process.env.OPENROUTER_API_KEY}`,
       'Content-Type': 'application/json',
       'HTTP-Referer': 'https://github.com/yorov15/where-can-i-apply',
       'X-Title': 'Nerio',
     },
     body: JSON.stringify({
-      models,
+      ...(go ? { model: models[0].slice(3) } : { models }),
       messages: [
         { role: 'system', content: system },
         { role: 'user', content: user },
@@ -145,7 +155,7 @@ async function askOnce(models, { system, user }, timeoutMs) {
     }),
     signal: AbortSignal.timeout(timeoutMs),
   });
-  if (!res.ok) throw new Error(`openrouter ${res.status}`);
+  if (!res.ok) throw new Error(`${go ? 'go' : 'openrouter'} ${res.status}`);
   const text = parseCompletion(await res.json());
   // Мусор — та же неудача, что и ошибка сети: идём к следующей модели.
   if (!isUsableAnswer(text)) throw new Error('unusable answer');
@@ -153,7 +163,7 @@ async function askOnce(models, { system, user }, timeoutMs) {
   return text;
 }
 
-const callModel = (prompt, trace) => callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 30000, perGroupMs: 9000 });
+const callModel = (prompt, trace) => callWithFallback(modelGroups(), (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 30000, perGroupMs: 9000 });
 
 function send(res, status, json, headers = {}) {
   res.statusCode = status;
@@ -185,7 +195,7 @@ async function handle(req, res, cors) {
   if (req.method === 'OPTIONS') return send(res, 204, {}, cors);
   if (req.method !== 'POST') return send(res, 405, { error: 'method' }, cors);
   if (!originAllowed(req.headers.origin, req.headers.host, allowed)) return send(res, 403, { error: 'origin' }, cors);
-  if (!process.env.OPENROUTER_API_KEY) return send(res, 503, { error: 'off' }, cors);
+  if (!pickModels().length) return send(res, 503, { error: 'off' }, cors);
 
   const raw = await readBody(req);
   if (raw === null) return send(res, 413, { error: 'too-big' }, cors);
