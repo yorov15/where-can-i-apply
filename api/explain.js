@@ -115,8 +115,14 @@ const FREE_MODELS = [
 const CONFIGURED = (process.env.EXPLAIN_MODELS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 // Без ключа поставщика его модели не пробуем: иначе каждая тратила бы
 // попытку на заведомый отказ.
-const usable = (name) => (name.startsWith('go/') ? Boolean(process.env.OPENCODE_API_KEY) : Boolean(process.env.OPENROUTER_API_KEY));
-const pickModels = () => (CONFIGURED.length ? CONFIGURED : process.env.OPENCODE_API_KEY ? GO_MODELS : FREE_MODELS).filter(usable).slice(0, 9);
+// Ключи Go начинаются с oc_sk_. Если такой ключ лежит не в той переменной
+// (04.10.2026 он попал в OPENROUTER_API_KEY и OpenRouter ответил 401 на всё),
+// берём его как ключ Go, а в OpenRouter не отправляем.
+const isGoKey = (key) => typeof key === 'string' && key.startsWith('oc_sk_');
+const goKey = () => [process.env.OPENCODE_API_KEY, process.env.OPENROUTER_API_KEY].find(isGoKey) ?? '';
+const routerKey = () => (isGoKey(process.env.OPENROUTER_API_KEY) ? '' : process.env.OPENROUTER_API_KEY ?? '');
+const usable = (name) => (name.startsWith('go/') ? Boolean(goKey()) : Boolean(routerKey()));
+const pickModels = () => (CONFIGURED.length ? CONFIGURED : goKey() ? GO_MODELS : FREE_MODELS).filter(usable).slice(0, 9);
 const modelGroups = () => chunk(pickModels(), 1);
 
 // След обращения: какая модель, за сколько и чем кончилось. Собирается на
@@ -141,7 +147,7 @@ async function askOnce(models, { system, user }, timeoutMs) {
   const res = await fetch(go ? 'https://opencode.ai/zen/go/v1/chat/completions' : 'https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${go ? process.env.OPENCODE_API_KEY : process.env.OPENROUTER_API_KEY}`,
+      Authorization: `Bearer ${go ? goKey() : routerKey()}`,
       'Content-Type': 'application/json',
       'HTTP-Referer': 'https://github.com/yorov15/where-can-i-apply',
       'X-Title': 'Nerio',
