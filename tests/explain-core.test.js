@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   validateRequest, buildPrompt, cacheKey, createCache, createLimiter,
-  originAllowed, corsHeaders, explain, cleanParams, parseCompletion, isUsableAnswer, chunk, callWithFallback, SYSTEM_PROMPT,
+  originAllowed, corsHeaders, explain, fallbackAnswer, cleanParams, parseCompletion, isUsableAnswer, chunk, callWithFallback, SYSTEM_PROMPT,
 } from '../api/_explain-core.js';
 
 const read = (name) => JSON.parse(readFileSync(new URL(`../data/${name}`, import.meta.url), 'utf8'));
@@ -41,11 +41,21 @@ test('нормальный запрос проходит, тексты прич�
   assert.match(r.value.reasons[0].text.detail, /не принимает аттестаты/);
 });
 
+test('подходящая программа: пустой список причин принимается, ответ про срок и шаги', () => {
+  const r = validateRequest({ programId: 'oxford-reach', reasons: [] }, index, details);
+  assert.equal(r.ok, true);
+  assert.match(buildPrompt(r.value, '2026-10-04').user, /подходишь по условиям/);
+  const plain = fallbackAnswer(r.value, '2026-10-04');
+  assert.match(plain, /Почему так\nСайт не нашёл причин для отказа/);
+  assert.match(plain, /Как это обойти\nОбходить нечего/);
+  assert.doesNotMatch(plain, /undefined/);
+});
+
 test('неизвестная программа и мусор отклоняются', () => {
   assert.equal(validateRequest({ ...good, programId: 'nope-nope' }, index, details).error, 'unknown-program');
   assert.equal(validateRequest({ ...good, programId: '../../etc' }, index, details).error, 'bad-request');
   assert.equal(validateRequest(null, index, details).error, 'bad-request');
-  assert.equal(validateRequest({ programId: 'oxford-reach', reasons: [] }, index, details).error, 'bad-request');
+  assert.equal(validateRequest({ programId: 'oxford-reach', reasons: 'нет' }, index, details).error, 'bad-request');
 });
 
 test('код причины, которого не знает wording.js, отклоняется, а не выдумывается', () => {

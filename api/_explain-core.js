@@ -90,7 +90,9 @@ export function validateRequest(body, index, details) {
   const program = index.programs?.find((p) => p.id === programId);
   const extra = details.programs?.[programId];
   if (!program || !extra) return { ok: false, error: 'unknown-program' };
-  if (!Array.isArray(reasons) || reasons.length === 0 || reasons.length > LIMITS.reasons) {
+  // Пустой список — программа подходит по условиям: объяснять нечего, но
+  // «что делать дальше» человек спросить может.
+  if (!Array.isArray(reasons) || reasons.length > LIMITS.reasons) {
     return { ok: false, error: 'bad-request' };
   }
 
@@ -128,6 +130,7 @@ export const SYSTEM_PROMPT = `Ты — помощник сайта «Nerio». С
 - Пиши на «ты», спокойно и по-доброму, без канцелярита и без слов «к сожалению». Не пугай человека.
 - Сразу пиши готовый ответ: без рассуждений, черновиков и пояснений о том, что ты делаешь. Первой строкой — «Почему так».
 - Формат — обычный текст без разметки, три коротких абзаца, каждый начинается со своей строки-заголовка: «Почему так», «Как это обойти», «Что сделать сейчас». Если обходиться нечем, в «Как это обойти» напиши это прямо.
+- Если блок <reasons> без пунктов, человек подходит по условиям. Тогда в «Почему так» коротко скажи, что отказов нет, в «Как это обойти» напиши, что обходить нечего, а в «Что сделать сейчас» назови срок и шаги подачи из условий программы.
 - Пункты со статусом [не подходит] — это причины отказа. Пункты со статусом [надо проверить] — не отказ: там что-то нужно уточнить или ещё выполнить. Не называй их отказом и не пиши «по трём пунктам нельзя», если отказ один; сначала скажи про отказ, потом коротко про остальное.
 - Не больше 120 слов, короткими предложениями. Числа, названия экзаменов и сроки бери точно как в данных.
 - Не обещай поступление и стипендию: ответ сайта только про то, пустят ли подавать заявку.`;
@@ -139,6 +142,7 @@ const FIELD_NAME = {
 };
 
 export function verdictWord(reasons) {
+  if (!reasons.length) return 'подходишь по условиям';
   return reasons.some((r) => r.status === 'fail') ? 'сейчас нельзя' : 'можно, но сначала надо проверить условия';
 }
 
@@ -176,13 +180,15 @@ export function buildPrompt({ program, extra, reasons }, today) {
 export function fallbackAnswer({ program, extra, reasons }, today) {
   const fails = reasons.filter((r) => r.status === 'fail');
   const checks = reasons.filter((r) => r.status !== 'fail');
-  const why = [];
+  const why = reasons.length ? [] : ['Сайт не нашёл причин для отказа: по условиям, которые программа называет, ты подходишь.'];
   for (const r of fails) why.push(`${r.text.title}. ${r.text.detail}${r.text.changeable ? ' Это можно изменить со временем.' : ''}`);
   for (const r of checks) why.push(`${fails.length ? 'Ещё нужно уточнить' : 'Это не отказ, но нужно уточнить'}: ${r.text.title}. ${r.text.detail}`);
 
   const fields = new Set(reasons.map((r) => r.field));
   const ways = (extra.textConditions ?? []).filter((c) => c.kind === 'workaround' && c.ru && (!c.field || fields.has(c.field))).slice(0, 3);
-  const how = ways.length
+  const how = !reasons.length
+    ? ['Обходить нечего: отказа нет.']
+    : ways.length
     ? ways.map((c) => c.ru)
     : [fails.length
       ? 'Программа обходного пути не называет. Стоит спросить в приёмной комиссии, есть ли исключения.'
@@ -191,7 +197,9 @@ export function fallbackAnswer({ program, extra, reasons }, today) {
   const now = [];
   const deadline = deadlineLine(program.deadline ?? null, today);
   if (deadline) now.push(`Срок: ${deadline}.`);
-  now.push(fails.length
+  now.push(!reasons.length
+    ? 'Открой сайт программы и сверь шаги подачи: сайт отвечает только на вопрос «пустят ли подавать».'
+    : fails.length
     ? 'Пока пункт выше не изменился, заявку подавать рано. Напиши в приёмную комиссию и уточни.'
     : 'Проверь условия на сайте программы. Если что-то неясно, спроси приёмную комиссию.');
 

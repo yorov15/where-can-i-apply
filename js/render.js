@@ -384,7 +384,9 @@ function explainBlock(model) {
   const status = el('p', 'explain-note');
   wrap.append(
     button,
-    el('p', 'explain-note', 'Уйдут только причины ответа по этой программе и названные в них цифры — без анкеты целиком и без даты рождения.'),
+    el('p', 'explain-note', model.reasons.length
+      ? 'Уйдут только причины ответа по этой программе и названные в них цифры — без анкеты целиком и без даты рождения.'
+      : 'Уйдёт только название программы — без анкеты и без даты рождения.'),
     status,
   );
   button.addEventListener('click', async () => {
@@ -507,6 +509,9 @@ function card(row, today, details, openCards, openMore, kindLine, plan) {
         body.append(item);
       }
       if (EXPLAIN_URL) body.append(explainBlock(model));
+    } else if (EXPLAIN_URL) {
+      // Подходящая программа: причин нет, но «что делать дальше» объяснить можно.
+      body.append(explainBlock(model));
     }
 
     if (!model.hasDetails) {
