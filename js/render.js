@@ -459,96 +459,106 @@ function card(row, today, details, openCards, openMore, kindLine, plan) {
   );
   box.append(head);
 
+  // Тело карточки строится, когда её раскрыли: триста закрытых карточек с
+  // телами — это больше тринадцати тысяч узлов, и пересобирались они при
+  // каждом ответе в анкете. На телефоне это были секунды зависания.
   const body = el('div', 'card-body');
+  let filled = false;
+  const fill = () => {
+    if (filled) return;
+    filled = true;
 
-  // Главное действие — сразу под шапкой, а не после списков условий.
-  const applyUrl = safeHttpUrl(model.applyUrl);
-  if (applyUrl) {
-    const link = el('a', 'button', 'Открыть сайт программы');
-    link.href = applyUrl;
-    link.target = '_blank';
-    link.rel = 'noopener';
-    body.append(link);
-  }
+    // Главное действие — сразу под шапкой, а не после списков условий.
+    const applyUrl = safeHttpUrl(model.applyUrl);
+    if (applyUrl) {
+      const link = el('a', 'button', 'Открыть сайт программы');
+      link.href = applyUrl;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      body.append(link);
+    }
 
-  // Отметить программу, чтобы вернуться к ней: из отмеченных собирается
-  // календарь с напоминаниями (см. planBlock).
-  const inPlan = plan.ids.includes(model.id);
-  const mark = el('button', 'button button-quiet plan-toggle', inPlan ? '✓ В моём плане' : '＋ В мой план');
-  mark.type = 'button';
-  mark.setAttribute('aria-pressed', String(inPlan));
-  mark.addEventListener('click', () => plan.toggle(model.id));
-  body.append(mark);
+    // Отметить программу, чтобы вернуться к ней: из отмеченных собирается
+    // календарь с напоминаниями (см. planBlock).
+    const inPlan = plan.ids.includes(model.id);
+    const mark = el('button', 'button button-quiet plan-toggle', inPlan ? '✓ В моём плане' : '＋ В мой план');
+    mark.type = 'button';
+    mark.setAttribute('aria-pressed', String(inPlan));
+    mark.addEventListener('click', () => plan.toggle(model.id));
+    body.append(mark);
 
-  if (model.reasons.length) {
-    body.append(el('h4', 'card-section-title', 'Почему так'));
-    for (const reason of model.reasons) {
-      const item = el('div', `reason ${reason.status}`);
-      const line = el('p', 'reason-text');
-      line.append(el('strong', null, `${reason.title}. `), document.createTextNode(reason.detail));
-      item.append(line);
-      if (reason.workarounds.length) {
-        item.append(el('p', 'reason-label', 'Как обойти:'), list(reason.workarounds, 'reason-list'));
+    if (model.reasons.length) {
+      body.append(el('h4', 'card-section-title', 'Почему так'));
+      for (const reason of model.reasons) {
+        const item = el('div', `reason ${reason.status}`);
+        const line = el('p', 'reason-text');
+        line.append(el('strong', null, `${reason.title}. `), document.createTextNode(reason.detail));
+        item.append(line);
+        if (reason.workarounds.length) {
+          item.append(el('p', 'reason-label', 'Как обойти:'), list(reason.workarounds, 'reason-list'));
+        }
+        if (reason.says.length) {
+          item.append(el('p', 'reason-label', 'Что пишет программа:'), list(reason.says, 'reason-list'));
+        }
+        if (reason.noWorkaround) {
+          item.append(el('p', 'reason-muted', 'Обходного пути программа не называет. Если сомневаешься — напиши в приёмную комиссию.'));
+        }
+        if (reason.seeBelow) item.append(el('p', 'reason-muted', 'Подробности — в условиях программы ниже.'));
+        body.append(item);
       }
-      if (reason.says.length) {
-        item.append(el('p', 'reason-label', 'Что пишет программа:'), list(reason.says, 'reason-list'));
+      if (EXPLAIN_URL) body.append(explainBlock(model));
+    }
+
+    if (!model.hasDetails) {
+      if (details.status === 'failed') {
+        const failed = el('p', 'details-state', 'Подробности не загрузились. Проверь интернет. ');
+        const retry = el('button', 'button button-small', 'Попробовать ещё раз');
+        retry.type = 'button';
+        retry.addEventListener('click', () => details.retry());
+        failed.append(retry);
+        body.append(failed);
+      } else {
+        body.append(skeleton('Подробности загружаются…'));
       }
-      if (reason.noWorkaround) {
-        item.append(el('p', 'reason-muted', 'Обходного пути программа не называет. Если сомневаешься — напиши в приёмную комиссию.'));
+    }
+
+    if (model.conditionsFailed) {
+      body.append(el('p', 'details-state', 'Условия программы не загрузились. Проверь интернет и обнови страницу.'));
+    }
+
+    for (const section of model.sections) {
+      body.append(el('h4', 'card-section-title', section.title), list(section.items, 'card-list'));
+    }
+
+    if (model.more.notes.length || model.more.attested.length) {
+      const more = el('details', 'more');
+      more.dataset.id = model.id;
+      more.open = openMore.has(model.id);
+      more.append(el('summary', 'more-head', 'Ещё'));
+      if (model.more.notes.length) more.append(list(model.more.notes, 'card-list'));
+      if (model.more.attested.length) {
+        more.append(el('p', 'reason-label', 'Не ограничивает — проверено по страницам программы:'), list(model.more.attested, 'card-list muted'));
       }
-      if (reason.seeBelow) item.append(el('p', 'reason-muted', 'Подробности — в условиях программы ниже.'));
-      body.append(item);
+      body.append(more);
     }
-    if (EXPLAIN_URL) body.append(explainBlock(model));
-  }
 
-  if (!model.hasDetails) {
-    if (details.status === 'failed') {
-      const failed = el('p', 'details-state', 'Подробности не загрузились. Проверь интернет. ');
-      const retry = el('button', 'button button-small', 'Попробовать ещё раз');
-      retry.type = 'button';
-      retry.addEventListener('click', () => details.retry());
-      failed.append(retry);
-      body.append(failed);
-    } else {
-      body.append(skeleton('Подробности загружаются…'));
+    if (model.source) {
+      const foot = el('p', model.stale ? 'card-source stale' : 'card-source', `${model.source}. `);
+      const sourceUrl = safeHttpUrl(model.sourceUrl);
+      if (sourceUrl) {
+        const a = el('a', null, 'Источник');
+        a.href = sourceUrl;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        foot.append(a);
+      }
+      body.append(foot);
     }
-  }
 
-  if (model.conditionsFailed) {
-    body.append(el('p', 'details-state', 'Условия программы не загрузились. Проверь интернет и обнови страницу.'));
-  }
-
-  for (const section of model.sections) {
-    body.append(el('h4', 'card-section-title', section.title), list(section.items, 'card-list'));
-  }
-
-  if (model.more.notes.length || model.more.attested.length) {
-    const more = el('details', 'more');
-    more.dataset.id = model.id;
-    more.open = openMore.has(model.id);
-    more.append(el('summary', 'more-head', 'Ещё'));
-    if (model.more.notes.length) more.append(list(model.more.notes, 'card-list'));
-    if (model.more.attested.length) {
-      more.append(el('p', 'reason-label', 'Не ограничивает — проверено по страницам программы:'), list(model.more.attested, 'card-list muted'));
-    }
-    body.append(more);
-  }
-
-  if (model.source) {
-    const foot = el('p', model.stale ? 'card-source stale' : 'card-source', `${model.source}. `);
-    const sourceUrl = safeHttpUrl(model.sourceUrl);
-    if (sourceUrl) {
-      const a = el('a', null, 'Источник');
-      a.href = sourceUrl;
-      a.target = '_blank';
-      a.rel = 'noopener';
-      foot.append(a);
-    }
-    body.append(foot);
-  }
-
+  };
   box.append(body);
+  if (box.open) fill();
+  else box.addEventListener('toggle', fill, { once: true });
 
   // Условия приезжают отдельным файлом: карточку раскрыли — просим их и
   // перерисовываем только её. Вместе со всеми деталями они ехали бы к
