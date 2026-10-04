@@ -12,7 +12,7 @@
 //   EXPLAIN_MODELS     — модели через запятую, первая основная, остальные
 //                        запасные (до девяти). Имя вида `go/deepseek-v4-flash`
 //                        идёт в OpenCode Go, любое другое — в OpenRouter.
-//                        По умолчанию: три модели Go и бесплатные OpenRouter
+//                        По умолчанию: с ключом Go — одна модель Go, без него — бесплатные OpenRouter
 //   ALLOWED_ORIGINS    — адреса сайта через запятую (по умолчанию
 //                        https://yorov15.github.io, https://nerio-app.vercel.app и прежний https://kuda-podat.vercel.app)
 //   DATA_BASE_URL      — где лежат data/index.json и details.json (по
@@ -100,9 +100,9 @@ const allowed = configured.length ? configured : ['https://yorov15.github.io', '
 // Порядок: сначала те, что лучше пишут по-русски и не рассуждают вслух.
 // Модели пробуются по одной: каждый ответ проверяется (isUsableAnswer), и
 // занятая или болтливая модель просто уступает место следующей.
-// Порядок по живой пробе 04.10.2026: qwen ответил за 7 с, glm-flash рассуждает
-// вслух и в лимит токенов не укладывается, deepseek не ответил за 40 с.
-const GO_MODELS = ['go/qwen3.8-flash', 'go/deepseek-v4-flash', 'go/glm-5.3-flash'];
+// По решению Мурода (04.10.2026) при ключе Go работает одна модель: deepseek-v4.1-flash
+// ответила за 3 с, её рассуждения приходят отдельным полем, а не в тексте.
+const GO_MODELS = ['go/deepseek-v4.1-flash'];
 const FREE_MODELS = [
   'google/gemma-4-31b-it:free',
   'google/gemma-4-26b-a4b-it:free',
@@ -116,7 +116,7 @@ const CONFIGURED = (process.env.EXPLAIN_MODELS ?? '').split(',').map((s) => s.tr
 // Без ключа поставщика его модели не пробуем: иначе каждая тратила бы
 // попытку на заведомый отказ.
 const usable = (name) => (name.startsWith('go/') ? Boolean(process.env.OPENCODE_API_KEY) : Boolean(process.env.OPENROUTER_API_KEY));
-const pickModels = () => (CONFIGURED.length ? CONFIGURED : [...GO_MODELS, ...FREE_MODELS]).filter(usable).slice(0, 9);
+const pickModels = () => (CONFIGURED.length ? CONFIGURED : process.env.OPENCODE_API_KEY ? GO_MODELS : FREE_MODELS).filter(usable).slice(0, 9);
 const modelGroups = () => chunk(pickModels(), 1);
 
 // След обращения: какая модель, за сколько и чем кончилось. Собирается на
