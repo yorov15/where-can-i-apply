@@ -100,7 +100,9 @@ const allowed = configured.length ? configured : ['https://yorov15.github.io', '
 // Порядок: сначала те, что лучше пишут по-русски и не рассуждают вслух.
 // Модели пробуются по одной: каждый ответ проверяется (isUsableAnswer), и
 // занятая или болтливая модель просто уступает место следующей.
-const GO_MODELS = ['go/deepseek-v4-flash', 'go/glm-5.3-flash', 'go/qwen3.8-flash'];
+// Порядок по живой пробе 04.10.2026: qwen ответил за 7 с, glm-flash рассуждает
+// вслух и в лимит токенов не укладывается, deepseek не ответил за 40 с.
+const GO_MODELS = ['go/qwen3.8-flash', 'go/deepseek-v4-flash', 'go/glm-5.3-flash'];
 const FREE_MODELS = [
   'google/gemma-4-31b-it:free',
   'google/gemma-4-26b-a4b-it:free',
@@ -143,6 +145,8 @@ async function askOnce(models, { system, user }, timeoutMs) {
       'Content-Type': 'application/json',
       'HTTP-Referer': 'https://github.com/yorov15/where-can-i-apply',
       'X-Title': 'Nerio',
+      // Go требует свой user-agent и номер сессии: без них отвечает 400.
+      ...(go ? { 'User-Agent': 'nerio-explainer/1.0', 'x-opencode-session': crypto.randomUUID() } : {}),
     },
     body: JSON.stringify({
       ...(go ? { model: models[0].slice(3) } : { models }),
