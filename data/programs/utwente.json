@@ -68,14 +68,14 @@
         },
         {
           "test": "TOEFL_IBT",
-          "min": 80,
+          "min": 90,
           "parts": true,
-          "evidence": "TOEFL iBT (internet-based) certificate, not older than two years, with an overall score of 80, and a minimum score on each section of at least 18."
+          "evidence": "TOEFL iBT (internet-based) certificate (before January 2026) not older than two years, with an overall score of 90, and a minimum score on each section of at least 21."
         },
         {
           "test": "TOEFL_IBT_2026",
-          "min": 4.0,
-          "evidence": "TOEFL iBT (internet-based) certificate, not older than two years, with an overall score of 4, and a minimum score of 4 on reading, listening and writing."
+          "min": 4.5,
+          "evidence": "TOEFL iBT (internet-based) certificate (after January 2026) not older than two years, with an overall score of 4,5, and a minimum score of 4,5 on reading, listening and writing."
         }
       ]
     },
@@ -118,7 +118,7 @@
       "kind": "note"
     },
     {
-      "ru": "Английский на бакалавриат: IELTS 6,0 общий и не ниже 5,5 в каждой части, либо TOEFL iBT 80 (старая шкала, до 21 января 2026) и не ниже 18 в каждой части, либо TOEFL iBT 4,0 по новой шкале. Сертификат не старше двух лет. Есть ещё PTE Academic и LANGUAGECERT, но их принимают немногие программы.",
+      "ru": "Английский на бакалавриат: IELTS 6,0 общий и не ниже 5,5 в каждой части, либо TOEFL iBT 90 (старая шкала, сдан до января 2026) и не ниже 21 в каждой части, либо TOEFL iBT 4,5 по новой шкале (не ниже 4,5 в чтении, аудировании и письме, 4 в говорении). Сертификат не старше двух лет. Есть ещё PTE Academic и LANGUAGECERT, но их принимают немногие программы.",
       "evidence": "an overall band score of at least 6.0, and a minimum score on each section of at least 5.5",
       "field": "language",
       "kind": "must"
@@ -161,22 +161,22 @@
     "pages": [
       {
         "url": "https://www.utwente.nl/en/education/bachelor/how-to-apply/",
-        "contentHash": "sha256:a6ef720e95dffe71e180a91ac1c54aabc35c822606ae67f81b710803cfe5c19f"
+        "contentHash": "sha256:85f96c4263c959f70fb92fe5570e1e3fe412e2d796d5210e03873b1f37965cc8"
       },
       {
         "url": "https://www.utwente.nl/en/education/bachelor/how-to-apply/language-requirements/",
-        "contentHash": "sha256:651c9e96de8e68e585b2886306d0fa8e81957278e2dc21a266a2ac6ec85a9c8c"
+        "contentHash": "sha256:76385da6f8817e1b4f52f5e1ec581133d7001a189802bcb2dbadda199c4dc4c2"
       },
       {
         "url": "https://www.utwente.nl/en/education/bachelor/apply/bachelor-deadlines/",
-        "contentHash": "sha256:307ba06e7497949d00376706f72e587ef831e3da23846a0af4c0b659f85196cd"
+        "contentHash": "sha256:7eb3d647a4514d8fac3977b1c012f95e3028fa618bab797aa898c3e8db6424b0"
       },
       {
         "url": "https://www.utwente.nl/en/education/bachelor/apply/tuition-fees/",
         "contentHash": "sha256:a1b025c3f37720fd3463d649d9b59396a102a322f4538e1e281d46a6f549a208"
       }
     ],
-    "lastVerified": "2026-09-27",
+    "lastVerified": "2026-10-05",
     "humanChecked": false
   }
 }

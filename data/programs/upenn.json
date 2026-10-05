@@ -7,7 +7,9 @@
   },
   "hostCountry": "US",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": true,
@@ -147,8 +149,8 @@
       "kind": "note"
     },
     {
-      "ru": "Сертификат действует два года и должен быть действителен в момент подачи. IELTS Indicator, IELTS One Retake и TOEFL MyBest не принимают.",
-      "evidence": "This means your scores must be valid at the time you submit you application.",
+      "ru": "Дата экзамена должна быть не раньше чем за два года до срока подачи, и принимают только экзамены, сданные с 1 апреля 2025 года. IELTS Indicator, IELTS One Retake и TOEFL MyBest не принимают.",
+      "evidence": "Please note, your exam date must be within two years from your application deadline to be valid.",
       "field": "language",
       "kind": "must"
     },
@@ -234,17 +236,17 @@
   },
   "source": {
     "url": "https://admissions.upenn.edu/how-to-apply/international-applicants",
-    "lastVerified": "2026-09-24",
+    "lastVerified": "2026-10-05",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
       {
         "url": "https://admissions.upenn.edu/how-to-apply/international-applicants",
-        "contentHash": "sha256:49b57208626a76803de6cb19a14f1293d0efb12f5cbeb9a3d40db679af7c0c43"
+        "contentHash": "sha256:3dbf7a2fbcd78a40c3ebd767bce0c3961a2c2e8fcb01eadc2f5631edaaf767d9"
       },
       {
         "url": "https://admissions.upenn.edu/how-to-apply/international-applicants/guidelines",
-        "contentHash": "sha256:d2657ccaa5042fd3c32d8d2efee934338499227327d547b6ce2a2e1c72b69e0d"
+        "contentHash": "sha256:cecb3675a275185ff2a39adda4c31dbb72da4fd8215ac91749aa1c2683e670ea"
       },
       {
         "url": "https://admissions.upenn.edu/affording-penn/international-aid",

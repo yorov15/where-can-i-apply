@@ -7,7 +7,9 @@
   },
   "hostCountry": "KZ",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": true,
@@ -20,41 +22,41 @@
   "eligibility": {
     "citizenship": {
       "allow": "*",
-      "evidence": "International applicants from countries eligible for visa issuance before arrival"
+      "evidence": "international applicantsfrom countries eligible for visa issuance upon arrival"
     },
     "schoolCountry": {
       "noLimit": true,
       "evidence": null,
       "checkedBy": "assistant",
-      "checkedAt": "2026-09-11",
+      "checkedAt": "2026-10-05",
       "note": "страну школы не называют и не ограничивают: нужен аттестат с оценками или справка из школы о выпускном классе"
     },
     "schoolYears": {
       "noLimit": true,
       "evidence": null,
       "checkedBy": "assistant",
-      "checkedAt": "2026-09-11",
+      "checkedAt": "2026-10-05",
       "note": "числа лет школы не требуют; подготовительный год необязателен — можно поступать сразу на бакалавриат"
     },
     "graduationYear": {
       "noLimit": true,
       "evidence": null,
       "checkedBy": "assistant",
-      "checkedAt": "2026-09-11",
+      "checkedAt": "2026-10-05",
       "note": "подают и из выпускного класса, и уже окончившие школу — года выпуска не ограничивают"
     },
     "age": {
       "noLimit": true,
       "evidence": null,
       "checkedBy": "assistant",
-      "checkedAt": "2026-09-11",
+      "checkedAt": "2026-10-05",
       "note": "возраст на страницах приёма не упоминается"
     },
     "gpa": {
       "noLimit": true,
       "evidence": null,
       "checkedBy": "assistant",
-      "checkedAt": "2026-09-11",
+      "checkedAt": "2026-10-05",
       "note": "в конкурсе на финпомощь балла аттестата не требуют — вместо него NUET, SAT/ACT, IB или A-level; порог по баллу есть только в платном приёме, он в условиях ниже"
     },
     "language": {
@@ -76,20 +78,20 @@
       "kind": "must"
     },
     {
-      "ru": "Самый ранний срок — ноябрьский. В конкурсе на финпомощь через экзамен NUET подают до 20 ноября, и иностранцев этот путь тоже касается. Дата на странице — от прошлого цикла; новые даты университет вывешивает осенью, приём открывается 27 сентября.",
-      "evidence": "NUET Applicants (NUFYP and Undergraduate programs, including international): September 27-November 20, 2025",
+      "ru": "Даты набора 2027/28 на странице пока не названы: подача заявок на финпомощь начинается в октябре 2026, сроки для категории NUET (в том числе для иностранцев) университет объявит позже. Для заявителей из стран, которым нужна виза до въезда в Казахстан, даты вообще не названы.",
+      "evidence": "NUET Applicants (NUFYP and Undergraduate programs, including international applicants) : October 2026 - To be announced later",
       "field": null,
       "kind": "steps"
     },
     {
-      "ru": "Остальные категории конкурса на финпомощь закрываются позже: SAT/ACT, IB, A-level и победители олимпиад — до 28 января, отдельная категория для иностранцев — до 10 февраля. Какие требования у категории для иностранцев, страница не расписывает.",
-      "evidence": "International Applicants (Undergraduate programs only and International SAT/ACT applicants for NUFYP): September 27- February 10, 2026",
+      "ru": "Для остальных категорий (SAT/ACT, IB, A-level, победители олимпиад) и отдельной категории для иностранцев сроки тоже пока не названы: приём с октября 2026, закрытие объявят позже. Какие требования у категории для иностранцев, страница не расписывает.",
+      "evidence": "International applicants applying for undergraduate programs, as well as for the NUFYP program under the SAT/ACT category : October 2026 - to be announced later.",
       "field": null,
       "kind": "steps"
     },
     {
       "ru": "Для финпомощи NUET не обязателен: вместо него принимают Digital SAT от 1240 или ACT от 26.",
-      "evidence": "SAT/ACT applicants Digital SAT Reasoning Test - 1240 OR ACT - 26 composite score",
+      "evidence": "Digital SAT: 1240 or ACT: 26",
       "field": "gpa",
       "kind": "note"
     },
@@ -119,7 +121,7 @@
     },
     {
       "ru": "Балл аттестата — 4,0 из 5 — требуют только в платном приёме. В конкурсе на финпомощь его место занимают NUET, SAT/ACT, IB или A-level, поэтому балл ниже четырёх подачу на финпомощь не закрывает.",
-      "evidence": "GPA or equivalent and/or UNT in English *** 4.0 out of 5.0",
+      "evidence": "Academic Results (one of the results) GPA - 4.0 out of 5.0",
       "field": "gpa",
       "kind": "note"
     },
@@ -160,14 +162,14 @@
       "kind": "must"
     },
     {
-      "ru": "NUET в прошлом цикле проводили только в городах Казахстана: Астане, Алматы, Шымкенте, Караганде и других. На экзамен придётся ехать в Казахстан.",
-      "evidence": "Dates of NUET 2026 February 1, 2026 : Astana, Kostanay, Aktau, Kokshetau, Oskemen",
+      "ru": "Даты и города NUET 2027 университет пока не назвал. В прошлом цикле экзамен проводили только в городах Казахстана (Астана, Алматы, Шымкент, Караганда и другие), так что ехать на него, скорее всего, придётся в Казахстан.",
+      "evidence": "Dates of NUET 2027 To be announced later",
       "field": null,
       "kind": "steps"
     },
     {
       "ru": "Плата за подачу 10 000 тенге, но в последние две недели перед первым утверждённым сроком она втрое больше. Не возвращается. Сверь на сайте, какой срок считать.",
-      "evidence": "The application fee is increased 3 times from the established amount when paid within the last two weeks before the first",
+      "evidence": "The application fee is increased 3 times from the established amount when paid within the last two weeks preceding the first",
       "field": null,
       "kind": "money",
       "fee": {
@@ -179,7 +181,7 @@
   ],
   "deadline": {
     "opens": null,
-    "closes": "2027-02-10",
+    "closes": null,
     "recurring": "annual",
     "confidence": "expected"
   },
@@ -193,21 +195,21 @@
   },
   "source": {
     "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
-    "lastVerified": "2026-09-24",
+    "lastVerified": "2026-10-05",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
       {
         "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
-        "contentHash": "sha256:18e67f62b1fa1ed57dc280ff309420b8f10e42eab8325c33a8daa25e2a448f13"
+        "contentHash": "sha256:e917c202366217cd7e9726bd4de59f5bb14c80fc72137fd9226324a15be98227"
       },
       {
         "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/financial-aid-end-scholarships/",
-        "contentHash": "sha256:5b7d72a70af24c92160e42d197860668a8f6c76a9c663d8a12262e042c9af090"
+        "contentHash": "sha256:3cd56e8f9dd9d3d1f0f9d4cd6afab30be0bcb127673a2869687a2791a5da00e1"
       },
       {
         "url": "https://nu.edu.kz/admissions/international-admission/international-admission_general/",
-        "contentHash": "sha256:ea58f398629e1c706c45d1e07776134390a8112737056240ea6be4e58f5f9f8a"
+        "contentHash": "sha256:d44cdd4a4c5d477223939e7a5ba39b54c56a980b79c22ea6d1e911f9e2774dde"
       }
     ]
   }

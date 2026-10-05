@@ -2,7 +2,9 @@
   "id": "barnard-college",
   "status": "published",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Barnard College — колледж в США для женщин, помощь иностранцам есть, но стипендий мало",
     "orig": "Barnard College"
@@ -26,35 +28,35 @@
       "noLimit": true,
       "evidence": null,
       "checkedBy": "assistant",
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-10-05",
       "note": "страну школы не ограничивают: подходят национальные экзамены, нужны табели за каждый год"
     },
     "schoolYears": {
       "noLimit": true,
       "evidence": null,
       "checkedBy": "assistant",
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-10-05",
       "note": "числа лет школы страницы не называют"
     },
     "graduationYear": {
       "noLimit": true,
       "evidence": null,
       "checkedBy": "assistant",
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-10-05",
       "note": "года выпуска страницы не называют"
     },
     "age": {
       "noLimit": true,
       "evidence": null,
       "checkedBy": "assistant",
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-10-05",
       "note": "возраст на этих страницах не упоминается"
     },
     "gpa": {
       "noLimit": true,
       "evidence": null,
       "checkedBy": "assistant",
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-10-05",
       "note": "порога по среднему баллу нет: колледж читает табели и результаты экзаменов целиком"
     },
     "language": {
@@ -143,8 +145,8 @@
       "kind": "must"
     },
     {
-      "ru": "Сроки на страницах колледжа устарели или расходятся: раздел о раундах ещё показывает даты прошлого набора (ранний тур 1 ноября 2025, обычный 1 января 2026), а раздел про помощь называет 15 ноября и 15 января. Актуальные даты на 2026/27 сверь в личном кабинете или у приёмной комиссии, пока они не обновятся.",
-      "evidence": "Regular Decision Deadline: January 1, 2026",
+      "ru": "Сроки набора 2027/28: ранний тур (обязывающий) — до 1 ноября 2026, ответ в середине декабря; обычный тур — до 1 января 2027, ответ в конце марта, подтвердить место нужно до 1 мая. Заявки на финансовую помощь: 1 ноября 2026 и 15 января 2027 (FAFSA, CSS Profile и документы).",
+      "evidence": "Regular Decision Deadline: January 1, 2027",
       "field": null,
       "kind": "steps"
     }
@@ -173,11 +175,11 @@
       },
       {
         "url": "https://barnard.edu/admissions/application-rounds",
-        "contentHash": "sha256:a89db2d4bbd76356f76bd0955fc2cdc41270b665625da9c985545fc62e72bd54"
+        "contentHash": "sha256:78b49cf42efd8ae20d91583d0c9d13d24b90c0df05b39be37790be3a3b64b910"
       },
       {
         "url": "https://barnard.edu/admissions/how-to-apply",
-        "contentHash": "sha256:3c7da85f7fce3468c733ad57c27bb0ae0dd28023ed091a3bb41a6748c94c92bc"
+        "contentHash": "sha256:b7c9dae3619d7ca390f5c802197f7e494ad2dd3b414b56458a8827a5480c6ce9"
       },
       {
         "url": "https://barnard.edu/admissions/first-year-applicants",
@@ -189,14 +191,14 @@
       },
       {
         "url": "https://barnard.edu/finaid/apply-for-aid",
-        "contentHash": "sha256:b553dc1f6af25b781f28cf4e764396c24b5ae843fc4e60789580452a2fe51af4"
+        "contentHash": "sha256:921c9c5b8ab642bd95916b0eecc6c05ead5c67ad5689a043f665aa0160e780ea"
       },
       {
         "url": "https://barnard.edu/finaid/general-policies",
         "contentHash": "sha256:1a8fb704c281a45183edd9b6f94943d6a397c60c869547fd2c91cd24bb20ce31"
       }
     ],
-    "lastVerified": "2026-09-26",
+    "lastVerified": "2026-10-05",
     "humanChecked": false
   }
 }

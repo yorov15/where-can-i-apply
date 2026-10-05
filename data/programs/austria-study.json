@@ -2,9 +2,11 @@
   "id": "austria-study",
   "status": "published",
   "kind": "national",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
-    "ru": "Австрия: бакалавриат — 751,92 евро за семестр, но обучение в основном на немецком",
+    "ru": "Австрия: бакалавриат — 726,72 евро за семестр, но обучение в основном на немецком",
     "orig": "Bachelor's studies in Austria — tuition fees, application and admission"
   },
   "hostCountry": "AT",
@@ -14,7 +16,7 @@
     "living": false,
     "travel": false,
     "note": {
-      "ru": "Для студентов из третьих стран плата — 751,92 евро за семестр, плюс обязательный взнос 25,20 евро за семестр (профсоюз и страховка). Полных стипендий на всю программу OeAD не даёт: в Австрии их почти нет. Жизнь стоит около 1 300 евро в месяц, самая большая статья — жильё, 450–700."
+      "ru": "Для студентов из третьих стран плата — 726,72 евро за семестр, плюс обязательный взнос 26,20 евро за семестр (профсоюз и страховка). Полных стипендий на всю программу OeAD не даёт: в Австрии их почти нет. Жизнь стоит около 1 300 евро в месяц, самая большая статья — жильё, 450–700."
     }
   },
   "eligibility": {
@@ -23,7 +25,7 @@
       "evidence": null,
       "checkedBy": "assistant",
       "checkedAt": "2026-09-27",
-      "note": "гражданство не ограничивают: для студентов из третьих стран меняется только плата — 751,92 евро за семестр"
+      "note": "гражданство не ограничивают: для студентов из третьих стран меняется только плата — 726,72 евро за семестр"
     },
     "schoolCountry": {
       "notMeasured": true,
@@ -79,19 +81,19 @@
       "kind": "must"
     },
     {
-      "ru": "Плата для студентов из третьих стран с видом на жительство — 751,92 евро за семестр. Граждане ЕС и те, кто учится в пределах минимального срока плюс два семестра, не платят.",
-      "evidence": "For all other students from third countries (who are in possession of a Residence Permit-Student ) 751.92 euros per semester is generally required.",
+      "ru": "Плата для студентов из третьих стран с видом на жительство — 726,72 евро за семестр. Граждане ЕС и те, кто учится в пределах минимального срока плюс два семестра, не платят.",
+      "evidence": "For all other students from third countries (who hold a Residence Permit-Student ), a fee of €726.72 per semester is generally required.",
       "field": null,
       "kind": "money",
       "fee": {
-        "amount": 751.92,
+        "amount": 726.72,
         "currency": "EUR",
-        "evidence": "For all other students from third countries (who are in possession of a Residence Permit-Student ) 751.92 euros per semester is generally required."
+        "evidence": "For all other students from third countries (who hold a Residence Permit-Student ), a fee of €726.72 per semester is generally required."
       }
     },
     {
-      "ru": "Сверху обязателен взнос 25,20 евро за семестр — профсоюз студентов и страхование от несчастных случаев. Его платят все.",
-      "evidence": "The student union membership fee \"ÖH-Beitrag\" and the student accident insurance fee is 25,20 euros per semester and is compulsory for all students.",
+      "ru": "Сверху обязателен взнос 26,20 евро за семестр — профсоюз студентов и страхование от несчастных случаев. Его платят все.",
+      "evidence": "The student union membership fee (\"ÖH-Beitrag\"), which includes student accident insurance, is €26.20 per semester and is compulsory for all students",
       "field": null,
       "kind": "money"
     },
@@ -160,7 +162,7 @@
       },
       {
         "url": "https://studyinaustria.at/en/tuition",
-        "contentHash": "sha256:db58e520b4df1e7d53bd32977d1f8599da533afbacebb470edb163877488b175"
+        "contentHash": "sha256:046b871c78db9aa8916ed64930b8c713e73e9969a4da18dbd4922765a26b782a"
       },
       {
         "url": "https://studyinaustria.at/en/live-and-work/living-costs",
@@ -168,10 +170,10 @@
       },
       {
         "url": "https://vorstudienlehrgang.oead.at/en/",
-        "contentHash": "sha256:a0df021fb23bfc23386b418d3a90f9d28def91335c197463394c48d7d6122294"
+        "contentHash": "sha256:7dbc34e7d8b216e55746bfc5b7b6123d65874b9af9136819cfcda37ec3732bb2"
       }
     ],
-    "lastVerified": "2026-09-27",
+    "lastVerified": "2026-10-05",
     "humanChecked": false
   }
 }
