@@ -40,7 +40,9 @@ jobs:
       # Если правили data/programs и не пересобрали, карточка не доедет до людей.
       - name: Собранные файлы совпадают с data/programs
         run: |
-          if [ -n "$(git status --porcelain data feed.xml)" ]; then
+          # Дата сборки (generatedAt) меняется каждый день и сама по себе не
+          # значит, что данные устарели: сравниваем всё остальное.
+          if ! git diff -I'"generatedAt"' --quiet data feed.xml || [ -n "$(git ls-files --others --exclude-standard data feed.xml)" ]; then
             git status --short data feed.xml
             echo "Собранные файлы устарели: запусти python -m tools.build и закоммить data/ и feed.xml."
             exit 1
