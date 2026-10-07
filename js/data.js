@@ -8,7 +8,17 @@ async function loadJson(path) {
   return res.json();
 }
 
-export const loadIndex = () => loadJson('data/index.json');
+// Запрос мог стартовать раньше, из early.js. Берём его один раз; если он не
+// удался или ответил ошибкой, грузим обычным путём.
+export async function loadIndex() {
+  const early = globalThis.__nerioIndex;
+  globalThis.__nerioIndex = null;
+  if (early) {
+    const res = await early;
+    if (res && res.ok) return res.json();
+  }
+  return loadJson('data/index.json');
+}
 export const loadDetails = () => loadJson('data/details.json');
 
 // Копия держится в памяти: карточку можно раскрыть и закрыть несколько раз,
