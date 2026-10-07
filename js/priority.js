@@ -9,6 +9,7 @@
 // В форму выбор уходит скрытыми полями в том же порядке: их читает
 // js/form.js, так что об этом файле знает только он.
 import { countryName } from './filter.js';
+import { plural } from './lib/format.js';
 import { CHOSEN_MAJORS, majorLabel } from './lib/majors.js';
 
 const NAME = { countries: 'priorityCountry', majors: 'priorityMajor' };
@@ -19,8 +20,12 @@ const NAME = { countries: 'priorityCountry', majors: 'priorityMajor' };
 // программы, покрывающие десятки вузов. Решение Мурода 29.09.2026.
 const countryLabel = (value, count) => {
   const name = countryName(value);
-  if (!count) return name;
-  return `${name} · ${count.programs} программ / ${count.universities} вузов`;
+  if (!count) return { name, note: '' };
+  const { programs, universities } = count;
+  return {
+    name,
+    note: `${programs} ${plural(programs, 'программа', 'программы', 'программ')} · ${universities} ${plural(universities, 'вуз', 'вуза', 'вузов')}`,
+  };
 };
 
 // Счётчик направления включает и записи «любое направление» (вуз целиком):
@@ -29,7 +34,7 @@ const countryLabel = (value, count) => {
 // и числа были крошечными. Решение Мурода 29.09.2026.
 const majorLabelWithCount = (value, count) => {
   const name = majorLabel(value) ?? value;
-  return count === undefined ? name : `${name} · ${count}`;
+  return { name, note: count === undefined ? '' : String(count) };
 };
 
 function setupOne(node, key, changed, format) {
@@ -59,11 +64,14 @@ function setupOne(node, key, changed, format) {
     for (const button of list.children) {
       const at = order.indexOf(button.dataset.value);
       const on = at >= 0;
-      button.textContent = on ? `${at + 1}. ${label(button.dataset.value)}` : label(button.dataset.value);
+      const { name, note } = label(button.dataset.value);
+      button.replaceChildren(
+        Object.assign(document.createElement('span'), { className: 'chip-name', textContent: on ? `${at + 1}. ${name}` : name }),
+        ...(note ? [Object.assign(document.createElement('small'), { className: 'chip-note', textContent: note })] : []),
+      );
       button.setAttribute('aria-pressed', on ? 'true' : 'false');
-      button.setAttribute('aria-label', on
-        ? `${label(button.dataset.value)}: приоритет ${at + 1}`
-        : `${label(button.dataset.value)}: не выбран`);
+      const spoken = note ? `${name}, ${note}` : name;
+      button.setAttribute('aria-label', on ? `${spoken}: приоритет ${at + 1}` : `${spoken}: не выбран`);
     }
     hidden();
   };

@@ -504,6 +504,13 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .chips { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-bottom: var(--s-4); }
 .chip { padding: .375rem .75rem; font: inherit; font-size: .9375rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-control); cursor: pointer; }
 .chip[aria-pressed="true"] { color: var(--accent-text); background: var(--accent-soft); border-color: var(--accent); font-weight: 700; }
+/* Анкета: чипы стран и направлений переносятся строками на любом экране;
+   лента с прокруткой вбок нужна только фильтрам каталога. */
+#profile .chips { flex-flow: row wrap; gap: var(--s-2); margin: 0 0 var(--s-4); padding: 0; overflow: visible; }
+#profile .chip { flex-direction: column; align-items: flex-start; justify-content: center; gap: 0; width: auto; }
+.chip-name, .chip-note { display: block; text-align: left; }
+.chip-note { margin-top: .0625rem; font-size: .75rem; font-weight: 400; color: var(--muted); }
+.chip[aria-pressed="true"] .chip-note { color: inherit; }
 
 /* Компактная карточка каталога. Раньше одна карточка занимала около 230px,
    и список из 200 вузов давал 50 000px прокрутки. Статус уже назван
