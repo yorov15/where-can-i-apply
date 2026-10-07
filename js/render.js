@@ -285,9 +285,13 @@ export function renderResults(nodes, profile, programs, today, details) {
   const plan = nodes.plan;
   const openCards = rememberOpen(resultsNode, 'details.card');
   const openMore = rememberOpen(resultsNode, 'details.more');
+  // Пока каталог не на экране, карточки не пересобираем: это 300+ узлов на
+  // каждое нажатие в анкете, а увидит их человек только при открытии каталога.
+  // Прежние карточки остаются как есть, main.js построит свежие при показе.
+  const skipCards = Boolean(nodes.skipCards?.()) && programs.length > 0;
   summaryNode.textContent = '';
   agendaNode.textContent = '';
-  resultsNode.textContent = '';
+  if (!skipCards) resultsNode.textContent = '';
 
   if (!programs.length) {
     resultsNode.append(el('p', 'empty', 'Программ пока нет. Данные собираются.'));
@@ -328,12 +332,12 @@ export function renderResults(nodes, profile, programs, today, details) {
   // группы остаются те же, меняется только порядок внутри.
   const priorities = { countries: profile.priorityCountries ?? [], majors: profile.priorityMajors ?? [] };
   const sorted = hasPriorities(priorities);
-  if (sorted) {
+  if (!skipCards && sorted) {
     resultsNode.append(el('p', 'hint',
       'Сверху — программы из выбранных тобой стран и направлений, в том порядке, в каком ты их поставил.'));
   }
 
-  for (const group of groupRows(rows)) {
+  for (const group of skipCards ? [] : groupRows(rows)) {
     const section = el('section', `group ${group.status}`);
     const title = el('h2', 'group-title', `${group.title} (${group.rows.length})`);
     title.dataset.base = group.title;
@@ -348,12 +352,13 @@ export function renderResults(nodes, profile, programs, today, details) {
     }
     resultsNode.append(section);
   }
-  refreshFilter(programs);
+  if (!skipCards) refreshFilter(programs);
 
   // Есть подходящие — кнопка ведёт прямо к ним, иначе к полному списку.
   catalogButton.textContent = ready.count ? 'Показать подходящие' : `Все программы (${rows.length})`;
   catalogButton.dataset.bucket = ready.count ? 'yes' : 'all';
   catalogButton.hidden = false;
+  return { skippedCards: skipCards };
 }
 
 function answerNodes(text, fallback = false) {

@@ -32,12 +32,15 @@ const lead = document.querySelector('.lead');
 function showCatalog(on) {
   answerScreen.hidden = on || !finished;
   catalogScreen.hidden = !on || !finished;
+  if (on && finished) buildCards();
   if (lead) lead.hidden = finished;
   tabbar.show(finished);
   tabbar.sync();
 }
 
 function openProgram(id) {
+  // Карточка может ещё не существовать: пока каталог закрыт, их не строят.
+  buildCards();
   // Карточку, спрятанную фильтром, открыть нельзя: сначала снимаем его.
   catalogFilter.reset();
   location.hash = 'programs';
@@ -97,7 +100,18 @@ const nodes = {
   resultsNode: document.getElementById('results'),
   catalogButton,
   onOpenProgram: openProgram,
+  // Каталог закрыт — карточки не пересобираем (см. renderResults).
+  skipCards: () => catalogScreen.hidden && !forceCards,
 };
+
+// Карточки каталога отстали от анкеты, пока каталог был закрыт.
+let cardsStale = false;
+let forceCards = false;
+function buildCards() {
+  if (!cardsStale) return;
+  forceCards = true;
+  try { refresh(); } finally { forceCards = false; }
+}
 
 // На широком экране фильтры лежат в боковой колонке, а не прячутся под
 // «Ещё фильтры»: место есть, а лишний тап не нужен.
@@ -205,7 +219,7 @@ function refresh(profile = readForm(form)) {
   saveProfile(profile, localStorage);
   profileBox.update(profile);
   tabbar.setPlanCount(plan.ids.length);
-  renderResults(nodes, profile, programs, today, details);
+  cardsStale = Boolean(renderResults(nodes, profile, programs, today, details)?.skippedCards);
 }
 
 function fetchDetails() {
