@@ -8,23 +8,24 @@
 :root {
   color-scheme: light dark;
 
-  --bg: #f2f3f0;
-  --surface: #fbfbf9;
-  --soft: #e7e9e5;
-  --line: #d8dbd5;
-  --line-strong: #7b807a;
-  --fg: #1a1d1b;
-  --muted: #53595a;
-  --ink: #1a1d1b;
-  --on-ink: #f2f3f0;
+  --bg: #f6f8fb;
+  --surface: #fefefe;
+  --soft: #edf1f7;
+  --line: #dce2ed;
+  --line-strong: #7d889e;
+  --fg: #141a2a;
+  --muted: #566177;
+  --ink: #141a2a;
+  --on-ink: #f6f8fb;
 
-  --accent: #27408a;
-  --accent-text: #27408a;
-  --accent-soft: #e2e6f1;
-  --on-accent: #f6f7fc;
-  --on-hero: #1a1d1b;
-  --tint: rgb(39 64 138 / .1);
+  --accent: #2d52d6;
+  --accent-text: #2845b8;
+  --accent-soft: #e5ebfc;
+  --on-accent: #f8f9ff;
+  --on-hero: #141a2a;
+  --tint: rgb(45 82 214 / .12);
   --accent-glow: none;
+  --amber: #f2b123;
 
   --yes: #146c3e;
   --yes-bg: #e2f2e9;
@@ -36,7 +37,7 @@
   --no-bg: #f9e5e2;
 
   --shadow: 0 0 0 1px var(--line);
-  --hover: rgb(26 29 27 / .06);
+  --hover: rgb(20 26 42 / .06);
 
   --r-control: .5rem;
   --r-container: .75rem;
@@ -63,22 +64,22 @@
 /* Тёмная палитра записана дважды (по системе и по ручному выбору): блок нельзя поделить между @media и атрибутом. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #121413;
-    --surface: #1a1d1c;
-    --soft: #242827;
-    --line: #2f3432;
-    --line-strong: #8b928d;
-    --fg: #ecedea;
-    --muted: #a8aeaa;
-    --ink: #ecedea;
-    --on-ink: #121413;
+    --bg: #161b2c;
+    --surface: #1f2540;
+    --soft: #2a3153;
+    --line: #343d63;
+    --line-strong: #8791b8;
+    --fg: #eef1fb;
+    --muted: #b0b8d6;
+    --ink: #eef1fb;
+    --on-ink: #161b2c;
 
-    --accent: #a3b6ec;
-    --accent-text: #bccaf2;
-    --accent-soft: #252d45;
-    --on-accent: #10172c;
-    --on-hero: #ecedea;
-    --tint: rgb(163 182 236 / .16);
+    --accent: #8fa8ff;
+    --accent-text: #b2c2ff;
+    --accent-soft: #2a3470;
+    --on-accent: #0c1230;
+    --on-hero: #eef1fb;
+    --tint: rgb(143 168 255 / .18);
     --accent-glow: none;
 
     --yes: #86e0ad;
@@ -97,22 +98,22 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #121413;
-  --surface: #1a1d1c;
-  --soft: #242827;
-  --line: #2f3432;
-  --line-strong: #8b928d;
-  --fg: #ecedea;
-  --muted: #a8aeaa;
-  --ink: #ecedea;
-  --on-ink: #121413;
+  --bg: #161b2c;
+  --surface: #1f2540;
+  --soft: #2a3153;
+  --line: #343d63;
+  --line-strong: #8791b8;
+  --fg: #eef1fb;
+  --muted: #b0b8d6;
+  --ink: #eef1fb;
+  --on-ink: #161b2c;
 
-  --accent: #a3b6ec;
-  --accent-text: #bccaf2;
-  --accent-soft: #252d45;
-  --on-accent: #10172c;
-  --on-hero: #ecedea;
-  --tint: rgb(163 182 236 / .16);
+  --accent: #8fa8ff;
+  --accent-text: #b2c2ff;
+  --accent-soft: #2a3470;
+  --on-accent: #0c1230;
+  --on-hero: #eef1fb;
+  --tint: rgb(143 168 255 / .18);
   --accent-glow: none;
 
   --yes: #86e0ad;
@@ -153,10 +154,10 @@ p { text-wrap: pretty; }
 
 h1 { font-size: clamp(1.75rem, 1.35rem + 1.9vw, 2.5rem); line-height: 1.05; margin: 0 0 var(--s-3); font-weight: 800; letter-spacing: -.035em; }
 .lead { margin: 0 0 var(--s-6); max-width: 60ch; color: var(--muted); font-size: 1.0625rem; }
-.hero { margin: 0 0 var(--s-5); padding: var(--s-4) 0 0; color: var(--fg); border-top: 3px solid var(--ink); }
+.hero { margin: 0 0 var(--s-4); padding: var(--s-3) 0 0; color: var(--fg); border-top: 4px solid var(--amber); }
 /* Ответ и каталог идут без шапки: название уже в верхней полосе, а ответ должен быть на первом экране. h1 остаётся для скринридеров. */
 body:has(:is(#answer, #catalog):not([hidden])) .hero { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); box-shadow: none; }
-.hero h1 { color: var(--on-hero); font-size: clamp(2rem, 1.5rem + 3.2vw, 3.25rem); }
+.hero h1 { color: var(--on-hero); font-size: clamp(1.75rem, 1.4rem + 2.6vw, 3rem); }
 .hero .lead { margin: 0; }
 .hint, small { color: var(--muted); font-size: .875rem; }
 .hint { margin: 0 0 var(--s-4); padding: var(--s-3) var(--s-4); background: var(--soft); border-radius: var(--r-control); }
@@ -174,7 +175,7 @@ summary:focus-visible { outline-offset: -3px; }
 /* Верхняя полоса: название, «Вопросы» и переключатель темы всегда на виду, как на обычных сайтах. */
 .topbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--s-1); margin: 0 0 var(--s-3); white-space: nowrap; }
 .brand { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; margin-right: auto; font-weight: 800; letter-spacing: -.02em; color: var(--fg); text-decoration: none; }
-.brand::before { content: ""; width: .625rem; height: .625rem; background: var(--accent); }
+.brand::before { content: ""; width: 1.75rem; height: 1.75rem; background: url("../icons/logo.svg") center / contain no-repeat; }
 .topbar nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--s-2); font-weight: 500; color: var(--fg); text-decoration: none; border-radius: var(--r-control); }
 .theme-toggle { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; padding: 0 var(--s-3); font: inherit; font-size: .9375rem; font-weight: 600; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-pill); box-shadow: var(--shadow); cursor: pointer; transition: transform var(--dur) var(--ease), background var(--dur) var(--ease); }
 .theme-toggle::before { content: ""; width: 1rem; height: 1rem; border: 2px solid currentColor; border-radius: 50%; background: linear-gradient(90deg, currentColor 50%, transparent 50%); }
@@ -184,11 +185,11 @@ summary:focus-visible { outline-offset: -3px; }
 .skip-link:focus { transform: none; }
 
 /* Поля */
-fieldset { border: 0; margin: 0 0 var(--s-6); padding: 0; min-width: 0; }
+fieldset { border: 0; margin: 0 0 var(--s-5); padding: 0; min-width: 0; }
 legend { font-size: 1.5rem; font-weight: 800; letter-spacing: -.025em; padding: 0; margin: 0 0 var(--s-4); }
 legend:focus { outline: none; }
 
-label { display: block; margin: 0 0 var(--s-5); font-size: .9375rem; font-weight: 600; }
+label { display: block; margin: 0 0 var(--s-4); font-size: .9375rem; font-weight: 600; }
 label small { display: block; font-weight: 400; margin-top: var(--s-2); }
 label.row { display: grid; grid-template-columns: 1.5rem 1fr 6rem; align-items: center; gap: var(--s-3); min-height: 56px; margin: 0 0 var(--s-2); padding: var(--s-2) var(--s-3); font-size: 1rem; font-weight: 400; background: var(--soft); border-radius: var(--r-control); }
 
@@ -254,13 +255,13 @@ body:has(#catalog:not([hidden])) .profile-box { display: none; }
 .profile-box:not([open]) .profile-box-text { order: 1; flex: 1 1 auto; font-size: .9375rem; }
 .profile-box:not([open]) .profile-box-edit { flex: none; }
 .profile-box[open] > summary { border-bottom: 1px solid var(--line); border-radius: var(--r-container) var(--r-container) 0 0; }
-.profile-box form { padding: var(--s-5) var(--s-4) var(--s-4); }
+.profile-box form { padding: var(--s-4); }
 
 /* Пошаговая анкета: пока человек впервые её заполняет, виден один шаг. */
 .wizard-head { display: none; }
 .profile-box.wizard > summary, .profile-box.wizard .step { display: none; }
 .profile-box.wizard .step.is-current { display: block; }
-.profile-box.wizard .wizard-head { display: block; margin: 0 0 var(--s-5); }
+.profile-box.wizard .wizard-head { display: block; margin: 0 0 var(--s-4); }
 .wizard-progress-label { margin: 0 0 var(--s-2); font-size: .875rem; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
 .wizard-error { margin: 0 0 var(--s-3); color: var(--no); font-weight: 600; }
 .wizard-error:empty { display: none; }
@@ -284,8 +285,8 @@ input[aria-invalid="true"] { border-color: var(--no); background: var(--no-bg); 
 .profile-box.wizard { background: var(--surface); }
 .profile-box.wizard .stepper { gap: .5rem; }
 .profile-box.wizard .stepper li { height: .5rem; }
-.profile-box.wizard legend { font-size: clamp(1.75rem, 1.4rem + 2vw, 2.25rem); line-height: 1.1; letter-spacing: -.03em; margin-bottom: var(--s-5); }
-label:not(.row) > select, label:not(.row) > input { min-height: 56px; font-size: 1.0625rem; background-color: var(--surface); transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+.profile-box.wizard legend { font-size: clamp(1.75rem, 1.4rem + 2vw, 2.25rem); line-height: 1.1; letter-spacing: -.03em; margin-bottom: var(--s-4); }
+label:not(.row) > select, label:not(.row) > input { min-height: 52px; font-size: 1.0625rem; background-color: var(--surface); transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
 label:not(.row) > select:not(:has(option[value=""]:checked)), label:not(.row) > input:not(:placeholder-shown) { border-color: var(--accent); background-color: var(--accent-soft); }
 input:focus-visible, select:focus-visible { box-shadow: 0 0 0 4px var(--tint); }
 label.row { transition: background-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
@@ -318,7 +319,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 
 /* Календарь сроков: строки, а не карточки. Здесь человек выбирает, куда идти
    смотреть, а читает уже в каталоге. Дата слева, остаток справа. */
-.agenda { margin: 0 0 var(--s-5); }
+.agenda { margin: 0 0 var(--s-4); }
 .agenda-title { font-size: 1.25rem; font-weight: 800; letter-spacing: -.025em; margin: 0 0 var(--s-1); }
 .plan-actions { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-3); }
 .plan-status { color: var(--muted); font-size: .9375rem; margin: var(--s-2) 0 0; }
@@ -334,7 +335,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .agenda-horizon { font-size: .875rem; font-weight: 600; color: var(--muted); margin: var(--s-4) 0 var(--s-2); }
 .agenda-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
 .agenda-list li + li { border-top: 1px solid var(--line); }
-.agenda-item { display: grid; grid-template-columns: auto 1fr; column-gap: var(--s-4); row-gap: .25rem; align-items: center; width: 100%; min-height: 60px; padding: var(--s-3) var(--s-4); font: inherit; color: inherit; text-align: left; background: none; border: 0; cursor: pointer; }
+.agenda-item { display: grid; grid-template-columns: auto 1fr; column-gap: var(--s-4); row-gap: .25rem; align-items: center; width: 100%; min-height: 52px; padding: .625rem var(--s-4); font: inherit; color: inherit; text-align: left; background: none; border: 0; cursor: pointer; }
 .agenda-item:focus-visible { outline-offset: -3px; }
 @media (hover: hover) { .agenda-item:hover { background: var(--hover); } }
 .agenda-date { grid-row: 1 / span 2; display: grid; justify-items: center; width: 2.75rem; color: var(--accent-text); line-height: 1; font-variant-numeric: tabular-nums; }
@@ -396,15 +397,15 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .faq > p { margin: 0; padding: 0 var(--s-4) var(--s-4); }
 
 /* Выдача */
-.group { margin: 0 0 var(--s-6); }
-.group-title { display: flex; gap: var(--s-2); align-items: center; font-size: 1.375rem; font-weight: 800; letter-spacing: -.025em; line-height: 1.3; margin: 0 0 var(--s-3); }
+.group { margin: 0 0 var(--s-5); }
+.group-title { display: flex; gap: var(--s-2); align-items: center; font-size: 1.25rem; font-weight: 800; letter-spacing: -.025em; line-height: 1.3; margin: 0 0 var(--s-3); }
 .group-title::before { flex: none; display: grid; place-items: center; width: 2rem; height: 2rem; font-size: 1.125rem; font-weight: 800; background: var(--soft); border-radius: 50%; }
 .group.yes .group-title::before { background: var(--yes-bg); content: "✓"; color: var(--yes); }
 .group.likely .group-title::before { background: var(--likely-bg); content: "≈"; color: var(--likely); }
 .group.check .group-title::before { background: var(--check-bg); content: "!"; color: var(--check); }
 .group.no .group-title::before { background: var(--no-bg); content: "✕"; color: var(--no); }
 
-.card { --edge: transparent; margin: 0 0 var(--s-3); background: var(--surface); border-radius: var(--r-container); box-shadow: inset 5px 0 0 var(--edge), var(--shadow); transition: transform var(--dur) var(--ease); }
+.card { content-visibility: auto; contain-intrinsic-size: auto 5.5rem; --edge: transparent; margin: 0 0 var(--s-3); background: var(--surface); border-radius: var(--r-container); box-shadow: inset 5px 0 0 var(--edge), var(--shadow); transition: transform var(--dur) var(--ease); }
 .card.yes { --edge: var(--yes); }
 .card.likely { --edge: var(--likely); }
 .card.check { --edge: var(--check); }
@@ -598,7 +599,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 
 /* Совсем узкие экраны (320 и ниже, обложка складного): всё в одну строку. */
 @media (max-width: 22.5rem) {
-  .brand::before { content: ""; width: .625rem; height: .625rem; background: var(--accent); }
+  .brand::before { content: ""; width: 1.75rem; height: 1.75rem; background: url("../icons/logo.svg") center / contain no-repeat; }
   .topbar nav a { padding: 0 var(--s-1); }
   .theme-toggle { gap: .375rem; padding: 0 .625rem; font-size: .875rem; }
   .summary-number { font-size: 3.25rem; }
