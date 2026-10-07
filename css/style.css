@@ -532,7 +532,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
    переносились на три строки, а панель поиска липнет к верху экрана и
    съедала его. */
 @media (max-width: 39.99rem) {
-  .chips { flex-wrap: nowrap; overflow-x: auto; margin: 0 calc(var(--gutter) * -1) var(--s-2); padding: 0 var(--gutter); }
+  #catalog-tools .chips { flex-wrap: nowrap; overflow-x: auto; margin: 0 calc(var(--gutter) * -1) var(--s-2); padding: 0 var(--gutter); }
   .chip { flex: none; min-height: 40px; }
   .catalog-bar input[type="search"] { min-height: 48px; margin-bottom: var(--s-2); }
   .card-metas:has(.card-meta:not(:empty)) { gap: .25rem; }
