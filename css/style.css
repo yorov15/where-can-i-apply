@@ -8,25 +8,23 @@
 :root {
   color-scheme: light dark;
 
-  --bg: #f6f7f9;
-  --surface: #fdfdfe;
-  --soft: #eceef2;
-  --line: #e0e3e9;
-  --line-strong: #858d9a;
-  --fg: #14171c;
-  --muted: #555c68;
-  --ink: #14171c;
-  --on-ink: #f6f7f9;
+  --bg: #f2f3f0;
+  --surface: #fbfbf9;
+  --soft: #e7e9e5;
+  --line: #d8dbd5;
+  --line-strong: #7b807a;
+  --fg: #1a1d1b;
+  --muted: #53595a;
+  --ink: #1a1d1b;
+  --on-ink: #f2f3f0;
 
-  --accent: #2b4fd8;
-  --accent-text: #2340b8;
-  --accent-soft: #e5eafd;
-  --on-accent: #f8f9ff;
-  --on-hero: #f8f9ff;
-  --hero-from: #3357e0;
-  --hero-to: #1b2b86;
-  --tint: rgb(43 79 216 / .12);
-  --accent-glow: 0 10px 22px -10px rgb(43 79 216 / .65);
+  --accent: #27408a;
+  --accent-text: #27408a;
+  --accent-soft: #e2e6f1;
+  --on-accent: #f6f7fc;
+  --on-hero: #1a1d1b;
+  --tint: rgb(39 64 138 / .1);
+  --accent-glow: none;
 
   --yes: #146c3e;
   --yes-bg: #e2f2e9;
@@ -37,12 +35,12 @@
   --no: #a3231b;
   --no-bg: #f9e5e2;
 
-  --shadow: 0 1px 2px rgb(24 32 48 / .05), 0 10px 28px -14px rgb(24 32 48 / .22);
-  --hover: rgb(24 32 48 / .06);
+  --shadow: 0 0 0 1px var(--line);
+  --hover: rgb(26 29 27 / .06);
 
-  --r-control: .75rem;
-  --r-container: 1.25rem;
-  --r-pill: 999px;
+  --r-control: .5rem;
+  --r-container: .75rem;
+  --r-pill: .5rem;
 
   --s-1: .25rem;
   --s-2: .5rem;
@@ -65,25 +63,23 @@
 /* Тёмная палитра записана дважды (по системе и по ручному выбору): блок нельзя поделить между @media и атрибутом. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0b0e1a;
-    --surface: #151a2e;
-    --soft: #1f2645;
-    --line: #2a3357;
-    --line-strong: #7b86ad;
-    --fg: #eef0fa;
-    --muted: #aab3d0;
-    --ink: #eef0fa;
-    --on-ink: #0b0e1a;
+    --bg: #121413;
+    --surface: #1a1d1c;
+    --soft: #242827;
+    --line: #2f3432;
+    --line-strong: #8b928d;
+    --fg: #ecedea;
+    --muted: #a8aeaa;
+    --ink: #ecedea;
+    --on-ink: #121413;
 
-    --accent: #8ea2ff;
-    --accent-text: #b4c1ff;
-    --accent-soft: #232c66;
-    --on-accent: #0a0f2e;
-    --on-hero: #f8f9ff;
-    --hero-from: #3d5ae0;
-    --hero-to: #1b2575;
-    --tint: rgb(110 135 255 / .2);
-    --accent-glow: 0 18px 40px -18px rgb(100 130 255 / .6);
+    --accent: #a3b6ec;
+    --accent-text: #bccaf2;
+    --accent-soft: #252d45;
+    --on-accent: #10172c;
+    --on-hero: #ecedea;
+    --tint: rgb(163 182 236 / .16);
+    --accent-glow: none;
 
     --yes: #86e0ad;
     --yes-bg: #123222;
@@ -94,32 +90,30 @@
     --no: #ffa39c;
     --no-bg: #3d1c1f;
 
-    --shadow: 0 0 0 1px rgb(255 255 255 / .07), 0 14px 32px -18px rgb(0 0 0 / .7);
-    --hover: rgb(255 255 255 / .08);
+    --shadow: 0 0 0 1px var(--line);
+    --hover: rgb(255 255 255 / .07);
     color-scheme: dark;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #0b0e1a;
-  --surface: #151a2e;
-  --soft: #1f2645;
-  --line: #2a3357;
-  --line-strong: #7b86ad;
-  --fg: #eef0fa;
-  --muted: #aab3d0;
-  --ink: #eef0fa;
-  --on-ink: #0b0e1a;
+  --bg: #121413;
+  --surface: #1a1d1c;
+  --soft: #242827;
+  --line: #2f3432;
+  --line-strong: #8b928d;
+  --fg: #ecedea;
+  --muted: #a8aeaa;
+  --ink: #ecedea;
+  --on-ink: #121413;
 
-  --accent: #8ea2ff;
-  --accent-text: #b4c1ff;
-  --accent-soft: #232c66;
-  --on-accent: #0a0f2e;
-  --on-hero: #f8f9ff;
-  --hero-from: #3d5ae0;
-  --hero-to: #1b2575;
-  --tint: rgb(110 135 255 / .2);
-  --accent-glow: 0 18px 40px -18px rgb(100 130 255 / .6);
+  --accent: #a3b6ec;
+  --accent-text: #bccaf2;
+  --accent-soft: #252d45;
+  --on-accent: #10172c;
+  --on-hero: #ecedea;
+  --tint: rgb(163 182 236 / .16);
+  --accent-glow: none;
 
   --yes: #86e0ad;
   --yes-bg: #123222;
@@ -130,8 +124,8 @@
   --no: #ffa39c;
   --no-bg: #3d1c1f;
 
-  --shadow: 0 0 0 1px rgb(255 255 255 / .07), 0 14px 32px -18px rgb(0 0 0 / .7);
-  --hover: rgb(255 255 255 / .08);
+  --shadow: 0 0 0 1px var(--line);
+  --hover: rgb(255 255 255 / .07);
   color-scheme: dark;
 }
 :root[data-theme="light"] { color-scheme: light; }
@@ -150,7 +144,7 @@ body {
   max-width: 42rem;
   font: 1rem/1.55 Onest, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
   color: var(--fg);
-  background: radial-gradient(48rem 26rem at 50% -8rem, var(--tint), transparent 70%) no-repeat, var(--bg);
+  background: var(--bg);
   overflow-wrap: anywhere;
 }
 
@@ -159,14 +153,11 @@ p { text-wrap: pretty; }
 
 h1 { font-size: clamp(1.75rem, 1.35rem + 1.9vw, 2.5rem); line-height: 1.05; margin: 0 0 var(--s-3); font-weight: 800; letter-spacing: -.035em; }
 .lead { margin: 0 0 var(--s-6); max-width: 60ch; color: var(--muted); font-size: 1.0625rem; }
-.hero { position: relative; overflow: hidden; margin: 0 0 var(--s-5); padding: var(--s-6) var(--s-5) var(--s-5); color: var(--on-hero); background: linear-gradient(140deg, var(--hero-from), var(--hero-to)); border-radius: var(--r-container); box-shadow: var(--accent-glow); }
-.hero::before { content: ""; position: absolute; right: -5rem; top: -6rem; width: 16rem; height: 16rem; border-radius: 50%; background: radial-gradient(circle, rgb(255 255 255 / .2), transparent 66%); pointer-events: none; }
-.hero::after { content: ""; position: absolute; left: -4rem; bottom: -7rem; width: 14rem; height: 14rem; border-radius: 50%; background: radial-gradient(circle, rgb(255 255 255 / .1), transparent 68%); pointer-events: none; }
-.hero h1, .hero .lead { position: relative; z-index: 1; }
+.hero { margin: 0 0 var(--s-5); padding: var(--s-4) 0 0; color: var(--fg); border-top: 3px solid var(--ink); }
 /* Ответ и каталог идут без шапки: название уже в верхней полосе, а ответ должен быть на первом экране. h1 остаётся для скринридеров. */
 body:has(:is(#answer, #catalog):not([hidden])) .hero { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); box-shadow: none; }
 .hero h1 { color: var(--on-hero); font-size: clamp(2rem, 1.5rem + 3.2vw, 3.25rem); }
-.hero .lead { margin: 0; color: var(--on-hero); opacity: .88; }
+.hero .lead { margin: 0; }
 .hint, small { color: var(--muted); font-size: .875rem; }
 .hint { margin: 0 0 var(--s-4); padding: var(--s-3) var(--s-4); background: var(--soft); border-radius: var(--r-control); }
 
@@ -183,7 +174,7 @@ summary:focus-visible { outline-offset: -3px; }
 /* Верхняя полоса: название, «Вопросы» и переключатель темы всегда на виду, как на обычных сайтах. */
 .topbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--s-1); margin: 0 0 var(--s-3); white-space: nowrap; }
 .brand { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; margin-right: auto; font-weight: 800; letter-spacing: -.02em; color: var(--fg); text-decoration: none; }
-.brand::before { content: ""; width: .75rem; height: .75rem; border-radius: 50%; background: linear-gradient(140deg, var(--hero-from), var(--accent)); }
+.brand::before { content: ""; width: .625rem; height: .625rem; background: var(--accent); }
 .topbar nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--s-2); font-weight: 500; color: var(--fg); text-decoration: none; border-radius: var(--r-control); }
 .theme-toggle { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; padding: 0 var(--s-3); font: inherit; font-size: .9375rem; font-weight: 600; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-pill); box-shadow: var(--shadow); cursor: pointer; transition: transform var(--dur) var(--ease), background var(--dur) var(--ease); }
 .theme-toggle::before { content: ""; width: 1rem; height: 1rem; border: 2px solid currentColor; border-radius: 50%; background: linear-gradient(90deg, currentColor 50%, transparent 50%); }
@@ -290,10 +281,9 @@ input[aria-invalid="true"] { border-color: var(--no); background: var(--no-bg); 
 .profile-box.wizard .wizard-nav { position: sticky; bottom: 0; z-index: var(--z-bar); margin: 0 calc(var(--s-4) * -1) calc(var(--s-4) * -1); padding: var(--s-4) var(--s-4) calc(var(--s-4) + env(safe-area-inset-bottom)); background: linear-gradient(to top, var(--surface) 70%, transparent); border-radius: 0 0 var(--r-container) var(--r-container); }
 
 /* Шаг анкеты: крупный номер, крупные поля, заполненное видно сразу. */
-.profile-box.wizard { background: linear-gradient(to bottom, var(--accent-soft), var(--surface) 10rem); }
+.profile-box.wizard { background: var(--surface); }
 .profile-box.wizard .stepper { gap: .5rem; }
 .profile-box.wizard .stepper li { height: .5rem; }
-.profile-box.wizard .stepper li.is-current::after { box-shadow: 0 0 .75rem var(--accent); }
 .profile-box.wizard legend { font-size: clamp(1.75rem, 1.4rem + 2vw, 2.25rem); line-height: 1.1; letter-spacing: -.03em; margin-bottom: var(--s-5); }
 label:not(.row) > select, label:not(.row) > input { min-height: 56px; font-size: 1.0625rem; background-color: var(--surface); transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
 label:not(.row) > select:not(:has(option[value=""]:checked)), label:not(.row) > input:not(:placeholder-shown) { border-color: var(--accent); background-color: var(--accent-soft); }
@@ -419,7 +409,6 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .card.likely { --edge: var(--likely); }
 .card.check { --edge: var(--check); }
 .card.no { --edge: var(--no); }
-@media (hover: hover) { .card:hover { transform: translateY(-2px); } }
 /* Закрытый приём не бледнеет через opacity: тот съел бы контраст текста.
    Его выдаёт пунктир и подпись «Приём закрыт». */
 .card.closed { background: var(--soft); box-shadow: none; outline: 1px dashed var(--line-strong); outline-offset: -1px; }
@@ -609,7 +598,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 
 /* Совсем узкие экраны (320 и ниже, обложка складного): всё в одну строку. */
 @media (max-width: 22.5rem) {
-  .brand::before { display: none; }
+  .brand::before { content: ""; width: .625rem; height: .625rem; background: var(--accent); }
   .topbar nav a { padding: 0 var(--s-1); }
   .theme-toggle { gap: .375rem; padding: 0 .625rem; font-size: .875rem; }
   .summary-number { font-size: 3.25rem; }
