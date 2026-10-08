@@ -77,6 +77,29 @@ test('разделы по kind, каждое условие один раз', ()
   assert.equal(new Set(all).size, all.length);
 });
 
+test('условия documents рисуются разделом «Документы» до «Что ещё потребуется»', () => {
+  const withDocs = {
+    ...extra,
+    textConditions: [
+      { ru: 'Аттестат с оценками', field: null, kind: 'documents' },
+      { ru: 'Перевод на английский', field: null, kind: 'documents' },
+      { ru: 'Два письма', field: null, kind: 'must' },
+    ],
+  };
+  const model = cardModel(row([], 'yes'), withDocs, today);
+  assert.deepEqual(model.sections.find((s) => s.key === 'documents').items, ['Аттестат с оценками', 'Перевод на английский']);
+  const keys = model.sections.map((s) => s.key);
+  assert.ok(keys.indexOf('documents') < keys.indexOf('must'));
+  const must = model.sections.find((s) => s.key === 'must').items;
+  assert.deepEqual(must, ['Два письма']);
+  assert.ok(!must.includes('Аттестат с оценками'));
+});
+
+test('без условий documents раздел «Документы» не показывается', () => {
+  const model = cardModel(row([], 'yes'), extra, today);
+  assert.equal(model.sections.some((s) => s.key === 'documents'), false);
+});
+
 test('неразмеченные условия идут одним списком', () => {
   const raw = { ...extra, textConditions: [{ ru: 'Старое условие без тегов' }] };
   const model = cardModel(row([], 'yes'), raw, today);

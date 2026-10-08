@@ -103,10 +103,15 @@ export function cardModel({ program, verdict, deadline }, extra, today) {
   const must = take((c) => c.kind === 'must');
   const money = take((c) => c.kind === 'money');
   const steps = take((c) => c.kind === 'steps');
+  const documents = take((c) => c.kind === 'documents');
   const notes = take((c) => c.kind === 'note' || c.kind === 'workaround');
   const untagged = conditions.filter((c) => !c.kind).map((c) => c.ru);
 
+  // Документы — что вуз просит приложить. Раздел идёт до «Что ещё
+  // потребуется»: это отдельный список к сборке, а не условие допуска, и
+  // среди условий он терялся бы.
   const sections = [
+    { key: 'documents', title: 'Документы', items: documents },
     { key: 'must', title: 'Что ещё потребуется', items: must },
     { key: 'money', title: 'Деньги', items: [extra?.coverageNote, ...money].filter(Boolean) },
     { key: 'steps', title: 'Как подавать', items: steps },

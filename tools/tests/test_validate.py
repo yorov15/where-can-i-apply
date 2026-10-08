@@ -635,6 +635,18 @@ class TestConditionTags(unittest.TestCase):
         program = self.with_condition(field="citizenship", kind="workaround")
         self.assertEqual(validate_program(program, SNAPSHOT), [])
 
+    def test_documents_kind_without_field_passes(self):
+        # Документы — не условие допуска и не привязаны к полю анкеты:
+        # раздел «Документы» собирается из самого kind.
+        program = self.with_condition(field=None, kind="documents")
+        self.assertEqual(validate_program(program, SNAPSHOT), [])
+
+    def test_documents_condition_without_quote_is_caught(self):
+        program = self.with_condition(field=None, kind="documents")
+        program["textConditions"][0]["evidence"] = ""
+        problems = validate_program(program, SNAPSHOT)
+        self.assertTrue(any("условие 1: нет цитаты" in p for p in problems), problems)
+
     def test_general_condition_without_field_passes(self):
         program = self.with_condition(field=None, kind="steps")
         self.assertEqual(validate_program(program, SNAPSHOT), [])

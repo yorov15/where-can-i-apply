@@ -93,6 +93,11 @@ test('дела: обязательное, потом шаги, потом ден
   assert.deepEqual(planTasks('x', null), []);
 });
 
+test('дела включают документы, и они идут первыми', () => {
+  const tasks = planTasks('mit', extraOf(['documents', 'Аттестат с оценками'], ['must', 'Два письма'], ['money', 'Взнос 75 долларов']));
+  assert.deepEqual(tasks.map((t) => [t.kind, t.text]), [['documents', 'Аттестат с оценками'], ['must', 'Два письма'], ['money', 'Взнос 75 долларов']]);
+});
+
 test('отметка привязана к тексту дела: ключ стабилен и различает и программы, и тексты', () => {
   assert.equal(taskKey('mit', 'Два письма'), taskKey('mit', 'Два письма'));
   assert.notEqual(taskKey('mit', 'Два письма'), taskKey('yale', 'Два письма'));
