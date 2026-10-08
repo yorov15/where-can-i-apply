@@ -146,6 +146,36 @@
       "evidence": "studying and living in the Netherlands will cost you, on average, about 1,300 euros a month",
       "field": null,
       "kind": "money"
+    },
+    {
+      "ru": "Копия страницы загранпаспорта с личными данными.",
+      "evidence": "the personal details page(s) of your international passport",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Диплом об окончании школы и официальная выписка оценок (транскрипт). Если в твоей стране диплом и выписка — один документ, загружай его как есть.",
+      "evidence": "you are required to upload your diploma certificate(s) and academic records",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Заверенный перевод диплома и выписки на английский или нидерландский — если оригинал не на английском, нидерландском или немецком языке.",
+      "evidence": "Documents must be uploaded in the original national language along with an official sworn translation in English or Dutch. If the original document is in English, Dutch, or German, no translation is required.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия официального результата языкового экзамена — IELTS, TOEFL, Cambridge, PTE или LANGUAGECERT, смотря что сдавал.",
+      "evidence": "Please make sure to upload a clear copy of the official test result",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "CV на английском языке — формат свободный.",
+      "evidence": "Please upload your CV in English.",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -174,9 +204,13 @@
       {
         "url": "https://www.utwente.nl/en/education/bachelor/apply/tuition-fees/",
         "contentHash": "sha256:a1b025c3f37720fd3463d649d9b59396a102a322f4538e1e281d46a6f549a208"
+      },
+      {
+        "url": "https://www.utwente.nl/en/education/bachelor/application-admission/application/required-application-documents/",
+        "contentHash": "sha256:f60a1d08d515efbd5b0621008398e8a27e6cdc59818eb702ff4a8320d96f3057"
       }
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-08",
     "humanChecked": false
   }
 }
