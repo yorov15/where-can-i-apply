@@ -170,6 +170,54 @@
         "currency": "USD",
         "evidence": "Application fee: USD 20 (or UZS 200,000)"
       }
+    },
+    {
+      "ru": "Копия паспорта или удостоверения личности",
+      "evidence": "Copy of passport/ID card",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия диплома лицея/колледжа/школы с приложением с оценками (транскриптом) либо справкой-подтверждением, включающей справку о прохождении обучения в лицее/колледже/школе",
+      "evidence": "Copy of Diploma from lyceum/college/high school with transcript or verification certificate including enrollment certificate from lyceum/college/high school",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия приложения с оценками (транскрипта) из лицея/колледжа/школы",
+      "evidence": "Copy of transcript from lyceum/college/high school",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Электронное фото, сделанное за последние 3 месяца — 3,5 × 4,5 см",
+      "evidence": "Electronic photo taken within last 3 months - 3.5 cm ×4.5 cm",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный сертификат владения английским языком (IELTS/TOEFL iBT) либо официальное письмо от средней школы или вуза, подтверждающее, что обучение велось на английском",
+      "evidence": "Official English Proficiency Test Certificate (IELTS/ TOEFL iBT) or an official letter issued by the secondary or higher education that certifies their students were taught in English",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Мотивационное письмо (Personal Statement)",
+      "evidence": "Personal Statement",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Учебный план (Study Plan)",
+      "evidence": "Study Plan",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Рекомендательное письмо",
+      "evidence": "Recommendation letter",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -188,25 +236,25 @@
   },
   "source": {
     "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-09",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
       {
         "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
-        "contentHash": "sha256:e844b060b48db1a17d0157a50d48030433538b876b890622126d21ca1199da6a"
+        "contentHash": "sha256:32e5d449657f3b4581bcff95ab4b23a60991005813836d616585d6254d9f5ee7"
       },
       {
         "url": "https://inha.uz/prospective-students/admissions/tuitions/",
-        "contentHash": "sha256:7943210dc217eef3a0ad05c6cb535ce58a61d124f5c2ff96d3e33b9d8ea4f83a"
+        "contentHash": "sha256:1c7ed5b264039bb8de36a29292be87422d2b7e40a1a9d92065f097b18f13ad44"
       },
       {
         "url": "https://inha.uz/prospective-students/admissions/faq/",
-        "contentHash": "sha256:950ceb650b6c39b20d37f0c14a1fbef3d6df7789e91744026a1bbc5c18c7ecb1"
+        "contentHash": "sha256:d64873651d7086ac8499625f2b624e0875c79733e97898d085fca413463e19cc"
       },
       {
         "url": "https://inha.uz/prospective-students/admissions/scholarships/",
-        "contentHash": "sha256:b8ab811fc0f62913e4cb5a0004400e63cb07e6a27a54690d7223fc5e00994ce5"
+        "contentHash": "sha256:f53b8501abd2bb173df51a47024447a524675f3b42db4b98baeccfc2d7a06505"
       }
     ]
   }
