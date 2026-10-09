@@ -22,8 +22,26 @@
 - tiu — 7 документов (`dbb2c4a`) — TIU
 - kbtu — 4 документа (`0636eef`) — KBTU
 
+Порция 2 (09.10.2026, остаток Центральной Азии и Турция), сборка `307c4c1`:
+
+- sdu — 9 документов (`a62aac8`) — SDU, Казахстан
+- inha — 8 документов (`85d930e`) — Университет Инха в Ташкенте, Узбекистан
+- kazakhstan-grant — 7 документов (`c738fd6`) — госстипендия Казахстана для иностранцев
+- enu — 7 документов (`8f64ca4`) — ЕНУ им. Гумилёва, Казахстан
+- webster-tashkent — 4 документа (`b82eb25`) — Webster University in Tashkent, Узбекистан
+- koc-university — 7 документов (`5877623`) — Koç University, Турция
+- sabanci-university — 7 документов (`d57009d`) — Sabancı University, Турция
+- ozyegin-university — 5 документов (`73fd539`) — Özyeğin University, Турция
+- istanbul-bilgi — 8 документов (`72c5863`) — Istanbul Bilgi University, Турция
+- bahcesehir — 6 документов (`7c9b9f3`) — Bahçeşehir University, Турция
+- ibn-haldun — 8 документов (`8419ecf`) — Ibn Haldun University, Турция
+- itu — 7 документов (`1ea7016`) — Istanbul Technical University, Турция
+
 ## Пропущено
 
 (формат строки: `id — причина`)
 
 - cau — на снятых страницах (internationalstudents, admissionregulations, tuitionfees, scholarshipsfor2026entry) перечень обязательных документов не назван: только процесс подачи, экзамены и стипендии
+- turkiye-burslari — на снятых страницах (scholarshipsprograms, calendar, fulltimeprograms) перечень обязательных документов не назван
+- bilkent — на страницах приёма иностранцев личного перечня документов нет: только общие требования к квалификации, экзамены и форма подачи
+- metu-turkey — страница «Required Documents» не входит в снимок; на снятых страницах перечня документов нет
