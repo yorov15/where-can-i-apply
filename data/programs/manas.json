@@ -91,6 +91,30 @@
       "evidence": "Tuition is free",
       "field": null,
       "kind": "money"
+    },
+    {
+      "ru": "Копия аттестата/диплома об образовании с указанием изученных предметов и оценок (нотариально заверенный перевод на русский или английский)",
+      "evidence": "Copy of the certificate / diploma of education; with indication of studied subjects and the grades (notarized translation into Russian or English;",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия паспорта",
+      "evidence": "Copy of Passport;",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "2 фотографии 3х4 (сделаны в течение последних 3 месяцев)",
+      "evidence": "2 photos 3х4, (should be taken within the last 3 months)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Сертификат государственного вступительного экзамена (при наличии)",
+      "evidence": "Certificate of State University Entrance Examination (if applicable)",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -123,7 +147,7 @@
         "contentHash": "sha256:bcda0cd5b0c64544f0f0303752b54fd26e8307583f44065212c7979ea9ebd90e"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-09",
     "humanChecked": false,
     "approvedBy": "assistant"
   },
