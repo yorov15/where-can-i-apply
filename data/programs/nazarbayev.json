@@ -177,6 +177,42 @@
         "currency": "KZT",
         "evidence": "The application fee is 10,000 tenge"
       }
+    },
+    {
+      "ru": "Справка (сертификат) из учебного заведения по образцу в личном кабинете абитуриента — если он на момент подачи учится в выпускном классе (курсе); либо отсканированный сертификат/диплом с транскриптами — если соответствующий уровень образования уже окончен",
+      "evidence": "A certificate from an educational institution according to the sample in the Personal account of applicant (in case the applicant is a current student of the final grade (course) at the time of online application) or a scanned version of a certificate/diploma with transcripts if the applicant has already completed a relevant level of study.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Отсканированная копия удостоверения личности и/или паспорта; копии из eGov и любых других платформ/электронных сервисов не принимают",
+      "evidence": "A scanned copy of national ID card and/or passport. The copies from eGov or any other platforms/electronic services are not accepted.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Фотография 3×4",
+      "evidence": "A 3×4 photo for documents uploaded to the \"Profile\" section of the personal account.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Транскрипт за последний завершённый учебный год, либо аттестат об общем среднем образовании / диплом колледжа с приложением, либо его международный эквивалент (сертификат/диплом), если имеется",
+      "evidence": "Transcript for the last completed academic year, or a high school diploma of general secondary education / college diploma with supplement, or its international equivalent (certificate/diploma), if available.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Сертификат IELTS/TOEFL (загружается только после оплаты заявки и подачи заявления)",
+      "evidence": "Step 5. Submit IELTS/ TOEFL certificate (only after paying the application fee and submitting the application)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Рекомендательные письма",
+      "evidence": "letters of recommendation",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -195,21 +231,21 @@
   },
   "source": {
     "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-09",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
       {
         "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
-        "contentHash": "sha256:e917c202366217cd7e9726bd4de59f5bb14c80fc72137fd9226324a15be98227"
+        "contentHash": "sha256:11a93fc1e49631e7afa6f1494f2f26d70566aa2007501346bb4fdf1140669874"
       },
       {
         "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/financial-aid-end-scholarships/",
-        "contentHash": "sha256:3cd56e8f9dd9d3d1f0f9d4cd6afab30be0bcb127673a2869687a2791a5da00e1"
+        "contentHash": "sha256:0a2b04ace6b334a53b24522f683c4a2de77445caee250c6553859572147f23e8"
       },
       {
         "url": "https://nu.edu.kz/admissions/international-admission/international-admission_general/",
-        "contentHash": "sha256:d44cdd4a4c5d477223939e7a5ba39b54c56a980b79c22ea6d1e911f9e2774dde"
+        "contentHash": "sha256:1aa9061d832098498d2245b7bb3856d0cec19ad0e411cf5f29b731365efd6099"
       }
     ]
   }
