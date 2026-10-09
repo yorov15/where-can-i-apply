@@ -98,6 +98,18 @@
       "evidence": "All foreign citizens (students) are required to purchase voluntary health insurance (VHI/DMS)",
       "field": null,
       "kind": "note"
+    },
+    {
+      "ru": "Оригиналы документов об образовании",
+      "evidence": "You must provide original educational documents to the Admissions Support Centre.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Нотариальный перевод документов на русский язык (если документы на иностранном языке)",
+      "evidence": "If the documents are in a foreign language, notarised translations into Russian must also be submitted.",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -134,12 +146,12 @@
         "contentHash": "sha256:1240a47cfc37dcd3fd05c4074d74412870bb07693c02616d85d06225fa62cca7"
       }
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-10",
     "humanChecked": false,
     "approvedBy": "assistant"
   },
   "leftEmpty": {
-    "schoolYears": "sha256:4002aa01d4b48fc2915ee4bd1312f3e7ac0e318e39f187b8470c1b59c3fc28d1"
+    "schoolYears": "sha256:25f32d1495f7abdaa7ceb0b6bc44888c0a0597740640dfa1d84d35358eff3961"
   },
   "majors": [
     "any"
