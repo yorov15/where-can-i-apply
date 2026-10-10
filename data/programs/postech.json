@@ -2,7 +2,10 @@
   "id": "postech",
   "status": "published",
   "kind": "university",
-  "majors": ["natural", "engineering"],
+  "majors": [
+    "natural",
+    "engineering"
+  ],
   "name": {
     "ru": "POSTECH — технический университет в Похане (наука и инженерия): плата за обучение снимается, есть пособие на жизнь и дорогу",
     "orig": "POSTECH"
@@ -177,6 +180,84 @@
       "evidence": "decided differently by each university, so you will then need to contact universities directly",
       "field": "schoolYears",
       "kind": "note"
+    },
+    {
+      "ru": "Личное заявление (Personal Statement) — заполняется в онлайн-системе подачи StudyinKorea.",
+      "evidence": "Personal Statement (to be completed in the StudyinKorea online application system)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Аттестат о среднем образовании или справка об ожидаемом окончании школы — с апостилем или консульской легализацией Кореи.",
+      "evidence": "Official High School Diploma or Certificate of (Expected) Graduation",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный табель/выписка оценок из старшей школы (Transcript) — с апостилем или консульской легализацией Кореи.",
+      "evidence": "Official High School Transcript(s) (with Apostille or Korean Consular Authentication)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Подтверждение гражданства абитуриента и обоих родителей (например, загранпаспорт).",
+      "evidence": "Proof of Nationality for Applicant and Both Parents (e.g., Passport)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Подтверждение родства (например, свидетельство о рождении).",
+      "evidence": "Proof of Family Relationship (e.g., Birth Certificate)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Письмо-рекомендация.",
+      "evidence": "Recommendation Letter",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Форма сведений об образовании (Academic History Record Form).",
+      "evidence": "Academic History Record Form",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный результат теста по английскому языку (IELTS, TOEFL, TEPS или TOEIC L&R).",
+      "evidence": "Official Score Report of English Language Proficiency Test Score",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Согласие и запрос на проверку академических записей (Letter of Consent and Request (Verification of Academic Records)).",
+      "evidence": "Letter of Consent and Request (Verification of Academic Records)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Только для иностранцев, проживающих в Корее: карты регистрации иностранца (Alien Registration Cards) абитуриента и обоих родителей.",
+      "evidence": "For Foreigners Residing in Korea: Alien Registration Cards of the Applicant and Both Parents",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Только для абитуриентов или родителей корейской этничности: справка о гражданстве или натурализации; справка об утрате корейского гражданства.",
+      "evidence": "For Applicants or Parents of Korean Ethnicity: ☐ Certificate of Citizenship or Naturalization",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Только для граждан Китая: нотариально заверенная справка о гражданстве (Notarized Certificate of Nationality) — для родителя и для абитуриента.",
+      "evidence": "For Applicants of Chinese Nationality: ☐ Notarized Certificate of Nationality",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Только при необходимости: для неполных семей, развода родителей или смерти родителя — документ, подтверждающий семейный статус (справка о статусе единственного родителя; решение о разводе с указанием опеки; свидетельство о смерти).",
+      "evidence": "Supporting documents confirming family status (as applicable)",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -199,15 +280,15 @@
     "pages": [
       {
         "url": "https://adm-iu.postech.ac.kr/user/admission/guide/international.do",
-        "contentHash": "sha256:35853e35d3cead0cd847370cf2978b67b87cd9012e672e3f5543e523e11d4785"
+        "contentHash": "sha256:21f1f6b54f51d45c4fb6201efc35f7032eaa591bd354dd3cb6a99d72af3e9683"
       },
       {
         "url": "https://adm-iu.postech.ac.kr/user/comm/menu/e2afb97fa1b8f43c574be0dabef78f87/content/index.do",
-        "contentHash": "sha256:9853fd74a27c7e63df1ba300b9154e3802ca5516344e80b24a91f1bb5b46d300"
+        "contentHash": "sha256:40c0279623fa0ab31737be49acc34c5ea0b29ee8d77e19914f8b173765345d15"
       },
       {
         "url": "https://adm-iu.postech.ac.kr/user/comm/menu/3317587a17a23d4dacdb9ffc4762bf4a/content/index.do",
-        "contentHash": "sha256:90ab9c36d3ad77afd2669a155cad40856358f2f42bcca6f4ba624fa016264422"
+        "contentHash": "sha256:ba5fa0c8721779efc57dd73aa0a2a6b00ac0511766916ed7d98bcc2021aeba14"
       },
       {
         "url": "https://adm-iu.postech.ac.kr/comm/cmfile/download.do?encFileGrpSeq=cc2ba150020190627ad899352ae4d036&encFileSeq=82c441f65591f55a229cf6d79a4d6b8a",
@@ -218,7 +299,7 @@
         "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
       }
     ],
-    "lastVerified": "2026-09-26",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
