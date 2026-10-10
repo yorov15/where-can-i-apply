@@ -2,7 +2,14 @@
   "id": "yonsei-uic",
   "status": "published",
   "kind": "university",
-  "majors": ["engineering", "natural", "business", "social", "humanities", "arts"],
+  "majors": [
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts"
+  ],
   "name": {
     "ru": "Yonsei University, Underwood International College (UIC) — обучение на английском в Сеуле и Сонгдо, для отобранных плата снимается на все 4 года",
     "orig": "Yonsei University, Underwood International College"
@@ -163,6 +170,84 @@
       "evidence": "decided differently by each university, so you will then need to contact universities directly",
       "field": "schoolYears",
       "kind": "note"
+    },
+    {
+      "ru": "Распечатанная копия заявки (Application Form), как вы её зарегистрировали через онлайн-подачу или Common App.",
+      "evidence": "A printed copy of your Application Form as you registered through Online Application or Common App",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Letter of Consent & Verification (бланк на сайте UIC) — письмо-согласие и подтверждение.",
+      "evidence": "Letter of Consent & Verification (Available on the UIC website)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальные табели успеваемости из всех школ, где учились, — с апостилем или консульской легализацией.",
+      "evidence": "[Apostille/Korean Consulate Authentication] Official transcripts from all high schools attended",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Аттестат об окончании школы или справка об ожидаемом окончании (аттестат надо дослать до зачисления) — с апостилем или консульской легализацией.",
+      "evidence": "[Apostille/Korean Consulate Authentication] Certificate of graduation or certificate of expected graduation* (in the latter case, certificate of graduation must be submitted before matriculation)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Подтверждение английского — одно на выбор: официальный результат признанного языкового теста; диплом школы страны, где английский единственный официальный язык; или справка о языке обучения (Medium of Instruction) для тех, кто полностью учился на английском.",
+      "evidence": "English proficiency test scores or equivalents. Applicants must submit one of the following as proof of English proficiency: an official score report for a recognized English proficiency test listed below; a high school diploma(or expected graduation certificate) issued by a school located in a country where English is the sole official language(the United States, Canada excluding Quebec, the United Kingdom, Australia, and New Zealand); or, for applicants who completed the entire high school curriculum in English except for native language/history courses, a Medium of Instruction certificate.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "По одной копии паспорта или удостоверения личности — своей и обоих родителей.",
+      "evidence": "One copy of the applicant's and his/her parents' passports or ID cards",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Одна нотариально заверенная копия свидетельства о рождении или нотариальный документ о родстве заявителя с родителями.",
+      "evidence": "One notarized copy of the applicant's birth certificate or notarized legal documentation that verifies the relationship between the applicant and his/her parents",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Заявителям с китайским гражданством — нотариальные копии 亲属关系证明 и 居民户口簿.",
+      "evidence": "Applicants with Chinese nationality must submit notarized copies of 亲属关系证明 and 居民户口簿.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Иностранцам, проживающим в Корее, — справка о регистрации иностранца (외국인등록사실증명) своя и родителей.",
+      "evidence": "[Foreigners residing in Korea] must submit the applicant's and his/her parents' Certification of Alien Registration (외국인등록사실증명)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Иностранцам корейского происхождения — документы об отказе от корейского гражданства их и родителей (Certificate of Family Relationship, 국적상실사실 확인증명 или 국적이탈신고 확인증명) и нотариальная копия Alien Registration Card, выданной после 2011 года.",
+      "evidence": "[Foreigners with Korean ethnicity] must submit legal documentation that verifies the renunciation of the applicants' and his/her parents' Korean citizenships, such as a Certificate of Family Relationship that shows Renunciation of Korean Citizenship by the Korean government, 국적상실사실 확인증명 issued from Korean Consul or 국적이탈신고 확인증명 issued from the Ministry of Justice, and notarized copy of Alien Registration Card issued after the year 2011.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Квитанция об оплате вступительного взноса.",
+      "evidence": "Receipt of application fee payment",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Документы, подтверждающие баллы выпускных или вступительных экзаменов из раздела Test Information (например SAT, ACT, GCE-A LEVEL, IB, AP, GAO KAO, Matura и т. п.).",
+      "evidence": "Documents certifying the scores of high school graduation exams or higher education entrance exams listed under the Test Information (e.g. SAT, ACT, GCE-A LEVEL, IB, AP, GAO KAO, Matura, etc.).",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Награды, отличия и документы о внешкольной активности за школьные годы — вносятся в List of Supplementary Documents.",
+      "evidence": "Honors, awards, and qualifications attained during high school and documents that certify extra-curricular activities from high school should be filed with the List of Supplementary Documents.",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -196,7 +281,7 @@
         "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
       }
     ],
-    "lastVerified": "2026-09-26",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
