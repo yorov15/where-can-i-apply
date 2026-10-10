@@ -171,6 +171,24 @@
 - comenius-university — 6 документов (`f42dd5f`) — Comenius University Bratislava, Словакия
 - copenhagen — 9 документов (`f32cb5f`) — University of Copenhagen, Дания
 
+Порция 12 (10.10.2026, продолжение «остальных»: США, Великобритания, Чехия, Венгрия, Нидерланды, Швейцария, Эстония), сборка `8ac4f57`:
+
+- cornell — 8 документов (`f22315e`) — Корнелл, США
+- corvinus — 3 документа (`27b1e26`) — Corvinus University of Budapest, Венгрия
+- cuhk — 5 документов (`a7d5693`) — The Chinese University of Hong Kong, Гонконг
+- czech-public — 11 документов (`454b149`) — государственные вузы Чехии
+- dartmouth-college — 5 документов (`de00159`) — Dartmouth College, США
+- davidson-college — 11 документов (`c07d58c`) — Davidson College, США
+- denison-university — 7 документов (`2fa9c71`) — Denison University, США
+- duke-university — 9 документов (`8b02fe4`) — Дьюк, США
+- durham — 4 документа (`90d5f66`) — Durham University, Великобритания
+- edinburgh — 9 документов (`657547a`) — University of Edinburgh, Великобритания
+- elte — 2 документа (`675b655`) — ELTE, Венгрия
+- emory — 9 документов (`a078b66`) — Emory, США
+- epfl — 10 документов (`4c92519`) — EPFL, Швейцария
+- erasmus — 6 документов (`c80e632`) — Erasmus University Rotterdam, Нидерланды
+- estonia-study — 4 документа (`a4c5aad`) — Эстония, англоязычный бакалавриат
+
 ## Пропущено
 
 (формат строки: `id — причина`)
