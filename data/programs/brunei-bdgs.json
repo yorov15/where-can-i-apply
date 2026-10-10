@@ -7,7 +7,9 @@
   },
   "hostCountry": "BN",
   "kind": "government",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": true,
@@ -176,6 +178,36 @@
       "evidence": "The closing date for application of the Scholarship is 15 February 2026.",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Приложить к заявке удостоверение личности (identification card).",
+      "evidence": "Identification Cards",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Приложить заверенные копии документов об образовании и других подтверждающих документов: сертификатов, характеристик, табелей (транскриптов).",
+      "evidence": "Certified true copies of academic qualifications and other supporting documents (i.e. certificates, testimonials, transcripts).",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Если документы не на английском, приложить их заверенный перевод на английский.",
+      "evidence": "Certified English translations of supporting documents must be submitted for documents that are not in English.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Приложить заверенные копии свидетельства о рождении и паспорта.",
+      "evidence": "Certified true copies of Birth Certificate and Passport.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Приложить рекомендации от поручителей по формам C1 и C2.",
+      "evidence": "References and recommendations from referees. ( C1 and C2 )",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -194,7 +226,7 @@
   },
   "source": {
     "url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx",
-    "lastVerified": "2026-09-24",
+    "lastVerified": "2026-10-10",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
