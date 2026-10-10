@@ -201,6 +201,54 @@
       "evidence": "Students who have already obtained a bachelor's degree are ineligible for admission to Bowdoin.",
       "field": null,
       "kind": "must"
+    },
+    {
+      "ru": "Документ о школе (Secondary School Report, SSR): его заполняет школьный консультант или сотрудник школы, там сведения о школьных предметах и среде. Подаёт его представитель школы.",
+      "evidence": "Secondary School Report (SSR) This document is completed by a school counselor or official and includes information about your school offerings and environment.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный школьный транскрипт (табель оценок за 9, 10 и 11 классы или эквивалент). Подаёт его школьный консультант или сотрудник школы.",
+      "evidence": "Official High School Transcript / Secondary School Record This is a high school transcript that contains grades for secondary school years 9, 10, and 11 (or US equivalent).",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Промежуточный транскрипт или отчёт (Mid-Year Transcript or Report) — официальные оценки за середину выпускного года. Нужен тем, кто подаёт во второй ранний тур (ED2) или в обычный тур (RD).",
+      "evidence": "Mid-Year Transcript or Report For students apply Early Decision 2 or Regular Decision: This is an official report of your mid-year grades and performance.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Рекомендация от школьного консультанта: оценка характера и достижений ученика и сведения о школе.",
+      "evidence": "Counselor Recommendation: Advisor's estimate of your character and accomplishments and any relevant school information.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Рекомендация от учителя, который преподавал у тебя в предпоследнем или выпускном классе по основному предмету (английский, математика, естественные науки, общественные науки, иностранные языки).",
+      "evidence": "Teacher Recommendation: An evaluation completed by a teacher who has taught you in either junior or senior year in an academic core subject (English, math, lab sciences, social sciences, and foreign languages) that appears on your official high school transcript.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Ещё одна рекомендация — от второго учителя либо от священника, тренера, консультанта НКО, работодателя, сверстника или члена общины.",
+      "evidence": "Other Recommendation: This may be a second teacher evaluation or a recommendation from a clergy, coach, community-based organization counselor, employer, peer, or community member who can speak to the applicant's contributions to the wider community or share insights not otherwise captured in the application.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Если в стране есть национальный вступительный экзамен в вузы (например, WASSCE, EGSE, KCSE, CAPE, IGCSE, ISC, SLC), нужны его официальные результаты.",
+      "evidence": "Students from countries with national university entrance exams (such as but not limited to: WASSCE, EGSE, KCSE, CAPE, IGCSE, ISC, SLC) are required to submit official results.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Транскрипт должен быть переведён на английский; перевод лучше от школы или заверяющего сотрудника.",
+      "evidence": "Your transcript should be translated into English, and we prefer a translation from a school or a certifying official.",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -219,7 +267,7 @@
   },
   "source": {
     "url": "https://www.bowdoin.edu/admissions/apply/index.html",
-    "lastVerified": "2026-10-07",
+    "lastVerified": "2026-10-10",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
@@ -233,7 +281,7 @@
       },
       {
         "url": "https://www.bowdoin.edu/admissions/apply/international-students/index.html",
-        "contentHash": "sha256:724306d9bfdb7a09104c58890c5c29408ab13b27606c6319238d6711464f295b"
+        "contentHash": "sha256:3917aee142f3f3dbe02a917316ab859250e1f102833fcc366a49501611c4566e"
       },
       {
         "url": "https://www.bowdoin.edu/admissions/costs-and-aid/index.html",
