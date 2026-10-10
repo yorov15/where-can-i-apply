@@ -280,6 +280,19 @@ function agendaBlock(groups, today, onOpenProgram) {
   return box;
 }
 
+const TIP_KEY = 'nerio.tip.cards';
+function tipSeen() {
+  try { return localStorage.getItem(TIP_KEY) === '1'; } catch { return false; }
+}
+// toggle не всплывает, поэтому слушаем в фазе перехвата; одна и та же функция
+// не навешивается дважды, сколько бы раз ни перерисовали результаты.
+function dismissTip(event) {
+  if (!event.target.matches?.('details.card') || !event.target.open) return;
+  try { localStorage.setItem(TIP_KEY, '1'); } catch { /* без хранилища подсказка покажется снова */ }
+  event.currentTarget.querySelector('.hint-tip')?.remove();
+  event.currentTarget.removeEventListener('toggle', dismissTip, true);
+}
+
 export function renderResults(nodes, profile, programs, today, details) {
   const { summaryNode, agendaNode, resultsNode, catalogButton, onOpenProgram } = nodes;
   const plan = nodes.plan;
@@ -335,6 +348,13 @@ export function renderResults(nodes, profile, programs, today, details) {
   if (!skipCards && sorted) {
     resultsNode.append(el('p', 'hint',
       'Сверху — программы из выбранных тобой стран и направлений, в том порядке, в каком ты их поставил.'));
+  }
+
+  // Первая подсказка: карточки раскрываются, и внутри самое нужное. Пока
+  // человек не открыл ни одной, показываем; открыл — запоминаем и больше нет.
+  if (!skipCards && !tipSeen()) {
+    resultsNode.append(el('p', 'hint hint-tip', 'Нажми на программу, чтобы раскрыть её: условия, документы, сроки.'));
+    resultsNode.addEventListener('toggle', dismissTip, true);
   }
 
   for (const group of skipCards ? [] : groupRows(rows)) {
