@@ -110,6 +110,36 @@
       "evidence": "NUCB is currently not accepting transfer admissions.",
       "field": null,
       "kind": "note"
+    },
+    {
+      "ru": "Официальные транскрипты (табель успеваемости) — последняя версия, для подачи до окончания школы",
+      "evidence": "you will be required to submit your most recent official transcripts with your application",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Одно рекомендательное письмо от представителя последнего учебного заведения",
+      "evidence": "One letter of recommendation is usually sufficient.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный результат теста по английскому: TOEFL, IELTS, TOEIC, Duolingo English Test или TOEFL Home Edition (для не-носителей без 100% английского обучения)",
+      "evidence": "An official score such as TOEFL, IELTS or TOEIC is required of all non-native speakers unless the language of instruction at high school was 100% in English.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Эссе (ответы на эссе-вопросы с ограничением по объёму)",
+      "evidence": "Essays play a critical role in evaluating your candidacy for our university.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный перевод документов, не написанных на английском или японском языке (с именем, адресом и подписью/печатью переводчика)",
+      "evidence": "For documents not written in English or Japanese, please also upload an official translation that includes the translator's name, address, contact details, and signature or official seal.",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -131,7 +161,7 @@
     "pages": [
       {
         "url": "https://www.nucba.ac.jp/en/admission/",
-        "contentHash": "sha256:251f19bee5f24b11d8af4b6ff17d18557b5a3b9390e739aea88a1a625f588093"
+        "contentHash": "sha256:67446e4eff10b35cae53ed41ff28f6e7f40b1d50c620e8742aad07cbc55800c0"
       },
       {
         "url": "https://www.nucba.ac.jp/en/scholarship/",
@@ -146,11 +176,11 @@
         "contentHash": "sha256:090d5d4fbff76ceaa15177b8bd00310a8f2f7b1a659b1df479dcaa94063b6523"
       }
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-10",
     "humanChecked": false,
     "approvedBy": "assistant"
   },
   "leftEmpty": {
-    "schoolYears": "sha256:51a7eb1b32a9e6d015ae1d159da7773fb5752fd4899ebf6345300a737fd990d4"
+    "schoolYears": "sha256:83ec7102d4b26c34ea23f4cea5b9eae48b48d26a6e7c67a812772dca2fbd40e9"
   }
 }
