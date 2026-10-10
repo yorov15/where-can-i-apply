@@ -140,6 +140,23 @@
 - alberta — 5 документов (`a5e6b95`) — University of Alberta, Канада
 - anu — 4 документа (`871e998`) — Australian National University, Австралия
 
+Порция 10 (10.10.2026, начало «остальных»: Океания, Европа, США), сборка `4cbb434`:
+
+- auckland — 7 документов (`eb6735e`) — University of Auckland, Новая Зеландия
+- aus-uae — 9 документов (`f4f875b`) — American University of Sharjah (AUS), ОАЭ
+- austria-study — 3 документа (`12970cd`) — бакалавриат в Австрии
+- bard-college — 5 документов (`53c92ef`) — Bard College, США
+- barnard-college — 4 документа (`9911837`) — Barnard College, США
+- bates — 6 документов (`1884090`) — Bates College, США
+- berea-college — 10 документов (`4d1b7a0`) — Berea College, США
+- birmingham — 2 документа (`d564f43`) — University of Birmingham, Великобритания
+- bit — 12 документов (`e9ef892`) — Beijing Institute of Technology, Китай
+- bme-budapest — 5 документов (`3ff83b6`) — Budapest University of Technology and Economics (BME), Венгрия
+- bologna-italy — 7 документов (`f80e625`) — Болонский университет, Италия
+- boston-university — 9 документов (`6e95b47`) — Boston University, США
+- bowdoin-college — 8 документов (`1661781`) — Bowdoin College, США
+- bristol — 2 документа (`680eddd`) — University of Bristol, Великобритания
+
 ## Пропущено
 
 (формат строки: `id — причина`)
@@ -173,3 +190,4 @@
 - aalto-finland — на снятых страницах («Apply to Bachelor's programmes in English», «Scholarships and Tuition Fees») перечня документов к заявке нет: только общие отсылки «submit the required documents» без списка
 - amherst-college — на снятых страницах нет перечня документов к заявке: только тестовые требования и материалы по финансовой помощи
 - constructor-university — свежий снимок 10.10.2026 потерял цитаты уже утверждённых условий (стипендия Talent Scholarship, сроки Early Action/Rolling Admissions): запись не проходит review и целиком не утверждается, документы не внесены
+- bocconi — свежий снимок 10.10.2026 потерял цитату уже утверждённого условия о плате за первый курс (€17 000, 2026/27): запись не проходит review и целиком не утверждается, документы не внесены
