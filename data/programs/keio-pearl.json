@@ -2,7 +2,9 @@
   "id": "keio-pearl",
   "status": "published",
   "kind": "university",
-  "majors": ["business"],
+  "majors": [
+    "business"
+  ],
   "name": {
     "ru": "Keio University, Faculty of Economics, PEARL (Кэйо, Токио) — бакалавриат экономики на английском, осенний набор 2027, три тура без минимальных баллов",
     "orig": "Keio University, Faculty of Economics (PEARL)"
@@ -169,6 +171,72 @@
       "evidence": "All successful applicants are required to arrange for their high school to send the original high school graduation certificate and final academic transcripts directly to the University by post.",
       "field": null,
       "kind": "must"
+    },
+    {
+      "ru": "Анкета: академическая история по годам (от начальной школы до настоящего) и краткое самоописание до 250 слов.",
+      "evidence": "You must complete the designated form on TAO with your academic background (in chronological order, from elementary school to the present) and brief self introduction",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Результаты стандартизованного теста: IB (итоговые баллы или прогноз) или SAT — достаточно одного из них.",
+      "evidence": "All applicants are required to submit one (or more) of the following: a. International Baccalaureate (IB) diploma final scores or predicted grades b. SAT scores",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Баллы TOEFL iBT и/или IELTS Academic — от всех, включая носителей английского.",
+      "evidence": "All applicants, including native English speakers, are required to submit TOEFL iBT® and/or IELTS Academic Module Scores.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Письменное заявление о целях учёбы (до 600 слов без имени и заголовка).",
+      "evidence": "Written Statement of the Applicant's Academic and Future Goals (in English)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Двухминутное видео: рассказ в камеру не дольше двух минут, замена собеседованию.",
+      "evidence": "Prepare and upload a video in which you talk to the camera for no longer than two minutes.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Минимум одно рекомендательное письмо (принимают до трёх).",
+      "evidence": "At least one Letter of Reference is required.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Аттестат о среднем образовании или справка об ожидаемом окончании (на английском или японском).",
+      "evidence": "High School Graduation Certificate (or a document certifying expected graduation)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Школьный табель успеваемости (транскрипт, на английском или японском).",
+      "evidence": "High School Academic Transcripts (in English or Japanese)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия страницы паспорта с фотографией (при невозможности — другое удостоверение личности).",
+      "evidence": "Upload a copy of your passport photo page on TAO as a PDF file.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Фотография кандидата (анфас, без головного убора, на однотонном фоне, сделана за последние три месяца).",
+      "evidence": "The photo of the applicant must be a full-face view with no hat or headgear",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "По желанию: до трёх дополнительных подтверждающих сертификатов (официальных и по теме учёбы).",
+      "evidence": "You may upload up to three additional certificate documents.",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -191,7 +259,7 @@
     "pages": [
       {
         "url": "https://www.keio.ac.jp/en/admissions/faculty/examinations/pearl/",
-        "contentHash": "sha256:dcb311d4806ca9005894a585c989b0e288d6c1511ed77dc65f6e416bc368173a"
+        "contentHash": "sha256:3632810dc7e9be4e1415a5a4fe299eed88a111d5de25202cc58b550b301d540a"
       },
       {
         "url": "https://www.keio.ac.jp/files/c9c4d47ee5f4d118ad078942dac9baeb225edc5c1b26271959e2b80c4ed54c82",
@@ -199,11 +267,11 @@
       },
       {
         "url": "https://www.keio.ac.jp/en/admissions/faculty/faq/pearl/",
-        "contentHash": "sha256:7cde132454dbfb36ed5c879b06ca49ac36b02596f406558a8219817923870092"
+        "contentHash": "sha256:3e88c22f9e0c935fbf51d13192972793febf997177dd99089f51de7bfa0812a5"
       },
       {
         "url": "https://www.keio.ac.jp/en/admissions/fee/faculty/",
-        "contentHash": "sha256:eac419b25f94adf04f9990d0eaa2079b5a0e329a03ca352462aa09dc7e6b2512"
+        "contentHash": "sha256:db240da51bc72d3ab4d9c6b87f9407aae7b4db56c30fac7ce88e336729ed01a4"
       },
       {
         "url": "https://www.keio.ac.jp/files/74725a53d22ba2b1b26d1889f8567d82404785eb0003ebc298aa8ae44022f822",
@@ -214,7 +282,7 @@
         "contentHash": "sha256:97a2e09de563dd14f599cfbbeacea46c43f6dd4bce4f3c60a4b2a055ea47d6ac"
       }
     ],
-    "lastVerified": "2026-09-26",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
