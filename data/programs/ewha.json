@@ -2,7 +2,9 @@
   "id": "ewha",
   "status": "published",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Ewha Womans University — приём иностранок на бакалавриат (только для женщин)",
     "orig": "Ewha Womans University"
@@ -175,6 +177,60 @@
       "evidence": "decided differently by each university, so you will then need to contact universities directly",
       "field": "schoolYears",
       "kind": "note"
+    },
+    {
+      "ru": "Заявка: форма Form 1 заполняется онлайн на сайте приёма, туда же загружается и фото.",
+      "evidence": "1 Application Form [Form 1] • Must be filled out on the online application website. • Applicant's photo must also be uploaded when filling out the application form.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Личное заявление Personal Statement (Form 2-1) — обязательно для бакалавриата, печатается на сайте приёма.",
+      "evidence": "2 Personal Statement [Form 2-1] • Required for undergraduate program applicants only • Must be typed on the online application website.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Заявка на стипендию (Form 4) — только если претендуешь на стипендии Ewha: официальный бланк на корейском или английском, загрузка в PDF.",
+      "evidence": "4 Scholarship Application [Form 4] • For applicants applying for Ewha scholarships only • Applicants must fill out the university's official form in either Korean or English and upload it in PDF format.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Аттестат (или справка об ожидаемом окончании) школы и официальный табель успеваемости.",
+      "evidence": "5 Certificate of (Expected) Graduation and Official Transcript of Academic Records",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Отчёты или сертификаты о сдаче языкового теста: корейский (TOPIK) — по желанию, английский — обязателен для Division of International Studies.",
+      "evidence": "6 Language Proficiency Test Score Reports or Certificates",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Паспорта — твой и обоих родителей (подтверждение гражданства); без паспорта подойдут удостоверения личности или официальный документ о гражданстве.",
+      "evidence": "7 Passport - Applicant and both Parents (Documents verifying Nationality) • Passport copies of applicant and both parents",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Юридический документ о родстве между тобой и обоими родителями: свидетельство о рождении, семейный реестр и т.п.; не на корейском или английском — с заверенным переводом.",
+      "evidence": "8 Legal document verifying relationship between applicant and both parents",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Дополнительные материалы — необязательно, до 10 штук: результаты экзаменов, языковые документы, награды и школьные активности.",
+      "evidence": "9 Supplemental Materials • If you would like other supplemental materials to be considered during the evaluation process, you may submit them. (Maximum number of materials: 10, not mandatory)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Творческое или спортивное портфолио/выступление — только для College of Music, College of Art & Design и Division of Kinesiology & Sports Studies.",
+      "evidence": "10 Performance Evaluation • Must be submitted by applicants who fall under one of the two cases below.",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -212,7 +268,7 @@
         "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
       }
     ],
-    "lastVerified": "2026-09-26",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
