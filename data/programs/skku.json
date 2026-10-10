@@ -2,7 +2,16 @@
   "id": "skku",
   "status": "published",
   "kind": "university",
-  "majors": ["cs", "engineering", "natural", "business", "social", "humanities", "arts", "medicine"],
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities",
+    "arts",
+    "medicine"
+  ],
   "name": {
     "ru": "Sungkyunkwan University (SKKU) — один из старейших вузов Кореи, есть английский трек, а для граждан Таджикистана — шанс на скидку 50% платы",
     "orig": "Sungkyunkwan University"
@@ -184,6 +193,66 @@
       "evidence": "decided differently by each university, so you will then need to contact universities directly",
       "field": "schoolYears",
       "kind": "note"
+    },
+    {
+      "ru": "Онлайн-заявка (Application)",
+      "evidence": "입학원서 Application",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Список поданных документов (List of Submitted Documents)",
+      "evidence": "제출서류 목록표 List of Submitted Documents",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Согласие на проверку академической истории (Letter of Consent)",
+      "evidence": "학력조회 동의서 및 의뢰서 Letter of Consent",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия паспорта заявителя",
+      "evidence": "지원자 여권 사본 Passport Copy of Applicant",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия паспорта (или удостоверения личности) родителей",
+      "evidence": "부모 여권 사본 ( 또는 자국 발급 신분증 사본 ) Passport (or Domestic ID) Copy of Parents",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Документ о семейных отношениях (свидетельство о родстве)",
+      "evidence": "가족관계 증명서류 Family Relationship Certificate",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Языковой сертификат (корейский или английский)",
+      "evidence": "어학능력 시험 성적표 Language Proficiency Document (Korean / English)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Аттестат об окончании школы (или справка об ожидаемом окончании)",
+      "evidence": "고등학교 졸업 ( 예정 ) 증명서 High school (Expectant) Graduation Certificate",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Табель успеваемости старшей школы",
+      "evidence": "고등학교 성적증명서 High school Transcript",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Выпускник, ещё не получивший аттестат, после зачисления досылает обновлённые аттестат и табель, выданные после даты выпуска",
+      "evidence": "After the acceptance, expected graduate must renew the graduation certificate and transcript issued after the graduation date - Not submitting documents may result in cancellation of acceptance",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -222,14 +291,14 @@
       },
       {
         "url": "https://admission-global.skku.edu/eng/etc/bbs_list.html?bbsid=global_notice_re_eng&ctg_cd=&page=1&skey=&keyword=&mode=view&bltn_seq=53798",
-        "contentHash": "sha256:f7789fb5d3772355a9749ba5762426b99632b17586d68b3d47ffe8c4eeaadd76"
+        "contentHash": "sha256:1a77a6e54aea7ab03a766cafc7017ae0ddd9825d1d8f9b68129cd277d6baf81e"
       },
       {
         "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
         "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
       }
     ],
-    "lastVerified": "2026-09-26",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
