@@ -219,6 +219,23 @@
 - lund-sweden — 3 документа (`197a69e`) — Лундский университет, Швеция
 - macalester-college — 11 документов (`5a9519e`) — Macalester College, США
 
+Порция 15 (10.10.2026, продолжение «остальных»: Великобритания, Чехия, Венгрия, Канада, Австралия, США, Тайвань, Нидерланды), сборка `fd24c42`:
+
+- manchester — 3 документа (`fed9245`) — Университет Манчестера, Великобритания
+- masaryk-university — 9 документов (`62663fa`) — Университет Масарика, Чехия
+- mate — 5 документов (`1397ed6`) — MATE, Венгрия
+- mcgill — 10 документов (`04476d9`) — McGill University, Канада
+- melbourne — 4 документа (`5c53bdd`) — University of Melbourne, Австралия
+- michigan — 7 документов (`35b6c0d`) — University of Michigan, США
+- middlebury-college — 10 документов (`8aec309`) — Middlebury College, США
+- mit — 5 документов (`3ae3767`) — MIT, США
+- moe-taiwan — 6 документов (`830b04a`) — стипендия MOE Тайваня
+- monash — 9 документов (`84962a8`) — Monash University, Австралия
+- mount-holyoke-college — 15 документов (`8b4bf38`) — Mount Holyoke College, США
+- nccu — 5 документов (`8bafade`) — National Chengchi University, Тайвань
+- ncku — 10 документов (`bf93521`) — National Cheng Kung University, Тайвань
+- northwestern-university — 11 документов (`ca98c47`) — Northwestern University, США
+
 ## Пропущено
 
 (формат строки: `id — причина`)
@@ -263,3 +280,4 @@
 - jagiellonian-university — на снятых страницах приёма перечень документов к заявке не назван
 - ljubljana-slovenia — на снятых страницах приёма перечень обязательных документов к заявке не назван
 - khalifa-uae — на снятых страницах (undergraduate-admissions, undergraduate-scholarships, tuition-fees) перечень обязательных документов не назван
+- netherlands-study — на снятых страницах приёма англоязычного бакалавриата в Нидерландах перечень документов к заявке не назван
