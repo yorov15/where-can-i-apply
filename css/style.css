@@ -314,10 +314,11 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .summary-more { margin: var(--s-2) 0 0; }
 .summary-note { margin: var(--s-3) 0 0; color: var(--muted); font-size: .875rem; }
 
-.summary-more-head, .agenda-more-head, .catalog-more > summary { list-style: none; cursor: pointer; display: flex; align-items: center; min-height: 44px; font-weight: 700; color: var(--accent-text); }
-.summary-more-head::-webkit-details-marker, .agenda-more-head::-webkit-details-marker, .catalog-more > summary::-webkit-details-marker { display: none; }
-.summary-more-head::after, .agenda-more-head::after, .catalog-more > summary::after { content: ""; width: .45rem; height: .45rem; margin-left: .6rem; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg); transition: transform var(--dur) var(--ease); }
-.summary-more[open] > .summary-more-head::after, .agenda-more[open] > .agenda-more-head::after, .catalog-more[open] > summary::after { transform: rotate(-135deg); }
+.summary-more-head, .agenda-more-head, .catalog-more > summary, .more-head { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 0 var(--s-4); font-weight: 700; color: var(--accent-text); background: var(--accent-soft); border: 1px solid var(--accent); border-radius: var(--r-control); }
+.summary-more-head:hover, .agenda-more-head:hover, .catalog-more > summary:hover, .more-head:hover { background: var(--tint); }
+.summary-more-head::-webkit-details-marker, .agenda-more-head::-webkit-details-marker, .catalog-more > summary::-webkit-details-marker, .more-head::-webkit-details-marker { display: none; }
+.summary-more-head::after, .agenda-more-head::after, .catalog-more > summary::after, .more-head::after { content: ""; width: .45rem; height: .45rem; margin-left: .6rem; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg); transition: transform var(--dur) var(--ease); }
+.summary-more[open] > .summary-more-head::after, .agenda-more[open] > .agenda-more-head::after, .catalog-more[open] > summary::after, .more[open] > .more-head::after { transform: rotate(-135deg); }
 .agenda-more { margin-top: var(--s-3); }
 .catalog-more { margin: 0 0 var(--s-4); }
 
@@ -455,7 +456,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .reason-muted, .details-state { margin: var(--s-2) 0 0; color: var(--muted); font-size: .875rem; }
 .card-body > .button { margin-top: var(--s-5); width: 100%; }
 .more { margin-top: var(--s-4); }
-.more-head { cursor: pointer; font-size: .9375rem; font-weight: 600; min-height: 48px; display: flex; align-items: center; }
+.more-head { font-size: .9375rem; min-height: 48px; }
 .card-source { margin: var(--s-4) 0 0; color: var(--muted); font-size: .8125rem; }
 .card-source.stale { color: var(--check); font-weight: 600; }
 .empty { color: var(--muted); }
