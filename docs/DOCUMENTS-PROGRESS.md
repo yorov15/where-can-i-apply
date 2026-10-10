@@ -83,6 +83,20 @@
 - sejong — 18 документов (`0d26927`) — Sejong University, Корея
 - seoultech — 10 документов (`1133feb`) — Сеульский национальный технический университет, Корея
 
+Порция 6 (10.10.2026, остаток Кореи и Япония), сборка `a72df2e`:
+
+- skku — 10 документов (`56dc740`) — Sungkyunkwan University (SKKU), Корея
+- snu-korea — 15 документов (`86238d0`) — Seoul National University (SNU), Корея
+- sookmyung — 11 документов (`e5d5e5c`) — Sookmyung Women's University, Корея
+- yonsei-uic — 13 документов (`f80f65d`) — Yonsei University, Underwood International College (UIC), Корея
+- yonsei — 11 документов (`e25e474`) — Yonsei University (Ёнсе), Корея
+- apu-japan — 7 документов (`24c8fa2`) — APU (Беппу), Япония
+- hokkaido-isp — 12 документов (`b67d8b4`) — Hokkaido University, Integrated Science Program, Япония
+- hokkaido-mjsp — 13 документов (`4225f8e`) — Hokkaido University, Modern Japanese Studies Program, Япония
+- icu-japan — 12 документов (`9418325`) — International Christian University (ICU), Япония
+- keio-pearl — 11 документов (`e1e569b`) — Keio University, PEARL, Япония
+- kyoto-iup — 9 документов (`aa78702`) — Kyoto University, Kyoto iUP, Япония
+
 ## Пропущено
 
 (формат строки: `id — причина`)
@@ -101,3 +115,7 @@
 - hongik — на снятых страницах (admissions-guide.do, apply.do, recruitment-is.do) личного перечня документов нет: раздел «Application Documents Submission» присутствует только как пункт навигации и ссылка на PDF, списка на страницах нет
 - kyung-hee — на снятых страницах (iadmission menuNo=8000031, khu.ac.kr/eng menuNo=300152) перечня документов к заявке нет; чек-лист лежит в PDF-руководстве (menuNo=8000020), которого нет в снимке
 - pusan-national — на снятых страницах (pusan.ac.kr/eng CMS MN013, MN016) перечень обязательных документов не назван
+- sogang — на снятых страницах (english.moe.go.kr 0703, wwwe.sogang.ac.kr/admissionprograms.html) перечень документов к заявке не назван
+- unist — на снятых страницах (unist.ac.kr/en/admissions, /unist/admissions/admissions.do, english.moe.go.kr 0703) перечень обязательных документов не назван
+- aiu-japan — на снятых страницах приёма (admission.aiu.ac.jp/en/ug/international, /en/ug, web.aiu.ac.jp tuition и scholarship) личного перечня документов к заявке нет
+- kyushu — на снятых страницах (kyushu-u.ac.jp/en/admission/faculty/foreign/foreign10, isc.kyushu-u.ac.jp/financialaid, /en/admission/fees) перечень обязательных документов не назван
