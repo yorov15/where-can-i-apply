@@ -7,7 +7,9 @@
   },
   "hostCountry": "JP",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": null,
@@ -162,6 +164,48 @@
       "evidence": "*The date of enrollment is April 1, 2027 for April enrollment and September 21, 2027 for September enrollment.",
       "field": "graduationYear",
       "kind": "steps"
+    },
+    {
+      "ru": "Академические документы: транскрипты (табели оценок) и свидетельство об окончании школы.",
+      "evidence": "Academic documents (transcripts and graduation certificate)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Результат экзамена на знание языка — английского или японского.",
+      "evidence": "Language proficiency test score",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Результаты стандартизированных тестов — если они есть.",
+      "evidence": "Standardized test scores",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Подтверждение внеклассной деятельности — если есть.",
+      "evidence": "Proof of extracurricular activities (if applicable)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Эссе — только при заявке на скидку на обучение (APU Tuition Reduction Scholarship).",
+      "evidence": "Essays (only if applying for the APU Tuition Reduction Scholarship)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Рекомендательное письмо — только при заявке на скидку на обучение (APU Tuition Reduction Scholarship).",
+      "evidence": "Letter of Recommendation (only if applying for the APU Tuition Reduction Scholarship)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Записанное интервью (Recorded interview).",
+      "evidence": "Recorded interview",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -180,33 +224,33 @@
   },
   "source": {
     "url": "https://admissions.apu.ac.jp/admissions/application_eligibility/",
-    "lastVerified": "2026-09-24",
+    "lastVerified": "2026-10-10",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
       {
         "url": "https://admissions.apu.ac.jp/admissions/application_eligibility/",
-        "contentHash": "sha256:aaf83c0e21f48b0218ad51ab4a10b8c01670785b321638589ba93ecba3bed045"
+        "contentHash": "sha256:46d35867546839c94c16ff4a213936c1b71d4b68eaddcef7b652475641575391"
       },
       {
         "url": "https://admissions.apu.ac.jp/admissions/application_schedule/",
-        "contentHash": "sha256:a619223c740394658b527726d252ad976411acefb59a68c8e6b7ff138b85b306"
+        "contentHash": "sha256:a170034e4ff97d61451fcd04e654c44b8305150af2f2444448c5f1b2c0002746"
       },
       {
         "url": "https://admissions.apu.ac.jp/admissions/how_to_apply/",
-        "contentHash": "sha256:2350cc51916e1c3d1329ebeca69a522cd567022b346abc0812318a788e06b6f9"
+        "contentHash": "sha256:5e74487cdb1d7b88478b0fdab1a0e0f55ca768c67192fa5bc044ea3131bdb4ad"
       },
       {
         "url": "https://admissions.apu.ac.jp/costs_scholarships/before_enrollment/",
-        "contentHash": "sha256:4e4ff257db19c94c7005f68b585fcd786534cd4ca5d510fb30dda67f5cc88af3"
+        "contentHash": "sha256:e234314c96831db3f2ff4ef397d3ac944035da706ec456c30d827ffae37c4e6c"
       },
       {
         "url": "https://admissions.apu.ac.jp/costs_scholarships/tuition_fees/",
-        "contentHash": "sha256:01e0593c7a6a2209f333bcf692c90e71a3b5d2a8b104ded1cfcbe8a7d95f3ed1"
+        "contentHash": "sha256:656ee7cd91e049a58225b267de7823a827a6f116b40e2824c87b5cc0b80064f4"
       },
       {
         "url": "https://admissions.apu.ac.jp/costs_scholarships/after_enrollment/",
-        "contentHash": "sha256:035969645e6c230e1c2fe34ceee7147eefed8a87446073d8376cd677949cd595"
+        "contentHash": "sha256:044da6023c9da12a5ccd526800d4aceda517044819bf25c7eaef7f6d97f8347b"
       }
     ]
   }
