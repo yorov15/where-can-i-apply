@@ -2,7 +2,9 @@
   "id": "korea-university",
   "status": "published",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Korea University (Кориё) — приём иностранцев на бакалавриат, один из трёх лучших вузов Кореи",
     "orig": "Korea University"
@@ -160,6 +162,66 @@
       "evidence": "decided differently by each university, so you will then need to contact universities directly",
       "field": "schoolYears",
       "kind": "note"
+    },
+    {
+      "ru": "Копия онлайн-заявки: форму печатают из системы онлайн-подачи и прикладывают к заявке (вместе с заявлением о целях и согласием это формы ①–③).",
+      "evidence": "Copy of Online Application l Documents ① - ③ must be completed, and be printed from the online application system for submission.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Заявление о целях (Statement of Purpose).",
+      "evidence": "Statement of Purpose",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Согласие на сбор и использование персональных данных и заявление о гражданстве (Consent of Collection and Use of Personal Information & Citizenship Statement).",
+      "evidence": "Consent of Collection and Use of Personal Information & Citizenship Statement",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия страницы паспорта с фотографией — заявителя и его родителей.",
+      "evidence": "Photocopy of the Passport Information (photo) Page of the Applicant and Parent(s)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Документ о родстве (Family Register / Relationship Certificate): свидетельство о рождении, семейный реестр, регистрация по месту жительства или справка о семейных отношениях, подтверждающие родство заявителя с родителями.",
+      "evidence": "Applicants other than Chinese: Birth certificate of the applicant, family register, resident registration or certificate of family relations to confirm the relationship between the applicant and parent(s)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Сертификат о владении языком (Proof of Language Proficiency) — официальный результат теста по английскому или корейскому.",
+      "evidence": "Proof of Language Proficiency",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный табель успеваемости средней школы (Official Transcript of High/Secondary School) — с апостилем или консульской легализацией.",
+      "evidence": "Official Transcript of High/Secon dary School Must obtain apostille stamps or consular authentication",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный аттестат об окончании средней школы (Official Graduation Certificate of High/Secondary School).",
+      "evidence": "Official Graduation Certificate of High/Secon dary School",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Портфолио (A4, не больше 10 работ) и Statement of Verification for Portfolio — только для поступающих на Art & Design.",
+      "evidence": "Portfolio (A4, max. 10 items) and Statement of Verification for Portfolio",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Необязательные документы (не больше 10 штук): профиль школы, официальные результаты тестов, международные квалификации об образовании, лицензии и т. п., полученные после средней школы.",
+      "evidence": "Optional Documents: School Profile, Official scores (language proficiency test results, international standard qualification of education, licenses, etc.) obtained since high school.",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -197,7 +259,7 @@
         "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
       }
     ],
-    "lastVerified": "2026-09-26",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
