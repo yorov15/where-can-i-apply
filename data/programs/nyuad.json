@@ -7,7 +7,9 @@
   },
   "hostCountry": "AE",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": null,
@@ -151,6 +153,48 @@
       "evidence": "All of your schooling for the three full consecutive academic years prior to the current year were taught entirely in English (excluding world language classes).",
       "field": "language",
       "kind": "must"
+    },
+    {
+      "ru": "Школьные академические документы (табель/транскрипт) об учёбе в средней школе — обязательны.",
+      "evidence": "Applicants are required to provide academic records reflecting their secondary school studies.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Одно рекомендательное письмо — обязательно.",
+      "evidence": "One letter of recommendation",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "STARS (Self-reported Transcript and Academic Record System) — самоотчёт о табеле и академических результатах, входит в полную заявку.",
+      "evidence": "STARS (Self-reported Transcript and Academic Record System)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Анкета NYU Abu Dhabi Applicant Profile — отдельный профиль заявителя, входит в полную заявку.",
+      "evidence": "The NYU Abu Dhabi Applicant Profile",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Результаты теста по английскому (или стандартизированного теста) — прикладываются, если применимо.",
+      "evidence": "Standardized and/or English Language Proficiency test, if applicable",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальные результаты языкового теста нужно отправить, если поступил и планируешь учиться.",
+      "evidence": "To submit official results (required if admitted and planning to enroll)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Заявка подаётся через общую американскую систему Common Application — это обязательная основа полной заявки.",
+      "evidence": "The Common Application",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
