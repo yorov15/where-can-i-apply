@@ -101,6 +101,60 @@
       "evidence": "Tuition for all majors is AED 110,876 per academic year.",
       "field": null,
       "kind": "money"
+    },
+    {
+      "ru": "Аттестат о среднем образовании, заверенный уполномоченными органами.",
+      "evidence": "official secondary school certificate certified by the appropriate authorities**",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Табели (ведомости оценок) за последние три класса средней школы, заверенные уполномоченными органами.",
+      "evidence": "official grade reports of the last three secondary school classes certified by the appropriate authorities**",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Справка о хорошем поведении (Letter of Good Conduct) из школы, которую окончил заявитель.",
+      "evidence": "Letter of Good Conduct from the School of Graduation***",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Свидетельство об эквивалентности аттестата от Министерства образования ОАЭ (кроме выпускников систем Thanaweyya Ammah и Applied Technology).",
+      "evidence": "Certificate of Equivalency from the UAE Ministry of Education (required from all applicants except UAE Thanaweyya 'Ammah and Applied Technology graduates)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Цветной скан действующего паспорта.",
+      "evidence": "valid passport-colored scan",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Цветной скан удостоверения личности ОАЭ (для граждан и резидентов ОАЭ).",
+      "evidence": "colored UAE national ID scan (for UAE nationals and residents)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Недавняя фотография паспортного размера на белом фоне.",
+      "evidence": "recent passport-size photo with a white background",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Результат теста по английскому: TOEFL iBT от 80, TOEFL ITP от 550 или IELTS Academic от 6.5.",
+      "evidence": "a minimum TOEFL iBT score of 80, or TOEFL ITP score of 550, or an IELTS Academic score of 6.5 are accepted.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальное письмо о прохождении или освобождении от воинской службы (для мужчин-заявителей из ОАЭ).",
+      "evidence": "official letter stating completion or exemption of the Military National Service (UAE Male Applicants)",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -133,11 +187,11 @@
         "contentHash": "sha256:9ada210edc06ba223f67b64cf78c6cba82a7b4410fc6e3cc79b291cba6eff241"
       }
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-10",
     "humanChecked": false,
     "approvedBy": "assistant"
   },
   "leftEmpty": {
-    "schoolYears": "sha256:571c45e879e7d4cf049fb6a05626b66e9149202a131d5080725a4b3ac83caad9"
+    "schoolYears": "sha256:0342654de53a7ebfed7d2c69b9e623cb0bfb6237c160a05a26dcf744d2445ee9"
   }
 }
