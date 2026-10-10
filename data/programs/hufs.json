@@ -2,7 +2,14 @@
   "id": "hufs",
   "status": "published",
   "kind": "university",
-  "majors": ["cs", "engineering", "natural", "business", "social", "humanities"],
+  "majors": [
+    "cs",
+    "engineering",
+    "natural",
+    "business",
+    "social",
+    "humanities"
+  ],
   "name": {
     "ru": "Hankuk University of Foreign Studies (HUFS) — вуз иностранных языков в Сеуле, приём иностранцев на бакалавриат",
     "orig": "Hankuk University of Foreign Studies"
@@ -157,6 +164,90 @@
       "evidence": "decided differently by each university, so you will then need to contact universities directly",
       "field": "schoolYears",
       "kind": "note"
+    },
+    {
+      "ru": "Анкета-заявление (Application Form): заполняется и распечатывается с сайта подачи.",
+      "evidence": "1. Application Form Complete the form and print it out from the application website",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Личное заявление и план учёбы (Personal Statement & Study Plan): печатаются с сайта подачи; для корейской ветки пишут по-корейски, для английской — по-английски.",
+      "evidence": "2. Personal Statement & Study Plan Complete the form and print it out from the application website",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Аттестат/выписка из старшей школы (High School Transcripts): сканы загружаются на сайте (U-Way), затем оригиналы отправляют заказным письмом.",
+      "evidence": "High School Transcripts - After uploading scanned files on the application website (U-Way), applicants must submit hardcopies of the original documents by registered mail",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный аттестат об окончании (или об ожидаемом окончании) старшей школы.",
+      "evidence": "4. Official High School (Expected) Graduation Certificate",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Справка о корейском языке (на выбор): TOPIK 3 и выше, курс корейского уровня средний 1 и выше и т.п. — необязательна.",
+      "evidence": "5.Official Certificate of Proficiency in Korean <Optional>",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Справка об английском языке (на выбор): TOEFL iBT 3,5 или IELTS 5,5 — необязательна.",
+      "evidence": "6. Official Certificate of English Language Proficiency <Optional>",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия действующего паспорта заявителя.",
+      "evidence": "7. A copy of the applicant's passport - Submit a copy of a valid passport.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия карты иностранца (Residence Card) — для тех, у кого она есть или была.",
+      "evidence": "8. A copy of the applicant's Residence Card (RC) - Applicants who have had or currently have an Residence Card (RC) should submit a copy",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копии паспортов обоих родителей либо официальные документы об их гражданстве.",
+      "evidence": "9. A copy of both parents' passports ※ or official documents indicating parents' nationality",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный документ о родстве заявителя с законными родителями (например, Certificate of Family Relations).",
+      "evidence": "10. Official document indicating family relationship between the applicant and their legal parents",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Финансовая справка (Financial Certification): заполняется и печатается с сайта Uway.",
+      "evidence": "11. Financial Certification Complete the form and print it out from the Uway application website",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Согласие на проверку академических записей (Agreement for Verification of Academic Records).",
+      "evidence": "12. Agreement for Verification of Academic Records",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Рекомендательное письмо от учителя или преподавателя — необязательно.",
+      "evidence": "13. Letter of Recommendation(s) from your teacher/professor ※ Optional",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Прочее (по необходимости): сертификаты CKLC или FL TTC, награды, сертификаты квалификации, документы об успеваемости.",
+      "evidence": "14. Miscellaneous (certificate of completion for CKLC or FL TTC, records of awards, certificates of qualification(s), documents relating to academic proficiency, etc.) - Submit only if applicable.",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -179,18 +270,18 @@
     "pages": [
       {
         "url": "https://international.hufs.ac.kr/",
-        "contentHash": "sha256:e34943dd3a1765885b4ff06a59545d4d6483150c53c1395cca23d7757fbb96a3"
+        "contentHash": "sha256:4f97022c321249578a0da05de428b2658739a77f6cd60609d5b9249e51907e15"
       },
       {
         "url": "https://international.hufs.ac.kr/sites/international/contents/files/2026fall/HUFS_2026_Fall_Admission_guide(ENG)_update_ver.pdf",
-        "contentHash": "sha256:ec87bd6aa56657b0e5d4a51dd03627c54ad935bc9683debce34d7c8fa2a8b29f"
+        "contentHash": "sha256:88a23b75b07d24d39bda86893834d67106424fa82e075b1cc1ecda29ab058529"
       },
       {
         "url": "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
         "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
       }
     ],
-    "lastVerified": "2026-09-26",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
