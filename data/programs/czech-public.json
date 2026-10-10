@@ -7,7 +7,9 @@
   },
   "hostCountry": "CZ",
   "kind": "national",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": null,
@@ -122,6 +124,72 @@
       "evidence": "A yearly student public transport pass can cost roughly 50-100 EUR",
       "field": null,
       "kind": "money"
+    },
+    {
+      "ru": "Заполненная заявка (application form) через систему вуза.",
+      "evidence": "completed application form",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Подтверждение оплаты вступительного взноса за подачу заявки.",
+      "evidence": "proof of payment of the application fee",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Диплом или аттестат о полученном предыдущем образовании.",
+      "evidence": "diploma or graduation certificate from your previous studies",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Приложение к диплому / выписка оценок (transcript of records).",
+      "evidence": "transcript of records",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Признание предыдущего образования (нострификация), если требуется.",
+      "evidence": "recognition of previous education, if required",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Языковой сертификат, подтверждающий уровень владения языком.",
+      "evidence": "language certificate",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия паспорта или удостоверения личности (ID).",
+      "evidence": "copy of your passport or ID",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Резюме (CV).",
+      "evidence": "CV",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Мотивационное письмо (motivation letter).",
+      "evidence": "motivation letter",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Рекомендательное письмо (recommendation letter).",
+      "evidence": "recommendation letter",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Портфолио — особенно для творческих и художественных программ.",
+      "evidence": "portfolio, especially for arts or creative programmes",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -140,7 +208,7 @@
   },
   "source": {
     "url": "https://studyin.gov.cz/plan-your-studies/learn-czech-study-tuition-free/",
-    "lastVerified": "2026-09-24",
+    "lastVerified": "2026-10-10",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
