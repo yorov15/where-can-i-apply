@@ -2,7 +2,9 @@
   "id": "bard-college",
   "status": "published",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Bard College — колледж в США, нужду гарантируют только в ранних турах, семья обычно платит от 30 000 долларов",
     "orig": "Bard College"
@@ -176,6 +178,36 @@
       "evidence": "Jan. 15 Applications Due Jan. 15 Financial Aid Application Due",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Аттестат (справка о завершении школы): официальный школьный транскрипт, который школа отправляет напрямую в Bard College в электронном виде.",
+      "evidence": "High School transcript sent directly by your high school to Bard College electronically (include mid-year senior grades if available at the time you apply.)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Школьный отчёт School Report — форму обычно заполняет школьный консультант; включает профиль школы.",
+      "evidence": "School Report (form is generally completed by a high school counselor and includes a school profile.)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Две рекомендации от учителей: одна от консультанта или советника по поступлению, одна от школьного учителя.",
+      "evidence": "Teacher recommendations: Two are required. One must come from a guidance or college counselor and one from a High School teacher.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Результаты теста по английскому языку: TOEFL, IELTS или Duolingo English Test.",
+      "evidence": "TOEFL exam or IELTS exam or Duolingo English Test are acceptable English proficiency tests.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Заполненная заявка на финансовую помощь Bard International Financial Aid Application (BISFAA) — обязательна, если просишь помощь.",
+      "evidence": "Completed Bard International Financial Aid Application (BISFAA).",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -205,7 +237,7 @@
         "contentHash": "sha256:f81ded0e9d2bc4833ee87a14ad5aee94cd1040ef3d7f23598b3a65f43bd78228"
       }
     ],
-    "lastVerified": "2026-09-26",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
