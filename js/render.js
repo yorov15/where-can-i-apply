@@ -477,6 +477,7 @@ function card(row, today, details, openCards, openMore, kindLine, plan) {
   const head = el('summary', 'card-head');
   const metas = el('span', 'card-metas');
   metas.append(el('span', 'card-meta', model.deadlineLine), el('span', 'card-meta card-meta-cover', model.coverageLine));
+  if (row.program.hasDocuments) metas.append(el('span', 'card-meta card-meta-docs', 'Документы'));
   head.append(
     el('span', 'card-verdict', verdict),
     ...(kindLine ? [el('span', 'card-kind', kindLine)] : []),

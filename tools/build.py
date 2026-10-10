@@ -141,6 +141,11 @@ def index_entry(program: dict) -> dict:
         # Тексты условий уехали в details.json. Здесь остаётся только то,
         # что нужно свёрнутой карточке и сводке.
         "workaroundFields": workaround_fields(program),
+        # Метка «Документы» на свёрнутой карточке: сами документы лежат в
+        # условиях, а метке нужен только факт, что они есть.
+        "hasDocuments": any(
+            c.get("kind") == "documents" for c in program.get("textConditions") or []
+        ),
     }
 
 

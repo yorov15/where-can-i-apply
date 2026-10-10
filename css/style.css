@@ -633,3 +633,4 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 /* Отклик на касание: на телефоне hover нет, и нажатие иначе молчит. */
 @media (hover: none) { .card-head:active, .agenda-item:active, .faq > summary:active, .tab:active { background: var(--tint); } }
 .hint-tip { border-left: 3px solid var(--amber); padding-left: var(--s-3); }
+.card-meta-docs { color: var(--accent-text); font-weight: 700; background: none; box-shadow: inset 0 0 0 1px var(--accent); }

@@ -111,6 +111,14 @@ class TestIndexEntry(unittest.TestCase):
         del program["textConditions"]
         self.assertEqual(index_entry(program)["workaroundFields"], [])
 
+    def test_documents_flag_reaches_the_index(self):
+        program = json.loads(json.dumps(PROGRAM))
+        self.assertFalse(index_entry(program)["hasDocuments"])
+        program["textConditions"] = [
+            {"ru": "Паспорт", "evidence": "Passport", "field": None, "kind": "documents"},
+        ]
+        self.assertTrue(index_entry(program)["hasDocuments"])
+
     def test_no_limit_flag_and_note_both_reach_the_site(self):
         # Без флага движок не отличит «человек проверил, требования нет»
         # от «не знаем» — и карточка снова станет жёлтой.
