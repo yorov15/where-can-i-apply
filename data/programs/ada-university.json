@@ -7,7 +7,9 @@
   },
   "hostCountry": "AZ",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": null,
@@ -139,6 +141,48 @@
       "evidence": "If there is no Embassy of Azerbaijan in your country, you can apply for visa through (evisa.gov.az) portal by selecting EDUCATION purpose of visa only.",
       "field": null,
       "kind": "note"
+    },
+    {
+      "ru": "Аттестат о среднем образовании или справка из школы об ожидаемой дате выпуска — с нотариально заверенным переводом на английский.",
+      "evidence": "High School diploma/a reference from school with expected graduation date (with a notarized English translation)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный транскрипт (табель успеваемости) средней школы — с нотариально заверенным переводом на английский.",
+      "evidence": "Official High School transcript (with a notarized English translation)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Резюме (CV), не больше 2 страниц.",
+      "evidence": "CV (no more than 2 pages)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Мотивационное письмо (Statement of Purpose) о мотивации к программе, будущих целях и карьерных устремлениях, от 300 до 500 слов.",
+      "evidence": "Statement of Purpose describing motivation for applying to this program, future goals and career aspirations (minimum 300, maximum 500 words)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Паспорт.",
+      "evidence": "Passport",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Свежая фотография.",
+      "evidence": "Recent photo",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Результаты экзамена по английскому — если есть.",
+      "evidence": "English proficiency results (if available)",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -157,7 +201,7 @@
   },
   "source": {
     "url": "https://www.ada.edu.az/en/admission/undergraduate",
-    "lastVerified": "2026-09-24",
+    "lastVerified": "2026-10-10",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
