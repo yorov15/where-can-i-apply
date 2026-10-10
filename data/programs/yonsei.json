@@ -2,7 +2,9 @@
   "id": "yonsei",
   "status": "published",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Yonsei University (Ёнсе) — один из трёх лучших вузов Кореи, набор иностранцев на бакалавриат в Сеуле и Сонгдо",
     "orig": "Yonsei University"
@@ -142,6 +144,72 @@
       "evidence": "decided differently by each university, so you will then need to contact universities directly",
       "field": "schoolYears",
       "kind": "note"
+    },
+    {
+      "ru": "Заявка (Application Form) — печатная копия онлайн-заявки, распечатанная из системы подачи.",
+      "evidence": "Application Form Essential One printed copy",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Академическая справка об обучении (Academic History Record Sheet) — печатная копия: перечисли все начальные, неполные средние и старшие школы, где учился.",
+      "evidence": "Academic History Record sheet Essential One printed copy",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Личное заявление (Personal Statement) — печатная копия.",
+      "evidence": "Personal Statement Essential One printed copy",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Аттестат о среднем образовании или справка об ожидаемом выпуске (High School Diploma or Certificate of (Expected) Graduation) — оригинал с апостилем или консульской легализацией. Для школ Кореи апостиль не нужен.",
+      "evidence": "High School Diploma or Certificate of (Expected) Graduation",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальные табели за все посещённые старшие школы, 10–12 классы (Official Transcripts of All Attended High School) — годовые выписки по семестрам (четвертям) с апостилем или консульской легализацией.",
+      "evidence": "Official Transcripts of All Attended High School (G10, G11 and G12)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Справка о пройденном курсе старшей школы (High School Course Completion Certificate) — только если школа предлагает несколько форматов обучения (очный, заочный и др.): нужно подтвердить, какую именно программу закончил.",
+      "evidence": "High School Course Completion Certificate (Only relevant applicants )",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копии паспортов заявителя и обоих родителей (допускаются удостоверения личности родной страны с заверением или справка о регистрации иностранца из корейской иммиграционной службы).",
+      "evidence": "Documents verifying foreign nationality of applicant and his/her parents Essential",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Документ о родстве между заявителем и родителями: свидетельство о рождении (для граждан Китая — нотариальное подтверждение родства и домовая книга, для граждан Японии — семейный реестр).",
+      "evidence": "Official(legal) document indicating the relationship between the applicant and his/her parents Non -Chinese/ Japanese Nationals Essential Birth Certificate",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Для иностранцев, ранее имевших корейское гражданство (только применимо): документы о выходе заявителя и родителей из корейского гражданства и о дате получения иностранного гражданства.",
+      "evidence": "Mandatory documents for foreigners with a history of holding Korean nationality (Only relevant applicants )",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Для иностранных резидентов Кореи (только применимо): справка о регистрации иностранного резидента (Certification of Foreign Resident Registration) или справка о регистрации зарубежного корейца — по одному экземпляру на заявителя и родителя.",
+      "evidence": "Documents verifying nationality status of foreign residents in Korea (Only relevant applicants )",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Подтверждение владения корейским или английским языком — на выбор одно: результат теста по корейскому/английскому, стандартизированный тест, сертификат об окончании языковых курсов корейского или справка о школьных курсах на корейском/английском.",
+      "evidence": "Certificate of Language proficiency [Choose ONE]",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -171,7 +239,7 @@
         "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
       }
     ],
-    "lastVerified": "2026-09-26",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
