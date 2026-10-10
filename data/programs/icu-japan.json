@@ -303,6 +303,78 @@
       "evidence": "Only documents bearing an official seal or signature of the issuing institution will be accepted.",
       "field": null,
       "kind": "must"
+    },
+    {
+      "ru": "Базовая информация в онлайн-форме: личные данные, гражданство, статус проживания в Японии, контакты, сведения о родителях",
+      "evidence": "A) Basic Information",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "История обучения в онлайн-форме: все школы от начальной до последней с периодами, страной, языком преподавания и названием диплома",
+      "evidence": "B) Educational History",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Личное заявление (Personal Statement) на 500–600 слов о мотивации учиться в ICU",
+      "evidence": "C) Personal Statement",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Короткое эссе (Short Essay) на 400–500 слов на одну из заданных тем",
+      "evidence": "D) Short Essay",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Внеклассная деятельность (Extracurricular Activities) в онлайн-форме",
+      "evidence": "E) Extracurricular Activities",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Особые достижения и награды (Special Recognition) в онлайн-форме",
+      "evidence": "F) Special Recognition",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Документы об образовании, требуемые для образовательной системы страны абитуриента (аттестат/диплом и результаты экзаменов)",
+      "evidence": "G) Required Documents by Educational System",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный табель успеваемости (Official Transcript)",
+      "evidence": "H) Official Transcript",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Школьный отчёт ICU (ICU School Report): обязательная форма, заполняет школьный консультант вместе с табелем",
+      "evidence": "I) ICU School Report",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Две рекомендательные письма (Two Letters of Recommendation)",
+      "evidence": "J) Two Letters of Recommendation",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Подтверждение владения английским: IELTS или TOEFL",
+      "evidence": "K) Proof of English Proficiency (IEL TS or TOEFL)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "SAT или ACT с разделами Science и Writing — только для применимых абитуриентов типа A",
+      "evidence": "L) SAT or ACT Plus Science and Writing Scores (only for applicable Type A applicants)",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -372,7 +444,7 @@
         "contentHash": "sha256:60b1455f991a0235d8e56a78a433fedbc8a1915bc913c55b7eecb0762b0437bd"
       }
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
