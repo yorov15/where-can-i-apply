@@ -157,6 +157,20 @@
 - bowdoin-college — 8 документов (`1661781`) — Bowdoin College, США
 - bristol — 2 документа (`680eddd`) — University of Bristol, Великобритания
 
+Порция 11 (10.10.2026, продолжение «остальных»: США, Великобритания, страны процедур), сборка `2ed39c7`:
+
+- brunei-bdgs — 5 документов (`6f043d8`) — стипендия правительства Брунея (BDGS)
+- bryn-mawr-college — 12 документов (`17b00d6`) — Bryn Mawr College, США
+- caltech — 12 документов (`c34c224`) — California Institute of Technology (Caltech), США
+- cambridge — 6 документов (`cd2b001`) — University of Cambridge, Великобритания
+- carleton-college — 5 документов (`989b08b`) — Carleton College, США
+- cmu — 12 документов (`0acb40b`) — Carnegie Mellon University, США
+- colby-college — 9 документов (`cb65df3`) — Colby College, США
+- colgate-university — 11 документов (`00a9c2f`) — Colgate University, США
+- columbia-university — 6 документов (`616ce8d`) — Колумбийский университет, США
+- comenius-university — 6 документов (`f42dd5f`) — Comenius University Bratislava, Словакия
+- copenhagen — 9 документов (`f32cb5f`) — University of Copenhagen, Дания
+
 ## Пропущено
 
 (формат строки: `id — причина`)
@@ -191,3 +205,7 @@
 - amherst-college — на снятых страницах нет перечня документов к заявке: только тестовые требования и материалы по финансовой помощи
 - constructor-university — свежий снимок 10.10.2026 потерял цитаты уже утверждённых условий (стипендия Talent Scholarship, сроки Early Action/Rolling Admissions): запись не проходит review и целиком не утверждается, документы не внесены
 - bocconi — свежий снимок 10.10.2026 потерял цитату уже утверждённого условия о плате за первый курс (€17 000, 2026/27): запись не проходит review и целиком не утверждается, документы не внесены
+- brown-university — на снятых страницах международного пути (admission-criteria, application-process, english-proficiency, financial-aid, first-year/*) перечня документов к заявке нет: только «complete the Common Application», общая оговорка о переводе документов и тестовые требования
+- campus-france — на снятых страницах процедуры Campus France перечень обязательных документов к заявке не назван
+- cityu-hk — на снятых страницах приёма перечень обязательных документов к заявке не назван
+- charles-university — снимок 10.10.2026 получил пустые страницы (3 из 4, включая «How to Apply»): сайт не отдал содержимое; после двух повторов fetch перечня документов нет
