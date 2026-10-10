@@ -54,10 +54,30 @@
 - od — 3 документа (`0bcc317`) — Open Doors, Россия
 - rudn — 7 документов (`410a9c3`) — РУДН, Россия
 
+Порция 4 (10.10.2026, Корея), сборка `d6e85be`:
+
+- chung-ang — 20 документов (`6399088`) — Университет Чунан (Chung-Ang), Корея
+- chungbuk — 14 документов (`e3c4a2b`) — Chungbuk National University, Корея
+- cnu — 14 документов (`7f0fbf8`) — Университет Чхуннам (CNU), Корея
+- dgist — 13 документов (`17933f2`) — DGIST, Корея
+- ewha — 9 документов (`ae51f44`) — Ewha Womans University, Корея
+- gist-korea — 13 документов (`4342476`) — GIST, Корея
+- gyeongsang — 14 документов (`a4a47a9`) — Gyeongsang National University, Корея
+- hufs — 14 документов (`d9b8f1e`) — HUFS, Корея
+- jbnu — 12 документов (`e2683d9`) — Чонбукский национальный университет (JBNU), Корея
+- kaist — 11 документов (`68b2290`) — KAIST, Корея
+- konkuk — 17 документов (`6cde835`) — Konkuk University, Корея
+- kyungpook — 14 документов (`3669367`) — Кёнбукский национальный университет (KNU), Корея
+
 ## Пропущено
 
 (формат строки: `id — причина`)
 
+- gks-korea — на снятых страницах (studyinkorea.go.kr, english.moe.go.kr) перечень обязательных документов не назван: только этапы подачи и «Document Submission»
+- handong — на снятых страницах приёма сказано «all Required Documents have been uploaded», но самого перечня документов нет; снимок без списка
+- hanyang — на снятых страницах (admission, scholarships, global_edu/s/e) личного перечня документов для иностранца-бакалавра нет: только процедура и «upload all required documents»
+- inu — на снятых страницах перечень обязательных документов не назван: только шаги подачи и «Prepare required documents»
+- kangwon — на снятых страницах (1188, 1203) Procedure и стипендии, конкретного перечня документов нет
 - cau — на снятых страницах (internationalstudents, admissionregulations, tuitionfees, scholarshipsfor2026entry) перечень обязательных документов не назван: только процесс подачи, экзамены и стипендии
 - turkiye-burslari — на снятых страницах (scholarshipsprograms, calendar, fulltimeprograms) перечень обязательных документов не назван
 - bilkent — на страницах приёма иностранцев личного перечня документов нет: только общие требования к квалификации, экзамены и форма подачи
