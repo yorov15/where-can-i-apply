@@ -2,7 +2,9 @@
   "id": "italy-universitaly",
   "status": "published",
   "kind": "national",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Поступление в вузы Италии: предзапись через Universitaly",
     "orig": "Universitaly: procedure per l'ingresso e l'immatricolazione degli studenti internazionali"
@@ -98,6 +100,30 @@
       "evidence": "Tali date potranno essere anche antecedenti a quella del 30 novembre 2026",
       "field": null,
       "kind": "note"
+    },
+    {
+      "ru": "Аттестат о среднем образовании (не менее 12 лет учёбы) либо заменяющий его по закону документ; по усмотрению вуза — с аттестацией CIMEA (ENIC-NARIC Италии) или Dichiarazione di valore.",
+      "evidence": "titolo finale degli studi secondari 5 conseguito con almeno 12 anni di scolarità 6, oppure certificato sostitutivo a tutti gli effetti di legge; a discrezione della singola istituzione della formazione superiore, il titolo finale può essere corredato in alternativa da attestazione rilasciata dal centro ENIC-NARIC italiano (CIMEA) o da eventuale Dichiarazione di valore",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Справка (сертификат) о сдаче вступительного академического экзамена, если он предусмотрен для поступления в вуз в стране проживания.",
+      "evidence": "certificato attestante il superamento della prova di idoneità accademica eventualmente prevista per l'accesso all'Università del Paese di provenienza",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Перевод на итальянский документов из пунктов выше, если требуется.",
+      "evidence": "eventuali traduzioni in italiano dei documenti indicati ai punti a) e b)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Другие документы, которые дополнительно запросит вуз, в том числе для проверки подлинности иностранного диплома.",
+      "evidence": "eventuale altra documentazione richiesta dall'ateneo, anche in riferimento alla verifica della veridicità del titolo di studio estero",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
