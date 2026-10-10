@@ -7,7 +7,9 @@
   },
   "hostCountry": "IN",
   "kind": "government",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": true,
@@ -154,6 +156,60 @@
       "evidence": "No admission is provided to foreign students for B.Tech Courses in the IITs",
       "field": null,
       "kind": "note"
+    },
+    {
+      "ru": "Письмо-оферта (offer letter), выданное посольством Индии",
+      "evidence": "1) Offer letter issued by the Indian Mission",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Оригиналы документов об образовании начиная со школы, загруженные на портал A2A при подаче заявки, с нотариально заверенным переводом на английский, если они на другом языке",
+      "evidence": "2) Original documents related to academic qualification from School education onwards, and those were uploaded in the A2A Portal in the application process along with a notarized English translation, in the original in case the same are in a language other than English.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Заверенная копия транскрипта/программы последнего сданного экзамена, на основании которого дают приём: для бакалавриата — транскрипт/программа старшей школы",
+      "evidence": "3) Certified copy of the transcript/syllabus of the last qualifying examination on the basis of which the admission is granted. For example, for admission in the UG course, the transcript/syllabus of High School, for PG course, the transcript/syllabus of UG course and similarly for Ph.D. Course, transcript/ syllabus of Masters Course is required to be brought.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Медицинская справка о пригодности с результатами анализов и сертификатами о прививках",
+      "evidence": "4) Medical Fitness Certificate along with test reports and vaccination certificates",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Сертификаты о владении английским языком (при наличии)",
+      "evidence": "5) English Proficiency Certificates, if any",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Сертификат эквивалентности Ассоциации индийских университетов (AIU) — при необходимости",
+      "evidence": "7) AIU Equivalence Certificate, if applicable",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Форма Joining Report, которую можно скачать на портале A2A",
+      "evidence": "8) Joining Report Form downloadable from the A2A Portal",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Фотографии паспортного размера",
+      "evidence": "9) Passport-size photographs which will be required for various purposes",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Любой другой документ, который может понадобиться для приёма в вуз",
+      "evidence": "10) Any other document which can be relevant for admission at the University/Institution",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
