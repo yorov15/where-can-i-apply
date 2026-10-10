@@ -92,6 +92,36 @@
       "evidence": "This applies in particular to the period up to 8 weeks BEFORE the application deadline on July 15",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Предварительная проверка документов (VPD) от uni-assist, выданная для FU Berlin; без неё заявку не принимают",
+      "evidence": "The following document is required when applying via the Freie Universität Berlin application portal: valid VPD from uni-assist",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Все школьные аттестаты и университетские дипломы/сертификаты, входящие в состав документа о праве на высшее образование",
+      "evidence": "all school leaving and university certificates which are part of your university entrance qualification",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальные переводы всех аттестатов и дипломов, если они выданы не на английском и не на немецком языке",
+      "evidence": "official translations of all certificates if issued in any language other than English or German",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Сертификат APS для абитуриентов с документами из Китая, Индии или Вьетнама",
+      "evidence": "APS certificate for applicants with certificates from China, India or Vietnam",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Подтверждение достаточного знания немецкого языка в зависимости от выбранной программы",
+      "evidence": "sufficient knowledge of German depending on the requested study course required proof",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -121,14 +151,14 @@
       },
       {
         "url": "https://www.fu-berlin.de/en/studium/international/studium_fu/studienfinanzierung/index.html",
-        "contentHash": "sha256:f56d8ee8c488bd4da017efa97a6be13ca7df75c3571c6ec25bd46e0bccb57261"
+        "contentHash": "sha256:dbf22bdde961df73dcf90279317e46adf91d1351d1afe32a88e8f1e423d149aa"
       }
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-10",
     "humanChecked": false,
     "approvedBy": "assistant"
   },
   "leftEmpty": {
-    "schoolYears": "sha256:a311707492e86ce9c13eb35dd0e72625834bf9b34e2ad81626b16d69d5435e9d"
+    "schoolYears": "sha256:b8f4d48354b61b453ec3de17e6422e6b2e2a1bb1cfc9b23e2337e552c9326760"
   }
 }
