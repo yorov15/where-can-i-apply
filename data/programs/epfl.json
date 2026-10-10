@@ -212,6 +212,66 @@
       "evidence": "All documents should be in English, French, German, or Italian . Please join a legalized translation of all documents in another language. Your application will be rejected without these translations.",
       "field": null,
       "kind": "must"
+    },
+    {
+      "ru": "Фотография на удостоверение (портрет, вертикальный формат 3/4, минимум 750×1000 px, до 2 МБ), без головного убора, на нейтральном фоне.",
+      "evidence": "identity photo (portrait with the face and neck, filling the whole image) with a 3/4 vertical format (minimum 750×1000 pixels, maximum 2 MB).",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Удостоверение личности (паспорт или ID-карта, обе стороны).",
+      "evidence": "identity document (passport or identity card, both sides)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Промежуточные табели за последние два года старшей школы (кроме выпускников швейцарских школ).",
+      "evidence": "intermediary grade sheets from the last two years of upper secondary education (except for applicants with a Swiss education)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Если применимо — транскрипты из ранее посещённых вузов.",
+      "evidence": "when applicable, transcripts from prior higher-education institutions",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Если применимо — вид на жительство в Швейцарии и справка для заявителя (и его родителей, если он живёт с ними в Швейцарии).",
+      "evidence": "when applicable, Swiss residence permit and certificate for the applicant (and his or her parents if he or she resides in Switzerland with them)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Сертификат о владении французским (кроме выпускников швейцарских или франкоязычных школ).",
+      "evidence": "language competence certificate in French (except for applicants with a Swiss or francophone education)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Аттестат о среднем образовании (или диплом вуза, если применимо), если он уже получен.",
+      "evidence": "upper secondary school certificate (or higher-education diploma when applicable) if already available",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Транскрипт аттестата о среднем образовании (или диплома вуза, если применимо).",
+      "evidence": "transcripts of the upper secondary school certificate (or of the higher-education diploma when applicable)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Если применимо — последний табель за старшую школу.",
+      "evidence": "last grade sheet from the upper secondary education when applicable",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Если применимо — справка об окончании вуза, где ранее учился заявитель.",
+      "evidence": "end-of-matriculation certificate from prior higher-education institutions",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
