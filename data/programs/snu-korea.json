@@ -2,7 +2,9 @@
   "id": "snu-korea",
   "status": "published",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Seoul National University (SNU) — лучший университет Кореи, особый набор иностранцев на бакалавриат",
     "orig": "Seoul National University"
@@ -148,6 +150,96 @@
       "evidence": "decided differently by each university, so you will then need to contact universities directly",
       "field": "schoolYears",
       "kind": "note"
+    },
+    {
+      "ru": "Заявка (Application Form)",
+      "evidence": "1 Application Form",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Личное заявление и учебный план (Personal Statement and Study Plan)",
+      "evidence": "2 Personal Statement and Study Plan",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Рекомендательное письмо (Recommendation Letter)",
+      "evidence": "3 Recommendation Letter",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Сертификаты знания корейского или английского языка (Language Proficiency Scores)",
+      "evidence": "4 Language Proficiency Scores",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный табель успеваемости старшей школы (Official High School Transcript)",
+      "evidence": "5 Official High School Transcript",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный аттестат старшей школы или справка об ожидаемом выпуске (Official High School (Expected) Graduation Certificate)",
+      "evidence": "6 Official High School (Expected) Graduation Certificate",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Документ о гражданстве абитуриента (Applicant's Nationality Certificate)",
+      "evidence": "7 Applicant's Nationality Certificate",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Документы о гражданстве родителей (Parents' Nationality Certificates)",
+      "evidence": "8 Parents' Nationality Certificates",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Свидетельство о родстве абитуриента с родителями (Certificate of Parent-Child Relationship)",
+      "evidence": "9 Certificate of Parent-Child Relationship",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Результаты стандартизированных экзаменов или предсказанный балл — необязательно (Standardized Test (Predicted) Scores)",
+      "evidence": "10 Standardized Test (Predicted) Scores (Optional)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Результаты экзаменов по другим языкам, кроме корейского и английского — необязательно (Language Proficiency Scores other than Korean/English)",
+      "evidence": "11 Language Proficiency Scores other than Korean/English (Optional)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Пояснительное письмо и подтверждающие документы — необязательно (Explanatory Statement / Supporting Documents)",
+      "evidence": "12 Explanatory Statement /Supporting Documents (Optional)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Профиль школы — необязательно (School Profile)",
+      "evidence": "13 School Profile (Optional)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Дополнительные материалы о школьной и внешкольной деятельности — необязательно (Supplementary Materials)",
+      "evidence": "14 Supplementary Materials (Optional)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Портфолио и письменное обязательство для факультетов изобразительных искусств и музыки (College of Fine Arts / College of Music)",
+      "evidence": "15 College of Fine Arts",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -182,7 +274,7 @@
       },
       {
         "url": "https://en.snu.ac.kr/webdata/uploads/eng/file/2026/06/Admissions_for_Undergraduate_Spring_2027.pdf",
-        "contentHash": "sha256:c347399a0368ee3d426813967ef43a026d2f075e89f6762bfd40be6158deaae3"
+        "contentHash": "sha256:2da73795a52f0c573e38a887004a1bb8063ac39882137eb06b33cd439620fbc6"
       },
       {
         "url": "https://en.snu.ac.kr/webdata/uploads/eng/file/2026/03/Guideline_for_Online_Application_Undergraduate.pdf",
@@ -193,7 +285,7 @@
         "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
       }
     ],
-    "lastVerified": "2026-09-26",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
