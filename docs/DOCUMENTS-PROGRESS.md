@@ -97,6 +97,22 @@
 - keio-pearl — 11 документов (`e1e569b`) — Keio University, PEARL, Япония
 - kyoto-iup — 9 документов (`aa78702`) — Kyoto University, Kyoto iUP, Япония
 
+Порция 7 (10.10.2026, остаток Японии и Китай), сборка `d99675b`:
+
+- nucb — 5 документов (`94262bc`) — NUCB Undergraduate School (Нагоя), Япония
+- osaka-iudp — 9 документов (`08a34c8`) — The University of Osaka, Human Sciences International Undergraduate Degree Program, Япония
+- ritsumeikan — 5 документов (`908a946`) — Университет Рицумейкан, Япония
+- science-tokyo — 8 документов (`265cc27`) — Institute of Science Tokyo, GSEP, Япония
+- sophia-fla — 9 документов (`8ad90bc`) — Sophia University, Faculty of Liberal Arts, Япония
+- sophia-spsf — 9 документов (`3b42829`) — Sophia University, SPSF, Япония
+- tiu-japan — 9 документов (`9f99d46`) — Токийский международный университет (TIU), Япония
+- tmu-japan — 3 документа (`204d485`) — Токийский столичный университет (TMU), Япония
+- tohoku-gateway-college — 7 документов (`cead55e`) — Tohoku University, Gateway College, Япония
+- tokyo — 18 документов (`2d1f1be`) — University of Tokyo, Япония
+- tsukuba-ide — 11 документов (`98abe6f`) — University of Tsukuba, Interdisciplinary Engineering, Япония
+- waseda-sils — 12 документов (`d96a98d`) — Waseda University, SILS, Япония
+- beihang — 15 документов (`770ff1d`) — Beihang University, Китай
+
 ## Пропущено
 
 (формат строки: `id — причина`)
@@ -119,3 +135,5 @@
 - unist — на снятых страницах (unist.ac.kr/en/admissions, /unist/admissions/admissions.do, english.moe.go.kr 0703) перечень обязательных документов не назван
 - aiu-japan — на снятых страницах приёма (admission.aiu.ac.jp/en/ug/international, /en/ug, web.aiu.ac.jp tuition и scholarship) личного перечня документов к заявке нет
 - kyushu — на снятых страницах (kyushu-u.ac.jp/en/admission/faculty/foreign/foreign10, isc.kyushu-u.ac.jp/financialaid, /en/admission/fees) перечень обязательных документов не назван
+- mext-japan — на снятых страницах перечень обязательных документов не назван: только «all required documents and interviews will be conducted by the Japanese embassy», конкретных документов нет
+- nagoya-g30 — свежий снимок 10.10.2026 потерял цитату уже утверждённого правила английского (TOEFL 80 iBT 60 Paper-delivered Test): запись не проходит review, документы не внесены; старый снимок 26.09.2026 цитату содержал
