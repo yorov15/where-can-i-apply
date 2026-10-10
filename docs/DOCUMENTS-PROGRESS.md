@@ -113,6 +113,23 @@
 - waseda-sils — 12 документов (`d96a98d`) — Waseda University, SILS, Япония
 - beihang — 15 документов (`770ff1d`) — Beihang University, Китай
 
+Порция 8 (10.10.2026, Китай), сборка `c824f6c`:
+
+- bnu — 9 документов (`d9c464d`) — Beijing Normal University, Китай
+- csc-china — 13 документов (`931c554`) — Стипендия правительства Китая (CSC)
+- duke-kunshan — 13 документов (`47d5f32`) — Duke Kunshan University, Китай
+- ecnu — 8 документов (`c95243e`) — East China Normal University, Китай
+- fudan-university — 3 документа (`bc4e471`) — Университет Фудань, Китай
+- harbin-institute-of-technology — 13 документов (`79ffe8a`) — Харбинский политехнический институт (HIT), Китай
+- nanjing — 8 документов (`c0dd6cb`) — Nanjing University, Китай
+- nankai — 11 документов (`dece264`) — Nankai University, Китай
+- nyu-shanghai — 7 документов (`3761ebc`) — NYU Shanghai, Китай
+- peking-university — 13 документов (`3a29e13`) — Peking University, Китай
+- renmin — 15 документов (`8e9a988`) — Renmin University of China, Китай
+- sjtu — 8 документов (`c07927e`) — Шанхайский университет Цзяо Тун (SJTU), Китай
+- tongji — 10 документов (`53d33a8`) — Tongji University, Китай
+- tsinghua-university — 13 документов (`ea71dd3`) — Tsinghua University (Китай)
+
 ## Пропущено
 
 (формат строки: `id — причина`)
@@ -137,3 +154,4 @@
 - kyushu — на снятых страницах (kyushu-u.ac.jp/en/admission/faculty/foreign/foreign10, isc.kyushu-u.ac.jp/financialaid, /en/admission/fees) перечень обязательных документов не назван
 - mext-japan — на снятых страницах перечень обязательных документов не назван: только «all required documents and interviews will be conducted by the Japanese embassy», конкретных документов нет
 - nagoya-g30 — свежий снимок 10.10.2026 потерял цитату уже утверждённого правила английского (TOEFL 80 iBT 60 Paper-delivered Test): запись не проходит review, документы не внесены; старый снимок 26.09.2026 цитату содержал
+- nottingham-ningbo — свежий снимок 10.10.2026 потерял цитаты уже утверждённых условий о сроках (досрочное закрытие приёма, условные офферы, срок внесения результатов): запись не проходит review и целиком не утверждается, документы не внесены; старый снимок 05.10.2026 цитаты содержал
