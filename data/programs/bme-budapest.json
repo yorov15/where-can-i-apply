@@ -92,6 +92,36 @@
       "evidence": "English language proficiency",
       "field": "language",
       "kind": "must"
+    },
+    {
+      "ru": "Резюме (CV).",
+      "evidence": "II. BSc, OTM: a) CV",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия паспорта.",
+      "evidence": "II. BSc, OTM: a) CV b) Copy of passport",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Аттестат или справка о завершении школы.",
+      "evidence": "II. BSc, OTM: a) CV b) Copy of passport c) High School certificate",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Подтверждение знания английского языка.",
+      "evidence": "II. BSc, OTM: a) CV b) Copy of passport c) High School certificate d) English language proficiency",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Квитанция о переводе 150 евро — сбор за заявку.",
+      "evidence": "II. BSc, OTM: a) CV b) Copy of passport c) High School certificate d) English language proficiency e) Receipt of the transfer of 150 euro for application fee",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -128,11 +158,11 @@
         "contentHash": "sha256:d7becd0c2b78b9a9fd911591c8d7cce0500dcad3d2286ce61fd8992a36bc4d69"
       }
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-10",
     "humanChecked": false,
     "approvedBy": "assistant"
   },
   "leftEmpty": {
-    "schoolYears": "sha256:467b1981fc8560f3b3dcf3a37259a8282f6c71354a8fbfd7dde8141fc0a967a3"
+    "schoolYears": "sha256:54396071023831e39cfee0872dedebef7b7bcb0d7595a3190df5cbaf709a256b"
   }
 }
