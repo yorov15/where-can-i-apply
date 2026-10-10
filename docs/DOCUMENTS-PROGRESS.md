@@ -236,6 +236,22 @@
 - ncku — 10 документов (`bf93521`) — National Cheng Kung University, Тайвань
 - northwestern-university — 11 документов (`ca98c47`) — Northwestern University, США
 
+Порция 16 (10.10.2026, продолжение «остальных»: Тайвань, Сингапур, ОАЭ, Великобритания, Венгрия, США), сборка `f1d2735`:
+
+- nottingham — 4 документа (`773e45e`) — University of Nottingham, Великобритания
+- nthu — 12 документов (`4b94e26`) — National Tsing Hua University, Тайвань
+- ntu-singapore — 5 документов (`4447020`) — NTU (Сингапур)
+- ntu-taiwan — 12 документов (`72314e8`) — National Taiwan University, Тайвань
+- ntut — 10 документов (`15c443a`) — National Taipei University of Technology, Тайвань
+- nyu — 9 документов (`d518700`) — New York University, США
+- nyuad — 7 документов (`32c24bd`) — NYU Abu Dhabi, ОАЭ
+- oberlin — 10 документов (`d4bf04a`) — Оберлин, США
+- obuda — 7 документов (`a5a9acd`) — Óbuda University, Венгрия
+- oxford — 4 документа (`51bf4d4`) — University of Oxford, Великобритания
+- oxford-reach — 3 документа (`2596067`) — Reach Oxford Scholarship, Великобритания
+- pecs — 32 документа (`8b5882a`) — University of Pécs, Венгрия
+- penn-state — 9 документов (`38a23a0`) — Penn State, США
+
 ## Пропущено
 
 (формат строки: `id — причина`)
@@ -281,3 +297,5 @@
 - ljubljana-slovenia — на снятых страницах приёма перечень обязательных документов к заявке не назван
 - khalifa-uae — на снятых страницах (undergraduate-admissions, undergraduate-scholarships, tuition-fees) перечень обязательных документов не назван
 - netherlands-study — на снятых страницах приёма англоязычного бакалавриата в Нидерландах перечень документов к заявке не назван
+- palacky-university — на снятых страницах приёма (admissions, права и плата, стипендии) перечень обязательных документов к заявке не назван: только общие слова о загрузке документов и легализации
+- paris-saclay — перечень документов есть только в материалах обменных программ (exchange); на страницах приёма бакалавра-иностранца конкретных документов к заявке не названо
