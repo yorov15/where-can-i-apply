@@ -116,6 +116,90 @@
       "evidence": "the university offers international admissions for both the spring and fall semesters",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Онлайн-заявка на поступление (Application Form) — обязательный документ.",
+      "evidence": "① [Online] Application Form [온라인] 입학신청서",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Чек-лист документов для бакалавриата (Form 1).",
+      "evidence": "② [Form 1] UNDERGRAD. Application Checklist [서식 1] 학부 제출서류 체크리스트",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Согласие на проверку академических данных (Form 2, Letter of Consent).",
+      "evidence": "③ [Form 2] Letter of Consent [서식 2] 학력조회 동의서",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Обязательство о финансовом обеспечении (Form 3) и подтверждение финансов — справка о банковском вкладе.",
+      "evidence": "④ [Form 3] Affidavit of Financial Support(By the Applicant or Parents) &Financial Proof(Cert. of Bank Deposit balance)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Свидетельство об окончании (или ожидаемом окончании) старшей школы.",
+      "evidence": "⑤ Cert. of (Expected) Graduation of Highschool 고등학교 졸업(예정)증명서",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Табель с оценками за все годы старшей школы.",
+      "evidence": "⑥ Transcript of High school 고등학교 전 학년 성적증명서",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Школьная ведомость — только для выпускников корейских школ.",
+      "evidence": "⑥-1.국내 고등학교 출신자만) 학생기록부 (For Graduates of Korean High Schools Only) School Record",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Документ, подтверждающий гражданство родителей и родственные связи.",
+      "evidence": "⑨ Proof of Familiar Relationship 부모국적 및 가족관계 입증 서류",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия карты иностранного резидента (передняя и задняя стороны) — только для находящихся в Корее.",
+      "evidence": "⑩ Copy of Residence Card(Front․Back sides) 외국인등록증 사본(앞·뒷면)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия паспорта (для граждан Узбекистана — только заграничный паспорт).",
+      "evidence": "⑪ Copy of Passport 여권 사본 ○ 필수제출 ○ 필수제출 [Uzbek] Only Int'l passport allowed",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Сертификат TOPIK 3-го уровня или справка о завершении 4-го уровня корейского языкового курса CBNU (KLP).",
+      "evidence": "⑫ TOPIK Lv. 3 or CBNU KLP Lv. 4 completion",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Портфолио и Form 4 — для кафедр изобразительного искусства и дизайна.",
+      "evidence": "(Dept. of Fine arts and Design) Applicants MUST submit their own portfolio and [Form 4]",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Справка о зачислении/окончании колледжа или университета — для поступающих переводом (편입).",
+      "evidence": "⑦ Cert. of Enrollment/Graduation of College/Univ.(Expected) Completion, (Expected) Graduation",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Транскрипт за весь период обучения в колледже/университете — для поступающих переводом (편입).",
+      "evidence": "⑧ Transcript of College/univ. 대학(교) 전 과정 성적증명서",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -158,10 +242,10 @@
       },
       {
         "url": "https://oia.cbnu.ac.kr/home/main.do",
-        "contentHash": "sha256:6f322410375772abb2a6b5b082daff51a76ef0aadf23f7c678e5c6fed6fa3abf"
+        "contentHash": "sha256:8ad14ae09cc942d433ff96f29fdb5d1ddd859c9d2871bb036c3898e4a7bfdb03"
       }
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
