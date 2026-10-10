@@ -88,6 +88,90 @@
       "evidence": "If your high school leaving certificate does not qualify you to begin a degree program, you may be able to acquire a university entrance qualification by attending a one year Studienkolleg (preparatory course) .",
       "field": "schoolCountry",
       "kind": "workaround"
+    },
+    {
+      "ru": "Заявка подаётся по форме для иностранных абитуриентов «Application for admission for international applicants».",
+      "evidence": "Application form: Application for admission for international applicants",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Документ о праве на обучение в вузе: как правило аттестат Abitur или приравненный школьный аттестат; в отдельных случаях — школьный аттестат вместе с сертификатом о вступительном экзамене, сертификатом одногодичного вузовского курса или вузовским сертификатом.",
+      "evidence": "University admission qualification (generally Abitur certificate or equivalent school leaving certificate; where applicable: school leaving certificate in combination with a university entrance examination certificate or a certificate from a one-year higher education course or university certificate).",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Документ о праве на обучение подаётся на языке оригинала — как официально заверенная копия с официально заверенным переводом. Сертификаты на английском, французском, итальянском, каталанском, латинском, португальском, румынском и испанском переводить не нужно.",
+      "evidence": "in the original language - as an officially certified copy with an officially certified translation . Certificates in English, French, Italian, Catalan, Latin, Portuguese, Rumanian and Spanish do not have to be translated.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Обладателям диплома International Baccalaureate (IB), ещё не получившим финальный сертификат, нужен признающий документ (recognition letter) от Zeugnisanerkennungsstelle für den Freistaat Bayern (ZAST).",
+      "evidence": "A recognition letter from the Zeugnisanerkennungsstelle für den Freistaat Bayern (ZAST) is required for holders of the International Baccalaureate IB",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Абитуриенты из США (если у них ещё нет степени бакалавра) и из Афганистана должны заранее до срока подачи написать на zulassung.international@lmu.de, приложив свои сертификаты, CV и выбранную программу LMU, чтобы подготовить выдачу признающего документа от Zeugnisanerkennungsstelle für den Freistaat Bayern.",
+      "evidence": "Applicants from the USA (unless they already hold a bachelor's degree) and applicants from Afghanistan should send an e-mail to zulassung.international@lmu.de in good time before the application deadline, enclosing their certificates, CV and the desired LMU degree program, in order to prepare for the issuing of a recognition letter the Zeugnisanerkennungsstelle für den Freistaat Bayern.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Абитуриенты со школьными аттестатами и/или вузовскими дипломами из КНР, Индии и Вьетнама должны приложить сертификат Akademische Prüfstelle при посольстве Германии (APS).",
+      "evidence": "Applicants with school leaving certificates and/or university degrees from the PR China , India and Vietnam should submit the certificate from the Akademische Prüfstelle bei der Deutschen Botschaft (APS) .",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Подтверждение владения немецким языком — в виде незаверенной копии (кроме магистратуры, докторантуры и программ двойного диплома, где преподавание идёт на английском).",
+      "evidence": "Evidence of proficiency in German , uncertified copy (exception: master's degree programs, doctoral studies and double degree programs where the course language is English)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Актуальное резюме (CV).",
+      "evidence": "Updated resume (please see sample (PDF, 135 KB) )",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "При подаче в International Office экспертные заключения, рекомендательные письма и сертификаты о стажировках не требуются.",
+      "evidence": "Expert reports, letters of recommendation or internship certificates are not required when applying to the International Office.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Если ранее учились в вузе — все вузовские сертификаты и дипломы, а также все выписки оценок (transcripts of records) на языке оригинала как официально заверенная копия.",
+      "evidence": "All university certificates and diplomas and all transcripts of records in the original language - as an officially certified copy .",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "При наличии — регистрация и подтверждение программ, ранее изученных в другом немецком вузе.",
+      "evidence": "Where applicable, registration and confirmation of programs previously studied at any other German university",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "При переходе на другую программу или в другой вуз — подтверждение всех пройденных на сегодня курсов; без него заявку не обрабатывают.",
+      "evidence": "Evidence of all courses completed to date (applications without such evidence will not be processed!)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "При наличии — уведомление о переводе кредитов от соответствующей экзаменационной комиссии для старшего семестра.",
+      "evidence": "Where applicable, notice of transfer of credit from the respective examination board for an advanced semester",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Если абитуриент состоит в браке или менял имя — свидетельство о браке или официальное уведомление о смене имени.",
+      "evidence": "Marriage certificate or official notice of change of name",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -118,10 +202,10 @@
       },
       {
         "url": "https://www.lmu.de/en/workspace-for-students/international-student-guide/",
-        "contentHash": "sha256:ec9dc6454e51253f486fededbd35e0b851eb7f0e73996df941395bd1bb6acc2b"
+        "contentHash": "sha256:634b534924928d8f2950314aa53d536a63ad9f86a83219d4ebdfc7047f0188a5"
       }
     ],
-    "lastVerified": "2026-09-27",
+    "lastVerified": "2026-10-10",
     "humanChecked": false,
     "approvedBy": "assistant"
   }
