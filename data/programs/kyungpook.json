@@ -108,6 +108,90 @@
       "evidence": "All documents should be in Korean or English.",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Заявка на поступление (Application Form) — обязательный документ.",
+      "evidence": "Completed Application Form",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Мотивационное письмо (Statement of Purpose) — обязательно.",
+      "evidence": "Statement of Purpose",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Аттестат об окончании (или ожидаемом окончании) средней школы.",
+      "evidence": "Graduation Certificate (of Proof of Completion) from High School",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный транскрипт (табель оценок) из средней школы.",
+      "evidence": "Official Transcript from High School",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Справка об окончании (или зачислении) колледжа/университета — только для поступающих переводом (편입).",
+      "evidence": "Graduation Certificate (or Enrollment Certificate) from College / University",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный транскрипт из колледжа/университета — только для поступающих переводом (편입).",
+      "evidence": "Official Transcript from College / University",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Результаты языкового экзамена (например, TOPIK, IELTS) — обязательно.",
+      "evidence": "English or Korean Proficiency test results (e.g, TOPIK, IELTS)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Экзаменационный лист TOPIK конкретной сессии — при необходимости.",
+      "evidence": "Specific test session TOPIK examination admission ticket",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Справка об окончании (или зачислении) и транскрипт из языкового учебного заведения корейского языка — при необходимости.",
+      "evidence": "Certificate of completion (or enrollment) and transcript from a Korean language training institution",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия паспорта заявителя (страница с именем).",
+      "evidence": "Copy of applicant's Passport (name page)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия карты иностранного резидента (обе стороны) — при наличии.",
+      "evidence": "Copy of Alien Registration Card (both front and back)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Документы, подтверждающие гражданство родителей и родственные связи.",
+      "evidence": "Documents proving parents' nationality and family relationship",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Письмо о предварительном зачислении — при наличии.",
+      "evidence": "Preliminary acceptance letter",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Школьная ведомость (Student Record Book) — только для выпускников корейских школ.",
+      "evidence": "Student Record Book (Korean High School Graduates Only)",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -144,7 +228,7 @@
         "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
       }
     ],
-    "lastVerified": "2026-10-02",
+    "lastVerified": "2026-10-10",
     "humanChecked": false,
     "approvedBy": "assistant"
   },
