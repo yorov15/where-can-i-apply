@@ -7,7 +7,9 @@
   },
   "hostCountry": "KR",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": true,
@@ -158,6 +160,72 @@
       "evidence": "Neither of the applicant's parents is a Korean citizen",
       "field": "citizenship",
       "kind": "must"
+    },
+    {
+      "ru": "Заявка подаётся онлайн через портал KAIST; в неё входит личное эссе (Personal Statement) с вопросами из приложения к руководству.",
+      "evidence": "Essay Prompts (included in the Application Form)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Нужны официальные выписки (транскрипты) из всех школ, где учился, а если уже студент вуза — то и из вуза; за последние два-три года обучения, включая текущие курсы.",
+      "evidence": "Applicants must submit official transcripts from all high schools attended (and universities*).",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия паспорта или национального удостоверения личности как подтверждение гражданства; на копии паспорта должны быть видны номер, даты выдачи и окончания, фото и имя.",
+      "evidence": "Applicants must submit a copy of applicant's passport or national ID card as proof of nationality.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Нужен минимум один официальный результат стандартизированного теста — SAT, ACT, AP, IB, GCE A-Level или другой выпускной или вступительный экзамен.",
+      "evidence": "Applicants must submit at least one official test score (e.g., SAT, ACT, AP, IB, GCE A-Level, or other national high school leaving or university entrance examinations).",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Все подающие обязаны предоставить минимум один результат теста по английскому (TOEFL, IELTS, TOEIC, TEPS) — это отдельный документ, помимо стандартизированных тестов.",
+      "evidence": "all applicants must submit at least one of the following English Proficiency test (EPT) scores.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "До двух рекомендательных писем; формально на выбор, но настоятельно рекомендуются. Пишет научный, классный или учитель математики/науки и отправляет сам автор через портал.",
+      "evidence": "Applicants may submit up to two recommendation letters; although optional, submission is highly recommended.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "До пяти наград или отличий, полученных в старшей школе; засчитываются только при наличии подтверждающих документов.",
+      "evidence": "Applicants may submit up to five honors or awards obtained during their high school years.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Профиль школы от самой школы или министерства образования — на выбор, не больше пяти страниц.",
+      "evidence": "Applicants may submit an official high school profile, brochure or other documents published by the applicant's high school or the Ministry of Education.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Официальный школьный отчёт (School Report), выданный школой: об академической системе, шкале оценок и успеваемости в контексте. Принимают только официально заверенные школой документы.",
+      "evidence": "A School Report is an official document issued by the applicant's high school, providing information on the school's academic system, grading scale, and the applicant's academic performance in context .",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Только для абитуриентов корейского происхождения: справка о въездах и выездах от иммиграционной службы Кореи, выданная не раньше чем за два месяца до дедлайна, со всеми записями с рождения.",
+      "evidence": "Applicants of Korean origin must submit a certificate issued by the Korean Immigration Office within two months prior to the application deadline.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Только для корейского происхождения: документы об утрате корейского гражданства — семейное отношение, подтверждение потери гражданства, семейный реестр.",
+      "evidence": "Korean origin applicants must submit documents such as a Family Relation Certificate, Proof of Loss of Korean Nationality, Family Census Register.",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -176,7 +244,7 @@
   },
   "source": {
     "url": "https://admission.kaist.ac.kr/intl-undergraduate/before/sub02",
-    "lastVerified": "2026-09-24",
+    "lastVerified": "2026-10-09",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
