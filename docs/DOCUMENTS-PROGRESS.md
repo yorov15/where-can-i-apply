@@ -312,6 +312,24 @@
 - ustc — 12 документов (`549af15`) — USTC, Китай
 - ut-austin — 8 документов (`d053db9`) — University of Texas at Austin, США
 
+Порция 21 (11.10.2026, продолжение «остальных»: Австралия, США, Нидерланды, Литва, Польша, Великобритания, Китай), сборка `d74527d`:
+
+- uts — 8 документов (`51c467f`) — UTS Sydney, Австралия
+- uva-amsterdam — 6 документов (`5510687`) — Амстердамский университет (UvA), Нидерланды
+- uwa — 4 документа (`3d8a9fa`) — University of Western Australia, Австралия
+- uwashington — 4 документа (`4fe6e32`) — University of Washington, США
+- vanderbilt-university — 6 документов (`ebbf6e8`) — Vanderbilt University, США
+- vassar-college — 10 документов (`a113b4e`) — Vassar College, США
+- vilnius — 8 документов (`ef22040`) — Вильнюсский университет, Литва
+- warsaw-university-of-technology — 10 документов (`43477f8`) — Варшавский политехнический университет, Польша
+- warwick — 3 документа (`7ff946c`) — University of Warwick, Великобритания
+- washu — 13 документов (`181ed8f`) — Washington University in St. Louis, США
+- wellesley-college — 10 документов (`bee3e5e`) — Wellesley College, США
+- wesleyan — 12 документов (`2cbc440`) — Wesleyan University, США
+- williams-college — 6 документов (`5578f31`) — Williams College, США
+- wuhan-university — 9 документов (`41f3eac`) — Уханьский университет, Китай
+- xian-jiaotong-university — 12 документов (`1e28d87`) — Сианьский университет Цзяотун, Китай
+
 ## Пропущено
 
 (формат строки: `id — причина`)
