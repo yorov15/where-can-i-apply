@@ -2,7 +2,9 @@
   "id": "pomona-college",
   "status": "published",
   "kind": "need-aid",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "name": {
     "ru": "Pomona College — колледж в США, помощь по нужде без кредитов, но отбор учитывает деньги",
     "orig": "Pomona College"
@@ -175,6 +177,54 @@
       "evidence": "Early Decision I: November 15 QuestBridge National College Match: November 1 Posse Scholar: November 15 Early Decision II: January 15 Regular Decision: January 15",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Заявка та же, что и у всех первокурсников: школы вне США подают по тем же формам.",
+      "evidence": "Students studying outside the United States may apply using the same forms as all first-year applicants",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Школьные табели (транскрипты). Если школа трёхлетняя (10-12 классы), нужны табели и за 9-й, и за 10-12-й классы.",
+      "evidence": "you will need to submit transcripts from both your 9 th grade year and from your 10 th -12 th -grade years in secondary school.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Документы не на английском подают с официальным английским переводом.",
+      "evidence": "If your transcripts are not in English, you will need to provide official English translations.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Результаты теста по английскому — TOEFL, IELTS или Duolingo (на выбор); нужны, если язык обучения в школе не английский.",
+      "evidence": "you must submit either official or self-reported results of either the Test of English as a Foreign Language (TOEFL) , the International English Language Testing System (IELTS) or the Duolingo English Test",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "SAT или ACT — по желанию: балл можно сообщить самому.",
+      "evidence": "All applicants to Pomona have the option to self-report standardized (ACT or SAT) test scores.",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Иностранцу, учащемуся в американской школе, до зачисления нужно подать International Student Certification of Finances.",
+      "evidence": "must submit International Student Certification of Finances prior to enrollment",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Претенденты на помощь из-за рубежа подают CSS Profile (код колледжа 4607) либо, если плата в тягость, Pomona College International Financial Aid Application.",
+      "evidence": "International aid applicants must complete the following: CSS Profile (School Code: 4607)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Переведённая копия налоговых документов за позапрошлый год или справки о доходах.",
+      "evidence": "Translated copy of prior-prior year's tax documents or statement of earnings.",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -212,7 +262,7 @@
         "contentHash": "sha256:b6e04e39990c63c4cc0b9fa99b41655f0ce74248a037c4523943877186329cd9"
       }
     ],
-    "lastVerified": "2026-09-26",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
