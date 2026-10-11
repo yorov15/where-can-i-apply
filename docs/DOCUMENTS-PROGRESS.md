@@ -265,6 +265,24 @@
 - rug — 3 документа (`2a66061`) — University of Groningen, Нидерланды
 - sheffield — 10 документов (`f2743bb`) — University of Sheffield, Великобритания
 
+Порция 18 (11.10.2026, продолжение «остальных»: Словакия, США, Венгрия, Саудовская Аравия, Франция, Австралия, Китай, Эстония, Канада), сборка `e488997`:
+
+- slovak-university-of-technology — 1 документ (`780e829`) — Словацкий технический университет в Братиславе (STUBA)
+- slovakia-gov — 9 документов (`df6337c`) — стипендия Правительства Словакии
+- smith-college — 11 документов (`9bb8cd1`) — Smith College, США
+- soka — 8 документов (`e7bf986`) — Soka University of America, США
+- sorbonne — 2 документа (`023edb8`) — Sorbonne University, Франция
+- stanford-university — 11 документов (`6a646b2`) — Стэнфорд, США
+- stipendium-hungaricum — 5 документов (`e20152f`) — стипендия Stipendium Hungaricum, Венгрия
+- study-in-saudi — 3 документа (`547c386`) — Study in Saudi Arabia, Саудовская Аравия
+- swarthmore-college — 10 документов (`76b707f`) — Swarthmore College, США
+- sweden-study — 3 документа (`e229a9d`) — Швеция, англоязычный бакалавриат
+- sydney — 6 документов (`9247d88`) — University of Sydney, Австралия
+- sysu — 14 документов (`d5d0fe6`) — Sun Yat-sen University, Китай
+- tartu-estonia — 6 документов (`b1511ae`) — University of Tartu, Эстония
+- tianjin-university — 13 документов (`4e5dcfd`) — Тяньцзиньский университет, Китай
+- toronto — 6 документов (`5aade2f`) — University of Toronto, Канада
+
 ## Пропущено
 
 (формат строки: `id — причина`)
