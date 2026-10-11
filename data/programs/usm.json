@@ -80,6 +80,48 @@
       "evidence": "IELTS/TOEFL/MUET/CAE/CPE/PTE/Authorization Letter from an institution in which the medium instruction is English",
       "field": "language",
       "kind": "must"
+    },
+    {
+      "ru": "официальные аттестаты, транскрипты, ведомости с оценками или школьный отчёт из каждого учебного заведения (школы или колледжа), где учились",
+      "evidence": "Official certificates, transcripts, mark sheets or school report from each secondary or college attended",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "перевод копий аттестатов, если они выданы не на английском или малайском языке",
+      "evidence": "Translated copy of certificates (if issued other than English or Malay Language)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "сертификат о знании английского (IELTS/TOEFL/MUET/CAE/CPE/PTE) или письмо-подтверждение из учебного заведения, где обучение велось на английском",
+      "evidence": "IELTS/TOEFL/MUET/CAE/CPE/PTE/Authorization Letter from an institution in which the medium instruction is English",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "копия паспорта (только страница с данными, формат A4)",
+      "evidence": "Copy of passport (Details page only in A4 size)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Student Pass, если уже учишься в Малайзии",
+      "evidence": "Student Pass (if study in Malaysia)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "письмо о стипендии (если есть)",
+      "evidence": "Letter of scholarship (if any)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "квитанция об оплате сбора за рассмотрение заявки",
+      "evidence": "Receipt of processing fee payment.",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -113,6 +155,6 @@
     "approvedBy": "assistant"
   },
   "leftEmpty": {
-    "schoolYears": "sha256:5a37f4f787fc060f0f8f4d762a9b76204bf049ef2c031bdc52a2cf34dc549c22"
+    "schoolYears": "sha256:c7ec5e284e7c46803aebb0277a9789910e74a4f2b948caeff3c755ec90297432"
   }
 }
