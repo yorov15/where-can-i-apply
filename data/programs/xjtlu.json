@@ -226,6 +226,42 @@
       "evidence": "It usually takes 15 working days for us to process your application and prepare an offer or a response of additional documents requirement.",
       "field": "graduationYear",
       "kind": "steps"
+    },
+    {
+      "ru": "Документ об образовании (аттестат о среднем образовании или его эквивалент).",
+      "evidence": "Certificates of education qualifications",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Табель успеваемости с переводом на английский язык.",
+      "evidence": "Transcripts, translated into English",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Справка об английском языке: IELTS, TOEFL или другой признанный сертификат — для тех, для кого английский не родной.",
+      "evidence": "Certificates of English language qualifications such as IELTS, TOEFL or other acceptable English qualifications (as required for non-native speakers of English)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Результаты вступительных тестов A-level, IB, AP или других — если они есть.",
+      "evidence": "A-level, IB, AP or other entrance aptitude test scores (if available)",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Копия паспорта (для иностранных студентов).",
+      "evidence": "International students: Photocopy of your passport",
+      "field": null,
+      "kind": "documents"
+    },
+    {
+      "ru": "Цветная фотография размером с паспортную, на белом фоне.",
+      "evidence": "Passport sized colour photo with a white background",
+      "field": null,
+      "kind": "documents"
     }
   ],
   "deadline": {
@@ -263,7 +299,7 @@
         "contentHash": "sha256:9db7cfb13a267b5dfbad693af55a42c3c8f4335da3f553aac77127ece8d73839"
       }
     ],
-    "lastVerified": "2026-09-27",
+    "lastVerified": "2026-10-10",
     "humanChecked": false
   }
 }
