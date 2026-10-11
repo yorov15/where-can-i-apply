@@ -283,6 +283,23 @@
 - tianjin-university — 13 документов (`4e5dcfd`) — Тяньцзиньский университет, Китай
 - toronto — 6 документов (`5aade2f`) — University of Toronto, Канада
 
+Порция 19 (11.10.2026, продолжение «остальных»: Италия, Нидерланды, США, Аргентина, Румыния, Канада, Великобритания, Малайзия), сборка `792830b`:
+
+- trento — 6 документов (`d634812`) — Университет Тренто, Италия
+- tudelft — 14 документов (`0b09ac8`) — Delft University of Technology, Нидерланды
+- tufts-university — 9 документов (`63d6e8c`) — Tufts University, США
+- uba — 3 документа (`7707670`) — Universidad de Buenos Aires, Аргентина
+- ubbcluj-romania — 10 документов (`2dc1d8f`) — Университет Бабеш-Бойяи (Клуж), Румыния
+- ubc — 5 документов (`449e200`) — University of British Columbia, Канада
+- ubc-scholars — 5 документов (`973f75f`) — UBC International Scholars, Канада
+- uc-berkeley — 7 документов (`24309d7`) — UC Berkeley, США
+- uchicago — 11 документов (`7bf332f`) — University of Chicago, США
+- ucl — 5 документов (`c70ffeb`) — UCL (University College London), Великобритания
+- ucla — 5 документов (`43d8f11`) — UCLA, США
+- ucsd — 8 документов (`b120be1`) — UC San Diego, США
+- uiuc — 11 документов (`a0999a9`) — University of Illinois Urbana-Champaign, США
+- um-malaya — 6 документов (`c95ef62`) — Universiti Malaya, Малайзия
+
 ## Пропущено
 
 (формат строки: `id — причина`)
@@ -335,3 +352,4 @@
 - sapienza-italy — на снятых страницах приёма перечень обязательных документов не назван: есть только отсылка к отдельному PDF «Admission procedures - Orientation and Information» и странице International Student Office, самого списка нет
 - scu — свежий снимок 11.10.2026 получил пустые страницы (5 из 11, включая страницы с требованиями к заявке): повторный fetch не помог, цитаты и перечень документов проверить не по чему, запись не проходит review
 - serbia-world — на снятых страницах перечень обязательных документов не назван
+- uaeu-uae — на снятых страницах (приём иностранцев, плата/жильё, стипендии) перечень документов к заявке бакалавра-иностранца не назван: только общие требования приёма и стипендии
