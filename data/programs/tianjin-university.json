@@ -17,7 +17,7 @@
     "living": null,
     "travel": null,
     "note": {
-      "ru": "Обучение платное: 16 600 юаней в год на китайскоязычных программах, 20 000 на англоязычных, 26 000 на особых (архитектура, ПО, урбанистика, ландшафт). Сбор за заявку 420 юаней, депозит при зачислении 7 000, страховка 800, общежитие 15–60 юаней за койку в сутки. Государственная стипендия Китая (CSC Type A) открыта только для китайскоязычных программ; для англоязычных есть Qiushi и стипендии Тяньцзиньского университета. Жильё и дорога не покрываются"
+      "ru": "Обучение платное: 20 000 юаней в год на общих программах, 26 000 на особых (архитектура и программная инженерия); на программах в филиалах (Шэньчжэнь, Фучжоу, Хайнань, совместный институт) — 100 000–130 000. Сбор за заявку 500 юаней и депозит 7 000 платят после зачисления, страховка 800 в год, общежитие 15–60 юаней за койку в сутки. Государственная стипендия Китая (CSC Type A) открыта только для китайскоязычных программ; для англоязычных есть Qiushi и стипендии Тяньцзиньского университета. Жильё и дорога не покрываются"
     }
   },
   "eligibility": {
@@ -88,14 +88,32 @@
       "kind": "must"
     },
     {
-      "ru": "Все абитуриенты сдают китайский экзамен CSCA; результат желательно подать до 20 мая 2026.",
+      "ru": "Все абитуриенты сдают китайский экзамен CSCA, его результат прикладывается к заявке; сдавать лучше заранее.",
       "evidence": "Students must take the \"CSCA Test\" organized by the China Scholarship Council",
       "field": "exam",
       "kind": "must"
     },
     {
-      "ru": "Заявка на осень 2026: с 15 октября 2025 по 15 апреля 2026; на стипендии — до 1 апреля 2026. Обучение 16 600/20 000/26 000 юаней, сбор 420, депозит 7 000.",
-      "evidence": "October 15th, 202 5 - April 15th , 202 6",
+      "ru": "Заявка на осень 2027: с 30 сентября 2026 по 31 мая 2027.",
+      "evidence": "Application period: September 30 to May 31, 2027.",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Стипендии: заявку на них нужно подать до 1 апреля 2027 из-за ограниченной квоты.",
+      "evidence": "students applying for scholarships are requested to submit their applications before April 1",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "Обучение: 20 000 юаней в год на общих программах и 26 000 на архитектуре и программной инженерии.",
+      "evidence": "Bachelor's general programs: 20,000 RMB/year; Other programs: 26,000 RMB/year",
+      "field": null,
+      "kind": "money"
+    },
+    {
+      "ru": "После зачисления платят депозит 7 000 юаней и сбор за заявку 500; при отказе от учёбы по личным причинам они не возвращаются.",
+      "evidence": "Admitted students are required to pre-pay a deposit of 7,000 RMB and an application fee of 500 RMB",
       "field": null,
       "kind": "money"
     },
@@ -191,12 +209,12 @@
     }
   ],
   "deadline": {
-    "opens": null,
-    "closes": "2026-04-15",
+    "opens": "2026-09-30",
+    "closes": "2027-05-31",
     "recurring": "annual",
-    "confidence": "expected"
+    "confidence": "confirmed"
   },
-  "applyUrl": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202510/t20251013_324445.html",
+  "applyUrl": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202609/t20260930_324729.html",
   "coversInstitutions": {
     "kind": "list",
     "approxCount": 1,
@@ -205,11 +223,11 @@
     }
   },
   "source": {
-    "url": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202510/t20251013_324445.html",
+    "url": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202609/t20260930_324729.html",
     "pages": [
       {
-        "url": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202510/t20251013_324445.html",
-        "contentHash": "sha256:7ac88d099c2436d25e8b0b2a6f0b775aaf02f29311f592a8788d5bafadb1fc11"
+        "url": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202609/t20260930_324729.html",
+        "contentHash": "sha256:4888445dfb43960978fb3997418e7303106bcdb9af9907b1c4302632a5ee1872"
       },
       {
         "url": "https://en.tju.edu.cn/info/1017/11186.htm",
@@ -220,7 +238,7 @@
         "contentHash": "sha256:a1fd7f58edc3cec9782da667cbb31754fdaffd4de2ffa44b9fd4a5a97ef8faa1"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-13",
     "humanChecked": false,
     "approvedBy": "assistant"
   },
