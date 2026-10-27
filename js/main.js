@@ -18,6 +18,7 @@ import { planCost } from './cost.js';
 import { buildCombinedRoute } from './route-combined.js';
 import { renderRoute } from './route-view.js';
 import { EXPLAIN_URL } from './config.js';
+import { renderToday } from './today-view.js';
 
 const form = document.getElementById('profile');
 const today = new Date().toISOString().slice(0, 10);
@@ -29,6 +30,11 @@ const answerScreen = document.getElementById('answer');
 const catalogScreen = document.getElementById('catalog');
 const routeScreen = document.getElementById('route');
 const routeBody = document.getElementById('route-body');
+const todayScreen = document.getElementById('today');
+const todayBody = document.getElementById('today-body');
+// Маршрут и «Сегодня» питаются одним состоянием; фокус после перерисовки
+// возвращаем на том экране, который сейчас открыт.
+const activeBody = () => (todayScreen.hidden ? routeBody : todayBody);
 const catalogButton = document.getElementById('open-catalog');
 
 // Пока человек не закончил анкету, ни ответа, ни каталога не видно: ответ
@@ -49,8 +55,9 @@ function showScreen(name) {
   answerScreen.hidden = !ready || name !== 'answer';
   catalogScreen.hidden = !ready || name !== 'catalog';
   routeScreen.hidden = !ready || name !== 'route';
+  todayScreen.hidden = !ready || name !== 'today';
   if (ready && name === 'catalog') buildCards();
-  if (ready && name === 'route') openRoute();
+  if (ready && (name === 'route' || name === 'today')) openRoute();
   if (lead) lead.hidden = finished;
   tabbar.show(finished);
   tabbar.sync();
@@ -58,6 +65,7 @@ function showScreen(name) {
 
 function screenFromHash() {
   if (location.hash === '#route') return 'route';
+  if (location.hash === '#today') return 'today';
   if (location.hash === '#programs') return 'catalog';
   return 'answer';
 }
@@ -84,13 +92,12 @@ setupBarHide(document.querySelector('.catalog-bar'));
 const tabbar = setupTabbar({
   bar: document.getElementById('tabbar'),
   hash: () => location.hash,
-  bucket: () => document.querySelector('#catalog-tools .chip[aria-pressed="true"]')?.dataset.bucket,
   watch: document.getElementById('catalog-tools'),
   go(name) {
     if (name === 'answer') {
       if (location.hash) location.hash = '';
-    } else if (name === 'route') {
-      location.hash = 'route';
+    } else if (name === 'route' || name === 'today') {
+      location.hash = name;
     } else {
       catalogFilter.showBucket(name === 'plan' ? 'plan' : 'all');
       location.hash = 'programs';
@@ -115,7 +122,7 @@ const plan = {
     // условий. Только что отмеченную программу надо дочитать: иначе её
     // строка в плане была бы пустой до раскрытия карточки.
     if (plan.ids.includes(id)) details.ensure(id).then(() => refresh());
-    if (!routeScreen.hidden) openRoute();
+    if (!routeScreen.hidden || !todayScreen.hidden) openRoute();
   },
 };
 
@@ -311,7 +318,7 @@ function examForStep(step) {
 
 function renderRouteView() {
   const plans = Object.fromEntries((route?.steps ?? []).filter(step => routeTracks[step.track]).map(step => [step.id, examForStep(step)]));
-  renderRoute(routeBody, {
+  (todayScreen.hidden ? renderRoute : renderToday)(todayScreen.hidden ? routeBody : todayBody, {
     study: route ? buildStudyPlan({ steps:route.steps, tracks:routeTracks, plans, state:routeState, today }) : null,
     routeState, today,
     weekly:weeklySnapshot,
@@ -329,9 +336,9 @@ function renderRouteView() {
       getExamPlan: examForStep,
       onStudyToggle(week, taskId) {
         routeState=toggleStudyTask(routeState,week,taskId,today);persistRoute();rebuildRoute();renderRouteView();
-        const section=routeBody.querySelector(`[data-study-week="${CSS.escape(week)}"]`);
+        const section=activeBody().querySelector(`[data-study-week="${CSS.escape(week)}"]`);
         if (section) section.open=true;
-        routeBody.querySelector(`[data-study-task="${CSS.escape(taskId)}"] input`)?.focus();
+        activeBody().querySelector(`[data-study-task="${CSS.escape(taskId)}"] input`)?.focus();
       },
       onWeeklyToggle(week,taskId) {
         const task=routeState.weekPlan[week]?.find(item=>item.taskId===taskId);
@@ -340,18 +347,18 @@ function renderRouteView() {
         if(wanted)routeState.carryTasks=routeState.carryTasks.filter(item=>item.taskId!==taskId);
         if(task?.routeId){const step=route.steps.find(item=>item.id===task.routeId);if(step&&step.done!==wanted)routeState=toggleStep(routeState,step.id,today,step.legacyIds);}
         persistRoute();rebuildRoute();renderRouteView();
-        routeBody.querySelector(`[data-week-task="${CSS.escape(taskId)}"] input`)?.focus();
+        activeBody().querySelector(`[data-week-task="${CSS.escape(taskId)}"] input`)?.focus();
       },
       onTaskDay(week,taskId,day) {
         routeState=setTaskDay(routeState,week,taskId,day,today);persistRoute();rebuildRoute();renderRouteView();
-        routeBody.querySelector(`[data-week-task="${CSS.escape(taskId)}"] select`)?.focus();
+        activeBody().querySelector(`[data-week-task="${CSS.escape(taskId)}"] select`)?.focus();
       },
       onReview(taskIds) {routeState=reviewWeeks(routeState,today,taskIds);persistRoute();rebuildRoute();renderRouteView();},
       onMock(code, score) {
         const next=recordMock(routeState,code,score,today);
         if (!next) return 'Проверь дату и шкалу балла.';
         routeState=next;persistRoute();rebuildRoute();renderRouteView();
-        routeBody.querySelector(`[data-advice="${CSS.escape(code)}"]`)?.scrollIntoView({block:'nearest'});
+        activeBody().querySelector(`[data-advice="${CSS.escape(code)}"]`)?.scrollIntoView({block:'nearest'});
         return 'Пробник сохранён.';
       },
       onExamPlan(code, patch, field) {
@@ -359,7 +366,7 @@ function renderRouteView() {
         persistRoute();
         rebuildRoute();
         renderRouteView();
-        routeBody.querySelector(`[data-exam="${CSS.escape(code)}"] [data-field="${field}"]`)?.focus();
+        activeBody().querySelector(`[data-exam="${CSS.escape(code)}"] [data-field="${field}"]`)?.focus();
       },
       onChooseGoals() { location.hash = 'programs'; },
       onRemoveGoal(id) { plan.toggle(id); },
@@ -371,7 +378,7 @@ function renderRouteView() {
         renderRouteView();
         // Перерисовка заменяет узлы: возвращаем фокус на тот же шаг, иначе
         // с клавиатуры после каждой галочки человек оказывается в начале.
-        routeBody.querySelector(`[data-step="${CSS.escape(stepId)}"]`)?.focus();
+        activeBody().querySelector(`[data-step="${CSS.escape(stepId)}"]`)?.focus();
       },
       onPrint() {
         window.print();
@@ -447,6 +454,9 @@ function renderRouteView() {
       },
       onOpenRoute() {
         location.hash = 'route';
+      },
+      onOpenToday() {
+        location.hash = 'today';
       },
       async onRetry() {
         if (!routeData) {
@@ -538,7 +548,7 @@ function refresh(profile = readForm(form)) {
   tabbar.setPlanCount(plan.ids.length);
   cardsStale = Boolean(renderResults(nodes, profile, programs, today, details)?.skippedCards);
   // Маршрут строится из анкеты: поправил балл — маршрут и неделя другие.
-  if (!routeScreen.hidden) {
+  if (!routeScreen.hidden || !todayScreen.hidden) {
     rebuildRoute();
     renderRouteView();
   }
@@ -645,7 +655,7 @@ loadIndex()
     // Маршрут — отдельный маленький файл: если человек пришёл сразу на
     // #route, к моменту нажатия он уже приехал.
     loadRouteData().then(() => {
-      if (location.hash === '#route') openRoute();
+      if (location.hash === '#route' || location.hash === '#today') openRoute();
     });
   })
   .catch(() => {

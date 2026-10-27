@@ -330,9 +330,6 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .plan-status { color: var(--muted); font-size: .9375rem; margin: var(--s-2) 0 0; }
 .plan-status:empty { display: none; }
 .plan-toggle { margin-left: var(--s-2); }
-.todo { display: flex; gap: var(--s-3); align-items: flex-start; padding: var(--s-2) 0; font-size: .9375rem; }
-.todo input { flex: none; width: 1.25rem; height: 1.25rem; margin-top: .15rem; accent-color: var(--accent); }
-.todo.done span { color: var(--muted); text-decoration: line-through; }
 .compare { overflow-x: auto; }
 .compare table { border-collapse: collapse; font-size: .875rem; }
 .compare th, .compare td { padding: var(--s-2) var(--s-3); text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); min-width: 10rem; }
@@ -618,17 +615,26 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
   .agenda-item { column-gap: var(--s-3); padding-inline: var(--s-2); }
 }
 
-/* Нижняя панель разделов: на телефоне палец лежит внизу, а «Назад» вверху. */
+/* Разделы: на широком экране строка в шапке, на телефоне панель внизу, где лежит палец. */
 .tabbar { display: none; }
+.tabbar:not([hidden]) { display: flex; margin-right: auto; }
+.tab { min-height: 44px; padding: 0 var(--s-3); font: inherit; font-weight: 600; white-space: nowrap; color: var(--muted); background: none; border: 0; cursor: pointer; }
+.tab[aria-current] { color: var(--accent-text); box-shadow: inset 0 -3px 0 var(--accent); }
+.tab-count:not(:empty) { margin-left: .25rem; padding: 0 .4rem; color: var(--on-accent); background: var(--accent); border-radius: var(--r-pill); font-size: .8125rem; }
 @media (max-width: 63.99rem) {
-  .tabbar:not([hidden]) { position: fixed; inset: auto 0 0; z-index: var(--z-bar); display: grid; grid-template-columns: repeat(4, 1fr); padding-bottom: env(safe-area-inset-bottom); background: var(--surface); border-top: 1px solid var(--line); }
+  .tabbar:not([hidden]) { position: fixed; inset: auto 0 0; z-index: var(--z-bar); display: grid; grid-template-columns: repeat(3, 1fr); padding-bottom: env(safe-area-inset-bottom); background: var(--surface); border-top: 1px solid var(--line); }
   body:has(.tabbar:not([hidden])) { padding-bottom: calc(3.5rem + env(safe-area-inset-bottom)); }
   body:has(.tabbar:not([hidden])) #back-to-answer { display: none; }
-  .tab { min-height: 52px; font: inherit; font-size: .875rem; font-weight: 600; white-space: nowrap; color: var(--muted); background: none; border: 0; cursor: pointer; }
-  .tab[aria-current] { color: var(--accent-text); box-shadow: inset 0 3px 0 var(--accent); }
-  .tab-count:not(:empty) { margin-left: .25rem; padding: 0 .4rem; color: var(--on-accent); background: var(--accent); border-radius: var(--r-pill); font-size: .8125rem; }
+  .tab { min-height: 52px; padding: 0; font-size: .875rem; }
+  .tab[aria-current] { box-shadow: inset 0 3px 0 var(--accent); }
 }
-@media (max-height: 32rem) { .tab { min-height: 44px; } }
+body:is([data-screen=today],[data-screen=route]) .hero { display: none; }
+.today-head { margin: 0 0 var(--s-3); }
+.today-title { margin: 0; font-size: 1.75rem; line-height: 1.15; letter-spacing: -.02em; }
+.today-now { margin: 0 0 var(--s-4); padding: var(--s-4); background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: var(--r-control); }
+.today-now-title { margin: var(--s-1) 0 var(--s-3); font-size: 1.375rem; line-height: 1.2; }
+.today-actions { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.today-level { margin: 0 0 var(--s-2); }
 
 /* Отклик на касание: на телефоне hover нет, и нажатие иначе молчит. */
 @media (hover: none) { .card-head:active, .agenda-item:active, .faq > summary:active, .tab:active { background: var(--tint); } }
@@ -638,12 +644,12 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 /* Маршрут до оффера: цель, прогресс, неделя и разделы-справочники. Сверху
    то, что человек делает сейчас, ниже — что вообще бывает по программе. */
 .route-head { display: grid; gap: var(--s-2); margin: 0 0 var(--s-4); }
-.route-goal-pick { display: grid; gap: var(--s-1); }
-.route-select { width: 100%; min-height: 44px; padding: 0 var(--s-3); font: inherit; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-control); }
 .route-goal-name { margin: 0; font-size: 1.25rem; line-height: 1.2; }
 .route-goal-meta { margin: 0; color: var(--muted); }
 .route-goal-note { margin: 0; font-size: .9375rem; }
 .route-goal-actions { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-1); }
+.route-goal-actions > .link-button { flex: 1 1 0; min-width: 0; text-align: left; }
+.route-goal-actions > p, .route-goal-actions > details { flex: 1 0 100%; }
 .route-bar { height: .5rem; margin: 0 0 var(--s-1); accent-color: var(--accent); }
 .route-progress { margin: 0 0 var(--s-4); font-weight: 600; }
 .route-gaps-box { margin: 0 0 var(--s-4); }
@@ -707,7 +713,7 @@ body[data-screen="route"] .hero { display: none; }
 /* Печать: на бумаге нужен только маршрут, без шапки, вкладок и кнопок.
    Раскрытые разделы печатаются целиком — их открывает main.js перед печатью. */
 @media print {
-  .topbar, .hero, .site-footer, .tabbar, .profile-box, #answer, #catalog, .route-actions, .route-goal-actions, .route-goal-pick, .route-status, .route-open { display: none !important; }
+  .topbar, .hero, .site-footer, .tabbar, .profile-box, #answer, #catalog, .route-actions, .route-goal-actions, .route-status { display: none !important; }
   .route-step, .route-phase { break-inside: avoid; }
   .is-parent-print>*:not(#parent-print) { display:none!important; }
   .is-parent-print { background:#fbfbf9; }

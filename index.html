@@ -33,6 +33,7 @@
 <link rel="modulepreload" href="js/lib/kinds.js">
 <link rel="modulepreload" href="js/barscroll.js">
 <link rel="modulepreload" href="js/tabbar.js">
+<link rel="modulepreload" href="js/today-view.js">
 <link rel="modulepreload" href="js/priority.js">
 <link rel="modulepreload" href="js/lib/majors.js">
 <link rel="modulepreload" href="js/data.js">
@@ -72,7 +73,12 @@
 <a class="skip-link" href="#main">К содержимому</a>
 <div class="topbar">
   <a class="brand" href="./">Nerio</a>
-  <nav aria-label="Разделы"><a href="#route">Маршрут</a><a href="faq.html">Вопросы</a></nav>
+  <nav id="tabbar" class="tabbar" aria-label="Разделы сайта" hidden>
+  <button type="button" class="tab" data-tab="today">Сегодня</button>
+  <button type="button" class="tab" data-tab="answer">Куда можно</button>
+  <button type="button" class="tab" data-tab="route">Мой путь <span class="tab-count"></span></button>
+</nav>
+  <nav aria-label="Справка"><a href="faq.html">Вопросы</a></nav>
   <button type="button" id="theme-toggle" class="theme-toggle" hidden>Тёмная</button>
 </div>
 <header class="hero">
@@ -289,8 +295,12 @@
     <div id="results"></div>
   </section>
 
-  <section id="route" aria-label="Маршрут до оффера" hidden>
-    <h2 class="catalog-title">Маршрут до оффера</h2>
+  <section id="today" aria-label="Сегодня" hidden>
+    <div id="today-body"></div>
+  </section>
+
+  <section id="route" aria-label="Мой путь" hidden>
+    <h2 class="catalog-title">Мой путь</h2>
     <div id="route-body"></div>
   </section>
 </main>
@@ -305,12 +315,6 @@
   <p id="clear-status" class="fineprint" role="status"></p>
 </footer>
 
-<nav id="tabbar" class="tabbar" aria-label="Разделы сайта" hidden>
-  <button type="button" class="tab" data-tab="answer">Итог</button>
-  <button type="button" class="tab" data-tab="route">Маршрут</button>
-  <button type="button" class="tab" data-tab="catalog">Программы</button>
-  <button type="button" class="tab" data-tab="plan">План <span class="tab-count"></span></button>
-</nav>
 
 <script type="module" src="js/main.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>

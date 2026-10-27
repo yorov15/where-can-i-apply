@@ -11,7 +11,6 @@ import { reasonText } from './wording.js';
 import { formatDate, plural } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
 import { renderStudyPlan } from './study-view.js';
-import { renderCurrentWeek } from './weekly-view.js';
 import { renderEssays } from './essay-view.js';
 
 const PHASES = [
@@ -427,8 +426,10 @@ export function renderRoute(root, props) {
   // ——— цель и прогресс (левая колонка на широком экране) ———
   const main = el('div', 'route-main');
   const head = el('header', 'route-head');
-  head.append(el('h3', 'route-goal-name', `Цели из моего плана (${route.goals.length})`));
+  head.append(el('h3', 'route-goal-name', `Цели (${route.goals.length})`));
   for (const goal of route.goals) {
+    // Строка цели — имя, срок и «Убрать». Покрытие, заметки и предупреждения
+    // под раскрытием: восемь целей иначе занимают весь первый экран.
     const item = el('div', 'route-goal-actions');
     item.dataset.goal = goal.id;
     const open = el('button', 'link-button', goal.name);
@@ -438,10 +439,13 @@ export function renderRoute(root, props) {
     remove.type = 'button';
     remove.setAttribute('aria-label', `Убрать ${goal.name} из целей`);
     remove.addEventListener('click', () => handlers.onRemoveGoal(goal.id));
-    item.append(open, remove, el('p', 'route-goal-meta', deadlineLine(goal)),
-      el('p', 'route-goal-meta', coverageLine(goal.coverage)));
-    if (!goal.prepared) item.append(el('p', 'route-detail', 'Подготовка для этой программы пока не размечена. Сверь требования на её сайте.'));
-    if (goal.note) item.append(el('p', 'route-goal-note', goal.note));
+    item.append(open, remove, el('p', 'route-goal-meta', deadlineLine(goal)));
+    const more = el('details', 'route-more');
+    more.append(el('summary', null, 'Что покрывает и что учесть'));
+    more.append(el('p', 'route-goal-meta', coverageLine(goal.coverage)));
+    if (!goal.prepared) more.append(el('p', 'route-detail', 'Подготовка для этой программы пока не размечена. Сверь требования на её сайте.'));
+    if (goal.note) more.append(el('p', 'route-goal-note', goal.note));
+    item.append(more);
     if (!goal.conditionsLoaded) item.append(el('p', 'route-warn', 'Условия этой программы не загрузились. Нажми «Повторить» ниже.'));
     head.append(item);
   }
@@ -470,9 +474,20 @@ export function renderRoute(root, props) {
   const gaps = gapBlock(route);
   if (gaps) main.append(gaps);
 
-  main.append(props.weekly?renderCurrentWeek(props.weekly,handlers):weekBlock(route, handlers));
-  const study = renderStudyPlan(props.study, props.routeState, props.today, handlers,Boolean(props.weekly));
-  if (study) main.append(study);
+  if (props.weekly) {
+    // Дела недели живут на «Сегодня»; здесь только ссылка, чтобы не вести два списка.
+    const today = el('button', 'button button-quiet', 'Дела этой недели — на «Сегодня»');
+    today.type = 'button';
+    today.addEventListener('click', handlers.onOpenToday);
+    main.append(today);
+  } else main.append(weekBlock(route, handlers));
+  const study = renderStudyPlan(props.study, props.routeState, props.today, handlers, Boolean(props.weekly));
+  if (study) {
+    const wrap = el('details', 'route-phase');
+    wrap.append(el('summary', 'route-phase-title', 'Подготовка по неделям'));
+    wrap.append(study);
+    main.append(wrap);
+  }
   root.append(main);
 
   // ——— разделы-справочники (правая колонка на широком экране) ———
