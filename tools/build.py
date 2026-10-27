@@ -16,6 +16,7 @@ from datetime import date
 from pathlib import Path
 
 from tools.changelog import feed_xml
+from tools.route import write_route
 from tools.schema import FIELDS, KINDS, MAJORS, SIGNERS, approved_by
 
 # Предел ставится на то, за что человек платит, — на сжатый размер.
@@ -374,6 +375,12 @@ def main() -> int:
     for path in conditions_dir.glob("*.json"):
         if path.name not in written:
             path.unlink()
+
+    # Маршрут до оффера: проверяем подготовку программ и треки экзаменов.
+    # Выдуманная дата в маршруте останавливает сборку так же, как пустая
+    # цитата в условии: человек пойдёт по ней к дедлайну.
+    if write_route(root, programs, date.today().isoformat()):
+        return 1
 
     (root / "data" / "index.json").write_text(text, encoding="utf-8")
     (root / "data" / "details.json").write_text(extra, encoding="utf-8")
