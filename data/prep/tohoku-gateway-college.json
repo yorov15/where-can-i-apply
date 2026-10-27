@@ -7,5 +7,42 @@
     "duolingo",
     "sat",
     "act"
-  ]
+  ],
+  "essays": [
+    {
+      "id": "essay-1",
+      "title": "Мотивационное письмо (Statement of Purpose, до 400 слов на английском, вводится ",
+      "prompt": null,
+      "requirements": [
+        "Мотивационное письмо (Statement of Purpose, до 400 слов на английском, вводится прямо в TAO)"
+      ],
+      "source": {
+        "url": "https://admissions.tohoku.ac.jp/en/admissions/undergraduate/gateway_college/",
+        "lastVerified": "2026-10-10",
+        "pageHash": "sha256:657e6dacc6e3bd5f5224779ff803618f35d8fe915327e899a8c38f984f9ccede",
+        "contentHash": "sha256:ca64b04c82a5df433808c9abd6cac3fe369f3d2c3479a3cb98a59c417efb998d",
+        "snapshot": "raw/essays/2026-10-27/tohoku-gateway-college-essay-1.txt",
+        "quotes": [
+          "Statement of Purpose - max. 400 words, in English, to be inputted directly into a dedicated field in TAO"
+        ]
+      },
+      "words": {
+        "max": 400
+      }
+    }
+  ],
+  "essayPolicy": {
+    "review": "blocked",
+    "note": "Использование генеративного ИИ вуз просит не допускать: писать идеи и текст надо самому. Если ИИ заметят, на оценку документов это не повлияет.",
+    "source": {
+      "url": "https://admissions.tohoku.ac.jp/en/adcms/wp-content/uploads/2026/08/ApplicationGuideGWC2027Fall.pdf",
+      "lastVerified": "2026-10-10",
+      "pageHash": "sha256:32e5da227c9bab8cf9a4a72f5792d00ffb66ddfab4f9118cc80693a00f41020c",
+      "contentHash": "sha256:8d026f45b9d9d90c695cbcc08bced29d8dd2bdb89c19992ee60b826143f072cb",
+      "snapshot": "raw/essays/2026-10-27/tohoku-gateway-college-policy.txt",
+      "quotes": [
+        "Even if the use of Generative AI is detected, it will not influence the evaluation of application documents."
+      ]
+    }
+  }
 }

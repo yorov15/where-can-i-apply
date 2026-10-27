@@ -8,5 +8,39 @@
     "sat",
     "act",
     "eju"
-  ]
+  ],
+  "essays": [
+    {
+      "id": "essay-1",
+      "title": "Личное заявление (Форма 4)",
+      "prompt": null,
+      "requirements": [
+        "Личное заявление (Форма 4): скачивается с сайта программы, заполняется и загружается; профессиональная правка запрещена."
+      ],
+      "source": {
+        "url": "https://www.oia.hokudai.ac.jp/isp/wp-content/uploads/2026/09/ISP-Application-Guidelines-for-2027-Enrollment.pdf",
+        "lastVerified": "2026-10-10",
+        "pageHash": "sha256:b7ddef77a26ecb7b660fb8a767412691ac21879964349e44ddaa8ac949cb3060",
+        "contentHash": "sha256:76ec5ee86e77c6e052b674f5a57672700d95dc689668e82c4a7b1ff723970e19",
+        "snapshot": "raw/essays/2026-10-27/hokkaido-isp-essay-1.txt",
+        "quotes": [
+          "10 Personal statement (Form 4) Download the form from the Integrated Science Program website, enter requested information and upload the completed form."
+        ]
+      }
+    }
+  ],
+  "essayPolicy": {
+    "review": "blocked",
+    "note": "Личное заявление (Форма 4): скачивается с сайта программы, заполняется и загружается; профессиональная правка запрещена.",
+    "source": {
+      "url": "https://www.oia.hokudai.ac.jp/isp/wp-content/uploads/2026/09/ISP-Application-Guidelines-for-2027-Enrollment.pdf",
+      "lastVerified": "2026-10-10",
+      "pageHash": "sha256:b7ddef77a26ecb7b660fb8a767412691ac21879964349e44ddaa8ac949cb3060",
+      "contentHash": "sha256:3fa7378f194966d41397635a4a46c274bc4069af8e89641638513236774b688b",
+      "snapshot": "raw/essays/2026-10-27/hokkaido-isp-policy.txt",
+      "quotes": [
+        "Professional proofreading is strictly prohibited for these documents."
+      ]
+    }
+  }
 }

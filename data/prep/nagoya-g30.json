@@ -7,5 +7,39 @@
     "duolingo",
     "sat",
     "act"
-  ]
+  ],
+  "essays": [
+    {
+      "id": "essay-1",
+      "title": "Два эссе Nagoya G30",
+      "prompt": null,
+      "requirements": [
+        "Нужны два эссе. Вопросы — в приложении 5 к требованиям приёма."
+      ],
+      "source": {
+        "url": "https://admissions.g30.nagoya-u.ac.jp/upload/2027_admission_requirements_en.pdf",
+        "lastVerified": "2026-10-10",
+        "pageHash": "sha256:747f22ace437f01cba854be4e0879563dde2d2ec1dc7740fad913a657e15aa29",
+        "contentHash": "sha256:9b3fd2131b67b6080c87c05b97ae8539bbc31ff2194518a2e492f86a64e9fa66",
+        "snapshot": "raw/essays/2026-10-27/nagoya-g30-essay-1.txt",
+        "quotes": [
+          "Two essays are required. The essay questions are given on the \"Appendix 5: Essay Questions\" page of the admissions requirements."
+        ]
+      }
+    }
+  ],
+  "essayPolicy": {
+    "review": "blocked",
+    "note": "Нужны: справка об окончании школы, табель за последние два и больше года, два эссе (мотивационное и по программе), письмо от школьного учителя, копия паспорта. Писать эссе с помощью генеративного ИИ запрещено, все тексты проверяют программой обнаружения ИИ. Документы не на английском — с заверенным переводом.",
+    "source": {
+      "url": "https://admissions.g30.nagoya-u.ac.jp/admissions/undergraduate/",
+      "lastVerified": "2026-09-26",
+      "pageHash": "sha256:fe5fd3fc47dc4f72c909bbdc1c2aaa6534516ed10af5f0ddd26fe0480cb4008d",
+      "contentHash": "sha256:91d2a9e9987f70e15a93755a7593c2c99aaa14d152433c054192083d23115233",
+      "snapshot": "raw/essays/2026-10-27/nagoya-g30-policy.txt",
+      "quotes": [
+        "the use of generative AI tools to create text or any other content-including essays-for application documents is strictly prohibited"
+      ]
+    }
+  }
 }

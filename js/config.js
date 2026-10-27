@@ -4,4 +4,4 @@
 // а в самой функции по умолчанию разрешены адреса Pages, nerio-app.vercel.app и прежний kuda-podat.vercel.app. Если
 // поставить null, кнопки «Объяснить» на сайте не будет вовсе, и он
 // вернётся к работе без единого запроса наружу.
-export const EXPLAIN_URL = 'https://where-can-i-apply.vercel.app/api/explain';
+export const EXPLAIN_URL = 'https://nerio-app.vercel.app/api/explain';

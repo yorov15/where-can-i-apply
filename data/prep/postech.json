@@ -5,5 +5,28 @@
     "ielts",
     "toefl",
     "topik"
-  ]
+  ],
+  "essays": [
+    {
+      "id": "essay-1",
+      "title": "Личное заявление (Personal Statement) — заполняется в онлайн-системе подачи Stud",
+      "prompt": null,
+      "requirements": [
+        "Личное заявление (Personal Statement) — заполняется в онлайн-системе подачи StudyinKorea."
+      ],
+      "source": {
+        "url": "https://adm-iu.postech.ac.kr/comm/cmfile/download.do?encFileGrpSeq=cc2ba150020190627ad899352ae4d036&encFileSeq=82c441f65591f55a229cf6d79a4d6b8a",
+        "lastVerified": "2026-10-10",
+        "pageHash": "sha256:ccc94c19432b706a87498bf8521190226aff6d0f422f35b05d87a475409df45b",
+        "contentHash": "sha256:5c9f09f1128ce6ff53eaccd72af7e2117df88430ad301fb369737b592c24f12a",
+        "snapshot": "raw/essays/2026-10-27/postech-essay-1.txt",
+        "quotes": [
+          "Personal Statement (to be completed in the StudyinKorea online application system)"
+        ]
+      }
+    }
+  ],
+  "essayPolicy": {
+    "review": "unknown"
+  }
 }

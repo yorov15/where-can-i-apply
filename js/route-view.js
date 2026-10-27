@@ -12,6 +12,7 @@ import { formatDate, plural } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
 import { renderStudyPlan } from './study-view.js';
 import { renderCurrentWeek } from './weekly-view.js';
+import { renderEssays } from './essay-view.js';
 
 const PHASES = [
   ['tests', 'Экзамены'],
@@ -479,6 +480,8 @@ export function renderRoute(root, props) {
   side.append(phaseBlock(route, { ...handlers, tracks }));
   const applyNotes = applyNotesBlock(route);
   if (applyNotes) side.append(applyNotes);
+  const essays=renderEssays(route.goals,props.essays??{},handlers.onRetry);
+  if(essays)side.append(essays);
   root.append(side);
 
   root.append(actionsBlock(route, handlers, status, applyUrl));

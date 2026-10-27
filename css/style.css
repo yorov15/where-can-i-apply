@@ -197,7 +197,7 @@ label { display: block; margin: 0 0 var(--s-4); font-size: .9375rem; font-weight
 label small { display: block; font-weight: 400; margin-top: var(--s-2); }
 label.row { display: grid; grid-template-columns: 1.5rem 1fr 6rem; align-items: center; gap: var(--s-3); min-height: 56px; margin: 0 0 var(--s-2); padding: var(--s-2) var(--s-3); font-size: 1rem; font-weight: 400; background: var(--soft); border-radius: var(--r-control); }
 
-input, select {
+input, select, textarea {
   display: block;
   width: 100%;
   min-height: 48px;
@@ -667,6 +667,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .route-detail { margin: 0; color: var(--muted); font-size: .9375rem; }
 .route-more { font-size: .9375rem; }
 .route-actions>[data-parent-report] { flex-basis:100%; min-width:0; }
+[data-essays] label.row { grid-template-columns:1.5rem 1fr; }
 .route-more summary { color: var(--accent-text); font-weight: 600; cursor: pointer; }
 .route-track { font-size: .9375rem; }
 .route-track p { margin: var(--s-1) 0; }

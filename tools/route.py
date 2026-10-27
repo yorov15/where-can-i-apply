@@ -23,7 +23,7 @@ PREP_DIR = ROOT / "data" / "prep"
 TRACKS_DIR = PREP_DIR / "exams"
 ROUTE_PATH = ROOT / "data" / "route.json"
 
-PREP_KEYS = frozenset({"id", "checked", "tests", "note", "perPart"})
+PREP_KEYS = frozenset({"id", "checked", "tests", "note", "perPart", "essays", "essayPolicy"})
 TRACK_KEYS = frozenset({"code", "name", "format", "scoring", "register", "site", "freePrep", "note", "source"})
 TRACK_KEYS |= frozenset({'parts', 'partsSource', 'resultDays', 'resultSource', 'reportDays', 'reportSource', 'retakeRule', 'sessions', 'sessionsSource', 'timingNote'})
 TRACK_KEYS |= frozenset({'practice', 'practiceSource', 'weekTemplates', 'scheduleNote'})
@@ -163,6 +163,10 @@ def load_prep(programs: list[dict], directory: Path = PREP_DIR, tracks: dict | N
         }
         if isinstance(note, str) and note:
             entry["note"] = note
+        if 'essays' in prep or 'essayPolicy' in prep:
+            from tools.essays import validate_essays
+            problems.extend(f'{name}: {problem}' for problem in validate_essays(prep, published[program_id], directory.parent.parent))
+            entry['hasEssays'] = True
         per_part = prep.get('perPart')
         if per_part is not None:
             from tools.exam_timing import validate_per_part

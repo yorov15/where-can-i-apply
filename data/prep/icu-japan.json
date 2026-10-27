@@ -6,5 +6,65 @@
     "toefl",
     "sat",
     "act"
-  ]
+  ],
+  "essays": [
+    {
+      "id": "essay-1",
+      "title": "Личное заявление (Personal Statement) на 500–600 слов о мотивации учиться в ICU",
+      "prompt": "C) Personal Statement Applicants are required to write a 500-600 word personal statement on their motivation and purpose for studying at ICU. State your motivation and purpose for studying at ICU in 500 to 600 words. Include the following points: (1) Study and career plans (2) Your motivation to study Japanese in the Japanese Language Program and conduct specialized studies in both English and Japanese (3) Contributions you can make to realize ICU's ideals",
+      "requirements": [
+        "Личное заявление (Personal Statement) на 500–600 слов о мотивации учиться в ICU"
+      ],
+      "source": {
+        "url": "https://www.icu.ac.jp/en/admissions/undergraduate/images/UndergraduateAdmissionsGuide2027_Regular.pdf",
+        "lastVerified": "2026-10-10",
+        "pageHash": "sha256:0ad99584ce3d9d2a3d2304004862a6e6b05add89e7cdd59bfbe0c19267df0349",
+        "contentHash": "sha256:e060c7411aef168db7c6fa4285de6b32234a4da666c7ebf122fbf633d887cd57",
+        "snapshot": "raw/essays/2026-10-27/icu-japan-essay-1.txt",
+        "quotes": [
+          "C) Personal Statement Applicants are required to write a 500-600 word personal statement on their motivation and purpose for studying at ICU. State your motivation and purpose for studying at ICU in 500 to 600 words. Include the following points: (1) Study and career plans (2) Your motivation to study Japanese in the Japanese Language Program and conduct specialized studies in both English and Japanese (3) Contributions you can make to realize ICU's ideals"
+        ]
+      },
+      "words": {
+        "min": 500,
+        "max": 600
+      }
+    },
+    {
+      "id": "essay-2",
+      "title": "Короткое эссе (Short Essay) на 400–500 слов на одну из заданных тем",
+      "prompt": "D) Short Essay Applicants are required to write an essay on one of the topics listed below. The essay must have a title and be 400 to 500 words in length, and should include the applicant's personal point of view on the issue and/or how the issue has affected or impacted the applicant: A) Discuss a current issue of personal, local, national, or international concern and its importance to you. B) Describe a work of art (painting, literature, music, etc.), a historical episode, or a scientific achievement that has impressed you and explain how it has affected your outlook on life. C) Evaluate a significant experience, achievement, challenge, or ethical dilemma you have accomplished/faced and its impact on you.",
+      "requirements": [
+        "Короткое эссе (Short Essay) на 400–500 слов на одну из заданных тем"
+      ],
+      "source": {
+        "url": "https://www.icu.ac.jp/en/admissions/undergraduate/images/UndergraduateAdmissionsGuide2027_Regular.pdf",
+        "lastVerified": "2026-10-10",
+        "pageHash": "sha256:0ad99584ce3d9d2a3d2304004862a6e6b05add89e7cdd59bfbe0c19267df0349",
+        "contentHash": "sha256:c04ad9164525ea015c8513464048640fe62c5a2858214d5a1cbb3bf59e6509b1",
+        "snapshot": "raw/essays/2026-10-27/icu-japan-essay-2.txt",
+        "quotes": [
+          "D) Short Essay Applicants are required to write an essay on one of the topics listed below. The essay must have a title and be 400 to 500 words in length, and should include the applicant's personal point of view on the issue and/or how the issue has affected or impacted the applicant: A) Discuss a current issue of personal, local, national, or international concern and its importance to you. B) Describe a work of art (painting, literature, music, etc.), a historical episode, or a scientific achievement that has impressed you and explain how it has affected your outlook on life. C) Evaluate a significant experience, achievement, challenge, or ethical dilemma you have accomplished/faced and its impact on you."
+        ]
+      },
+      "words": {
+        "min": 400,
+        "max": 500
+      }
+    }
+  ],
+  "essayPolicy": {
+    "review": "blocked",
+    "note": "ИСПОЛЬЗОВАНИЕ ИИ ПРИ ПОДГОТОВКЕ ДОКУМЕНТОВ ПРЯМО ЗАПРЕЩЕНО — вуз пишет это отдельным пунктом. Это касается личного заявления и эссе: писать надо самому.",
+    "source": {
+      "url": "https://www.icu.ac.jp/en/admissions/undergraduate/engdoc/documents/",
+      "lastVerified": "2026-10-10",
+      "pageHash": "sha256:7518ec653d4b76652be2646aa6aa8299458fc689c6f1819eca6a50562f79ac52",
+      "contentHash": "sha256:de385641955d37a93730879897fdd5e46112880998d75ad19709cf06d572b0df",
+      "snapshot": "raw/essays/2026-10-27/icu-japan-policy.txt",
+      "quotes": [
+        "The use of generative AI in preparing any application documents is strictly prohibited."
+      ]
+    }
+  }
 }

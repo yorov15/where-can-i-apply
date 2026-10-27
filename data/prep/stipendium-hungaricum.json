@@ -1,5 +1,28 @@
 {
   "id": "stipendium-hungaricum",
   "checked": "2026-10-27",
-  "tests": []
+  "tests": [],
+  "essays": [
+    {
+      "id": "essay-1",
+      "title": "Нужно мотивационное письмо",
+      "prompt": null,
+      "requirements": [
+        "Нужно мотивационное письмо: не меньше одной страницы, набранное шрифтом Times New Roman 12 пунктов, на языке выбранной программы или на венгерском."
+      ],
+      "source": {
+        "url": "https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf",
+        "lastVerified": "2026-10-11",
+        "pageHash": "sha256:d076b9643c5237e086f56456ccb872a3bf01481281bfc9e000973bc66a4f56ea",
+        "contentHash": "sha256:2730b960576bdfc9a7a5f2bf752d817a39a4263a2dc59316d9a97c39480896c7",
+        "snapshot": "raw/essays/2026-10-27/stipendium-hungaricum-essay-1.txt",
+        "quotes": [
+          "Motivation Letter - minimum 1 page, typed in Times New Roman 12-point letters - written in the language of the selected study programme or Hungarian"
+        ]
+      }
+    }
+  ],
+  "essayPolicy": {
+    "review": "unknown"
+  }
 }

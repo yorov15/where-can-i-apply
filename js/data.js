@@ -26,6 +26,12 @@ export const loadDetails = () => loadJson('data/details.json');
 // тогда, когда у цели есть экзамен: за все 13 файлов платить незачем.
 export const loadRoute = () => loadJson('data/route.json');
 
+const essaySpecs = new Map();
+export function loadEssaySpec(id) {
+  if(!essaySpecs.has(id)) essaySpecs.set(id,loadJson(`data/prep/${encodeURIComponent(id)}.json`).catch(()=>{essaySpecs.delete(id);return null;}));
+  return essaySpecs.get(id);
+}
+
 const tracks = new Map();
 
 export function loadTrack(code) {

@@ -6,5 +6,31 @@
     "toefl",
     "sat",
     "act"
-  ]
+  ],
+  "essays": [
+    {
+      "id": "essay-1",
+      "title": "Мотивационное эссе (Statement of Purpose) объёмом до 700 слов, прилагается к зая",
+      "prompt": "STATEMENT OF PURPOSE Please state your reasons for applying to the chosen program of the American University of Central Asia, and how your studies at AUCA will contribute toward your life goals; also tell us what you feel most enthusiastic about and whether this has influenced your life in any way. Limit your statement of purpose to 700 words.",
+      "requirements": [
+        "Мотивационное эссе (Statement of Purpose) объёмом до 700 слов, прилагается к заявке"
+      ],
+      "source": {
+        "url": "https://www.auca.kg/en/freshman_applicants/",
+        "lastVerified": "2026-10-09",
+        "pageHash": "sha256:96cb83c2b5fae706f7058920693dd39b296a4e322b2b7734e6012a2f5a70730d",
+        "contentHash": "sha256:9206159c87cfa5e2e7ebc52a5aa75bccfc03c2fa554df26a77edd2f14016367a",
+        "snapshot": "raw/essays/2026-10-27/auca-essay-1.txt",
+        "quotes": [
+          "STATEMENT OF PURPOSE Please state your reasons for applying to the chosen program of the American University of Central Asia, and how your studies at AUCA will contribute toward your life goals; also tell us what you feel most enthusiastic about and whether this has influenced your life in any way. Limit your statement of purpose to 700 words."
+        ]
+      },
+      "words": {
+        "max": 700
+      }
+    }
+  ],
+  "essayPolicy": {
+    "review": "unknown"
+  }
 }

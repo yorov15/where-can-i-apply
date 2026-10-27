@@ -4,5 +4,28 @@
   "tests": [
     "ielts",
     "toefl"
-  ]
+  ],
+  "essays": [
+    {
+      "id": "essay-1",
+      "title": "Учебный план (Study Plan) с описанием образования, научных интересов и мотивации",
+      "prompt": "Applicant is required to submit a study plan which contains details regarding their educational background, research interest, motivations for further study, etc.",
+      "requirements": [
+        "Учебный план (Study Plan) с описанием образования, научных интересов и мотивации к дальнейшей учёбе."
+      ],
+      "source": {
+        "url": "https://oia.ncku.edu.tw/var/file/32/1032/img/5041/NCKUAdmissionProspectusforInternationalStudentsFall2026Spring2027v5-3.pdf",
+        "lastVerified": "2026-10-01",
+        "pageHash": "sha256:e5b3d69094435bc81b4fe9665fd6cbaef9ecae06d8527c42643dcb5d0f6ae9d2",
+        "contentHash": "sha256:e2ad1f3764eefc6696386e354fae383665dde7ba48a8946845ccfb11d74d88d6",
+        "snapshot": "raw/essays/2026-10-27/ncku-essay-1.txt",
+        "quotes": [
+          "Applicant is required to submit a study plan which contains details regarding their educational background, research interest, motivations for further study, etc."
+        ]
+      }
+    }
+  ],
+  "essayPolicy": {
+    "review": "unknown"
+  }
 }

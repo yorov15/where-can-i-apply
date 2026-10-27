@@ -23,6 +23,7 @@
 import {
   explain, createCache, createLimiter, originAllowed, corsHeaders, parseCompletion, isUsableAnswer, grounded, chunk, callWithFallback, LIMITS,
 } from './_explain-core.js';
+import { reviewEssay,createEssayLimiter,parseEssayFeedback,ESSAY_LIMITS } from './_essay-core.js';
 
 // Данные берутся с живого сайта, а не лежат внутри функции: карточки
 // обновляются каждый день, и передеплоить прокси при каждой правке было
@@ -57,6 +58,17 @@ async function fetchData() {
 // живёт столько же, сколько копия данных. Не приехало — работаем без
 // условий: подсказка выйдет беднее, а отказ человек всё равно получит.
 const conditions = new Map();
+const essaySpecs = new Map();
+async function essaySpecFor(id) {
+  const hit=essaySpecs.get(id);
+  if(hit&&Date.now()-hit.at<DATA_TTL_MS)return hit.spec;
+  try{
+    const response=await fetch(`${DATA_BASE}prep/${encodeURIComponent(id)}.json`,{signal:AbortSignal.timeout(8000)});
+    if(!response.ok)return null;
+    const spec=await response.json();if(!Array.isArray(spec.essays)||!spec.essayPolicy)return null;
+    essaySpecs.set(id,{at:Date.now(),spec});return spec;
+  }catch{return null;}
+}
 
 async function conditionsFor(id) {
   const hit = conditions.get(id);
@@ -92,6 +104,7 @@ function loadData() {
 const cache = createCache();
 const inflight = new Map();
 const limiter = createLimiter({ daily: Number(process.env.DAILY_LIMIT) || LIMITS.dailyCalls });
+const essayDeviceLimiter=createEssayLimiter();
 // Сайт стоит на GitHub Pages, то есть на другом адресе, чем функция:
 // без списка разрешённых адресов браузер запретил бы ему сюда ходить.
 const configured = (process.env.ALLOWED_ORIGINS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
@@ -128,11 +141,11 @@ const modelGroups = () => chunk(pickModels(), 1);
 // След обращения: какая модель, за сколько и чем кончилось. Собирается на
 // каждый запрос отдельно и отдаётся только тому, кто попросил заголовком
 // X-Explain-Trace: нужен, чтобы подбирать порядок моделей по фактам.
-async function askGroup(models, { system, user }, timeoutMs, trace) {
+async function askGroup(models, { system, user, mode }, timeoutMs, trace) {
   const started = Date.now();
   const note = (result) => trace.push({ model: models[0], ms: Date.now() - started, result });
   try {
-    const text = await askOnce(models, { system, user }, timeoutMs);
+    const text = await askOnce(models, { system, user, mode }, timeoutMs);
     note('ok');
     return text;
   } catch (error) {
@@ -141,7 +154,7 @@ async function askGroup(models, { system, user }, timeoutMs, trace) {
   }
 }
 
-async function askOnce(models, { system, user }, timeoutMs) {
+async function askOnce(models, { system, user, mode }, timeoutMs) {
   // Подписка Go отвечает по тому же протоколу, но берёт одну модель за запрос.
   const go = models[0].startsWith('go/');
   const res = await fetch(go ? 'https://opencode.ai/zen/go/v1/chat/completions' : 'https://openrouter.ai/api/v1/chat/completions', {
@@ -160,20 +173,25 @@ async function askOnce(models, { system, user }, timeoutMs) {
         { role: 'system', content: system },
         { role: 'user', content: user },
       ],
-      max_tokens: 1200,
+      max_tokens: mode==='essay'?2200:1200,
       temperature: 0.3,
+      ...(mode==='essay'?{provider:{data_collection:'deny',zdr:true,max_price:{prompt:0,completion:0}},response_format:{type:'json_object'}}:{}),
     }),
     signal: AbortSignal.timeout(timeoutMs),
   });
   if (!res.ok) throw new Error(`${go ? 'go' : 'openrouter'} ${res.status}`);
   const text = parseCompletion(await res.json());
   // Мусор — та же неудача, что и ошибка сети: идём к следующей модели.
-  if (!isUsableAnswer(text)) throw new Error('unusable answer');
-  if (!grounded(text, user)) throw new Error('invented contact');
+  if (mode==='essay'?!parseEssayFeedback(text):!isUsableAnswer(text)) throw new Error('unusable answer');
+  if (mode!=='essay'&&!grounded(text, user)) throw new Error('invented contact');
   return text;
 }
 
 const callModel = (prompt, trace) => callWithFallback(modelGroups(), (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 30000, perGroupMs: 9000 });
+// The essay path never selects Go or a paid configured model. Privacy and
+// zero-price constraints are not relaxed when a free provider is unavailable.
+const callEssayModel = (prompt, trace) => callWithFallback([['openrouter/free']],
+  (group,timeoutMs)=>askGroup(group,prompt,timeoutMs,trace),{budgetMs:30000,perGroupMs:28000});
 
 function send(res, status, json, headers = {}) {
   res.statusCode = status;
@@ -188,12 +206,12 @@ function send(res, status, json, headers = {}) {
 // доходить до разбора. Считаем байты, а не символы.
 async function readBody(req) {
   const declared = Number(req.headers['content-length']);
-  if (Number.isFinite(declared) && declared > LIMITS.bodyBytes) return null;
+  if (Number.isFinite(declared) && declared > ESSAY_LIMITS.bodyBytes) return null;
   const parts = [];
   let size = 0;
   for await (const part of req) {
     size += part.length;
-    if (size > LIMITS.bodyBytes) return null;
+    if (size > ESSAY_LIMITS.bodyBytes) return null;
     parts.push(part);
   }
   return Buffer.concat(parts).toString('utf8');
@@ -205,7 +223,6 @@ async function handle(req, res, cors) {
   if (req.method === 'OPTIONS') return send(res, 204, {}, cors);
   if (req.method !== 'POST') return send(res, 405, { error: 'method' }, cors);
   if (!originAllowed(req.headers.origin, req.headers.host, allowed)) return send(res, 403, { error: 'origin' }, cors);
-  if (!pickModels().length) return send(res, 503, { error: 'off' }, cors);
 
   const raw = await readBody(req);
   if (raw === null) return send(res, 413, { error: 'too-big' }, cors);
@@ -213,12 +230,21 @@ async function handle(req, res, cors) {
   try {
     body = JSON.parse(raw);
   } catch {
-    return send(res, 400, { error: 'bad-request' }, cors);
+    return send(res,Buffer.byteLength(raw)>LIMITS.bodyBytes?413:400,{error:Buffer.byteLength(raw)>LIMITS.bodyBytes?'too-big':'bad-request'},cors);
   }
+  if(body?.mode!=='essay'&&Math.max(Buffer.byteLength(raw),Number(req.headers['content-length'])||0)>LIMITS.bodyBytes)return send(res,413,{error:'too-big'},cors);
+  if(body?.mode!=='essay'&&!pickModels().length)return send(res,503,{error:'off'},cors);
 
   const data = await loadData();
   if (!data) return send(res, 503, { error: 'off' }, cors);
   const trace = [];
+  if(body?.mode==='essay'){
+    const program=typeof body.programId==='string'?data.index.programs.find(item=>item.id===body.programId):null;
+    const spec=program?await essaySpecFor(program.id):null;
+    const result=await reviewEssay({body,ip:clientIp(req)},{program,spec,limiter,deviceLimiter:essayDeviceLimiter,
+      available:Boolean(routerKey()),callModel:prompt=>callEssayModel(prompt,trace)});
+    return send(res,result.status,result.json,cors);
+  }
   const { status, json } = await explain(
     { body, ip: clientIp(req), today: new Date().toISOString().slice(0, 10) },
     { index: data.index, details: await withConditions(data.details, body), cache, limiter, inflight, callModel: (prompt) => callModel(prompt, trace) },

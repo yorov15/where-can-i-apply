@@ -5,7 +5,7 @@ import { setupCatalogFilter } from './filter.js';
 import { setupBarHide } from './barscroll.js';
 import { setupTabbar } from './tabbar.js';
 import { setupPriority } from './priority.js';
-import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocument, forgetConditions } from './data.js';
+import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocument, loadEssaySpec, forgetConditions } from './data.js';
 import { renderResults } from './render.js';
 import { PLAN_KEY, DONE_KEY, buildEventsIcs } from './plan.js';
 import { scheduleRoute, routeCalendarEvents } from './agenda.js';
@@ -102,6 +102,7 @@ const tabbar = setupTabbar({
 // План живёт отдельно от анкеты: анкету можно поправить, не потеряв отмеченное.
 let routeState = loadRouteState(localStorage);
 let weeklySnapshot=null;
+let routeEssays={};
 const plan = {
   ids: [...routeState.goals],
   limit: MAX_GOALS,
@@ -255,7 +256,10 @@ async function refreshRoute() {
     .flatMap(condition => [condition.doc, ...(condition.docExtras ?? []).map(extra => extra.code)]).filter(Boolean)))];
   const documents = await Promise.all(docCodes.map(loadDocument));
   docCodes.forEach((code, index) => { if (documents[index]) routeDocuments[code] = documents[index]; });
+  const essayIds=selected.filter(program=>preparedEntry(program.id)?.hasEssays).map(program=>program.id);
+  const essaySpecs=await Promise.all(essayIds.map(loadEssaySpec));
   if (ticket !== routeRequest || ids.join(',') !== routeState.goals.join(',')) return;
+  routeEssays=Object.fromEntries(essayIds.map((id,index)=>[id,essaySpecs[index]]));
   routeCtx = selected.map(program => ({ program, conditions: details.conditions[program.id] ?? null, prepared: preparedEntry(program.id) }));
   rebuildRoute();
   routeState = reconcileProgress(routeState, route.steps);
@@ -311,6 +315,7 @@ function renderRouteView() {
     study: route ? buildStudyPlan({ steps:route.steps, tracks:routeTracks, plans, state:routeState, today }) : null,
     routeState, today,
     weekly:weeklySnapshot,
+    essays:routeEssays,
     programs,
     goal: routeState.goals[0] ?? null,
     route,

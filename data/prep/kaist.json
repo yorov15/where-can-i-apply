@@ -4,5 +4,130 @@
   "tests": [
     "ielts",
     "toefl"
-  ]
+  ],
+  "essays": [
+    {
+      "id": "part-1",
+      "title": "Вопрос о STEM",
+      "prompt": "Q1. KAIST seeks to foster individuals with a questioning spirit. Write about a question you have in the field of STEM * that sets you apart from others, and describe the reason that inspired you to ask this question. *STEM: Science, Technology, Engineering, and Math, etc. (Note: This is not about evaluating the question itself but rather about assessing your attitude, curiosity, and challenging spirit toward the field of STEM. It is recommended to avoid content related to R&E activities and instead focus on sharing your personal story.) Write a question (within 300 characters, including spaces; portal system limit: 300 bytes)",
+      "requirements": [
+        "До 300 знаков с пробелами; портал ограничивает поле также 300 байтами."
+      ],
+      "characters": 300,
+      "bytes": 300,
+      "source": {
+        "url": "https://admission.kaist.ac.kr/wz/api/common/files/download/intl-undergraduate/pdf/Admissions_Guide_for_2027_admission.pdf",
+        "lastVerified": "2026-10-09",
+        "pageHash": "sha256:18d4f3eec23a312f0a98873975ac4848d8b67ac17936a8de8429e4a196f1edbb",
+        "contentHash": "sha256:77a7bd432347500be3877260aa254ee967f275957d6d8ec8803e818741fa77b1",
+        "snapshot": "raw/essays/2026-10-27/kaist-part-1.txt",
+        "quotes": [
+          "Q1. KAIST seeks to foster individuals with a questioning spirit. Write about a question you have in the field of STEM * that sets you apart from others, and describe the reason that inspired you to ask this question. *STEM: Science, Technology, Engineering, and Math, etc. (Note: This is not about evaluating the question itself but rather about assessing your attitude, curiosity, and challenging spirit toward the field of STEM. It is recommended to avoid content related to R&E activities and instead focus on sharing your personal story.) Write a question (within 300 characters, including spaces; portal system limit: 300 bytes)"
+        ]
+      }
+    },
+    {
+      "id": "part-2",
+      "title": "Почему возник этот вопрос",
+      "prompt": "Q1. KAIST seeks to foster individuals with a questioning spirit. Write about a question you have in the field of STEM * that sets you apart from others, and describe the reason that inspired you to ask this question. *STEM: Science, Technology, Engineering, and Math, etc. (Note: This is not about evaluating the question itself but rather about assessing your attitude, curiosity, and challenging spirit toward the field of STEM. It is recommended to avoid content related to R&E activities and instead focus on sharing your personal story.) Write a question (within 300 characters, including spaces; portal system limit: 300 bytes) Describe the reason (within 1,600 characters, including spaces; portal system limit: 1,600 bytes)",
+      "requirements": [
+        "До 1600 знаков с пробелами; портал ограничивает поле также 1600 байтами."
+      ],
+      "characters": 1600,
+      "bytes": 1600,
+      "source": {
+        "url": "https://admission.kaist.ac.kr/wz/api/common/files/download/intl-undergraduate/pdf/Admissions_Guide_for_2027_admission.pdf",
+        "lastVerified": "2026-10-09",
+        "pageHash": "sha256:18d4f3eec23a312f0a98873975ac4848d8b67ac17936a8de8429e4a196f1edbb",
+        "contentHash": "sha256:7f5dc0842007d76bb9a8760baaee8d39365849a49ddc209d17c2b4cb9bc8fda4",
+        "snapshot": "raw/essays/2026-10-27/kaist-part-2.txt",
+        "quotes": [
+          "Q1. KAIST seeks to foster individuals with a questioning spirit. Write about a question you have in the field of STEM * that sets you apart from others, and describe the reason that inspired you to ask this question. *STEM: Science, Technology, Engineering, and Math, etc. (Note: This is not about evaluating the question itself but rather about assessing your attitude, curiosity, and challenging spirit toward the field of STEM. It is recommended to avoid content related to R&E activities and instead focus on sharing your personal story.) Write a question (within 300 characters, including spaces; portal system limit: 300 bytes) Describe the reason (within 1,600 characters, including spaces; portal system limit: 1,600 bytes)"
+        ]
+      }
+    },
+    {
+      "id": "part-3",
+      "title": "Чему научили занятия в школе",
+      "prompt": "Q2. Please write the personal statement with a focus on what you learned from and felt during curricular and/or extracurricular activities (up to three) to which you attached meaning and devoted yourself in high school. (within 1,500 characters, including spaces; portal system limit: 1,500 bytes)",
+      "requirements": [
+        "До 1500 знаков с пробелами; портал ограничивает поле также 1500 байтами."
+      ],
+      "characters": 1500,
+      "bytes": 1500,
+      "source": {
+        "url": "https://admission.kaist.ac.kr/wz/api/common/files/download/intl-undergraduate/pdf/Admissions_Guide_for_2027_admission.pdf",
+        "lastVerified": "2026-10-09",
+        "pageHash": "sha256:18d4f3eec23a312f0a98873975ac4848d8b67ac17936a8de8429e4a196f1edbb",
+        "contentHash": "sha256:d25ab025979299ce058b055b48356c13e28e839ba54540eeda06b310412ed2e3",
+        "snapshot": "raw/essays/2026-10-27/kaist-part-3.txt",
+        "quotes": [
+          "Q2. Please write the personal statement with a focus on what you learned from and felt during curricular and/or extracurricular activities (up to three) to which you attached meaning and devoted yourself in high school. (within 1,500 characters, including spaces; portal system limit: 1,500 bytes)"
+        ]
+      }
+    },
+    {
+      "id": "part-4",
+      "title": "Попробовать другой подход",
+      "prompt": "Q3. Please cite any cases in which you thought and/or made attempts in ways different from those of others and describe how such ideas and/or attempts affected you and people around you. (within 1,500 characters, including spaces; portal system limit: 1,500 bytes)",
+      "requirements": [
+        "До 1500 знаков с пробелами; портал ограничивает поле также 1500 байтами."
+      ],
+      "characters": 1500,
+      "bytes": 1500,
+      "source": {
+        "url": "https://admission.kaist.ac.kr/wz/api/common/files/download/intl-undergraduate/pdf/Admissions_Guide_for_2027_admission.pdf",
+        "lastVerified": "2026-10-09",
+        "pageHash": "sha256:18d4f3eec23a312f0a98873975ac4848d8b67ac17936a8de8429e4a196f1edbb",
+        "contentHash": "sha256:1d068e1c45ef5015955ee1b276e9c35ec87d0cf3f4ce5bd6c97fd1faea7ceb58",
+        "snapshot": "raw/essays/2026-10-27/kaist-part-4.txt",
+        "quotes": [
+          "Q3. Please cite any cases in which you thought and/or made attempts in ways different from those of others and describe how such ideas and/or attempts affected you and people around you. (within 1,500 characters, including spaces; portal system limit: 1,500 bytes)"
+        ]
+      }
+    },
+    {
+      "id": "part-5",
+      "title": "Забота, сотрудничество или разрешение конфликта",
+      "prompt": "Q4. Please cite any cases in which you practiced consideration, sharing, cooperation, and/or conflict management and describe what you learned from and felt during the process(es). (within 1,500 characters, including spaces; portal system limit: 1,500 bytes)",
+      "requirements": [
+        "До 1500 знаков с пробелами; портал ограничивает поле также 1500 байтами."
+      ],
+      "characters": 1500,
+      "bytes": 1500,
+      "source": {
+        "url": "https://admission.kaist.ac.kr/wz/api/common/files/download/intl-undergraduate/pdf/Admissions_Guide_for_2027_admission.pdf",
+        "lastVerified": "2026-10-09",
+        "pageHash": "sha256:18d4f3eec23a312f0a98873975ac4848d8b67ac17936a8de8429e4a196f1edbb",
+        "contentHash": "sha256:3c2aac34a8af48310ccab750c146ecb078791a5ed3a6f04ed7ecbf88f1956925",
+        "snapshot": "raw/essays/2026-10-27/kaist-part-5.txt",
+        "quotes": [
+          "Q4. Please cite any cases in which you practiced consideration, sharing, cooperation, and/or conflict management and describe what you learned from and felt during the process(es). (within 1,500 characters, including spaces; portal system limit: 1,500 bytes)"
+        ]
+      }
+    },
+    {
+      "id": "part-6",
+      "title": "Семья и трудности",
+      "prompt": "Q5. Please write if there is any other information you would like to tell us regarding your family/social background or difficulties you had to overcome in the past. (within 1,000 characters, including spaces; portal system limit: 1,000 bytes)",
+      "requirements": [
+        "До 1000 знаков с пробелами; портал ограничивает поле также 1000 байтами."
+      ],
+      "characters": 1000,
+      "bytes": 1000,
+      "source": {
+        "url": "https://admission.kaist.ac.kr/wz/api/common/files/download/intl-undergraduate/pdf/Admissions_Guide_for_2027_admission.pdf",
+        "lastVerified": "2026-10-09",
+        "pageHash": "sha256:18d4f3eec23a312f0a98873975ac4848d8b67ac17936a8de8429e4a196f1edbb",
+        "contentHash": "sha256:a4151981d75924748f89213b6b40b1a2a2ce9d7679d6658f1ed33be0eb643d75",
+        "snapshot": "raw/essays/2026-10-27/kaist-part-6.txt",
+        "quotes": [
+          "Q5. Please write if there is any other information you would like to tell us regarding your family/social background or difficulties you had to overcome in the past. (within 1,000 characters, including spaces; portal system limit: 1,000 bytes)"
+        ]
+      }
+    }
+  ],
+  "essayPolicy": {
+    "review": "unknown"
+  }
 }
