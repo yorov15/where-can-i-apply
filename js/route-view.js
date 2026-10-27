@@ -155,7 +155,64 @@ function trackBlock(step, tracks) {
   return details;
 }
 
-function stepRow(step, index, { tracks, onToggle, compact = false }) {
+function examPlanningBlock(step, track, plan, onChange) {
+  const box = el('div', 'route-more');
+  box.dataset.exam = plan.code;
+  const current = plan.current == null ? 'балл ещё не указан' : plan.current;
+  const target = plan.target == null ? 'числовой порог не подтверждён'
+    : `${plan.recommended ? 'рекомендуют' : 'нужно'} ${plan.target}`;
+  box.append(el('p', null, `Сейчас: ${current} → ${target}.`));
+  if (plan.historicalScale) box.append(el('p', 'route-warn', 'Здесь указан TOEFL по прежней шкале 0–120. Для новой сдачи уточни у вуза порог по текущей шкале; напрямую эти баллы не сравниваем.'));
+  if (plan.current == null) box.append(el('p', 'route-detail', 'Начни с пробного теста из официальных материалов ниже. Балл сертификата можно указать в анкете.'));
+  if (track.parts?.length) box.append(el('p', 'route-detail', `Части: ${track.parts.map(part => part.name).join(', ')}.`));
+  if (Object.keys(step.target?.perPart ?? {}).length) box.append(el('p', 'route-detail', `Минимумы по частям: ${Object.entries(step.target.perPart).map(([part,value]) => `${track.parts.find(item => item.code === part)?.name ?? part} — ${value}`).join(', ')}.`));
+  const field = (name, label, input, patch) => {
+    const wrap = el('label', 'route-detail', `${label} `);
+    input.dataset.field = name;
+    input.setAttribute('aria-label', label);
+    input.addEventListener('change', () => {
+      if (input.checkValidity()) onChange?.(plan.code, patch(input.value), name);
+    });
+    wrap.append(input);
+    const p = el('p'); p.append(wrap); box.append(p);
+  };
+  if (track.resultDays?.computer && track.resultDays?.paper) {
+    const select = el('select');
+    for (const [value, text] of [['computer','На компьютере'],['paper','На бумаге']]) {
+      const option = el('option', null, text); option.value = value; select.append(option);
+    }
+    select.value = plan.format;
+    field('format', 'Формат экзамена', select, format => ({ format }));
+  }
+  const reserve = el('input'); reserve.type = 'number'; reserve.min = '0'; reserve.max = '180'; reserve.step = '1'; reserve.value = plan.buffer;
+  field('buffer', 'Твой запас в днях', reserve, value => ({ bufferDays: Number(value) }));
+  const booked = el('input'); booked.type = 'date'; booked.value = plan.booked ?? '';
+  field('date', 'Дата, на которую записался', booked, date => ({ date }));
+  if (plan.expired) box.append(el('p', 'route-warn', 'Срок подачи уже прошёл. Дату экзамена для этого набора не рассчитываем.'));
+  else if (plan.lastDate) {
+    box.append(el('p', null, `Ориентир для сдачи: до ${formatDate(plan.lastDate)}${plan.expectedDeadline ? ' (срок подачи ожидаемый)' : ''}.`));
+    if (!plan.hasTime) box.append(el('p', 'route-warn', 'Эта дата уже прошла. Уточни у вуза возможность дослать результат или выбери следующий набор.'));
+    else box.append(el('p', 'route-detail', plan.canReserveRetake
+      ? 'По расчёту есть запас на ожидание результата и повторную попытку. Проверь доступные даты в центре.'
+      : plan.buffer === 0 ? 'План без запаса на пересдачу. Дополнительная попытка не заложена.'
+      : 'Выбранный запас учтён. Возможность пересдачи не подтверждена — сверь её правила и даты.'));
+  } else box.append(el('p', 'route-detail', 'Дату для сдачи пока не рассчитать: не подтверждён срок подачи, время результата или подходящая сессия.'));
+  if (plan.booked) box.append(el('p', plan.tooLate || plan.pastBooking ? 'route-warn' : 'route-detail',
+    plan.pastBooking ? 'Выбранная дата экзамена уже прошла. Проверь результат и обнови план.'
+      : plan.resultDate ? `Результат по опубликованному сроку: ${formatDate(plan.resultDate)}.${plan.tooLate ? ' Это позже срока подачи — уточни, примет ли вуз результат позже.' : ''}`
+        : 'Дата сохранена. Выдачу результата для неё здесь пока не удалось рассчитать.'));
+  if (track.timingNote) box.append(el('p', 'route-detail', track.timingNote));
+  if (track.retakeRule) box.append(el('p', 'route-detail', track.retakeRule.text));
+  box.append(el('p', 'route-detail', 'Это ориентир для плана. Срок проверки, доставку баллов вузу и доступные места уточни до регистрации.'));
+  const proofs = [['Срок результата', track.resultSource], ['Календарь экзамена', track.sessionsSource], ['Правила пересдачи', track.retakeRule?.source], ['Части экзамена', track.partsSource]];
+  for (const [label, proof] of proofs) {
+    const source = link(label, proof?.url);
+    if (source) { const p = el('p', 'route-detail'); p.append(source, ` · проверено ${formatDate(proof.lastVerified)}`); box.append(p); }
+  }
+  return box;
+}
+
+function stepRow(step, index, { tracks, onToggle, getExamPlan, onExamPlan, compact = false }) {
   const row = el('div', step.done ? 'route-step is-done' : 'route-step');
   const check = el('input', 'route-check');
   check.type = 'checkbox';
@@ -183,6 +240,7 @@ function stepRow(step, index, { tracks, onToggle, compact = false }) {
       }
     }
     if (step.target?.parts) body.append(el('p', 'route-detail', 'У целей есть минимумы по частям экзамена. Сверь их в карточках программ.'));
+    if (step.track && tracks?.[step.track] && getExamPlan) body.append(examPlanningBlock(step, tracks[step.track], getExamPlan(step), onExamPlan));
     if (parts.rest) {
       const more = el('details', 'route-more');
       more.append(el('summary', null, 'Читать полностью'));

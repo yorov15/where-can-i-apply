@@ -19,5 +19,55 @@
   "source": {
     "url": "https://blog.englishtest.duolingo.com/how-is-the-duolingo-english-test-scored/",
     "lastVerified": "2026-10-27"
-  }
+  },
+  "parts": [
+    {
+      "code": "R",
+      "name": "Reading"
+    },
+    {
+      "code": "W",
+      "name": "Writing"
+    },
+    {
+      "code": "L",
+      "name": "Listening"
+    },
+    {
+      "code": "S",
+      "name": "Speaking"
+    }
+  ],
+  "partsSource": {
+    "url": "https://blog.englishtest.duolingo.com/how-is-the-duolingo-english-test-scored/",
+    "quotes": [
+      "Reading Writing Listening Speaking"
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/det-format.txt",
+    "contentHash": "sha256:715bd2ce3fe87b0d3c310de26ed4ed617fbbf4eb9ab1c16ea98f6686bfb0b27b",
+    "pageHash": "sha256:1bacf2ff1f7650f9825e957e6baebe482d9bac0a9a31def273d2a796a97d65e6"
+  },
+  "resultDays": {
+    "default": [
+      2,
+      2
+    ]
+  },
+  "resultSource": {
+    "url": "https://blog.englishtest.duolingo.com/online-proctoring/",
+    "quotes": [
+      "this entire process takes only 48 hours"
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/det-results.txt",
+    "contentHash": "sha256:c4e801c2b147457a2ac75e8bcf0be435355db8a9e71e2603bf3137b5dd4c9d34",
+    "pageHash": "sha256:e4978ce0f41c9ffb6e780f496e174fcf7f7352f728577ea86043d429d10b985d"
+  },
+  "reportDays": null,
+  "reportSource": null,
+  "retakeRule": null,
+  "sessions": [],
+  "sessionsSource": null,
+  "timingNote": "Организатор называет 48 часов для проверки. Готовность результата и правила повторной попытки сверь в своём кабинете."
 }

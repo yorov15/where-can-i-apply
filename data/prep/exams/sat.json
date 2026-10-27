@@ -19,5 +19,65 @@
   "source": {
     "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/structure",
     "lastVerified": "2026-10-27"
-  }
+  },
+  "parts": [
+    {
+      "code": "RW",
+      "name": "Reading and Writing"
+    },
+    {
+      "code": "M",
+      "name": "Math"
+    }
+  ],
+  "partsSource": {
+    "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/structure",
+    "quotes": [
+      "the Reading and Writing section, and (2) the Math section."
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/sat-format.txt",
+    "contentHash": "sha256:7e5d10218c4a573e11722263984f4103a8559cc4b1ef1985db03aa3872ca07e8",
+    "pageHash": "sha256:dfaa1335ab4da7ba17f3510e7aa5b106b4738431b1a03caff11c761cc78455a0"
+  },
+  "resultDays": null,
+  "resultSource": null,
+  "reportDays": null,
+  "reportSource": null,
+  "retakeRule": null,
+  "sessions": [
+    {
+      "date": "2026-11-07",
+      "result": "2026-11-20"
+    },
+    {
+      "date": "2026-12-05",
+      "result": "2026-12-18"
+    },
+    {
+      "date": "2027-03-06",
+      "result": "2027-03-19"
+    },
+    {
+      "date": "2027-05-01",
+      "result": "2027-05-14"
+    },
+    {
+      "date": "2027-06-05",
+      "result": "2027-06-21"
+    }
+  ],
+  "sessionsSource": {
+    "url": "https://satsuite.collegeboard.org/scores/score-release-dates",
+    "quotes": [
+      "Nov. 7, 2026 Nov. 20, 2026",
+      "Dec. 5, 2026 Dec. 18, 2026",
+      "Mar. 6, 2027 Mar. 19, 2027"
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/sat-dates.txt",
+    "contentHash": "sha256:a4c532bc1509db83160c2f876a104709f10b4562a24aa2e5279db399e656ddc2",
+    "pageHash": "sha256:23287ba943b657a901278f3137c0022a66258aa215c0e015f9d7832061f59e35"
+  },
+  "timingNote": "План использует опубликованные даты SAT Weekend и выдачи баллов. Места, регистрацию и отправку баллов вузу проверяй отдельно."
 }

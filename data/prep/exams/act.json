@@ -19,5 +19,46 @@
   "source": {
     "url": "https://global.act.org/content/global/en/products-and-services/the-act-non-us/scores/understanding-your-scores.html",
     "lastVerified": "2026-10-27"
-  }
+  },
+  "parts": [
+    {
+      "code": "E",
+      "name": "English"
+    },
+    {
+      "code": "M",
+      "name": "Math"
+    },
+    {
+      "code": "R",
+      "name": "Reading"
+    },
+    {
+      "code": "SC",
+      "name": "Science (optional)"
+    },
+    {
+      "code": "W",
+      "name": "Writing (optional)"
+    }
+  ],
+  "partsSource": {
+    "url": "https://global.act.org/content/global/en/products-and-services/the-act-non-us/scores/understanding-your-scores.html",
+    "quotes": [
+      "English, Math, Reading, Science (optional)",
+      "Writing Test (optional)"
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/act-format.txt",
+    "contentHash": "sha256:a5dd8543b0e7ee0882ff083368cb146e563ed5007fb10cfecff0a55d108346ff",
+    "pageHash": "sha256:f5e75cce680d7c09f2e6e327b480c53048db8afeebf393acd8946c8d2a8cd683"
+  },
+  "resultDays": null,
+  "resultSource": null,
+  "reportDays": null,
+  "reportSource": null,
+  "retakeRule": null,
+  "sessions": [],
+  "sessionsSource": null,
+  "timingNote": "Срок выдачи результата и правила пересдачи здесь ещё не подтверждены. Уточни их у организатора."
 }

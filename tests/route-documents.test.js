@@ -11,6 +11,14 @@ const profile = { citizenship: 'TJ', schoolCountry: 'TJ', schoolYears: 11, gradu
 const context = id => { const program = read(`programs/${id}.json`); return { program, conditions: program.textConditions, prepared: read(`prep/${id}.json`) }; };
 const build = (contexts, state = loadRouteState(), library = documents) => buildCombinedRoute({ contexts, state, documents: library, profile, today: '2026-10-27' });
 
+test('Nazarbayev retains the sourced IELTS section minima and a shared recommendation cannot raise them', () => {
+  const route = build([context('nazarbayev'), context('kaist')]);
+  const english = route.steps.find(step => step.id === 'test:ielts');
+  assert.equal(english.target.min, 6);
+  assert.equal(english.target.recommendedMin, 6.5);
+  assert.deepEqual(english.target.perPart, { L:5.5, R:5.5, W:6, S:5.5 });
+});
+
 test('all prepared document conditions have short actions and supported codes; none is silently left as a paragraph', () => {
   const ids = readdirSync(new URL('prep/', root)).filter(file => file.endsWith('.json')).map(file => file.slice(0, -5));
   for (const id of ids) {

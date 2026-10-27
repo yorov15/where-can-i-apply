@@ -8,7 +8,8 @@ import { setupPriority } from './priority.js';
 import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocument, forgetConditions } from './data.js';
 import { renderResults } from './render.js';
 import { PLAN_KEY, DONE_KEY, buildIcs } from './plan.js';
-import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS } from './route-state.js';
+import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan } from './route-state.js';
+import { examPlan } from './exam-plan.js';
 import { buildCombinedRoute } from './route-combined.js';
 import { renderRoute } from './route-view.js';
 import { EXPLAIN_URL } from './config.js';
@@ -295,6 +296,19 @@ function renderRouteView() {
     loading: routeLoading,
     applyUrl: routeState.goals.length === 1 ? details.programs?.[routeState.goals[0]]?.applyUrl ?? null : null,
     handlers: {
+      getExamPlan(step) {
+        const goals = route.goals.filter(goal => step.programIds.includes(goal.id) && goal.deadline.closes);
+        const open = goals.filter(goal => goal.deadline.state !== 'closed');
+        const deadline = (open.length ? open : goals).sort((a,b) => a.deadline.closes.localeCompare(b.deadline.closes))[0]?.deadline;
+        return examPlan({ step, track: routeTracks[step.track], state: routeState, profile: readForm(form), today, deadline });
+      },
+      onExamPlan(code, patch, field) {
+        routeState = setExamPlan(routeState, code, patch);
+        persistRoute();
+        rebuildRoute();
+        renderRouteView();
+        routeBody.querySelector(`[data-exam="${CSS.escape(code)}"] [data-field="${field}"]`)?.focus();
+      },
       onChooseGoals() { location.hash = 'programs'; },
       onRemoveGoal(id) { plan.toggle(id); },
       onToggle(stepId) {

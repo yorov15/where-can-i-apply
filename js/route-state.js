@@ -13,7 +13,7 @@ const day = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(val
   && Number.isFinite(Date.parse(`${value}T00:00:00Z`))
   && new Date(`${value}T00:00:00Z`).toISOString().slice(0, 10) === value;
 const read = (storage, key) => { try { return JSON.parse(storage?.getItem(key) ?? 'null'); } catch { return null; } };
-const empty = () => ({ version: 2, goals: [], hoursPerWeek: 4, scores: {}, examDates: {}, done: {}, weekPlan: {}, lastReview: null });
+const empty = () => ({ version: 2, goals: [], hoursPerWeek: 4, scores: {}, examDates: {}, examFormats: {}, retakeBuffers: {}, done: {}, weekPlan: {}, lastReview: null });
 
 function normalize(value) {
   if (!object(value)) return null;
@@ -29,11 +29,14 @@ function normalize(value) {
   next.done = Object.fromEntries(Object.entries(value.done).filter(([id, date]) => safeKey(id) && (date === null || day(date))));
   next.examDates = Object.fromEntries(Object.entries(object(value.examDates) ? value.examDates : {})
     .filter(([code, date]) => safeKey(code) && day(date)));
+  next.examFormats = Object.fromEntries(Object.entries(object(value.examFormats) ? value.examFormats : {}).filter(([code, format]) => safeKey(code) && ['computer','paper','default'].includes(format)));
+  next.retakeBuffers = Object.fromEntries(Object.entries(object(value.retakeBuffers) ? value.retakeBuffers : {}).filter(([code, days]) => safeKey(code) && Number.isInteger(days) && days >= 0 && days <= 180));
   for (const [code, scores] of Object.entries(object(value.scores) ? value.scores : {})) {
     if (!safeKey(code) || !Array.isArray(scores)) continue;
     next.scores[code] = scores.filter(score => object(score) && day(score.date)
       && typeof score.overall === 'number' && Number.isFinite(score.overall) && score.overall >= 0)
       .map(score => ({ date: score.date, overall: score.overall, mock: score.mock === true,
+        ...(safeKey(score.test) ? { test: score.test } : {}),
         ...(object(score.parts) ? { parts: Object.fromEntries(Object.entries(score.parts)
           .filter(([part, value]) => safeKey(part) && typeof value === 'number' && Number.isFinite(value) && value >= 0)) } : {}) }));
   }
@@ -122,5 +125,15 @@ export function reconcileProgress(state, steps) {
     }
   }
   known.forEach(id => delete next.done[id]);
+  return next;
+}
+
+export function setExamPlan(state, code, { date, format, bufferDays }) {
+  const next = copy(state);
+  if (!safeKey(code)) return next;
+  if (date === '') delete next.examDates[code];
+  else if (day(date)) next.examDates[code] = date;
+  if (['computer','paper','default'].includes(format)) next.examFormats[code] = format;
+  if (Number.isInteger(bufferDays) && bufferDays >= 0 && bufferDays <= 180) next.retakeBuffers[code] = bufferDays;
   return next;
 }

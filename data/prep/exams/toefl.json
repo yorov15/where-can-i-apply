@@ -19,5 +19,85 @@
   "source": {
     "url": "https://www.ets.org/toefl/test-takers/ibt/about/content.html",
     "lastVerified": "2026-10-27"
-  }
+  },
+  "parts": [
+    {
+      "code": "R",
+      "name": "Reading"
+    },
+    {
+      "code": "L",
+      "name": "Listening"
+    },
+    {
+      "code": "W",
+      "name": "Writing"
+    },
+    {
+      "code": "S",
+      "name": "Speaking"
+    }
+  ],
+  "partsSource": {
+    "url": "https://www.ets.org/toefl/test-takers/ibt/about/content.html",
+    "quotes": [
+      "Reading",
+      "Listening",
+      "Writing",
+      "Speaking"
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/ets-format.txt",
+    "contentHash": "sha256:4c3c51d2ad471e5467d5826c7095cdb5db0f0c7bf388168e46f4e4413d0a153d",
+    "pageHash": "sha256:1cb0802c30fef173f87375e7e68914d619f157b269946ceca7edeab39b597a40"
+  },
+  "resultDays": {
+    "default": [
+      3,
+      3
+    ]
+  },
+  "resultSource": {
+    "url": "https://www.ets.org/toefl/test-takers/ibt/scores/get-scores.html",
+    "quotes": [
+      "3 days after your test date.",
+      "24-48 hours after you receive your scores electronically"
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/ets-results.txt",
+    "contentHash": "sha256:42df3caa563018e9c95043415034e9e090d9cb373f4ce569fa12affe2954aac5",
+    "pageHash": "sha256:f3a082ff3b87920f8aec54f29b30b46a687e4aa4698ee6f1dc2dc860d9d37ab0"
+  },
+  "reportDays": [
+    1,
+    2
+  ],
+  "reportSource": {
+    "url": "https://www.ets.org/toefl/test-takers/ibt/scores/get-scores.html",
+    "quotes": [
+      "3 days after your test date.",
+      "24-48 hours after you receive your scores electronically"
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/ets-results.txt",
+    "contentHash": "sha256:42df3caa563018e9c95043415034e9e090d9cb373f4ce569fa12affe2954aac5",
+    "pageHash": "sha256:f3a082ff3b87920f8aec54f29b30b46a687e4aa4698ee6f1dc2dc860d9d37ab0"
+  },
+  "retakeRule": {
+    "minDays": 3,
+    "text": "Между сдачами должно пройти не меньше трёх дней.",
+    "source": {
+      "url": "https://www.ets.org/toefl/test-takers/ibt/faq/taking-the-test.html",
+      "quotes": [
+        "not more than once in a 3-day period."
+      ],
+      "lastVerified": "2026-10-27",
+      "snapshot": "raw/exams/2026-10-27/ets-retake.txt",
+      "contentHash": "sha256:8a812427274c4b79b239e5daa31c3f199b93fa57e488bf76b19b2251e412d2d5",
+      "pageHash": "sha256:3856bbb35019bff3cc4fd4c13778135825d2de3c9b96f793411260854c077402"
+    }
+  },
+  "sessions": [],
+  "sessionsSource": null,
+  "timingNote": "Результат в кабинете — через 3 дня; PDF доступен ещё через 24–48 часов. Для планирования учитывается и ожидание PDF. Доставку результата вузу уточни отдельно."
 }

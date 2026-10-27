@@ -32,6 +32,7 @@ export function buildCombinedRoute({ contexts = [], profile, today, tracks = {},
       const member = { programId: program.id, name: program.name?.ru ?? program.id, detail: original.detail,
         requirement: original.conditionText ?? original.detail,
         advisory: program.eligibility?.[group === 'standard' ? 'exam' : 'language']?.advisory === true,
+        perPart: context.prepared?.perPart ?? {},
         options: original.options ?? program.eligibility?.[group === 'standard' ? 'exam' : 'language']?.anyOf ?? [] };
       if (original.kind === 'test') {
         // Не добавляем IELTS, если исходное правило разрешает только TOEFL.
@@ -76,9 +77,14 @@ export function buildCombinedRoute({ contexts = [], profile, today, tracks = {},
     const idCode = choice === 'TOEFL_IBT' ? 'toefl-legacy' : TRACK[choice] ?? choice;
     const id = idCode ? `test:${idCode}` : `test:${entry.group ?? 'unknown'}:${entry.members[0].programId}`;
     const label = choice ? testName(choice) : null;
+    const perPart = {};
+    for (const member of entry.members.filter(member => !member.advisory)) {
+      for (const [part, value] of Object.entries(member.perPart[choice]?.minimums ?? {})) perPart[part] = Math.max(perPart[part] ?? 0, value);
+    }
     shared.set(id, { ...entry, id, track,
       title: label && entry.members.length > 1 ? `Подготовить ${label}${minimum != null ? ` от ${minimum}` : recommended != null ? ` (рекомендуют ${recommended})` : ''}` : entry.title,
       target: choice ? { test: choice, min: minimum, parts: targets.some(option => option.parts === true),
+        ...(Object.keys(perPart).length ? { perPart } : {}),
         ...(recommended != null ? { recommendedMin: recommended } : {}) } : null });
   }
   const steps = [...shared.values()].map(step => ({ ...step,

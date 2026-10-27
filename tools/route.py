@@ -23,8 +23,9 @@ PREP_DIR = ROOT / "data" / "prep"
 TRACKS_DIR = PREP_DIR / "exams"
 ROUTE_PATH = ROOT / "data" / "route.json"
 
-PREP_KEYS = frozenset({"id", "checked", "tests", "note"})
+PREP_KEYS = frozenset({"id", "checked", "tests", "note", "perPart"})
 TRACK_KEYS = frozenset({"code", "name", "format", "scoring", "register", "site", "freePrep", "note", "source"})
+TRACK_KEYS |= frozenset({'parts', 'partsSource', 'resultDays', 'resultSource', 'reportDays', 'reportSource', 'retakeRule', 'sessions', 'sessionsSource', 'timingNote'})
 TRACK_REQUIRED = frozenset({"code", "name", "format", "scoring", "site", "source"})
 MAX_NOTE = 300
 MAX_ROUTE_WIRE_BYTES = 24 * 1024
@@ -102,6 +103,8 @@ def load_tracks(directory: Path = TRACKS_DIR) -> tuple[dict, list[str]]:
         if note is not None and (not isinstance(note, str) or len(note) > MAX_NOTE):
             problems.append(f"{name}: note длиннее {MAX_NOTE} знаков или не строка")
         tracks[code] = track
+        from tools.exam_timing import validate_timing
+        problems.extend(f'{name}: {problem}' for problem in validate_timing(track, directory.resolve().parents[2]))
     return tracks, problems
 
 
@@ -157,6 +160,11 @@ def load_prep(programs: list[dict], directory: Path = PREP_DIR, tracks: dict | N
         }
         if isinstance(note, str) and note:
             entry["note"] = note
+        per_part = prep.get('perPart')
+        if per_part is not None:
+            from tools.exam_timing import validate_per_part
+            problems.extend(f'{name}: {problem}' for problem in validate_per_part(per_part, published[program_id]))
+            entry['perPart'] = per_part
         entries.append(entry)
     return entries, problems
 

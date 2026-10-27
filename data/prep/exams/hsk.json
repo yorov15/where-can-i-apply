@@ -23,5 +23,45 @@
   "source": {
     "url": "https://www.chinesetest.cn/HSK",
     "lastVerified": "2026-10-27"
-  }
+  },
+  "parts": [
+    {
+      "code": "L",
+      "name": "Listening"
+    },
+    {
+      "code": "S",
+      "name": "Speaking"
+    },
+    {
+      "code": "R",
+      "name": "Reading"
+    },
+    {
+      "code": "W",
+      "name": "Writing"
+    },
+    {
+      "code": "T",
+      "name": "Translation (advanced levels)"
+    }
+  ],
+  "partsSource": {
+    "url": "https://www.chinesetest.cn/HSK",
+    "quotes": [
+      "listening, speaking, reading, writing, and translation (at advanced levels)"
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/hsk-format.txt",
+    "contentHash": "sha256:1030f624fa392296ab40d5c32aa39663ba97b1659245b881d715a0a17823ded7",
+    "pageHash": "sha256:0c03caa85d709f51d54580df48cb3e338ec4a0d8c9d2ad24b2861874d10ebc7a"
+  },
+  "resultDays": null,
+  "resultSource": null,
+  "reportDays": null,
+  "reportSource": null,
+  "retakeRule": null,
+  "sessions": [],
+  "sessionsSource": null,
+  "timingNote": "Срок выдачи результата и правила пересдачи здесь ещё не подтверждены. Уточни их у организатора."
 }

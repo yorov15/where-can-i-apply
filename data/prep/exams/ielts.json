@@ -19,5 +19,72 @@
   "source": {
     "url": "https://ielts.org/take-a-test/your-results/ielts-scoring-in-detail",
     "lastVerified": "2026-10-27"
-  }
+  },
+  "parts": [
+    {
+      "code": "L",
+      "name": "Listening"
+    },
+    {
+      "code": "R",
+      "name": "Reading"
+    },
+    {
+      "code": "W",
+      "name": "Writing"
+    },
+    {
+      "code": "S",
+      "name": "Speaking"
+    }
+  ],
+  "partsSource": {
+    "url": "https://ielts.org/take-a-test/your-results/ielts-scoring-in-detail",
+    "quotes": [
+      "Listening, Reading, Writing, and Speaking"
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/ielts-format.txt",
+    "contentHash": "sha256:ac459238ddc70561a5a3baf729154025ec0b21d58f581ced3439c00e9089624c",
+    "pageHash": "sha256:e263e86d512ef43fd06ff6c5d628eeea17c98bd265255d42df007a327b45e238"
+  },
+  "resultDays": {
+    "computer": [
+      1,
+      2
+    ],
+    "paper": [
+      13,
+      13
+    ]
+  },
+  "resultSource": {
+    "url": "https://ielts.org/take-a-test/your-results/fast-test-results-and-sharing",
+    "quotes": [
+      "IELTS on computer: results usually within 1-2 days IELTS on Paper: results within 13 days"
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/ielts-results.txt",
+    "contentHash": "sha256:d65988c634bd887b54c28639cd5574f3b5c445ad17d5aedaeda7195b4472cabf",
+    "pageHash": "sha256:c39f6d9a95727bf61b684e32068558e33335bb79b2400711db73e2a97d29e8ae"
+  },
+  "reportDays": null,
+  "reportSource": null,
+  "retakeRule": {
+    "minDays": 0,
+    "text": "Можно записаться повторно, когда будешь готов. Даты и места уточни в центре.",
+    "source": {
+      "url": "https://www.ielts.org/take-a-test/booking-your-test/cancellations-refunds-remarks-transfers",
+      "quotes": [
+        "you can apply to take the test again as soon as you feel ready."
+      ],
+      "lastVerified": "2026-10-27",
+      "snapshot": "raw/exams/2026-10-27/ielts-retake.txt",
+      "contentHash": "sha256:599da222695eb9610825139f470237d78cc4bded5a935bd7f8e3b64fa36bc978",
+      "pageHash": "sha256:5443c1f76e69c9be97aef49e20adf180c42a75a87674ce0f317c75abd43ebbbf"
+    }
+  },
+  "sessions": [],
+  "sessionsSource": null,
+  "timingNote": "Компьютерный результат обычно приходит за 1–2 дня, бумажный — в пределах 13 дней. Проверки могут задержать результат; это ориентир для плана, а не гарантия."
 }
