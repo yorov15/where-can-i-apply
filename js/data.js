@@ -30,7 +30,10 @@ const tracks = new Map();
 
 export function loadTrack(code) {
   if (!tracks.has(code)) {
-    tracks.set(code, loadJson(`data/prep/exams/${encodeURIComponent(code)}.json`).catch(() => null));
+    tracks.set(code, loadJson(`data/prep/exams/${encodeURIComponent(code)}.json`).catch(() => {
+      tracks.delete(code);
+      return null;
+    }));
   }
   return tracks.get(code);
 }

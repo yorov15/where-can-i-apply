@@ -92,11 +92,12 @@ const clip = (text, max) => {
 };
 
 function conditionsWarn(route, onRetry) {
-  if (route.conditionsLoaded !== false && route.instructionsLoaded !== false) return null;
+  if (route.conditionsLoaded !== false && route.instructionsLoaded !== false && route.tracksLoaded !== false) return null;
   const box = el('div', 'route-warn');
   box.append(el('p', null, route.conditionsLoaded === false
     ? 'Часть условий не загрузилась. Документы и деньги по этим программам могут быть неполными.'
-    : 'Инструкции к части документов не загрузились. Требования программ сохранены; повтори загрузку.'));
+    : route.instructionsLoaded === false ? 'Инструкции к части документов не загрузились. Требования программ сохранены; повтори загрузку.'
+      : 'Часть подготовки к экзаменам не загрузилась. Даты и недельный план могут быть неполными; повтори загрузку.'));
   const retry = el('button', 'button button-quiet', 'Повторить');
   retry.type = 'button';
   retry.addEventListener('click', () => onRetry?.());

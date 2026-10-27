@@ -284,6 +284,7 @@ function rebuildRoute() {
   });
   const plans=Object.fromEntries(route.steps.filter(step=>routeTracks[step.track]).map(step=>[step.id,examForStep(step)]));
   route=scheduleRoute(route,plans,routeDocuments,today);
+  route.tracksLoaded=routeCtx.every(context=>(context.prepared?.tests??[]).every(code=>Boolean(routeTracks[code])));
   const study=buildStudyPlan({steps:route.steps,tracks:routeTracks,plans,state:routeState,today});
   weeklySnapshot=prepareCurrentWeek(routeState,route,study,today);
   if(exportState(routeState)!==exportState(weeklySnapshot.state)){routeState=weeklySnapshot.state;persistRoute();}
