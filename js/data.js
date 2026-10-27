@@ -35,6 +35,16 @@ export function loadTrack(code) {
   return tracks.get(code);
 }
 
+const documents = new Map();
+export function loadDocument(code) {
+  if (!documents.has(code)) documents.set(code,
+    loadJson(`data/prep/docs/${encodeURIComponent(code)}.json`).catch(() => {
+      documents.delete(code);
+      return null;
+    }));
+  return documents.get(code);
+}
+
 // Копия держится в памяти: карточку можно раскрыть и закрыть несколько раз,
 // и каждый раз идти в сеть незачем. В кэш кладётся промис, а не результат,
 // чтобы второе раскрытие не начало вторую загрузку.

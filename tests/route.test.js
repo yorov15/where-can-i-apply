@@ -295,9 +295,10 @@ test('школа не 11 лет — вопроса про 11-летнюю шко
 
 // ——— правило 4: документы ———
 
-test('документы: заголовок — текст условия, повторы не дают второй галочки', () => {
+test('неразмеченные документы: полный текст сохраняется, повторы не дают второй галочки', () => {
   const docs = phaseSteps(build(), 'docs');
-  assert.deepEqual(docs.map((step) => step.title), [DOC_ONE, DOC_TWO]);
+  assert.deepEqual(docs.map((step) => step.sourceTitle), [DOC_ONE, DOC_TWO]);
+  assert.ok(docs.every(step => step.title.length <= 80));
   assert.ok(docs.every((step) => step.kind === 'document' && step.phase === 'docs'));
 });
 
@@ -326,7 +327,8 @@ test('заметки и процедура подачи в документы н
 test('деньги: шаг на условие money', () => {
   const money = phaseSteps(build(), 'money');
   assert.equal(money.length, 1);
-  assert.equal(money[0].title, MONEY_TEXT);
+  assert.equal(money[0].sourceTitle, MONEY_TEXT);
+  assert.ok(money[0].detail.includes(MONEY_TEXT));
   assert.equal(money[0].kind, 'fee');
 });
 

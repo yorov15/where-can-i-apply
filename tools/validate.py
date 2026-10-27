@@ -465,6 +465,25 @@ def _check_condition_tags(number: int, condition: dict, required: bool) -> list[
         problems.append(f"условие {number}: field {field!r} — не поле анкеты")
     if kind == "workaround" and not field:
         problems.append(f"условие {number}: обходной путь без field — непонятно, что он обходит")
+    if any(key in condition for key in ('docVariant', 'docTitle', 'docExtras')) and 'doc' not in condition:
+        problems.append(f'условие {number}: разметка документа без doc')
+    if 'doc' in condition:
+        from tools.documents import CODE, action_title
+        code = condition['doc']
+        if kind != 'documents' or 'test' in condition or not isinstance(code, str) or not CODE.fullmatch(code):
+            problems.append(f'условие {number}: неверный код документа или его kind')
+        if not action_title(condition.get('docTitle')):
+            problems.append(f'условие {number}: docTitle — действие до 80 знаков')
+        variant = condition.get('docVariant')
+        if variant is not None and (not isinstance(variant, str) or not CODE.fullmatch(variant)):
+            problems.append(f'условие {number}: неверный docVariant')
+        extras = condition.get('docExtras', [])
+        if not isinstance(extras, list):
+            problems.append(f'условие {number}: docExtras — список')
+        else:
+            for extra in extras:
+                if not isinstance(extra, dict) or not isinstance(extra.get('code'), str) or not CODE.fullmatch(extra['code']) or not action_title(extra.get('title')) or not isinstance(extra.get('variant'), str) or not CODE.fullmatch(extra['variant']):
+                    problems.append(f'условие {number}: неверное дополнительное действие документа')
     if "test" in condition:
         tag = condition["test"]
         if kind != "documents" or not isinstance(tag, dict):

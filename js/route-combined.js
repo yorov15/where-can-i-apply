@@ -12,8 +12,8 @@ const hash = text => taskKey('', text).slice(1);
 const uniq = values => [...new Set(values)];
 const phaseOrder = ['tests', 'inquiry', 'docs', 'money', 'apply', 'after'];
 
-export function buildCombinedRoute({ contexts = [], profile, today, tracks = {}, state }) {
-  const routes = contexts.map(context => ({ context, route: buildRoute({ ...context, profile, today, tracks, state }) }));
+export function buildCombinedRoute({ contexts = [], profile, today, tracks = {}, documents = {}, state }) {
+  const routes = contexts.map(context => ({ context, route: buildRoute({ ...context, profile, today, tracks, documents, state }) }));
   const shared = new Map();
   const exams = [];
   for (const { context, route } of routes) {
@@ -22,13 +22,15 @@ export function buildCombinedRoute({ contexts = [], profile, today, tracks = {},
       const group = original.testGroup ?? GROUP[original.track] ?? original.track;
       const sourceConditions = (conditions ?? []).filter(condition => original.kind === 'test'
         ? condition.test?.group === group || (condition.test?.group === 'language' && group === 'english')
-        : condition.ru === original.title);
+        : condition.ru === (original.conditionText ?? original.sourceTitle ?? original.title));
       const legacyIds = [original.id, ...sourceConditions.flatMap(condition => [
         `${program.id}:${condition.kind === 'documents' ? 'document' : original.kind}:${hash(condition.ru)}`,
         taskKey(program.id, condition.ru),
+        `${original.kind}:${program.id}:${hash(condition.ru)}`,
         ...(condition.kind === 'documents' && !condition.test ? [`doc:text-${hash(condition.ru)}`] : []),
       ])];
       const member = { programId: program.id, name: program.name?.ru ?? program.id, detail: original.detail,
+        requirement: original.conditionText ?? original.detail,
         advisory: program.eligibility?.[group === 'standard' ? 'exam' : 'language']?.advisory === true,
         options: original.options ?? program.eligibility?.[group === 'standard' ? 'exam' : 'language']?.anyOf ?? [] };
       if (original.kind === 'test') {
@@ -45,9 +47,10 @@ export function buildCombinedRoute({ contexts = [], profile, today, tracks = {},
         } else exams.push({ ...original, group, candidates, members: [member], legacyIds });
         continue;
       }
-      const doc = sourceConditions.find(condition => typeof condition.doc === 'string')?.doc;
-      const id = original.kind === 'document' ? `doc:${doc ?? `text-${hash(original.title)}`}`
-        : original.kind === 'apply' ? `apply:${program.id}` : `${original.kind}:${program.id}:${hash(original.title)}`;
+      const doc = original.documentCode ?? sourceConditions.find(condition => typeof condition.doc === 'string')?.doc;
+      const variant = original.documentVariant;
+      const id = original.kind === 'document' ? `doc:${doc ?? `text-${hash(original.title)}`}${variant ? `:${variant}` : ''}`
+        : original.kind === 'apply' ? `apply:${program.id}` : `${original.kind}:${program.id}:${hash(original.sourceTitle ?? original.title)}`;
       const same = shared.get(id);
       if (same) { same.members.push(member); same.legacyIds.push(...legacyIds); }
       else shared.set(id, { ...original, id, members: [member], legacyIds });
@@ -82,7 +85,9 @@ export function buildCombinedRoute({ contexts = [], profile, today, tracks = {},
     programIds: uniq(step.members.map(member => member.programId)),
     legacyIds: uniq(step.legacyIds),
     done: isDone(state, step.id) || step.legacyIds.some(id => isDone(state, id)),
-    detail: step.members.length > 1 ? step.members.map(member => `${member.name}: ${member.detail || step.title}`).join('\n') : step.detail,
+    detail: step.members.length > 1
+      ? [step.documentGuidance, ...step.members.map(member => `${member.name.split(' — ')[0]}: ${step.documentGuidance ? member.requirement : member.detail || step.title}`)].filter(Boolean).join('\n')
+      : step.detail,
   })).sort((a, b) => phaseOrder.indexOf(a.phase) - phaseOrder.indexOf(b.phase));
   const goals = routes.map(({ route, context }) => ({ ...route.goal, id: route.id, prepared: route.prepared,
     conditionsLoaded: route.conditionsLoaded, note: context.prepared?.note ?? null }));
@@ -93,6 +98,7 @@ export function buildCombinedRoute({ contexts = [], profile, today, tracks = {},
   const done = steps.filter(step => step.done).length;
   return { id: goals.map(goal => goal.id).join(','), goal, goals, steps,
     prepared: goals.every(goal => goal.prepared), conditionsLoaded: goals.every(goal => goal.conditionsLoaded),
+    instructionsLoaded: steps.every(step => !step.documentCode || Boolean(step.docSource)),
     gaps: routes.flatMap(({ route }) => route.gaps.map(reason => ({ ...reason, programName: route.goal.name }))),
     gapNotes: uniq(routes.flatMap(({ route }) => route.gapNotes ?? [])),
     applyNotes: routes.flatMap(({ route }) => route.applyNotes.map(note => `${route.goal.name}: ${note}`)),

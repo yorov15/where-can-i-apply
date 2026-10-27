@@ -146,25 +146,37 @@
       "ru": "Анкета: заполняется онлайн в системе GIST.",
       "evidence": "Application must be completed via online.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "application",
+      "docVariant": "gist-korea-13",
+      "docTitle": "Заполнить форму заявки"
     },
     {
       "ru": "Одна рекомендация: её пишет научный руководитель, классный руководитель или учитель математики или естественных наук, и загружает через онлайн-систему GIST.",
       "evidence": "The recommendation letter is encouraged to be written by an academic advisor, homeroom teacher, or a math/science teacher.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "recommendation",
+      "docVariant": "gist-korea-14",
+      "docTitle": "Попросить рекомендательное письмо"
     },
     {
       "ru": "Транскрипты всех старших школ и вузов, где учился, с описанием системы оценок и записями за каждый год или семестр.",
       "evidence": "Submit official transcripts from every high school (or university) attended.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "transcript",
+      "docVariant": "gist-korea-15",
+      "docTitle": "Запросить официальные табели с оценками"
     },
     {
       "ru": "Аттестат о выпуске или справка об ожидаемом выпуске; если справки нет, принимают справку об учёбе, транскрипты или официальный документ школы.",
       "evidence": "If the certificate of (expected) graduation is unavailable, the applicant may submit a certificate of enrollment, transcripts, or an official document from their school",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "diploma",
+      "docVariant": "gist-korea-16",
+      "docTitle": "Подготовить документ об образовании"
     },
     {
       "ru": "Сертификат по английскому (один из): TOEFL, IELTS, TEPS, TOEIC, Cambridge English, PTE Academic или Duolingo.",
@@ -190,43 +202,64 @@
       "ru": "Копия загранпаспорта или национального удостоверения с указанием твоего гражданства; обязательно страница с номером, датами выдачи и окончания, фото и именем.",
       "evidence": "Submit a copy of international passport or national ID, along with an official document that indicates your nationality.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "passport",
+      "docVariant": "applicant-copy",
+      "docTitle": "Подготовить подтверждение личности и гражданства"
     },
     {
       "ru": "Копии паспортов или удостоверений обоих родителей с указанием их гражданства.",
       "evidence": "Submit a copy of international passport or national ID, along with an official document that indicates your parent's nationalities.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "passport",
+      "docVariant": "gist-korea-20",
+      "docTitle": "Подготовить копии паспортов абитуриента и родителей"
     },
     {
       "ru": "Справка о въезде и выезде, выданная иммиграционной службой Кореи (для лиц корейского происхождения).",
       "evidence": "The Certificate of Entry & Exit must be issued by the Korean Immigration Office within 60 days of the application deadline.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "other-document",
+      "docVariant": "gist-korea-21",
+      "docTitle": "Проверить требование о справке въезда и выезда"
     },
     {
       "ru": "Документ об утрате или отказе от корейского гражданства (для лиц корейского происхождения).",
       "evidence": "Loss or renunciation of Korean citizenship has to be proven in the documents with dates and other details.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "other-document",
+      "docVariant": "gist-korea-22",
+      "docTitle": "Проверить требование о подтверждении гражданства"
     },
     {
       "ru": "Официальные транскрипты начальной и средней школы, находящейся не в Корее (для лиц корейского происхождения).",
       "evidence": "Official transcripts issued by the applicant's elementary and middle school, which are not located in Korea.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "transcript",
+      "docVariant": "gist-korea-23",
+      "docTitle": "Проверить, нужно ли запросить официальные табели с оценками"
     },
     {
       "ru": "Награды и достижения за годы старшей школы (по желанию, до пяти).",
       "evidence": "You may submit up to five honors and awards obtained during your high school years.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "other-document",
+      "docVariant": "gist-korea-24",
+      "docTitle": "Решить, прикладывать ли подтверждения достижений"
     },
     {
       "ru": "Профиль или презентация старшей школы, выпущенные школой, департаментом или министерством образования (настоятельно рекомендуется).",
       "evidence": "Submit official high school profile/introduction/brochures published by the applicant's high school, Department of Education or Ministry of Education.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "recommendation",
+      "docVariant": "gist-korea-25",
+      "docTitle": "Решить, прикладывать ли профиль школы"
     }
   ],
   "deadline": {

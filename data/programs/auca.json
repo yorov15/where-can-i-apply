@@ -170,13 +170,19 @@
       "ru": "Заполненная заявка AUCA: онлайн-заявка или форма AUCA Admission Application Form",
       "evidence": "Fill out the ONLINE APPLICATION or send the AUCA Admission Application Form and supporting documents to: AUCA Office of Admissions",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "application",
+      "docVariant": "auca-15",
+      "docTitle": "Заполнить форму заявки"
     },
     {
       "ru": "Мотивационное эссе (Statement of Purpose) объёмом до 700 слов, прилагается к заявке",
       "evidence": "Limit your statement of purpose to 700 words. Please attach your statement of purpose to this application.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "essay",
+      "docVariant": "auca-16",
+      "docTitle": "Написать мотивационный текст"
     },
     {
       "ru": "Официальный сертификат по английскому языку (один из): AUCA Test of English Language Proficiency, TOEFL или IELTS",
@@ -202,31 +208,46 @@
       "ru": "Копия аттестата о среднем образовании (или диплома о профобразовании) либо справка из школы о том, что абитуриент учится в выпускном классе",
       "evidence": "Copy of high school diploma or vocational education certificate or if currently enrolled in high school, a document from current school certifying that an applicant is in the final year of study",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "diploma",
+      "docVariant": "auca-19",
+      "docTitle": "Подготовить документ об образовании"
     },
     {
       "ru": "Официальные (нотариально заверенные) копии всех школьных и университетских транскриптов / ведомостей",
       "evidence": "Official copies (notarized photocopies) of any and all high school and university transcripts / marksheets",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "transcript",
+      "docVariant": "auca-20",
+      "docTitle": "Запросить официальные табели с оценками"
     },
     {
       "ru": "Копия страниц паспорта с данными (для неграждан Кыргызстана, проживающих в КР, — и копия визовой страницы КР)",
       "evidence": "Copy of passport information pages and for non-Kyrgyz citizens living in Kyrgyzstan, a copy of the Kyrgyz Republic visa page",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "passport",
+      "docVariant": "applicant-copy",
+      "docTitle": "Подготовить копию паспорта"
     },
     {
       "ru": "2 цветные фотографии паспортного формата 3 x 4 см на белом фоне",
       "evidence": "2 color passport-style photographs (3 x 4 cm - white background)",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "photo",
+      "docVariant": "auca-22",
+      "docTitle": "Подготовить фотографию по требованиям программы"
     },
     {
       "ru": "Заявление на студенческую визу (оформление через координатора по визам и регистрации)",
       "evidence": "STUDENT VISA APPLICATION The Students Visa and Registration Coordinator will help arrange for a visa to the Kyrgyz Republic.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "application",
+      "docVariant": "auca-23",
+      "docTitle": "Заполнить заявление на студенческую визу"
     }
   ],
   "deadline": {

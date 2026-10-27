@@ -29,12 +29,19 @@ function hash(text) {
 }
 
 function makeStep(program, { phase, kind, title, detail = '', due = null, track = null }) {
+  const action = title.length <= 80 ? title : {
+    inquiry: 'Уточнить условие у приёмной комиссии',
+    fee: 'Проверить расходы и условия оплаты',
+    document: 'Проверить требование к документу',
+    test: 'Проверить требования к экзамену',
+  }[kind] ?? 'Проверить требование программы';
   return {
     id: `${program.id}:${kind}:${hash(title)}`,
     phase,
     kind,
-    title,
-    detail,
+    title: action,
+    sourceTitle: title,
+    detail: action === title ? detail : [title, detail].filter(Boolean).join('\n'),
     due,
     track,
   };
@@ -241,15 +248,31 @@ const MONEY_FALLBACK = 'Уточнить плату за подачу на ст�
 // Документы: по шагу на условие, один и тот же текст — одна галочка.
 // null — условия ещё не приехали. Врать «документов нет» нельзя, а
 // перезапросить их может только UI: ждём его и шагов не строим.
-function documentSteps({ program, conditions }) {
+function documentSteps({ program, conditions, documents: library }) {
   if (conditions === null) return [];
   const documents = conditionsOf(conditions, 'documents');
   if (documents.length) {
-    return documents.filter((condition) => !condition.test).map((condition) => makeStep(program, {
-      phase: 'docs',
-      kind: 'document',
-      title: condition.ru,
-    }));
+    return documents.filter((condition) => !condition.test).flatMap((condition) => {
+      if (!condition.doc) return [makeStep(program, {
+        phase: 'docs',
+        kind: 'document',
+        title: condition.ru,
+      })];
+      return [{ code: condition.doc, title: condition.docTitle, variant: condition.docVariant }, ...(condition.docExtras ?? [])]
+        .map(reference => {
+          const instruction = library?.[reference.code];
+          const title = reference.title ?? instruction?.title ?? 'Проверить требования к документу';
+          const wait = instruction?.waitDays;
+          const guidance = instruction ? [instruction.where, `Кто готовит: ${instruction.who}.`,
+            wait == null ? 'Срок изготовления: уточни у того, кто выдаёт документ.'
+              : `Срок изготовления: около ${wait} дней (оценка).`] : ['Инструкция не загрузилась. Требования программы приведены ниже; попробуй загрузить маршрут ещё раз.'];
+          return { ...makeStep(program, { phase: 'docs', kind: 'document', title,
+            detail: [...guidance, `Требование программы: ${condition.ru}`].join('\n') }),
+            documentCode: reference.code, documentVariant: reference.variant ?? '', conditionText: condition.ru,
+            documentGuidance: guidance.join('\n'),
+            docSource: instruction?.source ?? null };
+        });
+    });
   }
   return [makeStep(program, { phase: 'docs', kind: 'document', title: DOCS_FALLBACK })];
 }
@@ -331,11 +354,12 @@ function deadlineOf(program, today) {
 // До полноценного планировщика R4–R6 берём только явные действия.
 // Описательные условия остаются в полном маршруте, экзамен на месяцы
 // нельзя выдавать за дело на ближайшую неделю.
-const WEEK_ACTION = /^(?:Уточнить|Запросить|Подготовить|Заказать|Получить|Попросить|Заполнить|Загрузить|Приложить|Оплатить|Проверить|Связаться|Отправить|Перевести|Собрать|Зарегистрироваться)(?:\s|$)/u;
+const WEEK_ACTION = /^(?:Уточнить|Запросить|Подготовить|Заказать|Получить|Попросить|Заполнить|Загрузить|Приложить|Оплатить|Проверить|Связаться|Отправить|Перевести|Собрать|Зарегистрироваться|Написать|Подписать|Описать|Скачать|Выбрать)(?:\s|$)/u;
 
 export function weekOf(steps, goal, today = null) {
   const undone = steps.filter((step) => !step.done && step.kind !== 'apply'
-    && step.kind !== 'test' && WEEK_ACTION.test(step.title));
+    && step.kind !== 'test' && WEEK_ACTION.test(step.title)
+    && (!step.sourceTitle || step.sourceTitle === step.title || WEEK_ACTION.test(step.sourceTitle)));
   const sorted = [...undone].sort((a, b) => {
     const dueDiff = (a.due ?? '9999').localeCompare(b.due ?? '9999');
     if (dueDiff !== 0) return dueDiff;
@@ -363,6 +387,7 @@ export function buildRoute({
   today = null,
   prepared = null,
   tracks = null,
+  documents: documentLibrary = null,
   state = null,
 } = {}) {
   const verdict = evaluate(profile, program, today);
@@ -380,6 +405,7 @@ export function buildRoute({
     today,
     prepared,
     tracks,
+    documents: documentLibrary,
     state,
     gaps: verdict.reasons,
     gapNotes: conditionsOf(conditions, 'documents')

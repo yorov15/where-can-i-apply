@@ -5,7 +5,7 @@ import { setupCatalogFilter } from './filter.js';
 import { setupBarHide } from './barscroll.js';
 import { setupTabbar } from './tabbar.js';
 import { setupPriority } from './priority.js';
-import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, forgetConditions } from './data.js';
+import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocument, forgetConditions } from './data.js';
 import { renderResults } from './render.js';
 import { PLAN_KEY, DONE_KEY, buildIcs } from './plan.js';
 import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS } from './route-state.js';
@@ -185,6 +185,7 @@ const details = {
 let routeData = null;
 let routeDataLoading = null;
 let routeTracks = {};
+let routeDocuments = {};
 let routeCtx = null;
 let route = null;
 let routeStatus = '';
@@ -243,6 +244,10 @@ async function refreshRoute() {
   const loaded = await Promise.all(codes.map((code) => loadTrack(code)));
   codes.forEach((code, index) => { if (loaded[index]) routeTracks[code] = loaded[index]; });
   await Promise.all(selected.map(program => details.ensure(program.id)));
+  const docCodes = [...new Set(selected.flatMap(program => (details.conditions[program.id] ?? [])
+    .flatMap(condition => [condition.doc, ...(condition.docExtras ?? []).map(extra => extra.code)]).filter(Boolean)))];
+  const documents = await Promise.all(docCodes.map(loadDocument));
+  docCodes.forEach((code, index) => { if (documents[index]) routeDocuments[code] = documents[index]; });
   if (ticket !== routeRequest || ids.join(',') !== routeState.goals.join(',')) return;
   routeCtx = selected.map(program => ({ program, conditions: details.conditions[program.id] ?? null, prepared: preparedEntry(program.id) }));
   rebuildRoute();
@@ -268,6 +273,7 @@ function rebuildRoute() {
     profile: readForm(form),
     today,
     tracks: routeTracks,
+    documents: routeDocuments,
     state: routeState,
   });
 }
@@ -503,6 +509,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
   route = null;
   routeCtx = null;
   routeTracks = {};
+  routeDocuments = {};
   routeStatus = '';
   box.open = true;
   finished = false;

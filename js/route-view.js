@@ -90,9 +90,11 @@ const clip = (text, max) => {
 };
 
 function conditionsWarn(route, onRetry) {
-  if (route.conditionsLoaded !== false) return null;
+  if (route.conditionsLoaded !== false && route.instructionsLoaded !== false) return null;
   const box = el('div', 'route-warn');
-  box.append(el('p', null, 'Часть условий не загрузилась. Документы и деньги по этим программам могут быть неполными.'));
+  box.append(el('p', null, route.conditionsLoaded === false
+    ? 'Часть условий не загрузилась. Документы и деньги по этим программам могут быть неполными.'
+    : 'Инструкции к части документов не загрузились. Требования программ сохранены; повтори загрузку.'));
   const retry = el('button', 'button button-quiet', 'Повторить');
   retry.type = 'button';
   retry.addEventListener('click', () => onRetry?.());
@@ -163,7 +165,7 @@ function stepRow(step, index, { tracks, onToggle, compact = false }) {
   check.addEventListener('change', () => onToggle(step.id));
   const body = el('div', 'route-step-body');
   // В неделе нужен короткий заголовок: там строка одна на дело, а не абзац.
-  const parts = compact ? { short: clip(step.title, 72), rest: '' } : splitTitle(step.title);
+  const parts = compact ? { short: step.title, rest: '' } : splitTitle(step.title);
   const label = el('label', 'route-step-title', parts.short);
   label.htmlFor = check.id;
   body.append(label);
@@ -172,6 +174,14 @@ function stepRow(step, index, { tracks, onToggle, compact = false }) {
   if (step.due) body.append(el('span', 'route-due', `до ${formatDate(step.due)}`));
   if (!compact) {
     if (step.detail) body.append(el('p', 'route-detail', step.detail));
+    if (step.docSource) {
+      const source = link('Источник инструкции', step.docSource.url);
+      if (source) {
+        const citation = el('p', 'route-detail');
+        citation.append(source, ` · проверено ${formatDate(step.docSource.lastVerified)}`);
+        body.append(citation);
+      }
+    }
     if (step.target?.parts) body.append(el('p', 'route-detail', 'У целей есть минимумы по частям экзамена. Сверь их в карточках программ.'));
     if (parts.rest) {
       const more = el('details', 'route-more');

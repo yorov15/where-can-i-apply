@@ -128,19 +128,28 @@
       "ru": "Мотивационное письмо",
       "evidence": "The motivation letter must be typed or copy-pasted into the corresponding form",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "essay",
+      "docVariant": "od-10",
+      "docTitle": "Написать мотивационный текст"
     },
     {
       "ru": "Документ, подтверждающий уровень образования",
       "evidence": "Only the motivation letter, proof of your education level and passport are mandatory.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "diploma",
+      "docVariant": "od-11",
+      "docTitle": "Подготовить документ об образовании"
     },
     {
       "ru": "Скан-копия паспорта",
       "evidence": "each participant must upload a scanned copy of the passport they intend to use for identification in the Russian Federation",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "passport",
+      "docVariant": "applicant-copy",
+      "docTitle": "Подготовить копию паспорта"
     }
   ],
   "deadline": {

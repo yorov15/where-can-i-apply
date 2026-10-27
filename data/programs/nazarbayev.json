@@ -182,25 +182,37 @@
       "ru": "Справка (сертификат) из учебного заведения по образцу в личном кабинете абитуриента — если он на момент подачи учится в выпускном классе (курсе); либо отсканированный сертификат/диплом с транскриптами — если соответствующий уровень образования уже окончен",
       "evidence": "A certificate from an educational institution according to the sample in the Personal account of applicant (in case the applicant is a current student of the final grade (course) at the time of online application) or a scanned version of a certificate/diploma with transcripts if the applicant has already completed a relevant level of study.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "diploma",
+      "docVariant": "nazarbayev-17",
+      "docTitle": "Подготовить документ об образовании"
     },
     {
       "ru": "Отсканированная копия удостоверения личности и/или паспорта; копии из eGov и любых других платформ/электронных сервисов не принимают",
       "evidence": "A scanned copy of national ID card and/or passport. The copies from eGov or any other platforms/electronic services are not accepted.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "passport",
+      "docVariant": "applicant-copy",
+      "docTitle": "Подготовить подтверждение личности и гражданства"
     },
     {
       "ru": "Фотография 3×4",
       "evidence": "A 3×4 photo for documents uploaded to the \"Profile\" section of the personal account.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "photo",
+      "docVariant": "nazarbayev-19",
+      "docTitle": "Подготовить фотографию по требованиям программы"
     },
     {
       "ru": "Транскрипт за последний завершённый учебный год, либо аттестат об общем среднем образовании / диплом колледжа с приложением, либо его международный эквивалент (сертификат/диплом), если имеется",
       "evidence": "Transcript for the last completed academic year, or a high school diploma of general secondary education / college diploma with supplement, or its international equivalent (certificate/diploma), if available.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "diploma",
+      "docVariant": "nazarbayev-20",
+      "docTitle": "Подготовить документ об образовании"
     },
     {
       "ru": "Сертификат IELTS/TOEFL (загружается только после оплаты заявки и подачи заявления)",
@@ -216,7 +228,10 @@
       "ru": "Рекомендательные письма",
       "evidence": "letters of recommendation",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "recommendation",
+      "docVariant": "nazarbayev-22",
+      "docTitle": "Попросить рекомендательное письмо"
     }
   ],
   "deadline": {

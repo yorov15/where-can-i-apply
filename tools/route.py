@@ -34,10 +34,10 @@ def _is_iso_day(value) -> bool:
     if not isinstance(value, str):
         return False
     try:
-        date.fromisoformat(value)
+        parsed = date.fromisoformat(value)
     except ValueError:
         return False
-    return True
+    return parsed.isoformat() == value
 
 
 def _is_http(value) -> bool:
@@ -181,6 +181,9 @@ def write_route(root: Path = ROOT, programs: list[dict] | None = None, today: st
     tracks, track_problems = load_tracks(root / "data" / "prep" / "exams")
     prep, prep_problems = load_prep(programs, root / "data" / "prep", tracks)
     problems = track_problems + prep_problems
+    from tools.documents import load_documents, check_document_refs
+    documents, doc_problems = load_documents(programs, root / 'data' / 'prep' / 'docs')
+    problems += doc_problems + check_document_refs(programs, {p['id'] for p in prep}, documents)
 
     # Трек, на который никто не ссылается, — это забытый файл: он уедет
     # на сайт и будет грузиться по прямой ссылке, хотя он не нужен.
@@ -194,6 +197,8 @@ def write_route(root: Path = ROOT, programs: list[dict] | None = None, today: st
         return 1
 
     route = build_route(programs, prep, tracks, today)
+    if documents:
+        route['documents'] = sorted(documents)
     text = json.dumps(route, ensure_ascii=False, separators=(",", ":")) + "\n"
     size = len(text.encode("utf-8"))
     if size > MAX_ROUTE_WIRE_BYTES:

@@ -183,31 +183,46 @@
       "ru": "Приложить к заявке удостоверение личности (identification card).",
       "evidence": "Identification Cards",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "passport",
+      "docVariant": "brunei-bdgs-18",
+      "docTitle": "Подготовить подтверждение личности и гражданства"
     },
     {
       "ru": "Приложить заверенные копии документов об образовании и других подтверждающих документов: сертификатов, характеристик, табелей (транскриптов).",
       "evidence": "Certified true copies of academic qualifications and other supporting documents (i.e. certificates, testimonials, transcripts).",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "diploma",
+      "docVariant": "brunei-bdgs-19",
+      "docTitle": "Подготовить заверенные документы об образовании"
     },
     {
       "ru": "Если документы не на английском, приложить их заверенный перевод на английский.",
       "evidence": "Certified English translations of supporting documents must be submitted for documents that are not in English.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "translation",
+      "docVariant": "brunei-bdgs-20",
+      "docTitle": "Проверить, нужны ли переводы на английский"
     },
     {
       "ru": "Приложить заверенные копии свидетельства о рождении и паспорта.",
       "evidence": "Certified true copies of Birth Certificate and Passport.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "other-document",
+      "docVariant": "brunei-bdgs-21",
+      "docTitle": "Подготовить копии свидетельства о рождении и паспорта"
     },
     {
       "ru": "Приложить рекомендации от поручителей по формам C1 и C2.",
       "evidence": "References and recommendations from referees. ( C1 and C2 )",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "recommendation",
+      "docVariant": "brunei-bdgs-22",
+      "docTitle": "Попросить рекомендательное письмо"
     }
   ],
   "deadline": {

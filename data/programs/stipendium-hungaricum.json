@@ -118,31 +118,61 @@
       "ru": "Нужно мотивационное письмо: не меньше одной страницы, набранное шрифтом Times New Roman 12 пунктов, на языке выбранной программы или на венгерском.",
       "evidence": "Motivation Letter - minimum 1 page, typed in Times New Roman 12-point letters - written in the language of the selected study programme or Hungarian",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "essay",
+      "docVariant": "stipendium-hungaricum-8",
+      "docTitle": "Написать мотивационный текст"
     },
     {
       "ru": "Нужен документ о знании языка: скан оригинала сертификата с минимальным уровнем, который определяет принимающий вуз, и его перевод.",
       "evidence": "scanned copy of the original proof of language proficiency, with a minimum level determined by the Host Institution AND its translation",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "language",
+        "title": "Уточнить языковые требования выбранного вуза"
+      }
     },
     {
       "ru": "Абитуриенту бакалавриата нужен скан оригинала аттестата о среднем образовании или его эквивалента и его перевод.",
       "evidence": "bachelor-level full -time programmes: scanned copy of the original secondary school graduation certificate or equivalent AND its translation",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "diploma",
+      "docVariant": "stipendium-hungaricum-10",
+      "docTitle": "Подготовить документ об образовании",
+      "docExtras": [
+        {
+          "code": "translation",
+          "variant": "stipendium-hungaricum-diploma",
+          "title": "Подготовить перевод аттестата"
+        }
+      ]
     },
     {
       "ru": "Нужна выписка оценок (Transcript of Records) за все пройденные семестры или учебные годы на предыдущем, самом высоком уровне обучения, и её перевод.",
       "evidence": "copy of the original transcript of records regarding all academic semesters or school years completed during previous studies (at the highest level of education that the student has participated in) AND its translation",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "transcript",
+      "docVariant": "stipendium-hungaricum-11",
+      "docTitle": "Запросить официальные табели с оценками",
+      "docExtras": [
+        {
+          "code": "translation",
+          "variant": "stipendium-hungaricum-transcript",
+          "title": "Подготовить перевод табеля с оценками"
+        }
+      ]
     },
     {
       "ru": "Нужен документ, удостоверяющий личность: если паспорт уже есть — скан страницы с данными паспорта; если паспорта ещё нет — скан национального ID-документа, той страницы, где есть и личные данные, и фотография.",
       "evidence": "Copy of Identification Document - provided that the applicant already has a passport, a scanned copy of the passport's data page should be uploaded - in case the applicants do not yet have a passport, they should upload a scanned copy of their national ID card - that page must be uploaded, which contains both the personal data and the photograph of the applicant",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "photo",
+      "docVariant": "stipendium-hungaricum-12",
+      "docTitle": "Подготовить фотографию по требованиям программы"
     }
   ],
   "deadline": {

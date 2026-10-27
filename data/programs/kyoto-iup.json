@@ -225,31 +225,46 @@
       "ru": "Фото: цифровая фотография заявителя, сделанная за последние полгода; без головного убора, если нет религиозных или медицинских причин.",
       "evidence": "Digital identification photograph Applicant A digital photograph of the applicant taken within the last six months.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "photo",
+      "docVariant": "kyoto-iup-21",
+      "docTitle": "Подготовить цифровую фотографию"
     },
     {
       "ru": "Копия страницы паспорта с именем, фотографией, номером паспорта, гражданством и сроком действия.",
       "evidence": "Copy of passport Applicant Copied page(s) containing the applicant's name, photograph, passport number, nationality, and expiration date.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "photo",
+      "docVariant": "kyoto-iup-22",
+      "docTitle": "Подготовить фотографию по требованиям программы"
     },
     {
       "ru": "Официальные табели за всю среднюю школу с первого года до текущего момента или выпуска; табели вуза — при наличии.",
       "evidence": "School transcripts Applicant or School Official transcripts covering the applicant's entire time at secondary/high school from their first year to the present or graduation.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "transcript",
+      "docVariant": "kyoto-iup-23",
+      "docTitle": "Запросить официальные табели с оценками"
     },
     {
       "ru": "Форма A: справка школы об окончании или ожидаемом окончании; можно заменить копией аттестата или диплома.",
       "evidence": "Form A must be completed by the secondary/high school from which the applicant graduated or is expected to graduate.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "diploma",
+      "docVariant": "kyoto-iup-24",
+      "docTitle": "Подготовить документ об образовании"
     },
     {
       "ru": "Форма B: оценка от школы, её заполняет сотрудник школы или третье лицо, знакомое с успеваемостью заявителя; принимают только форму B.",
       "evidence": "Form B must be filled out in English by a staff member of the secondary/high school that the applicant currently attends or has most recently attended, or by a third party.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "other-document",
+      "docVariant": "kyoto-iup-25",
+      "docTitle": "Попросить школу заполнить форму B"
     },
     {
       "ru": "Либо балл теста английского (TOEFL iBT / iBT Home Edition или IELTS Academic / IELTS Online), либо форма C — оценка английского от школы.",
@@ -275,13 +290,19 @@
       "ru": "Форма D: эссе на английском в объёме, указанном в самой форме; принимают только форму D.",
       "evidence": "The essay must be written in English within the word count specified in Form D, and submitted using Form D.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "essay",
+      "docVariant": "kyoto-iup-28",
+      "docTitle": "Написать эссе Kyoto iUP по форме D"
     },
     {
       "ru": "Дополнительно можно приложить подтверждения академических наград и внеклассной активности через онлайн-систему; их учёт не гарантирован.",
       "evidence": "Additional supporting documents such as those relating to academic awards and extracurricular activities may be submitted via the Online Application System.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "doc": "other-document",
+      "docVariant": "kyoto-iup-29",
+      "docTitle": "Решить, прикладывать ли подтверждения достижений"
     }
   ],
   "deadline": {
