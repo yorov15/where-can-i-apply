@@ -177,6 +177,7 @@ const TRACK_GROUP = {
 };
 
 const groupOf = (code) => TRACK_GROUP[code] ?? code;
+const languageGroup = (group) => ['english', 'korean', 'chinese', 'japanese', 'german', 'language'].includes(group);
 
 const trackOf = (test) => TRACK_OF[test] ?? null;
 
@@ -224,7 +225,7 @@ function conditionsOf(conditions, kind) {
 // не pass. Pass означает, что сертификат уже подходит: ни причины, ни шага.
 // У любого правила-экзамена альтернативы лежат в anyOf, поэтому один шаг
 // закрывает всё поле сразу, а варианты перечисляются в detail.
-function testSteps({ program, gaps, prepared, tracks }) {
+function testSteps({ program, gaps, prepared, tracks, conditions }) {
   const steps = [];
   for (const field of ['language', 'exam']) {
     const rule = program.eligibility?.[field] ?? null;
@@ -232,13 +233,37 @@ function testSteps({ program, gaps, prepared, tracks }) {
     const gap = gaps.find((reason) => reason.field === field);
     if (!gap || !options.length) continue;
     const variants = options.map(optionText);
-    steps.push(makeStep(program, {
+    steps.push({ ...makeStep(program, {
       phase: 'tests',
       kind: 'test',
       title: `Сдать ${optionText(options[0])}`,
       detail: `${rule.advisory === true ? 'Программа советует' : 'Подойдёт'} ${joinOr(variants)}.`,
       track: firstTrack(options, tracks),
-    }));
+    }), testGroup: groupOf(trackOf(options[0].test)) ?? field });
+  }
+
+  // Проверенная разметка документов: сертификат может требоваться даже
+  // при рекомендованном пороге. Сохраняем условные пути и альтернативы
+  // дословно; названия экзаменов из свободного текста не угадываем.
+  const taggedGroups = new Set();
+  for (const condition of conditionsOf(conditions, 'documents')) {
+    const requirement = condition.test;
+    if (!requirement?.group || !requirement.title) continue;
+    taggedGroups.add(requirement.group);
+    const same = steps.find((step) => step.testGroup === requirement.group
+      || (requirement.group === 'language' && languageGroup(step.testGroup)));
+    if (same) {
+      // Идентичность уже существующего шага остаётся привязана к правилу,
+      // даже если уточняем его заголовок из проверенных условий.
+      same.title = requirement.title;
+      same.detail = [same.detail, condition.ru].filter(Boolean).join(' ');
+      continue;
+    }
+    const code = (prepared?.tests ?? []).find((code) => groupOf(code) === requirement.group && tracks?.[code]);
+    steps.push({ ...makeStep(program, {
+      phase: 'tests', kind: 'test', title: requirement.title,
+      detail: condition.ru, track: code ?? null,
+    }), testGroup: requirement.group });
   }
 
   // Трек, которого в правилах нет: программе он нужен (файл подготовки
@@ -248,7 +273,8 @@ function testSteps({ program, gaps, prepared, tracks }) {
   // два разных дела.
   const inRules = ruleTrackCodes(program.eligibility);
   const extras = (prepared?.tests ?? [])
-    .filter((code) => !inRules.has(code) && tracks?.[code]?.name);
+    .filter((code) => !inRules.has(code) && !taggedGroups.has(groupOf(code))
+      && !(taggedGroups.has('language') && languageGroup(groupOf(code))) && tracks?.[code]?.name);
   const groups = new Map();
   for (const code of extras) {
     const key = groupOf(code);
@@ -309,7 +335,7 @@ function documentSteps({ program, conditions }) {
   if (conditions === null) return [];
   const documents = conditionsOf(conditions, 'documents');
   if (documents.length) {
-    return documents.map((condition) => makeStep(program, {
+    return documents.filter((condition) => !condition.test).map((condition) => makeStep(program, {
       phase: 'docs',
       kind: 'document',
       title: condition.ru,
@@ -392,8 +418,14 @@ function deadlineOf(program, today) {
 // Неделя — не второй маршрут, а его первые пять дел. Подача сама по себе
 // в неделю не попадает: это дедлайн, а не недельное дело. Но когда до него
 // осталось меньше месяца, она встаёт в конец списка, чтобы не потеряться.
+// До полноценного планировщика R4–R6 берём только явные действия.
+// Описательные условия остаются в полном маршруте, экзамен на месяцы
+// нельзя выдавать за дело на ближайшую неделю.
+const WEEK_ACTION = /^(?:Уточнить|Запросить|Подготовить|Заказать|Получить|Попросить|Заполнить|Загрузить|Приложить|Оплатить|Проверить|Связаться|Отправить|Перевести|Собрать|Зарегистрироваться)(?:\s|$)/u;
+
 function weekOf(steps, goal) {
-  const undone = steps.filter((step) => !step.done && step.kind !== 'apply');
+  const undone = steps.filter((step) => !step.done && step.kind !== 'apply'
+    && step.kind !== 'test' && WEEK_ACTION.test(step.title));
   const sorted = [...undone].sort((a, b) => {
     const dueDiff = (a.due ? 0 : 1) - (b.due ? 0 : 1);
     if (dueDiff !== 0) return dueDiff;
@@ -443,6 +475,10 @@ export function buildRoute({
     tracks,
     state,
     gaps: verdict.reasons,
+    gapNotes: conditionsOf(conditions, 'documents')
+      .filter((condition) => condition.test?.group === 'english'
+        && verdict.reasons.some((reason) => reason.field === 'language'))
+      .map((condition) => condition.ru),
   };
   const steps = buildSteps(context);
   return {
@@ -454,6 +490,7 @@ export function buildRoute({
     // Причины — ровно то, что сказал evaluate: своих формулировок о том,
     // чего не хватает, маршрут не придумывает.
     gaps: verdict.reasons,
+    gapNotes: context.gapNotes,
     steps,
     week: weekOf(steps, goal),
     applyNotes: conditionsOf(conditions, 'steps').map((condition) => condition.ru),

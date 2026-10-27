@@ -368,13 +368,21 @@
       "ru": "Подтверждение владения английским: IELTS или TOEFL",
       "evidence": "K) Proof of English Proficiency (IEL TS or TOEFL)",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "english",
+        "title": "Подготовить результат IELTS или TOEFL"
+      }
     },
     {
       "ru": "SAT или ACT с разделами Science и Writing — только для применимых абитуриентов типа A",
       "evidence": "L) SAT or ACT Plus Science and Writing Scores (only for applicable Type A applicants)",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "standard",
+        "title": "Проверить, нужен ли SAT или ACT для твоего типа заявки"
+      }
     }
   ],
   "deadline": {

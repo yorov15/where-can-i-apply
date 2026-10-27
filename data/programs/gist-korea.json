@@ -170,13 +170,21 @@
       "ru": "Сертификат по английскому (один из): TOEFL, IELTS, TEPS, TOEIC, Cambridge English, PTE Academic или Duolingo.",
       "evidence": "TOEFL (Code: 0144), IELTS, TEPS, TOEIC, Cambridge English Exam(CAE, CPE), PTE Academic, Duolingo English Test",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "english",
+        "title": "Выбрать сертификат английского из списка GIST"
+      }
     },
     {
       "ru": "Хотя бы один стандартный тест: SAT, ACT, GCE A-Level, IB, AP, диплом международной олимпиады или национальный выпускной или вступительный экзамен.",
       "evidence": "SAT, ACT, GCE A-Level, IB, AP, and Certificate of International Olympiad, the relevant country's qualifying test for high school graduation or college entrance examination.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "standard",
+        "title": "Выбрать стандартный тест или другую принимаемую квалификацию"
+      }
     },
     {
       "ru": "Копия загранпаспорта или национального удостоверения с указанием твоего гражданства; обязательно страница с номером, датами выдачи и окончания, фото и именем.",

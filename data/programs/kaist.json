@@ -183,13 +183,21 @@
       "ru": "Нужен минимум один официальный результат стандартизированного теста — SAT, ACT, AP, IB, GCE A-Level или другой выпускной или вступительный экзамен.",
       "evidence": "Applicants must submit at least one official test score (e.g., SAT, ACT, AP, IB, GCE A-Level, or other national high school leaving or university entrance examinations).",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "standard",
+        "title": "Выбрать один стандартизированный тест из списка KAIST"
+      }
     },
     {
       "ru": "Все подающие обязаны предоставить минимум один результат теста по английскому (TOEFL, IELTS, TOEIC, TEPS) — это отдельный документ, помимо стандартизированных тестов.",
       "evidence": "all applicants must submit at least one of the following English Proficiency test (EPT) scores.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "english",
+        "title": "Подготовить сертификат английского для KAIST"
+      }
     },
     {
       "ru": "До двух рекомендательных писем; формально на выбор, но настоятельно рекомендуются. Пишет научный, классный или учитель математики/науки и отправляет сам автор через портал.",

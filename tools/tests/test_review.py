@@ -1,4 +1,11 @@
 import unittest
+import contextlib
+import io
+import json
+import tempfile
+from pathlib import Path
+from unittest.mock import patch
+from tools.review import main
 
 from tools.review import (
     _brief,
@@ -697,6 +704,25 @@ class TestForgetSignatures(unittest.TestCase):
 
     def test_unknown_field_is_ignored(self):
         self.assertEqual(forget_signatures(self.record(), ["nope"]), self.record())
+
+
+class TestIsolatedReviewQueue(unittest.TestCase):
+    def test_custom_queue_does_not_review_or_overwrite_shared_proposals(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            shared = root / "proposed"
+            custom = root / "agent-queue"
+            shared.mkdir()
+            custom.mkdir()
+            original = '{"id":"shared"}'
+            (shared / "shared.json").write_text(original, encoding="utf-8")
+            (custom / "own.json").write_text(json.dumps({"id": "own"}), encoding="utf-8")
+            output = io.StringIO()
+            with patch("tools.review.__file__", str(root / "tools" / "review.py")), contextlib.redirect_stdout(output):
+                self.assertEqual(main(["--by-assistant", f"--proposed-dir={custom}"]), 0)
+            self.assertIn("own:", output.getvalue())
+            self.assertNotIn("shared:", output.getvalue())
+            self.assertEqual((shared / "shared.json").read_text(encoding="utf-8"), original)
 
 
 if __name__ == "__main__":

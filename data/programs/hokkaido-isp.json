@@ -262,13 +262,21 @@
       "ru": "Справка об английском — один из вариантов: TOEFL-iBT, IELTS, Duolingo или справка о том, что английский был основным языком обучения.",
       "evidence": "6 Certificate of English language proficiency Submit one of the following a-d.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "english",
+        "title": "Выбрать тест английского или справку о языке обучения"
+      }
     },
     {
       "ru": "Баллы национальных или других стандартизированных экзаменов для поступления в вуз, если такие экзамены есть в стране.",
       "evidence": "7 National or other standardized test score reports Individuals who have taken the following national or other standardized tests for university admission or for completion of secondary education in their own country.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "standard",
+        "title": "Проверить, какие результаты национальных экзаменов приложить"
+      }
     },
     {
       "ru": "Подтверждение гражданства: копия действующего паспорта со страницей, где фото, имя, дата рождения, пол, гражданство, номер и срок действия; без паспорта — удостоверение личности.",

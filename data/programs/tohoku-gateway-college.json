@@ -247,13 +247,21 @@
       "ru": "Официальный результат одного из принимаемых стандартизированных тестов или международных квалификаций по профильным предметам",
       "evidence": "⑤ Qualifications or Test scores for the required subjects Submit an official score report from one of the accepted tests or qualifications for the required subjects.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "standard",
+        "title": "Выбрать тест или квалификацию по профильным предметам"
+      }
     },
     {
       "ru": "Результат теста по английскому языку либо сертификат Certificate of English as Medium of Instruction (одно из двух)",
       "evidence": "⑥ Language Proficiency Test Score Submit one of the following: • Score report or certificate from an accepted English proficiency test • Certificate of English as Medium of Instruction in Tohoku University format",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "english",
+        "title": "Выбрать тест английского или справку о языке обучения"
+      }
     },
     {
       "ru": "Документ, подтверждающий гражданство (или копия паспорта)",

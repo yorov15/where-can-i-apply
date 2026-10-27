@@ -157,6 +157,7 @@ function gapBlock(route) {
     list.append(item);
   }
   box.append(list);
+  for (const note of route.gapNotes ?? []) box.append(el('p', 'route-detail', note));
   return box;
 }
 
@@ -231,7 +232,9 @@ function weekBlock(route, handlers) {
   const box = el('section', 'route-week');
   box.append(el('h3', 'route-phase-title', 'Эта неделя'));
   if (!route.week.length) {
-    box.append(el('p', 'route-detail', 'Неделя пустая: либо всё отмечено, либо дел в маршруте не осталось. Проверь срок ниже.'));
+    box.append(el('p', 'route-detail', route.stats.done === route.stats.total
+      ? 'Все шаги отмечены. Проверь срок подачи ниже.'
+      : 'Недельные дела пока не составлены. Проверь экзамены, документы и сроки в полном маршруте ниже.'));
     return box;
   }
   const list = el('ol', 'route-week-list');

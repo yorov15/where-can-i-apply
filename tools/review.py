@@ -475,7 +475,10 @@ def main(argv=None) -> int:
     confirm = say_yes if by == "assistant" else ask
 
     root = Path(__file__).resolve().parent.parent
-    proposed_dir = root / "proposed"
+    # Изолированная очередь агента: не перезаписываем чужие предложения
+    # в общей proposed/. Формат: --proposed-dir=<путь>.
+    queue = next((a.split("=", 1)[1] for a in args if a.startswith("--proposed-dir=")), None)
+    proposed_dir = Path(queue) if queue else root / "proposed"
     programs_dir = root / "data" / "programs"
     programs_dir.mkdir(parents=True, exist_ok=True)
 

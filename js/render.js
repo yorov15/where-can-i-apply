@@ -357,6 +357,8 @@ export function renderResults(nodes, profile, programs, today, details) {
     resultsNode.append(el('p', 'hint',
       'Сверху — программы из выбранных тобой стран и направлений, в том порядке, в каком ты их поставил.'));
   }
+  if (!skipCards) resultsNode.append(el('p', 'hint',
+    'Каталог включает программы с закрытым приёмом. В итоге считаются только те, у которых приём не закрыт.'));
 
   // Первая подсказка: карточки раскрываются, и внутри самое нужное. Пока
   // человек не открыл ни одной, показываем; открыл — запоминаем и больше нет.
@@ -447,7 +449,7 @@ function readyStat({ count, next }) {
   const box = el('div', 'summary-stat');
   box.append(
     el('span', 'summary-number', String(count)),
-    el('span', 'summary-label', `${plural(count, 'программа подходит', 'программы подходят', 'программ подходят')} по условиям`),
+    el('span', 'summary-label', `${plural(count, 'программа подходит', 'программы подходят', 'программ подходят')} по условиям · приём не закрыт`),
   );
   if (next) {
     const line = el('p', 'summary-next');

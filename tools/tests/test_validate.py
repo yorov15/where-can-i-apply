@@ -641,6 +641,17 @@ class TestConditionTags(unittest.TestCase):
         program = self.with_condition(field=None, kind="documents")
         self.assertEqual(validate_program(program, SNAPSHOT), [])
 
+    def test_exam_document_tag_preserves_a_checked_action(self):
+        program = self.with_condition(kind="documents", test={"group": "english", "title": "Подготовить сертификат"})
+        self.assertEqual(validate_program(program, SNAPSHOT), [])
+
+    def test_invalid_exam_document_tags_are_rejected(self):
+        for tag in ["IELTS", {"group": "invented", "title": "Подготовить"},
+                    {"group": "english", "title": "x" * 81}, {"group": "english", "title": "", "extra": True}]:
+            with self.subTest(tag=tag):
+                self.assertTrue(validate_program(self.with_condition(kind="documents", test=tag), SNAPSHOT))
+        self.assertTrue(validate_program(self.with_condition(kind="note", test={"group": "english", "title": "Подготовить"}), SNAPSHOT))
+
     def test_documents_condition_without_quote_is_caught(self):
         program = self.with_condition(field=None, kind="documents")
         program["textConditions"][0]["evidence"] = ""

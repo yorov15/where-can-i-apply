@@ -182,13 +182,21 @@
       "ru": "Официальный сертификат по английскому языку (один из): AUCA Test of English Language Proficiency, TOEFL или IELTS",
       "evidence": "Official English Test Certificate (only one English test certificate must be submitted): AUCA Test of English Language Proficiency or Official TOEFL Certificate (paper-based or internet-based) - REPORT TO AUCA INSTITUTION CODE 0419 or Official IELTS Certificate - REPORT TO AUCA INSTITUTION CODE 8306",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "english",
+        "title": "Выбрать тест английского из списка AUCA"
+      }
     },
     {
       "ru": "Официальный результат вступительного экзамена (один из): AUCA Admission Exam, SAT Reasoning Test (SAT I) или ACT Test Plus Writing",
       "evidence": "Official Admission Exam Results (only one exam certificate must be submitted): AUCA Admission Exam or SAT Reasoning Test (SAT I) - REPORT TO AUCA INSTITUTION CODE 5825 or ACT Test Plus Writing - REPORT TO AUCA INSTITUTION CODE 5479",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "standard",
+        "title": "Выбрать вступительный экзамен AUCA, SAT или ACT"
+      }
     },
     {
       "ru": "Копия аттестата о среднем образовании (или диплома о профобразовании) либо справка из школы о том, что абитуриент учится в выпускном классе",

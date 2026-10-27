@@ -255,13 +255,21 @@
       "ru": "Либо балл теста английского (TOEFL iBT / iBT Home Edition или IELTS Academic / IELTS Online), либо форма C — оценка английского от школы.",
       "evidence": "Either a specified English proficiency test result or Form C is required.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "english",
+        "title": "Выбрать тест английского или школьную форму C"
+      }
     },
     {
       "ru": "Официальный результат как минимум одного стандартизированного теста из списка в Приложении 1.",
       "evidence": "Standardized test result*2 Applicant or School Applicants must submit their official results for at least one of the standardized tests listed in Appendix 1.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "standard",
+        "title": "Выбрать стандартный тест из Приложения 1 Kyoto iUP"
+      }
     },
     {
       "ru": "Форма D: эссе на английском в объёме, указанном в самой форме; принимают только форму D.",

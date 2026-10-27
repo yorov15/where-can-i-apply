@@ -310,6 +310,14 @@ class TestIndexText(unittest.TestCase):
 
 
 class TestDetails(unittest.TestCase):
+    def test_exam_document_classification_reaches_the_client_without_evidence(self):
+        program = json.loads(json.dumps(PROGRAM))
+        tag = {"group": "standard", "title": "Выбрать тест или квалификацию"}
+        program["textConditions"] = [{"ru": "SAT или IB", "kind": "documents", "test": tag, "evidence": "SAT or IB"}]
+        result = conditions_entry(program)
+        self.assertEqual(result["textConditions"][0]["test"], tag)
+        self.assertNotIn("evidence", result["textConditions"][0])
+
     def tagged(self):
         program = json.loads(json.dumps(PROGRAM))
         program["applyUrl"] = "https://example.gov/apply"

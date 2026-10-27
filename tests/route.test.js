@@ -15,6 +15,10 @@ import {
   routeText,
 } from '../js/route.js';
 import { evaluate } from '../js/verdict.js';
+import { readFileSync } from 'node:fs';
+import { readySummary } from '../js/summary.js';
+import { bucketCounts } from '../js/filter.js';
+import { bucketOf, reasonText } from '../js/wording.js';
 
 const TODAY = '2026-10-27';
 
@@ -429,8 +433,8 @@ test('денег в условиях нет — шаг уточнить плат
 
 test('неделя: невыполненные дела по фазам, подача при далёком сроке не входит', () => {
   const week = build().week;
-  assert.equal(week.length, 4);
-  assert.deepEqual(week.map((step) => step.phase), ['inquiry', 'docs', 'docs', 'money']);
+  assert.equal(week.length, 1);
+  assert.deepEqual(week.map((step) => step.phase), ['inquiry']);
   assert.equal(week.some((step) => step.kind === 'apply'), false);
 });
 
@@ -453,11 +457,81 @@ test('неделя: выполненные дела не попадают, по�
 });
 
 test('неделя: из многих дел берём пять', () => {
-  const many = Array.from({ length: 8 }, (_, i) => ({ field: null, kind: 'documents', ru: `Документ номер ${i + 1}.` }));
+  const many = Array.from({ length: 8 }, (_, i) => ({ field: null, kind: 'documents', ru: `Подготовить документ номер ${i + 1}.` }));
   // Школа не 11 лет: без вопроса в приёмную в неделю попадут только документы.
   const week = build({ profile: { ...ME, schoolYears: 12 }, conditions: conditions(...many) }).week;
   assert.equal(week.length, 5);
   assert.ok(week.every((step) => step.kind === 'document'));
+});
+
+test('R0: неделя содержит действия, без экзамена на месяцы и описаний условий', () => {
+  const route = build({ profile: NO_LANG, conditions: [
+    { kind: 'documents', ru: 'Заявка подаётся онлайн через портал.' },
+    { kind: 'documents', ru: 'Подготовить копию паспорта' },
+    { kind: 'documents', ru: 'Подготовительный год может понадобиться.' },
+    { kind: 'money', ru: MONEY_TEXT },
+  ] });
+  assert.ok(route.steps.some(step => step.kind === 'test'));
+  assert.deepEqual(route.week.map(step => step.title), [
+    'Уточнить у приёмной комиссии, принимают ли 11-летнюю школу', 'Подготовить копию паспорта',
+  ]);
+});
+
+test('R0: экзамен из документов вынесен в tests, альтернативы и оговорки сохранены', () => {
+  for (const [group, title, ru] of [
+    ['standard', 'Подготовить результат одного стандартизированного теста', 'Нужен SAT, ACT, AP, IB, GCE A-Level или национальный экзамен.'],
+    ['english', 'Выбрать тест английского или справку школы', 'Подойдёт IELTS или справка об обучении на английском.'],
+    ['standard', 'Решить, прикладывать ли результат теста', 'Результат теста необязательный.'],
+  ]) {
+    const route = build({ conditions: [{ kind: 'documents', ru, test: { group, title } }] });
+    const step = route.steps.find(step => step.title === title);
+    assert.equal(step?.kind, 'test');
+    assert.equal(step.detail, ru);
+    assert.equal(phaseSteps(route, 'docs').length, 0);
+    assert.equal(route.week.some(step => step.kind === 'test'), false);
+  }
+});
+
+test('R0: требование сертификата дополняет один шаг языка без дублирования', () => {
+  const ru = 'Сертификат обязателен; IELTS или TOEFL на выбор.';
+  const route = build({ profile: NO_LANG, prepared: PREPARED,
+    conditions: [{ kind: 'documents', ru, test: { group: 'english', title: 'Подготовить сертификат' } }] });
+  assert.equal(phaseSteps(route, 'tests').length, 1);
+  assert.ok(phaseSteps(route, 'tests')[0].detail.includes(ru));
+  assert.deepEqual(route.gapNotes, [ru]);
+});
+
+test('R0: смешанный выбор языка и незагруженные треки не создают лишних обязанностей', () => {
+  const ru = 'Подойдёт английский или немецкий сертификат.';
+  const condition = { kind: 'documents', ru, test: { group: 'language', title: 'Выбрать сертификат языка' } };
+  const route = build({ profile: NO_LANG, prepared: PREPARED, conditions: [condition] });
+  assert.equal(phaseSteps(route, 'tests').length, 1);
+  assert.equal(phaseSteps(route, 'tests')[0].title, condition.test.title);
+  const unloaded = build({ profile: NO_LANG, tracks: {}, conditions: [
+    { ...condition, test: { group: 'english', title: 'Подготовить сертификат' } },
+  ] });
+  assert.equal(phaseSteps(unloaded, 'tests').length, 1);
+});
+
+test('R0: KAIST — сертификат обязателен при рекомендованном балле, стандартный тест не теряется', () => {
+  const source = JSON.parse(readFileSync(new URL('../data/programs/kaist.json', import.meta.url), 'utf8'));
+  const route = build({ program: source, profile: { ...ME, languageTests: [{ test: 'IELTS', score: 6 }] },
+    prepared: PREPARED, conditions: source.textConditions });
+  const language = reasonText(route.gaps.find(reason => reason.field === 'language'));
+  assert.match(language.detail, /Сам сертификат может быть обязателен/);
+  assert.ok(route.gapNotes.some(note => /обязаны предоставить/.test(note)));
+  const standard = phaseSteps(route, 'tests').find(step => /SAT.*ACT.*AP.*IB/.test(step.detail));
+  assert.ok(standard, 'обязательный стандартный тест показан отдельно с полным списком альтернатив');
+  assert.equal(phaseSteps(route, 'docs').some(step => step.title.includes('стандартизированного теста')), false);
+});
+
+test('R0: итог исключает закрытые сроки, каталог считает все совпадения по условиям', () => {
+  const eligible = programOf({ eligibility: { schoolYears: { noLimit: true }, exam: { noLimit: true }, graduationYear: { noLimit: true } } });
+  const closed = { ...eligible, id: 'closed', deadline: { closes: '2026-10-01', confidence: 'confirmed' } };
+  const programs = [eligible, closed];
+  assert.equal(readySummary(ME, programs, TODAY).count, 1);
+  const items = programs.map(program => ({ bucket: bucketOf(evaluate(ME, program, TODAY)) }));
+  assert.equal(bucketCounts(items).yes, 2);
 });
 
 // ——— правило 7: счётчик ———

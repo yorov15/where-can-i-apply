@@ -465,4 +465,16 @@ def _check_condition_tags(number: int, condition: dict, required: bool) -> list[
         problems.append(f"условие {number}: field {field!r} — не поле анкеты")
     if kind == "workaround" and not field:
         problems.append(f"условие {number}: обходной путь без field — непонятно, что он обходит")
+    if "test" in condition:
+        tag = condition["test"]
+        if kind != "documents" or not isinstance(tag, dict):
+            problems.append(f"условие {number}: test — объект разметки документа-экзамена")
+        else:
+            if set(tag) != {"group", "title"} or not isinstance(tag.get("group"), str) or tag.get("group") not in {
+                "english", "standard", "chinese", "csca", "language"
+            }:
+                problems.append(f"условие {number}: неизвестная группа или поля test")
+            title = tag.get("title")
+            if not isinstance(title, str) or not title.strip() or len(title) > 80:
+                problems.append(f"условие {number}: test.title — непустое действие до 80 знаков")
     return problems

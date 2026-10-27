@@ -108,7 +108,7 @@ def workaround_fields(program: dict) -> list[str]:
 
 def _condition_for_site(condition: dict) -> dict:
     entry = {"ru": condition.get("ru") or ""}
-    for key in ("field", "kind"):
+    for key in ("field", "kind", "test"):
         if key in condition:
             entry[key] = condition[key]
     fee = condition.get("fee")

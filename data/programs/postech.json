@@ -227,7 +227,11 @@
       "ru": "Официальный результат теста по английскому языку (IELTS, TOEFL, TEPS или TOEIC L&R).",
       "evidence": "Official Score Report of English Language Proficiency Test Score",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "english",
+        "title": "Подготовить результат теста английского для POSTECH"
+      }
     },
     {
       "ru": "Согласие и запрос на проверку академических записей (Letter of Consent and Request (Verification of Academic Records)).",

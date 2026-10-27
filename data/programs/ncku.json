@@ -163,7 +163,11 @@
       "ru": "Сертификат о владении языком обучения выбранной программы (английский CEFR B1 и выше или китайский TOCFL A2 и выше; кафедра может требовать строже).",
       "evidence": "Applicants must submit language proficiency certificates corresponding to the language of instruction of the intended department/program.",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "test": {
+        "group": "language",
+        "title": "Проверить требования кафедры к языку обучения"
+      }
     },
     {
       "ru": "Подтверждение оплаты вступительного взноса либо загрузка квитанции об оплате в систему подачи.",
