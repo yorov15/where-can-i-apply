@@ -50,6 +50,8 @@
 <link rel="modulepreload" href="js/lib/url.js">
 <link rel="modulepreload" href="js/config.js">
 <link rel="modulepreload" href="js/plan.js">
+<link rel="modulepreload" href="js/route.js">
+<link rel="modulepreload" href="js/route-view.js">
 <link rel="modulepreload" href="js/compare.js">
 <link rel="modulepreload" href="js/cost.js">
 <link rel="modulepreload" href="js/lib/priority.js">
@@ -65,7 +67,7 @@
 </div>
 <header class="hero">
   <h1>Куда можно подавать документы</h1>
-  <p class="lead">Пять вопросов — и по каждой программе видно: можно подавать, чего не хватает или почему нет. Анкета остаётся в телефоне.</p>
+  <p class="lead">Пять вопросов — и по каждой программе видно: можно подавать, чего не хватает или почему нет. Для 26 самых ходовых программ есть маршрут: что сдать, какие документы собрать и когда подать. Анкета остаётся в телефоне.</p>
 </header>
 
 <main id="main">
@@ -267,6 +269,11 @@
 
     <div id="results"></div>
   </section>
+
+  <section id="route" aria-label="Маршрут до оффера" hidden>
+    <h2 class="catalog-title">Маршрут до оффера</h2>
+    <div id="route-body"></div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -281,6 +288,7 @@
 
 <nav id="tabbar" class="tabbar" aria-label="Разделы сайта" hidden>
   <button type="button" class="tab" data-tab="answer">Итог</button>
+  <button type="button" class="tab" data-tab="route">Маршрут</button>
   <button type="button" class="tab" data-tab="catalog">Программы</button>
   <button type="button" class="tab" data-tab="plan">План <span class="tab-count"></span></button>
 </nav>

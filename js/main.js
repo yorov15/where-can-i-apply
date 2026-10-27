@@ -5,9 +5,11 @@ import { setupCatalogFilter } from './filter.js';
 import { setupBarHide } from './barscroll.js';
 import { setupTabbar } from './tabbar.js';
 import { setupPriority } from './priority.js';
-import { loadIndex, loadDetails, loadConditions } from './data.js';
+import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack } from './data.js';
 import { renderResults } from './render.js';
 import { loadPlan, savePlan, togglePlan, PLAN_KEY, DONE_KEY, loadDone, saveDone } from './plan.js';
+import { loadRouteState, saveRouteState, setGoal, toggleStep, clearProgress, buildRoute, exportState, importState, ROUTE_STATE_KEY } from './route.js';
+import { renderRoute } from './route-view.js';
 import { EXPLAIN_URL } from './config.js';
 
 const form = document.getElementById('profile');
@@ -18,6 +20,8 @@ const today = new Date().toISOString().slice(0, 10);
 // в браузере работает.
 const answerScreen = document.getElementById('answer');
 const catalogScreen = document.getElementById('catalog');
+const routeScreen = document.getElementById('route');
+const routeBody = document.getElementById('route-body');
 const catalogButton = document.getElementById('open-catalog');
 
 // Пока человек не закончил анкету, ни ответа, ни каталога не видно: ответ
@@ -29,13 +33,23 @@ let finished = false;
 // только отодвигает ответ вниз: на телефоне это пять строк до первого слова.
 const lead = document.querySelector('.lead');
 
-function showCatalog(on) {
-  answerScreen.hidden = on || !finished;
-  catalogScreen.hidden = !on || !finished;
-  if (on && finished) buildCards();
+function showScreen(name) {
+  const ready = finished;
+  document.body.dataset.screen = name;
+  answerScreen.hidden = !ready || name !== 'answer';
+  catalogScreen.hidden = !ready || name !== 'catalog';
+  routeScreen.hidden = !ready || name !== 'route';
+  if (ready && name === 'catalog') buildCards();
+  if (ready && name === 'route') openRoute();
   if (lead) lead.hidden = finished;
   tabbar.show(finished);
   tabbar.sync();
+}
+
+function screenFromHash() {
+  if (location.hash === '#route') return 'route';
+  if (location.hash === '#programs') return 'catalog';
+  return 'answer';
 }
 
 function openProgram(id) {
@@ -59,12 +73,14 @@ setupBarHide(document.querySelector('.catalog-bar'));
 // Нижняя панель вкладок (телефон). Экраны переключаются адресом, как и кнопками.
 const tabbar = setupTabbar({
   bar: document.getElementById('tabbar'),
-  isCatalog: () => location.hash === '#programs',
+  hash: () => location.hash,
   bucket: () => document.querySelector('#catalog-tools .chip[aria-pressed="true"]')?.dataset.bucket,
   watch: document.getElementById('catalog-tools'),
   go(name) {
     if (name === 'answer') {
-      if (location.hash === '#programs') location.hash = '';
+      if (location.hash) location.hash = '';
+    } else if (name === 'route') {
+      location.hash = 'route';
     } else {
       catalogFilter.showBucket(name === 'plan' ? 'plan' : 'all');
       location.hash = 'programs';
@@ -120,7 +136,7 @@ const openFilters = () => { if (wide.matches) document.querySelector('.catalog-m
 openFilters();
 wide.addEventListener?.('change', openFilters);
 
-const syncScreen = () => showCatalog(location.hash === '#programs');
+const syncScreen = () => showScreen(screenFromHash());
 addEventListener('hashchange', syncScreen);
 
 catalogButton.addEventListener('click', () => {
@@ -158,6 +174,183 @@ const details = {
     return loadConditions(id).then((list) => { details.conditions[id] = list ?? null; });
   },
 };
+
+// ——— Маршрут до оффера ———
+// Цель и галочки живут рядом с планом, в localStorage; ничего не уходит
+// наружу. Полный маршрут есть только у программ из data/route.json: у
+// остальных показываем срок, требования и что уточнить у вуза.
+let routeData = null;
+let routeDataLoading = null;
+let routeState = loadRouteState(localStorage);
+let routeTracks = {};
+let routeCtx = null;
+let route = null;
+let routeStatus = '';
+
+const programById = (id) => programs.find((program) => program.id === id);
+
+function loadRouteData() {
+  if (!routeDataLoading) {
+    routeDataLoading = loadRoute()
+      .then((data) => { routeData = data; })
+      .catch(() => { routeData = null; });
+  }
+  return routeDataLoading;
+}
+
+function persistRoute() {
+  saveRouteState(routeState, localStorage);
+}
+
+function preparedEntry(id) {
+  return routeData?.prepared?.find((entry) => entry.id === id) ?? null;
+}
+
+// Новичку цель выбирать не из чего: берём первую программу из плана, у
+// которой маршрут сверен. План пуст — оставляем выбор человеку.
+function defaultGoal() {
+  const first = plan.ids.find((id) => preparedEntry(id) && programById(id));
+  return first ?? null;
+}
+
+async function openRoute() {
+  if (!routeData) await loadRouteData();
+  if (!routeState.goal || !programById(routeState.goal)) {
+    const first = defaultGoal();
+    if (first) {
+      routeState = setGoal(routeState, first);
+      persistRoute();
+    }
+  }
+  await refreshRoute();
+  renderRouteView();
+}
+
+async function refreshRoute() {
+  if (!routeData) {
+    route = null;
+    routeCtx = null;
+    return;
+  }
+  const goalId = routeState.goal;
+  const program = goalId ? programById(goalId) : null;
+  if (!program) {
+    route = null;
+    routeCtx = null;
+    return;
+  }
+  const prepared = preparedEntry(goalId);
+  const codes = [...new Set(prepared?.tests ?? [])];
+  await Promise.all(codes.map((code) => loadTrack(code)));
+  for (const code of codes) {
+    const track = await loadTrack(code);
+    if (track) routeTracks[code] = track;
+  }
+  await details.ensure(goalId);
+  routeCtx = { program, conditions: details.conditions[goalId] ?? null, prepared };
+  rebuildRoute();
+}
+
+function rebuildRoute() {
+  if (!routeCtx) {
+    route = null;
+    return;
+  }
+  route = buildRoute({
+    program: routeCtx.program,
+    conditions: routeCtx.conditions,
+    profile: readForm(form),
+    today,
+    prepared: routeCtx.prepared,
+    tracks: routeTracks,
+    state: routeState,
+  });
+}
+
+const showRouteStatus = (message) => {
+  routeStatus = message ?? '';
+  renderRouteView();
+};
+
+function renderRouteView() {
+  renderRoute(routeBody, {
+    programs,
+    goal: routeState.goal,
+    route,
+    prepared: routeData?.prepared ?? [],
+    planIds: plan.ids,
+    tracks: routeTracks,
+    status: routeStatus,
+    handlers: {
+      onGoal(id) {
+        routeState = setGoal(routeState, id);
+        persistRoute();
+        refreshRoute().then(renderRouteView);
+      },
+      onToggle(stepId) {
+        routeState = toggleStep(routeState, stepId);
+        persistRoute();
+        rebuildRoute();
+        renderRouteView();
+      },
+      onPrint() {
+        window.print();
+      },
+      onParent(text) {
+        return navigator.clipboard.writeText(text).then(
+          () => 'Скопировано. Можно вставить в мессенджер.',
+          () => 'Браузер не дал скопировать.',
+        );
+      },
+      onExport() {
+        try {
+          const text = exportState(routeState);
+          const blob = new Blob([text], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const node = document.createElement('a');
+          node.href = url;
+          node.download = 'nerio-route.json';
+          document.body.append(node);
+          node.click();
+          node.remove();
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+          return 'Маршрут сохранён в файл.';
+        } catch {
+          return 'Браузер не дал сохранить файл.';
+        }
+      },
+      async onImport(picked) {
+        try {
+          const imported = importState(await picked.text());
+          if (!imported) return 'Это не файл маршрута Nerio.';
+          routeState = imported;
+          persistRoute();
+          await refreshRoute();
+          return 'Маршрут загружен.';
+        } catch {
+          return 'Не получилось прочитать файл.';
+        }
+      },
+      onClear() {
+        routeState = clearProgress(routeState);
+        persistRoute();
+        rebuildRoute();
+        renderRouteView();
+        return 'Прогресс стёрт, цель осталась.';
+      },
+      onOpen(programId) {
+        openProgram(programId);
+      },
+      onStatus: showRouteStatus,
+    },
+  });
+}
+
+// Перед печатью раскрываем подробности шагов: на бумаге закрытое
+// раскрытие — это пропавший текст условия.
+addEventListener('beforeprint', () => {
+  for (const node of routeBody.querySelectorAll('details')) node.open = true;
+});
 
 const saved = loadProfile(localStorage);
 writeForm(form, saved);
@@ -220,6 +413,11 @@ function refresh(profile = readForm(form)) {
   profileBox.update(profile);
   tabbar.setPlanCount(plan.ids.length);
   cardsStale = Boolean(renderResults(nodes, profile, programs, today, details)?.skippedCards);
+  // Маршрут строится из анкеты: поправил балл — маршрут и неделя другие.
+  if (!routeScreen.hidden) {
+    rebuildRoute();
+    renderRouteView();
+  }
 }
 
 function fetchDetails() {
@@ -257,7 +455,13 @@ document.getElementById('clear-profile').addEventListener('click', () => {
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(PLAN_KEY);
     localStorage.removeItem(DONE_KEY);
+    localStorage.removeItem(ROUTE_STATE_KEY);
   } catch { /* приватный режим: стирать нечего */ }
+  routeState = loadRouteState(localStorage);
+  route = null;
+  routeCtx = null;
+  routeTracks = {};
+  routeStatus = '';
   box.open = true;
   finished = false;
   location.hash = '';
@@ -312,6 +516,11 @@ loadIndex()
       lostNote.hidden = false;
     }
     fetchDetails();
+    // Маршрут — отдельный маленький файл: если человек пришёл сразу на
+    // #route, к моменту нажатия он уже приехал.
+    loadRouteData().then(() => {
+      if (location.hash === '#route') openRoute();
+    });
   })
   .catch(() => {
     showLoadError();

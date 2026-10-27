@@ -1,24 +1,26 @@
-// Нижняя панель вкладок на телефоне: Итог, Программы, План. Большой палец
-// достаёт до низа экрана, а до кнопки «Назад» вверху и до кнопки посреди
-// ответа нет. Вкладки не заводят новых экранов: «Итог» и «Программы» — это
-// те же два экрана, «План» — каталог с фильтром «В плане».
+// Нижняя панель вкладок на телефоне: Итог, Маршрут, Программы, План. Большой
+// палец достаёт до низа экрана, а до кнопки «Назад» вверху и до кнопки посреди
+// ответа нет. Вкладки не заводят новых экранов: «Итог», «Маршрут» и
+// «Программы» — это три экрана одного файла, «План» — каталог с фильтром
+// «В плане».
 //
 // Выбор вкладки — чистая функция, она покрыта тестом. setupTabbar только
 // слушает нажатия и, как вся работа с DOM в проекте, тестами не покрыта.
 
-export function activeTab(onCatalog, bucket) {
-  if (!onCatalog) return 'answer';
+export function activeTab(hash, bucket) {
+  if (hash === '#route') return 'route';
+  if (hash !== '#programs') return 'answer';
   return bucket === 'plan' ? 'plan' : 'catalog';
 }
 
-// bar — сама панель; isCatalog и bucket говорят, что сейчас на экране;
+// bar — сама панель; hash и bucket говорят, что сейчас на экране;
 // go(name) переключает экран; watch — узел, нажатия в котором меняют фильтр.
-export function setupTabbar({ bar, isCatalog, bucket, go, watch }) {
+export function setupTabbar({ bar, hash, bucket, go, watch }) {
   const tabs = [...bar.querySelectorAll('[data-tab]')];
   const count = bar.querySelector('.tab-count');
 
   const sync = () => {
-    const now = activeTab(isCatalog(), bucket());
+    const now = activeTab(hash(), bucket());
     for (const tab of tabs) {
       if (tab.dataset.tab === now) tab.setAttribute('aria-current', 'page');
       else tab.removeAttribute('aria-current');

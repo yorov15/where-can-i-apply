@@ -21,6 +21,20 @@ export async function loadIndex() {
 }
 export const loadDetails = () => loadJson('data/details.json');
 
+// Маршрут: один маленький файл со списком программ, у которых маршрут
+// сверен, и с кодами треков подготовки. Треки грузятся по одному и только
+// тогда, когда у цели есть экзамен: за все 13 файлов платить незачем.
+export const loadRoute = () => loadJson('data/route.json');
+
+const tracks = new Map();
+
+export function loadTrack(code) {
+  if (!tracks.has(code)) {
+    tracks.set(code, loadJson(`data/prep/exams/${encodeURIComponent(code)}.json`).catch(() => null));
+  }
+  return tracks.get(code);
+}
+
 // Копия держится в памяти: карточку можно раскрыть и закрыть несколько раз,
 // и каждый раз идти в сеть незачем. В кэш кладётся промис, а не результат,
 // чтобы второе раскрытие не начало вторую загрузку.
