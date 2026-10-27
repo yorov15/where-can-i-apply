@@ -134,6 +134,7 @@ const CONFIGURED = (process.env.EXPLAIN_MODELS ?? '').split(',').map((s) => s.tr
 const isGoKey = (key) => typeof key === 'string' && key.startsWith('oc_sk_');
 const goKey = () => [process.env.OPENCODE_API_KEY, process.env.OPENROUTER_API_KEY].find(isGoKey) ?? '';
 const routerKey = () => (isGoKey(process.env.OPENROUTER_API_KEY) ? '' : process.env.OPENROUTER_API_KEY ?? '');
+const essayEnabled = () => process.env.ESSAY_REVIEW_ENABLED==='1'&&Boolean(routerKey());
 const usable = (name) => (name.startsWith('go/') ? Boolean(goKey()) : Boolean(routerKey()));
 const pickModels = () => (CONFIGURED.length ? CONFIGURED : goKey() ? GO_MODELS : FREE_MODELS).filter(usable).slice(0, 9);
 const modelGroups = () => chunk(pickModels(), 1);
@@ -233,6 +234,10 @@ async function handle(req, res, cors) {
     return send(res,Buffer.byteLength(raw)>LIMITS.bodyBytes?413:400,{error:Buffer.byteLength(raw)>LIMITS.bodyBytes?'too-big':'bad-request'},cors);
   }
   if(body?.mode!=='essay'&&Math.max(Buffer.byteLength(raw),Number(req.headers['content-length'])||0)>LIMITS.bodyBytes)return send(res,413,{error:'too-big'},cors);
+  if(body?.mode==='essay-status'){
+    if(Object.keys(body).length!==1)return send(res,400,{error:'bad-request'},cors);
+    return send(res,200,{available:essayEnabled()},cors);
+  }
   if(body?.mode!=='essay'&&!pickModels().length)return send(res,503,{error:'off'},cors);
 
   const data = await loadData();
@@ -242,7 +247,7 @@ async function handle(req, res, cors) {
     const program=typeof body.programId==='string'?data.index.programs.find(item=>item.id===body.programId):null;
     const spec=program?await essaySpecFor(program.id):null;
     const result=await reviewEssay({body,ip:clientIp(req)},{program,spec,limiter,deviceLimiter:essayDeviceLimiter,
-      available:Boolean(routerKey()),callModel:prompt=>callEssayModel(prompt,trace)});
+      available:essayEnabled(),callModel:prompt=>callEssayModel(prompt,trace)});
     return send(res,result.status,result.json,cors);
   }
   const { status, json } = await explain(

@@ -4,6 +4,11 @@ export const ESSAY_ERRORS={rate:'Лимит проверок исчерпан. �
   model:'Модель не вернула пригодный отзыв. Черновик остался в поле.',network:'Не получилось связаться. Черновик остался в поле.',
   storage:'В этом браузере ИИ-проверка недоступна. Чек-лист работает.',restricted:'У этой программы есть ограничения на такую проверку.',invalid:'Вставь черновик длиной от 40 до 10 000 знаков.'};
 const localDay=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
+export async function essayAvailable(url,fetchImpl=fetch){
+  if(!url)return false;
+  try{const response=await fetchImpl(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'essay-status'}),signal:AbortSignal.timeout(10000)});
+    return response.ok&&(await response.json()).available===true;}catch{return false;}
+}
 export function essayUsage(storage=localStorage,today=localDay()) {
   try{const raw=JSON.parse(storage.getItem(ESSAY_USAGE_KEY)??'null');return raw?.day===today&&Number.isInteger(raw.count)&&raw.count>=0?Math.min(3,raw.count):0;}catch{return 0;}
 }

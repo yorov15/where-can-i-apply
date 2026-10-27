@@ -1,10 +1,11 @@
-import { askEssay,draftSize,essayUsage,ESSAY_ERRORS } from './essay.js';
+import { askEssay,draftSize,essayUsage,essayAvailable,ESSAY_ERRORS } from './essay.js';
 import { safeHttpUrl } from './lib/url.js';
 import { EXPLAIN_URL } from './config.js';
 import { formatDate } from './lib/format.js';
 // Drafts and feedback survive a route re-render in memory, but are never
 // written to storage, route exports or analytics. Reloading clears them.
 const drafts=new Map();
+let availabilityRequest;
 const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!=null)node.textContent=text;return node;};
 const sourceLink=(source,label)=>{const url=safeHttpUrl(source?.url);if(!url)return el('span',null,'Источник не загрузился');
   const a=el('a',null,label??`Источник · проверено ${formatDate(source.lastVerified)}`);a.href=url;a.target='_blank';a.rel='noopener';return a;};
@@ -13,7 +14,7 @@ export function renderEssays(goals,specs,onRetry) {
   const entries=goals.filter(goal=>Object.hasOwn(specs,goal.id));if(!entries.length)return null;
   const section=el('section','route-phase');section.dataset.essays='';
   section.append(el('h3',null,'Эссе и мотивационные письма'));
-  section.append(el('p','route-detail','Сначала ответь на вопрос вуза своими словами. ИИ даёт замечания к черновику.'));
+  section.append(el('p','route-detail','Сверь задание и требования программы. Ответь своими словами и проверь объём.'));
   for(const goal of entries){
     const spec=specs[goal.id],box=el('details','route-more');box.dataset.essayProgram=goal.id;
     box.append(el('summary',null,goal.name.split(' — ')[0]));
@@ -21,7 +22,6 @@ export function renderEssays(goals,specs,onRetry) {
     const blocked=spec.essayPolicy?.review==='blocked';
     if(blocked){box.append(el('p','route-warn',spec.essayPolicy.note),sourceLink(spec.essayPolicy.source,'Правило программы'));
       box.append(el('p','route-detail','ИИ-проверка здесь отключена. Используй требования и собственные примеры.'));}
-    else box.append(el('p','route-detail','Правило об ИИ в собранных источниках не найдено. Перед отправкой сверь действующие правила программы.'));
     for(const item of spec.essays??[]){
       const field=el('details','route-more');field.dataset.essayField=item.id;field.append(el('summary',null,item.title));
       if(item.prompt)field.append(el('p','route-detail',item.prompt));
@@ -44,12 +44,15 @@ export function renderEssays(goals,specs,onRetry) {
         count.className=over?'route-warn':'route-detail';if(over)count.textContent+=' Объём превышает лимит.';
       };size();input.addEventListener('input',()=>{saved.text=input.value;saved.feedback=null;saved.status='';feedback.replaceChildren();status.textContent='';size();});field.append(count);
       const feedback=el('div'),status=el('p','route-status');status.setAttribute('role','status');status.textContent=saved.status;
+      field.append(el('p','route-detail','Черновик исчезнет после перезагрузки. Сохрани свою копию.'));
       const show=()=>{feedback.replaceChildren();for(const [name,title] of [['response','Ответ на вопрос'],['structure','Ход мысли'],['questions','Что уточнить самому']]){
         if(!saved.feedback?.[name])continue;feedback.append(el('h4',null,title));for(const line of saved.feedback[name])feedback.append(el('p','route-detail',line));}};show();
       if(!blocked&&item.prompt){
-        field.append(el('p','route-detail','Черновик исчезнет после перезагрузки. Сохрани свою копию. Для проверки он уйдёт через Vercel и OpenRouter к бесплатной модели; убери имена и контакты.'));
-        const consentLabel=el('label','row'),consent=el('input');consent.type='checkbox';consentLabel.append(consent,document.createTextNode('Я сверил правила программы и разрешаю отправить этот черновик на ИИ-проверку.'));field.append(consentLabel);
-        const quota=el('p','route-detail'),updateQuota=()=>{quota.textContent=`Сегодня осталось ${3-essayUsage()} из 3 попыток на этот браузер. Ошибка запроса тоже расходует попытку.`;};updateQuota();field.append(quota);
+        const aiBox=el('div');aiBox.hidden=true;
+        const availabilityNote=el('p','route-detail','ИИ-проверку включим позже. Сейчас используй чек-лист и счётчик объёма.');field.append(availabilityNote);
+        aiBox.append(el('p','route-detail','Правило об ИИ в собранных источниках не найдено. Сверь действующие правила программы. Для проверки черновик уйдёт через Vercel и OpenRouter к бесплатной модели; убери имена и контакты.'));
+        const consentLabel=el('label','row'),consent=el('input');consent.type='checkbox';consentLabel.append(consent,document.createTextNode('Я сверил правила программы и разрешаю отправить этот черновик на ИИ-проверку.'));aiBox.append(consentLabel);
+        const quota=el('p','route-detail'),updateQuota=()=>{quota.textContent=`Сегодня осталось ${3-essayUsage()} из 3 попыток на этот браузер. Ошибка запроса тоже расходует попытку.`;};updateQuota();aiBox.append(quota);
         const check=el('button','button button-quiet',saved.busy?'Проверяю…':'Проверить черновик');check.type='button';check.disabled=saved.busy;
         saved.update=()=>{show();status.textContent=saved.status;check.disabled=saved.busy;input.readOnly=saved.busy;check.textContent=saved.busy?'Проверяю…':'Проверить черновик';updateQuota();};saved.update();
         check.addEventListener('click',async()=>{
@@ -59,7 +62,9 @@ export function renderEssays(goals,specs,onRetry) {
           try{saved.feedback=await askEssay({programId:goal.id,essayId:item.id,draft:input.value},{url:EXPLAIN_URL});saved.status='Отзыв ИИ. Проверь его и реши сам, что менять.';}
           catch(error){saved.status=ESSAY_ERRORS[error.kind]??ESSAY_ERRORS.model;}
           finally{saved.busy=false;saved.update();}
-        });field.append(check);
+        });aiBox.append(check);field.append(aiBox);
+        availabilityRequest??=essayAvailable(EXPLAIN_URL);
+        availabilityRequest.then(available=>{aiBox.hidden=!available;availabilityNote.hidden=available;});
       }
       field.append(status,feedback);box.append(field);
     }

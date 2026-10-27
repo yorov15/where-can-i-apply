@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {askEssay,draftSize,essayUsage,ESSAY_USAGE_KEY} from '../js/essay.js';
+import {askEssay,draftSize,essayUsage,essayAvailable} from '../js/essay.js';
 import {reviewEssay,parseEssayFeedback,createEssayLimiter,ESSAY_SYSTEM} from '../api/_essay-core.js';
 const text='В кружке я собрал простой датчик и сравнил показания при разных условиях. Самая сложная часть состояла в проверке собственных предположений.';
 const feedback={response:['Объясни, какой вопрос ты хотел проверить.'],structure:['Покажи связь между опытом и выбором программы.'],questions:['Как ты проверил, что датчик работает правильно?']};
@@ -11,6 +11,14 @@ const storage=()=>{const map=new Map();return {getItem:key=>map.get(key)??null,s
 const locks={request:async(name,fn)=>fn()};
 const client=over=>({url:'https://example.test/api',storage:storage(),locks,today:'2026-10-27',randomId:()=>body().deviceId,
   fetchImpl:async()=>({ok:true,json:async()=>({feedback})}),...over});
+
+test('availability probe sends only mode, defaults to unavailable on transport or response errors',async()=>{
+  let payload;assert.equal(await essayAvailable('https://example.test/api',async(url,request)=>{payload=JSON.parse(request.body);return {ok:true,json:async()=>({available:true})};}),true);
+  assert.deepEqual(payload,{mode:'essay-status'});
+  assert.equal(await essayAvailable(null),false);
+  assert.equal(await essayAvailable('https://example.test/api',async()=>{throw Error('offline');}),false);
+  assert.equal(await essayAvailable('https://example.test/api',async()=>({ok:true,json:async()=>({available:'true'})})),false);
+});
 
 test('draft size distinguishes Unicode characters and UTF-8 bytes, including spaces',()=>{
   assert.deepEqual(draftSize('Я 🙂'),{words:2,characters:3,bytes:7});assert.equal(draftSize('').words,0);

@@ -6,6 +6,7 @@ const read=id=>JSON.parse(readFileSync(new URL(`../data/prep/${id}.json`,import.
 const feedback={response:['Уточни, откуда возник исследовательский вопрос.'],structure:['Добавь связь между наблюдением и выводом.'],questions:['Какой результат заставил тебя изменить подход?']};
 process.env.OPENROUTER_API_KEY='essay-test-router-key';process.env.OPENCODE_API_KEY='oc_sk_essay-test-go-key';
 process.env.EXPLAIN_MODELS='go/paid-test-model';process.env.DATA_BASE_URL='https://data.example.test/';
+process.env.ESSAY_REVIEW_ENABLED='1';
 let requests=[],modelCalls=0,garbage=false,serial=1;
 globalThis.fetch=async(url,options)=>{
   const address=String(url);
@@ -24,6 +25,15 @@ async function call(body,headers={}){
   const result={headers:{}};const res={setHeader:(key,value)=>{result.headers[key]=value;},end:value=>{result.status=res.statusCode;result.json=value?JSON.parse(value):null;}};
   await handler(req,res);return result;
 }
+test('explicit server switch keeps essay review off even with a valid router key; status never calls models',async()=>{
+  const before=modelCalls;delete process.env.ESSAY_REVIEW_ENABLED;
+  assert.deepEqual((await call({mode:'essay-status'})).json,{available:false});
+  assert.deepEqual((await call(input())).json,{error:'off'});
+  process.env.ESSAY_REVIEW_ENABLED='1';
+  assert.deepEqual((await call({mode:'essay-status'})).json,{available:true});
+  assert.equal((await call({mode:'essay-status',draft:'must not be accepted'})).status,400);
+  assert.equal(modelCalls,before);
+});
 test('essay endpoint chooses only free OpenRouter despite configured paid Go model, uses privacy constraints and no draft cache',async()=>{
   const body=input(),before=modelCalls;
   for(let i=0;i<2;i++){const result=await call(body);assert.equal(result.status,200);assert.deepEqual(result.json,{feedback});assert.equal(result.headers['Cache-Control'],'no-store');}
