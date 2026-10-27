@@ -19,6 +19,7 @@ import { buildCombinedRoute } from './route-combined.js';
 import { renderRoute } from './route-view.js';
 import { EXPLAIN_URL } from './config.js';
 import { renderToday } from './today-view.js';
+import { renderProgram, programRow } from './program-view.js';
 
 const form = document.getElementById('profile');
 const today = new Date().toISOString().slice(0, 10);
@@ -27,7 +28,8 @@ const today = new Date().toISOString().slice(0, 10);
 // вторую шапку и второй разбор анкеты. Адрес всё равно настоящий — назад
 // в браузере работает.
 const answerScreen = document.getElementById('answer');
-const catalogScreen = document.getElementById('catalog');
+const programScreen = document.getElementById('program');
+const programBody = document.getElementById('program-body');
 const routeScreen = document.getElementById('route');
 const routeBody = document.getElementById('route-body');
 const todayScreen = document.getElementById('today');
@@ -35,7 +37,6 @@ const todayBody = document.getElementById('today-body');
 // Маршрут и «Сегодня» питаются одним состоянием; фокус после перерисовки
 // возвращаем на том экране, который сейчас открыт.
 const activeBody = () => (todayScreen.hidden ? routeBody : todayBody);
-const catalogButton = document.getElementById('open-catalog');
 
 // Пока человек не закончил анкету, ни ответа, ни каталога не видно: ответ
 // по пустому профилю — это стена «можно, но сначала», из которой нечего
@@ -52,34 +53,64 @@ function showScreen(name) {
   // человека на пустом экране.
   if (!ready) name = 'answer';
   document.body.dataset.screen = name;
+  // Уходя на экран программы, запоминаем место в списке: назад человек
+  // возвращается к тому же вузу, а не в начало трёхсот строк.
+  if (name === 'program' && !answerScreen.hidden) answerScroll = window.scrollY;
+  const back = ready && name === 'answer' && answerScreen.hidden;
   answerScreen.hidden = !ready || name !== 'answer';
-  catalogScreen.hidden = !ready || name !== 'catalog';
+  programScreen.hidden = !ready || name !== 'program';
   routeScreen.hidden = !ready || name !== 'route';
   todayScreen.hidden = !ready || name !== 'today';
-  if (ready && name === 'catalog') buildCards();
+  if (ready && name === 'answer') buildCards();
+  if (ready && name === 'program') renderProgramView();
+  if (back && answerScroll) requestAnimationFrame(() => window.scrollTo({ top: answerScroll, behavior: 'instant' }));
   if (ready && (name === 'route' || name === 'today')) openRoute();
   if (lead) lead.hidden = finished;
   tabbar.show(finished);
   tabbar.sync();
 }
 
+let answerScroll = 0;
+const PROGRAM_PREFIX = '#program/';
+
 function screenFromHash() {
   if (location.hash === '#route') return 'route';
   if (location.hash === '#today') return 'today';
-  if (location.hash === '#programs') return 'catalog';
+  if (location.hash.startsWith(PROGRAM_PREFIX)) return 'program';
   return 'answer';
 }
 
-function openProgram(id) {
-  // Карточка может ещё не существовать: пока каталог закрыт, их не строят.
-  buildCards();
-  // Карточку, спрятанную фильтром, открыть нельзя: сначала снимаем его.
-  catalogFilter.reset();
-  location.hash = 'programs';
-  const card = catalogScreen.querySelector(`details.card[data-id="${CSS.escape(id)}"]`);
-  if (!card) return;
-  card.open = true;
-  card.scrollIntoView({ block: 'start' });
+// Прежний адрес #programs и пустой адрес ведут на один и тот же экран.
+const openProgram = (id) => { location.hash = PROGRAM_PREFIX.slice(1) + encodeURIComponent(id); };
+const openAnswer = () => { location.hash = ''; };
+
+function programIdFromHash() {
+  try { return decodeURIComponent(location.hash.slice(PROGRAM_PREFIX.length)); } catch { return ''; }
+}
+
+let leftFirstPage = false;
+addEventListener('hashchange', () => { leftFirstPage = true; });
+
+// Экран программы живёт по адресу: перерисовываем его, когда меняется анкета,
+// план или приезжают подробности.
+function renderProgramView() {
+  const id = programIdFromHash();
+  const program = programs.find((item) => item.id === id);
+  renderProgram(programBody, {
+    row: program ? programRow(program, readForm(form), today) : null,
+    loading: details.status === 'loading' && !programs.length,
+    details, plan, today,
+    handlers: {
+      // Зашёл по прямой ссылке — назад в истории ведёт с сайта, поэтому на список.
+      onBack: () => (leftFirstPage ? history.back() : openAnswer()),
+      onOpenToday: () => { location.hash = 'today'; },
+    },
+  });
+  // Условия едут отдельным файлом: попросили — и после их прихода рисуем
+  // заново. Повтора не будет: после ensure условия уже не «ожидаются».
+  if (program && details.programs[id] && details.conditions[id] === undefined) {
+    details.ensure(id).then(() => { if (programIdFromHash() === id && !programScreen.hidden) renderProgramView(); });
+  }
 }
 
 const catalogFilter = setupCatalogFilter({
@@ -94,14 +125,8 @@ const tabbar = setupTabbar({
   hash: () => location.hash,
   watch: document.getElementById('catalog-tools'),
   go(name) {
-    if (name === 'answer') {
-      if (location.hash) location.hash = '';
-    } else if (name === 'route' || name === 'today') {
-      location.hash = name;
-    } else {
-      catalogFilter.showBucket(name === 'plan' ? 'plan' : 'all');
-      location.hash = 'programs';
-    }
+    if (name === 'route' || name === 'today') location.hash = name;
+    else if (location.hash) location.hash = '';
     window.scrollTo({ top: 0 });
   },
 });
@@ -131,14 +156,13 @@ const nodes = {
   summaryNode: document.getElementById('summary'),
   agendaNode: document.getElementById('agenda'),
   resultsNode: document.getElementById('results'),
-  catalogButton,
   onOpenProgram: openProgram,
   onOpenRoute: () => { location.hash = 'route'; },
-  // Каталог закрыт — карточки не пересобираем (см. renderResults).
-  skipCards: () => catalogScreen.hidden && !forceCards,
+  // Список не на экране — карточки не пересобираем (см. renderResults).
+  skipCards: () => answerScreen.hidden && !forceCards,
 };
 
-// Карточки каталога отстали от анкеты, пока каталог был закрыт.
+// Карточки списка отстали от анкеты, пока его не было на экране.
 let cardsStale = false;
 let forceCards = false;
 function buildCards() {
@@ -157,16 +181,8 @@ wide.addEventListener?.('change', openFilters);
 const syncScreen = () => showScreen(screenFromHash());
 addEventListener('hashchange', syncScreen);
 
-catalogButton.addEventListener('click', () => {
-  catalogFilter.showBucket(catalogButton.dataset.bucket || 'all');
-  location.hash = 'programs';
-  catalogScreen.scrollIntoView({ block: 'start' });
-});
-document.getElementById('back-to-answer').addEventListener('click', () => {
-  history.length > 1 ? history.back() : (location.hash = '');
-});
 document.getElementById('show-results').addEventListener('click', () => {
-  if (location.hash === '#programs') location.hash = '';
+  if (location.hash === '#programs') openAnswer();
 });
 
 // Шапка обещает, что данные никуда не уходят. Пока объяснялка выключена,
@@ -368,7 +384,7 @@ function renderRouteView() {
         renderRouteView();
         activeBody().querySelector(`[data-exam="${CSS.escape(code)}"] [data-field="${field}"]`)?.focus();
       },
-      onChooseGoals() { location.hash = 'programs'; },
+      onChooseGoals() { openAnswer(); },
       onRemoveGoal(id) { plan.toggle(id); },
       onToggle(stepId) {
         const aliases = route?.steps.find(step => step.id === stepId)?.legacyIds ?? [];
@@ -547,6 +563,7 @@ function refresh(profile = readForm(form)) {
   profileBox.update(profile);
   tabbar.setPlanCount(plan.ids.length);
   cardsStale = Boolean(renderResults(nodes, profile, programs, today, details)?.skippedCards);
+  if (!programScreen.hidden) renderProgramView();
   // Маршрут строится из анкеты: поправил балл — маршрут и неделя другие.
   if (!routeScreen.hidden || !todayScreen.hidden) {
     rebuildRoute();

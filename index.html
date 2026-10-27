@@ -63,6 +63,7 @@
 <link rel="modulepreload" href="js/essay.js">
 <link rel="modulepreload" href="js/essay-view.js">
 <link rel="modulepreload" href="js/route-view.js">
+<link rel="modulepreload" href="js/program-view.js">
 <link rel="modulepreload" href="js/compare.js">
 <link rel="modulepreload" href="js/cost.js">
 <link rel="modulepreload" href="js/lib/priority.js">
@@ -255,16 +256,9 @@
     </form>
   </details>
 
-  <section id="answer" aria-label="Ответ">
+  <section id="answer" aria-label="Куда можно">
+    <h2 class="catalog-title">Куда можно подать</h2>
     <div id="summary" class="summary" aria-live="polite" aria-atomic="true"></div>
-    <button type="button" id="open-catalog" class="button" hidden></button>
-    <div id="agenda"></div>
-  </section>
-
-  <section id="catalog" aria-label="Все программы" hidden>
-    <button type="button" id="back-to-answer" class="button button-quiet">← Назад к ответу</button>
-
-    <h2 class="catalog-title">Все программы</h2>
 
     <div id="catalog-tools" class="catalog-tools">
       <div class="catalog-bar">
@@ -272,10 +266,10 @@
         <input type="search" id="catalog-search" placeholder="Название или страна" autocomplete="off" enterkeyhint="search">
         <div class="chips" role="group" aria-label="Показать только">
           <button type="button" class="chip" data-bucket="all" aria-pressed="true">Все <span class="chip-count"></span></button>
-          <button type="button" class="chip" data-bucket="plan" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">★</span> В плане <span class="chip-count"></span></button>
-          <button type="button" class="chip" data-bucket="yes" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">✓</span> Подходишь <span class="chip-count"></span></button>
-          <button type="button" class="chip" data-bucket="likely" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">≈</span> Похоже <span class="chip-count"></span></button>
-          <button type="button" class="chip" data-bucket="check" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">!</span> Доделать <span class="chip-count"></span></button>
+          <button type="button" class="chip" data-bucket="plan" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">★</span> В моём пути <span class="chip-count"></span></button>
+          <button type="button" class="chip" data-bucket="yes" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">✓</span> Можно подавать <span class="chip-count"></span></button>
+          <button type="button" class="chip" data-bucket="likely" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">≈</span> Похоже, можно <span class="chip-count"></span></button>
+          <button type="button" class="chip" data-bucket="check" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">!</span> Нужно доделать <span class="chip-count"></span></button>
           <button type="button" class="chip" data-bucket="no" aria-pressed="false"><span class="chip-glyph" aria-hidden="true">✕</span> Нельзя <span class="chip-count"></span></button>
         </div>
       </div>
@@ -293,6 +287,11 @@
     </div>
 
     <div id="results"></div>
+    <p class="summary-note">Сайт проверяет условия подачи. Решение об отборе принимает вуз; шансы поступления здесь не оцениваются. Всё сверяй с сайтом программы. Закрытые программы тоже в списке, но в число «подходят» не входят.</p>
+  </section>
+
+  <section id="program" aria-label="Программа" hidden>
+    <div id="program-body"></div>
   </section>
 
   <section id="today" aria-label="Сегодня" hidden>
@@ -302,6 +301,10 @@
   <section id="route" aria-label="Мой путь" hidden>
     <h2 class="catalog-title">Мой путь</h2>
     <div id="route-body"></div>
+    <details class="route-phase" hidden>
+      <summary class="route-phase-title">План, сравнение и сроки</summary>
+      <div id="agenda"></div>
+    </details>
   </section>
 </main>
 

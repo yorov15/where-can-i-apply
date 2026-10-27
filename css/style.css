@@ -152,15 +152,15 @@ body {
   overflow-wrap: anywhere;
 }
 
-h1, h2, h3, h4, legend, .brand, .group-title, .agenda-title, .card-title, .summary-number, .summary-line:first-child { font-family: var(--serif); }
+h1, h2, h3, h4, legend, .brand, .group-title, .agenda-title, .card-title, .summary-count strong { font-family: var(--serif); }
 h1, h2, h3, h4 { text-wrap: balance; }
 p { text-wrap: pretty; }
 
 h1 { font-size: clamp(1.75rem, 1.35rem + 1.9vw, 2.5rem); line-height: 1.05; margin: 0 0 var(--s-3); font-weight: 700; letter-spacing: -.015em; }
 .lead { margin: 0 0 var(--s-6); max-width: 60ch; color: var(--muted); font-size: 1.0625rem; }
 .hero { margin: 0 0 var(--s-4); padding: var(--s-3) 0 0; color: var(--fg); border-top: 4px solid var(--amber); }
-/* Ответ и каталог идут без шапки: название уже в верхней полосе, а ответ должен быть на первом экране. h1 остаётся для скринридеров. */
-body:has(:is(#answer, #catalog):not([hidden])) .hero { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); box-shadow: none; }
+/* Список и программа идут без шапки: название уже в верхней полосе, а ответ должен быть на первом экране. h1 остаётся для скринридеров. */
+body:has(:is(#answer, #program):not([hidden])) .hero { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); box-shadow: none; }
 .hero h1 { color: var(--on-hero); font-size: clamp(1.75rem, 1.4rem + 2.6vw, 3rem); }
 .hero .lead { margin: 0; }
 .hint, small { color: var(--muted); font-size: .875rem; }
@@ -238,11 +238,7 @@ select + input, input + select { margin-top: var(--s-2); }
 .link-button { display: inline-flex; align-items: center; min-height: 44px; padding: 0; font: inherit; color: var(--accent-text); text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: .2em; background: none; border: 0; cursor: pointer; text-align: left; }
 @media (hover: hover) { .link-button:hover { text-decoration-color: currentColor; } }
 #show-results { width: 100%; }
-#open-catalog { width: 100%; margin: 0 0 var(--s-6); justify-content: space-between; }
-#open-catalog::after { content: "→" / ""; font-size: 1.25rem; transition: transform var(--dur) var(--ease); }
-@media (hover: hover) { #open-catalog:hover::after { transform: translateX(.25rem); } }
-#back-to-answer { min-height: 44px; margin: 0; padding: .5rem var(--s-4); font-size: .9375rem; }
-body:has(#catalog:not([hidden])) .profile-box { display: none; }
+body:has(#program:not([hidden])) .profile-box { display: none; }
 
 /* Анкета */
 .profile-box { margin: 0 0 var(--s-5); background: var(--surface); border-radius: var(--r-container); box-shadow: var(--shadow); }
@@ -304,21 +300,16 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .summary { margin: 0 0 var(--s-4); padding: var(--s-2) 0 0; }
 .summary:empty { display: none; }
 .summary-line { margin: 0 0 var(--s-2); }
-.summary-stat { display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: var(--s-3); }
-.summary-number { align-self: start; font-size: clamp(2.5rem, 2rem + 4vw, 3.25rem); font-weight: 700; line-height: 1; letter-spacing: -.04em; color: var(--fg); box-shadow: inset 0 -.2em 0 var(--amber); }
-.summary-label { font-size: 1.25rem; font-weight: 750; line-height: 1.25; letter-spacing: -.02em; }
-.summary-next { grid-column: 1 / -1; margin: var(--s-4) 0 0; padding-top: var(--s-4); color: var(--muted); border-top: 1px solid var(--line); }
-.summary-next strong { color: var(--fg); font-variant-numeric: tabular-nums; }
-.summary-stat + .summary-more, .summary-stat + .summary-note { margin-top: var(--s-4); }
-.summary-line:first-child { font-size: 1.25rem; font-weight: 650; line-height: 1.35; letter-spacing: -.01em; }
+.summary-count { margin: 0 0 var(--s-3); font-size: 1.25rem; font-weight: 650; line-height: 1.35; }
+.summary-count strong { font-size: 1.75rem; font-variant-numeric: tabular-nums; }
 .summary-more { margin: var(--s-2) 0 0; }
 .summary-note { margin: var(--s-3) 0 0; color: var(--muted); font-size: .875rem; }
 
-.summary-more-head, .agenda-more-head, .catalog-more > summary, .more-head { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 0 var(--s-4); font-weight: 700; color: var(--accent-text); background: var(--accent-soft); border: 1px solid var(--accent); border-radius: var(--r-control); }
-.summary-more-head:hover, .agenda-more-head:hover, .catalog-more > summary:hover, .more-head:hover { background: var(--tint); }
-.summary-more-head::-webkit-details-marker, .agenda-more-head::-webkit-details-marker, .catalog-more > summary::-webkit-details-marker, .more-head::-webkit-details-marker { display: none; }
-.summary-more-head::after, .agenda-more-head::after, .catalog-more > summary::after, .more-head::after { content: ""; width: .45rem; height: .45rem; margin-left: .6rem; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg); transition: transform var(--dur) var(--ease); }
-.summary-more[open] > .summary-more-head::after, .agenda-more[open] > .agenda-more-head::after, .catalog-more[open] > summary::after, .more[open] > .more-head::after { transform: rotate(-135deg); }
+.summary-more-head, .agenda-more-head, .catalog-more > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 0 var(--s-4); font-weight: 700; color: var(--accent-text); background: var(--accent-soft); border: 1px solid var(--accent); border-radius: var(--r-control); }
+.summary-more-head:hover, .agenda-more-head:hover, .catalog-more > summary:hover { background: var(--tint); }
+.summary-more-head::-webkit-details-marker, .agenda-more-head::-webkit-details-marker, .catalog-more > summary::-webkit-details-marker { display: none; }
+.summary-more-head::after, .agenda-more-head::after, .catalog-more > summary::after { content: ""; width: .45rem; height: .45rem; margin-left: .6rem; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg); transition: transform var(--dur) var(--ease); }
+.summary-more[open] > .summary-more-head::after, .program-exact[open] > .summary-more-head::after, .agenda-more[open] > .agenda-more-head::after, .catalog-more[open] > summary::after { transform: rotate(-135deg); }
 .agenda-more { margin-top: var(--s-3); }
 .catalog-more { margin: 0 0 var(--s-4); }
 
@@ -329,7 +320,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .plan-actions { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-3); }
 .plan-status { color: var(--muted); font-size: .9375rem; margin: var(--s-2) 0 0; }
 .plan-status:empty { display: none; }
-.plan-toggle { margin-left: var(--s-2); }
+.plan-toggle { margin: 0; }
 .compare { overflow-x: auto; }
 .compare table { border-collapse: collapse; font-size: .875rem; }
 .compare th, .compare td { padding: var(--s-2) var(--s-3); text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); min-width: 10rem; }
@@ -400,48 +391,29 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 
 /* Выдача */
 .group { margin: 0 0 var(--s-5); }
-.group-title { display: inline-flex; gap: var(--s-2); align-items: center; margin: 0 0 var(--s-4) .125rem; padding: .125rem .75rem .1875rem; font-size: 1.125rem; font-weight: 700; line-height: 1.3; border: 2px solid currentColor; border-radius: .25rem; outline: 1px solid currentColor; outline-offset: 2px; transform: rotate(-1.2deg); }
-.group-title::before { flex: none; font-size: 1.125rem; font-weight: 800; }
-.group.yes .group-title { color: var(--yes); }
-.group.likely .group-title { color: var(--likely); }
-.group.check .group-title { color: var(--check); }
-.group.no .group-title { color: var(--no); }
-.group.yes .group-title::before { content: "✓"; }
-.group.likely .group-title::before { content: "≈"; }
-.group.check .group-title::before { content: "!"; }
-.group.no .group-title::before { content: "✕"; }
+.group-title { margin: 0 0 var(--s-2); padding: 0 0 var(--s-2) calc(var(--s-4) + 4px); color: var(--tone, var(--muted)); font-size: 1rem; font-weight: 700; line-height: 1.3; letter-spacing: 0; }
 
-.card { content-visibility: auto; contain-intrinsic-size: auto 5.5rem; --edge: transparent; margin: 0; background: none; border-top: 1px solid var(--line); border-radius: 0; box-shadow: inset 4px 0 0 var(--edge); }
-.card[open] { background: var(--surface); }
 .group { border-bottom: 1px solid var(--line); }
-.card.yes { --edge: var(--yes); }
-.card.likely { --edge: var(--likely); }
-.card.check { --edge: var(--check); }
-.card.no { --edge: var(--no); }
+.yes { --tone: var(--yes); }
+.likely { --tone: var(--likely); }
+.check { --tone: var(--check); }
+.no { --tone: var(--no); }
+.card { display: grid; gap: .125rem; padding: var(--s-4) var(--s-4) var(--s-3) calc(var(--s-4) + 4px); content-visibility: auto; contain-intrinsic-size: auto 9rem; border-top: 1px solid var(--line); box-shadow: inset 4px 0 0 var(--tone, transparent); }
 /* Закрытый приём не бледнеет через opacity: тот съел бы контраст текста.
    Его выдаёт пунктир и подпись «Приём закрыт». */
 .card.closed { background: var(--soft); box-shadow: none; outline: 1px dashed var(--line-strong); outline-offset: -1px; }
 
-.card-head { list-style: none; cursor: pointer; position: relative; }
-.card-head::-webkit-details-marker { display: none; }
-.card-head::after { content: ""; position: absolute; right: 1.25rem; top: 1.5rem; width: .5rem; height: .5rem; border: solid var(--muted); border-width: 0 2px 2px 0; transform: rotate(45deg); transition: transform var(--dur) var(--ease); }
-.card[open] > .card-head::after { transform: rotate(-135deg); }
-@media (hover: hover) { .card-head:hover { background: var(--hover); } }
 
-/* Тип и страна: что за программа. Стоит между вердиктом и названием и
-   тише названия, чтобы не спорить с ответом. */
-.card-kind { color: var(--muted); font-size: .8125rem; font-weight: 600; line-height: 1.35; }
-.card-title { font-size: 1.3125rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
-.card-reason { line-height: 1.45; }
+.card-verdict { justify-self: start; padding: .0625rem .6rem; color: var(--tone, var(--fg)); font-size: .8125rem; font-weight: 700; border: 1px solid currentColor; border-radius: var(--r-pill); }
+.card-title { margin: .25rem 0 0; font-size: 1.1875rem; line-height: 1.3; letter-spacing: -.01em; }
+.card-title a { color: inherit; text-decoration: none; }
+@media (hover: hover) { .card-title a:hover { text-decoration: underline; } }
+.card-meta { margin: 0; color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; }
+.card-reason { margin: .125rem 0 0; line-height: 1.4; }
 .card-reason::first-letter { text-transform: uppercase; }
-.card-reason-tail { color: var(--muted); font-size: .9375rem; }
-.card-metas { display: none; }
-.card-metas:has(.card-meta:not(:empty)) { display: flex; flex-wrap: wrap; gap: .375rem; margin-top: .125rem; }
-.card-meta { padding: .25rem .7rem; color: var(--fg); background: var(--soft); border-radius: .25rem; font-size: .875rem; line-height: 1.4; font-variant-numeric: tabular-nums; }
-.card-meta-cover { color: var(--accent-text); background: var(--accent-soft); }
-.card-meta:empty { display: none; }
+.card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-1) var(--s-4); margin-top: var(--s-2); }
+.card-open { font-weight: 700; }
 
-.card-body { padding: 0 var(--s-4) var(--s-4); border-top: 1px solid var(--line); }
 .card-section-title { margin: var(--s-5) 0 .375rem; font-size: .9375rem; }
 .card-list { margin: 0; padding-left: 1.25rem; font-size: .9375rem; }
 .card-list li { margin-bottom: .375rem; }
@@ -451,12 +423,20 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .reason-label { margin: var(--s-2) 0 var(--s-1); font-size: .875rem; font-weight: 600; }
 .reason-list { margin: 0; padding-left: 1.25rem; font-size: .9375rem; }
 .reason-muted, .details-state { margin: var(--s-2) 0 0; color: var(--muted); font-size: .875rem; }
-.card-body > .button { margin-top: var(--s-5); width: 100%; }
-.more { margin-top: var(--s-4); }
-.more-head { font-size: .9375rem; min-height: 48px; }
 .card-source { margin: var(--s-4) 0 0; color: var(--muted); font-size: .8125rem; }
 .card-source.stale { color: var(--check); font-weight: 600; }
 .empty { color: var(--muted); }
+.program-top { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-3); margin: var(--s-3) 0 0; }
+.program-title { margin: var(--s-2) 0; font-size: clamp(1.75rem, 1.4rem + 1.8vw, 2.5rem); line-height: 1.1; letter-spacing: -.02em; }
+.program-lead { margin: 0 0 var(--s-4); font-size: 1.125rem; }
+.facts { display: grid; gap: var(--s-3); margin: 0 0 var(--s-4); padding: var(--s-4); background: var(--soft); border-radius: var(--r-control); }
+.facts dt { color: var(--muted); font-size: .8125rem; font-weight: 600; }
+.facts dd { margin: 0; font-weight: 600; }
+.program-section { margin: var(--s-6) 0 var(--s-2); font-size: 1.25rem; }
+.tag { display: inline-block; margin-bottom: var(--s-1); padding: .0625rem .5rem; color: var(--accent-text); font-size: .75rem; font-weight: 700; background: var(--accent-soft); border-radius: var(--r-pill); }
+.program-exact { margin-top: var(--s-5); }
+.program-plan { margin-top: var(--s-6); padding: var(--s-4); background: var(--accent-soft); border-radius: var(--r-control); }
+@media (min-width: 40rem) { .facts { grid-template-columns: repeat(3, 1fr); } }
 
 .explain { margin: var(--s-5) 0 var(--s-1); padding: var(--s-3) var(--s-4); background: var(--soft); border-radius: var(--r-control); }
 .explain-note { margin: var(--s-2) 0 0; color: var(--muted); font-size: .8125rem; }
@@ -483,12 +463,11 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 @keyframes screen-in { from { opacity: 0; transform: translateY(.5rem); } }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
-  #answer:not([hidden]), #catalog:not([hidden]) { animation: screen-in .24s var(--ease) backwards; }
+  #answer:not([hidden]), #program:not([hidden]) { animation: screen-in .24s var(--ease) backwards; }
 }
 
 @media (min-width: 40rem) {
   body { padding-top: var(--s-7); }
-  .card-body > .button { width: auto; }
   .chips { flex-wrap: wrap; overflow: visible; }
   .profile-box form { padding: var(--s-6) var(--s-5) var(--s-5); }
   .profile-box.wizard .wizard-nav { margin: 0 calc(var(--s-5) * -1) calc(var(--s-5) * -1); padding: var(--s-4) var(--s-5) calc(var(--s-4) + env(safe-area-inset-bottom)); }
@@ -510,28 +489,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .chip-note { margin-top: .0625rem; font-size: .75rem; font-weight: 400; color: var(--muted); }
 .chip[aria-pressed="true"] .chip-note { color: inherit; }
 
-/* Компактная карточка каталога. Раньше одна карточка занимала около 230px,
-   и список из 200 вузов давал 50 000px прокрутки. Статус уже назван
-   заголовком группы и цветной кромкой, поэтому слово в плашке остаётся
-   только для скринридера. */
-.card-head { display: grid; grid-template-columns: minmax(0, 1fr); gap: .125rem var(--s-3); align-items: start; padding: .75rem 2.5rem .75rem var(--s-4); }
-.card-head::after { top: 1.25rem; right: 1rem; }
-/* Статус называет заголовок группы и цветная кромка, слово вердикта читает только скринридер. */
-.card-verdict { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.card-title { font-size: 1.0625rem; line-height: 1.3; }
-.card-reason { font-size: .9375rem; line-height: 1.35; }
-.card-reason-tail { display: none; }
-.card-metas:has(.card-meta:not(:empty)) { margin-top: .25rem; }
-.card-meta { padding: .125rem .55rem; font-size: .8125rem; }
 .group-more { width: 100%; margin: 0 0 var(--s-3); }
-.group-title { font-size: 1.125rem; }
-
-@media (min-width: 40rem) {
-  .card-reason-tail { display: block; }
-  .card-head { grid-template-columns: minmax(0, 1fr) auto; }
-  .card-head > :not(.card-metas):not(.card-verdict) { grid-column: 1; }
-  .card-metas:has(.card-meta:not(:empty)) { grid-column: 2; grid-row: 1 / span 3; flex-direction: column; align-items: flex-end; margin-top: 0; }
-}
 
 /* Телефон: фильтры одной строкой с прокруткой вбок. Раньше кнопки
    переносились на три строки, а панель поиска липнет к верху экрана и
@@ -540,11 +498,6 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
   #catalog-tools .chips { flex-wrap: nowrap; overflow-x: auto; margin: 0 calc(var(--gutter) * -1) var(--s-2); padding: 0 var(--gutter); }
   .chip { flex: none; min-height: 40px; }
   .catalog-bar input[type="search"] { min-height: 48px; margin-bottom: var(--s-2); }
-  .card-metas:has(.card-meta:not(:empty)) { gap: .25rem; }
-  .card-title, .card-reason { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
-  .card-title { -webkit-line-clamp: 2; line-clamp: 2; }
-  .card-reason { -webkit-line-clamp: 1; line-clamp: 1; }
-  .card-meta { font-size: .8125rem; }
 }
 
 /* Широкий экран: обычная ширина сайта вместо узкой колонки в центре.
@@ -555,15 +508,12 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
   .profile-box.wizard { max-width: 44rem; margin-inline: auto; }
   .hero .lead { max-width: 44rem; }
 
-  #answer:not([hidden]) { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); grid-template-areas: "summary agenda" "button agenda"; column-gap: var(--s-7); align-items: start; }
+  #answer:not([hidden]) { display: grid; grid-template-columns: 17rem minmax(0, 1fr); grid-template-areas: "title title" "summary summary" "tools results" ". note"; column-gap: var(--s-7); align-items: start; }
+  #answer > .catalog-title { grid-area: title; }
   #answer > .summary { grid-area: summary; }
-  #answer > #open-catalog { grid-area: button; }
-  #answer > #agenda { grid-area: agenda; margin-top: var(--s-2); }
-
-  #catalog:not([hidden]) { display: grid; grid-template-columns: 17rem minmax(0, 1fr); grid-template-areas: "back back" "title title" "tools results"; column-gap: var(--s-7); align-items: start; }
-  #catalog > #back-to-answer { grid-area: back; justify-self: start; }
-  #catalog > .catalog-title { grid-area: title; }
-  #catalog > #results { grid-area: results; margin-top: 0; }
+  #answer > #results { grid-area: results; margin-top: 0; }
+  #answer > .summary-note { grid-area: note; }
+  #program { max-width: 46rem; }
   .catalog-tools { grid-area: tools; display: block; position: sticky; top: var(--s-4); }
   .catalog-bar { position: static; margin: 0 0 var(--s-3); padding: 0; background: none; }
   .chips { flex-direction: column; flex-wrap: nowrap; gap: .25rem; margin: 0; padding: 0; overflow: visible; }
@@ -591,7 +541,6 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
   body { padding-top: var(--s-2); }
   .catalog-bar { position: static; }
   .profile-box.wizard .wizard-nav { position: static; margin: 0; padding: 0; background: none; }
-  .summary-number { font-size: 3rem; }
 }
 
 /* До 420px: кнопки переносят текст (длинная «Объяснить простыми словами (ИИ)» шире экрана), а поле балла уходит под
@@ -599,7 +548,6 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 @media (max-width: 26.25rem) {
   .button { white-space: normal; text-align: center; line-height: 1.25; }
   .plan-toggle { margin-left: 0; }
-  .card-body > .button + .button { margin-top: var(--s-2); }
   label.row { grid-template-columns: 1.5rem minmax(0, 1fr); row-gap: var(--s-2); }
   label.row input[type="number"] { display: none; grid-column: 2; min-height: 48px; }
   label.row:has(:checked) input[type="number"], label.row input[type="number"]:not(:placeholder-shown) { display: block; }
@@ -610,8 +558,6 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
   .brand::before { content: ""; width: 2rem; height: 2rem; background: url("../icons/logo.svg") center / contain no-repeat; }
   .topbar nav a { padding: 0 var(--s-1); }
   .theme-toggle { gap: .375rem; padding: 0 .625rem; font-size: .875rem; }
-  .summary-number { font-size: 2.5rem; }
-  .summary-label { font-size: 1.0625rem; }
   .agenda-item { column-gap: var(--s-3); padding-inline: var(--s-2); }
 }
 
@@ -624,7 +570,6 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 @media (max-width: 63.99rem) {
   .tabbar:not([hidden]) { position: fixed; inset: auto 0 0; z-index: var(--z-bar); display: grid; grid-template-columns: repeat(3, 1fr); padding-bottom: env(safe-area-inset-bottom); background: var(--surface); border-top: 1px solid var(--line); }
   body:has(.tabbar:not([hidden])) { padding-bottom: calc(3.5rem + env(safe-area-inset-bottom)); }
-  body:has(.tabbar:not([hidden])) #back-to-answer { display: none; }
   .tab { min-height: 52px; padding: 0; font-size: .875rem; }
   .tab[aria-current] { box-shadow: inset 0 3px 0 var(--accent); }
 }
@@ -637,8 +582,7 @@ body:is([data-screen=today],[data-screen=route]) .hero { display: none; }
 .today-level { margin: 0 0 var(--s-2); }
 
 /* Отклик на касание: на телефоне hover нет, и нажатие иначе молчит. */
-@media (hover: none) { .card-head:active, .agenda-item:active, .faq > summary:active, .tab:active { background: var(--tint); } }
-.hint-tip { border-left: 3px solid var(--amber); padding-left: var(--s-3); }
+@media (hover: none) { .card:active, .agenda-item:active, .faq > summary:active, .tab:active { background: var(--tint); } }
 .card-meta-docs { color: var(--accent-text); font-weight: 700; background: none; box-shadow: inset 0 0 0 1px var(--accent); }
 
 /* Маршрут до оффера: цель, прогресс, неделя и разделы-справочники. Сверху
@@ -713,7 +657,7 @@ body[data-screen="route"] .hero { display: none; }
 /* Печать: на бумаге нужен только маршрут, без шапки, вкладок и кнопок.
    Раскрытые разделы печатаются целиком — их открывает main.js перед печатью. */
 @media print {
-  .topbar, .hero, .site-footer, .tabbar, .profile-box, #answer, #catalog, .route-actions, .route-goal-actions, .route-status { display: none !important; }
+  .topbar, .hero, .site-footer, .tabbar, .profile-box, #answer, #program, .route-actions, .route-goal-actions, .route-status { display: none !important; }
   .route-step, .route-phase { break-inside: avoid; }
   .is-parent-print>*:not(#parent-print) { display:none!important; }
   .is-parent-print { background:#fbfbf9; }

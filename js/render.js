@@ -3,7 +3,7 @@
 // card-model.js; здесь их только рисуют.
 import { evaluate } from './verdict.js';
 import { deadlineState } from './lib/deadline.js';
-import { summaryLines, readySummary } from './summary.js';
+import { summaryLines } from './summary.js';
 import { cardModel, extraFor } from './card-model.js';
 import { bucketOf } from './wording.js';
 import { agenda } from './agenda.js';
@@ -77,12 +77,6 @@ function list(items, className) {
   const ul = el('ul', className);
   for (const item of items) ul.append(el('li', null, item));
   return ul;
-}
-
-// Пересчёт идёт на каждое нажатие в анкете. Без этого все раскрытые
-// карточки захлопывались бы, пока человек правит балл.
-function rememberOpen(node, selector) {
-  return new Set([...node.querySelectorAll(`${selector}[open]`)].map((d) => d.dataset.id));
 }
 
 // Календарь сроков: строка на программу, без раскрытия. Подробности
@@ -255,26 +249,11 @@ function agendaBlock(groups, today, onOpenProgram) {
   return box;
 }
 
-const TIP_KEY = 'nerio.tip.cards';
-function tipSeen() {
-  try { return localStorage.getItem(TIP_KEY) === '1'; } catch { return false; }
-}
-// toggle не всплывает, поэтому слушаем в фазе перехвата; одна и та же функция
-// не навешивается дважды, сколько бы раз ни перерисовали результаты.
-function dismissTip(event) {
-  if (!event.target.matches?.('details.card') || !event.target.open) return;
-  try { localStorage.setItem(TIP_KEY, '1'); } catch { /* без хранилища подсказка покажется снова */ }
-  event.currentTarget.querySelector('.hint-tip')?.remove();
-  event.currentTarget.removeEventListener('toggle', dismissTip, true);
-}
-
 export function renderResults(nodes, profile, programs, today, details) {
-  const { summaryNode, agendaNode, resultsNode, catalogButton, onOpenProgram, onOpenRoute } = nodes;
+  const { summaryNode, agendaNode, resultsNode, onOpenProgram, onOpenRoute } = nodes;
   const plan = nodes.plan;
-  const openCards = rememberOpen(resultsNode, 'details.card');
-  const openMore = rememberOpen(resultsNode, 'details.more');
-  // Пока каталог не на экране, карточки не пересобираем: это 300+ узлов на
-  // каждое нажатие в анкете, а увидит их человек только при открытии каталога.
+  // Пока экран «Куда можно» не виден, карточки не пересобираем: это 300+ узлов
+  // на каждое нажатие в анкете, а увидит их человек только при возврате.
   // Прежние карточки остаются как есть, main.js построит свежие при показе.
   const skipCards = Boolean(nodes.skipCards?.()) && programs.length > 0;
   summaryNode.textContent = '';
@@ -286,34 +265,29 @@ export function renderResults(nodes, profile, programs, today, details) {
     return;
   }
 
-  // Наверху одна главная строка. Что улучшить и на что обратить внимание —
-  // под «Подробнее»: это нужно не каждому и не с первого взгляда.
-  const [headline, ...extra] = summaryLines(profile, programs, today);
-  const ready = readySummary(profile, programs, today);
-  if (ready.count) {
-    summaryNode.append(readyStat(ready));
-  } else {
-    summaryNode.append(el('p', 'summary-line', headline));
-  }
-  if (extra.length) {
-    const more = el('details', 'summary-more');
-    more.append(el('summary', 'summary-more-head', 'Подробнее: что улучшить'));
-    for (const line of extra) more.append(el('p', 'summary-line', line));
-    summaryNode.append(more);
-  }
-  summaryNode.append(el('p', 'summary-note', 'Это «пустят ли подавать», а не «возьмут ли»: шансы сайт не оценивает. Всё сверяй с сайтом программы.'));
-
   const rows = programs.map((program) => ({
     program,
     verdict: evaluate(profile, program, today),
     deadline: deadlineState(program.deadline, today),
   }));
 
+  // Наверху одна строка с двумя числами. Что улучшить — под «Подробнее»:
+  // это нужно не каждому и не с первого взгляда.
+  summaryNode.append(countLine(rows));
+  const [, ...extra] = summaryLines(profile, programs, today);
+  if (extra.length) {
+    const more = el('details', 'summary-more');
+    more.append(el('summary', 'summary-more-head', 'Подробнее: что улучшить'));
+    for (const line of extra) more.append(el('p', 'summary-line', line));
+    summaryNode.append(more);
+  }
+
+  // План, сравнение и сроки живут на вкладке «Мой путь», в свёрнутом блоке.
   const planned = planPrograms(programs, plan.ids);
   if (planned.length) agendaNode.append(planBlock(planned, today, details, onOpenProgram, plan, rows.filter((r) => plan.ids.includes(r.program.id)), onOpenRoute));
-
   const soon = agenda(rows, today);
   if (soon.length) agendaNode.append(agendaBlock(soon, today, onOpenProgram));
+  if (agendaNode.parentElement) agendaNode.parentElement.hidden = !agendaNode.childElementCount;
 
   // Порядок внутри каждой группы — по приоритетам человека: свои страны и
   // направления сверху. На ответ «пустят ли» это не влияет, поэтому
@@ -324,15 +298,6 @@ export function renderResults(nodes, profile, programs, today, details) {
     resultsNode.append(el('p', 'hint',
       'Сверху — программы из выбранных тобой стран и направлений, в том порядке, в каком ты их поставил.'));
   }
-  if (!skipCards) resultsNode.append(el('p', 'hint',
-    'Каталог включает программы с закрытым приёмом. В итоге считаются только те, у которых приём не закрыт.'));
-
-  // Первая подсказка: карточки раскрываются, и внутри самое нужное. Пока
-  // человек не открыл ни одной, показываем; открыл — запоминаем и больше нет.
-  if (!skipCards && !tipSeen()) {
-    resultsNode.append(el('p', 'hint hint-tip', 'Нажми на программу, чтобы раскрыть её: условия, документы, сроки.'));
-    resultsNode.addEventListener('toggle', dismissTip, true);
-  }
 
   for (const group of skipCards ? [] : groupRows(rows)) {
     const section = el('section', `group ${group.status}`);
@@ -340,23 +305,19 @@ export function renderResults(nodes, profile, programs, today, details) {
     title.dataset.base = group.title;
     section.append(title);
     for (const row of (sorted ? orderByPriority(group.rows, priorities) : group.rows)) {
-      // «Тип · страна» — что это за программа и где; без типа (данных ещё
-      // нет) остаётся одна страна, без выдуманной подписи.
-      const kindLine = [kindLabel(row.program.kind), row.program.hostCountry && countryName(row.program.hostCountry)]
-        .filter(Boolean)
-        .join(' · ');
-      section.append(card(row, today, details, openCards, openMore, kindLine, plan));
+      section.append(card(row, today, details, plan));
     }
     resultsNode.append(section);
   }
   if (!skipCards) refreshFilter(programs);
-
-  // Есть подходящие — кнопка ведёт прямо к ним, иначе к полному списку.
-  catalogButton.textContent = ready.count ? 'Показать подходящие' : `Все программы (${rows.length})`;
-  catalogButton.dataset.bucket = ready.count ? 'yes' : 'all';
-  catalogButton.hidden = false;
   return { skippedCards: skipCards };
 }
+
+// «Тип · страна» — что это за программа и где; без типа (данных ещё нет)
+// остаётся одна страна, без выдуманной подписи.
+export const kindLine = (program) => [kindLabel(program.kind), program.hostCountry && countryName(program.hostCountry)]
+  .filter(Boolean)
+  .join(' · ');
 
 function answerNodes(text, fallback = false) {
   const box = el('div', 'explain-answer');
@@ -372,7 +333,7 @@ function answerNodes(text, fallback = false) {
 
 // Кнопка есть только когда в config.js указан адрес прокси. Что уходит
 // наружу, сказано рядом с кнопкой: человек решает, нажимать ли, зная это.
-function explainBlock(model) {
+export function explainBlock(model) {
   const wrap = el('div', 'explain');
   // Ответ модели приходит в уже стоящий блок: экранный диктор его зачитает.
   wrap.setAttribute('aria-live', 'polite');
@@ -410,25 +371,22 @@ function explainBlock(model) {
   return wrap;
 }
 
-// Главный ответ крупно: число программ и ближайший срок. Число то же, что в
-// первой строке сводки (обе берут readySummary), поэтому они не разойдутся.
-function readyStat({ count, next }) {
-  const box = el('div', 'summary-stat');
-  box.append(
-    el('span', 'summary-number', String(count)),
-    el('span', 'summary-label', `${plural(count, 'программа подходит', 'программы подходят', 'программ подходят')} по условиям · приём не закрыт`),
-  );
-  if (next) {
-    const line = el('p', 'summary-next');
-    line.append('Ближайший срок: ', el('strong', '', formatDate(next.date)), ` · ${next.name}`);
-    box.append(line);
-  }
-  return box;
+// Главный ответ одной строкой: сколько программ подходит по условиям и сколько
+// ещё нужно проверить или доделать. Считаются только открытые программы; число
+// «подходят» то же, что в readySummary и в первой строке «Подробнее».
+export function countLine(rows) {
+  const open = rows.filter((row) => row.deadline !== 'closed');
+  const yes = open.filter((row) => bucketOf(row.verdict) === 'yes').length;
+  const rest = open.filter((row) => ['likely', 'check'].includes(bucketOf(row.verdict))).length;
+  const line = el('p', 'summary-count');
+  line.append(el('strong', null, String(yes)), ` ${plural(yes, 'подходит', 'подходят', 'подходят')} по условиям`);
+  if (rest) line.append(' · ', el('strong', null, String(rest)), ' нужно проверить или доделать');
+  return line;
 }
 
 // Пока подробности едут по сети, вместо пустоты стоит заготовка будущего
 // списка. Текст остаётся для экранного диктора: глазами его не видно.
-function skeleton(label) {
+export function skeleton(label) {
   const box = el('div', 'skeleton-lines');
   box.setAttribute('role', 'status');
   box.append(el('span', 'sr-only', label));
@@ -436,12 +394,13 @@ function skeleton(label) {
   return box;
 }
 
-function card(row, today, details, openCards, openMore, kindLine, plan) {
+// Одна строка списка. Подробности — на экране программы (js/program-view.js):
+// список читается как перечень, а не как стена из раскрывающихся блоков.
+function card(row, today, details, plan) {
   const id = row.program.id;
-  let model = cardModel(row, extraFor(details, id), today);
-  const box = el('details', `card ${model.bucket}${model.closed ? ' closed' : ''}`);
+  const model = cardModel(row, extraFor(details, id), today);
+  const box = el('article', `card ${model.bucket}${model.closed ? ' closed' : ''}`);
   box.dataset.id = id;
-  box.open = openCards.has(id);
   // По этим полям фильтр каталога решает, показать карточку или спрятать.
   box.dataset.plan = plan.ids.includes(id) ? '1' : '0';
   box.dataset.title = model.title;
@@ -451,141 +410,65 @@ function card(row, today, details, openCards, openMore, kindLine, plan) {
   box.dataset.bucket = model.bucket;
 
   const { verdict, reason } = splitHeadline(model.headline);
-  const head = el('summary', 'card-head');
-  const metas = el('span', 'card-metas');
-  metas.append(el('span', 'card-meta', model.deadlineLine), el('span', 'card-meta card-meta-cover', model.coverageLine));
-  if (row.program.hasDocuments) metas.append(el('span', 'card-meta card-meta-docs', 'Документы'));
-  head.append(
-    el('span', 'card-verdict', verdict),
-    ...(kindLine ? [el('span', 'card-kind', kindLine)] : []),
-    el('span', 'card-title', model.title),
-    ...reason.split(' · ').filter(Boolean).map((part, i) => el('span', i ? 'card-reason card-reason-tail' : 'card-reason', part)),
-    metas,
-  );
-  box.append(head);
+  const href = programHref(id);
+  const title = el('h3', 'card-title');
+  const name = el('a', null, model.title);
+  name.href = href;
+  title.append(name);
+  const meta = [kindLine(row.program), model.coverageLine, model.deadlineLine].filter(Boolean).join(' · ');
+  box.append(el('span', 'card-verdict', verdict), title, el('p', 'card-meta', meta));
+  const why = reason.split(' · ')[0];
+  if (why) box.append(el('p', 'card-reason', why));
 
-  // Тело карточки строится, когда её раскрыли: триста закрытых карточек с
-  // телами — это больше тринадцати тысяч узлов, и пересобирались они при
-  // каждом ответе в анкете. На телефоне это были секунды зависания.
-  const body = el('div', 'card-body');
-  let filled = false;
-  const fill = () => {
-    if (filled) return;
-    filled = true;
-
-    // Главное действие — сразу под шапкой, а не после списков условий.
-    const applyUrl = safeHttpUrl(model.applyUrl);
-    if (applyUrl) {
-      const link = el('a', 'button', 'Открыть сайт программы');
-      link.href = applyUrl;
-      link.target = '_blank';
-      link.rel = 'noopener';
-      body.append(link);
-    }
-
-    // Отметить программу, чтобы вернуться к ней: из отмеченных собирается
-    // календарь с напоминаниями (см. planBlock).
-    const inPlan = plan.ids.includes(model.id);
-    const mark = el('button', 'button button-quiet plan-toggle', inPlan ? '✓ В моём плане' : '＋ В мой план');
-    if (!inPlan && plan.ids.length >= plan.limit) {
-      mark.disabled = true;
-      mark.textContent = `В плане уже ${plan.ids.length} программ`;
-      mark.title = 'Убери одну цель из плана, чтобы добавить другую.';
-    }
-    mark.type = 'button';
-    mark.setAttribute('aria-pressed', String(inPlan));
-    mark.addEventListener('click', () => plan.toggle(model.id));
-    body.append(mark);
-
-    if (model.reasons.length) {
-      body.append(el('h4', 'card-section-title', 'Почему так'));
-      for (const reason of model.reasons) {
-        const item = el('div', `reason ${reason.status}`);
-        const line = el('p', 'reason-text');
-        line.append(el('strong', null, `${reason.title}. `), document.createTextNode(reason.detail));
-        item.append(line);
-        if (reason.workarounds.length) {
-          item.append(el('p', 'reason-label', 'Как обойти:'), list(reason.workarounds, 'reason-list'));
-        }
-        if (reason.says.length) {
-          item.append(el('p', 'reason-label', 'Что пишет программа:'), list(reason.says, 'reason-list'));
-        }
-        if (reason.noWorkaround) {
-          item.append(el('p', 'reason-muted', 'Обходного пути программа не называет. Если сомневаешься — напиши в приёмную комиссию.'));
-        }
-        if (reason.seeBelow) item.append(el('p', 'reason-muted', 'Подробности — в условиях программы ниже.'));
-        body.append(item);
-      }
-      if (EXPLAIN_URL) body.append(explainBlock(model));
-    } else if (EXPLAIN_URL) {
-      // Подходящая программа: причин нет, но «что делать дальше» объяснить можно.
-      body.append(explainBlock(model));
-    }
-
-    if (!model.hasDetails) {
-      if (details.status === 'failed') {
-        const failed = el('p', 'details-state', 'Подробности не загрузились. Проверь интернет. ');
-        const retry = el('button', 'button button-small', 'Попробовать ещё раз');
-        retry.type = 'button';
-        retry.addEventListener('click', () => details.retry());
-        failed.append(retry);
-        body.append(failed);
-      } else {
-        body.append(skeleton('Подробности загружаются…'));
-      }
-    }
-
-    if (model.conditionsFailed) {
-      body.append(el('p', 'details-state', 'Условия программы не загрузились. Проверь интернет и обнови страницу.'));
-    }
-
-    for (const section of model.sections) {
-      body.append(el('h4', 'card-section-title', section.title), list(section.items, 'card-list'));
-    }
-
-    if (model.more.notes.length || model.more.attested.length) {
-      const more = el('details', 'more');
-      more.dataset.id = model.id;
-      more.open = openMore.has(model.id);
-      more.append(el('summary', 'more-head', 'Ещё'));
-      if (model.more.notes.length) more.append(list(model.more.notes, 'card-list'));
-      if (model.more.attested.length) {
-        more.append(el('p', 'reason-label', 'Не ограничивает — проверено по страницам программы:'), list(model.more.attested, 'card-list muted'));
-      }
-      body.append(more);
-    }
-
-    if (model.source) {
-      const foot = el('p', model.stale ? 'card-source stale' : 'card-source', `${model.source}. `);
-      const sourceUrl = safeHttpUrl(model.sourceUrl);
-      if (sourceUrl) {
-        const a = el('a', null, 'Источник');
-        a.href = sourceUrl;
-        a.target = '_blank';
-        a.rel = 'noopener';
-        foot.append(a);
-      }
-      body.append(foot);
-    }
-
-  };
-  box.append(body);
-  if (box.open) fill();
-  else box.addEventListener('toggle', fill, { once: true });
-
-  // Условия приезжают отдельным файлом: карточку раскрыли — просим их и
-  // перерисовываем только её. Вместе со всеми деталями они ехали бы к
-  // каждому посетителю, включая того, кто ничего не раскрывал.
-  box.addEventListener('toggle', () => {
-    if (!box.open || !model.conditionsPending || !details.ensure) return;
-    details.ensure(id).then(() => {
-      // Пока файл ехал, карточку могли закрыть или перерисовать.
-      if (!box.isConnected) return;
-      const fresh = card(row, today, details, openCards, openMore, kindLine, plan);
-      fresh.open = true;
-      box.replaceWith(fresh);
-    });
-  });
-
+  const actions = el('div', 'card-actions');
+  const open = el('a', 'card-open', 'Открыть программу →');
+  open.href = href;
+  actions.append(open, planButton(id, plan));
+  box.append(actions);
   return box;
 }
+
+export const programHref = (id) => `#program/${encodeURIComponent(id)}`;
+
+// Одна кнопка на списке и на экране программы. Перерисовка заменяет узлы, поэтому
+// фокус возвращаем на ту же кнопку: иначе с клавиатуры человек оказывается в начале.
+export function planButton(id, plan) {
+  const inPlan = plan.ids.includes(id);
+  const mark = el('button', 'button button-small button-quiet plan-toggle', inPlan ? '✓ В моём пути' : 'В мой путь');
+  mark.type = 'button';
+  mark.setAttribute('aria-pressed', String(inPlan));
+  if (!inPlan && plan.ids.length >= plan.limit) {
+    mark.disabled = true;
+    mark.textContent = `В пути уже ${plan.ids.length}`;
+    mark.title = 'Убери одну цель из «Моего пути», чтобы добавить другую.';
+  }
+  mark.addEventListener('click', () => {
+    plan.toggle(id);
+    // Тот же id есть и в скрытом списке, и на экране программы: берём видимую кнопку.
+    const same = document.querySelectorAll(`.card[data-id="${CSS.escape(id)}"] .plan-toggle, .program-plan .plan-toggle`);
+    [...same].find((node) => node.offsetParent !== null)?.focus();
+  });
+  return mark;
+}
+
+// Одна причина на экране программы: название, что именно не так, как обойти
+// и что пишет сама программа.
+export function reasonItem(reason) {
+  const item = el('div', `reason ${reason.status}`);
+  const line = el('p', 'reason-text');
+  line.append(el('strong', null, `${reason.title}. `), document.createTextNode(reason.detail));
+  item.append(line);
+  if (reason.workarounds.length) {
+    item.append(el('p', 'reason-label', 'Как обойти:'), list(reason.workarounds, 'reason-list'));
+  }
+  if (reason.says.length) {
+    item.append(el('p', 'reason-label', 'Что пишет программа:'), list(reason.says, 'reason-list'));
+  }
+  if (reason.noWorkaround) {
+    item.append(el('p', 'reason-muted', 'Обходного пути программа не называет. Если сомневаешься — напиши в приёмную комиссию.'));
+  }
+  if (reason.seeBelow) item.append(el('p', 'reason-muted', 'Подробности — в условиях программы ниже.'));
+  return item;
+}
+
+export { list as bulletList, el as makeNode };

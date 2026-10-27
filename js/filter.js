@@ -74,7 +74,7 @@ const itemOf = (card) => ({
 
 function apply() {
   if (!ui) return;
-  const cards = [...ui.resultsNode.querySelectorAll('details.card')];
+  const cards = [...ui.resultsNode.querySelectorAll('.card')];
   const items = cards.map(itemOf);
 
   // Счётчик у каждой кнопки — сколько станет, если её нажать: с учётом
@@ -82,7 +82,11 @@ function apply() {
   const counts = bucketCounts(items.filter((item) => matchesFilter(item, { ...state, bucket: 'all' })));
   for (const chip of ui.chips) {
     chip.setAttribute('aria-pressed', String(chip.dataset.bucket === state.bucket));
-    chip.querySelector('.chip-count').textContent = `(${counts[chip.dataset.bucket] ?? 0})`;
+    const count = counts[chip.dataset.bucket] ?? 0;
+    chip.querySelector('.chip-count').textContent = String(count);
+    // Пустой фильтр только сбивает: «Похоже, можно · 0» ничего не открывает.
+    // Выбранный остаётся, чтобы его можно было снять.
+    chip.hidden = count === 0 && chip.dataset.bucket !== 'all' && chip.dataset.bucket !== state.bucket;
   }
 
   // Так же и у типов: сколько программ станет, если выбрать этот тип, при
@@ -104,7 +108,7 @@ function apply() {
   });
 
   for (const group of ui.resultsNode.querySelectorAll('.group')) {
-    const matched = [...group.querySelectorAll('details.card')].filter((card) => card.dataset.match === '1');
+    const matched = [...group.querySelectorAll('.card')].filter((card) => card.dataset.match === '1');
     group.hidden = matched.length === 0;
     const title = group.querySelector('.group-title');
     if (title?.dataset.base) title.textContent = `${title.dataset.base} (${matched.length})`;
