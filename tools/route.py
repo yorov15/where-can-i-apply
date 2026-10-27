@@ -26,6 +26,7 @@ ROUTE_PATH = ROOT / "data" / "route.json"
 PREP_KEYS = frozenset({"id", "checked", "tests", "note", "perPart"})
 TRACK_KEYS = frozenset({"code", "name", "format", "scoring", "register", "site", "freePrep", "note", "source"})
 TRACK_KEYS |= frozenset({'parts', 'partsSource', 'resultDays', 'resultSource', 'reportDays', 'reportSource', 'retakeRule', 'sessions', 'sessionsSource', 'timingNote'})
+TRACK_KEYS |= frozenset({'practice', 'practiceSource', 'weekTemplates', 'scheduleNote'})
 TRACK_REQUIRED = frozenset({"code", "name", "format", "scoring", "site", "source"})
 MAX_NOTE = 300
 MAX_ROUTE_WIRE_BYTES = 24 * 1024
@@ -105,6 +106,8 @@ def load_tracks(directory: Path = TRACKS_DIR) -> tuple[dict, list[str]]:
         tracks[code] = track
         from tools.exam_timing import validate_timing
         problems.extend(f'{name}: {problem}' for problem in validate_timing(track, directory.resolve().parents[2]))
+        from tools.exam_timing import validate_practice
+        problems.extend(f'{name}: {problem}' for problem in validate_practice(track, directory.resolve().parents[2]))
     return tracks, problems
 
 

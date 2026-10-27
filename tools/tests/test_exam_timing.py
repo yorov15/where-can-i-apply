@@ -3,7 +3,7 @@ import hashlib
 import tempfile
 import unittest
 from pathlib import Path
-from tools.exam_timing import validate_timing, validate_per_part
+from tools.exam_timing import validate_timing, validate_per_part, validate_practice
 from tools.route import load_tracks
 
 class ExamTimingValidation(unittest.TestCase):
@@ -56,3 +56,12 @@ class ExamTimingValidation(unittest.TestCase):
         self.assertEqual(validate_per_part(parts,program), [])
         parts['IELTS']['source']['quote'] = 'Invented'
         self.assertTrue(validate_per_part(parts,program))
+
+    def test_weekly_resources_need_valid_parts_urls_and_sources(self):
+        item={'parts':[{'code':'R','name':'Reading'}], 'practice':{'url':'https://example.org/test','label':'Mock','source':self.proof},'practiceSource':self.proof,'weekTemplates':[{'id':'reading','part':'R','title':'Потренировать чтение','url':'https://example.org/test'}]}
+        self.assertEqual(validate_practice(item,self.root),[])
+        for key,value in [('part','UNKNOWN'),('url','javascript:alert(1)'),('title','x'*81)]:
+            bad=copy.deepcopy(item);bad['weekTemplates'][0][key]=value
+            self.assertTrue(validate_practice(bad,self.root))
+        item['practiceSource']=None
+        self.assertTrue(validate_practice(item,self.root))

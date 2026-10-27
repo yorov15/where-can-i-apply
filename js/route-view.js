@@ -11,6 +11,7 @@ import { reasonText } from './wording.js';
 import { routeText } from './route.js';
 import { formatDate, plural } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
+import { renderStudyPlan } from './study-view.js';
 
 const PHASES = [
   ['tests', 'Экзамены'],
@@ -455,6 +456,8 @@ export function renderRoute(root, props) {
   if (gaps) main.append(gaps);
 
   main.append(weekBlock(route, handlers));
+  const study = renderStudyPlan(props.study, props.routeState, props.today, handlers);
+  if (study) main.append(study);
   root.append(main);
 
   // ——— разделы-справочники (правая колонка на широком экране) ———

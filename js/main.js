@@ -8,8 +8,9 @@ import { setupPriority } from './priority.js';
 import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocument, forgetConditions } from './data.js';
 import { renderResults } from './render.js';
 import { PLAN_KEY, DONE_KEY, buildIcs } from './plan.js';
-import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan } from './route-state.js';
+import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask } from './route-state.js';
 import { examPlan } from './exam-plan.js';
+import { buildStudyPlan } from './study-plan.js';
 import { buildCombinedRoute } from './route-combined.js';
 import { renderRoute } from './route-view.js';
 import { EXPLAIN_URL } from './config.js';
@@ -269,6 +270,7 @@ function rebuildRoute() {
     route = null;
     return;
   }
+  if (!routeState.studyStarted) { routeState = { ...routeState, studyStarted: today }; persistRoute(); }
   route = buildCombinedRoute({
     contexts: routeCtx,
     profile: readForm(form),
@@ -284,8 +286,18 @@ const showRouteStatus = (message) => {
   renderRouteView();
 };
 
+function examForStep(step) {
+  const goals = route.goals.filter(goal => step.programIds.includes(goal.id) && goal.deadline.closes);
+  const open = goals.filter(goal => goal.deadline.state !== 'closed');
+  const deadline = (open.length ? open : goals).sort((a,b) => a.deadline.closes.localeCompare(b.deadline.closes))[0]?.deadline;
+  return examPlan({ step, track: routeTracks[step.track], state: routeState, profile: readForm(form), today, deadline });
+}
+
 function renderRouteView() {
+  const plans = Object.fromEntries((route?.steps ?? []).filter(step => routeTracks[step.track]).map(step => [step.id, examForStep(step)]));
   renderRoute(routeBody, {
+    study: route ? buildStudyPlan({ steps:route.steps, tracks:routeTracks, plans, state:routeState, today }) : null,
+    routeState, today,
     programs,
     goal: routeState.goals[0] ?? null,
     route,
@@ -296,11 +308,19 @@ function renderRouteView() {
     loading: routeLoading,
     applyUrl: routeState.goals.length === 1 ? details.programs?.[routeState.goals[0]]?.applyUrl ?? null : null,
     handlers: {
-      getExamPlan(step) {
-        const goals = route.goals.filter(goal => step.programIds.includes(goal.id) && goal.deadline.closes);
-        const open = goals.filter(goal => goal.deadline.state !== 'closed');
-        const deadline = (open.length ? open : goals).sort((a,b) => a.deadline.closes.localeCompare(b.deadline.closes))[0]?.deadline;
-        return examPlan({ step, track: routeTracks[step.track], state: routeState, profile: readForm(form), today, deadline });
+      getExamPlan: examForStep,
+      onStudyToggle(week, taskId) {
+        routeState=toggleStudyTask(routeState,week,taskId);persistRoute();renderRouteView();
+        const section=routeBody.querySelector(`[data-study-week="${CSS.escape(week)}"]`);
+        if (section) section.open=true;
+        routeBody.querySelector(`[data-study-task="${CSS.escape(taskId)}"] input`)?.focus();
+      },
+      onMock(code, score) {
+        const next=recordMock(routeState,code,score,today);
+        if (!next) return 'Проверь дату и шкалу балла.';
+        routeState=next;persistRoute();rebuildRoute();renderRouteView();
+        routeBody.querySelector(`[data-advice="${CSS.escape(code)}"]`)?.scrollIntoView({block:'nearest'});
+        return 'Пробник сохранён.';
       },
       onExamPlan(code, patch, field) {
         routeState = setExamPlan(routeState, code, patch);
@@ -370,6 +390,7 @@ function renderRouteView() {
           const imported = importState(await picked.text());
           if (!imported) return 'Это не файл маршрута Nerio.';
           routeState = imported;
+          form.elements.hoursPerWeek.value=routeState.hoursPerWeek;
           persistRoute();
           await refreshRoute();
           refresh();
@@ -417,6 +438,7 @@ addEventListener('beforeprint', () => {
 
 const saved = loadProfile(localStorage);
 writeForm(form, saved);
+form.elements.hoursPerWeek.value=routeState.hoursPerWeek;
 
 // Приоритеты: кнопки стран строятся по данным, а не по списку в коде —
 // незачем показывать страну, программ которой на сайте нет. До загрузки
@@ -472,6 +494,8 @@ finishButton.addEventListener('click', (event) => {
 }, true);
 
 function refresh(profile = readForm(form)) {
+  const hours=Number(form.elements.hoursPerWeek.value);
+  if (hours!==routeState.hoursPerWeek) { routeState=setStudyHours(routeState,hours);persistRoute(); }
   saveProfile(profile, localStorage);
   profileBox.update(profile);
   tabbar.setPlanCount(plan.ids.length);
@@ -520,6 +544,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
     localStorage.removeItem(ROUTE_STATE_KEY);
   } catch { /* приватный режим: стирать нечего */ }
   routeState = loadRouteState(localStorage);
+  form.elements.hoursPerWeek.value=routeState.hoursPerWeek;
   route = null;
   routeCtx = null;
   routeTracks = {};

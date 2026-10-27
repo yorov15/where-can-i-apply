@@ -99,5 +99,59 @@
   },
   "sessions": [],
   "sessionsSource": null,
-  "timingNote": "Результат в кабинете — через 3 дня; PDF доступен ещё через 24–48 часов. Для планирования учитывается и ожидание PDF. Доставку результата вузу уточни отдельно."
+  "timingNote": "Результат в кабинете — через 3 дня; PDF доступен ещё через 24–48 часов. Для планирования учитывается и ожидание PDF. Доставку результата вузу уточни отдельно.",
+  "practice": {
+    "url": "https://www.ets.org/pdfs/toefl/toefl-ibt-full-length-practice-test-1.pdf",
+    "label": "Официальный пробный тест",
+    "source": {
+      "url": "https://www.ets.org/toefl/test-takers/ibt/prepare.htm.html",
+      "pageHash": "sha256:ea79bff70bb329e8cc86d05b266f545861079a1bedcf50930cb9235826f1ad05",
+      "quotes": [
+        "Free products",
+        "Full-Length Practice Test 1"
+      ],
+      "lastVerified": "2026-10-27",
+      "snapshot": "raw/exams/2026-10-27/toefl-practice.txt",
+      "contentHash": "sha256:ddeb91bf0933f8517b16c3e47ac344941cfba2af0ca9ea68b67e6e2827d38b2d"
+    },
+    "note": "Результат пробника не заменяет сертификат. Не подбирай балл сам, если материал не даёт оценки."
+  },
+  "weekTemplates": [
+    {
+      "id": "r",
+      "part": "R",
+      "title": "Потренировать Reading и разобрать ошибки",
+      "url": "https://www.ets.org/pdfs/toefl/toefl-ibt-full-length-practice-test-1.pdf"
+    },
+    {
+      "id": "l",
+      "part": "L",
+      "title": "Потренировать Listening и разобрать ошибки",
+      "url": "https://www.ets.org/pdfs/toefl/toefl-ibt-full-length-practice-test-1.pdf"
+    },
+    {
+      "id": "w",
+      "part": "W",
+      "title": "Потренировать Writing и разобрать ошибки",
+      "url": "https://www.ets.org/pdfs/toefl/toefl-ibt-full-length-practice-test-1.pdf"
+    },
+    {
+      "id": "s",
+      "part": "S",
+      "title": "Потренировать Speaking и разобрать ошибки",
+      "url": "https://www.ets.org/pdfs/toefl/toefl-ibt-full-length-practice-test-1.pdf"
+    }
+  ],
+  "practiceSource": {
+    "url": "https://www.ets.org/toefl/test-takers/ibt/prepare.htm.html",
+    "pageHash": "sha256:ea79bff70bb329e8cc86d05b266f545861079a1bedcf50930cb9235826f1ad05",
+    "quotes": [
+      "Free products",
+      "Full-Length Practice Test 1"
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/toefl-practice.txt",
+    "contentHash": "sha256:ddeb91bf0933f8517b16c3e47ac344941cfba2af0ca9ea68b67e6e2827d38b2d"
+  },
+  "scheduleNote": "Минуты — распределение выбранного тобой времени, а не оценка срока достижения балла. На Writing и Speaking используй критерии организатора или помощь преподавателя."
 }

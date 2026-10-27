@@ -39,6 +39,23 @@ def validate_per_part(per_part, program):
         if not isinstance(source,dict) or source.get('quote') != evidence or not _is_iso_day(source.get('lastVerified')) or not any(p.get('url')==source.get('url') and p.get('contentHash')==source.get('contentHash') for p in pages): errors.append('perPart source does not match approved programme evidence')
     return errors
 
+def validate_practice(track, root):
+    from tools.route import _is_http
+    if 'practice' not in track and 'weekTemplates' not in track: return []
+    errors = source_problems(track.get('practiceSource'), root, 'practice')
+    practice = track.get('practice')
+    if not isinstance(practice, dict) or not _is_http(practice.get('url')) or not isinstance(practice.get('label'),str): errors.append('invalid practice resource')
+    else: errors += source_problems(practice.get('source'),root,'mock')
+    templates = track.get('weekTemplates')
+    parts = {part.get('code') for part in track.get('parts', [])}
+    if not isinstance(templates,list) or not templates: errors.append('missing weekly templates')
+    else:
+        ids=set()
+        for item in templates:
+            if not isinstance(item,dict) or not isinstance(item.get('id'),str) or item.get('id') in ids or item.get('part') not in parts or not isinstance(item.get('title'),str) or len(item['title'])>80 or not _is_http(item.get('url')): errors.append('invalid weekly task template')
+            elif item.get('id'): ids.add(item['id'])
+    return errors
+
 def validate_timing(track, root: Path):
     from tools.route import _is_iso_day
     errors = []

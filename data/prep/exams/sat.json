@@ -79,5 +79,47 @@
     "contentHash": "sha256:a4c532bc1509db83160c2f876a104709f10b4562a24aa2e5279db399e656ddc2",
     "pageHash": "sha256:23287ba943b657a901278f3137c0022a66258aa215c0e015f9d7832061f59e35"
   },
-  "timingNote": "План использует опубликованные даты SAT Weekend и выдачи баллов. Места, регистрацию и отправку баллов вузу проверяй отдельно."
+  "timingNote": "План использует опубликованные даты SAT Weekend и выдачи баллов. Места, регистрацию и отправку баллов вузу проверяй отдельно.",
+  "practice": {
+    "url": "https://bluebook.collegeboard.org/students/practice",
+    "label": "Официальный пробный тест",
+    "source": {
+      "url": "https://satsuite.collegeboard.org/practice",
+      "pageHash": "sha256:3bc970b1890337394385d1dbde623a6e8d503bb1a1a9e00ffaac07cbca1dfca0",
+      "quotes": [
+        "find your free practice resources here.",
+        "Download Bluebook to take official digital practice tests"
+      ],
+      "lastVerified": "2026-10-27",
+      "snapshot": "raw/exams/2026-10-27/sat-practice.txt",
+      "contentHash": "sha256:3ee2b91c51cd106360dfdcdca4804ba87d1fd0214a3ce98f466cfe1a4394a73c"
+    },
+    "note": "Результат пробника не заменяет сертификат. Не подбирай балл сам, если материал не даёт оценки."
+  },
+  "weekTemplates": [
+    {
+      "id": "rw",
+      "part": "RW",
+      "title": "Потренировать Reading and Writing и разобрать ошибки",
+      "url": "https://satsuite.collegeboard.org/practice"
+    },
+    {
+      "id": "m",
+      "part": "M",
+      "title": "Потренировать Math и разобрать ошибки",
+      "url": "https://satsuite.collegeboard.org/practice"
+    }
+  ],
+  "practiceSource": {
+    "url": "https://satsuite.collegeboard.org/practice",
+    "pageHash": "sha256:3bc970b1890337394385d1dbde623a6e8d503bb1a1a9e00ffaac07cbca1dfca0",
+    "quotes": [
+      "find your free practice resources here.",
+      "Download Bluebook to take official digital practice tests"
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/sat-practice.txt",
+    "contentHash": "sha256:3ee2b91c51cd106360dfdcdca4804ba87d1fd0214a3ce98f466cfe1a4394a73c"
+  },
+  "scheduleNote": "Минуты — распределение выбранного тобой времени, а не оценка срока достижения балла. На Writing и Speaking используй критерии организатора или помощь преподавателя."
 }

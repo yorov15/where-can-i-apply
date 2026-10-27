@@ -1,5 +1,6 @@
 // Единое состояние маршрута и выбранных программ. Старые ключи читаются
 // только при миграции; неизвестные отметки остаются в экспорте для переноса.
+import { SCORE_LIMITS } from './lib/limits.js';
 export const ROUTE_STATE_KEY = 'eligibility-route';
 export const ROUTE_VERSION = 2;
 export const MAX_GOALS = 8;
@@ -13,7 +14,7 @@ const day = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(val
   && Number.isFinite(Date.parse(`${value}T00:00:00Z`))
   && new Date(`${value}T00:00:00Z`).toISOString().slice(0, 10) === value;
 const read = (storage, key) => { try { return JSON.parse(storage?.getItem(key) ?? 'null'); } catch { return null; } };
-const empty = () => ({ version: 2, goals: [], hoursPerWeek: 4, scores: {}, examDates: {}, examFormats: {}, retakeBuffers: {}, done: {}, weekPlan: {}, lastReview: null });
+const empty = () => ({ version: 2, goals: [], hoursPerWeek: 4, scores: {}, examDates: {}, examFormats: {}, retakeBuffers: {}, done: {}, weekPlan: {}, studyStarted: null, lastReview: null });
 
 function normalize(value) {
   if (!object(value)) return null;
@@ -46,6 +47,7 @@ function normalize(value) {
       .map(task => ({ taskId: task.taskId, ...(day(task.day) ? { day: task.day } : {}), done: task.done === true }));
   }
   next.lastReview = day(value.lastReview) ? value.lastReview : null;
+  next.studyStarted = day(value.studyStarted) ? value.studyStarted : null;
   if (value.migrationNotice === true) next.migrationNotice = true;
   return next;
 }
@@ -135,5 +137,37 @@ export function setExamPlan(state, code, { date, format, bufferDays }) {
   else if (day(date)) next.examDates[code] = date;
   if (['computer','paper','default'].includes(format)) next.examFormats[code] = format;
   if (Number.isInteger(bufferDays) && bufferDays >= 0 && bufferDays <= 180) next.retakeBuffers[code] = bufferDays;
+  return next;
+}
+
+export function setStudyHours(state, hours) {
+  const next = copy(state);
+  if ([2,4,6,10].includes(hours)) next.hoursPerWeek = hours;
+  return next;
+}
+
+export function recordMock(state, code, score, today) {
+  const tests={ielts:'IELTS',toefl:'TOEFL_IBT_2026',duolingo:'DUOLINGO',sat:'SAT'};
+  if (tests[code]!==score.test) return null;
+  const limit = SCORE_LIMITS[score.test];
+  if (!safeKey(code) || !limit || !day(score.date) || score.date > today || !Number.isFinite(score.overall)
+    || score.overall < limit.min || score.overall > limit.max || Math.abs(score.overall / limit.step - Math.round(score.overall / limit.step)) > 1e-8) return null;
+  const partLimit = score.test === 'SAT' ? { min:200, max:800, step:10 } : limit;
+  const parts = score.parts ?? {};
+  if (Object.values(parts).some(value => !Number.isFinite(value) || value < partLimit.min || value > partLimit.max || Math.abs(value / partLimit.step - Math.round(value / partLimit.step)) > 1e-8)) return null;
+  const next = copy(state);
+  // One self-report per day and scale; editing it does not inflate the history.
+  next.scores[code] = [...(next.scores[code] ?? []).filter(item => item.date !== score.date || item.test !== score.test), { ...score, mock:true }].sort((a,b) => a.date.localeCompare(b.date));
+  return next;
+}
+
+export function toggleStudyTask(state, week, taskId) {
+  const next = copy(state);
+  if (!/^\d{4}-W\d{2}$/.test(week) || !safeKey(taskId)) return next;
+  const tasks = next.weekPlan[week] ?? [];
+  const existing = tasks.find(item => item.taskId === taskId);
+  if (existing) existing.done = !existing.done;
+  else tasks.push({ taskId, done:true });
+  next.weekPlan[week] = tasks;
   return next;
 }

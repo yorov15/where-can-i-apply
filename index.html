@@ -54,6 +54,8 @@
 <link rel="modulepreload" href="js/route-state.js">
 <link rel="modulepreload" href="js/route-combined.js">
 <link rel="modulepreload" href="js/exam-plan.js">
+<link rel="modulepreload" href="js/study-plan.js">
+<link rel="modulepreload" href="js/study-view.js">
 <link rel="modulepreload" href="js/route-view.js">
 <link rel="modulepreload" href="js/compare.js">
 <link rel="modulepreload" href="js/cost.js">
@@ -207,6 +209,15 @@
 
     <fieldset class="step">
       <legend>Что тебе важнее</legend>
+      <label>Сколько часов в неделю готов заниматься?
+        <select name="hoursPerWeek" aria-label="Часы подготовки в неделю">
+          <option value="2">2 часа</option>
+          <option value="4" selected>4 часа</option>
+          <option value="6">6 часов</option>
+          <option value="10">10 часов</option>
+        </select>
+      </label>
+      <p class="hint">Это общее время на подготовку ко всем выбранным экзаменам. Его можно изменить позже.</p>
       <p class="hint">Нажимай по порядку: первое нажатие — первое желание, число на кнопке его показывает. Повторное нажатие снимает выбор. Программы, подходящие под выбор, встанут в начале списка. Шаг можно пропустить.</p>
 
       <div id="priority-countries">

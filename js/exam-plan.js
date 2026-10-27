@@ -38,7 +38,7 @@ export function examPlan({ step, track, state, profile, today, deadline }) {
   const canReserveRetake = Boolean(last && latest && last >= today && buffer > 0 && retakeKnown && wait != null
     && (!booked || booked <= last) && buffer >= Math.max(wait,track.retakeRule.minDays));
   return { code, test, target, recommended, current, gap: current == null || target == null ? null : Math.max(0,target-current),
-    partsUnknown: Boolean(step.target?.parts), historicalScale, format, buffer, booked, resultDate,
+    partsUnknown: Boolean(step.target?.parts), recent: recent ?? null, historicalScale, format, buffer, booked, resultDate,
     lastDate: expired ? null : last, latestDate: expired ? null : latest,
     waitDays: wait, expired, tooLate, pastBooking,
     hasTime: Boolean(last && last >= today && !expired), canReserveRetake,

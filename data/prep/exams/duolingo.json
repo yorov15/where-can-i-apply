@@ -69,5 +69,65 @@
   "retakeRule": null,
   "sessions": [],
   "sessionsSource": null,
-  "timingNote": "Организатор называет 48 часов для проверки. Готовность результата и правила повторной попытки сверь в своём кабинете."
+  "timingNote": "Организатор называет 48 часов для проверки. Готовность результата и правила повторной попытки сверь в своём кабинете.",
+  "practice": {
+    "url": "https://englishtest.duolingo.com/quick",
+    "label": "Официальный пробный тест",
+    "source": {
+      "url": "https://blog.englishtest.duolingo.com/duolingo-english-test-readiness/",
+      "pageHash": "sha256:72e75825f5279a6da7e7ad97ce2b119e741f5517ccbaf5ebc5af97ee31ab1623",
+      "quotes": [
+        "Take a free, adaptive practice test!",
+        "Reading articles in English",
+        "Listening to podcasts or shows",
+        "Speaking out loud",
+        "Writing short responses"
+      ],
+      "lastVerified": "2026-10-27",
+      "snapshot": "raw/exams/2026-10-27/det-practice.txt",
+      "contentHash": "sha256:77b899a861aab2f0450f6d9c0c70a861a3064a8f8d070f47c67134d459335281"
+    },
+    "note": "Результат пробника не заменяет сертификат. Не подбирай балл сам, если материал не даёт оценки."
+  },
+  "weekTemplates": [
+    {
+      "id": "r",
+      "part": "R",
+      "title": "Потренировать Reading и разобрать ошибки",
+      "url": "https://blog.englishtest.duolingo.com/duolingo-english-test-readiness/"
+    },
+    {
+      "id": "w",
+      "part": "W",
+      "title": "Потренировать Writing и разобрать ошибки",
+      "url": "https://blog.englishtest.duolingo.com/duolingo-english-test-readiness/"
+    },
+    {
+      "id": "l",
+      "part": "L",
+      "title": "Потренировать Listening и разобрать ошибки",
+      "url": "https://blog.englishtest.duolingo.com/duolingo-english-test-readiness/"
+    },
+    {
+      "id": "s",
+      "part": "S",
+      "title": "Потренировать Speaking и разобрать ошибки",
+      "url": "https://blog.englishtest.duolingo.com/duolingo-english-test-readiness/"
+    }
+  ],
+  "practiceSource": {
+    "url": "https://blog.englishtest.duolingo.com/duolingo-english-test-readiness/",
+    "pageHash": "sha256:72e75825f5279a6da7e7ad97ce2b119e741f5517ccbaf5ebc5af97ee31ab1623",
+    "quotes": [
+      "Take a free, adaptive practice test!",
+      "Reading articles in English",
+      "Listening to podcasts or shows",
+      "Speaking out loud",
+      "Writing short responses"
+    ],
+    "lastVerified": "2026-10-27",
+    "snapshot": "raw/exams/2026-10-27/det-practice.txt",
+    "contentHash": "sha256:77b899a861aab2f0450f6d9c0c70a861a3064a8f8d070f47c67134d459335281"
+  },
+  "scheduleNote": "Минуты — распределение выбранного тобой времени, а не оценка срока достижения балла. На Writing и Speaking используй критерии организатора или помощь преподавателя."
 }
