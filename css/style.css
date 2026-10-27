@@ -666,6 +666,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .route-due { color: var(--accent-text); font-size: .875rem; font-weight: 600; }
 .route-detail { margin: 0; color: var(--muted); font-size: .9375rem; }
 .route-more { font-size: .9375rem; }
+.route-actions>[data-parent-report] { flex-basis:100%; min-width:0; }
 .route-more summary { color: var(--accent-text); font-weight: 600; cursor: pointer; }
 .route-track { font-size: .9375rem; }
 .route-track p { margin: var(--s-1) 0; }
@@ -707,4 +708,7 @@ body[data-screen="route"] .hero { display: none; }
 @media print {
   .topbar, .hero, .site-footer, .tabbar, .profile-box, #answer, #catalog, .route-actions, .route-goal-actions, .route-goal-pick, .route-status, .route-open { display: none !important; }
   .route-step, .route-phase { break-inside: avoid; }
+  .is-parent-print>*:not(#parent-print) { display:none!important; }
+  .is-parent-print { background:#fbfbf9; }
+  .is-parent-print #parent-print { display:block!important; color:#1c1f2a; background:#fbfbf9; max-width:170mm; margin:0 auto; padding:12mm; font:12pt/1.5 Onest,system-ui,sans-serif; overflow-wrap:anywhere; }
 }

@@ -8,7 +8,6 @@
 // Разделы справочника — раскрывающиеся: иначе экран превращается в стену
 // текста, и «что делать» теряется среди «что вообще бывает».
 import { reasonText } from './wording.js';
-import { routeText } from './route.js';
 import { formatDate, plural } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
 import { renderStudyPlan } from './study-view.js';
@@ -330,12 +329,23 @@ function actionsBlock(route, handlers, statusText, applyUrl) {
   calendar.addEventListener('click', () => say(handlers.onCalendar()));
   box.append(calendar);
 
-  const parent = el('button', 'button button-quiet', 'Текст для родителей');
+  const parent = el('button', 'button button-quiet', 'Скопировать отчёт родителю');
   parent.type = 'button';
   parent.addEventListener('click', async () => {
-    try { say(await handlers.onParent(routeText(route))); } catch { say('Не получилось подготовить текст.'); }
+    try { say(await handlers.onParent(route.parentReport)); } catch { say('Не получилось подготовить текст.'); }
   });
   box.append(parent);
+
+  const parentPrint=el('button','button button-quiet','Отчёт в PDF');
+  parentPrint.type='button';
+  parentPrint.addEventListener('click',()=>handlers.onParentPrint(route.parentReport));
+  box.append(parentPrint);
+
+  const preview=el('details','route-more');
+  preview.dataset.parentReport='';
+  preview.append(el('summary',null,'Что войдёт в отчёт'));
+  for(const line of (route.parentReport??'').split('\n')) preview.append(el('p','route-detail',line));
+  box.append(preview);
 
   const print = el('button', 'button button-quiet', 'Печать или PDF');
   print.type = 'button';

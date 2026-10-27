@@ -24,7 +24,11 @@ export function reviewWeeks(state,today,taskIds) {
 export function prepareCurrentWeek(state,route,study,today) {
   const next=clone(state),start=mondayOf(today),key=weekKey(today),end=shift(start,6);
   for(const tasks of Object.values(next.weekPlan))for(const task of tasks){
-    if(task.routeId&&Object.hasOwn(next.done,task.routeId)){task.done=true;if(next.done[task.routeId])task.completedAt=next.done[task.routeId];}
+    if(task.routeId&&route.steps.some(step=>step.id===task.routeId)){
+      task.done=route.steps.find(step=>step.id===task.routeId).done===true;
+      if(task.done&&next.done[task.routeId])task.completedAt=next.done[task.routeId];
+      else delete task.completedAt;
+    }
   }
   const stored=next.weekPlan[key]??[];
   const sourceTasks=study?.weeks.find(week=>week.key===key)?.tasks??[];

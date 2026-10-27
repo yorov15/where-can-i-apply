@@ -6,6 +6,15 @@ const route={steps:[{id:'doc:a'}],week:[{id:'doc:a',title:'Подготовит�
 const study=(key='2026-W44')=>({active:[{plan:{code:'ielts'}}],weeks:[{key,tasks:['L','R','W','S'].map(part=>({id:`study:${key}:${part}`,code:'ielts',title:`Потренировать ${part}`,kind:'practice',minutes:60,url:'https://ielts.org'}))}]});
 const build=(state=loadRouteState(),today='2026-10-27',material=study())=>prepareCurrentWeek(state,route,material,today);
 
+test('unchecking a route action clears its weekly completion date; undated legacy marks stay undated',()=>{
+  const state=loadRouteState();state.weekPlan={'2026-W44':[{taskId:'admin',routeId:'doc:a',title:'Паспорт',done:true,completedAt:'2026-10-27'}]};
+  const cleared=build(state).state.weekPlan['2026-W44'];
+  assert.ok(cleared.every(task=>!task.done&&!task.completedAt));
+  state.done['doc:a']=null;
+  const migrated=prepareCurrentWeek(state,{...route,steps:[{id:'doc:a',done:true}]},study(),'2026-10-27').state.weekPlan['2026-W44'];
+  assert.equal(migrated[0].done,true);assert.equal(migrated[0].completedAt,undefined);
+});
+
 test('current Monday–Sunday week includes paperwork and preparation in one shared budget',()=>{
   const result=build();assert.equal(result.week.start,'2026-10-26');assert.equal(result.week.end,'2026-11-01');
   assert.equal(result.week.tasks.length,5);assert.equal(result.week.minutes,240);

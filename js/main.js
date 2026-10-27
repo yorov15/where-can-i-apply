@@ -13,6 +13,8 @@ import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, ex
 import { examPlan } from './exam-plan.js';
 import { buildStudyPlan } from './study-plan.js';
 import { prepareCurrentWeek,reviewWeeks,setTaskDay,studyCalendarEvents } from './weekly.js';
+import { parentReport,printParentReport } from './parent-report.js';
+import { planCost } from './cost.js';
 import { buildCombinedRoute } from './route-combined.js';
 import { renderRoute } from './route-view.js';
 import { EXPLAIN_URL } from './config.js';
@@ -288,6 +290,7 @@ function rebuildRoute() {
   const study=buildStudyPlan({steps:route.steps,tracks:routeTracks,plans,state:routeState,today});
   weeklySnapshot=prepareCurrentWeek(routeState,route,study,today);
   if(exportState(routeState)!==exportState(weeklySnapshot.state)){routeState=weeklySnapshot.state;persistRoute();}
+  route.parentReport=parentReport({route,state:routeState,weekly:weeklySnapshot,cost:planCost(routeCtx.map(context=>context.program),details),today});
 }
 
 const showRouteStatus = (message) => {
@@ -367,6 +370,9 @@ function renderRouteView() {
       },
       onPrint() {
         window.print();
+      },
+      onParentPrint(text) {
+        try {printParentReport(text);} catch {showRouteStatus('Браузер не дал открыть печать отчёта.');}
       },
       onCalendar() {
         if (!routeCtx) return 'Срок некуда добавить.';
@@ -458,6 +464,7 @@ function renderRouteView() {
 // Перед печатью раскрываем подробности шагов: на бумаге закрытое
 // раскрытие — это пропавший текст условия.
 addEventListener('beforeprint', () => {
+  if(document.body.classList.contains('is-parent-print')) return;
   for (const node of routeBody.querySelectorAll('details')) node.open = true;
 });
 
