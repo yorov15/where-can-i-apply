@@ -635,21 +635,29 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .hint-tip { border-left: 3px solid var(--amber); padding-left: var(--s-3); }
 .card-meta-docs { color: var(--accent-text); font-weight: 700; background: none; box-shadow: inset 0 0 0 1px var(--accent); }
 
-/* Маршрут до оффера: цель, разрыв, неделя и шаги. Здесь действия, а не
-   карточки, поэтому строки, как в календаре сроков. */
-.route-goals { margin: 0 0 var(--s-4); }
-.route-goal { display: grid; gap: var(--s-2); margin: 0 0 var(--s-4); padding: var(--s-4); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-control); }
-.route-goal-name { margin: 0; font-size: 1.125rem; }
+/* Маршрут до оффера: цель, прогресс, неделя и разделы-справочники. Сверху
+   то, что человек делает сейчас, ниже — что вообще бывает по программе. */
+.route-head { display: grid; gap: var(--s-2); margin: 0 0 var(--s-4); }
+.route-goal-pick { display: grid; gap: var(--s-1); }
+.route-select { width: 100%; min-height: 44px; padding: 0 var(--s-3); font: inherit; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-control); }
+.route-goal-name { margin: 0; font-size: 1.25rem; line-height: 1.2; }
 .route-goal-meta { margin: 0; color: var(--muted); }
 .route-goal-note { margin: 0; font-size: .9375rem; }
-.route-progress { margin: 0 0 var(--s-3); font-weight: 600; }
-.route-gaps { display: grid; gap: var(--s-1); margin: 0 0 var(--s-5); padding: 0; list-style: none; }
-.route-gap { padding-left: var(--s-3); border-left: 3px solid var(--amber); }
+.route-goal-actions { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-1); }
+.route-bar { height: .5rem; margin: 0 0 var(--s-1); accent-color: var(--accent); }
+.route-progress { margin: 0 0 var(--s-4); font-weight: 600; }
+.route-gaps-box { margin: 0 0 var(--s-4); }
+.route-gaps { display: grid; gap: var(--s-1); margin: var(--s-2) 0 0; padding: 0; list-style: none; }
+.route-gap { padding-left: var(--s-3); border-left: 3px solid var(--amber); font-size: .9375rem; }
 .route-gap[data-status="fail"] { border-left-color: var(--no); }
-.route-week { display: grid; gap: var(--s-2); margin: 0 0 var(--s-5); padding: 0; list-style: none; }
-.route-week-item { padding: var(--s-2) 0 var(--s-2) var(--s-3); border-left: 3px solid var(--accent); }
-.route-phase { margin: 0 0 var(--s-4); }
-.route-phase-title { margin: 0 0 var(--s-2); font-size: .8125rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.route-week { margin: 0 0 var(--s-4); }
+.route-week-list { display: grid; gap: var(--s-2); margin: 0; padding: 0; list-style: none; }
+.route-week-item { padding: var(--s-2) var(--s-3); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-control); }
+.route-week-now { border-left: 3px solid var(--accent); }
+.route-phases { display: grid; gap: var(--s-2); margin: 0 0 var(--s-4); }
+.route-phase { padding: 0 var(--s-3) var(--s-2); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-control); }
+.route-phase-title { margin: 0; font-size: .8125rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.route-phase-hint { display: block; margin-top: var(--s-1); font-size: .875rem; letter-spacing: 0; text-transform: none; color: var(--muted); }
 .route-step { display: flex; gap: var(--s-3); align-items: flex-start; padding: var(--s-2) 0; border-bottom: 1px solid var(--line); }
 .route-check { flex: none; width: 1.25rem; height: 1.25rem; margin-top: .15rem; accent-color: var(--accent); }
 .route-step-body { display: grid; gap: var(--s-1); min-width: 0; }
@@ -657,30 +665,46 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .route-step.is-done .route-step-title { color: var(--muted); text-decoration: line-through; }
 .route-due { color: var(--accent-text); font-size: .875rem; font-weight: 600; }
 .route-detail { margin: 0; color: var(--muted); font-size: .9375rem; }
-.route-track, .route-more { font-size: .9375rem; }
+.route-more { font-size: .9375rem; }
 .route-more summary { color: var(--accent-text); font-weight: 600; cursor: pointer; }
-.route-more p { margin: var(--s-1) 0 0; }
+.route-track { font-size: .9375rem; }
 .route-track p { margin: var(--s-1) 0; }
-.route-actions { display: flex; flex-wrap: wrap; gap: var(--s-2); margin: var(--s-5) 0 var(--s-2); }
+.route-actions { display: flex; flex-wrap: wrap; gap: var(--s-2); margin: var(--s-4) 0 var(--s-2); }
 .route-status { min-height: 1.25em; margin: 0; color: var(--muted); font-size: .9375rem; }
 .route-empty { padding: var(--s-4); background: var(--soft); border-radius: var(--r-control); }
-.route-all { margin: var(--s-3) 0 0; }
-.route-all .chips { margin-top: var(--s-2); }
-
-body[data-screen="route"] .hero { display: none; }
-
-/* Цель маршрута — обычные чипы в строку: на широком экране общий стиль
-   ставит чипы анкеты столбцом, здесь это не нужно. */
-.route-goals .chips { flex-flow: row wrap; gap: var(--s-2); margin: 0; padding: 0; overflow: visible; }
-.route-goals .chip { width: auto; max-width: 100%; white-space: normal; text-align: left; justify-content: flex-start; }
 .route-warn { margin: 0 0 var(--s-4); padding: var(--s-3) var(--s-4); background: var(--soft); border-radius: var(--r-control); }
 .route-warn p { margin: 0 0 var(--s-2); }
 .route-warn .button { margin: 0; }
+body[data-screen="route"] .hero { display: none; }
 
-/* Печать: на бумаге нужен только маршрут, без шапки, вкладок и кнопок. */
+
+/* Колонки: на телефоне всё столбцом, на широком экране слева «что делать»,
+   справа справочник. display: contents на телефоне убирает обёртки из
+   раскладки, чтобы отступы считались как раньше. */
+.route-main, .route-side { display: contents; }
+.route-bar::-webkit-progress-bar { background: var(--soft); border-radius: var(--r-pill); }
+.route-bar::-webkit-progress-value, .route-bar::-moz-progress-bar { background: var(--accent); border-radius: var(--r-pill); }
+@media (min-width: 64rem) {
+  #route-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: var(--s-4) var(--s-5); align-items: start; }
+  .route-main { grid-column: 1; display: grid; gap: var(--s-3); }
+  .route-side { grid-column: 2; display: grid; gap: var(--s-2); }
+  .route-actions { grid-column: 1 / -1; }
+}
 @media print {
-  .topbar, .hero, .site-footer, .tabbar, .profile-box, #answer, #catalog, .route-actions, .route-all, .route-goals, .route-status { display: none !important; }
-  .route-open { display: none; }
-  .route-step { break-inside: avoid; }
-  .route-track[open] { page-break-inside: avoid; }
+  /* На бумаге тёмная тема тратит краску и может остаться светлым текстом
+     на белом поле: принудительно светлые токены, независимо от темы. */
+  :root, :root[data-theme="dark"] {
+    color-scheme: light;
+    --bg: #f2f2ee; --surface: #fbfbf9; --soft: #ecece8; --line: #c9c9c4;
+    --fg: #1c1f2a; --muted: #555b66; --ink: #1c1f2a; --on-ink: #f7f7f4;
+    --accent: #2d52d6; --accent-text: #2845b8;
+  }
+  #route-body { display: block; }
+}
+
+/* Печать: на бумаге нужен только маршрут, без шапки, вкладок и кнопок.
+   Раскрытые разделы печатаются целиком — их открывает main.js перед печатью. */
+@media print {
+  .topbar, .hero, .site-footer, .tabbar, .profile-box, #answer, #catalog, .route-actions, .route-goal-actions, .route-goal-pick, .route-status, .route-open { display: none !important; }
+  .route-step, .route-phase { break-inside: avoid; }
 }

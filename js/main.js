@@ -7,7 +7,7 @@ import { setupTabbar } from './tabbar.js';
 import { setupPriority } from './priority.js';
 import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, forgetConditions } from './data.js';
 import { renderResults } from './render.js';
-import { loadPlan, savePlan, togglePlan, PLAN_KEY, DONE_KEY, loadDone, saveDone } from './plan.js';
+import { loadPlan, savePlan, togglePlan, PLAN_KEY, DONE_KEY, loadDone, saveDone, buildIcs } from './plan.js';
 import { loadRouteState, saveRouteState, setGoal, toggleStep, clearProgress, buildRoute, exportState, importState, ROUTE_STATE_KEY } from './route.js';
 import { renderRoute } from './route-view.js';
 import { EXPLAIN_URL } from './config.js';
@@ -190,6 +190,7 @@ let routeTracks = {};
 let routeCtx = null;
 let route = null;
 let routeStatus = '';
+let routeLoading = false;
 
 const programById = (id) => programs.find((program) => program.id === id);
 
@@ -226,7 +227,13 @@ async function openRoute() {
       persistRoute();
     }
   }
+  // Возврат на вкладку не должен показывать «Собираю маршрут…» на готовом
+  // маршруте: скелетон только когда для этой цели ничего не собрано.
+  const stale = !route || route.id !== routeState.goal || !routeCtx;
+  routeLoading = stale;
+  if (stale) renderRouteView();
   await refreshRoute();
+  routeLoading = false;
   renderRouteView();
 }
 
@@ -282,11 +289,19 @@ function renderRouteView() {
     planIds: plan.ids,
     tracks: routeTracks,
     status: routeStatus,
+    loading: routeLoading,
+    applyUrl: routeState.goal ? details.programs?.[routeState.goal]?.applyUrl ?? null : null,
     handlers: {
       onGoal(id) {
         routeState = setGoal(routeState, id);
         persistRoute();
-        refreshRoute().then(renderRouteView);
+        routeLoading = true;
+        renderRouteView();
+        refreshRoute().then(() => {
+          routeLoading = false;
+          renderRouteView();
+          routeScreen.scrollIntoView({ block: 'start' });
+        });
       },
       onToggle(stepId) {
         routeState = toggleStep(routeState, stepId);
@@ -299,6 +314,23 @@ function renderRouteView() {
       },
       onPrint() {
         window.print();
+      },
+      onCalendar() {
+        if (!routeCtx) return 'Срок некуда добавить.';
+        const urls = { [routeCtx.program.id]: details.programs?.[routeCtx.program.id]?.applyUrl };
+        const stamp = new Date().toISOString().replace(/[-:]|\.\d{3}/g, '');
+        const { text, events } = buildIcs([routeCtx.program], today, stamp, urls);
+        if (!events) return 'Срок подачи не объявлен — в календарь добавлять нечего.';
+        try {
+          const link = document.createElement('a');
+          link.href = URL.createObjectURL(new Blob([text], { type: 'text/calendar;charset=utf-8' }));
+          link.download = 'nerio-marshrut.ics';
+          link.click();
+          setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+          return 'Файл скачан: открыл — и срок с напоминанием за неделю и за день в календаре.';
+        } catch {
+          return 'Браузер не дал скачать файл календаря.';
+        }
       },
       onParent(text) {
         return navigator.clipboard.writeText(text).then(

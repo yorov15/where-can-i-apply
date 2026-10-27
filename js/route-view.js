@@ -1,13 +1,17 @@
-// Экран «Маршрут до оффера»: цель, чего не хватает, неделя и шаги.
+// Экран «Маршрут до оффера»: цель, прогресс, неделя и шаги по разделам.
 // Движок и все правила — в js/route.js; здесь только DOM. Ничего не
 // считается второй раз и не выдумывается: тексты шагов приходят готовыми,
 // причины — из wording.js, треки — из data/prep/exams.
+//
+// Порядок на экране выбран по пользе: сверху то, что человек делает сейчас
+// (цель, неделя, прогресс), ниже — справочник (документы, деньги, подача).
+// Разделы справочника — раскрывающиеся: иначе экран превращается в стену
+// текста, и «что делать» теряется среди «что вообще бывает».
 import { reasonText } from './wording.js';
 import { routeText } from './route.js';
 import { formatDate, plural } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
 
-// Порядок блоков шагов. Совпадает с порядком, который задаёт движок.
 const PHASES = [
   ['tests', 'Экзамены'],
   ['inquiry', 'Уточнить у вуза'],
@@ -16,6 +20,15 @@ const PHASES = [
   ['apply', 'Подача'],
   ['after', 'После подачи'],
 ];
+
+const PHASE_HINT = {
+  tests: 'что сдать и когда',
+  inquiry: 'что спросить у приёмной комиссии',
+  docs: 'что собрать в папку',
+  money: 'сколько заплатить',
+  apply: 'куда и когда отправить',
+  after: 'что будет после заявки',
+};
 
 function el(tag, className, text) {
   const node = document.createElement(tag);
@@ -57,70 +70,6 @@ function deadlineLine(goal) {
   return `${soon}Срок подачи — ${formatDate(deadline.closes)}${expected}${left}.`;
 }
 
-function chips(ids, selected, programs, onGoal) {
-  const box = el('div', 'chips');
-  for (const id of ids) {
-    const program = programs.find((item) => item.id === id);
-    if (!program) continue;
-    const chip = el('button', 'chip', shortName(program));
-    chip.type = 'button';
-    chip.setAttribute('aria-pressed', id === selected ? 'true' : 'false');
-    chip.addEventListener('click', () => onGoal(id));
-    box.append(chip);
-  }
-  return box;
-}
-
-// Цель: сначала программы из «Моего плана», остальные проверенные — под
-// раскрывающимся списком. Полный маршрут сейчас не у всех, поэтому список
-// честно называется.
-function goalBlock({ goal, prepared, planIds, programs, onGoal }) {
-  const box = el('div', 'route-goals');
-  const preparedIds = prepared.map((entry) => entry.id);
-  const fromPlan = planIds.filter((id) => preparedIds.includes(id));
-  if (fromPlan.length) {
-    box.append(el('p', 'fineprint', 'Цель из плана:'));
-    box.append(chips(fromPlan, goal, programs, onGoal));
-  }
-  const rest = preparedIds.filter((id) => !fromPlan.includes(id));
-  if (rest.length) {
-    const details = el('details', 'route-all');
-    if (!fromPlan.length) details.open = true;
-    details.append(el('summary', null, `Все программы с маршрутом (${rest.length})`));
-    details.append(chips(rest, goal, programs, onGoal));
-    box.append(details);
-  }
-  return box;
-}
-
-function emptyState({ hasPlan, prepared, failed, onRetry }) {
-  const box = el('div', failed ? 'route-warn' : 'route-empty');
-  if (failed) {
-    box.append(el('p', null, 'Маршрут не загрузился. Проверь интернет и попробуй ещё раз.'));
-    const retry = el('button', 'button button-quiet', 'Попробовать ещё раз');
-    retry.type = 'button';
-    retry.addEventListener('click', () => onRetry?.());
-    box.append(retry);
-    return box;
-  }
-  const text = hasPlan || !prepared.length
-    ? 'Выбери цель — программу, до которой строится маршрут. Полный маршрут с подготовкой сейчас у проверенных программ из списка ниже; у остальных появятся срок, требования и документы, когда их сверят.'
-    : 'Выбери цель из списка ниже.';
-  box.append(el('p', null, text));
-  return box;
-}
-
-function conditionsWarn(route, onRetry) {
-  if (route.conditionsLoaded !== false) return null;
-  const box = el('div', 'route-warn');
-  box.append(el('p', null, 'Условия программы не загрузились: документы и деньги не показаны, поэтому маршрут неполный.'));
-  const retry = el('button', 'button button-quiet', 'Повторить');
-  retry.type = 'button';
-  retry.addEventListener('click', () => onRetry?.());
-  box.append(retry);
-  return box;
-}
-
 // Заголовки условий бывают абзацем: в шаге показываем первую фразу, полный
 // текст — под раскрытием. Ничего не выкидываем: текст условия остаётся.
 const SHORT_TITLE = 110;
@@ -135,14 +84,71 @@ function splitTitle(title) {
   return { short: short.endsWith('.') || short.endsWith('…') ? short : `${short}…`, rest: text };
 }
 
-function gapList(route) {
-  if (!route.gaps.length) {
-    const box = el('div', null);
-    box.append(el('p', 'route-detail', 'По правилам программы замечаний нет. Шансы поступления сайт не оценивает — смотри сроки, документы и деньги ниже.'));
-    return box;
+const clip = (text, max) => {
+  const value = String(text ?? '').trim();
+  return value.length <= max ? value : `${value.slice(0, max - 1).trimEnd()}…`;
+};
+
+// Цель — выпадающий список: 26 кнопок в две строки занимали весь первый
+// экран, а нужна одна цель. Сначала программы из плана, остальные — ниже.
+function goalSelect({ goal, prepared, planIds, programs, onGoal }) {
+  const box = el('div', 'route-goal-pick');
+  const label = el('label', 'fineprint', 'Цель');
+  label.htmlFor = 'route-goal';
+  const select = el('select', 'route-select');
+  select.id = 'route-goal';
+  const preparedIds = prepared.map((entry) => entry.id);
+  const fromPlan = planIds.filter((id) => preparedIds.includes(id));
+  const rest = preparedIds.filter((id) => !fromPlan.includes(id));
+  const addOption = (parent, id) => {
+    const program = programs.find((item) => item.id === id);
+    const option = el('option', null, shortName(program));
+    option.value = id;
+    if (id === goal) option.selected = true;
+    parent.append(option);
+  };
+  if (!goal) {
+    const empty = el('option', null, 'Выбери программу');
+    empty.value = '';
+    empty.disabled = true;
+    empty.selected = true;
+    select.append(empty);
   }
-  const box = el('div', null);
-  box.append(el('h3', 'route-phase-title', 'Чего не хватает'));
+  if (fromPlan.length) {
+    const group = el('optgroup');
+    group.label = 'Из плана';
+    for (const id of fromPlan) addOption(group, id);
+    select.append(group);
+  }
+  if (rest.length) {
+    const group = el('optgroup');
+    group.label = 'Все программы с маршрутом';
+    for (const id of rest) addOption(group, id);
+    select.append(group);
+  }
+  select.addEventListener('change', () => { if (select.value) onGoal(select.value); });
+  box.append(label, select);
+  return box;
+}
+
+function conditionsWarn(route, onRetry) {
+  if (route.conditionsLoaded !== false) return null;
+  const box = el('div', 'route-warn');
+  box.append(el('p', null, 'Условия программы не загрузились: документы и деньги не показаны, поэтому маршрут неполный.'));
+  const retry = el('button', 'button button-quiet', 'Повторить');
+  retry.type = 'button';
+  retry.addEventListener('click', () => onRetry?.());
+  box.append(retry);
+  return box;
+}
+
+function gapBlock(route) {
+  if (!route.gaps.length) return null;
+  const box = el('details', 'route-gaps-box');
+  // Одна-две причины — это ответ на «почему я ещё не готов»; прятать его за
+  // тапом незачем. Длинный список — уже справочник, его лучше свернуть.
+  if (route.gaps.length <= 2) box.open = true;
+  box.append(el('summary', 'route-phase-title', `Чего не хватает (${route.gaps.length})`));
   const list = el('ul', 'route-gaps');
   for (const reason of route.gaps) {
     const text = reasonText(reason);
@@ -172,7 +178,7 @@ function trackBlock(step, tracks) {
   for (const item of track.freePrep ?? []) {
     const node = link(item.label, item.url);
     if (node) {
-      const p = el('p', null, '');
+      const p = el('p');
       p.append(node);
       details.append(p);
     }
@@ -181,15 +187,14 @@ function trackBlock(step, tracks) {
   const source = link('Источник', track.source?.url);
   if (source) {
     const p = el('p', 'route-detail', 'Сверено: ');
-    const checked = track.source?.lastVerified ? formatDate(track.source.lastVerified) : '';
     p.append(source);
-    p.append(document.createTextNode(checked ? ` · ${checked}` : ''));
+    p.append(document.createTextNode(track.source?.lastVerified ? ` · ${formatDate(track.source.lastVerified)}` : ''));
     details.append(p);
   }
   return details;
 }
 
-function stepRow(step, index, { tracks, onToggle }) {
+function stepRow(step, index, { tracks, onToggle, compact = false }) {
   const row = el('div', step.done ? 'route-step is-done' : 'route-step');
   const check = el('input', 'route-check');
   check.type = 'checkbox';
@@ -198,96 +203,94 @@ function stepRow(step, index, { tracks, onToggle }) {
   check.checked = Boolean(step.done);
   check.addEventListener('change', () => onToggle(step.id));
   const body = el('div', 'route-step-body');
-  const { short, rest } = splitTitle(step.title);
-  const title = el('label', 'route-step-title', short);
-  title.htmlFor = check.id;
-  body.append(title);
+  // В неделе нужен короткий заголовок: там строка одна на дело, а не абзац.
+  const parts = compact ? { short: clip(step.title, 72), rest: '' } : splitTitle(step.title);
+  const label = el('label', 'route-step-title', parts.short);
+  label.htmlFor = check.id;
+  body.append(label);
   if (step.due) body.append(el('span', 'route-due', `до ${formatDate(step.due)}`));
-  if (step.detail) body.append(el('p', 'route-detail', step.detail));
-  if (rest) {
-    const more = el('details', 'route-more');
-    more.append(el('summary', null, 'Полный текст условия'));
-    more.append(el('p', 'route-detail', rest));
-    body.append(more);
+  if (!compact) {
+    if (step.detail) body.append(el('p', 'route-detail', step.detail));
+    if (parts.rest) {
+      const more = el('details', 'route-more');
+      more.append(el('summary', null, 'Читать полностью'));
+      more.append(el('p', 'route-detail', parts.rest));
+      body.append(more);
+    }
+    const track = step.track ? trackBlock(step, tracks) : null;
+    if (track) body.append(track);
   }
-  const track = step.track ? trackBlock(step, tracks) : null;
-  if (track) body.append(track);
   row.append(check, body);
   return row;
 }
 
-// Неделя — короткий список: те же шаги, но без полного текста и подготовки,
-// иначе она повторяет весь маршрут и человек не видит, что делать сейчас.
-function weekRow(step, index, { onToggle }) {
-  const row = el('div', step.done ? 'route-step is-done' : 'route-step');
-  const check = el('input', 'route-check');
-  check.type = 'checkbox';
-  check.id = `route-week-${index}`;
-  check.dataset.step = step.id;
-  check.checked = Boolean(step.done);
-  check.addEventListener('change', () => onToggle(step.id));
-  const body = el('div', 'route-step-body');
-  const { short } = splitTitle(step.title);
-  const title = el('label', 'route-step-title', short);
-  title.htmlFor = check.id;
-  body.append(title);
-  if (step.due) body.append(el('span', 'route-due', `до ${formatDate(step.due)}`));
-  row.append(check, body);
-  return row;
-}
-
+// «Эта неделя» — не второй маршрут, а первые дела: первое выделено, как
+// «сейчас», остальные просто список. Полный текст и подготовка — ниже, в
+// разделах.
 function weekBlock(route, handlers) {
-  const box = el('div', null);
+  const box = el('section', 'route-week');
   box.append(el('h3', 'route-phase-title', 'Эта неделя'));
   if (!route.week.length) {
-    box.append(el('p', 'route-detail', 'На эту неделю дел не осталось. Проверь сроки и документы ниже.'));
+    box.append(el('p', 'route-detail', 'Неделя пустая: либо всё отмечено, либо дел в маршруте не осталось. Проверь срок ниже.'));
     return box;
   }
-  const list = el('ul', 'route-week');
+  const list = el('ol', 'route-week-list');
   route.week.forEach((step, index) => {
-    const item = el('li', 'route-week-item');
-    item.append(weekRow(step, index, handlers));
+    const item = el('li', index === 0 ? 'route-week-item route-week-now' : 'route-week-item');
+    item.append(stepRow(step, `week-${index}`, { tracks: null, onToggle: handlers.onToggle, compact: true }));
     list.append(item);
   });
   box.append(list);
   return box;
 }
 
-function stepsBlock(route, handlers) {
-  const box = el('div', null);
-  route.steps.forEach((step) => {
-    const phase = PHASES.find(([code]) => code === step.phase);
-    if (!phase) return;
-    let section = box.querySelector(`[data-phase="${phase[0]}"]`);
-    if (!section) {
-      section = el('div', 'route-phase');
-      section.dataset.phase = phase[0];
-      section.append(el('h3', 'route-phase-title', phase[1]));
-      box.append(section);
-    }
-    section.append(stepRow(step, step.id, handlers));
-  });
+// Разделы-справочники: по умолчанию открыт только тот, где есть ближайшее
+// несделанное дело. Так экран не заставляет прокручивать документы, чтобы
+// увидеть экзамены.
+function phaseBlock(route, handlers) {
+  const box = el('div', 'route-phases');
+  const firstUndone = route.steps.find((step) => !step.done);
+  const rows = [];
+  for (const [code, title] of PHASES) {
+    const steps = route.steps.filter((step) => step.phase === code);
+    if (!steps.length) continue;
+    const done = steps.filter((step) => step.done).length;
+    const details = el('details', 'route-phase');
+    details.dataset.phase = code;
+    if (firstUndone && steps.some((step) => !step.done) && !rows.some((item) => item.open)) details.open = true;
+    const summary = el('summary', 'route-phase-title', `${title} · ${done} из ${steps.length}`);
+    summary.append(el('span', 'route-phase-hint', PHASE_HINT[code] ?? ''));
+    details.append(summary);
+    for (const step of steps) details.append(stepRow(step, step.id, handlers));
+    box.append(details);
+    rows.push(details);
+  }
   return box;
 }
 
-function applyBlock(route) {
+function applyNotesBlock(route) {
   if (!route.applyNotes.length) return null;
-  const box = el('div', 'route-phase');
-  box.append(el('h3', 'route-phase-title', 'Как подавать'));
-  for (const note of route.applyNotes) box.append(el('p', 'route-detail', note));
-  return box;
+  const details = el('details', 'route-more');
+  details.append(el('summary', null, 'Как проходит подача'));
+  for (const note of route.applyNotes) details.append(el('p', 'route-detail', note));
+  return details;
 }
 
-function actionsBlock(route, handlers, statusText) {
+function actionsBlock(route, handlers, statusText, applyUrl) {
   const box = el('div', 'route-actions');
   const status = el('p', 'route-status', statusText ?? '');
   status.setAttribute('role', 'status');
   const say = (message) => handlers.onStatus(message ?? '');
 
-  const print = el('button', 'button', 'Печать или PDF');
-  print.type = 'button';
-  print.addEventListener('click', () => handlers.onPrint());
-  box.append(print);
+  if (applyUrl) {
+    const site = link('Сайт программы', applyUrl, 'button');
+    if (site) box.append(site);
+  }
+
+  const calendar = el('button', 'button button-quiet', 'Срок в календарь');
+  calendar.type = 'button';
+  calendar.addEventListener('click', () => say(handlers.onCalendar()));
+  box.append(calendar);
 
   const parent = el('button', 'button button-quiet', 'Текст для родителей');
   parent.type = 'button';
@@ -296,10 +299,17 @@ function actionsBlock(route, handlers, statusText) {
   });
   box.append(parent);
 
+  const print = el('button', 'button button-quiet', 'Печать или PDF');
+  print.type = 'button';
+  print.addEventListener('click', () => handlers.onPrint());
+  box.append(print);
+
+  const more = el('details', 'route-more');
+  more.append(el('summary', null, 'Сохранить маршрут или сбросить прогресс'));
   const save = el('button', 'button button-quiet', 'Скачать маршрут');
   save.type = 'button';
   save.addEventListener('click', () => say(handlers.onExport()));
-  box.append(save);
+  more.append(save);
 
   const load = el('button', 'button button-quiet', 'Загрузить маршрут');
   load.type = 'button';
@@ -312,64 +322,102 @@ function actionsBlock(route, handlers, statusText) {
     if (!picked) return;
     try { say(await handlers.onImport(picked)); } catch { say('Не получилось прочитать файл.'); }
   });
-  box.append(file);
+  more.append(file, load);
   load.addEventListener('click', () => file.click());
-  box.append(load);
 
   const clear = el('button', 'link-button', 'Сбросить прогресс');
   clear.type = 'button';
   clear.addEventListener('click', () => say(handlers.onClear()));
-  box.append(clear);
+  more.append(clear);
+  box.append(more);
   box.append(status);
   return box;
 }
 
+function emptyNotice({ prepared, failed, onRetry }) {
+  const box = el('div', failed ? 'route-warn' : 'route-empty');
+  if (failed) {
+    box.append(el('p', null, 'Маршрут не загрузился. Проверь интернет и попробуй ещё раз.'));
+    const retry = el('button', 'button button-quiet', 'Попробовать ещё раз');
+    retry.type = 'button';
+    retry.addEventListener('click', () => onRetry?.());
+    box.append(retry);
+    return box;
+  }
+  box.append(el('p', null, prepared.length
+    ? 'Выбери цель — программу, до которой строится маршрут. Полный маршрут сейчас у проверенных программ из списка.'
+    : 'Маршрут пока не собран: обнови страницу или зайди позже.'));
+  return box;
+}
+
 export function renderRoute(root, props) {
-  const { programs, goal, route, prepared, planIds, tracks, status, handlers } = props;
+  const { programs, goal, route, prepared, planIds, tracks, status, loading, applyUrl, handlers } = props;
   root.textContent = '';
 
+  if (loading) {
+    const box = el('div', 'route-empty');
+    box.append(el('p', null, 'Собираю маршрут…'));
+    root.append(box);
+    return;
+  }
+
+  const failed = Boolean(goal && prepared.length === 0);
   if (!goal && !prepared.length) {
-    root.append(emptyState({ hasPlan: planIds.length > 0, prepared }));
+    root.append(emptyNotice({ prepared, failed: false, onRetry: handlers.onRetry }));
     return;
   }
 
-  root.append(goalBlock({ goal, prepared, planIds, programs, onGoal: handlers.onGoal }));
   if (!route) {
-    root.append(emptyState({ hasPlan: planIds.length > 0, prepared, failed: Boolean(goal && !prepared.length), onRetry: handlers.onRetry }));
+    root.append(goalSelect({ goal, prepared, planIds, programs, onGoal: handlers.onGoal }));
+    root.append(emptyNotice({ prepared, failed, onRetry: handlers.onRetry }));
     return;
   }
 
+  const program = programs.find((item) => item.id === route.id);
   const entry = prepared.find((item) => item.id === route.id) ?? null;
-  const head = el('div', 'route-goal');
-  const name = programs.find((item) => item.id === route.id);
-  head.append(el('h3', 'route-goal-name', name?.name?.ru ?? route.id));
+
+  // ——— цель и прогресс (левая колонка на широком экране) ———
+  const main = el('div', 'route-main');
+  const head = el('header', 'route-head');
+  head.append(goalSelect({ goal, prepared, planIds, programs, onGoal: handlers.onGoal }));
+  head.append(el('h3', 'route-goal-name', program?.name?.ru ?? route.id));
   head.append(el('p', 'route-goal-meta', deadlineLine(route.goal)));
   head.append(el('p', 'route-goal-meta', coverageLine(route.goal.coverage)));
-  if (!route.conditionsLoaded) {
-    head.append(el('p', 'route-goal-note', 'Маршрут сверен не полностью: условия программы не загрузились.'));
-  } else if (route.prepared && entry?.checked) {
-    head.append(el('p', 'route-goal-note', `Маршрут сверен ${formatDate(entry.checked)}: список документов, экзамены и сроки из проверенных условий программы.`));
-  } else if (route.prepared) {
-    head.append(el('p', 'route-goal-note', 'Маршрут сверен: список документов, экзамены и сроки из проверенных условий программы.'));
-  } else {
-    head.append(el('p', 'route-goal-note', 'Полный маршрут с подготовкой для этой программы появится позже. Пока видны срок, требования, документы и деньги.'));
-  }
-  for (const note of route.notes ?? []) head.append(el('p', 'route-goal-note', note));
-  root.append(head);
-
-  const warn = conditionsWarn(route, handlers.onRetry);
-  if (warn) root.append(warn);
-
-  const open = el('button', 'link-button route-open', 'Открыть карточку в каталоге');
+  let note;
+  if (!route.conditionsLoaded) note = 'Маршрут сверен не полностью: условия программы не загрузились.';
+  else if (route.prepared && entry?.checked) note = `Сверено ${formatDate(entry.checked)}: документы, экзамены и сроки — из условий программы.`;
+  else if (route.prepared) note = 'Маршрут сверен: документы, экзамены и сроки — из условий программы.';
+  else note = 'Полный маршрут с подготовкой для этой программы появится позже. Пока видны срок, требования, документы и деньги.';
+  head.append(el('p', 'route-goal-note', note));
+  const actions = el('div', 'route-goal-actions');
+  const open = el('button', 'button button-quiet route-open', 'Карточка программы');
   open.type = 'button';
   open.addEventListener('click', () => handlers.onOpen(route.id));
-  root.append(open);
+  actions.append(open);
+  head.append(actions);
+  main.append(head);
 
-  root.append(el('p', 'route-progress', `Сделано ${route.stats.done} из ${route.stats.total} (${route.stats.percent}%)`));
-  root.append(gapList(route));
-  root.append(weekBlock(route, { tracks, onToggle: handlers.onToggle }));
-  root.append(stepsBlock(route, { tracks, onToggle: handlers.onToggle }));
-  const apply = applyBlock(route);
-  if (apply) root.append(apply);
-  root.append(actionsBlock(route, handlers, status));
+  const progress = el('progress', 'route-bar');
+  progress.max = route.stats.total || 1;
+  progress.value = route.stats.done;
+  progress.setAttribute('aria-label', `Сделано ${route.stats.done} из ${route.stats.total}`);
+  main.append(progress);
+  main.append(el('p', 'route-progress', `Сделано ${route.stats.done} из ${route.stats.total} · ${route.stats.percent}%`));
+
+  const warn = conditionsWarn(route, handlers.onRetry);
+  if (warn) main.append(warn);
+  const gaps = gapBlock(route);
+  if (gaps) main.append(gaps);
+
+  main.append(weekBlock(route, handlers));
+  root.append(main);
+
+  // ——— разделы-справочники (правая колонка на широком экране) ———
+  const side = el('div', 'route-side');
+  side.append(phaseBlock(route, { ...handlers, tracks }));
+  const applyNotes = applyNotesBlock(route);
+  if (applyNotes) side.append(applyNotes);
+  root.append(side);
+
+  root.append(actionsBlock(route, handlers, status, applyUrl));
 }
