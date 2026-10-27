@@ -229,9 +229,11 @@ function stepRow(step, index, { tracks, onToggle, getExamPlan, onExamPlan, compa
   body.append(label);
   if (step.members?.length) body.append(el('p', 'route-detail',
     `Для: ${step.members.map(member => shortName({ name: { ru: member.name } })).join(', ')}`));
-  if (step.due) body.append(el('span', 'route-due', `до ${formatDate(step.due)}`));
+  if (step.due) body.append(el('span', 'route-due', `${step.dueKind==='planning'?'План: к ':step.dueKind==='booked'?'Записан на ':step.dueKind==='exam-plan'?'Расчёт: до ':'до '}${formatDate(step.due)}${step.dueExpected?' · срок подачи ожидаемый':''}`));
   if (!compact) {
     if (step.detail) body.append(el('p', 'route-detail', step.detail));
+    if(step.dueKind==='planning') body.append(el('p','route-detail','Дата для твоего плана взята по сроку подачи. Отдельный срок документа или платежа уточни у вуза.'));
+    if(step.startBy) body.append(el('p','route-detail',`Начни до ${formatDate(step.startBy)} — расчёт по оценке времени изготовления.`));
     if (step.docSource) {
       const source = link('Источник инструкции', step.docSource.url);
       if (source) {
@@ -321,7 +323,7 @@ function actionsBlock(route, handlers, statusText, applyUrl) {
   }
 
   if (route) {
-  const calendar = el('button', 'button button-quiet', 'Сроки в календарь');
+  const calendar = el('button', 'button button-quiet', 'Обновить календарь');
   calendar.type = 'button';
   calendar.addEventListener('click', () => say(handlers.onCalendar()));
   box.append(calendar);

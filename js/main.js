@@ -7,7 +7,8 @@ import { setupTabbar } from './tabbar.js';
 import { setupPriority } from './priority.js';
 import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocument, forgetConditions } from './data.js';
 import { renderResults } from './render.js';
-import { PLAN_KEY, DONE_KEY, buildIcs } from './plan.js';
+import { PLAN_KEY, DONE_KEY, buildEventsIcs } from './plan.js';
+import { scheduleRoute, routeCalendarEvents } from './agenda.js';
 import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask } from './route-state.js';
 import { examPlan } from './exam-plan.js';
 import { buildStudyPlan } from './study-plan.js';
@@ -279,6 +280,8 @@ function rebuildRoute() {
     documents: routeDocuments,
     state: routeState,
   });
+  const plans=Object.fromEntries(route.steps.filter(step=>routeTracks[step.track]).map(step=>[step.id,examForStep(step)]));
+  route=scheduleRoute(route,plans,routeDocuments,today);
 }
 
 const showRouteStatus = (message) => {
@@ -348,15 +351,16 @@ function renderRouteView() {
         if (!routeCtx) return 'Срок некуда добавить.';
         const urls = Object.fromEntries(routeCtx.map(context => [context.program.id, details.programs?.[context.program.id]?.applyUrl]));
         const stamp = new Date().toISOString().replace(/[-:]|\.\d{3}/g, '');
-        const { text, events } = buildIcs(routeCtx.map(context => context.program), today, stamp, urls);
-        if (!events) return 'Срок подачи не объявлен — в календарь добавлять нечего.';
+        const plans=Object.fromEntries(route.steps.filter(step=>routeTracks[step.track]).map(step=>[step.id,examForStep(step)]));
+        const { text, events } = buildEventsIcs(routeCalendarEvents(route,plans,routeTracks,urls,today), today, stamp);
+        if (!events) return 'Подтверждённых или запланированных дат пока нет.';
         try {
           const link = document.createElement('a');
           link.href = URL.createObjectURL(new Blob([text], { type: 'text/calendar;charset=utf-8' }));
           link.download = 'nerio-marshrut.ics';
           link.click();
           setTimeout(() => URL.revokeObjectURL(link.href), 1000);
-          return 'Файл скачан: открыл — и срок с напоминанием за неделю и за день в календаре.';
+          return `Календарь скачан: ${events} событий с напоминаниями за 7 и за 1 день. После изменений импортируй новый файл; проверь, не сохранил ли календарь старые события.`;
         } catch {
           return 'Браузер не дал скачать файл календаря.';
         }

@@ -72,7 +72,7 @@ const escapeText = (text) => text
   .replace(/\\/g, '\\\\')
   .replace(/;/g, '\\;')
   .replace(/,/g, '\\,')
-  .replace(/\r?\n/g, '\\n');
+  .replace(/\r\n|\r|\n/g, '\\n');
 
 // Строка календаря не длиннее 75 байт; продолжение начинается с пробела.
 // Режем по символам, считая байты UTF-8, чтобы не разорвать букву.
@@ -148,6 +148,26 @@ export function buildIcs(programs, today, stamp, urls = {}) {
   }
   lines.push('END:VCALENDAR');
   return { text: `${lines.map(fold).join('\r\n')}\r\n`, events };
+}
+
+// Shared RFC 5545 writer for route steps, bookings and chosen study days.
+// Stable logical UIDs keep an event's identity when its date changes.
+export function buildEventsIcs(items, today, stamp) {
+  const lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//nerio//route-v2//RU','CALSCALE:GREGORIAN','X-WR-CALNAME:Маршрут Nerio'];
+  const seen=new Set();let events=0;
+  for(const item of items) {
+    if(typeof item.date!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(item.date)||!Number.isFinite(Date.parse(`${item.date}T00:00:00Z`))||new Date(`${item.date}T00:00:00Z`).toISOString().slice(0,10)!==item.date||item.date<today||!item.id||seen.has(item.id))continue;
+    seen.add(item.id);
+    const url=safeHttpUrl(item.url);
+    lines.push('BEGIN:VEVENT',`UID:${encodeURIComponent(item.id)}@nerio`,`DTSTAMP:${stamp}`,`LAST-MODIFIED:${stamp}`,
+      `DTSTART;VALUE=DATE:${compact(item.date)}`,`DTEND;VALUE=DATE:${compact(nextDay(item.date))}`,
+      `SUMMARY:${escapeText(String(item.title??'План Nerio'))}`,`DESCRIPTION:${escapeText(String(item.description??''))}`);
+    if(url)lines.push(`URL:${url}`);
+    for(const before of ['P7D','P1D'])lines.push('BEGIN:VALARM','ACTION:DISPLAY',`DESCRIPTION:${escapeText(String(item.title??'План Nerio'))}`,`TRIGGER:-${before}`,'END:VALARM');
+    lines.push('END:VEVENT');events++;
+  }
+  lines.push('END:VCALENDAR');
+  return {text:`${lines.map(fold).join('\r\n')}\r\n`,events};
 }
 
 // ——— «Что подготовить»: список дел из проверенных условий программ ———
