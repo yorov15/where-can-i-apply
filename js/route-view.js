@@ -12,6 +12,7 @@ import { routeText } from './route.js';
 import { formatDate, plural } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
 import { renderStudyPlan } from './study-view.js';
+import { renderCurrentWeek } from './weekly-view.js';
 
 const PHASES = [
   ['tests', 'Экзамены'],
@@ -457,8 +458,8 @@ export function renderRoute(root, props) {
   const gaps = gapBlock(route);
   if (gaps) main.append(gaps);
 
-  main.append(weekBlock(route, handlers));
-  const study = renderStudyPlan(props.study, props.routeState, props.today, handlers);
+  main.append(props.weekly?renderCurrentWeek(props.weekly,handlers):weekBlock(route, handlers));
+  const study = renderStudyPlan(props.study, props.routeState, props.today, handlers,Boolean(props.weekly));
   if (study) main.append(study);
   root.append(main);
 

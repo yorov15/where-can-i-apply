@@ -12,6 +12,7 @@ import { scheduleRoute, routeCalendarEvents } from './agenda.js';
 import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask } from './route-state.js';
 import { examPlan } from './exam-plan.js';
 import { buildStudyPlan } from './study-plan.js';
+import { prepareCurrentWeek,reviewWeeks,setTaskDay,studyCalendarEvents } from './weekly.js';
 import { buildCombinedRoute } from './route-combined.js';
 import { renderRoute } from './route-view.js';
 import { EXPLAIN_URL } from './config.js';
@@ -98,6 +99,7 @@ const tabbar = setupTabbar({
 
 // План живёт отдельно от анкеты: анкету можно поправить, не потеряв отмеченное.
 let routeState = loadRouteState(localStorage);
+let weeklySnapshot=null;
 const plan = {
   ids: [...routeState.goals],
   limit: MAX_GOALS,
@@ -282,6 +284,9 @@ function rebuildRoute() {
   });
   const plans=Object.fromEntries(route.steps.filter(step=>routeTracks[step.track]).map(step=>[step.id,examForStep(step)]));
   route=scheduleRoute(route,plans,routeDocuments,today);
+  const study=buildStudyPlan({steps:route.steps,tracks:routeTracks,plans,state:routeState,today});
+  weeklySnapshot=prepareCurrentWeek(routeState,route,study,today);
+  if(exportState(routeState)!==exportState(weeklySnapshot.state)){routeState=weeklySnapshot.state;persistRoute();}
 }
 
 const showRouteStatus = (message) => {
@@ -301,6 +306,7 @@ function renderRouteView() {
   renderRoute(routeBody, {
     study: route ? buildStudyPlan({ steps:route.steps, tracks:routeTracks, plans, state:routeState, today }) : null,
     routeState, today,
+    weekly:weeklySnapshot,
     programs,
     goal: routeState.goals[0] ?? null,
     route,
@@ -313,11 +319,25 @@ function renderRouteView() {
     handlers: {
       getExamPlan: examForStep,
       onStudyToggle(week, taskId) {
-        routeState=toggleStudyTask(routeState,week,taskId);persistRoute();renderRouteView();
+        routeState=toggleStudyTask(routeState,week,taskId,today);persistRoute();rebuildRoute();renderRouteView();
         const section=routeBody.querySelector(`[data-study-week="${CSS.escape(week)}"]`);
         if (section) section.open=true;
         routeBody.querySelector(`[data-study-task="${CSS.escape(taskId)}"] input`)?.focus();
       },
+      onWeeklyToggle(week,taskId) {
+        const task=routeState.weekPlan[week]?.find(item=>item.taskId===taskId);
+        routeState=toggleStudyTask(routeState,week,taskId,today);
+        const wanted=routeState.weekPlan[week].find(item=>item.taskId===taskId).done;
+        if(wanted)routeState.carryTasks=routeState.carryTasks.filter(item=>item.taskId!==taskId);
+        if(task?.routeId){const step=route.steps.find(item=>item.id===task.routeId);if(step&&step.done!==wanted)routeState=toggleStep(routeState,step.id,today,step.legacyIds);}
+        persistRoute();rebuildRoute();renderRouteView();
+        routeBody.querySelector(`[data-week-task="${CSS.escape(taskId)}"] input`)?.focus();
+      },
+      onTaskDay(week,taskId,day) {
+        routeState=setTaskDay(routeState,week,taskId,day,today);persistRoute();rebuildRoute();renderRouteView();
+        routeBody.querySelector(`[data-week-task="${CSS.escape(taskId)}"] select`)?.focus();
+      },
+      onReview(taskIds) {routeState=reviewWeeks(routeState,today,taskIds);persistRoute();rebuildRoute();renderRouteView();},
       onMock(code, score) {
         const next=recordMock(routeState,code,score,today);
         if (!next) return 'Проверь дату и шкалу балла.';
@@ -352,7 +372,7 @@ function renderRouteView() {
         const urls = Object.fromEntries(routeCtx.map(context => [context.program.id, details.programs?.[context.program.id]?.applyUrl]));
         const stamp = new Date().toISOString().replace(/[-:]|\.\d{3}/g, '');
         const plans=Object.fromEntries(route.steps.filter(step=>routeTracks[step.track]).map(step=>[step.id,examForStep(step)]));
-        const { text, events } = buildEventsIcs(routeCalendarEvents(route,plans,routeTracks,urls,today), today, stamp);
+        const { text, events } = buildEventsIcs([...routeCalendarEvents(route,plans,routeTracks,urls,today),...studyCalendarEvents(routeState,today)], today, stamp);
         if (!events) return 'Подтверждённых или запланированных дат пока нет.';
         try {
           const link = document.createElement('a');
@@ -548,6 +568,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
     localStorage.removeItem(ROUTE_STATE_KEY);
   } catch { /* приватный режим: стирать нечего */ }
   routeState = loadRouteState(localStorage);
+  weeklySnapshot=null;
   form.elements.hoursPerWeek.value=routeState.hoursPerWeek;
   route = null;
   routeCtx = null;

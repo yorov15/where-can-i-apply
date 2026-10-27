@@ -36,7 +36,7 @@ function scoreForm(item,today,onMock) {
   more.append(form);return more;
 }
 
-export function renderStudyPlan(study,state,today,handlers) {
+export function renderStudyPlan(study,state,today,handlers,hasCurrentWeek=false) {
   if(!study?.active.length)return null;
   const box=el('section','route-week');box.dataset.study='';
   box.append(el('h3','route-phase-title','Подготовка по неделям'));
@@ -50,6 +50,7 @@ export function renderStudyPlan(study,state,today,handlers) {
   }
   box.append(el('p','route-detail','Каждую третью неделю — работа с пробником. Если не хватает времени на полный тест, разбей тренировку на занятия; общий балл вводи после всех частей. Используй новые варианты, если организатор их предлагает.'));
   for(const week of study.weeks) {
+    if(hasCurrentWeek&&week===study.weeks[0])continue;
     const more=el('details','route-phase');more.dataset.studyWeek=week.key;
     if(week===study.weeks[0])more.open=true;
     more.append(el('summary','route-phase-title',`Неделя ${week.index}: ${formatDate(week.start)} — ${formatDate(week.end)} · ${week.minutes} мин`));

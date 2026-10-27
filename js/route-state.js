@@ -14,7 +14,12 @@ const day = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(val
   && Number.isFinite(Date.parse(`${value}T00:00:00Z`))
   && new Date(`${value}T00:00:00Z`).toISOString().slice(0, 10) === value;
 const read = (storage, key) => { try { return JSON.parse(storage?.getItem(key) ?? 'null'); } catch { return null; } };
-const empty = () => ({ version: 2, goals: [], hoursPerWeek: 4, scores: {}, examDates: {}, examFormats: {}, retakeBuffers: {}, done: {}, weekPlan: {}, studyStarted: null, lastReview: null });
+const empty = () => ({ version: 2, goals: [], hoursPerWeek: 4, scores: {}, examDates: {}, examFormats: {}, retakeBuffers: {}, done: {}, weekPlan: {}, carryTasks: [], studyStarted: null, lastReview: null });
+const weeklyTask = task => ({ taskId:task.taskId, ...(day(task.day)?{day:task.day}:{}), done:task.done===true,
+  ...(day(task.completedAt)?{completedAt:task.completedAt}:{}),
+  ...(typeof task.title==='string'?{title:task.title.slice(0,200)}:{}),
+  ...(Number.isInteger(task.minutes)&&task.minutes>=0&&task.minutes<=600?{minutes:task.minutes}:{}),
+  ...Object.fromEntries(['kind','code','routeId','url'].filter(key=>typeof task[key]==='string'&&task[key].length<=2000).map(key=>[key,task[key]])) });
 
 function normalize(value) {
   if (!object(value)) return null;
@@ -44,8 +49,9 @@ function normalize(value) {
   for (const [week, tasks] of Object.entries(object(value.weekPlan) ? value.weekPlan : {})) {
     if (!/^\d{4}-W\d{2}$/.test(week) || !Array.isArray(tasks)) continue;
     next.weekPlan[week] = tasks.filter(task => object(task) && safeKey(task.taskId))
-      .map(task => ({ taskId: task.taskId, ...(day(task.day) ? { day: task.day } : {}), done: task.done === true }));
+      .map(weeklyTask);
   }
+  next.carryTasks=(Array.isArray(value.carryTasks)?value.carryTasks:[]).filter(task=>object(task)&&safeKey(task.taskId)).map(weeklyTask);
   next.lastReview = day(value.lastReview) ? value.lastReview : null;
   next.studyStarted = day(value.studyStarted) ? value.studyStarted : null;
   if (value.migrationNotice === true) next.migrationNotice = true;
@@ -161,12 +167,12 @@ export function recordMock(state, code, score, today) {
   return next;
 }
 
-export function toggleStudyTask(state, week, taskId) {
+export function toggleStudyTask(state, week, taskId, today = null) {
   const next = copy(state);
   if (!/^\d{4}-W\d{2}$/.test(week) || !safeKey(taskId)) return next;
   const tasks = next.weekPlan[week] ?? [];
   const existing = tasks.find(item => item.taskId === taskId);
-  if (existing) existing.done = !existing.done;
+  if (existing) { existing.done = !existing.done; if (existing.done&&day(today)) existing.completedAt=today; else delete existing.completedAt; }
   else tasks.push({ taskId, done:true });
   next.weekPlan[week] = tasks;
   return next;
