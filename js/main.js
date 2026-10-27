@@ -7,8 +7,9 @@ import { setupTabbar } from './tabbar.js';
 import { setupPriority } from './priority.js';
 import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, forgetConditions } from './data.js';
 import { renderResults } from './render.js';
-import { loadPlan, savePlan, togglePlan, PLAN_KEY, DONE_KEY, loadDone, saveDone, buildIcs } from './plan.js';
-import { loadRouteState, saveRouteState, setGoal, toggleStep, clearProgress, buildRoute, exportState, importState, ROUTE_STATE_KEY } from './route.js';
+import { PLAN_KEY, DONE_KEY, buildIcs } from './plan.js';
+import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS } from './route-state.js';
+import { buildCombinedRoute } from './route-combined.js';
 import { renderRoute } from './route-view.js';
 import { EXPLAIN_URL } from './config.js';
 
@@ -93,22 +94,20 @@ const tabbar = setupTabbar({
 });
 
 // План живёт отдельно от анкеты: анкету можно поправить, не потеряв отмеченное.
+let routeState = loadRouteState(localStorage);
 const plan = {
-  ids: loadPlan(localStorage),
+  ids: [...routeState.goals],
+  limit: MAX_GOALS,
   toggle(id) {
-    plan.ids = togglePlan(plan.ids, id);
-    savePlan(plan.ids, localStorage);
+    routeState = setGoals(routeState, plan.ids.includes(id)
+      ? plan.ids.filter(goal => goal !== id) : [...plan.ids, id]);
+    persistRoute();
     refresh();
     // План показывает дела и плату за подачу — и то и другое берётся из
     // условий. Только что отмеченную программу надо дочитать: иначе её
     // строка в плане была бы пустой до раскрытия карточки.
     if (plan.ids.includes(id)) details.ensure(id).then(() => refresh());
-  },
-  // Отметки дел: без перерисовки, чтобы раскрытый список не схлопывался.
-  done: loadDone(localStorage),
-  markDone(key, on) {
-    if (on) plan.done.add(key); else plan.done.delete(key);
-    saveDone(plan.done, localStorage);
+    if (!routeScreen.hidden) openRoute();
   },
 };
 
@@ -185,12 +184,12 @@ const details = {
 // остальных показываем срок, требования и что уточнить у вуза.
 let routeData = null;
 let routeDataLoading = null;
-let routeState = loadRouteState(localStorage);
 let routeTracks = {};
 let routeCtx = null;
 let route = null;
 let routeStatus = '';
 let routeLoading = false;
+let routeRequest = 0;
 
 const programById = (id) => programs.find((program) => program.id === id);
 
@@ -204,6 +203,7 @@ function loadRouteData() {
 }
 
 function persistRoute() {
+  plan.ids = [...routeState.goals];
   saveRouteState(routeState, localStorage);
 }
 
@@ -213,23 +213,11 @@ function preparedEntry(id) {
 
 // Новичку цель выбирать не из чего: берём первую программу из плана, у
 // которой маршрут сверен. План пуст — оставляем выбор человеку.
-function defaultGoal() {
-  const first = plan.ids.find((id) => preparedEntry(id) && programById(id));
-  return first ?? null;
-}
-
 async function openRoute() {
   if (!routeData) await loadRouteData();
-  if (!routeState.goal || !programById(routeState.goal)) {
-    const first = defaultGoal();
-    if (first) {
-      routeState = setGoal(routeState, first);
-      persistRoute();
-    }
-  }
   // Возврат на вкладку не должен показывать «Собираю маршрут…» на готовом
   // маршруте: скелетон только когда для этой цели ничего не собрано.
-  const stale = !route || route.id !== routeState.goal || !routeCtx;
+  const stale = !route || route.id !== routeState.goals.join(',') || !routeCtx;
   routeLoading = stale;
   if (stale) renderRouteView();
   await refreshRoute();
@@ -243,19 +231,30 @@ async function refreshRoute() {
     routeCtx = null;
     return;
   }
-  const goalId = routeState.goal;
-  const program = goalId ? programById(goalId) : null;
-  if (!program) {
+  const ticket = ++routeRequest;
+  const ids = [...routeState.goals];
+  const selected = ids.map(programById).filter(Boolean);
+  if (!selected.length) {
     route = null;
     routeCtx = null;
     return;
   }
-  const prepared = preparedEntry(goalId);
-  const codes = [...new Set(prepared?.tests ?? [])];
+  const codes = [...new Set(selected.flatMap(program => preparedEntry(program.id)?.tests ?? []))];
   const loaded = await Promise.all(codes.map((code) => loadTrack(code)));
   codes.forEach((code, index) => { if (loaded[index]) routeTracks[code] = loaded[index]; });
-  await details.ensure(goalId);
-  routeCtx = { program, conditions: details.conditions[goalId] ?? null, prepared };
+  await Promise.all(selected.map(program => details.ensure(program.id)));
+  if (ticket !== routeRequest || ids.join(',') !== routeState.goals.join(',')) return;
+  routeCtx = selected.map(program => ({ program, conditions: details.conditions[program.id] ?? null, prepared: preparedEntry(program.id) }));
+  rebuildRoute();
+  routeState = reconcileProgress(routeState, route.steps);
+  if (routeState.migrationNotice) {
+    const remaining = Object.keys(routeState.done).filter(id => !route.steps.some(step => step.id === id));
+    routeStatus = remaining.length
+      ? 'Часть старых отметок пока не сопоставлена. Они сохранены в файле маршрута; проверь прогресс.'
+      : 'Старые отметки перенесены. Даты старых выполнений неизвестны.';
+    delete routeState.migrationNotice;
+  }
+  persistRoute();
   rebuildRoute();
 }
 
@@ -264,12 +263,10 @@ function rebuildRoute() {
     route = null;
     return;
   }
-  route = buildRoute({
-    program: routeCtx.program,
-    conditions: routeCtx.conditions,
+  route = buildCombinedRoute({
+    contexts: routeCtx,
     profile: readForm(form),
     today,
-    prepared: routeCtx.prepared,
     tracks: routeTracks,
     state: routeState,
   });
@@ -283,28 +280,20 @@ const showRouteStatus = (message) => {
 function renderRouteView() {
   renderRoute(routeBody, {
     programs,
-    goal: routeState.goal,
+    goal: routeState.goals[0] ?? null,
     route,
     prepared: routeData?.prepared ?? [],
     planIds: plan.ids,
     tracks: routeTracks,
     status: routeStatus,
     loading: routeLoading,
-    applyUrl: routeState.goal ? details.programs?.[routeState.goal]?.applyUrl ?? null : null,
+    applyUrl: routeState.goals.length === 1 ? details.programs?.[routeState.goals[0]]?.applyUrl ?? null : null,
     handlers: {
-      onGoal(id) {
-        routeState = setGoal(routeState, id);
-        persistRoute();
-        routeLoading = true;
-        renderRouteView();
-        refreshRoute().then(() => {
-          routeLoading = false;
-          renderRouteView();
-          routeScreen.scrollIntoView({ block: 'start' });
-        });
-      },
+      onChooseGoals() { location.hash = 'programs'; },
+      onRemoveGoal(id) { plan.toggle(id); },
       onToggle(stepId) {
-        routeState = toggleStep(routeState, stepId);
+        const aliases = route?.steps.find(step => step.id === stepId)?.legacyIds ?? [];
+        routeState = toggleStep(routeState, stepId, today, aliases);
         persistRoute();
         rebuildRoute();
         renderRouteView();
@@ -317,9 +306,9 @@ function renderRouteView() {
       },
       onCalendar() {
         if (!routeCtx) return 'Срок некуда добавить.';
-        const urls = { [routeCtx.program.id]: details.programs?.[routeCtx.program.id]?.applyUrl };
+        const urls = Object.fromEntries(routeCtx.map(context => [context.program.id, details.programs?.[context.program.id]?.applyUrl]));
         const stamp = new Date().toISOString().replace(/[-:]|\.\d{3}/g, '');
-        const { text, events } = buildIcs([routeCtx.program], today, stamp, urls);
+        const { text, events } = buildIcs(routeCtx.map(context => context.program), today, stamp, urls);
         if (!events) return 'Срок подачи не объявлен — в календарь добавлять нечего.';
         try {
           const link = document.createElement('a');
@@ -357,11 +346,13 @@ function renderRouteView() {
       },
       async onImport(picked) {
         try {
+          if (picked.size > 500_000) return 'Файл слишком большой для маршрута Nerio.';
           const imported = importState(await picked.text());
           if (!imported) return 'Это не файл маршрута Nerio.';
           routeState = imported;
           persistRoute();
           await refreshRoute();
+          refresh();
           return 'Маршрут загружен.';
         } catch {
           return 'Не получилось прочитать файл.';
@@ -372,7 +363,7 @@ function renderRouteView() {
         persistRoute();
         rebuildRoute();
         renderRouteView();
-        return 'Прогресс стёрт, цель осталась.';
+        return 'Прогресс стёрт, цели остались.';
       },
       onOpen(programId) {
         openProgram(programId);
@@ -385,8 +376,7 @@ function renderRouteView() {
           routeDataLoading = null;
           await loadRouteData();
         }
-        const goalId = routeState.goal;
-        if (goalId) {
+        for (const goalId of routeState.goals) {
           details.conditions[goalId] = undefined;
           forgetConditions(goalId);
         }
@@ -502,7 +492,6 @@ document.getElementById('clear-profile').addEventListener('click', () => {
   const empty = emptyProfile();
   writeForm(form, empty);
   plan.ids = [];
-  plan.done = new Set();
   refresh(empty);
   try {
     localStorage.removeItem(STORAGE_KEY);

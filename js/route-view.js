@@ -89,52 +89,10 @@ const clip = (text, max) => {
   return value.length <= max ? value : `${value.slice(0, max - 1).trimEnd()}…`;
 };
 
-// Цель — выпадающий список: 26 кнопок в две строки занимали весь первый
-// экран, а нужна одна цель. Сначала программы из плана, остальные — ниже.
-function goalSelect({ goal, prepared, planIds, programs, onGoal }) {
-  const box = el('div', 'route-goal-pick');
-  const label = el('label', 'fineprint', 'Цель');
-  label.htmlFor = 'route-goal';
-  const select = el('select', 'route-select');
-  select.id = 'route-goal';
-  const preparedIds = prepared.map((entry) => entry.id);
-  const fromPlan = planIds.filter((id) => preparedIds.includes(id));
-  const rest = preparedIds.filter((id) => !fromPlan.includes(id));
-  const addOption = (parent, id) => {
-    const program = programs.find((item) => item.id === id);
-    const option = el('option', null, shortName(program));
-    option.value = id;
-    if (id === goal) option.selected = true;
-    parent.append(option);
-  };
-  if (!goal) {
-    const empty = el('option', null, 'Выбери программу');
-    empty.value = '';
-    empty.disabled = true;
-    empty.selected = true;
-    select.append(empty);
-  }
-  if (fromPlan.length) {
-    const group = el('optgroup');
-    group.label = 'Из плана';
-    for (const id of fromPlan) addOption(group, id);
-    select.append(group);
-  }
-  if (rest.length) {
-    const group = el('optgroup');
-    group.label = 'Все программы с маршрутом';
-    for (const id of rest) addOption(group, id);
-    select.append(group);
-  }
-  select.addEventListener('change', () => { if (select.value) onGoal(select.value); });
-  box.append(label, select);
-  return box;
-}
-
 function conditionsWarn(route, onRetry) {
   if (route.conditionsLoaded !== false) return null;
   const box = el('div', 'route-warn');
-  box.append(el('p', null, 'Условия программы не загрузились: документы и деньги не показаны, поэтому маршрут неполный.'));
+  box.append(el('p', null, 'Часть условий не загрузилась. Документы и деньги по этим программам могут быть неполными.'));
   const retry = el('button', 'button button-quiet', 'Повторить');
   retry.type = 'button';
   retry.addEventListener('click', () => onRetry?.());
@@ -152,7 +110,7 @@ function gapBlock(route) {
   const list = el('ul', 'route-gaps');
   for (const reason of route.gaps) {
     const text = reasonText(reason);
-    const item = el('li', 'route-gap', `${text.title}. ${text.detail ?? ''}`.trim());
+    const item = el('li', 'route-gap', `${reason.programName ? `${shortName({ name: { ru: reason.programName } })}. ` : ''}${text.title}. ${text.detail ?? ''}`.trim());
     item.dataset.status = reason.status;
     list.append(item);
   }
@@ -209,9 +167,12 @@ function stepRow(step, index, { tracks, onToggle, compact = false }) {
   const label = el('label', 'route-step-title', parts.short);
   label.htmlFor = check.id;
   body.append(label);
+  if (step.members?.length) body.append(el('p', 'route-detail',
+    `Для: ${step.members.map(member => shortName({ name: { ru: member.name } })).join(', ')}`));
   if (step.due) body.append(el('span', 'route-due', `до ${formatDate(step.due)}`));
   if (!compact) {
     if (step.detail) body.append(el('p', 'route-detail', step.detail));
+    if (step.target?.parts) body.append(el('p', 'route-detail', 'У целей есть минимумы по частям экзамена. Сверь их в карточках программ.'));
     if (parts.rest) {
       const more = el('details', 'route-more');
       more.append(el('summary', null, 'Читать полностью'));
@@ -290,7 +251,8 @@ function actionsBlock(route, handlers, statusText, applyUrl) {
     if (site) box.append(site);
   }
 
-  const calendar = el('button', 'button button-quiet', 'Срок в календарь');
+  if (route) {
+  const calendar = el('button', 'button button-quiet', 'Сроки в календарь');
   calendar.type = 'button';
   calendar.addEventListener('click', () => say(handlers.onCalendar()));
   box.append(calendar);
@@ -306,6 +268,7 @@ function actionsBlock(route, handlers, statusText, applyUrl) {
   print.type = 'button';
   print.addEventListener('click', () => handlers.onPrint());
   box.append(print);
+  }
 
   const more = el('details', 'route-more');
   more.append(el('summary', null, 'Сохранить маршрут или сбросить прогресс'));
@@ -347,14 +310,12 @@ function emptyNotice({ prepared, failed, onRetry }) {
     box.append(retry);
     return box;
   }
-  box.append(el('p', null, prepared.length
-    ? 'Выбери цель — программу, до которой строится маршрут. Полный маршрут сейчас у проверенных программ из списка.'
-    : 'Маршрут пока не собран: обнови страницу или зайди позже.'));
+  box.append(el('p', null, 'Добавь программы в «Мой план» из каталога. Здесь будут общие экзамены, документы и сроки.'));
   return box;
 }
 
 export function renderRoute(root, props) {
-  const { programs, goal, route, prepared, planIds, tracks, status, loading, applyUrl, handlers } = props;
+  const { programs, route, planIds, tracks, status, loading, applyUrl, handlers } = props;
   root.textContent = '';
 
   if (loading) {
@@ -364,40 +325,53 @@ export function renderRoute(root, props) {
     return;
   }
 
-  const failed = Boolean(goal && prepared.length === 0);
-  if (!goal && !prepared.length) {
-    root.append(emptyNotice({ prepared, failed: false, onRetry: handlers.onRetry }));
-    return;
-  }
-
   if (!route) {
-    root.append(goalSelect({ goal, prepared, planIds, programs, onGoal: handlers.onGoal }));
-    root.append(emptyNotice({ prepared, failed, onRetry: handlers.onRetry }));
+    root.append(emptyNotice({ prepared: [], failed: planIds.length > 0, onRetry: handlers.onRetry }));
+    const choose = el('button', 'button', 'Выбрать программы');
+    choose.type = 'button';
+    choose.addEventListener('click', handlers.onChooseGoals);
+    for (const id of planIds.filter(id => !programs.some(program => program.id === id))) {
+      const remove = el('button', 'button button-quiet', `Убрать недоступную цель: ${id}`);
+      remove.type = 'button';
+      remove.addEventListener('click', () => handlers.onRemoveGoal(id));
+      root.append(remove);
+    }
+    root.append(choose, actionsBlock(null, handlers, status, null));
     return;
   }
-
-  const program = programs.find((item) => item.id === route.id);
-  const entry = prepared.find((item) => item.id === route.id) ?? null;
 
   // ——— цель и прогресс (левая колонка на широком экране) ———
   const main = el('div', 'route-main');
   const head = el('header', 'route-head');
-  head.append(goalSelect({ goal, prepared, planIds, programs, onGoal: handlers.onGoal }));
-  head.append(el('h3', 'route-goal-name', program?.name?.ru ?? route.id));
-  head.append(el('p', 'route-goal-meta', deadlineLine(route.goal)));
-  head.append(el('p', 'route-goal-meta', coverageLine(route.goal.coverage)));
-  let note;
-  if (!route.conditionsLoaded) note = 'Маршрут сверен не полностью: условия программы не загрузились.';
-  else if (route.prepared && entry?.checked) note = `Сверено ${formatDate(entry.checked)}: документы, экзамены и сроки — из условий программы.`;
-  else if (route.prepared) note = 'Маршрут сверен: документы, экзамены и сроки — из условий программы.';
-  else note = 'Полный маршрут с подготовкой для этой программы появится позже. Пока видны срок, требования, документы и деньги.';
-  head.append(el('p', 'route-goal-note', note));
-  const actions = el('div', 'route-goal-actions');
-  const open = el('button', 'button button-quiet route-open', 'Карточка программы');
-  open.type = 'button';
-  open.addEventListener('click', () => handlers.onOpen(route.id));
-  actions.append(open);
-  head.append(actions);
+  head.append(el('h3', 'route-goal-name', `Цели из моего плана (${route.goals.length})`));
+  for (const goal of route.goals) {
+    const item = el('div', 'route-goal-actions');
+    item.dataset.goal = goal.id;
+    const open = el('button', 'link-button', goal.name);
+    open.type = 'button';
+    open.addEventListener('click', () => handlers.onOpen(goal.id));
+    const remove = el('button', 'button button-small button-quiet', 'Убрать');
+    remove.type = 'button';
+    remove.setAttribute('aria-label', `Убрать ${goal.name} из целей`);
+    remove.addEventListener('click', () => handlers.onRemoveGoal(goal.id));
+    item.append(open, remove, el('p', 'route-goal-meta', deadlineLine(goal)),
+      el('p', 'route-goal-meta', coverageLine(goal.coverage)));
+    if (!goal.prepared) item.append(el('p', 'route-detail', 'Подготовка для этой программы пока не размечена. Сверь требования на её сайте.'));
+    if (goal.note) item.append(el('p', 'route-goal-note', goal.note));
+    if (!goal.conditionsLoaded) item.append(el('p', 'route-warn', 'Условия этой программы не загрузились. Нажми «Повторить» ниже.'));
+    head.append(item);
+  }
+  if (planIds.length > route.goals.length) head.append(el('p', 'route-warn', 'Часть целей больше не найдена в каталоге. Их id сохранены в файле маршрута.'));
+  for (const id of planIds.filter(id => !programs.some(program => program.id === id))) {
+    const remove = el('button', 'button button-quiet', `Убрать недоступную цель: ${id}`);
+    remove.type = 'button';
+    remove.addEventListener('click', () => handlers.onRemoveGoal(id));
+    head.append(remove);
+  }
+  const choose = el('button', 'button button-quiet', 'Выбрать ещё программы');
+  choose.type = 'button';
+  choose.addEventListener('click', handlers.onChooseGoals);
+  head.append(choose);
   main.append(head);
 
   const progress = el('progress', 'route-bar');

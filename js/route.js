@@ -10,100 +10,13 @@ import { testName } from './wording.js';
 import { formatDate, daysBetween } from './lib/format.js';
 import { deadlineState } from './lib/deadline.js';
 
-export const ROUTE_STATE_KEY = 'eligibility-route';
-export const ROUTE_VERSION = 1;
-
-// Больше пяти дел — это уже весь маршрут, а не «эта неделя».
+export { ROUTE_STATE_KEY, ROUTE_VERSION, loadRouteState, saveRouteState, setGoal, setGoals,
+  toggleStep, clearProgress, exportState, importState, isDone } from './route-state.js';
+import { isDone } from './route-state.js';
 const WEEK_MAX = 5;
-// Месяц до срока: подача перестаёт быть «когда-нибудь».
 const SOON_DAYS = 30;
-// Длиннее этого текст для родителей не читают.
 const TEXT_MAX = 1200;
-
-// Порядок фаз: он же порядок шагов в маршруте и подсказка для недели.
 const PHASES = ['tests', 'inquiry', 'docs', 'money', 'apply', 'after'];
-
-// ——— состояние ———
-
-// Состояние: {version, goal: string|null, done: string[]}.
-// Цель и отметки живут на устройстве и переживают перезагрузку; чужие
-// отметки от прошлой версии не подставляются к новым шагам молча.
-function freshState() {
-  return { version: ROUTE_VERSION, goal: null, done: [] };
-}
-
-// Всё, что пришло из хранилища или из файла, проходит одну проверку:
-// своя версия, цель — строка или null, отметки — список строк. Остальное —
-// не наше состояние, а мусор; лучше пустое, чем упавшая страница.
-function normalize(value) {
-  if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
-  if (value.version !== ROUTE_VERSION) return null;
-  const goal = value.goal ?? null;
-  if (goal !== null && typeof goal !== 'string') return null;
-  if (!Array.isArray(value.done)) return null;
-  const done = [...new Set(value.done.filter((id) => typeof id === 'string'))];
-  return { version: ROUTE_VERSION, goal, done };
-}
-
-const asState = (state) => normalize(state) ?? freshState();
-
-function copyState(state) {
-  const base = asState(state);
-  return { version: ROUTE_VERSION, goal: base.goal, done: [...base.done] };
-}
-
-export function loadRouteState(storage) {
-  try {
-    const stored = storage?.getItem(ROUTE_STATE_KEY) ?? null;
-    return normalize(JSON.parse(stored)) ?? freshState();
-  } catch {
-    return freshState();
-  }
-}
-
-export function saveRouteState(state, storage) {
-  try {
-    storage?.setItem(ROUTE_STATE_KEY, JSON.stringify(copyState(state)));
-  } catch { /* приватный режим: сохранение не должно ломать страницу */ }
-}
-
-export function setGoal(state, id) {
-  return { ...copyState(state), goal: typeof id === 'string' ? id : null };
-}
-
-export function toggleStep(state, stepId) {
-  const next = copyState(state);
-  if (typeof stepId !== 'string' || !stepId) return next;
-  next.done = next.done.includes(stepId)
-    ? next.done.filter((id) => id !== stepId)
-    : [...next.done, stepId];
-  return next;
-}
-
-export function clearProgress(state) {
-  return { ...copyState(state), done: [] };
-}
-
-export function exportState(state) {
-  const base = copyState(state);
-  return JSON.stringify({ version: ROUTE_VERSION, goal: base.goal, done: base.done });
-}
-
-// Чужой или битый файл не должен стирать маршрут наполовину: либо
-// разобралось целиком, либо null.
-export function importState(text) {
-  if (typeof text !== 'string') return null;
-  try {
-    return normalize(JSON.parse(text));
-  } catch {
-    return null;
-  }
-}
-
-export function isDone(state, stepId) {
-  return Array.isArray(state?.done) && state.done.includes(stepId);
-}
-
 // ——— шаги ———
 
 // djb2 — тот же, что в js/plan.js: отметка привязана к тексту, а не к
@@ -239,7 +152,7 @@ function testSteps({ program, gaps, prepared, tracks, conditions }) {
       title: `Сдать ${optionText(options[0])}`,
       detail: `${rule.advisory === true ? 'Программа советует' : 'Подойдёт'} ${joinOr(variants)}.`,
       track: firstTrack(options, tracks),
-    }), testGroup: groupOf(trackOf(options[0].test)) ?? field });
+    }), testGroup: groupOf(trackOf(options[0].test)) ?? field, options });
   }
 
   // Проверенная разметка документов: сертификат может требоваться даже
@@ -272,8 +185,10 @@ function testSteps({ program, gaps, prepared, tracks, conditions }) {
   // Один вид экзамена — один шаг: IELTS и TOEFL в нём альтернативы, а не
   // два разных дела.
   const inRules = ruleTrackCodes(program.eligibility);
+  const ruledGroups = new Set([...inRules].map(groupOf));
   const extras = (prepared?.tests ?? [])
     .filter((code) => !inRules.has(code) && !taggedGroups.has(groupOf(code))
+      && !ruledGroups.has(groupOf(code))
       && !(taggedGroups.has('language') && languageGroup(groupOf(code))) && tracks?.[code]?.name);
   const groups = new Map();
   for (const code of extras) {
@@ -283,18 +198,13 @@ function testSteps({ program, gaps, prepared, tracks, conditions }) {
   for (const codes of groups.values()) {
     const names = codes.map((code) => tracks[code].name);
     const join = joinOr(names);
-    const same = steps.find((step) => step.track && groupOf(step.track) === groupOf(codes[0]));
-    if (same) {
-      same.detail = [same.detail, `Или ${join}.`].filter(Boolean).join(' ');
-      continue;
-    }
-    steps.push(makeStep(program, {
+    steps.push({ ...makeStep(program, {
       phase: 'tests',
       kind: 'test',
-      title: `Сдать ${names[0]}`,
-      detail: names.length > 1 ? `Подойдёт ${join}.` : '',
+      title: `Проверить, нужен ли ${names[0]}`,
+      detail: `Есть трек подготовки: ${join}. Обязательность и принимаемый формат сверь в условиях программы.`,
       track: codes[0],
-    }));
+    }), referenceOnly: true, testGroup: groupOf(codes[0]) });
   }
   return steps;
 }
@@ -423,22 +333,19 @@ function deadlineOf(program, today) {
 // нельзя выдавать за дело на ближайшую неделю.
 const WEEK_ACTION = /^(?:Уточнить|Запросить|Подготовить|Заказать|Получить|Попросить|Заполнить|Загрузить|Приложить|Оплатить|Проверить|Связаться|Отправить|Перевести|Собрать|Зарегистрироваться)(?:\s|$)/u;
 
-function weekOf(steps, goal) {
+export function weekOf(steps, goal, today = null) {
   const undone = steps.filter((step) => !step.done && step.kind !== 'apply'
     && step.kind !== 'test' && WEEK_ACTION.test(step.title));
   const sorted = [...undone].sort((a, b) => {
-    const dueDiff = (a.due ? 0 : 1) - (b.due ? 0 : 1);
+    const dueDiff = (a.due ?? '9999').localeCompare(b.due ?? '9999');
     if (dueDiff !== 0) return dueDiff;
     return PHASES.indexOf(a.phase) - PHASES.indexOf(b.phase);
   });
-  const week = sorted.slice(0, WEEK_MAX);
-  const apply = steps.find((step) => step.kind === 'apply');
-  const daysLeft = goal.deadline.daysLeft;
-  const soon = daysLeft != null && daysLeft <= SOON_DAYS;
-  if (soon && apply && !apply.done) {
-    if (week.length >= WEEK_MAX) week.length = WEEK_MAX - 1;
-    week.push(apply);
-  }
+  const applications = steps.filter(step => step.kind === 'apply' && !step.done && step.due && today
+    && daysBetween(today, step.due) >= 0 && daysBetween(today, step.due) <= SOON_DAYS)
+    .sort((a, b) => a.due.localeCompare(b.due)).slice(0, WEEK_MAX);
+  const week = sorted.slice(0, WEEK_MAX - applications.length);
+  week.push(...applications);
   return week;
 }
 
@@ -492,7 +399,7 @@ export function buildRoute({
     gaps: verdict.reasons,
     gapNotes: context.gapNotes,
     steps,
-    week: weekOf(steps, goal),
+    week: weekOf(steps, goal, today),
     applyNotes: conditionsOf(conditions, 'steps').map((condition) => condition.ru),
     notes: prepared?.note ? [prepared.note] : [],
     stats: statsOf(steps),
@@ -523,7 +430,9 @@ export function routeText(route) {
   const week = route?.week ?? [];
   const stats = route?.stats ?? { done: 0, total: 0 };
   const lines = [
-    `Цель: ${clip(goal.name ?? '—', 240)}`,
+    route?.goals?.length > 1
+      ? `Цели: ${clip(route.goals.map(goal => goal.name.split(' — ')[0]).join('; '), 360)}`
+      : `Цель: ${clip(goal.name ?? '—', 240)}`,
     `Срок: ${deadlineText(goal.deadline)}`,
   ];
   const missing = steps

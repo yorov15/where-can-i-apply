@@ -13,7 +13,7 @@ import { isStale, STALE_DAYS } from './lib/dates.js';
 import { refreshFilter, countryName } from './filter.js';
 import { kindLabel } from './lib/kinds.js';
 import { EXPLAIN_URL } from './config.js';
-import { planPrograms, planText, buildIcs, planTasks } from './plan.js';
+import { planPrograms, planText, buildIcs } from './plan.js';
 import { compareTable } from './compare.js';
 import { orderByPriority, hasPriorities } from './lib/priority.js';
 import { planCost, costText } from './cost.js';
@@ -125,38 +125,6 @@ function agendaGroups(groups, today, onOpenProgram) {
   return frag;
 }
 
-// Дела по программам плана: то, что нужно подготовить, с галочками.
-function todoBlock(planned, details, plan) {
-  const box = el('div');
-  for (const program of planned) {
-    const tasks = planTasks(program.id, extraFor(details, program.id));
-    if (!tasks.length) continue;
-    const name = program.name?.ru ?? program.id;
-    const group = el('details', 'agenda-more');
-    const head = el('summary', 'agenda-more-head');
-    const count = () => tasks.filter((t) => plan.done.has(t.key)).length;
-    const refreshHead = () => { head.textContent = `Что подготовить: ${name} (${count()} из ${tasks.length})`; };
-    refreshHead();
-    group.append(head);
-    for (const task of tasks) {
-      const row = el('label', 'todo');
-      const tick = el('input');
-      tick.type = 'checkbox';
-      tick.checked = plan.done.has(task.key);
-      row.classList.toggle('done', tick.checked);
-      tick.addEventListener('change', () => {
-        plan.markDone(task.key, tick.checked);
-        row.classList.toggle('done', tick.checked);
-        refreshHead();
-      });
-      row.append(tick, el('span', null, task.text));
-      group.append(row);
-    }
-    box.append(group);
-  }
-  return box;
-}
-
 // Таблица «программы в столбцах, признаки в строках»; на телефоне
 // прокручивается вбок, первый столбец с названиями признаков остаётся.
 function compareBlock(entries, details, today) {
@@ -207,8 +175,7 @@ function planBlock(planned, today, details, onOpenProgram, plan, entries, onOpen
   box.append(agendaGroups([{ title: 'По срокам', rows }], today, onOpenProgram));
   const cost = costText(planCost(planned, details));
   if (cost) box.append(el('p', 'summary-line', cost));
-  const todo = todoBlock(rows.map((r) => r.program), details, plan);
-  if (todo.childElementCount) box.append(todo);
+  box.append(el('p', 'hint', 'Все дела и отметки — в общем маршруте. Здесь выбирай цели и сравнивай программы.'));
   if (entries.length > 1) box.append(compareBlock(entries, details, today));
 
   const old = planned.filter((p) => isStale(details.programs?.[p.id]?.source?.lastVerified, today));
@@ -520,6 +487,11 @@ function card(row, today, details, openCards, openMore, kindLine, plan) {
     // календарь с напоминаниями (см. planBlock).
     const inPlan = plan.ids.includes(model.id);
     const mark = el('button', 'button button-quiet plan-toggle', inPlan ? '✓ В моём плане' : '＋ В мой план');
+    if (!inPlan && plan.ids.length >= plan.limit) {
+      mark.disabled = true;
+      mark.textContent = `В плане уже ${plan.ids.length} программ`;
+      mark.title = 'Убери одну цель из плана, чтобы добавить другую.';
+    }
     mark.type = 'button';
     mark.setAttribute('aria-pressed', String(inPlan));
     mark.addEventListener('click', () => plan.toggle(model.id));

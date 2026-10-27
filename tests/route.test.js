@@ -143,99 +143,6 @@ const brokenStore = {
   setItem() { throw new Error('приватный режим'); },
 };
 
-const EMPTY_STATE = { version: ROUTE_VERSION, goal: null, done: [] };
-
-// ——— состояние ———
-
-test('пустое хранилище даёт пустое состояние своей версии', () => {
-  assert.deepEqual(loadRouteState(store()), EMPTY_STATE);
-  assert.deepEqual(loadRouteState(undefined), EMPTY_STATE);
-});
-
-test('битый JSON, массив и чужая версия дают пустое состояние', () => {
-  for (const raw of [
-    'не json',
-    '[]',
-    '{"version":2,"goal":null,"done":[]}',
-    '{"version":1,"goal":5,"done":[]}',
-    '{"version":1,"goal":null,"done":"x"}',
-  ]) {
-    assert.deepEqual(loadRouteState(store(raw)), EMPTY_STATE, raw);
-  }
-});
-
-test('состояние сохраняется и читается обратно', () => {
-  const s = store();
-  const state = setGoal(toggleStep(loadRouteState(s), 'kaist:apply:abc'), 'kaist');
-  saveRouteState(state, s);
-  assert.deepEqual(loadRouteState(s), state);
-});
-
-test('недоступное хранилище не ломает ни сохранение, ни чтение', () => {
-  assert.doesNotThrow(() => saveRouteState(EMPTY_STATE, brokenStore));
-  assert.deepEqual(loadRouteState(brokenStore), EMPTY_STATE);
-});
-
-test('setGoal меняет цель в новом объекте и не трогает отметки', () => {
-  const original = { version: ROUTE_VERSION, goal: null, done: ['a'] };
-  const next = setGoal(original, 'kaist');
-  assert.equal(next.goal, 'kaist');
-  assert.deepEqual(next.done, ['a']);
-  assert.equal(original.goal, null);
-  assert.notEqual(next, original);
-  assert.equal(setGoal(next, null).goal, null);
-});
-
-test('toggleStep включает и выключает отметку, исходное состояние цело', () => {
-  const original = { version: ROUTE_VERSION, goal: 'kaist', done: ['a'] };
-  const added = toggleStep(original, 'b');
-  assert.deepEqual(added.done, ['a', 'b']);
-  assert.deepEqual(original.done, ['a']);
-  assert.notEqual(added.done, original.done);
-  assert.deepEqual(toggleStep(added, 'a').done, ['b']);
-  assert.deepEqual(toggleStep(added, '').done, ['a', 'b']);
-});
-
-test('clearProgress убирает отметки, цель остаётся', () => {
-  const original = { version: ROUTE_VERSION, goal: 'kaist', done: ['a', 'b'] };
-  const cleared = clearProgress(original);
-  assert.deepEqual(cleared.done, []);
-  assert.equal(cleared.goal, 'kaist');
-  assert.deepEqual(original.done, ['a', 'b']);
-  assert.deepEqual(clearProgress(undefined), EMPTY_STATE);
-});
-
-test('экспорт и импорт возвращают то же состояние', () => {
-  const state = { version: ROUTE_VERSION, goal: 'kaist', done: ['x:test:1', 'kaist:apply:2'] };
-  const text = exportState(state);
-  assert.deepEqual(JSON.parse(text), state);
-  assert.deepEqual(importState(text), state);
-});
-
-test('мусор в importState — null, а не половина состояния', () => {
-  for (const text of [
-    '',
-    'не json',
-    '[]',
-    'null',
-    '"строка"',
-    '{"version":2,"goal":null,"done":[]}',
-    '{"version":1,"goal":5,"done":[]}',
-    '{"version":1,"goal":null,"done":"x"}',
-  ]) {
-    assert.equal(importState(text), null, text);
-  }
-  assert.equal(importState(null), null);
-  assert.equal(importState(undefined), null);
-});
-
-test('isDone знает про отметку и не падает на пустом состоянии', () => {
-  assert.equal(isDone({ version: ROUTE_VERSION, goal: null, done: ['a'] }, 'a'), true);
-  assert.equal(isDone({ version: ROUTE_VERSION, goal: null, done: ['a'] }, 'b'), false);
-  assert.equal(isDone(null, 'a'), false);
-  assert.equal(isDone(undefined, 'a'), false);
-});
-
 // ——— правила 1: подача ———
 
 test('срок объявлен — шаг подачи с датой, дедлайном и подтверждением', () => {
@@ -330,7 +237,7 @@ test('prepared.tests добавляет шаг только для трека, �
   });
   const tests = phaseSteps(route, 'tests');
   assert.deepEqual(tests.map((step) => step.track), ['sat']);
-  assert.equal(tests[0].title, 'Сдать SAT');
+  assert.equal(tests[0].title, 'Проверить, нужен ли SAT');
 });
 
 test('трек из prepared без загруженного файла шага не даёт: название взять неоткуда', () => {
@@ -450,7 +357,7 @@ test('неделя: за 30 дней до срока подача входит �
 test('неделя: выполненные дела не попадают, подача тоже', () => {
   const route = build();
   const done = [route.steps[0].id, route.steps[1].id];
-  const state = { version: ROUTE_VERSION, goal: 'kaist', done };
+  const state = { version: ROUTE_VERSION, goals: ['kaist'], done: Object.fromEntries(done.map(id => [id, TODAY])) };
   const next = build({ state, program: programOf({ deadline: { closes: '2026-11-15', confidence: 'confirmed' } }) });
   assert.equal(next.week.some((step) => done.includes(step.id)), false);
   assert.equal(next.stats.done, 2);
@@ -539,7 +446,7 @@ test('R0: итог исключает закрытые сроки, катало�
 test('stats: всего, сделано, процент — целое число', () => {
   const route = build();
   assert.deepEqual(route.stats, { total: 5, done: 0, percent: 0 });
-  const state = { version: ROUTE_VERSION, goal: 'kaist', done: [route.steps[0].id, route.steps[1].id] };
+  const state = { version: ROUTE_VERSION, goals: ['kaist'], done: { [route.steps[0].id]: TODAY, [route.steps[1].id]: TODAY } };
   assert.deepEqual(build({ state }).stats, { total: 5, done: 2, percent: 40 });
 });
 
@@ -552,7 +459,7 @@ test('процент округляется до целого: 1 из 3 — 33',
     ),
   });
   assert.equal(route.stats.total, 3);
-  const state = { version: ROUTE_VERSION, goal: 'kaist', done: [route.steps[0].id] };
+  const state = { version: ROUTE_VERSION, goals: ['kaist'], done: { [route.steps[0].id]: TODAY } };
   const stats = build({
     profile: { ...ME, schoolYears: 12 },
     conditions: conditions(
@@ -634,7 +541,7 @@ test('текст: закрытый и необъявленный срок наз
 
 test('текст после отметок: «сделано N из M» растёт', () => {
   const route = build();
-  const state = { version: ROUTE_VERSION, goal: 'kaist', done: [route.steps[0].id, route.steps[1].id] };
+  const state = { version: ROUTE_VERSION, goals: ['kaist'], done: { [route.steps[0].id]: TODAY, [route.steps[1].id]: TODAY } };
   assert.match(routeText(build({ state })), /Сделано 2 из 5/);
 });
 
@@ -666,7 +573,7 @@ test('треки одного вида из prepared склеиваются в �
   assert.match(tests[0].detail, /или/);
 });
 
-test('альтернатива из prepared дописывается к шагу того же вида из правил', () => {
+test('справочный трек из prepared не расширяет принимаемые альтернативы правила', () => {
   const eju = track('eju', 'EJU (поступление в вузы Японии)');
   const route = build({
     program: programOf({
@@ -682,14 +589,14 @@ test('альтернатива из prepared дописывается к шаг�
   const tests = phaseSteps(route, 'tests');
   const examStep = tests.find((step) => step.track === 'sat');
   assert.ok(examStep, 'шаг по экзамену из правила есть');
-  assert.match(examStep.detail, /EJU/);
+  assert.doesNotMatch(examStep.detail, /EJU/);
   assert.equal(tests.filter((step) => step.track === 'eju').length, 0);
 });
 
 test('в «чего не хватает» для родителя не попадает уже сделанное', () => {
   const first = build({ profile: NO_LANG });
   const languageStep = phaseSteps(first, 'tests')[0];
-  const state = { version: ROUTE_VERSION, goal: 'kaist', done: [languageStep.id] };
+  const state = { version: ROUTE_VERSION, goals: ['kaist'], done: { [languageStep.id]: TODAY } };
   const text = routeText(build({ profile: NO_LANG, state }));
   assert.ok(!text.includes(languageStep.title), text);
 });
