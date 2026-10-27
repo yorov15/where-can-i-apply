@@ -50,10 +50,11 @@ function deadlineLine(goal) {
   if (!deadline.closes) return 'Срок подачи не объявлен — следи за страницей приёма.';
   if (deadline.state === 'closed') return `Приём закрыт ${formatDate(deadline.closes)}.`;
   const expected = deadline.confidence === 'confirmed' ? '' : ' (дата ожидаемая)';
+  const soon = deadline.state === 'upcoming' ? 'Приём ещё не открыт. ' : '';
   const left = typeof deadline.daysLeft === 'number' && deadline.daysLeft >= 0
     ? ` · осталось ${deadline.daysLeft} ${plural(deadline.daysLeft, 'день', 'дня', 'дней')}`
     : '';
-  return `Срок подачи — ${formatDate(deadline.closes)}${expected}${left}.`;
+  return `${soon}Срок подачи — ${formatDate(deadline.closes)}${expected}${left}.`;
 }
 
 function chips(ids, selected, programs, onGoal) {
@@ -92,15 +93,31 @@ function goalBlock({ goal, prepared, planIds, programs, onGoal }) {
   return box;
 }
 
-function emptyState({ hasPlan, prepared }) {
-  const box = el('div', 'route-empty');
+function emptyState({ hasPlan, prepared, failed, onRetry }) {
+  const box = el('div', failed ? 'route-warn' : 'route-empty');
+  if (failed) {
+    box.append(el('p', null, 'Маршрут не загрузился. Проверь интернет и попробуй ещё раз.'));
+    const retry = el('button', 'button button-quiet', 'Попробовать ещё раз');
+    retry.type = 'button';
+    retry.addEventListener('click', () => onRetry?.());
+    box.append(retry);
+    return box;
+  }
   const text = hasPlan || !prepared.length
     ? 'Выбери цель — программу, до которой строится маршрут. Полный маршрут с подготовкой сейчас у проверенных программ из списка ниже; у остальных появятся срок, требования и документы, когда их сверят.'
     : 'Выбери цель из списка ниже.';
   box.append(el('p', null, text));
-  if (!prepared.length) {
-    box.append(el('p', 'route-detail', 'Маршрут пока не собран: обнови страницу или зайди позже.'));
-  }
+  return box;
+}
+
+function conditionsWarn(route, onRetry) {
+  if (route.conditionsLoaded !== false) return null;
+  const box = el('div', 'route-warn');
+  box.append(el('p', null, 'Условия программы не загрузились: документы и деньги не показаны, поэтому маршрут неполный.'));
+  const retry = el('button', 'button button-quiet', 'Повторить');
+  retry.type = 'button';
+  retry.addEventListener('click', () => onRetry?.());
+  box.append(retry);
   return box;
 }
 
@@ -161,6 +178,14 @@ function trackBlock(step, tracks) {
     }
   }
   if (track.note) details.append(el('p', 'route-detail', track.note));
+  const source = link('Источник', track.source?.url);
+  if (source) {
+    const p = el('p', 'route-detail', 'Сверено: ');
+    const checked = track.source?.lastVerified ? formatDate(track.source.lastVerified) : '';
+    p.append(source);
+    p.append(document.createTextNode(checked ? ` · ${checked}` : ''));
+    details.append(p);
+  }
   return details;
 }
 
@@ -169,6 +194,7 @@ function stepRow(step, index, { tracks, onToggle }) {
   const check = el('input', 'route-check');
   check.type = 'checkbox';
   check.id = `route-step-${index}`;
+  check.dataset.step = step.id;
   check.checked = Boolean(step.done);
   check.addEventListener('change', () => onToggle(step.id));
   const body = el('div', 'route-step-body');
@@ -197,6 +223,7 @@ function weekRow(step, index, { onToggle }) {
   const check = el('input', 'route-check');
   check.type = 'checkbox';
   check.id = `route-week-${index}`;
+  check.dataset.step = step.id;
   check.checked = Boolean(step.done);
   check.addEventListener('change', () => onToggle(step.id));
   const body = el('div', 'route-step-body');
@@ -274,7 +301,8 @@ function actionsBlock(route, handlers, statusText) {
   save.addEventListener('click', () => say(handlers.onExport()));
   box.append(save);
 
-  const load = el('label', 'button button-quiet', 'Загрузить маршрут');
+  const load = el('button', 'button button-quiet', 'Загрузить маршрут');
+  load.type = 'button';
   const file = document.createElement('input');
   file.type = 'file';
   file.accept = 'application/json,.json';
@@ -284,7 +312,8 @@ function actionsBlock(route, handlers, statusText) {
     if (!picked) return;
     try { say(await handlers.onImport(picked)); } catch { say('Не получилось прочитать файл.'); }
   });
-  load.append(file);
+  box.append(file);
+  load.addEventListener('click', () => file.click());
   box.append(load);
 
   const clear = el('button', 'link-button', 'Сбросить прогресс');
@@ -306,22 +335,30 @@ export function renderRoute(root, props) {
 
   root.append(goalBlock({ goal, prepared, planIds, programs, onGoal: handlers.onGoal }));
   if (!route) {
-    root.append(emptyState({ hasPlan: planIds.length > 0, prepared }));
+    root.append(emptyState({ hasPlan: planIds.length > 0, prepared, failed: Boolean(goal && !prepared.length), onRetry: handlers.onRetry }));
     return;
   }
 
+  const entry = prepared.find((item) => item.id === route.id) ?? null;
   const head = el('div', 'route-goal');
   const name = programs.find((item) => item.id === route.id);
   head.append(el('h3', 'route-goal-name', name?.name?.ru ?? route.id));
   head.append(el('p', 'route-goal-meta', deadlineLine(route.goal)));
   head.append(el('p', 'route-goal-meta', coverageLine(route.goal.coverage)));
-  if (route.prepared) {
+  if (!route.conditionsLoaded) {
+    head.append(el('p', 'route-goal-note', 'Маршрут сверен не полностью: условия программы не загрузились.'));
+  } else if (route.prepared && entry?.checked) {
+    head.append(el('p', 'route-goal-note', `Маршрут сверен ${formatDate(entry.checked)}: список документов, экзамены и сроки из проверенных условий программы.`));
+  } else if (route.prepared) {
     head.append(el('p', 'route-goal-note', 'Маршрут сверен: список документов, экзамены и сроки из проверенных условий программы.'));
   } else {
     head.append(el('p', 'route-goal-note', 'Полный маршрут с подготовкой для этой программы появится позже. Пока видны срок, требования, документы и деньги.'));
   }
   for (const note of route.notes ?? []) head.append(el('p', 'route-goal-note', note));
   root.append(head);
+
+  const warn = conditionsWarn(route, handlers.onRetry);
+  if (warn) root.append(warn);
 
   const open = el('button', 'link-button route-open', 'Открыть карточку в каталоге');
   open.type = 'button';

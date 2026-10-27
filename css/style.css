@@ -672,7 +672,10 @@ body[data-screen="route"] .hero { display: none; }
 /* Цель маршрута — обычные чипы в строку: на широком экране общий стиль
    ставит чипы анкеты столбцом, здесь это не нужно. */
 .route-goals .chips { flex-flow: row wrap; gap: var(--s-2); margin: 0; padding: 0; overflow: visible; }
-.route-goals .chip { max-width: 100%; white-space: normal; text-align: left; }
+.route-goals .chip { width: auto; max-width: 100%; white-space: normal; text-align: left; justify-content: flex-start; }
+.route-warn { margin: 0 0 var(--s-4); padding: var(--s-3) var(--s-4); background: var(--soft); border-radius: var(--r-control); }
+.route-warn p { margin: 0 0 var(--s-2); }
+.route-warn .button { margin: 0; }
 
 /* Печать: на бумаге нужен только маршрут, без шапки, вкладок и кнопок. */
 @media print {

@@ -5,7 +5,7 @@ import { setupCatalogFilter } from './filter.js';
 import { setupBarHide } from './barscroll.js';
 import { setupTabbar } from './tabbar.js';
 import { setupPriority } from './priority.js';
-import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack } from './data.js';
+import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, forgetConditions } from './data.js';
 import { renderResults } from './render.js';
 import { loadPlan, savePlan, togglePlan, PLAN_KEY, DONE_KEY, loadDone, saveDone } from './plan.js';
 import { loadRouteState, saveRouteState, setGoal, toggleStep, clearProgress, buildRoute, exportState, importState, ROUTE_STATE_KEY } from './route.js';
@@ -35,6 +35,9 @@ const lead = document.querySelector('.lead');
 
 function showScreen(name) {
   const ready = finished;
+  // Пока анкета не готова, маршрута нет: адрес #route не должен оставлять
+  // человека на пустом экране.
+  if (!ready) name = 'answer';
   document.body.dataset.screen = name;
   answerScreen.hidden = !ready || name !== 'answer';
   catalogScreen.hidden = !ready || name !== 'catalog';
@@ -116,6 +119,7 @@ const nodes = {
   resultsNode: document.getElementById('results'),
   catalogButton,
   onOpenProgram: openProgram,
+  onOpenRoute: () => { location.hash = 'route'; },
   // Каталог закрыт — карточки не пересобираем (см. renderResults).
   skipCards: () => catalogScreen.hidden && !forceCards,
 };
@@ -241,11 +245,8 @@ async function refreshRoute() {
   }
   const prepared = preparedEntry(goalId);
   const codes = [...new Set(prepared?.tests ?? [])];
-  await Promise.all(codes.map((code) => loadTrack(code)));
-  for (const code of codes) {
-    const track = await loadTrack(code);
-    if (track) routeTracks[code] = track;
-  }
+  const loaded = await Promise.all(codes.map((code) => loadTrack(code)));
+  codes.forEach((code, index) => { if (loaded[index]) routeTracks[code] = loaded[index]; });
   await details.ensure(goalId);
   routeCtx = { program, conditions: details.conditions[goalId] ?? null, prepared };
   rebuildRoute();
@@ -292,6 +293,9 @@ function renderRouteView() {
         persistRoute();
         rebuildRoute();
         renderRouteView();
+        // Перерисовка заменяет узлы: возвращаем фокус на тот же шаг, иначе
+        // с клавиатуры после каждой галочки человек оказывается в начале.
+        routeBody.querySelector(`[data-step="${CSS.escape(stepId)}"]`)?.focus();
       },
       onPrint() {
         window.print();
@@ -340,6 +344,23 @@ function renderRouteView() {
       },
       onOpen(programId) {
         openProgram(programId);
+      },
+      onOpenRoute() {
+        location.hash = 'route';
+      },
+      async onRetry() {
+        if (!routeData) {
+          routeDataLoading = null;
+          await loadRouteData();
+        }
+        const goalId = routeState.goal;
+        if (goalId) {
+          details.conditions[goalId] = undefined;
+          forgetConditions(goalId);
+        }
+        await refreshRoute();
+        routeStatus = routeData ? 'Попробовал ещё раз.' : 'Файл маршрута не загрузился: проверь интернет.';
+        renderRouteView();
       },
       onStatus: showRouteStatus,
     },

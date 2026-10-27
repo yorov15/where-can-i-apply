@@ -198,7 +198,7 @@ function compareBlock(entries, details, today) {
 
 // «Мой план»: отмеченные программы по срокам и два действия, ради которых
 // план нужен — календарь с напоминаниями и текст для родителей или учителя.
-function planBlock(planned, today, details, onOpenProgram, plan, entries) {
+function planBlock(planned, today, details, onOpenProgram, plan, entries, onOpenRoute) {
   const box = el('div', 'agenda');
   box.append(el('h2', 'agenda-title', `Мой план (${planned.length})`));
   const rows = [...planned]
@@ -249,6 +249,14 @@ function planBlock(planned, today, details, onOpenProgram, plan, entries) {
   });
 
   const actions = el('div', 'plan-actions');
+  // Маршрут — это действия, а не карточки: на телефоне до него доходит
+  // нижняя вкладка, на широком экране её нет, поэтому нужна кнопка.
+  if (onOpenRoute) {
+    const route = el('button', 'button', 'Маршрут до оффера');
+    route.type = 'button';
+    route.addEventListener('click', () => onOpenRoute());
+    actions.append(route);
+  }
   actions.append(calendar, copy);
   box.append(actions, status);
   return box;
@@ -294,7 +302,7 @@ function dismissTip(event) {
 }
 
 export function renderResults(nodes, profile, programs, today, details) {
-  const { summaryNode, agendaNode, resultsNode, catalogButton, onOpenProgram } = nodes;
+  const { summaryNode, agendaNode, resultsNode, catalogButton, onOpenProgram, onOpenRoute } = nodes;
   const plan = nodes.plan;
   const openCards = rememberOpen(resultsNode, 'details.card');
   const openMore = rememberOpen(resultsNode, 'details.more');
@@ -335,7 +343,7 @@ export function renderResults(nodes, profile, programs, today, details) {
   }));
 
   const planned = planPrograms(programs, plan.ids);
-  if (planned.length) agendaNode.append(planBlock(planned, today, details, onOpenProgram, plan, rows.filter((r) => plan.ids.includes(r.program.id))));
+  if (planned.length) agendaNode.append(planBlock(planned, today, details, onOpenProgram, plan, rows.filter((r) => plan.ids.includes(r.program.id)), onOpenRoute));
 
   const soon = agenda(rows, today);
   if (soon.length) agendaNode.append(agendaBlock(soon, today, onOpenProgram));

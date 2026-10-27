@@ -153,6 +153,31 @@ const TRACK_OF = {
   HSK: 'hsk',
 };
 
+// Вид экзамена: альтернативы одного вида — один шаг с «или», как anyOf в
+// правилах. Иначе IELTS, TOEFL и Duolingo выглядели бы тремя отдельными
+// делами, хотя человеку нужен один сертификат.
+const TRACK_GROUP = {
+  ielts: 'english',
+  toefl: 'english',
+  duolingo: 'english',
+  pte: 'english',
+  sat: 'standard',
+  act: 'standard',
+  eju: 'standard',
+  // NUET и тест UCA — не отдельные обязанности, а замена SAT/ACT: вуз
+  // принимает один из них на выбор, и человеку нужен один шаг.
+  nuet: 'standard',
+  'uca-test': 'standard',
+  topik: 'korean',
+  hsk: 'chinese',
+  jlpt: 'japanese',
+  testdaf: 'german',
+  dsh: 'german',
+  goethe: 'german',
+};
+
+const groupOf = (code) => TRACK_GROUP[code] ?? code;
+
 const trackOf = (test) => TRACK_OF[test] ?? null;
 
 const optionsOf = (rule) => (Array.isArray(rule?.anyOf) ? rule.anyOf : []);
@@ -219,16 +244,30 @@ function testSteps({ program, gaps, prepared, tracks }) {
   // Трек, которого в правилах нет: программе он нужен (файл подготовки
   // сверен руками), а правило об этом молчит. Название берём из трека, не
   // из головы; пока трек не загружен, шага нет — его добавит перезагрузка.
+  // Один вид экзамена — один шаг: IELTS и TOEFL в нём альтернативы, а не
+  // два разных дела.
   const inRules = ruleTrackCodes(program.eligibility);
-  for (const code of prepared?.tests ?? []) {
-    if (inRules.has(code)) continue;
-    const track = tracks?.[code];
-    if (!track?.name) continue;
+  const extras = (prepared?.tests ?? [])
+    .filter((code) => !inRules.has(code) && tracks?.[code]?.name);
+  const groups = new Map();
+  for (const code of extras) {
+    const key = groupOf(code);
+    groups.set(key, [...(groups.get(key) ?? []), code]);
+  }
+  for (const codes of groups.values()) {
+    const names = codes.map((code) => tracks[code].name);
+    const join = joinOr(names);
+    const same = steps.find((step) => step.track && groupOf(step.track) === groupOf(codes[0]));
+    if (same) {
+      same.detail = [same.detail, `Или ${join}.`].filter(Boolean).join(' ');
+      continue;
+    }
     steps.push(makeStep(program, {
       phase: 'tests',
       kind: 'test',
-      title: `Сдать ${track.name}`,
-      track: code,
+      title: `Сдать ${names[0]}`,
+      detail: names.length > 1 ? `Подойдёт ${join}.` : '',
+      track: codes[0],
     }));
   }
   return steps;
@@ -292,19 +331,23 @@ function moneySteps({ program, conditions }) {
 }
 
 // Срок подачи — единственный шаг с датой. Ожидаемая дата помечается:
-// на неё нельзя опираться как на объявленную.
+// на неё нельзя опираться как на объявленную. Без «сегодня» закрытость
+// срока не утверждаем: в guard-вызовах today нет, а соврать про закрытый
+// приём дороже, чем попросить сверить дату.
 function applyStep({ program, today }) {
   const deadline = program.deadline ?? null;
-  const state = deadlineState(deadline, today);
+  const state = today ? deadlineState(deadline, today) : null;
   if (deadline?.closes && state !== 'closed') {
     const expected = deadline.confidence !== 'confirmed';
     return makeStep(program, {
       phase: 'apply',
       kind: 'apply',
       title: `Подать заявку до ${formatDate(deadline.closes)}`,
-      detail: expected
-        ? 'дата ожидаемая: вуз ещё не объявил её на этот цикл'
-        : 'дата подтверждена',
+      detail: today == null
+        ? 'дату сверь на сайте программы'
+        : expected
+          ? 'дата ожидаемая: вуз ещё не объявил её на этот цикл'
+          : 'дата подтверждена',
       due: deadline.closes,
     });
   }
@@ -447,7 +490,7 @@ export function routeText(route) {
     `Срок: ${deadlineText(goal.deadline)}`,
   ];
   const missing = steps
-    .filter((step) => step.phase === 'tests' || step.phase === 'inquiry')
+    .filter((step) => !step.done && (step.phase === 'tests' || step.phase === 'inquiry'))
     .slice(0, 3);
   if (missing.length) {
     lines.push(`Чего не хватает: ${missing.map((step) => clip(step.title, 100)).join('; ')}.`);

@@ -575,3 +575,58 @@ test('текст не длиннее 1200 знаков даже на длинн�
   assert.ok(text.length <= 1200, `длина ${text.length}`);
   assert.match(text, /Сделано 0 из/);
 });
+
+// ——— альтернативы из prepared.tests ———
+
+const NO_RULES = { language: { notMeasured: true }, exam: null };
+
+test('треки одного вида из prepared склеиваются в один шаг с «или»', () => {
+  const route = build({
+    program: programOf({ eligibility: NO_RULES }),
+    profile: NO_LANG,
+    prepared: { ...PREPARED, tests: ['ielts', 'toefl'] },
+  });
+  const tests = phaseSteps(route, 'tests');
+  assert.deepEqual(tests.map((step) => step.track), ['ielts']);
+  assert.match(tests[0].detail, /TOEFL iBT/);
+  assert.match(tests[0].detail, /или/);
+});
+
+test('альтернатива из prepared дописывается к шагу того же вида из правил', () => {
+  const eju = track('eju', 'EJU (поступление в вузы Японии)');
+  const route = build({
+    program: programOf({
+      eligibility: {
+        language: KAIST.eligibility.language,
+        exam: { anyOf: [{ test: 'SAT' }, { test: 'ACT' }] },
+      },
+    }),
+    profile: NO_LANG,
+    prepared: { ...PREPARED, tests: ['eju'] },
+    tracks: { ...TRACKS, eju },
+  });
+  const tests = phaseSteps(route, 'tests');
+  const examStep = tests.find((step) => step.track === 'sat');
+  assert.ok(examStep, 'шаг по экзамену из правила есть');
+  assert.match(examStep.detail, /EJU/);
+  assert.equal(tests.filter((step) => step.track === 'eju').length, 0);
+});
+
+test('в «чего не хватает» для родителя не попадает уже сделанное', () => {
+  const first = build({ profile: NO_LANG });
+  const languageStep = phaseSteps(first, 'tests')[0];
+  const state = { version: ROUTE_VERSION, goal: 'kaist', done: [languageStep.id] };
+  const text = routeText(build({ profile: NO_LANG, state }));
+  assert.ok(!text.includes(languageStep.title), text);
+});
+
+test('без today закрытый срок не выдаётся за открытый', () => {
+  const route = build({
+    program: programOf({ deadline: { closes: '2026-09-30', confidence: 'confirmed' } }),
+    today: null,
+  });
+  const apply = stepOf(route, 'apply');
+  assert.match(apply.title, /Подать заявку до 30 сентября 2026/);
+  assert.doesNotMatch(apply.title, /Приём закрыт/);
+  assert.match(apply.detail, /сверь/);
+});

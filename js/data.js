@@ -54,3 +54,9 @@ export function loadConditions(id) {
   }
   return conditions.get(id);
 }
+
+// Файл условий не приехал: забываем неудачную попытку, иначе «Повторить»
+// вернёт тот же null из памяти и ничего не перезапросит.
+export function forgetConditions(id) {
+  conditions.delete(id);
+}
