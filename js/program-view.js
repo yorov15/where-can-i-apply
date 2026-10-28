@@ -50,6 +50,9 @@ export function programModel(row, details, today) {
     lead,
     kind: kindLine(row.program),
     feeSource: applicationFee?.source ?? null,
+    applyRoutes: (Array.isArray(extra?.applyChannel?.routes) ? extra.applyChannel.routes : [])
+      .filter(route => route && typeof route.name === 'string' && route.name.trim()
+        && (route.url === null || safeHttpUrl(route.url))),
     facts: [
       ['Срок подачи', model.deadlineLine],
       ['Что покрывает', model.coverageLine],
@@ -83,6 +86,18 @@ function exactBlock(view, model) {
       el('p', 'reason-label', 'Не ограничивает — проверено по страницам программы:'),
       bulletList(model.more.attested, 'card-list muted'),
     );
+  }
+  if (view.applyRoutes.length) {
+    const heading = el('h4', 'card-section-title', 'Как подавать — порядок и источники');
+    heading.dataset.channelSources = '';
+    heading.tabIndex = -1;
+    box.append(heading);
+    for (const route of view.applyRoutes) {
+      const item = el('p', 'card-source', `${route.name}. ${route.note ?? ''} Проверено ${formatDate(route.source?.lastVerified)}. `);
+      const reference = link(route.source?.url, 'Источник канала');
+      if (reference) item.append(reference);
+      box.append(item);
+    }
   }
   if (model.source) {
     const foot = el('p', model.stale ? 'card-source stale' : 'card-source', `${model.source}. `);
@@ -122,6 +137,28 @@ export function renderProgram(root, props) {
   for (const [name, value] of view.facts) {
     const cell = el('div');
     cell.append(el('dt', null, name), el('dd', null, value));
+    facts.append(cell);
+  }
+  if (view.applyRoutes.length) {
+    const cell = el('div', 'program-channel');
+    const value = el('dd');
+    view.applyRoutes.forEach((route, index) => {
+      if (index) value.append(document.createTextNode(' · '));
+      value.append(link(route.url, route.name) ?? document.createTextNode(route.name));
+    });
+    if (view.applyRoutes.some(route => route.note)) {
+      const conditions = el('button', 'link-button', 'Порядок и условия');
+      conditions.type = 'button';
+      conditions.addEventListener('click', () => {
+        const exact = root.querySelector('.program-exact');
+        exact.open = true;
+        const heading = exact.querySelector('[data-channel-sources]');
+        heading.scrollIntoView({ block: 'center' });
+        heading.focus({ preventScroll: true });
+      });
+      value.append(document.createTextNode(' · '), conditions);
+    }
+    cell.append(el('dt', null, 'Как подавать'), value);
     facts.append(cell);
   }
   root.append(facts);

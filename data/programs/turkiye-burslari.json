@@ -123,5 +123,21 @@
       }
     ],
     "approvedBy": "assistant"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "government",
+        "name": "TBBS",
+        "url": "https://tbbs.turkiyeburslari.gov.tr",
+        "note": "Türkiye Scholarships.",
+        "evidence": "For applications made online through the Türkiye Scholarships Application System (TBBS)",
+        "source": {
+          "url": "https://turkiyeburslari.gov.tr/applysteps",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:a92a0b74d196983c0754f162cf599834f9c1e63cd3b6e5c6275e7921379f7298"
+        }
+      }
+    ]
   }
 }

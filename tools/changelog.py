@@ -41,6 +41,7 @@ OTHER_LABELS = (
     ("textConditions", "условия текстом"),
     ("name", "название"),
     ("applyUrl", "ссылка для подачи"),
+    ("applyChannel", "канал подачи"),
 )
 
 # Дата и автор подписи меняются при каждой повторной проверке.
@@ -76,7 +77,12 @@ def summarize(before, after) -> list[str]:
         if _rule(old_rules.get(field)) != _rule(new_rules.get(field)):
             labels.append(f"правило: {label}")
     for key, label in OTHER_LABELS:
-        if key == "textConditions":
+        if key == "applyChannel":
+            def visible(channel):
+                return [(r.get('type'), r.get('name'), r.get('url'), r.get('note'))
+                        for r in (channel or {}).get('routes', [])]
+            changed = visible(before.get(key)) != visible(after.get(key))
+        elif key == "textConditions":
             changed = _conditions(before.get(key)) != _conditions(after.get(key))
         else:
             changed = before.get(key) != after.get(key)

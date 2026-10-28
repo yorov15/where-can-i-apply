@@ -433,6 +433,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .facts { display: grid; gap: var(--s-3); margin: 0 0 var(--s-4); padding: var(--s-4); background: var(--soft); border-radius: var(--r-control); }
 .facts dt { color: var(--muted); font-size: .8125rem; font-weight: 600; }
 .facts dd { margin: 0; font-weight: 600; }
+.program-channel { grid-column: 1 / -1; overflow-wrap: anywhere; }
 .program-section { margin: var(--s-6) 0 var(--s-2); font-size: 1.25rem; }
 .tag { display: inline-block; margin-bottom: var(--s-1); padding: .0625rem .5rem; color: var(--accent-text); font-size: .75rem; font-weight: 700; background: var(--accent-soft); border-radius: var(--r-pill); }
 .program-exact { margin-top: var(--s-5); }

@@ -164,5 +164,21 @@
   "leftEmpty": {
     "schoolYears": "sha256:3440fe6d5af6920a51787b037a7181d91756c81512704fd29d6609160bb6b11f",
     "language": "sha256:3440fe6d5af6920a51787b037a7181d91756c81512704fd29d6609160bb6b11f"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "Studenti Online",
+        "url": "https://studenti.unibo.it/sol/welcome.htm?siteLanguage=en",
+        "note": "Заявка на отбор; предзачисление для визы через Universitaly — отдельный этап.",
+        "evidence": "Access Studenti Online with your institutional credentials, enter \"Application for admission - Participate in the selection\" and complete the application.",
+        "source": {
+          "url": "https://www.unibo.it/en/study/enrolment-fees-and-other-procedures/degree-programmes/enrolling-in-first-cycle-and-single-cycle-degree-programmes/enrolling-in-a-first-cycle-or-single-cycle-degree-programme-if-you-come-from-a-non-eu-country",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:a67883ef529992bd1ba8ec9ed02e8009a6cf9b3222d0a278394d834f978ef481"
+        }
+      }
+    ]
   }
 }

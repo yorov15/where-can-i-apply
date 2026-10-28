@@ -267,5 +267,21 @@
         "contentHash": "sha256:1aa9061d832098498d2245b7bb3856d0cec19ad0e411cf5f29b731365efd6099"
       }
     ]
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "NU Admissions",
+        "url": "https://admissions.nu.edu.kz/wps/portal",
+        "note": "Личный кабинет; выбрать Undergraduate program.",
+        "evidence": "The applicant should go to the admissions.nu.edu.kz portal, press the \"Sign Up\" button",
+        "source": {
+          "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:237b45f9d9af36216699c3ca054c33c065d99520effa09095f9fe18c3aa97401"
+        }
+      }
+    ]
   }
 }

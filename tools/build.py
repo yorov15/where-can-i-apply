@@ -162,6 +162,11 @@ def details_entry(program: dict) -> dict:
     return {
         "coverageNote": (coverage.get("note") or {}).get("ru") or None,
         "applyUrl": program.get("applyUrl"),
+        **({"applyChannel": {"routes": [
+            {**{key: route[key] for key in ("type", "name", "url", "note")},
+             "source": {key: route["source"][key] for key in ("url", "lastVerified")}}
+            for route in program["applyChannel"]["routes"]
+        ]}} if program.get("applyChannel") else {}),
         "source": {
             "url": source.get("url"),
             "lastVerified": source.get("lastVerified"),

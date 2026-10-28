@@ -174,5 +174,21 @@
   },
   "leftEmpty": {
     "schoolYears": "sha256:54396071023831e39cfee0872dedebef7b7bcb0d7595a3190df5cbaf709a256b"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "BME e-admission",
+        "url": "http://e-admission.bme.hu/",
+        "note": "Для платного пути; стипендиальные программы имеют отдельные процедуры.",
+        "evidence": "you have to fill our online application form",
+        "source": {
+          "url": "https://www.bme.hu/en/application_and_admission",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:da41d4777b436d3e2ff5d5866e3a73477055fe4d12e8ad9cbc92e25e8ce681ff"
+        }
+      }
+    ]
   }
 }

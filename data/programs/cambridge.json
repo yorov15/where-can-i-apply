@@ -299,5 +299,33 @@
     ],
     "lastVerified": "2026-09-29",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "UCAS",
+        "url": "https://accounts.ucas.com/account/login",
+        "note": "Сначала основная заявка.",
+        "evidence": "You must apply to Cambridge through UCAS",
+        "source": {
+          "url": "https://www.undergraduate.study.cam.ac.uk/apply/how",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:ac47f15a3a146ac915564dff0731c72d328bf6f4715c87f92afe0027692f289f"
+        }
+      },
+      {
+        "type": "university",
+        "name": "My Cambridge Application",
+        "url": null,
+        "note": "После UCAS для большинства курсов; ссылка приходит по email.",
+        "evidence": "you'll get an email from us within 48 hours with instructions and a link to your My Cambridge Application.",
+        "source": {
+          "url": "https://www.undergraduate.study.cam.ac.uk/apply/how/cambridge-application",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:d6d22e47064c7ee55e2fac80c3a9b1747cce405dd6d6bff89ca1c5403459655f"
+        }
+      }
+    ]
   }
 }

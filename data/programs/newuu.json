@@ -176,5 +176,21 @@
   },
   "majors": [
     "any"
-  ]
+  ],
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "NewUU International Admissions",
+        "url": "https://admission.newuu.uz/international/auth/login",
+        "note": "Иностранные абитуриенты.",
+        "evidence": "Apply now",
+        "source": {
+          "url": "https://newuu.uz/en/menu/entry-requirements",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:d9b0509c23e4371a0008de7f6804ca7b9fc1a373fe08998eb2db75966931d41d"
+        }
+      }
+    ]
+  }
 }

@@ -129,5 +129,33 @@
       }
     ],
     "approvedBy": "assistant"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "government",
+        "name": "Study in Korea",
+        "url": "https://www.studyinkorea.go.kr/ko/receipt/OnlineReceipt11.do",
+        "note": "Embassy track: онлайн-заявка, затем отбор посольством.",
+        "evidence": "Embassy Track Apply online through Study in Korea",
+        "source": {
+          "url": "https://www.studyinkorea.go.kr/en/plan/scholarship.do",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:82ca5786d887e7be52bc72744e30537b6ef3748363149fba5511d60ecf4339bc"
+        }
+      },
+      {
+        "type": "university",
+        "name": "Вуз-участник GKS",
+        "url": null,
+        "note": "University track: подать напрямую в выбранный вуз GKS; следовать его правилам.",
+        "evidence": "University Track Apply directly to a GKS university",
+        "source": {
+          "url": "https://www.studyinkorea.go.kr/en/plan/scholarship.do",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:82ca5786d887e7be52bc72744e30537b6ef3748363149fba5511d60ecf4339bc"
+        }
+      }
+    ]
   }
 }

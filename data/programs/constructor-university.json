@@ -226,5 +226,21 @@
         "contentHash": "sha256:081bdb09491309c8cfa444a4c1a1e616b86bfbe5a89ba3862b1f10d0d60f3838"
       }
     ]
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "Constructor Application Portal",
+        "url": "https://apply.constructor.university/",
+        "note": "",
+        "evidence": "Application portal",
+        "source": {
+          "url": "https://constructor.university/admission-aid/application-information-undergraduate",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:46073cf5446409e539713ea952362f8c40e331cd47a09e77665498d5fa8d2140"
+        }
+      }
+    ]
   }
 }

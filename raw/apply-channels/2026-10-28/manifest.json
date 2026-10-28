@@ -1,0 +1,600 @@
+[
+  {
+    "id": "kaist",
+    "routes": [
+      {
+        "type": "university",
+        "name": "KAIST Apply Online",
+        "url": "https://admission.kaist.ac.kr/intl-undergraduate/application/apply",
+        "note": "",
+        "evidence": "Apply Online",
+        "source": {
+          "url": "https://admission.kaist.ac.kr/intl-undergraduate/before/sub02",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:7a895c95ed0c0fc24b33d53f817e6d7051b9c8501727f672f26e080365852f94"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/kaist-ffb8182ec634.txt"
+      }
+    ]
+  },
+  {
+    "id": "tiu-japan",
+    "routes": [
+      {
+        "type": "university",
+        "name": "My TIU Page",
+        "url": "http://www.tiu.ac.jp/apply/bachelor",
+        "note": "Онлайн-заявка и документы почтой — обе части обязательны.",
+        "evidence": "Register My TIU Page account (online).",
+        "source": {
+          "url": "https://www.tiu.ac.jp/etrack/wp-content/uploads/application_guideline_for_first_year.pdf",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:a25a1f1aebb7512e4bc2942e84b27bb40b9b151a195d2173fdcaad27f0f6e310"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/tiu-japan-f82f9c08dacb.txt"
+      }
+    ]
+  },
+  {
+    "id": "hku",
+    "routes": [
+      {
+        "type": "university",
+        "name": "HKU Online Application",
+        "url": "https://ug.hku.hk/hku-applicant/hku/index/login.xhtml",
+        "note": "Международные квалификации.",
+        "evidence": "Applicants must input all their academic results, including both predicted and actual results, into the application system",
+        "source": {
+          "url": "https://admissions.hku.hk/apply/international-qualifications",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:22a922a90a7b2301fd05163726c1383f514e386592c28fa3b280fe2183475d21"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/hku-fae46dee1b3b.txt"
+      }
+    ]
+  },
+  {
+    "id": "hkust",
+    "routes": [
+      {
+        "type": "university",
+        "name": "HKUST Online Application",
+        "url": "https://join.hkust.edu.hk/apply/",
+        "note": "",
+        "evidence": "submit their applications directly to the University via the online application system",
+        "source": {
+          "url": "https://join.hkust.edu.hk/admissions/international-qualifications?general_requirement=46180",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:0e48d53ff70175ade12fef5c3428f413d192b1586b3c22d51decad3bee0983ed"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/hkust-94bb0cbf7a01.txt"
+      }
+    ]
+  },
+  {
+    "id": "harvard-college",
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common App",
+        "url": "https://www.commonapp.org/explore/harvard-university",
+        "note": "Первый курс.",
+        "evidence": "We accept the Common Application",
+        "source": {
+          "url": "https://college.harvard.edu/admissions/apply/application-requirements",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:8a971ebfd488cb4c7ec09fd0e590c464ddcec32a1acdcca5548f8c69cec1c59c"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/harvard-college-e32e72d7e359.txt"
+      }
+    ]
+  },
+  {
+    "id": "cambridge",
+    "routes": [
+      {
+        "type": "platform",
+        "name": "UCAS",
+        "url": "https://accounts.ucas.com/account/login",
+        "note": "Сначала основная заявка.",
+        "evidence": "You must apply to Cambridge through UCAS",
+        "source": {
+          "url": "https://www.undergraduate.study.cam.ac.uk/apply/how",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:ac47f15a3a146ac915564dff0731c72d328bf6f4715c87f92afe0027692f289f"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/cambridge-89712f558ccc.txt"
+      },
+      {
+        "type": "university",
+        "name": "My Cambridge Application",
+        "url": null,
+        "note": "После UCAS для большинства курсов; ссылка приходит по email.",
+        "evidence": "you'll get an email from us within 48 hours with instructions and a link to your My Cambridge Application.",
+        "source": {
+          "url": "https://www.undergraduate.study.cam.ac.uk/apply/how/cambridge-application",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:d6d22e47064c7ee55e2fac80c3a9b1747cce405dd6d6bff89ca1c5403459655f"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/cambridge-86ea046a53c0.txt"
+      }
+    ]
+  },
+  {
+    "id": "tu-berlin",
+    "routes": [
+      {
+        "type": "university",
+        "name": "tuPORT",
+        "url": "https://tuport.sap.tu-berlin.de/",
+        "note": "Заявка в TU Berlin; предварительно может требоваться VPD.",
+        "evidence": "required documents via the application portal of TU Berlin",
+        "source": {
+          "url": "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment/prospective-students-with-an-international-higher-education-entrance-qualification/application/group-c",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:a97337ca500215441b9991d8e5d20e2bfad44ee2937a1079a390f701ecebfdfc"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/tu-berlin-681ba995ab99.txt"
+      },
+      {
+        "type": "platform",
+        "name": "My assist / uni-assist",
+        "url": "https://www.uni-assist.de/en/",
+        "note": "Предварительная проверка VPD для иностранных документов; это не заявка в TU Berlin.",
+        "evidence": "online portal My assist",
+        "source": {
+          "url": "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment/prospective-students-with-an-international-higher-education-entrance-qualification/admission-requirements",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:6785c73ca56e35a18464366367e635cb855013d7fdedff6be6bd33f9596616df"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/tu-berlin-6fe45323cce6.txt"
+      }
+    ]
+  },
+  {
+    "id": "gks-korea",
+    "routes": [
+      {
+        "type": "government",
+        "name": "Study in Korea",
+        "url": "https://www.studyinkorea.go.kr/ko/receipt/OnlineReceipt11.do",
+        "note": "Embassy track: онлайн-заявка, затем отбор посольством.",
+        "evidence": "Embassy Track Apply online through Study in Korea",
+        "source": {
+          "url": "https://www.studyinkorea.go.kr/en/plan/scholarship.do",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:82ca5786d887e7be52bc72744e30537b6ef3748363149fba5511d60ecf4339bc"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/gks-korea-4aeec3f2b065.txt"
+      },
+      {
+        "type": "university",
+        "name": "Вуз-участник GKS",
+        "url": null,
+        "note": "University track: подать напрямую в выбранный вуз GKS; следовать его правилам.",
+        "evidence": "University Track Apply directly to a GKS university",
+        "source": {
+          "url": "https://www.studyinkorea.go.kr/en/plan/scholarship.do",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:82ca5786d887e7be52bc72744e30537b6ef3748363149fba5511d60ecf4339bc"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/gks-korea-4aeec3f2b065.txt"
+      }
+    ]
+  },
+  {
+    "id": "unist",
+    "routes": [
+      {
+        "type": "government",
+        "name": "Study in Korea",
+        "url": "https://studyinkorea.go.kr/",
+        "note": "Бакалавриат, осень 2027.",
+        "evidence": "Online Application Website ▶ https://studyinkorea.go.kr/",
+        "source": {
+          "url": "https://admu-intl.unist.ac.kr/admission-eng/admissions/admissions.do?articleNo=306812&attachNo=591437&mode=download",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:b1d0fca31d3a2d07e018a70be79efe2c4cfa1985866294223efae478f6dd76d4"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/unist-d81b68be9239.txt"
+      }
+    ]
+  },
+  {
+    "id": "turkiye-burslari",
+    "routes": [
+      {
+        "type": "government",
+        "name": "TBBS",
+        "url": "https://tbbs.turkiyeburslari.gov.tr",
+        "note": "Türkiye Scholarships.",
+        "evidence": "For applications made online through the Türkiye Scholarships Application System (TBBS)",
+        "source": {
+          "url": "https://turkiyeburslari.gov.tr/applysteps",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:a92a0b74d196983c0754f162cf599834f9c1e63cd3b6e5c6275e7921379f7298"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/turkiye-burslari-343749be0671.txt"
+      }
+    ]
+  },
+  {
+    "id": "mext-japan",
+    "routes": [
+      {
+        "type": "embassy",
+        "name": "Посольство Японии",
+        "url": null,
+        "note": "Embassy recommendation: уточнить открытые направления в посольстве своей страны.",
+        "evidence": "scholarship recipients are recruited and initially screened by a Japanese embassy",
+        "source": {
+          "url": "https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:9757581c09f7eafc8e55175126bbf89e3d72e8698da2eba40457e68824013708"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/mext-japan-3361ea527426.txt"
+      },
+      {
+        "type": "university",
+        "name": "Рекомендующий японский вуз",
+        "url": null,
+        "note": "University recommendation: отдельный путь по партнёрскому обмену и доступным вузу квотам.",
+        "evidence": "University recommendation is a scheme in which Japanese universities etc. recruit scholarship candidates based on their student-exchange agreements with schools overseas",
+        "source": {
+          "url": "https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:9757581c09f7eafc8e55175126bbf89e3d72e8698da2eba40457e68824013708"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/mext-japan-3361ea527426.txt"
+      }
+    ]
+  },
+  {
+    "id": "csc-china",
+    "routes": [
+      {
+        "type": "embassy",
+        "name": "Отбор посольства Китая",
+        "url": "https://p8wravkip3kb63mw.mikecrm.com/9DYduDW",
+        "note": "Объявление для Таджикистана, набор 2026: сначала электронные материалы; дальнейшая ссылка объявляется рекомендованным кандидатам.",
+        "evidence": "本次选拔及申报工作由中国驻塔吉克斯坦大使馆负责",
+        "source": {
+          "url": "https://tj.china-embassy.gov.cn/sgzc/202511/t20251124_11759137.htm",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:71c91848cbabe4fc8cc9ee7ca6ef74ae7f823e26a8a2b11987b92b78d95ba049"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/csc-china-97e469c23c84.txt"
+      }
+    ]
+  },
+  {
+    "id": "utoronto-pearson",
+    "routes": [
+      {
+        "type": "school",
+        "name": "Номинация школой",
+        "url": null,
+        "note": "Сначала номинация школой; отдельно нужна заявка на поступление в U of T.",
+        "evidence": "Your high school nominates you",
+        "source": {
+          "url": "https://future.utoronto.ca/pearson-scholarships",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:5a083c1c45b9457a071be87e359f424ff9ee5fbf1564dfbe25b40596b15c389b"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/utoronto-pearson-8258fe4c3187.txt"
+      },
+      {
+        "type": "university",
+        "name": "Персональная заявка Pearson",
+        "url": null,
+        "note": "Ссылка приходит после номинации; форму можно завершить после заявки на поступление.",
+        "evidence": "You will receive a private link to the Lester B. Pearson International Student Scholarship application when you have been nominated by your school.",
+        "source": {
+          "url": "https://future.utoronto.ca/pearson-scholarships",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:5a083c1c45b9457a071be87e359f424ff9ee5fbf1564dfbe25b40596b15c389b"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/utoronto-pearson-8258fe4c3187.txt"
+      }
+    ]
+  },
+  {
+    "id": "ubc-scholars",
+    "routes": [
+      {
+        "type": "school",
+        "name": "Номинация школой",
+        "url": null,
+        "note": "Нужны номинатор и рекомендация учителя; в названных вузом случаях возможна номинация образовательной некоммерческой организацией.",
+        "evidence": "Late September: Discuss the nomination with your school",
+        "source": {
+          "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:e3e4742ff0f376c96a55549fdea28b717c696c9e890966c9db934c2e73ceacc9"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/ubc-scholars-fce726ac77d2.txt"
+      },
+      {
+        "type": "university",
+        "name": "UBC International Scholars",
+        "url": "https://undergraduatescholarships.ubc.ca/prog/2027_international_scholars_program_application/",
+        "note": "Стипендиальная заявка; отдельно нужна заявка на поступление в UBC.",
+        "evidence": "start your award application by creating an account",
+        "source": {
+          "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:e3e4742ff0f376c96a55549fdea28b717c696c9e890966c9db934c2e73ceacc9"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/ubc-scholars-fce726ac77d2.txt"
+      }
+    ]
+  },
+  {
+    "id": "adelaide",
+    "routes": [
+      {
+        "type": "university",
+        "name": "Adelaide International Application System",
+        "url": "https://student-adelaideuni.studylink.com/index.cfm?event=security.showLogin&brand=ADELAIDEUNI&custInstID=ADELAIDEUNI",
+        "note": "Прямой путь, если вуз не требует агента для твоего гражданства.",
+        "evidence": "If you don't need to apply via an Education Agent, you can submit your application directly through our International Application System.",
+        "source": {
+          "url": "https://adelaide.edu.au/study/international-students/how-to-apply/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:6def3fa968d841b4a60fabd1c80c559435fa097c3b4690eacd125b86067223e0"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/adelaide-86c71d88c22a.txt"
+      },
+      {
+        "type": "agent",
+        "name": "Авторизованный агент Adelaide",
+        "url": "https://adelaide.edu.au/study/international-students/find-an-education-agent/",
+        "note": "Для перечисленных вузом стран/регионов агент обязателен; список — в источнике.",
+        "evidence": "Some students must apply through an Adelaide University authorised Education Agent.",
+        "source": {
+          "url": "https://adelaide.edu.au/study/international-students/how-to-apply/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:6def3fa968d841b4a60fabd1c80c559435fa097c3b4690eacd125b86067223e0"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/adelaide-86c71d88c22a.txt"
+      }
+    ]
+  },
+  {
+    "id": "monash",
+    "routes": [
+      {
+        "type": "university",
+        "name": "Прямая подача Monash",
+        "url": "https://www.monash.edu/admissions/apply/international-ug",
+        "note": "Страница начала прямой подачи; проверь условия своего пути.",
+        "evidence": "Undergraduate direct application",
+        "source": {
+          "url": "https://www.monash.edu/study/how-to-apply/application-process/international-students",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:0998f7ed3c35cde7cc88dc7c78067d5615cb248c1bc2143a7237bf92d2d2f494"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/monash-9594e3308ef0.txt"
+      },
+      {
+        "type": "agent",
+        "name": "Авторизованный агент Monash",
+        "url": "https://www.monash.edu/study/how-to-apply/application-process/international-students/applying-through-an-education-agent",
+        "note": "Допустимый альтернативный путь; используй только авторизованного агента.",
+        "evidence": "Apply through a Monash Education Agent",
+        "source": {
+          "url": "https://www.monash.edu/study/how-to-apply/application-process/international-students",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:0998f7ed3c35cde7cc88dc7c78067d5615cb248c1bc2143a7237bf92d2d2f494"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/monash-9594e3308ef0.txt"
+      }
+    ]
+  },
+  {
+    "id": "unsw",
+    "routes": [
+      {
+        "type": "university",
+        "name": "UNSW Applicant Portal",
+        "url": "https://apply.unsw.edu.au/",
+        "note": "Прямая заявка.",
+        "evidence": "Applying is easy via the UNSW Applicant Portal",
+        "source": {
+          "url": "https://www.unsw.edu.au/study/how-to-apply/international",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:27d82850122abcdcfae7771e14f018e8d695b6d3ed36b53edf09cf21dc733b5a"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/unsw-d866e0b36e14.txt"
+      },
+      {
+        "type": "agent",
+        "name": "Авторизованный агент UNSW",
+        "url": "https://www.unsw.edu.au/study/how-to-apply/international/find-a-agent",
+        "note": "Альтернатива прямой подаче.",
+        "evidence": "Alternatively, you can find a local UNSW agent in your region",
+        "source": {
+          "url": "https://www.unsw.edu.au/study/how-to-apply/international",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:27d82850122abcdcfae7771e14f018e8d695b6d3ed36b53edf09cf21dc733b5a"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/unsw-d866e0b36e14.txt"
+      }
+    ]
+  },
+  {
+    "id": "bme-budapest",
+    "routes": [
+      {
+        "type": "university",
+        "name": "BME e-admission",
+        "url": "http://e-admission.bme.hu/",
+        "note": "Для платного пути; стипендиальные программы имеют отдельные процедуры.",
+        "evidence": "you have to fill our online application form",
+        "source": {
+          "url": "https://www.bme.hu/en/application_and_admission",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:da41d4777b436d3e2ff5d5866e3a73477055fe4d12e8ad9cbc92e25e8ce681ff"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/bme-budapest-a987070240fd.txt"
+      }
+    ]
+  },
+  {
+    "id": "bologna-italy",
+    "routes": [
+      {
+        "type": "university",
+        "name": "Studenti Online",
+        "url": "https://studenti.unibo.it/sol/welcome.htm?siteLanguage=en",
+        "note": "Заявка на отбор; предзачисление для визы через Universitaly — отдельный этап.",
+        "evidence": "Access Studenti Online with your institutional credentials, enter \"Application for admission - Participate in the selection\" and complete the application.",
+        "source": {
+          "url": "https://www.unibo.it/en/study/enrolment-fees-and-other-procedures/degree-programmes/enrolling-in-first-cycle-and-single-cycle-degree-programmes/enrolling-in-a-first-cycle-or-single-cycle-degree-programme-if-you-come-from-a-non-eu-country",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:a67883ef529992bd1ba8ec9ed02e8009a6cf9b3222d0a278394d834f978ef481"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/bologna-italy-51bf747d09fc.txt"
+      }
+    ]
+  },
+  {
+    "id": "aiu-japan",
+    "routes": [
+      {
+        "type": "university",
+        "name": "AIU Online Application",
+        "url": "https://e-apply.jp/ds/aiu/",
+        "note": "Онлайн-регистрация и оплата, затем распечатать форму и отправить документы почтой.",
+        "evidence": "After registering your application information on the online application website and paying the application fee, please print out the downloadable documents",
+        "source": {
+          "url": "https://admission.aiu.ac.jp/en/ug/application/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:013e947267785ca78801e3cea0ef72432467b881aa1ab67f3307c80da4423d93"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/aiu-japan-99d8766ba493.txt"
+      }
+    ]
+  },
+  {
+    "id": "constructor-university",
+    "routes": [
+      {
+        "type": "university",
+        "name": "Constructor Application Portal",
+        "url": "https://apply.constructor.university/",
+        "note": "",
+        "evidence": "Application portal",
+        "source": {
+          "url": "https://constructor.university/admission-aid/application-information-undergraduate",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:46073cf5446409e539713ea952362f8c40e331cd47a09e77665498d5fa8d2140"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/constructor-university-27ef22cda6e2.txt"
+      }
+    ]
+  },
+  {
+    "id": "nazarbayev",
+    "routes": [
+      {
+        "type": "university",
+        "name": "NU Admissions",
+        "url": "https://admissions.nu.edu.kz/wps/portal",
+        "note": "Личный кабинет; выбрать Undergraduate program.",
+        "evidence": "The applicant should go to the admissions.nu.edu.kz portal, press the \"Sign Up\" button",
+        "source": {
+          "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:237b45f9d9af36216699c3ca054c33c065d99520effa09095f9fe18c3aa97401"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/nazarbayev-74a89e094167.txt"
+      }
+    ]
+  },
+  {
+    "id": "auca",
+    "routes": [
+      {
+        "type": "university",
+        "name": "AUCA Online Application",
+        "url": "http://applyonline.auca.kg/",
+        "note": "Альтернатива: отправить форму и документы в приёмную комиссию.",
+        "evidence": "Fill out the ONLINE APPLICATION or send the AUCA Admission Application Form and supporting documents to: AUCA Office of Admissions",
+        "source": {
+          "url": "https://www.auca.kg/en/freshman_applicants/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:f840753c2422baf8310b864b35a607d7385b83552ff9757c71a62518fb99534d"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/auca-50fa1229491d.txt"
+      }
+    ]
+  },
+  {
+    "id": "newuu",
+    "routes": [
+      {
+        "type": "university",
+        "name": "NewUU International Admissions",
+        "url": "https://admission.newuu.uz/international/auth/login",
+        "note": "Иностранные абитуриенты.",
+        "evidence": "Apply now",
+        "source": {
+          "url": "https://newuu.uz/en/menu/entry-requirements",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:d9b0509c23e4371a0008de7f6804ca7b9fc1a373fe08998eb2db75966931d41d"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/newuu-3c5a8206540a.txt"
+      }
+    ]
+  },
+  {
+    "id": "aus-uae",
+    "routes": [
+      {
+        "type": "university",
+        "name": "AUS Online Application",
+        "url": "https://aus.elluciancrmrecruit.com/Apply/Account/Login?ReturnUrl=%2fApply",
+        "note": "",
+        "evidence": "Applicants are required to submit an online application on apply.aus.edu",
+        "source": {
+          "url": "https://www.aus.edu/admissions/bachelors-degrees/application-requirements",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:0e7bae8b2bd1e0be3304d86063e087f519bfb388f060dc3493e2880eee978d8a"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/aus-uae-e04e95482dd4.txt"
+      }
+    ]
+  },
+  {
+    "id": "duke-university",
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common App",
+        "url": "https://www.commonapp.org/",
+        "note": "Первый курс; QuestBridge — отдельный путь для соответствующих его правилам студентов.",
+        "evidence": "First-year applicants may apply using the Common Application",
+        "source": {
+          "url": "https://admissions.duke.edu/apply/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:c0d062532d2ee79fc9f002d62a76f8b2108ad6158b269cfa783ff8f4c56fe2e4"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/duke-university-b33d74638529.txt"
+      },
+      {
+        "type": "platform",
+        "name": "QuestBridge",
+        "url": "https://www.questbridge.org/college-partners/duke-university",
+        "note": "Только для подходящих под правила QuestBridge; Coalition в этом источнике относится к переводу, а не первому курсу.",
+        "evidence": "QuestBridge Application for eligible students",
+        "source": {
+          "url": "https://admissions.duke.edu/apply/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:c0d062532d2ee79fc9f002d62a76f8b2108ad6158b269cfa783ff8f4c56fe2e4"
+        },
+        "snapshot": "raw/apply-channels/2026-10-28/duke-university-b33d74638529.txt"
+      }
+    ]
+  }
+]

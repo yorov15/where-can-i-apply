@@ -212,5 +212,33 @@
       }
     ],
     "approvedBy": "assistant"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "school",
+        "name": "Номинация школой",
+        "url": null,
+        "note": "Нужны номинатор и рекомендация учителя; в названных вузом случаях возможна номинация образовательной некоммерческой организацией.",
+        "evidence": "Late September: Discuss the nomination with your school",
+        "source": {
+          "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:e3e4742ff0f376c96a55549fdea28b717c696c9e890966c9db934c2e73ceacc9"
+        }
+      },
+      {
+        "type": "university",
+        "name": "UBC International Scholars",
+        "url": "https://undergraduatescholarships.ubc.ca/prog/2027_international_scholars_program_application/",
+        "note": "Стипендиальная заявка; отдельно нужна заявка на поступление в UBC.",
+        "evidence": "start your award application by creating an account",
+        "source": {
+          "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:e3e4742ff0f376c96a55549fdea28b717c696c9e890966c9db934c2e73ceacc9"
+        }
+      }
+    ]
   }
 }

@@ -193,5 +193,21 @@
   },
   "leftEmpty": {
     "schoolYears": "sha256:0342654de53a7ebfed7d2c69b9e623cb0bfb6237c160a05a26dcf744d2445ee9"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "AUS Online Application",
+        "url": "https://aus.elluciancrmrecruit.com/Apply/Account/Login?ReturnUrl=%2fApply",
+        "note": "",
+        "evidence": "Applicants are required to submit an online application on apply.aus.edu",
+        "source": {
+          "url": "https://www.aus.edu/admissions/bachelors-degrees/application-requirements",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:0e7bae8b2bd1e0be3304d86063e087f519bfb388f060dc3493e2880eee978d8a"
+        }
+      }
+    ]
   }
 }

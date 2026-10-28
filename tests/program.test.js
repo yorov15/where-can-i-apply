@@ -57,6 +57,28 @@ test('у взноса есть собственные источник и дат
   assert.equal(pending.feeSource, null);
 });
 
+test('канал приезжает в деталях до ленивых условий и сохраняет этапы и ограничения', () => {
+  const routes = [
+    { type: 'school', name: 'Школа', url: null, note: 'Сначала номинация.' },
+    { type: 'university', name: 'Портал', url: 'https://example.org/apply', note: 'Затем заявка.' },
+  ];
+  const view = programModel(programRow(program, me, today), {
+    programs: { demo: { applyChannel: { routes } } }, conditions: {},
+  }, today);
+  assert.deepEqual(view.applyRoutes, routes);
+  assert.equal(view.facts[2][1], 'Загружается…');
+});
+
+test('неизвестный канал не создаёт строку, опасные ссылки не превращаются в способы подачи', () => {
+  for (const applyChannel of [undefined, null, { routes: [] }, { routes: 'unknown' },
+    { routes: [{ name: 'Опасный', url: 'javascript:alert(1)' }, { name: '', url: 'https://example.org' }] }]) {
+    const view = programModel(programRow(program, me, today), {
+      programs: { demo: { applyChannel, applyUrl: 'https://example.org/apply' } }, conditions: {},
+    }, today);
+    assert.deepEqual(view.applyRoutes, []);
+  }
+});
+
 test('документы и подача идут в дела, остальное — в «Источники и точные требования»', () => {
   const view = programModel(programRow(program, me, today), {
     programs: { demo: {} },

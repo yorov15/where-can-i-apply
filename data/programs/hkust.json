@@ -7,7 +7,9 @@
   },
   "hostCountry": "HK",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": null,
@@ -156,5 +158,21 @@
       }
     ],
     "approvedBy": "assistant"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "HKUST Online Application",
+        "url": "https://join.hkust.edu.hk/apply/",
+        "note": "",
+        "evidence": "submit their applications directly to the University via the online application system",
+        "source": {
+          "url": "https://join.hkust.edu.hk/admissions/international-qualifications?general_requirement=46180",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:0e48d53ff70175ade12fef5c3428f413d192b1586b3c22d51decad3bee0983ed"
+        }
+      }
+    ]
   }
 }
