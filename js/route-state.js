@@ -2,6 +2,7 @@
 // только при миграции; неизвестные отметки остаются в экспорте для переноса.
 import { SCORE_LIMITS } from './lib/limits.js';
 import { isGoalStatus } from './goal-status.js';
+import { normalizePortfolio } from './portfolio.js';
 export const ROUTE_STATE_KEY = 'eligibility-route';
 export const ROUTE_VERSION = 2;
 export const MAX_GOALS = 8;
@@ -31,6 +32,10 @@ function normalize(value) {
   }
   if (value.version !== 2 || !Array.isArray(value.goals) || !object(value.done)) return null;
   const next = empty();
+  if (Object.hasOwn(value, 'portfolio')) {
+    next.portfolio = normalizePortfolio(value.portfolio);
+    if (!next.portfolio) return null;
+  }
   next.goals = list(value.goals);
   if ([2, 4, 6, 10].includes(value.hoursPerWeek)) next.hoursPerWeek = value.hoursPerWeek;
   next.done = Object.fromEntries(Object.entries(value.done).filter(([id, date]) => safeKey(id) && (date === null || day(date))));
@@ -76,12 +81,15 @@ export function loadRouteState(storage) {
 }
 
 export function saveRouteState(state, storage) {
+  if (!storage?.setItem) return false;
   try {
-    const next = copy(state);
-    storage?.setItem(ROUTE_STATE_KEY, JSON.stringify(next));
+    const next = normalize(state);
+    if (!next) return false;
+    storage.setItem(ROUTE_STATE_KEY, JSON.stringify(next));
     // Совместимость со старой вкладкой каталога; источник истины — v2.
-    storage?.setItem(PLAN_KEY, JSON.stringify(next.goals));
-  } catch { /* сохранение не должно ломать страницу */ }
+    try { storage.setItem(PLAN_KEY, JSON.stringify(next.goals)); } catch { /* маршрут уже сохранён */ }
+    return true;
+  } catch { return false; }
 }
 
 export function setGoals(state, ids) {

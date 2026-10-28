@@ -6,6 +6,7 @@ import { formatDate, plural, daysBetween } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
 import { renderWeekReview } from './weekly-view.js';
 import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine } from './goal-status.js';
+import { renderTaskOutcome } from './portfolio-view.js';
 
 const DAYS = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 const shift = (day, n) => new Date(Date.parse(`${day}T00:00:00Z`) + n * 86400000).toISOString().slice(0, 10);
@@ -131,7 +132,8 @@ function nowCard(model, handlers) {
   return card;
 }
 
-function weekList(model, handlers) {
+function weekList(model, props) {
+  const { handlers } = props;
   const { week, tasks } = model;
   const box = el('section', 'route-week');
   box.dataset.currentWeek = week.key;
@@ -150,6 +152,7 @@ function weekList(model, handlers) {
     const label = el('label', 'route-step-title', `${task.title} · ${task.minutes} мин`);
     label.htmlFor = check.id;
     body.append(label, dayPicker(week, task, handlers));
+    body.append(renderTaskOutcome(week.key, task, props));
     layout.append(check, body);
     row.append(layout);
     list.append(row);
@@ -238,7 +241,7 @@ export function renderToday(root, props) {
   const review = props.weekly ? renderWeekReview(props.weekly.review, handlers) : null;
   if (review) root.append(review);
   if (model.week) root.append(nowCard(model, handlers));
-  if (model.week?.tasks.length) root.append(weekList(model, handlers));
+  if (model.week?.tasks.length) root.append(weekList(model, props));
   const level = levelBlock(model);
   if (level) root.append(level);
   const dates = datesBlock(model);

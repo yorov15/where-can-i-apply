@@ -13,6 +13,7 @@ import { safeHttpUrl } from './lib/url.js';
 import { renderStudyPlan } from './study-view.js';
 import { renderEssays } from './essay-view.js';
 import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine } from './goal-status.js';
+import { renderPortfolio } from './portfolio-view.js';
 
 const PHASES = [
   ['tests', 'Экзамены'],
@@ -380,7 +381,7 @@ function actionsBlock(route, handlers, statusText, applyUrl) {
   more.append(file, load);
   load.addEventListener('click', () => file.click());
 
-  const clear = el('button', 'link-button', 'Сбросить прогресс');
+  const clear = el('button', 'link-button', 'Сбросить отметки выполнения');
   clear.type = 'button';
   clear.addEventListener('click', () => say(handlers.onClear()));
   more.append(clear);
@@ -415,6 +416,9 @@ export function renderRoute(root, props) {
   }
 
   if (!route) {
+    const library = el('div', 'route-main');
+    library.append(renderPortfolio(props));
+    root.append(library);
     root.append(emptyNotice({ prepared: [], failed: planIds.length > 0, onRetry: handlers.onRetry }));
     const choose = el('button', 'button', 'Выбрать программы');
     choose.type = 'button';
@@ -470,6 +474,7 @@ export function renderRoute(root, props) {
   choose.addEventListener('click', handlers.onChooseGoals);
   head.append(choose);
   main.append(head);
+  main.append(renderPortfolio(props));
 
   const progress = el('progress', 'route-bar');
   progress.max = route.stats.total || 1;

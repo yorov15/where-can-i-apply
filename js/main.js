@@ -20,6 +20,8 @@ import { renderRoute } from './route-view.js';
 import { EXPLAIN_URL } from './config.js';
 import { renderToday } from './today-view.js';
 import { renderProgram, programRow } from './program-view.js';
+import { saveExperience, removeExperience, saveTaskOutcome, removeTaskOutcome } from './portfolio.js';
+import { clearPortfolioDrafts } from './portfolio-view.js';
 
 const form = document.getElementById('profile');
 const today = new Date().toISOString().slice(0, 10);
@@ -239,6 +241,14 @@ function persistRoute() {
   saveRouteState(routeState, localStorage);
 }
 
+function persistPortfolio(next, message) {
+  if (!next) return {ok:false,message:'Не удалось сохранить. Проверь ссылку, длину полей и число записей (до 40 опытов и 100 результатов).'};
+  if (new TextEncoder().encode(exportState(next)).length > 500_000) return {ok:false,message:'Маршрут слишком большой. Сохрани резервную копию и сократи записи.'};
+  if (!saveRouteState(next, localStorage)) return {ok:false,message:'Браузер не сохранил записи. Освободи место или разреши локальное хранение и попробуй снова.'};
+  routeState = next;
+  return {ok:true,message};
+}
+
 function preparedEntry(id) {
   return routeData?.prepared?.find((entry) => entry.id === id) ?? null;
 }
@@ -349,6 +359,11 @@ function renderRouteView() {
     loading: routeLoading,
     applyUrl: routeState.goals.length === 1 ? details.programs?.[routeState.goals[0]]?.applyUrl ?? null : null,
     handlers: {
+      getRouteState: () => routeState,
+      onSaveExperience(input) { return persistPortfolio(saveExperience(routeState,input,today),'Опыт сохранён.'); },
+      onRemoveExperience(id) { return persistPortfolio(removeExperience(routeState,id),'Опыт удалён. Результаты заданий сохранены.'); },
+      onSaveTaskOutcome(input) { return persistPortfolio(saveTaskOutcome(routeState,input,today),'Результат сохранён в «Моём пути».'); },
+      onRemoveTaskOutcome(week,taskId) { return persistPortfolio(removeTaskOutcome(routeState,week,taskId),'Результат удалён. Галочка задания не изменилась.'); },
       getExamPlan: examForStep,
       onStudyToggle(week, taskId) {
         routeState=toggleStudyTask(routeState,week,taskId,today);persistRoute();rebuildRoute();renderRouteView();
@@ -455,12 +470,15 @@ function renderRouteView() {
           if (picked.size > 500_000) return 'Файл слишком большой для маршрута Nerio.';
           const imported = importState(await picked.text());
           if (!imported) return 'Это не файл маршрута Nerio.';
+          if (!window.confirm('Заменить текущий маршрут данными из файла? Цели, прогресс, опыт и результаты заданий будут заменены. Для резервной копии сначала нажми «Скачать маршрут».')) return 'Загрузка отменена. Текущие записи сохранены.';
+          if (!saveRouteState(imported, localStorage)) return 'Браузер не сохранил файл. Текущий маршрут не заменён.';
+          clearPortfolioDrafts();
           routeState = imported;
           form.elements.hoursPerWeek.value=routeState.hoursPerWeek;
           persistRoute();
           await refreshRoute();
           refresh();
-          return 'Маршрут загружен.';
+          return 'Маршрут, опыт и результаты заданий загружены.';
         } catch {
           return 'Не получилось прочитать файл.';
         }
@@ -470,7 +488,7 @@ function renderRouteView() {
         persistRoute();
         rebuildRoute();
         renderRouteView();
-        return 'Прогресс стёрт, цели остались.';
+        return 'Отметки выполнения сброшены. Цели, опыт и результаты заданий сохранены.';
       },
       onOpen(programId) {
         openProgram(programId);
@@ -604,6 +622,7 @@ onProfileChange(form, (profile) => refresh(profile));
 // refresh() пишет профиль в хранилище, поэтому ключ снимается после него:
 // иначе пустая анкета осталась бы лежать под тем же ключом.
 document.getElementById('clear-profile').addEventListener('click', () => {
+  clearPortfolioDrafts();
   const empty = emptyProfile();
   writeForm(form, empty);
   plan.ids = [];
