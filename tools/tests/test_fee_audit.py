@@ -24,7 +24,7 @@ class TestFeeAudit(unittest.TestCase):
                 self.assertNotIn('\ufffd', entry['quote'])
                 self.assertEqual('sha256:' + hashlib.sha256(raw).hexdigest(), entry["source"]["contentHash"])
                 self.assertIn(normalize(entry["quote"]), normalize(text))
-                if 'batch2' in entry['snapshot']:
+                if 'batch' in entry['snapshot']:
                     self.assertIn(entry['quote'], text)
                 program = json.loads((ROOT / f"data/programs/{entry['id']}.json").read_text(encoding="utf-8"))
                 fee = next(c["fee"] for c in program["textConditions"] if c.get("fee"))
@@ -38,6 +38,28 @@ class TestFeeAudit(unittest.TestCase):
         text = (ROOT / 'raw/application-fees/2026-10-28/aalto-finland.txt').read_bytes().decode('utf-8', errors='strict')
         self.assertIn('\u20ac100', normalize(text))
         self.assertNotIn('\ufffd', text)
+
+    def test_batch3_has_thirty_unreviewed_programs_and_ten_distinct_second_pages(self):
+        base = ROOT / 'raw/application-fees'
+        first = json.loads((base / '2026-10-28/manifest.json').read_text(encoding='utf8'))
+        previous = json.loads((base / '2026-10-28-batch2/reviews.json').read_text(encoding='utf8'))
+        current = json.loads((base / '2026-10-28-batch3/reviews.json').read_text(encoding='utf8'))
+        earlier_ids = {row['id'] for row in first + previous}
+        new = [row for row in current if row['cohort'] == 'new']
+        retry = [row for row in current if row['cohort'] == 'retry']
+        self.assertEqual(len(current), 40)
+        self.assertEqual(len(new), 30)
+        self.assertEqual(len(retry), 10)
+        self.assertEqual(len({row['id'] for row in current}), 40)
+        self.assertFalse({row['id'] for row in new} & earlier_ids)
+        for row in retry:
+            with self.subTest(program=row['id']):
+                old = next(old for old in previous if old['id'] == row['id'])
+                self.assertEqual(old['status'], 'skipped')
+                self.assertEqual(set(row['previousSources']), {source['url'] for source in old['sources']})
+                self.assertNotIn(row['secondPage'], row['previousSources'])
+                self.assertTrue(any(source['url'] == row['secondPage'] and 'snapshot' in source
+                                    for source in row['sources']))
 
     def test_review_source_files_are_strict_utf8_and_byte_hashes_match(self):
         for file in (ROOT / 'raw/application-fees').glob('*/reviews.json'):

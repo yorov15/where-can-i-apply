@@ -1,0 +1,41 @@
+[
+  {
+    "id": "kyungpook",
+    "amount": 60000,
+    "currency": "KRW",
+    "quote": "Application fee ￦60,000 (Korean currency)",
+    "source": {
+      "url": "https://en.knu.ac.kr/admission/foreign01_inc.htm",
+      "lastVerified": "2026-10-28",
+      "contentHash": "sha256:f389f4d6149d681e2715f243d97f78a8f83c484ed812e26c93db639a0bb97f85"
+    },
+    "snapshot": "raw/application-fees/2026-10-28-batch3/kyungpook.txt",
+    "scope": "Взнос за подачу на международный бакалавриат — 60 000 вон."
+  },
+  {
+    "id": "unist",
+    "amount": 50000,
+    "currency": "KRW",
+    "quote": "Application fee: 50,000 KRW",
+    "source": {
+      "url": "https://admu-intl.unist.ac.kr/admission-eng/admissions/admissions.do?articleNo=306812&attachNo=591437&mode=download",
+      "lastVerified": "2026-10-28",
+      "contentHash": "sha256:3245173a22cb2a601c5a5f4aeefebd3afd2ca43c39940aa3ebfeee4a03885425"
+    },
+    "snapshot": "raw/application-fees/2026-10-28-batch3/unist.txt",
+    "scope": "Взнос за подачу на бакалавриат осенью 2027 — 50 000 вон. Он покрывает проверку документов; отдельного взноса за интервью нет."
+  },
+  {
+    "id": "tiu-japan",
+    "amount": 5000,
+    "currency": "JPY",
+    "quote": "Application Fee 5,000 JPY",
+    "source": {
+      "url": "https://www.tiu.ac.jp/etrack/wp-content/uploads/application_guideline_for_first_year.pdf",
+      "lastVerified": "2026-10-28",
+      "contentHash": "sha256:8045e1c7fbe355bfa0e40b734a4da0079eec727d446f2dcadd81efc6662831c4"
+    },
+    "snapshot": "raw/application-fees/2026-10-28-batch3/tiu-japan.txt",
+    "scope": "Взнос за подачу на первый курс E-Track по руководству 2027 — 5 000 иен."
+  }
+]

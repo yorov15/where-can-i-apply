@@ -124,6 +124,22 @@
       "evidence": "학부 입학 홈페이지 International Undergraduate Admissions",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу на бакалавриат осенью 2027 — 50 000 вон. Он покрывает проверку документов; отдельного взноса за интервью нет.",
+      "field": null,
+      "kind": "money",
+      "evidence": "Application fee: 50,000 KRW",
+      "fee": {
+        "amount": 50000,
+        "currency": "KRW",
+        "evidence": "Application fee: 50,000 KRW",
+        "source": {
+          "url": "https://admu-intl.unist.ac.kr/admission-eng/admissions/admissions.do?articleNo=306812&attachNo=591437&mode=download",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:3245173a22cb2a601c5a5f4aeefebd3afd2ca43c39940aa3ebfeee4a03885425"
+        }
+      }
     }
   ],
   "deadline": {

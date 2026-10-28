@@ -188,6 +188,22 @@
       "evidence": "submit a copy of their TIU student ID card and official proof of your relationship",
       "field": null,
       "kind": "documents"
+    },
+    {
+      "ru": "Взнос за подачу на первый курс E-Track по руководству 2027 — 5 000 иен.",
+      "field": null,
+      "kind": "money",
+      "evidence": "Application Fee 5,000 JPY",
+      "fee": {
+        "amount": 5000,
+        "currency": "JPY",
+        "evidence": "Application Fee 5,000 JPY",
+        "source": {
+          "url": "https://www.tiu.ac.jp/etrack/wp-content/uploads/application_guideline_for_first_year.pdf",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:8045e1c7fbe355bfa0e40b734a4da0079eec727d446f2dcadd81efc6662831c4"
+        }
+      }
     }
   ],
   "deadline": {
