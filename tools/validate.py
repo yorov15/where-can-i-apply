@@ -448,9 +448,13 @@ def _check_fee(number: int, condition: dict, haystack: str) -> list[str]:
                 problems.append(f"{where}.source.contentHash: нужен SHA-256 снимка")
     if fee.get("waivedForAid") not in (None, True):
         problems.append(f"{where}.waivedForAid: только значение true")
+    if "unconditional" in fee and (type(fee["unconditional"]) is not bool or amount != 0):
+        problems.append(f"{where}.unconditional: boolean только для нулевого взноса")
     quote = fee.get("evidence")
     if not quote:
         return problems + [f"{where}: нет собственной цитаты"]
+    if '\ufffd' in quote:
+        problems.append(f"{where}: повреждённая UTF-8 цитата содержит U+FFFD")
     if normalize(quote) not in haystack:
         problems.append(f"{where}: цитата не найдена в тексте источника — {quote!r}")
     elif amount == 0:

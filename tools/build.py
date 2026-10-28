@@ -123,7 +123,8 @@ def _condition_for_site(condition: dict) -> dict:
 def index_entry(program: dict) -> dict:
     coverage = program.get("coverage") or {}
     fee = next((c["fee"] for c in program.get("textConditions") or [] if c.get("fee")), None)
-    free = bool(fee and type(fee.get("amount")) in (int, float) and fee["amount"] == 0 and fee.get("evidence") and not fee.get("waivedForAid"))
+    free = bool(fee and type(fee.get("amount")) in (int, float) and fee["amount"] == 0
+                and fee.get("evidence") and fee.get("unconditional") is True and not fee.get("waivedForAid"))
     return {
         "id": program["id"],
         **({"feeFree": True} if free else {}),

@@ -61,10 +61,12 @@ class TestIndexEntry(unittest.TestCase):
         for fee in [None, {"amount": 75, "currency": "USD", "evidence": "Application fee $75"},
                     {"amount": 75, "currency": "USD", "waivedForAid": True, "evidence": "We waive $75 for aid"},
                     {"amount": False, "evidence": "No application fee"}, {"amount": 0},
-                    {"amount": 0, "evidence": "No fee for aid applicants", "waivedForAid": True}]:
+                    {"amount": 0, "evidence": "No application fee"},
+                    {"amount": 0, "evidence": "No fee for international students", "unconditional": False},
+                    {"amount": 0, "evidence": "No fee for aid applicants", "waivedForAid": True, "unconditional": True}]:
             program = {**PROGRAM, "textConditions": [{"fee": fee}] if fee else []}
             self.assertNotIn("feeFree", index_entry(program))
-        program = {**PROGRAM, "textConditions": [{"fee": {"amount": 0, "currency": None, "evidence": "No application fee"}}]}
+        program = {**PROGRAM, "textConditions": [{"fee": {"amount": 0, "currency": None, "evidence": "No application fee", "unconditional": True}}]}
         self.assertIs(index_entry(program)["feeFree"], True)
         self.assertNotIn("evidence", json.dumps(index_entry(program)))
 

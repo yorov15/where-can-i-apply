@@ -116,7 +116,17 @@
       "ru": "Подача через систему TAO; сбор — 5 000 иен за каждую программу. Приёмные окна на 2027 год: у GLA сентябрьский набор — с 14 октября по 2 ноября 2026, далее ещё два окна.",
       "evidence": "Fee Amount: 5,000 JPY per program.",
       "field": null,
-      "kind": "steps"
+      "kind": "steps",
+      "fee": {
+        "amount": 5000,
+        "currency": "JPY",
+        "evidence": "Fee Amount: 5,000 JPY per program.",
+        "source": {
+          "url": "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:e2ac672c8568a0989be656b5206d31e0bb211d79bb69a1a7219b595891cfc3e4"
+        }
+      }
     },
     {
       "ru": "Для программы GLA граждане и резиденты Австралии подавать через Рицумейкан не могут — только через Австралийский национальный университет.",

@@ -1,0 +1,827 @@
+[
+  {
+    "id": "chung-ang",
+    "name": "Университет Чунан (Chung-Ang, Корея) — приём иностранцев",
+    "country": "KR",
+    "status": "skipped",
+    "reason": "Кандидат-PDF возвращает 404, основная страница не отдала полный ответ. Актуальная сумма не подтверждена.",
+    "sources": [
+      {
+        "url": "https://oias.cau.ac.kr/_attach/gradcau/file/2026/08/osIrsNiLIsHJiFISatlLQvxjLj.pdf",
+        "date": "2026-10-28",
+        "error": "HTTPError: HTTP Error 404: "
+      },
+      {
+        "url": "https://neweng.cau.ac.kr/cms/FR_CON/index.do?MENU_ID=410",
+        "date": "2026-10-28",
+        "error": "IncompleteRead: IncompleteRead(0 bytes read)"
+      }
+    ]
+  },
+  {
+    "id": "chungbuk",
+    "name": "Chungbuk National University (Южная Корея): приём иностранцев на бакалавриат",
+    "country": "KR",
+    "status": "skipped",
+    "reason": "50 000 KRW на главной странице относится к graduate admission: рядом обязательный prospective academic advisor. Нельзя переносить её на бакалавриат. В старых условиях есть 72 000 KRW; актуальный бакалаврский тариф не подтверждён.",
+    "sources": [
+      {
+        "url": "https://oia.cbnu.ac.kr/home/sub.do?menukey=7867",
+        "date": "2026-10-28",
+        "error": "TimeoutError: The read operation timed out"
+      },
+      {
+        "url": "https://oia.cbnu.ac.kr/home/main.do",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/chungbuk-f991dc18492b.txt",
+        "contentHash": "sha256:27298dcafcc55e22235602d3bab15ddb6f9f429091d9ca562321666d3dcbd309",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "dgist",
+    "name": "DGIST (Корея): бакалавриат для иностранцев, обучение бесплатно и стипендия",
+    "country": "KR",
+    "status": "added",
+    "reason": "Прямая однозначная сумма для нужного пути.",
+    "sources": [
+      {
+        "url": "https://www.dgist.ac.kr/iuadm/sub04_01.do",
+        "date": "2026-10-28",
+        "error": "URLError: <urlopen error [WinError 10054] Удаленный хост принудительно разорвал существующее подключение>"
+      },
+      {
+        "url": "https://www.dgist.ac.kr/iuadm/sub02_03.do",
+        "date": "2026-10-28",
+        "error": "URLError: <urlopen error [WinError 10054] Удаленный хост принудительно разорвал существующее подключение>"
+      },
+      {
+        "url": "https://www.dgist.ac.kr/iuadm/sub02_03.do",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/dgist-f80d4e0a4c73.txt",
+        "contentHash": "sha256:4514cc175ea42ffd550421b88ffc90f57d3c80f7fa37b3d8598f170656c5b9a9",
+        "extraction": "rendered DOM"
+      }
+    ],
+    "fee": {
+      "id": "dgist",
+      "amount": 50000,
+      "currency": "KRW",
+      "quote": "Application fee : 50,000 KRW",
+      "source": {
+        "url": "https://www.dgist.ac.kr/iuadm/sub02_03.do",
+        "lastVerified": "2026-10-28",
+        "contentHash": "sha256:4514cc175ea42ffd550421b88ffc90f57d3c80f7fa37b3d8598f170656c5b9a9"
+      },
+      "snapshot": "raw/application-fees/2026-10-28-batch2/dgist.txt",
+      "scope": "Заявка подаётся онлайн через портал Study in Korea с начала декабря до конца января, сбор за заявку 50 000 вон (не возвращается). Все документы в одном PDF до 10 МБ, на английском или с нотариальным переводом. Потом оценка заявки и интервью до апреля, итоги до мая, учёба с конца августа или начала сентября. Перенести поступление на другой семестр нельзя."
+    }
+  },
+  {
+    "id": "gyeongsang",
+    "name": "Gyeongsang National University (Южная Корея): приём иностранцев на бакалавриат (Global Interdisciplinary Studies)",
+    "country": "KR",
+    "status": "skipped",
+    "reason": "В сохранённом старом руководстве ноль относится к Division of Global Interdisciplinary Studies. Свежие PDF не удалось скачать; универсальная сумма для всей записи не подтверждена.",
+    "sources": [
+      {
+        "url": "https://www.gnu.ac.kr/international/cm/cntnts/cntntsView.do?cntntsId=4367&mi=8327",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/gyeongsang-2bb1251aaf25.txt",
+        "contentHash": "sha256:da89f3f3a9bdca0e9b5876e75e21cef563e34eec42114d735405eeea7d790f56",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.gnu.ac.kr/international/cm/cntnts/cntntsView.do?cntntsId=4402&mi=8380",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/gyeongsang-76389563e6ec.txt",
+        "contentHash": "sha256:f468e50899c5c83d8b7418eb149b2bbcbde490bb68b7c183c4ff6c92968be75b",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=77397",
+        "date": "2026-10-28",
+        "error": "URLError: <urlopen error _ssl.c:993: The handshake operation timed out>"
+      },
+      {
+        "url": "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=77338",
+        "date": "2026-10-28",
+        "error": "TimeoutError: The read operation timed out"
+      }
+    ]
+  },
+  {
+    "id": "handong",
+    "name": "Handong Global University (Хандон, Пхохан) — христианский вуз; заявка только онлайн, плата за семестр от 3,17 млн вон, за TOPIK 6 первый семестр учат бесплатно",
+    "country": "KR",
+    "status": "added",
+    "reason": "Прямая однозначная сумма для нужного пути.",
+    "sources": [
+      {
+        "url": "https://www.handong.edu/eng/admission/undergraduate/application/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/handong-17bbb409f469.txt",
+        "contentHash": "sha256:050f063e61f0546a225ee8d8ff5cfb356d4e1c8bc563623f6570b6caf89fc633",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.handong.edu/eng/admission/undergraduate/tuition/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/handong-2b8e711e45dd.txt",
+        "contentHash": "sha256:105e3dc199170dfe4b59141030be7f83135871b8e6a10409fd46f71ef07506fb",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.handong.edu/eng/admission/undergraduate/application/freshman/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/handong-66e694362251.txt",
+        "contentHash": "sha256:0a3ff66e811531c7bc173cda1975e0a6006030ab5a5dfd58fef30eab4b8f5753",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.handong.edu/eng/admission/undergraduate/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/handong-e2d573fb1062.txt",
+        "contentHash": "sha256:050f063e61f0546a225ee8d8ff5cfb356d4e1c8bc563623f6570b6caf89fc633",
+        "extraction": "decoded HTML/PDF"
+      }
+    ],
+    "fee": {
+      "id": "handong",
+      "amount": 100000,
+      "currency": "KRW",
+      "quote": "Application Fee: 100,000 KRW, paid by wire transfer.",
+      "source": {
+        "url": "https://www.handong.edu/eng/admission/undergraduate/application/freshman/",
+        "lastVerified": "2026-10-28",
+        "contentHash": "sha256:0a3ff66e811531c7bc173cda1975e0a6006030ab5a5dfd58fef30eab4b8f5753"
+      },
+      "snapshot": "raw/application-fees/2026-10-28-batch2/handong.txt",
+      "scope": "Заявка подана, когда отправлена онлайн-форма, загружены документы и оплачен взнос 100 000 вон банковским переводом."
+    }
+  },
+  {
+    "id": "seoultech",
+    "name": "Сеульский национальный технический университет (SeoulTech) — приём иностранцев",
+    "country": "KR",
+    "status": "skipped",
+    "reason": "Прямое скачивание остановлено проверкой сертификата, браузер не дождался страницы. Из старой страницы scholar нельзя переносить 120 000 KRW без проверки ступени и категории.",
+    "sources": [
+      {
+        "url": "https://global.seoultech.ac.kr/apply/undergraduate",
+        "date": "2026-10-28",
+        "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      {
+        "url": "https://global.seoultech.ac.kr/apply/scholar",
+        "date": "2026-10-28",
+        "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      },
+      {
+        "url": "https://global.seoultech.ac.kr/apply/undergraduate",
+        "date": "2026-10-28",
+        "error": "page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://global.seoultech.ac.kr/apply/undergraduate\", waiting until \"domcontentloaded\"\u001b[22m\n"
+      }
+    ]
+  },
+  {
+    "id": "hanyang",
+    "name": "Hanyang University (Ханян, Сеул) — один из ведущих технических вузов Кореи, приём иностранцев на бакалавриат",
+    "country": "KR",
+    "status": "skipped",
+    "reason": "Страница приёма возвращает 403; другая доступная страница не называет сумму взноса.",
+    "sources": [
+      {
+        "url": "https://www.hanyang.ac.kr/web/eng/admissions-guide",
+        "date": "2026-10-28",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://oia.hanyang.ac.kr/admission",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/hanyang-9a5040e5a383.txt",
+        "contentHash": "sha256:009f525416b333b7cbfb2782c2502329b7feb36f9af27f4ec27e2d1366843d7a",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "unist",
+    "name": "UNIST (Ulsan National Institute of Science and Technology, Ульсан) — научно-технический вуз; всем новым студентам покрывают вступительный взнос и плату за обучение на 100%",
+    "country": "KR",
+    "status": "skipped",
+    "reason": "Общая страница приёма не называет application fee. Стипендия и освобождение от admission/enrollment fee не доказывают бесплатную подачу.",
+    "sources": [
+      {
+        "url": "https://www.unist.ac.kr/en/admissions/",
+        "date": "2026-10-28",
+        "error": "URLError: <urlopen error timed out>"
+      },
+      {
+        "url": "https://www.unist.ac.kr/unist/admissions/admissions.do",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/unist-ac6ff32a7db1.txt",
+        "contentHash": "sha256:6a67a0d8edcabbc8f52413f6413e9c04305256eb713769fdbbe391222553104d",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "aiu-japan",
+    "name": "Международный университет Акиты (AIU) — приём иностранцев на английском",
+    "country": "JP",
+    "status": "added",
+    "reason": "Прямая однозначная сумма для нужного пути.",
+    "sources": [
+      {
+        "url": "https://admission.aiu.ac.jp/en/ug/international/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/aiu-japan-279f0636a9d3.txt",
+        "contentHash": "sha256:cc393205f115eda33d700b2d47076e902fa4eadc8d436237a243219753637a61",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://admission.aiu.ac.jp/en/ug/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/aiu-japan-824817c45e3b.txt",
+        "contentHash": "sha256:09411affd137fa5c5f9ae4e397246ef0c2ca6281f549b9a860160a87ea86f17e",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://admission.aiu.ac.jp/wp/wp-content/uploads/2026/08/2027-International-Admissions-Examination-Guide.pdf",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/aiu-japan-868d15e323b8.txt",
+        "contentHash": "sha256:cd6f85eecf0dcf1159d40eab5b0ef5d4f6619a624713b600508f2439917d232e",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://web.aiu.ac.jp/en/undergraduate/tuition/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/aiu-japan-be8283c55cab.txt",
+        "contentHash": "sha256:cfcb08f963b5bdb0728bcde1d41917805653b890a5b9c0db5bb03b5e4d8ff3d8",
+        "extraction": "decoded HTML/PDF"
+      }
+    ],
+    "fee": {
+      "id": "aiu-japan",
+      "amount": 17000,
+      "currency": "JPY",
+      "quote": "Application Fee: 17,000 JPY",
+      "source": {
+        "url": "https://admission.aiu.ac.jp/wp/wp-content/uploads/2026/08/2027-International-Admissions-Examination-Guide.pdf",
+        "lastVerified": "2026-10-28",
+        "contentHash": "sha256:cd6f85eecf0dcf1159d40eab5b0ef5d4f6619a624713b600508f2439917d232e"
+      },
+      "snapshot": "raw/application-fees/2026-10-28-batch2/aiu-japan.txt",
+      "scope": "Взнос за подачу на International Examination 2027 — 17 000 иен."
+    }
+  },
+  {
+    "id": "apu-japan",
+    "name": "APU (Беппу, Япония) — скидка на обучение для иностранцев",
+    "country": "JP",
+    "status": "skipped",
+    "reason": "Прежние страницы заменены уведомлением об ограничении доступа; актуальный взнос для нужного пути не подтверждён.",
+    "sources": [
+      {
+        "url": "https://admissions.apu.ac.jp/costs_scholarships/before_enrollment/",
+        "date": "2026-10-28",
+        "error": "URLError: <urlopen error _ssl.c:993: The handshake operation timed out>"
+      },
+      {
+        "url": "https://admissions.apu.ac.jp/admissions/application_eligibility/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/apu-japan-39c169e78984.txt",
+        "contentHash": "sha256:2028a273101a9de2ccffa48e8314878a658cccba200eed5ebdce981884d74042",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://admissions.apu.ac.jp/admissions/how_to_apply/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/apu-japan-ea3bf5fffdcc.txt",
+        "contentHash": "sha256:2028a273101a9de2ccffa48e8314878a658cccba200eed5ebdce981884d74042",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "nucb",
+    "name": "NUCB Undergraduate School (Нагоя) — Global BBA на английском",
+    "country": "JP",
+    "status": "skipped",
+    "reason": "Открытая страница требует оплатить application fee, но не называет сумму. Руководство 2027 выдаётся через форму с именем и email; форму не отправлял.",
+    "sources": [
+      {
+        "url": "https://www.nucba.ac.jp/en/admission/download/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/nucb-1050487742dd.txt",
+        "contentHash": "sha256:be4b86b397cbb9cd9860b0beb638f9a0c8cbb64959b4e8329376d04abf3c0800",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.nucba.ac.jp/en/admission/",
+        "date": "2026-10-28",
+        "error": "TimeoutError: The read operation timed out"
+      },
+      {
+        "url": "https://www.nucba.ac.jp/en/admission/faq/",
+        "date": "2026-10-28",
+        "error": "URLError: <urlopen error _ssl.c:993: The handshake operation timed out>"
+      },
+      {
+        "url": "https://www.nucba.ac.jp/en/scholarship/tuition_list.html",
+        "date": "2026-10-28",
+        "error": "TimeoutError: The read operation timed out"
+      }
+    ]
+  },
+  {
+    "id": "ritsumeikan",
+    "name": "Университет Рицумейкан (Япония) — английские бакалаврские программы",
+    "country": "JP",
+    "status": "added",
+    "reason": "Прямая однозначная сумма для нужного пути.",
+    "sources": [
+      {
+        "url": "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/ritsumeikan-19d45e607f6e.txt",
+        "contentHash": "sha256:e2ac672c8568a0989be656b5206d31e0bb211d79bb69a1a7219b595891cfc3e4",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://en.ritsumei.ac.jp/e-ug/financial_info/fees.html",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/ritsumeikan-cf8621fb99c0.txt",
+        "contentHash": "sha256:2cadc45cc988ec5bd17fd39e77f64a784f68b92d45f5889e8d23e9bb8d57ab09",
+        "extraction": "decoded HTML/PDF"
+      }
+    ],
+    "fee": {
+      "id": "ritsumeikan",
+      "amount": 5000,
+      "currency": "JPY",
+      "quote": "Fee Amount: 5,000 JPY per program.",
+      "source": {
+        "url": "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+        "lastVerified": "2026-10-28",
+        "contentHash": "sha256:e2ac672c8568a0989be656b5206d31e0bb211d79bb69a1a7219b595891cfc3e4"
+      },
+      "snapshot": "raw/application-fees/2026-10-28-batch2/ritsumeikan.txt",
+      "scope": "Подача через систему TAO; сбор — 5 000 иен за каждую программу. Приёмные окна на 2027 год: у GLA сентябрьский набор — с 14 октября по 2 ноября 2026, далее ещё два окна."
+    }
+  },
+  {
+    "id": "tiu-japan",
+    "name": "Токийский международный университет (TIU) — E-Track на английском",
+    "country": "JP",
+    "status": "skipped",
+    "reason": "В отображённой браузером странице сказано заплатить application fee, но сумма и валюта не названы. Некорректный UTF-8 исходного HTML не заменял знаком замены.",
+    "sources": [
+      {
+        "url": "https://www.tiu.ac.jp/etrack/admissions/tuition/",
+        "date": "2026-10-28",
+        "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0xed in position 389882: invalid continuation byte"
+      },
+      {
+        "url": "https://www.tiu.ac.jp/etrack/admissions/apply/",
+        "date": "2026-10-28",
+        "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0xed in position 390097: invalid continuation byte"
+      },
+      {
+        "url": "https://www.tiu.ac.jp/etrack/admissions/reductions/",
+        "date": "2026-10-28",
+        "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0xed in position 388797: invalid continuation byte"
+      },
+      {
+        "url": "https://www.tiu.ac.jp/etrack/admissions/apply/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/tiu-japan-97f3d1e8f2a6.txt",
+        "contentHash": "sha256:f7a9b0c74d254c9a7a4abca816bf53284e079104cb280e9670c60c7df5ec87bc",
+        "extraction": "rendered DOM"
+      }
+    ]
+  },
+  {
+    "id": "harbin-institute-of-technology",
+    "name": "Харбинский политехнический институт (HIT, Китай) — бакалавриат для иностранцев",
+    "country": "CN",
+    "status": "skipped",
+    "reason": "Источник перечисляет CNY 400 / USD 60 и CNY 600 / USD 90. Однозначного тарифа для всей записи нет; один из вариантов не выбирал.",
+    "sources": [
+      {
+        "url": "https://studyathit.hit.edu.cn/18337/list.htm",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/harbin-institute-of-technology-649570a7458b.txt",
+        "contentHash": "sha256:df3252a5446752ce2587c5d5fa22069e3c85bedabf3f0b4c613459016e6bc458",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "sjtu",
+    "name": "Шанхайский университет Цзяо Тун (SJTU) — англоязычный Engineering Cluster",
+    "country": "CN",
+    "status": "skipped",
+    "reason": "Кандидат-страница с платой не ответила вовремя. Старую сумму USD 75 для отдельного англоязычного пути не распространял на всю запись.",
+    "sources": [
+      {
+        "url": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/278",
+        "date": "2026-10-28",
+        "error": "TimeoutError: The read operation timed out"
+      }
+    ]
+  },
+  {
+    "id": "tianjin-university",
+    "name": "Тяньцзиньский университет (Китай) — англоязычный бакалавриат",
+    "country": "CN",
+    "status": "skipped",
+    "reason": "500 RMB платят после зачисления, а Chinese Government Scholarship winners освобождены. Сумма зависит от пути/статуса; единого fee не внесено.",
+    "sources": [
+      {
+        "url": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202609/t20260930_324729.html",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/tianjin-university-70f6edb49e8b.txt",
+        "contentHash": "sha256:4888445dfb43960978fb3997418e7303106bcdb9af9907b1c4302632a5ee1872",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "wuhan-university",
+    "name": "Уханьский университет (Китай) — англоязычный бакалавриат",
+    "country": "CN",
+    "status": "added",
+    "reason": "Прямая однозначная сумма для нужного пути.",
+    "sources": [
+      {
+        "url": "https://admission.whu.edu.cn/ADMISSION/SCHOLARSHIPS.htm",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/wuhan-university-170c67cb8006.txt",
+        "contentHash": "sha256:8060102d1f55169ade05d8001452eb1e99d1f2b09fe5dea10ac85914a2b2e16c",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://admission.whu.edu.cn/FRESHMEN_RELATED/FEES.htm",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/wuhan-university-3693b5d32307.txt",
+        "contentHash": "sha256:72802be3bdf622471dbf986317dc1544f50539df078f4db825814b17cc3159c3",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://admission.whu.edu.cn/info/1121/5802.htm",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/wuhan-university-ef7eb8317581.txt",
+        "contentHash": "sha256:2c34f0df00e59ccc320dfad23a77174d0452deb4e10085638067d818fc90a3b2",
+        "extraction": "decoded HTML/PDF"
+      }
+    ],
+    "fee": {
+      "id": "wuhan-university",
+      "amount": 800,
+      "currency": "CNY",
+      "quote": "Application Fee RMB800 or USD111",
+      "source": {
+        "url": "https://admission.whu.edu.cn/FRESHMEN_RELATED/FEES.htm",
+        "lastVerified": "2026-10-28",
+        "contentHash": "sha256:72802be3bdf622471dbf986317dc1544f50539df078f4db825814b17cc3159c3"
+      },
+      "snapshot": "raw/application-fees/2026-10-28-batch2/wuhan-university.txt",
+      "scope": "Плата за англоязычный бакалавриат: 23 000 юаней в год (гуманитарные), 28 000 (наука и инженерия), 40 000 (медицина). Сбор за заявку 800 юаней, страховка 500 юаней за семестр."
+    }
+  },
+  {
+    "id": "xian-jiaotong-university",
+    "name": "Сианьский университет Цзяо Тун (XJTU, Китай) — англоязычный бакалавриат",
+    "country": "CN",
+    "status": "skipped",
+    "reason": "Прямо указаны разные тарифы: self-sponsored RMB 500 и scholarship RMB 800. Поле оставлено пустым.",
+    "sources": [
+      {
+        "url": "https://sie.xjtu.edu.cn/en/info/1119/2943.htm",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/xian-jiaotong-university-263a0153d515.txt",
+        "contentHash": "sha256:2354f8c02abfdf1262f4fe7554c39c93dd11a079b247382b3de2d2ed320d6184",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "ustc",
+    "name": "University of Science and Technology of China (Китай): бакалавриат со стипендией USTC",
+    "country": "CN",
+    "status": "skipped",
+    "reason": "Открытая страница — навигация без суммы; обнаруженная ссылка на руководство 2027 вернула 404.",
+    "sources": [
+      {
+        "url": "https://ic.ustc.edu.cn/?abroad=introduction",
+        "date": "2026-10-28",
+        "error": "HTTPError: HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://ic.ustc.edu.cn/en/v7info.php?Nav_x=17",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/ustc-94535ee15c98.txt",
+        "contentHash": "sha256:03e11e789b13e5138df5e9dc2f08f7e0db1fc919cd1daf8493cb83d5896eca56",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "fu-berlin",
+    "name": "Свободный университет Берлина (FU Berlin) — бакалавриат для иностранцев",
+    "country": "DE",
+    "status": "skipped",
+    "reason": "Найдено отсутствие tuition fees и semester contributions, а не прямое отсутствие application fee. Тариф подачи не подтверждён.",
+    "sources": [
+      {
+        "url": "https://www.fu-berlin.de/en/studium/bewerbung/bachelor/ausl-hzb/index.html",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/fu-berlin-57154540a904.txt",
+        "contentHash": "sha256:0b01b9c2c21167f3922b882fca9d41688fa820233b841d8354a76c9b3fe9e441",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.fu-berlin.de/en/studium/international/studium_fu/studienfinanzierung/index.html",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/fu-berlin-a5ed89eff832.txt",
+        "contentHash": "sha256:dbf22bdde961df73dcf90279317e46adf91d1351d1afe32a88e8f1e423d149aa",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "rwth",
+    "name": "RWTH Aachen (Германия) — бакалавриат для иностранцев",
+    "country": "DE",
+    "status": "skipped",
+    "reason": "Проверенные страницы поступления не называют самостоятельный взнос за подачу. Отсутствие цены не считается нулём.",
+    "sources": [
+      {
+        "url": "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~bdpsux/Internationale-Studieninteressierte/lidx/1/?lang=en",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/rwth-04c40dc806cc.txt",
+        "contentHash": "sha256:33f31ac06c497e49587b68b44d0c4aeac47f9c80b6f5ba06b40cc5bcd762ae04",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/~bdpsux/Internationale-Studieninteressierte/lidx/1/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/rwth-1a6b6b257c0d.txt",
+        "contentHash": "sha256:33f31ac06c497e49587b68b44d0c4aeac47f9c80b6f5ba06b40cc5bcd762ae04",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "tum",
+    "name": "Technische Universität München (Германия) — бакалавриат для иностранцев: 2 000–3 000 евро за семестр",
+    "country": "DE",
+    "status": "skipped",
+    "reason": "Нет однозначной суммы application fee на проверенных страницах. Бесплатный VisaFlow относится к внешнему визовому сервису, не к подаче в вуз.",
+    "sources": [
+      {
+        "url": "https://www.tum.de/en/studies/application/application-info-portal/dates-periods-and-deadlines",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/tum-1424cea4f511.txt",
+        "contentHash": "sha256:1e86cc6c8f62081b306dcc37448a8dfc8c071e1b1e47982cc0ad02c2e4d6011d",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.tum.de/en/studies/fees/tuition",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/tum-50ba733184a6.txt",
+        "contentHash": "sha256:d8f7b3b3226de27d0d73b55e5109df074ce07a54cc464a74c281a345c7a8ca2e",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.tum.de/en/studies/application/application-info-portal/application-international",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/tum-f1e531b4a53e.txt",
+        "contentHash": "sha256:1fe3bde1a7d22483c8e4d56a12d77a87d10015ea8a5a9796eb1f9ad6db3256db",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "bilkent",
+    "name": "Bilkent (Анкара) — скидка на обучение для иностранцев",
+    "country": "TR",
+    "status": "skipped",
+    "reason": "Открытые страницы требований и подачи не называют сумму либо прямое отсутствие взноса.",
+    "sources": [
+      {
+        "url": "https://w3.bilkent.edu.tr/international/how-to-apply/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/bilkent-191bfabdf6f4.txt",
+        "contentHash": "sha256:624904c5119d64cd4b1a4b208b4d8398ea43354baaf0ff534dab714c625ce144",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://w3.bilkent.edu.tr/international/scholarships-for-international-students/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/bilkent-35d77308c1d5.txt",
+        "contentHash": "sha256:aa77a2f1c7a9d50157b7b403c840ee4efab09726f85e3a5d50d27860ca655edc",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://w3.bilkent.edu.tr/international/english-language-proficiency/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/bilkent-baccae413674.txt",
+        "contentHash": "sha256:353ef47fa306523403336f46ad4f0250f8f94da3ba8037d56f257e91b57034f1",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "koc-university",
+    "name": "Koç University (Турция): бакалавриат для иностранцев",
+    "country": "TR",
+    "status": "skipped",
+    "reason": "Вуз прямо пишет, что application fee определяется ежегодно и публикуется в online application system. Числа на открытой странице нет.",
+    "sources": [
+      {
+        "url": "https://international.ku.edu.tr/undergraduate-programs/how-to-apply/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/koc-university-47a50c57fef1.txt",
+        "contentHash": "sha256:953f749897698840901a68d8cd8cae538380ec1b9c92fb75c873166d01c27374",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://international.ku.edu.tr/undergraduate-programs/application-faqs/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/koc-university-7e92ddcaa698.txt",
+        "contentHash": "sha256:90495915bc51ae0c47ce3dbf37ec610607ee50b47f37e74e67a9f0c01d572c03",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://international.ku.edu.tr/undergraduate-programs/tuition-and-scholarships/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/koc-university-d503959d906e.txt",
+        "contentHash": "sha256:c32dc06f2965052705e7ac7d7dcfe5b59699610abd63b5a7258b367658cec66d",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "metu-turkey",
+    "name": "METU (Анкара) — приём иностранцев на бакалавриат",
+    "country": "TR",
+    "status": "skipped",
+    "reason": "Проверенные страницы международного бакалавриата не называют сумму или прямое отсутствие взноса.",
+    "sources": [
+      {
+        "url": "https://iso.metu.edu.tr/en/who-can-apply",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/metu-turkey-7b3a27e00d4e.txt",
+        "contentHash": "sha256:3bded9dfe75764896040e255b514d016aa76e908b8c09ac8cad68a6c3735e8f2",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://iso.metu.edu.tr/en/application-dates",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/metu-turkey-85a67e2f75c2.txt",
+        "contentHash": "sha256:73add48bb71746160758e8c6e16e1e62eebef57e1a2691a581abe1da18ad03a6",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://iso.metu.edu.tr/en/application-requirements",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/metu-turkey-b37dbf4c1886.txt",
+        "contentHash": "sha256:579088e2a1c2485a48d7d44bcc74567cd96bcf105b2503442ab74fec7eb53e60",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "kimep",
+    "name": "KIMEP University (Казахстан): бакалавриат со стипендией для Центральной Азии",
+    "country": "KZ",
+    "status": "skipped",
+    "reason": "На страницах и в таблице расходов есть другие платежи, включая late registration fee per course. Application fee не назван.",
+    "sources": [
+      {
+        "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/kimep-074cf081cdc5.txt",
+        "contentHash": "sha256:6c5d10a53a8446bb0041443d0e4e26389c63f956c4944cd1ae85705d359e41e5",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.kimep.kz/prospective-students/files/2026/05/Tuition-and-fees-eng-2026-27.pdf",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/kimep-337ed3ccd943.txt",
+        "contentHash": "sha256:8f9430141743bcf81cdd9b41f7f6fb3a23aabc21f703acc4af276fa420eb59d5",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.kimep.kz/prospective-students/en/admission/application-deadlines/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/kimep-7fdb60710c8c.txt",
+        "contentHash": "sha256:c9202d712c263bb4a37a1907dbdcdeea767844d2c296892759068e74fcbd8bbe",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "auca",
+    "name": "Американский университет в Центральной Азии (AUCA), Бишкек",
+    "country": "KG",
+    "status": "skipped",
+    "reason": "Проверенные страницы freshman/international admissions не называют сумму или отсутствие application fee. Free call не относится к подаче.",
+    "sources": [
+      {
+        "url": "https://www.auca.kg/en/apply_international/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/auca-016da8374cb7.txt",
+        "contentHash": "sha256:0b2f85cd72377b0cd0f34be448d57951cab8e88ab7dbfeb509d3499df7971689",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.auca.kg/en/freshman_applicants/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/auca-3a963a424a69.txt",
+        "contentHash": "sha256:96cb83c2b5fae706f7058920693dd39b296a4e322b2b7734e6012a2f5a70730d",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.auca.kg/en/admissions/",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/auca-8545862d630f.txt",
+        "contentHash": "sha256:b30f656bd9e30c9f235da1d139f8d596bd84b6be1e77d2f7ad93ee14beba3622",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "manas",
+    "name": "Кыргызско-Турецкий университет «Манас» — приём иностранцев",
+    "country": "KG",
+    "status": "skipped",
+    "reason": "Страница приёма не называет application fee. Бесплатное обучение не использовалось как доказательство бесплатной подачи.",
+    "sources": [
+      {
+        "url": "https://manas.edu.kg/en/students/admission",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/manas-508cbe79ca4a.txt",
+        "contentHash": "sha256:661e74ef5e91a15ba8d071424e6b20a0854c1f20683f8e0b4be80ba22c7d8545",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "newuu",
+    "name": "New Uzbekistan University (Ташкент) — приём иностранцев на бакалавриат",
+    "country": "UZ",
+    "status": "skipped",
+    "reason": "На страницах приёма есть платежи для закрепления conditional offer, но нет отдельного однозначного application fee.",
+    "sources": [
+      {
+        "url": "https://newuu.uz/en/menu/entry-requirements",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/newuu-55eaf197c6da.txt",
+        "contentHash": "sha256:1e5031455134d3cebb0ac801efe302dfa4ec714f4edb8094c7e7061b34614a3f",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://newuu.uz/en/undergraduate-admissions",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/newuu-5ba53733562a.txt",
+        "contentHash": "sha256:8deffa60786304c8c879999ead592482bd20539d6e3f9e5d704bd6ffaead5f63",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  },
+  {
+    "id": "wiut",
+    "name": "Westminster International University in Tashkent (WIUT) — через подготовительный год",
+    "country": "UZ",
+    "status": "skipped",
+    "reason": "Найдены tuition и раздел math entrance exam fee; отдельная цена либо прямое отсутствие взноса за заявку не указаны.",
+    "sources": [
+      {
+        "url": "https://admission.wiut.uz/Manual/OverView",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/wiut-0870683f1fc3.txt",
+        "contentHash": "sha256:6843e62b18e56e37ec82eefa47fb290b6a2c51d78cd89a22802b37ff3f16f19d",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.wiut.uz/certificate-international-foundation-studies",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/wiut-09fbf1a6b9f4.txt",
+        "contentHash": "sha256:8c0cd315571b236f41528e2a8e7e564832348d903478a851444eccb45d620f17",
+        "extraction": "decoded HTML/PDF"
+      },
+      {
+        "url": "https://www.wiut.uz/tuition-fees-international",
+        "date": "2026-10-28",
+        "snapshot": "raw/application-fees/2026-10-28-batch2/review-sources/wiut-c5e949ec279a.txt",
+        "contentHash": "sha256:cf7545344781f0bea9de1639b440a4d8124816e2f99af66b69ddc7acba011b56",
+        "extraction": "decoded HTML/PDF"
+      }
+    ]
+  }
+]
