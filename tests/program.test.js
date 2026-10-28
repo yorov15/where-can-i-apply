@@ -46,6 +46,17 @@ test('взнос показывается только после загрузк
   assert.equal(none.facts[2][1], 'Не указана');
 });
 
+test('у взноса есть собственные источник и дата, без подмены даты остальных правил', () => {
+  const source = { url: 'https://example.org/fees', lastVerified: '2026-10-28' };
+  const view = programModel(programRow(program, me, today), {
+    programs: { demo: { source: { url: 'https://example.org', lastVerified: '2026-09-01' } } },
+    conditions: { demo: [{ ru: 'Плата', kind: 'money', fee: { amount: 0, currency: null, source } }] },
+  }, today);
+  assert.deepEqual(view.feeSource, source);
+  const pending = programModel(programRow(program, me, today), { programs: {}, conditions: {} }, today);
+  assert.equal(pending.feeSource, null);
+});
+
 test('документы и подача идут в дела, остальное — в «Источники и точные требования»', () => {
   const view = programModel(programRow(program, me, today), {
     programs: { demo: {} },

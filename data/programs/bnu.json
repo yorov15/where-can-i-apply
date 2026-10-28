@@ -183,6 +183,22 @@
       "evidence": "The Certificate of Non-Criminal Record or Letter of Commitment",
       "field": null,
       "kind": "documents"
+    },
+    {
+      "ru": "Заплати взнос за заявку 500 юаней после отправки онлайн-заявки.",
+      "field": null,
+      "kind": "money",
+      "evidence": "The application fee is 500 RMB",
+      "fee": {
+        "amount": 500,
+        "currency": "CNY",
+        "evidence": "The application fee is 500 RMB",
+        "source": {
+          "url": "https://admission-is.bnu.edu.cn/english/admissionprogram/bachelordegreeprogram/admissionbrochure/index.html",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:db8754e1695f8ee055dfc3ef5b0aa7091014954ab1bef1e5cbc8b9a35fbaa8ca"
+        }
+      }
     }
   ],
   "deadline": {

@@ -9,6 +9,7 @@ import { PROGRAM_SIDE_STATES } from './wording.js';
 import { feeOf, feeCell } from './cost.js';
 import { safeHttpUrl } from './lib/url.js';
 import { EXPLAIN_URL } from './config.js';
+import { formatDate } from './lib/format.js';
 import { statusOf, goalProgress, progressLine } from './goal-status.js';
 import {
   splitHeadline, kindLine, explainBlock, skeleton, reasonItem, planButton, bulletList, makeNode as el,
@@ -38,7 +39,8 @@ export function programModel(row, details, today) {
   const model = cardModel(row, extra, today);
   const { verdict, reason } = splitHeadline(model.headline);
   const loading = !model.hasDetails || model.conditionsPending;
-  const fee = loading ? null : feeCell(feeOf(extra));
+  const applicationFee = loading ? null : feeOf(extra);
+  const fee = loading ? null : feeCell(applicationFee);
   const lead = model.bucket === 'yes'
     ? 'Твоя анкета подходит под названные условия. Отбор проводит вуз.'
     : reason.charAt(0).toUpperCase() + reason.slice(1);
@@ -47,6 +49,7 @@ export function programModel(row, details, today) {
     verdict,
     lead,
     kind: kindLine(row.program),
+    feeSource: applicationFee?.source ?? null,
     facts: [
       ['Срок подачи', model.deadlineLine],
       ['Что покрывает', model.coverageLine],
@@ -122,6 +125,14 @@ export function renderProgram(root, props) {
     facts.append(cell);
   }
   root.append(facts);
+  if (view.feeSource) {
+    const reference = link(view.feeSource.url, 'Источник взноса');
+    if (reference) {
+      const note = el('p', 'card-source', `Взнос проверен ${formatDate(view.feeSource.lastVerified)}. `);
+      note.append(reference);
+      root.append(note);
+    }
+  }
 
   const site = link(model.applyUrl, 'Открыть сайт программы', 'button');
   if (site) root.append(site);

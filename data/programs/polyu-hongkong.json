@@ -95,6 +95,22 @@
       "evidence": "English Language Requirements",
       "field": "language",
       "kind": "must"
+    },
+    {
+      "ru": "Заплати взнос за заявку — 600 гонконгских долларов.",
+      "field": null,
+      "kind": "money",
+      "evidence": "Application Fee HKD600",
+      "fee": {
+        "amount": 600,
+        "currency": "HKD",
+        "evidence": "Application Fee HKD600",
+        "source": {
+          "url": "https://www.polyu.edu.hk/study/ug/fees-and-scholarships/fees",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:00376dce48726d4d2d3751450e3baf2dcbf9586726a97c34e2faf6f8b0add3b2"
+        }
+      }
     }
   ],
   "deadline": {

@@ -121,7 +121,17 @@
       "ru": "Сбор за каждую заявку — €100, оплачивается только через портал и не возвращается.",
       "evidence": "an application fee of €100 is required",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 100,
+        "currency": "EUR",
+        "evidence": "an application fee of €100 is required",
+        "source": {
+          "url": "https://www.unibocconi.it/en/applying-bocconi/bachelor-and-law-programs/application-and-admissions/admissions",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:ec4952edef396aa1180d895b583badebed598110d8a01488dc1cc44e08cc26ae"
+        }
+      }
     },
     {
       "ru": "Приём на 2027/28 идёт в две сессии: ранняя — 2–29 сентября 2026 (уже прошла), зимняя — 25 ноября 2026 – 26 января 2027.",

@@ -101,6 +101,22 @@
       "evidence": "Guarantee Statement",
       "field": null,
       "kind": "documents"
+    },
+    {
+      "ru": "Заплати взнос за заявку на программу с дипломом — 800 юаней.",
+      "field": null,
+      "kind": "money",
+      "evidence": "For Degree Students Application Fee: RMB 800",
+      "fee": {
+        "amount": 800,
+        "currency": "CNY",
+        "evidence": "For Degree Students Application Fee: RMB 800",
+        "source": {
+          "url": "https://econ.fudan.edu.cn/uipe/Prospective_Students1/Tuition_and_Expenses.htm",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:b71bc79bf6191af81e3cb75487dfcd2e6efd1f53ba69461e87e3cbe76e610ac6"
+        }
+      }
     }
   ],
   "deadline": {

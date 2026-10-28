@@ -409,6 +409,7 @@ function card(row, today, details, plan) {
   box.dataset.kind = row.program.kind ?? '';
   box.dataset.bucket = model.bucket;
   box.dataset.duolingo = acceptsDuolingo(row.program) ? '1' : '0';
+  box.dataset.feeFree = row.program.feeFree === true ? '1' : '0';
 
   const { verdict, reason } = splitHeadline(model.headline);
   const href = programHref(id);

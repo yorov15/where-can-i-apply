@@ -195,7 +195,18 @@
       "ru": "Заявка стоит $75 и сбор невозвратный; тем, кто просит помощь, его снимают.",
       "evidence": "The $75 nonrefundable application fee is required to complete your application.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 75,
+        "currency": "USD",
+        "evidence": "we are happy to waive our $75 application fee for all financial aid applicants",
+        "source": {
+          "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:5e4892961a7cb9ff37be0447082adf62ec762a911e8077e9d3e9b1343c371f2e"
+        },
+        "waivedForAid": true
+      }
     },
     {
       "ru": "Вуз снимает $75 за заявку всем, кто подаёт на помощь по нужде, и тем, кому сбор не по силам.",

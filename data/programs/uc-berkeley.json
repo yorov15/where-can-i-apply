@@ -162,7 +162,17 @@
       "ru": "Плата за заявку — $80 за кампус, для иностранцев и неиммигрантов — $95. Освобождение от платы доступно только гражданам/резидентам и лицам с правом AB540.",
       "evidence": "The application fee is $80 for each UC campus ($95 for international and non-immigrant applicants).",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 95,
+        "currency": "USD",
+        "evidence": "The application fee is $80 for each UC campus ($95 for international and non-immigrant applicants).",
+        "source": {
+          "url": "https://admissions.berkeley.edu/basic-admission-requirements/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:fceb612bfcdb8f559e0fab0622a24ec7306d0d42f35ab60929f79970fa18c1fd"
+        }
+      }
     },
     {
       "ru": "Иностранцы не имеют права на федеральную, штатную и need-based помощь вуза.",

@@ -115,13 +115,18 @@ def _condition_for_site(condition: dict) -> dict:
     if fee:
         # Цитата — для проверяющего, сайту хватает суммы и признака.
         entry["fee"] = {key: fee[key] for key in ("amount", "currency", "waivedForAid") if key in fee}
+        if fee.get("source"):
+            entry["fee"]["source"] = {key: fee["source"][key] for key in ("url", "lastVerified")}
     return entry
 
 
 def index_entry(program: dict) -> dict:
     coverage = program.get("coverage") or {}
+    fee = next((c["fee"] for c in program.get("textConditions") or [] if c.get("fee")), None)
+    free = bool(fee and type(fee.get("amount")) in (int, float) and fee["amount"] == 0 and fee.get("evidence") and not fee.get("waivedForAid"))
     return {
         "id": program["id"],
+        **({"feeFree": True} if free else {}),
         "name": program.get("name"),
         "hostCountry": program.get("hostCountry"),
         "kind": program.get("kind"),

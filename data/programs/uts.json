@@ -185,7 +185,17 @@
       "ru": "Сбор за заявку — A$100, невозвратный, платится за любую заявку иностранца; освобождены только нынешние студенты UTS и UTS College.",
       "evidence": "A non-refundable A$100 application fee is payable with all applications for study as an international student at UTS.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 100,
+        "currency": "AUD",
+        "evidence": "A non-refundable A$100 application fee is payable with all applications for study as an international student at UTS.",
+        "source": {
+          "url": "https://www.uts.edu.au/for-students/admissions-entry/fees-costs/international-fees",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:60c7830e64a2f52dd5cc0b3d7dd2fbcb5aa399efc9889d015dc96e1a4b2ad340"
+        }
+      }
     },
     {
       "ru": "Обучение платное, суммы зависят от курса и меняются по годам; платится вперёд за каждую сессию. Цифр на страницах приёма нет — их даёт поиск по курсам.",

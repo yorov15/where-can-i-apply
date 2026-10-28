@@ -6,6 +6,8 @@
 """
 
 import re
+from datetime import date
+from urllib.parse import urlparse
 
 from tools.schema import (
     CONDITION_KINDS,
@@ -426,8 +428,24 @@ def _check_fee(number: int, condition: dict, haystack: str) -> list[str]:
     amount = fee.get("amount")
     if isinstance(amount, bool) or not isinstance(amount, (int, float)) or amount < 0:
         problems.append(f"{where}.amount: нужно неотрицательное число")
-    if fee.get("currency") not in FEE_CURRENCIES:
+    if fee.get("currency") not in FEE_CURRENCIES and not (amount == 0 and fee.get("currency") is None):
         problems.append(f"{where}.currency: неизвестная валюта {fee.get('currency')!r}")
+    if "source" in fee:
+        source = fee["source"]
+        if not isinstance(source, dict):
+            problems.append(f"{where}.source: нужен объект источника")
+        else:
+            url = source.get("url")
+            if not isinstance(url, str) or urlparse(url).scheme != "https" or not urlparse(url).hostname:
+                problems.append(f"{where}.source.url: нужен HTTPS-адрес")
+            verified = source.get("lastVerified")
+            try:
+                if not isinstance(verified, str) or date.fromisoformat(verified).isoformat() != verified:
+                    raise ValueError
+            except ValueError:
+                problems.append(f"{where}.source.lastVerified: нужна настоящая дата")
+            if not re.fullmatch(r"sha256:[0-9a-f]{64}", str(source.get("contentHash", ""))):
+                problems.append(f"{where}.source.contentHash: нужен SHA-256 снимка")
     if fee.get("waivedForAid") not in (None, True):
         problems.append(f"{where}.waivedForAid: только значение true")
     quote = fee.get("evidence")

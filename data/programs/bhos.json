@@ -95,7 +95,17 @@
       "ru": "Платы за подачу на государственном портале нет — вуз специально это подчёркивает.",
       "evidence": "there is no application fee on portal.edu.az",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": null,
+        "evidence": "there is no application fee on portal.edu.az",
+        "source": {
+          "url": "https://bhos.edu.az/en/page/216/Application",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:1b3d22d786e7499ccbdc7b0513a7a1e9fcc23775f6e6d8677992150a2f7e3ae3"
+        }
+      }
     },
     {
       "ru": "Грант имени Гейдара Алиева даёт бесплатное общежитие, бесплатные учебные материалы и спорт, поддержку с документами и стажировки, без требования банковского счёта. Это государственная программа — отдельная заявка, не через вуз.",

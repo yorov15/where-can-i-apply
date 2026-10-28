@@ -8,6 +8,19 @@ const harvard = { title: 'Гарвардский колледж — помощь
 const turkey = { title: 'Türkiye Bursları — государственная стипендия Турции', orig: 'Türkiye Scholarships', country: 'TR', bucket: 'check', kind: 'government' };
 const none = { query: '', bucket: 'all', country: '', kind: '' };
 
+test('no-fee filter excludes unknown and paid applications, including conditional aid waivers', () => {
+  const free = { ...harvard, feeFree: true, duolingo: true, plan: true };
+  const filter = { ...none, noFee: true, duolingo: true, country: 'US', kind: 'need-aid', bucket: 'plan' };
+  assert.equal(matchesFilter(free, filter), true);
+  for (const feeFree of [undefined, null, false, '1']) assert.equal(matchesFilter({ ...free, feeFree }, filter), false);
+  assert.equal(matchesFilter({ ...free, duolingo: false }, filter), false);
+  assert.equal(matchesFilter(free, { ...filter, country: 'KR' }), false);
+  assert.equal(matchesFilter(free, { ...filter, query: 'turkey' }), false);
+  assert.equal(matchesFilter(harvard, none), true);
+  assert.deepEqual(bucketCounts([free, harvard, { ...turkey, feeFree: true }], { ...none, noFee: true, duolingo: true }),
+    { all: 1, plan: 1, yes: 1, likely: 0, check: 0, no: 0 });
+});
+
 test('Duolingo acceptance comes only from the named language alternatives', () => {
   assert.equal(acceptsDuolingo({ eligibility: { language: { anyOf: [{ test: 'DUOLINGO', min: 120 }] } } }), true);
   for (const program of [{}, { eligibility: { language: { notMeasured: true, evidence: 'Duolingo is not accepted' } } },

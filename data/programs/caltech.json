@@ -206,7 +206,17 @@
       "ru": "Заявка стоит $85, сбор разовый и невозвратный.",
       "evidence": "Caltech requires a one-time, non-refundable application fee of $85.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 85,
+        "currency": "USD",
+        "evidence": "Caltech requires a one-time, non-refundable application fee of $85.",
+        "source": {
+          "url": "https://www.admissions.caltech.edu/apply/first-year-applicants/first-year-application-fee-and-waiver",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:ed024380756c1dae321ffe06df187572e005e990a09db0e7b0f87094d06e92f7"
+        }
+      }
     },
     {
       "ru": "Если семья подаёт на помощь по нужде и сбор неподъёмен, можно оформить Caltech Active Transport Pass и получить снятие платы за заявку.",

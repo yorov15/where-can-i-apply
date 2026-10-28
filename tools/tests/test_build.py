@@ -57,6 +57,17 @@ PROGRAM = {
 
 
 class TestIndexEntry(unittest.TestCase):
+    def test_fee_free_index_flag_requires_an_explicit_zero(self):
+        for fee in [None, {"amount": 75, "currency": "USD", "evidence": "Application fee $75"},
+                    {"amount": 75, "currency": "USD", "waivedForAid": True, "evidence": "We waive $75 for aid"},
+                    {"amount": False, "evidence": "No application fee"}, {"amount": 0},
+                    {"amount": 0, "evidence": "No fee for aid applicants", "waivedForAid": True}]:
+            program = {**PROGRAM, "textConditions": [{"fee": fee}] if fee else []}
+            self.assertNotIn("feeFree", index_entry(program))
+        program = {**PROGRAM, "textConditions": [{"fee": {"amount": 0, "currency": None, "evidence": "No application fee"}}]}
+        self.assertIs(index_entry(program)["feeFree"], True)
+        self.assertNotIn("evidence", json.dumps(index_entry(program)))
+
     def test_evidence_is_stripped(self):
         entry = index_entry(PROGRAM)
         self.assertNotIn("evidence", json.dumps(entry, ensure_ascii=False))
@@ -310,6 +321,14 @@ class TestIndexText(unittest.TestCase):
 
 
 class TestDetails(unittest.TestCase):
+    def test_fee_source_reaches_client_without_internal_hash_or_quote(self):
+        source = {"url": "https://example.edu/fees", "lastVerified": "2026-10-28", "contentHash": "sha256:internal"}
+        program = {**PROGRAM, "textConditions": [{"ru": "Бесплатно", "fee": {"amount": 0, "currency": None, "evidence": "No application fee", "source": source}}]}
+        fee = conditions_entry(program)["textConditions"][0]["fee"]
+        self.assertEqual(fee["source"], {"url": source["url"], "lastVerified": source["lastVerified"]})
+        self.assertNotIn("contentHash", json.dumps(fee))
+        self.assertNotIn("evidence", fee)
+
     def test_exam_document_classification_reaches_the_client_without_evidence(self):
         program = json.loads(json.dumps(PROGRAM))
         tag = {"group": "standard", "title": "Выбрать тест или квалификацию"}

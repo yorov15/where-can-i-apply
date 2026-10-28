@@ -88,7 +88,17 @@
       "ru": "Плату за заявку с иностранных абитуриентов не берут.",
       "evidence": "International students pay no application fee.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": null,
+        "evidence": "International students pay no application fee.",
+        "source": {
+          "url": "https://tiu.uz/en/international/admission-process/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:2f98db33618f3e70a207b2824a60939fcc51d8749728a0492181932b20329f74"
+        }
+      }
     },
     {
       "ru": "Год обучения на англоязычных программах бакалавриата — 25 млн сум; на узбекоязычных дешевле, 16–19 млн сум.",

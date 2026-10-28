@@ -154,7 +154,17 @@
       "ru": "Сбор за заявку — AUD $150, невозвратный, платится за каждую заявку.",
       "evidence": "Note A non-refundable application fee of AUD $150* applies to every application.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 150,
+        "currency": "AUD",
+        "evidence": "Note A non-refundable application fee of AUD $150* applies to every application.",
+        "source": {
+          "url": "https://adelaide.edu.au/study/international-students/how-to-apply/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:c9232eee6071520c1d50cbd6a373e46c8497d9fb5bbe397213f82ecd385a54a6"
+        }
+      }
     },
     {
       "ru": "Вуз проверяет финансовую состоятельность: студент обязан показать, что покроет tuition и жизнь в Австралии; освободить от платы или оплатить расходы вуз не будет.",

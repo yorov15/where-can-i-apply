@@ -31,11 +31,12 @@ export const norm = (text) => text.normalize('NFD').replace(/\p{M}/gu, '').toLow
 // Только явный список принимаемых экзаменов: упоминание в тексте может быть запретом.
 export const acceptsDuolingo = program => (program.eligibility?.language?.anyOf ?? []).some(option => option.test === 'DUOLINGO');
 
-export function matchesFilter(item, { query, bucket, country, kind, duolingo }) {
+export function matchesFilter(item, { query, bucket, country, kind, duolingo, noFee }) {
   if (bucket === 'plan' ? !item.plan : bucket !== 'all' && item.bucket !== bucket) return false;
   if (country && item.country !== country) return false;
   if (kind && item.kind !== kind) return false;
   if (duolingo && item.duolingo !== true) return false;
+  if (noFee && item.feeFree !== true) return false;
   const words = norm(query).split(/\s+/).filter(Boolean);
   if (!words.length) return true;
   // Тип показан в карточке словами, поэтому его можно и набрать.
@@ -62,7 +63,7 @@ export function bucketCounts(items, filters) {
 
 // ——— DOM ———
 
-const state = { query: '', bucket: 'all', country: '', kind: '', duolingo: false };
+const state = { query: '', bucket: 'all', country: '', kind: '', duolingo: false, noFee: false };
 let ui = null;
 // Сколько карточек открыто в каждой группе (по классу группы). Хранится вне
 // перерисовки: renderResults пересобирает список на каждое нажатие в анкете.
@@ -76,6 +77,7 @@ const itemOf = (card) => ({
   kind: card.dataset.kind ?? '',
   plan: card.dataset.plan === '1',
   duolingo: card.dataset.duolingo === '1',
+  feeFree: card.dataset.feeFree === '1',
 });
 
 function apply() {
@@ -102,7 +104,7 @@ function apply() {
     if (option.value) option.textContent = `${KIND_FILTER[option.value]} (${byKind.filter((item) => item.kind === option.value).length})`;
   }
 
-  const searching = state.query.trim() !== '' || state.country !== '' || state.kind !== '' || state.duolingo;
+  const searching = state.query.trim() !== '' || state.country !== '' || state.kind !== '' || state.duolingo || state.noFee;
   const active = searching || state.bucket !== 'all';
 
   let shown = 0;
@@ -154,11 +156,13 @@ export function resetFilter() {
   state.country = '';
   state.kind = '';
   state.duolingo = false;
+  state.noFee = false;
   if (ui) {
     ui.search.value = '';
     ui.country.value = '';
     ui.kind.value = '';
     ui.duolingo.checked = false;
+    ui.noFee.checked = false;
   }
   apply();
 }
@@ -235,6 +239,7 @@ export function setupCatalogFilter({ root, resultsNode }) {
     country: root.querySelector('#catalog-country'),
     kind: root.querySelector('#catalog-kind'),
     duolingo: root.querySelector('#catalog-duolingo'),
+    noFee: root.querySelector('#catalog-no-fee'),
     status: root.querySelector('#catalog-status'),
     reset: root.querySelector('#catalog-reset'),
   };
@@ -242,6 +247,7 @@ export function setupCatalogFilter({ root, resultsNode }) {
   ui.country.addEventListener('change', () => { state.country = ui.country.value; apply(); });
   ui.kind.addEventListener('change', () => { state.kind = ui.kind.value; apply(); });
   ui.duolingo.addEventListener('change', () => { state.duolingo = ui.duolingo.checked; apply(); });
+  ui.noFee.addEventListener('change', () => { state.noFee = ui.noFee.checked; apply(); });
   for (const chip of ui.chips) chip.addEventListener('click', () => { state.bucket = chip.dataset.bucket; apply(); });
   ui.reset.addEventListener('click', resetFilter);
   return {
