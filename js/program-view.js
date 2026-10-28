@@ -9,6 +9,7 @@ import { PROGRAM_SIDE_STATES } from './wording.js';
 import { feeOf, feeCell } from './cost.js';
 import { safeHttpUrl } from './lib/url.js';
 import { EXPLAIN_URL } from './config.js';
+import { statusOf, goalProgress, progressLine } from './goal-status.js';
 import {
   splitHeadline, kindLine, explainBlock, skeleton, reasonItem, planButton, bulletList, makeNode as el,
 } from './render.js';
@@ -89,10 +90,10 @@ function exactBlock(view, model) {
   return box;
 }
 
-// props: { row, loading, details, plan, today, handlers }.
+// props: { row, loading, details, plan, route, routeState, today, handlers }.
 // row — null, пока программу ищем, или когда такой нет.
 export function renderProgram(root, props) {
-  const { row, loading, details, plan, today, handlers } = props;
+  const { row, loading, details, plan, route, routeState, today, handlers } = props;
   root.textContent = '';
 
   const back = el('button', 'link-button', '← Назад');
@@ -161,6 +162,9 @@ export function renderProgram(root, props) {
   next.append(el('p', 'route-detail', plan.ids.includes(id)
     ? 'Программа в твоём пути. Сроки и дела — на вкладках «Сегодня» и «Мой путь».'
     : 'Срок и дела по этой программе появятся на вкладках «Сегодня» и «Мой путь».'));
+  if (plan.ids.includes(id) && route?.goals.some(goal => goal.id === id)) {
+    next.append(el('p', 'route-goal-meta', progressLine(goalProgress(route, id), statusOf(routeState, id))));
+  }
   const actions = el('div', 'today-actions');
   const add = planButton(id, plan);
   // Здесь это главное действие экрана, поэтому кнопка полная, а не тихая, как в списке.

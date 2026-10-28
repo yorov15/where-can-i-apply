@@ -53,6 +53,7 @@
 <link rel="modulepreload" href="js/plan.js">
 <link rel="modulepreload" href="js/route.js">
 <link rel="modulepreload" href="js/route-state.js">
+<link rel="modulepreload" href="js/goal-status.js">
 <link rel="modulepreload" href="js/route-combined.js">
 <link rel="modulepreload" href="js/exam-plan.js">
 <link rel="modulepreload" href="js/study-plan.js">
@@ -282,6 +283,8 @@
           <select id="catalog-country"><option value="">Все страны</option></select>
         </label>
       </details>
+      <label class="catalog-toggle" for="catalog-duolingo"><input type="checkbox" id="catalog-duolingo" aria-describedby="catalog-source-note"> Принимают Duolingo</label>
+      <p id="catalog-source-note" class="fineprint">Показываем только программы, где это указано в источнике.</p>
       <p id="catalog-status" class="fineprint" role="status" aria-live="polite"></p>
       <button type="button" id="catalog-reset" class="link-button" hidden>Сбросить фильтры</button>
     </div>

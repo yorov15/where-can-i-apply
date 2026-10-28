@@ -1,6 +1,7 @@
 // Единое состояние маршрута и выбранных программ. Старые ключи читаются
 // только при миграции; неизвестные отметки остаются в экспорте для переноса.
 import { SCORE_LIMITS } from './lib/limits.js';
+import { isGoalStatus } from './goal-status.js';
 export const ROUTE_STATE_KEY = 'eligibility-route';
 export const ROUTE_VERSION = 2;
 export const MAX_GOALS = 8;
@@ -14,7 +15,7 @@ const day = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(val
   && Number.isFinite(Date.parse(`${value}T00:00:00Z`))
   && new Date(`${value}T00:00:00Z`).toISOString().slice(0, 10) === value;
 const read = (storage, key) => { try { return JSON.parse(storage?.getItem(key) ?? 'null'); } catch { return null; } };
-const empty = () => ({ version: 2, goals: [], hoursPerWeek: 4, scores: {}, examDates: {}, examFormats: {}, retakeBuffers: {}, done: {}, weekPlan: {}, carryTasks: [], studyStarted: null, lastReview: null });
+const empty = () => ({ version: 2, goals: [], hoursPerWeek: 4, scores: {}, examDates: {}, examFormats: {}, retakeBuffers: {}, done: {}, weekPlan: {}, carryTasks: [], studyStarted: null, lastReview: null, statuses: {} });
 const weeklyTask = task => ({ taskId:task.taskId, ...(day(task.day)?{day:task.day}:{}), done:task.done===true,
   ...(day(task.completedAt)?{completedAt:task.completedAt}:{}),
   ...(typeof task.title==='string'?{title:task.title.slice(0,200)}:{}),
@@ -52,6 +53,9 @@ function normalize(value) {
       .map(weeklyTask);
   }
   next.carryTasks=(Array.isArray(value.carryTasks)?value.carryTasks:[]).filter(task=>object(task)&&safeKey(task.taskId)).map(weeklyTask);
+  next.statuses = Object.fromEntries(Object.entries(object(value.statuses) ? value.statuses : {})
+    .filter(([id, entry]) => safeKey(id) && object(entry) && isGoalStatus(entry.status) && entry.status !== 'thinking' && (entry.since === null || day(entry.since)))
+    .map(([id, entry]) => [id, { status: entry.status, since: entry.since }]));
   next.lastReview = day(value.lastReview) ? value.lastReview : null;
   next.studyStarted = day(value.studyStarted) ? value.studyStarted : null;
   if (value.migrationNotice === true) next.migrationNotice = true;
@@ -86,6 +90,19 @@ export function setGoals(state, ids) {
   // Старый длинный план не обрезаем. Новые цели сверх лимита не добавляем.
   if (goals.length > MAX_GOALS && goals.some(id => !next.goals.includes(id))) return next;
   return { ...next, goals };
+}
+
+// Статус заявки по цели. «Рассматриваю» — состояние по умолчанию, его не храним.
+// Дата ставится, когда статус меняется, и не сдвигается, если выбрали тот же.
+export function setGoalStatus(state, id, status, today = new Date().toISOString().slice(0, 10)) {
+  const next = copy(state);
+  if (!safeKey(id) || !day(today)) return next;
+  if (status === 'thinking') delete next.statuses[id];
+  else if (isGoalStatus(status)) {
+    const same = next.statuses[id]?.status === status;
+    next.statuses[id] = { status, since: same ? next.statuses[id].since : today };
+  }
+  return next;
 }
 
 export function setGoal(state, id) {

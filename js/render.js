@@ -10,7 +10,7 @@ import { agenda } from './agenda.js';
 import { timeLeft, formatDate, dateTile, plural } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
 import { isStale, STALE_DAYS } from './lib/dates.js';
-import { refreshFilter, countryName } from './filter.js';
+import { refreshFilter, countryName, acceptsDuolingo } from './filter.js';
 import { kindLabel } from './lib/kinds.js';
 import { EXPLAIN_URL } from './config.js';
 import { planPrograms, planText, buildIcs } from './plan.js';
@@ -408,6 +408,7 @@ function card(row, today, details, plan) {
   box.dataset.country = row.program.hostCountry ?? '';
   box.dataset.kind = row.program.kind ?? '';
   box.dataset.bucket = model.bucket;
+  box.dataset.duolingo = acceptsDuolingo(row.program) ? '1' : '0';
 
   const { verdict, reason } = splitHeadline(model.headline);
   const href = programHref(id);

@@ -2,13 +2,40 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState,
-  reconcileProgress, isDone, MAX_GOALS } from '../js/route-state.js';
+  reconcileProgress, isDone, MAX_GOALS, setGoalStatus } from '../js/route-state.js';
 const TODAY = '2026-10-27';
 const storage = values => {
   const map = new Map(Object.entries(values ?? {}).map(([key, value]) => [key, JSON.stringify(value)]));
   return { getItem: key => map.get(key) ?? null, setItem: (key, value) => map.set(key, value) };
 };
 const empty = () => loadRouteState(storage());
+
+test('statuses reject unknown codes, unsafe ids, invalid dates and omit the default', () => {
+  const state = importState('{"version":2,"goals":["kaist"],"done":{},"statuses":{"kaist":{"status":"preparing","since":"2026-10-27"},"unknown":{"status":"sent","since":null},"__proto__":{"status":"submitted","since":null},"":{"status":"submitted","since":null},"bad-date":{"status":"answered","since":"2026-02-31"},"default":{"status":"thinking","since":"2026-10-27"}}}');
+  assert.deepEqual(state.statuses, { kaist: { status: 'preparing', since: TODAY } });
+});
+
+test('status changes date only on a new choice; thinking deletes the record', () => {
+  const initial = setGoals(empty(), ['kaist']);
+  const preparing = setGoalStatus(initial, 'kaist', 'preparing', TODAY);
+  assert.deepEqual(initial.statuses, {});
+  assert.deepEqual(setGoalStatus(preparing, 'kaist', 'preparing', '2026-10-28').statuses, preparing.statuses);
+  const submitted = setGoalStatus(preparing, 'kaist', 'submitted', '2026-10-28');
+  assert.deepEqual(submitted.statuses.kaist, { status: 'submitted', since: '2026-10-28' });
+  assert.deepEqual(setGoalStatus(submitted, 'kaist', 'thinking', TODAY).statuses, {});
+  assert.deepEqual(setGoalStatus(submitted, '__proto__', 'answered', TODAY), submitted);
+  assert.deepEqual(setGoalStatus(submitted, 'kaist', 'sent', TODAY), submitted);
+  assert.deepEqual(setGoalStatus(submitted, 'kaist', 'answered', '2026-02-31'), submitted);
+});
+
+test('storage and export/import preserve statuses; clearing work does not change them', () => {
+  const state = setGoalStatus(setGoals(empty(), ['kaist']), 'kaist', 'submitted', TODAY);
+  const store = storage();
+  saveRouteState(state, store);
+  assert.deepEqual(loadRouteState(store), state);
+  assert.deepEqual(importState(exportState(state)), state);
+  assert.deepEqual(clearProgress(state).statuses, state.statuses);
+});
 
 test('v1 snapshot merges plan and checklist; old completion dates stay unknown', () => {
   const v1 = JSON.parse(readFileSync(new URL('./fixtures/route-state-v1.json', import.meta.url)));

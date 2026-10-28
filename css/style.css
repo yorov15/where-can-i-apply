@@ -312,6 +312,7 @@ label.row:has(input[type="checkbox"]:checked) { background: var(--accent-soft); 
 .summary-more[open] > .summary-more-head::after, .program-exact[open] > .summary-more-head::after, .agenda-more[open] > .agenda-more-head::after, .catalog-more[open] > summary::after { transform: rotate(-135deg); }
 .agenda-more { margin-top: var(--s-3); }
 .catalog-more { margin: 0 0 var(--s-4); }
+.catalog-toggle { display: flex; align-items: center; gap: var(--s-2); min-height: 44px; cursor: pointer; }
 
 /* Календарь сроков: строки, а не карточки. Здесь человек выбирает, куда идти
    смотреть, а читает уже в каталоге. Дата слева, остаток справа. */
@@ -589,11 +590,13 @@ body:is([data-screen=today],[data-screen=route]) .hero { display: none; }
    то, что человек делает сейчас, ниже — что вообще бывает по программе. */
 .route-head { display: grid; gap: var(--s-2); margin: 0 0 var(--s-4); }
 .route-goal-name { margin: 0; font-size: 1.25rem; line-height: 1.2; }
-.route-goal-meta { margin: 0; color: var(--muted); }
+.route-goal-meta { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
 .route-goal-note { margin: 0; font-size: .9375rem; }
 .route-goal-actions { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-1); }
 .route-goal-actions > .link-button { flex: 1 1 0; min-width: 0; text-align: left; }
 .route-goal-actions > p, .route-goal-actions > details { flex: 1 0 100%; }
+.route-goal-status { flex: 1 0 100%; display: grid; gap: var(--s-1); }
+.route-goal-status select { min-height: 44px; }
 .route-bar { height: .5rem; margin: 0 0 var(--s-1); accent-color: var(--accent); }
 .route-progress { margin: 0 0 var(--s-4); font-weight: 600; }
 .route-gaps-box { margin: 0 0 var(--s-4); }

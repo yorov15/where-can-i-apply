@@ -79,3 +79,17 @@ export function coverageLine(coverage) {
   if (!covered.length) return ownText.charAt(0).toUpperCase() + ownText.slice(1);
   return `Покрывает ${joinAnd(covered)}${ownText ? `; ${ownText}` : ''}`;
 }
+
+// Заголовки условий бывают абзацем: в шаге показываем первую фразу, полный
+// текст — под раскрытием. Ничего не выкидываем: текст условия остаётся.
+const SHORT_TITLE = 110;
+
+export function splitTitle(title) {
+  const text = String(title ?? '').trim();
+  if (text.length <= SHORT_TITLE) return { short: text, rest: '' };
+  const cut = text.slice(0, SHORT_TITLE);
+  const stop = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('; '), cut.lastIndexOf(', '));
+  const at = stop > 40 ? stop + 1 : cut.lastIndexOf(' ');
+  const short = text.slice(0, at > 0 ? at : SHORT_TITLE).trim();
+  return { short: short.endsWith('.') || short.endsWith('…') ? short : `${short}…`, rest: text };
+}

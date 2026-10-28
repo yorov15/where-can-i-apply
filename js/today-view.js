@@ -5,6 +5,7 @@
 import { formatDate, plural, daysBetween } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
 import { renderWeekReview } from './weekly-view.js';
+import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine } from './goal-status.js';
 
 const DAYS = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 const shift = (day, n) => new Date(Date.parse(`${day}T00:00:00Z`) + n * 86400000).toISOString().slice(0, 10);
@@ -18,8 +19,9 @@ const el = (tag, className, text) => {
 };
 
 // Что показать на экране. Чистая функция: тесты читают её, а не DOM.
-export function todayModel({ route, weekly, study, today }) {
+export function todayModel({ route, routeState, weekly, study, today }) {
   const open = (route?.goals ?? [])
+    .filter(goal => !isSent(statusOf(routeState, goal.id).status))
     .filter(goal => goal.deadline?.closes && goal.deadline.state !== 'closed' && goal.deadline.closes >= today)
     .sort((a, b) => a.deadline.closes.localeCompare(b.deadline.closes));
   const nearest = open[0] ?? null;
@@ -61,6 +63,12 @@ export function todayModel({ route, weekly, study, today }) {
   }
   dates.sort((a, b) => a.date.localeCompare(b.date));
 
+  const applications = (route?.goals ?? []).map(goal => {
+    const entry = statusOf(routeState, goal.id);
+    return { id: goal.id, name: shortName(goal.name), status: entry.status,
+      line: progressLine(goalProgress(route, goal.id), entry) };
+  });
+
   return {
     nearest,
     daysToNearest: nearest ? daysBetween(today, nearest.deadline.closes) : null,
@@ -68,6 +76,7 @@ export function todayModel({ route, weekly, study, today }) {
     doneMinutes: tasks.filter(task => task.done).reduce((sum, task) => sum + task.minutes, 0),
     levels,
     dates: dates.slice(0, 4),
+    applications: applications.some(goal => goal.status !== 'thinking') ? applications : [],
   };
 }
 
@@ -184,6 +193,23 @@ function datesBlock(model) {
   return box;
 }
 
+function applicationsBlock(model) {
+  if (!model.applications.length) return null;
+  const box = el('section', 'route-week');
+  box.dataset.applications = '';
+  box.append(el('h3', 'route-phase-title', 'Заявки'));
+  const list = el('ul', 'route-week-list');
+  for (const goal of model.applications) {
+    const row = el('li', 'route-week-item');
+    row.append(el('strong', null, goal.name),
+      el('p', 'route-detail', GOAL_STATUSES.find(([code]) => code === goal.status)[1]),
+      el('p', 'route-goal-meta', goal.line));
+    list.append(row);
+  }
+  box.append(list);
+  return box;
+}
+
 export function renderToday(root, props) {
   const { handlers, loading, route } = props;
   root.textContent = '';
@@ -217,6 +243,8 @@ export function renderToday(root, props) {
   if (level) root.append(level);
   const dates = datesBlock(model);
   if (dates) root.append(dates);
+  const applications = applicationsBlock(model);
+  if (applications) root.append(applications);
   const more = el('button', 'button button-quiet', 'Открыть весь путь');
   more.type = 'button';
   more.addEventListener('click', handlers.onOpenRoute);

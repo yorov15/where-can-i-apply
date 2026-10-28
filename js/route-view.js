@@ -8,10 +8,11 @@
 // Разделы справочника — раскрывающиеся: иначе экран превращается в стену
 // текста, и «что делать» теряется среди «что вообще бывает».
 import { reasonText } from './wording.js';
-import { formatDate, plural } from './lib/format.js';
+import { formatDate, plural, splitTitle } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
 import { renderStudyPlan } from './study-view.js';
 import { renderEssays } from './essay-view.js';
+import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine } from './goal-status.js';
 
 const PHASES = [
   ['tests', 'Экзамены'],
@@ -71,20 +72,6 @@ function deadlineLine(goal) {
   return `${soon}Срок подачи — ${formatDate(deadline.closes)}${expected}${left}.`;
 }
 
-// Заголовки условий бывают абзацем: в шаге показываем первую фразу, полный
-// текст — под раскрытием. Ничего не выкидываем: текст условия остаётся.
-const SHORT_TITLE = 110;
-
-function splitTitle(title) {
-  const text = String(title ?? '').trim();
-  if (text.length <= SHORT_TITLE) return { short: text, rest: '' };
-  const cut = text.slice(0, SHORT_TITLE);
-  const stop = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('; '), cut.lastIndexOf(', '));
-  const at = stop > 40 ? stop + 1 : cut.lastIndexOf(' ');
-  const short = text.slice(0, at > 0 ? at : SHORT_TITLE).trim();
-  return { short: short.endsWith('.') || short.endsWith('…') ? short : `${short}…`, rest: text };
-}
-
 const clip = (text, max) => {
   const value = String(text ?? '').trim();
   return value.length <= max ? value : `${value.slice(0, max - 1).trimEnd()}…`;
@@ -120,6 +107,25 @@ function gapBlock(route) {
   }
   box.append(list);
   for (const note of route.gapNotes ?? []) box.append(el('p', 'route-detail', note));
+  return box;
+}
+
+// Статус заявки по цели и одна строка «что осталось». Статус выбирает человек:
+// ничего не отмечается само, потому что подачу на сайте вуза мы не видим.
+function statusRow(goal, route, routeState, handlers) {
+  const entry = statusOf(routeState, goal.id);
+  const box = el('div', 'route-goal-status');
+  const select = el('select');
+  select.setAttribute('aria-label', `Статус заявки: ${goal.name}`);
+  for (const [code, text] of GOAL_STATUSES) {
+    const option = el('option', null, text);
+    option.value = code;
+    select.append(option);
+  }
+  select.value = entry.status;
+  select.addEventListener('change', () => handlers.onGoalStatus(goal.id, select.value));
+  box.append(el('span', 'route-detail', 'Статус заявки'), select);
+  box.append(el('p', 'route-goal-meta', progressLine(goalProgress(route, goal.id), entry)));
   return box;
 }
 
@@ -439,7 +445,10 @@ export function renderRoute(root, props) {
     remove.type = 'button';
     remove.setAttribute('aria-label', `Убрать ${goal.name} из целей`);
     remove.addEventListener('click', () => handlers.onRemoveGoal(goal.id));
-    item.append(open, remove, el('p', 'route-goal-meta', deadlineLine(goal)));
+    const sent = isSent(statusOf(props.routeState, goal.id).status);
+    item.append(open, remove);
+    if (!sent) item.append(el('p', 'route-goal-meta', deadlineLine(goal)));
+    item.append(statusRow(goal, route, props.routeState, handlers));
     const more = el('details', 'route-more');
     more.append(el('summary', null, 'Что покрывает и что учесть'));
     more.append(el('p', 'route-goal-meta', coverageLine(goal.coverage)));

@@ -9,7 +9,7 @@ import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocum
 import { renderResults } from './render.js';
 import { PLAN_KEY, DONE_KEY, buildEventsIcs } from './plan.js';
 import { scheduleRoute, routeCalendarEvents } from './agenda.js';
-import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask } from './route-state.js';
+import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask, setGoalStatus } from './route-state.js';
 import { examPlan } from './exam-plan.js';
 import { buildStudyPlan } from './study-plan.js';
 import { prepareCurrentWeek,reviewWeeks,setTaskDay,studyCalendarEvents } from './weekly.js';
@@ -99,7 +99,7 @@ function renderProgramView() {
   renderProgram(programBody, {
     row: program ? programRow(program, readForm(form), today) : null,
     loading: details.status === 'loading' && !programs.length,
-    details, plan, today,
+    details, plan, route, routeState, today,
     handlers: {
       // Зашёл по прямой ссылке — назад в истории ведёт с сайта, поэтому на список.
       onBack: () => (leftFirstPage ? history.back() : openAnswer()),
@@ -386,6 +386,13 @@ function renderRouteView() {
       },
       onChooseGoals() { openAnswer(); },
       onRemoveGoal(id) { plan.toggle(id); },
+      onGoalStatus(id, status) {
+        routeState = setGoalStatus(routeState, id, status, today);
+        persistRoute();
+        rebuildRoute();
+        renderRouteView();
+        activeBody().querySelector(`[data-goal="${CSS.escape(id)}"] select`)?.focus();
+      },
       onToggle(stepId) {
         const aliases = route?.steps.find(step => step.id === stepId)?.legacyIds ?? [];
         routeState = toggleStep(routeState, stepId, today, aliases);

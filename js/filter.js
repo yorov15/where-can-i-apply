@@ -28,10 +28,14 @@ export const countryName = (code) => COUNTRY_RU[code] ?? code;
 // NFD отделяет значки от букв, и они отбрасываются с обеих сторон.
 export const norm = (text) => text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().trim();
 
-export function matchesFilter(item, { query, bucket, country, kind }) {
+// Только явный список принимаемых экзаменов: упоминание в тексте может быть запретом.
+export const acceptsDuolingo = program => (program.eligibility?.language?.anyOf ?? []).some(option => option.test === 'DUOLINGO');
+
+export function matchesFilter(item, { query, bucket, country, kind, duolingo }) {
   if (bucket === 'plan' ? !item.plan : bucket !== 'all' && item.bucket !== bucket) return false;
   if (country && item.country !== country) return false;
   if (kind && item.kind !== kind) return false;
+  if (duolingo && item.duolingo !== true) return false;
   const words = norm(query).split(/\s+/).filter(Boolean);
   if (!words.length) return true;
   // Тип показан в карточке словами, поэтому его можно и набрать.
@@ -46,7 +50,8 @@ export const PAGE = 12;
 
 export const pageLimit = (limit, filtered) => (filtered ? Infinity : limit);
 
-export function bucketCounts(items) {
+export function bucketCounts(items, filters) {
+  if (filters) items = items.filter(item => matchesFilter(item, { ...filters, bucket: 'all' }));
   const counts = { all: items.length, plan: 0, yes: 0, likely: 0, check: 0, no: 0 };
   for (const item of items) {
     counts[item.bucket] += 1;
@@ -57,7 +62,7 @@ export function bucketCounts(items) {
 
 // ——— DOM ———
 
-const state = { query: '', bucket: 'all', country: '', kind: '' };
+const state = { query: '', bucket: 'all', country: '', kind: '', duolingo: false };
 let ui = null;
 // Сколько карточек открыто в каждой группе (по классу группы). Хранится вне
 // перерисовки: renderResults пересобирает список на каждое нажатие в анкете.
@@ -70,6 +75,7 @@ const itemOf = (card) => ({
   bucket: card.dataset.bucket ?? '',
   kind: card.dataset.kind ?? '',
   plan: card.dataset.plan === '1',
+  duolingo: card.dataset.duolingo === '1',
 });
 
 function apply() {
@@ -79,7 +85,7 @@ function apply() {
 
   // Счётчик у каждой кнопки — сколько станет, если её нажать: с учётом
   // поиска и страны, но без выбранного вердикта.
-  const counts = bucketCounts(items.filter((item) => matchesFilter(item, { ...state, bucket: 'all' })));
+  const counts = bucketCounts(items, state);
   for (const chip of ui.chips) {
     chip.setAttribute('aria-pressed', String(chip.dataset.bucket === state.bucket));
     const count = counts[chip.dataset.bucket] ?? 0;
@@ -96,8 +102,8 @@ function apply() {
     if (option.value) option.textContent = `${KIND_FILTER[option.value]} (${byKind.filter((item) => item.kind === option.value).length})`;
   }
 
-  const active = state.query.trim() !== '' || state.bucket !== 'all' || state.country !== '' || state.kind !== '';
-  const searching = state.query.trim() !== '' || state.country !== '' || state.kind !== '';
+  const searching = state.query.trim() !== '' || state.country !== '' || state.kind !== '' || state.duolingo;
+  const active = searching || state.bucket !== 'all';
 
   let shown = 0;
   cards.forEach((card, i) => {
@@ -147,10 +153,12 @@ export function resetFilter() {
   state.bucket = 'all';
   state.country = '';
   state.kind = '';
+  state.duolingo = false;
   if (ui) {
     ui.search.value = '';
     ui.country.value = '';
     ui.kind.value = '';
+    ui.duolingo.checked = false;
   }
   apply();
 }
@@ -226,12 +234,14 @@ export function setupCatalogFilter({ root, resultsNode }) {
     chips: [...root.querySelectorAll('.chip')],
     country: root.querySelector('#catalog-country'),
     kind: root.querySelector('#catalog-kind'),
+    duolingo: root.querySelector('#catalog-duolingo'),
     status: root.querySelector('#catalog-status'),
     reset: root.querySelector('#catalog-reset'),
   };
   ui.search.addEventListener('input', () => { state.query = ui.search.value; apply(); });
   ui.country.addEventListener('change', () => { state.country = ui.country.value; apply(); });
   ui.kind.addEventListener('change', () => { state.kind = ui.kind.value; apply(); });
+  ui.duolingo.addEventListener('change', () => { state.duolingo = ui.duolingo.checked; apply(); });
   for (const chip of ui.chips) chip.addEventListener('click', () => { state.bucket = chip.dataset.bucket; apply(); });
   ui.reset.addEventListener('click', resetFilter);
   return {

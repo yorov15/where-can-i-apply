@@ -6,6 +6,29 @@ const today = '2026-10-27';
 const goal = (id, closes, extra = {}) => ({ id, name: `${id} — программа`, deadline: { closes, state: 'open', confidence: 'confirmed', ...extra } });
 const task = (taskId, done, extra = {}) => ({ taskId, title: `Дело ${taskId}`, minutes: 45, done, day: null, url: null, ...extra });
 
+test('submitted and answered goals disappear from countdown and application dates', () => {
+  const route = { goals: [goal('sent', '2027-01-01'), goal('answered', '2027-01-02'), goal('next', '2027-01-14')] };
+  const routeState = { statuses: { sent: { status: 'submitted', since: today }, answered: { status: 'answered', since: today } } };
+  const model = todayModel({ route, routeState, today });
+  assert.equal(model.nearest.id, 'next');
+  assert.deepEqual(model.dates.map(item => item.date), ['2027-01-14']);
+  assert.equal(model.applications.length, 3);
+  assert.equal(model.applications[0].status, 'submitted');
+  assert.match(model.applications[0].line, /Заявка подана/);
+  assert.equal(todayModel({ route, today }).nearest.id, 'sent');
+  assert.deepEqual(todayModel({ route, today }).applications, []);
+});
+
+test('preparing still counts toward deadlines and shows applications even without dates', () => {
+  const route = { goals: [goal('a', '2027-01-14')], steps: [{ id: 'doc', programIds: ['a'], title: 'Паспорт', done: false }] };
+  const model = todayModel({ route, routeState: { statuses: { a: { status: 'preparing', since: today } } }, today });
+  assert.equal(model.nearest.id, 'a');
+  assert.match(model.applications[0].line, /не хватает: Паспорт/);
+  const sent = todayModel({ route, routeState: { statuses: { a: { status: 'submitted', since: today } } }, today });
+  assert.equal(sent.nearest, null);
+  assert.deepEqual(sent.dates, []);
+});
+
 test('ближайший срок — самый ранний из открытых, закрытые не считаются', () => {
   const model = todayModel({
     route: { goals: [goal('b', '2027-01-23'), goal('a', '2027-01-14'), goal('old', '2026-09-01', { state: 'closed' })] },
