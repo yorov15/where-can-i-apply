@@ -77,7 +77,7 @@
 
 ### kaist
 
-- Сам вуз: [KAIST Apply Online](https://admission.kaist.ac.kr/intl-undergraduate/application/apply). 
+- Сам вуз: [KAIST Apply Online](https://admission.kaist.ac.kr/intl-undergraduate/application/apply).
   - Цитата: Apply Online
   - [Источник](https://admission.kaist.ac.kr/intl-undergraduate/before/sub02), проверено 2026-10-28; `sha256:7a895c95ed0c0fc24b33d53f817e6d7051b9c8501727f672f26e080365852f94`.
   - Снимок: `raw/apply-channels/2026-10-28/kaist-ffb8182ec634.txt`.
@@ -98,7 +98,7 @@
 
 ### hkust
 
-- Сам вуз: [HKUST Online Application](https://join.hkust.edu.hk/apply/). 
+- Сам вуз: [HKUST Online Application](https://join.hkust.edu.hk/apply/).
   - Цитата: submit their applications directly to the University via the online application system
   - [Источник](https://join.hkust.edu.hk/admissions/international-qualifications?general_requirement=46180), проверено 2026-10-28; `sha256:0e48d53ff70175ade12fef5c3428f413d192b1586b3c22d51decad3bee0983ed`.
   - Снимок: `raw/apply-channels/2026-10-28/hkust-94bb0cbf7a01.txt`.
@@ -253,7 +253,7 @@
 
 ### constructor-university
 
-- Сам вуз: [Constructor Application Portal](https://apply.constructor.university/). 
+- Сам вуз: [Constructor Application Portal](https://apply.constructor.university/).
   - Цитата: Application portal
   - [Источник](https://constructor.university/admission-aid/application-information-undergraduate), проверено 2026-10-28; `sha256:46073cf5446409e539713ea952362f8c40e331cd47a09e77665498d5fa8d2140`.
   - Снимок: `raw/apply-channels/2026-10-28/constructor-university-27ef22cda6e2.txt`.
@@ -281,7 +281,7 @@
 
 ### aus-uae
 
-- Сам вуз: [AUS Online Application](https://aus.elluciancrmrecruit.com/Apply/Account/Login?ReturnUrl=%2fApply). 
+- Сам вуз: [AUS Online Application](https://aus.elluciancrmrecruit.com/Apply/Account/Login?ReturnUrl=%2fApply).
   - Цитата: Applicants are required to submit an online application on apply.aus.edu
   - [Источник](https://www.aus.edu/admissions/bachelors-degrees/application-requirements), проверено 2026-10-28; `sha256:0e7bae8b2bd1e0be3304d86063e087f519bfb388f060dc3493e2880eee978d8a`.
   - Снимок: `raw/apply-channels/2026-10-28/aus-uae-e04e95482dd4.txt`.
