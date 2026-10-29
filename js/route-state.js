@@ -21,7 +21,8 @@ const weeklyTask = task => ({ taskId:task.taskId, ...(day(task.day)?{day:task.da
   ...(day(task.completedAt)?{completedAt:task.completedAt}:{}),
   ...(typeof task.title==='string'?{title:task.title.slice(0,200)}:{}),
   ...(Number.isInteger(task.minutes)&&task.minutes>=0&&task.minutes<=600?{minutes:task.minutes}:{}),
-  ...Object.fromEntries(['kind','code','routeId','url'].filter(key=>typeof task[key]==='string'&&task[key].length<=2000).map(key=>[key,task[key]])) });
+  ...(Number.isInteger(task.workMinutes)&&task.workMinutes>=15&&task.workMinutes<=120?{workMinutes:task.workMinutes}:{}),
+  ...Object.fromEntries(['kind','code','routeId','url','experienceId','workStepId','expected'].filter(key=>typeof task[key]==='string'&&task[key].length<=2000).map(key=>[key,task[key]])) });
 
 function normalize(value) {
   if (!object(value)) return null;
@@ -130,6 +131,7 @@ export function toggleStep(state, stepId, today = new Date().toISOString().slice
 export function clearProgress(state) {
   const next = copy(state);
   next.done = {};
+  for(const entry of next.portfolio?.experiences??[])for(const step of entry.workPlan?.steps??[]){step.done=false;delete step.completedOn;}
   for (const tasks of Object.values(next.weekPlan)) for (const task of tasks) task.done = false;
   return next;
 }

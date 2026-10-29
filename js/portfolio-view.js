@@ -1,11 +1,12 @@
 import { EXPERIENCE_KINDS, portfolioOf } from './portfolio.js';
 import { safeHttpUrl } from './lib/url.js';
 import { formatDate } from './lib/format.js';
+import { renderWorkPicker, renderWorkPlan, clearWorkDrafts } from './portfolio-work-view.js';
 
 // Несохранённый ввод переживает служебную перерисовку, но не перезагрузку.
 const drafts = new Map();
 const openSections = new Set();
-export function clearPortfolioDrafts() { drafts.clear(); openSections.clear(); }
+export function clearPortfolioDrafts() { drafts.clear(); openSections.clear(); clearWorkDrafts(); }
 const el = (tag,cls,text) => { const node=document.createElement(tag); if(cls)node.className=cls; if(text!=null)node.textContent=text; return node; };
 const button = (text,run) => { const node=el('button','button button-quiet',text); node.type='button'; node.addEventListener('click',run); return node; };
 const status = () => { const node=el('p','route-status'); node.setAttribute('role','status'); return node; };
@@ -97,6 +98,7 @@ export function renderPortfolio(props) {
     const portfolio=portfolioOf(props.handlers.getRouteState());
     box.append(el('h3',null,'Мой опыт и работы'),el('p','route-detail','Сохраняй проекты, занятия, работу и помощь семье. Сертификат или публичная ссылка не обязательны.'));
     const saved=(id,text)=>{expanded=id;openSections.delete('add');openSections.delete(`editor:${id}`);draw(text);box.querySelector(`[data-experience="${CSS.escape(id)}"] > summary`)?.focus();};
+    box.append(renderWorkPicker(props,saved));
     for(const entry of portfolio.experiences){
       const card=el('details','route-more');card.dataset.experience=entry.id;
       rememberOpen(card,`entry:${entry.id}`,expanded===entry.id||drafts.has(`experience:${entry.id}`));
@@ -104,6 +106,7 @@ export function renderPortfolio(props) {
       card.append(el('p','route-goal-meta',[EXPERIENCE_KINDS.find(([id])=>id===entry.kind)?.[1],entry.period].filter(Boolean).join(' · ')));
       for(const [name,title] of [['role','Личный вклад'],['actions','Действия'],['result','Результат'],['reflection','Вывод']])paragraph(card,title,entry[name]);
       showLink(card,entry.url);
+      const work=renderWorkPlan(entry,props,saved);if(work)card.append(work);
       for(const goal of entry.goals)paragraph(card,`Для ${nameOf(props.programs,goal.goalId)}`,goal.why||'Объяснение пока не добавлено');
       const linked=portfolio.outcomes.filter(item=>item.experienceId===entry.id);
       for(const item of linked)paragraph(card,`Задание «${item.title}» · ${formatDate(item.updatedOn)}`,item.text);
@@ -155,7 +158,10 @@ export function renderTaskOutcome(week,task,props) {
   field(form,'Что получилось?','text',value.text,{required:true});
   field(form,'Ссылка на результат · необязательно','url',value.url,{type:'url'});
   field(form,'Что понял или доработаешь?','reflection',value.reflection,{rows:2});
-  selectField(form,'Связать с моим опытом · необязательно','experienceId',[['','Без связи'],...portfolio.experiences.map(item=>[item.id,item.title])],value.experienceId);
+  if(task.kind==='portfolio'){
+    form.append(el('p','route-detail',`Связанная работа: ${portfolio.experiences.find(item=>item.id===task.experienceId)?.title??'запись не найдена'}`));
+    const binding=el('input');binding.type='hidden';binding.name='experienceId';binding.value=task.experienceId;form.append(binding);
+  }else selectField(form,'Связать с моим опытом · необязательно','experienceId',[['','Без связи'],...portfolio.experiences.map(item=>[item.id,item.title])],value.experienceId);
   const say=status(),save=el('button','button button-quiet','Сохранить результат');save.type='submit';form.append(save,say);
   form.addEventListener('input',()=>drafts.set(draftKey,readFields(form)));
   form.addEventListener('change',()=>drafts.set(draftKey,readFields(form)));

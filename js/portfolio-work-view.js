@@ -1,0 +1,91 @@
+import { WORK_TEMPLATES, WORK_REVIEW_FIELDS } from './portfolio-work.js';
+import { formatDate } from './lib/format.js';
+
+const drafts=new Map(),opened=new Set();
+export function clearWorkDrafts(){drafts.clear();opened.clear();}
+const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!=null)node.textContent=text;return node;};
+const say=()=>{const node=el('p','route-status');node.setAttribute('role','status');return node;};
+const button=(title,run)=>{const node=el('button','button button-quiet',title);node.type='button';node.addEventListener('click',run);return node;};
+const read=form=>Object.fromEntries(new FormData(form));
+function details(key,title){
+  const node=el('details','route-more');node.open=opened.has(key)||drafts.has(key);node.append(el('summary',null,title));
+  node.addEventListener('toggle',()=>{if(node.isConnected){if(node.open)opened.add(key);else opened.delete(key);}});return node;
+}
+function field(parent,title,name,value,{required=false,short=false,max=1000}={}){
+  const label=el('label',null,title),node=el(short?'input':'textarea');node.name=name;node.value=value??'';node.required=required;node.maxLength=max;
+  if(short)node.type='text';else node.rows=3;label.append(node);parent.append(label);return node;
+}
+function options(parent,title,name,choices,value){
+  const label=el('label',null,title),node=el('select');node.name=name;
+  for(const [id,text] of choices){const option=el('option',null,text);option.value=id;node.append(option);}node.value=value??'';label.append(node);parent.append(label);return node;
+}
+const timeOptions=[[15,'15 минут'],[30,'30 минут'],[45,'45 минут'],[60,'60 минут'],[90,'90 минут'],[120,'120 минут']];
+function bindForm(form,key,submit,done){
+  const status=say();form.append(status);
+  const remember=()=>drafts.set(key,read(form));form.addEventListener('input',remember);form.addEventListener('change',remember);
+  form.addEventListener('submit',event=>{event.preventDefault();const response=submit(read(form));status.textContent=response.message;
+    if(response.ok){drafts.delete(key);opened.delete(key);done(response);}});
+}
+
+export function renderWorkPicker(props,onSaved){
+  const key='new-work',box=details(key,'Выбрать работу для развития опыта');box.dataset.workPicker='';
+  box.append(el('p','route-detail','Выбери интересную и посильную работу. Это учебные предложения Nerio; условия конкретной программы проверяй отдельно.'));
+  const value=drafts.get(key)??{templateId:'data',sessionMinutes:'60'},form=el('form');
+  const template=options(form,'Что хочешь попробовать?','templateId',WORK_TEMPLATES.map(item=>[item.id,item.name]),value.templateId);
+  const info=el('div');form.append(info);
+  field(form,'Какую задачу выбираешь?','title',value.title,{required:true,short:true,max:160});
+  field(form,'Почему тебе это интересно?','aim',value.aim,{required:true});
+  const expected=field(form,'Какой результат хочешь получить?','expectedResult',value.expectedResult??WORK_TEMPLATES.find(item=>item.id===value.templateId)?.output,{required:true});
+  const explain=()=>{const item=WORK_TEMPLATES.find(item=>item.id===template.value);info.replaceChildren(el('p','route-detail',item.description),el('p','route-detail',item.smaller));};
+  explain();template.addEventListener('change',()=>{explain();expected.value=WORK_TEMPLATES.find(item=>item.id===template.value).output;});
+  options(form,'Выделить на следующий шаг · не больше','sessionMinutes',timeOptions,value.sessionMinutes);
+  form.append(el('p','route-detail','Это часть твоих часов на неделю. План может выделить меньше времени; завершать весь шаг за одну сессию не обязательно.'));
+  const goals=props.handlers.getRouteState().goals;
+  const goalName=id=>{const name=props.programs.find(item=>item.id===id)?.name;return typeof name==='string'?name:name?.ru??id;};
+  options(form,'Для какой цели? · необязательно','goalId',[['','Пока без цели'],...goals.map(id=>[id,goalName(id)])],value.goalId);
+  field(form,'Чем работа полезна для этой цели? · если выбрал цель','why',value.why);
+  const start=el('button','button','Начать работу');start.type='submit';form.append(start);
+  bindForm(form,key,data=>props.handlers.onStartPortfolioWork({...data,id:crypto.randomUUID(),sessionMinutes:Number(data.sessionMinutes),goals:data.goalId?[{goalId:data.goalId,why:data.why}]:[]}),response=>onSaved(response.id,response.message));
+  box.append(form);return box;
+}
+
+export function renderWorkPlan(entry,props,onSaved){
+  const plan=entry.workPlan;if(!plan)return null;
+  const box=el('section');box.dataset.workPlan=entry.id;
+  const status=say(),done=plan.steps.filter(step=>step.done).length;
+  box.append(el('p','route-detail',plan.paused?'Работа на паузе':`Шаги работы: ${done} из ${plan.steps.length}`));
+  box.append(el('p','route-goal-meta',`Интерес: ${plan.aim}`),el('p','route-goal-meta',`Хочу получить: ${plan.expectedResult}`));
+  const change=(response)=>{if(response.ok)onSaved(entry.id,response.message);else status.textContent=response.message;};
+  box.append(button(plan.paused?'Продолжить работу':'Поставить на паузу',()=>change(props.handlers.onPausePortfolioWork(entry.id,!plan.paused))));
+  const next=plan.steps.find(step=>!step.done);
+  for(const [index,step] of plan.steps.entries()){
+    const row=details(`work-step:${entry.id}:${step.id}`,`${index+1}. ${step.title}${step.done?' · готово':''}`);row.dataset.workStep=step.id;
+    row.append(el('p','route-detail',`Результат шага: ${step.expected}`));
+    if(step.done){
+      row.append(el('p','route-detail','Возврат к этому шагу снимет отметки с него и следующих шагов. Записанные результаты останутся.'));
+      row.append(button('Вернуться к этому шагу',()=>change(props.handlers.onPortfolioWorkStep(entry.id,step.id))));
+    }else if(next.id===step.id&&!plan.paused){
+      row.append(button('Открыть дела недели',props.handlers.onOpenToday));
+      row.append(button('Отметить шаг готовым',()=>change(props.handlers.onPortfolioWorkStep(entry.id,step.id))));
+      row.append(el('p','route-detail','Сначала сохрани результат задания на «Сегодня». Отметка означает, что ты сам считаешь шаг законченным.'));
+    }
+    box.append(row);
+  }
+  if(done===plan.steps.length)box.append(el('p','route-detail','Шаги закончены. Запиши выводы и выбери, как использовать работу для своей цели.'));
+  const briefKey=`brief:${entry.id}`,brief=details(briefKey,'Уточнить задачу и объём'),briefForm=el('form');
+  const value=drafts.get(briefKey)??plan;
+  field(briefForm,'Почему тебе это интересно?','aim',value.aim,{required:true});
+  field(briefForm,'Какой результат хочешь получить?','expectedResult',value.expectedResult,{required:true});
+  options(briefForm,'Выделить на следующий шаг · не больше','sessionMinutes',timeOptions,value.sessionMinutes);
+  const save=el('button','button button-quiet','Сохранить задачу');save.type='submit';briefForm.append(save);
+  bindForm(briefForm,briefKey,data=>props.handlers.onSavePortfolioBrief(entry.id,{...data,sessionMinutes:Number(data.sessionMinutes)}),response=>onSaved(entry.id,response.message));
+  brief.append(briefForm);box.append(brief);
+  const reviewKey=`review:${entry.id}`,review=details(reviewKey,'Самопроверка работы'),reviewForm=el('form');
+  const reflection=drafts.get(reviewKey)??plan.review??{};
+  review.append(el('p','route-detail','Ответь по своей работе. Можно написать «пока не знаю» или «не применимо» и выбрать, что проверить дальше.'));
+  if(plan.review)review.append(el('p','route-detail',`Сохранено ${formatDate(plan.review.checkedOn)}`));
+  for(const [name,title] of WORK_REVIEW_FIELDS)field(reviewForm,title,name,reflection[name]);
+  const check=el('button','button button-quiet','Сохранить самопроверку');check.type='submit';reviewForm.append(check);
+  bindForm(reviewForm,reviewKey,data=>props.handlers.onSavePortfolioReview(entry.id,data),response=>onSaved(entry.id,response.message));
+  review.append(reviewForm);box.append(review,status);return box;
+}

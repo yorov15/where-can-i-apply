@@ -20,7 +20,8 @@ import { renderRoute } from './route-view.js';
 import { EXPLAIN_URL } from './config.js';
 import { renderToday } from './today-view.js';
 import { renderProgram, programRow } from './program-view.js';
-import { saveExperience, removeExperience, saveTaskOutcome, removeTaskOutcome } from './portfolio.js';
+import { saveExperience, removeExperience, saveTaskOutcome, removeTaskOutcome, startPortfolioWork, setPortfolioWorkPaused,
+  togglePortfolioWorkStep, savePortfolioBrief, savePortfolioReview } from './portfolio.js';
 import { clearPortfolioDrafts } from './portfolio-view.js';
 
 const form = document.getElementById('profile');
@@ -249,6 +250,12 @@ function persistPortfolio(next, message) {
   return {ok:true,message};
 }
 
+function persistWork(next,message) {
+  const response=persistPortfolio(next,message);
+  if(response.ok)rebuildRoute();
+  return response;
+}
+
 function preparedEntry(id) {
   return routeData?.prepared?.find((entry) => entry.id === id) ?? null;
 }
@@ -271,6 +278,7 @@ async function refreshRoute() {
   if (!routeData) {
     route = null;
     routeCtx = null;
+    rebuildRoute();
     return;
   }
   const ticket = ++routeRequest;
@@ -279,6 +287,7 @@ async function refreshRoute() {
   if (!selected.length) {
     route = null;
     routeCtx = null;
+    rebuildRoute();
     return;
   }
   const codes = [...new Set(selected.flatMap(program => preparedEntry(program.id)?.tests ?? []))];
@@ -310,6 +319,8 @@ async function refreshRoute() {
 function rebuildRoute() {
   if (!routeCtx) {
     route = null;
+    weeklySnapshot=prepareCurrentWeek(routeState,{steps:[],week:[]},null,today);
+    if(exportState(routeState)!==exportState(weeklySnapshot.state)){routeState=weeklySnapshot.state;persistRoute();}
     return;
   }
   if (!routeState.studyStarted) { routeState = { ...routeState, studyStarted: today }; persistRoute(); }
@@ -364,6 +375,18 @@ function renderRouteView() {
       onRemoveExperience(id) { return persistPortfolio(removeExperience(routeState,id),'Опыт удалён. Результаты заданий сохранены.'); },
       onSaveTaskOutcome(input) { return persistPortfolio(saveTaskOutcome(routeState,input,today),'Результат сохранён в «Моём пути».'); },
       onRemoveTaskOutcome(week,taskId) { return persistPortfolio(removeTaskOutcome(routeState,week,taskId),'Результат удалён. Галочка задания не изменилась.'); },
+      onStartPortfolioWork(input) {
+        const response=persistWork(startPortfolioWork(routeState,input,today),'Работа добавлена. Следующий шаг — на «Сегодня», если есть место в плане.');
+        return {...response,id:input.id};
+      },
+      onPausePortfolioWork(id,paused) { return persistWork(setPortfolioWorkPaused(routeState,id,paused,today),paused?'Работа на паузе. Записанные результаты сохранены.':'Работа продолжена. Проверь дела недели.'); },
+      onPortfolioWorkStep(id,stepId) {
+        const next=togglePortfolioWorkStep(routeState,id,stepId,today);
+        if(!next)return {ok:false,message:'Сначала сохрани результат этого шага на «Сегодня». Предыдущие шаги должны быть закончены, работа — снята с паузы.'};
+        return persistWork(next,'Отметки шагов обновлены. Результаты сохранены.');
+      },
+      onSavePortfolioBrief(id,input) { return persistWork(savePortfolioBrief(routeState,id,input,today),'Задача и время обновлены.'); },
+      onSavePortfolioReview(id,input) { return persistWork(savePortfolioReview(routeState,id,input,today),'Самопроверка сохранена.'); },
       getExamPlan: examForStep,
       onStudyToggle(week, taskId) {
         routeState=toggleStudyTask(routeState,week,taskId,today);persistRoute();rebuildRoute();renderRouteView();
@@ -373,6 +396,22 @@ function renderRouteView() {
       },
       onWeeklyToggle(week,taskId) {
         const task=routeState.weekPlan[week]?.find(item=>item.taskId===taskId);
+        if(!task)return;
+        if(task.kind==='portfolio'){
+          const next=togglePortfolioWorkStep(routeState,task.experienceId,task.workStepId,today);
+          if(!next){
+            renderRouteView();
+            const box=activeBody().querySelector(`[data-task-outcome="${CSS.escape(taskId)}"]`);
+            if(box){box.open=true;box.querySelector('[role="status"]').textContent='Сначала запиши и сохрани результат этого шага.';box.querySelector('textarea')?.focus();}
+            return;
+          }
+          const response=persistPortfolio(next,'Шаг обновлён.');
+          if(!response.ok){
+            const box=activeBody().querySelector(`[data-task-outcome="${CSS.escape(taskId)}"]`);
+            if(box){box.open=true;box.querySelector('[role="status"]').textContent=response.message;}
+            return;
+          }
+        }
         routeState=toggleStudyTask(routeState,week,taskId,today);
         const wanted=routeState.weekPlan[week].find(item=>item.taskId===taskId).done;
         if(wanted)routeState.carryTasks=routeState.carryTasks.filter(item=>item.taskId!==taskId);

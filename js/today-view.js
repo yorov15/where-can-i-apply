@@ -111,7 +111,14 @@ function openLink(url, label) {
   return node;
 }
 
-function nowCard(model, handlers) {
+function taskLabel(task,state) {
+  const entry=state?.portfolio?.experiences.find(item=>item.id===task.experienceId);
+  const step=entry?.workPlan?.steps.find(item=>item.id===task.workStepId);
+  return {title:step?.title??task.title,context:step?entry.title:null};
+}
+
+function nowCard(model, props) {
+  const {handlers,routeState}=props;
   const { next, week } = model;
   const card = el('section', 'today-now');
   if (!next) {
@@ -120,7 +127,10 @@ function nowCard(model, handlers) {
     return card;
   }
   card.append(el('p', 'route-detail', `Сейчас · ${next.minutes} мин`));
-  card.append(el('h3', 'today-now-title', next.title));
+  const label=taskLabel(next,routeState);
+  card.append(el('h3', 'today-now-title', label.title));
+  if(label.context)card.append(el('p','route-detail',`Работа: ${label.context}`));
+  if(next.expected)card.append(el('p','route-detail',`Результат шага: ${next.expected}`));
   const row = el('div', 'today-actions');
   const open = openLink(next.url, 'Открыть материал');
   if (open) row.append(open);
@@ -149,15 +159,20 @@ function weekList(model, props) {
     check.id = `today-${task.taskId}`;
     check.addEventListener('change', () => handlers.onWeeklyToggle(week.key, task.taskId));
     const body = el('div', 'route-step-body');
-    const label = el('label', 'route-step-title', `${task.title} · ${task.minutes} мин`);
+    const display=taskLabel(task,props.routeState);
+    const label = el('label', 'route-step-title', `${display.title} · ${task.minutes>0?`${task.minutes} мин`:'время не указано'}`);
     label.htmlFor = check.id;
     body.append(label, dayPicker(week, task, handlers));
+    if(display.context)body.append(el('p','route-detail',`Работа: ${display.context}`));
+    if(task.expected)body.append(el('p','route-detail',`Результат шага: ${task.expected}`));
     body.append(renderTaskOutcome(week.key, task, props));
     layout.append(check, body);
     row.append(layout);
     list.append(row);
   }
-  box.append(list, el('p', 'route-detail', 'Минуты — время, которое ты выбрал на подготовку. Это не обещание роста балла.'));
+  box.append(list, el('p', 'route-detail', 'Минуты — время, отведённое в твоём плане недели.'));
+  if(week.minutes<week.budget)box.append(el('p','route-detail',`В плане ${week.minutes} из ${week.budget} доступных минут. Следующий шаг работы появится после завершения текущего, если останется время и место в плане.`));
+  if(week.minutes>week.budget)box.append(el('p','route-detail',`У отмеченных дел запланировано ${week.minutes} минут — больше нынешнего бюджета ${week.budget} минут. Новые сессии пока не добавлены.`));
   return box;
 }
 
@@ -220,13 +235,14 @@ export function renderToday(root, props) {
     root.append(el('p', 'route-detail', 'Собираю план…'));
     return;
   }
-  if (!route) {
+  if (!route && !props.weekly?.week.tasks.length) {
     const box = el('div', 'route-empty');
-    box.append(el('p', null, 'Пока нет целей. Выбери программы, и здесь появится, что делать сегодня.'));
+    box.append(el('p', null, 'Пока нет дел на неделю. Выбери программы или начни работу в «Моём пути».'));
     const choose = el('button', 'button', 'Выбрать программы');
     choose.type = 'button';
     choose.addEventListener('click', handlers.onChooseGoals);
     box.append(choose);
+    const path=el('button','button button-quiet','Открыть мой путь');path.type='button';path.addEventListener('click',handlers.onOpenRoute);box.append(path);
     root.append(box);
     return;
   }
@@ -240,8 +256,9 @@ export function renderToday(root, props) {
   root.append(head);
   const review = props.weekly ? renderWeekReview(props.weekly.review, handlers) : null;
   if (review) root.append(review);
-  if (model.week) root.append(nowCard(model, handlers));
+  if (model.week) root.append(nowCard(model, props));
   if (model.week?.tasks.length) root.append(weekList(model, props));
+  if(props.weekly?.workBacklog)root.append(el('p','route-detail',`Шагов работ вне плана недели: ${props.weekly.workBacklog}. Проверь доступное время и выбранные дни; лишние работы можно поставить на паузу в «Моём пути».`));
   const level = levelBlock(model);
   if (level) root.append(level);
   const dates = datesBlock(model);
