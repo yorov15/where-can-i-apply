@@ -7,6 +7,8 @@ import { safeHttpUrl } from './lib/url.js';
 import { renderWeekReview } from './weekly-view.js';
 import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine } from './goal-status.js';
 import { renderTaskOutcome } from './portfolio-view.js';
+import { applicationActions } from './application.js';
+import { renderOfferActions } from './application-view.js';
 
 const DAYS = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 const shift = (day, n) => new Date(Date.parse(`${day}T00:00:00Z`) + n * 86400000).toISOString().slice(0, 10);
@@ -71,6 +73,7 @@ export function todayModel({ route, routeState, weekly, study, today }) {
   });
 
   return {
+    offerActions:applicationActions(routeState,today),
     nearest,
     daysToNearest: nearest ? daysBetween(today, nearest.deadline.closes) : null,
     week, tasks, next, doneCount,
@@ -235,7 +238,8 @@ export function renderToday(root, props) {
     root.append(el('p', 'route-detail', 'Собираю план…'));
     return;
   }
-  if (!route && !props.weekly?.week.tasks.length) {
+  const model = todayModel(props);
+  if (!route && !props.weekly?.week.tasks.length && !model.offerActions.length) {
     const box = el('div', 'route-empty');
     box.append(el('p', null, 'Пока нет дел на неделю. Выбери программы или начни работу в «Моём пути».'));
     const choose = el('button', 'button', 'Выбрать программы');
@@ -246,7 +250,6 @@ export function renderToday(root, props) {
     root.append(box);
     return;
   }
-  const model = todayModel(props);
   const head = el('header', 'today-head');
   if (model.nearest) {
     head.append(el('p', 'route-detail',
@@ -254,9 +257,11 @@ export function renderToday(root, props) {
   }
   head.append(el('h2', 'today-title', 'Что сделать сегодня'));
   root.append(head);
+  const offers=renderOfferActions(model.offerActions,props);if(offers)root.append(offers);
   const review = props.weekly ? renderWeekReview(props.weekly.review, handlers) : null;
   if (review) root.append(review);
-  if (model.week) root.append(nowCard(model, props));
+  if (model.week?.tasks.length) root.append(nowCard(model, props));
+  else if(!model.offerActions.length)root.append(el('p','route-detail','Дел в плане недели нет. Материалы и ответы доступны в «Моём пути».'));
   if (model.week?.tasks.length) root.append(weekList(model, props));
   if(props.weekly?.workBacklog)root.append(el('p','route-detail',`Шагов работ вне плана недели: ${props.weekly.workBacklog}. Проверь доступное время и выбранные дни; лишние работы можно поставить на паузу в «Моём пути».`));
   const level = levelBlock(model);

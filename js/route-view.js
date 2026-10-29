@@ -12,8 +12,9 @@ import { formatDate, plural, splitTitle } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
 import { renderStudyPlan } from './study-view.js';
 import { renderEssays } from './essay-view.js';
-import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine } from './goal-status.js';
+import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine, hasPreparationGoals } from './goal-status.js';
 import { renderPortfolio } from './portfolio-view.js';
+import { renderApplications } from './application-view.js';
 
 const PHASES = [
   ['tests', 'Экзамены'],
@@ -381,7 +382,7 @@ function actionsBlock(route, handlers, statusText, applyUrl) {
   more.append(file, load);
   load.addEventListener('click', () => file.click());
 
-  const clear = el('button', 'link-button', 'Сбросить отметки выполнения');
+  const clear = el('button', 'link-button', 'Сбросить учебные отметки');
   clear.type = 'button';
   clear.addEventListener('click', () => say(handlers.onClear()));
   more.append(clear);
@@ -419,6 +420,7 @@ export function renderRoute(root, props) {
     const library = el('div', 'route-main');
     library.append(renderPortfolio(props));
     root.append(library);
+    const applications=renderApplications(props);if(applications){const side=el('div','route-side');side.append(applications);root.append(side);}
     root.append(emptyNotice({ prepared: [], failed: planIds.length > 0, onRetry: handlers.onRetry }));
     const choose = el('button', 'button', 'Выбрать программы');
     choose.type = 'button';
@@ -453,6 +455,7 @@ export function renderRoute(root, props) {
     item.append(open, remove);
     if (!sent) item.append(el('p', 'route-goal-meta', deadlineLine(goal)));
     item.append(statusRow(goal, route, props.routeState, handlers));
+    const application=el('button','button button-small button-quiet','Материалы и ответ');application.type='button';application.addEventListener('click',()=>handlers.onOpenApplication(goal.id));item.append(application);
     const more = el('details', 'route-more');
     more.append(el('summary', null, 'Что покрывает и что учесть'));
     more.append(el('p', 'route-goal-meta', coverageLine(goal.coverage)));
@@ -475,7 +478,9 @@ export function renderRoute(root, props) {
   head.append(choose);
   main.append(head);
   main.append(renderPortfolio(props));
+  const preparing=hasPreparationGoals(route,props.routeState);
 
+  if(preparing){
   const progress = el('progress', 'route-bar');
   progress.max = route.stats.total || 1;
   progress.value = route.stats.done;
@@ -487,6 +492,7 @@ export function renderRoute(root, props) {
   if (warn) main.append(warn);
   const gaps = gapBlock(route);
   if (gaps) main.append(gaps);
+  }
 
   if (props.weekly) {
     // Дела недели живут на «Сегодня»; здесь только ссылка, чтобы не вести два списка.
@@ -506,10 +512,12 @@ export function renderRoute(root, props) {
 
   // ——— разделы-справочники (правая колонка на широком экране) ———
   const side = el('div', 'route-side');
-  side.append(phaseBlock(route, { ...handlers, tracks }));
+  const applications=renderApplications(props);if(applications)side.append(applications);
+  const preparation=phaseBlock(route,{...handlers,tracks});
+  if(preparing)side.append(preparation);else{const archive=el('details','route-phase');archive.append(el('summary',null,'Подготовка до подачи · справка'),preparation);side.append(archive);}
   const applyNotes = applyNotesBlock(route);
   if (applyNotes) side.append(applyNotes);
-  const essays=renderEssays(route.goals,props.essays??{},handlers.onRetry);
+  const essays=renderEssays(route.goals,props.essays??{},handlers.onRetry,handlers.onSaveEssayVersion,handlers.onEssayVersionSaved);
   if(essays)side.append(essays);
   root.append(side);
 

@@ -3,6 +3,7 @@
 import { SCORE_LIMITS } from './lib/limits.js';
 import { isGoalStatus } from './goal-status.js';
 import { normalizePortfolio } from './portfolio.js';
+import { normalizeApplications } from './application.js';
 export const ROUTE_STATE_KEY = 'eligibility-route';
 export const ROUTE_VERSION = 2;
 export const MAX_GOALS = 8;
@@ -33,6 +34,7 @@ function normalize(value) {
   }
   if (value.version !== 2 || !Array.isArray(value.goals) || !object(value.done)) return null;
   const next = empty();
+  if(Object.hasOwn(value,'applications')){next.applications=normalizeApplications(value.applications);if(!next.applications)return null;}
   if (Object.hasOwn(value, 'portfolio')) {
     next.portfolio = normalizePortfolio(value.portfolio);
     if (!next.portfolio) return null;

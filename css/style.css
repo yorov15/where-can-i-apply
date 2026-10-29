@@ -4,9 +4,7 @@
 @font-face { font-family: Onest; font-style: normal; font-weight: 400 800; font-display: swap; src: url("../fonts/onest-latin.woff2") format("woff2"); unicode-range: U+0020-007E, U+00A0, U+00AB, U+00B7, U+00BB, U+2013, U+2014, U+2018-201D, U+2026, U+2212; }
 @font-face { font-family: Literata; font-style: normal; font-weight: 600 800; font-display: swap; src: url("../fonts/literata-cyrillic.woff2") format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+2116; }
 @font-face { font-family: Literata; font-style: normal; font-weight: 600 800; font-display: swap; src: url("../fonts/literata-latin.woff2") format("woff2"); unicode-range: U+0020-007E, U+00A0, U+00AB, U+00B7, U+00BB, U+2013, U+2014, U+2019, U+2026, U+2212; }
-/* Яркий акцент, мобильный вперёд. Кобальт (--accent) ведёт по интерфейсу, цвета вердиктов
-   заняты только вердиктом и не смешиваются с ним; у каждого вердикта есть слово и значок.
-   Скругления: 12px поля и кнопки, 20px контейнеры, пилюля у чипов. Анимируются только transform и opacity. */
+/* Кобальт ведёт действия. Цвета вердиктов остаются у вердиктов; движение — transform и opacity. */
 :root {
   color-scheme: light dark;
   --serif: Literata, Georgia, "Times New Roman", serif;
@@ -638,6 +636,54 @@ body[data-screen="route"] .hero { display: none; }
    справа справочник. display: contents на телефоне убирает обёртки из
    раскладки, чтобы отступы считались как раньше. */
 .route-main, .route-side { display: contents; }
+.journey-panel { min-width:0; margin-bottom:var(--s-4); padding:clamp(1rem,2.5vw,1.5rem); background:var(--surface); border:1px solid var(--line); border-radius:var(--r-container); }
+.journey-head { margin-bottom:var(--s-5); }
+.journey-head h3 { margin:.25rem 0 .75rem; font-size:1.5rem; line-height:1.2; }
+.journey-kicker { margin:0; color:var(--accent-text); font-size:.8125rem; font-weight:600; }
+.journey-meta { display:block; margin:.5rem 0; color:var(--muted); font-size:.875rem; line-height:1.6; overflow-wrap:anywhere; }
+.journey-title { display:block; font-size:1.125rem; font-weight:600; line-height:1.4; overflow-wrap:anywhere; }
+.journey-card { min-width:0; padding:1.25rem 0; border-top:1px solid var(--line); }
+.journey-card>summary { display:flex; justify-content:space-between; gap:1rem; cursor:pointer; font-weight:600; line-height:1.45; overflow-wrap:anywhere; }
+.journey-card>summary::after { content:'+'; flex:none; color:var(--muted); font-size:1.25rem; font-weight:400; }
+.journey-card[open]>summary::after { content:'−'; }
+.journey-card>summary::-webkit-details-marker { display:none; }
+.journey-card[open]>summary { margin-bottom:1rem; }
+.journey-card>summary,.journey-edit>summary,.journey-start>summary,.journey-step>summary { min-height:44px; }
+.journey-card .route-goal-meta { margin:.75rem 0; }
+.journey-edit { margin:.75rem 0; font-size:.9375rem; }
+.journey-edit>summary { padding:.625rem 0; color:var(--accent-text); cursor:pointer; font-weight:500; line-height:1.5; }
+.journey-start { margin:1rem 0; padding:1rem; background:var(--accent-soft); border-radius:var(--r-control); }
+.journey-start>summary { color:var(--accent-text); cursor:pointer; font-weight:600; line-height:1.5; }
+.journey-form { display:grid; gap:1.25rem; margin:1.25rem 0 .5rem; }
+.journey-form label,.journey-form fieldset { margin:0; }
+.journey-form legend { margin:0 0 .75rem; font:600 .9375rem/1.5 Onest,system-ui,sans-serif; }
+.journey-form textarea { resize:vertical; }
+.journey-form>.button { justify-self:start; }
+.journey-check { display:grid; grid-template-columns:1.2rem minmax(0,1fr); gap:.75rem; align-items:start; padding:.75rem 0; margin:0; font-weight:400; line-height:1.5; border-bottom:1px solid var(--line); overflow-wrap:anywhere; }
+.journey-check input { width:1.15rem; min-height:0; height:1.15rem; margin:.15rem 0 0; accent-color:var(--accent); }
+.journey-actions { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0; }
+.journey-panel .button-quiet { background:var(--surface); color:var(--fg); box-shadow:inset 0 0 0 1px var(--line-strong); }
+.journey-panel .button-quiet:hover { background:var(--soft); }
+.journey-empty,.journey-note { padding:1rem; margin:1rem 0; background:var(--soft); color:var(--muted); font-size:.9375rem; line-height:1.6; }
+.journey-note p+p { margin-top:.75rem; }
+.journey-work { margin:1rem 0; }
+.journey-work>.link-button { min-height:44px; }
+.journey-progress { display:block; width:100%; height:.3rem; border:0; accent-color:var(--accent); }
+.journey-brief { margin:1.25rem 0; }
+.journey-brief dt { margin:1rem 0 .25rem; color:var(--muted); font-size:.8125rem; }
+.journey-brief dd { margin:0; line-height:1.6; overflow-wrap:anywhere; }
+.journey-step { margin:.75rem 0; padding:.75rem 1rem; border-left:2px solid var(--line); }
+.journey-step[data-current=true] { border-color:var(--accent); background:var(--soft); }
+.journey-step>summary { cursor:pointer; font-weight:600; line-height:1.5; }
+.journey-step p { margin:.75rem 0; }
+.journey-copy { margin:1rem 0; font-size:.9375rem; line-height:1.7; white-space:pre-wrap; overflow-wrap:anywhere; }
+.journey-reference { margin:1rem 0; padding-left:1rem; border-left:2px solid var(--line); }
+.journey-reference h5 { margin:.75rem 0; font-size:1rem; }
+.journey-response { margin:1.5rem 0; padding-top:1rem; border-top:2px solid var(--accent); }
+.journey-response h4,.journey-action h4 { margin:.5rem 0; font-size:1.125rem; }
+.journey-action { padding:1rem 0; border-top:1px solid var(--line); }
+.journey-action[data-state=overdue] { border-left:3px solid var(--no); padding-left:1rem; }
+@media(max-width:40rem){.journey-start{padding:.875rem}.journey-step{padding:.75rem}.journey-actions>.button{flex:1 1 100%}}
 .route-bar::-webkit-progress-bar { background: var(--soft); border-radius: var(--r-pill); }
 .route-bar::-webkit-progress-value, .route-bar::-moz-progress-bar { background: var(--accent); border-radius: var(--r-pill); }
 @media (min-width: 64rem) {

@@ -23,6 +23,7 @@ export function statusOf(state, goalId) {
 
 // Подана или уже с ответом: отсчёт «до подачи» по такой цели больше не нужен.
 export const isSent = (status) => status === 'submitted' || status === 'answered';
+export const hasPreparationGoals = (route,state) => (route?.goals??[]).some(goal=>!isSent(statusOf(state,goal.id).status));
 
 // Сколько дел по цели сделано и что не хватает. Общие дела (один IELTS на
 // шесть программ) считаются у каждой из программ, куда они входят.

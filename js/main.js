@@ -23,6 +23,9 @@ import { renderProgram, programRow } from './program-view.js';
 import { saveExperience, removeExperience, saveTaskOutcome, removeTaskOutcome, startPortfolioWork, setPortfolioWorkPaused,
   togglePortfolioWorkStep, savePortfolioBrief, savePortfolioReview } from './portfolio.js';
 import { clearPortfolioDrafts } from './portfolio-view.js';
+import { saveMaterialVersion,markMaterialSubmitted,removeMaterialVersion,removeMaterial,saveDecision,toggleOfferCondition,removeDecision,applicationsOf } from './application.js';
+import { clearApplicationDrafts } from './application-view.js';
+import { hasPreparationGoals } from './goal-status.js';
 
 const form = document.getElementById('profile');
 const today = new Date().toISOString().slice(0, 10);
@@ -223,6 +226,7 @@ let routeDocuments = {};
 let routeCtx = null;
 let route = null;
 let routeStatus = '';
+let applicationFocus = null;
 let routeLoading = false;
 let routeRequest = 0;
 
@@ -254,6 +258,11 @@ function persistWork(next,message) {
   const response=persistPortfolio(next,message);
   if(response.ok)rebuildRoute();
   return response;
+}
+
+function persistApplication(next,message) {
+  if(!next)return {ok:false,message:'Не удалось сохранить. Проверь текст, ссылки и даты. Можно хранить до 12 материалов, 8 версий каждого и 8 условий ответа; общий объём тоже ограничен.'};
+  return persistPortfolio(next,message);
 }
 
 function preparedEntry(id) {
@@ -335,8 +344,9 @@ function rebuildRoute() {
   const plans=Object.fromEntries(route.steps.filter(step=>routeTracks[step.track]).map(step=>[step.id,examForStep(step)]));
   route=scheduleRoute(route,plans,routeDocuments,today);
   route.tracksLoaded=routeCtx.every(context=>(context.prepared?.tests??[]).every(code=>Boolean(routeTracks[code])));
-  const study=buildStudyPlan({steps:route.steps,tracks:routeTracks,plans,state:routeState,today});
-  weeklySnapshot=prepareCurrentWeek(routeState,route,study,today);
+  const preparing=hasPreparationGoals(route,routeState),routine=preparing?route:{...route,steps:[],week:[]};
+  const study=buildStudyPlan({steps:routine.steps,tracks:routeTracks,plans,state:routeState,today});
+  weeklySnapshot=prepareCurrentWeek(routeState,routine,study,today);
   if(exportState(routeState)!==exportState(weeklySnapshot.state)){routeState=weeklySnapshot.state;persistRoute();}
   route.parentReport=parentReport({route,state:routeState,weekly:weeklySnapshot,cost:planCost(routeCtx.map(context=>context.program),details),today});
 }
@@ -356,7 +366,7 @@ function examForStep(step) {
 function renderRouteView() {
   const plans = Object.fromEntries((route?.steps ?? []).filter(step => routeTracks[step.track]).map(step => [step.id, examForStep(step)]));
   (todayScreen.hidden ? renderRoute : renderToday)(todayScreen.hidden ? routeBody : todayBody, {
-    study: route ? buildStudyPlan({ steps:route.steps, tracks:routeTracks, plans, state:routeState, today }) : null,
+    study: route ? buildStudyPlan({ steps:hasPreparationGoals(route,routeState)?route.steps:[], tracks:routeTracks, plans, state:routeState, today }) : null,
     routeState, today,
     weekly:weeklySnapshot,
     essays:routeEssays,
@@ -371,6 +381,24 @@ function renderRouteView() {
     applyUrl: routeState.goals.length === 1 ? details.programs?.[routeState.goals[0]]?.applyUrl ?? null : null,
     handlers: {
       getRouteState: () => routeState,
+      onSaveMaterialVersion(input) { return {...persistApplication(saveMaterialVersion(routeState,input,today),'Новая версия сохранена. Прежние версии остались.'),id:input.id}; },
+      onMarkMaterialSubmitted(id,versionId) { return persistApplication(markMaterialSubmitted(routeState,id,versionId,today),versionId?'Отправленная версия отмечена.':'Отметка отправки снята.'); },
+      onRemoveMaterialVersion(id,versionId) { return persistApplication(removeMaterialVersion(routeState,id,versionId),'Версия удалена.'); },
+      onRemoveMaterial(id) { return persistApplication(removeMaterial(routeState,id),'Материал и версии удалены.'); },
+      onSaveDecision(input) { const response=persistApplication(saveDecision(routeState,input,today),'Ответ и условия сохранены.');if(response.ok)rebuildRoute();return response; },
+      onDecisionSaved(goalId,message) { routeStatus=message;applicationFocus=goalId;renderRouteView(); },
+      onOfferCondition(goalId,id) { return persistApplication(toggleOfferCondition(routeState,goalId,id,today),'Отметка условия обновлена.'); },
+      onRemoveDecision(goalId) { return persistApplication(removeDecision(routeState,goalId),'Запись об ответе удалена.'); },
+      onOpenApplication(goalId) { applicationFocus=goalId;if(location.hash==='#route')renderRouteView();else location.hash='route'; },
+      onSaveEssayVersion(goalId,item,text) {
+        const old=applicationsOf(routeState).materials.find(material=>material.goalId===goalId&&material.sourceKey===item.id);
+        return persistApplication(saveMaterialVersion(routeState,{id:old?.id??crypto.randomUUID(),versionId:crypto.randomUUID(),sourceKey:item.id,goalId,
+          title:item.title,kind:'essay',prompt:item.prompt??'',sourceUrl:item.source?.url??'',text,url:'',note:'Сохранено из раздела эссе',experienceIds:old?.versions.at(-1).references.map(ref=>ref.experienceId)??[]},today),'Версия сохранена в «Материалах и ответах».');
+      },
+      onEssayVersionSaved(goalId,fieldId) {
+        renderRouteView();const program=routeBody.querySelector(`[data-essay-program="${CSS.escape(goalId)}"]`),field=program?.querySelector(`[data-essay-field="${CSS.escape(fieldId)}"]`);
+        if(program)program.open=true;if(field){field.open=true;field.querySelector('textarea')?.focus();}
+      },
       onSaveExperience(input) { return persistPortfolio(saveExperience(routeState,input,today),'Опыт сохранён.'); },
       onRemoveExperience(id) { return persistPortfolio(removeExperience(routeState,id),'Опыт удалён. Результаты заданий сохранены.'); },
       onSaveTaskOutcome(input) { return persistPortfolio(saveTaskOutcome(routeState,input,today),'Результат сохранён в «Моём пути».'); },
@@ -499,7 +527,7 @@ function renderRouteView() {
           node.click();
           node.remove();
           setTimeout(() => URL.revokeObjectURL(url), 1000);
-          return 'Маршрут сохранён в файл.';
+          return 'Маршрут, портфолио и заявки сохранены в файл.';
         } catch {
           return 'Браузер не дал сохранить файл.';
         }
@@ -509,15 +537,17 @@ function renderRouteView() {
           if (picked.size > 500_000) return 'Файл слишком большой для маршрута Nerio.';
           const imported = importState(await picked.text());
           if (!imported) return 'Это не файл маршрута Nerio.';
-          if (!window.confirm('Заменить текущий маршрут данными из файла? Цели, прогресс, опыт и результаты заданий будут заменены. Для резервной копии сначала нажми «Скачать маршрут».')) return 'Загрузка отменена. Текущие записи сохранены.';
+          if (!window.confirm('Заменить текущие данные файлом? Цели, подготовка, портфолио, материалы заявки и ответы будут заменены. Для резервной копии сначала скачай маршрут.')) return 'Загрузка отменена. Текущие записи сохранены.';
           if (!saveRouteState(imported, localStorage)) return 'Браузер не сохранил файл. Текущий маршрут не заменён.';
           clearPortfolioDrafts();
+          clearApplicationDrafts();
+          applicationFocus=null;
           routeState = imported;
           form.elements.hoursPerWeek.value=routeState.hoursPerWeek;
           persistRoute();
           await refreshRoute();
           refresh();
-          return 'Маршрут, опыт и результаты заданий загружены.';
+          return 'Маршрут, портфолио и заявки загружены.';
         } catch {
           return 'Не получилось прочитать файл.';
         }
@@ -527,7 +557,7 @@ function renderRouteView() {
         persistRoute();
         rebuildRoute();
         renderRouteView();
-        return 'Отметки выполнения сброшены. Цели, опыт и результаты заданий сохранены.';
+        return 'Учебные отметки сброшены. Опыт, материалы заявки и ответы сохранены.';
       },
       onOpen(programId) {
         openProgram(programId);
@@ -554,6 +584,10 @@ function renderRouteView() {
       onStatus: showRouteStatus,
     },
   });
+  if(applicationFocus&&!routeLoading&&!routeScreen.hidden){
+    const goal=routeBody.querySelector(`[data-application-goal="${CSS.escape(applicationFocus)}"]`);
+    if(goal){goal.open=true;goal.scrollIntoView({block:'start'});goal.querySelector('summary')?.focus();applicationFocus=null;}
+  }
 }
 
 // Перед печатью раскрываем подробности шагов: на бумаге закрытое
@@ -662,6 +696,8 @@ onProfileChange(form, (profile) => refresh(profile));
 // иначе пустая анкета осталась бы лежать под тем же ключом.
 document.getElementById('clear-profile').addEventListener('click', () => {
   clearPortfolioDrafts();
+  clearApplicationDrafts();
+  applicationFocus=null;
   const empty = emptyProfile();
   writeForm(form, empty);
   plan.ids = [];
@@ -674,6 +710,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
   } catch { /* приватный режим: стирать нечего */ }
   routeState = loadRouteState(localStorage);
   weeklySnapshot=null;
+  routeBody.replaceChildren();todayBody.replaceChildren();programBody.replaceChildren();
   form.elements.hoursPerWeek.value=routeState.hoursPerWeek;
   route = null;
   routeCtx = null;
