@@ -402,6 +402,12 @@ function examForStep(step) {
 }
 
 function renderRouteView() {
+  // Условия программы догружаются в фоне. Они не должны заменять открытую
+  // форму новой работы между вводом и нажатием кнопки сохранения.
+  if (!routeScreen.hidden && location.hash==='#route/new' && !portfolioFocus
+    && routeBody.dataset.editorGuide===String(guidedStart)
+    && routeBody.querySelector('[data-work-picker][open] form')) return;
+  if (!routeScreen.hidden) routeBody.dataset.editorGuide=String(guidedStart);
   let todayFocus=null;
   if(location.hash.startsWith('#today/work/')){try{todayFocus=decodeURIComponent(location.hash.slice('#today/work/'.length))||null;}catch{ /* повреждённая ссылка возвращает общий план */ }}
   const plans = Object.fromEntries((route?.steps ?? []).filter(step => routeTracks[step.track]).map(step => [step.id, examForStep(step)]));
