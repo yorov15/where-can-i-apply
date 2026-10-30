@@ -21,8 +21,9 @@ import { EXPLAIN_URL } from './config.js';
 import { renderToday } from './today-view.js';
 import { renderProgram, programRow } from './program-view.js';
 import { saveExperience, removeExperience, saveTaskOutcome, removeTaskOutcome, startPortfolioWork, setPortfolioWorkPaused,
-  togglePortfolioWorkStep, savePortfolioBrief, savePortfolioReview } from './portfolio.js';
+  togglePortfolioWorkStep, savePortfolioBrief, savePortfolioReview, updatePortfolioLearning } from './portfolio.js';
 import { clearPortfolioDrafts } from './portfolio-view.js';
+import { forgetLearningDrafts } from './portfolio-learning-view.js';
 import { saveMaterialVersion,markMaterialSubmitted,removeMaterialVersion,removeMaterial,saveDecision,toggleOfferCondition,removeDecision,applicationsOf } from './application.js';
 import { clearApplicationDrafts } from './application-view.js';
 import { hasPreparationGoals } from './goal-status.js';
@@ -227,6 +228,7 @@ let routeCtx = null;
 let route = null;
 let routeStatus = '';
 let applicationFocus = null;
+let portfolioFocus = null;
 let routeLoading = false;
 let routeRequest = 0;
 
@@ -400,7 +402,7 @@ function renderRouteView() {
         if(program)program.open=true;if(field){field.open=true;field.querySelector('textarea')?.focus();}
       },
       onSaveExperience(input) { return persistPortfolio(saveExperience(routeState,input,today),'Опыт сохранён.'); },
-      onRemoveExperience(id) { return persistPortfolio(removeExperience(routeState,id),'Опыт удалён. Результаты заданий сохранены.'); },
+      onRemoveExperience(id) { const entry=routeState.portfolio?.experiences.find(item=>item.id===id),response=persistPortfolio(removeExperience(routeState,id),'Опыт удалён. Результаты заданий сохранены.');if(response.ok&&entry)forgetLearningDrafts(entry);return response; },
       onSaveTaskOutcome(input) { return persistPortfolio(saveTaskOutcome(routeState,input,today),'Результат сохранён в «Моём пути».'); },
       onRemoveTaskOutcome(week,taskId) { return persistPortfolio(removeTaskOutcome(routeState,week,taskId),'Результат удалён. Галочка задания не изменилась.'); },
       onStartPortfolioWork(input) {
@@ -410,11 +412,17 @@ function renderRouteView() {
       onPausePortfolioWork(id,paused) { return persistWork(setPortfolioWorkPaused(routeState,id,paused,today),paused?'Работа на паузе. Записанные результаты сохранены.':'Работа продолжена. Проверь дела недели.'); },
       onPortfolioWorkStep(id,stepId) {
         const next=togglePortfolioWorkStep(routeState,id,stepId,today);
-        if(!next)return {ok:false,message:'Сначала сохрани результат этого шага на «Сегодня». Предыдущие шаги должны быть закончены, работа — снята с паузы.'};
+        if(!next)return {ok:false,message:'Сначала закончи или отложи учебную пробу и сохрани результат этого шага на «Сегодня». Предыдущие шаги должны быть закончены, работа — снята с паузы.'};
         return persistWork(next,'Отметки шагов обновлены. Результаты сохранены.');
       },
       onSavePortfolioBrief(id,input) { return persistWork(savePortfolioBrief(routeState,id,input,today),'Задача и время обновлены.'); },
       onSavePortfolioReview(id,input) { return persistWork(savePortfolioReview(routeState,id,input,today),'Самопроверка сохранена.'); },
+      onPortfolioLearning(id,action,input) {
+        const next=updatePortfolioLearning(routeState,id,action,input,today);
+        if(!next)return {ok:false,message:'Не удалось сохранить. Заполни поля и выбери результат. Для доработки нужен изменённый текст или ссылка; иначе выбери сохранение решения. Хранятся до трёх проб и четырёх отзывов на работу.'};
+        return persistWork(next,'Учебная запись сохранена.');
+      },
+      onOpenPortfolio(id) { portfolioFocus=id;if(location.hash==='#route')renderRouteView();else location.hash='route'; },
       getExamPlan: examForStep,
       onStudyToggle(week, taskId) {
         routeState=toggleStudyTask(routeState,week,taskId,today);persistRoute();rebuildRoute();renderRouteView();
@@ -429,6 +437,8 @@ function renderRouteView() {
           const next=togglePortfolioWorkStep(routeState,task.experienceId,task.workStepId,today);
           if(!next){
             renderRouteView();
+            const learning=activeBody().querySelector(`[data-learning-task="${CSS.escape(taskId)}"]`);
+            if(learning){learning.querySelector('button')?.focus();return;}
             const box=activeBody().querySelector(`[data-task-outcome="${CSS.escape(taskId)}"]`);
             if(box){box.open=true;box.querySelector('[role="status"]').textContent='Сначала запиши и сохрани результат этого шага.';box.querySelector('textarea')?.focus();}
             return;
@@ -542,6 +552,7 @@ function renderRouteView() {
           clearPortfolioDrafts();
           clearApplicationDrafts();
           applicationFocus=null;
+          portfolioFocus=null;
           routeState = imported;
           form.elements.hoursPerWeek.value=routeState.hoursPerWeek;
           persistRoute();
@@ -587,6 +598,10 @@ function renderRouteView() {
   if(applicationFocus&&!routeLoading&&!routeScreen.hidden){
     const goal=routeBody.querySelector(`[data-application-goal="${CSS.escape(applicationFocus)}"]`);
     if(goal){goal.open=true;goal.scrollIntoView({block:'start'});goal.querySelector('summary')?.focus();applicationFocus=null;}
+  }
+  if(portfolioFocus&&!routeLoading&&!routeScreen.hidden){
+    const entry=routeBody.querySelector(`[data-experience="${CSS.escape(portfolioFocus)}"]`);
+    if(entry){entry.open=true;const training=entry.querySelector('[data-training]');if(training)training.open=true;(training??entry).scrollIntoView({block:'start'});(training??entry).querySelector('summary')?.focus();portfolioFocus=null;}
   }
 }
 
@@ -698,6 +713,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
   clearPortfolioDrafts();
   clearApplicationDrafts();
   applicationFocus=null;
+  portfolioFocus=null;
   const empty = emptyProfile();
   writeForm(form, empty);
   plan.ids = [];

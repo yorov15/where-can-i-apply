@@ -1,3 +1,4 @@
+import { normalizeLearning } from './portfolio-learning.js';
 // Собственные учебные примеры Nerio. Это не требования программ и не
 // обещания поступления, публикации или результата за заданное число часов.
 export const WORK_TEMPLATES = [
@@ -72,6 +73,7 @@ export function normalizeWorkPlan(value) {
     if(Object.values(fields).some(value=>typeof value!=='string'||value.length>1000))return null;
     next.review={...fields,checkedOn:value.review.checkedOn};
   }
+  if(Object.hasOwn(value,'learning')){next.learning=normalizeLearning(value.learning);if(!next.learning)return null;}
   return next;
 }
 

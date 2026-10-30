@@ -9,6 +9,7 @@ import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine } from './g
 import { renderTaskOutcome } from './portfolio-view.js';
 import { applicationActions } from './application.js';
 import { renderOfferActions } from './application-view.js';
+import { pendingPractice } from './portfolio-learning.js';
 
 const DAYS = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 const shift = (day, n) => new Date(Date.parse(`${day}T00:00:00Z`) + n * 86400000).toISOString().slice(0, 10);
@@ -117,7 +118,8 @@ function openLink(url, label) {
 function taskLabel(task,state) {
   const entry=state?.portfolio?.experiences.find(item=>item.id===task.experienceId);
   const step=entry?.workPlan?.steps.find(item=>item.id===task.workStepId);
-  return {title:step?.title??task.title,context:step?entry.title:null};
+  const practice=pendingPractice(entry?.workPlan);
+  return {title:practice?`Учебная проба: ${practice.lesson.title}`:step?.title??task.title,context:step?entry.title:null};
 }
 
 function nowCard(model, props) {

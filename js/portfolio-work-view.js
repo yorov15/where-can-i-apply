@@ -1,8 +1,10 @@
 import { WORK_TEMPLATES, WORK_REVIEW_FIELDS } from './portfolio-work.js';
 import { formatDate } from './lib/format.js';
+import { renderPortfolioLearning, clearLearningDrafts } from './portfolio-learning-view.js';
+import { pendingPractice } from './portfolio-learning.js';
 
 const drafts=new Map(),opened=new Map();
-export function clearWorkDrafts(){drafts.clear();opened.clear();}
+export function clearWorkDrafts(){drafts.clear();opened.clear();clearLearningDrafts();}
 const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!=null)node.textContent=text;return node;};
 const say=()=>{const node=el('p','route-status');node.setAttribute('role','status');return node;};
 const button=(title,run,primary=false)=>{const node=el('button',primary?'button':'button button-quiet',title);node.type='button';node.addEventListener('click',run);return node;};
@@ -59,6 +61,7 @@ export function renderWorkPlan(entry,props,onSaved){
   const change=(response)=>{if(response.ok)onSaved(entry.id,response.message);else status.textContent=response.message;};
   const pause=button(plan.paused?'Продолжить работу':'Поставить на паузу',()=>change(props.handlers.onPausePortfolioWork(entry.id,!plan.paused)));pause.className='link-button';box.append(pause);
   const next=plan.steps.find(step=>!step.done);
+  box.append(renderPortfolioLearning(entry,props,onSaved));
   for(const [index,step] of plan.steps.entries()){
     const row=details(`work-step:${entry.id}:${step.id}`,`${index+1}. ${step.title}${step.done?' · готово':''}`,next?.id===step.id&&!plan.paused);row.className='journey-step';row.dataset.workStep=step.id;row.dataset.current=String(next?.id===step.id&&!plan.paused);
     row.append(el('p','route-detail',`Результат шага: ${step.expected}`));
@@ -66,8 +69,8 @@ export function renderWorkPlan(entry,props,onSaved){
       row.append(el('p','route-detail','Возврат к этому шагу снимет отметки с него и следующих шагов. Записанные результаты останутся.'));
       row.append(button('Вернуться к этому шагу',()=>change(props.handlers.onPortfolioWorkStep(entry.id,step.id))));
     }else if(next.id===step.id&&!plan.paused){
-      const actions=el('div','journey-actions');actions.append(button('Открыть дела недели',props.handlers.onOpenToday,true),button('Отметить шаг готовым',()=>change(props.handlers.onPortfolioWorkStep(entry.id,step.id))));row.append(actions);
-      row.append(el('p','route-detail','Сначала сохрани результат задания на «Сегодня». Отметка означает, что ты сам считаешь шаг законченным.'));
+      const actions=el('div','journey-actions'),complete=button('Отметить шаг готовым',()=>change(props.handlers.onPortfolioWorkStep(entry.id,step.id)));complete.disabled=Boolean(pendingPractice(plan));actions.append(button('Открыть дела недели',props.handlers.onOpenToday,true),complete);row.append(actions);
+      row.append(el('p','route-detail',pendingPractice(plan)?'Сначала закончи или отложи учебную пробу выше. Затем сохрани результат этого шага на «Сегодня».':'Сначала сохрани результат задания на «Сегодня». Отметка означает, что ты сам считаешь шаг законченным.'));
     }
     box.append(row);
   }

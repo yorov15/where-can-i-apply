@@ -3,6 +3,7 @@
 // при импорте отклоняем целиком: молча терять личные работы нельзя.
 import { safeHttpUrl } from './lib/url.js';
 import { WORK_TEMPLATES, WORK_REVIEW_FIELDS, normalizeWorkPlan, workTaskId } from './portfolio-work.js';
+import { changeLearning, pendingPractice } from './portfolio-learning.js';
 
 export const EXPERIENCE_KINDS = [['project','Проект'],['study','Учёба'],['work','Работа'],['family','Помощь семье'],['creative','Творчество'],['community','Инициатива'],['sport','Спорт'],['other','Другое']];
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -136,7 +137,7 @@ export function togglePortfolioWorkStep(state,id,stepId,today) {
     const index=plan.steps.findIndex(step=>step.id===stepId),step=plan.steps[index];
     if(!step)return false;
     if(step.done){for(const item of plan.steps.slice(index)){item.done=false;delete item.completedOn;}return;}
-    if(plan.paused||plan.steps.slice(0,index).some(item=>!item.done)
+    if(plan.paused||pendingPractice(plan)||plan.steps.slice(0,index).some(item=>!item.done)
       ||!portfolio.outcomes.some(item=>item.experienceId===id&&item.workStepId===stepId&&item.text))return false;
     step.done=true;step.completedOn=today;
   });
@@ -145,6 +146,14 @@ export function togglePortfolioWorkStep(state,id,stepId,today) {
 export function savePortfolioBrief(state,id,input,today) {
   if(!object(input))return null;
   return updateWorkPlan(state,id,today,plan=>{plan.aim=input.aim;plan.expectedResult=input.expectedResult;if(input.sessionMinutes!=null)plan.sessionMinutes=input.sessionMinutes;});
+}
+
+export function updatePortfolioLearning(state,id,action,input,today){
+  return updateWorkPlan(state,id,today,(plan,portfolio)=>{
+    if(['start','resume'].includes(action)&&!plan.steps.some(step=>!step.done))return false;
+    const entry=portfolio.experiences.find(item=>item.id===id),next=changeLearning(plan.learning,action,input,today,entry,portfolio.outcomes);
+    if(!next)return false;plan.learning=next;
+  });
 }
 
 export function savePortfolioReview(state,id,input,today) {
@@ -159,7 +168,8 @@ export function savePortfolioReview(state,id,input,today) {
 export function nextPortfolioTasks(state) {
   return portfolioOf(state).experiences.flatMap(entry=>{
     const plan=entry.workPlan,step=plan?.steps.find(item=>!item.done);
-    return !step||plan.paused?[]:[{taskId:workTaskId(plan,step),title:`${step.title} · ${entry.title}`.slice(0,200),kind:'portfolio',
-      experienceId:entry.id,workStepId:step.id,expected:step.expected,minutes:plan.sessionMinutes,workMinutes:plan.sessionMinutes}];
+    const practice=pendingPractice(plan);
+    return !step||plan.paused?[]:[{taskId:workTaskId(plan,step),title:`${practice?'Учебная проба: '+practice.lesson.title:step.title} · ${entry.title}`.slice(0,200),kind:'portfolio',
+      experienceId:entry.id,workStepId:step.id,expected:practice?'Своя попытка, разбор примера и новая задача с объяснением.':step.expected,minutes:plan.sessionMinutes,workMinutes:plan.sessionMinutes}];
   });
 }

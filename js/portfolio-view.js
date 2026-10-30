@@ -2,6 +2,7 @@ import { EXPERIENCE_KINDS, portfolioOf } from './portfolio.js';
 import { safeHttpUrl } from './lib/url.js';
 import { formatDate } from './lib/format.js';
 import { renderWorkPicker, renderWorkPlan, clearWorkDrafts } from './portfolio-work-view.js';
+import { pendingPractice } from './portfolio-learning.js';
 
 // Несохранённый ввод переживает служебную перерисовку, но не перезагрузку.
 const drafts = new Map();
@@ -116,7 +117,7 @@ export function renderPortfolio(props) {
       const edit=el('details','journey-edit');rememberOpen(edit,`editor:${entry.id}`,drafts.has(`experience:${entry.id}`));
       edit.append(el('summary',null,'Изменить запись'),experienceForm(entry,props,saved));card.append(edit);
       const remove=el('details','journey-edit');remove.append(el('summary',null,'Удалить запись'));
-      remove.append(el('p','route-detail','Запись опыта будет удалена. Сохранённые результаты заданий останутся.'));
+      remove.append(el('p','route-detail','Запись опыта, её учебные пробы и отзывы будут удалены. Сохранённые результаты заданий останутся.'));
       remove.append(button('Удалить этот опыт',()=>{
         const response=props.handlers.onRemoveExperience(entry.id);
         if(response.ok){drafts.delete(`experience:${entry.id}`);draw(response.message);box.querySelector('[data-add-experience] > summary')?.focus();}
@@ -151,6 +152,8 @@ export function renderPortfolio(props) {
 export function renderTaskOutcome(week,task,props) {
   const draftKey=JSON.stringify(['outcome',week,task.taskId]);
   const portfolio=portfolioOf(props.handlers.getRouteState());
+  const practice=pendingPractice(portfolio.experiences.find(item=>item.id===task.experienceId)?.workPlan);
+  if(practice){const box=el('section','journey-reference');box.dataset.learningTask=task.taskId;box.append(el('p','journey-meta',`Учебная проба: ${practice.lesson.title}`),el('p','route-detail','Открой пробу в своей работе. После неё вернись к результату текущего шага.'),button('Открыть учебную пробу',()=>props.handlers.onOpenPortfolio(task.experienceId)));return box;}
   const saved=portfolio.outcomes.find(item=>item.week===week&&item.taskId===task.taskId);
   const value=drafts.get(draftKey)??saved??{};
   const box=el('details','journey-edit');box.dataset.taskOutcome=task.taskId;
