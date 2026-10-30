@@ -458,7 +458,7 @@ export const programHref = (id) => `#program/${encodeURIComponent(id)}`;
 // фокус возвращаем на ту же кнопку: иначе с клавиатуры человек оказывается в начале.
 export function planButton(id, plan) {
   const inPlan = plan.ids.includes(id);
-  const mark = el('button', 'button button-small button-quiet plan-toggle', inPlan ? '✓ В моём пути' : 'В мой путь');
+  const mark = el('button', 'button button-small button-quiet plan-toggle', inPlan ? '✓ В моём пути' : plan.guided?'Выбрать эту цель':'В мой путь');
   mark.type = 'button';
   mark.setAttribute('aria-pressed', String(inPlan));
   if (!inPlan && plan.ids.length >= plan.limit) {

@@ -23,7 +23,7 @@ const el = (tag, className, text) => {
 };
 
 // Что показать на экране. Чистая функция: тесты читают её, а не DOM.
-export function todayModel({ route, routeState, weekly, study, today }) {
+export function todayModel({ route, routeState, weekly, study, today, todayFocus }) {
   const open = (route?.goals ?? [])
     .filter(goal => !isSent(statusOf(routeState, goal.id).status))
     .filter(goal => goal.deadline?.closes && goal.deadline.state !== 'closed' && goal.deadline.closes >= today)
@@ -32,7 +32,7 @@ export function todayModel({ route, routeState, weekly, study, today }) {
 
   const week = weekly?.week ?? null;
   const tasks = week?.tasks ?? [];
-  const next = tasks.find(task => !task.done) ?? null;
+  const next = todayFocus ? tasks.find(task=>!task.done&&task.experienceId===todayFocus)??null : tasks.find(task => !task.done) ?? null;
   const doneCount = tasks.filter(task => task.done).length;
 
   // Уровень — только там, где известны и текущий балл, и нужный: иначе
@@ -127,6 +127,10 @@ function nowCard(model, props) {
   const { next, week } = model;
   const card = el('section', 'today-now');
   if (!next) {
+    if(props.todayFocus){
+      card.append(el('p',null,'Для этой работы пока нет дел в плане недели. Результаты сохранены; открой работу, чтобы посмотреть её шаги.'));
+      const open=el('button','button','Открыть мою работу');open.type='button';open.addEventListener('click',()=>handlers.onOpenPortfolio(props.todayFocus));card.append(open);return card;
+    }
     card.append(el('p', 'route-detail', 'Дела на эту неделю закончились.'));
     card.append(el('p', null, week?.tasks.length ? 'Всё из плана недели сделано.' : 'Дел на эту неделю пока нет. Добавь программы в «Мой путь».'));
     return card;
@@ -254,23 +258,23 @@ export function renderToday(root, props) {
     const hasWorks = Boolean(props.routeState?.portfolio?.experiences.length);
     const box = el('div', 'start-space');
     const statement = el('div', 'start-statement');
-    statement.append(el('h2', null, 'Твои работы.\nТвой путь.'), el('p', null, 'Портфолио начинается с того, что тебе интересно. Развивай свои работы и готовь их к поступлению.'));
+    statement.append(el('h2', null, 'Подготовься\nк поступлению.'), el('p', null, 'Выбери цель, развивай портфолио и подготовь заявку. Здесь будет видно, что делать дальше.'));
     const entry = el('section', 'start-entry');
-    entry.append(el('h3', null, hasWorks?'Продолжим твой путь?':'С чего начнём?'), el('p', null, hasWorks?'Твои работы сохранены в «Моём пути». Открой нужную, чтобы доработать её или связать с программой.':'Выбери небольшую работу или сохрани то, что уже сделал. Программа поступления пока не нужна.'));
-    const path=el('button','button',hasWorks?'Открыть мои работы':'Начать работу');path.type='button';path.addEventListener('click',hasWorks?handlers.onOpenRoute:handlers.onStartWork);entry.append(path);
-    const choose = el('button', 'link-button', 'Сначала посмотреть программы →');
+    entry.append(el('h3', null, hasWorks?'Продолжим подготовку?':'Начнём с первого шага'), el('p', null, 'Ответь, есть ли у тебя программа поступления. Затем мы перейдём к твоему опыту и первому делу.'));
+    const path=el('button','button',hasWorks?'Продолжить подготовку':'Начать подготовку');path.type='button';path.addEventListener('click',handlers.onBeginPreparation);entry.append(path);
+    const choose = el('button', 'link-button', 'Посмотреть каталог самостоятельно');
     choose.type = 'button';
-    choose.addEventListener('click', handlers.onChooseGoals);
+    choose.addEventListener('click', handlers.onExploreCatalog);
     entry.append(choose, el('p', 'start-note', 'Бесплатно, без регистрации. Записи остаются на этом устройстве.'));
     box.append(statement, entry);
     root.append(box);
     const map = el('section', 'path-explainer');
     map.setAttribute('aria-label', 'Как устроен Nerio');
-    for (const [title, description, href] of [
-      ['Работы', 'Пробуй, получай отзыв, дорабатывай. Сохраняй свой вклад и результат.', '#route'],
-      ['Программы', 'Изучи условия и выбери, куда хочешь поступать.', '#programs'],
-      ['Заявки', 'Собери материалы под конкретную цель и сохрани отправленную версию.', '#route/applications'],
-    ]) { const item = el('a', null);item.href=href;item.append(el('h3', null, title), el('p', null, description));map.append(item); }
+    for (const [title, description] of [
+      ['Выбери цель', 'Найдём программу и посмотрим её условия.'],
+      ['Добавь свой опыт', 'Начни небольшую работу по интересной тебе теме.'],
+      ['Сделай первый шаг', 'Получишь конкретное дело и сохранишь результат.'],
+    ]) { const item = el('div', null);item.append(el('h3', null, title), el('p', null, description));map.append(item); }
     root.append(map);
     return;
   }

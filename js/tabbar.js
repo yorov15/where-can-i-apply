@@ -7,8 +7,9 @@
 // слушает нажатия и, как вся работа с DOM в проекте, тестами не покрыта.
 
 export function activeTab(hash) {
+  if (hash === '#start') return 'today';
   if (hash === '#profile') return 'profile';
-  if (hash === '#today') return 'today';
+  if (hash === '#today' || hash.startsWith('#today/work/')) return 'today';
   if (hash === '#route' || hash.startsWith('#route/')) return 'route';
   if (!hash) return 'today';
   return 'answer';

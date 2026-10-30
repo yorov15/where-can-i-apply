@@ -27,6 +27,7 @@ import { forgetLearningDrafts } from './portfolio-learning-view.js';
 import { saveMaterialVersion,markMaterialSubmitted,removeMaterialVersion,removeMaterial,saveDecision,toggleOfferCondition,removeDecision,applicationsOf } from './application.js';
 import { clearApplicationDrafts } from './application-view.js';
 import { hasPreparationGoals } from './goal-status.js';
+import { renderStart, renderStartGuide, startWork } from './start-view.js';
 
 const form = document.getElementById('profile');
 const today = new Date().toISOString().slice(0, 10);
@@ -41,6 +42,34 @@ const routeScreen = document.getElementById('route');
 const routeBody = document.getElementById('route-body');
 const todayScreen = document.getElementById('today');
 const todayBody = document.getElementById('today-body');
+const startScreen = document.getElementById('start');
+let guidedStart=false;
+try { guidedStart=sessionStorage.getItem('nerio-guided-start')==='1'; } catch { /* подсказки доступны и без хранилища */ }
+
+function setGuidedStart(active){
+  guidedStart=active;document.body.dataset.guided=String(active);
+  try{if(active)sessionStorage.setItem('nerio-guided-start','1');else sessionStorage.removeItem('nerio-guided-start');}catch{ /* режим на время этой страницы */ }
+  updateStartGuide();
+}
+function updateStartGuide(){
+  document.body.dataset.guided=String(guidedStart);
+  document.body.dataset.guideStep=guidedStart&&location.hash==='#route/new'?'work':'';
+  renderStartGuide(document.getElementById('start-guide'),{active:guidedStart,screen:document.body.dataset.screen,workPath:location.hash==='#route/new',onExit:()=>setGuidedStart(false)});
+}
+function renderStartView(){
+  const work=startWork(routeState);
+  renderStart(startScreen,{state:routeState,programs,hasTask:Boolean(work&&weeklySnapshot?.week.tasks.some(task=>!task.done&&task.experienceId===work.id)),handlers:{
+    onCatalog(){location.hash='programs';},onProfile(){location.hash='profile';},onWork(){location.hash='route/new';},
+    onFinish(){
+      const entry=startWork(routeState),planned=entry&&weeklySnapshot?.week.tasks.some(task=>!task.done&&task.experienceId===entry.id);
+      setGuidedStart(false);
+      if(planned)location.hash=`today/work/${encodeURIComponent(entry.id)}`;
+      else if(entry){portfolioFocus=entry.id;location.hash='route';}
+      else location.hash='today';
+      window.scrollTo({top:0,behavior:'instant'});
+    },onSkip(){setGuidedStart(false);location.hash='programs';},
+  }});
+}
 // Маршрут и «Сегодня» питаются одним состоянием; фокус после перерисовки
 // возвращаем на том экране, который сейчас открыт.
 const activeBody = () => (todayScreen.hidden ? routeBody : todayBody);
@@ -53,7 +82,14 @@ let finished = false;
 const lead = document.querySelector('.lead');
 
 function showScreen(name) {
+  const previous=document.body.dataset.screen;
   document.body.dataset.screen = name;
+  startScreen.hidden=name!=='start';
+  if(name==='start'){
+    setGuidedStart(true);renderStartView();
+    if(routeState.goals.length||startWork(routeState))openRoute().then(()=>{if(!startScreen.hidden)renderStartView();});
+  }
+  updateStartGuide();
   // Уходя на экран программы, запоминаем место в списке: назад человек
   // возвращается к тому же вузу, а не в начало трёхсот строк.
   if (name === 'program' && !answerScreen.hidden) answerScroll = window.scrollY;
@@ -75,15 +111,17 @@ function showScreen(name) {
   if (lead) lead.hidden = true;
   tabbar.show(true);
   tabbar.sync();
+  if(guidedStart&&previous!==name)requestAnimationFrame(()=>window.scrollTo({top:0,behavior:'instant'}));
 }
 
 let answerScroll = 0;
 const PROGRAM_PREFIX = '#program/';
 
 function screenFromHash() {
+  if (location.hash === '#start') return 'start';
   if (location.hash === '#route' || location.hash.startsWith('#route/')) return 'route';
   if (location.hash === '#profile') return 'profile';
-  if (location.hash === '#today') return 'today';
+  if (location.hash === '#today' || location.hash.startsWith('#today/work/')) return 'today';
   if (location.hash.startsWith(PROGRAM_PREFIX)) return 'program';
   return location.hash ? 'answer' : 'today';
 }
@@ -148,6 +186,7 @@ const plan = {
   ids: [...routeState.goals],
   limit: MAX_GOALS,
   toggle(id) {
+    const adding=!plan.ids.includes(id);
     routeState = setGoals(routeState, plan.ids.includes(id)
       ? plan.ids.filter(goal => goal !== id) : [...plan.ids, id]);
     persistRoute();
@@ -157,7 +196,9 @@ const plan = {
     // строка в плане была бы пустой до раскрытия карточки.
     if (plan.ids.includes(id)) details.ensure(id).then(() => refresh());
     if (!routeScreen.hidden || !todayScreen.hidden) openRoute();
+    if(guidedStart&&adding){location.hash='start';window.scrollTo({top:0});}
   },
+  get guided(){return guidedStart;},
 };
 
 const nodes = {
@@ -361,9 +402,13 @@ function examForStep(step) {
 }
 
 function renderRouteView() {
+  let todayFocus=null;
+  if(location.hash.startsWith('#today/work/')){try{todayFocus=decodeURIComponent(location.hash.slice('#today/work/'.length))||null;}catch{ /* повреждённая ссылка возвращает общий план */ }}
   const plans = Object.fromEntries((route?.steps ?? []).filter(step => routeTracks[step.track]).map(step => [step.id, examForStep(step)]));
   (todayScreen.hidden ? renderRoute : renderToday)(todayScreen.hidden ? routeBody : todayBody, {
+    guidedStart,
     focusExperience: portfolioFocus,
+    todayFocus,
     study: route ? buildStudyPlan({ steps:hasPreparationGoals(route,routeState)?route.steps:[], tracks:routeTracks, plans, state:routeState, today }) : null,
     routeState, today,
     weekly:weeklySnapshot,
@@ -403,6 +448,7 @@ function renderRouteView() {
       onRemoveTaskOutcome(week,taskId) { return persistPortfolio(removeTaskOutcome(routeState,week,taskId),'Результат удалён. Галочка задания не изменилась.'); },
       onStartPortfolioWork(input) {
         const response=persistWork(startPortfolioWork(routeState,input,today),'Работа добавлена. Следующий шаг — на «Сегодня», если есть место в плане.');
+        if(response.ok&&guidedStart)queueMicrotask(()=>{location.hash='start';window.scrollTo({top:0});});
         return {...response,id:input.id};
       },
       onPausePortfolioWork(id,paused) { return persistWork(setPortfolioWorkPaused(routeState,id,paused,today),paused?'Работа на паузе. Записанные результаты сохранены.':'Работа продолжена. Проверь дела недели.'); },
@@ -573,6 +619,8 @@ function renderRouteView() {
         location.hash = 'route';
       },
       onStartWork() { location.hash = 'route/new'; },
+      onBeginPreparation(){location.hash='start';},
+      onExploreCatalog(){setGuidedStart(false);openAnswer();},
       onOpenToday() {
         location.hash = 'today';
       },
@@ -674,6 +722,7 @@ function refresh(profile = readForm(form)) {
   tabbar.setPlanCount(plan.ids.length);
   cardsStale = Boolean(renderResults(nodes, profile, programs, today, details)?.skippedCards);
   if (!programScreen.hidden) renderProgramView();
+  if (!startScreen.hidden) renderStartView();
   // Маршрут строится из анкеты: поправил балл — маршрут и неделя другие.
   if (!routeScreen.hidden || !todayScreen.hidden) {
     rebuildRoute();
@@ -708,6 +757,7 @@ onProfileChange(form, (profile) => refresh(profile));
 // иначе пустая анкета осталась бы лежать под тем же ключом.
 document.getElementById('clear-profile').addEventListener('click', () => {
   clearPortfolioDrafts();
+  setGuidedStart(false);
   clearApplicationDrafts();
   applicationFocus=null;
   portfolioFocus=null;
