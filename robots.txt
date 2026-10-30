@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /raw/
+Disallow: /manual/
+Disallow: /tools/
+Disallow: /tests/
+Disallow: /docs/
+Disallow: /api/
 
 Sitemap: https://nerio-app.vercel.app/sitemap.xml
