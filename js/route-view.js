@@ -8,11 +8,13 @@
 // Разделы справочника — раскрывающиеся: иначе экран превращается в стену
 // текста, и «что делать» теряется среди «что вообще бывает».
 import { reasonText } from './wording.js';
-import { formatDate, plural } from './lib/format.js';
+import { formatDate, plural, splitTitle } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
 import { renderStudyPlan } from './study-view.js';
-import { renderCurrentWeek } from './weekly-view.js';
 import { renderEssays } from './essay-view.js';
+import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine, hasPreparationGoals } from './goal-status.js';
+import { renderPortfolio } from './portfolio-view.js';
+import { renderApplications } from './application-view.js';
 
 const PHASES = [
   ['tests', 'Экзамены'],
@@ -72,20 +74,6 @@ function deadlineLine(goal) {
   return `${soon}Срок подачи — ${formatDate(deadline.closes)}${expected}${left}.`;
 }
 
-// Заголовки условий бывают абзацем: в шаге показываем первую фразу, полный
-// текст — под раскрытием. Ничего не выкидываем: текст условия остаётся.
-const SHORT_TITLE = 110;
-
-function splitTitle(title) {
-  const text = String(title ?? '').trim();
-  if (text.length <= SHORT_TITLE) return { short: text, rest: '' };
-  const cut = text.slice(0, SHORT_TITLE);
-  const stop = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('; '), cut.lastIndexOf(', '));
-  const at = stop > 40 ? stop + 1 : cut.lastIndexOf(' ');
-  const short = text.slice(0, at > 0 ? at : SHORT_TITLE).trim();
-  return { short: short.endsWith('.') || short.endsWith('…') ? short : `${short}…`, rest: text };
-}
-
 const clip = (text, max) => {
   const value = String(text ?? '').trim();
   return value.length <= max ? value : `${value.slice(0, max - 1).trimEnd()}…`;
@@ -121,6 +109,25 @@ function gapBlock(route) {
   }
   box.append(list);
   for (const note of route.gapNotes ?? []) box.append(el('p', 'route-detail', note));
+  return box;
+}
+
+// Статус заявки по цели и одна строка «что осталось». Статус выбирает человек:
+// ничего не отмечается само, потому что подачу на сайте вуза мы не видим.
+function statusRow(goal, route, routeState, handlers) {
+  const entry = statusOf(routeState, goal.id);
+  const box = el('div', 'route-goal-status');
+  const select = el('select');
+  select.setAttribute('aria-label', `Статус заявки: ${goal.name}`);
+  for (const [code, text] of GOAL_STATUSES) {
+    const option = el('option', null, text);
+    option.value = code;
+    select.append(option);
+  }
+  select.value = entry.status;
+  select.addEventListener('change', () => handlers.onGoalStatus(goal.id, select.value));
+  box.append(el('span', 'route-detail', 'Статус заявки'), select);
+  box.append(el('p', 'route-goal-meta', progressLine(goalProgress(route, goal.id), entry)));
   return box;
 }
 
@@ -355,7 +362,8 @@ function actionsBlock(route, handlers, statusText, applyUrl) {
   }
 
   const more = el('details', 'route-more');
-  more.append(el('summary', null, 'Сохранить маршрут или сбросить прогресс'));
+  more.open = true;
+  more.append(el('summary', null, 'Резервная копия и перенос'));
   const save = el('button', 'button button-quiet', 'Скачать маршрут');
   save.type = 'button';
   save.addEventListener('click', () => say(handlers.onExport()));
@@ -375,7 +383,7 @@ function actionsBlock(route, handlers, statusText, applyUrl) {
   more.append(file, load);
   load.addEventListener('click', () => file.click());
 
-  const clear = el('button', 'link-button', 'Сбросить прогресс');
+  const clear = el('button', 'link-button', 'Сбросить учебные отметки');
   clear.type = 'button';
   clear.addEventListener('click', () => say(handlers.onClear()));
   more.append(clear);
@@ -398,9 +406,36 @@ function emptyNotice({ prepared, failed, onRetry }) {
   return box;
 }
 
+const openedGoals = new Set();
+export function routeSection(hash) {
+  const section = hash.split('/')[1];
+  return ['preparation', 'applications', 'files'].includes(section) ? section : 'works';
+}
+
 export function renderRoute(root, props) {
   const { programs, route, planIds, tracks, status, loading, applyUrl, handlers } = props;
   root.textContent = '';
+  const section = routeSection(location.hash);
+  root.dataset.layer = section;
+  const navigation = el('nav', 'path-nav');
+  navigation.setAttribute('aria-label', 'Разделы моего пути');
+  for (const [id, title] of [['works', 'Работы'], ['preparation', 'Подготовка'], ['applications', 'Заявки'], ['files', 'Файл и данные']]) {
+    const link = el('a', null, title);
+    link.href = id === 'works' ? '#route' : `#route/${id}`;
+    if (id === section) link.setAttribute('aria-current', 'page');
+    navigation.append(link);
+  }
+  root.append(navigation);
+  if (section === 'works') {
+    root.append(renderPortfolio(props));
+    return;
+  }
+  if (section === 'files') {
+    const head = el('header', 'section-heading');
+    head.append(el('h3', null, 'Твой путь остаётся у тебя'), el('p', null, 'Сохрани файл перед сменой устройства или очисткой браузера. В него входят цели, работы, результаты и версии заявки.'));
+    root.append(head, actionsBlock(route, handlers, status, applyUrl));
+    return;
+  }
 
   if (loading) {
     const box = el('div', 'route-empty');
@@ -410,6 +445,7 @@ export function renderRoute(root, props) {
   }
 
   if (!route) {
+    if(section === 'applications') { const applications=renderApplications(props);if(applications)root.append(applications); }
     root.append(emptyNotice({ prepared: [], failed: planIds.length > 0, onRetry: handlers.onRetry }));
     const choose = el('button', 'button', 'Выбрать программы');
     choose.type = 'button';
@@ -420,17 +456,22 @@ export function renderRoute(root, props) {
       remove.addEventListener('click', () => handlers.onRemoveGoal(id));
       root.append(remove);
     }
-    root.append(choose, actionsBlock(null, handlers, status, null));
+    root.append(choose);
     return;
   }
 
   // ——— цель и прогресс (левая колонка на широком экране) ———
   const main = el('div', 'route-main');
   const head = el('header', 'route-head');
-  head.append(el('h3', 'route-goal-name', `Цели из моего плана (${route.goals.length})`));
+  head.append(el('h3', 'route-goal-name', `Цели (${route.goals.length})`));
   for (const goal of route.goals) {
-    const item = el('div', 'route-goal-actions');
+    // Строка цели — имя, срок и «Убрать». Покрытие, заметки и предупреждения
+    // под раскрытием: восемь целей иначе занимают весь первый экран.
+    const item = el('details', 'route-goal-actions');
     item.dataset.goal = goal.id;
+    item.open = openedGoals.has(goal.id);
+    item.addEventListener('toggle',()=>{if(item.isConnected){if(item.open)openedGoals.add(goal.id);else openedGoals.delete(goal.id);}});
+    item.append(el('summary', null, goal.name));
     const open = el('button', 'link-button', goal.name);
     open.type = 'button';
     open.addEventListener('click', () => handlers.onOpen(goal.id));
@@ -438,10 +479,17 @@ export function renderRoute(root, props) {
     remove.type = 'button';
     remove.setAttribute('aria-label', `Убрать ${goal.name} из целей`);
     remove.addEventListener('click', () => handlers.onRemoveGoal(goal.id));
-    item.append(open, remove, el('p', 'route-goal-meta', deadlineLine(goal)),
-      el('p', 'route-goal-meta', coverageLine(goal.coverage)));
-    if (!goal.prepared) item.append(el('p', 'route-detail', 'Подготовка для этой программы пока не размечена. Сверь требования на её сайте.'));
-    if (goal.note) item.append(el('p', 'route-goal-note', goal.note));
+    const sent = isSent(statusOf(props.routeState, goal.id).status);
+    item.append(open, remove);
+    if (!sent) item.append(el('p', 'route-goal-meta', deadlineLine(goal)));
+    item.append(statusRow(goal, route, props.routeState, handlers));
+    const application=el('button','button button-small button-quiet','Материалы и ответ');application.type='button';application.addEventListener('click',()=>handlers.onOpenApplication(goal.id));item.append(application);
+    const more = el('details', 'route-more');
+    more.append(el('summary', null, 'Что покрывает и что учесть'));
+    more.append(el('p', 'route-goal-meta', coverageLine(goal.coverage)));
+    if (!goal.prepared) more.append(el('p', 'route-detail', 'Подготовка для этой программы пока не размечена. Сверь требования на её сайте.'));
+    if (goal.note) more.append(el('p', 'route-goal-note', goal.note));
+    item.append(more);
     if (!goal.conditionsLoaded) item.append(el('p', 'route-warn', 'Условия этой программы не загрузились. Нажми «Повторить» ниже.'));
     head.append(item);
   }
@@ -452,12 +500,23 @@ export function renderRoute(root, props) {
     remove.addEventListener('click', () => handlers.onRemoveGoal(id));
     head.append(remove);
   }
-  const choose = el('button', 'button button-quiet', 'Выбрать ещё программы');
+  const choose = el('button', 'link-button', 'Выбрать ещё программы →');
   choose.type = 'button';
   choose.addEventListener('click', handlers.onChooseGoals);
   head.append(choose);
-  main.append(head);
+  if (section === 'applications') {
+    main.append(head);
+    const applications = renderApplications(props);
+    if(applications) main.append(applications);
+    root.append(main);
+    return;
+  }
+  const intro = el('header', 'section-heading');
+  intro.append(el('h3', null, 'Что нужно для твоих целей'), el('p', null, 'Экзамены, документы и учебный план. Конкретные дела недели — на «Сегодня».'));
+  main.append(intro);
+  const preparing=hasPreparationGoals(route,props.routeState);
 
+  if(preparing){
   const progress = el('progress', 'route-bar');
   progress.max = route.stats.total || 1;
   progress.value = route.stats.done;
@@ -469,20 +528,32 @@ export function renderRoute(root, props) {
   if (warn) main.append(warn);
   const gaps = gapBlock(route);
   if (gaps) main.append(gaps);
+  }
 
-  main.append(props.weekly?renderCurrentWeek(props.weekly,handlers):weekBlock(route, handlers));
-  const study = renderStudyPlan(props.study, props.routeState, props.today, handlers,Boolean(props.weekly));
-  if (study) main.append(study);
+  if (props.weekly) {
+    // Дела недели живут на «Сегодня»; здесь только ссылка, чтобы не вести два списка.
+    const today = el('button', 'button button-quiet', 'Дела этой недели — на «Сегодня»');
+    today.type = 'button';
+    today.addEventListener('click', handlers.onOpenToday);
+    main.append(today);
+  } else main.append(weekBlock(route, handlers));
+  const study = renderStudyPlan(props.study, props.routeState, props.today, handlers, Boolean(props.weekly));
+  if (study) {
+    const wrap = el('details', 'route-phase');
+    wrap.append(el('summary', 'route-phase-title', 'Подготовка по неделям'));
+    wrap.append(study);
+    main.append(wrap);
+  }
   root.append(main);
 
   // ——— разделы-справочники (правая колонка на широком экране) ———
   const side = el('div', 'route-side');
-  side.append(phaseBlock(route, { ...handlers, tracks }));
+  const preparation=phaseBlock(route,{...handlers,tracks});
+  if(preparing)side.append(preparation);else{const archive=el('details','route-phase');archive.append(el('summary',null,'Подготовка до подачи · справка'),preparation);side.append(archive);}
   const applyNotes = applyNotesBlock(route);
   if (applyNotes) side.append(applyNotes);
-  const essays=renderEssays(route.goals,props.essays??{},handlers.onRetry);
+  const essays=renderEssays(route.goals,props.essays??{},handlers.onRetry,handlers.onSaveEssayVersion,handlers.onEssayVersionSaved);
   if(essays)side.append(essays);
   root.append(side);
 
-  root.append(actionsBlock(route, handlers, status, applyUrl));
 }

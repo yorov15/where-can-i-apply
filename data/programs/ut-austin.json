@@ -185,7 +185,17 @@
       "ru": "Плата за рассмотрение заявки для иностранца — $90, и права на её снятие у иностранцев нет.",
       "evidence": "What is the application fee? The application fee is $90 for international students.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 90,
+        "currency": "USD",
+        "evidence": "What is the application fee? The application fee is $90 for international students.",
+        "source": {
+          "url": "https://admissions.utexas.edu/apply/frequently-asked-questions/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:9eabe0744750009190c45eb2a7397e4be9344f8723857ecd523074adc5f1ce97"
+        }
+      }
     },
     {
       "ru": "Снятия платы за заявку для иностранцев не бывает.",

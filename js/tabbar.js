@@ -1,26 +1,27 @@
-// Нижняя панель вкладок на телефоне: Итог, Маршрут, Программы, План. Большой
+// Нижняя панель вкладок: Сегодня, Куда можно, Мой путь. Большой
 // палец достаёт до низа экрана, а до кнопки «Назад» вверху и до кнопки посреди
-// ответа нет. Вкладки не заводят новых экранов: «Итог», «Маршрут» и
-// «Программы» — это три экрана одного файла, «План» — каталог с фильтром
-// «В плане».
+// ответа нет. Вкладки не заводят новых экранов: «Сегодня», «Куда можно»
+// (итог и каталог) и «Мой путь» — экраны одного файла.
 //
 // Выбор вкладки — чистая функция, она покрыта тестом. setupTabbar только
 // слушает нажатия и, как вся работа с DOM в проекте, тестами не покрыта.
 
-export function activeTab(hash, bucket) {
-  if (hash === '#route') return 'route';
-  if (hash !== '#programs') return 'answer';
-  return bucket === 'plan' ? 'plan' : 'catalog';
+export function activeTab(hash) {
+  if (hash === '#profile') return 'profile';
+  if (hash === '#today') return 'today';
+  if (hash === '#route' || hash.startsWith('#route/')) return 'route';
+  if (!hash) return 'today';
+  return 'answer';
 }
 
 // bar — сама панель; hash и bucket говорят, что сейчас на экране;
 // go(name) переключает экран; watch — узел, нажатия в котором меняют фильтр.
-export function setupTabbar({ bar, hash, bucket, go, watch }) {
+export function setupTabbar({ bar, hash, go, watch }) {
   const tabs = [...bar.querySelectorAll('[data-tab]')];
   const count = bar.querySelector('.tab-count');
 
   const sync = () => {
-    const now = activeTab(hash(), bucket());
+    const now = activeTab(hash());
     for (const tab of tabs) {
       if (tab.dataset.tab === now) tab.setAttribute('aria-current', 'page');
       else tab.removeAttribute('aria-current');
@@ -29,8 +30,7 @@ export function setupTabbar({ bar, hash, bucket, go, watch }) {
 
   for (const tab of tabs) {
     tab.addEventListener('click', () => {
-      if (tab.getAttribute('aria-current') === 'page') window.scrollTo({ top: 0 });
-      else go(tab.dataset.tab);
+      go(tab.dataset.tab);
       sync();
     });
   }

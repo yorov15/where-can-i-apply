@@ -211,6 +211,22 @@
       "evidence": "Other documents (Students in design major should provide no less than 2 art works)",
       "field": null,
       "kind": "documents"
+    },
+    {
+      "ru": "Заплати взнос за заявку 600 юаней после предварительной проверки.",
+      "field": null,
+      "kind": "money",
+      "evidence": "Pay application fee (CNY600) after passing preliminary examination",
+      "fee": {
+        "amount": 600,
+        "currency": "CNY",
+        "evidence": "Pay application fee (CNY600) after passing preliminary examination",
+        "source": {
+          "url": "https://isc.bit.edu.cn/aboutbit/faq/70fe36ccf5f64defb9ecda409efd2b71.htm",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:fefb3efe2ffccde5a649d442c39ea72180bb133e00db49dbc599571b23e196e5"
+        }
+      }
     }
   ],
   "deadline": {

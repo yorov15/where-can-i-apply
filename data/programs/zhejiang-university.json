@@ -85,7 +85,17 @@
       "ru": "Заявка подаётся онлайн с 1 декабря 2025 по 28 февраля 2026 (у части специальностей — до 31 мая 2026). Сбор за заявку — 800 юаней.",
       "evidence": "Application Fee: RMB 800 yuan, non-refundable.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 800,
+        "currency": "CNY",
+        "evidence": "Application Fee: RMB 800 yuan, non-refundable.",
+        "source": {
+          "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:60ac787e8b199fe448a922c7c51a88528e72fcd0cec155cc1143f17c6371db5f"
+        }
+      }
     },
     {
       "ru": "Государственная стипендия Китая (CSC) и стипендия провинции Чжэцзян открыты только для китайскоязычных программ.",

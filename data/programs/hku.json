@@ -7,7 +7,9 @@
   },
   "hostCountry": "HK",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
     "tuition": null,
@@ -175,5 +177,21 @@
   "leftEmpty": {
     "schoolYears": "sha256:09a3367f5ccbb776dce1c32d2b835f7a79689594ad1a4c56a6e22c3b0dc4f5c7",
     "gpa": "sha256:09a3367f5ccbb776dce1c32d2b835f7a79689594ad1a4c56a6e22c3b0dc4f5c7"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "HKU Online Application",
+        "url": "https://ug.hku.hk/hku-applicant/hku/index/login.xhtml",
+        "note": "Международные квалификации.",
+        "evidence": "Applicants must input all their academic results, including both predicted and actual results, into the application system",
+        "source": {
+          "url": "https://admissions.hku.hk/apply/international-qualifications",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:22a922a90a7b2301fd05163726c1383f514e386592c28fa3b280fe2183475d21"
+        }
+      }
+    ]
   }
 }

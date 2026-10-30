@@ -185,7 +185,17 @@
       "ru": "Сбор за заявку — 100 евро, невозвратный.",
       "evidence": "Payment of 100 EUR Application Fee via SimplePay on the application platform",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 100,
+        "currency": "EUR",
+        "evidence": "Payment of 100 EUR Application Fee via SimplePay on the application platform",
+        "source": {
+          "url": "https://en.uni-mate.hu/application-procedure-for-bsc-msc",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:cd825d6a8f6dc34fa140d7aa3e24b038bc4bd46fd9fdfe1cf40cdbb0c5ffcc37"
+        }
+      }
     },
     {
       "ru": "Для письма о зачислении оплачивают первый год целиком; после зачисления можно платить по семестрам.",

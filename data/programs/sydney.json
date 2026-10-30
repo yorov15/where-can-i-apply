@@ -283,6 +283,22 @@
       "evidence": "If you have documents in languages other than English, you need to have them translated by a government-accredited translator such as NAATI, or your school's registrar or equivalent department.",
       "field": null,
       "kind": "documents"
+    },
+    {
+      "ru": "Заплати невозвратный взнос за обработку заявки — 150 австралийских долларов. Он покрывает заявки в течение одного года.",
+      "field": null,
+      "kind": "money",
+      "evidence": "You need to pay a non-refundable application processing fee of A$150.00 .",
+      "fee": {
+        "amount": 150,
+        "currency": "AUD",
+        "evidence": "You need to pay a non-refundable application processing fee of A$150.00 .",
+        "source": {
+          "url": "https://www.sydney.edu.au/study/fees-and-loans/other-costs.html",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:008e83dbc938661adaaafcfdba209a3849c4ce2665480d725e1286b92181b8f5"
+        }
+      }
     }
   ],
   "deadline": {

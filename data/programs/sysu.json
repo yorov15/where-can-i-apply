@@ -115,7 +115,17 @@
       "ru": "Без стипендии обучение на бакалавриате в 2026 году стоит в год: гуманитарные 26 000 юаней, естественные науки, инженерия и агрономия 33 800, медицина 48 000. Сбор за заявку 400 юаней, невозвратный.",
       "evidence": "The application fee is RMB 400. Once paid, it is non-refundable.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 400,
+        "currency": "CNY",
+        "evidence": "The application fee is RMB 400. Once paid, it is non-refundable.",
+        "source": {
+          "url": "https://iso.sysu.edu.cn/en/application/selffunded/1420575.htm",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:9b7b35502870fd78f14d3a07f99502f5d752d1e414693eabe8d35d73ac108f71"
+        }
+      }
     },
     {
       "ru": "Приём в цикле 2026: первый раунд с 1 января по 28 февраля, второй с 1 марта по 30 апреля. Дальше проверка документов и интервью (общие способности и язык), предварительные итоги через 15 дней после интервью, письма о зачислении с июля.",

@@ -1,24 +1,32 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { activeTab } from '../js/tabbar.js';
+import { routeSection } from '../js/route-view.js';
 
-test('вне каталога активен «Итог», каким бы ни был фильтр', () => {
-  assert.equal(activeTab('', 'all'), 'answer');
-  assert.equal(activeTab('', 'plan'), 'answer');
-  assert.equal(activeTab('#programs-x', 'plan'), 'answer');
+test('«Куда можно» активна на итоге и в каталоге', () => {
+  assert.equal(activeTab('#programs'), 'answer');
+  assert.equal(activeTab('#programs-x'), 'answer');
 });
 
-test('на экране маршрута активен «Маршрут»', () => {
-  assert.equal(activeTab('#route', 'all'), 'route');
-  assert.equal(activeTab('#route', 'plan'), 'route');
+test('на экране маршрута активен «Мой путь»', () => {
+  assert.equal(activeTab('#route'), 'route');
+  assert.equal(activeTab('#route/applications'), 'route');
 });
 
-test('в каталоге с фильтром «В плане» активен «План»', () => {
-  assert.equal(activeTab('#programs', 'plan'), 'plan');
+test('на экране «Сегодня» активна «Сегодня»', () => {
+  assert.equal(activeTab('#today'), 'today');
+  assert.equal(activeTab(''), 'today');
 });
 
-test('в каталоге с любым другим фильтром активны «Программы»', () => {
-  for (const bucket of ['all', 'yes', 'likely', 'check', 'no', undefined]) {
-    assert.equal(activeTab('#programs', bucket), 'catalog', String(bucket));
-  }
+test('анкета не выдаётся за открытую вкладку каталога', () => {
+  assert.equal(activeTab('#profile'), 'profile');
+});
+
+test('ссылки на разделы пути открывают нужный слой, неизвестная ссылка возвращает работы', () => {
+  assert.equal(routeSection('#route'), 'works');
+  assert.equal(routeSection('#route/new'), 'works');
+  assert.equal(routeSection('#route/preparation'), 'preparation');
+  assert.equal(routeSection('#route/applications'), 'applications');
+  assert.equal(routeSection('#route/files'), 'files');
+  assert.equal(routeSection('#route/unknown'), 'works');
 });

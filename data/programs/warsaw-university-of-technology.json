@@ -79,7 +79,17 @@
       "ru": "Сбор за заявку — 85 злотых, платят на личный счёт абитуриента, который выдаёт система набора.",
       "evidence": "Proof of payment of PLN 85 application fee .",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 85,
+        "currency": "PLN",
+        "evidence": "Proof of payment of PLN 85 application fee .",
+        "source": {
+          "url": "https://www.students.pw.edu.pl/How-to-Apply/Admission-to-B.Sc",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:3bf40a721edc5f4553a59f7e6406c28903a7a5ebc502d41bdf3ef1ce65a4f65b"
+        }
+      }
     },
     {
       "ru": "Приём на октябрь 2026: регистрация с 11 мая 2026, заявку создать до 21 июля 2026, документы загрузить до 19 августа, занятия с 1 октября.",

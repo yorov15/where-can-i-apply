@@ -10,7 +10,7 @@ const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.cla
 const sourceLink=(source,label)=>{const url=safeHttpUrl(source?.url);if(!url)return el('span',null,'Источник не загрузился');
   const a=el('a',null,label??`Источник · проверено ${formatDate(source.lastVerified)}`);a.href=url;a.target='_blank';a.rel='noopener';return a;};
 
-export function renderEssays(goals,specs,onRetry) {
+export function renderEssays(goals,specs,onRetry,onSaveVersion,onVersionSaved) {
   const entries=goals.filter(goal=>Object.hasOwn(specs,goal.id));if(!entries.length)return null;
   const section=el('section','route-phase');section.dataset.essays='';
   section.append(el('h3',null,'Эссе и мотивационные письма'));
@@ -45,6 +45,11 @@ export function renderEssays(goals,specs,onRetry) {
       };size();input.addEventListener('input',()=>{saved.text=input.value;saved.feedback=null;saved.status='';feedback.replaceChildren();status.textContent='';size();});field.append(count);
       const feedback=el('div'),status=el('p','route-status');status.setAttribute('role','status');status.textContent=saved.status;
       field.append(el('p','route-detail','Черновик исчезнет после перезагрузки. Сохрани свою копию.'));
+      if(onSaveVersion){
+        const save=el('button','button button-quiet','Сохранить версию для заявки');save.type='button';
+        save.addEventListener('click',()=>{const result=onSaveVersion(goal.id,item,input.value);saved.status=result.message;status.textContent=result.message;if(result.ok)onVersionSaved?.(goal.id,item.id);});
+        field.append(save,el('p','route-detail','По этой кнопке текст сохранится на устройстве и попадёт в файл маршрута.'));
+      }
       const show=()=>{feedback.replaceChildren();for(const [name,title] of [['response','Ответ на вопрос'],['structure','Ход мысли'],['questions','Что уточнить самому']]){
         if(!saved.feedback?.[name])continue;feedback.append(el('h4',null,title));for(const line of saved.feedback[name])feedback.append(el('p','route-detail',line));}};show();
       if(!blocked&&item.prompt){

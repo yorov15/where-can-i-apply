@@ -73,7 +73,17 @@
       "ru": "Сбор за заявку — 150 долларов США, вступительный экзамен — 350 долларов.",
       "evidence": "Application fee: 150 USD Entrance exam fee: 350 USD",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 150,
+        "currency": "USD",
+        "evidence": "Application fee: 150 USD Entrance exam fee: 350 USD",
+        "source": {
+          "url": "https://edu.unideb.hu/p/tuition-fee-application-entrance-fee",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:296d5dec22ee9d1b9d30e4b927bae4c91f63b83af6b11988a3e4475033c52260"
+        }
+      }
     },
     {
       "ru": "Обучение на английском: гуманитарные программы 6 000 долларов в год, инженерия 7 000–7 500, искусство и музыка 10 000; медицина и стоматология дороже — 16 900 и 17 500.",

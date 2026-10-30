@@ -373,5 +373,33 @@
     ],
     "lastVerified": "2026-09-30",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "Прямая подача Monash",
+        "url": "https://www.monash.edu/admissions/apply/international-ug",
+        "note": "Страница начала прямой подачи; проверь условия своего пути.",
+        "evidence": "Undergraduate direct application",
+        "source": {
+          "url": "https://www.monash.edu/study/how-to-apply/application-process/international-students",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:0998f7ed3c35cde7cc88dc7c78067d5615cb248c1bc2143a7237bf92d2d2f494"
+        }
+      },
+      {
+        "type": "agent",
+        "name": "Авторизованный агент Monash",
+        "url": "https://www.monash.edu/study/how-to-apply/application-process/international-students/applying-through-an-education-agent",
+        "note": "Допустимый альтернативный путь; используй только авторизованного агента.",
+        "evidence": "Apply through a Monash Education Agent",
+        "source": {
+          "url": "https://www.monash.edu/study/how-to-apply/application-process/international-students",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:0998f7ed3c35cde7cc88dc7c78067d5615cb248c1bc2143a7237bf92d2d2f494"
+        }
+      }
+    ]
   }
 }

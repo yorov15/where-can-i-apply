@@ -203,7 +203,17 @@
       "ru": "Сбор за заявку — CAN $150 для новых заявителей, невозвратный; у профессиональных программ он может быть другим.",
       "evidence": "In order to submit your application, you must submit an application fee of either CAN $150 (for new applicants to the U of A) or CAN $100 (for current or previous U of A students).",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 150,
+        "currency": "CAD",
+        "evidence": "In order to submit your application, you must submit an application fee of either CAN $150 (for new applicants to the U of A) or CAN $100 (for current or previous U of A students).",
+        "source": {
+          "url": "https://www.ualberta.ca/admissions/how-to-apply/international-admission-requirements/index.html",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:086003d73b43bf30a3bd70f080ca43168cf897e293de21c0ef2dc3215bc79cc9"
+        }
+      }
     },
     {
       "ru": "Чтобы принять предложение, большинство новых студентов вносит депозит CAN $5,000; он нужен и для письма Provincial Attestation Letter, без которого нет разрешения на учёбу.",

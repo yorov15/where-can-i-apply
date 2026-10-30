@@ -1,0 +1,67 @@
+[
+  {
+    "id": "dgist",
+    "amount": 50000,
+    "currency": "KRW",
+    "quote": "Application fee : 50,000 KRW",
+    "source": {
+      "url": "https://www.dgist.ac.kr/iuadm/sub02_03.do",
+      "lastVerified": "2026-10-28",
+      "contentHash": "sha256:4514cc175ea42ffd550421b88ffc90f57d3c80f7fa37b3d8598f170656c5b9a9"
+    },
+    "snapshot": "raw/application-fees/2026-10-28-batch2/dgist.txt",
+    "scope": "Заявка подаётся онлайн через портал Study in Korea с начала декабря до конца января, сбор за заявку 50 000 вон (не возвращается). Все документы в одном PDF до 10 МБ, на английском или с нотариальным переводом. Потом оценка заявки и интервью до апреля, итоги до мая, учёба с конца августа или начала сентября. Перенести поступление на другой семестр нельзя."
+  },
+  {
+    "id": "handong",
+    "amount": 100000,
+    "currency": "KRW",
+    "quote": "Application Fee: 100,000 KRW, paid by wire transfer.",
+    "source": {
+      "url": "https://www.handong.edu/eng/admission/undergraduate/application/freshman/",
+      "lastVerified": "2026-10-28",
+      "contentHash": "sha256:0a3ff66e811531c7bc173cda1975e0a6006030ab5a5dfd58fef30eab4b8f5753"
+    },
+    "snapshot": "raw/application-fees/2026-10-28-batch2/handong.txt",
+    "scope": "Заявка подана, когда отправлена онлайн-форма, загружены документы и оплачен взнос 100 000 вон банковским переводом."
+  },
+  {
+    "id": "aiu-japan",
+    "amount": 17000,
+    "currency": "JPY",
+    "quote": "Application Fee: 17,000 JPY",
+    "source": {
+      "url": "https://admission.aiu.ac.jp/wp/wp-content/uploads/2026/08/2027-International-Admissions-Examination-Guide.pdf",
+      "lastVerified": "2026-10-28",
+      "contentHash": "sha256:cd6f85eecf0dcf1159d40eab5b0ef5d4f6619a624713b600508f2439917d232e"
+    },
+    "snapshot": "raw/application-fees/2026-10-28-batch2/aiu-japan.txt",
+    "scope": "Взнос за подачу на International Examination 2027 — 17 000 иен."
+  },
+  {
+    "id": "ritsumeikan",
+    "amount": 5000,
+    "currency": "JPY",
+    "quote": "Fee Amount: 5,000 JPY per program.",
+    "source": {
+      "url": "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+      "lastVerified": "2026-10-28",
+      "contentHash": "sha256:e2ac672c8568a0989be656b5206d31e0bb211d79bb69a1a7219b595891cfc3e4"
+    },
+    "snapshot": "raw/application-fees/2026-10-28-batch2/ritsumeikan.txt",
+    "scope": "Подача через систему TAO; сбор — 5 000 иен за каждую программу. Приёмные окна на 2027 год: у GLA сентябрьский набор — с 14 октября по 2 ноября 2026, далее ещё два окна."
+  },
+  {
+    "id": "wuhan-university",
+    "amount": 800,
+    "currency": "CNY",
+    "quote": "Application Fee RMB800 or USD111",
+    "source": {
+      "url": "https://admission.whu.edu.cn/FRESHMEN_RELATED/FEES.htm",
+      "lastVerified": "2026-10-28",
+      "contentHash": "sha256:72802be3bdf622471dbf986317dc1544f50539df078f4db825814b17cc3159c3"
+    },
+    "snapshot": "raw/application-fees/2026-10-28-batch2/wuhan-university.txt",
+    "scope": "Плата за англоязычный бакалавриат: 23 000 юаней в год (гуманитарные), 28 000 (наука и инженерия), 40 000 (медицина). Сбор за заявку 800 юаней, страховка 500 юаней за семестр."
+  }
+]

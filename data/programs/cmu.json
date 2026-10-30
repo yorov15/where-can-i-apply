@@ -201,7 +201,17 @@
       "ru": "Оплатить невозвратный регистрационный сбор $75; при экономической нужде можно запросить освобождение от оплаты (fee waiver).",
       "evidence": "Common Application $75 Application Fee* High School Courses and Grades",
       "field": null,
-      "kind": "documents"
+      "kind": "documents",
+      "fee": {
+        "amount": 75,
+        "currency": "USD",
+        "evidence": "Common Application $75 Application Fee* High School Courses and Grades",
+        "source": {
+          "url": "https://www.cmu.edu/admission/admission/undergraduate-admission-requirements",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:c895b28d1d12e2cc68bd77a09eb085a2172b3319438fa8828d5ebe7d420f506c"
+        }
+      }
     },
     {
       "ru": "Предоставить список школьных предметов и оценки — их сверяют с академическими требованиями вуза.",

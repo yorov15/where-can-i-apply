@@ -91,7 +91,17 @@
       "ru": "Плата за англоязычный бакалавриат: 23 000 юаней в год (гуманитарные), 28 000 (наука и инженерия), 40 000 (медицина). Сбор за заявку 800 юаней, страховка 500 юаней за семестр.",
       "evidence": "English Medium RMB23,000 English medium RMB28,000 English medium RMB40,000",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 800,
+        "currency": "CNY",
+        "evidence": "Application Fee RMB800 or USD111",
+        "source": {
+          "url": "https://admission.whu.edu.cn/FRESHMEN_RELATED/FEES.htm",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:72802be3bdf622471dbf986317dc1544f50539df078f4db825814b17cc3159c3"
+        }
+      }
     },
     {
       "ru": "Заявка на осень 2026 шла с 1 октября 2025 по 30 июня 2026. Нужна финансовая справка — вклад от 5 000 долларов, и медосмотр за последние полгода.",

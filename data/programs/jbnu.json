@@ -92,7 +92,17 @@
       "ru": "Подача на весну 2027 идёт в два раунда: с 21 сентября по 2 октября 2026 и с 9 по 20 ноября 2026. Сбор за заявку — 80 000 вон.",
       "evidence": "Fee : KRW 80,000 (Unpaid applications can not be accepted)",
       "field": null,
-      "kind": "steps"
+      "kind": "steps",
+      "fee": {
+        "amount": 80000,
+        "currency": "KRW",
+        "evidence": "Fee : KRW 80,000 (Unpaid applications can not be accepted)",
+        "source": {
+          "url": "https://top.jbnu.ac.kr/sites/ioffice/file/2-1%20English.pdf",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:992afb89e0289aee1cb1d0616b602228b2f194d9c9accb17c52e7fd60868e73c"
+        }
+      }
     },
     {
       "ru": "Семестр на гуманитарных, экономических и социальных направлениях стоит 2 016 000 вон, на инженерных — 2 704 000 вон (данные осени 2026).",

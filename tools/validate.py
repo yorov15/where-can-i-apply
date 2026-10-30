@@ -6,9 +6,12 @@
 """
 
 import re
+from datetime import date
+from urllib.parse import urlparse
 
 from tools.schema import (
     CONDITION_KINDS,
+    APPLY_CHANNEL_TYPES,
     FIELDS,
     LANGUAGE_TESTS,
     EXAM_TESTS,
@@ -117,6 +120,71 @@ def validate_program(
         problems.append("exam: alternative без условия kind=workaround по полю exam — не сказано, какой это путь")
 
     problems.extend(_check_deadline(program.get("deadline") or {}))
+    problems.extend(_check_apply_channel(program.get("applyChannel"), haystack))
+    return problems
+
+
+def _https_url(value, allow_http=False):
+    if not isinstance(value, str):
+        return False
+    try:
+        parsed = urlparse(value)
+        schemes = ('http', 'https') if allow_http else ('https',)
+        return parsed.scheme in schemes and bool(parsed.hostname) and not parsed.username and not parsed.password
+    except ValueError:
+        return False
+
+
+def _check_apply_channel(channel, haystack):
+    if channel is None:
+        return []
+    if not isinstance(channel, dict) or set(channel) != {'routes'}:
+        return ['applyChannel: нужен объект с единственным полем routes']
+    routes = channel['routes']
+    if not isinstance(routes, list) or not 1 <= len(routes) <= 6:
+        return ['applyChannel.routes: нужен список от 1 до 6 подтверждённых маршрутов']
+    problems, seen = [], set()
+    for i, route in enumerate(routes, 1):
+        where = f'applyChannel.routes[{i}]'
+        if not isinstance(route, dict):
+            problems.append(f'{where}: нужен объект')
+            continue
+        if set(route) != {'type', 'name', 'url', 'note', 'evidence', 'source'}:
+            problems.append(f'{where}: нужны type, name, url, note, evidence, source без лишних полей')
+        if route.get('type') not in APPLY_CHANNEL_TYPES:
+            problems.append(f'{where}.type: неизвестный тип канала')
+        for key, limit, required in [('name', 120, True), ('note', 240, route.get('url') is None)]:
+            value = route.get(key)
+            if not isinstance(value, str) or len(value) > limit or (required and not value.strip()) or '\ufffd' in value:
+                problems.append(f'{where}.{key}: нужен текст до {limit} знаков без U+FFFD')
+        url = route.get('url')
+        if url is not None:
+            if not _https_url(url, allow_http=True):
+                problems.append(f'{where}.url: нужен HTTP(S)-адрес или null с пояснением адресата')
+            elif normalize(url) not in haystack:
+                problems.append(f'{where}.url: ссылка не найдена в снимке источника')
+        quote = route.get('evidence')
+        if not isinstance(quote, str) or not quote.strip() or '\ufffd' in quote:
+            problems.append(f'{where}.evidence: нужна цитата без U+FFFD')
+        elif normalize(quote) not in haystack:
+            problems.append(f'{where}.evidence: цитата не найдена в снимке источника')
+        source = route.get('source')
+        if not isinstance(source, dict) or set(source) != {'url', 'lastVerified', 'contentHash'}:
+            problems.append(f'{where}.source: нужны url, lastVerified и contentHash')
+        else:
+            if not _https_url(source['url']):
+                problems.append(f'{where}.source.url: нужен HTTPS-адрес')
+            try:
+                if not isinstance(source['lastVerified'], str) or date.fromisoformat(source['lastVerified']).isoformat() != source['lastVerified']:
+                    raise ValueError
+            except ValueError:
+                problems.append(f'{where}.source.lastVerified: нужна настоящая дата')
+            if not re.fullmatch(r'sha256:[0-9a-f]{64}', str(source['contentHash'])):
+                problems.append(f'{where}.source.contentHash: нужен SHA-256 снимка')
+        identity = (str(route.get('type')), str(route.get('name')), str(url))
+        if identity in seen:
+            problems.append(f'{where}: маршрут повторяется')
+        seen.add(identity)
     return problems
 
 
@@ -426,13 +494,33 @@ def _check_fee(number: int, condition: dict, haystack: str) -> list[str]:
     amount = fee.get("amount")
     if isinstance(amount, bool) or not isinstance(amount, (int, float)) or amount < 0:
         problems.append(f"{where}.amount: нужно неотрицательное число")
-    if fee.get("currency") not in FEE_CURRENCIES:
+    if fee.get("currency") not in FEE_CURRENCIES and not (amount == 0 and fee.get("currency") is None):
         problems.append(f"{where}.currency: неизвестная валюта {fee.get('currency')!r}")
+    if "source" in fee:
+        source = fee["source"]
+        if not isinstance(source, dict):
+            problems.append(f"{where}.source: нужен объект источника")
+        else:
+            url = source.get("url")
+            if not isinstance(url, str) or urlparse(url).scheme != "https" or not urlparse(url).hostname:
+                problems.append(f"{where}.source.url: нужен HTTPS-адрес")
+            verified = source.get("lastVerified")
+            try:
+                if not isinstance(verified, str) or date.fromisoformat(verified).isoformat() != verified:
+                    raise ValueError
+            except ValueError:
+                problems.append(f"{where}.source.lastVerified: нужна настоящая дата")
+            if not re.fullmatch(r"sha256:[0-9a-f]{64}", str(source.get("contentHash", ""))):
+                problems.append(f"{where}.source.contentHash: нужен SHA-256 снимка")
     if fee.get("waivedForAid") not in (None, True):
         problems.append(f"{where}.waivedForAid: только значение true")
+    if "unconditional" in fee and (type(fee["unconditional"]) is not bool or amount != 0):
+        problems.append(f"{where}.unconditional: boolean только для нулевого взноса")
     quote = fee.get("evidence")
     if not quote:
         return problems + [f"{where}: нет собственной цитаты"]
+    if '\ufffd' in quote:
+        problems.append(f"{where}: повреждённая UTF-8 цитата содержит U+FFFD")
     if normalize(quote) not in haystack:
         problems.append(f"{where}: цитата не найдена в тексте источника — {quote!r}")
     elif amount == 0:

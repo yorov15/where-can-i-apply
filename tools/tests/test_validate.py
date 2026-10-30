@@ -746,6 +746,27 @@ class TestFee(unittest.TestCase):
     def test_valid_fee_passes(self):
         self.assertEqual(self.problems(amount=20, currency="USD", evidence=self.QUOTE), [])
 
+    def test_zero_fee_does_not_need_an_invented_currency(self):
+        self.assertEqual(self.problems(amount=0, currency=None, evidence="There is no application fee"), [])
+        self.assertTrue(any("неизвестная валюта" in p for p in self.problems(amount=20, currency=None, evidence=self.QUOTE)))
+
+    def test_replacement_character_in_fee_quote_is_rejected_even_if_in_snapshot(self):
+        quote = 'Application fee: \ufffd20'
+        errors = validate_program(self.program({'amount': 20, 'currency': 'EUR', 'evidence': quote}), SNAPSHOT + ' ' + quote)
+        self.assertTrue(any('UTF-8' in error for error in errors), errors)
+
+    def test_unconditional_flag_is_boolean_and_only_classifies_zero(self):
+        self.assertEqual(self.problems(amount=0, currency=None, evidence='There is no application fee', unconditional=True), [])
+        for flag in ['yes', 1, None]:
+            self.assertTrue(any('unconditional' in p for p in self.problems(amount=0, currency=None, evidence='There is no application fee', unconditional=flag)))
+        self.assertTrue(any('unconditional' in p for p in self.problems(amount=20, currency='USD', evidence=self.QUOTE, unconditional=True)))
+
+    def test_optional_fee_source_requires_url_real_date_and_hash(self):
+        source = {"url": "https://example.edu/apply", "lastVerified": "2026-10-28", "contentHash": "sha256:" + "a" * 64}
+        self.assertEqual(self.problems(amount=20, currency="USD", evidence=self.QUOTE, source=source), [])
+        for patch in [{"url": "http://example.edu"}, {"lastVerified": "2026-02-31"}, {"contentHash": "invented"}]:
+            self.assertTrue(any("source" in p for p in self.problems(amount=20, currency="USD", evidence=self.QUOTE, source={**source, **patch})), patch)
+
     def test_amount_must_stand_in_its_own_quote(self):
         problems = self.problems(amount=25, currency="USD", evidence=self.QUOTE)
         self.assertTrue(any("нет в цитате" in p for p in problems), problems)

@@ -151,7 +151,17 @@
       "ru": "Подача стоит 100 евро за одну заявку (до трёх программ), плата невозвратная и оплачивается через Flywire; освобождения от неё нет.",
       "evidence": "The application fee is 100 EUR per application.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 100,
+        "currency": "EUR",
+        "evidence": "The application fee is 100 EUR per application.",
+        "source": {
+          "url": "https://www.vu.lt/en/admissions/admissions-to-bachelor-studies",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:d285943a7cb843d9abaaaebb7c609538829b16c65645ab8411f4a95e3dc12fa4"
+        }
+      }
     },
     {
       "ru": "Приём на 2027/28 открывается 1 декабря 2026.",

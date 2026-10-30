@@ -108,5 +108,33 @@
     "lastVerified": "2026-09-27",
     "humanChecked": false,
     "approvedBy": "assistant"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "tuPORT",
+        "url": "https://tuport.sap.tu-berlin.de/",
+        "note": "Заявка в TU Berlin; предварительно может требоваться VPD.",
+        "evidence": "required documents via the application portal of TU Berlin",
+        "source": {
+          "url": "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment/prospective-students-with-an-international-higher-education-entrance-qualification/application/group-c",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:a97337ca500215441b9991d8e5d20e2bfad44ee2937a1079a390f701ecebfdfc"
+        }
+      },
+      {
+        "type": "platform",
+        "name": "My assist / uni-assist",
+        "url": "https://www.uni-assist.de/en/",
+        "note": "Предварительная проверка VPD для иностранных документов; это не заявка в TU Berlin.",
+        "evidence": "online portal My assist",
+        "source": {
+          "url": "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment/prospective-students-with-an-international-higher-education-entrance-qualification/admission-requirements",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:6785c73ca56e35a18464366367e635cb855013d7fdedff6be6bd33f9596616df"
+        }
+      }
+    ]
   }
 }

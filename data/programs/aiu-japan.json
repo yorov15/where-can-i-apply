@@ -100,6 +100,22 @@
       "evidence": "AIU has a tuition waiver program for students who encounter difficulties affording tuition fees because of financial situations, natural disasters, etc.",
       "field": null,
       "kind": "money"
+    },
+    {
+      "ru": "Взнос за подачу на International Examination 2027 — 17 000 иен.",
+      "field": null,
+      "kind": "money",
+      "evidence": "Application Fee: 17,000 JPY",
+      "fee": {
+        "amount": 17000,
+        "currency": "JPY",
+        "evidence": "Application Fee: 17,000 JPY",
+        "source": {
+          "url": "https://admission.aiu.ac.jp/wp/wp-content/uploads/2026/08/2027-International-Admissions-Examination-Guide.pdf",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:cd6f85eecf0dcf1159d40eab5b0ef5d4f6619a624713b600508f2439917d232e"
+        }
+      }
     }
   ],
   "deadline": {
@@ -142,5 +158,21 @@
   },
   "leftEmpty": {
     "schoolYears": "sha256:d60fe00933cf6e2dab359cb19353e1c1f599659e5a5cd30968b1b9c4f6053ace"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "AIU Online Application",
+        "url": "https://e-apply.jp/ds/aiu/",
+        "note": "Онлайн-регистрация и оплата, затем распечатать форму и отправить документы почтой.",
+        "evidence": "After registering your application information on the online application website and paying the application fee, please print out the downloadable documents",
+        "source": {
+          "url": "https://admission.aiu.ac.jp/en/ug/application/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:013e947267785ca78801e3cea0ef72432467b881aa1ab67f3307c80da4423d93"
+        }
+      }
+    ]
   }
 }

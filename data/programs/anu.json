@@ -188,7 +188,17 @@
       "ru": "Подача стоит AUD$150 за каждую заявку, вносится при отправке онлайн-заявления.",
       "evidence": "You must pay an application fee of AUD$150 upon submission of each application you make to the University.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 150,
+        "currency": "AUD",
+        "evidence": "You must pay an application fee of AUD$150 upon submission of each application you make to the University.",
+        "source": {
+          "url": "https://study.anu.edu.au/apply/international-applications",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:fd1e74fe9a6ea1794bd0845be2d381e42c3592357ef679b3f019df51a853d0ac"
+        }
+      }
     },
     {
       "ru": "Подать можно не более чем на три программы, расставив их в порядке предпочтения; при успехе придёт одно предложение на наиболее приоритетную программу, на которую хватает баллов.",

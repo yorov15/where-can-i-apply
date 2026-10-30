@@ -1,12 +1,53 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { norm, countryName, matchesFilter, bucketCounts, COUNTRY_RU } from '../js/filter.js';
+import { norm, countryName, matchesFilter, bucketCounts, acceptsDuolingo, COUNTRY_RU } from '../js/filter.js';
 import { KINDS, KIND_LABEL, KIND_FILTER } from '../js/lib/kinds.js';
 
 const harvard = { title: 'Гарвардский колледж — помощь по достатку семьи', orig: 'Harvard College — need-based financial aid', country: 'US', bucket: 'yes', kind: 'need-aid' };
 const turkey = { title: 'Türkiye Bursları — государственная стипендия Турции', orig: 'Türkiye Scholarships', country: 'TR', bucket: 'check', kind: 'government' };
 const none = { query: '', bucket: 'all', country: '', kind: '' };
+
+test('no-fee filter excludes unknown and paid applications, including conditional aid waivers', () => {
+  const free = { ...harvard, feeFree: true, duolingo: true, plan: true };
+  const filter = { ...none, noFee: true, duolingo: true, country: 'US', kind: 'need-aid', bucket: 'plan' };
+  assert.equal(matchesFilter(free, filter), true);
+  for (const feeFree of [undefined, null, false, '1']) assert.equal(matchesFilter({ ...free, feeFree }, filter), false);
+  assert.equal(matchesFilter({ ...free, duolingo: false }, filter), false);
+  assert.equal(matchesFilter(free, { ...filter, country: 'KR' }), false);
+  assert.equal(matchesFilter(free, { ...filter, query: 'turkey' }), false);
+  assert.equal(matchesFilter(harvard, none), true);
+  assert.deepEqual(bucketCounts([free, harvard, { ...turkey, feeFree: true }], { ...none, noFee: true, duolingo: true }),
+    { all: 1, plan: 1, yes: 1, likely: 0, check: 0, no: 0 });
+});
+
+test('Duolingo acceptance comes only from the named language alternatives', () => {
+  assert.equal(acceptsDuolingo({ eligibility: { language: { anyOf: [{ test: 'DUOLINGO', min: 120 }] } } }), true);
+  for (const program of [{}, { eligibility: { language: { notMeasured: true, evidence: 'Duolingo is not accepted' } } },
+    { eligibility: { language: { noLimit: true }, exam: { anyOf: [{ test: 'DUOLINGO' }] } } },
+    { eligibility: { language: { anyOf: [{ test: 'IELTS', min: 6.5 }] } }, name: { ru: 'Duolingo' } }]) {
+    assert.equal(acceptsDuolingo(program), false);
+  }
+});
+
+test('Duolingo filter excludes unknowns and combines with search, bucket, plan, country and kind', () => {
+  const accepted = { ...harvard, duolingo: true, plan: true };
+  const filter = { ...none, duolingo: true, query: 'harvard', country: 'US', kind: 'need-aid', bucket: 'plan' };
+  assert.equal(matchesFilter(accepted, filter), true);
+  for (const duolingo of [false, undefined, null]) assert.equal(matchesFilter({ ...accepted, duolingo }, filter), false);
+  assert.equal(matchesFilter(accepted, { ...filter, country: 'KR' }), false);
+  assert.equal(matchesFilter(accepted, { ...filter, kind: 'government' }), false);
+  assert.equal(matchesFilter(accepted, { ...filter, bucket: 'no' }), false);
+  assert.equal(matchesFilter(accepted, { ...filter, query: 'turkey' }), false);
+  assert.equal(matchesFilter(accepted, { ...filter, bucket: 'yes' }), true);
+  assert.equal(matchesFilter(harvard, none), true);
+});
+
+test('bucket counts apply Duolingo together with the other filters', () => {
+  const items = [{ ...harvard, duolingo: true, plan: true }, harvard, { ...turkey, duolingo: true }];
+  assert.deepEqual(bucketCounts(items, { ...none, duolingo: true }), { all: 2, plan: 1, yes: 1, likely: 0, check: 1, no: 0 });
+  assert.deepEqual(bucketCounts(items, { ...none, duolingo: true, country: 'US' }), { all: 1, plan: 1, yes: 1, likely: 0, check: 0, no: 0 });
+});
 
 test('нормализация: регистр, ё, диакритика', () => {
   assert.equal(norm('  Türkiye '), 'turkiye');

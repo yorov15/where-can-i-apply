@@ -303,5 +303,21 @@
         "contentHash": "sha256:1d62c4b6444860b1b5d4d777614e04ec0c90c532c54fe4d6b0ea09db9b6db50a"
       }
     ]
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "AUCA Online Application",
+        "url": "http://applyonline.auca.kg/",
+        "note": "Альтернатива: отправить форму и документы в приёмную комиссию.",
+        "evidence": "Fill out the ONLINE APPLICATION or send the AUCA Admission Application Form and supporting documents to: AUCA Office of Admissions",
+        "source": {
+          "url": "https://www.auca.kg/en/freshman_applicants/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:f840753c2422baf8310b864b35a607d7385b83552ff9757c71a62518fb99534d"
+        }
+      }
+    ]
   }
 }

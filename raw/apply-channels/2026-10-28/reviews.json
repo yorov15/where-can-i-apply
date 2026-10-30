@@ -1,0 +1,633 @@
+[
+  {
+    "id": "kaist",
+    "name": "KAIST — приём иностранцев на бакалавриат",
+    "country": "KR",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://admission.kaist.ac.kr/intl-undergraduate/before/sub02",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/kaist-ffb8182ec634.txt",
+        "contentHash": "sha256:7a895c95ed0c0fc24b33d53f817e6d7051b9c8501727f672f26e080365852f94",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      },
+      {
+        "url": "https://admission.kaist.ac.kr/intl-undergraduate/apply/sub01",
+        "date": "2026-10-28",
+        "error": "RuntimeError: curl 22: curl: (22) The requested URL returned error: 404\n"
+      },
+      {
+        "url": "https://admission.kaist.ac.kr/intl-undergraduate/application/apply",
+        "date": "2026-10-28",
+        "error": "page.goto: Timeout 22000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://admission.kaist.ac.kr/intl-undergraduate/application/apply\", waiting until \"domcontentloaded\"\u001b[22m\n"
+      }
+    ]
+  },
+  {
+    "id": "tiu-japan",
+    "name": "Токийский международный университет (TIU) — E-Track на английском",
+    "country": "JP",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://www.tiu.ac.jp/etrack/wp-content/uploads/application_guideline_for_first_year.pdf",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/tiu-japan-f82f9c08dacb.txt",
+        "contentHash": "sha256:a25a1f1aebb7512e4bc2942e84b27bb40b9b151a195d2173fdcaad27f0f6e310",
+        "extraction": "strict HTML/PDF with extracted hrefs",
+        "captureNote": "Повторно обработаны исходные байты официальной страницы, сохранённые в этот же день для партии взносов."
+      }
+    ]
+  },
+  {
+    "id": "hku",
+    "name": "Гонконгский университет (HKU) — приём иностранцев и стипендии за успехи",
+    "country": "HK",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://admissions.hku.hk/apply/international-qualifications",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/hku-fae46dee1b3b.txt",
+        "contentHash": "sha256:22a922a90a7b2301fd05163726c1383f514e386592c28fa3b280fe2183475d21",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "hkust",
+    "name": "HKUST, Гонконг — приём по международным аттестатам",
+    "country": "HK",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://join.hkust.edu.hk/admissions/international-qualifications?general_requirement=46180",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/hkust-94bb0cbf7a01.txt",
+        "contentHash": "sha256:0e48d53ff70175ade12fef5c3428f413d192b1586b3c22d51decad3bee0983ed",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "harvard-college",
+    "name": "Гарвардский колледж — помощь по достатку семьи",
+    "country": "US",
+    "kind": "need-aid",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/harvard-college-e32e72d7e359.txt",
+        "contentHash": "sha256:8a971ebfd488cb4c7ec09fd0e590c464ddcec32a1acdcca5548f8c69cec1c59c",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      },
+      {
+        "url": "https://college.harvard.edu/admissions/apply/international-applicants",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/harvard-college-b16c3fa596c8.txt",
+        "contentHash": "sha256:219d50cbf3336e2bb99dfa99e4cddb2624f298b57b641653f99491c3d3a7b238",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "oxford",
+    "name": "University of Oxford (Великобритания): приём иностранцев на бакалавриат",
+    "country": "GB",
+    "kind": "university",
+    "status": "not_stated",
+    "reason": "Локальное скачивание и браузер возвращают 403. Поисковое описание UCAS не заменяет сохранённый снимок официальной страницы; поле оставлено пустым.",
+    "sources": [
+      {
+        "url": "https://www.ox.ac.uk/admissions/undergraduate/applying/guide-for-applicants/ucas-application",
+        "date": "2026-10-28",
+        "error": "RuntimeError: curl 22: curl: (22) The requested URL returned error: 403\n"
+      },
+      {
+        "url": "https://www.ox.ac.uk/admissions/undergraduate/applying/for-international-students",
+        "date": "2026-10-28",
+        "error": "RuntimeError: curl 22: curl: (22) The requested URL returned error: 403\n"
+      },
+      {
+        "url": "https://www.ox.ac.uk/admissions/undergraduate/applying/guide-for-applicants/ucas-application",
+        "date": "2026-10-28",
+        "error": "HTTP 403"
+      }
+    ]
+  },
+  {
+    "id": "cambridge",
+    "name": "University of Cambridge (Кембриджский университет) — приём иностранцев на бакалавриат",
+    "country": "GB",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://www.undergraduate.study.cam.ac.uk/apply/how/cambridge-application",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/cambridge-86ea046a53c0.txt",
+        "contentHash": "sha256:d6d22e47064c7ee55e2fac80c3a9b1747cce405dd6d6bff89ca1c5403459655f",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      },
+      {
+        "url": "https://www.undergraduate.study.cam.ac.uk/international-students",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/cambridge-ffc04c87f944.txt",
+        "contentHash": "sha256:d7207e92cff4f39963f9596e6c1f947bce12c8ae8bbfee05fc86c2ddbe291b51",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      },
+      {
+        "url": "https://www.undergraduate.study.cam.ac.uk/apply/how",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/cambridge-89712f558ccc.txt",
+        "contentHash": "sha256:ac47f15a3a146ac915564dff0731c72d328bf6f4715c87f92afe0027692f289f",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "tu-berlin",
+    "name": "Technische Universität Berlin (Германия) — бакалавриат для иностранцев",
+    "country": "DE",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment/prospective-students-with-an-international-higher-education-entrance-qualification",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/tu-berlin-3518e413b810.txt",
+        "contentHash": "sha256:ac48a9f9790018d5bc91c4cef4802cd58e6ca069e29d4e032f6f5027426828b8",
+        "extraction": "strict HTML/PDF with extracted hrefs",
+        "captureNote": "Повторно обработаны исходные байты официальной страницы, сохранённые в этот же день для партии взносов."
+      },
+      {
+        "url": "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/tu-berlin-01575dfb7110.txt",
+        "contentHash": "sha256:2492687432e1692f718021e4c9bdb653ebd2d409c6efdcc53bb2c0e9bf4e790a",
+        "extraction": "strict HTML/PDF with extracted hrefs",
+        "captureNote": "Повторно обработаны исходные байты официальной страницы, сохранённые в этот же день для партии взносов."
+      },
+      {
+        "url": "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment/prospective-students-with-an-international-higher-education-entrance-qualification/application/group-c",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/tu-berlin-681ba995ab99.txt",
+        "contentHash": "sha256:a97337ca500215441b9991d8e5d20e2bfad44ee2937a1079a390f701ecebfdfc",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      },
+      {
+        "url": "https://www.tu.berlin/en/studierendensekretariat/bachelors-application-enrollment/prospective-students-with-an-international-higher-education-entrance-qualification/admission-requirements",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/tu-berlin-6fe45323cce6.txt",
+        "contentHash": "sha256:6785c73ca56e35a18464366367e635cb855013d7fdedff6be6bd33f9596616df",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "gks-korea",
+    "name": "Global Korea Scholarship — государственная стипендия Кореи",
+    "country": "KR",
+    "kind": "government",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://www.studyinkorea.go.kr/en/plan/scholarship.do",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/gks-korea-4aeec3f2b065.txt",
+        "contentHash": "sha256:82ca5786d887e7be52bc72744e30537b6ef3748363149fba5511d60ecf4339bc",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "unist",
+    "name": "UNIST (Ulsan National Institute of Science and Technology, Ульсан) — научно-технический вуз; всем новым студентам покрывают вступительный взнос и плату за обучение на 100%",
+    "country": "KR",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://admu-intl.unist.ac.kr/admission-eng/admissions/admissions.do?articleNo=306812&attachNo=591437&mode=download",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/unist-d81b68be9239.txt",
+        "contentHash": "sha256:b1d0fca31d3a2d07e018a70be79efe2c4cfa1985866294223efae478f6dd76d4",
+        "extraction": "strict HTML/PDF with extracted hrefs",
+        "captureNote": "Повторно обработаны исходные байты официальной страницы, сохранённые в этот же день для партии взносов."
+      }
+    ]
+  },
+  {
+    "id": "russia-quota",
+    "name": "Квота Правительства России",
+    "country": "RU",
+    "kind": "government",
+    "status": "not_stated",
+    "reason": "Страницы портала отдали только оболочку JavaScript, браузер не дождался содержимого. Догадка по названию портала и прежнему applyUrl не использована.",
+    "sources": [
+      {
+        "url": "https://education-in-russia.com/how-to-proceed/admission-process",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/russia-quota-24cd2db7768a.txt",
+        "contentHash": "sha256:ec8beeff3896d2f06866edad34a7e36c2ac7d6434c316081bd9e798fe8ecafc0",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      },
+      {
+        "url": "https://education-in-russia.com/",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/russia-quota-ed7556609e11.txt",
+        "contentHash": "sha256:ec8beeff3896d2f06866edad34a7e36c2ac7d6434c316081bd9e798fe8ecafc0",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      },
+      {
+        "url": "https://education-in-russia.com/how-to-proceed/admission-process",
+        "date": "2026-10-28",
+        "error": "page.goto: Timeout 22000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://education-in-russia.com/how-to-proceed/admission-process\", waiting until \"domcontentloaded\"\u001b[22m\n"
+      }
+    ]
+  },
+  {
+    "id": "turkiye-burslari",
+    "name": "Türkiye Bursları — государственная стипендия Турции",
+    "country": "TR",
+    "kind": "government",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://turkiyeburslari.gov.tr/scholarshipsprograms",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/turkiye-burslari-45b39f162f60.txt",
+        "contentHash": "sha256:1f321893c5618767450485d26d84519e40cd4d42e64f7b4c640d3e2f0af612a1",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      },
+      {
+        "url": "https://turkiyeburslari.gov.tr/applysteps",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/turkiye-burslari-343749be0671.txt",
+        "contentHash": "sha256:a92a0b74d196983c0754f162cf599834f9c1e63cd3b6e5c6275e7921379f7298",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "mext-japan",
+    "name": "MEXT — государственная стипендия Японии",
+    "country": "JP",
+    "kind": "government",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/mext-japan-3361ea527426.txt",
+        "contentHash": "sha256:9757581c09f7eafc8e55175126bbf89e3d72e8698da2eba40457e68824013708",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "csc-china",
+    "name": "Стипендия правительства Китая (CSC) — через посольство КНР в Таджикистане",
+    "country": "CN",
+    "kind": "government",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://tj.china-embassy.gov.cn/sgzc/202511/t20251124_11759137.htm",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/csc-china-97e469c23c84.txt",
+        "contentHash": "sha256:71c91848cbabe4fc8cc9ee7ca6ef74ae7f823e26a8a2b11987b92b78d95ba049",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "utoronto-pearson",
+    "name": "Стипендия Пирсона, Университет Торонто",
+    "country": "CA",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://future.utoronto.ca/pearson-scholarships",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/utoronto-pearson-8258fe4c3187.txt",
+        "contentHash": "sha256:5a083c1c45b9457a071be87e359f424ff9ee5fbf1564dfbe25b40596b15c389b",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "ubc-scholars",
+    "name": "UBC International Scholars, Ванкувер",
+    "country": "CA",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/ubc-scholars-fce726ac77d2.txt",
+        "contentHash": "sha256:e3e4742ff0f376c96a55549fdea28b717c696c9e890966c9db934c2e73ceacc9",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "adelaide",
+    "name": "Adelaide University (Австралия): приём иностранцев на бакалавриат",
+    "country": "AU",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://adelaide.edu.au/study/international-students/how-to-apply/",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/adelaide-86c71d88c22a.txt",
+        "contentHash": "sha256:6def3fa968d841b4a60fabd1c80c559435fa097c3b4690eacd125b86067223e0",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "monash",
+    "name": "Monash University (Австралия): приём иностранцев на бакалавриат",
+    "country": "AU",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://www.monash.edu/study/how-to-apply/application-process/international-students",
+        "date": "2026-10-28",
+        "error": "RuntimeError: curl 22: curl: (22) The requested URL returned error: 403\n"
+      },
+      {
+        "url": "https://www.monash.edu/study/international",
+        "date": "2026-10-28",
+        "error": "RuntimeError: curl 22: curl: (22) The requested URL returned error: 403\n"
+      },
+      {
+        "url": "https://www.monash.edu/study/how-to-apply/application-process/international-students",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/monash-9594e3308ef0.txt",
+        "contentHash": "sha256:0998f7ed3c35cde7cc88dc7c78067d5615cb248c1bc2143a7237bf92d2d2f494",
+        "extraction": "official web tool text, lines 88-104; observed link clicks"
+      },
+      {
+        "url": "https://www.monash.edu/study/how-to-apply/application-process/international-students",
+        "date": "2026-10-28",
+        "error": "HTTP 403"
+      }
+    ]
+  },
+  {
+    "id": "melbourne",
+    "name": "University of Melbourne (Австралия): приём иностранцев на бакалавриат",
+    "country": "AU",
+    "kind": "university",
+    "status": "not_stated",
+    "reason": "Официальная страница прочитана через web, но curl и браузер возвращают 403, повторное извлечение текста не удалось. Проверяемый UTF-8 снимок не сохранён, поэтому поле не внесено.",
+    "sources": [
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/entry-requirements",
+        "date": "2026-10-28",
+        "error": "RuntimeError: curl 22: curl: (22) The requested URL returned error: 403\n"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/authorised-education-agent",
+        "date": "2026-10-28",
+        "error": "RuntimeError: curl 22: curl: (22) The requested URL returned error: 403\n"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/applications",
+        "date": "2026-10-28",
+        "error": "RuntimeError: curl 22: curl: (22) The requested URL returned error: 403\n"
+      },
+      {
+        "url": "https://study.unimelb.edu.au/how-to-apply/authorised-education-agent",
+        "date": "2026-10-28",
+        "error": "HTTP 403"
+      }
+    ]
+  },
+  {
+    "id": "unsw",
+    "name": "UNSW Sydney (Австралия) — приём иностранцев на бакалавриат",
+    "country": "AU",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://www.unsw.edu.au/study/how-to-apply/international",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/unsw-d866e0b36e14.txt",
+        "contentHash": "sha256:27d82850122abcdcfae7771e14f018e8d695b6d3ed36b53edf09cf21dc733b5a",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "duke-university",
+    "name": "Дьюк — помощь по достатку семьи",
+    "country": "US",
+    "kind": "need-aid",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://admissions.duke.edu/apply/",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/duke-university-b33d74638529.txt",
+        "contentHash": "sha256:c0d062532d2ee79fc9f002d62a76f8b2108ad6158b269cfa783ff8f4c56fe2e4",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "bme-budapest",
+    "name": "Будапештский университет технологии и экономики (BME, Венгрия) — бакалавриат",
+    "country": "HU",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://www.bme.hu/en/application_and_admission",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/bme-budapest-a987070240fd.txt",
+        "contentHash": "sha256:da41d4777b436d3e2ff5d5866e3a73477055fe4d12e8ad9cbc92e25e8ce681ff",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "bologna-italy",
+    "name": "Болонский университет (Италия) — приём иностранцев на бакалавриат",
+    "country": "IT",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://www.unibo.it/en/study/enrolment-fees-and-other-procedures/degree-programmes/enrolling-in-first-cycle-and-single-cycle-degree-programmes/enrolling-in-a-first-cycle-or-single-cycle-degree-programme-if-you-come-from-a-non-eu-country",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/bologna-italy-51bf747d09fc.txt",
+        "contentHash": "sha256:a67883ef529992bd1ba8ec9ed02e8009a6cf9b3222d0a278394d834f978ef481",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "charles-university",
+    "name": "Карлов университет (Чехия) — приём иностранцев на бакалавриат",
+    "country": "CZ",
+    "kind": "university",
+    "status": "not_stated",
+    "reason": "Проверенная общая страница не называет способ отправки заявки. Каналы отдельных факультетов не обобщались на весь университет.",
+    "sources": [
+      {
+        "url": "https://cuni.cz/uken-329.html",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/charles-university-d1a6e463c635.txt",
+        "contentHash": "sha256:6e20e635e138c67a97d38388d18d479d9766efb14de6ef8f7d4c631bb6c1b922",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "aiu-japan",
+    "name": "Международный университет Акиты (AIU) — приём иностранцев на английском",
+    "country": "JP",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://admission.aiu.ac.jp/en/ug/application/",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/aiu-japan-99d8766ba493.txt",
+        "contentHash": "sha256:013e947267785ca78801e3cea0ef72432467b881aa1ab67f3307c80da4423d93",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      },
+      {
+        "url": "https://admission.aiu.ac.jp/en/ug/international/",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/aiu-japan-a8604a080450.txt",
+        "contentHash": "sha256:7399143f9390efb909a0d289262f0efefac80d07301baa6b716766f65cac615b",
+        "extraction": "strict HTML/PDF with extracted hrefs",
+        "captureNote": "Повторно обработаны исходные байты официальной страницы, сохранённые в этот же день для партии взносов."
+      }
+    ]
+  },
+  {
+    "id": "constructor-university",
+    "name": "Constructor University (Бремен) — стипендии, в том числе полная от JetBrains",
+    "country": "DE",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://constructor.university/admission-aid/application-information-undergraduate",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/constructor-university-27ef22cda6e2.txt",
+        "contentHash": "sha256:46073cf5446409e539713ea952362f8c40e331cd47a09e77665498d5fa8d2140",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "nazarbayev",
+    "name": "Назарбаев Университет, Астана",
+    "country": "KZ",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/nazarbayev-74a89e094167.txt",
+        "contentHash": "sha256:237b45f9d9af36216699c3ca054c33c065d99520effa09095f9fe18c3aa97401",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  },
+  {
+    "id": "auca",
+    "name": "Американский университет в Центральной Азии (AUCA), Бишкек",
+    "country": "KG",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://www.auca.kg/en/freshman_applicants/",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/auca-50fa1229491d.txt",
+        "contentHash": "sha256:f840753c2422baf8310b864b35a607d7385b83552ff9757c71a62518fb99534d",
+        "extraction": "strict HTML/PDF with extracted hrefs",
+        "captureNote": "Повторно обработаны исходные байты официальной страницы, сохранённые в этот же день для партии взносов."
+      }
+    ]
+  },
+  {
+    "id": "newuu",
+    "name": "New Uzbekistan University (Ташкент) — приём иностранцев на бакалавриат",
+    "country": "UZ",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://newuu.uz/en/menu/entry-requirements",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/newuu-3c5a8206540a.txt",
+        "contentHash": "sha256:d9b0509c23e4371a0008de7f6804ca7b9fc1a373fe08998eb2db75966931d41d",
+        "extraction": "strict HTML/PDF with extracted hrefs",
+        "captureNote": "Повторно обработаны исходные байты официальной страницы, сохранённые в этот же день для партии взносов."
+      }
+    ]
+  },
+  {
+    "id": "aus-uae",
+    "name": "Американский университет Шарджи (AUS, ОАЭ) — приём иностранцев",
+    "country": "AE",
+    "kind": "university",
+    "status": "added",
+    "reason": "Прямо назван хотя бы один канал. Условия, этапы и названные альтернативы сохранены.",
+    "sources": [
+      {
+        "url": "https://www.aus.edu/admissions/bachelors-degrees/application-requirements",
+        "date": "2026-10-28",
+        "snapshot": "raw/apply-channels/2026-10-28/review-sources/aus-uae-e04e95482dd4.txt",
+        "contentHash": "sha256:0e7bae8b2bd1e0be3304d86063e087f519bfb388f060dc3493e2880eee978d8a",
+        "extraction": "strict HTML/PDF with extracted hrefs"
+      }
+    ]
+  }
+]

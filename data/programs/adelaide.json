@@ -154,7 +154,17 @@
       "ru": "Сбор за заявку — AUD $150, невозвратный, платится за каждую заявку.",
       "evidence": "Note A non-refundable application fee of AUD $150* applies to every application.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 150,
+        "currency": "AUD",
+        "evidence": "Note A non-refundable application fee of AUD $150* applies to every application.",
+        "source": {
+          "url": "https://adelaide.edu.au/study/international-students/how-to-apply/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:c9232eee6071520c1d50cbd6a373e46c8497d9fb5bbe397213f82ecd385a54a6"
+        }
+      }
     },
     {
       "ru": "Вуз проверяет финансовую состоятельность: студент обязан показать, что покроет tuition и жизнь в Австралии; освободить от платы или оплатить расходы вуз не будет.",
@@ -332,5 +342,33 @@
     ],
     "lastVerified": "2026-09-30",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "Adelaide International Application System",
+        "url": "https://student-adelaideuni.studylink.com/index.cfm?event=security.showLogin&brand=ADELAIDEUNI&custInstID=ADELAIDEUNI",
+        "note": "Прямой путь, если вуз не требует агента для твоего гражданства.",
+        "evidence": "If you don't need to apply via an Education Agent, you can submit your application directly through our International Application System.",
+        "source": {
+          "url": "https://adelaide.edu.au/study/international-students/how-to-apply/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:6def3fa968d841b4a60fabd1c80c559435fa097c3b4690eacd125b86067223e0"
+        }
+      },
+      {
+        "type": "agent",
+        "name": "Авторизованный агент Adelaide",
+        "url": "https://adelaide.edu.au/study/international-students/find-an-education-agent/",
+        "note": "Для перечисленных вузом стран/регионов агент обязателен; список — в источнике.",
+        "evidence": "Some students must apply through an Adelaide University authorised Education Agent.",
+        "source": {
+          "url": "https://adelaide.edu.au/study/international-students/how-to-apply/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:6def3fa968d841b4a60fabd1c80c559435fa097c3b4690eacd125b86067223e0"
+        }
+      }
+    ]
   }
 }

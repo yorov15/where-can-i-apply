@@ -9,7 +9,7 @@ import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocum
 import { renderResults } from './render.js';
 import { PLAN_KEY, DONE_KEY, buildEventsIcs } from './plan.js';
 import { scheduleRoute, routeCalendarEvents } from './agenda.js';
-import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask } from './route-state.js';
+import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask, setGoalStatus } from './route-state.js';
 import { examPlan } from './exam-plan.js';
 import { buildStudyPlan } from './study-plan.js';
 import { prepareCurrentWeek,reviewWeeks,setTaskDay,studyCalendarEvents } from './weekly.js';
@@ -18,6 +18,15 @@ import { planCost } from './cost.js';
 import { buildCombinedRoute } from './route-combined.js';
 import { renderRoute } from './route-view.js';
 import { EXPLAIN_URL } from './config.js';
+import { renderToday } from './today-view.js';
+import { renderProgram, programRow } from './program-view.js';
+import { saveExperience, removeExperience, saveTaskOutcome, removeTaskOutcome, startPortfolioWork, setPortfolioWorkPaused,
+  togglePortfolioWorkStep, savePortfolioBrief, savePortfolioReview, updatePortfolioLearning } from './portfolio.js';
+import { clearPortfolioDrafts } from './portfolio-view.js';
+import { forgetLearningDrafts } from './portfolio-learning-view.js';
+import { saveMaterialVersion,markMaterialSubmitted,removeMaterialVersion,removeMaterial,saveDecision,toggleOfferCondition,removeDecision,applicationsOf } from './application.js';
+import { clearApplicationDrafts } from './application-view.js';
+import { hasPreparationGoals } from './goal-status.js';
 
 const form = document.getElementById('profile');
 const today = new Date().toISOString().slice(0, 10);
@@ -26,14 +35,17 @@ const today = new Date().toISOString().slice(0, 10);
 // вторую шапку и второй разбор анкеты. Адрес всё равно настоящий — назад
 // в браузере работает.
 const answerScreen = document.getElementById('answer');
-const catalogScreen = document.getElementById('catalog');
+const programScreen = document.getElementById('program');
+const programBody = document.getElementById('program-body');
 const routeScreen = document.getElementById('route');
 const routeBody = document.getElementById('route-body');
-const catalogButton = document.getElementById('open-catalog');
+const todayScreen = document.getElementById('today');
+const todayBody = document.getElementById('today-body');
+// Маршрут и «Сегодня» питаются одним состоянием; фокус после перерисовки
+// возвращаем на том экране, который сейчас открыт.
+const activeBody = () => (todayScreen.hidden ? routeBody : todayBody);
 
-// Пока человек не закончил анкету, ни ответа, ни каталога не видно: ответ
-// по пустому профилю — это стена «можно, но сначала», из которой нечего
-// вынести. Каталог по прямой ссылке тоже ждёт анкету.
+// Анкета меняет только персональную проверку. Навигация и работы доступны всем.
 let finished = false;
 
 // Вводная фраза нужна тому, кто пришёл впервые. Когда анкета готова, она
@@ -41,37 +53,73 @@ let finished = false;
 const lead = document.querySelector('.lead');
 
 function showScreen(name) {
-  const ready = finished;
-  // Пока анкета не готова, маршрута нет: адрес #route не должен оставлять
-  // человека на пустом экране.
-  if (!ready) name = 'answer';
   document.body.dataset.screen = name;
-  answerScreen.hidden = !ready || name !== 'answer';
-  catalogScreen.hidden = !ready || name !== 'catalog';
-  routeScreen.hidden = !ready || name !== 'route';
-  if (ready && name === 'catalog') buildCards();
-  if (ready && name === 'route') openRoute();
-  if (lead) lead.hidden = finished;
-  tabbar.show(finished);
+  // Уходя на экран программы, запоминаем место в списке: назад человек
+  // возвращается к тому же вузу, а не в начало трёхсот строк.
+  if (name === 'program' && !answerScreen.hidden) answerScroll = window.scrollY;
+  const back = name === 'answer' && answerScreen.hidden;
+  answerScreen.hidden = name !== 'answer';
+  programScreen.hidden = name !== 'program';
+  routeScreen.hidden = name !== 'route';
+  todayScreen.hidden = name !== 'today';
+  document.getElementById('profile-box').hidden = name !== 'profile';
+  document.getElementById('profile-intro').hidden = name !== 'profile';
+  if (name === 'profile') {
+    document.getElementById('profile-box').open = true;
+    if (!wizard.active) wizard.start();
+  }
+  if (name === 'answer') buildCards();
+  if (name === 'program') renderProgramView();
+  if (back && answerScroll) requestAnimationFrame(() => window.scrollTo({ top: answerScroll, behavior: 'instant' }));
+  if (name === 'route' || name === 'today') openRoute();
+  if (lead) lead.hidden = true;
+  tabbar.show(true);
   tabbar.sync();
 }
 
+let answerScroll = 0;
+const PROGRAM_PREFIX = '#program/';
+
 function screenFromHash() {
-  if (location.hash === '#route') return 'route';
-  if (location.hash === '#programs') return 'catalog';
-  return 'answer';
+  if (location.hash === '#route' || location.hash.startsWith('#route/')) return 'route';
+  if (location.hash === '#profile') return 'profile';
+  if (location.hash === '#today') return 'today';
+  if (location.hash.startsWith(PROGRAM_PREFIX)) return 'program';
+  return location.hash ? 'answer' : 'today';
 }
 
-function openProgram(id) {
-  // Карточка может ещё не существовать: пока каталог закрыт, их не строят.
-  buildCards();
-  // Карточку, спрятанную фильтром, открыть нельзя: сначала снимаем его.
-  catalogFilter.reset();
-  location.hash = 'programs';
-  const card = catalogScreen.querySelector(`details.card[data-id="${CSS.escape(id)}"]`);
-  if (!card) return;
-  card.open = true;
-  card.scrollIntoView({ block: 'start' });
+// Прежний адрес #programs и пустой адрес ведут на один и тот же экран.
+const openProgram = (id) => { location.hash = PROGRAM_PREFIX.slice(1) + encodeURIComponent(id); };
+const openAnswer = () => { location.hash = 'programs'; };
+
+function programIdFromHash() {
+  try { return decodeURIComponent(location.hash.slice(PROGRAM_PREFIX.length)); } catch { return ''; }
+}
+
+let leftFirstPage = false;
+addEventListener('hashchange', () => { leftFirstPage = true; });
+
+// Экран программы живёт по адресу: перерисовываем его, когда меняется анкета,
+// план или приезжают подробности.
+function renderProgramView() {
+  const id = programIdFromHash();
+  const program = programs.find((item) => item.id === id);
+  renderProgram(programBody, {
+    row: program ? programRow(program, readForm(form), today) : null,
+    loading: details.status === 'loading' && !programs.length,
+    details, plan, route, routeState, today, guest: !profileReady(readForm(form)),
+    handlers: {
+      // Зашёл по прямой ссылке — назад в истории ведёт с сайта, поэтому на список.
+      onBack: () => (leftFirstPage ? history.back() : openAnswer()),
+      onOpenToday: () => { location.hash = 'today'; },
+      onProfile: () => { location.hash = 'profile'; },
+    },
+  });
+  // Условия едут отдельным файлом: попросили — и после их прихода рисуем
+  // заново. Повтора не будет: после ensure условия уже не «ожидаются».
+  if (program && details.programs[id] && details.conditions[id] === undefined) {
+    details.ensure(id).then(() => { if (programIdFromHash() === id && !programScreen.hidden) renderProgramView(); });
+  }
 }
 
 const catalogFilter = setupCatalogFilter({
@@ -84,17 +132,10 @@ setupBarHide(document.querySelector('.catalog-bar'));
 const tabbar = setupTabbar({
   bar: document.getElementById('tabbar'),
   hash: () => location.hash,
-  bucket: () => document.querySelector('#catalog-tools .chip[aria-pressed="true"]')?.dataset.bucket,
   watch: document.getElementById('catalog-tools'),
   go(name) {
-    if (name === 'answer') {
-      if (location.hash) location.hash = '';
-    } else if (name === 'route') {
-      location.hash = 'route';
-    } else {
-      catalogFilter.showBucket(name === 'plan' ? 'plan' : 'all');
-      location.hash = 'programs';
-    }
+    if (name === 'route' || name === 'today') location.hash = name;
+    else location.hash = 'programs';
     window.scrollTo({ top: 0 });
   },
 });
@@ -115,7 +156,7 @@ const plan = {
     // условий. Только что отмеченную программу надо дочитать: иначе её
     // строка в плане была бы пустой до раскрытия карточки.
     if (plan.ids.includes(id)) details.ensure(id).then(() => refresh());
-    if (!routeScreen.hidden) openRoute();
+    if (!routeScreen.hidden || !todayScreen.hidden) openRoute();
   },
 };
 
@@ -124,14 +165,13 @@ const nodes = {
   summaryNode: document.getElementById('summary'),
   agendaNode: document.getElementById('agenda'),
   resultsNode: document.getElementById('results'),
-  catalogButton,
   onOpenProgram: openProgram,
   onOpenRoute: () => { location.hash = 'route'; },
-  // Каталог закрыт — карточки не пересобираем (см. renderResults).
-  skipCards: () => catalogScreen.hidden && !forceCards,
+  // Список не на экране — карточки не пересобираем (см. renderResults).
+  skipCards: () => answerScreen.hidden && !forceCards,
 };
 
-// Карточки каталога отстали от анкеты, пока каталог был закрыт.
+// Карточки списка отстали от анкеты, пока его не было на экране.
 let cardsStale = false;
 let forceCards = false;
 function buildCards() {
@@ -140,26 +180,11 @@ function buildCards() {
   try { refresh(); } finally { forceCards = false; }
 }
 
-// На широком экране фильтры лежат в боковой колонке, а не прячутся под
-// «Ещё фильтры»: место есть, а лишний тап не нужен.
-const wide = matchMedia('(min-width: 64rem)');
-const openFilters = () => { if (wide.matches) document.querySelector('.catalog-more')?.setAttribute('open', ''); };
-openFilters();
-wide.addEventListener?.('change', openFilters);
-
 const syncScreen = () => showScreen(screenFromHash());
 addEventListener('hashchange', syncScreen);
 
-catalogButton.addEventListener('click', () => {
-  catalogFilter.showBucket(catalogButton.dataset.bucket || 'all');
-  location.hash = 'programs';
-  catalogScreen.scrollIntoView({ block: 'start' });
-});
-document.getElementById('back-to-answer').addEventListener('click', () => {
-  history.length > 1 ? history.back() : (location.hash = '');
-});
 document.getElementById('show-results').addEventListener('click', () => {
-  if (location.hash === '#programs') location.hash = '';
+  if (location.hash === '#programs') openAnswer();
 });
 
 // Шапка обещает, что данные никуда не уходят. Пока объяснялка выключена,
@@ -197,6 +222,8 @@ let routeDocuments = {};
 let routeCtx = null;
 let route = null;
 let routeStatus = '';
+let applicationFocus = null;
+let portfolioFocus = null;
 let routeLoading = false;
 let routeRequest = 0;
 
@@ -214,6 +241,25 @@ function loadRouteData() {
 function persistRoute() {
   plan.ids = [...routeState.goals];
   saveRouteState(routeState, localStorage);
+}
+
+function persistPortfolio(next, message) {
+  if (!next) return {ok:false,message:'Не удалось сохранить. Проверь ссылку, длину полей и число записей (до 40 опытов и 100 результатов).'};
+  if (new TextEncoder().encode(exportState(next)).length > 500_000) return {ok:false,message:'Маршрут слишком большой. Сохрани резервную копию и сократи записи.'};
+  if (!saveRouteState(next, localStorage)) return {ok:false,message:'Браузер не сохранил записи. Освободи место или разреши локальное хранение и попробуй снова.'};
+  routeState = next;
+  return {ok:true,message};
+}
+
+function persistWork(next,message) {
+  const response=persistPortfolio(next,message);
+  if(response.ok)rebuildRoute();
+  return response;
+}
+
+function persistApplication(next,message) {
+  if(!next)return {ok:false,message:'Не удалось сохранить. Проверь текст, ссылки и даты. Можно хранить до 12 материалов, 8 версий каждого и 8 условий ответа; общий объём тоже ограничен.'};
+  return persistPortfolio(next,message);
 }
 
 function preparedEntry(id) {
@@ -238,6 +284,7 @@ async function refreshRoute() {
   if (!routeData) {
     route = null;
     routeCtx = null;
+    rebuildRoute();
     return;
   }
   const ticket = ++routeRequest;
@@ -246,6 +293,7 @@ async function refreshRoute() {
   if (!selected.length) {
     route = null;
     routeCtx = null;
+    rebuildRoute();
     return;
   }
   const codes = [...new Set(selected.flatMap(program => preparedEntry(program.id)?.tests ?? []))];
@@ -277,6 +325,8 @@ async function refreshRoute() {
 function rebuildRoute() {
   if (!routeCtx) {
     route = null;
+    weeklySnapshot=prepareCurrentWeek(routeState,{steps:[],week:[]},null,today);
+    if(exportState(routeState)!==exportState(weeklySnapshot.state)){routeState=weeklySnapshot.state;persistRoute();}
     return;
   }
   if (!routeState.studyStarted) { routeState = { ...routeState, studyStarted: today }; persistRoute(); }
@@ -291,8 +341,9 @@ function rebuildRoute() {
   const plans=Object.fromEntries(route.steps.filter(step=>routeTracks[step.track]).map(step=>[step.id,examForStep(step)]));
   route=scheduleRoute(route,plans,routeDocuments,today);
   route.tracksLoaded=routeCtx.every(context=>(context.prepared?.tests??[]).every(code=>Boolean(routeTracks[code])));
-  const study=buildStudyPlan({steps:route.steps,tracks:routeTracks,plans,state:routeState,today});
-  weeklySnapshot=prepareCurrentWeek(routeState,route,study,today);
+  const preparing=hasPreparationGoals(route,routeState),routine=preparing?route:{...route,steps:[],week:[]};
+  const study=buildStudyPlan({steps:routine.steps,tracks:routeTracks,plans,state:routeState,today});
+  weeklySnapshot=prepareCurrentWeek(routeState,routine,study,today);
   if(exportState(routeState)!==exportState(weeklySnapshot.state)){routeState=weeklySnapshot.state;persistRoute();}
   route.parentReport=parentReport({route,state:routeState,weekly:weeklySnapshot,cost:planCost(routeCtx.map(context=>context.program),details),today});
 }
@@ -311,8 +362,9 @@ function examForStep(step) {
 
 function renderRouteView() {
   const plans = Object.fromEntries((route?.steps ?? []).filter(step => routeTracks[step.track]).map(step => [step.id, examForStep(step)]));
-  renderRoute(routeBody, {
-    study: route ? buildStudyPlan({ steps:route.steps, tracks:routeTracks, plans, state:routeState, today }) : null,
+  (todayScreen.hidden ? renderRoute : renderToday)(todayScreen.hidden ? routeBody : todayBody, {
+    focusExperience: portfolioFocus,
+    study: route ? buildStudyPlan({ steps:hasPreparationGoals(route,routeState)?route.steps:[], tracks:routeTracks, plans, state:routeState, today }) : null,
     routeState, today,
     weekly:weeklySnapshot,
     essays:routeEssays,
@@ -326,32 +378,91 @@ function renderRouteView() {
     loading: routeLoading,
     applyUrl: routeState.goals.length === 1 ? details.programs?.[routeState.goals[0]]?.applyUrl ?? null : null,
     handlers: {
+      getRouteState: () => routeState,
+      onSaveMaterialVersion(input) { return {...persistApplication(saveMaterialVersion(routeState,input,today),'Новая версия сохранена. Прежние версии остались.'),id:input.id}; },
+      onMarkMaterialSubmitted(id,versionId) { return persistApplication(markMaterialSubmitted(routeState,id,versionId,today),versionId?'Отправленная версия отмечена.':'Отметка отправки снята.'); },
+      onRemoveMaterialVersion(id,versionId) { return persistApplication(removeMaterialVersion(routeState,id,versionId),'Версия удалена.'); },
+      onRemoveMaterial(id) { return persistApplication(removeMaterial(routeState,id),'Материал и версии удалены.'); },
+      onSaveDecision(input) { const response=persistApplication(saveDecision(routeState,input,today),'Ответ и условия сохранены.');if(response.ok)rebuildRoute();return response; },
+      onDecisionSaved(goalId,message) { routeStatus=message;applicationFocus=goalId;renderRouteView(); },
+      onOfferCondition(goalId,id) { return persistApplication(toggleOfferCondition(routeState,goalId,id,today),'Отметка условия обновлена.'); },
+      onRemoveDecision(goalId) { return persistApplication(removeDecision(routeState,goalId),'Запись об ответе удалена.'); },
+      onOpenApplication(goalId) { applicationFocus=goalId;if(location.hash==='#route/applications')renderRouteView();else location.hash='route/applications'; },
+      onSaveEssayVersion(goalId,item,text) {
+        const old=applicationsOf(routeState).materials.find(material=>material.goalId===goalId&&material.sourceKey===item.id);
+        return persistApplication(saveMaterialVersion(routeState,{id:old?.id??crypto.randomUUID(),versionId:crypto.randomUUID(),sourceKey:item.id,goalId,
+          title:item.title,kind:'essay',prompt:item.prompt??'',sourceUrl:item.source?.url??'',text,url:'',note:'Сохранено из раздела эссе',experienceIds:old?.versions.at(-1).references.map(ref=>ref.experienceId)??[]},today),'Версия сохранена в «Материалах и ответах».');
+      },
+      onEssayVersionSaved(goalId,fieldId) {
+        renderRouteView();const program=routeBody.querySelector(`[data-essay-program="${CSS.escape(goalId)}"]`),field=program?.querySelector(`[data-essay-field="${CSS.escape(fieldId)}"]`);
+        if(program)program.open=true;if(field){field.open=true;field.querySelector('textarea')?.focus();}
+      },
+      onSaveExperience(input) { return persistPortfolio(saveExperience(routeState,input,today),'Опыт сохранён.'); },
+      onRemoveExperience(id) { const entry=routeState.portfolio?.experiences.find(item=>item.id===id),response=persistPortfolio(removeExperience(routeState,id),'Опыт удалён. Результаты заданий сохранены.');if(response.ok&&entry)forgetLearningDrafts(entry);return response; },
+      onSaveTaskOutcome(input) { return persistPortfolio(saveTaskOutcome(routeState,input,today),'Результат сохранён в «Моём пути».'); },
+      onRemoveTaskOutcome(week,taskId) { return persistPortfolio(removeTaskOutcome(routeState,week,taskId),'Результат удалён. Галочка задания не изменилась.'); },
+      onStartPortfolioWork(input) {
+        const response=persistWork(startPortfolioWork(routeState,input,today),'Работа добавлена. Следующий шаг — на «Сегодня», если есть место в плане.');
+        return {...response,id:input.id};
+      },
+      onPausePortfolioWork(id,paused) { return persistWork(setPortfolioWorkPaused(routeState,id,paused,today),paused?'Работа на паузе. Записанные результаты сохранены.':'Работа продолжена. Проверь дела недели.'); },
+      onPortfolioWorkStep(id,stepId) {
+        const next=togglePortfolioWorkStep(routeState,id,stepId,today);
+        if(!next)return {ok:false,message:'Сначала закончи или отложи учебную пробу и сохрани результат этого шага на «Сегодня». Предыдущие шаги должны быть закончены, работа — снята с паузы.'};
+        return persistWork(next,'Отметки шагов обновлены. Результаты сохранены.');
+      },
+      onSavePortfolioBrief(id,input) { return persistWork(savePortfolioBrief(routeState,id,input,today),'Задача и время обновлены.'); },
+      onSavePortfolioReview(id,input) { return persistWork(savePortfolioReview(routeState,id,input,today),'Самопроверка сохранена.'); },
+      onPortfolioLearning(id,action,input) {
+        const next=updatePortfolioLearning(routeState,id,action,input,today);
+        if(!next)return {ok:false,message:'Не удалось сохранить. Заполни поля и выбери результат. Для доработки нужен изменённый текст или ссылка; иначе выбери сохранение решения. Хранятся до трёх проб и четырёх отзывов на работу.'};
+        return persistWork(next,'Учебная запись сохранена.');
+      },
+      onOpenPortfolio(id) { portfolioFocus=id;if(location.hash==='#route')renderRouteView();else location.hash='route'; },
       getExamPlan: examForStep,
       onStudyToggle(week, taskId) {
         routeState=toggleStudyTask(routeState,week,taskId,today);persistRoute();rebuildRoute();renderRouteView();
-        const section=routeBody.querySelector(`[data-study-week="${CSS.escape(week)}"]`);
+        const section=activeBody().querySelector(`[data-study-week="${CSS.escape(week)}"]`);
         if (section) section.open=true;
-        routeBody.querySelector(`[data-study-task="${CSS.escape(taskId)}"] input`)?.focus();
+        activeBody().querySelector(`[data-study-task="${CSS.escape(taskId)}"] input`)?.focus();
       },
       onWeeklyToggle(week,taskId) {
         const task=routeState.weekPlan[week]?.find(item=>item.taskId===taskId);
+        if(!task)return;
+        if(task.kind==='portfolio'){
+          const next=togglePortfolioWorkStep(routeState,task.experienceId,task.workStepId,today);
+          if(!next){
+            renderRouteView();
+            const learning=activeBody().querySelector(`[data-learning-task="${CSS.escape(taskId)}"]`);
+            if(learning){learning.querySelector('button')?.focus();return;}
+            const box=activeBody().querySelector(`[data-task-outcome="${CSS.escape(taskId)}"]`);
+            if(box){box.open=true;box.querySelector('[role="status"]').textContent='Сначала запиши и сохрани результат этого шага.';box.querySelector('textarea')?.focus();}
+            return;
+          }
+          const response=persistPortfolio(next,'Шаг обновлён.');
+          if(!response.ok){
+            const box=activeBody().querySelector(`[data-task-outcome="${CSS.escape(taskId)}"]`);
+            if(box){box.open=true;box.querySelector('[role="status"]').textContent=response.message;}
+            return;
+          }
+        }
         routeState=toggleStudyTask(routeState,week,taskId,today);
         const wanted=routeState.weekPlan[week].find(item=>item.taskId===taskId).done;
         if(wanted)routeState.carryTasks=routeState.carryTasks.filter(item=>item.taskId!==taskId);
         if(task?.routeId){const step=route.steps.find(item=>item.id===task.routeId);if(step&&step.done!==wanted)routeState=toggleStep(routeState,step.id,today,step.legacyIds);}
         persistRoute();rebuildRoute();renderRouteView();
-        routeBody.querySelector(`[data-week-task="${CSS.escape(taskId)}"] input`)?.focus();
+        activeBody().querySelector(`[data-week-task="${CSS.escape(taskId)}"] input`)?.focus();
       },
       onTaskDay(week,taskId,day) {
         routeState=setTaskDay(routeState,week,taskId,day,today);persistRoute();rebuildRoute();renderRouteView();
-        routeBody.querySelector(`[data-week-task="${CSS.escape(taskId)}"] select`)?.focus();
+        activeBody().querySelector(`[data-week-task="${CSS.escape(taskId)}"] select`)?.focus();
       },
       onReview(taskIds) {routeState=reviewWeeks(routeState,today,taskIds);persistRoute();rebuildRoute();renderRouteView();},
       onMock(code, score) {
         const next=recordMock(routeState,code,score,today);
         if (!next) return 'Проверь дату и шкалу балла.';
         routeState=next;persistRoute();rebuildRoute();renderRouteView();
-        routeBody.querySelector(`[data-advice="${CSS.escape(code)}"]`)?.scrollIntoView({block:'nearest'});
+        activeBody().querySelector(`[data-advice="${CSS.escape(code)}"]`)?.scrollIntoView({block:'nearest'});
         return 'Пробник сохранён.';
       },
       onExamPlan(code, patch, field) {
@@ -359,10 +470,17 @@ function renderRouteView() {
         persistRoute();
         rebuildRoute();
         renderRouteView();
-        routeBody.querySelector(`[data-exam="${CSS.escape(code)}"] [data-field="${field}"]`)?.focus();
+        activeBody().querySelector(`[data-exam="${CSS.escape(code)}"] [data-field="${field}"]`)?.focus();
       },
-      onChooseGoals() { location.hash = 'programs'; },
+      onChooseGoals() { openAnswer(); },
       onRemoveGoal(id) { plan.toggle(id); },
+      onGoalStatus(id, status) {
+        routeState = setGoalStatus(routeState, id, status, today);
+        persistRoute();
+        rebuildRoute();
+        renderRouteView();
+        activeBody().querySelector(`[data-goal="${CSS.escape(id)}"] select`)?.focus();
+      },
       onToggle(stepId) {
         const aliases = route?.steps.find(step => step.id === stepId)?.legacyIds ?? [];
         routeState = toggleStep(routeState, stepId, today, aliases);
@@ -371,7 +489,7 @@ function renderRouteView() {
         renderRouteView();
         // Перерисовка заменяет узлы: возвращаем фокус на тот же шаг, иначе
         // с клавиатуры после каждой галочки человек оказывается в начале.
-        routeBody.querySelector(`[data-step="${CSS.escape(stepId)}"]`)?.focus();
+        activeBody().querySelector(`[data-step="${CSS.escape(stepId)}"]`)?.focus();
       },
       onPrint() {
         window.print();
@@ -415,7 +533,7 @@ function renderRouteView() {
           node.click();
           node.remove();
           setTimeout(() => URL.revokeObjectURL(url), 1000);
-          return 'Маршрут сохранён в файл.';
+          return 'Маршрут, портфолио и заявки сохранены в файл.';
         } catch {
           return 'Браузер не дал сохранить файл.';
         }
@@ -425,12 +543,18 @@ function renderRouteView() {
           if (picked.size > 500_000) return 'Файл слишком большой для маршрута Nerio.';
           const imported = importState(await picked.text());
           if (!imported) return 'Это не файл маршрута Nerio.';
+          if (!window.confirm('Заменить текущие данные файлом? Цели, подготовка, портфолио, материалы заявки и ответы будут заменены. Для резервной копии сначала скачай маршрут.')) return 'Загрузка отменена. Текущие записи сохранены.';
+          if (!saveRouteState(imported, localStorage)) return 'Браузер не сохранил файл. Текущий маршрут не заменён.';
+          clearPortfolioDrafts();
+          clearApplicationDrafts();
+          applicationFocus=null;
+          portfolioFocus=null;
           routeState = imported;
           form.elements.hoursPerWeek.value=routeState.hoursPerWeek;
           persistRoute();
           await refreshRoute();
           refresh();
-          return 'Маршрут загружен.';
+          return 'Маршрут, портфолио и заявки загружены.';
         } catch {
           return 'Не получилось прочитать файл.';
         }
@@ -440,13 +564,17 @@ function renderRouteView() {
         persistRoute();
         rebuildRoute();
         renderRouteView();
-        return 'Прогресс стёрт, цели остались.';
+        return 'Учебные отметки сброшены. Опыт, материалы заявки и ответы сохранены.';
       },
       onOpen(programId) {
         openProgram(programId);
       },
       onOpenRoute() {
         location.hash = 'route';
+      },
+      onStartWork() { location.hash = 'route/new'; },
+      onOpenToday() {
+        location.hash = 'today';
       },
       async onRetry() {
         if (!routeData) {
@@ -464,6 +592,14 @@ function renderRouteView() {
       onStatus: showRouteStatus,
     },
   });
+  if(applicationFocus&&!routeLoading&&!routeScreen.hidden){
+    const goal=routeBody.querySelector(`[data-application-goal="${CSS.escape(applicationFocus)}"]`);
+    if(goal){goal.open=true;goal.scrollIntoView({block:'start'});goal.querySelector('summary')?.focus();applicationFocus=null;}
+  }
+  if(portfolioFocus&&!routeLoading&&!routeScreen.hidden){
+    const entry=routeBody.querySelector(`[data-experience="${CSS.escape(portfolioFocus)}"]`);
+    if(entry){entry.open=true;const training=entry.querySelector('[data-training]');if(training)training.open=true;(training??entry).scrollIntoView({block:'start'});(training??entry).querySelector('summary')?.focus();portfolioFocus=null;}
+  }
 }
 
 // Перед печатью раскрываем подробности шагов: на бумаге закрытое
@@ -520,13 +656,13 @@ syncScreen();
 // Слушатель на захвате, потому что обработчик из setupProfileBox сворачивает
 // анкету безусловно, а при пропущенном обязательном она должна остаться.
 finishButton.addEventListener('click', (event) => {
-  if (!wizard.active) return;
-  if (!wizard.canFinish()) {
+  if (wizard.active && !wizard.canFinish()) {
     event.stopImmediatePropagation();
     return;
   }
   wizard.end();
   finished = true;
+  location.hash = 'programs';
   syncScreen();
 }, true);
 
@@ -537,8 +673,9 @@ function refresh(profile = readForm(form)) {
   profileBox.update(profile);
   tabbar.setPlanCount(plan.ids.length);
   cardsStale = Boolean(renderResults(nodes, profile, programs, today, details)?.skippedCards);
+  if (!programScreen.hidden) renderProgramView();
   // Маршрут строится из анкеты: поправил балл — маршрут и неделя другие.
-  if (!routeScreen.hidden) {
+  if (!routeScreen.hidden || !todayScreen.hidden) {
     rebuildRoute();
     renderRouteView();
   }
@@ -570,9 +707,14 @@ onProfileChange(form, (profile) => refresh(profile));
 // refresh() пишет профиль в хранилище, поэтому ключ снимается после него:
 // иначе пустая анкета осталась бы лежать под тем же ключом.
 document.getElementById('clear-profile').addEventListener('click', () => {
+  clearPortfolioDrafts();
+  clearApplicationDrafts();
+  applicationFocus=null;
+  portfolioFocus=null;
   const empty = emptyProfile();
   writeForm(form, empty);
   plan.ids = [];
+  catalogFilter.reset();
   refresh(empty);
   try {
     localStorage.removeItem(STORAGE_KEY);
@@ -582,6 +724,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
   } catch { /* приватный режим: стирать нечего */ }
   routeState = loadRouteState(localStorage);
   weeklySnapshot=null;
+  routeBody.replaceChildren();todayBody.replaceChildren();programBody.replaceChildren();
   form.elements.hoursPerWeek.value=routeState.hoursPerWeek;
   route = null;
   routeCtx = null;
@@ -590,7 +733,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
   routeStatus = '';
   box.open = true;
   finished = false;
-  location.hash = '';
+  location.hash = 'today';
   wizard.start();
   syncScreen();
   document.getElementById('clear-status').textContent = 'Анкета стёрта с этого устройства.';
@@ -645,7 +788,7 @@ loadIndex()
     // Маршрут — отдельный маленький файл: если человек пришёл сразу на
     // #route, к моменту нажатия он уже приехал.
     loadRouteData().then(() => {
-      if (location.hash === '#route') openRoute();
+      if (location.hash === '#route' || location.hash === '#today') openRoute();
     });
   })
   .catch(() => {

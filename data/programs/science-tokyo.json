@@ -139,7 +139,17 @@
       "ru": "Платно: сбор за подачу 17 000 иен, вступительный взнос 282 000 иен, обучение 635 400 иен в год.",
       "evidence": "Application Fee JPY 17,000 Enrollment Fee JPY 282,000 Annual Tuition JPY 635,400",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 17000,
+        "currency": "JPY",
+        "evidence": "Application Fee JPY 17,000 Enrollment Fee JPY 282,000 Annual Tuition JPY 635,400",
+        "source": {
+          "url": "https://admissions.isct.ac.jp/en/013/undergraduate/programs/gsep",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:26ac42335a10620ff664e70854b4ec2a915ccce6be57e47e62907f85a6f53bfb"
+        }
+      }
     },
     {
       "ru": "Восемь лучших получают стипендию правительства Японии (MEXT) на четыре года: без вступительного взноса и платы за обучение, 120 000 иен в месяц и билет туда-обратно на условиях MEXT. Остальные (до 10 мест) платят сами; можно подать на стипендию JASSO 48 000 иен в месяц на один год.",

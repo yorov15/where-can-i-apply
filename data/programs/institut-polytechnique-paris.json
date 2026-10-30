@@ -151,7 +151,17 @@
       "ru": "Плата за заявку — €105 с каждого абитуриента, картой или переводом.",
       "evidence": "Each applicant will be asked to pay an application fee of €105, payable by credit card or bank transfer.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 105,
+        "currency": "EUR",
+        "evidence": "Each applicant will be asked to pay an application fee of €105, payable by credit card or bank transfer.",
+        "source": {
+          "url": "https://programmes.polytechnique.edu/en/bachelor/admissions/admissions-criteria-and-procedure",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:17554967dc9fcf01c26f45f0b1dd5313b14b3fdbcfa17783933f4e5c8b7ba743"
+        }
+      }
     },
     {
       "ru": "После зачисления два депозита по €1,500 идут в счёт первого года обучения; они невозвратные.",

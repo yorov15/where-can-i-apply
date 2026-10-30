@@ -239,5 +239,21 @@
         "contentHash": "sha256:d202bc8949c8fddd4025d17c8cd46892ef6d14a9644125b14f527acd06ec0d0f"
       }
     ]
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common App",
+        "url": "https://www.commonapp.org/explore/harvard-university",
+        "note": "Первый курс.",
+        "evidence": "We accept the Common Application",
+        "source": {
+          "url": "https://college.harvard.edu/admissions/apply/application-requirements",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:8a971ebfd488cb4c7ec09fd0e590c464ddcec32a1acdcca5548f8c69cec1c59c"
+        }
+      }
+    ]
   }
 }

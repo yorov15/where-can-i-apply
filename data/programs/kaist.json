@@ -304,5 +304,21 @@
         "contentHash": "sha256:279b5dcecba40ba2b3af1c735702c7353a8ebcd90e3ef828537faa4c4bc8a535"
       }
     ]
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "KAIST Apply Online",
+        "url": "https://admission.kaist.ac.kr/intl-undergraduate/application/apply",
+        "note": "",
+        "evidence": "Apply Online",
+        "source": {
+          "url": "https://admission.kaist.ac.kr/intl-undergraduate/before/sub02",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:7a895c95ed0c0fc24b33d53f817e6d7051b9c8501727f672f26e080365852f94"
+        }
+      }
+    ]
   }
 }

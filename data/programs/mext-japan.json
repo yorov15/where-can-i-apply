@@ -122,5 +122,33 @@
       }
     ],
     "approvedBy": "assistant"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "embassy",
+        "name": "Посольство Японии",
+        "url": null,
+        "note": "Embassy recommendation: уточнить открытые направления в посольстве своей страны.",
+        "evidence": "scholarship recipients are recruited and initially screened by a Japanese embassy",
+        "source": {
+          "url": "https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:9757581c09f7eafc8e55175126bbf89e3d72e8698da2eba40457e68824013708"
+        }
+      },
+      {
+        "type": "university",
+        "name": "Рекомендующий японский вуз",
+        "url": null,
+        "note": "University recommendation: отдельный путь по партнёрскому обмену и доступным вузу квотам.",
+        "evidence": "University recommendation is a scheme in which Japanese universities etc. recruit scholarship candidates based on their student-exchange agreements with schools overseas",
+        "source": {
+          "url": "https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:9757581c09f7eafc8e55175126bbf89e3d72e8698da2eba40457e68824013708"
+        }
+      }
+    ]
   }
 }

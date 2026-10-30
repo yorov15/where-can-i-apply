@@ -283,5 +283,33 @@
         "contentHash": "sha256:fdc9e2408eafd291c36e769bfb32c87815abbf5975c126b95f583dd985c225c9"
       }
     ]
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common App",
+        "url": "https://www.commonapp.org/",
+        "note": "Первый курс; QuestBridge — отдельный путь для соответствующих его правилам студентов.",
+        "evidence": "First-year applicants may apply using the Common Application",
+        "source": {
+          "url": "https://admissions.duke.edu/apply/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:c0d062532d2ee79fc9f002d62a76f8b2108ad6158b269cfa783ff8f4c56fe2e4"
+        }
+      },
+      {
+        "type": "platform",
+        "name": "QuestBridge",
+        "url": "https://www.questbridge.org/college-partners/duke-university",
+        "note": "Только для подходящих под правила QuestBridge; Coalition в этом источнике относится к переводу, а не первому курсу.",
+        "evidence": "QuestBridge Application for eligible students",
+        "source": {
+          "url": "https://admissions.duke.edu/apply/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:c0d062532d2ee79fc9f002d62a76f8b2108ad6158b269cfa783ff8f4c56fe2e4"
+        }
+      }
+    ]
   }
 }

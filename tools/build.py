@@ -115,13 +115,19 @@ def _condition_for_site(condition: dict) -> dict:
     if fee:
         # Цитата — для проверяющего, сайту хватает суммы и признака.
         entry["fee"] = {key: fee[key] for key in ("amount", "currency", "waivedForAid") if key in fee}
+        if fee.get("source"):
+            entry["fee"]["source"] = {key: fee["source"][key] for key in ("url", "lastVerified")}
     return entry
 
 
 def index_entry(program: dict) -> dict:
     coverage = program.get("coverage") or {}
+    fee = next((c["fee"] for c in program.get("textConditions") or [] if c.get("fee")), None)
+    free = bool(fee and type(fee.get("amount")) in (int, float) and fee["amount"] == 0
+                and fee.get("evidence") and fee.get("unconditional") is True and not fee.get("waivedForAid"))
     return {
         "id": program["id"],
+        **({"feeFree": True} if free else {}),
         "name": program.get("name"),
         "hostCountry": program.get("hostCountry"),
         "kind": program.get("kind"),
@@ -156,6 +162,11 @@ def details_entry(program: dict) -> dict:
     return {
         "coverageNote": (coverage.get("note") or {}).get("ru") or None,
         "applyUrl": program.get("applyUrl"),
+        **({"applyChannel": {"routes": [
+            {**{key: route[key] for key in ("type", "name", "url", "note")},
+             "source": {key: route["source"][key] for key in ("url", "lastVerified")}}
+            for route in program["applyChannel"]["routes"]
+        ]}} if program.get("applyChannel") else {}),
         "source": {
             "url": source.get("url"),
             "lastVerified": source.get("lastVerified"),

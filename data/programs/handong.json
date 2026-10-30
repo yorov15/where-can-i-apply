@@ -178,10 +178,20 @@
       "kind": "steps"
     },
     {
-      "ru": "Заявка считается поданной, только когда отправлена онлайн-форма, загружены все обязательные документы и оплачен взнос за подачу. Размер взноса на скачанных страницах не назван — смотри страницу подачи.",
+      "ru": "Заявка подана, когда отправлена онлайн-форма, загружены документы и оплачен взнос 100 000 вон банковским переводом.",
       "evidence": "An application is considered complete only when the online application form has been submitted, all Required Documents have been uploaded, and the Application Fee has been paid.",
       "field": null,
-      "kind": "steps"
+      "kind": "steps",
+      "fee": {
+        "amount": 100000,
+        "currency": "KRW",
+        "evidence": "Application Fee: 100,000 KRW, paid by wire transfer.",
+        "source": {
+          "url": "https://www.handong.edu/eng/admission/undergraduate/application/freshman/",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:0a3ff66e811531c7bc173cda1975e0a6006030ab5a5dfd58fef30eab4b8f5753"
+        }
+      }
     },
     {
       "ru": "Отбор идёт в два шага: сначала документы, потом собеседование. Проценты стипендии Outstanding International Students считают по сумме баллов двух шагов — то есть собеседование влияет и на поступление, и на размер помощи.",

@@ -409,5 +409,33 @@
     ],
     "lastVerified": "2026-09-30",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "UNSW Applicant Portal",
+        "url": "https://apply.unsw.edu.au/",
+        "note": "Прямая заявка.",
+        "evidence": "Applying is easy via the UNSW Applicant Portal",
+        "source": {
+          "url": "https://www.unsw.edu.au/study/how-to-apply/international",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:27d82850122abcdcfae7771e14f018e8d695b6d3ed36b53edf09cf21dc733b5a"
+        }
+      },
+      {
+        "type": "agent",
+        "name": "Авторизованный агент UNSW",
+        "url": "https://www.unsw.edu.au/study/how-to-apply/international/find-a-agent",
+        "note": "Альтернатива прямой подаче.",
+        "evidence": "Alternatively, you can find a local UNSW agent in your region",
+        "source": {
+          "url": "https://www.unsw.edu.au/study/how-to-apply/international",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:27d82850122abcdcfae7771e14f018e8d695b6d3ed36b53edf09cf21dc733b5a"
+        }
+      }
+    ]
   }
 }

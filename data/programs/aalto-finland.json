@@ -73,7 +73,17 @@
       "ru": "Заявка стоит 100 евро для тех, кто не гражданин ЕС, ЕЭЗ или Швейцарии; платить нужно в течение 7 дней после подачи, иначе заявку не рассмотрят. Граждане ЕС/ЕЭЗ и Швейцарии освобождены.",
       "evidence": "must pay a €100 application fee to apply for higher education in Finland. Citizens of EU or EEA member states and Switzerland are exempt from the fee.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 100,
+        "currency": "EUR",
+        "evidence": "must pay a €100 application fee to apply for higher education in Finland. Citizens of EU or EEA member states and Switzerland are exempt from the fee.",
+        "source": {
+          "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:ddd6787030fc288802aebbb268ce78bd3b97685bee6b24fa8043ed895e70f84c"
+        }
+      }
     },
     {
       "ru": "Бакалавриат и магистратура платные для граждан вне ЕС/ЕЭЗ и Швейцарии — суммы на отдельной странице стипендий и платы.",

@@ -73,7 +73,17 @@
       "ru": "Сбор за заявку — 150 евро, платят все абитуриенты бакалавриата.",
       "evidence": "Receipt of the transfer of 150 euro for application fee",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 150,
+        "currency": "EUR",
+        "evidence": "Receipt of the transfer of 150 euro for application fee",
+        "source": {
+          "url": "https://www.bme.hu/en/application_and_admission",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:5054fb61792a2cc4149e9ac9e403a4fd8203885e722eefeeb4ce796956c84568"
+        }
+      }
     },
     {
       "ru": "Для граждан вне ЕС семестр бакалавриата стоит 3200 евро (строительство, химия, информатика, естественные науки) или 3500 (механика, экономика).",
@@ -164,5 +174,21 @@
   },
   "leftEmpty": {
     "schoolYears": "sha256:54396071023831e39cfee0872dedebef7b7bcb0d7595a3190df5cbaf709a256b"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "BME e-admission",
+        "url": "http://e-admission.bme.hu/",
+        "note": "Для платного пути; стипендиальные программы имеют отдельные процедуры.",
+        "evidence": "you have to fill our online application form",
+        "source": {
+          "url": "https://www.bme.hu/en/application_and_admission",
+          "lastVerified": "2026-10-28",
+          "contentHash": "sha256:da41d4777b436d3e2ff5d5866e3a73477055fe4d12e8ad9cbc92e25e8ce681ff"
+        }
+      }
+    ]
   }
 }
