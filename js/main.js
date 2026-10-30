@@ -45,9 +45,7 @@ const todayBody = document.getElementById('today-body');
 // возвращаем на том экране, который сейчас открыт.
 const activeBody = () => (todayScreen.hidden ? routeBody : todayBody);
 
-// Пока человек не закончил анкету, ни ответа, ни каталога не видно: ответ
-// по пустому профилю — это стена «можно, но сначала», из которой нечего
-// вынести. Каталог по прямой ссылке тоже ждёт анкету.
+// Анкета меняет только персональную проверку. Навигация и работы доступны всем.
 let finished = false;
 
 // Вводная фраза нужна тому, кто пришёл впервые. Когда анкета готова, она
@@ -55,25 +53,27 @@ let finished = false;
 const lead = document.querySelector('.lead');
 
 function showScreen(name) {
-  const ready = finished;
-  // Пока анкета не готова, маршрута нет: адрес #route не должен оставлять
-  // человека на пустом экране.
-  if (!ready) name = 'answer';
   document.body.dataset.screen = name;
   // Уходя на экран программы, запоминаем место в списке: назад человек
   // возвращается к тому же вузу, а не в начало трёхсот строк.
   if (name === 'program' && !answerScreen.hidden) answerScroll = window.scrollY;
-  const back = ready && name === 'answer' && answerScreen.hidden;
-  answerScreen.hidden = !ready || name !== 'answer';
-  programScreen.hidden = !ready || name !== 'program';
-  routeScreen.hidden = !ready || name !== 'route';
-  todayScreen.hidden = !ready || name !== 'today';
-  if (ready && name === 'answer') buildCards();
-  if (ready && name === 'program') renderProgramView();
+  const back = name === 'answer' && answerScreen.hidden;
+  answerScreen.hidden = name !== 'answer';
+  programScreen.hidden = name !== 'program';
+  routeScreen.hidden = name !== 'route';
+  todayScreen.hidden = name !== 'today';
+  document.getElementById('profile-box').hidden = name !== 'profile';
+  document.getElementById('profile-intro').hidden = name !== 'profile';
+  if (name === 'profile') {
+    document.getElementById('profile-box').open = true;
+    if (!wizard.active) wizard.start();
+  }
+  if (name === 'answer') buildCards();
+  if (name === 'program') renderProgramView();
   if (back && answerScroll) requestAnimationFrame(() => window.scrollTo({ top: answerScroll, behavior: 'instant' }));
-  if (ready && (name === 'route' || name === 'today')) openRoute();
-  if (lead) lead.hidden = finished;
-  tabbar.show(finished);
+  if (name === 'route' || name === 'today') openRoute();
+  if (lead) lead.hidden = true;
+  tabbar.show(true);
   tabbar.sync();
 }
 
@@ -81,15 +81,16 @@ let answerScroll = 0;
 const PROGRAM_PREFIX = '#program/';
 
 function screenFromHash() {
-  if (location.hash === '#route') return 'route';
+  if (location.hash === '#route' || location.hash.startsWith('#route/')) return 'route';
+  if (location.hash === '#profile') return 'profile';
   if (location.hash === '#today') return 'today';
   if (location.hash.startsWith(PROGRAM_PREFIX)) return 'program';
-  return 'answer';
+  return location.hash ? 'answer' : 'today';
 }
 
 // Прежний адрес #programs и пустой адрес ведут на один и тот же экран.
 const openProgram = (id) => { location.hash = PROGRAM_PREFIX.slice(1) + encodeURIComponent(id); };
-const openAnswer = () => { location.hash = ''; };
+const openAnswer = () => { location.hash = 'programs'; };
 
 function programIdFromHash() {
   try { return decodeURIComponent(location.hash.slice(PROGRAM_PREFIX.length)); } catch { return ''; }
@@ -106,11 +107,12 @@ function renderProgramView() {
   renderProgram(programBody, {
     row: program ? programRow(program, readForm(form), today) : null,
     loading: details.status === 'loading' && !programs.length,
-    details, plan, route, routeState, today,
+    details, plan, route, routeState, today, guest: !profileReady(readForm(form)),
     handlers: {
       // Зашёл по прямой ссылке — назад в истории ведёт с сайта, поэтому на список.
       onBack: () => (leftFirstPage ? history.back() : openAnswer()),
       onOpenToday: () => { location.hash = 'today'; },
+      onProfile: () => { location.hash = 'profile'; },
     },
   });
   // Условия едут отдельным файлом: попросили — и после их прихода рисуем
@@ -133,7 +135,7 @@ const tabbar = setupTabbar({
   watch: document.getElementById('catalog-tools'),
   go(name) {
     if (name === 'route' || name === 'today') location.hash = name;
-    else if (location.hash) location.hash = '';
+    else location.hash = 'programs';
     window.scrollTo({ top: 0 });
   },
 });
@@ -177,13 +179,6 @@ function buildCards() {
   forceCards = true;
   try { refresh(); } finally { forceCards = false; }
 }
-
-// На широком экране фильтры лежат в боковой колонке, а не прячутся под
-// «Ещё фильтры»: место есть, а лишний тап не нужен.
-const wide = matchMedia('(min-width: 64rem)');
-const openFilters = () => { if (wide.matches) document.querySelector('.catalog-more')?.setAttribute('open', ''); };
-openFilters();
-wide.addEventListener?.('change', openFilters);
 
 const syncScreen = () => showScreen(screenFromHash());
 addEventListener('hashchange', syncScreen);
@@ -368,6 +363,7 @@ function examForStep(step) {
 function renderRouteView() {
   const plans = Object.fromEntries((route?.steps ?? []).filter(step => routeTracks[step.track]).map(step => [step.id, examForStep(step)]));
   (todayScreen.hidden ? renderRoute : renderToday)(todayScreen.hidden ? routeBody : todayBody, {
+    focusExperience: portfolioFocus,
     study: route ? buildStudyPlan({ steps:hasPreparationGoals(route,routeState)?route.steps:[], tracks:routeTracks, plans, state:routeState, today }) : null,
     routeState, today,
     weekly:weeklySnapshot,
@@ -391,7 +387,7 @@ function renderRouteView() {
       onDecisionSaved(goalId,message) { routeStatus=message;applicationFocus=goalId;renderRouteView(); },
       onOfferCondition(goalId,id) { return persistApplication(toggleOfferCondition(routeState,goalId,id,today),'Отметка условия обновлена.'); },
       onRemoveDecision(goalId) { return persistApplication(removeDecision(routeState,goalId),'Запись об ответе удалена.'); },
-      onOpenApplication(goalId) { applicationFocus=goalId;if(location.hash==='#route')renderRouteView();else location.hash='route'; },
+      onOpenApplication(goalId) { applicationFocus=goalId;if(location.hash==='#route/applications')renderRouteView();else location.hash='route/applications'; },
       onSaveEssayVersion(goalId,item,text) {
         const old=applicationsOf(routeState).materials.find(material=>material.goalId===goalId&&material.sourceKey===item.id);
         return persistApplication(saveMaterialVersion(routeState,{id:old?.id??crypto.randomUUID(),versionId:crypto.randomUUID(),sourceKey:item.id,goalId,
@@ -576,6 +572,7 @@ function renderRouteView() {
       onOpenRoute() {
         location.hash = 'route';
       },
+      onStartWork() { location.hash = 'route/new'; },
       onOpenToday() {
         location.hash = 'today';
       },
@@ -659,13 +656,13 @@ syncScreen();
 // Слушатель на захвате, потому что обработчик из setupProfileBox сворачивает
 // анкету безусловно, а при пропущенном обязательном она должна остаться.
 finishButton.addEventListener('click', (event) => {
-  if (!wizard.active) return;
-  if (!wizard.canFinish()) {
+  if (wizard.active && !wizard.canFinish()) {
     event.stopImmediatePropagation();
     return;
   }
   wizard.end();
   finished = true;
+  location.hash = 'programs';
   syncScreen();
 }, true);
 
@@ -717,6 +714,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
   const empty = emptyProfile();
   writeForm(form, empty);
   plan.ids = [];
+  catalogFilter.reset();
   refresh(empty);
   try {
     localStorage.removeItem(STORAGE_KEY);
@@ -735,7 +733,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
   routeStatus = '';
   box.open = true;
   finished = false;
-  location.hash = '';
+  location.hash = 'today';
   wizard.start();
   syncScreen();
   document.getElementById('clear-status').textContent = 'Анкета стёрта с этого устройства.';

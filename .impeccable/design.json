@@ -1,0 +1,500 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T09:13:56.861035+00:00",
+  "title": "Design System: Nerio",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Кобальт",
+        "tonalRamp": [
+          "oklch(15% 0.0480 266.14)",
+          "oklch(26% 0.0880 266.14)",
+          "oklch(38% 0.1280 266.14)",
+          "oklch(50% 0.1600 266.14)",
+          "oklch(62% 0.1600 266.14)",
+          "oklch(74% 0.1280 266.14)",
+          "oklch(86% 0.0720 266.14)",
+          "oklch(95% 0.0240 266.14)"
+        ]
+      },
+      "primary-text": {
+        "role": "primary",
+        "displayName": "Синий текст",
+        "tonalRamp": [
+          "oklch(15% 0.0480 266.78)",
+          "oklch(26% 0.0880 266.78)",
+          "oklch(38% 0.1280 266.78)",
+          "oklch(50% 0.1600 266.78)",
+          "oklch(62% 0.1600 266.78)",
+          "oklch(74% 0.1280 266.78)",
+          "oklch(86% 0.0720 266.78)",
+          "oklch(95% 0.0240 266.78)"
+        ]
+      },
+      "primary-soft": {
+        "role": "primary",
+        "displayName": "Мягкий синий",
+        "tonalRamp": [
+          "oklch(15% 0.0072 270.34)",
+          "oklch(26% 0.0131 270.34)",
+          "oklch(38% 0.0191 270.34)",
+          "oklch(50% 0.0238 270.34)",
+          "oklch(62% 0.0238 270.34)",
+          "oklch(74% 0.0191 270.34)",
+          "oklch(86% 0.0107 270.34)",
+          "oklch(95% 0.0036 270.34)"
+        ]
+      },
+      "on-primary": {
+        "role": "primary",
+        "displayName": "Светлый текст акцента",
+        "tonalRamp": [
+          "oklch(15% 0.0024 278.64)",
+          "oklch(26% 0.0044 278.64)",
+          "oklch(38% 0.0064 278.64)",
+          "oklch(50% 0.0080 278.64)",
+          "oklch(62% 0.0080 278.64)",
+          "oklch(74% 0.0064 278.64)",
+          "oklch(86% 0.0036 278.64)",
+          "oklch(95% 0.0012 278.64)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Бумага",
+        "tonalRamp": [
+          "oklch(15% 0.0020 97.35)",
+          "oklch(26% 0.0037 97.35)",
+          "oklch(38% 0.0054 97.35)",
+          "oklch(50% 0.0067 97.35)",
+          "oklch(62% 0.0067 97.35)",
+          "oklch(74% 0.0054 97.35)",
+          "oklch(86% 0.0030 97.35)",
+          "oklch(95% 0.0010 97.35)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Поверхность",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(50% 0.0000 89.88)",
+          "oklch(62% 0.0000 89.88)",
+          "oklch(74% 0.0000 89.88)",
+          "oklch(86% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Мягкая подложка",
+        "tonalRamp": [
+          "oklch(15% 0.0012 121.56)",
+          "oklch(26% 0.0023 121.56)",
+          "oklch(38% 0.0033 121.56)",
+          "oklch(50% 0.0041 121.56)",
+          "oklch(62% 0.0041 121.56)",
+          "oklch(74% 0.0033 121.56)",
+          "oklch(86% 0.0019 121.56)",
+          "oklch(95% 0.0006 121.56)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Чернила",
+        "tonalRamp": [
+          "oklch(15% 0.0098 267.94)",
+          "oklch(26% 0.0180 267.94)",
+          "oklch(38% 0.0262 267.94)",
+          "oklch(50% 0.0328 267.94)",
+          "oklch(62% 0.0328 267.94)",
+          "oklch(74% 0.0262 267.94)",
+          "oklch(86% 0.0148 267.94)",
+          "oklch(95% 0.0049 267.94)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Вторичный текст",
+        "tonalRamp": [
+          "oklch(15% 0.0114 264.14)",
+          "oklch(26% 0.0209 264.14)",
+          "oklch(38% 0.0303 264.14)",
+          "oklch(50% 0.0379 264.14)",
+          "oklch(62% 0.0379 264.14)",
+          "oklch(74% 0.0303 264.14)",
+          "oklch(86% 0.0171 264.14)",
+          "oklch(95% 0.0057 264.14)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Линия",
+        "tonalRamp": [
+          "oklch(15% 0.0021 124.46)",
+          "oklch(26% 0.0039 124.46)",
+          "oklch(38% 0.0056 124.46)",
+          "oklch(50% 0.0071 124.46)",
+          "oklch(62% 0.0071 124.46)",
+          "oklch(74% 0.0056 124.46)",
+          "oklch(86% 0.0032 124.46)",
+          "oklch(95% 0.0011 124.46)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Сильная линия",
+        "tonalRamp": [
+          "oklch(15% 0.0107 264.27)",
+          "oklch(26% 0.0196 264.27)",
+          "oklch(38% 0.0285 264.27)",
+          "oklch(50% 0.0356 264.27)",
+          "oklch(62% 0.0356 264.27)",
+          "oklch(74% 0.0285 264.27)",
+          "oklch(86% 0.0160 264.27)",
+          "oklch(95% 0.0053 264.27)"
+        ]
+      },
+      "dark-primary": {
+        "role": "primary",
+        "displayName": "Тёмная тема: Кобальт",
+        "tonalRamp": [
+          "oklch(15% 0.0307 271.66)",
+          "oklch(26% 0.0562 271.66)",
+          "oklch(38% 0.0818 271.66)",
+          "oklch(50% 0.1022 271.66)",
+          "oklch(62% 0.1022 271.66)",
+          "oklch(74% 0.0818 271.66)",
+          "oklch(86% 0.0460 271.66)",
+          "oklch(95% 0.0153 271.66)"
+        ]
+      },
+      "dark-primary-text": {
+        "role": "primary",
+        "displayName": "Тёмная тема: Синий текст",
+        "tonalRamp": [
+          "oklch(15% 0.0254 273.37)",
+          "oklch(26% 0.0466 273.37)",
+          "oklch(38% 0.0678 273.37)",
+          "oklch(50% 0.0847 273.37)",
+          "oklch(62% 0.0847 273.37)",
+          "oklch(74% 0.0678 273.37)",
+          "oklch(86% 0.0381 273.37)",
+          "oklch(95% 0.0127 273.37)"
+        ]
+      },
+      "dark-primary-soft": {
+        "role": "primary",
+        "displayName": "Тёмная тема: Мягкий синий",
+        "tonalRamp": [
+          "oklch(15% 0.0311 272.82)",
+          "oklch(26% 0.0570 272.82)",
+          "oklch(38% 0.0829 272.82)",
+          "oklch(50% 0.1036 272.82)",
+          "oklch(62% 0.1036 272.82)",
+          "oklch(74% 0.0829 272.82)",
+          "oklch(86% 0.0466 272.82)",
+          "oklch(95% 0.0155 272.82)"
+        ]
+      },
+      "dark-on-primary": {
+        "role": "primary",
+        "displayName": "Тёмная тема: Светлый текст акцента",
+        "tonalRamp": [
+          "oklch(15% 0.0180 271.34)",
+          "oklch(26% 0.0330 271.34)",
+          "oklch(38% 0.0481 271.34)",
+          "oklch(50% 0.0601 271.34)",
+          "oklch(62% 0.0601 271.34)",
+          "oklch(74% 0.0481 271.34)",
+          "oklch(86% 0.0270 271.34)",
+          "oklch(95% 0.0090 271.34)"
+        ]
+      },
+      "dark-paper": {
+        "role": "neutral",
+        "displayName": "Тёмная тема: Бумага",
+        "tonalRamp": [
+          "oklch(15% 0.0072 262.26)",
+          "oklch(26% 0.0132 262.26)",
+          "oklch(38% 0.0192 262.26)",
+          "oklch(50% 0.0239 262.26)",
+          "oklch(62% 0.0239 262.26)",
+          "oklch(74% 0.0192 262.26)",
+          "oklch(86% 0.0108 262.26)",
+          "oklch(95% 0.0036 262.26)"
+        ]
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "Тёмная тема: Поверхность",
+        "tonalRamp": [
+          "oklch(15% 0.0094 260.41)",
+          "oklch(26% 0.0173 260.41)",
+          "oklch(38% 0.0252 260.41)",
+          "oklch(50% 0.0315 260.41)",
+          "oklch(62% 0.0315 260.41)",
+          "oklch(74% 0.0252 260.41)",
+          "oklch(86% 0.0142 260.41)",
+          "oklch(95% 0.0047 260.41)"
+        ]
+      },
+      "dark-soft": {
+        "role": "neutral",
+        "displayName": "Тёмная тема: Мягкая подложка",
+        "tonalRamp": [
+          "oklch(15% 0.0184 273.70)",
+          "oklch(26% 0.0337 273.70)",
+          "oklch(38% 0.0490 273.70)",
+          "oklch(50% 0.0612 273.70)",
+          "oklch(62% 0.0612 273.70)",
+          "oklch(74% 0.0490 273.70)",
+          "oklch(86% 0.0275 273.70)",
+          "oklch(95% 0.0092 273.70)"
+        ]
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Тёмная тема: Чернила",
+        "tonalRamp": [
+          "oklch(15% 0.0041 272.69)",
+          "oklch(26% 0.0076 272.69)",
+          "oklch(38% 0.0110 272.69)",
+          "oklch(50% 0.0138 272.69)",
+          "oklch(62% 0.0138 272.69)",
+          "oklch(74% 0.0110 272.69)",
+          "oklch(86% 0.0062 272.69)",
+          "oklch(95% 0.0021 272.69)"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Тёмная тема: Вторичный текст",
+        "tonalRamp": [
+          "oklch(15% 0.0131 273.58)",
+          "oklch(26% 0.0239 273.58)",
+          "oklch(38% 0.0348 273.58)",
+          "oklch(50% 0.0435 273.58)",
+          "oklch(62% 0.0435 273.58)",
+          "oklch(74% 0.0348 273.58)",
+          "oklch(86% 0.0196 273.58)",
+          "oklch(95% 0.0065 273.58)"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Тёмная тема: Линия",
+        "tonalRamp": [
+          "oklch(15% 0.0200 272.66)",
+          "oklch(26% 0.0366 272.66)",
+          "oklch(38% 0.0532 272.66)",
+          "oklch(50% 0.0665 272.66)",
+          "oklch(62% 0.0665 272.66)",
+          "oklch(74% 0.0532 272.66)",
+          "oklch(86% 0.0299 272.66)",
+          "oklch(95% 0.0100 272.66)"
+        ]
+      },
+      "dark-line-strong": {
+        "role": "neutral",
+        "displayName": "Тёмная тема: Сильная линия",
+        "tonalRamp": [
+          "oklch(15% 0.0178 273.49)",
+          "oklch(26% 0.0326 273.49)",
+          "oklch(38% 0.0474 273.49)",
+          "oklch(50% 0.0592 273.49)",
+          "oklch(62% 0.0592 273.49)",
+          "oklch(74% 0.0474 273.49)",
+          "oklch(86% 0.0266 273.49)",
+          "oklch(95% 0.0089 273.49)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Стартовый заголовок",
+        "purpose": "Стартовое высказывание; отдельные размеры на средней и малой ширине."
+      },
+      "headline": {
+        "displayName": "Заголовок страницы",
+        "purpose": "Названия основных экранов."
+      },
+      "work-title": {
+        "displayName": "Название работы",
+        "purpose": "Название в коллекции работ."
+      },
+      "catalog-title": {
+        "displayName": "Название программы",
+        "purpose": "Плотные строки каталога."
+      },
+      "body": {
+        "displayName": "Основной текст",
+        "purpose": "Инструкции и содержимое."
+      },
+      "label": {
+        "displayName": "Подпись поля",
+        "purpose": "Название ввода в форме."
+      }
+    },
+    "shadows": [
+      {
+        "name": "outline",
+        "value": "0 0 0 1px var(--line)",
+        "purpose": "Базовая обводка сохранённых контролов и форм."
+      },
+      {
+        "name": "workspace-button-outline",
+        "value": "inset 0 0 0 1px var(--line-strong)",
+        "purpose": "Нейтральная кнопка внутри рабочей области."
+      },
+      {
+        "name": "field-focus",
+        "value": "0 0 0 4px var(--tint)",
+        "purpose": "Дополнительный ореол фокуса input/select."
+      }
+    ],
+    "motion": [
+      {
+        "name": "duration-standard",
+        "value": ".18s",
+        "purpose": "Переходы состояния контролов."
+      },
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Общая кривая переходов."
+      },
+      {
+        "name": "button-press",
+        "value": "scale(.98)",
+        "purpose": "Обратная связь при нажатии кнопки."
+      },
+      {
+        "name": "chip-press",
+        "value": "scale(.97)",
+        "purpose": "Обратная связь фильтра."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-max",
+        "value": "639px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "1023px"
+      },
+      {
+        "name": "bottom-nav-max",
+        "value": "63.99rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Основная кнопка",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Основное действие текущего экрана.",
+      "html": "<button class=\"ds-button ds-primary\">Сохранить работу</button>",
+      "css": ".ds-button{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2,.5rem);min-height:52px;padding:.75rem 1.5rem;font:700 1.0625rem/1.55 Onest,system-ui,sans-serif;border:0;border-radius:var(--r-control,8px);cursor:pointer;transition:transform var(--dur,.18s) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button::before{content:\"\";position:absolute;inset:0;z-index:-1;background:currentColor;opacity:0;transition:opacity var(--dur,.18s) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button:hover::before{opacity:.12}.ds-button:active{transform:scale(.98)}.ds-button:active::before{opacity:.18}.ds-button:disabled{opacity:.55;cursor:default;transform:none}.ds-button:focus-visible{outline:3px solid var(--accent,#2449d8);outline-offset:2px}.ds-primary{background:var(--accent,#2449d8);color:var(--on-accent,#f8f9ff)}@media(prefers-reduced-motion:reduce){[class^=\"ds-\"]{transition-duration:.01ms;animation-duration:.01ms}}"
+    },
+    {
+      "name": "Вспомогательная кнопка",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Второе действие вне редактора работы.",
+      "html": "<button class=\"ds-button ds-quiet\">Открыть весь путь</button>",
+      "css": ".ds-button{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2,.5rem);min-height:52px;padding:.75rem 1.5rem;font:700 1.0625rem/1.55 Onest,system-ui,sans-serif;border:0;border-radius:var(--r-control,8px);cursor:pointer;transition:transform var(--dur,.18s) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button::before{content:\"\";position:absolute;inset:0;z-index:-1;background:currentColor;opacity:0;transition:opacity var(--dur,.18s) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button:hover::before{opacity:.12}.ds-button:active{transform:scale(.98)}.ds-button:active::before{opacity:.18}.ds-button:disabled{opacity:.55;cursor:default;transform:none}.ds-button:focus-visible{outline:3px solid var(--accent,#2449d8);outline-offset:2px}.ds-quiet{background:var(--accent-soft,#e5ebfc);color:var(--accent-text,#2544bd)}@media(prefers-reduced-motion:reduce){[class^=\"ds-\"]{transition-duration:.01ms;animation-duration:.01ms}}"
+    },
+    {
+      "name": "Кнопка рабочей области",
+      "kind": "button",
+      "refersTo": "button-workspace",
+      "description": "Нейтральное действие внутри работы.",
+      "html": "<button class=\"ds-button ds-workspace\">Изменить запись</button>",
+      "css": ".ds-button{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2,.5rem);min-height:52px;padding:.75rem 1.5rem;font:700 1.0625rem/1.55 Onest,system-ui,sans-serif;border:0;border-radius:var(--r-control,8px);cursor:pointer;transition:transform var(--dur,.18s) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button::before{content:\"\";position:absolute;inset:0;z-index:-1;background:currentColor;opacity:0;transition:opacity var(--dur,.18s) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button:hover::before{opacity:.12}.ds-button:active{transform:scale(.98)}.ds-button:active::before{opacity:.18}.ds-button:disabled{opacity:.55;cursor:default;transform:none}.ds-button:focus-visible{outline:3px solid var(--accent,#2449d8);outline-offset:2px}.ds-workspace{background:var(--surface,#fefefe);color:var(--fg,#141a2a);box-shadow:inset 0 0 0 1px var(--line-strong,#7d889e)}.ds-workspace:hover{background:var(--soft,#ecedea)}@media(prefers-reduced-motion:reduce){[class^=\"ds-\"]{transition-duration:.01ms;animation-duration:.01ms}}"
+    },
+    {
+      "name": "Подписанное поле",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Обычное поле формы с состоянием заполнения.",
+      "html": "<label class=\"ds-label\">Как называется работа?<input class=\"ds-input\" type=\"text\" placeholder=\"Название\"></label>",
+      "css": ".ds-label{display:block;font:600 .9375rem/1.55 Onest,system-ui,sans-serif;color:var(--fg,#141a2a)}.ds-input{display:block;width:100%;min-height:52px;margin-top:var(--s-2,.5rem);padding:.625rem var(--s-3,.75rem);font:400 1.0625rem/1.55 Onest,system-ui,sans-serif;color:var(--fg,#141a2a);background:var(--surface,#fefefe);border:1px solid var(--line-strong,#7d889e);border-radius:var(--r-control,8px);caret-color:var(--accent,#2449d8);transition:background-color var(--dur,.18s) var(--ease,cubic-bezier(.16,1,.3,1)),border-color var(--dur,.18s) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-input::placeholder{color:var(--muted,#566177);opacity:1}.ds-input:not(:placeholder-shown){border-color:var(--accent,#2449d8);background:var(--accent-soft,#e5ebfc)}.ds-input:hover{border-color:var(--fg,#141a2a)}.ds-input:focus-visible{outline:3px solid var(--accent,#2449d8);outline-offset:1px;border-color:var(--accent,#2449d8);box-shadow:0 0 0 4px var(--tint,rgb(45 82 214 / .12))}@media(prefers-reduced-motion:reduce){[class^=\"ds-\"]{transition-duration:.01ms;animation-duration:.01ms}}"
+    },
+    {
+      "name": "Глобальные вкладки",
+      "kind": "nav",
+      "refersTo": "tab-current",
+      "description": "Три постоянных раздела; пример верхней панели.",
+      "html": "<nav class=\"ds-tabs\" aria-label=\"Разделы сайта\"><button class=\"ds-tab\">Сегодня</button><button class=\"ds-tab\">Куда можно</button><button class=\"ds-tab\" aria-current=\"page\">Мой путь</button></nav>",
+      "css": ".ds-tabs{display:flex;gap:4px;flex-wrap:wrap}.ds-tab{min-height:44px;padding:10px 16px;font:600 1rem/1.55 Onest,system-ui,sans-serif;white-space:nowrap;color:var(--muted,#566177);background:none;border:0;border-radius:8px;cursor:pointer}.ds-tab[aria-current]{background:var(--accent,#2449d8);color:var(--bg,#f5f4ef)}.ds-tab:focus-visible{outline:3px solid var(--accent,#2449d8);outline-offset:2px}@media(prefers-reduced-motion:reduce){[class^=\"ds-\"]{transition-duration:.01ms;animation-duration:.01ms}}"
+    },
+    {
+      "name": "Фильтры",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Нейтральный и выбранный фильтр; размеры не наследуют старую сетку каталога.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Все</button><button class=\"ds-chip\" aria-pressed=\"false\">Без взноса</button></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:var(--s-2,.5rem)}.ds-chip{display:inline-flex;align-items:center;min-height:44px;padding:.375rem .75rem;font:400 .9375rem/1.55 Onest,system-ui,sans-serif;color:var(--fg,#141a2a);background:var(--surface,#fefefe);border:1px solid var(--line,#dcded9);border-radius:var(--r-control,8px);cursor:pointer;transition:transform var(--dur,.18s) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-chip[aria-pressed=true]{color:var(--accent-text,#2544bd);background:var(--accent-soft,#e5ebfc);border-color:var(--accent,#2449d8);font-weight:700}.ds-chip[aria-pressed=false]:hover{background:var(--line,#dcded9)}.ds-chip:active{transform:scale(.97)}.ds-chip:focus-visible{outline:3px solid var(--accent,#2449d8);outline-offset:2px}@media(prefers-reduced-motion:reduce){[class^=\"ds-\"]{transition-duration:.01ms;animation-duration:.01ms}}"
+    },
+    {
+      "name": "Карточка работы",
+      "kind": "card",
+      "refersTo": "work-card",
+      "description": "Поверхность коллекции с раскрытием подробностей.",
+      "html": "<details class=\"ds-work\"><summary class=\"ds-work-summary\"><span><span class=\"ds-work-title\">Моё исследование</span><small class=\"ds-work-meta\">1 из 4 шагов</small></span></summary><p class=\"ds-work-content\">Личный вклад, результат и следующий шаг.</p></details>",
+      "css": ".ds-work{min-width:0;color:var(--fg,#141a2a);background:var(--surface,#fefefe);border:0;border-radius:12px}.ds-work-summary{padding:32px;min-height:220px;display:flex;align-items:flex-end;list-style:none;cursor:pointer;border-radius:12px}.ds-work-summary::-webkit-details-marker{display:none}.ds-work-title{display:block;margin-bottom:18px;font:600 clamp(26px,3vw,38px)/1.2 var(--serif,Literata,Georgia,serif);letter-spacing:-.025em}.ds-work-meta{display:block;margin:.5rem 0;font:400 .875rem/1.6 Onest,system-ui,sans-serif;color:var(--muted,#566177)}.ds-work:not([open]) .ds-work-summary:hover{background:var(--accent-soft,#e5ebfc)}.ds-work-summary:focus-visible{outline:3px solid var(--accent,#2449d8);outline-offset:-3px}.ds-work[open]{padding:0 32px 32px}.ds-work[open]>.ds-work-summary{min-height:0;padding:32px 0;border-radius:0;border-bottom:1px solid var(--line,#dcded9)}.ds-work-content{font:400 1rem/1.55 Onest,system-ui,sans-serif}@media(max-width:639px){.ds-work-summary{padding:24px;min-height:180px}.ds-work[open]{padding:0 20px 20px}}@media(prefers-reduced-motion:reduce){[class^=\"ds-\"]{transition-duration:.01ms;animation-duration:.01ms}}"
+    },
+    {
+      "name": "Разделы пути",
+      "kind": "nav",
+      "refersTo": "path-current",
+      "description": "Второй уровень с акцентной нижней линией вместо заливки.",
+      "html": "<nav class=\"ds-path\" aria-label=\"Разделы моего пути\"><a href=\"#route\" aria-current=\"page\">Работы</a><a href=\"#route/preparation\">Подготовка</a><a href=\"#route/applications\">Заявки</a><a href=\"#route/files\">Файл и данные</a></nav>",
+      "css": ".ds-path{display:flex;gap:28px;overflow-x:auto;padding:0 0 4px;border-bottom:1px solid var(--line,#dcded9)}.ds-path a{flex:none;min-height:48px;display:flex;align-items:center;font:600 1rem/1.55 Onest,system-ui,sans-serif;color:var(--muted,#566177);text-decoration:none;border-bottom:2px solid transparent}.ds-path a[aria-current]{color:var(--accent-text,#2544bd);border-bottom-color:var(--accent,#2449d8)}.ds-path a:hover{color:var(--accent-text,#2544bd)}.ds-path a:focus-visible{outline:3px solid var(--accent,#2449d8);outline-offset:2px}@media(prefers-reduced-motion:reduce){[class^=\"ds-\"]{transition-duration:.01ms;animation-duration:.01ms}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Редакционное рабочее пространство",
+    "overview": "Система строится на выразительных заголовках, спокойном фоне и понятной иерархии действий. Literata придаёт работам собственный вес, Onest удерживает формы, условия и навигацию в практичном регистре. Кобальт выделяет выбранный раздел и основное действие.\n\nЭто запись построенного интерфейса, а не утверждение об одобрении итогового макета. Значения ниже описывают основное приложение с тремя вкладками; справочные страницы сохраняют часть прежних базовых правил. Тёмная тема меняет цветовые роли, а стартовая синяя панель сохраняет фиксированную окраску.",
+    "keyCharacteristics": [
+      "Контраст редакционного заголовка и спокойного интерфейсного текста.",
+      "Просторные поверхности работ и компактные строки требований.",
+      "Активное состояние выражено цветом; раскрытие добавляет подробности по месту.",
+      "Локальные шрифты, светлая и тёмная темы, видимый клавиатурный фокус."
+    ],
+    "rules": [
+      {
+        "name": "The Role Color Rule",
+        "body": "Используй цвет по роли: основной акцент для действия и выбора, вторичный текст для пояснения, линии для структуры.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Registers Rule",
+        "body": "Literata обозначает заголовки и работы, Onest — управление, формы, условия и названия программ в каталоге.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Workspace Rule",
+        "body": "Разделяй рабочие области фоном, отступом и линией; сохраняй карточки работ и строки каталога без падающей тени.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** сохранять распределение ролей Literata и Onest.",
+      "**Do** брать цвета из семантических переменных и проверять обе темы.",
+      "**Do** отделять рабочие поверхности фоном, отступами и тонкими линиями.",
+      "**Do** сохранять видимый фокус и поведение при уменьшении движения."
+    ],
+    "donts": [
+      "**Don't** заменять локальные семейства системным шрифтом в роли основного заголовка.",
+      "**Don't** добавлять падающие тени коллекции работ и строкам каталога.",
+      "**Don't** выдавать цвета статусов данных за новые фирменные акценты."
+    ]
+  }
+}

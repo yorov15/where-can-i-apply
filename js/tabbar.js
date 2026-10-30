@@ -7,8 +7,10 @@
 // слушает нажатия и, как вся работа с DOM в проекте, тестами не покрыта.
 
 export function activeTab(hash) {
+  if (hash === '#profile') return 'profile';
   if (hash === '#today') return 'today';
-  if (hash === '#route') return 'route';
+  if (hash === '#route' || hash.startsWith('#route/')) return 'route';
+  if (!hash) return 'today';
   return 'answer';
 }
 
@@ -28,8 +30,7 @@ export function setupTabbar({ bar, hash, go, watch }) {
 
   for (const tab of tabs) {
     tab.addEventListener('click', () => {
-      if (tab.getAttribute('aria-current') === 'page') window.scrollTo({ top: 0 });
-      else go(tab.dataset.tab);
+      go(tab.dataset.tab);
       sync();
     });
   }

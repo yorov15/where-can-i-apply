@@ -18,6 +18,7 @@ import { compareTable } from './compare.js';
 import { orderByPriority, hasPriorities } from './lib/priority.js';
 import { planCost, costText } from './cost.js';
 import { askExplain, cachedAnswer, parseAnswer, ERROR_TEXT } from './explain.js';
+import { profileReady } from './profile.js';
 
 const ORDER = { yes: 0, likely: 1, check: 2, no: 3 };
 
@@ -265,6 +266,26 @@ export function renderResults(nodes, profile, programs, today, details) {
     return;
   }
 
+  // Просмотр каталога не требует анкеты. Без неё нет персональных вердиктов.
+  if (!profileReady(profile)) {
+    summaryNode.append(el('p', 'summary-note', 'Каталог открыт целиком. Заполни анкету, когда захочешь проверить условия для себя.'));
+    if (!skipCards) {
+      const section = el('section', 'group');
+      const heading = el('h2', 'group-title', `Программы (${programs.length})`);
+      heading.dataset.base = 'Программы';
+      section.append(heading);
+      for (const program of programs) {
+        const row = { program, verdict: evaluate(profile, program, today), deadline: deadlineState(program.deadline, today) };
+        section.append(card(row, today, details, plan, true));
+      }
+      resultsNode.append(section);
+      refreshFilter(programs);
+    }
+    for (const chip of document.querySelectorAll('[data-bucket]')) chip.hidden = !['all', 'plan'].includes(chip.dataset.bucket);
+    return { skippedCards: skipCards };
+  }
+  for (const chip of document.querySelectorAll('[data-bucket]')) chip.hidden = false;
+
   const rows = programs.map((program) => ({
     program,
     verdict: evaluate(profile, program, today),
@@ -396,10 +417,10 @@ export function skeleton(label) {
 
 // Одна строка списка. Подробности — на экране программы (js/program-view.js):
 // список читается как перечень, а не как стена из раскрывающихся блоков.
-function card(row, today, details, plan) {
+function card(row, today, details, plan, guest = false) {
   const id = row.program.id;
   const model = cardModel(row, extraFor(details, id), today);
-  const box = el('article', `card ${model.bucket}${model.closed ? ' closed' : ''}`);
+  const box = el('article', `card ${guest ? 'catalog-entry' : model.bucket}${model.closed ? ' closed' : ''}`);
   box.dataset.id = id;
   // По этим полям фильтр каталога решает, показать карточку или спрятать.
   box.dataset.plan = plan.ids.includes(id) ? '1' : '0';
@@ -407,7 +428,7 @@ function card(row, today, details, plan) {
   box.dataset.orig = row.program.name?.orig ?? '';
   box.dataset.country = row.program.hostCountry ?? '';
   box.dataset.kind = row.program.kind ?? '';
-  box.dataset.bucket = model.bucket;
+  box.dataset.bucket = guest ? 'all' : model.bucket;
   box.dataset.duolingo = acceptsDuolingo(row.program) ? '1' : '0';
   box.dataset.feeFree = row.program.feeFree === true ? '1' : '0';
 
@@ -418,9 +439,10 @@ function card(row, today, details, plan) {
   name.href = href;
   title.append(name);
   const meta = [kindLine(row.program), model.coverageLine, model.deadlineLine].filter(Boolean).join(' · ');
-  box.append(el('span', 'card-verdict', verdict), title, el('p', 'card-meta', meta));
+  if (!guest) box.append(el('span', 'card-verdict', verdict));
+  box.append(title, el('p', 'card-meta', meta));
   const why = reason.split(' · ')[0];
-  if (why) box.append(el('p', 'card-reason', why));
+  if (why && !guest) box.append(el('p', 'card-reason', why));
 
   const actions = el('div', 'card-actions');
   const open = el('a', 'card-open', 'Открыть программу →');

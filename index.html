@@ -89,22 +89,27 @@
 <a class="skip-link" href="#main">К содержимому</a>
 <div class="topbar">
   <a class="brand" href="./">Nerio</a>
-  <nav id="tabbar" class="tabbar" aria-label="Разделы сайта" hidden>
+  <nav id="tabbar" class="tabbar" aria-label="Разделы сайта">
   <button type="button" class="tab" data-tab="today">Сегодня</button>
   <button type="button" class="tab" data-tab="answer">Куда можно</button>
   <button type="button" class="tab" data-tab="route">Мой путь <span class="tab-count"></span></button>
 </nav>
-  <nav aria-label="Справка"><a href="faq.html">Вопросы</a></nav>
+  <nav aria-label="Анкета и справка"><a href="#profile">Моя анкета</a><a href="faq.html">Помощь</a></nav>
   <button type="button" id="theme-toggle" class="theme-toggle" hidden>Тёмная</button>
 </div>
-<header class="hero">
-  <h1>Куда можно подавать документы</h1>
-  <p class="lead">Пять вопросов — и по каждой программе видно: можно подавать, чего не хватает или почему нет. Для 26 самых ходовых программ есть маршрут: что сдать, какие документы собрать и когда подать. Анкета остаётся в телефоне.</p>
+<header class="hero sr-only">
+  <h1>Nerio — от твоих интересов к поступлению</h1>
+  <p class="lead">Программы, портфолио и подготовка к поступлению. Бесплатно, без регистрации.</p>
 </header>
 
 <main id="main">
 <p id="offline" class="summary-note" role="status" hidden>Нет сети. Показано то, что сохранилось на этом устройстве при прошлом заходе: сроки могли измениться, сверяй их на сайтах программ.</p>
-  <details id="profile-box" class="profile-box" open>
+  <header id="profile-intro" class="page-heading" hidden>
+    <a href="#programs">← К программам</a>
+    <h2>Подберём под тебя</h2>
+    <p>Анкета нужна только для проверки условий поступления. Работы и каталог доступны без неё. Ответы сохраняются на этом устройстве.</p>
+  </header>
+  <details id="profile-box" class="profile-box" open hidden>
     <summary>
       <span class="profile-box-label">Анкета</span>
       <span id="profile-summary-text" class="profile-box-text">Заполни анкету</span>
@@ -272,7 +277,7 @@
   </details>
 
   <section id="answer" aria-label="Куда можно">
-    <h2 class="catalog-title">Куда можно подать</h2>
+    <header class="page-heading"><h2>Найди свою программу</h2><p>Выбери страну, изучи условия и сохрани интересное в свой путь.</p><a class="button button-quiet" href="#profile">Проверить по моей анкете</a></header>
     <div id="summary" class="summary" aria-live="polite" aria-atomic="true"></div>
 
     <div id="catalog-tools" class="catalog-tools">
@@ -289,17 +294,17 @@
         </div>
       </div>
       <details class="catalog-more">
-        <summary>Ещё фильтры: тип и страна</summary>
+        <summary>Страна, тип и условия</summary>
         <label for="catalog-kind">Тип программы
           <select id="catalog-kind"><option value="">Все типы</option></select>
         </label>
         <label for="catalog-country">Страна
           <select id="catalog-country"><option value="">Все страны</option></select>
         </label>
-      </details>
       <label class="catalog-toggle" for="catalog-duolingo"><input type="checkbox" id="catalog-duolingo" aria-describedby="catalog-source-note"> Принимают Duolingo</label>
       <label class="catalog-toggle" for="catalog-no-fee"><input type="checkbox" id="catalog-no-fee" aria-describedby="catalog-source-note"> Без взноса за подачу</label>
       <p id="catalog-source-note" class="fineprint">Показываем только программы, где это указано в источнике.</p>
+      </details>
       <p id="catalog-status" class="fineprint" role="status" aria-live="polite"></p>
       <button type="button" id="catalog-reset" class="link-button" hidden>Сбросить фильтры</button>
     </div>
@@ -317,7 +322,7 @@
   </section>
 
   <section id="route" aria-label="Мой путь" hidden>
-    <h2 class="catalog-title">Мой путь</h2>
+    <header class="page-heading"><h2>Мой путь</h2><p>Развивай свои работы, готовься к требованиям и собирай заявку.</p></header>
     <div id="route-body"></div>
     <details class="route-phase" hidden>
       <summary class="route-phase-title">План, сравнение и сроки</summary>
@@ -334,7 +339,7 @@
     <a href="privacy.html">Конфиденциальность</a>
     <a href="https://github.com/yorov15/where-can-i-apply/issues" target="_blank" rel="noopener">Сообщить об ошибке</a>
   </nav>
-  <button type="button" id="clear-profile" class="link-button">Стереть мою анкету с этого устройства</button>
+  <details class="data-cleanup"><summary>Очистить данные на этом устройстве</summary><p>Удалятся анкета, цели, работы, результаты и версии заявок. Сначала сохрани файл в «Мой путь → Файл и данные».</p><button type="button" id="clear-profile" class="link-button">Удалить все мои данные с этого устройства</button></details>
   <p id="clear-status" class="fineprint" role="status"></p>
 </footer>
 

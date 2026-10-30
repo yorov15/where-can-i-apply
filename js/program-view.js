@@ -129,9 +129,16 @@ export function renderProgram(root, props) {
   const id = row.program.id;
 
   const top = el('p', 'program-top');
-  top.append(el('span', `card-verdict ${model.bucket}`, view.verdict));
+  if (!props.guest) top.append(el('span', `card-verdict ${model.bucket}`, view.verdict));
   if (view.kind) top.append(el('span', 'card-meta', view.kind));
-  root.append(top, el('h2', 'program-title', model.title), el('p', 'program-lead', view.lead));
+  root.append(top, el('h2', 'program-title', model.title));
+  if (!props.guest) root.append(el('p', 'program-lead', view.lead));
+  else {
+    const note = el('section', 'profile-invite');
+    note.append(el('p', null, 'Это общие условия программы. Чтобы проверить их для себя, добавь сведения о школе и гражданстве.'));
+    const check = el('button', 'button button-quiet', 'Проверить по моей анкете');
+    check.type = 'button'; check.addEventListener('click', handlers.onProfile); note.append(check); root.append(note);
+  }
 
   const facts = el('dl', 'facts');
   for (const [name, value] of view.facts) {
@@ -190,9 +197,9 @@ export function renderProgram(root, props) {
     }
   }
 
-  if (view.steps.length || view.todo.length) {
+  if ((!props.guest && view.steps.length) || view.todo.length) {
     root.append(el('h3', 'program-section', 'Что нужно сделать'));
-    for (const { reason, tag } of view.steps) {
+    for (const { reason, tag } of props.guest ? [] : view.steps) {
       const step = reasonItem(reason);
       step.prepend(el('span', 'tag', tag));
       root.append(step);
@@ -201,7 +208,7 @@ export function renderProgram(root, props) {
       root.append(el('h4', 'card-section-title', section.title), bulletList(section.items, 'card-list'));
     }
   }
-  if (EXPLAIN_URL) root.append(explainBlock(model));
+  if (EXPLAIN_URL && !props.guest) root.append(explainBlock(model));
 
   root.append(exactBlock(view, model));
 

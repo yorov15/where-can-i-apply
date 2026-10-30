@@ -7,7 +7,8 @@ import { pendingPractice } from './portfolio-learning.js';
 // Несохранённый ввод переживает служебную перерисовку, но не перезагрузку.
 const drafts = new Map();
 const openSections = new Set();
-export function clearPortfolioDrafts() { drafts.clear(); openSections.clear(); clearWorkDrafts(); }
+let selectedExperience = null;
+export function clearPortfolioDrafts() { drafts.clear(); openSections.clear(); selectedExperience=null;clearWorkDrafts(); }
 const el = (tag,cls,text) => { const node=document.createElement(tag); if(cls)node.className=cls; if(text!=null)node.textContent=text; return node; };
 const button = (text,run) => { const node=el('button','button button-quiet',text); node.type='button'; node.addEventListener('click',run); return node; };
 const status = () => { const node=el('p','route-status'); node.setAttribute('role','status'); return node; };
@@ -97,14 +98,29 @@ export function renderPortfolio(props) {
   function draw(message='') {
     box.replaceChildren();
     const portfolio=portfolioOf(props.handlers.getRouteState());
-    const header=el('header','journey-head');header.append(el('p','journey-kicker','Твоё портфолио'),el('h3',null,'Мой опыт и работы'),el('p','journey-meta','Сохраняй занятия, проекты, работу и помощь семье. Выбирай, что развивать дальше.'));box.append(header);
-    if(!portfolio.experiences.length)box.append(el('p','journey-empty','Добавь то, чем уже занимаешься, или выбери небольшую новую работу.'));
-    const saved=(id,text)=>{expanded=id;openSections.delete('add');openSections.delete(`editor:${id}`);draw(text);box.querySelector(`[data-experience="${CSS.escape(id)}"] > summary`)?.focus();};
-    box.append(renderWorkPicker(props,saved));
+    const header=el('header','journey-head');header.append(el('h3',null,'Мои работы'),el('p','journey-meta','Не нужно заполнять всё сразу. Начни с одной работы и развивай её шаг за шагом.'));box.append(header);
+    const back=button('← Все работы',()=>{selectedExperience=null;for(const card of box.querySelectorAll('[data-experience]')){openSections.delete(`entry:${card.dataset.experience}`);card.open=false;}box.classList.remove('portfolio-focused');box.querySelector('.journey-head h3')?.focus();});back.classList.add('portfolio-back');header.append(back);header.querySelector('h3').tabIndex=-1;
+    if(!portfolio.experiences.length)box.append(el('p','journey-empty','Здесь будут твои проекты, исследования и другой опыт. Можно начать новую работу или добавить уже готовую.'));
+    const saved=(id,text)=>{expanded=id;selectedExperience=id;openSections.add(`entry:${id}`);openSections.delete('add');openSections.delete(`editor:${id}`);draw(text);box.querySelector(`[data-experience="${CSS.escape(id)}"] > summary`)?.focus();};
+    const picker=renderWorkPicker(props,saved);if(location.hash==='#route/new')picker.open=true;box.append(picker);
+    const collection=el('div','work-collection');box.append(collection);
+    const selected=expanded??props.focusExperience??selectedExperience??portfolio.experiences.find(entry=>openSections.has(`entry:${entry.id}`)||drafts.has(`experience:${entry.id}`))?.id;
+    selectedExperience=portfolio.experiences.some(entry=>entry.id===selected)?selected:null;
     for(const entry of portfolio.experiences){
       const card=el('details','journey-card');card.dataset.experience=entry.id;
       rememberOpen(card,`entry:${entry.id}`,expanded===entry.id||drafts.has(`experience:${entry.id}`));
+      card.open=entry.id===selectedExperience;
+      card.addEventListener('toggle',()=>{
+        if(!card.isConnected)return;
+        if(card.open)for(const other of collection.querySelectorAll('[data-experience]'))if(other!==card)other.open=false;
+        box.classList.toggle('portfolio-focused',Boolean(collection.querySelector('[data-experience][open]')));
+      });
       const summary=el('summary'),caption=el('span');caption.append(el('span','journey-title',entry.title));
+      summary.addEventListener('click',event=>{
+        event.preventDefault();const open=!card.open;selectedExperience=open?entry.id:null;
+        for(const other of collection.querySelectorAll('[data-experience]')){other.open=false;openSections.delete(`entry:${other.dataset.experience}`);}
+        card.open=open;if(open)openSections.add(`entry:${entry.id}`);box.classList.toggle('portfolio-focused',open);
+      });
       const progress=entry.workPlan?(entry.workPlan.paused?'На паузе':`${entry.workPlan.steps.filter(step=>step.done).length} из ${entry.workPlan.steps.length} шагов`):EXPERIENCE_KINDS.find(([id])=>id===entry.kind)?.[1];
       caption.append(el('small','journey-meta',[progress,entry.period].filter(Boolean).join(' · ')));summary.append(caption);card.append(summary);
       const work=renderWorkPlan(entry,props,saved);if(work)card.append(work);
@@ -122,9 +138,9 @@ export function renderPortfolio(props) {
         const response=props.handlers.onRemoveExperience(entry.id);
         if(response.ok){drafts.delete(`experience:${entry.id}`);draw(response.message);box.querySelector('[data-add-experience] > summary')?.focus();}
         else box.querySelector('[data-portfolio-status]').textContent=response.message;
-      }));card.append(remove);box.append(card);
+      }));card.append(remove);collection.append(card);
     }
-    const add=el('details','journey-edit');add.dataset.addExperience='';add.append(el('summary',null,'Добавить опыт'));
+    const add=el('details','journey-edit');add.dataset.addExperience='';add.append(el('summary',null,'Добавить готовый опыт'));
     rememberOpen(add,'add',drafts.has('experience:new'));
     add.append(experienceForm(null,props,saved));box.append(add);
     if(portfolio.outcomes.length){
@@ -145,11 +161,12 @@ export function renderPortfolio(props) {
     }
     box.append(el('p','journey-meta','Записи хранятся на устройстве и входят в файл маршрута. Внешние файлы по ссылкам сохраняй отдельно.'));
     const say=status();say.dataset.portfolioStatus='';say.textContent=message;box.append(say);
+    box.classList.toggle('portfolio-focused',Boolean(collection.querySelector('[data-experience][open]')));
   }
   draw();return box;
 }
 
-export function renderTaskOutcome(week,task,props) {
+export function renderTaskOutcome(week,task,props,onSaved=null) {
   const draftKey=JSON.stringify(['outcome',week,task.taskId]);
   const portfolio=portfolioOf(props.handlers.getRouteState());
   const practice=pendingPractice(portfolio.experiences.find(item=>item.id===task.experienceId)?.workPlan);
@@ -162,19 +179,20 @@ export function renderTaskOutcome(week,task,props) {
   box.append(el('p','route-detail','Запиши, что сделал и что понял. Галочка задания меняется отдельно.'));
   const form=el('form','journey-form');
   field(form,'Что получилось?','text',value.text,{required:true});
-  field(form,'Ссылка на результат · необязательно','url',value.url,{type:'url'});
-  field(form,'Что понял или доработаешь?','reflection',value.reflection,{rows:2});
+  const optional=el('details','journey-edit');optional.append(el('summary',null,'Ссылка и вывод · необязательно'));
+  field(optional,'Ссылка на результат','url',value.url,{type:'url'});
+  field(optional,'Что понял или доработаешь?','reflection',value.reflection,{rows:2});form.append(optional);
   if(task.kind==='portfolio'){
     form.append(el('p','route-detail',`Связанная работа: ${portfolio.experiences.find(item=>item.id===task.experienceId)?.title??'запись не найдена'}`));
     const binding=el('input');binding.type='hidden';binding.name='experienceId';binding.value=task.experienceId;form.append(binding);
   }else selectField(form,'Связать с моим опытом · необязательно','experienceId',[['','Без связи'],...portfolio.experiences.map(item=>[item.id,item.title])],value.experienceId);
-  const say=status(),save=el('button','button button-quiet','Сохранить результат');save.type='submit';form.append(save,say);
+  const say=status(),save=el('button',task.kind==='portfolio'?'button':'button button-quiet','Сохранить результат');save.type='submit';form.append(save,say);
   form.addEventListener('input',()=>drafts.set(draftKey,readFields(form)));
   form.addEventListener('change',()=>drafts.set(draftKey,readFields(form)));
   form.addEventListener('submit',event=>{
     event.preventDefault();const data=readFields(form);
     const response=props.handlers.onSaveTaskOutcome({...data,experienceId:data.experienceId||null,week,taskId:task.taskId});
     say.textContent=response.message;
-    if(response.ok){drafts.delete(draftKey);summary.textContent='Результат сохранён · изменить';}
+    if(response.ok){drafts.delete(draftKey);summary.textContent='Результат сохранён · изменить';onSaved?.();}
   });box.append(form);return box;
 }

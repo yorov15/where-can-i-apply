@@ -136,14 +136,23 @@ function nowCard(model, props) {
   card.append(el('h3', 'today-now-title', label.title));
   if(label.context)card.append(el('p','route-detail',`Работа: ${label.context}`));
   if(next.expected)card.append(el('p','route-detail',`Результат шага: ${next.expected}`));
+  const entry=routeState.portfolio?.experiences.find(item=>item.id===next.experienceId);
+  const practice=Boolean(pendingPractice(entry?.workPlan));
+  const needsResult=next.kind==='portfolio'&&!routeState.portfolio?.outcomes.some(item=>item.week===week.key&&item.taskId===next.taskId);
+  const prerequisite=el('p','route-detail',practice?'Сначала закончи или отложи учебную пробу.': 'Сначала сохрани результат, затем заверши шаг.');
+  prerequisite.hidden=!practice&&!needsResult;
+  const done = el('button', 'button button-quiet', 'Готово');
+  done.disabled=practice||needsResult;
+  const outcome=renderTaskOutcome(week.key,next,props,()=>{done.disabled=false;prerequisite.hidden=true;});
+  if(needsResult&&!practice)outcome.open=true;
+  card.append(outcome);
   const row = el('div', 'today-actions');
   const open = openLink(next.url, 'Открыть материал');
   if (open) row.append(open);
-  const done = el('button', 'button button-quiet', 'Готово');
   done.type = 'button';
   done.addEventListener('click', () => handlers.onWeeklyToggle(week.key, next.taskId));
   row.append(done);
-  card.append(row);
+  card.append(row,prerequisite);
   return card;
 }
 
@@ -170,7 +179,7 @@ function weekList(model, props) {
     body.append(label, dayPicker(week, task, handlers));
     if(display.context)body.append(el('p','route-detail',`Работа: ${display.context}`));
     if(task.expected)body.append(el('p','route-detail',`Результат шага: ${task.expected}`));
-    body.append(renderTaskOutcome(week.key, task, props));
+    if(task.taskId!==model.next?.taskId)body.append(renderTaskOutcome(week.key, task, props));
     layout.append(check, body);
     row.append(layout);
     list.append(row);
@@ -242,14 +251,27 @@ export function renderToday(root, props) {
   }
   const model = todayModel(props);
   if (!route && !props.weekly?.week.tasks.length && !model.offerActions.length) {
-    const box = el('div', 'route-empty');
-    box.append(el('p', null, 'Пока нет дел на неделю. Выбери программы или начни работу в «Моём пути».'));
-    const choose = el('button', 'button', 'Выбрать программы');
+    const hasWorks = Boolean(props.routeState?.portfolio?.experiences.length);
+    const box = el('div', 'start-space');
+    const statement = el('div', 'start-statement');
+    statement.append(el('h2', null, 'Твои работы.\nТвой путь.'), el('p', null, 'Портфолио начинается с того, что тебе интересно. Развивай свои работы и готовь их к поступлению.'));
+    const entry = el('section', 'start-entry');
+    entry.append(el('h3', null, hasWorks?'Продолжим твой путь?':'С чего начнём?'), el('p', null, hasWorks?'Твои работы сохранены в «Моём пути». Открой нужную, чтобы доработать её или связать с программой.':'Выбери небольшую работу или сохрани то, что уже сделал. Программа поступления пока не нужна.'));
+    const path=el('button','button',hasWorks?'Открыть мои работы':'Начать работу');path.type='button';path.addEventListener('click',hasWorks?handlers.onOpenRoute:handlers.onStartWork);entry.append(path);
+    const choose = el('button', 'link-button', 'Сначала посмотреть программы →');
     choose.type = 'button';
     choose.addEventListener('click', handlers.onChooseGoals);
-    box.append(choose);
-    const path=el('button','button button-quiet','Открыть мой путь');path.type='button';path.addEventListener('click',handlers.onOpenRoute);box.append(path);
+    entry.append(choose, el('p', 'start-note', 'Бесплатно, без регистрации. Записи остаются на этом устройстве.'));
+    box.append(statement, entry);
     root.append(box);
+    const map = el('section', 'path-explainer');
+    map.setAttribute('aria-label', 'Как устроен Nerio');
+    for (const [title, description, href] of [
+      ['Работы', 'Пробуй, получай отзыв, дорабатывай. Сохраняй свой вклад и результат.', '#route'],
+      ['Программы', 'Изучи условия и выбери, куда хочешь поступать.', '#programs'],
+      ['Заявки', 'Собери материалы под конкретную цель и сохрани отправленную версию.', '#route/applications'],
+    ]) { const item = el('a', null);item.href=href;item.append(el('h3', null, title), el('p', null, description));map.append(item); }
+    root.append(map);
     return;
   }
   const head = el('header', 'today-head');
@@ -264,14 +286,14 @@ export function renderToday(root, props) {
   if (review) root.append(review);
   if (model.week?.tasks.length) root.append(nowCard(model, props));
   else if(!model.offerActions.length)root.append(el('p','route-detail','Дел в плане недели нет. Материалы и ответы доступны в «Моём пути».'));
-  if (model.week?.tasks.length) root.append(weekList(model, props));
+  if (model.week?.tasks.length) {
+    const week = el('details', 'today-more');
+    week.append(el('summary', null, 'Вся неделя'), weekList(model, props));root.append(week);
+  }
   if(props.weekly?.workBacklog)root.append(el('p','route-detail',`Шагов работ вне плана недели: ${props.weekly.workBacklog}. Проверь доступное время и выбранные дни; лишние работы можно поставить на паузу в «Моём пути».`));
-  const level = levelBlock(model);
-  if (level) root.append(level);
-  const dates = datesBlock(model);
-  if (dates) root.append(dates);
-  const applications = applicationsBlock(model);
-  if (applications) root.append(applications);
+  const reference = el('details', 'today-more');reference.append(el('summary', null, 'Уровень, даты и заявки'));
+  for(const block of [levelBlock(model), datesBlock(model), applicationsBlock(model)])if(block)reference.append(block);
+  if(reference.children.length>1)root.append(reference);
   const more = el('button', 'button button-quiet', 'Открыть весь путь');
   more.type = 'button';
   more.addEventListener('click', handlers.onOpenRoute);

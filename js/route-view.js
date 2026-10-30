@@ -362,7 +362,8 @@ function actionsBlock(route, handlers, statusText, applyUrl) {
   }
 
   const more = el('details', 'route-more');
-  more.append(el('summary', null, 'Сохранить маршрут или сбросить прогресс'));
+  more.open = true;
+  more.append(el('summary', null, 'Резервная копия и перенос'));
   const save = el('button', 'button button-quiet', 'Скачать маршрут');
   save.type = 'button';
   save.addEventListener('click', () => say(handlers.onExport()));
@@ -405,9 +406,36 @@ function emptyNotice({ prepared, failed, onRetry }) {
   return box;
 }
 
+const openedGoals = new Set();
+export function routeSection(hash) {
+  const section = hash.split('/')[1];
+  return ['preparation', 'applications', 'files'].includes(section) ? section : 'works';
+}
+
 export function renderRoute(root, props) {
   const { programs, route, planIds, tracks, status, loading, applyUrl, handlers } = props;
   root.textContent = '';
+  const section = routeSection(location.hash);
+  root.dataset.layer = section;
+  const navigation = el('nav', 'path-nav');
+  navigation.setAttribute('aria-label', 'Разделы моего пути');
+  for (const [id, title] of [['works', 'Работы'], ['preparation', 'Подготовка'], ['applications', 'Заявки'], ['files', 'Файл и данные']]) {
+    const link = el('a', null, title);
+    link.href = id === 'works' ? '#route' : `#route/${id}`;
+    if (id === section) link.setAttribute('aria-current', 'page');
+    navigation.append(link);
+  }
+  root.append(navigation);
+  if (section === 'works') {
+    root.append(renderPortfolio(props));
+    return;
+  }
+  if (section === 'files') {
+    const head = el('header', 'section-heading');
+    head.append(el('h3', null, 'Твой путь остаётся у тебя'), el('p', null, 'Сохрани файл перед сменой устройства или очисткой браузера. В него входят цели, работы, результаты и версии заявки.'));
+    root.append(head, actionsBlock(route, handlers, status, applyUrl));
+    return;
+  }
 
   if (loading) {
     const box = el('div', 'route-empty');
@@ -417,10 +445,7 @@ export function renderRoute(root, props) {
   }
 
   if (!route) {
-    const library = el('div', 'route-main');
-    library.append(renderPortfolio(props));
-    root.append(library);
-    const applications=renderApplications(props);if(applications){const side=el('div','route-side');side.append(applications);root.append(side);}
+    if(section === 'applications') { const applications=renderApplications(props);if(applications)root.append(applications); }
     root.append(emptyNotice({ prepared: [], failed: planIds.length > 0, onRetry: handlers.onRetry }));
     const choose = el('button', 'button', 'Выбрать программы');
     choose.type = 'button';
@@ -431,7 +456,7 @@ export function renderRoute(root, props) {
       remove.addEventListener('click', () => handlers.onRemoveGoal(id));
       root.append(remove);
     }
-    root.append(choose, actionsBlock(null, handlers, status, null));
+    root.append(choose);
     return;
   }
 
@@ -442,8 +467,11 @@ export function renderRoute(root, props) {
   for (const goal of route.goals) {
     // Строка цели — имя, срок и «Убрать». Покрытие, заметки и предупреждения
     // под раскрытием: восемь целей иначе занимают весь первый экран.
-    const item = el('div', 'route-goal-actions');
+    const item = el('details', 'route-goal-actions');
     item.dataset.goal = goal.id;
+    item.open = openedGoals.has(goal.id);
+    item.addEventListener('toggle',()=>{if(item.isConnected){if(item.open)openedGoals.add(goal.id);else openedGoals.delete(goal.id);}});
+    item.append(el('summary', null, goal.name));
     const open = el('button', 'link-button', goal.name);
     open.type = 'button';
     open.addEventListener('click', () => handlers.onOpen(goal.id));
@@ -472,12 +500,20 @@ export function renderRoute(root, props) {
     remove.addEventListener('click', () => handlers.onRemoveGoal(id));
     head.append(remove);
   }
-  const choose = el('button', 'button button-quiet', 'Выбрать ещё программы');
+  const choose = el('button', 'link-button', 'Выбрать ещё программы →');
   choose.type = 'button';
   choose.addEventListener('click', handlers.onChooseGoals);
   head.append(choose);
-  main.append(head);
-  main.append(renderPortfolio(props));
+  if (section === 'applications') {
+    main.append(head);
+    const applications = renderApplications(props);
+    if(applications) main.append(applications);
+    root.append(main);
+    return;
+  }
+  const intro = el('header', 'section-heading');
+  intro.append(el('h3', null, 'Что нужно для твоих целей'), el('p', null, 'Экзамены, документы и учебный план. Конкретные дела недели — на «Сегодня».'));
+  main.append(intro);
   const preparing=hasPreparationGoals(route,props.routeState);
 
   if(preparing){
@@ -512,7 +548,6 @@ export function renderRoute(root, props) {
 
   // ——— разделы-справочники (правая колонка на широком экране) ———
   const side = el('div', 'route-side');
-  const applications=renderApplications(props);if(applications)side.append(applications);
   const preparation=phaseBlock(route,{...handlers,tracks});
   if(preparing)side.append(preparation);else{const archive=el('details','route-phase');archive.append(el('summary',null,'Подготовка до подачи · справка'),preparation);side.append(archive);}
   const applyNotes = applyNotesBlock(route);
@@ -521,5 +556,4 @@ export function renderRoute(root, props) {
   if(essays)side.append(essays);
   root.append(side);
 
-  root.append(actionsBlock(route, handlers, status, applyUrl));
 }

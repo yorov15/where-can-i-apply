@@ -30,7 +30,7 @@ function bindForm(form,key,submit,done){
 }
 
 export function renderWorkPicker(props,onSaved){
-  const key='new-work',box=details(key,'Выбрать работу для развития опыта');box.dataset.workPicker='';
+  const key='new-work',box=details(key,'Начать новую работу');box.dataset.workPicker='';
   box.className='journey-start';
   box.append(el('p','route-detail','Выбери интересную и посильную работу. Это учебные предложения Nerio; условия конкретной программы проверяй отдельно.'));
   const value=drafts.get(key)??{templateId:'data',sessionMinutes:'60'},form=el('form','journey-form');
@@ -57,11 +57,9 @@ export function renderWorkPlan(entry,props,onSaved){
   const box=el('section','journey-work');box.dataset.workPlan=entry.id;
   const status=say(),done=plan.steps.filter(step=>step.done).length;
   const progress=el('progress','journey-progress');progress.max=plan.steps.length;progress.value=done;progress.setAttribute('aria-label',`Готово ${done} из ${plan.steps.length} шагов`);box.append(progress);
-  const brief=el('dl','journey-brief');brief.append(el('dt',null,'Почему это интересно'),el('dd',null,plan.aim),el('dt',null,'Хочу получить'),el('dd',null,plan.expectedResult));box.append(brief);
   const change=(response)=>{if(response.ok)onSaved(entry.id,response.message);else status.textContent=response.message;};
-  const pause=button(plan.paused?'Продолжить работу':'Поставить на паузу',()=>change(props.handlers.onPausePortfolioWork(entry.id,!plan.paused)));pause.className='link-button';box.append(pause);
+  const pause=button(plan.paused?'Продолжить работу':'Поставить на паузу',()=>change(props.handlers.onPausePortfolioWork(entry.id,!plan.paused)));pause.className='link-button';
   const next=plan.steps.find(step=>!step.done);
-  box.append(renderPortfolioLearning(entry,props,onSaved));
   for(const [index,step] of plan.steps.entries()){
     const row=details(`work-step:${entry.id}:${step.id}`,`${index+1}. ${step.title}${step.done?' · готово':''}`,next?.id===step.id&&!plan.paused);row.className='journey-step';row.dataset.workStep=step.id;row.dataset.current=String(next?.id===step.id&&!plan.paused);
     row.append(el('p','route-detail',`Результат шага: ${step.expected}`));
@@ -70,11 +68,12 @@ export function renderWorkPlan(entry,props,onSaved){
       row.append(button('Вернуться к этому шагу',()=>change(props.handlers.onPortfolioWorkStep(entry.id,step.id))));
     }else if(next.id===step.id&&!plan.paused){
       const actions=el('div','journey-actions'),complete=button('Отметить шаг готовым',()=>change(props.handlers.onPortfolioWorkStep(entry.id,step.id)));complete.disabled=Boolean(pendingPractice(plan));actions.append(button('Открыть дела недели',props.handlers.onOpenToday,true),complete);row.append(actions);
-      row.append(el('p','route-detail',pendingPractice(plan)?'Сначала закончи или отложи учебную пробу выше. Затем сохрани результат этого шага на «Сегодня».':'Сначала сохрани результат задания на «Сегодня». Отметка означает, что ты сам считаешь шаг законченным.'));
+      row.append(el('p','route-detail',pendingPractice(plan)?'Сначала закончи или отложи учебную пробу. Затем сохрани результат этого шага на «Сегодня».':'Сначала сохрани результат задания на «Сегодня». Отметка означает, что ты сам считаешь шаг законченным.'));
     }
     box.append(row);
   }
   if(done===plan.steps.length)box.append(el('p','route-detail','Шаги закончены. Запиши выводы и выбери, как использовать работу для своей цели.'));
+  box.append(renderPortfolioLearning(entry,props,onSaved));
   const briefKey=`brief:${entry.id}`,editor=details(briefKey,'Уточнить задачу и объём'),briefForm=el('form','journey-form');
   const value=drafts.get(briefKey)??plan;
   field(briefForm,'Почему тебе это интересно?','aim',value.aim,{required:true});
@@ -82,7 +81,7 @@ export function renderWorkPlan(entry,props,onSaved){
   options(briefForm,'Выделить на следующий шаг · не больше','sessionMinutes',timeOptions,value.sessionMinutes);
   const save=el('button','button button-quiet','Сохранить задачу');save.type='submit';briefForm.append(save);
   bindForm(briefForm,briefKey,data=>props.handlers.onSavePortfolioBrief(entry.id,{...data,sessionMinutes:Number(data.sessionMinutes)}),response=>onSaved(entry.id,response.message));
-  editor.append(briefForm);box.append(editor);
+  editor.append(briefForm,pause);box.append(editor);
   const reviewKey=`review:${entry.id}`,review=details(reviewKey,'Самопроверка работы'),reviewForm=el('form','journey-form');
   const reflection=drafts.get(reviewKey)??plan.review??{};
   review.append(el('p','route-detail','Ответь по своей работе. Можно написать «пока не знаю» или «не применимо» и выбрать, что проверить дальше.'));
