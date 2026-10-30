@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-30T09:13:56.861035+00:00",
+  "generatedAt": "2026-10-30T09:42:10.612600+00:00",
   "title": "Design System: Nerio",
   "extensions": {
     "colorMeta": {
@@ -316,7 +316,7 @@
     "typographyMeta": {
       "display": {
         "displayName": "Стартовый заголовок",
-        "purpose": "Стартовое высказывание; отдельные размеры на средней и малой ширине."
+        "purpose": "Стартовый заголовок: 46px на средней ширине, 32px на телефоне; шкала названий работ сохранена."
       },
       "headline": {
         "displayName": "Заголовок страницы",
@@ -430,7 +430,7 @@
       "name": "Глобальные вкладки",
       "kind": "nav",
       "refersTo": "tab-current",
-      "description": "Три постоянных раздела; пример верхней панели.",
+      "description": "Навигация рабочих экранов; скрыта на пустом гостевом экране и в #start.",
       "html": "<nav class=\"ds-tabs\" aria-label=\"Разделы сайта\"><button class=\"ds-tab\">Сегодня</button><button class=\"ds-tab\">Куда можно</button><button class=\"ds-tab\" aria-current=\"page\">Мой путь</button></nav>",
       "css": ".ds-tabs{display:flex;gap:4px;flex-wrap:wrap}.ds-tab{min-height:44px;padding:10px 16px;font:600 1rem/1.55 Onest,system-ui,sans-serif;white-space:nowrap;color:var(--muted,#566177);background:none;border:0;border-radius:8px;cursor:pointer}.ds-tab[aria-current]{background:var(--accent,#2449d8);color:var(--bg,#f5f4ef)}.ds-tab:focus-visible{outline:3px solid var(--accent,#2449d8);outline-offset:2px}@media(prefers-reduced-motion:reduce){[class^=\"ds-\"]{transition-duration:.01ms;animation-duration:.01ms}}"
     },

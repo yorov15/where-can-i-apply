@@ -16,6 +16,8 @@ test('на экране маршрута активен «Мой путь»', ()
 test('на экране «Сегодня» активна «Сегодня»', () => {
   assert.equal(activeTab('#today'), 'today');
   assert.equal(activeTab(''), 'today');
+  assert.equal(activeTab('#start'), 'today');
+  assert.equal(activeTab('#today/work/test-id'), 'today');
 });
 
 test('анкета не выдаётся за открытую вкладку каталога', () => {
