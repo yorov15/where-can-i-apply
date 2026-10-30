@@ -390,6 +390,9 @@ def main() -> int:
     log = json.loads(log_path.read_text(encoding="utf-8")) if log_path.exists() else []
     names = {p["id"]: (p.get("name") or {}).get("ru") or p["id"] for p in programs}
     (root / "feed.xml").write_text(feed_xml(log, names), encoding="utf-8")
+    # Those same approved records also have ordinary URLs visible without JS.
+    from tools.seo import write_public_pages
+    write_public_pages(root, publishable(programs))
     print(
         f"Записано программ: {len(index['programs'])}; "
         f"индекс {wire} байт по проводу, детали {extra_wire}"

@@ -42,8 +42,8 @@ jobs:
         run: |
           # Дата сборки (generatedAt) меняется каждый день и сама по себе не
           # значит, что данные устарели: сравниваем всё остальное.
-          if ! git diff -I'"generatedAt"' --quiet data feed.xml || [ -n "$(git ls-files --others --exclude-standard data feed.xml)" ]; then
-            git status --short data feed.xml
+          if ! git diff -I'"generatedAt"' --quiet data feed.xml programs sitemap.xml || [ -n "$(git ls-files --others --exclude-standard data feed.xml programs sitemap.xml)" ]; then
+            git status --short data feed.xml programs sitemap.xml
             echo "Собранные файлы устарели: запусти python -m tools.build и закоммить data/ и feed.xml."
             exit 1
           fi
