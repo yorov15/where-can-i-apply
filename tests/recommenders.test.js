@@ -230,9 +230,9 @@ test('просьба по-английски: английское назван�
   assert.match(unknown, /I will confirm and let you know/);
 });
 
-test('памятка: программы и сроки; «Что я делал» — только названия записей портфолио', () => {
+test('памятка: программы и сроки; «Мои работы» — только названия записей портфолио', () => {
   const memo = teacherMemo({ entries: two, experiences: [{ title: 'Школьная метеостанция', period: '2025–2026' }, { title: 'Олимпиада по физике' }] });
   assert.match(memo, /— Гарвардский колледж: до 1 января 2027, отправлять через Common App/);
-  assert.match(memo, /Что я делал:\n— Школьная метеостанция \(2025–2026\)\n— Олимпиада по физике/);
-  assert.doesNotMatch(teacherMemo({ entries: one, experiences: [] }), /Что я делал/);
+  assert.match(memo, /Мои работы:\n— Школьная метеостанция \(2025–2026\)\n— Олимпиада по физике/);
+  assert.doesNotMatch(teacherMemo({ entries: one, experiences: [] }), /Мои работы/);
 });

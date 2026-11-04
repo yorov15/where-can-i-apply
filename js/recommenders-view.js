@@ -166,7 +166,7 @@ function personCard(person, props, save, say) {
     preview.append(el('summary', null, 'Посмотреть тексты'));
     for (const [, text] of texts) preview.append(el('p', 'journey-copy', text));
     card.append(preview);
-    if (!experiences.length) card.append(el('p', 'route-detail', 'В памятке нет раздела «Что я делал»: в «Работах» пока нет записей.'));
+    if (!experiences.length) card.append(el('p', 'route-detail', 'В памятке нет раздела «Мои работы»: в «Работах» пока нет записей.'));
   }
   const edit = remember(el('details', 'journey-edit'), `edit:${person.id}`);
   edit.append(el('summary', null, 'Изменить'), personForm(person, route.goals, sources, save, say),

@@ -316,11 +316,11 @@ export function requestText({ teacher, entries, lang = 'ru' }) {
       list.map(item => `— ${name(item)}: ${when(item)}; ${how(item)}`).join('\n'),
       'Сможете написать его для меня?'];
   return [`Здравствуйте, ${teacher || '[имя]'}!`, ...body,
-    'Пришлю короткую памятку: чем я занимался и куда подаюсь.',
+    'Пришлю короткую памятку: мои работы и программы, куда я подаюсь.',
     'Спасибо!\n[имя и фамилия, класс]'].join('\n\n');
 }
 
-// Памятка для учителя. «Что я делал» — только названия записей из
+// Памятка для учителя. «Мои работы» — только названия записей из
 // портфолио ученика; нет записей — раздела нет.
 export function teacherMemo({ entries, experiences }) {
   const lines = ['Памятка для рекомендации', '', 'Куда подаюсь:'];
@@ -330,7 +330,7 @@ export function teacherMemo({ entries, experiences }) {
   }
   const done = (experiences ?? []).filter(entry => entry?.title);
   if (done.length) {
-    lines.push('', 'Что я делал:');
+    lines.push('', 'Мои работы:');
     for (const entry of done.slice(0, 15)) lines.push(`— ${entry.title}${entry.period ? ` (${entry.period})` : ''}`);
   }
   lines.push('', 'Если нужно что-то ещё — спросите, пришлю.');
