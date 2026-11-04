@@ -172,7 +172,7 @@ function sheet(state, goalId, programName) {
 
 // Печать — тем же способом, что отчёт родителю: на время печати в body один
 // лист (#parent-print), всё остальное правило @media print прячет.
-function printSheet(node, doc = document, win = window) {
+export function printSheet(node, doc = document, win = window) {
   doc.getElementById('parent-print')?.remove();
   const copy = node.cloneNode(true);copy.id = 'parent-print';copy.hidden = true;
   doc.body.append(copy);doc.body.classList.add('is-parent-print');
