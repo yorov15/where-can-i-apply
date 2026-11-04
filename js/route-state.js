@@ -5,6 +5,7 @@ import { isGoalStatus } from './goal-status.js';
 import { normalizePortfolio } from './portfolio.js';
 import { normalizeApplications } from './application.js';
 import { normalizeInterview } from './interview.js';
+import { normalizeRecommenders } from './recommenders.js';
 export const ROUTE_STATE_KEY = 'eligibility-route';
 export const ROUTE_VERSION = 2;
 export const MAX_GOALS = 8;
@@ -41,6 +42,9 @@ function normalize(value) {
     next.portfolio = normalizePortfolio(value.portfolio);
     if (!next.portfolio) return null;
   }
+  // Рекомендатели. Пустой раздел не храним, испорченные записи отбрасываем по одной.
+  const recommenders = normalizeRecommenders(value.recommenders);
+  if (recommenders) next.recommenders = recommenders;
   next.goals = list(value.goals);
   // Репетиция собеседования. Битые ответы отбрасываются по одному, а не
   // роняют весь маршрут; пустую запись не храним.
