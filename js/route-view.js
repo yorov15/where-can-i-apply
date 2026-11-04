@@ -402,7 +402,11 @@ function emptyNotice({ prepared, failed, onRetry }) {
     box.append(retry);
     return box;
   }
-  box.append(el('p', null, 'Добавь программы в «Мой план» из каталога. Здесь будут общие экзамены, документы и сроки.'));
+  const message = el('p', null, 'Добавь программы в «Мой путь» из ');
+  const catalog = el('a', null, 'каталога');
+  catalog.href = '#programs';
+  message.append(catalog, '. Здесь будут общие экзамены, документы и сроки.');
+  box.append(message);
   return box;
 }
 
@@ -487,7 +491,7 @@ export function renderRoute(root, props) {
     const more = el('details', 'route-more');
     more.append(el('summary', null, 'Что покрывает и что учесть'));
     more.append(el('p', 'route-goal-meta', coverageLine(goal.coverage)));
-    if (!goal.prepared) more.append(el('p', 'route-detail', 'Подготовка для этой программы пока не размечена. Сверь требования на её сайте.'));
+    if (!goal.prepared) more.append(el('p', 'route-detail', 'План подготовки для этой программы пока не готов. Сверь требования на её сайте.'));
     if (goal.note) more.append(el('p', 'route-goal-note', goal.note));
     item.append(more);
     if (!goal.conditionsLoaded) item.append(el('p', 'route-warn', 'Условия этой программы не загрузились. Нажми «Повторить» ниже.'));

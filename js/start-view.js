@@ -19,7 +19,7 @@ export function valueTitle(count) {
   if (!Number.isInteger(n) || n <= 0) return 'Проверь, в какие программы ты можешь подать документы';
   return `Проверь, в какие из ${n} ${plural(n, 'программы', 'программ', 'программ')} ты можешь подать документы`;
 }
-export const VALUE_LEAD = 'Ответь на вопросы о школе и экзаменах. Покажем, куда можно подать и что сделать до дедлайна.';
+export const VALUE_LEAD = 'Ответь на вопросы о школе и экзаменах. Сверим известные условия и подскажем, что уточнить и сделать до срока.';
 
 const link = (text, run) => { const node = button(text, run); node.className = 'link-button'; return node; };
 

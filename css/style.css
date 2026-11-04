@@ -111,7 +111,7 @@ input[aria-invalid="true"]{border-color:var(--no);background:var(--no-bg)}
 .profile-box.wizard .stepper{gap:.5rem}
 .profile-box.wizard .stepper li{height:.5rem}
 .profile-box.wizard legend{font-size:clamp(1.75rem,1.4rem + 2vw,2.25rem);line-height:1.1;letter-spacing:-.015em;margin-bottom:var(--s-4)}
-label:not(.row)>select,label:not(.row)>input{min-height:52px;font-size:1.0625rem;background-color:var(--surface);transition:background-color var(--dur) var(--ease),border-color var(--dur) var(--ease)}
+label:not(.row)>select,label:not(.row)>input:not([type=checkbox]):not([type=radio]){min-height:52px;font-size:1.0625rem;background-color:var(--surface);transition:background-color var(--dur) var(--ease),border-color var(--dur) var(--ease)}
 label:not(.row)>select:not(:has(option[value=""]:checked)),label:not(.row)>input:not(:placeholder-shown){border-color:var(--accent);background-color:var(--accent-soft)}
 input:focus-visible,select:focus-visible{box-shadow:0 0 0 4px var(--tint)}
 label.row{transition:background-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
