@@ -25,10 +25,11 @@ const link = (text, run) => { const node = button(text, run); node.className = '
 
 // Один главный шаг на экран; остальное — тихие ссылки одной строкой.
 export function renderStart(root,{state,programs,hasTask,handlers}) {
-  const stage=startStage(state),number={goal:1,work:2,task:3}[stage];
+  // Главный путь — два шага: цель, затем дела поступления. Работа в портфолио — по желанию.
+  const stage=startStage(state),number={goal:1,work:2}[stage];
   root.replaceChildren();root.dataset.stage=stage;
   const box=el('section','start-question');
-  box.append(el('p','route-detail',`Шаг ${number} из 3`));
+  if(number)box.append(el('p','route-detail',`Шаг ${number} из 2`));
   const more=el('div','start-more');
   if(stage==='goal'){
     box.append(el('h2',null,valueTitle(programs?.length)),el('p',null,VALUE_LEAD),
@@ -36,10 +37,10 @@ export function renderStart(root,{state,programs,hasTask,handlers}) {
     more.append(link('Я уже знаю программу',handlers.onCatalog),link('Начать с портфолио',handlers.onWork));
   }else if(stage==='work'){
     const names=state.goals.map(id=>{const name=programs.find(item=>item.id===id)?.name;return name?.ru??(typeof name==='string'?name:id);});
-    box.append(el('h2',null,'Цель выбрана. Теперь — твой опыт.'),el('p',null,`В твоём плане: ${names.join('; ')}.`),
-      el('p',null,'Начни небольшую работу по интересной тебе теме. Nerio разобьёт её на шаги; результаты будут сохраняться в портфолио.'),
-      button('Добавить первую работу',handlers.onWork,true));
-    more.append(link('Сначала перейти к делам поступления',handlers.onFinish));
+    box.append(el('h2',null,'Цель выбрана. Теперь — дела поступления.'),el('p',null,`В твоём плане: ${names.join('; ')}.`),
+      button('Перейти к делам поступления',handlers.onFinish,true),
+      el('p','route-detail','Работа в портфолио пригодится, если программа просит портфолио или эссе.'));
+    more.append(link('Добавить работу в портфолио',handlers.onWork));
   }else{
     box.append(el('h2',null,'Работа сохранена. Можно начинать.'),
       el('p',null,hasTask?'На «Сегодня» уже есть шаг твоей работы: что сделать и какой результат записать.':'В твоей работе уже есть шаги и ожидаемый результат. Открой её, чтобы начать.'),
@@ -55,6 +56,6 @@ export function renderStartGuide(root,{active,screen,workPath,onExit}){
   if(root.hidden)return;
   const work=screen==='route';
   root.append(el('strong',null,work?'Добавим твою первую работу':'Выберем цель поступления'),
-    el('p',null,work?'Выбери тип работы и тему. После сохранения мы покажем, с какого действия начать.':screen==='profile'?'Ответь на вопросы о школе и гражданстве. Затем выбери программу из каталога.':'Найди интересную программу и нажми «Выбрать эту цель». После этого перейдём к твоему портфолио.'));
+    el('p',null,work?'Выбери тип работы и тему. После сохранения мы покажем, с какого действия начать.':screen==='profile'?'Ответь на вопросы о школе и гражданстве. Затем выбери программу из каталога.':'Найди интересную программу и нажми «Выбрать эту цель». После этого покажем дела поступления.'));
   const exit=button('Продолжить без подсказок',onExit);exit.className='link-button';root.append(exit);
 }

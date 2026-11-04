@@ -67,11 +67,13 @@ export function renderPortfolioLearning(entry,props,onSaved){
     const source=details(`feedback-source:${item.id}`,'Какой результат рассматривали');source.append(evidenceView(item.source,'Снимок результата'));card.append(source);
     if(item.resolution){card.append(el('h4',null,item.resolution.kind==='revised'?'Доработка записана':'Решение сохранено с объяснением'),el('p','journey-copy',item.resolution.explanation));const after=details(`feedback-after:${item.id}`,'Результат после решения');after.append(evidenceView(item.resolution.result,'Сохранённый результат'));card.append(after);}
     else{
-      const key=`resolve:${item.id}`,value=drafts.get(key)??{kind:'revised'},part=form(key,input=>send('resolve',{...input,id:item.id}),finish);
+      const key=`resolve:${item.id}`,value=drafts.get(key)??{kind:'revised',sourceKey:'new'},part=form(key,input=>send('resolve',{...input,id:item.id}),finish);
       const kind=select(part.node,'Что решил по отзыву?','kind',[['revised','Доработал результат'],['kept','Сохранил прежнее решение']],value.kind);
-      const result=select(part.node,'Обновлённый сохранённый результат','sourceKey',sources,value.sourceKey);
-      const show=()=>{result.parentElement.hidden=kind.value==='kept';result.disabled=kind.value==='kept';};kind.addEventListener('change',show);show();
-      field(part.node,'Что изменил или почему сохранил решение?','explanation',value.explanation);part.node.append(el('p','journey-meta','Сначала сохрани обновлённый результат в работе или в задании на «Сегодня». Здесь сохранится его снимок.'));
+      const result=select(part.node,'Где доработанный результат?','sourceKey',[['new','Записать здесь'],...choices.map(item=>[item.key,item.title])],value.sourceKey);
+      const written=field(part.node,'Доработанный результат','resultText',value.resultText);
+      const show=()=>{const kept=kind.value==='kept',fresh=!kept&&result.value==='new';result.parentElement.hidden=kept;result.disabled=kept;written.parentElement.hidden=!fresh;written.disabled=!fresh;};
+      kind.addEventListener('change',show);result.addEventListener('change',show);show();
+      field(part.node,'Что изменил или почему сохранил решение?','explanation',value.explanation);part.node.append(el('p','journey-meta','Новый результат сохранится в работе. Здесь останется его снимок.'));
       submit(part.node,part.status,'Сохранить решение по отзыву');card.append(part.node);
     }
     const remove=details(`remove-feedback:${item.id}`,'Удалить запись об отзыве');remove.append(el('p','journey-meta','Отзыв, его снимки и решение будут удалены. Исходная работа останется.'),button('Удалить отзыв и решение',()=>run('remove-feedback',{id:item.id})));card.append(remove);reviews.append(card);
@@ -85,6 +87,6 @@ export function renderPortfolioLearning(entry,props,onSaved){
     field(part.node,'Какое конкретное наблюдение или вопрос получил?','observation',value.observation);
     field(part.node,'Какое следующее действие предложили?','nextAction',value.nextAction,{max:1000});
     submit(part.node,part.status,'Сохранить полученный отзыв');add.append(part.node);reviews.append(add);
-  }else reviews.append(el('p','journey-meta','Сначала сохрани результат работы в записи опыта или в задании на «Сегодня». После этого можно записать отзыв о нём.'));
+  }else reviews.append(el('p','journey-meta','Сначала сохрани результат шага или результат в записи опыта. После этого можно записать отзыв о нём.'));
   box.append(reviews,status);return box;
 }

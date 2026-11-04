@@ -7,7 +7,7 @@ test('первый вход предлагает выбрать цель; обы
   assert.equal(startStage({goals:[]}), 'goal');
   assert.equal(startStage({goals:[],portfolio:{experiences:[{title:'Опыт'}]}}),'goal');
 });
-test('после выбора программы следующий шаг — своя работа',()=>{
+test('после выбора программы следующий шаг — дела поступления',()=>{
   assert.equal(startStage({goals:['kaist']}),'work');
 });
 test('незавершённая работа ведёт к делу и без выбранной программы',()=>{

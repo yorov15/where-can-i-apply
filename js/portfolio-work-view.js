@@ -2,6 +2,7 @@ import { WORK_TEMPLATES, WORK_REVIEW_FIELDS, WORK_FORMATS, workFormatLabel } fro
 import { formatDate } from './lib/format.js';
 import { renderPortfolioLearning, clearLearningDrafts } from './portfolio-learning-view.js';
 import { pendingPractice } from './portfolio-learning.js';
+import { workStepOutcome } from './portfolio.js';
 
 const drafts=new Map(),opened=new Map();
 export function clearWorkDrafts(){drafts.clear();opened.clear();clearLearningDrafts();}
@@ -74,8 +75,18 @@ export function renderWorkPlan(entry,props,onSaved){
       row.append(el('p','route-detail','Возврат к этому шагу снимет отметки с него и следующих шагов. Записанные результаты останутся.'));
       row.append(button('Вернуться к этому шагу',()=>change(props.handlers.onPortfolioWorkStep(entry.id,step.id))));
     }else if(next.id===step.id&&!plan.paused){
-      const actions=el('div','journey-actions'),complete=button('Отметить шаг готовым',()=>change(props.handlers.onPortfolioWorkStep(entry.id,step.id)));complete.disabled=Boolean(pendingPractice(plan));actions.append(button('Открыть дела недели',props.handlers.onOpenToday,true),complete);row.append(actions);
-      row.append(el('p','route-detail',pendingPractice(plan)?'Сначала закончи или отложи учебную пробу. Затем сохрани результат этого шага на «Сегодня».':'Сначала сохрани результат задания на «Сегодня». Отметка означает, что ты сам считаешь шаг законченным.'));
+      if(pendingPractice(plan)){row.append(el('p','route-detail','Сначала закончи или отложи учебную пробу ниже. Потом запиши результат этого шага.'));box.append(row);continue;}
+      // Та же запись, что и на «Сегодня»: результат шага на этой неделе.
+      const key=`work-result:${entry.id}:${step.id}`,saved=workStepOutcome(props.handlers.getRouteState(),entry.id,step.id,props.today);
+      const value=drafts.get(key)??saved??{},result=el('form','journey-form');result.dataset.workResult=step.id;
+      field(result,'Что получилось?','text',value.text,{required:true,max:2000});
+      const optional=details(`${key}:more`,'Ссылка и вывод · необязательно');
+      field(optional,'Ссылка на результат','url',value.url,{short:true,max:2000}).type='url';
+      field(optional,'Что понял или доработаешь?','reflection',value.reflection,{max:2000});result.append(optional);
+      const finish=el('button','button','Сохранить результат и закончить шаг');finish.type='submit';result.append(finish);
+      result.append(el('p','route-detail','Нажми, когда сам считаешь шаг законченным. Результат появится и на «Сегодня».'));
+      bindForm(result,key,data=>props.handlers.onFinishPortfolioWorkStep(entry.id,step.id,data),response=>onSaved(entry.id,response.message));
+      row.append(result);
     }
     box.append(row);
   }

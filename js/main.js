@@ -20,7 +20,7 @@ import { renderRoute } from './route-view.js';
 import { EXPLAIN_URL } from './config.js';
 import { renderToday } from './today-view.js';
 import { renderProgram, programRow } from './program-view.js';
-import { saveExperience, removeExperience, saveTaskOutcome, removeTaskOutcome, startPortfolioWork, setPortfolioWorkPaused,
+import { saveExperience, removeExperience, saveTaskOutcome, removeTaskOutcome, finishWorkStep, startPortfolioWork, setPortfolioWorkPaused,
   togglePortfolioWorkStep, savePortfolioBrief, savePortfolioReview, updatePortfolioLearning } from './portfolio.js';
 import { clearPortfolioDrafts } from './portfolio-view.js';
 import { forgetLearningDrafts } from './portfolio-learning-view.js';
@@ -470,8 +470,13 @@ function renderRouteView() {
       onPausePortfolioWork(id,paused) { return persistWork(setPortfolioWorkPaused(routeState,id,paused,today),paused?'Работа на паузе. Записанные результаты сохранены.':'Работа продолжена. Проверь дела недели.'); },
       onPortfolioWorkStep(id,stepId) {
         const next=togglePortfolioWorkStep(routeState,id,stepId,today);
-        if(!next)return {ok:false,message:'Сначала закончи или отложи учебную пробу и сохрани результат этого шага на «Сегодня». Предыдущие шаги должны быть закончены, работа — снята с паузы.'};
+        if(!next)return {ok:false,message:'Сначала закончи или отложи учебную пробу и сохрани результат этого шага. Предыдущие шаги должны быть закончены, работа — снята с паузы.'};
         return persistWork(next,'Отметки шагов обновлены. Результаты сохранены.');
+      },
+      onFinishPortfolioWorkStep(id,stepId,input) {
+        const next=finishWorkStep(routeState,id,stepId,input,today);
+        if(!next)return {ok:false,message:'Не удалось сохранить. Запиши, что получилось, и проверь ссылку. Учебную пробу сначала закончи или отложи.'};
+        return persistWork(next,'Результат сохранён, шаг закончен.');
       },
       onSavePortfolioBrief(id,input) { return persistWork(savePortfolioBrief(routeState,id,input,today),'Задача и время обновлены.'); },
       onSavePortfolioReview(id,input) { return persistWork(savePortfolioReview(routeState,id,input,today),'Самопроверка сохранена.'); },

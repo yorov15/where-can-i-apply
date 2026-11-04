@@ -4,6 +4,7 @@
 import { safeHttpUrl } from './lib/url.js';
 import { WORK_TEMPLATES, WORK_REVIEW_FIELDS, normalizeWorkPlan, workTaskId } from './portfolio-work.js';
 import { changeLearning, pendingPractice } from './portfolio-learning.js';
+import { weekKey } from './study-plan.js';
 
 export const EXPERIENCE_KINDS = [['project','Проект'],['study','Учёба'],['work','Работа'],['family','Помощь семье'],['creative','Творчество'],['community','Инициатива'],['sport','Спорт'],['other','Другое']];
 // Навыки — короткий закрытый список, чтобы примеры для эссе группировались одинаково.
@@ -152,6 +153,30 @@ export function togglePortfolioWorkStep(state,id,stepId,today) {
   });
 }
 
+// Результат шага из самой работы пишется туда же, куда его пишет «Сегодня»:
+// неделя сегодняшнего дня и id дела этого шага. Потом шаг отмечается готовым.
+export function finishWorkStep(state,id,stepId,input,today) {
+  if(!object(input)||!day(today))return null;
+  const portfolio=portfolioOf(state),entry=portfolio.experiences.find(item=>item.id===id),plan=entry?.workPlan;
+  const step=plan?.steps.find(item=>item.id===stepId);
+  if(!step||plan.paused||pendingPractice(plan)||plan.steps.find(item=>!item.done)!==step)return null;
+  const week=weekKey(today),taskId=workTaskId(plan,step),task=state.weekPlan?.[week]?.find(item=>item.taskId===taskId);
+  const saved=outcome({text:input.text,url:input.url,reflection:input.reflection,week,taskId,experienceId:id,workStepId:stepId,
+    title:task?.title??`${step.title} · ${entry.title}`.slice(0,200),updatedOn:today});
+  if(!saved)return null;
+  portfolio.outcomes=[...portfolio.outcomes.filter(item=>item.week!==week||item.taskId!==taskId),saved];
+  const checked=normalizePortfolio(portfolio);
+  return checked?togglePortfolioWorkStep({...state,portfolio:checked},id,stepId,today):null;
+}
+
+// Последний записанный результат шага: сначала на этой неделе, иначе — любой прежний.
+export function workStepOutcome(state,id,stepId,today) {
+  const entry=portfolioOf(state).experiences.find(item=>item.id===id),step=entry?.workPlan?.steps.find(item=>item.id===stepId);
+  if(!step||!day(today))return null;
+  const items=portfolioOf(state).outcomes.filter(item=>item.experienceId===id&&item.workStepId===stepId);
+  return items.find(item=>item.week===weekKey(today)&&item.taskId===workTaskId(entry.workPlan,step))??items.at(-1)??null;
+}
+
 export function savePortfolioBrief(state,id,input,today) {
   if(!object(input))return null;
   return updateWorkPlan(state,id,today,plan=>{plan.aim=input.aim;plan.expectedResult=input.expectedResult;if(input.format)plan.format=input.format;if(input.sessionMinutes!=null)plan.sessionMinutes=input.sessionMinutes;});
@@ -160,6 +185,15 @@ export function savePortfolioBrief(state,id,input,today) {
 export function updatePortfolioLearning(state,id,action,input,today){
   return updateWorkPlan(state,id,today,(plan,portfolio)=>{
     if(['start','resume'].includes(action)&&!plan.steps.some(step=>!step.done))return false;
+    // Доработку можно записать прямо в форме отзыва: она становится обычным
+    // результатом работы и сразу же источником решения.
+    if(action==='resolve'&&input?.sourceKey==='new'){
+      if(input.kind!=='revised'||!key(input.id))return false;
+      const saved=outcome({text:input.resultText,url:input.resultUrl,reflection:'',week:weekKey(today),taskId:`feedback:${input.id}`,experienceId:id,
+        title:`Доработка по отзыву · ${portfolio.experiences.find(item=>item.id===id).title}`.slice(0,200),updatedOn:today});
+      if(!saved||portfolio.outcomes.some(item=>item.week===saved.week&&item.taskId===saved.taskId))return false;
+      portfolio.outcomes.push(saved);input={...input,sourceKey:JSON.stringify([saved.week,saved.taskId])};
+    }
     const entry=portfolio.experiences.find(item=>item.id===id),next=changeLearning(plan.learning,action,input,today,entry,portfolio.outcomes);
     if(!next)return false;plan.learning=next;
   });
