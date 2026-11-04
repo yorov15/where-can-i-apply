@@ -17,7 +17,7 @@
       "permanent": true
     },
     {
-      "source": "/:page(faq|privacy).html",
+      "source": "/:page(faq|privacy|glossary|opportunities).html",
       "has": [{ "type": "host", "value": "(?:kuda-podat|where-can-i-apply)\\.vercel\\.app" }],
       "destination": "https://nerio-app.vercel.app/:page.html",
       "permanent": true

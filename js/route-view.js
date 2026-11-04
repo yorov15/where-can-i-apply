@@ -16,8 +16,10 @@ import { renderSpotlight, forgetSpotlightView, spotlightHash } from './spotlight
 import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine, hasPreparationGoals } from './goal-status.js';
 import { renderPortfolio } from './portfolio-view.js';
 import { renderRecommenders } from './recommenders-view.js';
+import { renderBragSheet, forgetBragSheetView } from './brag-sheet-view.js';
 import { renderApplications } from './application-view.js';
 import { renderInterview, interviewEntry } from './interview-view.js';
+import { balanceWarnings, visibleBalance } from './balance.js';
 
 const PHASES = [
   ['tests', 'Экзамены'],
@@ -114,6 +116,42 @@ function gapBlock(route) {
   }
   box.append(list);
   for (const note of route.gapNotes ?? []) box.append(el('p', 'route-detail', note));
+  return box;
+}
+
+// «Проверка пути» под списком целей: перекос в наборе целей, а не в одной
+// программе, поэтому блок стоит там, где цели добавляют и убирают.
+function balanceBlock(props, handlers) {
+  const goals = (props.routeState?.goals ?? []).map(id => props.programs.find(program => program.id === id)).filter(Boolean);
+  const warnings = visibleBalance(balanceWarnings({ goals, profile: props.profile, state: props.routeState, today: props.today }), props.routeState);
+  if (!warnings.length) return null;
+  const box = el('section', 'route-warn');
+  box.setAttribute('aria-labelledby', 'balance-title');
+  const title = el('h3', 'route-phase-title', 'Проверка пути');
+  title.id = 'balance-title';
+  const list = el('ul', 'route-gaps');
+  for (const item of warnings) {
+    const row = el('li', 'route-gap');
+    row.dataset.balance = item.id;
+    // Список названий нужен, только когда касается не всех целей: восемь длинных имён в каждой строке — шум.
+    const who = item.programIds.length === goals.length ? ' всех целей' : `: ${item.programNames.join(', ')}`;
+    row.append(el('p', null, item.text), el('p', 'route-detail', item.action),
+      el('p', 'route-detail', `${item.basis} Касается${who}.`));
+    const actions = el('div', 'plan-actions');
+    // Дату экзамена можно указать только там, где у шага экзамена загружен трек подготовки.
+    const datable = item.rule === 'exam' && (props.route?.steps ?? []).some(step => step.phase === 'tests' && props.tracks?.[step.track]
+      && step.programIds?.some(id => item.programIds.includes(id)));
+    if (item.link && datable) { const go = el('a', 'link-button', item.link.text); go.href = item.link.href; actions.append(go); }
+    const hide = el('button', 'link-button', 'Понятно, скрыть');
+    hide.type = 'button';
+    hide.dataset.balanceHide = '';
+    hide.setAttribute('aria-label', `Понятно, скрыть: ${item.text}`);
+    hide.addEventListener('click', () => handlers.onHideBalance(item.id));
+    actions.append(hide);
+    row.append(actions);
+    list.append(row);
+  }
+  box.append(title, list);
   return box;
 }
 
@@ -242,7 +280,8 @@ function stepRow(step, index, { tracks, onToggle, getExamPlan, onExamPlan, compa
   label.htmlFor = check.id;
   body.append(label);
   if (step.members?.length) body.append(el('p', 'route-detail',
-    `Для: ${step.members.map(member => shortName({ name: { ru: member.name } })).join(', ')}`));
+    // Один шаг может собрать несколько документов одной программы — имя показываем один раз.
+    `Для: ${[...new Set(step.members.map(member => shortName({ name: { ru: member.name } })))].join(', ')}`));
   if (step.due) body.append(el('span', 'route-due', `${step.dueKind==='planning'?'План: к ':step.dueKind==='booked'?'Записан на ':step.dueKind==='exam-plan'?'Расчёт: до ':'до '}${formatDate(step.due)}${step.dueExpected?' · срок подачи ожидаемый':''}`));
   if (!compact) {
     if (step.detail) body.append(el('p', 'route-detail', step.detail));
@@ -423,6 +462,8 @@ export function routeSection(hash) {
 
 export function renderRoute(root, props) {
   const { programs, route, planIds, tracks, status, loading, applyUrl, handlers } = props;
+  if (renderBragSheet(root, props)) return;
+  forgetBragSheetView(root);
   if (renderSpotlight(root, props)) return;
   forgetSpotlightView(root);
   root.textContent = '';
@@ -527,6 +568,7 @@ export function renderRoute(root, props) {
     remove.addEventListener('click', () => handlers.onRemoveGoal(id));
     head.append(remove);
   }
+  if (section === 'applications') { const balance = balanceBlock(props, handlers); if (balance) head.append(balance); }
   const choose = el('button', 'link-button', 'Выбрать ещё программы →');
   choose.type = 'button';
   choose.addEventListener('click', handlers.onChooseGoals);

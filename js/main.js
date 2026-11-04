@@ -9,7 +9,7 @@ import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocum
 import { renderResults } from './render.js';
 import { PLAN_KEY, DONE_KEY, buildEventsIcs } from './plan.js';
 import { scheduleRoute, routeCalendarEvents } from './agenda.js';
-import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask, setGoalStatus, toggleDismissed } from './route-state.js';
+import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask, setGoalStatus, toggleDismissed, hideBalance } from './route-state.js';
 import { examPlan } from './exam-plan.js';
 import { buildStudyPlan } from './study-plan.js';
 import { prepareCurrentWeek,reviewWeeks,setTaskDay,studyCalendarEvents } from './weekly.js';
@@ -21,6 +21,7 @@ import { interviewLive } from './interview-view.js';
 import { EXPLAIN_URL } from './config.js';
 import { renderToday } from './today-view.js';
 import { renderProgram, programRow } from './program-view.js';
+import { annotateTerms } from './glossary-view.js';
 import { saveExperience, removeExperience, saveTaskOutcome, removeTaskOutcome, finishWorkStep, startPortfolioWork, setPortfolioWorkPaused,
   togglePortfolioWorkStep, savePortfolioBrief, savePortfolioReview, updatePortfolioLearning } from './portfolio.js';
 import { clearPortfolioDrafts } from './portfolio-view.js';
@@ -156,6 +157,8 @@ function renderProgramView() {
       onProfile: () => { location.hash = 'profile'; },
     },
   });
+  // Английские термины в условиях и цитатах — с кнопкой-объяснением (js/glossary-view.js).
+  annotateTerms(programBody);
   // Условия едут отдельным файлом: попросили — и после их прихода рисуем
   // заново. Повтора не будет: после ensure условия уже не «ожидаются».
   if (program && details.programs[id] && details.conditions[id] === undefined) {
@@ -247,6 +250,7 @@ if (EXPLAIN_URL) {
 }
 
 let programs = [];
+let indexLoading = true;
 
 // programs — лёгкие детали по всем программам; conditions — условия тех,
 // которые уже раскрывали. Значение null значит «файл не приехал»: это не то
@@ -322,15 +326,22 @@ function preparedEntry(id) {
 // Новичку цель выбирать не из чего: берём первую программу из плана, у
 // которой маршрут сверен. План пуст — оставляем выбор человеку.
 async function openRoute() {
-  if (!routeData) await loadRouteData();
   // Возврат на вкладку не должен показывать «Собираю маршрут…» на готовом
   // маршруте: скелетон только когда для этой цели ничего не собрано.
   const stale = !route || route.id !== routeState.goals.join(',') || !routeCtx;
   routeLoading = stale;
   if (stale) renderRouteView();
-  await refreshRoute();
-  routeLoading = false;
-  renderRouteView();
+  try {
+    if (!routeData) await loadRouteData();
+    await refreshRoute();
+  } catch {
+    route = null;
+    routeCtx = null;
+    routeStatus = 'Не удалось загрузить маршрут. Попробуй ещё раз.';
+  } finally {
+    routeLoading = false;
+    renderRouteView();
+  }
 }
 
 async function refreshRoute() {
@@ -430,6 +441,7 @@ function renderRouteView() {
     focusExperience: portfolioFocus,
     todayFocus,
     profileDone: profileReady(readForm(form)),
+    profile: readForm(form),
     study: route ? buildStudyPlan({ steps:hasPreparationGoals(route,routeState)?route.steps:[], tracks:routeTracks, plans, state:routeState, today }) : null,
     routeState, today,
     weekly:weeklySnapshot,
@@ -442,10 +454,15 @@ function renderRouteView() {
     planIds: plan.ids,
     tracks: routeTracks,
     status: routeStatus,
-    loading: routeLoading,
+    loading: routeLoading || indexLoading,
     applyUrl: routeState.goals.length === 1 ? details.programs?.[routeState.goals[0]]?.applyUrl ?? null : null,
     handlers: {
       getRouteState: () => routeState,
+      onHideBalance(id) {
+        // Фокус — на следующее «Понятно, скрыть» или на «Выбрать ещё программы».
+        routeState = hideBalance(routeState, id); persistRoute(); renderRouteView();
+        (routeBody.querySelector('[data-balance-hide]') ?? routeBody.querySelector('.route-head > .link-button:last-of-type'))?.focus();
+      },
       onSaveInterview(next,message) {
         if (!next) return {ok:false,message:'Не сохранено: проверь текст. Своих вопросов — до 30.'};
         if (new TextEncoder().encode(exportState(next)).length > 500_000) return {ok:false,message:'Записей слишком много. Удали старые ответы в «Мои ответы».'};
@@ -680,6 +697,8 @@ function renderRouteView() {
       onStatus: showRouteStatus,
     },
   });
+  // В «Моём пути» — только строки из данных маршрута, не тексты самого ученика.
+  if (todayScreen.hidden) annotateTerms(routeBody, '.route-step, .route-detail, .route-warn');
   if(applicationFocus&&!routeLoading&&!routeScreen.hidden){
     const goal=routeBody.querySelector(`[data-application-goal="${CSS.escape(applicationFocus)}"]`);
     if(goal){goal.open=true;goal.scrollIntoView({block:'start'});goal.querySelector('summary')?.focus();applicationFocus=null;}
@@ -883,6 +902,7 @@ if ('serviceWorker' in navigator) {
 
 loadIndex()
   .then((index) => {
+    indexLoading = false;
     programs = index.programs ?? [];
     updatePreview();
     priority.setCountries(
@@ -902,9 +922,13 @@ loadIndex()
     // Маршрут — отдельный маленький файл: если человек пришёл сразу на
     // #route, к моменту нажатия он уже приехал.
     loadRouteData().then(() => {
-      if (location.hash === '#route' || location.hash === '#today') openRoute();
+      // И для разделов пути (#route/preparation и т. п.): прямая ссылка туда
+      // могла открыться раньше списка программ и показать «не загрузился».
+      if (/^#(route|today)(\/|$)/.test(location.hash)) openRoute();
     });
   })
   .catch(() => {
+    indexLoading = false;
     showLoadError();
+    if (/^#(route|today)(\/|$)/.test(location.hash)) renderRouteView();
   });

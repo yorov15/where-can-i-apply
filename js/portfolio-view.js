@@ -107,6 +107,7 @@ export function renderPortfolio(props) {
     box.replaceChildren();
     const portfolio=portfolioOf(props.handlers.getRouteState());
     const header=el('header','journey-head');header.append(el('h3',null,'Мои работы'),el('p','journey-meta','Не нужно заполнять всё сразу. Начни с одной работы и развивай её шаг за шагом.'));box.append(header);
+    const opportunities=el('a','link-button','Найти конкурс для своей работы');opportunities.href='opportunities.html';box.append(opportunities);
     const back=button('← Все работы',()=>{selectedExperience=null;for(const card of box.querySelectorAll('[data-experience]')){openSections.delete(`entry:${card.dataset.experience}`);card.open=false;}box.classList.remove('portfolio-focused');box.querySelector('.journey-head h3')?.focus();});back.classList.add('portfolio-back');header.append(back);header.querySelector('h3').tabIndex=-1;
     if(!portfolio.experiences.length)box.append(el('p','journey-empty','Здесь будут твои проекты, исследования и другой опыт. Можно начать новую работу или добавить уже готовую.'));
     const saved=(id,text)=>{expanded=id;selectedExperience=id;openSections.add(`entry:${id}`);openSections.delete('add');openSections.delete(`editor:${id}`);draw(text);box.querySelector(`[data-experience="${CSS.escape(id)}"] > summary`)?.focus();};

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; manifest-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#2d52d6">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="/icons/icon-180.png">
+<title>Словарь приёма: английские термины по-русски — Nerio</title>
+<link rel="preload" href="fonts/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link rel="modulepreload" href="js/glossary.js">
+<link rel="modulepreload" href="js/offline-page.js">
+<script src="js/theme.js"></script>
+<meta name="description" content="Что значат Early Decision, transcript, fee waiver, waitlist и другие слова из условий вузов. Простые объяснения на русском.">
+<link rel="canonical" href="https://nerio-app.vercel.app/glossary.html">
+<meta property="og:site_name" content="Nerio">
+<meta property="og:title" content="Словарь приёма: английские термины по-русски — Nerio">
+<meta property="og:description" content="Что значат Early Decision, transcript, fee waiver, waitlist и другие слова из условий вузов. Простые объяснения на русском.">
+<meta property="og:url" content="https://nerio-app.vercel.app/glossary.html">
+<meta property="og:image" content="https://nerio-app.vercel.app/icons/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="Nerio — поступление за границу">
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<div class="topbar">
+  <a class="brand" href="index.html">Nerio</a>
+  <nav aria-label="Разделы"><a href="faq.html">Вопросы</a><a href="glossary.html" aria-current="page">Словарь</a></nav>
+  <button type="button" id="theme-toggle" class="theme-toggle" hidden>Тёмная</button>
+</div>
+<header class="hero hero-page">
+  <p class="back"><a href="index.html">← В Nerio</a></p>
+  <h1>Словарь приёма</h1>
+</header>
+
+<main id="main" class="prose">
+  <p>Английские слова из условий вузов — по-русски и простыми словами.</p>
+  <p class="fineprint">Простые объяснения Nerio, не условия программы. У каждого вуза свои правила: точное условие смотри в карточке программы и на её сайте.</p>
+  <label for="glossary-search">Найти слово</label>
+  <input type="search" id="glossary-search" placeholder="Например, waitlist или виза" autocomplete="off" enterkeyhint="search">
+  <p id="glossary-count" class="fineprint" role="status"></p>
+  <div id="glossary-list"></div>
+  <noscript><p>Словарю нужен JavaScript.</p></noscript>
+</main>
+
+<footer class="site-footer">
+  <nav aria-label="О сайте">
+    <a href="faq.html">Вопросы и ответы</a>
+    <a href="privacy.html">Конфиденциальность</a>
+    <a href="index.html">Анкета</a>
+  </nav>
+</footer>
+<script type="module" src="js/glossary-page.js"></script>
+</body>
+</html>

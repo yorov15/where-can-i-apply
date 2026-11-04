@@ -189,6 +189,7 @@ label.row:has(input[type="checkbox"]:checked){background:var(--accent-soft);box-
 .site-footer nav{display:flex;flex-wrap:wrap;gap:var(--s-1) var(--s-5)}
 .site-footer a{display:inline-flex;align-items:center;min-height:44px}
 .fineprint{color:var(--muted);font-size:.875rem;margin:var(--s-2) 0 0}
+.term{padding:0;font:inherit;color:inherit;background:none;border:0;text-decoration:underline dotted;text-underline-offset:.2em;cursor:pointer}.term[aria-expanded="true"]{color:var(--accent-text)}.term-note{display:block}
 .back{margin:0 0 var(--s-4)}
 .hero .back a{color:var(--on-hero)}
 .hero-page h1{margin:0;font-size:clamp(1.5rem,.5rem + 4vw,2.75rem);overflow-wrap:break-word;hyphens:auto}
@@ -422,6 +423,7 @@ body[data-screen="route"] .hero{display:none}
 .journey-form label,.journey-form fieldset{margin:0}
 .journey-form legend{margin:0 0 .75rem;font:600 .9375rem/1.5 Onest, system-ui,sans-serif}
 .journey-form textarea{resize:vertical}
+#opportunity-filters .row{grid-template-columns:1.5rem 1fr}
 .journey-form>.button{justify-self:start}
 .journey-check{display:grid;grid-template-columns:1.2rem minmax(0,1fr);gap:.75rem;align-items:start;padding:.75rem 0;margin:0;font-weight:400;line-height:1.5;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
 .journey-check input{width:1.15rem;min-height:0;height:1.15rem;margin:.15rem 0 0;accent-color:var(--accent)}
