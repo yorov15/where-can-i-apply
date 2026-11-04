@@ -1,3 +1,4 @@
+import { plural } from './lib/format.js';
 export const ESSAY_USAGE_KEY='nerio-essay-usage';
 export const ESSAY_DEVICE_KEY='nerio-essay-device';
 export const ESSAY_ERRORS={rate:'Лимит проверок исчерпан. Попробуй завтра.',off:'Бесплатная проверка сейчас недоступна. Пользуйся чек-листом.',
@@ -13,6 +14,22 @@ export function essayUsage(storage=localStorage,today=localDay()) {
   try{const raw=JSON.parse(storage.getItem(ESSAY_USAGE_KEY)??'null');return raw?.day===today&&Number.isInteger(raw.count)&&raw.count>=0?Math.min(3,raw.count):0;}catch{return 0;}
 }
 export function draftSize(text) {return {words:text.trim()?text.trim().split(/\s+/u).length:0,characters:Array.from(text).length,bytes:new TextEncoder().encode(text).length};}
+// Границы берём только из данных программы: words/characters/bytes проверены
+// сборкой по цитате снимка (tools/essays.py). Нет поля — счётчик без границы.
+export function essayCount(text,item={}) {
+  const n=draftSize(text),words=item.words??{},limits=[];
+  // «из N» — всегда родительный падеж множественного числа: «из 300 знаков».
+  const part=(value,max,forms)=>max?`${value} из ${max} ${forms[2]}`:`${value} ${plural(value,...forms)}`;
+  const parts=[part(n.words,words.max,['слово','слова','слов']),part(n.characters,item.characters,['знак','знака','знаков'])];
+  if(item.bytes)parts.push(part(n.bytes,item.bytes,['байт','байта','байт']));
+  if(words.min)limits.push(`от ${words.min} слов`);if(words.max)limits.push(`до ${words.max} слов`);
+  if(item.characters)limits.push(`до ${item.characters} знаков`);if(item.bytes)limits.push(`до ${item.bytes} байт`);
+  const over=n.words>(words.max??Infinity)||n.characters>(item.characters??Infinity)||n.bytes>(item.bytes??Infinity);
+  const under=!over&&n.words>0&&n.words<(words.min??0);
+  const line=parts.join(' · ')+(limits.length?`. По источнику: ${limits.join(', ')}.`:'')
+    +(over?' Объём превышает лимит.':under?' Пока меньше минимума.':'');
+  return {text:line,over,under};
+}
 export async function askEssay({programId,essayId,draft},{url,storage=localStorage,locks=navigator.locks,fetchImpl=fetch,today=localDay(),randomId=()=>crypto.randomUUID()}={}) {
   const fail=kind=>{const error=new Error(kind);error.kind=kind;throw error;};
   if(typeof draft!=='string'||draft.trim().length<40||draft.length>10000)fail('invalid');

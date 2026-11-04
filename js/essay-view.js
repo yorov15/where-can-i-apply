@@ -1,4 +1,5 @@
-import { askEssay,draftSize,essayUsage,essayAvailable,ESSAY_ERRORS } from './essay.js';
+import { askEssay,essayCount,essayUsage,essayAvailable,ESSAY_ERRORS } from './essay.js';
+import { experiencesBySkill } from './portfolio.js';
 import { safeHttpUrl } from './lib/url.js';
 import { EXPLAIN_URL } from './config.js';
 import { formatDate } from './lib/format.js';
@@ -10,11 +11,30 @@ const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.cla
 const sourceLink=(source,label)=>{const url=safeHttpUrl(source?.url);if(!url)return el('span',null,'Источник не загрузился');
   const a=el('a',null,label??`Источник · проверено ${formatDate(source.lastVerified)}`);a.href=url;a.target='_blank';a.rel='noopener';return a;};
 
-export function renderEssays(goals,specs,onRetry,onSaveVersion,onVersionSaved) {
+// Свои записи опыта, сгруппированные по навыку. Ссылка открывает запись в «Работах».
+function skillExamples(handlers) {
+  if(!handlers?.getRouteState)return null;
+  const groups=experiencesBySkill(handlers.getRouteState()),box=el('details','route-more');box.dataset.skillExamples='';
+  box.append(el('summary',null,'Примеры по навыку'));
+  if(!groups.length){box.append(el('p','route-detail','Отметь навыки в записях опыта: «Работы» → запись → «Изменить запись». Здесь появятся твои примеры.'));return box;}
+  box.append(el('p','route-detail','Твои записи опыта. Выбери пример, который отвечает на вопрос программы.'));
+  for(const group of groups){
+    box.append(el('h4',null,group.label));const list=el('ul');
+    for(const entry of group.entries){
+      const item=el('li'),link=el('a',null,entry.title);link.href='#route';
+      link.addEventListener('click',event=>{event.preventDefault();handlers.onOpenPortfolio(entry.id);});
+      item.append(link);list.append(item);
+    }box.append(list);
+  }
+  return box;
+}
+
+export function renderEssays(goals,specs,onRetry,onSaveVersion,onVersionSaved,handlers) {
   const entries=goals.filter(goal=>Object.hasOwn(specs,goal.id));if(!entries.length)return null;
   const section=el('section','route-phase');section.dataset.essays='';
   section.append(el('h3',null,'Эссе и мотивационные письма'));
   section.append(el('p','route-detail','Сверь задание и требования программы. Ответь своими словами и проверь объём.'));
+  const examples=skillExamples(handlers);if(examples)section.append(examples);
   for(const goal of entries){
     const spec=specs[goal.id],box=el('details','route-more');box.dataset.essayProgram=goal.id;
     box.append(el('summary',null,goal.name.split(' — ')[0]));
@@ -36,13 +56,9 @@ export function renderEssays(goals,specs,onRetry,onSaveVersion,onVersionSaved) {
       field.append(topics);
       const label=el('label',null,'Твой черновик'),input=el('textarea');input.rows=7;input.maxLength=10000;input.value=saved.text;
       input.autocomplete='off';input.spellcheck=false;input.readOnly=saved.busy;label.append(input);field.append(label);
-      const count=el('p','route-detail'),size=()=>{const n=draftSize(input.value),limits=[];
-        if(item.words?.min)limits.push(`от ${item.words.min} слов`);if(item.words?.max)limits.push(`до ${item.words.max} слов`);
-        if(item.characters)limits.push(`до ${item.characters} знаков`);if(item.bytes)limits.push(`до ${item.bytes} байт`);
-        count.textContent=`${n.words} слов · ${n.characters} знаков · ${n.bytes} байт${limits.length?`. По источнику: ${limits.join(', ')}.`:''}`;
-        const over=n.words>(item.words?.max??Infinity)||n.characters>(item.characters??Infinity)||n.bytes>(item.bytes??Infinity);
-        count.className=over?'route-warn':'route-detail';if(over)count.textContent+=' Объём превышает лимит.';
-      };size();input.addEventListener('input',()=>{saved.text=input.value;saved.feedback=null;saved.status='';feedback.replaceChildren();status.textContent='';size();});field.append(count);
+      const count=el('p','route-detail'),size=()=>{const result=essayCount(input.value,item);
+        count.textContent=result.text;count.className=result.over||result.under?'route-warn':'route-detail';
+      };count.dataset.essayCount='';size();input.addEventListener('input',()=>{saved.text=input.value;saved.feedback=null;saved.status='';feedback.replaceChildren();status.textContent='';size();});field.append(count);
       const feedback=el('div'),status=el('p','route-status');status.setAttribute('role','status');status.textContent=saved.status;
       field.append(el('p','route-detail','Черновик исчезнет после перезагрузки. Сохрани свою копию.'));
       if(onSaveVersion){

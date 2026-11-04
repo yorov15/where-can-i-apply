@@ -6,6 +6,10 @@ import { WORK_TEMPLATES, WORK_REVIEW_FIELDS, normalizeWorkPlan, workTaskId } fro
 import { changeLearning, pendingPractice } from './portfolio-learning.js';
 
 export const EXPERIENCE_KINDS = [['project','Проект'],['study','Учёба'],['work','Работа'],['family','Помощь семье'],['creative','Творчество'],['community','Инициатива'],['sport','Спорт'],['other','Другое']];
+// Навыки — короткий закрытый список, чтобы примеры для эссе группировались одинаково.
+export const EXPERIENCE_SKILLS = [['independence','Самостоятельность'],['leadership','Лидерство'],['teamwork','Работа в команде'],
+  ['research','Исследование'],['creativity','Творчество'],['helping','Помощь людям'],['tech','Техника']];
+export const MAX_SKILLS = 3;
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const key = value => typeof value === 'string' && value.length > 0 && value.length <= 200
   && !['__proto__','constructor','prototype'].includes(value);
@@ -37,6 +41,11 @@ function experience(value) {
   });
   if (goals.includes(null) || !unique(goals.map(item => item.goalId))) return null;
   const entry={id:value.id,kind:value.kind,...fields,url:link,goals,createdOn:value.createdOn,updatedOn:value.updatedOn};
+  if(Object.hasOwn(value,'skills')&&value.skills!=null){
+    const skills=value.skills;
+    if(!Array.isArray(skills)||skills.length>MAX_SKILLS||!unique(skills)||skills.some(code=>!EXPERIENCE_SKILLS.some(([id])=>id===code)))return null;
+    if(skills.length)entry.skills=[...skills];
+  }
   if(Object.hasOwn(value,'workPlan')){entry.workPlan=normalizeWorkPlan(value.workPlan);if(!entry.workPlan)return null;}
   return entry;
 }
@@ -114,7 +123,7 @@ export function startPortfolioWork(state,input,today) {
   const template=WORK_TEMPLATES.find(item=>item.id===input.templateId);
   if(!template||portfolioOf(state).experiences.some(item=>item.id===input.id))return null;
   return saveExperience(state,{id:input.id,title:input.title,kind:template.kind,goals:input.goals??[],
-    workPlan:{version:1,id:input.id,templateId:template.id,aim:input.aim,expectedResult:input.expectedResult??template.output,sessionMinutes:input.sessionMinutes??60,paused:false,
+    workPlan:{version:1,id:input.id,templateId:template.id,aim:input.aim,expectedResult:input.expectedResult??template.output,format:input.format||template.format,sessionMinutes:input.sessionMinutes??60,paused:false,
       steps:template.steps.map(step=>({...step,done:false}))}},today);
 }
 
@@ -145,7 +154,7 @@ export function togglePortfolioWorkStep(state,id,stepId,today) {
 
 export function savePortfolioBrief(state,id,input,today) {
   if(!object(input))return null;
-  return updateWorkPlan(state,id,today,plan=>{plan.aim=input.aim;plan.expectedResult=input.expectedResult;if(input.sessionMinutes!=null)plan.sessionMinutes=input.sessionMinutes;});
+  return updateWorkPlan(state,id,today,plan=>{plan.aim=input.aim;plan.expectedResult=input.expectedResult;if(input.format)plan.format=input.format;if(input.sessionMinutes!=null)plan.sessionMinutes=input.sessionMinutes;});
 }
 
 export function updatePortfolioLearning(state,id,action,input,today){
@@ -163,6 +172,13 @@ export function savePortfolioReview(state,id,input,today) {
     if(Object.values(fields).some(value=>typeof value!=='string'||value.length>1000))return false;
     if(Object.values(fields).some(value=>value.trim()))plan.review={...fields,checkedOn:today};else delete plan.review;
   });
+}
+
+// Свои записи опыта по навыкам — для блока «Примеры по навыку» у эссе.
+export function experiencesBySkill(state) {
+  const experiences=portfolioOf(state).experiences;
+  return EXPERIENCE_SKILLS.map(([skill,label])=>({skill,label,entries:experiences.filter(entry=>entry.skills?.includes(skill)).map(({id,title})=>({id,title}))}))
+    .filter(group=>group.entries.length);
 }
 
 export function nextPortfolioTasks(state) {
