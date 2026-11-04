@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { examLadder, summaryLines } from '../js/summary.js';
+import { examLadder, summaryLines, reasonGroups, reasonLine } from '../js/summary.js';
 
 const today = '2026-09-14';
 const me = {
@@ -72,13 +72,16 @@ test('сводка просит заполнить поле, которого н
   assert.ok(summaryLines(noBirth, programs, today).includes('Укажи дату рождения — без этого не проверить 2 программы.'));
 });
 
-test('сводка называет главную преграду и обходные пути', () => {
+// Строка про одну главную преграду переехала в блок «Почему не подходят»
+// (reasonGroups): там видны все преграды, а не одна.
+test('блок причин называет преграду и обходные пути', () => {
   const years = { schoolYears: { min: 12, evidence: 'x' } };
   const programs = [
     { ...program('a', years), workaroundFields: ['schoolYears'] },
     program('b', years),
   ];
-  assert.ok(summaryLines(me, programs, today).includes('Число лет школы закрывает 2 программы, у 1 из них есть обходной путь.'));
+  assert.deepEqual(reasonGroups(me, programs, today).map(reasonLine), ['Нужно 12 лет школы — 2 программы, у 1 из них есть обходной путь']);
+  assert.ok(!summaryLines(me, programs, today).some((l) => l.includes('закрывает')));
 });
 
 test('программы с закрытым приёмом в сводке не считаются', () => {
