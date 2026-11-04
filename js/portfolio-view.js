@@ -1,4 +1,4 @@
-import { EXPERIENCE_KINDS, portfolioOf } from './portfolio.js';
+import { EXPERIENCE_KINDS, EXPERIENCE_SKILLS, MAX_SKILLS, portfolioOf } from './portfolio.js';
 import { safeHttpUrl } from './lib/url.js';
 import { formatDate } from './lib/format.js';
 import { renderWorkPicker, renderWorkPlan, clearWorkDrafts } from './portfolio-work-view.js';
@@ -40,7 +40,7 @@ function selectField(form,title,name,options,value) {
 
 function readFields(form) {
   const data=new FormData(form);
-  return Object.fromEntries([...data].filter(([name])=>!name.startsWith('goal:')&&!name.startsWith('why:')));
+  return Object.fromEntries([...data].filter(([name])=>!name.startsWith('goal:')&&!name.startsWith('why:')&&name!=='skill'));
 }
 
 function showLink(parent,value,label='Открыть работу') {
@@ -61,6 +61,13 @@ function experienceForm(entry,props,onSaved) {
   field(form,'Как называется занятие или работа?','title',value.title,{type:'text',max:160,required:true});
   selectField(form,'Вид опыта','kind',EXPERIENCE_KINDS,value.kind);
   field(form,'Когда и как долго? · необязательно','period',value.period,{type:'text',max:120});
+  const skillBox=el('fieldset');skillBox.dataset.skills='';skillBox.append(el('legend',null,`Какие навыки показывает опыт? · до ${MAX_SKILLS}, необязательно`));
+  const skills=EXPERIENCE_SKILLS.map(([code,title])=>{
+    const label=el('label','row'),check=el('input');check.type='checkbox';check.name='skill';check.value=code;check.checked=Boolean(value.skills?.includes(code));
+    label.append(check,document.createTextNode(title));skillBox.append(label);return check;
+  });
+  const limitSkills=()=>{const full=skills.filter(item=>item.checked).length>=MAX_SKILLS;for(const item of skills)item.disabled=full&&!item.checked;};
+  skillBox.addEventListener('change',limitSkills);limitSkills();form.append(skillBox);
   field(form,'Что делал лично ты?','role',value.role,{max:1000,rows:2});
   field(form,'Какие действия ты предпринял?','actions',value.actions);
   field(form,'Что получилось?','result',value.result);
@@ -82,7 +89,7 @@ function experienceForm(entry,props,onSaved) {
   if(!goalIds.length)links.append(el('p','route-detail','Сначала сохрани опыт. Когда выберешь программу, сможешь связать его с целью.'));
   form.append(links);
   const say=status(),save=el('button','button','Сохранить опыт');save.type='submit';form.append(save,say);
-  const read=()=>({...readFields(form),goals:controls.filter(item=>item.check.checked).map(item=>({goalId:item.goalId,why:item.why.value}))});
+  const read=()=>({...readFields(form),skills:skills.filter(item=>item.checked).map(item=>item.value),goals:controls.filter(item=>item.check.checked).map(item=>({goalId:item.goalId,why:item.why.value}))});
   const remember=()=>drafts.set(draftKey,read());form.addEventListener('input',remember);form.addEventListener('change',remember);
   form.addEventListener('submit',event=>{
     event.preventDefault();
@@ -126,6 +133,7 @@ export function renderPortfolio(props) {
       const work=renderWorkPlan(entry,props,saved);if(work)card.append(work);
       const facts=el('details','journey-edit');facts.open=!entry.workPlan;facts.append(el('summary',null,'Опыт и результаты'));
       for(const [name,title] of [['role','Личный вклад'],['actions','Действия'],['result','Результат'],['reflection','Вывод']])paragraph(facts,title,entry[name]);
+      if(entry.skills)paragraph(facts,'Навыки',entry.skills.map(code=>EXPERIENCE_SKILLS.find(([id])=>id===code)?.[1]).join(', '));
       showLink(facts,entry.url);
       for(const goal of entry.goals)paragraph(facts,`Для ${nameOf(props.programs,goal.goalId)}`,goal.why||'Объяснение пока не добавлено');
       const linked=portfolio.outcomes.filter(item=>item.experienceId===entry.id);

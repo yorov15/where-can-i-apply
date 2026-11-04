@@ -1,4 +1,4 @@
-import { WORK_TEMPLATES, WORK_REVIEW_FIELDS } from './portfolio-work.js';
+import { WORK_TEMPLATES, WORK_REVIEW_FIELDS, WORK_FORMATS, workFormatLabel } from './portfolio-work.js';
 import { formatDate } from './lib/format.js';
 import { renderPortfolioLearning, clearLearningDrafts } from './portfolio-learning-view.js';
 import { pendingPractice } from './portfolio-learning.js';
@@ -43,7 +43,8 @@ export function renderWorkPicker(props,onSaved){
   const expected=field(settings,'Какой результат хочешь получить?','expectedResult',value.expectedResult??WORK_TEMPLATES.find(item=>item.id===value.templateId)?.output,{required:true});
   expected.addEventListener('invalid',()=>{if(settings!==form)settings.open=true;});
   const explain=()=>{const item=WORK_TEMPLATES.find(item=>item.id===template.value);info.replaceChildren();if(props.guidedStart)info.append(el('summary',null,'Пример такой работы'));info.append(el('p','route-detail',item.description),el('p','route-detail',item.smaller));};
-  explain();template.addEventListener('change',()=>{explain();expected.value=WORK_TEMPLATES.find(item=>item.id===template.value).output;});
+  const format=options(settings,'В каком виде будет итог?','format',WORK_FORMATS,value.format??WORK_TEMPLATES.find(item=>item.id===value.templateId)?.format);
+  explain();template.addEventListener('change',()=>{const item=WORK_TEMPLATES.find(item=>item.id===template.value);explain();expected.value=item.output;format.value=item.format;});
   options(settings,'Выделить на следующий шаг · не больше','sessionMinutes',timeOptions,value.sessionMinutes);
   settings.append(el('p','route-detail','Это часть твоих часов на неделю. План может выделить меньше времени; завершать весь шаг за одну сессию не обязательно.'));
   const goals=props.handlers.getRouteState().goals;
@@ -59,6 +60,8 @@ export function renderWorkPicker(props,onSaved){
 export function renderWorkPlan(entry,props,onSaved){
   const plan=entry.workPlan;if(!plan)return null;
   const box=el('section','journey-work');box.dataset.workPlan=entry.id;
+  const formatName=workFormatLabel(plan);
+  if(formatName){const aim=el('p','route-goal-meta');aim.dataset.workFormat=plan.format;aim.append(el('strong',null,'Итог: '),document.createTextNode(`${formatName.toLowerCase()} — ${plan.expectedResult}`));box.append(aim);}
   const status=say(),done=plan.steps.filter(step=>step.done).length;
   const progress=el('progress','journey-progress');progress.max=plan.steps.length;progress.value=done;progress.setAttribute('aria-label',`Готово ${done} из ${plan.steps.length} шагов`);box.append(progress);
   const change=(response)=>{if(response.ok)onSaved(entry.id,response.message);else status.textContent=response.message;};
@@ -82,6 +85,8 @@ export function renderWorkPlan(entry,props,onSaved){
   const value=drafts.get(briefKey)??plan;
   field(briefForm,'Почему тебе это интересно?','aim',value.aim,{required:true});
   field(briefForm,'Какой результат хочешь получить?','expectedResult',value.expectedResult,{required:true});
+  if(value.format)options(briefForm,'В каком виде будет итог?','format',WORK_FORMATS,value.format);
+  else options(briefForm,'В каком виде будет итог? · необязательно','format',[['','Не выбран'],...WORK_FORMATS],'');
   options(briefForm,'Выделить на следующий шаг · не больше','sessionMinutes',timeOptions,value.sessionMinutes);
   const save=el('button','button button-quiet','Сохранить задачу');save.type='submit';briefForm.append(save);
   bindForm(briefForm,briefKey,data=>props.handlers.onSavePortfolioBrief(entry.id,{...data,sessionMinutes:Number(data.sessionMinutes)}),response=>onSaved(entry.id,response.message));

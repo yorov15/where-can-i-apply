@@ -552,7 +552,7 @@ export function renderRoute(root, props) {
   if(preparing)side.append(preparation);else{const archive=el('details','route-phase');archive.append(el('summary',null,'Подготовка до подачи · справка'),preparation);side.append(archive);}
   const applyNotes = applyNotesBlock(route);
   if (applyNotes) side.append(applyNotes);
-  const essays=renderEssays(route.goals,props.essays??{},handlers.onRetry,handlers.onSaveEssayVersion,handlers.onEssayVersionSaved);
+  const essays=renderEssays(route.goals,props.essays??{},handlers.onRetry,handlers.onSaveEssayVersion,handlers.onEssayVersionSaved,handlers);
   if(essays)side.append(essays);
   root.append(side);
 
