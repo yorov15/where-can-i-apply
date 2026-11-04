@@ -3,6 +3,7 @@ import { safeHttpUrl } from './lib/url.js';
 import { formatDate } from './lib/format.js';
 import { renderWorkPicker, renderWorkPlan, clearWorkDrafts } from './portfolio-work-view.js';
 import { pendingPractice } from './portfolio-learning.js';
+import { spotlightLinks } from './spotlight-view.js';
 
 // Несохранённый ввод переживает служебную перерисовку, но не перезагрузку.
 const drafts = new Map();
@@ -167,6 +168,7 @@ export function renderPortfolio(props) {
         results.append(row);
       }box.append(results);
     }
+    const spotlight=spotlightLinks(props);if(spotlight&&portfolio.experiences.length)box.append(spotlight);
     box.append(el('p','journey-meta','Записи хранятся на устройстве и входят в файл маршрута. Внешние файлы по ссылкам сохраняй отдельно.'));
     const say=status();say.dataset.portfolioStatus='';say.textContent=message;box.append(say);
     box.classList.toggle('portfolio-focused',Boolean(collection.querySelector('[data-experience][open]')));

@@ -6,6 +6,7 @@ import { normalizePortfolio } from './portfolio.js';
 import { normalizeApplications } from './application.js';
 import { normalizeInterview } from './interview.js';
 import { normalizeRecommenders } from './recommenders.js';
+import { normalizeSpotlight } from './spotlight.js';
 export const ROUTE_STATE_KEY = 'eligibility-route';
 export const ROUTE_VERSION = 2;
 export const MAX_GOALS = 8;
@@ -45,6 +46,12 @@ function normalize(value) {
   // Рекомендатели. Пустой раздел не храним, испорченные записи отбрасываем по одной.
   const recommenders = normalizeRecommenders(value.recommenders);
   if (recommenders) next.recommenders = recommenders;
+  // Подборка под цель. Пустую не храним: старые файлы остаются прежними.
+  if (Object.hasOwn(value, 'spotlight')) {
+    const spotlight = normalizeSpotlight(value.spotlight, next.portfolio ?? { experiences: [] });
+    if (!spotlight) return null;
+    if (Object.keys(spotlight.goals).length || spotlight.name) next.spotlight = spotlight;
+  }
   next.goals = list(value.goals);
   // Репетиция собеседования. Битые ответы отбрасываются по одному, а не
   // роняют весь маршрут; пустую запись не храним.

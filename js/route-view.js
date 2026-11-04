@@ -12,6 +12,7 @@ import { formatDate, plural, splitTitle } from './lib/format.js';
 import { safeHttpUrl } from './lib/url.js';
 import { renderStudyPlan } from './study-view.js';
 import { renderEssays } from './essay-view.js';
+import { renderSpotlight, forgetSpotlightView, spotlightHash } from './spotlight-view.js';
 import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine, hasPreparationGoals } from './goal-status.js';
 import { renderPortfolio } from './portfolio-view.js';
 import { renderRecommenders } from './recommenders-view.js';
@@ -422,6 +423,8 @@ export function routeSection(hash) {
 
 export function renderRoute(root, props) {
   const { programs, route, planIds, tracks, status, loading, applyUrl, handlers } = props;
+  if (renderSpotlight(root, props)) return;
+  forgetSpotlightView(root);
   root.textContent = '';
   const section = routeSection(location.hash);
   root.dataset.layer = section;
@@ -505,6 +508,9 @@ export function renderRoute(root, props) {
     item.append(statusRow(goal, route, props.routeState, handlers));
     const application=el('button','button button-small button-quiet','Материалы и ответ');application.type='button';application.addEventListener('click',()=>handlers.onOpenApplication(goal.id));item.append(application);
     item.append(interviewEntry(goal.id, { compact: true }));
+    const spotlight = el('a', 'button button-small button-quiet', 'Собрать подборку');
+    spotlight.href = `#${spotlightHash(goal.id)}`;
+    item.append(spotlight);
     const more = el('details', 'route-more');
     more.append(el('summary', null, 'Что покрывает и что учесть'));
     more.append(el('p', 'route-goal-meta', coverageLine(goal.coverage)));
