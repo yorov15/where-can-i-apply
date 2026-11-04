@@ -49,10 +49,10 @@ test('не указанный экзамен не отсеивает прогр�
   assert.deepEqual(ids, ['open-all', 'ielts']);
 });
 
-test('строка не говорит «подходишь» и меняет хвост на последнем шаге', () => {
-  assert.equal(previewLine(140), 'Пока ничего не мешает: 140 программ. Число уточнится, когда ответишь дальше.');
-  assert.equal(previewLine(1, true), 'Пока ничего не мешает: 1 программа.');
-  assert.equal(previewLine(3), 'Пока ничего не мешает: 3 программы. Число уточнится, когда ответишь дальше.');
-  assert.match(previewLine(0), /не осталось/);
+test('строка короткая и не говорит «подходишь»', () => {
+  assert.equal(previewLine(140), 'Пока ничего не мешает: 140 программ.');
+  assert.equal(previewLine(1), 'Пока ничего не мешает: 1 программа.');
+  assert.equal(previewLine(3), 'Пока ничего не мешает: 3 программы.');
+  assert.match(previewLine(0), /программ нет/);
   for (const n of [0, 1, 140]) assert.doesNotMatch(previewLine(n), /подходишь|шанс|вероятн/i);
 });

@@ -790,7 +790,7 @@ function updatePreview() {
   const show = wizard.active && programs.length > 0 && hasAnswers(profile);
   preview.hidden = !show;
   if (!show) return;
-  document.getElementById('wizard-preview-text').textContent = previewLine(previewCount(profile, programs, today), wizard.last);
+  document.getElementById('wizard-preview-text').textContent = previewLine(previewCount(profile, programs, today));
   document.getElementById('wizard-preview-open').hidden = wizard.last || !profileReady(profile);
 }
 let previewTimer = 0;
