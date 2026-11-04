@@ -1,0 +1,20 @@
+{
+ "date": "2026-11-04",
+ "summary": "Сеть облачной песочницы не пустила ни к одному сайту платформ; REA не смогла открыть ни одну страницу.",
+ "curl_via_sandbox_proxy": {
+  "result": "HTTP 000, curl exit 56; прокси: connect_rejected (gateway answered 403 to CONNECT)",
+  "hosts": [
+   "www.polygence.org", "pioneeracademics.com", "schoolhouse.world", "www.unifrog.org",
+   "bridge-u.com", "www.cialfo.co", "maialearning.com", "www.zeemee.com",
+   "www.roadtoielts.com", "www.kiratalent.com", "englishtest.duolingo.com",
+   "takeielts.britishcouncil.org"
+  ]
+ },
+ "webfetch": {
+  "result": "getaddrinfo ENOTFOUND — хост вне разрешённых доменов сессии",
+  "hosts": ["www.polygence.org", "pioneeracademics.com", "schoolhouse.world", "www.unifrog.org", "bridge-u.com", "www.cialfo.co"]
+ },
+ "mirrors": "Проверку зеркал и архивов (web.archive.org и т. п.) не проводили: автоматическая проверка безопасности запретила её как обход сетевой политики.",
+ "worked": "WebSearch (поисковая выдача и сводка поисковика) — использован как источник второго уровня.",
+ "fix": "Добавить домены выше в Allowed domains окружения (Network access) или включить более широкий доступ, затем повторить REA: inspect-web-page, analyze-web-bundle, capture-browser-scenario на 375 px."
+}
