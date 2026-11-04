@@ -7,6 +7,11 @@ const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf
 const ids = (list) => list.map((term) => term.id);
 const marked = (parts) => parts.filter((part) => part.id).map((part) => [part.text, part.id]);
 
+test('test-blind и test-flexible не получают совет приложить SAT/ACT как test-optional', () => {
+  assert.deepEqual(marked(segmentText('We are test-blind and test-flexible.')), []);
+  assert.equal(marked(segmentText('We are test-optional.'))[0][1], 'test-optional');
+});
+
 test('в словаре 25–40 терминов, у каждого английское слово, русский вариант и объяснение', () => {
   assert.ok(TERMS.length >= 25 && TERMS.length <= 40, `терминов ${TERMS.length}`);
   assert.equal(new Set(ids(TERMS)).size, TERMS.length, 'повтор id');

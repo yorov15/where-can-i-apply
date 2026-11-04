@@ -54,6 +54,14 @@ function draw(root, id, props) {
   const bar = el('div', 'journey-actions');
   bar.append(back());
   box.append(bar);
+  const stillLoading = props.loading;
+  const sourceStates = (route?.goals ?? []).filter(goal => person?.goals.some(item => item.goalId === goal.id))
+    .map(goal => loadRecommendationSource(goal.id));
+  if (stillLoading || sourceStates.some(source => source.status === 'loading')) {
+    box.setAttribute('aria-busy', 'true');
+    box.append(el('p', 'route-status', 'Загружаю программы и способы отправки для шпаргалки…'));
+    root.append(box); return;
+  }
   if (!person) {
     box.append(el('h2', null, SHEET_TITLE), el('p', 'journey-empty', 'Такого рекомендателя нет на этом устройстве. Добавь человека в «Рекомендациях».'));
     root.append(box); return;
@@ -62,7 +70,14 @@ function draw(root, id, props) {
   const say = el('p', 'route-status');
   say.setAttribute('role', 'status');
   const page = sheet(state, person, entries);
-  const text = () => bragSheetText({ teacher: person.name, role: person.role, from: sheetFrom(state), entries, sheet: person.sheet, works: sheetWorks(state, entries) });
+  const missingGoals = person.goals.some(item => !(route?.goals ?? []).some(goal => goal.id === item.goalId));
+  const incomplete = missingGoals || sourceStates.some(source => source.status === 'error');
+  const warning = 'Часть условий программ не загрузилась или цель больше не доступна. В листе могут отсутствовать сроки и способы отправки: сверь их на сайтах программ.';
+  if (incomplete) {
+    page.prepend(el('p', 'route-warn', warning));
+    bar.append(button('Повторить загрузку', 'button button-quiet', () => location.reload()));
+  }
+  const text = () => `${incomplete ? `${warning}\n\n` : ''}${bragSheetText({ teacher: person.name, role: person.role, from: sheetFrom(state), entries, sheet: person.sheet, works: sheetWorks(state, entries) })}`;
   const print = button('Печать / PDF', 'button', () => { const cleanup = printSheet(page); try { window.print(); } catch { cleanup(); } });
   const copy = button('Скопировать текстом', 'button button-quiet', async () => {
     const value = text();
@@ -94,7 +109,7 @@ export function renderBragSheet(root, props) {
   const sources = goals.map(goal => loadRecommendationSource(goal.id));
   const waiting = sources.filter(source => source.status === 'loading');
   if (waiting.length) Promise.allSettled(waiting.map(source => source.promise)).then(() => { if (bragSheetRoute(location.hash) === id) props.handlers.onRedraw?.(); });
-  const key = JSON.stringify([id, person, state.spotlight ?? null, portfolioOf(state).experiences.map(entry => [entry.id, entry.updatedOn]),
+  const key = JSON.stringify([id, person, props.loading, Boolean(props.route), state.spotlight ?? null, portfolioOf(state).experiences.map(entry => [entry.id, entry.updatedOn]),
     goals.map(goal => [goal.id, goal.deadline?.closes, goal.deadline?.state]), sources.map(source => source.status)]);
   delete root.dataset.spotlightKey;
   if (root.dataset.bragKey === key && root.firstElementChild) return true;

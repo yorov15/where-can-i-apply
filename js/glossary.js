@@ -198,7 +198,7 @@ export const TERMS = [
   },
   {
     id: 'test-optional', group: 'apply', en: 'Test-optional', ru: 'экзамен по желанию',
-    match: ['test[- ](?:optional|flexible|blind)'],
+    match: ['test[- ]optional'],
     text: 'Вуз не требует SAT или ACT: можно подать без них. Хороший балл можно приложить, невысокий — не присылать.',
   },
   {

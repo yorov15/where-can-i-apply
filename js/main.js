@@ -250,6 +250,7 @@ if (EXPLAIN_URL) {
 }
 
 let programs = [];
+let indexLoading = true;
 
 // programs — лёгкие детали по всем программам; conditions — условия тех,
 // которые уже раскрывали. Значение null значит «файл не приехал»: это не то
@@ -325,15 +326,22 @@ function preparedEntry(id) {
 // Новичку цель выбирать не из чего: берём первую программу из плана, у
 // которой маршрут сверен. План пуст — оставляем выбор человеку.
 async function openRoute() {
-  if (!routeData) await loadRouteData();
   // Возврат на вкладку не должен показывать «Собираю маршрут…» на готовом
   // маршруте: скелетон только когда для этой цели ничего не собрано.
   const stale = !route || route.id !== routeState.goals.join(',') || !routeCtx;
   routeLoading = stale;
   if (stale) renderRouteView();
-  await refreshRoute();
-  routeLoading = false;
-  renderRouteView();
+  try {
+    if (!routeData) await loadRouteData();
+    await refreshRoute();
+  } catch {
+    route = null;
+    routeCtx = null;
+    routeStatus = 'Не удалось загрузить маршрут. Попробуй ещё раз.';
+  } finally {
+    routeLoading = false;
+    renderRouteView();
+  }
 }
 
 async function refreshRoute() {
@@ -446,7 +454,7 @@ function renderRouteView() {
     planIds: plan.ids,
     tracks: routeTracks,
     status: routeStatus,
-    loading: routeLoading,
+    loading: routeLoading || indexLoading,
     applyUrl: routeState.goals.length === 1 ? details.programs?.[routeState.goals[0]]?.applyUrl ?? null : null,
     handlers: {
       getRouteState: () => routeState,
@@ -894,6 +902,7 @@ if ('serviceWorker' in navigator) {
 
 loadIndex()
   .then((index) => {
+    indexLoading = false;
     programs = index.programs ?? [];
     updatePreview();
     priority.setCountries(
@@ -919,5 +928,7 @@ loadIndex()
     });
   })
   .catch(() => {
+    indexLoading = false;
     showLoadError();
+    if (/^#(route|today)(\/|$)/.test(location.hash)) renderRouteView();
   });

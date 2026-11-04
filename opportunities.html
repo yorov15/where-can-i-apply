@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; manifest-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#2d52d6">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="/icons/icon-180.png">
+<title>Конкурсы и олимпиады для школьников — Nerio</title>
+<meta name="description" content="Найди конкурс эссе, выступлений или олимпиаду. Сроки, стоимость, возраст и ссылки на условия организаторов.">
+<link rel="canonical" href="https://nerio-app.vercel.app/opportunities.html">
+<link rel="preload" href="fonts/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link rel="modulepreload" href="js/opportunities.js">
+<link rel="modulepreload" href="js/offline-page.js">
+<script src="js/theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<div class="topbar">
+  <a class="brand" href="index.html">Nerio</a>
+  <nav aria-label="Разделы"><a href="faq.html">Помощь</a></nav>
+  <button type="button" id="theme-toggle" class="theme-toggle" hidden>Тёмная</button>
+</div>
+<header class="hero hero-page">
+  <p class="back"><a href="index.html#route">← К моим работам</a></p>
+  <h1>Конкурсы и олимпиады</h1>
+</header>
+<main id="main" class="prose">
+  <p>Выбери задачу, которую хочется попробовать. Готовую работу можно добавить в портфолио Nerio.</p>
+  <p class="fineprint">Бесплатное участие в конкурсе не означает бесплатную поездку или полную стипендию. Возраст и условия проверяй на сайте организатора.</p>
+  <form id="opportunity-filters" class="journey-form" role="search" aria-label="Поиск конкурсов">
+    <label>Найти конкурс<input type="search" name="query" placeholder="Например, эссе или биология" autocomplete="off"></label>
+    <label for="opportunity-type">Формат</label>
+    <select id="opportunity-type" name="type"><option value="">Все форматы</option><option value="essay">Эссе</option><option value="speaking">Выступление</option><option value="olympiad">Олимпиада</option></select>
+    <label class="row"><input type="checkbox" name="openOnly" checked><span>Набор идёт</span></label>
+    <label class="row"><input type="checkbox" name="freeOnly" checked><span>Участие бесплатно</span></label>
+  </form>
+  <p id="opportunity-status" class="fineprint" role="status"></p>
+  <div id="opportunity-list"></div>
+  <noscript><p>Каталогу нужен JavaScript. <a href="index.html">Вернуться в Nerio</a>.</p></noscript>
+</main>
+<footer class="site-footer"><nav aria-label="О сайте"><a href="index.html#route">Мои работы</a><a href="glossary.html">Словарь приёма</a><a href="privacy.html">Конфиденциальность</a></nav></footer>
+<script type="module" src="js/opportunities-page.js"></script>
+</body>
+</html>

@@ -2,6 +2,7 @@
 // перезагрузки. Все слова лежат в js/glossary.js, сеть для поиска не нужна;
 // после первого открытия страницу отдаёт из кэша воркер (sw.js).
 import { TERMS, GROUPS, searchTerms } from './glossary.js';
+import { cacheReferencePage } from './offline-page.js';
 
 const list = document.getElementById('glossary-list');
 const input = document.getElementById('glossary-search');
@@ -57,8 +58,9 @@ function openFromHash() {
 input.addEventListener('input', render);
 addEventListener('hashchange', openFromHash);
 render();
-openFromHash();
+// Начальная прокрутка браузера к #id может сбросить фокус, заданный модулем.
+// После load возвращаем его на summary, чтобы сразу работала клавиатура.
+if (document.readyState === 'complete') openFromHash();
+else addEventListener('load', () => setTimeout(openFromHash, 0), { once: true });
 
-if ('serviceWorker' in navigator) {
-  addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
-}
+cacheReferencePage(['/js/glossary-page.js', '/js/glossary.js']);

@@ -9,10 +9,10 @@ import { formatDate, daysBetween } from './lib/format.js';
 import { statusOf, isSent } from './goal-status.js';
 
 export const RECOMMENDER_STATUSES = [
-  ['planned', 'Ещё не попросил'],
-  ['asked', 'Попросил'],
-  ['agreed', 'Согласился'],
-  ['sent', 'Отправил письмо'],
+  ['planned', 'Просьба ещё не отправлена'],
+  ['asked', 'Просьба отправлена'],
+  ['agreed', 'Согласие получено'],
+  ['sent', 'Письмо отправлено'],
 ];
 export const DEFAULT_LEAD_WEEKS = 6;
 export const MAX_LEAD_WEEKS = 20;

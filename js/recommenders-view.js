@@ -217,7 +217,7 @@ function personCard(person, props, save, say) {
     label.append(select);
     card.append(label);
   }
-  const date = el('label', null, 'Когда попросил'), input = el('input');
+  const date = el('label', null, 'Дата просьбы'), input = el('input');
   input.type = 'date'; input.value = person.askedOn ?? ''; input.max = today; input.dataset.rk = `asked:${person.id}`;
   input.addEventListener('change', () => save(state => setAskedOn(state, person.id, input.value), 'Дата сохранена.'));
   date.append(input);
@@ -363,7 +363,7 @@ export function renderRecommenderToday(props) {
     const entries = entriesFor({ ...person, goals: person.goals.filter(goal => item.goalIds.includes(goal.goalId)) }, route.goals);
     const row2 = el('div', 'journey-actions');
     row2.append(button('Скопировать просьбу', () => copy(requestText({ teacher: item.name, entries, lang: 'ru' }), message => { status.textContent = message; })),
-      button('Попросил', () => {
+      button('Просьба отправлена', () => {
         const next = markAsked(handlers.getRouteState(), item.id, today);
         const response = next ? handlers.onSaveRecommenders(next, 'Отмечено: попросил.') : { ok: false, message: 'Не удалось сохранить.' };
         status.textContent = response.message;
