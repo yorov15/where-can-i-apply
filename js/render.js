@@ -3,7 +3,7 @@
 // card-model.js; здесь их только рисуют.
 import { evaluate } from './verdict.js';
 import { deadlineState, deadlineWindow } from './lib/deadline.js';
-import { summaryLines } from './summary.js';
+import { summaryLines, reasonGroups, reasonLine } from './summary.js';
 import { cardModel, extraFor } from './card-model.js';
 import { bucketOf } from './wording.js';
 import { agenda } from './agenda.js';
@@ -331,6 +331,10 @@ export function renderResults(nodes, profile, programs, today, details) {
     const title = el('h2', 'group-title', `${group.title} (${group.rows.length})`);
     title.dataset.base = group.title;
     section.append(title);
+    if (group.status === 'no') {
+      const why = whyNotBlock(reasonGroups(profile, programs, today));
+      if (why) section.append(why);
+    }
     for (const row of (sorted ? orderByPriority(group.rows, priorities) : group.rows)) {
       const node = card(row, today, details, plan, false, order++);
       if (isSetAside(plan, row.program.id)) set.push(node);
@@ -401,6 +405,27 @@ export function explainBlock(model) {
     }
   });
   return wrap;
+}
+
+// «Почему не подходят»: все преграды по полю, а не одна главная. Первые три
+// видны сразу, остальные — под «Ещё». Числа не складываются: одну
+// программу могут закрывать сразу несколько причин.
+const WHY_VISIBLE = 3;
+
+function whyNotBlock(groups) {
+  if (!groups.length) return null;
+  const box = el('div', 'why-no');
+  box.append(el('h3', 'why-no-title', 'Почему не подходят'));
+  box.append(list(groups.slice(0, WHY_VISIBLE).map(reasonLine), 'why-no-list'));
+  const rest = groups.slice(WHY_VISIBLE);
+  if (rest.length) {
+    const more = el('details', 'agenda-more');
+    more.append(el('summary', 'agenda-more-head', `Ещё ${rest.length} ${plural(rest.length, 'причина', 'причины', 'причин')}`));
+    more.append(list(rest.map(reasonLine), 'why-no-list'));
+    box.append(more);
+  }
+  if (groups.length > 1) box.append(el('p', 'fineprint', 'Одну программу могут закрывать сразу несколько причин.'));
+  return box;
 }
 
 // Главный ответ одной строкой: сколько программ подходит по условиям и сколько

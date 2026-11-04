@@ -290,6 +290,10 @@ label.row:has(input[type="checkbox"]:checked){background:var(--accent-soft);box-
 .chip-note{margin-top:.0625rem;font-size:.75rem;font-weight:400;color:var(--muted)}
 .chip[aria-pressed="true"] .chip-note{color:inherit}
 .group-more{width:100%;margin:0 0 var(--s-3)}
+.why-no{margin:0 0 var(--s-4);padding:var(--s-3) var(--s-4);background:var(--soft);border-radius:var(--r-control)}
+.why-no-title{margin:0;font-size:1rem}
+.why-no-list{margin:var(--s-2) 0 0;padding-left:1.25rem}
+.why-no-list li{margin:0 0 var(--s-1)}
 @media (max-width:39.99rem){#catalog-tools .chips{flex-wrap:nowrap;overflow-x:auto;margin:0 calc(var(--gutter) * -1) var(--s-2);padding:0 var(--gutter)}
 .chip{flex:none;min-height:40px}
 .catalog-bar input[type="search"]{min-height:48px;margin-bottom:var(--s-2)}
@@ -516,7 +520,7 @@ body:has(#tabbar) .catalog-more summary{flex-basis:100%;min-height:44px}
 body:has(#tabbar) .catalog-more label{flex:1 1 220px}
 body:has(#tabbar) #results{display:block}
 body:has(#tabbar) .group{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
-body:has(#tabbar) .group-title,body:has(#tabbar) .group-more{grid-column:1/-1}
+body:has(#tabbar) .group-title,body:has(#tabbar) .group-more,body:has(#tabbar) .why-no{grid-column:1/-1}
 body:has(#tabbar) .card{padding:24px 0;box-shadow:none;border-top:1px solid var(--line);gap:8px;background:none;outline:none}
 body:has(#tabbar) .card-title{font:650 24px/1.25 Onest, system-ui;letter-spacing:-.025em}
 .catalog-entry .card-title{color:var(--fg)}
