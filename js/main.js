@@ -28,6 +28,7 @@ import { saveMaterialVersion,markMaterialSubmitted,removeMaterialVersion,removeM
 import { clearApplicationDrafts } from './application-view.js';
 import { hasPreparationGoals } from './goal-status.js';
 import { renderStart, renderStartGuide, startWork } from './start-view.js';
+import { previewCount, previewLine, hasAnswers } from './summary.js';
 
 const form = document.getElementById('profile');
 const today = new Date().toISOString().slice(0, 10);
@@ -102,7 +103,7 @@ function showScreen(name) {
   document.getElementById('profile-intro').hidden = name !== 'profile';
   if (name === 'profile') {
     document.getElementById('profile-box').open = true;
-    if (!wizard.active) wizard.start();
+    if (!wizard.active) { wizard.start(); requestAnimationFrame(updatePreview); }
   }
   if (name === 'answer') buildCards();
   if (name === 'program') renderProgramView();
@@ -778,6 +779,28 @@ function fetchDetails() {
 
 onProfileChange(form, (profile) => refresh(profile));
 
+// Предварительное число под кнопками мастера. Считается с паузой после
+// ввода: на телефоне 323 проверки на каждое нажатие клавиши заметны.
+// «Посмотреть сейчас» видна, когда заполнено обязательное (profileReady):
+// без него ответ показывает каталог без проверки, а не результат.
+// Функции, а не константы: showScreen зовёт updatePreview раньше этих строк.
+function updatePreview() {
+  const preview = document.getElementById('wizard-preview');
+  const profile = readForm(form);
+  const show = wizard.active && programs.length > 0 && hasAnswers(profile);
+  preview.hidden = !show;
+  if (!show) return;
+  document.getElementById('wizard-preview-text').textContent = previewLine(previewCount(profile, programs, today), wizard.last);
+  document.getElementById('wizard-preview-open').hidden = wizard.last || !profileReady(profile);
+}
+let previewTimer = 0;
+const schedulePreview = () => { clearTimeout(previewTimer); previewTimer = setTimeout(updatePreview, 200); };
+form.addEventListener('input', schedulePreview);
+form.addEventListener('change', schedulePreview);
+for (const id of ['wizard-next', 'wizard-back', 'show-results']) document.getElementById(id).addEventListener('click', updatePreview);
+// Тот же путь, что у главной кнопки: проверка полей, конец мастера, ответ.
+document.getElementById('wizard-preview-open').addEventListener('click', () => finishButton.click());
+
 // refresh() пишет профиль в хранилище, поэтому ключ снимается после него:
 // иначе пустая анкета осталась бы лежать под тем же ключом.
 document.getElementById('clear-profile').addEventListener('click', () => {
@@ -810,6 +833,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
   finished = false;
   location.hash = 'today';
   wizard.start();
+  updatePreview();
   syncScreen();
   document.getElementById('clear-status').textContent = 'Анкета стёрта с этого устройства.';
 });
@@ -846,6 +870,7 @@ if ('serviceWorker' in navigator) {
 loadIndex()
   .then((index) => {
     programs = index.programs ?? [];
+    updatePreview();
     priority.setCountries(
       [...new Set(programs.map((program) => program.hostCountry).filter(Boolean))].sort(),
       programs,

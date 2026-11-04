@@ -145,3 +145,32 @@ export function summaryLines(profile, programs, today) {
 
   return lines;
 }
+
+// Предварительное число для анкеты, пока она не дописана: открытые программы,
+// где по уже введённым ответам нет ни одного отказа. Пустое поле правила
+// считают «неизвестно», а не отказом (js/rules.js), поэтому частичный
+// профиль подаётся в evaluate как есть.
+export function previewCount(profile, programs, today) {
+  return programs.filter(
+    (program) => deadlineState(program.deadline, today) !== 'closed' && evaluate(profile, program, today).status !== 'no',
+  ).length;
+}
+
+// Есть ли в анкете хоть один ответ, от которого зависит проверка. Пустой
+// анкете число не показываем: оно равно всему каталогу и ничего не говорит.
+export function hasAnswers(profile) {
+  return Boolean(
+    profile.citizenship || profile.schoolCountry || profile.schoolYears != null
+      || profile.graduationYear != null || profile.birthDate || profile.gpa?.value != null
+      || profile.languageTests?.length || profile.exams?.length,
+  );
+}
+
+// Строка под кнопками мастера. «Подходишь» здесь не говорим: проверено
+// только то, что уже введено.
+export function previewLine(count, last = false) {
+  if (!count) return 'По этим ответам открытых программ не осталось. Проверь, всё ли выбрано верно.';
+  const line = `Пока ничего не мешает: ${count} ${plural(count, 'программа', 'программы', 'программ')}.`;
+  // На последнем шаге ответов, меняющих число, больше нет.
+  return last ? line : `${line} Число уточнится, когда ответишь дальше.`;
+}

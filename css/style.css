@@ -108,6 +108,9 @@ input[aria-invalid="true"]{border-color:var(--no);background:var(--no-bg)}
 .wizard-nav #wizard-back{flex:0 0 auto}
 .profile-box.wizard .wizard-nav{position:sticky;bottom:0;z-index:var(--z-bar);margin:0 calc(var(--s-4) * -1) calc(var(--s-4) * -1);padding:var(--s-4) var(--s-4) calc(var(--s-4) + env(safe-area-inset-bottom));background:linear-gradient(to top,var(--surface) 70%,transparent);border-radius:0 0 var(--r-container) var(--r-container)}
 .profile-box.wizard{background:var(--surface)}
+.wizard-preview{display:flex;flex-wrap:wrap;align-items:center;gap:0 var(--s-3);margin-top:var(--s-5)}
+.wizard-preview p{margin:0;font-size:.875rem;color:var(--muted)}
+@media (max-width:20rem){.wizard-nav .button{padding-inline:var(--s-3)}}
 .profile-box.wizard .stepper{gap:.5rem}
 .profile-box.wizard .stepper li{height:.5rem}
 .profile-box.wizard legend{font-size:clamp(1.75rem,1.4rem + 2vw,2.25rem);line-height:1.1;letter-spacing:-.015em;margin-bottom:var(--s-4)}
@@ -281,7 +284,7 @@ label.row:has(input[type="checkbox"]:checked){background:var(--accent-soft);box-
 .chip{padding:.375rem .75rem;font:inherit;font-size:.9375rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-control);cursor:pointer}
 .chip[aria-pressed="true"]{color:var(--accent-text);background:var(--accent-soft);border-color:var(--accent);font-weight:700}
 #profile .chips{flex-flow:row wrap;gap:var(--s-2);margin:0 0 var(--s-4);padding:0;overflow:visible}
-#profile .chip{flex-direction:column;align-items:flex-start;justify-content:center;gap:0;width:auto}
+#profile .chip{flex-direction:column;align-items:flex-start;justify-content:center;gap:0;width:auto;max-width:100%}
 .chip-name,.chip-note{display:block;text-align:left}
 .chip-note{margin-top:.0625rem;font-size:.75rem;font-weight:400;color:var(--muted)}
 .chip[aria-pressed="true"] .chip-note{color:inherit}

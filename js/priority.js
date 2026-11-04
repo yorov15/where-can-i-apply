@@ -22,9 +22,12 @@ const countryLabel = (value, count) => {
   const name = countryName(value);
   if (!count) return { name, note: '' };
   const { programs, universities } = count;
+  const many = `${programs} ${plural(programs, 'программа', 'программы', 'программ')}`;
   return {
     name,
-    note: `${programs} ${plural(programs, 'программа', 'программы', 'программ')} · ${universities} ${plural(universities, 'вуз', 'вуза', 'вузов')}`,
+    note: `${many} · ${universities} ${plural(universities, 'вуз', 'вуза', 'вузов')}`,
+    // Пояснение к двум числам — на самой кнопке, а не абзацем над списком.
+    title: `${many}, из них в конкретном вузе — ${universities}`,
   };
 };
 
@@ -64,7 +67,8 @@ function setupOne(node, key, changed, format) {
     for (const button of list.children) {
       const at = order.indexOf(button.dataset.value);
       const on = at >= 0;
-      const { name, note } = label(button.dataset.value);
+      const { name, note, title } = label(button.dataset.value);
+      if (title) button.title = title; else button.removeAttribute('title');
       button.replaceChildren(
         Object.assign(document.createElement('span'), { className: 'chip-name', textContent: on ? `${at + 1}. ${name}` : name }),
         ...(note ? [Object.assign(document.createElement('small'), { className: 'chip-note', textContent: note })] : []),

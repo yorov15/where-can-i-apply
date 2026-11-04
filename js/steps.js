@@ -130,5 +130,6 @@ export function setupWizard({ box, form, progress, progressLabel, back, next, fi
       return false;
     },
     get active() { return active; },
+    get last() { return active && step === steps.length - 1; },
   };
 }
