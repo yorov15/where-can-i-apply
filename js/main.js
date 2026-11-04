@@ -913,7 +913,9 @@ loadIndex()
     // Маршрут — отдельный маленький файл: если человек пришёл сразу на
     // #route, к моменту нажатия он уже приехал.
     loadRouteData().then(() => {
-      if (location.hash === '#route' || location.hash === '#today') openRoute();
+      // И для разделов пути (#route/preparation и т. п.): прямая ссылка туда
+      // могла открыться раньше списка программ и показать «не загрузился».
+      if (/^#(route|today)(\/|$)/.test(location.hash)) openRoute();
     });
   })
   .catch(() => {

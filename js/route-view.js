@@ -280,7 +280,8 @@ function stepRow(step, index, { tracks, onToggle, getExamPlan, onExamPlan, compa
   label.htmlFor = check.id;
   body.append(label);
   if (step.members?.length) body.append(el('p', 'route-detail',
-    `Для: ${step.members.map(member => shortName({ name: { ru: member.name } })).join(', ')}`));
+    // Один шаг может собрать несколько документов одной программы — имя показываем один раз.
+    `Для: ${[...new Set(step.members.map(member => shortName({ name: { ru: member.name } })))].join(', ')}`));
   if (step.due) body.append(el('span', 'route-due', `${step.dueKind==='planning'?'План: к ':step.dueKind==='booked'?'Записан на ':step.dueKind==='exam-plan'?'Расчёт: до ':'до '}${formatDate(step.due)}${step.dueExpected?' · срок подачи ожидаемый':''}`));
   if (!compact) {
     if (step.detail) body.append(el('p', 'route-detail', step.detail));
