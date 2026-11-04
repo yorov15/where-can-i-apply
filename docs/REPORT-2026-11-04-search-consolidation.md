@@ -23,6 +23,9 @@
 - 738 JS / 512 Python, diff --check.
 - Headless Edge: 375/1280, обе темы, без JS: главная → каталог → программа → официальные источники; нет горизонтального переполнения. Отдельно с JS и задержкой индекса: первый экран, анкета, 323 карточки, раздел резервной копии; ошибок JS нет.
 - Артефакты вне репозитория: outputs/search-check-2026-11-04 в рабочем каталоге чата.
-- Подготовлен deployment `dpl_BwLVezjBAzfL8XfepigJU3FFF7kg`, `https://where-can-i-apply-h1cy6jfk3-ym-2559.vercel.app` (Ready). Публикация и HTTP-проверка фиксируются отдельным дополнением после проверки.
+- Опубликован deployment `dpl_BwLVezjBAzfL8XfepigJU3FFF7kg`, `https://where-can-i-apply-h1cy6jfk3-ym-2559.vercel.app`. Четыре staged-файла совпали с локальными по SHA-256, затем `vercel promote` завершился успешно. Код `6be4d3c`, PR https://github.com/yorov15/where-can-i-apply/pull/6, merge в main `448c5fb`; GitHub CI прошёл.
+- На основном `https://nerio-app.vercel.app/` повторены все пять браузерных проверок. HTTP-аудит 14 запросов: новая главная 200, canonical сохранён, обычный и подставной Googlebot получают одинаковые байты; оба старых корня 308; варианты index.html приведены к каноническим путям; отсутствие страницы по-прежнему 404/noindex.
+- Ещё 12 запросов к двум старым доменам: публичные страницы и sitemap дают 308 с правильным путём и query, старый index.html — 200/noindex, main.js — 200. Личные записи не удалялись и не передавались между origin.
+- Во время работы соединения с Vercel/GitHub временно прерывались; после восстановления публикация и проверки завершены. Повторный запрос индексации Google не отправлялся, текущий Search Console не прочитан.
 
 Индексация и позиция не гарантируются. Постоянные redirects и canonical — сигналы консолидации, не подтверждение обхода. Источники: https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls и https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl.
