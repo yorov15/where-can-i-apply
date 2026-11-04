@@ -162,7 +162,45 @@ function person(value) {
   const goals = (Array.isArray(value.goals) ? value.goals : []).filter(item => object(item) && safeKey(item.goalId)
     && !seen.has(item.goalId) && seen.add(item.goalId)).slice(0, MAX_GOALS)
     .map(item => ({ goalId: item.goalId, status: isStatus(item.status) ? item.status : 'planned' }));
-  return { id: value.id, name, role: line(value.role, 120), askedOn: day(value.askedOn) ? value.askedOn : null, goals };
+  const entry = { id: value.id, name, role: line(value.role, 120), askedOn: day(value.askedOn) ? value.askedOn : null, goals };
+  const sheet = normalizeSheet(value.sheet);
+  if (sheet) entry.sheet = sheet;
+  return entry;
+}
+
+// ——— шпаргалка для учителя ———
+// Ответы ученика, общие для человека (не для программы). Каждое поле
+// необязательное; пустые не храним, совсем пустую шпаргалку — тоже.
+export const SHEET_MAX = 300;
+export const SHEET_FIELDS = ['study', 'quality1', 'quality2', 'quality3', 'proud', 'more'];
+export const sheetLength = value => Array.from(String(value ?? '')).length;
+
+// Переносы строк оставляем (их ставит человек), лишние пробелы и пустые
+// строки убираем. Слишком длинное обрезаем по знакам, а не выбрасываем.
+function sheetText(value) {
+  if (typeof value !== 'string') return '';
+  const text = value.replace(/\r\n?/g, '\n').split('\n').map(part => part.replace(/[ \t\f\v\u00a0]+/g, ' ').trim())
+    .filter(Boolean).join('\n');
+  return Array.from(text).slice(0, SHEET_MAX).join('').trim();
+}
+
+export function normalizeSheet(value) {
+  if (!object(value)) return null;
+  const sheet = {};
+  for (const field of SHEET_FIELDS) { const text = sheetText(value[field]); if (text) sheet[field] = text; }
+  return Object.keys(sheet).length ? sheet : null;
+}
+export const sheetFilled = sheet => Boolean(normalizeSheet(sheet));
+
+// input — ответы формы целиком; пустые поля стирают прежние ответы.
+export function setRecommenderSheet(state, id, input) {
+  const section = recommendersOf(state);
+  const entry = section.people.find(item => item.id === id);
+  if (!entry || !object(input)) return null;
+  const next = { ...entry };
+  const sheet = normalizeSheet(input);
+  if (sheet) next.sheet = sheet; else delete next.sheet;
+  return withSection(state, { ...section, people: section.people.map(item => item.id === id ? next : item) });
 }
 
 // Раздел мягкий: испорченную запись отбрасываем, а не весь маршрут — иначе
@@ -282,7 +320,7 @@ const CHANNEL_TEXT = {
   sealed: ['в запечатанном конверте с подписью', 'in a sealed envelope signed by you'],
   portal: ['через онлайн-систему программы', "through the program's online system"],
 };
-function channelText(channels, lang) {
+export function channelText(channels, lang = 'ru') {
   const index = lang === 'en' ? 1 : 0;
   const parts = (channels ?? []).filter(code => CHANNEL_TEXT[code]).map(code => CHANNEL_TEXT[code][index]);
   return parts.length ? parts.join(', ') : null;

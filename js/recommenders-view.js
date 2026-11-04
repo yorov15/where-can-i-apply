@@ -6,7 +6,8 @@
 // детектор в браузере. Общую сборку это не трогает.
 import { RECOMMENDER_STATUSES, MAX_LEAD_WEEKS, MAX_RECOMMENDERS, detectRecommendations, needLine, askByDate, leadWeeksOf,
   recommendersOf, saveRecommender, removeRecommender, setRecommenderStatus, setAskedOn, setLeadWeeks, markAsked,
-  recommenderActions, requestText, teacherMemo, shortName } from './recommenders.js';
+  recommenderActions, requestText, teacherMemo, shortName, SHEET_MAX, sheetLength, sheetFilled, setRecommenderSheet } from './recommenders.js';
+import { SHEET_FORM, bragSheetHash, bragSheetText, sheetWorks, sheetFrom } from './brag-sheet.js';
 import { formatDate, daysBetween, plural } from './lib/format.js';
 import { portfolioOf } from './portfolio.js';
 
@@ -22,6 +23,13 @@ function remember(node, key) {
   node.open = openSections.has(key);
   node.addEventListener('toggle', () => { if (!node.isConnected) return; if (node.open) openSections.add(key); else openSections.delete(key); });
   return node;
+}
+
+// Возврат со страницы шпаргалки: карточка человека и форма открыты, фокус на форме.
+let focusSheet = null;
+export function openRecommenderSheet(personId) {
+  openSections.add(`person:${personId}`); openSections.add(`sheet:${personId}`);
+  focusSheet = personId;
 }
 
 // Файл программы → то, что детектор нашёл, и английское название для письма.
@@ -43,7 +51,7 @@ function ensureSources(ids, handlers) {
   if (fresh.length) Promise.allSettled(fresh).then(() => handlers.onRedraw?.());
 }
 
-function entriesFor(person, goals) {
+export function entriesFor(person, goals) {
   const byId = new Map(goals.map(goal => [goal.id, goal]));
   const mine = person.goals.filter(item => byId.has(item.goalId));
   const pending = mine.filter(item => item.status !== 'sent');
@@ -130,6 +138,68 @@ function personForm(person, goals, sources, save, say) {
   return form;
 }
 
+// Третий текст: шпаргалка, если в ней есть ответы, иначе прежняя памятка.
+// Шпаргалка включает всё, что есть в памятке, поэтому двух похожих кнопок нет.
+function memoText(state, personId, entries) {
+  const person = recommendersOf(state).people.find(item => item.id === personId);
+  if (person && sheetFilled(person.sheet)) {
+    return ['Скопировать шпаргалку', bragSheetText({ teacher: person.name, role: person.role, from: sheetFrom(state), entries,
+      sheet: person.sheet, works: sheetWorks(state, entries) })];
+  }
+  return ['Скопировать памятку', teacherMemo({ entries, experiences: portfolioOf(state).experiences })];
+}
+
+// Форма шпаргалки. Сохраняется по мере ввода и не перерисовывает панель,
+// чтобы не сбить курсор.
+function sheetForm(person, handlers, say, refresh) {
+  const box = remember(el('details', 'journey-edit'), `sheet:${person.id}`);
+  box.dataset.bragForm = person.id;
+  box.append(el('summary', null, 'Шпаргалка для учителя'));
+  box.append(el('p', 'route-detail', `Письмо получается сильнее, когда в нём конкретные случаи. Ответь на то, что хочется: каждое поле по желанию, до ${SHEET_MAX} знаков. Ответы общие для всех программ этого человека.`));
+  const form = el('form', 'journey-form');
+  form.addEventListener('submit', event => event.preventDefault());
+  const saved = person.sheet ?? {};
+  const inputs = {};
+  const area = ({ field, label, hint }, parent) => {
+    const wrap = el('label', null, label), input = el('textarea'), help = el('p', 'route-detail', hint), count = el('p', 'route-detail');
+    input.name = field; input.rows = 3; input.maxLength = SHEET_MAX; input.value = saved[field] ?? '';
+    input.dataset.rk = `sheet:${person.id}:${field}`;
+    help.id = `sheet-hint-${person.id}-${field}`; count.id = `sheet-count-${person.id}-${field}`;
+    input.setAttribute('aria-describedby', `${help.id} ${count.id}`);
+    const update = () => { count.textContent = `${sheetLength(input.value)} из ${SHEET_MAX} знаков`; };
+    input.addEventListener('input', () => { update(); store(); });
+    update();
+    wrap.append(input);
+    const item = el('div');
+    item.append(wrap, help, count);
+    parent.append(item);
+    inputs[field] = input;
+  };
+  const [study, q1, q2, q3, proud, more] = SHEET_FORM;
+  area(study, form);
+  const qualities = el('fieldset', 'journey-form');
+  qualities.append(el('legend', null, '2–3 качества, которые этот человек видит на уроках, и случай на каждое'));
+  for (const item of [q1, q2, q3]) area(item, qualities);
+  form.append(qualities);
+  area(proud, form); area(more, form);
+  box.append(form);
+  const open = el('a', 'button', 'Открыть шпаргалку');
+  open.href = `#${bragSheetHash(person.id)}`;
+  box.append(open);
+  function store() {
+    const values = Object.fromEntries(Object.entries(inputs).map(([field, input]) => [field, input.value]));
+    const next = setRecommenderSheet(handlers.getRouteState(), person.id, values);
+    const response = next ? handlers.onSaveRecommenders(next, 'Шпаргалка сохранена на этом устройстве.') : { ok: false, message: 'Не удалось сохранить шпаргалку.' };
+    say(response.message);
+    if (response.ok) refresh();
+  }
+  if (focusSheet === person.id) {
+    focusSheet = null;
+    queueMicrotask(() => { if (!box.isConnected) return; box.scrollIntoView({ block: 'start' }); box.querySelector('summary')?.focus(); });
+  }
+  return box;
+}
+
 function personCard(person, props, save, say) {
   const { route, today } = props;
   const goals = route.goals.filter(goal => person.goals.some(item => item.goalId === goal.id));
@@ -154,20 +224,32 @@ function personCard(person, props, save, say) {
   card.append(date);
 
   const entries = entriesFor(person, route.goals);
-  const experiences = portfolioOf(props.handlers.getRouteState()).experiences;
-  const texts = [['Скопировать просьбу', requestText({ teacher: person.name, entries, lang: 'ru' })],
+  // Тексты считаем заново при каждом нажатии: шпаргалка сохраняется по мере
+  // ввода, без перерисовки карточки.
+  const texts = () => [['Скопировать просьбу', requestText({ teacher: person.name, entries, lang: 'ru' })],
     ['Скопировать по-английски', requestText({ teacher: person.name, entries, lang: 'en' })],
-    ['Скопировать памятку', teacherMemo({ entries, experiences })]];
+    memoText(props.handlers.getRouteState(), person.id, entries)];
+  const refresh = () => {
+    const now = texts();
+    card.querySelectorAll('[data-copy-text]').forEach((node, index) => { node.textContent = now[index][0]; });
+    card.querySelectorAll('[data-preview-text]').forEach((node, index) => { node.textContent = now[index][1]; });
+    const works = card.querySelector('[data-memo-works]');
+    if (works) works.hidden = Boolean(sheetWorks(props.handlers.getRouteState(), entries));
+  };
   if (entries.length) {
     const actions = el('div', 'journey-actions');
-    for (const [title, text] of texts) actions.append(button(title, () => copy(text, say)));
+    texts().forEach(([title], index) => { const node = button(title, () => copy(texts()[index][1], say)); node.dataset.copyText = ''; actions.append(node); });
     card.append(actions);
     const preview = remember(el('details', 'route-more'), `texts:${person.id}`);
     preview.append(el('summary', null, 'Посмотреть тексты'));
-    for (const [, text] of texts) preview.append(el('p', 'journey-copy', text));
+    for (const [, text] of texts()) { const node = el('p', 'journey-copy', text); node.dataset.previewText = ''; preview.append(node); }
     card.append(preview);
-    if (!experiences.length) card.append(el('p', 'route-detail', 'В памятке нет раздела «Мои работы»: в «Работах» пока нет записей.'));
+    const works = el('p', 'route-detail', 'Раздела «Мои работы» в тексте нет: в «Работах» пока нет записей.');
+    works.dataset.memoWorks = '';
+    card.append(works);
   }
+  card.append(sheetForm(person, props.handlers, say, refresh));
+  if (entries.length) refresh();
   const edit = remember(el('details', 'journey-edit'), `edit:${person.id}`);
   edit.append(el('summary', null, 'Изменить'), personForm(person, route.goals, sources, save, say),
     button('Удалить', () => save(state => removeRecommender(state, person.id), `${person.name}: запись удалена.`), 'link-button'));
@@ -190,7 +272,7 @@ export function renderRecommenders(props) {
   }
 
   function draw(message = '') {
-    const focused = document.activeElement?.dataset?.rk;
+    const focused = document.activeElement?.dataset?.rk, caret = document.activeElement?.selectionStart;
     panel.replaceChildren();
     const state = handlers.getRouteState(), people = recommendersOf(state).people, weeks = leadWeeksOf(state);
     const head = el('header', 'journey-head');
@@ -238,7 +320,8 @@ export function renderRecommenders(props) {
     const status = el('p', 'route-status', message);
     status.setAttribute('role', 'status');
     panel.append(status);
-    if (focused) panel.querySelector(`[data-rk="${CSS.escape(focused)}"]`)?.focus();
+    const back = focused ? panel.querySelector(`[data-rk="${CSS.escape(focused)}"]`) : null;
+    if (back) { back.focus(); if (typeof caret === 'number' && back.tagName === 'TEXTAREA') back.setSelectionRange(caret, caret); }
   }
   function say(message) { const node = panel.querySelector('.route-status'); if (node) node.textContent = message; }
 

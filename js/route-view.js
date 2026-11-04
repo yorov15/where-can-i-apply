@@ -16,6 +16,7 @@ import { renderSpotlight, forgetSpotlightView, spotlightHash } from './spotlight
 import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine, hasPreparationGoals } from './goal-status.js';
 import { renderPortfolio } from './portfolio-view.js';
 import { renderRecommenders } from './recommenders-view.js';
+import { renderBragSheet, forgetBragSheetView } from './brag-sheet-view.js';
 import { renderApplications } from './application-view.js';
 import { renderInterview, interviewEntry } from './interview-view.js';
 
@@ -423,6 +424,8 @@ export function routeSection(hash) {
 
 export function renderRoute(root, props) {
   const { programs, route, planIds, tracks, status, loading, applyUrl, handlers } = props;
+  if (renderBragSheet(root, props)) return;
+  forgetBragSheetView(root);
   if (renderSpotlight(root, props)) return;
   forgetSpotlightView(root);
   root.textContent = '';
