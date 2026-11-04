@@ -1,11 +1,18 @@
 // Даты и числа так, как их говорит человек. Даты приходят строками
 // YYYY-MM-DD и так и считаются: Date в браузере тянет часовой пояс.
-import { deadlineState } from './deadline.js';
+import { deadlineState, nextIntake } from './deadline.js';
 
 const MONTHS = [
   'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
   'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря',
 ];
+
+const MONTHS_NOMINATIVE = [
+  'январь', 'февраль', 'март', 'апрель', 'май', 'июнь',
+  'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь',
+];
+
+export const formatMonth = ({ year, month }) => `${MONTHS_NOMINATIVE[month - 1]} ${year}`;
 
 export function formatDate(iso) {
   const [y, m, d] = iso.split('-').map(Number);
@@ -58,8 +65,12 @@ export function deadlineLine(deadline, today) {
   const state = deadlineState(deadline, today);
   if (state === 'unknown') return 'Сроки программа не объявила';
   if (state === 'closed') {
-    const again = deadline.recurring === 'annual' ? ', обычно повторяется каждый год' : '';
-    return `Приём закрыт ${formatDate(deadline.closes)}${again}`;
+    // Старая дата сама по себе ничего не говорит: человеку нужен следующий
+    // набор. Он известен только оценкой, и строка так и говорит.
+    const next = nextIntake(deadline, today);
+    return next
+      ? `Приём закрыт. Следующий набор ≈ ${formatMonth(next)} — по прошлому году, сверь на сайте программы`
+      : `Приём закрыт ${formatDate(deadline.closes)}`;
   }
   const tail = deadline.confidence !== 'confirmed' ? ' (ожидаемая дата)' : '';
   if (state === 'upcoming') {

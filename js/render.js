@@ -2,7 +2,7 @@
 // Решения о словах и разделах принимают wording.js, summary.js и
 // card-model.js; здесь их только рисуют.
 import { evaluate } from './verdict.js';
-import { deadlineState } from './lib/deadline.js';
+import { deadlineState, deadlineWindow } from './lib/deadline.js';
 import { summaryLines } from './summary.js';
 import { cardModel, extraFor } from './card-model.js';
 import { bucketOf } from './wording.js';
@@ -274,11 +274,15 @@ export function renderResults(nodes, profile, programs, today, details) {
       const heading = el('h2', 'group-title', `Программы (${programs.length})`);
       heading.dataset.base = 'Программы';
       section.append(heading);
-      for (const program of programs) {
+      const set = [];
+      programs.forEach((program, order) => {
         const row = { program, verdict: evaluate(profile, program, today), deadline: deadlineState(program.deadline, today) };
-        section.append(card(row, today, details, plan, true));
-      }
+        const node = card(row, today, details, plan, true, order);
+        if (isSetAside(plan, program.id)) set.push(node);
+        else section.append(node);
+      });
       resultsNode.append(section);
+      if (set.length) resultsNode.append(setAsideBlock(set));
       refreshFilter(programs);
     }
     for (const chip of document.querySelectorAll('.chip[data-bucket]')) chip.hidden = !['all', 'plan'].includes(chip.dataset.bucket);
@@ -320,16 +324,23 @@ export function renderResults(nodes, profile, programs, today, details) {
       'Сверху — программы из выбранных тобой стран и направлений, в том порядке, в каком ты их поставил.'));
   }
 
+  const set = [];
+  let order = 0;
   for (const group of skipCards ? [] : groupRows(rows)) {
     const section = el('section', `group ${group.status}`);
     const title = el('h2', 'group-title', `${group.title} (${group.rows.length})`);
     title.dataset.base = group.title;
     section.append(title);
     for (const row of (sorted ? orderByPriority(group.rows, priorities) : group.rows)) {
-      section.append(card(row, today, details, plan));
+      const node = card(row, today, details, plan, false, order++);
+      if (isSetAside(plan, row.program.id)) set.push(node);
+      else section.append(node);
     }
-    resultsNode.append(section);
+    const count = section.querySelectorAll('.card').length;
+    title.textContent = `${group.title} (${count})`;
+    if (count) resultsNode.append(section);
   }
+  if (set.length) resultsNode.append(setAsideBlock(set));
   if (!skipCards) refreshFilter(programs);
   return { skippedCards: skipCards };
 }
@@ -417,7 +428,7 @@ export function skeleton(label) {
 
 // Одна строка списка. Подробности — на экране программы (js/program-view.js):
 // список читается как перечень, а не как стена из раскрывающихся блоков.
-function card(row, today, details, plan, guest = false) {
+function card(row, today, details, plan, guest = false, order = 0) {
   const id = row.program.id;
   const model = cardModel(row, extraFor(details, id), today);
   const box = el('article', `card ${guest ? 'catalog-entry' : model.bucket}${model.closed ? ' closed' : ''}`);
@@ -431,6 +442,13 @@ function card(row, today, details, plan, guest = false) {
   box.dataset.bucket = guest ? 'all' : model.bucket;
   box.dataset.duolingo = acceptsDuolingo(row.program) ? '1' : '0';
   box.dataset.feeFree = row.program.feeFree === true ? '1' : '0';
+  // Срок — для фильтра «идёт / скоро» и порядка «сначала ближайший».
+  const term = deadlineWindow(row.program.deadline, today);
+  box.dataset.open = term.open ? '1' : '0';
+  box.dataset.soon = term.soon ? '1' : '0';
+  box.dataset.closes = row.program.deadline?.closes ?? '';
+  box.dataset.closed = model.closed ? '1' : '0';
+  box.dataset.order = String(order);
 
   const { verdict, reason } = splitHeadline(model.headline);
   const href = programHref(id);
@@ -448,8 +466,50 @@ function card(row, today, details, plan, guest = false) {
   const open = el('a', 'card-open', 'Открыть программу →');
   open.href = href;
   actions.append(open, planButton(id, plan));
+  // Цель из «Моего пути» не откладывают: сначала её убирают из пути.
+  if (plan.setAside && !plan.ids.includes(id)) actions.append(setAsideButton(id, plan, model.title));
   box.append(actions);
   return box;
+}
+
+// «Не моё»: программа уходит вниз, в свёрнутый список «Отложено», и
+// возвращается оттуда же. Ничего не удаляется — это только порядок списка.
+const isSetAside = (plan, id) => Boolean(plan.setAside?.includes(id)) && !plan.ids.includes(id);
+
+let setAsideOpen = false;
+
+function setAsideBlock(cards) {
+  const box = el('details', 'agenda-more');
+  box.dataset.role = 'set-aside';
+  box.open = setAsideOpen;
+  box.addEventListener('toggle', () => { setAsideOpen = box.open; });
+  box.append(el('summary', 'agenda-more-head', `Отложено (${cards.length})`));
+  box.append(el('p', 'fineprint', 'Программы, которые ты отметил «Не моё». Их можно вернуть в список.'));
+  for (const node of cards) {
+    node.dataset.setAside = '1';
+    box.append(node);
+  }
+  return box;
+}
+
+function setAsideButton(id, plan, title) {
+  const back = plan.setAside.includes(id);
+  const button = el('button', 'link-button', back ? 'Вернуть в список' : 'Не моё');
+  button.type = 'button';
+  button.setAttribute('aria-label', `${back ? 'Вернуть в список' : 'Не моё, отложить'}: ${title}`);
+  button.addEventListener('click', () => {
+    // Карточка исчезнет с этого места; фокус — на соседнюю, иначе с
+    // клавиатуры человек оказался бы в начале страницы.
+    const here = button.closest('.card');
+    const near = [...here.parentElement.querySelectorAll('.card')].filter((node) => node !== here && !node.hidden);
+    const at = [...here.parentElement.querySelectorAll('.card')].filter((node) => !node.hidden).indexOf(here);
+    const next = near[at] ?? near[at - 1];
+    plan.toggleSetAside(id);
+    const target = next && document.querySelector(`.card[data-id="${CSS.escape(next.dataset.id)}"] .card-title a`);
+    if (target) target.focus();
+    else document.querySelector('[data-role="set-aside"] > summary')?.focus();
+  });
+  return button;
 }
 
 export const programHref = (id) => `#program/${encodeURIComponent(id)}`;

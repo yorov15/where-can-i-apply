@@ -297,7 +297,14 @@
         </div>
       </div>
       <details class="catalog-more">
-        <summary>Страна, тип и условия</summary>
+        <summary>Страна, тип, срок и условия</summary>
+        <label for="catalog-sort">Порядок
+          <select id="catalog-sort"><option value="">Как обычно</option><option value="deadline">Сначала ближайший срок</option></select>
+        </label>
+        <label for="catalog-deadline">Срок подачи
+          <select id="catalog-deadline" aria-describedby="catalog-deadline-note"><option value="">Любой</option><option value="open">Приём идёт сейчас</option><option value="soon">Закрывается за 30 дней</option></select>
+        </label>
+        <p id="catalog-deadline-note" class="fineprint">«Приём идёт» — только где программа назвала и начало, и конец приёма.</p>
         <label for="catalog-kind">Тип программы
           <select id="catalog-kind"><option value="">Все типы</option></select>
         </label>

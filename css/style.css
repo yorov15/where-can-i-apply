@@ -223,6 +223,7 @@ label.row:has(input[type="checkbox"]:checked){background:var(--accent-soft);box-
 .card-reason::first-letter{text-transform:uppercase}
 .card-actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-1) var(--s-4);margin-top:var(--s-2)}
 .card-open{font-weight:700}
+.card-actions .link-button{color:var(--muted)}
 .card-section-title{margin:var(--s-5) 0 .375rem;font-size:.9375rem}
 .card-list{margin:0;padding-left:1.25rem;font-size:.9375rem}
 .card-list li{margin-bottom:.375rem}
@@ -319,13 +320,11 @@ label.row:has(input[type="checkbox"]:checked){background:var(--accent-soft);box-
 .profile-box.wizard .wizard-nav{position:static;margin:0;padding:0;background:none}
 }
 @media (max-width:26.25rem){.button{white-space:normal;text-align:center;line-height:1.25}
-.plan-toggle{margin-left:0}
 label.row{grid-template-columns:1.5rem minmax(0,1fr);row-gap:var(--s-2)}
 label.row input[type="number"]{display:none;grid-column:2;min-height:48px}
 label.row:has(:checked) input[type="number"],label.row input[type="number"]:not(:placeholder-shown){display:block}
 }
-@media (max-width:22.5rem){.brand::before{content:"";width:2rem;height:2rem;background:url("../icons/logo.svg") center / contain no-repeat}
-.topbar nav a{padding:0 var(--s-1)}
+@media (max-width:22.5rem){.topbar nav a{padding:0 var(--s-1)}
 .theme-toggle{gap:.375rem;padding:0 .625rem;font-size:.875rem}
 .agenda-item{column-gap:var(--s-3);padding-inline:var(--s-2)}
 }

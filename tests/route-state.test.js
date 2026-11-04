@@ -126,3 +126,27 @@ test('unavailable storage does not crash load or save', () => {
   assert.deepEqual(loadRouteState(unavailable), empty());
   assert.doesNotThrow(() => saveRouteState(empty(), unavailable));
 });
+
+test('«Не моё»: отложенные программы сохраняются, переживают экспорт/импорт и возвращаются', async () => {
+  const { toggleDismissed } = await import('../js/route-state.js');
+  const base = setGoals(empty(), ['kaist']);
+  assert.equal(Object.hasOwn(base, 'dismissed'), false, 'пустой список не хранится');
+  const one = toggleDismissed(base, 'aalto');
+  const two = toggleDismissed(one, 'ada');
+  assert.deepEqual(two.dismissed, ['aalto', 'ada']);
+  assert.deepEqual(base, setGoals(empty(), ['kaist']), 'исходное состояние не меняется');
+  const store = storage();
+  assert.equal(saveRouteState(two, store), true);
+  assert.deepEqual(loadRouteState(store).dismissed, ['aalto', 'ada']);
+  assert.deepEqual(importState(exportState(two)).dismissed, ['aalto', 'ada']);
+  // Вернуть — убрать из списка; последний возврат убирает и само поле.
+  assert.deepEqual(toggleDismissed(two, 'aalto').dismissed, ['ada']);
+  assert.equal(Object.hasOwn(toggleDismissed(one, 'aalto'), 'dismissed'), false);
+  // Мусор из файла отбрасывается, дубликаты схлопываются.
+  const imported = importState('{"version":2,"goals":[],"done":{},"dismissed":["ada","ada","__proto__","",5,"kaist"]}');
+  assert.deepEqual(imported.dismissed, ['ada', 'kaist']);
+  assert.equal(Object.hasOwn(importState('{"version":2,"goals":[],"done":{},"dismissed":"ada"}'), 'dismissed'), false);
+  assert.deepEqual(toggleDismissed(two, '__proto__'), two);
+  // Очистка прогресса отложенные не трогает.
+  assert.deepEqual(clearProgress(two).dismissed, ['aalto', 'ada']);
+});

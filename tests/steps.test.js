@@ -4,15 +4,15 @@ import { stepView, firstMissing, STEP_REQUIRED } from '../js/steps.js';
 import { profileReady, emptyProfile } from '../js/profile.js';
 
 test('на первом шаге назад нет, дальше есть, «показать» нет', () => {
-  assert.deepEqual(stepView(0, 4), { progressText: 'Шаг 1 из 4', showBack: false, showNext: true, showFinish: false });
+  assert.deepEqual(stepView(0, 4), { progressText: 'Раздел 1 из 4', showBack: false, showNext: true, showFinish: false });
 });
 
 test('на среднем шаге есть и назад, и дальше', () => {
-  assert.deepEqual(stepView(2, 4), { progressText: 'Шаг 3 из 4', showBack: true, showNext: true, showFinish: false });
+  assert.deepEqual(stepView(2, 4), { progressText: 'Раздел 3 из 4', showBack: true, showNext: true, showFinish: false });
 });
 
 test('на последнем шаге вместо «дальше» — «показать»', () => {
-  assert.deepEqual(stepView(3, 4), { progressText: 'Шаг 4 из 4', showBack: true, showNext: false, showFinish: true });
+  assert.deepEqual(stepView(3, 4), { progressText: 'Раздел 4 из 4', showBack: true, showNext: false, showFinish: true });
 });
 
 test('первый шаг просит гражданство, страну и годы школы по порядку', () => {

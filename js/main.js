@@ -9,7 +9,7 @@ import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocum
 import { renderResults } from './render.js';
 import { PLAN_KEY, DONE_KEY, buildEventsIcs } from './plan.js';
 import { scheduleRoute, routeCalendarEvents } from './agenda.js';
-import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask, setGoalStatus } from './route-state.js';
+import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask, setGoalStatus, toggleDismissed } from './route-state.js';
 import { examPlan } from './exam-plan.js';
 import { buildStudyPlan } from './study-plan.js';
 import { prepareCurrentWeek,reviewWeeks,setTaskDay,studyCalendarEvents } from './weekly.js';
@@ -189,6 +189,8 @@ const plan = {
     const adding=!plan.ids.includes(id);
     routeState = setGoals(routeState, plan.ids.includes(id)
       ? plan.ids.filter(goal => goal !== id) : [...plan.ids, id]);
+    // Выбранная цель не может оставаться в «Отложено».
+    if (adding && routeState.goals.includes(id) && routeState.dismissed?.includes(id)) routeState = toggleDismissed(routeState, id);
     persistRoute();
     refresh();
     // План показывает дела и плату за подачу — и то и другое берётся из
@@ -199,6 +201,13 @@ const plan = {
     if(guidedStart&&adding){location.hash='start';window.scrollTo({top:0});}
   },
   get guided(){return guidedStart;},
+  // «Не моё» в каталоге: хранится в том же состоянии и уходит в экспорт маршрута.
+  get setAside(){return routeState.dismissed ?? [];},
+  toggleSetAside(id) {
+    routeState = toggleDismissed(routeState, id);
+    persistRoute();
+    refresh();
+  },
 };
 
 const nodes = {

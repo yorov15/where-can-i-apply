@@ -7,6 +7,7 @@ import { normalizeApplications } from './application.js';
 export const ROUTE_STATE_KEY = 'eligibility-route';
 export const ROUTE_VERSION = 2;
 export const MAX_GOALS = 8;
+export const MAX_DISMISSED = 1000;
 const PLAN_KEY = 'eligibility-plan';
 const DONE_KEY = 'eligibility-plan-done';
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -40,6 +41,10 @@ function normalize(value) {
     if (!next.portfolio) return null;
   }
   next.goals = list(value.goals);
+  // «Не моё» в каталоге. Пустой список не храним: старые файлы и экспорт без
+  // отложенных остаются байт в байт прежними.
+  const dismissed = list(value.dismissed).slice(0, MAX_DISMISSED);
+  if (dismissed.length) next.dismissed = dismissed;
   if ([2, 4, 6, 10].includes(value.hoursPerWeek)) next.hoursPerWeek = value.hoursPerWeek;
   next.done = Object.fromEntries(Object.entries(value.done).filter(([id, date]) => safeKey(id) && (date === null || day(date))));
   next.examDates = Object.fromEntries(Object.entries(object(value.examDates) ? value.examDates : {})
@@ -113,6 +118,17 @@ export function setGoalStatus(state, id, status, today = new Date().toISOString(
     const same = next.statuses[id]?.status === status;
     next.statuses[id] = { status, since: same ? next.statuses[id].since : today };
   }
+  return next;
+}
+
+// Отложить программу («Не моё») или вернуть её в список каталога.
+export function toggleDismissed(state, id) {
+  const next = copy(state);
+  if (!safeKey(id)) return next;
+  const current = next.dismissed ?? [];
+  const dismissed = current.includes(id) ? current.filter(item => item !== id) : [...current, id].slice(-MAX_DISMISSED);
+  if (dismissed.length) next.dismissed = dismissed;
+  else delete next.dismissed;
   return next;
 }
 

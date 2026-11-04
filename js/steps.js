@@ -32,17 +32,18 @@ export function firstMissing(step, values) {
 
 export function stepView(step, total) {
   return {
-    progressText: `Шаг ${step + 1} из ${total}`,
+    progressText: `Раздел ${step + 1} из ${total}`,
     showBack: step > 0,
     showNext: step < total - 1,
     showFinish: step === total - 1,
   };
 }
 
-// Подпись над индикатором: номер шага и его название, чтобы человек видел
-// не только «где он», но и «о чём этот шаг».
-export function progressWithTitle(view, title) {
-  return `${view.progressText} · ${title}`;
+// Подпись над индикатором: номер раздела и что будет дальше. Название
+// текущего раздела крупно стоит строкой ниже (legend), повторять его не нужно.
+export function progressLine(view, nextTitle = '') {
+  const tail = nextTitle ? `Дальше: ${nextTitle}` : view.showFinish ? 'Это последний раздел' : '';
+  return tail ? `${view.progressText}. ${tail}` : view.progressText;
 }
 
 // Мастер включается только пока человек впервые заполняет анкету. Когда он
@@ -62,7 +63,7 @@ export function setupWizard({ box, form, progress, progressLabel, back, next, fi
       segment.classList.toggle('is-done', i < step);
       segment.classList.toggle('is-current', i === step);
     });
-    progressLabel.textContent = progressWithTitle(view, steps[step].querySelector('legend').textContent);
+    progressLabel.textContent = progressLine(view, steps[step + 1]?.querySelector('legend').textContent ?? '');
     back.hidden = !view.showBack;
     next.hidden = !view.showNext;
     finish.hidden = !view.showFinish;

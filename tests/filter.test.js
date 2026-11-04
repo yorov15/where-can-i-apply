@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { norm, countryName, matchesFilter, bucketCounts, acceptsDuolingo, COUNTRY_RU } from '../js/filter.js';
+import { norm, countryName, matchesFilter, bucketCounts, acceptsDuolingo, byDeadline, COUNTRY_RU } from '../js/filter.js';
 import { KINDS, KIND_LABEL, KIND_FILTER } from '../js/lib/kinds.js';
 
 const harvard = { title: 'Гарвардский колледж — помощь по достатку семьи', orig: 'Harvard College — need-based financial aid', country: 'US', bucket: 'yes', kind: 'need-aid' };
@@ -175,4 +175,40 @@ test('render.js не трогает карточки каталога общим
   // сразу после того, как фильтр спрятал их за «Показать ещё».
   const source = readFileSync(new URL('../js/render.js', import.meta.url), 'utf8');
   assert.doesNotMatch(source, /querySelectorAll\('\[data-bucket\]'\)/);
+});
+
+test('фильтр срока: «идёт сейчас» и «закрывается за 30 дней» по признакам карточки', () => {
+  const open = { ...harvard, open: true, soon: false };
+  const soon = { ...turkey, open: false, soon: true };
+  const both = { ...harvard, open: true, soon: true };
+  const plain = { ...turkey, open: false, soon: false };
+  const pick = (deadline) => [open, soon, both, plain].filter((item) => matchesFilter(item, { ...none, deadline }));
+  assert.deepEqual(pick('open'), [open, both]);
+  assert.deepEqual(pick('soon'), [soon, both]);
+  assert.deepEqual(pick(''), [open, soon, both, plain]);
+  assert.deepEqual(pick(undefined), [open, soon, both, plain]);
+  // Вместе с остальными фильтрами.
+  assert.equal(matchesFilter(both, { ...none, deadline: 'soon', country: 'TR' }), false);
+  assert.equal(matchesFilter(both, { ...none, deadline: 'soon', country: 'US' }), true);
+});
+
+test('порядок «сначала ближайший срок»: открытые по дате, затем закрытые, в конце без срока', () => {
+  const items = [
+    { id: 'none-1', closes: '', closed: false },
+    { id: 'closed-late', closes: '2026-10-15', closed: true },
+    { id: 'march', closes: '2027-03-01', closed: false },
+    { id: 'closed-early', closes: '2026-02-06', closed: true },
+    { id: 'none-2', closes: '', closed: false },
+    { id: 'december', closes: '2026-12-01', closed: false },
+  ];
+  assert.deepEqual([...items].sort(byDeadline).map((item) => item.id),
+    ['december', 'march', 'closed-early', 'closed-late', 'none-1', 'none-2']);
+});
+
+test('отложенные («Не моё») не входят в фильтр и счётчики каталога', () => {
+  const source = readFileSync(new URL('../js/filter.js', import.meta.url), 'utf8');
+  assert.match(source, /querySelectorAll\('\.group \.card'\)/);
+  const render = readFileSync(new URL('../js/render.js', import.meta.url), 'utf8');
+  assert.match(render, /setAsideBlock/);
+  assert.doesNotMatch(render, /'group[^']*set-aside/);
 });

@@ -31,8 +31,10 @@ export const norm = (text) => text.normalize('NFD').replace(/\p{M}/gu, '').toLow
 // Только явный список принимаемых экзаменов: упоминание в тексте может быть запретом.
 export const acceptsDuolingo = program => (program.eligibility?.language?.anyOf ?? []).some(option => option.test === 'DUOLINGO');
 
-export function matchesFilter(item, { query, bucket, country, kind, duolingo, noFee }) {
+export function matchesFilter(item, { query, bucket, country, kind, duolingo, noFee, deadline }) {
   if (bucket === 'plan' ? !item.plan : bucket !== 'all' && item.bucket !== bucket) return false;
+  if (deadline === 'open' && !item.open) return false;
+  if (deadline === 'soon' && !item.soon) return false;
   if (country && item.country !== country) return false;
   if (kind && item.kind !== kind) return false;
   if (duolingo && item.duolingo !== true) return false;
@@ -42,6 +44,17 @@ export function matchesFilter(item, { query, bucket, country, kind, duolingo, no
   // Тип показан в карточке словами, поэтому его можно и набрать.
   const haystack = norm(`${item.title} ${item.orig ?? ''} ${countryName(item.country)} ${KIND_LABEL[item.kind] ?? ''}`);
   return words.every((word) => haystack.includes(word));
+}
+
+// Порядок «сначала ближайший срок»: открытые сроки по дате, затем закрытые
+// (по дате закрытия — в том же порядке идёт и оценка следующего набора),
+// в конце программы без срока. Внутри равных — прежний порядок (sort стабилен).
+const deadlineRank = (item) => (!item.closes ? 2 : item.closed ? 1 : 0);
+
+export function byDeadline(a, b) {
+  const rank = deadlineRank(a) - deadlineRank(b);
+  if (rank !== 0) return rank;
+  return a.closes < b.closes ? -1 : a.closes > b.closes ? 1 : 0;
 }
 
 // Сколько карточек группы показывать сразу. Длинный список (94 и 99
@@ -62,9 +75,11 @@ export function bucketCounts(items, filters) {
   return counts;
 }
 
+export const DEADLINE_FILTER = { open: 'Приём идёт сейчас', soon: 'Закрывается за 30 дней' };
+
 // ——— DOM ———
 
-const state = { query: '', bucket: 'all', country: '', kind: '', duolingo: false, noFee: false };
+const state = { query: '', bucket: 'all', country: '', kind: '', duolingo: false, noFee: false, deadline: '', sort: '' };
 let ui = null;
 // Сколько карточек открыто в каждой группе (по классу группы). Хранится вне
 // перерисовки: renderResults пересобирает список на каждое нажатие в анкете.
@@ -79,11 +94,43 @@ const itemOf = (card) => ({
   plan: card.dataset.plan === '1',
   duolingo: card.dataset.duolingo === '1',
   feeFree: card.dataset.feeFree === '1',
+  open: card.dataset.open === '1',
+  soon: card.dataset.soon === '1',
+  closes: card.dataset.closes ?? '',
+  closed: card.dataset.closed === '1',
 });
+
+// Перекладывает карточки группы в нужном порядке. Кнопка «Показать ещё»
+// остаётся последней. Исходный порядок хранится в data-order.
+function reorder(group) {
+  const cards = [...group.querySelectorAll('.card')];
+  const sorted = state.sort === 'deadline'
+    ? [...cards].sort((a, b) => byDeadline(itemOf(a), itemOf(b)) || a.dataset.order - b.dataset.order)
+    : [...cards].sort((a, b) => a.dataset.order - b.dataset.order);
+  if (sorted.every((card, i) => card === cards[i])) return;
+  const more = group.querySelector('.group-more');
+  for (const card of sorted) group.insertBefore(card, more);
+}
+
+// При порядке по сроку перед первой видимой программой без срока стоит
+// строка-пометка: дальше даты нет, торопить нечем.
+function markUndated(group) {
+  group.querySelector('[data-role="undated"]')?.remove();
+  if (state.sort !== 'deadline') return;
+  const first = [...group.querySelectorAll('.card')].find((card) => !card.hidden && !card.dataset.closes);
+  if (!first) return;
+  const note = document.createElement('p');
+  note.className = 'fineprint';
+  note.dataset.role = 'undated';
+  note.textContent = 'Дальше — программы без срока: дату они не назвали.';
+  group.insertBefore(note, first);
+}
 
 function apply() {
   if (!ui) return;
-  const cards = [...ui.resultsNode.querySelectorAll('.card')];
+  for (const group of ui.resultsNode.querySelectorAll('.group')) reorder(group);
+  // Отложенные («Не моё») живут в своём списке внизу и в фильтре не участвуют.
+  const cards = [...ui.resultsNode.querySelectorAll('.group .card')];
   const items = cards.map(itemOf);
 
   // Счётчик у каждой кнопки — сколько станет, если её нажать: с учётом
@@ -104,8 +151,12 @@ function apply() {
   for (const option of ui.kind.options) {
     if (option.value) option.textContent = `${KIND_FILTER[option.value]} (${byKind.filter((item) => item.kind === option.value).length})`;
   }
+  const byWindow = items.filter((item) => matchesFilter(item, { ...state, deadline: '' }));
+  for (const option of ui.deadline.options) {
+    if (option.value) option.textContent = `${DEADLINE_FILTER[option.value]} (${byWindow.filter((item) => item[option.value]).length})`;
+  }
 
-  const searching = state.query.trim() !== '' || state.country !== '' || state.kind !== '' || state.duolingo || state.noFee;
+  const searching = state.query.trim() !== '' || state.country !== '' || state.kind !== '' || state.duolingo || state.noFee || state.deadline !== '';
   const active = searching || state.bucket !== 'all';
 
   let shown = 0;
@@ -142,9 +193,10 @@ function apply() {
     } else if (more) {
       more.remove();
     }
+    markUndated(group);
   }
 
-  ui.reset.hidden = !active;
+  ui.reset.hidden = !active && state.sort === '';
   // Без фильтров строка нужна, пока список обрезан: так видно, сколько всего программ.
   const visible = cards.filter((card) => !card.hidden).length;
   ui.status.textContent = !active
@@ -160,7 +212,11 @@ export function resetFilter() {
   state.kind = '';
   state.duolingo = false;
   state.noFee = false;
+  state.deadline = '';
+  state.sort = '';
   if (ui) {
+    ui.deadline.value = '';
+    ui.sort.value = '';
     ui.search.value = '';
     ui.country.value = '';
     ui.kind.value = '';
@@ -243,6 +299,8 @@ export function setupCatalogFilter({ root, resultsNode }) {
     kind: root.querySelector('#catalog-kind'),
     duolingo: root.querySelector('#catalog-duolingo'),
     noFee: root.querySelector('#catalog-no-fee'),
+    deadline: root.querySelector('#catalog-deadline'),
+    sort: root.querySelector('#catalog-sort'),
     status: root.querySelector('#catalog-status'),
     reset: root.querySelector('#catalog-reset'),
   };
@@ -251,6 +309,8 @@ export function setupCatalogFilter({ root, resultsNode }) {
   ui.kind.addEventListener('change', () => { state.kind = ui.kind.value; apply(); });
   ui.duolingo.addEventListener('change', () => { state.duolingo = ui.duolingo.checked; apply(); });
   ui.noFee.addEventListener('change', () => { state.noFee = ui.noFee.checked; apply(); });
+  ui.deadline.addEventListener('change', () => { state.deadline = ui.deadline.value; apply(); });
+  ui.sort.addEventListener('change', () => { state.sort = ui.sort.value; apply(); });
   for (const chip of ui.chips) chip.addEventListener('click', () => { state.bucket = chip.dataset.bucket; apply(); });
   ui.reset.addEventListener('click', resetFilter);
   return {
