@@ -189,6 +189,7 @@ label.row:has(input[type="checkbox"]:checked){background:var(--accent-soft);box-
 .site-footer nav{display:flex;flex-wrap:wrap;gap:var(--s-1) var(--s-5)}
 .site-footer a{display:inline-flex;align-items:center;min-height:44px}
 .fineprint{color:var(--muted);font-size:.875rem;margin:var(--s-2) 0 0}
+.term{padding:0;font:inherit;color:inherit;background:none;border:0;text-decoration:underline dotted;text-underline-offset:.2em;cursor:pointer}.term[aria-expanded="true"]{color:var(--accent-text)}.term-note{display:block}
 .back{margin:0 0 var(--s-4)}
 .hero .back a{color:var(--on-hero)}
 .hero-page h1{margin:0;font-size:clamp(1.5rem,.5rem + 4vw,2.75rem);overflow-wrap:break-word;hyphens:auto}

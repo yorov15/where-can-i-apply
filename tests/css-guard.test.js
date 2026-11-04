@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (path) => readFileSync(join(root, path), 'utf8');
 const css = read('css/style.css');
-const PAGES = ['index.html', 'faq.html', 'privacy.html', '404.html'];
+const PAGES = ['index.html', 'faq.html', 'glossary.html', 'privacy.html', '404.html'];
 
 // Обёртки, на которые опирается только JS: стиль им не нужен.
 const UNSTYLED = new Set(['explain-answer']);

@@ -21,6 +21,7 @@ import { interviewLive } from './interview-view.js';
 import { EXPLAIN_URL } from './config.js';
 import { renderToday } from './today-view.js';
 import { renderProgram, programRow } from './program-view.js';
+import { annotateTerms } from './glossary-view.js';
 import { saveExperience, removeExperience, saveTaskOutcome, removeTaskOutcome, finishWorkStep, startPortfolioWork, setPortfolioWorkPaused,
   togglePortfolioWorkStep, savePortfolioBrief, savePortfolioReview, updatePortfolioLearning } from './portfolio.js';
 import { clearPortfolioDrafts } from './portfolio-view.js';
@@ -156,6 +157,8 @@ function renderProgramView() {
       onProfile: () => { location.hash = 'profile'; },
     },
   });
+  // Английские термины в условиях и цитатах — с кнопкой-объяснением (js/glossary-view.js).
+  annotateTerms(programBody);
   // Условия едут отдельным файлом: попросили — и после их прихода рисуем
   // заново. Повтора не будет: после ensure условия уже не «ожидаются».
   if (program && details.programs[id] && details.conditions[id] === undefined) {
@@ -680,6 +683,8 @@ function renderRouteView() {
       onStatus: showRouteStatus,
     },
   });
+  // В «Моём пути» — только строки из данных маршрута, не тексты самого ученика.
+  if (todayScreen.hidden) annotateTerms(routeBody, '.route-step, .route-detail, .route-warn');
   if(applicationFocus&&!routeLoading&&!routeScreen.hidden){
     const goal=routeBody.querySelector(`[data-application-goal="${CSS.escape(applicationFocus)}"]`);
     if(goal){goal.open=true;goal.scrollIntoView({block:'start'});goal.querySelector('summary')?.focus();applicationFocus=null;}
