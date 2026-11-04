@@ -9,7 +9,7 @@ import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocum
 import { renderResults } from './render.js';
 import { PLAN_KEY, DONE_KEY, buildEventsIcs } from './plan.js';
 import { scheduleRoute, routeCalendarEvents } from './agenda.js';
-import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask, setGoalStatus, toggleDismissed } from './route-state.js';
+import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask, setGoalStatus, toggleDismissed, hideBalance } from './route-state.js';
 import { examPlan } from './exam-plan.js';
 import { buildStudyPlan } from './study-plan.js';
 import { prepareCurrentWeek,reviewWeeks,setTaskDay,studyCalendarEvents } from './weekly.js';
@@ -430,6 +430,7 @@ function renderRouteView() {
     focusExperience: portfolioFocus,
     todayFocus,
     profileDone: profileReady(readForm(form)),
+    profile: readForm(form),
     study: route ? buildStudyPlan({ steps:hasPreparationGoals(route,routeState)?route.steps:[], tracks:routeTracks, plans, state:routeState, today }) : null,
     routeState, today,
     weekly:weeklySnapshot,
@@ -446,6 +447,11 @@ function renderRouteView() {
     applyUrl: routeState.goals.length === 1 ? details.programs?.[routeState.goals[0]]?.applyUrl ?? null : null,
     handlers: {
       getRouteState: () => routeState,
+      onHideBalance(id) {
+        // Фокус — на следующее «Понятно, скрыть» или на «Выбрать ещё программы».
+        routeState = hideBalance(routeState, id); persistRoute(); renderRouteView();
+        (routeBody.querySelector('[data-balance-hide]') ?? routeBody.querySelector('.route-head > .link-button:last-of-type'))?.focus();
+      },
       onSaveInterview(next,message) {
         if (!next) return {ok:false,message:'Не сохранено: проверь текст. Своих вопросов — до 30.'};
         if (new TextEncoder().encode(exportState(next)).length > 500_000) return {ok:false,message:'Записей слишком много. Удали старые ответы в «Мои ответы».'};
