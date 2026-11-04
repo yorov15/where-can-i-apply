@@ -145,3 +145,31 @@ export function summaryLines(profile, programs, today) {
 
   return lines;
 }
+
+// Предварительное число для анкеты, пока она не дописана: открытые программы,
+// где по уже введённым ответам нет ни одного отказа. Пустое поле правила
+// считают «неизвестно», а не отказом (js/rules.js), поэтому частичный
+// профиль подаётся в evaluate как есть.
+export function previewCount(profile, programs, today) {
+  return programs.filter(
+    (program) => deadlineState(program.deadline, today) !== 'closed' && evaluate(profile, program, today).status !== 'no',
+  ).length;
+}
+
+// Есть ли в анкете хоть один ответ, от которого зависит проверка. Пустой
+// анкете число не показываем: оно равно всему каталогу и ничего не говорит.
+export function hasAnswers(profile) {
+  return Boolean(
+    profile.citizenship || profile.schoolCountry || profile.schoolYears != null
+      || profile.graduationYear != null || profile.birthDate || profile.gpa?.value != null
+      || profile.languageTests?.length || profile.exams?.length,
+  );
+}
+
+// Строка в липкой панели над кнопками мастера: одна короткая фраза, чтобы
+// на телефоне панель не росла. «Подходишь» здесь не говорим: проверено
+// только то, что уже введено, — это и значит «пока».
+export function previewLine(count) {
+  if (!count) return 'По этим ответам открытых программ нет. Проверь ответы.';
+  return `Пока ничего не мешает: ${count} ${plural(count, 'программа', 'программы', 'программ')}.`;
+}
