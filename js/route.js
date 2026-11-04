@@ -7,7 +7,7 @@
 // Если данных нет, шаг не появляется, а не заполняется догадкой.
 import { evaluate } from './verdict.js';
 import { testName } from './wording.js';
-import { formatDate, daysBetween } from './lib/format.js';
+import { formatDate, daysBetween, nextIntakeLine } from './lib/format.js';
 import { deadlineState } from './lib/deadline.js';
 
 export { ROUTE_STATE_KEY, ROUTE_VERSION, loadRouteState, saveRouteState, setGoal, setGoals,
@@ -315,6 +315,7 @@ function applyStep({ program, today }) {
       phase: 'apply',
       kind: 'apply',
       title: `Приём закрыт ${formatDate(deadline.closes)}`,
+      detail: nextIntakeLine(deadline, today) ?? '',
     });
   }
   return makeStep(program, {
@@ -345,7 +346,10 @@ function deadlineOf(program, today) {
   const daysLeft = closes && today && state !== 'closed'
     ? daysBetween(today, closes)
     : null;
-  return { closes, confidence: deadline?.confidence ?? null, state, daysLeft };
+  // Оценка следующего набора — готовой строкой, чтобы «Мой путь» и текст
+  // для родителя говорили её теми же словами, что и каталог.
+  const next = state === 'closed' && today ? nextIntakeLine(deadline, today) : null;
+  return { closes, confidence: deadline?.confidence ?? null, state, daysLeft, next };
 }
 
 // Неделя — не второй маршрут, а его первые пять дел. Подача сама по себе
@@ -441,7 +445,10 @@ const clip = (text, max) => {
 
 function deadlineText(deadline) {
   if (!deadline?.closes) return 'не объявлен';
-  if (deadline.state === 'closed') return `приём закрыт ${formatDate(deadline.closes)}`;
+  if (deadline.state === 'closed') {
+    const closed = `приём закрыт ${formatDate(deadline.closes)}`;
+    return deadline.next ? `${closed}. ${deadline.next}` : closed;
+  }
   const tail = deadline.confidence === 'confirmed' ? '' : ' (ожидаемая дата)';
   return `до ${formatDate(deadline.closes)}${tail}`;
 }

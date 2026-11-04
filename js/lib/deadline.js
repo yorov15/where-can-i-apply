@@ -30,12 +30,23 @@ export function deadlineWindow(deadline, today) {
 }
 
 // Следующий набор у прошедшего срока: тот же месяц через год. Это оценка по
-// прошлому году, и подписывать её надо именно так. Без даты срока или без
-// пометки «каждый год» оценки нет. Если и через год месяц уже прошёл,
-// данные устарели — тоже не угадываем.
+// прошлому году, и подписывать её надо именно так. Если программа называла
+// начало приёма, оценка — по нему: человеку важно, когда подача откроется.
+// Без даты срока или без пометки «каждый год» оценки нет. Месяц, который и
+// через год уже прошёл, не показываем: по открытию — берём срок, по сроку —
+// данные устарели, не угадываем.
+const plusYear = (iso) => {
+  const [y, m] = iso.split('-').map(Number);
+  return { year: y + 1, month: m };
+};
+const monthKey = ({ year, month }) => `${year}-${String(month).padStart(2, '0')}`;
+
 export function nextIntake(deadline, today) {
   if (deadlineState(deadline, today) !== 'closed' || deadline.recurring !== 'annual') return null;
-  const [y, m] = deadline.closes.split('-').map(Number);
-  const next = { year: y + 1, month: m };
-  return `${next.year}-${String(m).padStart(2, '0')}` < today.slice(0, 7) ? null : next;
+  for (const iso of [deadline.opens, deadline.closes]) {
+    if (!iso) continue;
+    const next = plusYear(iso);
+    if (monthKey(next) >= today.slice(0, 7)) return next;
+  }
+  return null;
 }

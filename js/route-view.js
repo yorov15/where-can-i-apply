@@ -65,7 +65,9 @@ function coverageLine(coverage) {
 function deadlineLine(goal) {
   const deadline = goal.deadline ?? {};
   if (!deadline.closes) return 'Срок подачи не объявлен — следи за страницей приёма.';
-  if (deadline.state === 'closed') return `Приём закрыт ${formatDate(deadline.closes)}.`;
+  if (deadline.state === 'closed') {
+    return deadline.next ? `Приём закрыт. ${deadline.next}.` : `Приём закрыт ${formatDate(deadline.closes)}.`;
+  }
   const expected = deadline.confidence === 'confirmed' ? '' : ' (дата ожидаемая)';
   const soon = deadline.state === 'upcoming' ? 'Приём ещё не открыт. ' : '';
   const left = typeof deadline.daysLeft === 'number' && deadline.daysLeft >= 0

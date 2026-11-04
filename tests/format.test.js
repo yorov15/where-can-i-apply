@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { formatDate, plural, timeLeft, joinAnd, deadlineLine, coverageLine } from '../js/lib/format.js';
+import { formatDate, plural, timeLeft, joinAnd, deadlineLine, nextIntakeLine, coverageLine } from '../js/lib/format.js';
 
 test('дата словами, месяц в родительном падеже', () => {
   assert.equal(formatDate('2027-01-01'), '1 января 2027');
@@ -69,6 +69,22 @@ test('закрытый приём: оценка следующего набор�
     deadlineLine({ closes: '2025-03-15', recurring: 'annual', confidence: 'expected' }, t),
     'Приём закрыт 15 марта 2025',
   );
+  // Есть начало приёма — оценка по нему: когда подача откроется.
+  assert.equal(
+    deadlineLine({ opens: '2025-11-12', closes: '2026-02-06', recurring: 'annual', confidence: 'confirmed' }, t),
+    'Приём закрыт. Следующий набор ≈ ноябрь 2026 — по прошлому году, сверь на сайте программы',
+  );
+});
+
+test('строка оценки: знак ≈ и «по прошлому году», иначе пусто', () => {
+  const t = '2026-11-04';
+  assert.equal(
+    nextIntakeLine({ opens: '2026-04-24', closes: '2026-06-26', recurring: 'annual' }, t),
+    'Следующий набор ≈ апрель 2027 — по прошлому году, сверь на сайте программы',
+  );
+  assert.equal(nextIntakeLine({ opens: '2026-10-01', closes: '2026-12-15', recurring: 'annual' }, t), null);
+  assert.equal(nextIntakeLine({ closes: null, recurring: 'annual' }, t), null);
+  assert.equal(nextIntakeLine(null, t), null);
 });
 
 test('строка покрытия', () => {

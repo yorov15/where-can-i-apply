@@ -61,3 +61,23 @@ test('следующий набор: тот же месяц через год, �
   assert.equal(nextIntake({ closes: '2026-06-30', recurring: null }, TODAY), null);
   assert.equal(nextIntake(d(null, null), TODAY), null);
 });
+
+test('следующий набор: при известном начале приёма оценка — по месяцу открытия', () => {
+  // ITU: приём шёл 24.04–26.06.2026 → откроется ≈ в апреле 2027.
+  assert.deepEqual(nextIntake(d('2026-04-24', '2026-06-26'), TODAY), { year: 2027, month: 4 });
+  // Начало в прошлом календарном году: СПбГУ 12.11.2025–06.02.2026 → ноябрь 2026, текущий месяц ещё считается.
+  assert.deepEqual(nextIntake(d('2025-11-12', '2026-02-06'), TODAY), { year: 2026, month: 11 });
+  // Месяц открытия через год уже прошёл, а срок ещё впереди — оценка по сроку.
+  assert.deepEqual(nextIntake(d('2025-10-01', '2026-01-15'), TODAY), { year: 2027, month: 1 });
+  // Прошли оба месяца — данные устарели, не угадываем.
+  assert.equal(nextIntake(d('2025-03-01', '2025-05-01'), TODAY), null);
+});
+
+test('следующий набор: срок не прошёл или даты нет — оценки нет', () => {
+  assert.equal(nextIntake(d('2026-10-01', '2026-12-15'), TODAY), null);
+  assert.equal(nextIntake(d('2026-12-01', '2027-02-01'), TODAY), null);
+  assert.equal(nextIntake(d(null, TODAY), TODAY), null);
+  assert.equal(nextIntake(d('2026-01-01', null), TODAY), null);
+  assert.equal(nextIntake(null, TODAY), null);
+  assert.equal(nextIntake({ opens: '2026-01-01', closes: '2026-03-01', recurring: null }, TODAY), null);
+});

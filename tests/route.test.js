@@ -159,6 +159,7 @@ test('срок объявлен — шаг подачи с датой, дедл�
     confidence: 'confirmed',
     state: 'upcoming',
     daysLeft: 79,
+    next: null,
   });
 });
 
@@ -175,6 +176,23 @@ test('срок закрыт — шаг говорит о закрытии, де�
   assert.equal(apply.due, null);
   assert.equal(route.goal.deadline.state, 'closed');
   assert.equal(route.goal.deadline.daysLeft, null);
+  // Без пометки «каждый год» оценки следующего набора нет.
+  assert.equal(apply.detail, '');
+  assert.equal(route.goal.deadline.next, null);
+});
+
+test('срок закрыт, набор ежегодный — шаг и цель называют оценку следующего набора', () => {
+  const route = build({ program: programOf({ deadline: {
+    opens: '2026-04-24', closes: '2026-06-26', recurring: 'annual', confidence: 'confirmed',
+  } }) });
+  const apply = stepOf(route, 'apply');
+  const line = 'Следующий набор ≈ апрель 2027 — по прошлому году, сверь на сайте программы';
+  // Заголовок прежний — от него зависит id шага и сохранённые галочки.
+  assert.equal(apply.title, 'Приём закрыт 26 июня 2026');
+  assert.equal(apply.detail, line);
+  assert.equal(apply.due, null);
+  assert.equal(route.goal.deadline.next, line);
+  assert.match(routeText(route), /Срок: приём закрыт 26 июня 2026\. Следующий набор ≈ апрель 2027 — по прошлому году/);
 });
 
 test('срока нет — шаг отправляет следить за страницей приёма', () => {
@@ -182,7 +200,7 @@ test('срока нет — шаг отправляет следить за ст
   const apply = stepOf(route, 'apply');
   assert.equal(apply.title, 'Срок подачи не объявлен — следи за страницей приёма');
   assert.equal(apply.due, null);
-  assert.deepEqual(route.goal.deadline, { closes: null, confidence: null, state: 'unknown', daysLeft: null });
+  assert.deepEqual(route.goal.deadline, { closes: null, confidence: null, state: 'unknown', daysLeft: null, next: null });
 });
 
 // ——— правила 2: экзамены ———
@@ -516,7 +534,7 @@ test('цель и разрыв берутся из программы и evaluat
     name: 'KAIST — приём иностранцев на бакалавриат',
     country: 'KR',
     kind: 'university',
-    deadline: { closes: '2027-01-14', confidence: 'confirmed', state: 'upcoming', daysLeft: 79 },
+    deadline: { closes: '2027-01-14', confidence: 'confirmed', state: 'upcoming', daysLeft: 79, next: null },
     coverage: { tuition: true, living: true, travel: null },
   });
   assert.deepEqual(route.gaps, evaluate(ME, KAIST, TODAY).reasons);

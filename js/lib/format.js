@@ -61,16 +61,21 @@ export function joinAnd(words) {
   return `${words.slice(0, -1).join(', ')} и ${words.at(-1)}`;
 }
 
+// Одна формулировка оценки на все экраны: знак ≈ и «по прошлому году»
+// обязательны — это догадка интерфейса, а не дата из источника.
+export function nextIntakeLine(deadline, today) {
+  const next = nextIntake(deadline, today);
+  return next ? `Следующий набор ≈ ${formatMonth(next)} — по прошлому году, сверь на сайте программы` : null;
+}
+
 export function deadlineLine(deadline, today) {
   const state = deadlineState(deadline, today);
   if (state === 'unknown') return 'Сроки программа не объявила';
   if (state === 'closed') {
     // Старая дата сама по себе ничего не говорит: человеку нужен следующий
     // набор. Он известен только оценкой, и строка так и говорит.
-    const next = nextIntake(deadline, today);
-    return next
-      ? `Приём закрыт. Следующий набор ≈ ${formatMonth(next)} — по прошлому году, сверь на сайте программы`
-      : `Приём закрыт ${formatDate(deadline.closes)}`;
+    const next = nextIntakeLine(deadline, today);
+    return next ? `Приём закрыт. ${next}` : `Приём закрыт ${formatDate(deadline.closes)}`;
   }
   const tail = deadline.confidence !== 'confirmed' ? ' (ожидаемая дата)' : '';
   if (state === 'upcoming') {
