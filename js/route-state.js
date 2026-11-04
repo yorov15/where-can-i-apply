@@ -4,6 +4,7 @@ import { SCORE_LIMITS } from './lib/limits.js';
 import { isGoalStatus } from './goal-status.js';
 import { normalizePortfolio } from './portfolio.js';
 import { normalizeApplications } from './application.js';
+import { normalizeSpotlight } from './spotlight.js';
 export const ROUTE_STATE_KEY = 'eligibility-route';
 export const ROUTE_VERSION = 2;
 export const MAX_GOALS = 8;
@@ -39,6 +40,12 @@ function normalize(value) {
   if (Object.hasOwn(value, 'portfolio')) {
     next.portfolio = normalizePortfolio(value.portfolio);
     if (!next.portfolio) return null;
+  }
+  // Подборка под цель. Пустую не храним: старые файлы остаются прежними.
+  if (Object.hasOwn(value, 'spotlight')) {
+    const spotlight = normalizeSpotlight(value.spotlight, next.portfolio ?? { experiences: [] });
+    if (!spotlight) return null;
+    if (Object.keys(spotlight.goals).length || spotlight.name) next.spotlight = spotlight;
   }
   next.goals = list(value.goals);
   // «Не моё» в каталоге. Пустой список не храним: старые файлы и экспорт без

@@ -26,6 +26,7 @@ import { clearPortfolioDrafts } from './portfolio-view.js';
 import { forgetLearningDrafts } from './portfolio-learning-view.js';
 import { saveMaterialVersion,markMaterialSubmitted,removeMaterialVersion,removeMaterial,saveDecision,toggleOfferCondition,removeDecision,applicationsOf } from './application.js';
 import { clearApplicationDrafts } from './application-view.js';
+import { saveSpotlight } from './spotlight.js';
 import { hasPreparationGoals } from './goal-status.js';
 import { renderStart, renderStartGuide, startWork } from './start-view.js';
 import { previewCount, previewLine, hasAnswers } from './summary.js';
@@ -431,6 +432,7 @@ function renderRouteView() {
     weekly:weeklySnapshot,
     essays:routeEssays,
     programs,
+    details,
     goal: routeState.goals[0] ?? null,
     route,
     prepared: routeData?.prepared ?? [],
@@ -459,6 +461,7 @@ function renderRouteView() {
         renderRouteView();const program=routeBody.querySelector(`[data-essay-program="${CSS.escape(goalId)}"]`),field=program?.querySelector(`[data-essay-field="${CSS.escape(fieldId)}"]`);
         if(program)program.open=true;if(field){field.open=true;field.querySelector('textarea')?.focus();}
       },
+      onSaveSpotlight(goalId, input) { return persistPortfolio(saveSpotlight(routeState, goalId, input, today), 'Подборка сохранена.'); },
       onSaveExperience(input) { return persistPortfolio(saveExperience(routeState,input,today),'Опыт сохранён.'); },
       onRemoveExperience(id) { const entry=routeState.portfolio?.experiences.find(item=>item.id===id),response=persistPortfolio(removeExperience(routeState,id),'Опыт удалён. Результаты заданий сохранены.');if(response.ok&&entry)forgetLearningDrafts(entry);return response; },
       onSaveTaskOutcome(input) { return persistPortfolio(saveTaskOutcome(routeState,input,today),'Результат сохранён в «Моём пути».'); },
