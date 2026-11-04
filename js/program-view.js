@@ -11,6 +11,7 @@ import { safeHttpUrl } from './lib/url.js';
 import { EXPLAIN_URL } from './config.js';
 import { formatDate } from './lib/format.js';
 import { statusOf, goalProgress, progressLine } from './goal-status.js';
+import { interviewEntry } from './interview-view.js';
 import {
   splitHeadline, kindLine, explainBlock, skeleton, reasonItem, planButton, bulletList, makeNode as el,
 } from './render.js';
@@ -210,6 +211,7 @@ export function renderProgram(root, props) {
   }
   if (EXPLAIN_URL && !props.guest) root.append(explainBlock(model));
 
+  root.append(interviewEntry(id));
   root.append(exactBlock(view, model));
 
   const next = el('section', 'program-plan');

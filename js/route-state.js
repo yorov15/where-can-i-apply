@@ -4,6 +4,7 @@ import { SCORE_LIMITS } from './lib/limits.js';
 import { isGoalStatus } from './goal-status.js';
 import { normalizePortfolio } from './portfolio.js';
 import { normalizeApplications } from './application.js';
+import { normalizeInterview } from './interview.js';
 export const ROUTE_STATE_KEY = 'eligibility-route';
 export const ROUTE_VERSION = 2;
 export const MAX_GOALS = 8;
@@ -41,6 +42,10 @@ function normalize(value) {
     if (!next.portfolio) return null;
   }
   next.goals = list(value.goals);
+  // Репетиция собеседования. Битые ответы отбрасываются по одному, а не
+  // роняют весь маршрут; пустую запись не храним.
+  const interview = normalizeInterview(value.interview);
+  if (interview) next.interview = interview;
   // «Не моё» в каталоге. Пустой список не храним: старые файлы и экспорт без
   // отложенных остаются байт в байт прежними.
   const dismissed = list(value.dismissed).slice(0, MAX_DISMISSED);

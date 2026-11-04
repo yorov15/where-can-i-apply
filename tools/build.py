@@ -392,6 +392,10 @@ def main() -> int:
     # цитата в условии: человек пойдёт по ней к дедлайну.
     if write_route(root, programs, date.today().isoformat()):
         return 1
+    # Собеседование: у каких программ оно есть и какой цитатой подтверждено.
+    from tools.interview import write_interview
+    if write_interview(root, publishable(programs)):
+        return 1
 
     (root / "data" / "index.json").write_text(text, encoding="utf-8")
     (root / "data" / "details.json").write_text(extra, encoding="utf-8")

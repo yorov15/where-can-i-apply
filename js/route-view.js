@@ -15,6 +15,7 @@ import { renderEssays } from './essay-view.js';
 import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine, hasPreparationGoals } from './goal-status.js';
 import { renderPortfolio } from './portfolio-view.js';
 import { renderApplications } from './application-view.js';
+import { renderInterview, interviewEntry } from './interview-view.js';
 
 const PHASES = [
   ['tests', 'Экзамены'],
@@ -415,7 +416,7 @@ function emptyNotice({ prepared, failed, onRetry }) {
 const openedGoals = new Set();
 export function routeSection(hash) {
   const section = hash.split('/')[1];
-  return ['preparation', 'applications', 'files'].includes(section) ? section : 'works';
+  return ['preparation', 'applications', 'interview', 'files'].includes(section) ? section : 'works';
 }
 
 export function renderRoute(root, props) {
@@ -425,7 +426,7 @@ export function renderRoute(root, props) {
   root.dataset.layer = section;
   const navigation = el('nav', 'path-nav');
   navigation.setAttribute('aria-label', 'Разделы моего пути');
-  for (const [id, title] of [['works', 'Работы'], ['preparation', 'Подготовка'], ['applications', 'Заявки'], ['files', 'Файл и данные']]) {
+  for (const [id, title] of [['works', 'Работы'], ['preparation', 'Подготовка'], ['applications', 'Заявки'], ['interview', 'Собеседование'], ['files', 'Файл и данные']]) {
     const link = el('a', null, title);
     link.href = id === 'works' ? '#route' : `#route/${id}`;
     if (id === section) link.setAttribute('aria-current', 'page');
@@ -434,6 +435,18 @@ export function renderRoute(root, props) {
   root.append(navigation);
   if (section === 'works') {
     root.append(renderPortfolio(props));
+    return;
+  }
+  if (section === 'interview') {
+    let programId = '';
+    try { programId = decodeURIComponent(location.hash.split('/')[2] ?? ''); } catch { /* битая ссылка — репетиция без программы */ }
+    const goals = (props.routeState?.goals ?? []).map(id => programs.find(item => item.id === id)).filter(Boolean)
+      .map(item => ({ id: item.id, name: item.name?.ru ?? item.id }));
+    const program = programs.find(item => item.id === programId);
+    const box = el('div');
+    root.append(box);
+    renderInterview(box, { programId: program ? programId : null, programName: program?.name?.ru ?? '', goals, today: props.today,
+      getRouteState: handlers.getRouteState, onSave: handlers.onSaveInterview });
     return;
   }
   if (section === 'files') {
@@ -490,6 +503,7 @@ export function renderRoute(root, props) {
     if (!sent) item.append(el('p', 'route-goal-meta', deadlineLine(goal)));
     item.append(statusRow(goal, route, props.routeState, handlers));
     const application=el('button','button button-small button-quiet','Материалы и ответ');application.type='button';application.addEventListener('click',()=>handlers.onOpenApplication(goal.id));item.append(application);
+    item.append(interviewEntry(goal.id, { compact: true }));
     const more = el('details', 'route-more');
     more.append(el('summary', null, 'Что покрывает и что учесть'));
     more.append(el('p', 'route-goal-meta', coverageLine(goal.coverage)));

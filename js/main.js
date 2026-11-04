@@ -17,6 +17,7 @@ import { parentReport,printParentReport } from './parent-report.js';
 import { planCost } from './cost.js';
 import { buildCombinedRoute } from './route-combined.js';
 import { renderRoute } from './route-view.js';
+import { interviewLive } from './interview-view.js';
 import { EXPLAIN_URL } from './config.js';
 import { renderToday } from './today-view.js';
 import { renderProgram, programRow } from './program-view.js';
@@ -417,6 +418,8 @@ function renderRouteView() {
   if (!routeScreen.hidden && location.hash==='#route/new' && !portfolioFocus
     && routeBody.dataset.editorGuide===String(guidedStart)
     && routeBody.querySelector('[data-work-picker][open] form')) return;
+  // Идёт репетиция собеседования: фоновая перерисовка сбила бы фокус в поле ответа.
+  if (!routeScreen.hidden && location.hash.startsWith('#route/interview') && interviewLive()) return;
   if (!routeScreen.hidden) routeBody.dataset.editorGuide=String(guidedStart);
   let todayFocus=null;
   if(location.hash.startsWith('#today/work/')){try{todayFocus=decodeURIComponent(location.hash.slice('#today/work/'.length))||null;}catch{ /* повреждённая ссылка возвращает общий план */ }}
@@ -441,6 +444,13 @@ function renderRouteView() {
     applyUrl: routeState.goals.length === 1 ? details.programs?.[routeState.goals[0]]?.applyUrl ?? null : null,
     handlers: {
       getRouteState: () => routeState,
+      onSaveInterview(next,message) {
+        if (!next) return {ok:false,message:'Не сохранено: проверь текст. Своих вопросов — до 30.'};
+        if (new TextEncoder().encode(exportState(next)).length > 500_000) return {ok:false,message:'Записей слишком много. Удали старые ответы в «Мои ответы».'};
+        if (!saveRouteState(next, localStorage)) return {ok:false,message:'Браузер не сохранил ответ. Освободи место или разреши локальное хранение.'};
+        routeState = next;
+        return {ok:true,message};
+      },
       onSaveMaterialVersion(input) { return {...persistApplication(saveMaterialVersion(routeState,input,today),'Новая версия сохранена. Прежние версии остались.'),id:input.id}; },
       onMarkMaterialSubmitted(id,versionId) { return persistApplication(markMaterialSubmitted(routeState,id,versionId,today),versionId?'Отправленная версия отмечена.':'Отметка отправки снята.'); },
       onRemoveMaterialVersion(id,versionId) { return persistApplication(removeMaterialVersion(routeState,id,versionId),'Версия удалена.'); },
