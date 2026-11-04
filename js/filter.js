@@ -55,7 +55,8 @@ export function bucketCounts(items, filters) {
   if (filters) items = items.filter(item => matchesFilter(item, { ...filters, bucket: 'all' }));
   const counts = { all: items.length, plan: 0, yes: 0, likely: 0, check: 0, no: 0 };
   for (const item of items) {
-    counts[item.bucket] += 1;
+    // У гостевой карточки вердикта нет, её корзина — «all»: в «Все» она уже посчитана.
+    if (item.bucket !== 'all') counts[item.bucket] += 1;
     if (item.plan) counts.plan += 1;
   }
   return counts;
@@ -144,8 +145,10 @@ function apply() {
   }
 
   ui.reset.hidden = !active;
+  // Без фильтров строка нужна, пока список обрезан: так видно, сколько всего программ.
+  const visible = cards.filter((card) => !card.hidden).length;
   ui.status.textContent = !active
-    ? ''
+    ? (visible < cards.length ? `Показано ${visible} из ${cards.length}` : '')
     : shown === 0 ? 'Ничего не нашлось. Попробуй убрать фильтр.' : `Показано ${shown} из ${cards.length}`;
   ui.status.dataset.empty = String(active && shown === 0);
 }

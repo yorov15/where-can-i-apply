@@ -1,3 +1,5 @@
+import { plural } from './lib/format.js';
+
 // Первый проход использует настоящие цели и работы, отдельного учебного профиля нет.
 export function startWork(state) {
   return state?.portfolio?.experiences?.find(entry => entry.workPlan
@@ -11,32 +13,41 @@ export function startStage(state) {
 const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!=null)node.textContent=text;return node;};
 function button(text,run,primary=false){const node=el('button',primary?'button':'button button-quiet',text);node.type='button';node.addEventListener('click',run);return node;}
 
+// Суть сайта одной фразой. Число берём из данных: каталог растёт, а цифра в тексте не должна устаревать.
+export function valueTitle(count) {
+  const n = Number(count);
+  if (!Number.isInteger(n) || n <= 0) return 'Проверь, в какие программы ты можешь подать документы';
+  return `Проверь, в какие из ${n} ${plural(n, 'программы', 'программ', 'программ')} ты можешь подать документы`;
+}
+export const VALUE_LEAD = 'Ответь на вопросы о школе и экзаменах. Покажем, куда можно подать и что сделать до дедлайна.';
+
+const link = (text, run) => { const node = button(text, run); node.className = 'link-button'; return node; };
+
+// Один главный шаг на экран; остальное — тихие ссылки одной строкой.
 export function renderStart(root,{state,programs,hasTask,handlers}) {
-  const stage=startStage(state),number={goal:0,work:1,task:2}[stage];
+  const stage=startStage(state),number={goal:1,work:2,task:3}[stage];
   root.replaceChildren();root.dataset.stage=stage;
-  const progress=el('ol','start-progress');progress.setAttribute('aria-label','Первые шаги');
-  for(const [index,title] of ['Выбрать цель','Добавить работу','Начать первый шаг'].entries()){
-    const item=el('li',null,title);if(index===number)item.setAttribute('aria-current','step');progress.append(item);
-  }
-  root.append(progress);
   const box=el('section','start-question');
+  box.append(el('p','route-detail',`Шаг ${number} из 3`));
+  const more=el('div','start-more');
   if(stage==='goal'){
-    box.append(el('h2',null,'Ты уже знаешь, куда хочешь поступать?'),
-      el('p',null,'Сначала выберем программу. Затем добавим твой опыт и перейдём к первому делу. Цель можно будет поменять.'));
-    box.append(button('Да — найти мою программу',handlers.onCatalog,true),button('Пока нет — подобрать по анкете',handlers.onProfile));
-    const portfolio=button('Хочу начать с портфолио без программы',handlers.onWork);portfolio.className='link-button';box.append(portfolio);
+    box.append(el('h2',null,valueTitle(programs?.length)),el('p',null,VALUE_LEAD),
+      button('Ответить на вопросы',handlers.onProfile,true));
+    more.append(link('Я уже знаю программу',handlers.onCatalog),link('Начать с портфолио',handlers.onWork));
   }else if(stage==='work'){
     const names=state.goals.map(id=>{const name=programs.find(item=>item.id===id)?.name;return name?.ru??(typeof name==='string'?name:id);});
     box.append(el('h2',null,'Цель выбрана. Теперь — твой опыт.'),el('p',null,`В твоём плане: ${names.join('; ')}.`),
-      el('p',null,'Начни небольшую работу по интересной тебе теме. Nerio разобьёт её на шаги; результаты будут сохраняться в портфолио.'));
-    box.append(button('Добавить первую работу',handlers.onWork,true),button('Сначала перейти к делам поступления',handlers.onFinish));
+      el('p',null,'Начни небольшую работу по интересной тебе теме. Nerio разобьёт её на шаги; результаты будут сохраняться в портфолио.'),
+      button('Добавить первую работу',handlers.onWork,true));
+    more.append(link('Сначала перейти к делам поступления',handlers.onFinish));
   }else{
     box.append(el('h2',null,'Работа сохранена. Можно начинать.'),
-      el('p',null,hasTask?'На «Сегодня» уже есть шаг твоей работы: что сделать и какой результат записать.':'В твоей работе уже есть шаги и ожидаемый результат. Открой её, чтобы начать.'));
-    box.append(button(hasTask?'Открыть мой первый шаг':'Открыть мою работу',handlers.onFinish,true));
+      el('p',null,hasTask?'На «Сегодня» уже есть шаг твоей работы: что сделать и какой результат записать.':'В твоей работе уже есть шаги и ожидаемый результат. Открой её, чтобы начать.'),
+      button(hasTask?'Открыть мой первый шаг':'Открыть мою работу',handlers.onFinish,true));
   }
+  more.append(link('Без подсказок',handlers.onSkip));
+  box.append(more);
   root.append(box);
-  const skip=button('Разобраться самостоятельно',handlers.onSkip);skip.className='link-button';root.append(skip);
 }
 
 export function renderStartGuide(root,{active,screen,workPath,onExit}){

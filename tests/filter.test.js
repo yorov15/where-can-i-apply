@@ -164,3 +164,15 @@ test('длинные группы режутся страницами, а пои
   assert.equal(pageLimit(PAGE, false), PAGE);
   assert.equal(pageLimit(PAGE, true), Infinity);
 });
+
+test('гостевые карточки (корзина «all») не удваивают счётчик «Все»', () => {
+  const guest = Array.from({ length: 5 }, () => ({ title: 'x', bucket: 'all', plan: false }));
+  assert.deepEqual(bucketCounts(guest), { all: 5, plan: 0, yes: 0, likely: 0, check: 0, no: 0 });
+});
+
+test('render.js не трогает карточки каталога общим селектором [data-bucket]', () => {
+  // У карточки тоже есть data-bucket; общий селектор раскрывал все 323 карточки гостя
+  // сразу после того, как фильтр спрятал их за «Показать ещё».
+  const source = readFileSync(new URL('../js/render.js', import.meta.url), 'utf8');
+  assert.doesNotMatch(source, /querySelectorAll\('\[data-bucket\]'\)/);
+});

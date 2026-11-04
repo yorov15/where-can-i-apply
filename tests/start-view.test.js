@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { startStage } from '../js/start-view.js';
+import { startStage, valueTitle } from '../js/start-view.js';
 import { todayModel } from '../js/today-view.js';
 
 test('первый вход предлагает выбрать цель; обычный опыт не подменяет учебную работу',()=>{
@@ -26,4 +26,11 @@ test('переход из работы открывает её реальное 
   assert.equal(todayModel({...props,todayFocus:'own-work'}).next.taskId,'work');
   assert.equal(todayModel({...props,todayFocus:'not-in-week'}).next,null);
   assert.deepEqual(tasks.map(task=>task.taskId),['apply','work']);
+});
+
+test('заголовок входа называет суть сайта и берёт число программ из данных',()=>{
+  assert.equal(valueTitle(323),'Проверь, в какие из 323 программ ты можешь подать документы');
+  assert.equal(valueTitle(21),'Проверь, в какие из 21 программы ты можешь подать документы');
+  assert.equal(valueTitle(0),'Проверь, в какие программы ты можешь подать документы');
+  assert.equal(valueTitle(undefined),'Проверь, в какие программы ты можешь подать документы');
 });

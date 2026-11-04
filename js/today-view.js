@@ -10,6 +10,7 @@ import { renderTaskOutcome } from './portfolio-view.js';
 import { applicationActions } from './application.js';
 import { renderOfferActions } from './application-view.js';
 import { pendingPractice } from './portfolio-learning.js';
+import { valueTitle, VALUE_LEAD } from './start-view.js';
 
 const DAYS = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 const shift = (day, n) => new Date(Date.parse(`${day}T00:00:00Z`) + n * 86400000).toISOString().slice(0, 10);
@@ -256,26 +257,22 @@ export function renderToday(root, props) {
   const model = todayModel(props);
   if (!route && !props.weekly?.week.tasks.length && !model.offerActions.length) {
     const hasWorks = Boolean(props.routeState?.portfolio?.experiences.length);
+    const done = Boolean(props.profileDone);
+    const quiet = (text, run) => { const node = el('button', 'link-button', text); node.type = 'button'; node.addEventListener('click', run); return node; };
     const box = el('div', 'start-space');
     const statement = el('div', 'start-statement');
-    statement.append(el('h2', null, 'Подготовься\nк поступлению.'), el('p', null, 'Выбери цель, развивай портфолио и подготовь заявку. Здесь будет видно, что делать дальше.'));
+    statement.append(el('h2', null, valueTitle(props.programs?.length)),
+      el('p', null, done ? 'Анкета заполнена. Открой результаты: по каждой программе видно, что можно подавать и чего не хватает.' : VALUE_LEAD));
     const entry = el('section', 'start-entry');
-    entry.append(el('h3', null, hasWorks?'Продолжим подготовку?':'Начнём с первого шага'), el('p', null, 'Ответь, есть ли у тебя программа поступления. Затем мы перейдём к твоему опыту и первому делу.'));
-    const path=el('button','button',hasWorks?'Продолжить подготовку':'Начать подготовку');path.type='button';path.addEventListener('click',handlers.onBeginPreparation);entry.append(path);
-    const choose = el('button', 'link-button', 'Посмотреть каталог самостоятельно');
-    choose.type = 'button';
-    choose.addEventListener('click', handlers.onExploreCatalog);
-    entry.append(choose, el('p', 'start-note', 'Бесплатно, без регистрации. Записи остаются на этом устройстве.'));
+    const path = el('button', 'button', done ? 'Открыть результаты' : 'Узнать, куда можно подать');
+    path.type = 'button';
+    path.addEventListener('click', done ? handlers.onOpenResults : handlers.onStartProfile);
+    entry.append(path,
+      quiet(done ? 'Смотреть весь каталог' : 'Смотреть каталог без анкеты', handlers.onExploreCatalog),
+      hasWorks ? quiet('Продолжить подготовку', handlers.onBeginPreparation) : quiet('Начать с портфолио', handlers.onStartWork),
+      el('p', 'start-note', 'Бесплатно, без регистрации. Анкета остаётся на этом устройстве.'));
     box.append(statement, entry);
     root.append(box);
-    const map = el('section', 'path-explainer');
-    map.setAttribute('aria-label', 'Как устроен Nerio');
-    for (const [title, description] of [
-      ['Выбери цель', 'Найдём программу и посмотрим её условия.'],
-      ['Добавь свой опыт', 'Начни небольшую работу по интересной тебе теме.'],
-      ['Сделай первый шаг', 'Получишь конкретное дело и сохранишь результат.'],
-    ]) { const item = el('div', null);item.append(el('h3', null, title), el('p', null, description));map.append(item); }
-    root.append(map);
     return;
   }
   const head = el('header', 'today-head');

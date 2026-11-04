@@ -281,10 +281,10 @@ export function renderResults(nodes, profile, programs, today, details) {
       resultsNode.append(section);
       refreshFilter(programs);
     }
-    for (const chip of document.querySelectorAll('[data-bucket]')) chip.hidden = !['all', 'plan'].includes(chip.dataset.bucket);
+    for (const chip of document.querySelectorAll('.chip[data-bucket]')) chip.hidden = !['all', 'plan'].includes(chip.dataset.bucket);
     return { skippedCards: skipCards };
   }
-  for (const chip of document.querySelectorAll('[data-bucket]')) chip.hidden = false;
+  for (const chip of document.querySelectorAll('.chip[data-bucket]')) chip.hidden = false;
 
   const rows = programs.map((program) => ({
     program,

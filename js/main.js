@@ -415,6 +415,7 @@ function renderRouteView() {
     guidedStart,
     focusExperience: portfolioFocus,
     todayFocus,
+    profileDone: profileReady(readForm(form)),
     study: route ? buildStudyPlan({ steps:hasPreparationGoals(route,routeState)?route.steps:[], tracks:routeTracks, plans, state:routeState, today }) : null,
     routeState, today,
     weekly:weeklySnapshot,
@@ -626,6 +627,8 @@ function renderRouteView() {
       },
       onStartWork() { location.hash = 'route/new'; },
       onBeginPreparation(){location.hash='start';},
+      onStartProfile(){setGuidedStart(true);location.hash='profile';},
+      onOpenResults(){setGuidedStart(true);openAnswer();},
       onExploreCatalog(){setGuidedStart(false);openAnswer();},
       onOpenToday() {
         location.hash = 'today';
