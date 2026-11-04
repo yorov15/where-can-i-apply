@@ -174,7 +174,9 @@ export function renderPortfolio(props) {
   draw();return box;
 }
 
-export function renderTaskOutcome(week,task,props,onSaved=null) {
+// finish — текущий шаг работы: одна кнопка сохраняет результат и закрывает шаг,
+// как в самой работе (onFinishPortfolioWorkStep пишет в ту же неделю и то же дело).
+export function renderTaskOutcome(week,task,props,onSaved=null,finish=false) {
   const draftKey=JSON.stringify(['outcome',week,task.taskId]);
   const portfolio=portfolioOf(props.handlers.getRouteState());
   const practice=pendingPractice(portfolio.experiences.find(item=>item.id===task.experienceId)?.workPlan);
@@ -184,7 +186,7 @@ export function renderTaskOutcome(week,task,props,onSaved=null) {
   const box=el('details','journey-edit');box.dataset.taskOutcome=task.taskId;
   rememberOpen(box,draftKey,drafts.has(draftKey));
   const summary=el('summary',null,saved?'Результат сохранён · изменить':'Записать результат');box.append(summary);
-  box.append(el('p','route-detail','Запиши, что сделал и что понял. Галочка задания меняется отдельно.'));
+  box.append(el('p','route-detail',finish?'Запиши, что сделал и что понял. Нажми, когда сам считаешь шаг законченным.':'Запиши, что сделал и что понял. Галочка задания меняется отдельно.'));
   const form=el('form','journey-form');
   field(form,'Что получилось?','text',value.text,{required:true});
   const optional=el('details','journey-edit');optional.append(el('summary',null,'Ссылка и вывод · необязательно'));
@@ -194,12 +196,13 @@ export function renderTaskOutcome(week,task,props,onSaved=null) {
     form.append(el('p','route-detail',`Связанная работа: ${portfolio.experiences.find(item=>item.id===task.experienceId)?.title??'запись не найдена'}`));
     const binding=el('input');binding.type='hidden';binding.name='experienceId';binding.value=task.experienceId;form.append(binding);
   }else selectField(form,'Связать с моим опытом · необязательно','experienceId',[['','Без связи'],...portfolio.experiences.map(item=>[item.id,item.title])],value.experienceId);
-  const say=status(),save=el('button',task.kind==='portfolio'?'button':'button button-quiet','Сохранить результат');save.type='submit';form.append(save,say);
+  const say=status(),save=el('button',task.kind==='portfolio'?'button':'button button-quiet',finish?'Сохранить результат и закончить шаг':'Сохранить результат');save.type='submit';form.append(save,say);
   form.addEventListener('input',()=>drafts.set(draftKey,readFields(form)));
   form.addEventListener('change',()=>drafts.set(draftKey,readFields(form)));
   form.addEventListener('submit',event=>{
     event.preventDefault();const data=readFields(form);
-    const response=props.handlers.onSaveTaskOutcome({...data,experienceId:data.experienceId||null,week,taskId:task.taskId});
+    const response=finish?props.handlers.onFinishPortfolioWorkStep(task.experienceId,task.workStepId,data)
+      :props.handlers.onSaveTaskOutcome({...data,experienceId:data.experienceId||null,week,taskId:task.taskId});
     say.textContent=response.message;
     if(response.ok){drafts.delete(draftKey);summary.textContent='Результат сохранён · изменить';onSaved?.();}
   });box.append(form);return box;

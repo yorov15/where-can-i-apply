@@ -146,17 +146,20 @@ function nowCard(model, props) {
   const needsResult=next.kind==='portfolio'&&!routeState.portfolio?.outcomes.some(item=>item.week===week.key&&item.taskId===next.taskId);
   const prerequisite=el('p','route-detail',practice?'Сначала закончи или отложи учебную пробу.': 'Сначала сохрани результат, затем заверши шаг.');
   prerequisite.hidden=!practice&&!needsResult;
+  // Шаг работы закрывается одной кнопкой в форме результата, как в самой работе.
+  const finish=next.kind==='portfolio'&&Boolean(next.workStepId&&next.experienceId);
   const done = el('button', 'button button-quiet', 'Готово');
   done.disabled=practice||needsResult;
-  const outcome=renderTaskOutcome(week.key,next,props,()=>{done.disabled=false;prerequisite.hidden=true;});
-  if(needsResult&&!practice)outcome.open=true;
+  const outcome=renderTaskOutcome(week.key,next,props,finish?()=>handlers.onRedraw?.():()=>{done.disabled=false;prerequisite.hidden=true;},finish);
+  if(!practice&&(needsResult||finish))outcome.open=true;
   card.append(outcome);
   const row = el('div', 'today-actions');
   const open = openLink(next.url, 'Открыть материал');
   if (open) row.append(open);
   done.type = 'button';
   done.addEventListener('click', () => handlers.onWeeklyToggle(week.key, next.taskId));
-  row.append(done);
+  if(!finish)row.append(done);
+  if(finish)prerequisite.hidden=!practice;
   card.append(row,prerequisite);
   return card;
 }

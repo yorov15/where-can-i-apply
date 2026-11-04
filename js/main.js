@@ -486,6 +486,8 @@ function renderRouteView() {
         return persistWork(next,'Учебная запись сохранена.');
       },
       onOpenPortfolio(id) { portfolioFocus=id;if(location.hash==='#route')renderRouteView();else location.hash='route'; },
+      // «Сегодня» после закрытия шага работы: показать следующее дело.
+      onRedraw() { renderRouteView(); },
       getExamPlan: examForStep,
       onStudyToggle(week, taskId) {
         routeState=toggleStudyTask(routeState,week,taskId,today);persistRoute();rebuildRoute();renderRouteView();
