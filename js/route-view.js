@@ -14,6 +14,7 @@ import { renderStudyPlan } from './study-view.js';
 import { renderEssays } from './essay-view.js';
 import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine, hasPreparationGoals } from './goal-status.js';
 import { renderPortfolio } from './portfolio-view.js';
+import { renderRecommenders } from './recommenders-view.js';
 import { renderApplications } from './application-view.js';
 
 const PHASES = [
@@ -560,6 +561,7 @@ export function renderRoute(root, props) {
   if (applyNotes) side.append(applyNotes);
   const essays=renderEssays(route.goals,props.essays??{},handlers.onRetry,handlers.onSaveEssayVersion,handlers.onEssayVersionSaved,handlers);
   if(essays)side.append(essays);
+  const recommenders=renderRecommenders(props);if(recommenders)side.append(recommenders);
   root.append(side);
 
 }

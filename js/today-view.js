@@ -11,6 +11,7 @@ import { applicationActions } from './application.js';
 import { renderOfferActions } from './application-view.js';
 import { pendingPractice } from './portfolio-learning.js';
 import { valueTitle, VALUE_LEAD } from './start-view.js';
+import { renderRecommenderToday } from './recommenders-view.js';
 
 const DAYS = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 const shift = (day, n) => new Date(Date.parse(`${day}T00:00:00Z`) + n * 86400000).toISOString().slice(0, 10);
@@ -286,6 +287,7 @@ export function renderToday(root, props) {
   head.append(el('h2', 'today-title', 'Что сделать сегодня'));
   root.append(head);
   const offers=renderOfferActions(model.offerActions,props);if(offers)root.append(offers);
+  const letters=renderRecommenderToday(props);if(letters)root.append(letters);
   const review = props.weekly ? renderWeekReview(props.weekly.review, handlers) : null;
   if (review) root.append(review);
   if (model.week?.tasks.length) root.append(nowCard(model, props));

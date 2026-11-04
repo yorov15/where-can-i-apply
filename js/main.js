@@ -448,6 +448,7 @@ function renderRouteView() {
       onSaveDecision(input) { const response=persistApplication(saveDecision(routeState,input,today),'Ответ и условия сохранены.');if(response.ok)rebuildRoute();return response; },
       onDecisionSaved(goalId,message) { routeStatus=message;applicationFocus=goalId;renderRouteView(); },
       onOfferCondition(goalId,id) { return persistApplication(toggleOfferCondition(routeState,goalId,id,today),'Отметка условия обновлена.'); },
+      onSaveRecommenders(next,message) { return persistPortfolio(next,message); },
       onRemoveDecision(goalId) { return persistApplication(removeDecision(routeState,goalId),'Запись об ответе удалена.'); },
       onOpenApplication(goalId) { applicationFocus=goalId;if(location.hash==='#route/applications')renderRouteView();else location.hash='route/applications'; },
       onSaveEssayVersion(goalId,item,text) {
