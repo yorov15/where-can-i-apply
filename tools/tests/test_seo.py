@@ -47,7 +47,7 @@ class SeoTest(unittest.TestCase):
             folder=root/'programs'
             self.assertTrue((folder/'primer.html').exists());self.assertFalse((folder/'draft.html').exists())
             urls=[n.text for n in ET.parse(root/'sitemap.xml').getroot().findall('{*}url/{*}loc')]
-            self.assertIn(ORIGIN+'/programs/primer.html',urls);self.assertEqual(len(urls),5)
+            self.assertIn(ORIGIN+'/programs/primer.html',urls);self.assertEqual(len(urls),6)
             self.assertNotIn('#',''.join(urls))
             (folder/'personal.html').write_text('not generated',encoding='utf-8')
             write_public_pages(root,[])

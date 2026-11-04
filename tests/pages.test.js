@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 
-const PAGES = ['index.html', 'faq.html', 'privacy.html', '404.html'];
+const PAGES = ['index.html', 'faq.html', 'glossary.html', 'privacy.html', '404.html'];
 const read = (name) => readFileSync(new URL(`../${name}`, import.meta.url), 'utf8');
 
 test('на каждой странице есть манифест, и CSP его пускает', () => {
