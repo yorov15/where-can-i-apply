@@ -69,9 +69,9 @@ def page(title, description, path, body, crumbs):
 <link rel="stylesheet" href="../css/catalog.css">{schema}
 </head><body>{MARKER}
 <a class="skip" href="#main">К содержимому</a>
-<header><a class="brand" href="../index.html"><img src="../icons/logo.svg" width="25" height="30" alt="">Nerio</a><nav aria-label="Разделы"><a href="index.html">Все программы</a><a href="../faq.html">Вопросы и ответы</a></nav></header>
+<header><a class="brand" href="../"><img src="../icons/logo.svg" width="25" height="30" alt="">Nerio</a><nav aria-label="Разделы"><a href="./">Все программы</a><a href="../faq.html">Вопросы и ответы</a></nav></header>
 <main id="main">{body}</main>
-<footer><span>Nerio (Нерио) — бесплатный инструмент для поступления за границу</span><a href="../privacy.html">Конфиденциальность</a><a href="../index.html">Проверить по своей анкете</a></footer>
+<footer><span>Nerio (Нерио) — бесплатный инструмент для поступления за границу</span><a href="../privacy.html">Конфиденциальность</a><a href="../#profile">Проверить по своей анкете</a></footer>
 </body></html>
 '''
 
@@ -83,7 +83,7 @@ def program_html(program, countries):
     description = f"{name}. Условия, документы и финансирование по официальным источникам. Бесплатная проверка по анкете в Nerio."
     description = description[:157].rsplit(" ", 1)[0] + "…" if len(description) > 160 else description
     source = program.get("source") or {}
-    body = '<nav class="breadcrumbs" aria-label="Путь"><a href="../index.html">Nerio</a><span>/</span><a href="index.html">Программы</a></nav>'
+    body = '<nav class="breadcrumbs" aria-label="Путь"><a href="../">Nerio</a><span>/</span><a href="./">Программы</a></nav>'
     body += f'<h1>{esc(name)}</h1>'
     if original and original != name:
         body += f'<p class="original">{esc(original)}</p>'
@@ -92,7 +92,7 @@ def program_html(program, countries):
     if checked:
         body += f' · Данные проверены <time datetime="{esc(checked)}">{esc(checked)}</time>'
     body += '</p><p class="notice">Условия могли измениться. Проверь официальный источник перед подачей. Эта страница не определяет, подходишь ли ты программе.</p>'
-    body += '<p><a class="primary" href="../index.html">Проверить по моей анкете</a></p>'
+    body += '<p><a class="primary" href="../#profile">Проверить по моей анкете</a></p>'
     coverage = (program.get("coverage") or {}).get("note") or {}
     if coverage.get("ru"):
         body += f'<section><h2>Финансирование и расходы</h2><p>{esc(coverage["ru"])}</p></section>'
@@ -113,7 +113,7 @@ def program_html(program, countries):
     apply = safe_url(program.get("applyUrl"))
     if apply:
         body += f'<p><a href="{esc(apply)}" target="_blank" rel="noopener">Официальная страница подачи</a></p>'
-    body += '<section class="next"><h2>Что проверить дальше</h2><p>Гражданство, страну и годы школы, возраст, оценки и экзамены. Заполни анкету: Nerio покажет, какие условия подходят, а что нужно уточнить.</p><a class="primary" href="../index.html">Открыть анкету Nerio</a><p><a href="index.html">Посмотреть другие университеты и стипендии</a></p></section>'
+    body += '<section class="next"><h2>Что проверить дальше</h2><p>Гражданство, страну и годы школы, возраст, оценки и экзамены. Заполни анкету: Nerio покажет, какие условия подходят, а что нужно уточнить.</p><a class="primary" href="../#profile">Открыть анкету Nerio</a><p><a href="./">Посмотреть другие университеты и стипендии</a></p></section>'
     return page(name + " — Nerio", description, program_path(program), body, [("Nerio", ORIGIN + "/"), ("Программы", ORIGIN + "/programs/"), (name, ORIGIN + "/" + program_path(program))])
 
 
@@ -123,7 +123,7 @@ def catalog_html(programs, countries):
         groups[program.get("hostCountry") or "other"].append(program)
     ordered = sorted(groups, key=lambda code: countries.get(code, code))
     body = '<h1>Университеты и стипендии за рубежом</h1><p class="intro">Программы для поступления после школы: условия, документы, финансирование и официальные источники. Каталог открыт без анкеты и регистрации.</p>'
-    body += f'<p class="meta">Программ в каталоге: {len(programs)}. Соответствие требованиям зависит от твоей анкеты.</p><p><a class="primary" href="../index.html">Проверить, куда могу подать</a></p>'
+    body += f'<p class="meta">Программ в каталоге: {len(programs)}. Соответствие требованиям зависит от твоей анкеты.</p><p><a class="primary" href="../#profile">Проверить, куда могу подать</a></p>'
     body += '<nav class="countries" aria-label="Страны">' + ''.join(f'<a href="#country-{esc(code)}">{esc(countries.get(code, code))}</a>' for code in ordered) + '</nav>'
     for code in ordered:
         body += f'<section id="country-{esc(code)}"><h2>{esc(countries.get(code, code))}</h2><ul class="program-list">'

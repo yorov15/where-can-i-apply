@@ -289,7 +289,7 @@
     </form>
   </details>
 
-  <section id="answer" aria-label="Куда можно">
+  <section id="answer" aria-label="Куда можно" hidden>
     <header class="page-heading"><h2>Найди свою программу</h2><p>Выбери страну, изучи условия и сохрани интересное в свой путь.</p><a class="button button-quiet" href="#profile">Проверить по моей анкете</a></header>
     <div id="summary" class="summary" aria-live="polite" aria-atomic="true"></div>
 
@@ -337,8 +337,21 @@
     <div id="program-body"></div>
   </section>
 
-  <section id="today" aria-label="Сегодня" hidden>
-    <div id="today-body"></div>
+  <section id="today" aria-label="Сегодня">
+    <div id="today-body">
+      <div class="start-space" data-initial-home>
+        <div class="start-statement">
+          <h2>Проверь, в какие программы ты можешь подать документы</h2>
+          <p>Ответь на вопросы о школе и экзаменах. Сверим известные условия и подскажем, что уточнить и сделать до срока.</p>
+        </div>
+        <section class="start-entry">
+          <a class="button" href="#profile">Узнать, куда можно подать</a>
+          <a class="link-button" href="programs/">Смотреть каталог без анкеты</a>
+          <a class="link-button" href="#route/new">Начать с портфолио</a>
+          <p class="start-note">Бесплатно, без регистрации. Анкета остаётся на этом устройстве.</p>
+        </section>
+      </div>
+    </div>
   </section>
 
   <section id="route" aria-label="Мой путь" hidden>

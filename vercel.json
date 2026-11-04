@@ -3,6 +3,50 @@
   "installCommand": "",
   "buildCommand": "",
   "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "(?:kuda-podat|where-can-i-apply)\\.vercel\\.app" }],
+      "destination": "https://nerio-app.vercel.app/",
+      "permanent": true
+    },
+    {
+      "source": "/programs/:path*",
+      "has": [{ "type": "host", "value": "(?:kuda-podat|where-can-i-apply)\\.vercel\\.app" }],
+      "destination": "https://nerio-app.vercel.app/programs/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:page(faq|privacy).html",
+      "has": [{ "type": "host", "value": "(?:kuda-podat|where-can-i-apply)\\.vercel\\.app" }],
+      "destination": "https://nerio-app.vercel.app/:page.html",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap.xml",
+      "has": [{ "type": "host", "value": "(?:kuda-podat|where-can-i-apply)\\.vercel\\.app" }],
+      "destination": "https://nerio-app.vercel.app/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "has": [{ "type": "host", "value": "nerio-app.vercel.app" }],
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/programs/index.html",
+      "destination": "/programs/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/index.html",
+      "has": [{ "type": "host", "value": "(?:kuda-podat|where-can-i-apply)\\.vercel\\.app" }],
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+    }
+  ],
   "functions": {
     "api/explain.js": {
       "maxDuration": 50

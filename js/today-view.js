@@ -253,6 +253,8 @@ function applicationsBlock(model) {
 
 export function renderToday(root, props) {
   const { handlers, loading, route } = props;
+  // Первый экран уже есть в HTML: не заменяем его ожиданием загрузки данных.
+  if (loading && root.querySelector('[data-initial-home]')) return;
   root.textContent = '';
   if (loading) {
     root.append(el('p', 'route-detail', 'Собираю план…'));
