@@ -1,0 +1,1149 @@
+{
+  "checkedOn": "2026-11-05",
+  "expiredCount": 35,
+  "extra": [
+    "csc-china"
+  ],
+  "workflowRun": "https://github.com/yorov15/where-can-i-apply/actions/runs/41981191507",
+  "robotIssue": "https://github.com/yorov15/where-can-i-apply/issues/1",
+  "records": [
+    {
+      "id": "beihang",
+      "country": "CN",
+      "deadline": {
+        "opens": "2025-11-01",
+        "closes": "2026-06-30",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://is.buaa.edu.cn/en/lxsq/Undergraduate.htm",
+      "status": "update",
+      "note": "Набор сентябрь 2027. Общий срок и сроки стипендий различаются.",
+      "sources": [
+        {
+          "url": "https://is.buaa.edu.cn/en/lxsq/Undergraduate.htm",
+          "quote": "Application Opening Date: November 1, 2026",
+          "freshFetch": true,
+          "responseHash": "sha256:60b0313700a17c9d2d1a318e3169051441911c93fb7b6d3a832786f11102bdc3",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://is.buaa.edu.cn/en/lxsq/Undergraduate.htm",
+          "quote": "Deadline for Online Application and Materials Submission: May 30, 2027",
+          "freshFetch": true,
+          "responseHash": "sha256:60b0313700a17c9d2d1a318e3169051441911c93fb7b6d3a832786f11102bdc3",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://is.buaa.edu.cn/en/lxsq/Undergraduate.htm",
+          "quote": "Application deadline: April 30, 2027",
+          "freshFetch": true,
+          "responseHash": "sha256:60b0313700a17c9d2d1a318e3169051441911c93fb7b6d3a832786f11102bdc3",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [
+        {
+          "track": "general",
+          "opens": "2026-11-01",
+          "closes": "2027-05-30",
+          "zone": null
+        },
+        {
+          "track": "university/Beijing scholarships",
+          "opens": null,
+          "closes": "2027-04-30",
+          "zone": null
+        }
+      ],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "bit",
+      "country": "CN",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-06-01",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://isc.bit.edu.cn/aboutbit/faq/70fe36ccf5f64defb9ecda409efd2b71.htm",
+      "status": "no_new_announcement",
+      "note": "DegreeFAQ всё ещё 2026; баннер 2027 относится только к preparatory/language, не бакалавриату.",
+      "sources": [
+        {
+          "url": "https://isc.bit.edu.cn/aboutbit/faq/70fe36ccf5f64defb9ecda409efd2b71.htm",
+          "quote": "Application Deadline: June 1, 2026",
+          "freshFetch": true,
+          "responseHash": "sha256:fadac703b81b966176e19af5633aca5df61e6cb0c311a67e1719226fc1313647",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "bnu",
+      "country": "CN",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-03-15",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://admission-is.bnu.edu.cn/english/international/bnuscholarships/studentscholarship1/index.html",
+      "status": "no_new_announcement",
+      "note": "Последний degreeguide 2026:15.11.2025–15.03.2026. Spring 2027 non-degree не заменяет bachelor.",
+      "sources": [
+        {
+          "url": "https://admission-is.bnu.edu.cn/english/admissionprogram/bachelordegreeprogram/admissionbrochure/index.html",
+          "quote": "November 15, 2025 - March 15, 2026",
+          "freshFetch": true,
+          "responseHash": "sha256:ac577f79869863eddb3fec145b7a5e59c542386bea1f61a2ca50906ee78c14e3",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "cambridge",
+      "country": "GB",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-10-15",
+        "recurring": "annual",
+        "confidence": "confirmed"
+      },
+      "source": "https://www.undergraduate.study.cam.ac.uk/international-students",
+      "status": "closed_correctly",
+      "note": "Это уже 2027 entry: UCAS до 15.10.2026 18:00 UK; My Cambridge Application до 22.10.2026. Следующий цикл не объявлен.",
+      "sources": [
+        {
+          "url": "https://www.undergraduate.study.cam.ac.uk/apply/application-dates-deadlines",
+          "quote": "15 October 2026 Deadline to submit your UCAS application (6pm UK time).",
+          "freshFetch": true,
+          "responseHash": "sha256:944aa19ceac9304ffcdc3aaa36ac4322b2076cca19632b416717cab1c933455f",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "ecnu",
+      "country": "CN",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-06-01",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "http://lxs.ecnu.edu.cn/en/admission/list.htm",
+      "status": "update",
+      "note": "Сентябрь 2027. Не переносить прежнюю Excellent Freshmen Scholarship: её нет в актуальной таблице.",
+      "sources": [
+        {
+          "url": "https://lxs.ecnu.edu.cn/en_admission_degree_programs_undergraduate_program/list.htm",
+          "quote": "Semester of Entry: Early September 2027",
+          "freshFetch": true,
+          "responseHash": "sha256:d5acc49ab415a116207d49059771721c59ea3b3481f24a5fa38a8dcbedac694b",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://lxs.ecnu.edu.cn/en_admission_degree_programs_undergraduate_program/list.htm",
+          "quote": "April 30th, 2027",
+          "freshFetch": true,
+          "responseHash": "sha256:d5acc49ab415a116207d49059771721c59ea3b3481f24a5fa38a8dcbedac694b",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://lxs.ecnu.edu.cn/en_admission_degree_programs_undergraduate_program/list.htm",
+          "quote": "June 1st, 2027",
+          "freshFetch": true,
+          "responseHash": "sha256:d5acc49ab415a116207d49059771721c59ea3b3481f24a5fa38a8dcbedac694b",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [
+        {
+          "track": "self-funded",
+          "opens": null,
+          "closes": "2027-06-01",
+          "zone": null
+        },
+        {
+          "track": "Shanghai scholarship",
+          "opens": null,
+          "closes": "2027-04-30",
+          "zone": null
+        },
+        {
+          "track": "language teachers scholarship; final CLEC rules pending",
+          "opens": null,
+          "closes": "2027-05-15",
+          "zone": null
+        }
+      ],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "fu-berlin",
+      "country": "DE",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-07-15",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://www.fu-berlin.de/en/studium/bewerbung/bachelor/ausl-hzb/index.html",
+      "status": "no_new_announcement",
+      "note": "Зима 2026/27 закрыта; Summer 2027 сообщает Further Information will follow. Ограниченные:01.06–15.07.2026, unrestricted до 01.09.2026. Отдельно проверить новый порядок VPD→FU portal вместо прежней подачи через uni-assist.",
+      "sources": [
+        {
+          "url": "https://www.fu-berlin.de/en/studium/beratung/kalender/2026wise/index.html",
+          "quote": "01.06.2026 – 15.07.2026",
+          "freshFetch": false,
+          "error": "curl 28",
+          "exactQuoteMatched": false
+        },
+        {
+          "url": "https://www.fu-berlin.de/en/studium/beratung/kalender/2027sose/index.html",
+          "quote": "Further Information will follow.",
+          "freshFetch": false,
+          "error": "curl 28",
+          "exactQuoteMatched": false
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "harbin-institute-of-technology",
+      "country": "CN",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-07-15",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://studyathit.hit.edu.cn/18337/list.htm",
+      "status": "conflicting_scholarship_sources",
+      "note": "Общий September 2026 закрыт 15.07.2026. Bachelorpage даёт стипендию до 15.07, отдельная scholarship page до 31.05; новый 2027 не доказан.",
+      "sources": [
+        {
+          "url": "https://studyathit.hit.edu.cn/18337/list.htm",
+          "quote": "September 2026 intake is July 15th, 2026",
+          "freshFetch": true,
+          "responseHash": "sha256:232625d834cdc3fda0b605fa4f0f2d599390b2be0714cfcc6b250f13581b339a",
+          "exactQuoteMatched": false
+        },
+        {
+          "url": "https://studyathit.hit.edu.cn/18367/list.htm",
+          "quote": "May 31st, 20 26",
+          "freshFetch": true,
+          "responseHash": "sha256:f5eda65e19d4eb9de4c74da19ea38f018a972590e53ca79c5061742e004dcec1",
+          "exactQuoteMatched": false
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "hokkaido-mjsp",
+      "country": "JP",
+      "deadline": {
+        "opens": "2026-10-27",
+        "closes": "2026-11-04",
+        "recurring": "annual",
+        "confidence": "confirmed"
+      },
+      "source": "https://www.oia.hokudai.ac.jp/mjsp/application/",
+      "status": "next_round",
+      "note": "Тот же опубликованный набор: японский курс октябрь 2027, бакалавриат апрель 2028. Сохранить информацию о рекомендации до 24.02.2027 17:00 JST.",
+      "sources": [
+        {
+          "url": "https://www.oia.hokudai.ac.jp/mjsp/application/",
+          "quote": "10:00 am, Feb. 2 – 5:00 pm, Feb. 9, 2027",
+          "freshFetch": true,
+          "responseHash": "sha256:1e09b8ef53fdcc02675c4591ff93e046c7cc04d32d0baada829888c4a7b002cb",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [
+        {
+          "track": "second round",
+          "opens": "2027-02-02",
+          "closes": "2027-02-09",
+          "zone": "JST: opens10:00, closes17:00"
+        }
+      ],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "ibn-haldun",
+      "country": "TR",
+      "deadline": {
+        "opens": "2026-04-08",
+        "closes": "2026-08-31",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://international.ihu.edu.tr/en",
+      "status": "closed_correctly",
+      "note": "2026/27:08.04–31.08.2026; до 04.09 регистрируются уже зачисленные, не новые кандидаты. Следующее окно не найдено.",
+      "sources": [
+        {
+          "url": "https://oidb.ihu.edu.tr/en/2026-2027-academic-calendar",
+          "quote": "April 8 - August 31, 2026",
+          "freshFetch": true,
+          "responseHash": "sha256:9aeaf29e470821b1192c6ee7315aaa8b0dbc18352090990faeffa4c31ab8fb12",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "islamic-university-madinah",
+      "country": "SA",
+      "deadline": {
+        "opens": "2026-04-19",
+        "closes": "2026-05-21",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://iu.edu.sa/en-us",
+      "status": "closed_correctly",
+      "note": "Последний 1448 AH:19.04–21.05.2026. Общие даты Study in Saudi не доказывают новый набор именно этого вуза.",
+      "sources": [
+        {
+          "url": "https://iu.edu.sa/قبول-طلاب-المنح-الدراسية-الداخلية-والخارجية-للعام-الجامعي-1448هـ",
+          "quote": "19-4-2026",
+          "freshFetch": true,
+          "responseHash": "sha256:781d47f1bdd57d60398bf00a9669fc8978e8e3e907d3c8661886fa8952c9a974",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "itu",
+      "country": "TR",
+      "deadline": {
+        "opens": "2026-04-24",
+        "closes": "2026-06-26",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://www.sis.itu.edu.tr/EN/student/intenational-students/application.php",
+      "status": "wrong_track",
+      "note": "Старые 24.04–26.06 относятся к graduate, а 03–06.09 к регистрации на экзамен английского. Правильные бакалаврские раунды 2026 уже закрыты; 2027/28 не подтверждён. Новый host календаря требует approval.",
+      "sources": [
+        {
+          "url": "https://www.sis.itu.edu.tr/EN/application-admission/application-admission.php",
+          "quote": "21 August 2026 09:00 - 26 August 2026 17:00 (UTC/GMT+3)",
+          "freshFetch": false,
+          "error": "curl 28",
+          "exactQuoteMatched": false
+        },
+        {
+          "url": "https://www.takvim.sis.itu.edu.tr/AkademikTakvim/EN/academic-calendar/AkademikTakvimTablo.php?akademikyil=854&baslangic=&bitis=&katagori=&takvimadi=17&taslak=856&ustbaslik=",
+          "quote": "Pre-Registrations of Applicants from Abroad Quota",
+          "freshFetch": true,
+          "responseHash": "sha256:73908f6ef48f463eb16af8e93190474d1f0e4cb3b9d040001e315c74aa3469e5",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [
+        {
+          "track": "main bachelor",
+          "opens": "2026-05-18",
+          "closes": "2026-07-17",
+          "zone": "opens09:00, closes17:00 UTC/GMT+3"
+        },
+        {
+          "track": "second bachelor",
+          "opens": "2026-08-21",
+          "closes": "2026-08-26",
+          "zone": "opens09:00, closes17:00 UTC/GMT+3"
+        }
+      ],
+      "pendingHostApproval": "www.takvim.sis.itu.edu.tr",
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "king-abdulaziz",
+      "country": "SA",
+      "deadline": {
+        "opens": "2026-09-16",
+        "closes": "2026-10-06",
+        "recurring": "annual",
+        "confidence": "confirmed"
+      },
+      "source": "https://www.kau.edu.sa/en/page/undergraduate-admission",
+      "status": "closed_correctly",
+      "note": "Latest non-Saudi window 16.09–06.10.2026. Не доказательство полностью бесплатного обучения; новое окно в announcements 02.11 не найдено.",
+      "sources": [
+        {
+          "url": "https://www.kau.edu.sa/en/announcement/the-date-for-opening-admission-applications-for-non-saudi-students-residing-both-inside-and-outside-the-kingdom-for-undergraduate-and-postgraduate-programs",
+          "quote": "Application period: September 16–October 6, 2026",
+          "freshFetch": true,
+          "responseHash": "sha256:0d219589628ba64c39f0429897b7f2f70a5bc75906875ff5df9181a7b99e0865",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "mate",
+      "country": "HU",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-07-03",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://en.uni-mate.hu/application-procedure-for-bsc-msc",
+      "status": "update",
+      "note": "Самофинансирование 2027/28; не Stipendium Hungaricum. Сохранить CET ровно как в источнике, не подменять CEST.",
+      "sources": [
+        {
+          "url": "https://en.uni-mate.hu/application-procedure-for-bsc-msc",
+          "quote": "Application for academic year 2027/2028 will open on 1 February 2027 until 30 April 2027 (23.59 CET)",
+          "freshFetch": true,
+          "responseHash": "sha256:5bf509e53bd285cee0941976032861317950341bd75d42738bfaa1c25656a7c0",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [
+        {
+          "track": "self-financing",
+          "opens": "2027-02-01",
+          "closes": "2027-04-30",
+          "zone": "23:59 CET as published"
+        }
+      ],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "mephi",
+      "country": "RU",
+      "deadline": {
+        "opens": "2026-06-20",
+        "closes": "2026-07-10",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://eng.mephi.ru/academics/admissions",
+      "status": "annual_windows_only",
+      "note": "Общая таблица 20 июня/10 июля/25 июля 17:00 MSK не содержит года. Нового 2027 не подтверждает. Квота и OD — отдельные пути.",
+      "sources": [
+        {
+          "url": "https://eng.mephi.ru/academics/admissions",
+          "quote": "Deadline for applicants required to take entrance examinations",
+          "freshFetch": true,
+          "responseHash": "sha256:b1c453ffb824ef7cbb57b5cb7872df088ae594d17fda2222646f4e8e3c44a023",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "mipt",
+      "country": "RU",
+      "deadline": {
+        "opens": "2026-06-20",
+        "closes": "2026-07-10",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://pk.mipt.ru/foreign/",
+      "status": "no_new_announcement",
+      "note": "Правила именно 2026:20.06–10.07 с испытаниями, без них до 25.07 17:00 MSK. Проект особых прав олимпиадников 2027 — не календарь.",
+      "sources": [
+        {
+          "url": "https://pk.mipt.ru/bachelor/2026_rules/",
+          "quote": "день завершения приема документов со сдачей вступительных испытаний – 10 июля",
+          "freshFetch": true,
+          "responseHash": "sha256:82b2a9ebbbe9d808a2e0dc8560362a58946b13f118f1b367d3e22c0e22011692",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "nankai",
+      "country": "CN",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-06-30",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://ensie.nankai.edu.cn/info/1089/1167.htm",
+      "status": "update",
+      "note": "Набор 2027. Старый URL /1167.htm возвращает 404; новый английский guide на прежнем host.",
+      "sources": [
+        {
+          "url": "https://ensie.nankai.edu.cn/info/1089/1357.htm",
+          "quote": "Oct. 20th , 202 6 - Jun. 4th , 202 7",
+          "freshFetch": true,
+          "responseHash": "sha256:93da3b51e8627de561f4b34e084fed0c197282ecf8360c010ad6b4d3228a4044",
+          "exactQuoteMatched": false
+        },
+        {
+          "url": "https://ensie.nankai.edu.cn/info/1089/1357.htm",
+          "quote": "Application Deadline: May 30, 202 7",
+          "freshFetch": true,
+          "responseHash": "sha256:93da3b51e8627de561f4b34e084fed0c197282ecf8360c010ad6b4d3228a4044",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [
+        {
+          "track": "general",
+          "opens": "2026-10-20",
+          "closes": "2027-06-04",
+          "zone": null
+        },
+        {
+          "track": "Tianjin/Study-at-NKU scholarship",
+          "opens": null,
+          "closes": "2027-05-30",
+          "zone": null
+        }
+      ],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "obuda",
+      "country": "HU",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-05-31",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://uni-obuda.hu/how-to-apply/",
+      "status": "no_new_announcement",
+      "note": "Сайт обновлён 29.10, но Fall deadline всё ещё 31.05.2026. Год в ежегодной инфографике не указан; обещанные SH 2027/28 документы — другой конкурс.",
+      "sources": [
+        {
+          "url": "https://uni-obuda.hu/how-to-apply/",
+          "quote": "Fall Semester Application deadline: 31th May, 2026",
+          "freshFetch": true,
+          "responseHash": "sha256:36ecd9ead2e24253ce24f3485f2a375d4f2abbb6b376515b2dc9fe5da8a55322",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "od",
+      "country": "RU",
+      "deadline": {
+        "opens": "2026-08-20",
+        "closes": "2026-11-01",
+        "recurring": "annual",
+        "confidence": "confirmed"
+      },
+      "source": "https://od.globaluni.ru/rules",
+      "status": "closed_correctly",
+      "note": "Open Doors 2026/27:20.08–01.11.2026. Организатор 03.11 объявил закрытие. 13 ноября — результаты этапа, не продление. Для УрФУ другой путь через квоту отдельно не подтверждён.",
+      "sources": [
+        {
+          "url": "https://od.globaluni.ru/rules",
+          "quote": "is open from August 20 to November 1, 2026",
+          "freshFetch": true,
+          "responseHash": "sha256:6f62fa9d8e3fa29d63515ee2950a6ef6a0b7abebb1ac838d8dc90c425dd73770",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://od.globaluni.ru/news/419",
+          "quote": "Registration for Open Doors: Russian Scholarship Project 2026/27 has closed.",
+          "freshFetch": true,
+          "responseHash": "sha256:db43824492b8f4d3893843c7232124b87e94dea168997b8974c7529302dcedf8",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "oxford-reach",
+      "country": "GB",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-10-15",
+        "recurring": "annual",
+        "confidence": "confirmed"
+      },
+      "source": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-support/reach-oxford-scholarship",
+      "status": "closed_correctly",
+      "note": "UCAS 2027 закрыт 15.10.2026 18:00 UK. Reach 26.01.2027 доступен после предложения места, не новый вход в университет; оба этапа уже описаны в textConditions.",
+      "sources": [
+        {
+          "url": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships/reach-oxford",
+          "quote": "For 2027 entry applicants who apply by the 26 January 2027 scholarship deadline",
+          "freshFetch": false,
+          "error": "curl 22",
+          "exactQuoteMatched": false
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "renmin",
+      "country": "CN",
+      "deadline": {
+        "opens": "2026-01-01",
+        "closes": "2026-05-31",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "http://iso.ruc.edu.cn/docs/2025-11/759ddbbb34f44a8583a7223a0015753e.pdf",
+      "status": "no_new_announcement",
+      "note": "GlobalBBA окно 01.01–31.05.2026; degreeISO частьтаймаутится. Не переносить на 2027.",
+      "sources": [
+        {
+          "url": "https://globalbba.rmbs.ruc.edu.cn/Admissions/KeyTimelines/index.htm",
+          "quote": "The application window is January 1 - May 31, 2026.",
+          "freshFetch": true,
+          "responseHash": "sha256:0d3fb876b6b0f22778cf3c55ee2760243792c31b5501632111d000caaac0dd21",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "ritsumeikan",
+      "country": "JP",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-11-02",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+      "status": "next_round",
+      "note": "Сентябрь 2027: только GLA, GS, CRPS. JD и ISSE апрельского набора уже закрылись 08.09.2026. Нельзя показать новый раунд всем программам.",
+      "sources": [
+        {
+          "url": "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+          "quote": "2026/12/2 Wed - 2027/1/12 Tue",
+          "freshFetch": true,
+          "responseHash": "sha256:362e1e1f92fca80314d7c0a0cf2b6ff08c9cc8ebeb8bf7a355519bdf09a3a8d9",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+          "quote": "2027/2/17 Wed - 2027/3/9 Tue",
+          "freshFetch": true,
+          "responseHash": "sha256:362e1e1f92fca80314d7c0a0cf2b6ff08c9cc8ebeb8bf7a355519bdf09a3a8d9",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [
+        {
+          "track": "GLA/GS/CRPS round",
+          "opens": "2026-12-02",
+          "closes": "2027-01-12",
+          "zone": "JST: opens10:00, closes23:00"
+        },
+        {
+          "track": "GLA/GS/CRPS next round",
+          "opens": "2027-02-17",
+          "closes": "2027-03-09",
+          "zone": "JST: opens10:00, closes23:00"
+        }
+      ],
+      "additionalSource": "https://en.ritsumei.ac.jp/e-ug/apply/aohb27.pdf (p8: time)",
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "scu",
+      "country": "CN",
+      "deadline": {
+        "opens": "2026-01-01",
+        "closes": "2026-05-30",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://en.scu.edu.cn/Admissions/Admission_Requirements_for_Degree_Programs/Bachelor_s/Entry_Requirement.htm",
+      "status": "update",
+      "note": "2027 guide от 02.11.2026. Четыре batch; даты CSC/CLEC определяются отдельно.",
+      "sources": [
+        {
+          "url": "https://global.scu.edu.cn/oso/article/details/7c5388ac-3600-4fc2-ae35-e802e6e09432",
+          "quote": "Batch 1: November 01, 2026 to December 15, 2026",
+          "freshFetch": true,
+          "responseHash": "sha256:8733f6685f622696e5a8867b78ac0c598421a8381d2b4f14e9eeb63114a04f83",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://global.scu.edu.cn/oso/article/details/7c5388ac-3600-4fc2-ae35-e802e6e09432",
+          "quote": "Batch 4: April 24, 2027 to May 30, 2027",
+          "freshFetch": true,
+          "responseHash": "sha256:8733f6685f622696e5a8867b78ac0c598421a8381d2b4f14e9eeb63114a04f83",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [
+        {
+          "track": "batch 1",
+          "opens": "2026-11-01",
+          "closes": "2026-12-15",
+          "zone": null
+        },
+        {
+          "track": "batch 2",
+          "opens": "2026-12-16",
+          "closes": "2027-02-28",
+          "zone": null
+        },
+        {
+          "track": "batch 3",
+          "opens": "2027-03-01",
+          "closes": "2027-04-23",
+          "zone": null
+        },
+        {
+          "track": "batch 4",
+          "opens": "2027-04-24",
+          "closes": "2027-05-30",
+          "zone": null
+        }
+      ],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "spbu",
+      "country": "RU",
+      "deadline": {
+        "opens": "2025-11-12",
+        "closes": "2026-02-06",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://abiturient.spbu.ru/reception-foreign/budget/",
+      "status": "blocked",
+      "note": "Три approvedURL вернули 403; актуальность 2026/27 и нового набора неизвестна. Не утверждать отсутствие объявления.",
+      "sources": [],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "study-in-saudi",
+      "country": "SA",
+      "deadline": {
+        "opens": "2026-09-16",
+        "closes": "2026-10-06",
+        "recurring": "annual",
+        "confidence": "confirmed"
+      },
+      "source": "https://studyinsaudi.sa/en",
+      "status": "closed_correctly",
+      "note": "16 сент–6 окт остались на livehomepage, но соседний год в тексте исчез. KAU подтверждает 2026 только для своего приёма; новое общее окно не доказано.",
+      "sources": [
+        {
+          "url": "https://studyinsaudi.sa/en",
+          "quote": "October 06 End of application period for international and resident students",
+          "freshFetch": true,
+          "responseHash": "sha256:55af43515c1e06cc8b0350cf6c23ee938b9e84085943d3b2d8071e9eb7299def",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "sysu",
+      "country": "CN",
+      "deadline": {
+        "opens": "2026-01-01",
+        "closes": "2026-04-30",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://iso.sysu.edu.cn/en/application/selffunded/1420575.htm",
+      "status": "blocked",
+      "note": "Live 403. Индексированная guideописывает 2 раунда 2026, не свежую проверку; новый 2027 не подтверждён.",
+      "sources": [],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "tongji",
+      "country": "CN",
+      "deadline": {
+        "opens": "2026-01-10",
+        "closes": "2026-03-31",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://study.tongji.edu.cn/en/CURRENT_STUDENTS/Free_Costs.htm",
+      "status": "update",
+      "note": "Бакалавриат осень 2027; не брать январь–март postgraduate. Исключения отдельных английских majors в картинках guide требуют проверки.",
+      "sources": [
+        {
+          "url": "https://study.tongji.edu.cn/info/1010/1182.htm",
+          "quote": "〖本科学位项目〗 上海市政府奖学金、自费：2026年12月10日至2027年3月31日",
+          "freshFetch": true,
+          "responseHash": "sha256:520798320b1af5ec8cc4c9da73fca8562d044034baa796dbbd56a168c4493434",
+          "exactQuoteMatched": false
+        }
+      ],
+      "windows": [
+        {
+          "track": "Shanghai scholarship and self-funded",
+          "opens": "2026-12-10",
+          "closes": "2027-03-31",
+          "zone": null
+        }
+      ],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "tsukuba-ide",
+      "country": "JP",
+      "deadline": {
+        "opens": "2026-10-01",
+        "closes": "2026-11-04",
+        "recurring": "annual",
+        "confidence": "confirmed"
+      },
+      "source": "https://www.ide.tsukuba.ac.jp/application-information",
+      "status": "closed_correctly",
+      "note": "Подача AY 2027 была 01.10.2026 12:00–04.11.2026 17:00 JST. Зачисление 01.09.2027; нового окна не объявлено.",
+      "sources": [
+        {
+          "url": "https://www.ide.tsukuba.ac.jp/application-information",
+          "quote": "",
+          "freshFetch": true,
+          "responseHash": "sha256:fc1443dff468cf4c8d80b22a9b4daba716e9d832911bb22d2f0eeb00dd03bf1d",
+          "exactQuoteMatched": false
+        }
+      ],
+      "windows": [],
+      "additionalSource": "https://drive.google.com/file/d/1ZvyD7wPCcIuBnFHa55R3fKxwAn73btxR/view (AY2027 p3; PDF прочитан облачным Drive, не HTML preview)",
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "uni-due",
+      "country": "DE",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-07-31",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://www.uni-due.de/international/international-admissions-en.php",
+      "status": "annual_windows_only",
+      "note": "Года в актуальных окнах нет: зима 01.05–15.06(NC)/31.07(unrestricted), лето 01.11–15.12(NC)/31.01(unrestricted). Возможность летнего входа зависит от курса; январь 2027 нельзя объявлять отдельным подтверждённым циклом.",
+      "sources": [
+        {
+          "url": "https://www.uni-due.de/international/international-admissions-en.php",
+          "quote": "For courses without admission restrictions: 01 May – 31 July",
+          "freshFetch": false,
+          "error": "curl 28",
+          "exactQuoteMatched": false
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "urfu",
+      "country": "RU",
+      "deadline": {
+        "opens": "2026-08-20",
+        "closes": "2026-11-01",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://urfu.ru/en/scholarships-for-foreigners/",
+      "status": "closed_correctly",
+      "note": "Open Doors 2026/27:20.08–01.11.2026. Организатор 03.11 объявил закрытие. 13 ноября — результаты этапа, не продление. Для УрФУ другой путь через квоту отдельно не подтверждён.",
+      "sources": [
+        {
+          "url": "https://od.globaluni.ru/rules",
+          "quote": "is open from August 20 to November 1, 2026",
+          "freshFetch": true,
+          "responseHash": "sha256:6f62fa9d8e3fa29d63515ee2950a6ef6a0b7abebb1ac838d8dc90c425dd73770",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://od.globaluni.ru/news/419",
+          "quote": "Registration for Open Doors: Russian Scholarship Project 2026/27 has closed.",
+          "freshFetch": true,
+          "responseHash": "sha256:db43824492b8f4d3893843c7232124b87e94dea168997b8974c7529302dcedf8",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "utoronto-pearson",
+      "country": "CA",
+      "deadline": {
+        "opens": "2026-07-06",
+        "closes": "2026-10-09",
+        "recurring": "annual",
+        "confidence": "confirmed"
+      },
+      "source": "https://future.utoronto.ca/pearson-scholarships",
+      "status": "closed_correctly",
+      "note": "Для нового кандидата номинация закрыта 09.10.2026, OUAC 16.10.2026. Только уже выдвинутые и подавшие заявку заканчивают стипендиальную форму до 06.11.2026. Noon EST относится к регистрации новой школы, не всем трём срокам.",
+      "sources": [
+        {
+          "url": "https://future.utoronto.ca/pearson-scholarships",
+          "quote": "School nomination deadline: October 9, 2026",
+          "freshFetch": false,
+          "error": "curl 28",
+          "exactQuoteMatched": false
+        },
+        {
+          "url": "https://future.utoronto.ca/pearson-scholarships",
+          "quote": "Student OUAC admission application deadline: October 16, 2026",
+          "freshFetch": false,
+          "error": "curl 28",
+          "exactQuoteMatched": false
+        },
+        {
+          "url": "https://future.utoronto.ca/pearson-scholarships",
+          "quote": "November 6, 2026",
+          "freshFetch": false,
+          "error": "curl 28",
+          "exactQuoteMatched": false
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "warsaw-university-of-technology",
+      "country": "PL",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-07-21",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://www.students.pw.edu.pl/How-to-Apply/Admission-to-B.Sc",
+      "status": "imprecise_new_cycle",
+      "note": "Уже October 2027, но начало мая / середина июля / середина августа помечены to be updated. Точные opens/closes оставить null; 1 октября — начало занятий.",
+      "sources": [
+        {
+          "url": "https://www.students.pw.edu.pl/How-to-Apply/Admission-to-B.Sc",
+          "quote": "Deadline to create a new application: middle of July 2027 (to be updated)",
+          "freshFetch": false,
+          "error": "curl 35",
+          "exactQuoteMatched": false
+        }
+      ],
+      "windows": [
+        {
+          "track": "application creation",
+          "opens": null,
+          "closes": null,
+          "zone": null
+        }
+      ],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "wuhan-university",
+      "country": "CN",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-06-30",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://admission.whu.edu.cn/info/1121/5802.htm",
+      "status": "blocked",
+      "note": "Sourceиhomepage 403; старые evidence в JSON не являются новой проверкой.",
+      "sources": [],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "xian-jiaotong-university",
+      "country": "CN",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-06-30",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://sie.xjtu.edu.cn/en/info/1119/2943.htm",
+      "status": "update",
+      "note": "Набор 2027. Это общие раунды; не объявлять июнь единым сроком всех стипендий.",
+      "sources": [
+        {
+          "url": "https://sie.xjtu.edu.cn/en/info/1119/3271.htm",
+          "quote": "Round 1: November 1, 2026 – May 15, 2027 (Beijing Time)",
+          "freshFetch": true,
+          "responseHash": "sha256:395926d7858910ad075a4b502b05d50b5ce655991ed494ffc6be59ff2efb0798",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://sie.xjtu.edu.cn/en/info/1119/3271.htm",
+          "quote": "Round 2: May 16, 2027 – June 30, 2027 (Beijing Time)",
+          "freshFetch": true,
+          "responseHash": "sha256:395926d7858910ad075a4b502b05d50b5ce655991ed494ffc6be59ff2efb0798",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [
+        {
+          "track": "round 1",
+          "opens": "2026-11-01",
+          "closes": "2027-05-15",
+          "zone": "Beijing Time"
+        },
+        {
+          "track": "round 2",
+          "opens": "2027-05-16",
+          "closes": "2027-06-30",
+          "zone": "Beijing Time"
+        }
+      ],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "xmu",
+      "country": "CN",
+      "deadline": {
+        "opens": "2025-12-01",
+        "closes": "2026-04-10",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+      "status": "update",
+      "note": "Набор 2027. CSC-A и language teachers не входят в общую таблицу.",
+      "sources": [
+        {
+          "url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "quote": "Dec. 1, 2026",
+          "freshFetch": true,
+          "responseHash": "sha256:2acce948b643bf34432600cdbe6557ef523620ad2286943ffc39cf2624efa5d2",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "quote": "Feb. 20, 2027",
+          "freshFetch": true,
+          "responseHash": "sha256:2acce948b643bf34432600cdbe6557ef523620ad2286943ffc39cf2624efa5d2",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "quote": "Apr. 30, 2027",
+          "freshFetch": true,
+          "responseHash": "sha256:2acce948b643bf34432600cdbe6557ef523620ad2286943ffc39cf2624efa5d2",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "quote": "May 31, 2027",
+          "freshFetch": true,
+          "responseHash": "sha256:2acce948b643bf34432600cdbe6557ef523620ad2286943ffc39cf2624efa5d2",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "quote": "Beijing Time (GMT +08:00)",
+          "freshFetch": true,
+          "responseHash": "sha256:2acce948b643bf34432600cdbe6557ef523620ad2286943ffc39cf2624efa5d2",
+          "exactQuoteMatched": true
+        }
+      ],
+      "windows": [
+        {
+          "track": "CSC-B",
+          "opens": "2026-12-01",
+          "closes": "2027-02-20",
+          "zone": "Beijing Time GMT+08:00"
+        },
+        {
+          "track": "Fujian/XMU scholarship",
+          "opens": "2026-12-01",
+          "closes": "2027-04-30",
+          "zone": "Beijing Time GMT+08:00"
+        },
+        {
+          "track": "self-funded",
+          "opens": "2026-12-01",
+          "closes": "2027-05-31",
+          "zone": "Beijing Time GMT+08:00"
+        }
+      ],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "zhejiang-university",
+      "country": "CN",
+      "deadline": {
+        "opens": null,
+        "closes": "2026-02-28",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "source": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+      "status": "no_new_general_announcement",
+      "note": "Общийguide всё ещё 2026:01.12.2025–28.02.2026, некоторые majorsдо 31.05.2026. Отдельный YouthTalent 2027 на WeChat не подтверждает общий набор.",
+      "sources": [
+        {
+          "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+          "quote": "From December 1，2025 to February 28, 202 6.",
+          "freshFetch": true,
+          "responseHash": "sha256:453aad6734876d0b16ddc5141ab2496412867929e6a8c62d420619de0e6ff3f8",
+          "exactQuoteMatched": false
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    },
+    {
+      "id": "csc-china",
+      "country": "CN",
+      "deadline": {
+        "opens": "2026-11-22",
+        "closes": "2026-12-19",
+        "recurring": "annual",
+        "confidence": "expected"
+      },
+      "status": "extrapolated_dates",
+      "note": "Текущее 22.11–19.12.2026 expected — перенос прошлогодних дат. Подтверждён только цикл 2026 с регистрацией 22.11–19.12.2025. В embassysection новогоCSC 2027 не найдено; AmbassadorScholarship 23.09.2026 — другая программа. Не подтверждать будущую дату; предложено null для нового цикла или сохранение реального прошлого цикла с пояснением.",
+      "sources": [
+        {
+          "url": "https://tj.china-embassy.gov.cn/sgzc/202511/t20251124_11759137.htm",
+          "quote": "2025年11月22日-12月19日",
+          "freshFetch": true,
+          "responseHash": "sha256:28efe224d529bd125250f80191806b9e2841ebba4c0d46c249232a8e846ed338",
+          "exactQuoteMatched": true
+        },
+        {
+          "url": "https://tj.china-embassy.gov.cn/sgzc/",
+          "quote": "",
+          "freshFetch": true,
+          "responseHash": "sha256:2fa8a4e8b85aa270caa2126557aa29c8e80492f35eba8ef50883f11784e757cf",
+          "exactQuoteMatched": false
+        }
+      ],
+      "windows": [],
+      "approval": "pending owner quote review; canonical data unchanged"
+    }
+  ]
+}
