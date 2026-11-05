@@ -4721,6 +4721,10 @@ approvedAt = "2026-10-01"
 # Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).
 [itu]
 name = "Istanbul Technical University (Турция)"
+# www.takvim.sis.itu.edu.tr одобрен Муродом 05.11.2026: «Да, подключи этот хост».
+urls = [
+  "https://www.takvim.sis.itu.edu.tr/AkademikTakvim/EN/academic-calendar/AkademikTakvimTablo.php?akademikyil=854&baslangic=&bitis=&katagori=&takvimadi=17&taslak=856&ustbaslik=",
+]
 files = [
   { path = "manual/itu/00-application.html", url = "https://www.sis.itu.edu.tr/EN/student/intenational-students/application.php" },
   { path = "manual/itu/01-exam-requirements.html", url = "https://www.sis.itu.edu.tr/EN/regulations/valid-exam-results.php" },
@@ -4737,7 +4741,7 @@ files = [
   { path = "manual/itu/12-tuitions.html", url = "https://www.sis.itu.edu.tr/EN/student/intenational-students/tuitions.php" },
 ]
 approvedBy = "human"
-approvedAt = "2026-10-01"
+approvedAt = "2026-11-05"
 
 # Партия 5. Домен одобрен Муродом 2026-10-01 («ok delay spisok», все 55 вузов).
 # Страницы внутри одобренного домена найдены по навигации сайта и сняты curl (origin=manual).

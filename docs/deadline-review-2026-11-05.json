@@ -339,7 +339,7 @@
       },
       "source": "https://www.sis.itu.edu.tr/EN/student/intenational-students/application.php",
       "status": "wrong_track",
-      "note": "Старые 24.04–26.06 относятся к graduate, а 03–06.09 к регистрации на экзамен английского. Правильные бакалаврские раунды 2026 уже закрыты; 2027/28 не подтверждён. Новый host календаря требует approval.",
+      "note": "Старые 24.04–26.06 относятся к graduate, а 03–06.09 к регистрации на экзамен английского. Правильные бакалаврские раунды 2026 уже закрыты; 2027/28 не подтверждён. Хост календаря одобрен Муродом 05.11.2026 и добавлен в реестр источников.",
       "sources": [
         {
           "url": "https://www.sis.itu.edu.tr/EN/application-admission/application-admission.php",
@@ -370,8 +370,13 @@
           "zone": "opens09:00, closes17:00 UTC/GMT+3"
         }
       ],
-      "pendingHostApproval": "www.takvim.sis.itu.edu.tr",
-      "approval": "pending owner quote review; canonical data unchanged"
+      "approval": "pending owner quote review; canonical data unchanged",
+      "hostApproval": {
+        "host": "www.takvim.sis.itu.edu.tr",
+        "approvedBy": "human",
+        "approvedAt": "2026-11-05",
+        "reply": "Да, подключи этот хост"
+      }
     },
     {
       "id": "king-abdulaziz",
