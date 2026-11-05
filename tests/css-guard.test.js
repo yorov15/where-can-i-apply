@@ -56,7 +56,7 @@ test('шрифт свой, с этого же сайта: нет адресов 
     assert.match(url, /^\.\.\/fonts\/[a-z-]+\.woff2$/, url);
     assert.ok(existsSync(join(root, 'css', url)), `нет файла ${url}`);
   }
-  assert.match(css, /font:[^;]*Onest, system-ui/);
+  assert.match(css, /font:[^;]*Onest,\s*system-ui/);
 });
 
 test('CSP разрешает шрифты только с этого же сайта', () => {
@@ -70,7 +70,7 @@ test('есть видимый фокус и отключение движени�
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
 });
 
-test('CSS не больше 48 КБ', () => {
+test('CSS не больше 50 КБ', () => {
   // Мерим то, что уезжает к человеку, а не то, что лежит на диске: git
   // хранит файл с переводами строк LF, оттуда же его отдаёт хостинг, а
   // рабочая копия на Windows раздута против этого примерно на байт на
@@ -118,7 +118,7 @@ test('палитра: токены поверхностей заданы, вер
     assert.equal(count, 3, `--${verdict} должен быть в светлой и в обеих тёмных записях`);
   }
   assert.match(css, /prefers-color-scheme:\s*dark/);
-  assert.match(css, /:root\[data-theme="dark"\]/);
+  assert.match(css, /:root\[data-theme=(?:"dark"|'dark'|dark)\]/);
 });
 
 test('на каждой странице есть ссылка «к содержимому» и main с id', () => {
