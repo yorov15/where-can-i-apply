@@ -5,6 +5,7 @@ import { safeHttpUrl } from './lib/url.js';
 import { WORK_TEMPLATES, WORK_REVIEW_FIELDS, normalizeWorkPlan, workTaskId } from './portfolio-work.js';
 import { changeLearning, pendingPractice } from './portfolio-learning.js';
 import { weekKey } from './study-plan.js';
+import { projectIdea } from './project-ideas.js';
 
 export const EXPERIENCE_KINDS = [['project','Проект'],['study','Учёба'],['work','Работа'],['family','Помощь семье'],['creative','Творчество'],['community','Инициатива'],['sport','Спорт'],['other','Другое']];
 // Навыки — короткий закрытый список, чтобы примеры для эссе группировались одинаково.
@@ -123,9 +124,11 @@ export function startPortfolioWork(state,input,today) {
   if(!object(input)||!day(today))return null;
   const template=WORK_TEMPLATES.find(item=>item.id===input.templateId);
   if(!template||portfolioOf(state).experiences.some(item=>item.id===input.id))return null;
+  const idea=input.ideaId?projectIdea(input.ideaId):null;
+  if(input.ideaId&&(!idea||idea.templateId!==template.id))return null;
   return saveExperience(state,{id:input.id,title:input.title,kind:template.kind,goals:input.goals??[],
     workPlan:{version:1,id:input.id,templateId:template.id,aim:input.aim,expectedResult:input.expectedResult??template.output,format:input.format||template.format,sessionMinutes:input.sessionMinutes??60,paused:false,
-      steps:template.steps.map(step=>({...step,done:false}))}},today);
+      ...(idea?{ideaId:idea.id}:{}),steps:(idea?.steps??template.steps).map(step=>({...step,done:false}))}},today);
 }
 
 function updateWorkPlan(state,id,today,change) {

@@ -72,6 +72,7 @@ export function normalizeWorkPlan(value) {
   if(![15,30,45,60,90,120].includes(sessionMinutes))return null;
   const next={version:1,id:value.id,templateId:value.templateId,aim:value.aim.trim(),expectedResult:value.expectedResult.trim(),sessionMinutes,paused:value.paused===true,steps};
   if(Object.hasOwn(value,'format')){if(!workFormatLabel(value))return null;next.format=value.format;}
+  if(Object.hasOwn(value,'ideaId')){if(!identifier(value.ideaId))return null;next.ideaId=value.ideaId;}
   if(Object.hasOwn(value,'review')){
     if(!object(value.review)||!day(value.review.checkedOn))return null;
     const fields=Object.fromEntries(WORK_REVIEW_FIELDS.map(([name])=>[name,value.review[name]??'']));
