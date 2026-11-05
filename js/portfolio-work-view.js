@@ -3,6 +3,7 @@ import { formatDate } from './lib/format.js';
 import { renderPortfolioLearning, clearLearningDrafts } from './portfolio-learning-view.js';
 import { pendingPractice } from './portfolio-learning.js';
 import { workStepOutcome } from './portfolio.js';
+import { PROJECT_IDEAS, IDEA_DIRECTIONS, projectIdea } from './project-ideas.js';
 
 const drafts=new Map(),opened=new Map();
 export function clearWorkDrafts(){drafts.clear();opened.clear();clearLearningDrafts();}
@@ -40,12 +41,34 @@ export function renderWorkPicker(props,onSaved){
   const info=el(props.guidedStart?'details':'div',props.guidedStart?'journey-edit':'journey-note');form.append(info);
   const title=field(form,props.guidedStart?'Назови тему твоей работы':'Какую задачу выбираешь?','title',value.title,{required:true,short:true,max:160});
   if(props.guidedStart)title.placeholder='Например: удобный путь от школы домой';
-  field(form,props.guidedStart?'Что хочешь узнать или изменить?':'Почему тебе это интересно?','aim',value.aim,{required:true});
+  const aim=field(form,props.guidedStart?'Что хочешь узнать или изменить?':'Почему тебе это интересно?','aim',value.aim,{required:true});
+  const ideaId=el('input');ideaId.type='hidden';ideaId.name='ideaId';ideaId.value=value.ideaId??'';form.append(ideaId);
   const expected=field(settings,'Какой результат хочешь получить?','expectedResult',value.expectedResult??WORK_TEMPLATES.find(item=>item.id===value.templateId)?.output,{required:true});
   expected.addEventListener('invalid',()=>{if(settings!==form)settings.open=true;});
   const explain=()=>{const item=WORK_TEMPLATES.find(item=>item.id===template.value);info.replaceChildren();if(props.guidedStart)info.append(el('summary',null,'Пример такой работы'));info.append(el('p','route-detail',item.description),el('p','route-detail',item.smaller));};
   const format=options(settings,'В каком виде будет итог?','format',WORK_FORMATS,value.format??WORK_TEMPLATES.find(item=>item.id===value.templateId)?.format);
-  explain();template.addEventListener('change',()=>{const item=WORK_TEMPLATES.find(item=>item.id===template.value);explain();expected.value=item.output;format.value=item.format;});
+  explain();template.addEventListener('change',()=>{const item=WORK_TEMPLATES.find(item=>item.id===template.value);explain();expected.value=item.output;format.value=item.format;ideaId.value='';});
+  const ideas=el('details','journey-edit');ideas.dataset.projectIdeas='';ideas.append(el('summary',null,'Подобрать конкретную идею работы'));
+  ideas.append(el('p','route-detail','Выбери пример и измени его под себя. Это собственные учебные предложения Nerio. Нужные материалы и способ проверки указаны у каждой идеи.'));
+  const direction=options(ideas,'Что тебе интересно?','ideaDirection',IDEA_DIRECTIONS,'data'),ideaList=el('div'),ideaStatus=say();ideas.append(ideaList,ideaStatus);
+  // Выбор направления управляет только списком, а не личными данными работы.
+  direction.removeAttribute('name');
+  direction.setAttribute('aria-label','Что тебе интересно?');
+  const drawIdeas=()=>{ideaList.replaceChildren();for(const item of PROJECT_IDEAS.filter(item=>item.direction===direction.value)){
+    const card=el('details','journey-edit');card.dataset.projectIdea=item.id;card.append(el('summary',null,item.title),el('p','route-detail',item.question),
+      el('p','route-detail',`Что нужно: ${item.materials}`),el('p','route-detail',`Итог: ${item.output}`));
+    for(const [index,step] of item.steps.entries())card.append(el('p','route-detail',`${index+1}. ${step.title}: ${step.expected}`));
+    card.append(button('Взять эту идею',()=>{
+      const current=WORK_TEMPLATES.find(item=>item.id===template.value);
+      const hasInput=title.value.trim()||aim.value.trim()||expected.value.trim()&&expected.value!==current.output||format.value!==current.format;
+      if(hasInput&&!confirm('Заменить тему, вопрос, ожидаемый результат и формат в этой форме выбранной идеей? Сохранённые работы не изменятся.'))return;
+      template.value=item.templateId;explain();title.value=item.title;aim.value=`Проверить: ${item.question}`;expected.value=item.output;
+      format.value=WORK_TEMPLATES.find(template=>template.id===item.templateId).format;ideaId.value=item.id;
+      drafts.set(key,read(form));ideaStatus.textContent='Идея выбрана. Измени вопрос под себя и нажми кнопку начала работы. Четыре шага этой идеи сохранятся вместе с работой.';
+      title.focus();
+    }));ideaList.append(card);
+  }};direction.addEventListener('change',drawIdeas);drawIdeas();form.append(ideas);
+  const chosen=projectIdea(ideaId.value);if(chosen)ideaStatus.textContent=`Выбрана идея «${chosen.title}». Её шаги сохранятся при начале работы.`;
   options(settings,'Выделить на следующий шаг · не больше','sessionMinutes',timeOptions,value.sessionMinutes);
   settings.append(el('p','route-detail','Это часть твоих часов на неделю. План может выделить меньше времени; завершать весь шаг за одну сессию не обязательно.'));
   const goals=props.handlers.getRouteState().goals;
