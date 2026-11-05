@@ -19,7 +19,10 @@ export const money = (amount, currency) => `${group(amount)} ${CURRENCY[currenc
 
 // Первая размеченная плата в условиях программы или null, если её нигде нет.
 export function feeOf(extra) {
-  return (extra?.textConditions ?? []).find((c) => c.fee)?.fee ?? null;
+  const fee=(extra?.textConditions ?? []).find((c) => c.fee)?.fee ?? null;
+  // Запрос, который ещё должен одобрить вуз, не является автоматическим снятием.
+  if(fee&&extra?.feeWaiver&&extra.feeWaiver.mode!=='automatic')return {...fee,waivedForAid:false};
+  return fee;
 }
 
 // Для таблицы сравнения.
@@ -68,6 +71,6 @@ export function costText(cost) {
     const n = cost.unknown.length;
     parts.push(`Плату ${n === 1 ? 'этой программы' : 'этих программ'} на собранных страницах не нашли, итог может быть больше: ${cost.unknown.join(', ')}.`);
   }
-  if (parts.length && cost.totals.length) parts.push('У части вузов плату можно снять, если она тяжела для семьи: смотри «Что подготовить».');
+  if (parts.length && cost.totals.length) parts.push('Условия снятия взноса смотри в карточке каждой программы.');
   return parts.join(' ');
 }

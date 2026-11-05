@@ -7,6 +7,7 @@ import { normalizeApplications } from './application.js';
 import { normalizeInterview } from './interview.js';
 import { normalizeRecommenders } from './recommenders.js';
 import { normalizeSpotlight } from './spotlight.js';
+import { normalizeApplicationNotes } from './application-notes.js';
 export const ROUTE_STATE_KEY = 'eligibility-route';
 export const ROUTE_VERSION = 2;
 export const MAX_GOALS = 8;
@@ -41,6 +42,11 @@ function normalize(value) {
   }
   if (value.version !== 2 || !Array.isArray(value.goals) || !object(value.done)) return null;
   const next = empty();
+  if (Object.hasOwn(value,'applicationNotes')) {
+    const notes=normalizeApplicationNotes(value.applicationNotes);
+    if(!notes)return null;
+    if(notes.stories.length||notes.school)next.applicationNotes=notes;
+  }
   if(Object.hasOwn(value,'applications')){next.applications=normalizeApplications(value.applications);if(!next.applications)return null;}
   if (Object.hasOwn(value, 'portfolio')) {
     next.portfolio = normalizePortfolio(value.portfolio);

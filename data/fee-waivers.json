@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "programs": [
+    {
+      "programId": "caltech",
+      "mode": "request",
+      "scope": "notSpecified",
+      "evidence": [
+        "If you are applying for financial aid",
+        "the application fee presents a hardship for you or your family",
+        "Caltech Active Transport Pass"
+      ],
+      "ru": "Если просишь финансовую помощь и взнос тяжёл для семьи, можно проверить право на его снятие через форму Caltech Active Transport Pass.",
+      "action": "Открой источник и перейди к форме Caltech Active Transport Pass. Заполни её до оплаты заявки.",
+      "source": {
+        "url": "https://www.admissions.caltech.edu/apply/first-year-applicants/first-year-application-fee-and-waiver",
+        "lastVerified": "2026-11-05",
+        "verifiedBy": "assistant",
+        "snapshot": "raw/fee-waivers/caltech.txt",
+        "contentHash": "sha256:d0647cd371fb1d85194016fa186c17e00377a7d718f6a7f9aae5f6219c1275d1",
+        "responseHash": "sha256:834c54dab4d897c6c20a81b06154f2ac394d6a7956cf04e55b13d954b16c4099"
+      }
+    },
+    {
+      "programId": "cmu",
+      "mode": "request",
+      "scope": "notSpecified",
+      "evidence": [
+        "accepts fee waivers from students who meet one of the indicators of economic need as outlined on the Common Application"
+      ],
+      "ru": "Вуз принимает снятие взноса по одному из признаков финансовой нужды, перечисленных в Common Application.",
+      "action": "Сверь признаки финансовой нужды в Common Application. Если непонятно, относится ли правило к тебе, уточни у приёмной до оплаты.",
+      "source": {
+        "url": "https://www.cmu.edu/admission/admission/undergraduate-admission-requirements",
+        "lastVerified": "2026-11-05",
+        "verifiedBy": "assistant",
+        "snapshot": "raw/fee-waivers/cmu.txt",
+        "contentHash": "sha256:01dac4fb595119f52e08f7d131898b874529a0829732c37a84c4c1086d26f0f0",
+        "responseHash": "sha256:b90a4bc9dbb86e4493200d698b5638a46b180b894bdcc6e3aadae6107abbaa5a"
+      }
+    },
+    {
+      "programId": "nyu-shanghai",
+      "mode": "request",
+      "scope": "notSpecified",
+      "evidence": [
+        "Students who are unable to pay the application fee can request a fee waiver"
+      ],
+      "ru": "Если не можешь оплатить взнос, можно запросить его снятие. Сам запрос не означает, что взнос уже отменён.",
+      "action": "Открой How to Apply и ссылку request a fee waiver в разделе Step 1. Проверь порядок запроса до оплаты.",
+      "source": {
+        "url": "https://shanghai.nyu.edu/page/how-apply",
+        "lastVerified": "2026-11-05",
+        "verifiedBy": "assistant",
+        "snapshot": "raw/fee-waivers/nyu-shanghai.txt",
+        "contentHash": "sha256:e45e6fbace2daef446971751a6bfc184449326220a7fa24bfc3d0a86c9808b85",
+        "responseHash": "sha256:46485a53c8221224a1c1228023487db2768bf9843b7943b141a74053db326768"
+      }
+    },
+    {
+      "programId": "bowdoin-college",
+      "mode": "automatic",
+      "scope": "international",
+      "evidence": [
+        "Is Bowdoin need blind for international students?",
+        "Applicants who indicate they will apply for financial aid will be automatically granted an application fee waiver."
+      ],
+      "ru": "Для иностранных абитуриентов, указавших запрос финансовой помощи, взнос снимается автоматически.",
+      "action": "Укажи в заявке, что просишь финансовую помощь. Отдельный запрос о снятии взноса по этому основанию не нужен.",
+      "source": {
+        "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+        "lastVerified": "2026-11-05",
+        "verifiedBy": "assistant",
+        "snapshot": "raw/fee-waivers/bowdoin-college.txt",
+        "contentHash": "sha256:9c6a02337aee4cefcab20a7a3635f24ca1ddefcea894f9dd8fed418a22b81508",
+        "responseHash": "sha256:da2ab8e98ab488496295bc8279dd3f309ad711849987cb22d0c17169b059d628"
+      }
+    },
+    {
+      "programId": "washu",
+      "mode": "request",
+      "scope": "allApplicants",
+      "evidence": [
+        "We are happy to waive our $75 application fee for any student who applies for need-based financial aid."
+      ],
+      "ru": "Взнос снимают любому абитуриенту, подающему на помощь по финансовой нужде; право проверят при обработке заявки.",
+      "action": "Если соответствуешь условиям, укажи в Common Application или Coalition Application право на WashU fee waiver.",
+      "source": {
+        "url": "https://admissions.washu.edu/how-to-apply/application-fee-waiver/",
+        "lastVerified": "2026-11-05",
+        "verifiedBy": "assistant",
+        "snapshot": "raw/fee-waivers/washu.txt",
+        "contentHash": "sha256:f1d0ec2fca9ac34107c70218d0e93b212d872a01d3925212e8e41ec9555a91d5",
+        "responseHash": "sha256:d62105d2f6ead7d1920841fbde9fdc22c8ba2bd96a26bfb83f705be2ab74ac63"
+      }
+    },
+    {
+      "programId": "uwashington",
+      "mode": "unavailable",
+      "scope": "international",
+      "evidence": [
+        "International first-year students",
+        "Fee waivers not available"
+      ],
+      "ru": "Для иностранных абитуриентов первого курса снятие взноса недоступно.",
+      "action": "Учти взнос в расходах на подачу. Правило для абитуриентов США здесь не применяется.",
+      "source": {
+        "url": "https://admit.washington.edu/apply/first-year/how-to-apply/",
+        "lastVerified": "2026-11-05",
+        "verifiedBy": "assistant",
+        "snapshot": "raw/fee-waivers/uwashington.txt",
+        "contentHash": "sha256:5b18de50553d34e0bf435c6b2a05f49b89780ace8a6ae51e4c7098644a6078d2",
+        "responseHash": "sha256:bb65ecfc2397bae4c80fed830618620d35d9de728ec828af905599d3433c4133"
+      }
+    },
+    {
+      "programId": "wesleyan",
+      "mode": "request",
+      "scope": "allApplicants",
+      "evidence": [
+        "We offer an application fee waiver for all applicants who apply for financial aid."
+      ],
+      "ru": "Вуз предлагает снятие взноса всем, кто подаёт на финансовую помощь.",
+      "action": "Укажи запрос финансовой помощи и проверь в форме заявки, как отметить снятие взноса. На странице не описан отдельный порядок запроса.",
+      "source": {
+        "url": "https://www.wesleyan.edu/admission/application-process.html",
+        "lastVerified": "2026-11-05",
+        "verifiedBy": "assistant",
+        "snapshot": "raw/fee-waivers/wesleyan.txt",
+        "contentHash": "sha256:1afa24ffde25a959bcd0b1c237f36674274859439d3cfc57f68960ce10eeb49e",
+        "responseHash": "sha256:512ba8d9174a587dd5d9d0d09b6d24a85df9f4218a2c21a7cbc45b4886a30903"
+      }
+    },
+    {
+      "programId": "emory",
+      "mode": "request",
+      "scope": "notSpecified",
+      "evidence": [
+        "If paying the $75 application fee is a financial hardship, we are happy to waive the fee.",
+        "processed online through the Common Application"
+      ],
+      "ru": "Если взнос тяжёл для семьи, запрос о его снятии оформляют онлайн через Common Application.",
+      "action": "Ответь на вопрос о праве на Emory fee waiver в Common Application. Дополнительные подтверждения вуз не требует; проверь условия в FAQ.",
+      "source": {
+        "url": "https://apply.emory.edu/apply/faqs",
+        "lastVerified": "2026-11-05",
+        "verifiedBy": "assistant",
+        "snapshot": "raw/fee-waivers/emory.txt",
+        "contentHash": "sha256:3ce9723ea436377f5f2a183b1061ebee88dd30a55a618c4762cd1082112f2546",
+        "responseHash": "sha256:b58798ca147550aab12b5f3bc560def7892ae0a7cfd86b801440bdd2156a5d77"
+      }
+    }
+  ]
+}

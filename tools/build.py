@@ -16,6 +16,7 @@ from datetime import date
 from pathlib import Path
 
 from tools.changelog import feed_xml
+from tools.fee_waivers import load_fee_waivers, attach_fee_waivers
 from tools.route import write_route
 from tools.schema import FIELDS, KINDS, MAJORS, SIGNERS, approved_by
 
@@ -342,6 +343,11 @@ def main() -> int:
 
     index = build_index(programs, date.today().isoformat())
     details = build_details(programs, date.today().isoformat())
+    try:
+        attach_fee_waivers(details, load_fee_waivers(root))
+    except (ValueError, KeyError, TypeError, OSError) as error:
+        print(f"СНЯТИЕ ВЗНОСА: {error}")
+        return 1
 
     # Молча выкинуть утверждённую программу из выдачи хуже, чем не собрать
     # индекс вовсе: человек считает, что она на сайте.
