@@ -1,8 +1,23 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { money, feeOf, feeCell, planCost, costText } from '../js/cost.js';
+import { feeWaiverInquiry, waiverTitle } from '../js/fee-waiver.js';
 
 const prog = (id, name) => ({ id, name: { ru: name } });
+test('запрос снятия взноса не исключает его из расходов, даже со старым waivedForAid',()=>{
+  const fee={amount:85,currency:'USD',waivedForAid:true};
+  const input={programs:{nyu:{feeWaiver:{mode:'request'}}},conditions:{nyu:[{fee}]}};
+  const result=planCost([prog('nyu','NYU')],input);
+  assert.deepEqual(result.totals,[{currency:'USD',amount:85}]);assert.deepEqual(result.waived,[]);
+  assert.equal(fee.waivedForAid,true,'канон не мутирует');
+  assert.doesNotMatch(feeCell(feeOf({...input.programs.nyu,textConditions:input.conditions.nyu})),/снимается/);
+  input.programs.nyu.feeWaiver.mode='automatic';assert.equal(planCost([prog('nyu','NYU')],input).waived.length,1);
+});
+test('вопрос приёмной не выдумывает финансовую нужду и не просит уже автоматическое снятие',()=>{
+  const draft=feeWaiverInquiry('NYU Shanghai');assert.match(draft,/NYU Shanghai/);assert.match(draft,/\[country\]/);
+  assert.match(draft,/whether international applicants may request/);assert.doesNotMatch(draft,/I cannot afford|my family is poor/i);
+  assert.match(waiverTitle({mode:'unavailable'}),/недоступно/);assert.match(waiverTitle(null),/не проверено/);
+});
 // Как на сайте: лёгкая запись программы лежит в programs, тексты условий —
 // отдельным слоем conditions, который приезжает при раскрытии карточки.
 const feeConds = (fee) => [{ ru: 'x', kind: 'money' }, { ru: 'плата', kind: 'money', fee }];

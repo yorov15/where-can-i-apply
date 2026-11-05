@@ -28,6 +28,7 @@ import { clearPortfolioDrafts } from './portfolio-view.js';
 import { forgetLearningDrafts } from './portfolio-learning-view.js';
 import { saveMaterialVersion,markMaterialSubmitted,removeMaterialVersion,removeMaterial,saveDecision,toggleOfferCondition,removeDecision,applicationsOf } from './application.js';
 import { clearApplicationDrafts } from './application-view.js';
+import { clearApplicationNotesDrafts } from './application-notes-view.js';
 import { saveSpotlight } from './spotlight.js';
 import { hasPreparationGoals } from './goal-status.js';
 import { renderStart, renderStartGuide, startWork } from './start-view.js';
@@ -458,6 +459,10 @@ function renderRouteView() {
     applyUrl: routeState.goals.length === 1 ? details.programs?.[routeState.goals[0]]?.applyUrl ?? null : null,
     handlers: {
       getRouteState: () => routeState,
+      onSaveApplicationNotes(next,message) {
+        if(!next)return {ok:false,message:'Не сохранено. Проверь длину полей, дату выпуска и числа. Можно хранить до 20 историй.'};
+        return persistPortfolio(next,message);
+      },
       onHideBalance(id) {
         // Фокус — на следующее «Понятно, скрыть» или на «Выбрать ещё программы».
         routeState = hideBalance(routeState, id); persistRoute(); renderRouteView();
@@ -644,10 +649,11 @@ function renderRouteView() {
           if (picked.size > 500_000) return 'Файл слишком большой для маршрута Nerio.';
           const imported = importState(await picked.text());
           if (!imported) return 'Это не файл маршрута Nerio.';
-          if (!window.confirm('Заменить текущие данные файлом? Цели, подготовка, портфолио, материалы заявки и ответы будут заменены. Для резервной копии сначала скачай маршрут.')) return 'Загрузка отменена. Текущие записи сохранены.';
+          if (!window.confirm('Заменить текущие данные файлом? Цели, подготовка, портфолио, истории, сведения о школе, материалы заявки и ответы будут заменены. Для резервной копии сначала скачай маршрут.')) return 'Загрузка отменена. Текущие записи сохранены.';
           if (!saveRouteState(imported, localStorage)) return 'Браузер не сохранил файл. Текущий маршрут не заменён.';
           clearPortfolioDrafts();
           clearApplicationDrafts();
+          clearApplicationNotesDrafts();delete routeBody.dataset.notesView;
           applicationFocus=null;
           portfolioFocus=null;
           routeState = imported;
@@ -840,6 +846,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
   clearPortfolioDrafts();
   setGuidedStart(false);
   clearApplicationDrafts();
+  clearApplicationNotesDrafts();delete routeBody.dataset.notesView;
   applicationFocus=null;
   portfolioFocus=null;
   const empty = emptyProfile();

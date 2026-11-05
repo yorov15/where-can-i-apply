@@ -20,6 +20,7 @@ import { renderBragSheet, forgetBragSheetView } from './brag-sheet-view.js';
 import { renderApplications } from './application-view.js';
 import { renderInterview, interviewEntry } from './interview-view.js';
 import { balanceWarnings, visibleBalance } from './balance.js';
+import { renderApplicationNotes } from './application-notes-view.js';
 
 const PHASES = [
   ['tests', 'Экзамены'],
@@ -462,6 +463,7 @@ export function routeSection(hash) {
 
 export function renderRoute(root, props) {
   const { programs, route, planIds, tracks, status, loading, applyUrl, handlers } = props;
+  if (renderApplicationNotes(root, props)) return;
   if (renderBragSheet(root, props)) return;
   forgetBragSheetView(root);
   if (renderSpotlight(root, props)) return;
@@ -478,6 +480,13 @@ export function renderRoute(root, props) {
     navigation.append(link);
   }
   root.append(navigation);
+  if(section==='preparation') {
+    const materials=el('section','route-phase');materials.append(el('h3',null,'Собери факты для заявки'));
+    for(const [id,title,description] of [['stories','Банк историй','Случаи для эссе, рекомендаций и интервью.'],['school','Сведения о школе','Шкала оценок, выпуск и другие факты для форм.']]) {
+      const line=el('p','route-detail'),link=el('a',null,title);link.href=`#route/${id}`;line.append(link,` · ${description}`);materials.append(line);
+    }
+    root.append(materials);
+  }
   if (section === 'works') {
     root.append(renderPortfolio(props));
     return;

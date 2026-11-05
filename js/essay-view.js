@@ -34,6 +34,7 @@ export function renderEssays(goals,specs,onRetry,onSaveVersion,onVersionSaved,ha
   const section=el('section','route-phase');section.dataset.essays='';
   section.append(el('h3',null,'Эссе и мотивационные письма'));
   section.append(el('p','route-detail','Сверь задание и требования программы. Ответь своими словами и проверь объём.'));
+  const stories=el('a','link-button','Выбрать случай из банка историй');stories.href='#route/stories';section.append(stories);
   const examples=skillExamples(handlers);if(examples)section.append(examples);
   for(const goal of entries){
     const spec=specs[goal.id],box=el('details','route-more');box.dataset.essayProgram=goal.id;

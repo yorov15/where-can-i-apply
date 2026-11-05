@@ -7,6 +7,7 @@ import { deadlineState } from './lib/deadline.js';
 import { cardModel, extraFor } from './card-model.js';
 import { PROGRAM_SIDE_STATES } from './wording.js';
 import { feeOf, feeCell } from './cost.js';
+import { renderFeeWaiver } from './fee-waiver-view.js';
 import { safeHttpUrl } from './lib/url.js';
 import { EXPLAIN_URL } from './config.js';
 import { formatDate } from './lib/format.js';
@@ -51,6 +52,8 @@ export function programModel(row, details, today) {
     lead,
     kind: kindLine(row.program),
     feeSource: applicationFee?.source ?? null,
+    applicationFee,
+    feeWaiver: extra?.feeWaiver ?? null,
     applyRoutes: (Array.isArray(extra?.applyChannel?.routes) ? extra.applyChannel.routes : [])
       .filter(route => route && typeof route.name === 'string' && route.name.trim()
         && (route.url === null || safeHttpUrl(route.url))),
@@ -170,6 +173,8 @@ export function renderProgram(root, props) {
     facts.append(cell);
   }
   root.append(facts);
+  const waiver=renderFeeWaiver(view.feeWaiver,view.applicationFee,model.title,today);
+  if(waiver)root.append(waiver);
   if (view.feeSource) {
     const reference = link(view.feeSource.url, 'Источник взноса');
     if (reference) {
