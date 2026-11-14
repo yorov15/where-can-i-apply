@@ -147,8 +147,16 @@ def write_public_pages(root: Path, programs: list[dict]):
     for old in folder.glob("*.html"):
         if old.name not in expected and MARKER in old.read_text(encoding="utf-8"):
             old.unlink()
-    paths = ["", "faq.html", "glossary.html", "opportunities.html", "privacy.html", "programs/"] + [program_path(p) for p in programs]
+    entries = [(path, None) for path in ["", "faq.html", "glossary.html", "opportunities.html", "privacy.html", "programs/"]]
+    # lastmod — дата проверки данных: страница собрана из них, раньше этой даты она меняться не могла.
+    for program in programs:
+        checked = (program.get("source") or {}).get("lastVerified")
+        entries.append((program_path(program), checked if isinstance(checked, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", checked) else None))
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    sitemap += ''.join(f'  <url><loc>{esc(ORIGIN + "/" + path)}</loc></url>\n' for path in paths)
+    for path, lastmod in entries:
+        sitemap += f'  <url><loc>{esc(ORIGIN + "/" + path)}</loc>'
+        if lastmod:
+            sitemap += f'<lastmod>{esc(lastmod)}</lastmod>'
+        sitemap += '</url>\n'
     (root / "sitemap.xml").write_text(sitemap + '</urlset>\n', encoding="utf-8")
     return len(programs)
