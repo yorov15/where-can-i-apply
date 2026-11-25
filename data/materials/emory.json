@@ -1,0 +1,99 @@
+{
+  "id": "emory",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Два коротких ответа на вопросы Emory в дополнение к общему эссе Common App.",
+      "evidence": "College Questions: Answer the two additional short answer questions specific to Emory's application.",
+      "source": {
+        "url": "https://apply.emory.edu/apply/first-year",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:2aafc945d5dfc75f910849ccf4c8ddbb25cbc82b904e1bafe6ad4861b2726f1a"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две оценки от учителей основных предметов: английский, математика, естественные или общественные науки, иностранный язык.",
+      "evidence": "Two Teacher Evaluations: Request letters from two core academic teachers (e.g., English, math, science, social studies, or foreign language).",
+      "source": {
+        "url": "https://apply.emory.edu/apply/first-year",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:2aafc945d5dfc75f910849ccf4c8ddbb25cbc82b904e1bafe6ad4861b2726f1a"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Иностранные абитуриенты могут записать видеособеседование InitialView. Оно не обязательно и не заменяет тест по английскому.",
+      "evidence": "International applicants may choose to submit a virtual interview through InitialView to share more about their background, interests, and communication skills.",
+      "source": {
+        "url": "https://apply.emory.edu/apply/international",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:e2cd27142a3262b25beb245a4e28cd479edd918e5f518888205bbcabdbb358d4"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Можно дополнительно загрузить резюме в личном кабинете. Не обязательно.",
+      "evidence": "These materials could include a resume, digital portfolio, or link to a YouTube page.",
+      "source": {
+        "url": "https://apply.emory.edu/apply/international",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:e2cd27142a3262b25beb245a4e28cd479edd918e5f518888205bbcabdbb358d4"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Можно дополнительно загрузить цифровое портфолио или ссылку на YouTube. Не обязательно.",
+      "evidence": "Optional Supplemental Materials If you so choose, you may upload additional materials digitally to add to your application.",
+      "source": {
+        "url": "https://apply.emory.edu/apply/international",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:e2cd27142a3262b25beb245a4e28cd479edd918e5f518888205bbcabdbb358d4"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Основное эссе Common App общее для всех — в файл не внесено."
+}

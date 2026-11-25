@@ -1,0 +1,54 @@
+{
+  "id": "ucsd",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": 4,
+      "limit": {
+        "unit": "words",
+        "max": 350
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Четыре ответа на personal insight questions из восьми. Каждый — не больше 350 слов.",
+      "evidence": "You must answer 4 out of 8 questions. Each answer is limited to 350 words.",
+      "source": {
+        "url": "https://admissions.ucsd.edu/first-year/application-requirements.html",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:841d109fe8230391981321783f8052cf71c146bd6475f3f127d2da4b5df2af49"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "form",
+      "ru": "Для Music, Theatre & Dance и Visual Arts можно дополнительно подать портфолио или запись прослушивания. Не обязательно.",
+      "evidence": "Students applying to Music, Theatre & Dance, or Visual Arts may submit an optional portfolio/audition video when they apply to UC San Diego.",
+      "source": {
+        "url": "https://admissions.ucsd.edu/first-year/application-review.html",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:e0e1c28bdefc0673fb5994ba55119406eaf84a1a7e7fb8697636dbf1bbfa42a8"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "interview",
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": null
+}

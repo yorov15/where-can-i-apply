@@ -1,0 +1,68 @@
+{
+  "id": "wesleyan",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации от людей, знающих ученика по учёбе. Родители не подходят, даже если преподают.",
+      "evidence": "Two academic letters of recommendation from adults who know the student in an academic or intellectual capacity, excluding parents (even if they work in an instructional capacity).",
+      "source": {
+        "url": "https://www.wesleyan.edu/admission/application-process.html",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:2cd31df92b5d1ccc0ba8571c4c3a1cb64e1335af93d2371de994349926c65eb7"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Письменная оценка от школьного консультанта (counselor).",
+      "evidence": "Counselor Recommendation Your school counselor should submit a written evaluation.",
+      "source": {
+        "url": "https://www.wesleyan.edu/admission/undergraduate-admission/first-year.html",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:5d5367eef7b13599b411182606be003d18657884666cb7aa304ef71025b39fa3"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Оценочных собеседований нет, но можно приложить интервью InitialView или Vericant.",
+      "evidence": "We will, however, accept InitialView or Vericant interviews as part of your application.",
+      "source": {
+        "url": "https://www.wesleyan.edu/admission/undergraduate-admission/international",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:cb0dd2071d482dacd2b2a18371aacb133eba0c960ec434167e694ee11bfd6edb"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Эссе Common App общее для всех — в файл не внесено."
+}

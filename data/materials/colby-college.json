@@ -1,0 +1,66 @@
+{
+  "id": "colby-college",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Одна рекомендация от школьного консультанта (counselor). Подаётся через Common App, Coalition или QuestBridge.",
+      "evidence": "We require one counselor recommendation and two teacher recommendations.",
+      "source": {
+        "url": "https://afa.colby.edu/apply/requirements/",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:52a9f5888c1e645169480da25b58101c9e2294c63755b2396ee099e836db6c54"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации от учителей. Подаются через Common App, Coalition или QuestBridge.",
+      "evidence": "Letters of Recommendation We require one counselor recommendation and two teacher recommendations.",
+      "source": {
+        "url": "https://afa.colby.edu/apply/requirements/",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:52a9f5888c1e645169480da25b58101c9e2294c63755b2396ee099e836db6c54"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Видеособеседование не обязательно, но Colby принимает его через Duolingo, Vericant и InitialView.",
+      "evidence": "Video interviews are not required; however, Colby does accept them via Duolingo, Vericant, and InitialView.",
+      "source": {
+        "url": "https://afa.colby.edu/apply/requirements/",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:52a9f5888c1e645169480da25b58101c9e2294c63755b2396ee099e836db6c54"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan"
+  ],
+  "note": null
+}
