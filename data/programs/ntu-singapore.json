@@ -245,5 +245,21 @@
         "contentHash": "sha256:b36a803ef17773f8d11dedc904a82d11df773f81e21a6034aae5ba89bcf09f4e"
       }
     ]
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "NTU application portal",
+        "url": "https://wis.ntu.edu.sg/pls/webexe/adm_fore_appl.login",
+        "note": "",
+        "evidence": "Select the portal that corresponds to the qualifications you will be applying to NTU with:",
+        "source": {
+          "url": "https://www.ntu.edu.sg/admissions/undergraduate/admissions/application-process",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:317b60bbd41596dcc25eb1f50b865d1a576c39c50f537ac72ef3c1fc3a5a4995"
+        }
+      }
+    ]
   }
 }

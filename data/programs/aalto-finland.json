@@ -137,5 +137,21 @@
   "leftEmpty": {
     "schoolYears": "sha256:fa0ae13bfcf75feae1aa540e6690dbff5774e929313f895d43c81396f0df878b",
     "language": "sha256:fa0ae13bfcf75feae1aa540e6690dbff5774e929313f895d43c81396f0df878b"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "government",
+        "name": "Studyinfo.fi",
+        "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english",
+        "note": "",
+        "evidence": "filling out the application form in the Studyinfo.fi service.",
+        "source": {
+          "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:2ba2708f685fd3d53c69afdc580c10573b000d891efe38a434b33a58ccd4f7ac"
+        }
+      }
+    ]
   }
 }

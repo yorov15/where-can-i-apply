@@ -295,5 +295,21 @@
     ],
     "lastVerified": "2026-10-10",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common Application, Coalition Application on Scoir, QuestBridge",
+        "url": "https://www.colgate.edu/admission-aid/apply",
+        "note": "",
+        "evidence": "Colgate accepts the Common Application, Coalition Application on Scoir, and QuestBridge Application.",
+        "source": {
+          "url": "https://www.colgate.edu/admission-aid/apply/first-year-applicants",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:3bdcc4691436a94cea648e13f6741714c11d4d3fb97830178b1326f21eaa2141"
+        }
+      }
+    ]
   }
 }

@@ -354,5 +354,33 @@
     ],
     "lastVerified": "2026-10-02",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common App",
+        "url": "https://apply.commonapp.org/Login?ma=187",
+        "note": "",
+        "evidence": "You can apply to Oberlin College through the Common App or the Coalition/Scoir Application.",
+        "source": {
+          "url": "https://www.oberlin.edu/admissions-and-aid/arts-and-sciences/first-year-applicants",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:3e25b081f980ac821eee6e37b8fc59ccacdf5900ea314034ca9932c15af1687e"
+        }
+      },
+      {
+        "type": "platform",
+        "name": "Coalition/Scoir Application",
+        "url": "http://app.scoir.com/app/signup/2800096",
+        "note": "",
+        "evidence": "You can apply to Oberlin College through the Common App or the Coalition/Scoir Application.",
+        "source": {
+          "url": "https://www.oberlin.edu/admissions-and-aid/arts-and-sciences/first-year-applicants",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:3e25b081f980ac821eee6e37b8fc59ccacdf5900ea314034ca9932c15af1687e"
+        }
+      }
+    ]
   }
 }

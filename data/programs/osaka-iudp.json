@@ -356,5 +356,21 @@
     ],
     "lastVerified": "2026-11-02",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "Application Registration website",
+        "url": "https://e-apply.jp/n/osaka-u-inter",
+        "note": "",
+        "evidence": "Applicants should visit the Application Registration website",
+        "source": {
+          "url": "https://iudp.hus.osaka-u.ac.jp/admissions/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:859e5281115a1389e7bd891a8544f90e36a10ef3f73a18866e43025b20c3f25f"
+        }
+      }
+    ]
   }
 }

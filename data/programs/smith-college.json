@@ -294,5 +294,33 @@
     ],
     "lastVerified": "2026-10-17",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common Application",
+        "url": "https://apply.commonapp.org/Login?ma=247",
+        "note": "",
+        "evidence": "Smith accepts two applications for first-year admission—the Coalition Application and the Common Application.",
+        "source": {
+          "url": "https://www.smith.edu/admission-aid/apply-smith/first-year-applicants",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:a955c06a82fef4583c4a4b18a3833b1756152f67068eb39252179a5cb8a87e7a"
+        }
+      },
+      {
+        "type": "platform",
+        "name": "Coalition Application",
+        "url": "http://app.scoir.com/app/signup/1100103",
+        "note": "",
+        "evidence": "Smith accepts two applications for first-year admission—the Coalition Application and the Common Application.",
+        "source": {
+          "url": "https://www.smith.edu/admission-aid/apply-smith/first-year-applicants",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:a955c06a82fef4583c4a4b18a3833b1756152f67068eb39252179a5cb8a87e7a"
+        }
+      }
+    ]
   }
 }

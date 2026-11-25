@@ -297,5 +297,33 @@
     ],
     "lastVerified": "2026-10-02",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common Application",
+        "url": "https://apply.commonapp.org/Login?ma=29",
+        "note": "",
+        "evidence": "Bates uses the Common Application and the Coalition Application, Powered by Scoir.",
+        "source": {
+          "url": "https://www.bates.edu/admission/apply/application-options/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:907fbf6cadff7c855406111c011a73e3d794c73dc7a2bbf07e28fdb7e68ef1a9"
+        }
+      },
+      {
+        "type": "platform",
+        "name": "Coalition Application, Powered by Scoir",
+        "url": "https://app.scoir.com/signin",
+        "note": "",
+        "evidence": "Bates uses the Common Application and the Coalition Application, Powered by Scoir.",
+        "source": {
+          "url": "https://www.bates.edu/admission/apply/application-options/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:907fbf6cadff7c855406111c011a73e3d794c73dc7a2bbf07e28fdb7e68ef1a9"
+        }
+      }
+    ]
   }
 }
