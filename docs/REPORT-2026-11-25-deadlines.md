@@ -475,4 +475,4 @@ Open Doors 2026/27 закрыт 01.11.2026; нового не объявлено
 - `PYTHONUTF8=1 python -m unittest discover -s tools/tests -t .` — 532 теста, OK.
 - `python -m tools.build` — код 0, 323 программы, индекс 97 326 байт по проводу (предел 98 304). Вывод сборки откатан, в коммит не вошёл.
 
-Ветка: `deepseek/deadlines`. Последний коммит: см. `git log -1`.
+Ветка: `deepseek/deadlines`. Коммит с отчётом и выдержками: `aa9e759`.
