@@ -40,7 +40,8 @@ const planned = [
 test('сумма пишется с пробелами тысяч и названием валюты', () => {
   assert.equal(money(10000, 'KZT'), '10 000 тенге');
   assert.equal(money(75, 'USD'), '75 долл. США');
-  assert.equal(money(5, 'XXX'), '5 XXX');
+  assert.equal(money(900, 'SEK'), '900 шведских крон');
+  assert.equal(money(5, 'XXX'),'5 XXX');
 });
 
 test('плата берётся из первой размеченной условия; нет разметки — null', () => {

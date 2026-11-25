@@ -137,7 +137,17 @@
       "ru": "Взнос за заявку — 900 шведских крон, его платят в University Admissions; отменить его нельзя, и это не плата вузу.",
       "evidence": "The application fee is paid to University Admissions in Sweden and cannot be waived or paid to Uppsala University.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 900,
+        "currency": "SEK",
+        "evidence": "If you are not a citizen of the European Union (EU), European Economic Area (EEA) or Switzerland, you must pay an application fee of SEK 900.",
+        "source": {
+          "url": "https://www.uu.se/en/study/bachelors-studies/application/application-guide",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:9d58dbe6760443985650594404a0da9cfce380bd628cc9b307e36a3214b2ca8a"
+        }
+      }
     },
     {
       "ru": "Обучение платное для граждан вне ЕС/ЕЭЗ/Швейцарии; за семестр очной учёбы вуз называет от 49 500 до 90 000 крон, точную сумму даёт страница программы.",

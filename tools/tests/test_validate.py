@@ -1,6 +1,8 @@
 import unittest
 
-from tools.schema import empty_program
+from pathlib import Path
+
+from tools.schema import FEE_CURRENCIES, empty_program
 from tools.validate import validate_program
 
 SNAPSHOT = (
@@ -745,6 +747,17 @@ class TestFee(unittest.TestCase):
 
     def test_valid_fee_passes(self):
         self.assertEqual(self.problems(amount=20, currency="USD", evidence=self.QUOTE), [])
+
+    def test_swedish_krona_is_a_known_currency(self):
+        quote = "you must pay an application fee of SEK 900."
+        fee = {"amount": 900, "currency": "SEK", "evidence": quote}
+        self.assertEqual(validate_program(self.program(fee), SNAPSHOT + " " + quote), [])
+
+    def test_every_fee_currency_has_a_russian_name_in_cost_js(self):
+        cost_js = (Path(__file__).resolve().parents[2] / "js/cost.js").read_text(encoding="utf-8")
+        for code in FEE_CURRENCIES:
+            with self.subTest(currency=code):
+                self.assertRegex(cost_js, rf"\b{code}: '")
 
     def test_zero_fee_does_not_need_an_invented_currency(self):
         self.assertEqual(self.problems(amount=0, currency=None, evidence="There is no application fee"), [])
