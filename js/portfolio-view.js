@@ -1,4 +1,4 @@
-import { EXPERIENCE_KINDS, EXPERIENCE_SKILLS, MAX_SKILLS, portfolioOf } from './portfolio.js';
+import { EXPERIENCE_KINDS, EXPERIENCE_SKILLS, MAX_SKILLS, PROOF_KINDS, portfolioOf } from './portfolio.js';
 import { safeHttpUrl } from './lib/url.js';
 import { formatDate } from './lib/format.js';
 import { renderWorkPicker, renderWorkPlan, clearWorkDrafts } from './portfolio-work-view.js';
@@ -55,7 +55,7 @@ function paragraph(parent,title,value) {
   value.split('\n').forEach((line,index)=>{if(index)text.append(el('br'));text.append(document.createTextNode(line));});parent.append(text);
 }
 
-function experienceForm(entry,props,onSaved) {
+export function experienceForm(entry,props,onSaved) {
   const id=entry?.id??'new', draftKey=`experience:${id}`;
   const value=drafts.get(draftKey)??entry??{kind:'project',goals:[]};
   const form=el('form','journey-form');form.dataset.experienceForm=id;
@@ -73,6 +73,7 @@ function experienceForm(entry,props,onSaved) {
   field(form,'Какие действия ты предпринял?','actions',value.actions);
   field(form,'Что получилось?','result',value.result);
   field(form,'Что понял и что изменил бы?','reflection',value.reflection);
+  selectField(form,'Чем подтвердить? · необязательно','proof',[['','Не указано'],...PROOF_KINDS],value.proof);
   field(form,'Ссылка на работу · необязательно','url',value.url,{type:'url'});
   const links=el('details','journey-edit');links.append(el('summary',null,'Связать с целями'));
   rememberOpen(links,`goals:${id}`);

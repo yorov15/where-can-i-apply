@@ -12,6 +12,11 @@ export const EXPERIENCE_KINDS = [['project','Проект'],['study','Учёба
 export const EXPERIENCE_SKILLS = [['independence','Самостоятельность'],['leadership','Лидерство'],['teamwork','Работа в команде'],
   ['research','Исследование'],['creativity','Творчество'],['helping','Помощь людям'],['tech','Техника']];
 export const MAX_SKILLS = 3;
+// Чем ученик может подтвердить запись. «Пока ничего» — честный ответ, а не пробел.
+export const PROOF_KINDS = [['certificate','Грамота или сертификат'],['link','Ссылка или файл'],['person','Человек, который подтвердит'],['none','Пока ничего']];
+// Ответы опроса «Что у меня уже есть»: «да» уже стало записью, «нет» убирает вопрос.
+const SURVEY_ANSWERS = ['yes','no'];
+const MAX_SURVEY = 30;
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const key = value => typeof value === 'string' && value.length > 0 && value.length <= 200
   && !['__proto__','constructor','prototype'].includes(value);
@@ -48,6 +53,7 @@ function experience(value) {
     if(!Array.isArray(skills)||skills.length>MAX_SKILLS||!unique(skills)||skills.some(code=>!EXPERIENCE_SKILLS.some(([id])=>id===code)))return null;
     if(skills.length)entry.skills=[...skills];
   }
+  if(value.proof!=null&&value.proof!==''){if(!PROOF_KINDS.some(([code])=>code===value.proof))return null;entry.proof=value.proof;}
   if(Object.hasOwn(value,'workPlan')){entry.workPlan=normalizeWorkPlan(value.workPlan);if(!entry.workPlan)return null;}
   return entry;
 }
@@ -70,6 +76,11 @@ export function normalizePortfolio(value) {
   if (outcomes.some(item => item.experienceId && !experiences.some(entry => entry.id === item.experienceId))) return null;
   if(!unique(experiences.filter(entry=>entry.workPlan).map(entry=>entry.workPlan.id)))return null;
   const next = {version:1,experiences,outcomes};
+  if (value.survey != null) {
+    const answers = object(value.survey) ? Object.entries(value.survey) : null;
+    if (!answers || answers.length > MAX_SURVEY || answers.some(([id,answer]) => !key(id) || !SURVEY_ANSWERS.includes(answer))) return null;
+    if (answers.length) next.survey = Object.fromEntries(answers);
+  }
   return new TextEncoder().encode(JSON.stringify(next)).length <= 300_000 ? next : null;
 }
 
@@ -81,6 +92,18 @@ export function saveExperience(state, input, today) {
   const entry = experience({...old,...input,createdOn:old?.createdOn ?? today,updatedOn:today});
   if (!entry) return null;
   portfolio.experiences = old ? portfolio.experiences.map(item => item.id === entry.id ? entry : item) : [...portfolio.experiences,entry];
+  const checked = normalizePortfolio(portfolio);
+  return checked ? {...state,portfolio:checked} : null;
+}
+
+// Ответ на вопрос опроса. null стирает все ответы: опрос можно пройти заново.
+export function answerSurvey(state, id, answer) {
+  const portfolio = portfolioOf(state);
+  if (id === null) delete portfolio.survey;
+  else {
+    if (!key(id) || !SURVEY_ANSWERS.includes(answer)) return null;
+    portfolio.survey = {...portfolio.survey, [id]: answer};
+  }
   const checked = normalizePortfolio(portfolio);
   return checked ? {...state,portfolio:checked} : null;
 }

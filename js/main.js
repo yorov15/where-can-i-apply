@@ -495,6 +495,7 @@ function renderRouteView() {
         if(program)program.open=true;if(field){field.open=true;field.querySelector('textarea')?.focus();}
       },
       onSaveSpotlight(goalId, input) { return persistPortfolio(saveSpotlight(routeState, goalId, input, today), 'Подборка сохранена.'); },
+      onSavePortfolio(next,message) { return persistPortfolio(next,message); },
       onSaveExperience(input) { return persistPortfolio(saveExperience(routeState,input,today),'Опыт сохранён.'); },
       onRemoveExperience(id) { const entry=routeState.portfolio?.experiences.find(item=>item.id===id),response=persistPortfolio(removeExperience(routeState,id),'Опыт удалён. Результаты заданий сохранены.');if(response.ok&&entry)forgetLearningDrafts(entry);return response; },
       onSaveTaskOutcome(input) { return persistPortfolio(saveTaskOutcome(routeState,input,today),'Результат сохранён в «Моём пути».'); },

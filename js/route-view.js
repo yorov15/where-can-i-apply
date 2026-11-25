@@ -14,7 +14,7 @@ import { renderStudyPlan } from './study-view.js';
 import { renderEssays } from './essay-view.js';
 import { renderSpotlight, forgetSpotlightView, spotlightHash } from './spotlight-view.js';
 import { GOAL_STATUSES, statusOf, isSent, goalProgress, progressLine, hasPreparationGoals } from './goal-status.js';
-import { renderPortfolio } from './portfolio-view.js';
+import { renderPortfolioSteps } from './portfolio-steps-view.js';
 import { renderRecommenders } from './recommenders-view.js';
 import { renderBragSheet, forgetBragSheetView } from './brag-sheet-view.js';
 import { renderApplications } from './application-view.js';
@@ -473,7 +473,7 @@ export function renderRoute(root, props) {
   root.dataset.layer = section;
   const navigation = el('nav', 'path-nav');
   navigation.setAttribute('aria-label', 'Разделы моего пути');
-  for (const [id, title] of [['works', 'Работы'], ['preparation', 'Подготовка'], ['applications', 'Заявки'], ['interview', 'Собеседование'], ['files', 'Файл и данные']]) {
+  for (const [id, title] of [['works', 'Портфолио'], ['preparation', 'Подготовка'], ['applications', 'Заявки'], ['interview', 'Собеседование'], ['files', 'Файл и данные']]) {
     const link = el('a', null, title);
     link.href = id === 'works' ? '#route' : `#route/${id}`;
     if (id === section) link.setAttribute('aria-current', 'page');
@@ -488,7 +488,7 @@ export function renderRoute(root, props) {
     root.append(materials);
   }
   if (section === 'works') {
-    root.append(renderPortfolio(props));
+    root.append(renderPortfolioSteps(props));
     return;
   }
   if (section === 'interview') {
