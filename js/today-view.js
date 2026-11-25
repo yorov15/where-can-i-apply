@@ -137,7 +137,7 @@ function nowCard(model, props) {
     card.append(el('p', null, week?.tasks.length ? 'Всё из плана недели сделано.' : 'Дел на эту неделю пока нет. Добавь программы в «Мой путь».'));
     return card;
   }
-  card.append(el('p', 'route-detail', `Сейчас · ${next.minutes} мин`));
+  card.append(el('p', 'today-tag', `Сейчас · ${next.minutes} мин`));
   const label=taskLabel(next,routeState);
   card.append(el('h3', 'today-now-title', label.title));
   if(label.context)card.append(el('p','route-detail',`Работа: ${label.context}`));
@@ -149,13 +149,14 @@ function nowCard(model, props) {
   prerequisite.hidden=!practice&&!needsResult;
   // Шаг работы закрывается одной кнопкой в форме результата, как в самой работе.
   const finish=next.kind==='portfolio'&&Boolean(next.workStepId&&next.experienceId);
-  const done = el('button', 'button button-quiet', 'Готово');
+  const open = openLink(next.url, 'Открыть материал');
+  // Одна главная кнопка: если есть материал, «Готово» становится тихой.
+  const done = el('button', open ? 'button button-quiet' : 'button', 'Готово');
   done.disabled=practice||needsResult;
   const outcome=renderTaskOutcome(week.key,next,props,finish?()=>handlers.onRedraw?.():()=>{done.disabled=false;prerequisite.hidden=true;},finish);
   if(!practice&&(needsResult||finish))outcome.open=true;
   card.append(outcome);
   const row = el('div', 'today-actions');
-  const open = openLink(next.url, 'Открыть материал');
   if (open) row.append(open);
   done.type = 'button';
   done.addEventListener('click', () => handlers.onWeeklyToggle(week.key, next.taskId));
@@ -170,7 +171,7 @@ function weekList(model, props) {
   const { week, tasks } = model;
   const box = el('section', 'route-week');
   box.dataset.currentWeek = week.key;
-  box.append(el('h3', 'route-phase-title', `Эта неделя · ${model.doneCount} из ${tasks.length}`));
+  // Счёт «N из M» уже в заголовке раскрывашки «Вся неделя».
   const list = el('ul', 'route-week-list');
   for (const task of tasks) {
     const row = el('li', 'route-week-item');
@@ -283,8 +284,9 @@ export function renderToday(root, props) {
   }
   const head = el('header', 'today-head');
   if (model.nearest) {
-    head.append(el('p', 'route-detail',
-      `До подачи в ${shortName(model.nearest.name)} — ${model.daysToNearest} ${plural(model.daysToNearest, 'день', 'дня', 'дней')}`));
+    const count = el('p', 'today-count');
+    count.append(el('b', null, `${model.daysToNearest} ${plural(model.daysToNearest, 'день', 'дня', 'дней')}`), ` до подачи в ${shortName(model.nearest.name)}`);
+    head.append(count);
   }
   head.append(el('h2', 'today-title', 'Что сделать сегодня'));
   root.append(head);
@@ -296,7 +298,7 @@ export function renderToday(root, props) {
   else if(!model.offerActions.length)root.append(el('p','route-detail','Дел в плане недели нет. Материалы и ответы доступны в «Моём пути».'));
   if (model.week?.tasks.length) {
     const week = el('details', 'today-more');
-    week.append(el('summary', null, 'Вся неделя'), weekList(model, props));root.append(week);
+    week.append(el('summary', null, `Вся неделя · ${model.doneCount} из ${model.tasks.length}`), weekList(model, props));root.append(week);
   }
   if(props.weekly?.workBacklog)root.append(el('p','route-detail',`Шагов работ вне плана недели: ${props.weekly.workBacklog}. Проверь доступное время и выбранные дни; лишние работы можно поставить на паузу в «Моём пути».`));
   const reference = el('details', 'today-more');reference.append(el('summary', null, 'Уровень, даты и заявки'));
