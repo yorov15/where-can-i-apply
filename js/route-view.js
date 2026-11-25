@@ -336,23 +336,42 @@ function weekBlock(route, handlers) {
 // Разделы-справочники: по умолчанию открыт только тот, где есть ближайшее
 // несделанное дело. Так экран не заставляет прокручивать документы, чтобы
 // увидеть экзамены.
+// Группы подготовки — плитки со счётом, как темы в банке задач: под сеткой
+// открыта одна группа. Пока ничего не выбрано — первая с несделанным.
+let chosenPhase = null;
 function phaseBlock(route, handlers) {
   const box = el('div', 'route-phases');
-  const firstUndone = route.steps.find((step) => !step.done);
-  const rows = [];
-  for (const [code, title] of PHASES) {
-    const steps = route.steps.filter((step) => step.phase === code);
-    if (!steps.length) continue;
-    const done = steps.filter((step) => step.done).length;
+  const groups = PHASES.map(([code, title]) => ({ code, title, steps: route.steps.filter((step) => step.phase === code) }))
+    .filter((group) => group.steps.length);
+  const current = groups.find((group) => group.code === chosenPhase)
+    ?? groups.find((group) => group.steps.some((step) => !step.done)) ?? groups[0];
+  const grid = el('div', 'record-grid');
+  box.append(grid);
+  for (const group of groups) {
+    const done = group.steps.filter((step) => step.done).length;
+    const finished = done === group.steps.length;
+    const tile = el('button', finished ? 'record-tile is-done' : 'record-tile');
+    tile.type = 'button';
+    tile.dataset.phaseTile = group.code;
+    tile.setAttribute('aria-expanded', String(group === current));
+    tile.append(el('span', 'journey-title', group.title), el('b', null, `${done} из ${group.steps.length}`),
+      el('small', 'journey-meta', finished ? 'Готово' : PHASE_HINT[group.code] ?? ''));
+    grid.append(tile);
     const details = el('details', 'route-phase');
-    details.dataset.phase = code;
-    if (firstUndone && steps.some((step) => !step.done) && !rows.some((item) => item.open)) details.open = true;
-    const summary = el('summary', 'route-phase-title', `${title} · ${done} из ${steps.length}`);
-    summary.append(el('span', 'route-phase-hint', PHASE_HINT[code] ?? ''));
+    details.dataset.phase = group.code;
+    details.open = true;
+    details.hidden = group !== current;
+    const summary = el('summary', 'route-phase-title', `${group.title} · ${done} из ${group.steps.length}`);
+    summary.append(el('span', 'route-phase-hint', PHASE_HINT[group.code] ?? ''));
     details.append(summary);
-    for (const step of steps) details.append(stepRow(step, step.id, handlers));
+    for (const step of group.steps) details.append(stepRow(step, step.id, handlers));
     box.append(details);
-    rows.push(details);
+    tile.addEventListener('click', () => {
+      chosenPhase = group.code;
+      for (const node of grid.children) node.setAttribute('aria-expanded', String(node === tile));
+      for (const node of box.querySelectorAll('[data-phase]')) node.hidden = node !== details;
+      details.open = true;
+    });
   }
   return box;
 }
@@ -604,6 +623,7 @@ export function renderRoute(root, props) {
 
   const warn = conditionsWarn(route, handlers.onRetry);
   if (warn) main.append(warn);
+  main.append(phaseBlock(route,{...handlers,tracks}));
   const gaps = gapBlock(route);
   if (gaps) main.append(gaps);
   }
@@ -626,8 +646,7 @@ export function renderRoute(root, props) {
 
   // ——— разделы-справочники (правая колонка на широком экране) ———
   const side = el('div', 'route-side');
-  const preparation=phaseBlock(route,{...handlers,tracks});
-  if(preparing)side.append(preparation);else{const archive=el('details','route-phase');archive.append(el('summary',null,'Подготовка до подачи · справка'),preparation);side.append(archive);}
+  if(!preparing){const archive=el('details','route-phase');archive.append(el('summary',null,'Подготовка до подачи · справка'),phaseBlock(route,{...handlers,tracks}));side.append(archive);}
   const applyNotes = applyNotesBlock(route);
   if (applyNotes) side.append(applyNotes);
   const essays=renderEssays(route.goals,props.essays??{},handlers.onRetry,handlers.onSaveEssayVersion,handlers.onEssayVersionSaved,handlers);
