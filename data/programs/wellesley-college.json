@@ -278,5 +278,21 @@
     ],
     "lastVerified": "2026-10-11",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common Application, QuestBridge, Coalition Application",
+        "url": "https://www.wellesley.edu/admission-aid/apply",
+        "note": "",
+        "evidence": "Wellesley accepts the Common Application, the QuestBridge Application, and the Coalition Application.",
+        "source": {
+          "url": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:e2034b0305245efa5757d22698dff49b45cae49bb157cbe90596b66d585eac65"
+        }
+      }
+    ]
   }
 }

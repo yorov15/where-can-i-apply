@@ -189,5 +189,21 @@
     ],
     "lastVerified": "2026-10-01",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "Bocconi online application",
+        "url": "https://apply.unibocconi.it/",
+        "note": "",
+        "evidence": "Apply now",
+        "source": {
+          "url": "https://www.unibocconi.it/en/applying-bocconi/bachelor-and-law-programs/application-and-admissions",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:aec962d93f4220b79102d52650f4de66aece9cb6fb7cf7492208bcb36bf379dd"
+        }
+      }
+    ]
   }
 }

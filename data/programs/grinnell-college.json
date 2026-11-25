@@ -311,5 +311,21 @@
     ],
     "lastVerified": "2026-10-05",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common Application, QuestBridge",
+        "url": "https://www.grinnell.edu/admission/apply",
+        "note": "",
+        "evidence": "a Common Application and QuestBridge School with no fee to apply and no required supplement.",
+        "source": {
+          "url": "https://www.grinnell.edu/admission/apply/first-year/requirements",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:5a43160d7ad5c801740d5faf22992c867cce78145e719f7dcacffc42b1653621"
+        }
+      }
+    ]
   }
 }

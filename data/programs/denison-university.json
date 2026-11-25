@@ -259,5 +259,21 @@
     ],
     "lastVerified": "2026-10-31",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common Application",
+        "url": "https://apply.commonapp.org/Login?ma=77&tref=W1002",
+        "note": "",
+        "evidence": "must submit an application through the Common Application or the Coalition Application.",
+        "source": {
+          "url": "https://denison.edu/campus/admission/international-applicants",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:a457194f17bd17840b90395f46c5bc5d6c725545845d0dbb866e08c0f99178db"
+        }
+      }
+    ]
   }
 }

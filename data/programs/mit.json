@@ -225,5 +225,21 @@
       }
     ],
     "approvedBy": "assistant"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "MIT application portal",
+        "url": "https://apply.mitadmissions.org/portal/apply",
+        "note": "",
+        "evidence": "The first-year application is open in the MIT application portal.",
+        "source": {
+          "url": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:e0a3bed81130b9fd1a51a3637c7dd73de43d65477232275d37eee09104311da8"
+        }
+      }
+    ]
   }
 }

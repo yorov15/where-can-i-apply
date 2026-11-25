@@ -312,5 +312,21 @@
     ],
     "lastVerified": "2026-10-20",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common Application, Apply Coalition with Scoir",
+        "url": "https://admissions.northwestern.edu/apply/index.html",
+        "note": "",
+        "evidence": "Common Application or Apply Coalition with Scoir*",
+        "source": {
+          "url": "https://admissions.northwestern.edu/apply/index.html",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:aeb85019d3a41b0c964dbe5336a37581a1067838a5cd50d8e89c1feff113edb5"
+        }
+      }
+    ]
   }
 }

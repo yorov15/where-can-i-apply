@@ -430,5 +430,21 @@
     ],
     "lastVerified": "2026-10-02",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common Application, Coalition Application",
+        "url": "https://www.commonapp.org/",
+        "note": "",
+        "evidence": "To apply, use either the Common Application or Coalition Application.",
+        "source": {
+          "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:78aa13c48a3bb7b1b59f7a62ba604da87fe55ac9484443807511489e497bd923"
+        }
+      }
+    ]
   }
 }
