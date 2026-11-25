@@ -1,6 +1,6 @@
 # Конкурсы и олимпиады для каталога — 25.11.2026
 
-Задача DS-2. Ветка `deepseek/opportunities`, worktree `C:\Users\ORYX\dev\nerio-ds2`, от `origin/main` `b3d5974`.
+Задача DS-2. Ветка `deepseek/opportunities`, worktree `C:\Users\ORYX\dev\nerio-ds2`, от `origin/main` `b3d5974`. Коммит с отчётом и снимками: `05c906c`; следующий за ним коммит только дописывает эту строку.
 
 ## Итог
 
