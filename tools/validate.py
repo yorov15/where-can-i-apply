@@ -585,3 +585,37 @@ def _check_condition_tags(number: int, condition: dict, required: bool) -> list[
             if not isinstance(title, str) or not title.strip() or len(title) > 80:
                 problems.append(f"условие {number}: test.title — непустое действие до 80 знаков")
     return problems
+
+
+def main(argv=None) -> int:
+    """python -m tools.validate [id ...] — проверить записи по их снимкам.
+
+    Без сети: запись сверяется с последним снимком raw/<id>/ и с отдельными
+    снимками её каналов подачи и взносов (их ищет tools.reverify). Печатает
+    только ошибки; код выхода 1, если они есть хоть у одной записи.
+    """
+    import json
+    import sys
+    from pathlib import Path
+
+    from tools.reverify import report_for
+
+    wanted = set(argv if argv is not None else sys.argv[1:])
+    root = Path(__file__).resolve().parent.parent
+    paths = sorted((root / "data" / "programs").glob("*.json"))
+    paths = [path for path in paths if not wanted or path.stem in wanted]
+    broken = 0
+    for path in paths:
+        result = report_for(root, json.loads(path.read_text(encoding="utf-8")))
+        problems = result["problems"] or (["нет снимка в raw/"] if result["state"] == "NO_SNAPSHOT" else [])
+        if problems:
+            broken += 1
+            print(f"{path.stem}:")
+            for problem in problems:
+                print(f"  {problem}")
+    print(f"проверено {len(paths)}, с ошибками {broken}")
+    return 1 if broken else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
