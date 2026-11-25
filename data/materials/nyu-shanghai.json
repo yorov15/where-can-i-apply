@@ -1,0 +1,67 @@
+{
+  "id": "nyu-shanghai",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Школьный консультант или другой представитель школы заполняет School Report и присылает аттестат.",
+      "evidence": "Contact information for the counselor or other school representative who will complete your Common Application School Report and submit your official high school transcript.",
+      "source": {
+        "url": "https://shanghai.nyu.edu/page/how-apply",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:568346107980307f9c5709c5693c016f9d5cad8ecbd75306be9a7d1f727f66f7"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Одна оценка от учителя; контакты учителя указываются в заявке.",
+      "evidence": "Contact information for one teacher (or two, maximum) who will complete the Teacher Evaluation form.",
+      "source": {
+        "url": "https://shanghai.nyu.edu/page/how-apply",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:568346107980307f9c5709c5693c016f9d5cad8ecbd75306be9a7d1f727f66f7"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "По желанию можно добавить вторую оценку от учителя, но не больше двух.",
+      "evidence": "One teacher evaluation (students may submit an optional second teacher evaluation, but please submit no more than two)",
+      "source": {
+        "url": "https://shanghai.nyu.edu/page/how-apply",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:568346107980307f9c5709c5693c016f9d5cad8ecbd75306be9a7d1f727f66f7"
+      }
+    }
+  ],
+  "notStated": [
+    "interview",
+    "video",
+    "portfolio",
+    "cv",
+    "awards",
+    "studyPlan",
+    "certificates"
+  ],
+  "note": "Общее эссе и список активностей Common App не внесены. Дополнительные вопросы NYU в снимке не описаны; интервью, видео и портфолио не упомянуты."
+}
