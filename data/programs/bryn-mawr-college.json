@@ -244,6 +244,23 @@
       "evidence": "You and your custodial parent should complete and sign the College Board Non-Custodial Parent Petition Waiver . A statement written by a third party (e.g. high school counselor, social worker, teacher, clergy, court documents or similar) certifying your situation must also be submitted with your waiver request",
       "field": null,
       "kind": "documents"
+    },
+    {
+      "ru": "Взноса за подачу нет.",
+      "evidence": "No application fee.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": null,
+        "evidence": "No application fee.",
+        "source": {
+          "url": "https://www.brynmawr.edu/admissions-aid/apply",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:d379b46f67781551121af66db0a4580a659c9046af8a72be1bb888795fe84ee4"
+        },
+        "unconditional": true
+      }
     }
   ],
   "deadline": {

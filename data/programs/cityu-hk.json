@@ -123,6 +123,22 @@
       "evidence": "15 Nov 2026 Early Round Application Deadline",
       "field": null,
       "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу для нелокальных абитуриентов - 600 гонконгских долларов (до двух выборов программ).",
+      "evidence": "Application Fee (Non-local Students) HK$600 (up to 2 programme choices).",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 600,
+        "currency": "HKD",
+        "evidence": "Application Fee (Non-local Students) HK$600 (up to 2 programme choices).",
+        "source": {
+          "url": "https://www.cityu.edu.hk/admo/fees-and-scholarships?kind=nonlocal",
+          "lastVerified": "2026-10-01",
+          "contentHash": "sha256:7c0673eb0db4a98efdb7b2ed250e7a58d9bf9e8a64cf363455ca735d5fba216e"
+        }
+      }
     }
   ],
   "deadline": {
