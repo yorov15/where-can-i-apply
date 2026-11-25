@@ -1,0 +1,873 @@
+[
+ {
+  "id": "bard-college",
+  "name": "Bard College — колледж в США, нужду гарантируют только в ранних турах, семья обычно платит от 30 000 долларов",
+  "country": "US",
+  "cohort": "new",
+  "status": "added",
+  "reasonCode": "explicit",
+  "reason": "Официальная страница прямо говорит, что взноса нет.",
+  "sources": [
+   {
+    "url": "https://www.bard.edu/admission/applying/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/bard-college-99841b67334c.txt",
+    "contentHash": "sha256:99841b67334cbc0a2bbcd683510bebb4057a8e3b893284037da51543fbeae9c7",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 23553
+   },
+   {
+    "url": "https://www.bard.edu/admission/apply/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/bard-college-e467e772aa45.txt",
+    "contentHash": "sha256:e467e772aa4553848060d5876e8588b9597344ad44e28609b02349ac70c9ba98",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 2772
+   }
+  ],
+  "fee": {
+   "id": "bard-college",
+   "amount": 0,
+   "currency": null,
+   "quote": "There is no application fee to apply to Bard College",
+   "source": {
+    "url": "https://www.bard.edu/admission/applying/",
+    "lastVerified": "2026-11-25",
+    "contentHash": "sha256:99841b67334cbc0a2bbcd683510bebb4057a8e3b893284037da51543fbeae9c7"
+   },
+   "snapshot": "raw/application-fees/2026-11-25-batch4/bard-college.txt",
+   "scope": "Взноса за подачу в Bard College нет."
+  }
+ },
+ {
+  "id": "brown-university",
+  "name": "Браун — помощь по достатку семьи",
+  "country": "US",
+  "cohort": "new",
+  "status": "added",
+  "reasonCode": "explicit",
+  "reason": "Прямая цитата с суммой с официальной страницы.",
+  "sources": [
+   {
+    "url": "https://admission.brown.edu/apply/how-apply",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/brown-university-fb2315d64e7e.txt",
+    "contentHash": "sha256:fb2315d64e7e56a8ff06f9d75aab945741f1e4b31424bc24e9191cce9b451d91",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 10295
+   },
+   {
+    "url": "https://admission.brown.edu/apply",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/brown-university-c270a3e624f3.txt",
+    "contentHash": "sha256:c270a3e624f3d883171ac01bc6f9860115647a0c96279de8d5f9cda8c05d474a",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 4426
+   }
+  ],
+  "fee": {
+   "id": "brown-university",
+   "amount": 80,
+   "currency": "USD",
+   "quote": "To apply to Brown you must submit an $80 non-refundable application fee, or a fee waiver.",
+   "source": {
+    "url": "https://admission.brown.edu/apply/how-apply",
+    "lastVerified": "2026-11-25",
+    "contentHash": "sha256:fb2315d64e7e56a8ff06f9d75aab945741f1e4b31424bc24e9191cce9b451d91"
+   },
+   "snapshot": "raw/application-fees/2026-11-25-batch4/brown-university.txt",
+   "scope": "Взнос за подачу - 80 долларов США, невозвратный; вместо него можно оформить снятие по условиям вуза."
+  }
+ },
+ {
+  "id": "bryn-mawr-college",
+  "name": "Bryn Mawr College — колледж в США для женщин, помощь по нужде, но денег на всех не хватает",
+  "country": "US",
+  "cohort": "new",
+  "status": "added",
+  "reasonCode": "explicit",
+  "reason": "Официальная страница прямо говорит, что взноса нет.",
+  "sources": [
+   {
+    "url": "https://www.brynmawr.edu/admissions-aid/apply",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/bryn-mawr-college-d379b46f6778.txt",
+    "contentHash": "sha256:d379b46f67781551121af66db0a4580a659c9046af8a72be1bb888795fe84ee4",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 23546
+   }
+  ],
+  "fee": {
+   "id": "bryn-mawr-college",
+   "amount": 0,
+   "currency": null,
+   "quote": "No application fee.",
+   "source": {
+    "url": "https://www.brynmawr.edu/admissions-aid/apply",
+    "lastVerified": "2026-11-25",
+    "contentHash": "sha256:d379b46f67781551121af66db0a4580a659c9046af8a72be1bb888795fe84ee4"
+   },
+   "snapshot": "raw/application-fees/2026-11-25-batch4/bryn-mawr-college.txt",
+   "scope": "Взноса за подачу нет."
+  }
+ },
+ {
+  "id": "carleton-college",
+  "name": "Carleton College — колледж в США: обещает закрыть нужду, но денег иностранцам мало",
+  "country": "US",
+  "cohort": "new",
+  "status": "added",
+  "reasonCode": "explicit",
+  "reason": "Официальная страница прямо говорит, что взноса нет.",
+  "sources": [
+   {
+    "url": "https://www.carleton.edu/admissions/apply/steps/materials/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/carleton-college-a73ec2e80ed9.txt",
+    "contentHash": "sha256:a73ec2e80ed9f18099e370fc7215334e74af7f0bfe9b52714ddc3b55f387e4ad",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 11475
+   },
+   {
+    "url": "https://www.carleton.edu/admissions/apply/afford/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/carleton-college-8990ad61dfc7.txt",
+    "contentHash": "sha256:8990ad61dfc72f2209637c1848a42eead18041e20e18820a7b5f60662d5dccb6",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 5154
+   },
+   {
+    "url": "https://www.carleton.edu/admissions/apply/steps/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/carleton-college-a473035fa1e7.txt",
+    "contentHash": "sha256:a473035fa1e7906a14b3dfd4c1a2312d9deef04f8b0b7aadd831620fdf14f2c8",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 2686
+   },
+   {
+    "url": "https://www.carleton.edu/admissions/apply/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/carleton-college-1a714985e9cf.txt",
+    "contentHash": "sha256:1a714985e9cf60c7956e77602bebb1a6c73b2cf699cb5fc0e61dbbe3a6ae426e",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 4538
+   }
+  ],
+  "fee": {
+   "id": "carleton-college",
+   "amount": 0,
+   "currency": null,
+   "quote": "No application fee",
+   "source": {
+    "url": "https://www.carleton.edu/admissions/apply/steps/materials/",
+    "lastVerified": "2026-11-25",
+    "contentHash": "sha256:a73ec2e80ed9f18099e370fc7215334e74af7f0bfe9b52714ddc3b55f387e4ad"
+   },
+   "snapshot": "raw/application-fees/2026-11-25-batch4/carleton-college.txt",
+   "scope": "Взноса за подачу нет."
+  }
+ },
+ {
+  "id": "cityu-hk",
+  "name": "City University of Hong Kong (Гонконг): бакалавриат на английском со вступительными стипендиями",
+  "country": "HK",
+  "cohort": "new",
+  "status": "added",
+  "reasonCode": "explicit",
+  "reason": "Прямая цитата с суммой с официальной страницы.",
+  "sources": [
+   {
+    "url": "https://www.cityu.edu.hk/admo/fees-and-scholarships?kind=nonlocal",
+    "date": "2026-10-01",
+    "snapshot": "raw/cityu-hk/2026-10-01/01.txt",
+    "contentHash": "sha256:7c0673eb0db4a98efdb7b2ed250e7a58d9bf9e8a64cf363455ca735d5fba216e",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 697
+   },
+   {
+    "url": "https://www.cityu.edu.hk/admo/fees-and-scholarships?kind=nonlocal",
+    "date": "2026-11-25",
+    "error": "повторный запрос 2026-11-25 вернул пустой текст"
+   }
+  ],
+  "fee": {
+   "id": "cityu-hk",
+   "amount": 600,
+   "currency": "HKD",
+   "quote": "Application Fee (Non-local Students) HK$600 (up to 2 programme choices).",
+   "source": {
+    "url": "https://www.cityu.edu.hk/admo/fees-and-scholarships?kind=nonlocal",
+    "lastVerified": "2026-10-01",
+    "contentHash": "sha256:7c0673eb0db4a98efdb7b2ed250e7a58d9bf9e8a64cf363455ca735d5fba216e"
+   },
+   "snapshot": "raw/application-fees/2026-11-25-batch4/cityu-hk.txt",
+   "scope": "Взнос за подачу для нелокальных абитуриентов - 600 гонконгских долларов (до двух выборов программ)."
+  }
+ },
+ {
+  "id": "cuhk",
+  "name": "The Chinese University of Hong Kong (Гонконг): приём иностранцев на бакалавриат",
+  "country": "HK",
+  "cohort": "new",
+  "status": "added",
+  "reasonCode": "explicit",
+  "reason": "Прямая цитата с суммой с официальной страницы.",
+  "sources": [
+   {
+    "url": "https://admission.cuhk.edu.hk/application/overseas-other-qualifications-non-local-international-team/application-guides/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/cuhk-a1123a0a3293.txt",
+    "contentHash": "sha256:a1123a0a329344dba79d47e701766d3651d675ed989c19920d8866495b3d50e7",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 6960
+   }
+  ],
+  "fee": {
+   "id": "cuhk",
+   "amount": 500,
+   "currency": "HKD",
+   "quote": "You will need to pay a non-refundable application fee of HK$500 for 2027 entry via ONLINE payment by credit card (Mastercard, VISA or UnionPay) or Faster Payment System (FPS) (for Hong Kong bank accounts only) through our Online Application System at the time of submission.",
+   "source": {
+    "url": "https://admission.cuhk.edu.hk/application/overseas-other-qualifications-non-local-international-team/application-guides/",
+    "lastVerified": "2026-11-25",
+    "contentHash": "sha256:a1123a0a329344dba79d47e701766d3651d675ed989c19920d8866495b3d50e7"
+   },
+   "snapshot": "raw/application-fees/2026-11-25-batch4/cuhk.txt",
+   "scope": "Взнос за подачу на 2027 год - 500 гонконгских долларов, невозвратный."
+  }
+ },
+ {
+  "id": "nottingham",
+  "name": "University of Nottingham (Ноттингем) — приём иностранцев на бакалавриат",
+  "country": "GB",
+  "cohort": "new",
+  "status": "added",
+  "reasonCode": "explicit",
+  "reason": "Прямая цитата с суммой с официальной страницы.",
+  "sources": [
+   {
+    "url": "https://www.nottingham.ac.uk/studywithus/ugstudy/applying.html",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/nottingham-da70c83b8cc8.txt",
+    "contentHash": "sha256:da70c83b8cc826e4a6cf9608779ff4ac0c98e6c0010d054529da9e602174b209",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 6763
+   }
+  ],
+  "fee": {
+   "id": "nottingham",
+   "amount": 34.5,
+   "currency": "GBP",
+   "quote": "For 2027, the UCAS application fee is £34.50. You pay this whether you apply to a single course or use all five choices.",
+   "source": {
+    "url": "https://www.nottingham.ac.uk/studywithus/ugstudy/applying.html",
+    "lastVerified": "2026-11-25",
+    "contentHash": "sha256:da70c83b8cc826e4a6cf9608779ff4ac0c98e6c0010d054529da9e602174b209"
+   },
+   "snapshot": "raw/application-fees/2026-11-25-batch4/nottingham.txt",
+   "scope": "Взнос UCAS за заявку 2027 года - 34,50 фунта; один и тот же для одной заявки и для пяти выборов."
+  }
+ },
+ {
+  "id": "nyuad",
+  "name": "NYU Abu Dhabi",
+  "country": "AE",
+  "cohort": "new",
+  "status": "added",
+  "reasonCode": "explicit",
+  "reason": "Прямая цитата с суммой с официальной страницы.",
+  "sources": [
+   {
+    "url": "https://nyuad.nyu.edu/en/apply/undergraduate/apply/application-fee.html",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/nyuad-56ae5b1049c9.txt",
+    "contentHash": "sha256:56ae5b1049c9948a87e0f34dfcd85f9d0bd14311f36f17e675a51ac08d947058",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 3376
+   },
+   {
+    "url": "https://nyuad.nyu.edu/en/apply/undergraduate/apply.html",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/nyuad-903c256bda67.txt",
+    "contentHash": "sha256:903c256bda671aeedcd02f223a4e20d5964003b31d54d855bd9d4675b4ebc73a",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 12242
+   },
+   {
+    "url": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply.html",
+    "date": "2026-11-25",
+    "error": "HTTP 403"
+   }
+  ],
+  "fee": {
+   "id": "nyuad",
+   "amount": 85,
+   "currency": "USD",
+   "quote": "The NYU application includes a non-refundable application fee of USD 85, which can be paid online by credit card or by check or money order.",
+   "source": {
+    "url": "https://nyuad.nyu.edu/en/apply/undergraduate/apply/application-fee.html",
+    "lastVerified": "2026-11-25",
+    "contentHash": "sha256:56ae5b1049c9948a87e0f34dfcd85f9d0bd14311f36f17e675a51ac08d947058"
+   },
+   "snapshot": "raw/application-fees/2026-11-25-batch4/nyuad.txt",
+   "scope": "Взнос за подачу в бакалавриат NYU (кампус Абу-Даби) - 85 долларов США; при финансовой трудности можно запросить снятие."
+  }
+ },
+ {
+  "id": "pomona-college",
+  "name": "Pomona College — колледж в США, помощь по нужде без кредитов, но отбор учитывает деньги",
+  "country": "US",
+  "cohort": "new",
+  "status": "added",
+  "reasonCode": "explicit",
+  "reason": "Прямая цитата с суммой с официальной страницы.",
+  "sources": [
+   {
+    "url": "https://www.pomona.edu/admissions/apply/first-year-applicants",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/pomona-college-15e3f8fa3c6e.txt",
+    "contentHash": "sha256:15e3f8fa3c6e8ccabf9d7c8e4f8c73dd3932214743eb1a2269a1403fb835b6e6",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 18804
+   },
+   {
+    "url": "https://www.pomona.edu/admissions/apply",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/pomona-college-05fc37f5237a.txt",
+    "contentHash": "sha256:05fc37f5237a12546e10f3a793ebb40c4d1d2d51b09b5dfabd3c2c5373fe4609",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 9255
+   },
+   {
+    "url": "https://www.pomona.edu/admissions/apply/international-applicants",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/pomona-college-0d542218b0d3.txt",
+    "contentHash": "sha256:0d542218b0d3b94ce16f9f6e97c033483c6568ea24c860508c840a526c0e6a58",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 8688
+   }
+  ],
+  "fee": {
+   "id": "pomona-college",
+   "amount": 80,
+   "currency": "USD",
+   "quote": "There is a one-time, non-refundable application fee of $80.",
+   "source": {
+    "url": "https://www.pomona.edu/admissions/apply/first-year-applicants",
+    "lastVerified": "2026-11-25",
+    "contentHash": "sha256:15e3f8fa3c6e8ccabf9d7c8e4f8c73dd3932214743eb1a2269a1403fb835b6e6"
+   },
+   "snapshot": "raw/application-fees/2026-11-25-batch4/pomona-college.txt",
+   "scope": "Взнос за подачу - 80 долларов США, разовый и невозвратный."
+  }
+ },
+ {
+  "id": "stipendium-hungaricum",
+  "name": "Stipendium Hungaricum — государственная стипендия Венгрии",
+  "country": "HU",
+  "cohort": "new",
+  "status": "added",
+  "reasonCode": "explicit",
+  "reason": "Официальная страница прямо говорит, что взноса нет.",
+  "sources": [
+   {
+    "url": "https://stipendiumhungaricum.hu/apply/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/stipendium-hungaricum-7408155ba676.txt",
+    "contentHash": "sha256:7408155ba676319a0b219f8e84d50e1e93c813fe15c11f8c8ef1af1296fbfa1e",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 25281
+   }
+  ],
+  "fee": {
+   "id": "stipendium-hungaricum",
+   "amount": 0,
+   "currency": null,
+   "quote": "No, the online application (registration) and the participation in the admission examinations is free of charge.",
+   "source": {
+    "url": "https://stipendiumhungaricum.hu/apply/",
+    "lastVerified": "2026-11-25",
+    "contentHash": "sha256:7408155ba676319a0b219f8e84d50e1e93c813fe15c11f8c8ef1af1296fbfa1e"
+   },
+   "snapshot": "raw/application-fees/2026-11-25-batch4/stipendium-hungaricum.txt",
+   "scope": "Подача заявки и участие в отборочных экзаменах бесплатны."
+  }
+ },
+ {
+  "id": "tufts-university",
+  "name": "Tufts University — университет в США, нужду закрывают полностью, но денег для иностранцев ограниченное количество",
+  "country": "US",
+  "cohort": "new",
+  "status": "added",
+  "reasonCode": "explicit",
+  "reason": "Прямая цитата с суммой с официальной страницы.",
+  "sources": [
+   {
+    "url": "https://admissions.tufts.edu/apply/applying-to-tufts/checklist-and-deadlines/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/tufts-university-b0838a1b4dfc.txt",
+    "contentHash": "sha256:b0838a1b4dfc90b2a51c59948f79d23021298820d3ca03d1282bcea1c937692e",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 4114
+   },
+   {
+    "url": "https://admissions.tufts.edu/apply/applying-to-tufts/application-faq/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/tufts-university-5b018e3ea572.txt",
+    "contentHash": "sha256:5b018e3ea572e1e1758b8e9c76675ff81cf6d253e82e540d6285577b2dfca9c1",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 18047
+   },
+   {
+    "url": "https://admissions.tufts.edu/apply/first-year-students/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/tufts-university-a7e916668f14.txt",
+    "contentHash": "sha256:a7e916668f144bd0b2ad2f8284e2d0e01338c275386cdd38c847f8697974ef9a",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 3743
+   }
+  ],
+  "fee": {
+   "id": "tufts-university",
+   "amount": 75,
+   "currency": "USD",
+   "quote": "$75 USD Application Fee or Fee Waiver: Applicants automatically receive an application fee waiver based on responses to prompts in the application, or may choose from a select set of fee waiver criteria specific to Tufts University in the application.",
+   "source": {
+    "url": "https://admissions.tufts.edu/apply/applying-to-tufts/checklist-and-deadlines/",
+    "lastVerified": "2026-11-25",
+    "contentHash": "sha256:b0838a1b4dfc90b2a51c59948f79d23021298820d3ca03d1282bcea1c937692e"
+   },
+   "snapshot": "raw/application-fees/2026-11-25-batch4/tufts-university.txt",
+   "scope": "Взнос за подачу - 75 долларов США; снятие даётся автоматически по ответам в заявке."
+  }
+ },
+ {
+  "id": "ubc",
+  "name": "University of British Columbia (Канада): приём иностранцев на бакалавриат",
+  "country": "CA",
+  "cohort": "new",
+  "status": "added",
+  "reasonCode": "explicit",
+  "reason": "Прямая цитата с суммой с официальной страницы.",
+  "sources": [
+   {
+    "url": "https://vancouver.calendar.ubc.ca/fees/application-and-administrative-fees",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/ubc-950ed648661d.txt",
+    "contentHash": "sha256:950ed648661d1ab3e76dd214b04ac99009846af37b4c846bf4d4ad70b3730c2e",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 9177
+   }
+  ],
+  "fee": {
+   "id": "ubc",
+   "amount": 173.25,
+   "currency": "CAD",
+   "quote": "Applicants who will be studying on a Study Permit (e.g., non-Canadian citizens and non-Permanent Residents) and presenting transcripts from institutions within or outside of BC $173.25",
+   "source": {
+    "url": "https://vancouver.calendar.ubc.ca/fees/application-and-administrative-fees",
+    "lastVerified": "2026-11-25",
+    "contentHash": "sha256:950ed648661d1ab3e76dd214b04ac99009846af37b4c846bf4d4ad70b3730c2e"
+   },
+   "snapshot": "raw/application-fees/2026-11-25-batch4/ubc.txt",
+   "scope": "Взнос за подачу на бакалавриат для абитуриентов на учебной визе - 173,25 канадского доллара (2027S и 2027W)."
+  }
+ },
+ {
+  "id": "toronto",
+  "name": "University of Toronto (Канада) — приём иностранцев на бакалавриат",
+  "country": "CA",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Страницы подачи, сроков и оплаты U of T не называют взнос за подачу; суммы или прямого «взноса нет» нет.",
+  "sources": [
+   {
+    "url": "https://future.utoronto.ca/how-to-apply",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/toronto-0a8f95813c95.txt",
+    "contentHash": "sha256:0a8f95813c9586e42d1ca284a597ddb002c1c8da36159d26757e43e0369d6a5c",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 10258
+   },
+   {
+    "url": "https://future.utoronto.ca/apply/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/toronto-402fab825d99.txt",
+    "contentHash": "sha256:402fab825d9920410d146f6f9e15ea58e84127f958d60047e6ca701e3ee8aa3f",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 5231
+   },
+   {
+    "url": "https://future.utoronto.ca/fees/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/toronto-a4497e519e76.txt",
+    "contentHash": "sha256:a4497e519e76edf4b2039c2af02c0abae16afaf245027b0738fbdc4f8b89114a",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 9227
+   }
+  ]
+ },
+ {
+  "id": "birmingham",
+  "name": "University of Birmingham (Бирмингем) — приём иностранцев на бакалавриат",
+  "country": "GB",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Подача идёт через UCAS; страница вуза называет комиссию UCAS без суммы. ucas.com - новый домен, нужен «да» Мурода.",
+  "sources": [
+   {
+    "url": "https://www.birmingham.ac.uk/study/undergraduate/apply",
+    "date": "2026-09-30",
+    "snapshot": "raw/birmingham/2026-09-30/02.txt",
+    "contentHash": "sha256:2846499798d4638336eb7f0816e6ba3fba299d6bb08e3d9c9578890f5e1de1c5",
+    "extraction": "сохранённый снимок",
+    "chars": 14835
+   }
+  ]
+ },
+ {
+  "id": "bristol",
+  "name": "University of Bristol (Бристоль) — приём иностранцев на бакалавриат",
+  "country": "GB",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Подача идёт через UCAS; страница вуза называет комиссию UCAS без суммы. ucas.com - новый домен, нужен «да» Мурода.",
+  "sources": [
+   {
+    "url": "https://www.bristol.ac.uk/study/undergraduate/apply/international/",
+    "date": "2026-09-30",
+    "snapshot": "raw/bristol/2026-09-30/07.txt",
+    "contentHash": "sha256:20cb1c61d1a67a9b434ab612f81487177098bb7beb95c219f351ee2c8a70c28e",
+    "extraction": "сохранённый снимок",
+    "chars": 7785
+   }
+  ]
+ },
+ {
+  "id": "durham",
+  "name": "Durham University (Дарем) — приём иностранцев на бакалавриат",
+  "country": "GB",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Подача идёт через UCAS; страница вуза называет комиссию UCAS без суммы. ucas.com - новый домен, нужен «да» Мурода.",
+  "sources": [
+   {
+    "url": "https://www.durham.ac.uk/study/undergraduate/how-to-apply/",
+    "date": "2026-09-30",
+    "snapshot": "raw/durham/2026-09-30/09.txt",
+    "contentHash": "sha256:5999a5f89b572d9f873934636b78ba478496730c3629fdfb637f958a569dd35f",
+    "extraction": "сохранённый снимок",
+    "chars": 8942
+   }
+  ]
+ },
+ {
+  "id": "edinburgh",
+  "name": "University of Edinburgh (Эдинбург) — приём иностранцев на бакалавриат",
+  "country": "GB",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Подача идёт через UCAS; страница вуза называет комиссию UCAS без суммы. ucas.com - новый домен, нужен «да» Мурода.",
+  "sources": [
+   {
+    "url": "https://www.ed.ac.uk/studying/international/applying/undergraduate",
+    "date": "2026-09-29",
+    "snapshot": "raw/edinburgh/2026-09-29/00.txt",
+    "contentHash": "sha256:d4efe3fa15540ed84e6c8d53d51385390e0d619a9b5d8137b05e5cc7cf24c8a7",
+    "extraction": "сохранённый снимок",
+    "chars": 4032
+   }
+  ]
+ },
+ {
+  "id": "glasgow",
+  "name": "University of Glasgow (Глазго) — приём иностранцев на бакалавриат",
+  "country": "GB",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Подача идёт через UCAS; страница вуза называет комиссию UCAS без суммы. ucas.com - новый домен, нужен «да» Мурода.",
+  "sources": [
+   {
+    "url": "https://www.gla.ac.uk/undergraduate/how-to-apply-for-an-undergraduate-degree/ucas/",
+    "date": "2026-09-30",
+    "snapshot": "raw/glasgow/2026-09-30/03.txt",
+    "contentHash": "sha256:8e7b0f227b98d843b0ba6e425704c9de5ec741beb9f678867158e969e5fc217c",
+    "extraction": "сохранённый снимок",
+    "chars": 5005
+   }
+  ]
+ },
+ {
+  "id": "imperial-college-london",
+  "name": "Imperial College London (Имперский колледж Лондона) — приём иностранцев на бакалавриат",
+  "country": "GB",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Подача идёт через UCAS; страница вуза называет комиссию UCAS без суммы. ucas.com - новый домен, нужен «да» Мурода.",
+  "sources": [
+   {
+    "url": "https://www.imperial.ac.uk/study/apply/undergraduate/process/",
+    "date": "2026-09-29",
+    "snapshot": "raw/imperial-college-london/2026-09-29/00.txt",
+    "contentHash": "sha256:2b2ede8bb93331b74a00cee9502068ab8c4f1ac9dd15d9b87ce594cac475ca1e",
+    "extraction": "сохранённый снимок",
+    "chars": 11335
+   }
+  ]
+ },
+ {
+  "id": "kcl",
+  "name": "King's College London (KCL) — приём иностранцев на бакалавриат",
+  "country": "GB",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Подача идёт через UCAS; страница вуза называет комиссию UCAS без суммы. ucas.com - новый домен, нужен «да» Мурода.",
+  "sources": [
+   {
+    "url": "https://www.kcl.ac.uk/study/undergraduate/how-to-apply/important-information-for-applying",
+    "date": "2026-09-29",
+    "snapshot": "raw/kcl/2026-09-29/04.txt",
+    "contentHash": "sha256:009fbb0516ea1f9f98dddaa5a0f46a28a1879b12526ad754b382c8cc0298dc09",
+    "extraction": "сохранённый снимок",
+    "chars": 12261
+   }
+  ]
+ },
+ {
+  "id": "leeds",
+  "name": "University of Leeds (Лидс) — приём иностранцев на бакалавриат",
+  "country": "GB",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Подача идёт через UCAS; страница вуза называет комиссию UCAS без суммы. ucas.com - новый домен, нужен «да» Мурода.",
+  "sources": [
+   {
+    "url": "https://www.leeds.ac.uk/undergraduate-how-to-apply/doc/apply",
+    "date": "2026-09-30",
+    "snapshot": "raw/leeds/2026-09-30/09.txt",
+    "contentHash": "sha256:ccf9180ef7b8bb8c959f7a7e29533e0b1b2545f84a637eec43d86af81e52c96d",
+    "extraction": "сохранённый снимок",
+    "chars": 9076
+   }
+  ]
+ },
+ {
+  "id": "lse",
+  "name": "LSE (Лондонская школа экономики) — приём иностранцев на бакалавриат",
+  "country": "GB",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Подача идёт через UCAS; страница вуза называет комиссию UCAS без суммы. ucas.com - новый домен, нужен «да» Мурода.",
+  "sources": [
+   {
+    "url": "https://www.lse.ac.uk/study-at-lse/Undergraduate/Prospective-Students/How-to-Apply",
+    "date": "2026-09-30",
+    "snapshot": "raw/lse/2026-09-30/00.txt",
+    "contentHash": "sha256:70ae3da7ff5339e41b7166bbb9bc53a34b4e65b294b0b44e26ba7787f7ef590d",
+    "extraction": "сохранённый снимок",
+    "chars": 9395
+   }
+  ]
+ },
+ {
+  "id": "manchester",
+  "name": "The University of Manchester (Манчестер) — приём иностранцев на бакалавриат",
+  "country": "GB",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Подача идёт через UCAS; страница вуза называет комиссию UCAS без суммы. ucas.com - новый домен, нужен «да» Мурода.",
+  "sources": [
+   {
+    "url": "https://www.manchester.ac.uk/study/international/admissions/undergraduate-application-process/",
+    "date": "2026-09-30",
+    "snapshot": "raw/manchester/2026-09-30/01.txt",
+    "contentHash": "sha256:6f4ac14025cc8e6c51f0e130bba823ba37dc9864e20545e56e116f647b9871ff",
+    "extraction": "сохранённый снимок",
+    "chars": 6848
+   }
+  ]
+ },
+ {
+  "id": "sheffield",
+  "name": "University of Sheffield (Шеффилд) — приём иностранцев на бакалавриат",
+  "country": "GB",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Подача идёт через UCAS; страница вуза называет комиссию UCAS без суммы. ucas.com - новый домен, нужен «да» Мурода.",
+  "sources": [
+   {
+    "url": "https://www.sheffield.ac.uk/undergraduate/apply",
+    "date": "2026-09-30",
+    "snapshot": "raw/sheffield/2026-09-30/06.txt",
+    "contentHash": "sha256:609cc031d243d079e5c9fbbb50f778efc2ae30c070cb38609b31cf5a3ec29bec",
+    "extraction": "сохранённый снимок",
+    "chars": 10090
+   }
+  ]
+ },
+ {
+  "id": "kth",
+  "name": "KTH Royal Institute of Technology (Швеция): приём иностранцев на бакалавриат",
+  "country": "SE",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "schema_limit",
+  "reason": "Страница прямо называет взнос SEK 900, но SEK нет в FEE_CURRENCIES схемы; менять схему в задаче DS-3 нельзя.",
+  "sources": [
+   {
+    "url": "https://www.kth.se/en/studies/bachelor/information-communication-technology/fees-1.646274",
+    "date": "2026-09-30",
+    "snapshot": "raw/kth/2026-09-30/03.txt",
+    "contentHash": "sha256:a63bfc79588909a8b99cb107e8341021b64f7859f74652560f2f2a1ec9f47d11",
+    "extraction": "сохранённый снимок",
+    "chars": 2752
+   }
+  ]
+ },
+ {
+  "id": "uppsala",
+  "name": "Uppsala University (Швеция): приём иностранцев на бакалавриат",
+  "country": "SE",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "schema_limit",
+  "reason": "Страница прямо называет взнос SEK 900, но SEK нет в FEE_CURRENCIES схемы; менять схему в задаче DS-3 нельзя.",
+  "sources": [
+   {
+    "url": "https://www.uu.se/en/study/bachelors-studies/application/application-guide",
+    "date": "2026-09-30",
+    "snapshot": "raw/uppsala/2026-09-30/02.txt",
+    "contentHash": "sha256:c7f5be8b001e88353d1c7c3640c7b59b00bbf90aaef90abd8010cda194c6c5aa",
+    "extraction": "сохранённый снимок",
+    "chars": 7312
+   }
+  ]
+ },
+ {
+  "id": "amherst-college",
+  "name": "Амхерст — помощь по достатку семьи, деньги при отборе не смотрят",
+  "country": "US",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "access",
+  "reason": "Страницы amherst.edu отвечают HTTP 405 на прямой запрос; полный текст не получен.",
+  "sources": [
+   {
+    "url": "https://www.amherst.edu/admission/apply/international",
+    "date": "2026-11-25",
+    "error": "HTTP 405"
+   },
+   {
+    "url": "https://www.amherst.edu/admission/apply",
+    "date": "2026-11-25",
+    "error": "HTTP 405"
+   },
+   {
+    "url": "https://www.amherst.edu/admission/apply/firstyear/",
+    "date": "2026-11-25",
+    "error": "HTTP 405"
+   }
+  ]
+ },
+ {
+  "id": "kenyon-college",
+  "name": "Kenyon College — колледж в США, помощь по нужде: полное покрытие страницы не обещают",
+  "country": "US",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Страницы подачи и требований Kenyon не называют взнос за заявку.",
+  "sources": [
+   {
+    "url": "https://www.kenyon.edu/admissions-aid/apply-to-kenyon/deadlines-requirements/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/kenyon-college-a7d14aea0bad.txt",
+    "contentHash": "sha256:a7d14aea0bade1b6e94f8b8719d3ef569884161c167212e76ebd727294be37bc",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 5227
+   },
+   {
+    "url": "https://www.kenyon.edu/admissions-aid/apply-to-kenyon/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/kenyon-college-bc237cccd42f.txt",
+    "contentHash": "sha256:bc237cccd42f1030ec623a839c8d9365903e2211aa63360f2ceb337f3264cb8c",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 3397
+   }
+  ]
+ },
+ {
+  "id": "macalester-college",
+  "name": "Macalester College — колледж в США, нужду закрывают, но отбор учитывает деньги",
+  "country": "US",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Страницы подачи и FAQ называют только взнос CSS Profile, не взнос за заявку.",
+  "sources": [
+   {
+    "url": "https://www.macalester.edu/admissions/faq/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/macalester-college-4b101a69388f.txt",
+    "contentHash": "sha256:4b101a69388fdc5608c66c851a90463dd2a2b4bd1c22b9dba62a57abefda12fc",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 36928
+   },
+   {
+    "url": "https://www.macalester.edu/admissions/apply/first-year/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/macalester-college-34c95e5f05a5.txt",
+    "contentHash": "sha256:34c95e5f05a5e4d4675dcfd84a60a332f4699a390d1ebd7f298d832deea506eb",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 9756
+   },
+   {
+    "url": "https://www.macalester.edu/admissions/apply/",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/macalester-college-7fb43e6e401d.txt",
+    "contentHash": "sha256:7fb43e6e401d7ac9df3b302302b4662248f29711669cada5351c93c70c5713a3",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 4288
+   }
+  ]
+ },
+ {
+  "id": "middlebury-college",
+  "name": "Middlebury College — колледж в США, помощь по нужде, но отбор иностранцев учитывает деньги",
+  "country": "US",
+  "cohort": "new",
+  "status": "skipped",
+  "reasonCode": "not_stated",
+  "reason": "Страницы инструкций и финансовой помощи не называют взнос за заявку; упомянут только сбор сервиса интервью.",
+  "sources": [
+   {
+    "url": "https://www.middlebury.edu/college/admissions/application-instructions-and-deadlines",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/middlebury-college-f4fcfbb36dfe.txt",
+    "contentHash": "sha256:f4fcfbb36dfe83d885a980b2e340d8974c62e9e5205900f56abc824646dd4eb7",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 14860
+   },
+   {
+    "url": "https://www.middlebury.edu/college/admissions/apply",
+    "date": "2026-11-25",
+    "snapshot": "raw/application-fees/2026-11-25-batch4/review-sources/middlebury-college-48d1257d7b12.txt",
+    "contentHash": "sha256:48d1257d7b124b9d71348e7d0962de9a32275ac531ff2b93aaed93072de381eb",
+    "extraction": "строгий UTF-8, HTML/PDF",
+    "chars": 12070
+   }
+  ]
+ }
+]

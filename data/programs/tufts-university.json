@@ -232,6 +232,22 @@
       "evidence": "The completed ISFAA form and any supporting financial documents can be uploaded via the Applicant Status Page.",
       "field": null,
       "kind": "documents"
+    },
+    {
+      "ru": "Взнос за подачу - 75 долларов США; снятие даётся автоматически по ответам в заявке.",
+      "evidence": "$75 USD Application Fee or Fee Waiver: Applicants automatically receive an application fee waiver based on responses to prompts in the application, or may choose from a select set of fee waiver criteria specific to Tufts University in the application.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 75,
+        "currency": "USD",
+        "evidence": "$75 USD Application Fee or Fee Waiver: Applicants automatically receive an application fee waiver based on responses to prompts in the application, or may choose from a select set of fee waiver criteria specific to Tufts University in the application.",
+        "source": {
+          "url": "https://admissions.tufts.edu/apply/applying-to-tufts/checklist-and-deadlines/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:b0838a1b4dfc90b2a51c59948f79d23021298820d3ca03d1282bcea1c937692e"
+        }
+      }
     }
   ],
   "deadline": {
