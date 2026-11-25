@@ -1,0 +1,51 @@
+{
+  "id": "csc-china",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "studyPlan",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "План учёбы в Китае: для бакалавриата не меньше 200 знаков. Пишется на китайском или английском.",
+      "evidence": "来华学习或研究计划。（本科生不少于200字，进修生不少于500字，研究生不少于800字），用中文或英文书写",
+      "source": {
+        "url": "https://tj.china-embassy.gov.cn/sgzc/202511/t20251124_11759137.htm",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:ee1e6dd85f40d7a0565ce248a699d60e81cb055875496624d3039b835d2d599a"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": null,
+      "via": "platform",
+      "ru": "Два рекомендательных письма: от школы, языковых курсов или учителей. На китайском или английском.",
+      "evidence": "推荐信2份，由申请人所在学校、中文培训机构及老师出具均可，用中文或英文书写。",
+      "source": {
+        "url": "https://tj.china-embassy.gov.cn/sgzc/202511/t20251124_11759137.htm",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:ee1e6dd85f40d7a0565ce248a699d60e81cb055875496624d3039b835d2d599a"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "video",
+    "interview",
+    "certificates"
+  ],
+  "note": "Страница посольства КНР на китайском; требования к пакету — в разделе «网上报名所需材料»."
+}

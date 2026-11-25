@@ -1,0 +1,83 @@
+{
+  "id": "cornell",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации от учителей об академических сильных сторонах ученика.",
+      "evidence": "You're required to submit two teacher recommendations, which should highlight your academic strengths and contributions in the classroom.",
+      "source": {
+        "url": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:d47abad794bea3177bc07da3b09fe6ac67cab400a33ef1b40f438cdac3045ab5"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Рекомендация школьного консультанта: она показывает успехи ученика в контексте школы.",
+      "evidence": "The counselor recommendation highlights your accomplishments within the context of your high school.",
+      "source": {
+        "url": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:d47abad794bea3177bc07da3b09fe6ac67cab400a33ef1b40f438cdac3045ab5"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Эссе Cornell Supplement — свои вопросы у каждого колледжа или школы внутри университета.",
+      "evidence": "As part of your Common Application, you'll be asked to fill out the Cornell University supplement, which includes the college- or school-specific essay(s) you'll need to answer.",
+      "source": {
+        "url": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:d47abad794bea3177bc07da3b09fe6ac67cab400a33ef1b40f438cdac3045ab5"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Портфолио или дизайн-дополнение нужно только для отдельных программ. Проверь свою программу.",
+      "evidence": "Portfolio or design supplement (if required for your program of interest)",
+      "source": {
+        "url": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:d47abad794bea3177bc07da3b09fe6ac67cab400a33ef1b40f438cdac3045ab5"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Короткие ответы Cornell входят в общий supplement, их число в снимке не названо."
+}

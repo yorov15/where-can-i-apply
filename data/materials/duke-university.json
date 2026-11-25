@@ -1,0 +1,133 @@
+{
+  "id": "duke-university",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Одна рекомендация от школьного консультанта: всего Duke требует три письма.",
+      "evidence": "We require three letters of recommendation for each applicant: one from your school counselor and two from teachers who have taught you in major academic courses",
+      "source": {
+        "url": "https://admissions.duke.edu/apply/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:6d39daff53ae3448e9f00d4977901e90b6e6e91ff668371fddd30585b54742a9"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации от учителей основных предметов, лучше за последние два года школы. Для инженерии одна — от математики или науки.",
+      "evidence": "two from teachers who have taught you in major academic courses (English, mathematics, social studies, sciences, world languages), preferably within the last two years of secondary school.",
+      "source": {
+        "url": "https://admissions.duke.edu/apply/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:6d39daff53ae3448e9f00d4977901e90b6e6e91ff668371fddd30585b54742a9"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Можно добавить одну личную рекомендацию от работодателя, наставника или другого человека, который хорошо знает ученика.",
+      "evidence": "You can submit one Personal Recommendation from an employer, mentor, or anyone else who knows you well and can give us a better idea of who you are.",
+      "source": {
+        "url": "https://admissions.duke.edu/apply/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:6d39daff53ae3448e9f00d4977901e90b6e6e91ff668371fddd30585b54742a9"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 250
+      },
+      "prompt": "What is your impression of Duke as a university and community, and why do you believe it is a good match for your goals, values, and interests?",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Короткие вопросы Duke для цикла 2026-27, каждый до 250 слов. Первый — «Why Duke».",
+      "evidence": "The following questions are required for all first-year applicants to Duke University during the 2026-27 application cycle. (250 word limit)",
+      "source": {
+        "url": "https://admissions.duke.edu/apply/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:6d39daff53ae3448e9f00d4977901e90b6e6e91ff668371fddd30585b54742a9"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Интервью с выпускником — необязательная часть. Приглашают не всех; отказ не влияет на решение.",
+      "evidence": "Alumni interviews are an optional component of the Duke application process.",
+      "source": {
+        "url": "https://admissions.duke.edu/apply/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:6d39daff53ae3448e9f00d4977901e90b6e6e91ff668371fddd30585b54742a9"
+      }
+    },
+    {
+      "type": "video",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Можно записать видео Glimpse на 60–90 секунд. Не обязательно.",
+      "evidence": "Glimpse is an opportunity to share a 60-90 second video that helps us get to know you better.",
+      "source": {
+        "url": "https://admissions.duke.edu/apply/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:6d39daff53ae3448e9f00d4977901e90b6e6e91ff668371fddd30585b54742a9"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Дополнительное портфолио для творческих направлений (Arts Supplement). Не обязательно.",
+      "evidence": "Arts Supplement (optional)",
+      "source": {
+        "url": "https://admissions.duke.edu/apply/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:6d39daff53ae3448e9f00d4977901e90b6e6e91ff668371fddd30585b54742a9"
+      }
+    }
+  ],
+  "notStated": [
+    "studyPlan",
+    "certificates"
+  ],
+  "note": "Резюме Duke не принимает; общее эссе Common App не внесено."
+}

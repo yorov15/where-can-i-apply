@@ -1,0 +1,48 @@
+{
+  "id": "uc-berkeley",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Только по приглашению: двух рекомендаций просят у части поступающих. Одну пишет учитель. Не пригласили — письма не принимают.",
+      "evidence": "Select applicants to UC Berkeley are invited to submit two letters of recommendation.",
+      "source": {
+        "url": "https://admissions.berkeley.edu/apply-to-berkeley/first-year-applicants-uc-berkeley/first-year-policy-changes/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:8495a8966f742d9f849591fdfd2f8621eae13d3bdf34e1c9eace2acb6b58d426"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Собеседование с сотрудником не проводится; можно подать интервью InitialView, но оно не обязательно.",
+      "evidence": "As part of our holistic review however, we will accept InitialView materials for international applicants who are choosing to participate in an InitialView interview as a part of their application journey.",
+      "source": {
+        "url": "https://admissions.berkeley.edu/apply-to-berkeley/international-students/requirements-for-international-students/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:dad44e593507f51ee469c49cbd774cc9b0fd053a15283b7ab6e7aae61e9c4474"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Ответы на Personal Insight Questions нужны, но в снимке нет страницы с их числом и лимитом — не внесены."
+}
