@@ -87,7 +87,7 @@ EXAM_LIMITS = {"SAT": (400, 1600), "ACT": (1, 36)}
 # только при amount=0. Не проверенный или ограниченный категорией ноль
 # не проходит фильтр. В index.json feeFree: true добавляется лишь при
 # unconditional=true; отсутствие признака не означает платный взнос.
-FEE_CURRENCIES = frozenset({"USD", "EUR", "GBP", "AZN", "SGD", "KZT", "KRW", "JPY", "CNY", "HKD", "TRY", "UZS", "AED", "QAR", "AUD", "CAD", "PLN"})
+FEE_CURRENCIES = frozenset({"USD", "EUR", "GBP", "AZN", "SGD", "KZT", "KRW", "JPY", "CNY", "HKD", "TRY", "UZS", "AED", "QAR", "AUD", "CAD", "PLN", "SEK"})
 
 # Канал подачи, необязательный: applyChannel = {routes: [route, ...]}.
 # route = {type, name, url, note, evidence, source: {url, lastVerified,
