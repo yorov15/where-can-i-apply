@@ -4,9 +4,9 @@
 
 ## Итог
 
-- Проверено по страницам организаторов: 6 конкурсов полностью (бесплатно + доступно школьнику из Таджикистана + срок 2026-12…2027-09 + официальный сайт).
-- В `data/opportunities.json` не внесено ни одной записи: все 6 — на новых доменах, а реестр `tools/opportunity-sources.json` по заданию не трогается, и тест требует точного совпадения пары «домен + URL» с реестром.
-- 9 записей проверены частично: нет одной фразы (обычно «бесплатно» или даты 2027 года) — в отчёт, но не в данные.
+- Проверено по страницам организаторов: 8 конкурсов полностью (бесплатно + доступно школьнику из Таджикистана + срок 2026-12…2027-09 + официальный сайт).
+- В `data/opportunities.json` не внесено ни одной записи: все 8 — на новых доменах, а реестр `tools/opportunity-sources.json` по заданию не трогается, и тест требует точного совпадения пары «домен + URL» с реестром.
+- 10 записей проверены частично: нет одной фразы (обычно «бесплатно» или даты 2027 года) — в отчёт, но не в данные.
 - Ещё 15 отклонены: платно, закрыто, нет входа для Таджикистана или страница недоступна.
 
 ## Ограничение: домены
@@ -33,6 +33,8 @@
 | `sony-youth` | Sony World Photography Awards — Youth | arts | 2027-01-05, 16:00 GMT | все желающие 19 лет и младше на дату закрытия; страна не ограничена | бесплатно | www.worldphoto.org | raw/opportunities/sony-youth.txt | d1f99a1e487b23c7a3b8a814ee12fe13bbb26cb1f83e69930611ffe47430f86d |
 | `bow-seat` | Blue Planet Awareness Contest | arts | 2027-06-07, 23:59 ET | школьники 11–18 лет, учащиеся средней или старшей школы, из любых стран | бесплатно | bowseat.org | raw/opportunities/bow-seat.txt | ac57a36d71ce0b28408a7ca0e66d6f0fbda8071f3b37709745ca0ebe6104ab7a |
 | `blue-ocean` | Blue Ocean Student Entrepreneur Competition | social | 2027-02-21, полночь по местному времени | старшеклассники или учащиеся предуниверситетского уровня из любых стран; команды | бесплатно | blueoceancompetition.org | raw/opportunities/blue-ocean.txt | 51abb85618ace5eac9608b8f76edeedec20f61fa35b33fd3047220e1aef5237d |
+| `earth-prize` | The Earth Prize | science | 2027-01-31 (регистрация до 10.01.2027) | школьники 13–19 лет, учащиеся в школе или на домашнем обучении, из любых стран | бесплатно | theearthprize.org | raw/opportunities/earth-prize.txt | 043429ca963d125bbd8c386a47a2fdbcd17691791fd1dd5af84cbde599b26a48 |
+| `yris-essay` | Yale Review of International Studies Essay Prize | essay | 2027-01-31 | любой школьник из любой страны, зачисленный в старшую школу на 31.01.2027 | бесплатно | highschoolessaycomp.org | raw/opportunities/yris-essay.txt | 269e081fe1cf5567f3210463daf0db4d007a4693c539dc4e179d16d82f6584a3 |
 
 Поля для вставки в `data/opportunities.json`:
 
@@ -42,6 +44,8 @@
 - `sony-youth`: organizer «World Photography Organisation», action «Сними от одной до трёх фотографий на тему конкурса и подай их до 5 января 2027.», `deadlineZone` `Europe/London`, `deadlineAt` `2027-01-05T16:00:00Z`, note «»
 - `bow-seat`: organizer «Bow Seat: Creative Action for Conservation», action «Сделай работу о проблемах океана: рисунок, текст, стихотворение, фильм, музыка или танец.», `deadlineZone` `America/New_York`, `deadlineAt` `2027-06-08T03:59:59Z`, note «»
 - `blue-ocean`: organizer «Blue Ocean Student Entrepreneurs Corporation», action «Собери команду и запиши видео-питч стартапа по принципам blue ocean.», `deadlineZone` `local`, `deadlineAt` `null`, note «После регистрации нужно пройти бесплатный мини-курс Blue Ocean.»
+- `earth-prize`: organizer «The Earth Foundation», action «Собери команду и подай проект по экологии и устойчивости до 31 января 2027.», `deadlineZone` `local`, `deadlineAt` `null`, note «Регистрация открыта до 10 января 2027, работы — до 31 января 2027.»
+- `yris-essay`: organizer «Yale Review of International Studies (студенческий журнал Йельского университета) и Lumiere Education», action «Выбери один из вопросов конкурса и напиши эссе на 1000–1500 слов.», `deadlineZone` `local`, `deadlineAt` `null`, note «Регистрация, подача и оба мастер-класса бесплатны; лучшие эссе публикуются в YRIS.»
 
 Новые значения `type` (`math`, `science`, `arts`, `social`) фильтр `opportunities.html` пока не показывает: в нём три варианта — эссе, выступление, олимпиада. Файл Claude, здесь не менялся.
 
@@ -51,8 +55,9 @@
 
 | Конкурс | Что есть | Чего нет |
 |---|---|---|
-| The Earth Prize 2027 | регистрация до 10.01.2027, подача до 31.01.2027, 13–19 лет, школьники мира | фразы о бесплатности нет ни на `/competition`, ни в условиях |
 | World Wildlife Day Youth Art Contest 2027 (IFAW/CITES) | до 07.02.2027, 4–18 лет, мир | фразы о бесплатности нет |
+| Never Such Innocence International Competition 2026/27 | «There is no entry fee», срок 26.02.2027, возрастные группы 9–11, 11–14, 14–16, 16–18 | в правилах не сказано, что участвовать могут школьники из любой страны |
+| World of 8 Billion Student Video Contest | по данным поиска: 03.03.2027, 6–12 классы, «There is no entry fee» | страница отдаёт 403 Cloudflare; лично не проверено, в данные не годится |
 | Diamond Challenge 2027 | 14.01.2027, 14–18 лет, команды 2–4, «Any Country» | фразы о бесплатности нет; год стоит только в заголовке таймлайна |
 | International Linguistics Olympiad 2027 | Бангкок, 21–28.07.2027 | Таджикистана нет в списке стран; вход только через национальную сборную |
 | COCI 2026/2027 | 12.12.2026, 23.01.2027, 20.02.2027; «Everyone is welcome to participate!» | ни слова о плате |
@@ -95,6 +100,8 @@
 | www.worldphoto.org | сайт World Photography Organisation, организатора Sony World Photography Awards |
 | bowseat.org | сайт Bow Seat: Creative Action for Conservation, организатора конкурса |
 | blueoceancompetition.org | сайт Blue Ocean Student Entrepreneurs Corporation (501c3), организатора конкурса |
+| theearthprize.org | сайт The Earth Foundation, организатора The Earth Prize |
+| highschoolessaycomp.org | сайт конкурса; на странице — организаторы YRIS («Yale student publication») и Lumiere Education, правила и призы |
 
 ## Команды и результат
 
