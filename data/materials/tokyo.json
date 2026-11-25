@@ -1,0 +1,35 @@
+{
+  "id": "tokyo",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "mail",
+      "ru": "Нужно рекомендательное письмо от директора, учителя или консультанта школы, которую окончил или посещает ученик.",
+      "evidence": "This recommendation letter is to be prepared by the principal, a teacher, or a guidance counselor at the secondary school from which the applicant has graduated or where the applicant is currently enrolled as a regular student.",
+      "source": {
+        "url": "https://www.u-tokyo.ac.jp/content/400291798.pdf",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:5eb5e68475de591633c27ca52b28b24d63b80190e9a0f56d782860078323e8e5"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "video",
+    "interview",
+    "certificates",
+    "portfolio"
+  ],
+  "note": "Правила на японской странице: эссе и собеседование — этапы экзамена, не материалы заявки. Рекомендация — из PDF с формами."
+}
