@@ -7,6 +7,7 @@
 | Кто | Ветка | Папка worktree |
 |---|---|---|
 | DS-1 материалы, партия 1 | `deepseek/materials-1` | `C:\Users\ORYX\dev\nerio-ds1` |
+| DS-1 материалы, партия 2 | `deepseek/materials-2` | `C:\Users\ORYX\dev\nerio-ds1b` |
 | DS-2 конкурсы | `deepseek/opportunities` | `C:\Users\ORYX\dev\nerio-ds2` |
 | DS-3 взносы, партия 4 | `deepseek/fees-4` | `C:\Users\ORYX\dev\nerio-ds3` |
 | DS-4 applyChannel, партия 2 | `deepseek/apply-channel-2` | `C:\Users\ORYX\dev\nerio-ds4` |
