@@ -1,0 +1,93 @@
+{
+  "id": "middlebury-college",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Просят как минимум две рекомендации от учителей.",
+      "evidence": "Teacher recommendations Please request at least two.",
+      "source": {
+        "url": "https://www.middlebury.edu/college/admissions/application-instructions-and-deadlines",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:e1ddf7a26df26b5e8fe3f9f76fd75354c3ee0242bae746491c4b709deb7f2710"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Школьный консультант отправляет школьный отчёт, свою рекомендацию и транскрипт.",
+      "evidence": "School report, counselor recommendation, and transcript Submitted directly from your high school counselor.",
+      "source": {
+        "url": "https://www.middlebury.edu/college/admissions/application-instructions-and-deadlines",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:e1ddf7a26df26b5e8fe3f9f76fd75354c3ee0242bae746491c4b709deb7f2710"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "По желанию можно приложить работы по искусству через SlideRoom: изобразительное искусство, музыку, театр, танец или кино.",
+      "evidence": "If you would like to have your special talent in one or more of the arts considered as a part of the admissions process, submit optional supplemental material using SlideRoom .",
+      "source": {
+        "url": "https://www.middlebury.edu/college/admissions/application-instructions-and-deadlines",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:e1ddf7a26df26b5e8fe3f9f76fd75354c3ee0242bae746491c4b709deb7f2710"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "После подачи можно попросить интервью с выпускником, но его не гарантируют.",
+      "evidence": "After applying, you may request an optional alumni interview in your applicant portal. We will make every effort to match you with an alumni interviewer. However, due to the volume of applications we receive, we cannot guarantee that an interview will be possible.",
+      "source": {
+        "url": "https://www.middlebury.edu/college/admissions/application-instructions-and-deadlines",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:e1ddf7a26df26b5e8fe3f9f76fd75354c3ee0242bae746491c4b709deb7f2710"
+      }
+    },
+    {
+      "type": "video",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Если интервью не предложат, можно записать видео или аудио до 90 секунд через Glimpse.",
+      "evidence": "If you aren't matched, Glimpse is a great alternative that allows you to create a 90-second video or audio statement to help us get to know you better.",
+      "source": {
+        "url": "https://www.middlebury.edu/college/admissions/application-instructions-and-deadlines",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:e1ddf7a26df26b5e8fe3f9f76fd75354c3ee0242bae746491c4b709deb7f2710"
+      }
+    }
+  ],
+  "notStated": ["cv", "studyPlan"],
+  "note": "Дополнительного эссе нет: используется общее эссе Common App. Список активностей Common App общий и не внесён. Копии наград и сертификатов просят не присылать."
+}

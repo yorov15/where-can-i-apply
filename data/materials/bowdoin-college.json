@@ -1,0 +1,144 @@
+{
+  "id": "bowdoin-college",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "optional",
+      "count": null,
+      "limit": {"unit": "words", "max": 250},
+      "prompt": "Which line from The Offer resonates most with you?",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Необязательное эссе: какая строка из «The Offer of the College» отзывается вам больше всего. До 250 слов.",
+      "evidence": "This optional essay (max 250 words) is available in the Bowdoin Supplement.",
+      "source": {
+        "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+        "lastVerified": "2026-09-13",
+        "contentHash": "sha256:8c93f00ebe9e2e87eb9168c148ffff916f50dda0e683aa6f26e41562ddda567b"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "optional",
+      "count": null,
+      "limit": {"unit": "words", "max": 250},
+      "prompt": "If you wish, you may share anything about the unique experiences and perspectives that you would bring with you to the Bowdoin campus and community or an experience you have had that required you to navigate across or through difference.",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Необязательное эссе о том, какой опыт и взгляды вы принесёте в Bowdoin или как преодолевали различия. До 250 слов.",
+      "evidence": "This optional essay (max 250 words) is available in the Bowdoin Supplement.",
+      "source": {
+        "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+        "lastVerified": "2026-09-13",
+        "contentHash": "sha256:8c93f00ebe9e2e87eb9168c148ffff916f50dda0e683aa6f26e41562ddda567b"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Рекомендация школьного консультанта или директора.",
+      "evidence": "A counselor recommendation. This evaluation should be completed by a high school counselor or principal.",
+      "source": {
+        "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+        "lastVerified": "2026-09-13",
+        "contentHash": "sha256:8c93f00ebe9e2e87eb9168c148ffff916f50dda0e683aa6f26e41562ddda567b"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Рекомендация учителя основного предмета из 11 или 12 класса.",
+      "evidence": "A teacher recommendation . This evaluation should be completed by a teacher who has taught applicant either junior or senior year in an academic core subject (English, math, lab sciences, social sciences, and foreign languages) that appears on their official high school transcript.",
+      "source": {
+        "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+        "lastVerified": "2026-09-13",
+        "contentHash": "sha256:8c93f00ebe9e2e87eb9168c148ffff916f50dda0e683aa6f26e41562ddda567b"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Третья рекомендация: второй учитель, священник, тренер, работодатель, выпускник программы или другой человек.",
+      "evidence": "An \"other\" recommendation. The \"other\" recommendation may be a second teacher evaluation (who has taught the student in any subject area) or a recommendation from a clergy, coach, community-based organization counselor, employer, peer, or community member who can speak to the applicant's contributions to the wider community or share insights not otherwise captured in the application.",
+      "source": {
+        "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+        "lastVerified": "2026-09-13",
+        "contentHash": "sha256:8c93f00ebe9e2e87eb9168c148ffff916f50dda0e683aa6f26e41562ddda567b"
+      }
+    },
+    {
+      "type": "video",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "По желанию можно записать короткое видео-ответ в портале после подачи заявки.",
+      "evidence": "This is an opportunity to record a short, spontaneous video to supplement your application. You can record the video response in your Application Portal once you've submitted your application.",
+      "source": {
+        "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+        "lastVerified": "2026-09-13",
+        "contentHash": "sha256:8c93f00ebe9e2e87eb9168c148ffff916f50dda0e683aa6f26e41562ddda567b"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Интервью настоятельно рекомендуют, но оно не обязательно; заявку рассматривают и без него.",
+      "evidence": "A personal interview is strongly encouraged but is not required for admission.",
+      "source": {
+        "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+        "lastVerified": "2026-09-13",
+        "contentHash": "sha256:8c93f00ebe9e2e87eb9168c148ffff916f50dda0e683aa6f26e41562ddda567b"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "По желанию можно подать Arts Supplement, если есть заметный талант в искусстве.",
+      "evidence": "Students with a notable visual or performing arts talent may submit a Bowdoin Arts Supplement.",
+      "source": {
+        "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+        "lastVerified": "2026-09-13",
+        "contentHash": "sha256:8c93f00ebe9e2e87eb9168c148ffff916f50dda0e683aa6f26e41562ddda567b"
+      }
+    }
+  ],
+  "notStated": ["cv", "awards", "studyPlan", "certificates"],
+  "note": "Общее эссе и список активностей Common App общие, не внесены. Оба дополнительных эссе Bowdoin — по желанию."
+}
