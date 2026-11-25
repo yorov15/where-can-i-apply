@@ -1,0 +1,127 @@
+{
+  "id": "davidson-college",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "words", "max": 300},
+      "prompt": "There are just under 4,000 four-year colleges and universities in the United States. Being as specific as possible, what interests you most about Davidson College?",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Первый дополнительный вопрос: что именно в Davidson интересует вас больше всего. 250–300 слов.",
+      "evidence": "There are just under 4,000 four-year colleges and universities in the United States. Being as specific as possible, what interests you most about Davidson College? (250-300 word limit)",
+      "source": {
+        "url": "https://www.davidson.edu/admission-and-financial-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:c774ad47dddc1dba4b9b3ea8347555347270e6ec1c06da565c0fd0bd4cd8e089"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "words", "max": 300},
+      "prompt": "Davidson encourages students to explore curiosities in and out of the classroom. What is a topic, activity or idea that excites you? Tell us why. Examples may include hobbies, books, interactions, music, podcasts, movies, etc.",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Второй вопрос: какая тема, занятие или идея увлекает и почему. 250–300 слов.",
+      "evidence": "Davidson encourages students to explore curiosities in and out of the classroom. What is a topic, activity or idea that excites you? Tell us why. Examples may include hobbies, books, interactions, music, podcasts, movies, etc. (250-300 word limit)",
+      "source": {
+        "url": "https://www.davidson.edu/admission-and-financial-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:c774ad47dddc1dba4b9b3ea8347555347270e6ec1c06da565c0fd0bd4cd8e089"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Рекомендация школьного консультанта или college advisor; передаётся через School Report.",
+      "evidence": "Counselor or College Advisor Letter of Recommendation Through the Secondary School Report and Mid-Year School Report, your counselor or college advisor will have the opportunity to share more context around your high school record, your place in class and your curriculum.",
+      "source": {
+        "url": "https://www.davidson.edu/admission-and-financial-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:c774ad47dddc1dba4b9b3ea8347555347270e6ec1c06da565c0fd0bd4cd8e089"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации от разных учителей; хотя бы одна — по основному предмету.",
+      "evidence": "Davidson requires two recommendations from two different high school academic instructors. At least one must come from a core academic subject (English, math, science, history/social science or a second language).",
+      "source": {
+        "url": "https://www.davidson.edu/admission-and-financial-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:c774ad47dddc1dba4b9b3ea8347555347270e6ec1c06da565c0fd0bd4cd8e089"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Нужна рекомендация от ровесника — друга, коллеги или товарища по команде; форма онлайн.",
+      "evidence": "We ask that someone of similar age to the applicant (a friend, a coworker, a teammate, etc) complete the online peer recommendation.",
+      "source": {
+        "url": "https://www.davidson.edu/admission-and-financial-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:c774ad47dddc1dba4b9b3ea8347555347270e6ec1c06da565c0fd0bd4cd8e089"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Нужно заполнить раздел внеучебной активности в заявке как можно полнее.",
+      "evidence": "We ask that you complete the extracurricular portion of your application as thoughtfully and fully as possible.",
+      "source": {
+        "url": "https://www.davidson.edu/admission-and-financial-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:c774ad47dddc1dba4b9b3ea8347555347270e6ec1c06da565c0fd0bd4cd8e089"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Своих интервью Davidson не проводит. По желанию можно приложить интервью InitialView или Vericant.",
+      "evidence": "No, we do not offer interviews. Since we are unable to meet every student who applies to Davidson, we don't require interviews as part of the application process. If you would like to include an interview as an optional supplement, we encourage students to submit either an InitialView or a Vericant interview, however we do not provide fee waiver codes.",
+      "source": {
+        "url": "https://www.davidson.edu/admission-and-financial-aid/admission-process-help/frequently-asked-questions/international-admission-aid-faqs",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:a72ae244c7ffa18e791d98466143c2d826a2559922ab4a9c02b902c1ba8e2713"
+      }
+    }
+  ],
+  "notStated": ["cv", "awards", "studyPlan", "certificates"],
+  "note": "Общее эссе Common App не внесено; два дополнительных вопроса Davidson и раздел внеучебной активности — выше."
+}
