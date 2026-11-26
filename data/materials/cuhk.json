@@ -1,0 +1,93 @@
+{
+  "id": "cuhk",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": {"unit": "words", "max": 250},
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Отдельный personal statement нужен только поступающим на Medicine: до 250 слов.",
+      "evidence": "Applicants applying to Medicine are required to submit a separate 250-word personal statement.",
+      "source": {
+        "url": "https://admission.cuhk.edu.hk/application/overseas-other-qualifications-non-local-international-team/application-guides/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:dbafe793a7915afb35147afdc7f4e2aaeac270670b53659052757c0757f43256"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": null,
+      "limit": {"unit": "items", "max": 3},
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Можно указать до трёх рекомендателей: они заполняют конфиденциальный отзыв в системе рекомендаций CUHK.",
+      "evidence": "You may nominate up to three referees",
+      "source": {
+        "url": "https://admission.cuhk.edu.hk/application/overseas-other-qualifications-non-local-international-team/application-guides/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:dbafe793a7915afb35147afdc7f4e2aaeac270670b53659052757c0757f43256"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Резюме или CV можно приложить по желанию.",
+      "evidence": "Resume / Curriculum Vitae (optional)",
+      "source": {
+        "url": "https://admission.cuhk.edu.hk/application/overseas-other-qualifications-non-local-international-team/application-guides/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:dbafe793a7915afb35147afdc7f4e2aaeac270670b53659052757c0757f43256"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Интервью не для всех: если пригласят, его результат учитывают при отборе.",
+      "evidence": "If they are invited to attend an interview, their performance at the interview will also be taken into consideration.",
+      "source": {
+        "url": "https://admission.cuhk.edu.hk/international/requirements.html",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:75b2507c96cf65ad736accd4af02e9c52e0c165b790550199b713cefc4c69a9f"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Можно приложить сертификаты профессиональных или учебных достижений.",
+      "evidence": "certificates in support of professional / academic achievements",
+      "source": {
+        "url": "https://admission.cuhk.edu.hk/application/overseas-other-qualifications-non-local-international-team/application-guides/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:dbafe793a7915afb35147afdc7f4e2aaeac270670b53659052757c0757f43256"
+      }
+    }
+  ],
+  "notStated": ["activities", "awards", "portfolio", "studyPlan", "video"],
+  "note": "Требования для overseas/other qualifications, не для материкового Gaokao. Гайды и даты — цикл 2027; страница требований ещё упоминает 2025."
+}

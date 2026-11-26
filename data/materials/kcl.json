@@ -1,0 +1,68 @@
+{
+  "id": "kcl",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": 3,
+      "limit": {
+        "unit": "chars",
+        "max": 4000
+      },
+      "prompt": "Question 1: Why do you want to study this course or subject? Question 2: How have your qualifications and studies helped you to prepare for this course or subject? Question 3: What else have you done to prepare outside of education, and why are these experiences useful?",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Личное заявление в UCAS: около 4 000 знаков или 47 строк, три отдельных вопроса.",
+      "evidence": "Your personal statement is a piece of writing - about 4,000 characters or 47 lines of text - which you will include in your application. You do not need to list your qualifications here, as there will be a separate section of the application form for recording those details (along with details of your qualifications and your reference). The personal statement is split into three separate questions.",
+      "source": {
+        "url": "https://www.kcl.ac.uk/study/undergraduate/how-to-apply/important-information-for-applying",
+        "lastVerified": "2026-09-29",
+        "contentHash": "sha256:009fbb0516ea1f9f98dddaa5a0f46a28a1879b12526ad754b382c8cc0298dc09"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Рекомендацию даёт референт — академический или профессиональный контакт, не друг и не родственник; ссылку присылает UCAS.",
+      "evidence": "You will need to nominate a referee who must be an academic or professional contact (not a friend or family member). Your referee will receive a secure link from UCAS to provide your reference and predicted grades (where applicable) directly.",
+      "source": {
+        "url": "https://www.kcl.ac.uk/study/undergraduate/how-to-apply/important-information-for-applying",
+        "lastVerified": "2026-09-29",
+        "contentHash": "sha256:009fbb0516ea1f9f98dddaa5a0f46a28a1879b12526ad754b382c8cc0298dc09"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Иногда на собеседование приглашают зрелых поступающих — обсудить знания и мотивацию.",
+      "evidence": "In some cases, mature applicants will be invited to an interview (for example, to discuss your current knowledge and your motivations for returning study)",
+      "source": {
+        "url": "https://www.kcl.ac.uk/study/undergraduate/how-to-apply/important-information-for-applying",
+        "lastVerified": "2026-09-29",
+        "contentHash": "sha256:009fbb0516ea1f9f98dddaa5a0f46a28a1879b12526ad754b382c8cc0298dc09"
+      }
+    }
+  ],
+  "notStated": [
+    "awards",
+    "cv",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Опыт работы и внеучебные занятия входят в личное заявление; отдельного списка активностей нет."
+}

@@ -1,0 +1,84 @@
+{
+  "id": "imperial-college-london",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Одно личное заявление на всю заявку: оно должно покрывать все выбранные курсы.",
+      "evidence": "You can only submit one personal statement with your application. So it needs to cover all your course choices.",
+      "source": {
+        "url": "https://www.imperial.ac.uk/study/apply/undergraduate/process/",
+        "lastVerified": "2026-09-29",
+        "contentHash": "sha256:2b2ede8bb93331b74a00cee9502068ab8c4f1ac9dd15d9b87ce594cac475ca1e"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Одна рекомендация в UCAS от человека, который знает ученика по учёбе.",
+      "evidence": "Only one reference is required for your UCAS application from someone who knows you academically.",
+      "source": {
+        "url": "https://www.imperial.ac.uk/study/apply/undergraduate/process/",
+        "lastVerified": "2026-09-29",
+        "contentHash": "sha256:2b2ede8bb93331b74a00cee9502068ab8c4f1ac9dd15d9b87ce594cac475ca1e"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "На части курсов Imperial есть интервью.",
+      "evidence": "If you're applying for a course with a interview learn how you can make the most of it with these top tips.",
+      "source": {
+        "url": "https://www.imperial.ac.uk/study/apply/undergraduate/process/",
+        "lastVerified": "2026-09-29",
+        "contentHash": "sha256:2b2ede8bb93331b74a00cee9502068ab8c4f1ac9dd15d9b87ce594cac475ca1e"
+      }
+    },
+    {
+      "type": "other",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Единого теста нет, но некоторые факультеты используют свой вступительный тест.",
+      "evidence": "Imperial doesn't have a university-wide test but some departments use a test in their selection process.",
+      "source": {
+        "url": "https://www.imperial.ac.uk/study/apply/undergraduate/process/",
+        "lastVerified": "2026-09-29",
+        "contentHash": "sha256:2b2ede8bb93331b74a00cee9502068ab8c4f1ac9dd15d9b87ce594cac475ca1e"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "certificates",
+    "cv",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Отдельных страниц Personal statement, Application reference и Interviews в снимке нет — только раздел Application process."
+}
