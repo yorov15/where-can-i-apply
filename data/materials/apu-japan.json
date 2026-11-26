@@ -1,0 +1,101 @@
+{
+  "id": "apu-japan",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 200
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Эссе пишут только при подаче на APU Tuition Reduction Scholarship: по 200 слов каждое, самому, по инструкции в анкете.",
+      "evidence": "Follow the instructions in the online application and complete the essays by yourself within the word limit (200 words each).",
+      "source": {
+        "url": "https://admissions.apu.ac.jp/costs_scholarships/before_enrollment/",
+        "lastVerified": "2026-09-13",
+        "contentHash": "sha256:4e4ff257db19c94c7005f68b585fcd786534cd4ca5d510fb30dda67f5cc88af3"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Только для стипендиальной заявки: письмо от преподавателя последнего учебного заведения, который знает вас не меньше полугода.",
+      "evidence": "A letter of recommendation is required from an instructor at the educational institution you most recently attended. The recommender must have known you for at least half a year.",
+      "source": {
+        "url": "https://admissions.apu.ac.jp/costs_scholarships/before_enrollment/",
+        "lastVerified": "2026-09-13",
+        "contentHash": "sha256:4e4ff257db19c94c7005f68b585fcd786534cd4ca5d510fb30dda67f5cc88af3"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Можно приложить подтверждение внеучебных занятий, если они есть.",
+      "evidence": "Proof of extracurricular activities (if applicable)",
+      "source": {
+        "url": "https://admissions.apu.ac.jp/admissions/how_to_apply/",
+        "lastVerified": "2026-09-13",
+        "contentHash": "sha256:2350cc51916e1c3d1329ebeca69a522cd567022b346abc0812318a788e06b6f9"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Нужно подтвердить английский или японский одним из принятых тестов; некоторым поступающим тест сдавать не нужно.",
+      "evidence": "You must meet one of the following English or Japanese language proficiency requirements. Applicants who meet certain conditions may choose not to submit a language proficiency test.",
+      "source": {
+        "url": "https://admissions.apu.ac.jp/admissions/application_eligibility/",
+        "lastVerified": "2026-09-13",
+        "contentHash": "sha256:aaf83c0e21f48b0218ad51ab4a10b8c01670785b321638589ba93ecba3bed045"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Записанное интервью нужно завершить до дедлайна подачи.",
+      "evidence": "Complete your recorded interview before the application deadline.",
+      "source": {
+        "url": "https://admissions.apu.ac.jp/admissions/how_to_apply/",
+        "lastVerified": "2026-09-13",
+        "contentHash": "sha256:2350cc51916e1c3d1329ebeca69a522cd567022b346abc0812318a788e06b6f9"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan"
+  ],
+  "note": "Тексты — для набора 2027 года. Эссе и письмо-рекомендация нужны только при подаче на APU Tuition Reduction Scholarship (так сказано в списке документов на How to Apply); темы эссе в снимке не приводятся — они в Application Handbook. Записанное интервью обязательно для всех."
+}

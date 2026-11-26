@@ -1,0 +1,99 @@
+{
+  "id": "inha",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "mail",
+      "ru": "Personal Statement нужен только на International Students Special Admission — это отдельный документ в том же списке.",
+      "evidence": "Personal Statement; Study Plan; Recommendation letter.",
+      "source": {
+        "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+        "lastVerified": "2026-09-19",
+        "contentHash": "sha256:cbce87caca6b14c1c8af9db36ecc63368e86721ea93c831440123a4072d3307c"
+      }
+    },
+    {
+      "type": "studyPlan",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "mail",
+      "ru": "Study Plan — тоже только для International Students Special Admission.",
+      "evidence": "Personal Statement; Study Plan; Recommendation letter.",
+      "source": {
+        "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+        "lastVerified": "2026-09-19",
+        "contentHash": "sha256:cbce87caca6b14c1c8af9db36ecc63368e86721ea93c831440123a4072d3307c"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "mail",
+      "ru": "Recommendation letter — только для International Students Special Admission.",
+      "evidence": "Personal Statement; Study Plan; Recommendation letter.",
+      "source": {
+        "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+        "lastVerified": "2026-09-19",
+        "contentHash": "sha256:cbce87caca6b14c1c8af9db36ecc63368e86721ea93c831440123a4072d3307c"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Официальный сертификат английского (IELTS или TOEFL iBT) либо письмо из школы или вуза о том, что учёба была на английском.",
+      "evidence": "Official English Proficiency Test Certificate (IELTS/ TOEFL iBT) or an official letter issued by the secondary or higher education that certifies their students were taught in English",
+      "source": {
+        "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+        "lastVerified": "2026-09-19",
+        "contentHash": "sha256:cbce87caca6b14c1c8af9db36ecc63368e86721ea93c831440123a4072d3307c"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "На International Students Special Admission отбор идёт по документам и собеседованию на английском.",
+      "evidence": "International Applicants Special Admission / Korean Nationals Residing Abroad Special Admission - Type: Document evaluation + interview",
+      "source": {
+        "url": "https://inha.uz/prospective-students/admissions/application-guideline/",
+        "lastVerified": "2026-09-19",
+        "contentHash": "sha256:cbce87caca6b14c1c8af9db36ecc63368e86721ea93c831440123a4072d3307c"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "activities",
+    "awards",
+    "portfolio",
+    "video"
+  ],
+  "note": "Гид 2026–2027: даты приёма весна–лето 2026 уже прошли, нового текста нет — сроки и требования могут измениться. Personal Statement, Study Plan и Recommendation letter есть в списке только у International Students Special Admission; на обычный приём их не просят."
+}

@@ -1,0 +1,99 @@
+{
+  "id": "sdu",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Мотивационное письмо пишет сам абитуриент: интерес к программе, цели и мотивация учиться в SDU.",
+      "evidence": "*Motivational Letter - written by the applicant to explain their interest in the program, goals, and motivation for studying at SDU University.",
+      "source": {
+        "url": "https://sdu.edu.kz/en/international-admissions/",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:04f0066990c4304fc0c7cfa6001286af442377f7ea5cd96fdb736791aa6eb4ff"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Письмо-рекомендация от учителя, работодателя или представителя учебного заведения: о способностях, достижениях и потенциале.",
+      "evidence": "*Recommendation Letter - written by a teacher, employer, or academic representative to describe the applicant's abilities, achievements, and potential.",
+      "source": {
+        "url": "https://sdu.edu.kz/en/international-admissions/",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:04f0066990c4304fc0c7cfa6001286af442377f7ea5cd96fdb736791aa6eb4ff"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Сертификат IELTS (минимум 5.5) или SDU Extension Center (минимум B1) прикладывают, если он есть.",
+      "evidence": "IELTS (min 5.5 points) or SDU Extension Center (min B1 level) Certificate (if available)",
+      "source": {
+        "url": "https://sdu.edu.kz/en/international-admissions/",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:04f0066990c4304fc0c7cfa6001286af442377f7ea5cd96fdb736791aa6eb4ff"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Можно приложить дополнительные документы: сертификат ISPT, достижения и другие подтверждения.",
+      "evidence": "Any additional documents (such as ISPT certificate, achievements, supporting documents, etc.)",
+      "source": {
+        "url": "https://sdu.edu.kz/en/international-admissions/",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:04f0066990c4304fc0c7cfa6001286af442377f7ea5cd96fdb736791aa6eb4ff"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Нужно пройти Placement Test по английскому и собеседование на английском; без теста дальше не пустят.",
+      "evidence": "Prospective students are expected to undertake a Placement Test and an interview in English.",
+      "source": {
+        "url": "https://sdu.edu.kz/en/international-admissions/",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:04f0066990c4304fc0c7cfa6001286af442377f7ea5cd96fdb736791aa6eb4ff"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "activities",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Приём 2026–2027: осенний дедлайн 31.07.2026 уже прошёл, весенний — 30.11.2026. IELTS не обязателен: без сертификата сдают Placement Test."
+}

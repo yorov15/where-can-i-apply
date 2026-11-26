@@ -1,0 +1,66 @@
+{
+  "id": "university-of-debrecen",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Короткое резюме: личные данные, образование, опыт работы, языки и другие навыки.",
+      "evidence": "Short Resume/ CV (personal details, educational background, work experience, language skills, additional skills)",
+      "source": {
+        "url": "https://edu.unideb.hu/p/application-and-admission",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:4b69c619282074a158e46be28e456f98e27c7560e578445f8d24c40b28924378"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Собеседование обязательно для BSc Physiotherapy, BSc Public Health, BSc Nurse и части магистерских программ. Спрашивают о мотивации, планах и прошлом образовании.",
+      "evidence": "An entrance interview is compulsory in case of the following programs: BSc Physiotherapy BSc Public Health BSc Nurse MSc in Public Health MSc in Molecular Biology MSc in Social Work in Health Care MA in Social Work and Social Economy MSc in Pharmaceutical Research and Development Manager Bachelor and master applicants can expect questions about their motivation, future plans and previous education.",
+      "source": {
+        "url": "https://edu.unideb.hu/p/entrance-examinationinterview",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:ecbdd98e8ba4aaebf7c2ab93c4118976bb6af19df16e2f3acfd6a6d427ded84e"
+      }
+    },
+    {
+      "type": "other",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "На Basic Medicine Course, Medicine, Dentistry и Pharmacy обязателен вступительный экзамен: письменный тест по биологии и по химии или физике на выбор.",
+      "evidence": "An entrance examination is compulsory for students applying to the following programs: Basic Medicine Course Medicine Dentistry Pharmacy The entrance exam consists of two parts: a written test (comprised of multiple-choice questions, definitions, calculations, etc.) in Biology (compulsory for all) and Chemistry or Physics (the applicant's choice).",
+      "source": {
+        "url": "https://edu.unideb.hu/p/entrance-examinationinterview",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:ecbdd98e8ba4aaebf7c2ab93c4118976bb6af19df16e2f3acfd6a6d427ded84e"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Страница приёма действующая: сроки указаны на набор 2027 года. Два рекомендательных письма от бывших преподавателей нужны только на PhD, бакалавриату их не просят. Языковой сертификат B2 — условие приёма, уже в карточке, отдельным материалом не внесён. Два рекомендательных письма есть только для PhD — для бакалавриата не вносил."
+}

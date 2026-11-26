@@ -1,0 +1,100 @@
+{
+  "id": "tianjin-university",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Резюме об учёбе и работе с момента окончания школы до сегодня: без перерывов в датах и с уровнем образования начиная со старшей школы.",
+      "evidence": "Study and Work Experience Resume since High School to present (The start and end time must be uninterrupted, and education level should start from senior high school)",
+      "source": {
+        "url": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202609/t20260930_324729.html",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:4888445dfb43960978fb3997418e7303106bcdb9af9907b1c4302632a5ee1872"
+      }
+    },
+    {
+      "type": "studyPlan",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Учебный план — не меньше 600 слов.",
+      "evidence": "S tudy plan (600 words at least).",
+      "source": {
+        "url": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202609/t20260930_324729.html",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:4888445dfb43960978fb3997418e7303106bcdb9af9907b1c4302632a5ee1872"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Только для англоязычных программ: обязателен сертификат английского — IELTS 6.0 или TOEFL 80.",
+      "evidence": "For English-instructed program applicants: Students are required to submit English Proficiency Certificates. IELTS 6.0 or TOEFL 80 is mandatory.",
+      "source": {
+        "url": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202609/t20260930_324729.html",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:4888445dfb43960978fb3997418e7303106bcdb9af9907b1c4302632a5ee1872"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Только для китайскоязычных программ: сертификат HSK-5 или HSK-4 с минимум 180 баллов.",
+      "evidence": "For Chinese-instructed program applicants: Students are required to submit HSK-5 certificates with a minimum score of 180 or HSK-4 certificates with a minimum score of 180 or above for programs in School of International Education.",
+      "source": {
+        "url": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202609/t20260930_324729.html",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:4888445dfb43960978fb3997418e7303106bcdb9af9907b1c4302632a5ee1872"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "В дополнительных документах можно приложить грамоты и награды, если они есть.",
+      "evidence": "Other attachments (such as Certificate of award etc. )",
+      "source": {
+        "url": "https://sie.tju.edu.cn/en/xwxm/UNDERGRADUATE/202609/t20260930_324729.html",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:4888445dfb43960978fb3997418e7303106bcdb9af9907b1c4302632a5ee1872"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "recommendation",
+    "activities",
+    "portfolio",
+    "video",
+    "interview"
+  ],
+  "note": "Приём 2027 года: заявки с 30 сентября 2026 по 31 мая 2027. Документы принимают на китайском или английском, иначе нужен нотариальный перевод."
+}

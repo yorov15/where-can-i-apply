@@ -1,0 +1,51 @@
+{
+  "id": "lmu",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "mail",
+      "ru": "Обновлённое резюме (Updated resume) прикладывают к заявке; на сайте есть образец в PDF.",
+      "evidence": "Updated resume (please see sample (PDF, 135 KB) )",
+      "source": {
+        "url": "https://www.lmu.de/en/study/degree-students/applications-for-admission/",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:81472b62bec97486956c42e5439d3e8b83026afa49a5acd11bdaaef005b58d27"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "de",
+      "via": "mail",
+      "ru": "Нужно подтверждение знания немецкого; принимают обычную, не заверенную копию.",
+      "evidence": "Evidence of proficiency in German , uncertified copy",
+      "source": {
+        "url": "https://www.lmu.de/en/study/degree-students/applications-for-admission/",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:81472b62bec97486956c42e5439d3e8b83026afa49a5acd11bdaaef005b58d27"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "recommendation",
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "interview"
+  ],
+  "note": "Снимок от 27.09.2026: страница описывает подачу в наборе 2026/27 (портал MoveIN был открыт 15.05–15.07.2026), нового текста нет — сроки и требования могут измениться. LMU прямо пишет, что рекомендации и характеристики не нужны: «Expert reports, letters of recommendation or internship certificates are not required»."
+}
