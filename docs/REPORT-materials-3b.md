@@ -78,16 +78,16 @@
 | ucl | — | | | |
 | unipd | — | | | |
 | university-of-szeged | — | | | |
-| upm | — | | | |
-| utm | — | | | |
-| warwick | — | | | |
-| yeditepe | — | | | |
-| zurich | — | | | |
-| bnu | — | | | |
-| sysu | — | | | |
-| obuda | — | | | |
-| ecnu | — | | | |
-| nankai | — | | | |
+| upm | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | письменных материалов вуз не просит: онлайн-заявка, взнос и доп. документы |
+| utm | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates, other |  |
+| warwick | частично | essay, recommendation, interview, other | activities, cv, awards, portfolio, studyPlan, video, certificates | не скачались Personal statement, Your reference, Admissions Tests; лимит заявления и детали рекомендации не подтверждены |
+| yeditepe | готово | essay, recommendation, other | activities, cv, awards, portfolio, studyPlan, video, interview, certificates |  |
+| zurich | частично | other | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | страница Documents to Submit в снимке не раскрыта; письменных материалов вуз не просит |
+| bnu | готово | recommendation, essay, awards, interview | activities, cv, portfolio, studyPlan, video, certificates, other | личное заявление заполняют от руки по-китайски |
+| sysu | готово | interview, recommendation, studyPlan, awards | essay, activities, cv, portfolio, video, certificates, other | SYSU-стипендия: письмо агентства, два письма, план учёбы |
+| obuda | готово | essay, cv, portfolio, other | activities, awards, studyPlan, video, interview, certificates | рекомендации и портфолио Architecture — только MSc |
+| ecnu | готово | essay, recommendation, portfolio, video, other, interview | activities, cv, awards, studyPlan, certificates | гайд обновлён под сентябрь 2027; саморекомендация 500–800 слов |
+| nankai | готово | essay, recommendation, interview, other | activities, cv, awards, portfolio, studyPlan, video, certificates |  |
 | mate | — | | | |
 | fu-berlin | — | | | |
 | uni-due | — | | | |
