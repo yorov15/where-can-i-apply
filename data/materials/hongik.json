@@ -1,0 +1,32 @@
+{
+  "id": "hongik",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Отбор включает интервью: 20% оценки у гуманитарных и естественных направлений, 40% у искусств (кроме теории искусства).",
+      "evidence": "Humanities (including Liberal Arts Studies) Document Review : 80 Interview : 20 Sciences Document Review : 80 Interview : 20 Fine Arts (excluding Arts Studies (theory)) Document Review : 60 Interview : 40",
+      "source": {
+        "url": "https://www.hongik.ac.kr/en/admissions/admissions-guide.do",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:40b4ab592a192a4b3391190ac9c701d27557d1e8140c36f6a5d9889c45747fd1"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "certificates"
+  ],
+  "note": "Страница снимка 2026-09-27 описывает интервью в отборе; в руководстве Spring 2027 его уже нет (документы 100%, у исполнительских 60% документы + 40% видео). Руководство — PDF 5,5 МБ, tools.fetch не успел за 30 с, поэтому письмо учителя, портфолио до 5 работ A4 и видео для искусств не внесены."
+}

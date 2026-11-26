@@ -48,16 +48,16 @@
 | ewha | готово | essay, other, portfolio, interview | recommendation, cv, studyPlan | гайд Spring 2027; рекомендация и учебный план в нём только для магистратуры |
 | gks-korea | готово | essay, studyPlan, recommendation, awards, interview | cv, portfolio, video | гайд 2027 GKS-U (English, 0914); вопросы Personal Statement в PDF не приведены |
 | hanyang | пропуск | — | — | fetch: HTTP 403 и таймауты; в снимке 2026-09-27 только навигация, гайд бакалавриата — PDF, скачать не удалось |
-| hongik | — | | | |
-| iccr-india | — | | | |
-| inu | — | | | |
-| itmo | — | | | |
-| kadir-has | — | | | |
-| khalifa-uae | — | | | |
-| king-saud | — | | | |
-| konkuk | — | | | |
-| ku-leuven | — | | | |
-| lund-sweden | — | | | |
+| hongik | частично | interview | essay, activities, cv, awards, studyPlan, certificates | руководство Spring 2027 (PDF 5,5 МБ) не скачалось; портфолио/письмо учителя/видео для искусств — только в note |
+| iccr-india | готово | essay, video | recommendation, activities, cv, awards, portfolio, studyPlan, interview, certificates |  |
+| inu | готово | portfolio, cv, interview, other | essay, recommendation, activities, awards, studyPlan, video, certificates |  |
+| itmo | готово | portfolio | essay, recommendation, activities, cv, studyPlan, video, interview | портфолио только для идущих через Open Doors |
+| kadir-has | готово | essay, recommendation | activities, cv, awards, portfolio, studyPlan, video, interview, certificates |  |
+| khalifa-uae | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, certificates | вместо собеседования — обязательная видеозапись в портале |
+| king-saud | готово | recommendation, interview | essay, activities, cv, awards, portfolio, studyPlan, video, certificates | внешняя стипендия: рекомендация «may require», собеседование только для медицины |
+| konkuk | готово | portfolio, video, awards, activities, other | cv, studyPlan, interview, certificates | Fall 2026; эссе и рекомендации вуз не принимает — в note |
+| ku-leuven | готово | essay, cv | recommendation, activities, awards, portfolio, studyPlan, video, interview, certificates |  |
+| lund-sweden | готово | portfolio, other | activities, awards, studyPlan, video, interview, certificates | statement of purpose, CV и рекомендации вуз относит только к магистратуре — в note |
 | mcgill | — | | | |
 | michigan | — | | | |
 | nazarbayev | — | | | |
