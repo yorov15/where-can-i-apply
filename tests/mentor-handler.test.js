@@ -43,7 +43,7 @@ test('mentor mode goes to Go in JSON mode and returns the checked plan', async (
   const sent = requests.at(-1);
   assert.equal(sent.url, 'https://opencode.ai/zen/go/v1/chat/completions');
   assert.equal(sent.body.response_format.type, 'json_object');
-  assert.equal(sent.body.max_tokens, 1600);
+  assert.equal(sent.body.max_tokens, 3000);
   assert.match(sent.body.messages[0].content, /json/);
   assert.doesNotMatch(JSON.stringify(sent.body), /deviceId|0000-4000/);
 });

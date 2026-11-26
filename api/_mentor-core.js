@@ -139,7 +139,7 @@ export function inspectMentorAnswer(text, req) {
   const no = (reason) => ({ plan: null, reason });
   if (typeof text !== 'string' || text.length > 6000) return no('empty or too long');
   let value;
-  try { value = JSON.parse(text.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '')); } catch { return no('not json'); }
+  try { value = JSON.parse(text.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '')); } catch { return no(`not json, ${text.length} chars, ends: ${text.slice(-60)}`); }
   if (!onlyKeys(value, ['focus', 'days']) || !Object.hasOwn(value, 'focus') || !Array.isArray(value.days)) return no('wrong keys');
   const allowed = allowedNumbers(req);
   const focus = textProblem(value.focus, req, allowed);

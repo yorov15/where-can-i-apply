@@ -180,7 +180,7 @@ async function askOnce(models, { system, user, mode, check }, timeoutMs) {
         { role: 'system', content: system },
         { role: 'user', content: user },
       ],
-      max_tokens: mode==='essay'?2200:mode==='mentor-week'?1600:1200,
+      max_tokens: mode==='essay'?2200:mode==='mentor-week'?3000:1200,
       temperature: 0.3,
       ...(mode==='essay'?{provider:{data_collection:'deny',zdr:true,max_price:{prompt:0,completion:0}}}:{}),
       ...(json?{response_format:{type:'json_object'}}:{}),
