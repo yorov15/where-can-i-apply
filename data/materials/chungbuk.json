@@ -6,7 +6,10 @@
       "type": "portfolio",
       "need": "some",
       "count": null,
-      "limit": {"unit": "items", "max": 10},
+      "limit": {
+        "unit": "items",
+        "max": 10
+      },
       "prompt": null,
       "who": null,
       "language": null,
@@ -35,25 +38,16 @@
         "lastVerified": "2026-10-01",
         "contentHash": "sha256:6f322410375772abb2a6b5b082daff51a76ef0aadf23f7c678e5c6fed6fa3abf"
       }
-    },
-    {
-      "type": "recommendation",
-      "need": "some",
-      "count": null,
-      "limit": null,
-      "prompt": null,
-      "who": null,
-      "language": null,
-      "via": null,
-      "ru": "Для магистратуры: отзыв [Form 3-1] пишет предполагаемый научный руководитель — преподаватель кафедры CBNU, с которым вы связались заранее. Это не школьная рекомендация.",
-      "evidence": "▪ [Form 3-1] Reference by CBNU prospective academic advisor.",
-      "source": {
-        "url": "https://oia.cbnu.ac.kr/home/main.do",
-        "lastVerified": "2026-10-01",
-        "contentHash": "sha256:6f322410375772abb2a6b5b082daff51a76ef0aadf23f7c678e5c6fed6fa3abf"
-      }
     }
   ],
-  "notStated": ["essay", "activities", "cv", "awards", "studyPlan", "video", "certificates"],
+  "notStated": [
+    "essay",
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
   "note": "На странице бакалавриата рекомендаций нет: [Form 3-1] Reference by CBNU prospective academic advisor — отзыв научного руководителя из объявления магистратуры в том же снимке. Даты и форма интервью — из объявления 2027 Spring."
 }

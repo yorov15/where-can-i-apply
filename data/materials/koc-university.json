@@ -1,0 +1,100 @@
+{
+  "id": "koc-university",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "pages",
+        "max": 2
+      },
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Мотивационное письмо на 1–2 страницы: почему выбрали эту программу, какие занятия и активности к этому привели и чем вам подходит Koç.",
+      "evidence": "You should use 1-2 pages to explain why you would like to study your program of choice, talk about the academic and extra-curricular activities that have helped you make your decision to study a specific major and that would make you ready for university life, and why specifically do you think Koç University's program is a good fit for your character, goals, and style of learning.",
+      "source": {
+        "url": "https://international.ku.edu.tr/undergraduate-programs/how-to-apply/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:56406a42dc33adc374e57455f780cce2063468406c2c3eecd69eb201543534e6"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": null,
+      "via": "email",
+      "ru": "Вы указываете рефери — учителя, директора школы или консультанта; вуз сам пишет им на почту и просит заполнить форму рекомендации.",
+      "evidence": "You will be asked to provide contact details (name, surname, institutional email address, job title) for every referee (this can be a teacher, headteacher, or guidance counselor) who can provide recommendations on your behalf for university admission. The referees will receive an email from Koç University asking them to complete a recommendation form.",
+      "source": {
+        "url": "https://international.ku.edu.tr/undergraduate-programs/how-to-apply/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:56406a42dc33adc374e57455f780cce2063468406c2c3eecd69eb201543534e6"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Записанное видео-интервью: один случайный вопрос, ответ записывают на видео за отведённое время. Его просят у всех поступающих.",
+      "evidence": "In this section, you will be presented with one randomly generated question and you are expected to read over the question and then record your answer accordingly within the allowed time frame.",
+      "source": {
+        "url": "https://international.ku.edu.tr/undergraduate-programs/how-to-apply/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:56406a42dc33adc374e57455f780cce2063468406c2c3eecd69eb201543534e6"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "form",
+      "ru": "В форме есть раздел про внешкольные занятия: вписывайте то, что считаете важным для оценки. Если активностей нет, это не минус.",
+      "evidence": "In the application form, you will be asked to submit the extra-curricular activities you have participated in that you think would be relevant for your evaluation (If applicable). Please note that if you don't have extracurricular activities or achievements, this will not negatively affect your evaluation as a candidate.",
+      "source": {
+        "url": "https://international.ku.edu.tr/undergraduate-programs/how-to-apply/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:56406a42dc33adc374e57455f780cce2063468406c2c3eecd69eb201543534e6"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Сертификаты, письма и другие подтверждения участия в активностях загружают в разделе «Checklist», подраздел «Activities».",
+      "evidence": "You can upload certificates, letters, or other evidence of participation in these activities in the \"Checklist\" section of the application form under \"Activities\".",
+      "source": {
+        "url": "https://international.ku.edu.tr/undergraduate-programs/how-to-apply/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:56406a42dc33adc374e57455f780cce2063468406c2c3eecd69eb201543534e6"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "portfolio",
+    "studyPlan"
+  ],
+  "note": "Обязательные материалы: мотивационное письмо на 1–2 страницы, письма-рекомендации (их отправляют сами рефери по ссылке от вуза) и записанное видео-интервью с одним случайным вопросом. Активности и подтверждения к ним — раздел Checklist формы, по желанию."
+}

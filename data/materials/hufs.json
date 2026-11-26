@@ -1,0 +1,115 @@
+{
+  "id": "hufs",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "form",
+      "ru": "Личное эссе по шаблону HUFS, заполняется на сайте подачи U-Way. На корейском для Korean Track, на английском для English Track.",
+      "evidence": "2. Personal Statement & Study Plan Complete the form and print it out from the application website -  Applicants to the Korean Track must write their Personal Statement and Study Plan in Korean, while applicants to the English Track must write them in English.",
+      "source": {
+        "url": "https://international.hufs.ac.kr/sites/international/contents/files/2026fall/HUFS_2026_Fall_Admission_guide(ENG)_update_ver.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ec87bd6aa56657b0e5d4a51dd03627c54ad935bc9683debce34d7c8fa2a8b29f"
+      }
+    },
+    {
+      "type": "studyPlan",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "form",
+      "ru": "План учёбы по шаблону вуза на сайте подачи. Если выбираете вторую специальность, для каждой нужен отдельный план.",
+      "evidence": "5)  If applying to two majors, a separate study plan must be submitted for each major. The personal statement and study plan must be written using the Hankuk University of Foreign Studies template and can be completed on the application website (U-Way).",
+      "source": {
+        "url": "https://international.hufs.ac.kr/sites/international/contents/files/2026fall/HUFS_2026_Fall_Admission_guide(ENG)_update_ver.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ec87bd6aa56657b0e5d4a51dd03627c54ad935bc9683debce34d7c8fa2a8b29f"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": null,
+      "via": "mail",
+      "ru": "По желанию — письмо от учителя или профессора на форме HUFS. Форму скачивают с сайта подачи, оригинал присылают в запечатанном конверте.",
+      "evidence": "13.  Letter of Recommendation(s) from your teacher/professor ※ Optional Print the form from the application submission site (U-Way) and fill it out ※ Be sure to submit it in a sealed condition.",
+      "source": {
+        "url": "https://international.hufs.ac.kr/sites/international/contents/files/2026fall/HUFS_2026_Fall_Admission_guide(ENG)_update_ver.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ec87bd6aa56657b0e5d4a51dd03627c54ad935bc9683debce34d7c8fa2a8b29f"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Онлайн-интервью: приглашают по запросу факультета, не всех. Кто не подал языковой сертификат, проходит интервью обязательно.",
+      "evidence": "•  Interviews will be conducted online. •  Applicants selected for the interview must access the system within the designated time.",
+      "source": {
+        "url": "https://international.hufs.ac.kr/sites/international/contents/files/2026fall/HUFS_2026_Fall_Admission_guide(ENG)_update_ver.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ec87bd6aa56657b0e5d4a51dd03627c54ad935bc9683debce34d7c8fa2a8b29f"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Сертификат языка (TOPIK, TOEFL iBT, IELTS) не обязателен: заявку примут и без него, но тогда позовут на интервью.",
+      "evidence": "International undergraduate admission students can apply without proof of language proficiency. Those who did not submit language proficiency documents, however, will be required to participate in an interview.",
+      "source": {
+        "url": "https://international.hufs.ac.kr/sites/international/contents/files/2026fall/HUFS_2026_Fall_Admission_guide(ENG)_update_ver.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ec87bd6aa56657b0e5d4a51dd03627c54ad935bc9683debce34d7c8fa2a8b29f"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Награды идут в разделе «Miscellaneous» вместе с другими дополнительными документами — прикладывают, только если есть.",
+      "evidence": "14.  Miscellaneous (certificate of completion for CKLC or FL TTC, records of awards, certificates of qualification(s), documents relating to academic proficiency, etc.) -  Submit only if applicable.",
+      "source": {
+        "url": "https://international.hufs.ac.kr/sites/international/contents/files/2026fall/HUFS_2026_Fall_Admission_guide(ENG)_update_ver.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ec87bd6aa56657b0e5d4a51dd03627c54ad935bc9683debce34d7c8fa2a8b29f"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "portfolio",
+    "video"
+  ],
+  "note": "Набор 2026 Fall — прошлый: брали PDF HUFS_2026_Fall_Admission_guide(ENG) от 26.09.2026, нового гида на сайте нет. Эссе и план учёбы — пункт 2 списка документов, поэтому count не ставили. Аттестат, паспорт и финансовые документы не вносили — они в data/prep."
+}

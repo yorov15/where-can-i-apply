@@ -38,10 +38,10 @@
 | barnard-college | готово | essay, interview, portfolio, recommendation, video | cv, awards, studyPlan, certificates | — |
 | bme-budapest | готово | certificates, cv, essay, interview, other | activities, awards, portfolio, studyPlan, video | — |
 | cau | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates | — |
-| chungbuk | готово | interview, portfolio, recommendation | essay, activities, cv, awards, studyPlan, video, certificates | — |
+| chungbuk | готово | interview, portfolio | essay, activities, cv, awards, studyPlan, video, certificates | — |
 | comenius-university | готово | cv, essay, interview | activities, awards, portfolio, studyPlan, video | — |
 | czech-public | готово | cv, essay, interview, portfolio, recommendation | activities, awards, studyPlan, video, certificates | — |
-| enu | готово | essay, recommendation, studyPlan | cv, activities, awards, portfolio, video, certificates | — |
+| enu | готово | essay, recommendation | cv, activities, awards, portfolio, video, certificates | — |
 | estonia-study | готово | cv, essay, interview, portfolio, recommendation | activities, awards, studyPlan, video, certificates | — |
 | fudan-university | готово | awards, certificates, essay, interview, other, recommendation | cv, activities, portfolio, studyPlan, video | — |
 | handong | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | — |
@@ -91,7 +91,7 @@
 | king-abdulaziz | пропуск | | | пропуск: для бакалавриата английские страницы — пустые JS-заглушки, требований нет; рекомендации только для стипендий магистратуры/PhD |
 | cambridge | готово | essay, interview, other, portfolio | recommendation, activities, cv, awards, studyPlan, video, certificates | — |
 | urfu | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview | — |
-| tsukuba-ide | — | | | не начато |
+| tsukuba-ide | готово | awards, essay, interview, recommendation, studyPlan | cv, activities, portfolio, video, certificates | — |
 | polyu-hongkong | готово | interview, other, recommendation | essay, activities, cv, awards, portfolio, studyPlan, video, certificates | — |
 | amherst-college | частично | | | частично: fetch вернул HTTP 405; чек-лист, writing supplement и arts supplement не скачаны — файл не создан |
 | brown-university | готово | essay, interview, other, portfolio, recommendation, video | activities, cv, awards, studyPlan, certificates | — |

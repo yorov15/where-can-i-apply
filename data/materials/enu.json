@@ -35,42 +35,15 @@
         "lastVerified": "2026-10-01",
         "contentHash": "sha256:c3860679746c58d0989a70450699ddd2f0f05aa966a2cdc79ddd6c88572fc79f"
       }
-    },
-    {
-      "type": "studyPlan",
-      "need": "some",
-      "count": null,
-      "limit": null,
-      "prompt": null,
-      "who": null,
-      "language": "ru",
-      "via": "platform",
-      "ru": "Только для докторантуры: в пакет документов входит план проведения исследования.",
-      "evidence": "8) Список научных публикаций за последние 3 календарных года (при наличии), план проведения исследования и эссе.",
-      "source": {
-        "url": "https://enu.kz/ru/page/applicants/for-foreign-citizens",
-        "lastVerified": "2026-10-01",
-        "contentHash": "sha256:c3860679746c58d0989a70450699ddd2f0f05aa966a2cdc79ddd6c88572fc79f"
-      }
-    },
-    {
-      "type": "essay",
-      "need": "some",
-      "count": null,
-      "limit": null,
-      "prompt": null,
-      "who": null,
-      "language": "ru",
-      "via": "platform",
-      "ru": "Только для докторантуры: вместе с планом проведения исследования подаётся эссе.",
-      "evidence": "8) Список научных публикаций за последние 3 календарных года (при наличии), план проведения исследования и эссе.",
-      "source": {
-        "url": "https://enu.kz/ru/page/applicants/for-foreign-citizens",
-        "lastVerified": "2026-10-01",
-        "contentHash": "sha256:c3860679746c58d0989a70450699ddd2f0f05aa966a2cdc79ddd6c88572fc79f"
-      }
     }
   ],
-  "notStated": ["cv", "activities", "awards", "portfolio", "video", "certificates"],
+  "notStated": [
+    "cv",
+    "activities",
+    "awards",
+    "portfolio",
+    "video",
+    "certificates"
+  ],
   "note": "Мотивационное письмо и рекомендации — из раздела о стипендиях «Культегин» и «Гумилев»: конкурс для иностранных студентов, уже учащихся платно, а не приём. План исследования и эссе — только для докторантуры. На бакалавриат у иностранцев письменных материалов нет."
 }

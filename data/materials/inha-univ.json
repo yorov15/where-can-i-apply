@@ -1,0 +1,83 @@
+{
+  "id": "inha-univ",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Cover letter в списке обязательных документов. Отдельного вопроса и лимита объёма страница не даёт.",
+      "evidence": "Required documents application form, high school diploma, foreign language proficiency certificate, cover letter, study plan, recommendation letter, bank account certificate, passport copy etc.",
+      "source": {
+        "url": "https://eng.inha.ac.kr/eng/3713/subview.do",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:a62cff7d3eab8a308975bce31abdaac35ef7128d457925a5ae85e235226b2653"
+      }
+    },
+    {
+      "type": "studyPlan",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Study plan тоже обязателен. Что в нём писать и сколько страниц, страница не уточняет.",
+      "evidence": "Required documents application form, high school diploma, foreign language proficiency certificate, cover letter, study plan, recommendation letter, bank account certificate, passport copy etc.",
+      "source": {
+        "url": "https://eng.inha.ac.kr/eng/3713/subview.do",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:a62cff7d3eab8a308975bce31abdaac35ef7128d457925a5ae85e235226b2653"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Recommendation letter в обязательном списке. Кто пишет и сколько писем нужно, страница не говорит.",
+      "evidence": "Required documents application form, high school diploma, foreign language proficiency certificate, cover letter, study plan, recommendation letter, bank account certificate, passport copy etc.",
+      "source": {
+        "url": "https://eng.inha.ac.kr/eng/3713/subview.do",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:a62cff7d3eab8a308975bce31abdaac35ef7128d457925a5ae85e235226b2653"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Сертификат иностранного языка в том же обязательном списке. Какие экзамены принимают, страница не уточняет.",
+      "evidence": "Required documents application form, high school diploma, foreign language proficiency certificate, cover letter, study plan, recommendation letter, bank account certificate, passport copy etc.",
+      "source": {
+        "url": "https://eng.inha.ac.kr/eng/3713/subview.do",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:a62cff7d3eab8a308975bce31abdaac35ef7128d457925a5ae85e235226b2653"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "video",
+    "interview"
+  ],
+  "note": "Cover letter, study plan и recommendation letter перечислены одной строкой в списке обязательных документов — промптов, лимитов и числа писем страница не даёт, поэтому count/limit/prompt пустые. Разбор заявки, по странице, только по документам; интервью нигде не упомянуто."
+}
