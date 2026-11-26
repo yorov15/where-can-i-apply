@@ -8,6 +8,8 @@ import { setupPriority } from './priority.js';
 import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocument, loadEssaySpec, forgetConditions } from './data.js';
 import { renderResults } from './render.js';
 import { countStep, COUNT_KEY } from './lib/count.js';
+import { TIPS_KEY, readSeen, markSeen, tipFor, renderTip } from './screen-tips.js';
+import { MENTOR_KEY, MENTOR_PER_DAY, MENTOR_ERRORS, askMentor, mentorUsage, savedMentorPlan } from './mentor.js';
 import { PLAN_KEY, DONE_KEY, buildEventsIcs } from './plan.js';
 import { scheduleRoute, routeCalendarEvents } from './agenda.js';
 import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask, setGoalStatus, toggleDismissed, hideBalance } from './route-state.js';
@@ -19,7 +21,7 @@ import { planCost } from './cost.js';
 import { buildCombinedRoute } from './route-combined.js';
 import { renderRoute } from './route-view.js';
 import { interviewLive } from './interview-view.js';
-import { EXPLAIN_URL } from './config.js';
+import { EXPLAIN_URL, MENTOR_ON } from './config.js';
 import { renderToday } from './today-view.js';
 import { renderProgram, programRow } from './program-view.js';
 import { annotateTerms } from './glossary-view.js';
@@ -61,7 +63,10 @@ function setGuidedStart(active){
 function updateStartGuide(){
   document.body.dataset.guided=String(guidedStart);
   document.body.dataset.guideStep=guidedStart&&location.hash==='#route/new'?'work':'';
-  renderStartGuide(document.getElementById('start-guide'),{active:guidedStart,screen:document.body.dataset.screen,workPath:location.hash==='#route/new',onExit:()=>setGuidedStart(false)});
+  const guide=document.getElementById('start-guide');
+  renderStartGuide(guide,{active:guidedStart,screen:document.body.dataset.screen,workPath:location.hash==='#route/new',onExit:()=>setGuidedStart(false)});
+  const tip=document.getElementById('screen-tip');
+  if(tip)renderTip(tip,tipFor(document.body.dataset.screen,{hasPlan:routeState.goals.length>0,guided:!guide.hidden,seen:readSeen()}),(key)=>markSeen(key));
 }
 function renderStartView(){
   const work=startWork(routeState);
@@ -207,6 +212,8 @@ const tabbar = setupTabbar({
 // План живёт отдельно от анкеты: анкету можно поправить, не потеряв отмеченное.
 let routeState = loadRouteState(localStorage);
 let weeklySnapshot=null;
+// Наставник: идёт ли вопрос и чем кончился последний. Сам ответ лежит в localStorage.
+let mentorAsk={busy:false,error:''};
 let routeEssays={};
 const plan = {
   ids: [...routeState.goals],
@@ -471,6 +478,7 @@ function renderRouteView() {
     study: route ? buildStudyPlan({ steps:hasPreparationGoals(route,routeState)?route.steps:[], tracks:routeTracks, plans, state:routeState, today }) : null,
     routeState, today,
     weekly:weeklySnapshot,
+    mentor:MENTOR_ON&&EXPLAIN_URL&&weeklySnapshot?{...mentorAsk,plan:savedMentorPlan(localStorage,weeklySnapshot.week),left:MENTOR_PER_DAY-mentorUsage(localStorage,today)}:null,
     essays:routeEssays,
     programs,
     details,
@@ -584,6 +592,28 @@ function renderRouteView() {
         if(task?.routeId){const step=route.steps.find(item=>item.id===task.routeId);if(step&&step.done!==wanted)routeState=toggleStep(routeState,step.id,today,step.legacyIds);}
         persistRoute();rebuildRoute();renderRouteView();
         activeBody().querySelector(`[data-week-task="${CSS.escape(taskId)}"] input`)?.focus();
+      },
+      async onMentorAsk(week,dates) {
+        if(mentorAsk.busy)return;
+        mentorAsk={busy:true,error:''};renderRouteView();
+        try{
+          // Одинаковые шаги для разных вузов («уточнить про 11-летнюю школу»)
+          // наставнику без названия вуза не различить: добавляем короткие имена.
+          const programsOf=task=>{const exam=task.code&&routeTracks?.[task.code]?.name;
+            if(exam)return String(task.title).includes(exam)?'':exam;
+            const step=task.routeId&&route?.steps.find(item=>item.id===task.routeId);
+            const names=[...new Set((step?.members??[]).map(member=>String(member.name??'').split(' — ')[0].split(' (')[0]).filter(Boolean))];
+            return names.length&&names.length<=3?names.join(', '):'';};
+          await askMentor({week,dates,today,hoursPerWeek:routeState.hoursPerWeek,programsOf},{url:EXPLAIN_URL});
+          mentorAsk={busy:false,error:''};countStep('mentor-asked');
+        }catch(error){mentorAsk={busy:false,error:MENTOR_ERRORS[error.kind]??MENTOR_ERRORS.model};}
+        renderRouteView();
+        activeBody().querySelector('[data-mentor] button')?.focus();
+      },
+      onMentorApply(week,days) {
+        for(const item of days)routeState=setTaskDay(routeState,week,item.taskId,item.day,today);
+        persistRoute();rebuildRoute();renderRouteView();
+        activeBody().querySelector('[data-mentor] [role="status"]')?.focus?.();
       },
       onTaskDay(week,taskId,day) {
         routeState=setTaskDay(routeState,week,taskId,day,today);persistRoute();rebuildRoute();renderRouteView();
@@ -887,6 +917,8 @@ document.getElementById('clear-profile').addEventListener('click', () => {
     localStorage.removeItem(DONE_KEY);
     localStorage.removeItem(ROUTE_STATE_KEY);
     localStorage.removeItem(COUNT_KEY);
+    localStorage.removeItem(TIPS_KEY);
+    localStorage.removeItem(MENTOR_KEY);
   } catch { /* приватный режим: стирать нечего */ }
   routeState = loadRouteState(localStorage);
   weeklySnapshot=null;

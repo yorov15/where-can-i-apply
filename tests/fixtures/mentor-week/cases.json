@@ -1,0 +1,417 @@
+{
+ "note": "Недели вымышленных учеников из tests/fixtures/students, собранные сайтом 26.11.2026 (кнопка «Спросить наставника», запрос перехвачен до отправки). Случай 09-fixed-day — тот же ученик, но пробник SAT человек сам поставил на субботу. Экзамен tools/mentor-exam.mjs сдвигает все даты к сегодняшнему дню.",
+ "cases": [
+  {
+   "id": "01-rural-tajik",
+   "request": {
+    "mode": "mentor-week",
+    "today": "2026-11-26",
+    "hoursPerWeek": 2,
+    "tasks": [
+     {
+      "taskId": "week:2026-W48:inquiry:soka:1b36f40",
+      "title": "Уточнить у приёмной комиссии, принимают ли 11-летнюю школу · Сока",
+      "kind": "action",
+      "minutes": 120
+     }
+    ],
+    "deadlines": [
+     {
+      "title": "Подача в Сока",
+      "date": "2027-01-15"
+     }
+    ]
+   }
+  },
+  {
+   "id": "02-dushanbe-russian",
+   "request": {
+    "mode": "mentor-week",
+    "today": "2026-11-26",
+    "hoursPerWeek": 6,
+    "tasks": [
+     {
+      "taskId": "week:2026-W48:inquiry:aalto-finland:1b36f40",
+      "title": "Уточнить у приёмной комиссии, принимают ли 11-летнюю школу · Университет Аалто",
+      "kind": "action",
+      "minutes": 120
+     },
+     {
+      "taskId": "week:2026-W48:inquiry:bocconi:1b36f40",
+      "title": "Уточнить у приёмной комиссии, принимают ли 11-летнюю школу · Bocconi University",
+      "kind": "action",
+      "minutes": 120
+     },
+     {
+      "taskId": "week:2026-W48:doc:text-8zwc30",
+      "title": "Запросить список документов на странице приёма · Университет Аалто, Bocconi University",
+      "kind": "action",
+      "minutes": 120
+     }
+    ],
+    "deadlines": [
+     {
+      "title": "Подача в Университет Аалто (Финляндия)",
+      "date": "2027-01-22"
+     },
+     {
+      "title": "Подача в Bocconi University (Италия): приём иностранцев на бакалавриат",
+      "date": "2027-01-26"
+     }
+    ]
+   }
+  },
+  {
+   "id": "03-lyceum-olympiad",
+   "request": {
+    "mode": "mentor-week",
+    "today": "2026-11-26",
+    "hoursPerWeek": 6,
+    "tasks": [
+     {
+      "taskId": "week:2026-W48:inquiry:kaist:1b36f40",
+      "title": "Уточнить у приёмной комиссии, принимают ли 11-летнюю школу · KAIST",
+      "kind": "action",
+      "minutes": 30
+     },
+     {
+      "taskId": "study:2026-11-23:toefl:mock",
+      "title": "Поработать с пробником TOEFL iBT",
+      "kind": "mock",
+      "minutes": 125
+     },
+     {
+      "taskId": "study:2026-11-23:toefl:r",
+      "title": "Потренировать Reading и разобрать ошибки · TOEFL iBT",
+      "kind": "practice",
+      "minutes": 65
+     },
+     {
+      "taskId": "study:2026-11-23:toefl:l",
+      "title": "Потренировать Listening и разобрать ошибки · TOEFL iBT",
+      "kind": "practice",
+      "minutes": 65
+     },
+     {
+      "taskId": "study:2026-11-23:toefl:w",
+      "title": "Потренировать Writing и разобрать ошибки · TOEFL iBT",
+      "kind": "practice",
+      "minutes": 75
+     }
+    ],
+    "deadlines": [
+     {
+      "title": "Последний день сдать TOEFL iBT",
+      "date": "2027-01-09"
+     },
+     {
+      "title": "Подача в KAIST",
+      "date": "2027-01-14"
+     }
+    ]
+   }
+  },
+  {
+   "id": "04-work-and-siblings",
+   "request": {
+    "mode": "mentor-week",
+    "today": "2026-11-26",
+    "hoursPerWeek": 2,
+    "tasks": [
+     {
+      "taskId": "week:2026-W48:inquiry:bahcesehir:1b36f40",
+      "title": "Уточнить у приёмной комиссии, принимают ли 11-летнюю школу · Bahçeşehir University",
+      "kind": "action",
+      "minutes": 60
+     },
+     {
+      "taskId": "week:2026-W48:apply:bahcesehir",
+      "title": "Подать заявку до 30 ноября 2026 · Bahçeşehir University",
+      "kind": "action",
+      "minutes": 60
+     }
+    ],
+    "deadlines": [
+     {
+      "title": "Подача в Bahçeşehir University (Турция): приём иностранцев на бакалавриат",
+      "date": "2026-11-30"
+     }
+    ]
+   }
+  },
+  {
+   "id": "05-self-taught-programmer",
+   "request": {
+    "mode": "mentor-week",
+    "today": "2026-11-26",
+    "hoursPerWeek": 10,
+    "tasks": [
+     {
+      "taskId": "week:2026-W48:inquiry:kaist:1b36f40",
+      "title": "Уточнить у приёмной комиссии, принимают ли 11-летнюю школу · KAIST",
+      "kind": "action",
+      "minutes": 45
+     },
+     {
+      "taskId": "work:plan-calc:check",
+      "title": "Проверь решение на реальной задаче · Калькулятор школьного расписания",
+      "kind": "portfolio",
+      "minutes": 60
+     },
+     {
+      "taskId": "study:2026-11-23:ielts:w",
+      "title": "Потренировать Writing и разобрать ошибки · IELTS Academic",
+      "kind": "practice",
+      "minutes": 290
+     },
+     {
+      "taskId": "study:2026-11-23:ielts:s",
+      "title": "Потренировать Speaking и разобрать ошибки · IELTS Academic",
+      "kind": "practice",
+      "minutes": 145
+     }
+    ],
+    "deadlines": [
+     {
+      "title": "Последний день сдать SAT",
+      "date": "2026-12-05"
+     },
+     {
+      "title": "Последний день сдать IELTS Academic",
+      "date": "2026-12-20"
+     },
+     {
+      "title": "Подача в KAIST",
+      "date": "2027-01-14"
+     },
+     {
+      "title": "Подача в GIST (Кванджу, Корея)",
+      "date": "2027-01-23"
+     }
+    ]
+   }
+  },
+  {
+   "id": "06-creative",
+   "request": {
+    "mode": "mentor-week",
+    "today": "2026-11-26",
+    "hoursPerWeek": 4,
+    "tasks": [
+     {
+      "taskId": "week:2026-W48:inquiry:aalto-finland:1b36f40",
+      "title": "Уточнить у приёмной комиссии, принимают ли 11-летнюю школу · Университет Аалто",
+      "kind": "action",
+      "minutes": 100
+     },
+     {
+      "taskId": "work:plan-poster:check",
+      "title": "Сравни варианты и найди, что улучшить · Серия афиш для школьного концерта",
+      "kind": "portfolio",
+      "minutes": 45
+     },
+     {
+      "taskId": "week:2026-W48:doc:text-8zwc30",
+      "title": "Запросить список документов на странице приёма · Университет Аалто",
+      "kind": "action",
+      "minutes": 95
+     }
+    ],
+    "deadlines": [
+     {
+      "title": "Подача в Университет Аалто (Финляндия)",
+      "date": "2027-01-22"
+     }
+    ]
+   }
+  },
+  {
+   "id": "07-athlete",
+   "request": {
+    "mode": "mentor-week",
+    "today": "2026-11-26",
+    "hoursPerWeek": 4,
+    "tasks": [
+     {
+      "taskId": "week:2026-W48:inquiry:aus-uae:1b36f40",
+      "title": "Уточнить у приёмной комиссии, принимают ли 11-летнюю школу · Американский университет Шарджи",
+      "kind": "action",
+      "minutes": 240
+     }
+    ],
+    "deadlines": []
+   }
+  },
+  {
+   "id": "09-eleventh-three-goals",
+   "request": {
+    "mode": "mentor-week",
+    "today": "2026-11-26",
+    "hoursPerWeek": 10,
+    "tasks": [
+     {
+      "taskId": "week:2026-W48:inquiry:kaist:1b36f40",
+      "title": "Уточнить у приёмной комиссии, принимают ли 11-летнюю школу · KAIST",
+      "kind": "action",
+      "minutes": 30
+     },
+     {
+      "taskId": "study:2026-11-23:ielts:mock",
+      "title": "Поработать с пробником IELTS Academic",
+      "kind": "mock",
+      "minutes": 190
+     },
+     {
+      "taskId": "study:2026-11-23:sat:mock",
+      "title": "Поработать с пробником SAT",
+      "kind": "mock",
+      "minutes": 190
+     },
+     {
+      "taskId": "study:2026-11-23:ielts:r",
+      "title": "Потренировать Reading и разобрать ошибки · IELTS Academic",
+      "kind": "practice",
+      "minutes": 95
+     },
+     {
+      "taskId": "study:2026-11-23:sat:m",
+      "title": "Потренировать Math и разобрать ошибки · SAT",
+      "kind": "practice",
+      "minutes": 95
+     }
+    ],
+    "deadlines": [
+     {
+      "title": "Последний день сдать SAT",
+      "date": "2026-12-05"
+     },
+     {
+      "title": "Последний день сдать IELTS Academic",
+      "date": "2026-12-20"
+     },
+     {
+      "title": "Подача в NYU Abu Dhabi",
+      "date": "2027-01-05"
+     },
+     {
+      "title": "Подача в KAIST",
+      "date": "2027-01-14"
+     }
+    ]
+   }
+  },
+  {
+   "id": "10-uzbekistan-ielts",
+   "request": {
+    "mode": "mentor-week",
+    "today": "2026-11-26",
+    "hoursPerWeek": 6,
+    "tasks": [
+     {
+      "taskId": "week:2026-W48:inquiry:kaist:1b36f40",
+      "title": "Уточнить у приёмной комиссии, принимают ли 11-летнюю школу · KAIST",
+      "kind": "action",
+      "minutes": 30
+     },
+     {
+      "taskId": "study:2026-11-23:ielts:l",
+      "title": "Потренировать Listening и разобрать ошибки · IELTS Academic",
+      "kind": "practice",
+      "minutes": 65
+     },
+     {
+      "taskId": "study:2026-11-23:ielts:r",
+      "title": "Потренировать Reading и разобрать ошибки · IELTS Academic",
+      "kind": "practice",
+      "minutes": 65
+     },
+     {
+      "taskId": "study:2026-11-23:ielts:w",
+      "title": "Потренировать Writing и разобрать ошибки · IELTS Academic",
+      "kind": "practice",
+      "minutes": 125
+     },
+     {
+      "taskId": "study:2026-11-23:ielts:s",
+      "title": "Потренировать Speaking и разобрать ошибки · IELTS Academic",
+      "kind": "practice",
+      "minutes": 75
+     }
+    ],
+    "deadlines": [
+     {
+      "title": "Последний день сдать IELTS Academic",
+      "date": "2027-01-03"
+     },
+     {
+      "title": "Подача в NYU Abu Dhabi",
+      "date": "2027-01-05"
+     },
+     {
+      "title": "Подача в KAIST",
+      "date": "2027-01-14"
+     }
+    ]
+   }
+  },
+  {
+   "id": "09-fixed-day",
+   "request": {
+    "mode": "mentor-week",
+    "today": "2026-11-26",
+    "hoursPerWeek": 10,
+    "tasks": [
+     {
+      "taskId": "week:2026-W48:inquiry:kaist:1b36f40",
+      "title": "Уточнить у приёмной комиссии, принимают ли 11-летнюю школу · KAIST",
+      "kind": "action",
+      "minutes": 30
+     },
+     {
+      "taskId": "study:2026-11-23:ielts:mock",
+      "title": "Поработать с пробником IELTS Academic",
+      "kind": "mock",
+      "minutes": 190
+     },
+     {
+      "taskId": "study:2026-11-23:sat:mock",
+      "title": "Поработать с пробником SAT",
+      "kind": "mock",
+      "minutes": 190,
+      "day": "2026-11-28"
+     },
+     {
+      "taskId": "study:2026-11-23:ielts:r",
+      "title": "Потренировать Reading и разобрать ошибки · IELTS Academic",
+      "kind": "practice",
+      "minutes": 95
+     },
+     {
+      "taskId": "study:2026-11-23:sat:m",
+      "title": "Потренировать Math и разобрать ошибки · SAT",
+      "kind": "practice",
+      "minutes": 95
+     }
+    ],
+    "deadlines": [
+     {
+      "title": "Последний день сдать SAT",
+      "date": "2026-12-05"
+     },
+     {
+      "title": "Последний день сдать IELTS Academic",
+      "date": "2026-12-20"
+     },
+     {
+      "title": "Подача в NYU Abu Dhabi",
+      "date": "2027-01-05"
+     },
+     {
+      "title": "Подача в KAIST",
+      "date": "2027-01-14"
+     }
+    ]
+   }
+  }
+ ]
+}

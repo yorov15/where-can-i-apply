@@ -23,6 +23,8 @@
 <link rel="modulepreload" href="js/form.js">
 <link rel="modulepreload" href="js/lib/limits.js">
 <link rel="modulepreload" href="js/lib/count.js">
+<link rel="modulepreload" href="js/screen-tips.js">
+<link rel="modulepreload" href="js/mentor.js">
 <link rel="modulepreload" href="js/steps.js">
 <link rel="modulepreload" href="js/filter.js">
 <link rel="modulepreload" href="js/lib/kinds.js">
@@ -136,6 +138,7 @@
 
 <main id="main">
 <section id="start-guide" class="start-guide" aria-label="Следующий шаг" hidden></section>
+<aside id="screen-tip" class="hint" aria-label="Подсказка" hidden></aside>
 <section id="start" aria-label="Начать подготовку" hidden></section>
 <p id="offline" class="summary-note" role="status" hidden>Нет сети. Показано то, что сохранилось на этом устройстве при прошлом заходе: сроки могли измениться, сверяй их на сайтах программ.</p>
   <header id="profile-intro" class="page-heading" hidden>
@@ -156,6 +159,7 @@
 
     <fieldset class="step is-current">
       <legend>Кто ты</legend>
+      <p class="hint"><b>Пример.</b> Паспорт Таджикистана, школа в Душанбе: гражданство — Таджикистан, школа — Таджикистан, 11 лет.</p>
 
       <label>Гражданство
         <select name="citizenship">
@@ -188,6 +192,7 @@
           <option value="11">11 лет</option>
           <option value="12">12 лет</option>
         </select>
+        <small>Посчитай классы с первого по выпускной. В обычной школе Таджикистана — 11.</small>
       </label>
     </fieldset>
 
@@ -195,7 +200,8 @@
       <legend>Выпуск и возраст</legend>
 
       <label>Год выпуска
-        <input type="number" name="graduationYear" min="2020" max="2035" inputmode="numeric" placeholder="2027">
+        <input type="number" name="graduationYear" min="2020" max="2035" inputmode="numeric" placeholder="год" aria-describedby="grad-example">
+        <small id="grad-example">Год, когда получишь аттестат.</small>
       </label>
 
       <label>Дата рождения
@@ -209,7 +215,7 @@
       <legend>Оценки</legend>
 
       <label>Средний балл за последнюю четверть
-        <input type="number" name="gpaValue" step="0.1" min="0" max="100" inputmode="decimal" placeholder="4.8">
+        <input type="number" name="gpaValue" step="0.1" min="0" max="100" inputmode="decimal" placeholder="балл" aria-describedby="gpa-example">
         <select name="gpaScale">
           <option value="TJ_5">по пятибалльной</option>
           <option value="TJ_10">по десятибалльной</option>
@@ -217,6 +223,7 @@
           <option value="GPA_4">по шкале 4.0</option>
           <option value="GPA_4_5">по шкале 4.5</option>
         </select>
+        <small id="gpa-example">Сложи оценки за последнюю четверть и раздели на число предметов.</small>
         <small>Итоговый балл аттестата может отличаться, и решает именно он.</small>
       </label>
       <p class="field-error" role="alert"></p>
@@ -224,7 +231,7 @@
 
     <fieldset class="step">
       <legend>Экзамены</legend>
-      <p class="hint">Если экзамен ещё не сдан — оставь балл пустым, но отметь галочку. Программа тогда не отсеется: её покажет жёлтым с подписью, какой балл нужен.</p>
+      <p class="hint"><b>Пример.</b> Сдал IELTS на 6.5 — отметь IELTS и впиши 6.5. Записался, но ещё не сдавал — только отметь, балл оставь пустым: программа не отсеется, сайт покажет, какой балл нужен. Не сдавал и не собираешься — ничего не отмечай.</p>
 
       <label class="row"><input type="checkbox" name="has-IELTS"> IELTS
         <input type="number" name="score-IELTS" step="0.5" min="1" max="9" inputmode="decimal" placeholder="балл">
@@ -238,37 +245,40 @@
       <label class="row"><input type="checkbox" name="has-DUOLINGO"> Duolingo English Test (10–160)
         <input type="number" name="score-DUOLINGO" step="5" min="10" max="160" inputmode="numeric" placeholder="балл">
       </label>
-      <label class="row"><input type="checkbox" name="has-PTE"> PTE Academic, английский (10–90)
-        <input type="number" name="score-PTE" step="1" min="10" max="90" inputmode="numeric" placeholder="балл">
-      </label>
 
-      <p class="hint">Американские вузы часто просят SAT или ACT. Если их нет — пропусти: часть вузов их не требует.</p>
+      <p class="hint">Американские вузы часто просят SAT или ACT. Если их нет — пропусти: часть вузов их не требует. ACT — в «Других экзаменах» ниже.</p>
       <label class="row"><input type="checkbox" name="has-SAT"> SAT (400–1600)
         <input type="number" name="score-SAT" step="10" min="400" max="1600" inputmode="numeric" placeholder="балл">
       </label>
-      <label class="row"><input type="checkbox" name="has-ACT"> ACT (1–36)
-        <input type="number" name="score-ACT" step="1" min="1" max="36" inputmode="numeric" placeholder="балл">
-      </label>
 
-      <p class="hint">Сертификаты по другим языкам: они открывают дорогу в свою страну — HSK в Китай, JLPT в Японию, TOPIK в Корею, немецкие в Германию. Если такого экзамена нет — оставь пусто. Уровень вписывай числом по подсказке в скобках: чем выше число, тем сильнее язык.</p>
-      <label class="row"><input type="checkbox" name="has-HSK"> HSK, китайский (1–9)
-        <input type="number" name="score-HSK" step="1" min="1" max="9" inputmode="numeric" placeholder="уровень">
-      </label>
-      <label class="row"><input type="checkbox" name="has-JLPT"> JLPT, японский (N5 → введи 1, N1 → введи 5)
-        <input type="number" name="score-JLPT" step="1" min="1" max="5" inputmode="numeric" placeholder="уровень">
-      </label>
-      <label class="row"><input type="checkbox" name="has-TOPIK"> TOPIK, корейский (1–6)
-        <input type="number" name="score-TOPIK" step="1" min="1" max="6" inputmode="numeric" placeholder="уровень">
-      </label>
-      <label class="row"><input type="checkbox" name="has-TESTDAF"> TestDaF, немецкий (TDN 3–5)
-        <input type="number" name="score-TESTDAF" step="1" min="3" max="5" inputmode="numeric" placeholder="уровень">
-      </label>
-      <label class="row"><input type="checkbox" name="has-DSH"> DSH, немецкий (1–3)
-        <input type="number" name="score-DSH" step="1" min="1" max="3" inputmode="numeric" placeholder="уровень">
-      </label>
-      <label class="row"><input type="checkbox" name="has-GOETHE"> Goethe-Zertifikat, немецкий (A1 → введи 1, C2 → введи 6)
-        <input type="number" name="score-GOETHE" step="1" min="1" max="6" inputmode="numeric" placeholder="уровень">
-      </label>
+      <details class="more-exams">
+        <summary>Другие экзамены: китайский, японский, корейский, немецкий, PTE, ACT</summary>
+        <label class="row"><input type="checkbox" name="has-PTE"> PTE Academic, английский (10–90)
+          <input type="number" name="score-PTE" step="1" min="10" max="90" inputmode="numeric" placeholder="балл">
+        </label>
+        <label class="row"><input type="checkbox" name="has-ACT"> ACT (1–36)
+          <input type="number" name="score-ACT" step="1" min="1" max="36" inputmode="numeric" placeholder="балл">
+        </label>
+        <p class="hint">HSK открывает Китай, JLPT — Японию, TOPIK — Корею, немецкие — Германию. <b>Пример:</b> TOPIK 3-го уровня — отметь TOPIK и впиши 3. Чем выше число, тем сильнее язык.</p>
+        <label class="row"><input type="checkbox" name="has-HSK"> HSK, китайский (1–9)
+          <input type="number" name="score-HSK" step="1" min="1" max="9" inputmode="numeric" placeholder="уровень">
+        </label>
+        <label class="row"><input type="checkbox" name="has-JLPT"> JLPT, японский (N5 → введи 1, N1 → введи 5)
+          <input type="number" name="score-JLPT" step="1" min="1" max="5" inputmode="numeric" placeholder="уровень">
+        </label>
+        <label class="row"><input type="checkbox" name="has-TOPIK"> TOPIK, корейский (1–6)
+          <input type="number" name="score-TOPIK" step="1" min="1" max="6" inputmode="numeric" placeholder="уровень">
+        </label>
+        <label class="row"><input type="checkbox" name="has-TESTDAF"> TestDaF, немецкий (TDN 3–5)
+          <input type="number" name="score-TESTDAF" step="1" min="3" max="5" inputmode="numeric" placeholder="уровень">
+        </label>
+        <label class="row"><input type="checkbox" name="has-DSH"> DSH, немецкий (1–3)
+          <input type="number" name="score-DSH" step="1" min="1" max="3" inputmode="numeric" placeholder="уровень">
+        </label>
+        <label class="row"><input type="checkbox" name="has-GOETHE"> Goethe-Zertifikat, немецкий (A1 → введи 1, C2 → введи 6)
+          <input type="number" name="score-GOETHE" step="1" min="1" max="6" inputmode="numeric" placeholder="уровень">
+        </label>
+      </details>
       <p class="field-error" role="alert"></p>
     </fieldset>
 
@@ -282,8 +292,8 @@
           <option value="10">10 часов</option>
         </select>
       </label>
-      <p class="hint">Это общее время на подготовку ко всем выбранным экзаменам. Его можно изменить позже.</p>
-      <p class="hint">Нажимай в порядке важности: номер на кнопке — место в очереди. Эти программы встанут в начале списка. Шаг можно пропустить.</p>
+      <p class="hint">Это общее время на подготовку ко всем выбранным экзаменам. 4 часа — примерно по 40 минут шесть дней в неделю. Можно изменить позже.</p>
+      <p class="hint">Нажимай в порядке важности: номер на кнопке — место в очереди. <b>Пример.</b> Сначала Корея, потом Япония — у Кореи будет 1, у Японии 2. Эти программы встанут в начале списка. Шаг можно пропустить.</p>
 
       <div id="priority-countries">
         <p><strong>Страны</strong><br><small>«На всю страну» — стипендия правительства: она не привязана к одному вузу.</small></p>

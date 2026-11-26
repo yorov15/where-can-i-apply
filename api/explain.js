@@ -24,6 +24,7 @@ import {
   explain, createCache, createLimiter, originAllowed, corsHeaders, parseCompletion, isUsableAnswer, grounded, chunk, callWithFallback, LIMITS,
 } from './_explain-core.js';
 import { reviewEssay,createEssayLimiter,parseEssayFeedback,ESSAY_LIMITS } from './_essay-core.js';
+import { mentorWeek, createDeviceLimiter, MENTOR_LIMITS } from './_mentor-core.js';
 
 // Данные берутся с живого сайта, а не лежат внутри функции: карточки
 // обновляются каждый день, и передеплоить прокси при каждой правке было
@@ -105,6 +106,10 @@ const cache = createCache();
 const inflight = new Map();
 const limiter = createLimiter({ daily: Number(process.env.DAILY_LIMIT) || LIMITS.dailyCalls });
 const essayDeviceLimiter=createEssayLimiter();
+// Наставник считает свои обращения отдельно, чтобы не съедать объяснялку и наоборот.
+const mentorLimiter = createLimiter({ daily: Number(process.env.MENTOR_DAILY_LIMIT) || MENTOR_LIMITS.daily, perIp: MENTOR_LIMITS.perIp });
+const mentorDevices = createDeviceLimiter();
+const mentorCache = createCache({ max: 300 });
 // Сайт стоит на GitHub Pages, то есть на другом адресе, чем функция:
 // без списка разрешённых адресов браузер запретил бы ему сюда ходить.
 const configured = (process.env.ALLOWED_ORIGINS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
@@ -142,11 +147,11 @@ const modelGroups = () => chunk(pickModels(), 1);
 // След обращения: какая модель, за сколько и чем кончилось. Собирается на
 // каждый запрос отдельно и отдаётся только тому, кто попросил заголовком
 // X-Explain-Trace: нужен, чтобы подбирать порядок моделей по фактам.
-async function askGroup(models, { system, user, mode }, timeoutMs, trace) {
+async function askGroup(models, prompt, timeoutMs, trace) {
   const started = Date.now();
   const note = (result) => trace.push({ model: models[0], ms: Date.now() - started, result });
   try {
-    const text = await askOnce(models, { system, user, mode }, timeoutMs);
+    const text = await askOnce(models, prompt, timeoutMs);
     note('ok');
     return text;
   } catch (error) {
@@ -155,7 +160,8 @@ async function askGroup(models, { system, user, mode }, timeoutMs, trace) {
   }
 }
 
-async function askOnce(models, { system, user, mode }, timeoutMs) {
+async function askOnce(models, { system, user, mode, check }, timeoutMs) {
+  const json = mode === 'essay' || mode === 'mentor-week';
   // Подписка Go отвечает по тому же протоколу, но берёт одну модель за запрос.
   const go = models[0].startsWith('go/');
   const res = await fetch(go ? 'https://opencode.ai/zen/go/v1/chat/completions' : 'https://openrouter.ai/api/v1/chat/completions', {
@@ -174,17 +180,19 @@ async function askOnce(models, { system, user, mode }, timeoutMs) {
         { role: 'system', content: system },
         { role: 'user', content: user },
       ],
-      max_tokens: mode==='essay'?2200:1200,
+      max_tokens: mode==='essay'?2200:mode==='mentor-week'?1600:1200,
       temperature: 0.3,
-      ...(mode==='essay'?{provider:{data_collection:'deny',zdr:true,max_price:{prompt:0,completion:0}},response_format:{type:'json_object'}}:{}),
+      ...(mode==='essay'?{provider:{data_collection:'deny',zdr:true,max_price:{prompt:0,completion:0}}}:{}),
+      ...(json?{response_format:{type:'json_object'}}:{}),
     }),
     signal: AbortSignal.timeout(timeoutMs),
   });
   if (!res.ok) throw new Error(`${go ? 'go' : 'openrouter'} ${res.status}`);
   const text = parseCompletion(await res.json());
   // Мусор — та же неудача, что и ошибка сети: идём к следующей модели.
-  if (mode==='essay'?!parseEssayFeedback(text):!isUsableAnswer(text)) throw new Error('unusable answer');
-  if (mode!=='essay'&&!grounded(text, user)) throw new Error('invented contact');
+  // У наставника своя строгая проверка: чужое дело, чужая дата или число — та же неудача.
+  if (check ? !check(text) : mode==='essay'?!parseEssayFeedback(text):!isUsableAnswer(text)) throw new Error('unusable answer');
+  if (!json&&!grounded(text, user)) throw new Error('invented contact');
   return text;
 }
 
@@ -233,12 +241,19 @@ async function handle(req, res, cors) {
   } catch {
     return send(res,Buffer.byteLength(raw)>LIMITS.bodyBytes?413:400,{error:Buffer.byteLength(raw)>LIMITS.bodyBytes?'too-big':'bad-request'},cors);
   }
-  if(body?.mode!=='essay'&&Math.max(Buffer.byteLength(raw),Number(req.headers['content-length'])||0)>LIMITS.bodyBytes)return send(res,413,{error:'too-big'},cors);
+  const cap=body?.mode==='mentor-week'?MENTOR_LIMITS.bodyBytes:LIMITS.bodyBytes;
+  if(body?.mode!=='essay'&&Math.max(Buffer.byteLength(raw),Number(req.headers['content-length'])||0)>cap)return send(res,413,{error:'too-big'},cors);
   if(body?.mode==='essay-status'){
     if(Object.keys(body).length!==1)return send(res,400,{error:'bad-request'},cors);
     return send(res,200,{available:essayEnabled()},cors);
   }
   if(body?.mode!=='essay'&&!pickModels().length)return send(res,503,{error:'off'},cors);
+  if(body?.mode==='mentor-week'){
+    const trace=[];
+    const result=await mentorWeek({body,ip:clientIp(req),today:new Date().toISOString().slice(0,10)},
+      {limiter:mentorLimiter,deviceLimiter:mentorDevices,cache:mentorCache,callModel:prompt=>callModel(prompt,trace)});
+    return send(res,result.status,req.headers['x-explain-trace']==='1'?{...result.json,trace}:result.json,cors);
+  }
 
   const data = await loadData();
   if (!data) return send(res, 503, { error: 'off' }, cors);

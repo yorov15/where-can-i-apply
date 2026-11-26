@@ -16,6 +16,26 @@ const num = (v) => (v === '' || v == null ? null : Number(v));
 
 const today = () => new Date().toISOString().slice(0, 10);
 
+// Примеры ответа стоят под полем, а не внутри: число в пустом поле люди
+// принимают за уже введённое значение. Год выпуска зависит от того, какой
+// сейчас учебный год, поэтому пример считается, а не вписан в разметку.
+export function graduationExample(day) {
+  const year = Number(day.slice(0, 4)) + (Number(day.slice(5, 7)) >= 7 ? 1 : 0);
+  return `Год, когда получишь аттестат. Сейчас в 11 классе — пиши ${year}, в 10-м — ${year + 1}.`;
+}
+
+export function gpaExample(scale, example) {
+  const how = 'Сложи оценки за последнюю четверть и раздели на число предметов.';
+  return scale === 'TJ_5' ? `${how} Например, оценки 5, 5, 4, 5, 4 → впиши 4.6.` : `${how} Например: ${example}.`;
+}
+
+// Редкие экзамены свёрнуты. Если среди них что-то отмечено или с ошибкой,
+// блок раскрыт: спрятанный ответ человек не проверит.
+const openMoreExams = (root) => {
+  const more = root.querySelector('.more-exams');
+  if (more && more.querySelector('input:checked, [aria-invalid]')) more.open = true;
+};
+
 // Что не так в анкете: список {name, message}. name — имя поля формы.
 // Пустое поле не ошибка, ошибка — значение вне границ (js/lib/limits.js).
 export function formProblems(root) {
@@ -78,7 +98,10 @@ export function applyLimits(root) {
   f.gpaValue.min = gpa.min;
   f.gpaValue.max = gpa.max;
   f.gpaValue.step = 'any';
-  f.gpaValue.placeholder = gpa.example;
+  const gpaNote = root.querySelector('#gpa-example');
+  if (gpaNote) gpaNote.textContent = gpaExample(f.gpaScale.value in GPA_LIMITS ? f.gpaScale.value : 'TJ_5', gpa.example);
+  const gradNote = root.querySelector('#grad-example');
+  if (gradNote) gradNote.textContent = graduationExample(today());
   const year = today().slice(0, 4);
   f.birthDate.max = `${Number(year) - 10}-12-31`;
   f.birthDate.min = '1985-01-01';
@@ -100,6 +123,7 @@ export function paintProblems(root) {
       .map((p) => p.message)
       .join('. ');
   }
+  openMoreExams(root);
   return problems;
 }
 
