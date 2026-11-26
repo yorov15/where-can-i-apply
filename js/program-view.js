@@ -13,6 +13,11 @@ import { EXPLAIN_URL } from './config.js';
 import { formatDate } from './lib/format.js';
 import { statusOf, goalProgress, progressLine } from './goal-status.js';
 import { interviewEntry } from './interview-view.js';
+import { loadMaterials } from './materials-data.js';
+import { MATERIAL_TYPES, NEED_LABELS } from './materials-plan.js';
+import { countryHref } from './country-view.js';
+import { plural } from './lib/format.js';
+import { countryName } from './filter.js';
 import {
   splitHeadline, kindLine, explainBlock, skeleton, reasonItem, planButton, bulletList, makeNode as el,
 } from './render.js';
@@ -112,7 +117,62 @@ function exactBlock(view, model) {
   return box;
 }
 
-// props: { row, loading, details, plan, route, routeState, today, handlers }.
+// Что подготовить для заявки: эссе, рекомендации и прочее из data/materials/<id>.json.
+// Файл едет отдельно и не у всех программ есть: нет файла — нет и раздела.
+const TYPE = Object.fromEntries(MATERIAL_TYPES);
+const NEED = Object.fromEntries(NEED_LABELS);
+const NEED_ORDER = { required: 0, some: 1, optional: 2 };
+const UNIT = {
+  words: ['слова', 'слов'], chars: ['знака', 'знаков'], pages: ['страницы', 'страниц'],
+  minutes: ['минуты', 'минут'], items: ['пункта', 'пунктов'],
+};
+
+export function materialLine(item) {
+  const parts = [TYPE[item.type] ?? item.type, NEED[item.need]?.toLowerCase()];
+  if (item.count) parts.push(`${item.count} ${plural(item.count, 'штука', 'штуки', 'штук')}`);
+  if (item.limit) {
+    const [one, many] = UNIT[item.limit.unit];
+    parts.push(`до ${item.limit.max} ${plural(item.limit.max, one, many, many)}`);
+  }
+  return `${parts.filter(Boolean).join(' · ')}. ${item.ru}`;
+}
+
+function materialsBlock(id) {
+  const box = el('section');
+  loadMaterials([id]).then((found) => {
+    const file = found.get(id)?.file;
+    if (!box.isConnected || !file?.items.length) return;
+    const items = [...file.items].sort((a, b) => NEED_ORDER[a.need] - NEED_ORDER[b.need]);
+    box.append(el('h3', 'program-section', 'Что подготовить для заявки'), bulletList(items.map(materialLine), 'card-list'));
+    const urls = [...new Set(items.map((item) => item.url))];
+    const latest = items.map((item) => item.lastVerified).sort().at(-1);
+    const foot = el('p', 'card-source', `Проверено ${formatDate(latest)}. `);
+    urls.forEach((url, index) => {
+      const reference = link(url, urls.length > 1 ? `Источник ${index + 1}` : 'Источник');
+      if (!reference) return;
+      if (index) foot.append(document.createTextNode(' · '));
+      foot.append(reference);
+    });
+    box.append(foot);
+  });
+  return box;
+}
+
+// Ссылка на эту программу: на телефоне — меню «Поделиться», иначе копируем.
+function shareButton(title, id) {
+  const button = el('button', 'link-button', 'Поделиться ссылкой');
+  button.type = 'button';
+  button.addEventListener('click', async () => {
+    const url = `${location.origin}${location.pathname}#program/${encodeURIComponent(id)}`;
+    try {
+      if (navigator.share) await navigator.share({ title, url });
+      else { await navigator.clipboard.writeText(url); button.textContent = 'Ссылка скопирована'; }
+    } catch { /* человек закрыл меню или буфер недоступен: ничего не ломаем */ }
+  });
+  return button;
+}
+
+// props: { row, loading, details, plan, route, routeState, today, countryTotal, handlers }.
 // row — null, пока программу ищем, или когда такой нет.
 export function renderProgram(root, props) {
   const { row, loading, details, plan, route, routeState, today, handlers } = props;
@@ -184,8 +244,17 @@ export function renderProgram(root, props) {
     }
   }
 
+  const links = el('div', 'today-actions');
   const site = link(model.applyUrl, 'Открыть сайт программы', 'button');
-  if (site) root.append(site);
+  if (site) links.append(site);
+  const code = row.program.hostCountry;
+  if (code && props.countryTotal) {
+    const country = el('a', 'link-button', `${countryName(code)}: все программы (${props.countryTotal})`);
+    country.href = countryHref(code);
+    links.append(country);
+  }
+  links.append(shareButton(model.title, id));
+  root.append(links);
 
   if (model.conditionsFailed) {
     root.append(el('p', 'details-state', 'Условия программы не загрузились. Проверь интернет и обнови страницу.'));
@@ -216,6 +285,7 @@ export function renderProgram(root, props) {
   }
   if (EXPLAIN_URL && !props.guest) root.append(explainBlock(model));
 
+  root.append(materialsBlock(id));
   root.append(interviewEntry(id));
   root.append(exactBlock(view, model));
 

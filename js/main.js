@@ -33,6 +33,7 @@ import { saveSpotlight } from './spotlight.js';
 import { hasPreparationGoals } from './goal-status.js';
 import { renderStart, renderStartGuide, startWork } from './start-view.js';
 import { previewCount, previewLine, hasAnswers } from './summary.js';
+import { renderCountry, renderCountries } from './country-view.js';
 
 const form = document.getElementById('profile');
 const today = new Date().toISOString().slice(0, 10);
@@ -127,7 +128,8 @@ function screenFromHash() {
   if (location.hash === '#route' || location.hash.startsWith('#route/')) return 'route';
   if (location.hash === '#profile') return 'profile';
   if (location.hash === '#today' || location.hash.startsWith('#today/work/')) return 'today';
-  if (location.hash.startsWith(PROGRAM_PREFIX)) return 'program';
+  // Страны живут на экране программы: это тоже страница каталога с кнопкой «назад» в браузере.
+  if (location.hash.startsWith(PROGRAM_PREFIX) || location.hash === '#countries' || location.hash.startsWith('#country/')) return 'program';
   return location.hash ? 'answer' : 'today';
 }
 
@@ -145,9 +147,19 @@ addEventListener('hashchange', () => { leftFirstPage = true; });
 // Экран программы живёт по адресу: перерисовываем его, когда меняется анкета,
 // план или приезжают подробности.
 function renderProgramView() {
+  const loading = details.status === 'loading' && !programs.length;
+  if (location.hash === '#countries') { renderCountries(programBody, { programs, loading }); return; }
+  if (location.hash.startsWith('#country/')) {
+    let code = '';
+    try { code = decodeURIComponent(location.hash.slice('#country/'.length)); } catch { /* битая ссылка — пустая страна */ }
+    const profile = readForm(form);
+    renderCountry(programBody, { code, programs, profile, guest: !profileReady(profile), today, loading });
+    return;
+  }
   const id = programIdFromHash();
   const program = programs.find((item) => item.id === id);
   renderProgram(programBody, {
+    countryTotal: program ? programs.filter((item) => item.hostCountry === program.hostCountry).length : 0,
     row: program ? programRow(program, readForm(form), today) : null,
     loading: details.status === 'loading' && !programs.length,
     details, plan, route, routeState, today, guest: !profileReady(readForm(form)),
@@ -241,7 +253,11 @@ function buildCards() {
 }
 
 const syncScreen = () => showScreen(screenFromHash());
-addEventListener('hashchange', syncScreen);
+// Новая страница каталога (программа, страна, список стран) открывается сверху, а не с места прошлой.
+addEventListener('hashchange', () => {
+  syncScreen();
+  if (/^#(program\/|country\/|countries$)/.test(location.hash)) window.scrollTo({ top: 0, behavior: 'instant' });
+});
 
 document.getElementById('show-results').addEventListener('click', () => {
   if (location.hash === '#programs') openAnswer();
