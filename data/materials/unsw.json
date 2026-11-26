@@ -1,0 +1,55 @@
+{
+  "id": "unsw",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 500
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Только при подаче на стипендию International Student Award: личное заявление до 500 слов о причинах учиться на выбранной программе UNSW.",
+      "evidence": "To apply for the UNSW International Student Award applicants must submit a personal statement of no more than 500 words outlining their reasons to study the proposed program at UNSW.",
+      "source": {
+        "url": "https://www.scholarships.unsw.edu.au/international-student-award",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:55b0813cfe53fa14e72d579ddfa62da96823fd8f30e4bd2e07a20d8aa787388b"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Только при заявлении на языковой waiver: личное заявление и подтверждающие документы в разделе English Language Requirements онлайн-заявки.",
+      "evidence": "You can apply for an English Waiver during your online application - just submit a personal statement with your supporting documentation under the English Language Requirements section of the online application form.",
+      "source": {
+        "url": "https://www.unsw.edu.au/study/how-to-apply/english-language-requirements",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:92fa3fc7f2bd61ff1a489e5d42e647384cd771bc329aa95ab22774761bedda63"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "interview",
+    "certificates"
+  ],
+  "note": "Общего эссе и рекомендаций страницы не просят. Личное заявление нужно только для стипендии International Student Award (до 500 слов) и для заявления на языковой waiver. Стипендия открыта гражданам стран из списка — Таджикистан и Узбекистан в нём есть."
+}

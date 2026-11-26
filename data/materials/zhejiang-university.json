@@ -1,0 +1,85 @@
+{
+  "id": "zhejiang-university",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 800
+      },
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Личное заявление примерно на 800 слов: опыт учёбы, причины подачи, сильные стороны.",
+      "evidence": "Personal statement, includ ing study experience, reasons for application, personal strengths ,about 800 words.",
+      "source": {
+        "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:60ac787e8b199fe448a922c7c51a88528e72fcd0cec155cc1143f17c6371db5f"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": null,
+      "via": "platform",
+      "ru": "Два рекомендательных письма, в принципе от школьных учителей. На письме нужны подпись, телефон и почта учителя.",
+      "evidence": "Two recommendation letters, in principle from high school teachers . (Teachers' signature, contact phone number and email address must be put on the letter.)",
+      "source": {
+        "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:60ac787e8b199fe448a922c7c51a88528e72fcd0cec155cc1143f17c6371db5f"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Видеоинтервью у школ и факультетов для тех, кто прошёл предварительную проверку документов.",
+      "evidence": "Those who pass the preliminary review will take video interview arranged by academic schools.",
+      "source": {
+        "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:60ac787e8b199fe448a922c7c51a88528e72fcd0cec155cc1143f17c6371db5f"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Грамоты и сертификаты за учебные достижения в старшей школе — если они есть.",
+      "evidence": "Award-winning Certificates related to academic courses during senior high school period. ( i f applicable)",
+      "source": {
+        "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:60ac787e8b199fe448a922c7c51a88528e72fcd0cec155cc1143f17c6371db5f"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Гайд — для приёма 2026 года: подача шла с 1 декабря 2025 до 28 февраля 2026, по части специальностей до 31 мая. Видеоинтервью — это собеседование, отдельного видео не просят. Портфолио и резюме тоже не упомянуты; все материалы загружают в онлайн-систему ZJU."
+}

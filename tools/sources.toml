@@ -867,6 +867,10 @@ urls = [
   "https://iso.metu.edu.tr/en/scholarship-opportunities",
   "https://iso.metu.edu.tr/en/system/files/odtu_iso_requirements.pdf",
   "https://iso.metu.edu.tr/tr/system/files/2025-2026_tuition_fee_11082025.pdf",
+  # 26.11.2026, DS-1 партия 3A: CV, statement of purpose, рекомендации,
+  # портфолио и эссе — на этих двух страницах того же домена.
+  "https://iso.metu.edu.tr/en/required-documents",
+  "https://iso.metu.edu.tr/en/announcement/how-strengthen-your-application",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-13"
@@ -1015,6 +1019,11 @@ urls = [
   "https://admission.brown.edu/first-year/regular-decision",
   "https://admission.brown.edu/first-year/standardized-tests",
   "https://admission.brown.edu/tuition-aid/tuition-fees",
+  # 26.11.2026, DS-1 партия 3A: чек-лист заявки, дополнительные материалы,
+  # видео-презентация. Тот же домен.
+  "https://admission.brown.edu/first-year/application-checklist",
+  "https://admission.brown.edu/first-year/supplementary-materials",
+  "https://admission.brown.edu/first-year/video-introduction",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-13"
@@ -1091,6 +1100,13 @@ files = [
   { path = "manual/amherst-college/03-aid-offer.txt", url = "https://www.amherst.edu/offices/financialaid/international_students/financialaid_award" },
   { path = "manual/amherst-college/04-deadlines.txt", url = "https://www.amherst.edu/admission/apply/firstyear/calendar_deadlines" },
 ]
+# 26.11.2026, DS-1 партия 3A: чек-лист заявки, промпты writing supplement,
+# arts portfolio. Тот же домен.
+urls = [
+  "https://www.amherst.edu/admission/apply/firstyear",
+  "https://www.amherst.edu/admission/apply/firstyear/writingsupplement",
+  "https://www.amherst.edu/admission/apply/firstyear/arts",
+]
 approvedBy = "human"
 approvedAt = "2026-09-14"
 
@@ -1131,6 +1147,12 @@ files = [
   { path = "manual/columbia-university/02-english-proficiency.txt", url = "https://undergrad.admissions.columbia.edu/apply/international/english-proficiency" },
   { path = "manual/columbia-university/03-how-aid-works.txt", url = "https://cc-seas.financialaid.columbia.edu/how/aid/works" },
   { path = "manual/columbia-university/04-first-year.txt", url = "https://undergrad.admissions.columbia.edu/apply/firstyear" },
+]
+# 26.11.2026, DS-1 партия 3A: короткие ответы Columbia и что читают в заявке.
+# Тот же домен.
+urls = [
+  "https://undergrad.admissions.columbia.edu/apply/process/columbia-questions",
+  "https://undergrad.admissions.columbia.edu/apply/process",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-14"
@@ -1302,6 +1324,10 @@ urls = [
   "https://www.pomona.edu/admissions/apply/international-applicants/international-applicant-faqs",
   "https://www.pomona.edu/financial-aid/applying-for-aid/international-aid",
   "https://www.pomona.edu/financial-aid/applying-aid/application-materials-and-deadlines",
+  # 26.11.2026, DS-1 партия 3A: требования заявки (рекомендации, эссе Pomona)
+  # и дополнительные материалы (портфолио, résumé, видео). Тот же домен.
+  "https://www.pomona.edu/admissions/apply/first-year-applicants",
+  "https://www.pomona.edu/admissions/apply/application-overview/supplements",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-26"
@@ -1477,6 +1503,9 @@ urls = [
   "https://barnard.edu/admissions/Womens-College-Eligibility-for-Admission",
   "https://barnard.edu/finaid/apply-for-aid",
   "https://barnard.edu/finaid/general-policies",
+  # 26.11.2026, DS-1 партия 3A: компоненты заявки — эссе, два short answer,
+  # рекомендации, активности, портфолио. Тот же домен.
+  "https://barnard.edu/admissions/the-application-process",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-26"
@@ -1708,6 +1737,9 @@ urls = [
   "https://www.pusan.ac.kr/eng/CMS/Contents/Contents.do?mCode=MN013",
   "https://www.pusan.ac.kr/eng/CMS/Contents/Contents.do?mCode=MN016",
   "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+  # 26.11.2026, DS-1 партия 3A: страница международного приёма PNU с гидом
+  # для иностранцев (тот же вуз, поддомен go.pusan.ac.kr).
+  "https://go.pusan.ac.kr/college_2016/pages/index.asp?p=47&mj=06",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-26"
@@ -2127,6 +2159,9 @@ urls = [
   "https://www.tum.de/en/studies/fees/tuition",
   "https://www.tum.de/en/studies/application/application-info-portal/dates-periods-and-deadlines",
   "https://www.tum.de/en/studies/application/application-info-portal/admission-requirements/language-certificates",
+  # 26.11.2026, DS-1 партия 3A: глоссарий документов — CV, эссе отдельных
+  # программ, портфолио на aptitude interview. Тот же домен.
+  "https://www.tum.de/en/studies/application/application-info-portal/glossary-of-documents",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-27"
@@ -2287,6 +2322,9 @@ urls = [
   "https://www.handong.edu/eng/admission/undergraduate/scholarship/",
   "https://www.handong.edu/eng/academics/undergraduate/english-programs/",
   "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+  # 26.11.2026, DS-1 партия 3A: объявление с Admission Guideline и формами —
+  # перечень документов, этапы, собеседование. Тот же домен.
+  "https://www.handong.edu/eng/connect/announcements/?mode=view&id=51825&group=0",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-27"
@@ -2647,6 +2685,9 @@ urls = [
   "https://www.tmu.ac.jp/english/education/english-taught_degree_programs.html",
   "https://www.ic.tmu.ac.jp/english/study_abroad/exemption.html",
   "https://www.ic.tmu.ac.jp/english/study_abroad/scholarship_gfs.html",
+  # 26.11.2026, DS-1 партия 3A: руководства с эссе, интервью и документами.
+  "https://www.tmu.ac.jp/extra/download.html?d=assets/files/download/entrance/2027_tg1_bosyuuyoukou_en.pdf",
+  "https://www.tmu.ac.jp/extra/download.html?d=assets/files/download/entrance/2026_0120_fse_applicationrequirements_en.pdf",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
@@ -2729,6 +2770,9 @@ urls = [
   "https://iso.fudan.edu.cn/isoenglish/16199/list.htm",
   "https://econ.fudan.edu.cn/uipe/Prospective_Students1/Tuition_and_Expenses.htm",
   "https://econ.fudan.edu.cn/uipe/info/1122/1432.htm",
+  # 26.11.2026, DS-1 партия 3A: PDF с требованиями — рекомендации, интервью,
+  # награды. Тот же домен.
+  "https://iso.fudan.edu.cn/_upload/article/files/32/4b/da86b1aa450f9b295b63a88bb6d3/082c79b0-dbba-413a-bdd0-cc201c34c6a6.pdf",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
@@ -2810,6 +2854,8 @@ urls = [
   "https://edu.unideb.hu/p/application-and-admission",
   "https://edu.unideb.hu/p/tuition-fee-application-entrance-fee",
   "https://edu.unideb.hu/p/scholarships-and-loans",
+  # 26.11.2026, DS-1 партия 3A: формат и даты вступительного экзамена/собеседования.
+  "https://edu.unideb.hu/p/entrance-examinationinterview",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
@@ -2821,6 +2867,8 @@ urls = [
   "https://xplore.bme.hu/tuition-fees",
   "https://www.bme.hu/en/scholarships",
   "https://xplore.bme.hu/scholarships/",
+  # 26.11.2026, DS-1 партия 3A: для BSc — CV и motivational letter, шаги подачи.
+  "https://xplore.bme.hu/admission/",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
@@ -2843,6 +2891,12 @@ files = [
   { path = "manual/comenius-university/02-natural-sciences.html", url = "https://fns.uniba.sk/en/study/applicant/admission-instructions-bachelor-level/" },
   { path = "manual/comenius-university/03-main.html", url = "https://uniba.sk/en" },
 ]
+# 26.11.2026, DS-1 партия 3A: нужные документы (CV, motivation letter) и
+# пошаговая подача факультета менеджмента. Тот же домен.
+urls = [
+  "https://www.fm.uniba.sk/en/study/documents-needed-for-application/",
+  "https://www.fm.uniba.sk/en/study/how-to-apply-step-by-step/",
+]
 approvedBy = "human"
 approvedAt = "2026-09-28"
 
@@ -2861,6 +2915,8 @@ urls = [
   "https://euba.sk/en/applicant/admission-procedure/general-information",
   "https://admission.euba.sk/",
   "https://euba.sk/en/applicant/fees-related-to-the-study",
+  # 26.11.2026, DS-1 партия 3A: как заполнять e-prihlaska, вложения и экзамен.
+  "https://euba.sk/en/applicant/prihlaska-na-eu-v-bratislave/navod-na-vyplnenie-e-prihlasky-1-stupen",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
@@ -2923,6 +2979,9 @@ urls = [
   "https://www.polyu.edu.hk/study/ug/admissions/international-other-qualifications",
   "https://www.polyu.edu.hk/study/ug/fees-and-scholarships/fees",
   "https://www.polyu.edu.hk/study/ug/fees-and-scholarships/scholarships",
+  # 26.11.2026, DS-1 партия 3A: supporting documents, reference letter, интервью.
+  "https://www.polyu.edu.hk/study/ug/admissions/international-other-qualifications/international-other-qualifications-additional",
+  "https://www.polyu.edu.hk/study/ug/admissions/international-other-qualifications/international-other-qualifications-application-0",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
@@ -2933,6 +2992,9 @@ urls = [
   "https://admissions.hkbu.edu.hk/admissions/international-qualifications.html",
   "https://admissions.hkbu.edu.hk/fees-and-scholarships.html",
   "https://admissions.hkbu.edu.hk/en/scholarships.html",
+  # 26.11.2026, DS-1 партия 3A: FAQ — personal statement, рекомендации,
+  # интервью, OEA. Тот же домен.
+  "https://admissions.hkbu.edu.hk/faq.html",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
@@ -2991,6 +3053,9 @@ name = "Aalto University (Финляндия): англоязычный бака
 urls = [
   "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english",
   "https://www.aalto.fi/en/admission-services/scholarships-and-tuition-fees",
+  # 26.11.2026, DS-1 партия 3A: задания и интервью для Design and Media —
+  # единственная программа Aalto с такими материалами. Тот же домен.
+  "https://www.aalto.fi/en/admission-services/admission-to-bachelors-programme-in-design-and-media-bachelor-and-master-of-arts-3-yrs-2-yrs",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
@@ -3031,6 +3096,10 @@ urls = [
   "https://www.uni-lj.si/en/study/bachelors-and-single-cycle-masters-study/call-for-enrolment",
   "https://www.uni-lj.si/en/study/tuition-fees-and-other-study-contributions",
   "https://www.uni-lj.si/en/study/scholarships",
+  # 26.11.2026, DS-1 партия 3A: брошюра с документами и интервью, отдельная
+  # страница про интервью для стран с повышенным миграционным риском.
+  "https://www.uni-lj.si/assets/Visokosolska-prijavno-informacijska-sluzba/2026-ANG/2026_zlozenka_3delna_neEU_ang.pdf",
+  "https://www.uni-lj.si/assets/Visokosolska-prijavno-informacijska-sluzba/2026-ANG/Interview-for-applicants-from-countries-with-a-higher-migration-risk-net.pdf",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
@@ -3087,6 +3156,13 @@ files = [
   { path = "manual/cambridge/scholarships-bursaries.html", url = "https://www.undergraduate.study.cam.ac.uk/fees-funding/scholarships-bursaries" },
   { path = "manual/cambridge/international-applications.html", url = "https://www.undergraduate.study.cam.ac.uk/international-students/international-applications" },
   { path = "manual/cambridge/application-dates-deadlines.html", url = "https://www.undergraduate.study.cam.ac.uk/apply/application-dates-deadlines" },
+]
+# 26.11.2026, DS-1 партия 3A: personal statement, written work и портфолио,
+# интервью. Тот же домен.
+urls = [
+  "https://www.undergraduate.study.cam.ac.uk/apply/how/ucas-personal-statement",
+  "https://www.undergraduate.study.cam.ac.uk/apply/after/written-work-portfolio",
+  "https://www.undergraduate.study.cam.ac.uk/apply/after/cambridge-interviews",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
@@ -3294,6 +3370,11 @@ files = [
   { path = "manual/sheffield/scholarships-undergraduate.html", url = "https://www.sheffield.ac.uk/international/fees-and-funding/scholarships/undergraduate" },
   { path = "manual/sheffield/foundation.html", url = "https://www.sheffield.ac.uk/international/applying/foundation" },
   { path = "manual/sheffield/undergraduate-fees-funding.html", url = "https://www.sheffield.ac.uk/undergraduate/fees-funding" },
+]
+# 26.11.2026, DS-1 партия 3A: как оценивают заявку — personal statement,
+# отзыв поручителя, интервью по курсам. Тот же домен.
+urls = [
+  "https://www.sheffield.ac.uk/undergraduate/apply/assess",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
@@ -4507,6 +4588,10 @@ name = "Уральский федеральный университет, Ека
 files = [
   { path = "manual/urfu/00-schol.html", url = "https://urfu.ru/en/scholarships-for-foreigners/" },
   { path = "manual/urfu/01-od.html", url = "https://urfu.ru/en/open-doors-russian-scholarship-project/" },
+]
+# 26.11.2026, DS-1 партия 3A: перечень документов и вступительные испытания.
+urls = [
+  "https://urfu.ru/en/international/information-for-prospective-international-students/entry-requirements/",
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"

@@ -1,0 +1,93 @@
+{
+  "id": "tsukuba-ide",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "words", "max": 1200},
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Personal Statement по форме 1: от 800 до 1 200 слов, загружается PDF-файлом в систему.",
+      "evidence": "i. Personal Statement (Essay) (Form 1) All Prepare your personal statement using Form 1 and upload it as a PDF file. The statement must be between 800 and 1,200 words.",
+      "source": {
+        "url": "https://drive.google.com/file/d/1ZvyD7wPCcIuBnFHa55R3fKxwAn73btxR/view",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ca0a195b3be990bc1b758566865d5f4dad38a2ea7e9bd76556e11800ea93df74"
+      }
+    },
+    {
+      "type": "studyPlan",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Финансовый план учёбы на четыре года по форме 2, загружается PDF-файлом.",
+      "evidence": "ii. Financial Plan (Form 2) All Prepare your financial plan for four years on Form 2 and upload it as a PDF file.",
+      "source": {
+        "url": "https://drive.google.com/file/d/1ZvyD7wPCcIuBnFHa55R3fKxwAn73btxR/view",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ca0a195b3be990bc1b758566865d5f4dad38a2ea7e9bd76556e11800ea93df74"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Одного рекомендателя выбираете сами — классный руководитель, консультант, директор школы или человек, который хорошо вас знает; он заполняет форму в системе.",
+      "evidence": "Nominate one of the individuals listed below from your current or most recent secondary school through the application system. The nominated referee will automatically receive an email from the system requesting them to complete and submit the reference letter form.",
+      "source": {
+        "url": "https://drive.google.com/file/d/1ZvyD7wPCcIuBnFHa55R3fKxwAn73btxR/view",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ca0a195b3be990bc1b758566865d5f4dad38a2ea7e9bd76556e11800ea93df74"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Второй этап отбора — личное собеседование для прошедших первый этап: проверяют английский, базовые знания по специальности и мотивацию.",
+      "evidence": "(2) Second-Stage Screening Individual interviews will be conducted for applicants who pass the first stage. The interview will assess English communication ability, fundamental academic knowledge relevant to the chosen field, and the applicant's motivation and goals for the Bachelor's Program in Interdisciplinary Engineering.",
+      "source": {
+        "url": "https://drive.google.com/file/d/1ZvyD7wPCcIuBnFHa55R3fKxwAn73btxR/view",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ca0a195b3be990bc1b758566865d5f4dad38a2ea7e9bd76556e11800ea93df74"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "optional",
+      "count": null,
+      "limit": {"unit": "items", "max": 3},
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Можно приложить до трёх дополнительных документов о сильных сторонах: академические достижения, награды и другое.",
+      "evidence": "Upload scanned copies of up to three additional documents that demonstrate your strengths as an applicant, such as outstanding academic achievements, awards, or other notable accomplishments.",
+      "source": {
+        "url": "https://drive.google.com/file/d/1ZvyD7wPCcIuBnFHa55R3fKxwAn73btxR/view",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ca0a195b3be990bc1b758566865d5f4dad38a2ea7e9bd76556e11800ea93df74"
+      }
+    }
+  ],
+  "notStated": ["cv", "activities", "portfolio", "video", "certificates"],
+  "note": "Набор AY 2027: заявки 1 октября — 4 ноября 2026, собеседования 26 февраля — 8 марта 2027. Financial Plan (форма 2) — план на четыре года; School Information (форма 3) заполняет школа; все документы — на английском."
+}

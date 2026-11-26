@@ -1,0 +1,121 @@
+{
+  "id": "pecs",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "chars",
+        "max": 3500
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Письмо о мотивации: знакомство с вами и область интересов. Для Computer Science и Psychology объём — 3000–3500 знаков.",
+      "evidence": "Motivation letter (introduction plus field of interest, etc.) in 3000 to 3500 characters.",
+      "source": {
+        "url": "https://international.pte.hu/study-programs/bsc-computer-science",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:162cdbbeefc1a7fa65a4887446c8b9cdf2257060cf5189a47e8974dc50bcbb27"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "CV на английском; для Computer Science — в формате Europass.",
+      "evidence": "Europass CV in English",
+      "source": {
+        "url": "https://international.pte.hu/study-programs/bsc-computer-science",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:162cdbbeefc1a7fa65a4887446c8b9cdf2257060cf5189a47e8974dc50bcbb27"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Нужна официальная копия языкового сертификата; какие экзамены принимают, сказано в разделе Language requirements.",
+      "evidence": "Official copy of the language exam certificate (see the acceptable certificates here: Language requirements )",
+      "source": {
+        "url": "https://international.pte.hu/study-programs/bsc-computer-science",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:162cdbbeefc1a7fa65a4887446c8b9cdf2257060cf5189a47e8974dc50bcbb27"
+      }
+    },
+    {
+      "type": "video",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Только для BA Psychology: к заявке нужно приложить мотивационное видео.",
+      "evidence": "Motivational video recording",
+      "source": {
+        "url": "https://international.pte.hu/study-programs/ba-psychology",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:3c51e8697575e080557c41c8512d54d93844776dbef570d3eee2095a56f8aec8"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Только для Civil Engineering, и не обязательно: рекомендации можно приложить вместе с сертификатом C1 и публикациями.",
+      "evidence": "Recommendations, C1 English Language Certificate, publications etc - optional",
+      "source": {
+        "url": "https://international.pte.hu/study-programs/bsc-civil-engineering",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:4d8d8cbe32ef32c6c6ab141951ae430c0f3420e3062514a5554291acc7cf42bd"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "minutes",
+        "max": 10
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Устное онлайн-собеседование с комиссией: около 10 минут, вопросы о биографии, планах и мотивации выбрать этот вуз.",
+      "evidence": "The interview takes approximately 10 minutes, and the committee will ask you about your background, future plans and motivation to choose us.",
+      "source": {
+        "url": "https://international.pte.hu/study-programs/bsc-business-administration-and-management",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:31f01c2873b75fdf2e83406df39109288264c45c8b287e732a92cf9367842bbf"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan"
+  ],
+  "note": "Снимок содержит четыре программы: Computer Science, Psychology, Business Administration и Civil Engineering. Набор документов и объёмы у остальных программ могут отличаться. Приём 2027 года."
+}

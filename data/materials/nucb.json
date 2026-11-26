@@ -1,0 +1,83 @@
+{
+  "id": "nucb",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "На каждый вопрос эссе есть рекомендуемый лимит слов, ответы должны быть краткими и по делу. Сами вопросы и цифру лимита вуз не публикует.",
+      "evidence": "Please ensure that each of your answers is concise and focused, allowing you to present your ideas clearly within the suggested word limit per question.",
+      "source": {
+        "url": "https://www.nucba.ac.jp/en/admission/faq/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:71f104f4c06052f1ab0e9ea6c76dcdc3d98ccafc9505ba2f881f1d7b4a7855f6"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": null,
+      "via": "platform",
+      "ru": "Одного письма обычно достаточно. Пишет человек из последнего учебного заведения, который может оценить ваш потенциал для программы по бизнесу.",
+      "evidence": "One letter of recommendation is usually sufficient. It should be written by an individual qualified to write about your potential for success in a business program from the applicant's most recent educational institution.",
+      "source": {
+        "url": "https://www.nucba.ac.jp/en/admission/faq/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:71f104f4c06052f1ab0e9ea6c76dcdc3d98ccafc9505ba2f881f1d7b4a7855f6"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Собеседование обязательно для всех поступающих и проходит онлайн.",
+      "evidence": "An interview is required of all applicants. All interviews are held online.",
+      "source": {
+        "url": "https://www.nucba.ac.jp/en/admission/faq/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:71f104f4c06052f1ab0e9ea6c76dcdc3d98ccafc9505ba2f881f1d7b4a7855f6"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Официальный результат TOEFL, IELTS или TOEIC нужен всем, для кого английский не родной. Исключение — если в школе всё обучение шло на английском.",
+      "evidence": "An official score such as TOEFL, IELTS or TOEIC is required of all non-native speakers unless the language of instruction at high school was 100% in English.",
+      "source": {
+        "url": "https://www.nucba.ac.jp/en/admission/faq/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:71f104f4c06052f1ab0e9ea6c76dcdc3d98ccafc9505ba2f881f1d7b4a7855f6"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "cv",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Вопросы эссе на сайте не опубликованы, точный лимит слов тоже не назван. Ответ длиннее одной страницы на вопрос могут не оценить; за плагиат и текст от AI — отказ. На собеседование приглашают после проверки документов. Аттестат, паспорт и переводы — в data/prep."
+}

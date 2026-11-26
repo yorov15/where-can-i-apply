@@ -1,0 +1,106 @@
+{
+  "id": "kimep",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 300
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Раздел Interview на портале: несколько вопросов, ответы письменно на английском, каждый до 300 слов.",
+      "evidence": "In this section several questions will be offered which you will have to answer in writing in English. Each answer should contain no more than 300 words.",
+      "source": {
+        "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:39d9752fa0b2864023b84db3cb7a2b24b0c42e576a7fc77828baadc8fe27508d"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 400
+      },
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Только для направлений Pedagogical Sciences и «Foreign Language: Two Foreign Languages»: мотивированное эссе на 300–400 слов на один из вопросов.",
+      "evidence": "Applicants should write a motivated essay of 300-400 words as an answer to one of questions asked.",
+      "source": {
+        "url": "https://www.kimep.kz/prospective-students/en/admission/kimep-university-tests-schedule/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:50b79ce670b4241cf6f52a267c923e9c58ef575aa32ebf5835458f414c937df4"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Только для Journalism (BAJ): творческое вступительное эссе на одну из выбранных тем — из личного опыта, без опоры на литературу.",
+      "evidence": "The entrance essay is designed to enable the applicant to express his or her creative abilities in one of the chosen topics. The essay should be based on the applicant's life experience and personal views and not on literary sources.",
+      "source": {
+        "url": "https://www.kimep.kz/prospective-students/en/admission/kimep-university-tests-schedule/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:50b79ce670b4241cf6f52a267c923e9c58ef575aa32ebf5835458f414c937df4"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Копии IELTS или TOEFL — если они есть: на портале их загружают в первом шаге, вместе со сканом паспорта.",
+      "evidence": "Upload the valid copies of IELTS/TOEFL certificates, if any",
+      "source": {
+        "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:39d9752fa0b2864023b84db3cb7a2b24b0c42e576a7fc77828baadc8fe27508d"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Только для заявки на стипендию, не для приёма: копии наград и учебных достижений национального или международного уровня за последние три года.",
+      "evidence": "Upload to the Registration form copies of academic merits of national or international level within the recent 3 years (if available).",
+      "source": {
+        "url": "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:32a731989558ff24bd95e3e2fc7c4517a5e376418e106ad37e31c195f59bdb34"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "cv",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Внутренний экзамен для иностранцев — письменные ответы в разделе Interview, до 300 слов. Эссе на 300-400 слов и творческое эссе сдают только на Pedagogical Sciences / Foreign Language и Journalism. CV, портфолио и рекомендательные письма на бакалавриат не просят — на стипендиях они для магистратуры."
+}

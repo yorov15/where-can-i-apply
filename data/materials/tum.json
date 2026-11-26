@@ -1,0 +1,110 @@
+{
+  "id": "tum",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Резюме без перерывов до даты подачи: хронологически, таблицей, с месяцами и годами; пробелы после школы дольше трёх месяцев объясняют. Загружается в онлайн-форму.",
+      "evidence": "We require a current curriculum vitae without chronological gaps up to the time of your application at TUM.",
+      "source": {
+        "url": "https://www.tum.de/en/studies/application/application-info-portal/glossary-of-documents",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:63154e832a9cbf8fe3400b2c8366f67eba8ff9534cb56ef3a420f85bfe9b6f4f"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Эссе пишут только для отдельных программ. Из бакалаврских это Chemistry, Food Chemistry и Mathematics; тема, объём и язык (немецкий или английский) — на сайте школы.",
+      "evidence": "For further information on the form, length, topics , and language (German or English) , please visit the homepage of your TUM school . Bachelor's degree programs : Chemistry Food Chemistry Mathematics",
+      "source": {
+        "url": "https://www.tum.de/en/studies/application/application-info-portal/glossary-of-documents",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:63154e832a9cbf8fe3400b2c8366f67eba8ff9534cb56ef3a420f85bfe9b6f4f"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Портфолио из работ, текстов и изображений — только там, где программа его просит; показывают на собеседовании aptitude assessment. Что именно положить, написано на сайте программы.",
+      "evidence": "For further information, please visit the homepage of the respective degree program. Please present the portfolio at the aptitude assessment interview.",
+      "source": {
+        "url": "https://www.tum.de/en/studies/application/application-info-portal/glossary-of-documents",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:63154e832a9cbf8fe3400b2c8366f67eba8ff9534cb56ef3a420f85bfe9b6f4f"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": null,
+      "via": "upload",
+      "ru": "Письма-рекомендации или контакты поручителей — только если программа их требует. Лишних писем не принимают: больше, чем указано, не рассматривают.",
+      "evidence": "For some degree programs, you are required to submit recommendation or reference letters, or name persons to be contacted as references if needed.",
+      "source": {
+        "url": "https://www.tum.de/en/studies/application/application-info-portal/glossary-of-documents",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:63154e832a9cbf8fe3400b2c8366f67eba8ff9534cb56ef3a420f85bfe9b6f4f"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "По желанию можно приложить внеучебные занятия по выбранной области — стажировки, участие в научных программах для школьников; их могут учесть при рассмотрении.",
+      "evidence": "In addition to required documents, your application may include records of extracurricular activities relevant to your desired field of study, such as internships, participation in youth science/research programs, etc.",
+      "source": {
+        "url": "https://www.tum.de/en/studies/application/application-info-portal/glossary-of-documents",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:63154e832a9cbf8fe3400b2c8366f67eba8ff9534cb56ef3a420f85bfe9b6f4f"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Для программ с обучением на английском нужен действующий сертификат английского: его загружают в онлайн-форму до конца приёма заявок.",
+      "evidence": "As a rule, proof of sufficient English language skills must be submitted before the end of the application period for all degree programs whose language of instruction is English.",
+      "source": {
+        "url": "https://www.tum.de/en/studies/application/application-info-portal/admission-requirements/language-certificates",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:849add4d5c5e08026d2f43836a5f31036f113c286fb86543bde6d81372d5e7de"
+      }
+    }
+  ],
+  "notStated": ["awards", "studyPlan", "video"],
+  "note": "Бакалавриат. Глоссарий перечисляет документы всех программ TUM, поэтому портфолио, рекомендации и эссе — «some»: у бакалавриата эссе названо только для Chemistry, Food Chemistry и Mathematics. Statement of purpose для бакалавриата не назван. Сертификат английского не нужен на части программ — язык проверяют на aptitude assessment."
+}

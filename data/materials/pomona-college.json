@@ -1,0 +1,138 @@
+{
+  "id": "pomona-college",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 150
+      },
+      "prompt": "What draws you to the subject(s) you selected as potential major(s)? If undecided, share more about one of your academic passions or interests.",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Короткое эссе о специальности: что тебя в ней привлекает; если ещё не определился — об одном из академических интересов. До 150 слов.",
+      "evidence": "Academic Interest Statement: What draws you to the subject(s) you selected as potential major(s)? If undecided, share more about one of your academic passions or interests. (150 words)",
+      "source": {
+        "url": "https://www.pomona.edu/admissions/apply/first-year-applicants",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:15e3f8fa3c6e8ccabf9d7c8e4f8c73dd3932214743eb1a2269a1403fb835b6e6"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 250
+      },
+      "prompt": "Pomona is home to a diverse community of faculty, staff and students who, through close ties and collaboration, enable each other to identify and explore their greatest passions. Considering this, respond to one of the following: (250 words) Reflecting on a community that you are a part of, what values or perspectives from that community would you bring to Pomona? Describe an experience you had outside the classroom that changed the way you think and/or how you engage with your peers. What was that experience and what did you learn from it? Choose any person or group of people in your life and share how they would describe you.",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Второе эссе: ответить на один из трёх вопросов — о ценностях своего сообщества, о случае вне класса, который изменил взгляды, или о том, как описали бы тебя близкие. До 250 слов.",
+      "evidence": "Short-Response Essay: Pomona is home to a diverse community of faculty, staff and students who, through close ties and collaboration, enable each other to identify and explore their greatest passions. Considering this, respond to one of the following: (250 words)",
+      "source": {
+        "url": "https://www.pomona.edu/admissions/apply/first-year-applicants",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:15e3f8fa3c6e8ccabf9d7c8e4f8c73dd3932214743eb1a2269a1403fb835b6e6"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации от учителей основных предметов: английского, иностранных языков, математики, естественных или общественных наук.",
+      "evidence": "Two Letters of Recommendation These should be written by teachers of core academic subject areas: English, foreign languages, math, science or social sciences.",
+      "source": {
+        "url": "https://www.pomona.edu/admissions/apply/first-year-applicants",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:15e3f8fa3c6e8ccabf9d7c8e4f8c73dd3932214743eb1a2269a1403fb835b6e6"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "School Report и рекомендацию отправляет школьный консультант.",
+      "evidence": "School Report and Counselor Recommendation These should be submitted by your high school counselor.",
+      "source": {
+        "url": "https://www.pomona.edu/admissions/apply/first-year-applicants",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:15e3f8fa3c6e8ccabf9d7c8e4f8c73dd3932214743eb1a2269a1403fb835b6e6"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "По желанию — ещё одна рекомендация: от учителя необязательного предмета, тренера, работодателя или другого человека, который знает твои качества.",
+      "evidence": "Optionally, a recommendation from a teacher of an elective subject (music, art, journalism, etc.), or by a coach, employer or other individual who can speak to your skills or special qualities may serve as an additional recommendation.",
+      "source": {
+        "url": "https://www.pomona.edu/admissions/apply/first-year-applicants",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:15e3f8fa3c6e8ccabf9d7c8e4f8c73dd3932214743eb1a2269a1403fb835b6e6"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Творческие дополнения (arts supplements) не обязательны, но приёмная комиссия хочет узнать о занятиях, которым ты предан.",
+      "evidence": "First-year and transfer applicants are invited to submit arts supplements for consideration as part of their application for admission. Supplements are not required, but we are very interested in learning more about the creative activities you engage in with passion and dedication.",
+      "source": {
+        "url": "https://www.pomona.edu/admissions/apply/application-overview/supplements",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:2b58f64b11c16bf103a8b8f8e806a2a49b4d56548d99b8ddc1c70c0881b5e85d"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Собеседование можно пройти только через InitialView, Vericant или Duolingo: его проводят не сотрудники Pomona, и на вопросы о вузе там не ответят.",
+      "evidence": "We accept interviews through InitialView , Vericant and Duolingo . It is important to note that these third-party interviews are not conducted by Pomona staff or alumni, so, unfortunately, the interviewer cannot answer specific questions about Pomona College.",
+      "source": {
+        "url": "https://www.pomona.edu/admissions/apply/international-applicants/international-applicant-faqs",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:cf100e942d1228b1cdf36ac07b6b5efb8cdd689c4770a6bde67eccdf0cd9080b"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "awards",
+    "studyPlan",
+    "certificates"
+  ],
+  "note": "Общее эссе и список активностей Common App не внесены. Arts supplements — это резюме, записи и видео по танцу, музыке или театру."
+}

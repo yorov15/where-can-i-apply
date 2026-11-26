@@ -1,0 +1,185 @@
+{
+  "id": "penn-state",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Personal statement в заявке необязателен: его можно заполнить, но без него заявку рассматривают.",
+      "evidence": "Lastly, all applicants can complete the optional Activities section and Personal Statement within the application.",
+      "source": {
+        "url": "https://www.psu.edu/resources/international-students/steps-to-apply",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:613e4a3f59c7c9f5557a07937fb7a45971c68b80157ec69dbe7a035b59c448f1"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Раздел Activities тоже необязательный — заполняется прямо в заявке, отдельный список присылать не нужно.",
+      "evidence": "Lastly, all applicants can complete the optional Activities section and Personal Statement within the application.",
+      "source": {
+        "url": "https://www.psu.edu/resources/international-students/steps-to-apply",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:613e4a3f59c7c9f5557a07937fb7a45971c68b80157ec69dbe7a035b59c448f1"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Для обычного приёма рекомендации не нужны и в рассмотрении не участвуют. Но отдельные программы их всё-таки требуют.",
+      "evidence": "Penn State does not require letters of recommendation for admission to the University, nor are they used in the application review process. Note that some specific programs require recommendations.",
+      "source": {
+        "url": "https://www.psu.edu/resources/international-students/steps-to-apply",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:613e4a3f59c7c9f5557a07937fb7a45971c68b80157ec69dbe7a035b59c448f1"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Для Schreyer Honors College нужны эссе, ответы на короткие вопросы и рекомендации — это отдельный набор материалов.",
+      "evidence": "Schreyer Honors College Applicants must submit essays, responses to short answer questions, and recommendation letters.",
+      "source": {
+        "url": "https://www.psu.edu/resources/first-year-students/requirements",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:502f014f1a0edb04bd90cba685e59b99f23d793fbe27c3827515ae46c3fe1b45"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Для Schreyer Honors College: кто подаёт до 1 ноября, может пройти необязательное интервью.",
+      "evidence": "Schreyer Honors College Applicants must submit essays, responses to short answer questions, and recommendation letters. Applicants applying before November 1 may also participate in an optional interview.",
+      "source": {
+        "url": "https://www.psu.edu/resources/first-year-students/requirements",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:502f014f1a0edb04bd90cba685e59b99f23d793fbe27c3827515ae46c3fe1b45"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "some",
+      "count": null,
+      "limit": {
+        "unit": "pages",
+        "max": 1
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "form",
+      "ru": "Только для Premedical-Medical BS/MD: резюме на одну страницу и ответы на вопросы программы прямо в заявке.",
+      "evidence": "Premedical-Medical BS/MD Applicants must submit a one-page resume and responses to program questions within the application.",
+      "source": {
+        "url": "https://www.psu.edu/resources/first-year-students/requirements",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:502f014f1a0edb04bd90cba685e59b99f23d793fbe27c3827515ae46c3fe1b45"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Только для Graphic Design: без творческих работ заявка не считается полной.",
+      "evidence": "Graphic Design Applicants need to submit Evidence of Creative Work to complete the application.",
+      "source": {
+        "url": "https://www.psu.edu/resources/first-year-students/requirements",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:502f014f1a0edb04bd90cba685e59b99f23d793fbe27c3827515ae46c3fe1b45"
+      }
+    },
+    {
+      "type": "other",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Только для Music: нужно записаться на прослушивание в Школе музыки, иначе заявка не завершена.",
+      "evidence": "Music Applicants must schedule a School of Music audition to complete the application.",
+      "source": {
+        "url": "https://www.psu.edu/resources/first-year-students/requirements",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:502f014f1a0edb04bd90cba685e59b99f23d793fbe27c3827515ae46c3fe1b45"
+      }
+    },
+    {
+      "type": "other",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Только для Acting BFA: нужен prescreen — предварительная запись, без неё заявка не завершена.",
+      "evidence": "Acting BFA Applicants need to submit a prescreen to complete the application.",
+      "source": {
+        "url": "https://www.psu.edu/resources/first-year-students/requirements",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:502f014f1a0edb04bd90cba685e59b99f23d793fbe27c3827515ae46c3fe1b45"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Всем, для кого английский не родной, нужно подтвердить владение языком. Способы перечислены на странице требований.",
+      "evidence": "All international students whose native language is not English must submit proof of English language proficiency.",
+      "source": {
+        "url": "https://www.psu.edu/resources/international-students/admission-requirements",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:7005b7f62d039592da747515a84b35219f2a9cb4fec47ef4660525c19977380f"
+      }
+    }
+  ],
+  "notStated": [
+    "awards",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Общая заявка: personal statement и Activities необязательны. Свои материалы просят Graphic Design, Music, Acting, Musical Theatre и Theatre BFA, BS/MD, Millennium Scholars, Schreyer. Schreyer — отдельная заявка; Millennium — эссе и рекомендации. Аттестат, паспорт и переводы — в data/prep."
+}
