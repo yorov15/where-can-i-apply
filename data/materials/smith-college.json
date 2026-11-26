@@ -1,0 +1,82 @@
+{
+  "id": "smith-college",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Рекомендация школьного консультанта — в списке документов, рядом со школьным отчётом и транскриптом.",
+      "evidence": "Secondary School Report, including official high school transcript Counselor Recommendation",
+      "source": {
+        "url": "https://www.smith.edu/admission-aid/apply-smith/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ad6bcb7721874e111dcbc6e654c0c00d2cce6192aa93e8706c61e31164782060"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две формы оценки от учителей.",
+      "evidence": "Two Teacher Evaluation Forms",
+      "source": {
+        "url": "https://www.smith.edu/admission-aid/apply-smith/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ad6bcb7721874e111dcbc6e654c0c00d2cce6192aa93e8706c61e31164782060"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "По желанию — творческое портфолио в SlideRoom: только музыка, изобразительное искусство или танец, другие жанры не принимают.",
+      "evidence": "Students with strong backgrounds in music, visual art or dance are welcome to submit supplementary materials to support their application. Materials in other genres are not accepted or reviewed. Please note that you must submit all materials electronically using SlideRoom (not via regular mail).",
+      "source": {
+        "url": "https://www.smith.edu/admission-aid/apply-smith/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ad6bcb7721874e111dcbc6e654c0c00d2cce6192aa93e8706c61e31164782060"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Собеседование по желанию; проводят выпускницы Smith. Как запросить — в личном кабинете абитуриента после подачи заявки.",
+      "evidence": "Interviews are optional for first-year and transfer applicants, and are conducted by Smith admission alum volunteers. Upon submission of your application to Smith, instructions for requesting an interview will be available on your applicant status portal.",
+      "source": {
+        "url": "https://www.smith.edu/admission-aid/apply-smith/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:ad6bcb7721874e111dcbc6e654c0c00d2cce6192aa93e8706c61e31164782060"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "awards",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Smith не публикует своего вопроса эссе: в заявке Common App или Coalition App используется общее эссе, о нём на странице только сказано, что его читают. Эссе и список активностей Common App сюда не входят."
+}
