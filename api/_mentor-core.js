@@ -115,38 +115,50 @@ function numberOk(value, after, allowed) {
 
 const FORBIDDEN = /https?:|www\.|\S+@\S+\.\S|\.(?:com|ru|org|net|edu|tj|io)\b|<\/?[a-z][^>]*>|%|процент|гарантир|шанс|точно (?:возьм|прим|поступ)|наверняка поступ|напишу за тебя|за тебя напиш|готов(?:ое|ый) (?:эссе|текст|письм)|как (?:ИИ|языковая модель)|```/i;
 
-function textOk(line, req, allowed) {
-  if (typeof line !== 'string') return false;
+// Что не так со строкой ответа; пустая строка — всё в порядке.
+function textProblem(line, req, allowed) {
+  if (typeof line !== 'string') return 'not a string';
   const text = line.trim();
-  if (text.length < 12 || text.length > MENTOR_LIMITS.textChars || CONTROL.test(text) || FORBIDDEN.test(text)) return false;
+  const cut = text.slice(0, 80);
+  if (text.length < 12 || text.length > MENTOR_LIMITS.textChars) return `length ${text.length}: ${cut}`;
+  if (CONTROL.test(text)) return 'control char';
+  const bad = text.match(FORBIDDEN);
+  if (bad) return `forbidden "${bad[0]}": ${cut}`;
   const cyr = (text.match(/[а-яё]/gi) ?? []).length, lat = (text.match(/[a-z]/gi) ?? []).length;
-  if (cyr < 8 || lat > cyr) return false;
-  if (req.tasks.some((task) => text.includes(task.taskId))) return false;
+  if (cyr < 8 || lat > cyr) return `latin ${lat} > cyrillic ${cyr}: ${cut}`;
+  if (req.tasks.some((task) => text.includes(task.taskId))) return 'taskId in text';
   for (const match of text.matchAll(/\d+(?:[.,]\d+)*/g)) {
-    if (!numberOk(match[0].replace(/,/g, '.'), text.slice(match.index + match[0].length), allowed)) return false;
+    const after = text.slice(match.index + match[0].length);
+    if (!numberOk(match[0].replace(/,/g, '.'), after, allowed)) return `number "${match[0]}${after.slice(0, 12)}"`;
   }
-  return true;
+  return '';
 }
 
-export function parseMentorAnswer(text, req) {
-  if (typeof text !== 'string' || text.length > 6000) return null;
+// Разбор ответа модели: { plan } или { reason } — почему ответ не годится.
+export function inspectMentorAnswer(text, req) {
+  const no = (reason) => ({ plan: null, reason });
+  if (typeof text !== 'string' || text.length > 6000) return no('empty or too long');
   let value;
-  try { value = JSON.parse(text.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '')); } catch { return null; }
-  if (!onlyKeys(value, ['focus', 'days']) || !Object.hasOwn(value, 'focus') || !Array.isArray(value.days)) return null;
+  try { value = JSON.parse(text.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '')); } catch { return no('not json'); }
+  if (!onlyKeys(value, ['focus', 'days']) || !Object.hasOwn(value, 'focus') || !Array.isArray(value.days)) return no('wrong keys');
   const allowed = allowedNumbers(req);
-  if (!textOk(value.focus, req, allowed)) return null;
+  const focus = textProblem(value.focus, req, allowed);
+  if (focus) return no(`focus: ${focus}`);
   const byId = new Map(req.tasks.map((task) => [task.taskId, task]));
   const free = new Set(req.days.map((item) => item.date));
-  if (value.days.length !== req.tasks.length) return null;
+  if (value.days.length !== req.tasks.length) return no(`days ${value.days.length} != tasks ${req.tasks.length}`);
   const seen = new Set(), perDay = new Map();
   const days = [];
   for (const item of value.days) {
-    if (!onlyKeys(item, ['taskId', 'day', 'why', 'firstStep']) || Object.keys(item).length !== 4) return null;
+    if (!onlyKeys(item, ['taskId', 'day', 'why', 'firstStep']) || Object.keys(item).length !== 4) return no('wrong item keys');
     const task = byId.get(item.taskId);
-    if (!task || seen.has(item.taskId)) return null;
+    if (!task || seen.has(item.taskId)) return no(`unknown or repeated task ${String(item.taskId).slice(0, 40)}`);
     // День, выбранный человеком, не двигаем; новый — только из свободных дней недели.
-    if (task.day && task.day >= req.days[0].date ? item.day !== task.day : !free.has(item.day)) return null;
-    if (!textOk(item.why, req, allowed) || !textOk(item.firstStep, req, allowed)) return null;
+    if (task.day && task.day >= req.days[0].date ? item.day !== task.day : !free.has(item.day)) return no(`day ${String(item.day).slice(0, 12)}`);
+    const why = textProblem(item.why, req, allowed);
+    if (why) return no(`why: ${why}`);
+    const first = textProblem(item.firstStep, req, allowed);
+    if (first) return no(`firstStep: ${first}`);
     seen.add(item.taskId);
     perDay.set(item.day, (perDay.get(item.day) ?? 0) + 1);
     days.push({ taskId: item.taskId, day: item.day, why: item.why.trim(), firstStep: item.firstStep.trim() });
@@ -155,10 +167,13 @@ export function parseMentorAnswer(text, req) {
   // загрузил сильнее, не считаем ошибкой модели.
   const most = Math.max(2, Math.ceil(req.tasks.length / req.days.length));
   const fixedOn = (day) => req.tasks.filter((task) => task.day === day).length;
-  if ([...perDay].some(([day, count]) => count > Math.max(most, fixedOn(day)))) return null;
+  const crowded = [...perDay].find(([day, count]) => count > Math.max(most, fixedOn(day)));
+  if (crowded) return no(`crowded ${crowded[0]}: ${crowded[1]}`);
   days.sort((a, b) => a.day.localeCompare(b.day) || req.tasks.findIndex((t) => t.taskId === a.taskId) - req.tasks.findIndex((t) => t.taskId === b.taskId));
-  return { focus: value.focus.trim(), days };
+  return { plan: { focus: value.focus.trim(), days }, reason: '' };
 }
+
+export const parseMentorAnswer = (text, req) => inspectMentorAnswer(text, req).plan;
 
 // Лимит на устройство. Настоящий счёт живёт в браузере; этот, в памяти
 // экземпляра функции, — вторая защита от перебора одним устройством.
@@ -176,7 +191,7 @@ export function createDeviceLimiter({ perDay = MENTOR_LIMITS.perDevice, now = ()
   };
 }
 
-export async function mentorWeek({ body, ip, today }, { limiter, deviceLimiter, cache, callModel, available = true }) {
+export async function mentorWeek({ body, ip, today }, { limiter, deviceLimiter, cache, callModel, available = true, onReject = () => {} }) {
   const req = validateMentorRequest(body, today);
   if (!req) return { status: 400, json: { error: 'bad-request' } };
   if (!available) return { status: 503, json: { error: 'off' } };
@@ -188,7 +203,11 @@ export async function mentorWeek({ body, ip, today }, { limiter, deviceLimiter, 
   if (blocked) return { status: 429, json: { error: blocked === 'daily' ? 'daily' : 'rate' } };
   if (!deviceLimiter.allow(req.deviceId)) return { status: 429, json: { error: 'device' } };
   try {
-    const text = await callModel({ mode: 'mentor-week', system: MENTOR_SYSTEM, user: buildMentorPrompt(req), check: (answer) => parseMentorAnswer(answer, req) });
+    const text = await callModel({ mode: 'mentor-week', system: MENTOR_SYSTEM, user: buildMentorPrompt(req), check: (answer) => {
+      const { plan, reason } = inspectMentorAnswer(answer, req);
+      if (!plan) onReject(reason);
+      return plan;
+    } });
     const plan = parseMentorAnswer(text, req);
     if (!plan) return { status: 503, json: { error: 'model' } };
     cache?.set(key, plan);

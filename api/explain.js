@@ -253,7 +253,7 @@ async function handle(req, res, cors) {
   if(body?.mode==='mentor-week'){
     const trace=[];
     const result=await mentorWeek({body,ip:clientIp(req),today:new Date().toISOString().slice(0,10)},
-      {limiter:mentorLimiter,deviceLimiter:mentorDevices,cache:mentorCache,callModel:prompt=>callMentorModel(prompt,trace)});
+      {limiter:mentorLimiter,deviceLimiter:mentorDevices,cache:mentorCache,callModel:prompt=>callMentorModel(prompt,trace),onReject:reason=>trace.push({reject:reason})});
     return send(res,result.status,req.headers['x-explain-trace']==='1'?{...result.json,trace}:result.json,cors);
   }
 
