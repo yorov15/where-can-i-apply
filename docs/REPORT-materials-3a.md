@@ -214,3 +214,6 @@
 - `6e6551d` — UNSW, USTC, UW, Webster, Yonsei UIC, Zhejiang, XMU, SCU, BIT, Beihang
 - `b300851` — XJTU, МФТИ, PW, Cambridge, УрФУ, Tsukuba IDE
 - `0d7a8d8` — PolyU, Brown, JHU
+
+Последний коммит с данными — `0d7a8d8`; этот отчёт и последние правки в пяти файлах —
+отдельным коммитом после него.
