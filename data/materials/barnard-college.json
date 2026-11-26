@@ -1,0 +1,155 @@
+{
+  "id": "barnard-college",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 50
+      },
+      "prompt": "At Barnard, inquiry starts with asking bold questions about the world. What is one bold question on your mind and what about it piques your curiosity? (50 words maximum)",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Первый обязательный короткий ответ Barnard: какой смелый вопрос вас сейчас занимает и что в нём любопытно. До 50 слов.",
+      "evidence": "At Barnard, inquiry starts with asking bold questions about the world. What is one bold question on your mind and what about it piques your curiosity? (50 words maximum)",
+      "source": {
+        "url": "https://barnard.edu/admissions/the-application-process",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:48ee8fbfe8ca909b7412addc5a08d267d567dc1d8606b37f97f44ff68aa68353"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 250
+      },
+      "prompt": "Barnard College is shaped by trailblazing women with a multitude of perspectives. Think of a woman - historical, fictional, contemporary, or personally significant - whose views or approach to problem-solving differ from your own, but who excels at bringing people together. What lesson from her approach would shape how you show up at Barnard both inside and outside of the classroom? (200-250 words)",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Второй обязательный короткий ответ: женщина, чей подход к проблемам отличается от вашего, но которая умеет объединять людей. Какой её урок вы возьмёте в Barnard. 200–250 слов.",
+      "evidence": "Required: Barnard College is shaped by trailblazing women with a multitude of perspectives. Think of a woman - historical, fictional, contemporary, or personally significant - whose views or approach to problem-solving differ from your own, but who excels at bringing people together.",
+      "source": {
+        "url": "https://barnard.edu/admissions/the-application-process",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:48ee8fbfe8ca909b7412addc5a08d267d567dc1d8606b37f97f44ff68aa68353"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Два письма от учителей основных предметов: английский, иностранный язык, математика, естественные или общественные науки.",
+      "evidence": "Two teacher letters of recommendation: We require two letters from teachers that taught you in core academic subjects (English, foreign language, mathematics, science, or social studies [history, economics, etc.]).",
+      "source": {
+        "url": "https://barnard.edu/admissions/the-application-process",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:48ee8fbfe8ca909b7412addc5a08d267d567dc1d8606b37f97f44ff68aa68353"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Письмо школьного консультанта. Если из-за нагрузки он не может его написать, Barnard просит сообщить об этом.",
+      "evidence": "High school counselor letter of recommendation: Due to large student caseloads, we understand that your counselor may be unable to send a recommendation letter. Please contact us if this is the case.",
+      "source": {
+        "url": "https://barnard.edu/admissions/the-application-process",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:48ee8fbfe8ca909b7412addc5a08d267d567dc1d8606b37f97f44ff68aa68353"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "По желанию — до двух писем от людей со стороны, с другим взглядом: руководитель с подработки, научный наставник, куратор клуба.",
+      "evidence": "Additional letters of recommendation: Students may request letters of recommendation from up to two additional sources outside the required letters of recommendation. If you choose to request additional letters of recommendation, we recommend that they come from a different perspective than your previous letters, such as a part-time job supervisor, a research mentor, or a club advisor.",
+      "source": {
+        "url": "https://barnard.edu/admissions/the-application-process",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:48ee8fbfe8ca909b7412addc5a08d267d567dc1d8606b37f97f44ff68aa68353"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Портфолио не обязательно ни для одной специальности: кино, фото, рисунок, живопись, скульптура, музыка, танец, театр или тексты.",
+      "evidence": "Supplementary portfolios: Students may choose to submit supplementary portfolios containing film, photo, drawing, painting, sculpture, music, dance, theatre, or creative writing. Barnard does not require supplementary portfolios or auditions from any of our applicants, regardless of the intended major.",
+      "source": {
+        "url": "https://barnard.edu/admissions/the-application-process",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:48ee8fbfe8ca909b7412addc5a08d267d567dc1d8606b37f97f44ff68aa68353"
+      }
+    },
+    {
+      "type": "video",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Только для тех, кто учится в школе в США, и для заявителей QuestBridge: по желанию видео Glimpse о себе, 60–90 секунд.",
+      "evidence": "As an optional part of the application, we invite applicants attending high school in the US and QuestBridge applicants to submit a Glimpse video. Glimpse is an opportunity to share a 60-90 second video helping us to get to know you better.",
+      "source": {
+        "url": "https://barnard.edu/admissions/the-application-process",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:48ee8fbfe8ca909b7412addc5a08d267d567dc1d8606b37f97f44ff68aa68353"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Для иностранцев и тех, кто учится вне США: по желанию видео-интервью InitialView или Vericant. За плату его отправят во все вузы из вашего списка.",
+      "evidence": "International applicants or applicants attending high school outside of the US may choose to do a video interview through InitialView or Vericant . For a fee, InitialView and Vericant will send your interview video/report to all of the colleges on your application list.",
+      "source": {
+        "url": "https://barnard.edu/admissions/internationalstudents",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:d17ff754bc1a426da48edc117d903ec2f248482b56c491dfa5eba9e0cd87fab1"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "awards",
+    "studyPlan",
+    "certificates"
+  ],
+  "note": "Набор 2027 (2026-27): ED 1 ноября 2026, RD 1 января 2027. Общее эссе и список активностей Common App не внесены: Barnard берёт их из платформы. Своих интервью Barnard не проводит. Сертификаты и копии документов просят не присылать."
+}

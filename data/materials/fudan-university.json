@@ -1,0 +1,119 @@
+{
+  "id": "fudan-university",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "chars",
+        "max": 5000
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Personal statement на английском, меньше 5000 знаков с пробелами и знаками препинания. Вопроса и темы вуз не задаёт.",
+      "evidence": "\"Personal Statement\" must be written in English and fewer than 5,000 English characters (including punctuation marks and space).",
+      "source": {
+        "url": "https://iso.fudan.edu.cn/_upload/article/files/32/4b/da86b1aa450f9b295b63a88bb6d3/082c79b0-dbba-413a-bdd0-cc201c34c6a6.pdf",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:ee5dbec2c2ab3682ac60fc533cc8a9aaafb4cf89fcee590eaefd32a2fed3197a"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Два рекомендательных письма на английском. Кто именно пишет, не указано — важно, чтобы человек мог подтвердить успехи и потенциал.",
+      "evidence": "Two recommendation letters. The recommendation letters must be written in English, and the recommenders must be able to attest to the applicant's academic performance and potential.",
+      "source": {
+        "url": "https://iso.fudan.edu.cn/_upload/article/files/32/4b/da86b1aa450f9b295b63a88bb6d3/082c79b0-dbba-413a-bdd0-cc201c34c6a6.pdf",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:ee5dbec2c2ab3682ac60fc533cc8a9aaafb4cf89fcee590eaefd32a2fed3197a"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "После проверки документов подходящих абитуриентов приглашают на собеседование: смотрят общие компетенции и умение общаться на языке обучения.",
+      "evidence": "Following the university's preliminary review, eligible applicants will be invited to participate in an interview. The interview will focus on assessing the applicant's comprehensive competencies and language communication skills.",
+      "source": {
+        "url": "https://iso.fudan.edu.cn/_upload/article/files/32/4b/da86b1aa450f9b295b63a88bb6d3/082c79b0-dbba-413a-bdd0-cc201c34c6a6.pdf",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:ee5dbec2c2ab3682ac60fc533cc8a9aaafb4cf89fcee590eaefd32a2fed3197a"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Подтверждение английского: TOEFL iBT от 90 (новый TOEFL от 4.5), IELTS от 6.5, Duolingo от 110 или PTE от 61. Кто учился в школе на английском, освобождён.",
+      "evidence": "Proof of English proficiency. TOEFL iBT score of ≥ 90 (New TOEFL ≥ 4.5), or IELTS ≥ 6.5, or Duolingo English Test ≥ 110, or PTE Academic ≥ 61. Applicants whose native language is English or who graduated from a high school fully taught in English can be exempt from this requirement.",
+      "source": {
+        "url": "https://iso.fudan.edu.cn/_upload/article/files/32/4b/da86b1aa450f9b295b63a88bb6d3/082c79b0-dbba-413a-bdd0-cc201c34c6a6.pdf",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:ee5dbec2c2ab3682ac60fc533cc8a9aaafb4cf89fcee590eaefd32a2fed3197a"
+      }
+    },
+    {
+      "type": "other",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Сначала надо сдать CSCA (China Scholastic Competency Assessment) — его проводит China Scholarship Council — и получить отчёт с баллами.",
+      "evidence": "Step 1 Take the China Scholastic Competency Assessment (CSCA). This assessment is organized by the China Scholarship Council on behalf of the Ministry of Education of China. Students must take the assessment in advance and obtain the score report.",
+      "source": {
+        "url": "https://iso.fudan.edu.cn/_upload/article/files/32/4b/da86b1aa450f9b295b63a88bb6d3/082c79b0-dbba-413a-bdd0-cc201c34c6a6.pdf",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:ee5dbec2c2ab3682ac60fc533cc8a9aaafb4cf89fcee590eaefd32a2fed3197a"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "По желанию можно приложить то, что показывает ваши способности: грамоты и награды, опубликованные работы.",
+      "evidence": "Other Supporting Materials. Applicants may submit additional materials which may demonstrate comprehensive abilities along with the required documents, such as award certificates or published papers.",
+      "source": {
+        "url": "https://iso.fudan.edu.cn/_upload/article/files/32/4b/da86b1aa450f9b295b63a88bb6d3/082c79b0-dbba-413a-bdd0-cc201c34c6a6.pdf",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:ee5dbec2c2ab3682ac60fc533cc8a9aaafb4cf89fcee590eaefd32a2fed3197a"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "activities",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Это гайд приёма 2027 года: раунд 1 — 1 декабря 2026 – 26 февраля 2027, раунд 2 — 1–15 апреля 2027. Personal statement меньше 5000 знаков. Паспорт, аттестат, переводы, справка о несудимости и финансовые документы — в data/prep."
+}

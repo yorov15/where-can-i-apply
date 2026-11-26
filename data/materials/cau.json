@@ -1,0 +1,42 @@
+{
+  "id": "cau",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "minutes", "max": 10},
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "После экзамена по английскому — обязательное 10-минутное собеседование с приёмной комиссией: короткий разговор о мотивации и готовности учиться.",
+      "evidence": "Interview: After successfully passing the English exam, applicants are invited to a mandatory 10-minute interview with the Admissions Committee. This is a brief conversation designed to assess the applicant's motivation and readiness for academic study.",
+      "source": {
+        "url": "https://centralasian.uz/admissionregulations",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:3ef3325b9d059b3526e9205bcadb7781b94c41060a58e887e5da3b37b419e541"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Только тем, кто просит освобождение от экзамена по английскому: приложить действующий IELTS 6.0 или выше, TOEFL iBT 60 или выше либо SAT English 585 или выше.",
+      "evidence": "Applicants may be exempted from the English entrance examination upon submission of one of the following: A valid IELTS score of 6.0 or higher; A TOEFL iBT score of 60 or higher; A SAT English subject score of 585 or above .",
+      "source": {
+        "url": "https://centralasian.uz/admissionregulations",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:3ef3325b9d059b3526e9205bcadb7781b94c41060a58e887e5da3b37b419e541"
+      }
+    }
+  ],
+  "notStated": ["essay", "recommendation", "activities", "cv", "awards", "portfolio", "studyPlan", "video"],
+  "note": "Набор в снимке — 2025-2026: даты стипендиальных экзаменов (10.08.2025) и дедлайны относятся к прошлому набору. Письменных материалов нет: поступление через вступительные экзамены и собеседование."
+}

@@ -11,10 +11,10 @@
 | cityu-hk | пропуск | | | пропуск: сайт отдаёт JS-заглушку Incapsula, снимок 2026-10-01 — только меню (4 216 знаков); страницы требований не скачать |
 | grinnell-college | готово | essay, interview, other, portfolio, recommendation | cv, awards, video, studyPlan, certificates | — |
 | macalester-college | готово | essay, interview, other, portfolio, recommendation | cv, awards, video, studyPlan, certificates | — |
-| pomona-college | — | | |  |
+| pomona-college | готово | essay, interview, portfolio, recommendation | cv, awards, studyPlan, certificates | — |
 | stipendium-hungaricum | готово | essay, portfolio, recommendation | activities, cv, awards, studyPlan, video | — |
-| uppsala | — | | |  |
-| aalto-finland | — | | |  |
+| uppsala | готово | essay | recommendation, activities, cv, awards, portfolio, studyPlan, video, interview | — |
+| aalto-finland | готово | interview, other | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | — |
 | waseda-sils | — | | |  |
 | institut-polytechnique-paris | — | | |  |
 | brunei-bdgs | — | | |  |
@@ -41,7 +41,7 @@
 | chungbuk | готово | certificates, interview, portfolio | essay, activities, cv, awards, studyPlan, video | — |
 | comenius-university | готово | cv, essay, interview | activities, awards, portfolio, studyPlan, video | — |
 | czech-public | готово | cv, essay, interview, portfolio, recommendation | activities, awards, studyPlan, video | — |
-| enu | готово | essay, recommendation, studyPlan | cv, activities, awards, portfolio, video | — |
+| enu | готово | essay, recommendation | cv, activities, awards, portfolio, video | — |
 | estonia-study | готово | cv, essay, interview, portfolio, recommendation | activities, awards, studyPlan, video | — |
 | fudan-university | готово | awards, certificates, essay, interview, other, recommendation | cv, activities, portfolio, studyPlan, video | — |
 | handong | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | — |
@@ -61,7 +61,7 @@
 | nottingham-ningbo | готово | certificates, essay, interview, recommendation | activities, awards, cv, portfolio, studyPlan, video | — |
 | nucb | готово | certificates, essay, interview, recommendation | activities, awards, cv, portfolio, studyPlan, video | — |
 | oxford | готово | essay, interview, other, recommendation | activities, awards, certificates, cv, portfolio, studyPlan, video | — |
-| penn-state | — | | |  |
+| penn-state | готово | activities, certificates, cv, essay, interview, other, portfolio, recommendation | awards, studyPlan, video | — |
 | polito-italy | — | | |  |
 | pusan-national | — | | |  |
 | rwth | — | | |  |
@@ -74,7 +74,7 @@
 | tum | готово | activities, certificates, cv, essay, portfolio, recommendation | awards, studyPlan, video | — |
 | ubbcluj-romania | — | | |  |
 | umm-al-qura | — | | |  |
-| university-of-economics-bratislava | — | | |  |
+| university-of-economics-bratislava | готово | other | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | — |
 | unsw | готово | essay | recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | — |
 | ustc | готово | recommendation | essay, activities, cv, awards, portfolio, studyPlan, video | — |
 | uwashington | готово | essay | activities, recommendation, interview, portfolio, cv, awards, studyPlan, video, certificates | — |
@@ -85,7 +85,7 @@
 | scu | готово | awards, essay, recommendation | activities, cv, portfolio, video | — |
 | bit | готово | essay, interview, portfolio | recommendation, activities, cv, awards, video, certificates | — |
 | beihang | готово | awards, other, portfolio | essay, recommendation, activities, cv, studyPlan, video | — |
-| xian-jiaotong-university | — | | |  |
+| xian-jiaotong-university | готово | interview, portfolio, recommendation, studyPlan | essay, activities, cv, awards, video | — |
 | mipt | — | | |  |
 | warsaw-university-of-technology | — | | |  |
 | king-abdulaziz | пропуск | | | пропуск: для бакалавриата английские страницы — пустые JS-заглушки, требований нет; рекомендации только для стипендий магистратуры/PhD |

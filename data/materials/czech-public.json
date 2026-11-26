@@ -1,0 +1,93 @@
+{
+  "id": "czech-public",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Мотивационное письмо: вуз может попросить его среди документов. Язык, объём и тему каждая программа задаёт сама.",
+      "evidence": "CV motivation letter recommendation letter portfolio, especially for arts or creative programmes",
+      "source": {
+        "url": "https://studyin.gov.cz/plan-your-studies/how-to-apply/",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:c0f5f9b5f9285550bb416194faf558db1b0b99d26dbe09870574fd03d38ecb40"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Резюме (CV): вуз может попросить его среди документов. Формат и требования задаёт сама программа.",
+      "evidence": "CV motivation letter recommendation letter portfolio, especially for arts or creative programmes",
+      "source": {
+        "url": "https://studyin.gov.cz/plan-your-studies/how-to-apply/",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:c0f5f9b5f9285550bb416194faf558db1b0b99d26dbe09870574fd03d38ecb40"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Рекомендательное письмо: может понадобиться. Кто его пишет и сколько писем нужно, каждый вуз решает сам.",
+      "evidence": "CV motivation letter recommendation letter portfolio, especially for arts or creative programmes",
+      "source": {
+        "url": "https://studyin.gov.cz/plan-your-studies/how-to-apply/",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:c0f5f9b5f9285550bb416194faf558db1b0b99d26dbe09870574fd03d38ecb40"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Портфолио — прежде всего для художественных и творческих программ. Состав и формат задаёт вуз.",
+      "evidence": "portfolio, especially for arts or creative programmes",
+      "source": {
+        "url": "https://studyin.gov.cz/plan-your-studies/how-to-apply/",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:c0f5f9b5f9285550bb416194faf558db1b0b99d26dbe09870574fd03d38ecb40"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Часть программ проводит вступительное испытание — экзамен, собеседование или просмотр портфолио; формат зависит от вуза.",
+      "evidence": "Some programmes require an entrance exam, interview, portfolio assessment or talent exam. Others may assess your application based on your documents.",
+      "source": {
+        "url": "https://studyin.gov.cz/plan-your-studies/how-to-apply/",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:c0f5f9b5f9285550bb416194faf558db1b0b99d26dbe09870574fd03d38ecb40"
+      }
+    }
+  ],
+  "notStated": ["activities", "awards", "studyPlan", "video"],
+  "note": "Это общий справочник по чешским вузам, а не требования одного вуза: документы, сроки и вступительные испытания каждый вуз и факультет устанавливает сам. Список «may be asked for» — то, что могут попросить, поэтому у всех пунктов need «some»."
+}
