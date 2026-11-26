@@ -1,0 +1,103 @@
+{
+  "id": "nottingham-ningbo",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Одно рекомендательное письмо на официальном бланке, с подписью и/или печатью. Кто именно пишет, страница не уточняет.",
+      "evidence": "One recommendation letter on headed paper, signed and/or stamped",
+      "source": {
+        "url": "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/how-to-apply.aspx",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:fc33e2ea6291baf442d19473e4da088ed9df6b48323d57bfe98efa1bcf6db302"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Personal statement входит в обязательный пакет материалов. Своего вопроса и объёма вуз не публикует — пишите свободно.",
+      "evidence": "Your application should include the following materials: One recommendation letter on headed paper, signed and/or stamped Transcript of school exam results (completed or results so far) High School Certificate English language test score report if already received (e.g. IELTS or PTE) Personal statement",
+      "source": {
+        "url": "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/how-to-apply.aspx",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:fc33e2ea6291baf442d19473e4da088ed9df6b48323d57bfe98efa1bcf6db302"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Результат языкового теста (например, IELTS или PTE), если он уже получен; недостающий можно дослать позже.",
+      "evidence": "English language test score report if already received (e.g. IELTS or PTE)",
+      "source": {
+        "url": "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/how-to-apply.aspx",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:fc33e2ea6291baf442d19473e4da088ed9df6b48323d57bfe98efa1bcf6db302"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 500
+      },
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Только для стипендии провинции и города: анкета с personal statement примерно на 500 слов.",
+      "evidence": "Application form (personal statement of approx. 500 words)",
+      "source": {
+        "url": "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/fees-and-scholarships/international.aspx",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:4b96c573ed09d5b62641344eb678c5bdf249f2db1264bb6ca714ed4c6b27f8d8"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "По материалам заявки приёмная комиссия может пригласить на собеседование или тест; каждого смотрят индивидуально.",
+      "evidence": "Based on the application materials, the admissions committee may require the applicant to participate in relevant interviews or tests.",
+      "source": {
+        "url": "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/entry-requirements/index.aspx",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:3f65b5fb3d765a1b2bc96cefd6eac2f882a9e35c4d0b0e074c9477baa1cf1813"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "cv",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Промпта для personal statement нет, объём не задан. Сроки и список — для набора сентября 2026. Отдельное эссе примерно на 500 слов просит только стипендия провинции и города. Паспорт, фото, аттестат и переводы — в data/prep."
+}

@@ -1,0 +1,84 @@
+{
+  "id": "brunei-bdgs",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Две характеристики от референтов (C1 и C2) — загружаются вместе с остальными документами в онлайн-форму.",
+      "evidence": "References and recommendations from referees. ( C1 and C2 )",
+      "source": {
+        "url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx",
+        "lastVerified": "2026-09-11",
+        "contentHash": "sha256:9effa12dad8fa067ba496d655338872ee974b37a84b7d24fd5ba55260705b005"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Собеседование — только для тех, кого вызовет вуз, куда вы подаёте; место и формат назначает он же.",
+      "evidence": "An applicant may be required to appear for an interview at such place(s) as may be determined by the institutions offering the programmes, and to sit a written examination to assess the applicant's proficiency in the English/ Malay/ Arabic Language (where applicable).",
+      "source": {
+        "url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx",
+        "lastVerified": "2026-09-11",
+        "contentHash": "sha256:9effa12dad8fa067ba496d655338872ee974b37a84b7d24fd5ba55260705b005"
+      }
+    },
+    {
+      "type": "other",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Письменный экзамен по английскому, малайскому или арабскому — там, где вуз его назначит вместе с собеседованием.",
+      "evidence": "An applicant may be required to appear for an interview at such place(s) as may be determined by the institutions offering the programmes, and to sit a written examination to assess the applicant's proficiency in the English/ Malay/ Arabic Language (where applicable).",
+      "source": {
+        "url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx",
+        "lastVerified": "2026-09-11",
+        "contentHash": "sha256:9effa12dad8fa067ba496d655338872ee974b37a84b7d24fd5ba55260705b005"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Английский подтверждают оценкой GCE 'O' Level или IGCSE либо баллом IELTS 6.0 / TOEFL 550 — это условие допуска.",
+      "evidence": "Be proficient in English with a Credit 6 at GCE 'O' Level Examination or a Grade 'C\" in IGCSE English (as a second language) or an IELTS score of 6.0 or a TOEFL minimum score of 550.",
+      "source": {
+        "url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx",
+        "lastVerified": "2026-09-11",
+        "contentHash": "sha256:9effa12dad8fa067ba496d655338872ee974b37a84b7d24fd5ba55260705b005"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "cv",
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Страница показывает набор 2026/2027: приём шёл с 15 декабря 2025 по 15 февраля 2026 и уже закрыт. Собеседование и письменный экзамен назначает вуз, а не абитуриент."
+}

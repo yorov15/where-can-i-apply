@@ -1,0 +1,67 @@
+{
+  "id": "yonsei-uic",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Собеседование обязательно: приёмная комиссия оценивает его в 100 баллов, остальные 200 — за документы.",
+      "evidence": "Applicants will be interviewed by the Admissions Committee and will be graded on a 100-point scale.",
+      "source": {
+        "url": "https://uic.yonsei.ac.kr/admission.php?mid=m04_02_02",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:1ed300b6b56c57731a33f789b8ce42dc933b1124ea150bf02aac7ffb4d75da4b"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Награды и дипломы за старшую школу вносят в List of Supplementary Documents; копии — с печатью организации или нотариально.",
+      "evidence": "Honors, awards, and qualifications attained during high school and documents that certify extra-curricular activities from high school should be filed with the List of Supplementary Documents. Provide copies with a seal affixed from the issuing institution or Notarization.",
+      "source": {
+        "url": "https://uic.yonsei.ac.kr/admission.php?mid=m04_02_02",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:1ed300b6b56c57731a33f789b8ce42dc933b1124ea150bf02aac7ffb4d75da4b"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Подтверждения внеучебной деятельности за старшую школу — в том же List of Supplementary Documents.",
+      "evidence": "Honors, awards, and qualifications attained during high school and documents that certify extra-curricular activities from high school should be filed with the List of Supplementary Documents. Provide copies with a seal affixed from the issuing institution or Notarization.",
+      "source": {
+        "url": "https://uic.yonsei.ac.kr/admission.php?mid=m04_02_02",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:1ed300b6b56c57731a33f789b8ce42dc933b1124ea150bf02aac7ffb4d75da4b"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "recommendation",
+    "cv",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Собеседование проходит онлайн, по расписанию 11-12 декабря 2026. В Guidelines эссе нет: заявку подают на сайте UIC или через Common App, и вопрос эссе, если он есть, задаёт сама форма — сверять там."
+}

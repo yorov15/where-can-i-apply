@@ -1,0 +1,101 @@
+{
+  "id": "nagoya-g30",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "words", "max": 300},
+      "prompt": "As briefly and clearly as possible please explain why you are applying to a particular program at Nagoya University and how it is related to your academic history and your personal and professional future goals.",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Эссе на 200–300 слов: почему вы подаёте на эту программу в Nagoya и как это связано с вашей учёбой и планами.",
+      "evidence": "Essay No. 1 - Answer the following question (200-300 words).",
+      "source": {
+        "url": "https://admissions.g30.nagoya-u.ac.jp/upload/2027_admission_requirements_en.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:747f22ace437f01cba854be4e0879563dde2d2ec1dc7740fad913a657e15aa29"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "words", "max": 500},
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Второе эссе: выберите вопрос по своей программе, 400–500 слов.",
+      "evidence": "Essay No. 2 - Answer one of the following questions* (400-500 words). *Please choose an essay topic based on your program choice",
+      "source": {
+        "url": "https://admissions.g30.nagoya-u.ac.jp/upload/2027_admission_requirements_en.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:747f22ace437f01cba854be4e0879563dde2d2ec1dc7740fad913a657e15aa29"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Обязательное письмо (Referee A) от учителя-предметника по профилю программы, на которую вы подаёте.",
+      "evidence": "Referee A (mandatory): high school teacher in the academic field (subject area) the applicant wishes to major in.",
+      "source": {
+        "url": "https://admissions.g30.nagoya-u.ac.jp/upload/2027_admission_requirements_en.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:747f22ace437f01cba854be4e0879563dde2d2ec1dc7740fad913a657e15aa29"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Второе письмо (Referee B) не обязательно, но его очень советуют: учитель или консультант, который может оценить ваш характер.",
+      "evidence": "Referee B (not mandatory but highly recommended): high school teacher or counselor who is able to evaluate the applicant's character.",
+      "source": {
+        "url": "https://admissions.g30.nagoya-u.ac.jp/upload/2027_admission_requirements_en.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:747f22ace437f01cba854be4e0879563dde2d2ec1dc7740fad913a657e15aa29"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Прошедших отбор по документам приглашают на собеседование или устный экзамен по видео или интернет-связи.",
+      "evidence": "Based on the application documents submitted, short-listed applicants will be invited for the next screening, an interview/oral examination, which will be conducted via video conference system or Voice over Internet Protocol.",
+      "source": {
+        "url": "https://admissions.g30.nagoya-u.ac.jp/admissions/undergraduate/",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:fe5fd3fc47dc4f72c909bbdc1c2aaa6534516ed10af5f0ddd26fe0480cb4008d"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Набор 2027, два раунда (ноябрь 2026 и январь 2027). Письмо рекомендации загружает сам рекомендатель: бланк школы и подпись обязательны. Для программы Physics к письму добавляется Physics Learning Checklist. Внеучебные активности и награды вуз учитывает при отборе, но отдельного списка не просит."
+}

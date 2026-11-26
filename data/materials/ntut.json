@@ -1,0 +1,147 @@
+{
+  "id": "ntut",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "studyPlan",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Один документ Statement of Purpose / Study Plan о плане учёбы — обязателен для поступающих на бакалавриат и в магистратуру.",
+      "evidence": "Applicants applying for Bachelor's or Master's programs should submit one Statement of Purpose/Study Plan.",
+      "source": {
+        "url": "https://oia.ntut.edu.tw/var/file/32/1032/img/2027SpringAdmissionHandbook.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:fb3f7cfdec3624483e2cd5c8567a94f05e74bf1e88dbbbd43c223ad798019515"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Резюме-автобиография (CV) с дополнительной информацией о себе — комиссия хочет лучше узнать вашу биографию и способности.",
+      "evidence": "請繳交一份自傳履歷讓審查委員更了解你的背景及能力。 Submit an expanded CV offering additional information about yourself.",
+      "source": {
+        "url": "https://oia.ntut.edu.tw/var/file/32/1032/img/2027SpringAdmissionHandbook.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:fb3f7cfdec3624483e2cd5c8567a94f05e74bf1e88dbbbd43c223ad798019515"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": null,
+      "via": "upload",
+      "ru": "Одно рекомендательное письмо от преподавателя прежней или нынешней школы либо от руководителя на работе.",
+      "evidence": "一封推薦信 1 Letter of Recommendati on 推薦人必須是申請者以前或目前就讀學校之師長或工作地點之長官。 The recommendator must be someone from your previous or current school or workplace.",
+      "source": {
+        "url": "https://oia.ntut.edu.tw/var/file/32/1032/img/2027SpringAdmissionHandbook.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:fb3f7cfdec3624483e2cd5c8567a94f05e74bf1e88dbbbd43c223ad798019515"
+      }
+    },
+    {
+      "type": "video",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Видео о себе и мотивации поступления, не короче 1 минуты, на китайском или английском. Ссылку вставить в Word и сохранить в PDF.",
+      "evidence": "Please record a video of at least 1 minute, including self-introduction and motivation for applying for the program (present in either Chinese or English or both). Please provide a valid link. If the file is invalid or cannot be viewed, it will be regarded as a missing document. Please paste the video link in a Word file and save as a PDF to submit.",
+      "source": {
+        "url": "https://oia.ntut.edu.tw/var/file/32/1032/img/2027SpringAdmissionHandbook.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:fb3f7cfdec3624483e2cd5c8567a94f05e74bf1e88dbbbd43c223ad798019515"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Портфолио дизайнера нужно только поступающим на программы Колледжа дизайна; на другие направления не требуется.",
+      "evidence": "Only applicants who apply for programs under College of Des ign are required to submit their design portfolio.",
+      "source": {
+        "url": "https://oia.ntut.edu.tw/var/file/32/1032/img/2027SpringAdmissionHandbook.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:fb3f7cfdec3624483e2cd5c8567a94f05e74bf1e88dbbbd43c223ad798019515"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Награды, публикации и другие дополнительные материалы — необязательны, по желанию.",
+      "evidence": "Other Supporting Materials Awards, certifications, publications, etc. Optional Optional Optional",
+      "source": {
+        "url": "https://oia.ntut.edu.tw/p/412-1032-13828.php?Lang=en",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:e767852024f4b96ea5d94da29d633a0cb6c4e7cd187de897353c06a3ced76556"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Сертификаты — в списке необязательных дополнительных материалов.",
+      "evidence": "Other Supporting Materials Awards, certifications, publications, etc. Optional Optional Optional",
+      "source": {
+        "url": "https://oia.ntut.edu.tw/p/412-1032-13828.php?Lang=en",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:e767852024f4b96ea5d94da29d633a0cb6c4e7cd187de897353c06a3ced76556"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Некоторые программы дополнительно проводят собеседование.",
+      "evidence": "Besides the above documents, there will be interviews for some programs.",
+      "source": {
+        "url": "https://oia.ntut.edu.tw/var/file/32/1032/img/2027SpringAdmissionHandbook.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:fb3f7cfdec3624483e2cd5c8567a94f05e74bf1e88dbbbd43c223ad798019515"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "essay"
+  ],
+  "note": "Данные из справочника весеннего набора 2027 (115學年度第2學期): заявки принимали до 30.09.2026, требований следующего набора в снимке нет. Research Plan и Master Thesis Topic & Abstract нужны только в докторантуре — в файл для бакалавриата не внесены."
+}

@@ -1,0 +1,82 @@
+{
+  "id": "wiut",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Сейчас собеседование не требуется, но вуз оставляет за собой право ввести его как дополнительный этап отбора.",
+      "evidence": "The university reserves the right to introduce other admission processes including for example, an Interview.",
+      "source": {
+        "url": "https://www.wiut.uz/certificate-international-foundation-studies",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:2ce7272607359d0b1f87a146df952a511cfc52cd1660ab7c472ee0b5eba0bd72"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Нужен только для магистратуры: CV в списке документов вместе с дипломом бакалавра и personal statement.",
+      "evidence": "5. CV 6. Personal statement 7. Research proposal (for MSc Research Methods)",
+      "source": {
+        "url": "https://admission.wiut.uz/Manual/OverView",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:6843e62b18e56e37ec82eefa47fb290b6a2c51d78cd89a22802b37ff3f16f19d"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Personal statement тоже только для магистратуры: он в том же списке документов, что CV и диплом бакалавра.",
+      "evidence": "6. Personal statement 7. Research proposal (for MSc Research Methods)",
+      "source": {
+        "url": "https://admission.wiut.uz/Manual/OverView",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:6843e62b18e56e37ec82eefa47fb290b6a2c51d78cd89a22802b37ff3f16f19d"
+      }
+    },
+    {
+      "type": "studyPlan",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Только для магистратуры MSc Research Methods: к заявке прикладывают research proposal.",
+      "evidence": "7. Research proposal (for MSc Research Methods)",
+      "source": {
+        "url": "https://admission.wiut.uz/Manual/OverView",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:6843e62b18e56e37ec82eefa47fb290b6a2c51d78cd89a22802b37ff3f16f19d"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "awards",
+    "portfolio",
+    "video"
+  ],
+  "note": "Данные набора 2026/27: заявки закрывались 15 июля (Foundation) и 17 августа 2026, требования следующего набора могут измениться. CV, personal statement и research proposal — только магистратура. Сертификаты по английскому и математике и Confirmation letter — уже собранные документы, не внесены."
+}

@@ -1,0 +1,50 @@
+{
+  "id": "gyeongsang",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "studyPlan",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": "지원동기(Purpose of Application) 한국에서의 학업 이수 계획 (Study Plans in Korea) 졸업 후 진로(Plans after Graduation)",
+      "who": null,
+      "language": null,
+      "via": "mail",
+      "ru": "Обязательная форма Study Plan: мотивация, план учёбы в Корее, планы после выпуска. Объём в правилах не указан.",
+      "evidence": "② Study Plan [Form 2] ○",
+      "source": {
+        "url": "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=77397",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:be970c48eb71300fc177c1d6460d870f1677dd5af800418dbf826a28757c3592"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Собеседование — половина оценки второго этапа, вторая половина — языковой уровень.",
+      "evidence": "Step 2 Language proficiency 50%, Interview 50%",
+      "source": {
+        "url": "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=77397",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:be970c48eb71300fc177c1d6460d870f1677dd5af800418dbf826a28757c3592"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "recommendation",
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "video"
+  ],
+  "note": "Данные из гайда Fall 2026 (2026학년도 후기, дополнительный приём) — прошлый цикл; для следующего набора требования могут измениться, более свежего гайда в снимке нет. Английская версия; при расхождении главенствует корейская. Отдельного эссе нет: вопросы о мотивации и планах — внутри Study Plan. TOPIK и другие языковые сертификаты — документы, а не материалы ученика; необязательный опрос о вузе не внесён."
+}

@@ -1,0 +1,67 @@
+{
+  "id": "ada-university",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "words", "max": 500},
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Statement of Purpose на английском: зачем вам эта программа, какие цели и планы в карьере. От 300 до 500 слов, прикладывается к онлайн-заявке.",
+      "evidence": "Statement of Purpose describing motivation for applying to this program, future goals and career aspirations (minimum 300, maximum 500 words)",
+      "source": {
+        "url": "https://www.ada.edu.az/en/admission/undergraduate",
+        "lastVerified": "2026-09-19",
+        "contentHash": "sha256:8550875ca02923ea4c790b1f1456a7d74248abb0501b63d75d25403c72d6b926"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "pages", "max": 2},
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Резюме не длиннее двух страниц — один из документов онлайн-заявки иностранца.",
+      "evidence": "CV (no more than 2 pages)",
+      "source": {
+        "url": "https://www.ada.edu.az/en/admission/undergraduate",
+        "lastVerified": "2026-09-19",
+        "contentHash": "sha256:8550875ca02923ea4c790b1f1456a7d74248abb0501b63d75d25403c72d6b926"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Отобранных абитуриентов приглашают на собеседование на английском. Комиссия смотрит на собеседование и решает о приёме по его результатам.",
+      "evidence": "Shortlisted applicants are invited for an evaluative interview which is held in English. Admission Committee reviews applicant's prior academic records, intellectual capacity, potential for growth, career focus, and ability to succeed at ADA University. Interview serves as a final step of admission process, and final decisions are made based on the applicant's interview results.",
+      "source": {
+        "url": "https://www.ada.edu.az/en/admission/undergraduate",
+        "lastVerified": "2026-09-19",
+        "contentHash": "sha256:8550875ca02923ea4c790b1f1456a7d74248abb0501b63d75d25403c72d6b926"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Снимок — приём 2026: дедлайны 8 апреля и 1 июля 2026, собеседования в мае — августе. Справка из школы вместо аттестата — подтверждение выпуска, а не рекомендация."
+}

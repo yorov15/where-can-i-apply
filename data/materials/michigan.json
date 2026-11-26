@@ -1,0 +1,59 @@
+{
+  "id": "michigan",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Одна Teacher Evaluation от учителя основного предмета или другого взрослого не из семьи, кто может сказать об успехах и работе в классе.",
+      "evidence": "Submit one Teacher Evaluation (core academic teacher or other non-relative who can speak directly to the student's academic aptitude, potential, and classroom performance).",
+      "source": {
+        "url": "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:e16cedea4a1163a69685efab87ca6f628d3fdcd9c71f94356492869cee0c233e"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Письмо школьного консультанта: просят прислать, но оно не обязательно.",
+      "evidence": "Submit a Counselor Recommendation (encouraged, but not required).",
+      "source": {
+        "url": "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:e16cedea4a1163a69685efab87ca6f628d3fdcd9c71f94356492869cee0c233e"
+      }
+    },
+    {
+      "type": "other",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Если окончили школу не в мае–июне или был перерыв в учёбе: письменное объяснение, что делали до начала учёбы в U-M, и список курсов, если учились в другом вузе.",
+      "evidence": "If you graduate high school in December or anytime other than May-June, please provide a detailed explanation as to what you will be doing until the time you would begin study at U-M. Please also indicate if you enroll at another university in the interim and provide a list of courses. A detailed explanation of any gaps in enrollment is required (this applies to both first-year applicants and university transfers).",
+      "source": {
+        "url": "https://admissions.umich.edu/apply/international-applicants/requirements-deadlines/requirements-country",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:a625562823324b3befe305456556bd26ae30e0c06cdfbb334941e45b5001dc75"
+      }
+    }
+  ],
+  "notStated": ["cv", "awards", "portfolio", "studyPlan", "video", "interview", "certificates"],
+  "note": "Снимок 2026-09-30: требования для иностранцев, требования по странам, экзамены, стоимость. Своей страницы вопросов эссе в снимке нет, поэтому эссе не внесено ни в items, ни в notStated. Общее эссе и список активностей Common App по правилу партии не внесены."
+}

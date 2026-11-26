@@ -1,0 +1,115 @@
+{
+  "id": "keio-pearl",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "words", "max": 600},
+      "prompt": "why you are applying to PEARL in relation to your academic and future goals",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Written Statement: почему вы подаётесь на PEARL — в связи с учебными и будущими целями. До 600 слов без учёта имени и заголовка.",
+      "evidence": "The limit is 600 words excluding your name and the title.",
+      "source": {
+        "url": "https://www.keio.ac.jp/files/c9c4d47ee5f4d118ad078942dac9baeb225edc5c1b26271959e2b80c4ed54c82",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:e114a645a8a05c424b60cb6b15f4b2a00857f4cfa424f949ea9825b4b51d06e2"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Учебная история по годам, с начальной школы до сегодня: заполняется в форме TAO.",
+      "evidence": "You must complete the designated form on TAO with your academic background (in chronological order, from elementary school to the present)",
+      "source": {
+        "url": "https://www.keio.ac.jp/files/c9c4d47ee5f4d118ad078942dac9baeb225edc5c1b26271959e2b80c4ed54c82",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:e114a645a8a05c424b60cb6b15f4b2a00857f4cfa424f949ea9825b4b51d06e2"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "words", "max": 250},
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Краткое самоописание — до 250 слов.",
+      "evidence": "The length of the brief self introduction should be up to 250 words.",
+      "source": {
+        "url": "https://www.keio.ac.jp/files/c9c4d47ee5f4d118ad078942dac9baeb225edc5c1b26271959e2b80c4ed54c82",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:e114a645a8a05c424b60cb6b15f4b2a00857f4cfa424f949ea9825b4b51d06e2"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": {"unit": "items", "max": 3},
+      "prompt": null,
+      "who": "any",
+      "language": null,
+      "via": "platform",
+      "ru": "Нужно хотя бы одно рекомендательное письмо, можно до трёх; на английском или японском.",
+      "evidence": "At least one Letter of Reference is required. If you wish to submit more than one, up to three Letters of Reference will be accepted.",
+      "source": {
+        "url": "https://www.keio.ac.jp/files/c9c4d47ee5f4d118ad078942dac9baeb225edc5c1b26271959e2b80c4ed54c82",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:e114a645a8a05c424b60cb6b15f4b2a00857f4cfa424f949ea9825b4b51d06e2"
+      }
+    },
+    {
+      "type": "video",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "minutes", "max": 2},
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Видео не длиннее двух минут: съёмка на камеру. Это альтернатива интервью, качество съёмки не оценивают.",
+      "evidence": "Prepare and upload a video in which you talk to the camera for no longer than two minutes. The video does not need to be elaborately produced and its production quality will not be evaluated. This is an alternative to an interview.",
+      "source": {
+        "url": "https://www.keio.ac.jp/files/c9c4d47ee5f4d118ad078942dac9baeb225edc5c1b26271959e2b80c4ed54c82",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:e114a645a8a05c424b60cb6b15f4b2a00857f4cfa424f949ea9825b4b51d06e2"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "optional",
+      "count": null,
+      "limit": {"unit": "items", "max": 3},
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "По желанию — до трёх дополнительных сертификатов.",
+      "evidence": "You may upload up to three additional certificate documents.",
+      "source": {
+        "url": "https://www.keio.ac.jp/files/c9c4d47ee5f4d118ad078942dac9baeb225edc5c1b26271959e2b80c4ed54c82",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:e114a645a8a05c424b60cb6b15f4b2a00857f4cfa424f949ea9825b4b51d06e2"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan"
+  ],
+  "note": "Набор September 2027, три периода подачи. Интервью нет: «No interview is required» — его заменяет видео. Про кружки и волонтёрство просят не прикладывать отдельно, а упомянуть в самоописании; сертификаты о наградах идут в дополнительные сертификаты. Готовить материалы с помощью генеративного ИИ запрещено."
+}

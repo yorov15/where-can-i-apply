@@ -1,0 +1,103 @@
+{
+  "id": "kbtu",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 600
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Мотивационное письмо на английском, до 600 слов. Загружают на портал admissions.kbtu.kz вместе с остальными документами.",
+      "evidence": "4. Motivation letter in English (up to 600 words)",
+      "source": {
+        "url": "https://kbtu.edu.kz/en/internationalization/international-admissions-internationalization",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:ac5dfa49a234f7e9becd9706c2a8b5300e2dce9ad71f92df3f3f408b2aef3023"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Сертификат английского (IELTS или TOEFL) — если он есть: в списке для бакалавриата он помечен «if available».",
+      "evidence": "3. Certificate of English proficiency (IELTS, TOEFL if available)",
+      "source": {
+        "url": "https://kbtu.edu.kz/en/internationalization/international-admissions-internationalization",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:ac5dfa49a234f7e9becd9706c2a8b5300e2dce9ad71f92df3f3f408b2aef3023"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Письмо-рекомендация — только на треке внутренних грантов и скидок (Internal Grants and Discounts). Для бакалавриата в таблице одно письмо, два — для магистратуры.",
+      "evidence": "Letter of recommendation Two letters of recommendation (at least one academic)",
+      "source": {
+        "url": "https://kbtu.edu.kz/en/internationalization/international-admissions-internationalization",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:ac5dfa49a234f7e9becd9706c2a8b5300e2dce9ad71f92df3f3f408b2aef3023"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Сертификаты достижений — только на треке внутренних грантов и скидок, и только если они есть.",
+      "evidence": "Other certificates of achievement (if any)",
+      "source": {
+        "url": "https://kbtu.edu.kz/en/internationalization/international-admissions-internationalization",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:ac5dfa49a234f7e9becd9706c2a8b5300e2dce9ad71f92df3f3f408b2aef3023"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Собеседование с приёмной комиссией — второй этап трека внутренних грантов и скидок: зовут тех, кто прошёл отбор документов.",
+      "evidence": "Stage 2: Interview Applicants who successfully pass the first stage will be invited to an interview. The date and time will be sent to the applicant's email.",
+      "source": {
+        "url": "https://kbtu.edu.kz/en/internationalization/international-admissions-internationalization",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:ac5dfa49a234f7e9becd9706c2a8b5300e2dce9ad71f92df3f3f408b2aef3023"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Для бакалавриата в общем списке только паспорт, документ об образовании, сертификат английского «if available» и мотивационное письмо до 600 слов. Письмо-рекомендация, сертификаты достижений и собеседование — только на треке Internal Grants and Discounts; CV и research proposal просят в магистратуре и PhD, не на бакалавриате."
+}

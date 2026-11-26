@@ -1,0 +1,101 @@
+{
+  "id": "sysu",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "После проверки документов приглашают тех, кто её прошёл: на собеседовании оценивают общую подготовку и язык.",
+      "evidence": "SYSU will review the submitted application documents, and qualified applicants will be invited to attend an interview. The interview will assess the applicant's overall competence and language proficiency.",
+      "source": {
+        "url": "https://iso.sysu.edu.cn/en/application/selffunded/1420575.htm",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:9b7b35502870fd78f14d3a07f99502f5d752d1e414693eabe8d35d73ac108f71"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Только для стипендии вуза: письмо от агентства или представителя (амбассадора) вуза в стране заявителя.",
+      "evidence": "Recommendation letter from an agency or an international student recruitment ambassador in the applicant ' s home country recognized by Sun Yat-sen University.",
+      "source": {
+        "url": "https://iso.sysu.edu.cn/en/application/scholarship/1420586.htm",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:d36d6da81a58fe7b4db4ddffa605742b498405c7ab61aa3d83f6bbd07b1f49dd"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Только для стипендии вуза: два письма — от директора школы и от учителя-предметника, по шаблону.",
+      "evidence": "Two recommendation letters: In principle, one should be provided by the principal of the high school and the other by a course teacher (see template in Attachment 1 ).",
+      "source": {
+        "url": "https://iso.sysu.edu.cn/en/application/scholarship/1420586.htm",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:d36d6da81a58fe7b4db4ddffa605742b498405c7ab61aa3d83f6bbd07b1f49dd"
+      }
+    },
+    {
+      "type": "studyPlan",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Только для стипендии вуза: план учёбы и исследования в Китае — о себе, учёбе, целях, причинах подачи и планах после выпуска; по шаблону.",
+      "evidence": "Plan of Study and Research in China: The content includes self-introduction, academic background, hobbies, learning objectives, reasons for application, and career plans after graduation (see template in Attachment 2 ).",
+      "source": {
+        "url": "https://iso.sysu.edu.cn/en/application/scholarship/1420586.htm",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:d36d6da81a58fe7b4db4ddffa605742b498405c7ab61aa3d83f6bbd07b1f49dd"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "По желанию можно приложить награды и документы, подтверждающие опыт, — в поддержку заявки.",
+      "evidence": "Applicants may submit certificates of awards or documents verifying relevant experience to support their application.",
+      "source": {
+        "url": "https://iso.sysu.edu.cn/en/application/selffunded/1420575.htm",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:9b7b35502870fd78f14d3a07f99502f5d752d1e414693eabe8d35d73ac108f71"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "activities",
+    "cv",
+    "portfolio",
+    "video",
+    "certificates",
+    "other"
+  ],
+  "note": "Правила набора 2026, снимок 01.10.2026; для 2027 могут измениться. Материалы для стипендии вуза — из правил SYSU Scholarship, страница помечена CLOSED. CSCA и HSK — экзамены, они в data/prep."
+}

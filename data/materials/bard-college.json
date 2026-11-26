@@ -1,0 +1,113 @@
+{
+  "id": "bard-college",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Вместо обычной заявки можно сдать Bard Entrance Examination — онлайн-эссе для старшеклассников: сдача засчитывается как заявка. Это альтернативный путь, не обязательный для всех.",
+      "evidence": "The Bard Entrance Examination is an online essay test open to high school juniors and seniors. Completion of the test is equivalent to an application for admission.",
+      "source": {
+        "url": "https://www.bard.edu/admission/international/",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:326c2c55cc967628bd0051e941d48ff920a8e587a132e152e09e86ab1eac30db"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации: одна от школьного консультанта (guidance или college counselor), вторая от школьного учителя.",
+      "evidence": "Teacher recommendations: Two are required. One must come from a guidance or college counselor and one from a High School teacher.",
+      "source": {
+        "url": "https://www.bard.edu/admission/international/",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:326c2c55cc967628bd0051e941d48ff920a8e587a132e152e09e86ab1eac30db"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Только при поступлении через Bard Entrance Examination: вместо двух рекомендаций нужен один общий отзыв от должностного лица школы.",
+      "evidence": "General reference letter from appropriate school official",
+      "source": {
+        "url": "https://www.bard.edu/admission/international/",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:326c2c55cc967628bd0051e941d48ff920a8e587a132e152e09e86ab1eac30db"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Творческие материалы (artistic supplements) можно загрузить в портал Bard, если решишь их присылать.",
+      "evidence": "If you decide to submit artistic supplements, you can upload the files on your Bard portal.",
+      "source": {
+        "url": "https://www.bard.edu/admission/international/",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:326c2c55cc967628bd0051e941d48ff920a8e587a132e152e09e86ab1eac30db"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Награды и сертификаты за внешкольные достижения можно передать в резюме вместе с заявкой.",
+      "evidence": "To submit awards or certificates for extracurricular achievements include them in a resume along with your application.",
+      "source": {
+        "url": "https://www.bard.edu/admission/international/",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:326c2c55cc967628bd0051e941d48ff920a8e587a132e152e09e86ab1eac30db"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "По желанию можно пройти дополнительную проверку английского в InitialView или Vericant — помимо TOEFL, IELTS или Duolingo.",
+      "evidence": "In addition to the English language proficiency exam requirement (TOEFL, IELTS, or Duolingo English Test), students have the option to participate in the optional English Proficiency supplements with one of our two service partners: Initialview or Vericant.",
+      "source": {
+        "url": "https://www.bard.edu/admission/international/",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:326c2c55cc967628bd0051e941d48ff920a8e587a132e152e09e86ab1eac30db"
+      }
+    }
+  ],
+  "notStated": [
+    "video",
+    "studyPlan"
+  ],
+  "note": "Общее эссе и список активностей Common App не внесены. Личное интервью упоминается только для переводящихся студентов: первокурсникам оно не требуется."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "tudelft",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "pages",
+        "max": 3
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Резюме на английском, не больше трёх страниц; формат свободный, можно Europass. Внутри: название аттестата на языке оригинала, выпускные экзамены и их уровень, навыки, интересы, внеучебные занятия и достижения.",
+      "evidence": "A Curriculum Vitae (CV) in English. There is no mandatory format for your CV, but you may use the Europass CV format if you wish. Your CV should not exceed three pages. Please make sure your CV includes the following information: The name of your secondary school diploma in the original language. Your final examination subjects and, where applicable, the examination level of each subject. Please refer to the Required (National) examination subjects for your BSc programme. Any additional skills, interests, extracurricular activities, achievements, or other information you consider relevant.",
+      "source": {
+        "url": "https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/required-documents",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:5bd185d3c1be7b6792bba32039529c09fb94d4b602dc2454ea695239d5a0eeb5"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "recommendation",
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "interview",
+    "certificates"
+  ],
+  "note": "Эссе, мотивационного письма, рекомендаций, портфолио, видео и собеседования страницы не упоминают; активности и достижения — только внутри CV. Для numerus clausus программ отбор идёт по отдельному регламенту, которого в снимке нет: какие материалы он требует — не проверено. Стипендии с reference letter на страницах — только для магистратуры. Языковой сертификат, диплом и транскрипт — документы, не материалы. У части программ есть обязательный matching, его формат в снимке не описан."
+}

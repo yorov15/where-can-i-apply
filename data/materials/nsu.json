@@ -1,0 +1,42 @@
+{
+  "id": "nsu",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Дополнительный документ по желанию при подаче на госстипендию через Rossotrudnichestvo: письма рекомендации в списке прочих документов.",
+      "evidence": "Any other documents, such as recommendation letters, certificates of international exams, certificates of language skills.",
+      "source": {
+        "url": "https://english.nsu.ru/admission/grants-scholarships/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:715caf467753552270eb69d9ae8189f221e078d2662bbf36188d350ea651a142"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "По желанию при подаче на госстипендию: можно приложить сертификаты международных экзаменов и знания языка.",
+      "evidence": "Any other documents, such as recommendation letters, certificates of international exams, certificates of language skills.",
+      "source": {
+        "url": "https://english.nsu.ru/admission/grants-scholarships/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:715caf467753552270eb69d9ae8189f221e078d2662bbf36188d350ea651a142"
+      }
+    }
+  ],
+  "notStated": ["essay", "activities", "cv", "awards", "portfolio", "studyPlan", "video", "interview"],
+  "note": "Снимок 2026-10-01. На бакалавриате NSU просит форму и документы, эссе, мотивационного письма и собеседования нет. Резюме и мотивационное письмо встречаются только на странице магистерской программы «Russian Language, Literature and Culture for Foreigners» — в файл не внесены."
+}

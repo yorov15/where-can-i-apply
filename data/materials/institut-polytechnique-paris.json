@@ -1,0 +1,86 @@
+{
+  "id": "institut-polytechnique-paris",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Personal statement в онлайн-заявке. Вопроса и объёма страница не называет — готовьте текст сами, без шаблона вуза.",
+      "evidence": "Applicants must submit official academic transcripts, a personal statement, a CV, a form of ID, a photo, the application fee and contact details for two referents.",
+      "source": {
+        "url": "https://programmes.polytechnique.edu/en/bachelor/admissions/admissions-criteria-and-procedure",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:05fbbd6ff8a975551e3899546315107a0d49917649b7fb0e7b1bd292bd871c5a"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "CV в той же онлайн-заявке. Что в нём писать и сколько страниц, страница не уточняет.",
+      "evidence": "Applicants must submit official academic transcripts, a personal statement, a CV, a form of ID, a photo, the application fee and contact details for two referents.",
+      "source": {
+        "url": "https://programmes.polytechnique.edu/en/bachelor/admissions/admissions-criteria-and-procedure",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:05fbbd6ff8a975551e3899546315107a0d49917649b7fb0e7b1bd292bd871c5a"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации, минимум одна — от учителя математики в вашей школе. Референты указывают имя, должность и e-mail.",
+      "evidence": "Applicants must provide the i nformation details of two referees: Name Job title E-mail Websites (if applicable) At least one of the referees must be a mathematics teacher at your current institution.",
+      "source": {
+        "url": "https://programmes.polytechnique.edu/en/bachelor/admissions/faq",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:3b7247b84dd591f1c494b75c7bc4950ec3fc9340716e220bc4a1a85c6f2b1746"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": {
+        "unit": "minutes",
+        "max": 50
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Собеседование по видеосвязи примерно 50 минут на английском — только для тех, кого отберут по документам.",
+      "evidence": "Shortlisted applicants receive an invitation for an interview, which will be conducted remotely (videoconference). The interview will last around 50 minutes and will be conducted entirely in English.",
+      "source": {
+        "url": "https://programmes.polytechnique.edu/en/bachelor/admissions/admissions-criteria-and-procedure",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:05fbbd6ff8a975551e3899546315107a0d49917649b7fb0e7b1bd292bd871c5a"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Вопросов эссе нет: personal statement без темы и лимита. Рекомендации идут через онлайн-форму на платформе, письма загружают сами референты."
+}

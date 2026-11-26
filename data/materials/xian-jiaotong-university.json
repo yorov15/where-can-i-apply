@@ -1,0 +1,83 @@
+{
+  "id": "xian-jiaotong-university",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": null,
+      "via": "platform",
+      "ru": "Одна рекомендация от директора школы или учителя; в письме должны быть подпись, email и телефон рекомендателя.",
+      "evidence": "6.A recommendation letter written by the high school headmaster or teachers (email, phone number and signature should be included.)",
+      "source": {
+        "url": "https://sie.xjtu.edu.cn/en/info/1119/2943.htm",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:2354f8c02abfdf1262f4fe7554c39c93dd11a079b247382b3de2d2ed320d6184"
+      }
+    },
+    {
+      "type": "studyPlan",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Учебный план на английском или китайском — не меньше 600 слов или знаков.",
+      "evidence": "7. Study plan written in English or Chinese with no less than 600 characters or words;",
+      "source": {
+        "url": "https://sie.xjtu.edu.cn/en/info/1119/2943.htm",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:2354f8c02abfdf1262f4fe7554c39c93dd11a079b247382b3de2d2ed320d6184"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Только для Environmental Design: на собеседовании показать портфолио своих работ — обязательно рисунки и/или цветные работы.",
+      "evidence": "e. Applicants for the Environmental Design program must possess a strong foundation in fine arts. During the interview, applicants are required to present a portfolio of their independently completed work, which must include sketches and/or color works.",
+      "source": {
+        "url": "https://sie.xjtu.edu.cn/en/info/1119/2943.htm",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:2354f8c02abfdf1262f4fe7554c39c93dd11a079b247382b3de2d2ed320d6184"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Комплексное собеседование — часть отбора для всех: по нему вместе с оценками, языком и CSCA решают о приёме.",
+      "evidence": "Admission will be granted to the most qualified applicants based on their academic records, language proficiency, CSCA results, and performance in the comprehensive interview.",
+      "source": {
+        "url": "https://sie.xjtu.edu.cn/en/info/1119/2943.htm",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:2354f8c02abfdf1262f4fe7554c39c93dd11a079b247382b3de2d2ed320d6184"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "activities",
+    "cv",
+    "awards",
+    "video",
+    "certificates"
+  ],
+  "note": "Портфолио — только для Environmental Design, на собеседовании. Само комплексное собеседование в правилах общее, не только для этой программы. Учебный план: 600 — минимум, поэтому в limit не внесён."
+}

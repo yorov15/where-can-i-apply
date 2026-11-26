@@ -1,0 +1,100 @@
+{
+  "id": "gks-korea",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Личное заявление — отдельная форма в списке документов; можно на английском или корейском.",
+      "evidence": "Documents to complete : Application Form, Personal Statement, Study Plan, Recommendation Letter, GKS Applicant Agreement, Personal Medical Assessment, Consent to Collect and Use Personal Information",
+      "source": {
+        "url": "https://www.studyinkorea.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000673717&fileSn=1",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:280db9e71eae9b8d1df6828e00a053721f6ad8074c091f3fa31fc339c1526a8e"
+      }
+    },
+    {
+      "type": "studyPlan",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "План учёбы: можно на английском или корейском.",
+      "evidence": "The Application Form must be written in English. The Personal Statement and Study Plan may be written in English or Korean.",
+      "source": {
+        "url": "https://www.studyinkorea.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000673717&fileSn=1",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:280db9e71eae9b8d1df6828e00a053721f6ad8074c091f3fa31fc339c1526a8e"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": null,
+      "via": "upload",
+      "ru": "Одно письмо от человека, который может оценить учебные способности, — например, директора школы или учителя; не старше года на дату дедлайна.",
+      "evidence": "The letter should be written by a credible individual who can evaluate the applicant's academic ability, such as a school principal or teacher - Submit one letter of recommendation, issued within one year of the application deadline.",
+      "source": {
+        "url": "https://www.studyinkorea.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000673717&fileSn=1",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:280db9e71eae9b8d1df6828e00a053721f6ad8074c091f3fa31fc339c1526a8e"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "optional",
+      "count": null,
+      "limit": {
+        "unit": "items",
+        "max": 5
+      },
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "По желанию — до пяти документов о наградах и активности со старшей школы.",
+      "evidence": "Submit materials such as an award that can prove the applicant's activities described in the \"Personal statement\" and \"Study plan\". - May submit up to FIVE (5) documents relate to activities or achievements from high school onward.",
+      "source": {
+        "url": "https://www.studyinkorea.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000673717&fileSn=1",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:280db9e71eae9b8d1df6828e00a053721f6ad8074c091f3fa31fc339c1526a8e"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "На втором этапе отбора комиссия оценивает кандидата по документам и на устном собеседовании.",
+      "evidence": "Review of Competency - Selection committee will evaluate each applicant's competency through document screening and an oral interview",
+      "source": {
+        "url": "https://www.studyinkorea.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000673717&fileSn=1",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:280db9e71eae9b8d1df6828e00a053721f6ad8074c091f3fa31fc339c1526a8e"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "portfolio",
+    "video"
+  ],
+  "note": "Гайд 2027 GKS-U (English, 0914): формы 2 и 3, одно письмо-рекомендация, устное собеседование на втором этапе. Вопросы личного заявления в PDF не приведены."
+}

@@ -1,0 +1,116 @@
+{
+  "id": "science-tokyo",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "form",
+      "ru": "Personal statement пишут в онлайн-форме заявки — это часть первого отбора в Science Tokyo.",
+      "evidence": "For the initial screening, there are personal statement essays you may write in the online application form.",
+      "source": {
+        "url": "https://www.tse.ens.titech.ac.jp/~gsep/faq/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:22c6f150bc20777eee5572afc1c53609c75bdcfdebf72659741871bb002a150a"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "principal",
+      "language": "en",
+      "via": "platform",
+      "ru": "Директор последней школы заполняет Applicant Evaluation and Recommendation Form и сам отправляет её в Science Tokyo через онлайн-систему; если директор не может — можно попросить другого учителя.",
+      "evidence": "The recommender must submit the evaluation sheet and recommendation letter directly to Science Tokyo through the Online Application System by the deadline. If the principal of the applicant's high school cannot submit the Applicant Evaluation and Recommendation Form, the applicant may ask someone else (a preparatory school teacher, etc.) who can report on the applicant's academic ability in detail.",
+      "source": {
+        "url": "https://admissions.isct.ac.jp/en/013/undergraduate/programs/gsep",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:26ac42335a10620ff664e70854b4ec2a915ccce6be57e47e62907f85a6f53bfb"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Прошедших предварительный отбор собеседует профессор GSEP; в том же туре — письменный экзамен по школьным математике, физике и химии.",
+      "evidence": "Applicants who pass the preliminary screening will be interviewed by a GSEP professor and take a written exam covering high school mathematics, physics, and chemistry.",
+      "source": {
+        "url": "https://admissions.isct.ac.jp/en/013/undergraduate/programs/gsep",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:26ac42335a10620ff664e70854b4ec2a915ccce6be57e47e62907f85a6f53bfb"
+      }
+    },
+    {
+      "type": "other",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Письменный экзамен второго тура: задачи по школьной математике, физике и химии плюс вопросы-эссе на критическое мышление.",
+      "evidence": "The written examination is composed of a problem-solving exam that covers high school level mathematics, physics, chemistry, and essay questions to assess critical thinking.",
+      "source": {
+        "url": "https://www.tse.ens.titech.ac.jp/~gsep/faq/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:22c6f150bc20777eee5572afc1c53609c75bdcfdebf72659741871bb002a150a"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Нужно отправить результат одного из перечисленных тестов английского как подтверждение уровня; засчитывают только тест, сданный не позже двух лет до конца приёма.",
+      "evidence": "Applicants are required to submit a score report of the following tests as proof of their English proficiency. A score report is considered valid only if the test is taken within two years prior to the last day of the application period.",
+      "source": {
+        "url": "https://admissions.isct.ac.jp/en/013/undergraduate/programs/gsep",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:26ac42335a10620ff664e70854b4ec2a915ccce6be57e47e62907f85a6f53bfb"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "После первого отбора можно по желанию показать на собеседовании любые документы, в том числе CV, — если они помогают заявке.",
+      "evidence": "Can I send additional documents like CV, recommendation letters, etc.? Applicants who pass the initial screening may optionally show any documents to help their application in the interview of the secondary screening.",
+      "source": {
+        "url": "https://www.tse.ens.titech.ac.jp/~gsep/faq/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:22c6f150bc20777eee5572afc1c53609c75bdcfdebf72659741871bb002a150a"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Набор April 2027: заявки 12–21 августа 2026, второй тур в 2026 году в основном онлайн. Форма рекомендации одна, но числа в цитате нет — count не заполнен. Activities и video на страницах — про студенческую жизнь и ролик о программе, не про заявку."
+}

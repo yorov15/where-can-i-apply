@@ -1,0 +1,116 @@
+{
+  "id": "masaryk-university",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "На части направлений факультета искусств дополнительно к документам просят эссе или рекомендательные письма. Какие именно направления — вуз здесь не перечисляет.",
+      "evidence": "some study fields require also an essay or recommendation letters",
+      "source": {
+        "url": "https://www.muni.cz/en/admissions/bachelors-and-masters-studies/how-to-apply",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:6c3b0d9615f7be61b799878f778d1b2aa1e50d5e196351ba4c0bd2186b74c615"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "На факультете искусств приём зависит от качества документов, и среди них — statement of purpose на английском: письмо о себе и своих мотивах.",
+      "evidence": "The result of the admission process depends on the quality of the provided documents: statement of purpose in English a document demonstrating English-language skills",
+      "source": {
+        "url": "https://www.muni.cz/en/admissions/bachelors-and-masters-studies/how-to-apply",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:6c3b0d9615f7be61b799878f778d1b2aa1e50d5e196351ba4c0bd2186b74c615"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "На факультете образования просят CV и сопроводительное письмо вместе с сертификатом английского, документом об образовании и онлайн-собеседованием.",
+      "evidence": "Applicants are asked to submit: CV cover letter certificate of proficiency in English a document certifying completion of secondary education/bachelor's programme online interview",
+      "source": {
+        "url": "https://www.muni.cz/en/admissions/bachelors-and-masters-studies/how-to-apply",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:6c3b0d9615f7be61b799878f778d1b2aa1e50d5e196351ba4c0bd2186b74c615"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "На факультете информатики нужно два письма на официальном бланке, и хотя бы одно из них — от академического лица.",
+      "evidence": "Two references on the official headed paper, one of which should be an academic reference",
+      "source": {
+        "url": "https://www.muni.cz/en/admissions/bachelors-and-masters-studies/how-to-apply",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:6c3b0d9615f7be61b799878f778d1b2aa1e50d5e196351ba4c0bd2186b74c615"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "На факультете искусств заявки смотрит приёмная комиссия, а прошедших первый тур приглашают на онлайн-собеседование.",
+      "evidence": "Applications will be reviewed by the admission committee and students who pass the first round will be invited for an online interview.",
+      "source": {
+        "url": "https://www.muni.cz/en/admissions/bachelors-and-masters-studies/how-to-apply",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:6c3b0d9615f7be61b799878f778d1b2aa1e50d5e196351ba4c0bd2186b74c615"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "На факультете информатики нужен английский не ниже B2, подтверждённый сертификатом из списка тех, которые вуз принимает.",
+      "evidence": "Proof of English language level at least at B2 level proved by accepted below-mentioned certificate.",
+      "source": {
+        "url": "https://www.muni.cz/en/admissions/bachelors-and-masters-studies/how-to-apply",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:6c3b0d9615f7be61b799878f778d1b2aa1e50d5e196351ba4c0bd2186b74c615"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Набор зависит от факультета. Искусства: statement of purpose, у части направлений ещё эссе или рекомендации. Информатика: CV, мотивационное письмо, эссе, две рекомендации, B2. Образование: CV с cover letter. Аттестат, паспорт и переводы — в data/prep."
+}

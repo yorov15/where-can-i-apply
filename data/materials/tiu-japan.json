@@ -1,0 +1,89 @@
+{
+  "id": "tiu-japan",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 600
+      },
+      "prompt": "How studying at TIU in your selected major will help you achieve your future goals ・Example(s) of past achievement(s), and how they will translate to success at TIU",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Эссе на английском, 450–600 слов. Ответить, как учёба на выбранной специальности в TIU поможет достичь будущих целей и какие прошлые достижения помогут в TIU.",
+      "evidence": "Write in English (450 to 600 words). Ensure that your essay is compliant with TIU's Plagiarism Policy on page 30.",
+      "source": {
+        "url": "https://www.tiu.ac.jp/etrack/wp-content/uploads/application_guideline_for_first_year.pdf",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:d84091a16bed8de4c4f0fd3bab4b16c196bdc8466f78eaba3aa20fcc655ae69b"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": null,
+      "via": "mail",
+      "ru": "Рекомендательное письмо от учителя, преподавателя, научного руководителя или должностного лица последней школы или вуза.",
+      "evidence": "A letter of recommendation signed by a teacher, professor, academic advisor, or school official of your most recently attended secondary school or higher education institution must be submitted.",
+      "source": {
+        "url": "https://www.tiu.ac.jp/etrack/wp-content/uploads/application_guideline_for_first_year.pdf",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:d84091a16bed8de4c4f0fd3bab4b16c196bdc8466f78eaba3aa20fcc655ae69b"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "optional",
+      "count": null,
+      "limit": {
+        "unit": "items",
+        "max": 3
+      },
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "До трёх файлов, которые доказывают участие во внеучебных активностях: школьный совет, волонтёрство, соревнования, языки. Например, награды или отзывы.",
+      "evidence": "Extracurricular Activities (Up to 3) if available If you have participated in extracurricular activities (student council, volunteer work, sports competitions, language proficiency etc.), upload proof of no more than 3 items which clearly prove your participation (e.g. awards, testimonials, etc.).",
+      "source": {
+        "url": "https://www.tiu.ac.jp/etrack/wp-content/uploads/application_guideline_for_first_year.pdf",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:d84091a16bed8de4c4f0fd3bab4b16c196bdc8466f78eaba3aa20fcc655ae69b"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Собеседования обычно нет. TIU может провести его онлайн или лично, если сочтёт нужным.",
+      "evidence": "Basically no. TIU may hold an interview online or in person if deemed necessary.",
+      "source": {
+        "url": "https://www.tiu.ac.jp/etrack/wp-content/uploads/application_guideline_for_first_year.pdf",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:d84091a16bed8de4c4f0fd3bab4b16c196bdc8466f78eaba3aa20fcc655ae69b"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Набор April & September 2027. Отдельного блока наград нет: награды принимают как доказательство активностей, до 3 файлов. Рекомендацию подписывают: скан принимают со школьной почты на etrackadmissions@tiu.ac.jp, иначе — оригинал почтой."
+}

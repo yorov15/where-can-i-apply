@@ -1,0 +1,25 @@
+{
+  "id": "university-of-economics-bratislava",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "other",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "form",
+      "ru": "Вступительный экзамен: в заявке уже отмечены его обязательные предметы (общие учебные предпосылки), остаётся выбрать иностранный язык, на котором будете сдавать.",
+      "evidence": "If you see the \" Choice of subjects \" table, the mandatory subjects of the entrance exam (General study requirements) are already marked. Select the foreign language of your choice in which you will take the entrance exam by marking it and confirming with the OK button.",
+      "source": {
+        "url": "https://euba.sk/en/applicant/prihlaska-na-eu-v-bratislave/navod-na-vyplnenie-e-prihlasky-1-stupen",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:d083bc31ac3c0c3cdd14a7a57cef8384bb40c9dc34d0bd4b0a707479565a5b36"
+      }
+    }
+  ],
+  "notStated": ["essay", "recommendation", "activities", "cv", "awards", "portfolio", "studyPlan", "video", "interview", "certificates"],
+  "note": "Набор 2027/28: сроки подачи для 1-й ступени — tba, страница 2026/27 ещё открыта. В инструкции к электронной заявке: «No attachments are required» — к форме ничего не прикладывают, данные и оценки вносятся в неё."
+}

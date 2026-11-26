@@ -1,0 +1,84 @@
+{
+  "id": "manchester",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Личное заявление — возможность показать знание предмета и интерес к нему, в том числе через опыт работы.",
+      "evidence": "A personal statement is your chance to showcase your knowledge and commitment. These could include showing proof of relevant work experience.",
+      "source": {
+        "url": "https://www.manchester.ac.uk/study/undergraduate/applying/before-you-apply/",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:3ae7f72f1dca0fe3e2b8bd68e92e7d16577110aabb6c04663006fdad1f51c2b2"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Академическая рекомендация должна быть готова раньше заявки: без неё заявку через UCAS не отправить.",
+      "evidence": "Your academic reference must be complete before your application can be submitted to UCAS.",
+      "source": {
+        "url": "https://www.manchester.ac.uk/study/undergraduate/applying/",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:9d21bdddbcbc4ca12c2d0564918f7aae282e1e58b8d784e5a4c187be50a16bf6"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Только на отдельных курсах: дополнительный отбор в виде собеседования или теста.",
+      "evidence": "Some courses require you to undertake an additional admissions selection process such as an interview or assessment.",
+      "source": {
+        "url": "https://www.manchester.ac.uk/study/undergraduate/applying/before-you-apply/",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:3ae7f72f1dca0fe3e2b8bd68e92e7d16577110aabb6c04663006fdad1f51c2b2"
+      }
+    },
+    {
+      "type": "other",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "На отдельных курсах просят приложить к заявке письменную работу; там же могут требоваться опыт работы или изучение предмета.",
+      "evidence": "Some courses have additional entry requirements such as previous work experience, submission of written work with the application or previous study of a particular subject.",
+      "source": {
+        "url": "https://www.manchester.ac.uk/study/international/admissions/undergraduate-application-process/undergraduate-entry-requirements/",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:cf04cea3648869299db8ebb774a355c2f677feb0b662b24bacfdd0f046241ca0"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Набор 2027 (страницы обновлены к сентябрю 2026). Объём и вопросы личного заявления на страницах Манчестера не указаны. Рекомендация в цитате названа академической, кто именно её пишет — не сказано."
+}

@@ -1,0 +1,139 @@
+{
+  "id": "snu-korea",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 800
+      },
+      "prompt": "Please describe your motivation for your desired course.",
+      "who": null,
+      "language": null,
+      "via": "form",
+      "ru": "Personal statement и план учёбы — один текст в онлайн-форме; до 4 000 байт, около 800 английских слов.",
+      "evidence": "2 Personal Statement and Study Plan ∙ Fill out on the online application website. ∙ 4,000-byte limit including spaces and line breaks(about 2,000 Korean characters, 800 English words",
+      "source": {
+        "url": "https://en.snu.ac.kr/webdata/uploads/eng/file/2026/06/Admissions_for_Undergraduate_Spring_2027.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:c347399a0368ee3d426813967ef43a026d2f075e89f6762bfd40be6158deaae3"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 600
+      },
+      "prompt": null,
+      "who": "any",
+      "language": null,
+      "via": "platform",
+      "ru": "Рекомендательное письмо: до 3 000 байт с пробелами и переносами — примерно 600 английских слов.",
+      "evidence": "3,000-byte limit including spaces and line breaks (approximately 1,500 Korean characters or 600 English words)",
+      "source": {
+        "url": "https://en.snu.ac.kr/webdata/uploads/eng/file/2026/06/Admissions_for_Undergraduate_Spring_2027.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:c347399a0368ee3d426813967ef43a026d2f075e89f6762bfd40be6158deaae3"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Только для College of Fine Arts и College of Music: портфолио сдают напрямую в офис факультета, не в приёмную комиссию SNU.",
+      "evidence": "Required for applicants of the following departments ONLY: College of Fine Arts, College of Music ∙ Applicants must submit his/her portfolios directly to the department office, not to the SNU Office of Admissions.",
+      "source": {
+        "url": "https://en.snu.ac.kr/webdata/uploads/eng/file/2026/06/Admissions_for_Undergraduate_Spring_2027.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:c347399a0368ee3d426813967ef43a026d2f075e89f6762bfd40be6158deaae3"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Прослушивания и собеседования — только для College of Fine Arts и Department of Physical Education, приглашение приходит лично.",
+      "evidence": "College of Fine Arts: Applicants eligible for performance tests/ interviews will be notified individually. - Department of Physical Education: Applicants eligible for performance tests/interviews will be notified individually.",
+      "source": {
+        "url": "https://en.snu.ac.kr/webdata/uploads/eng/file/2026/06/Admissions_for_Undergraduate_Spring_2027.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:c347399a0368ee3d426813967ef43a026d2f075e89f6762bfd40be6158deaae3"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Онлайн-интервью — только для International Admissions II и только по списку приглашённых: список 11 сентября 2026, интервью 18 сентября 2026.",
+      "evidence": "4 Online Interview (International Admissions II Only) Announcement of interviewee list Friday, September 11, 2026, 17:00 Online interview Friday, September 18, 2026",
+      "source": {
+        "url": "https://en.snu.ac.kr/webdata/uploads/eng/file/2026/06/Admissions_for_Undergraduate_Spring_2027.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:c347399a0368ee3d426813967ef43a026d2f075e89f6762bfd40be6158deaae3"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "optional",
+      "count": null,
+      "limit": {
+        "unit": "items",
+        "max": 10
+      },
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "По желанию можно загрузить до 10 записей о школьных и внешкольных делах и наградах.",
+      "evidence": "Supplementary Materials (Optional) ∙ Documents demonstrating the applicant's in-school and extracurricular activities during high school (volunteer work, club activities, awards, etc.) ∙ Up to 10 entries, including both in-school and extracurricular activities and awards, can be provided and uploaded.",
+      "source": {
+        "url": "https://en.snu.ac.kr/webdata/uploads/eng/file/2026/06/Admissions_for_Undergraduate_Spring_2027.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:c347399a0368ee3d426813967ef43a026d2f075e89f6762bfd40be6158deaae3"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Нужен документ о владении корейским или английским: засчитывают один или несколько вариантов из списка, включая официальные языковые баллы.",
+      "evidence": "Documents proving proficiency in Korean or English , including one or more of the following: 1) The undermentioned Korean or English language proficiency scores (*)",
+      "source": {
+        "url": "https://en.snu.ac.kr/webdata/uploads/eng/file/2026/06/Admissions_for_Undergraduate_Spring_2027.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:c347399a0368ee3d426813967ef43a026d2f075e89f6762bfd40be6158deaae3"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "video"
+  ],
+  "note": "Набор Spring 2027 (заявки 6–9 июля 2026). Personal statement и план учёбы — один текст в форме, 4 000 байт; на запись в дополнительных материалах — 300 байт. Одно письмо пишет учитель или консультант через онлайн-систему; профиль школы и пояснительное заявление не внесены."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "uts",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Личное заявление — письмо о том, почему выбрал этот курс и почему справишься. Вуз включает его в список документов заявки.",
+      "evidence": "Personal statement: A letter explaining why you want to study this course and why you will succeed.",
+      "source": {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:036369dabfec48eadbb4e73649145e3e9a913aab21ea02468ce3eae443b54cab"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": {
+        "unit": "items",
+        "max": 10
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Портфолио нужно для дизайнерских курсов: 5–10 работ. Точные правила — в UTS Handbook.",
+      "evidence": "Portfolio: For design students, 5-10 pieces of work. Check the UTS Handbook for specific rules.",
+      "source": {
+        "url": "https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:036369dabfec48eadbb4e73649145e3e9a913aab21ea02468ce3eae443b54cab"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "video",
+    "interview",
+    "certificates"
+  ],
+  "note": "Данные прошлого набора: форма Sept 2026, снимок 30.09.2026 — требования могут измениться. Личное заявление и портфолио стоят в общем списке документов; для дизайна 5–10 работ, точные правила в UTS Handbook, которого в снимке нет. CV упомянуто только для магистратуры, research proposal — для исследовательских степеней: другой уровень, не внесены. Рекомендаций, собеседования, наград и видео нет."
+}

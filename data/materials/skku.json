@@ -1,0 +1,67 @@
+{
+  "id": "skku",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Личное заявление по желанию: заполняется в онлайн-заявке, пишется по-корейски или по-английски. Печатную копию отправляют с документами почтой или приносят лично.",
+      "evidence": "Personal Statement • Completing and submitting the personal statement (referring to the attachment) if the applicant wishes to do ※ Must be written in either Korean of English only ※ The personal statement can be completed during the online application process, and a printed copy must be submitted when submitting the original application documents by post or in person.",
+      "source": {
+        "url": "https://admission-global.skku.edu/bbs/filedown.php?bbsid=global_notice_re_eng&file_seq=11473",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:606c619335cde76f49933b2d0ec684fa499853623649f5e607f67973fd0bd82a"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "optional",
+      "count": null,
+      "limit": {"unit": "pages", "max": 10},
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "mail",
+      "ru": "Справка о внеучебной деятельности до 10 страниц: активности в школе, награды, волонтёрство, лицензии, портфолио. Подтверждение от руководителя организации — с печатью и подписью.",
+      "evidence": "Certificate for extracurricular activities ( within 10 pages ) • Activities during high school Awards / organization activities from high school or other institutions , overseas study experience , volunteering activities , licenses , portfolio etc .",
+      "source": {
+        "url": "https://admission-global.skku.edu/bbs/filedown.php?bbsid=global_notice_re_eng&file_seq=11473",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:606c619335cde76f49933b2d0ec684fa499853623649f5e607f67973fd0bd82a"
+      }
+    },
+    {
+      "type": "video",
+      "need": "some",
+      "count": null,
+      "limit": {"unit": "minutes", "max": 2},
+      "prompt": null,
+      "who": null,
+      "language": "ko",
+      "via": "mail",
+      "ru": "Только для поступающих на Department of Theatre: своё актёрское видео до 2 минут, исполнение по-корейски. Записывают на USB и отправляют вместе с документами почтой.",
+      "evidence": "Free acting video ( Department of Theatre ) • Applicants m u s t submit the individual free acting video ( within 2 min . ) filmed individually ※ Must performed in Korean language ※ Filmed video should be saved in USB , and submit the USB together with the application documents via post service",
+      "source": {
+        "url": "https://admission-global.skku.edu/bbs/filedown.php?bbsid=global_notice_re_eng&file_seq=11473",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:606c619335cde76f49933b2d0ec684fa499853623649f5e607f67973fd0bd82a"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "cv",
+    "studyPlan",
+    "interview",
+    "awards",
+    "portfolio",
+    "certificates"
+  ],
+  "note": "Гид набора Spring 2027 (снимок 26.09.2026). Отдельных пунктов «награды», «портфолио» и «сертификаты» нет: награды, лицензии и портфолио входят в справку о внеучебной деятельности до 10 страниц. Собеседование упомянуто только при отборе на стипендию."
+}

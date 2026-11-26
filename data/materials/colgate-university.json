@@ -1,0 +1,115 @@
+{
+  "id": "colgate-university",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации от учителей основных предметов, которые вели у вас в 10, 11 или 12 классе. Отправляет сотрудник школы.",
+      "evidence": "Two academic teacher recommendations Recommendations must be from core academic teachers who worked with a student in 10th, 11th, or 12th grade. Must be submitted by a school official.",
+      "source": {
+        "url": "https://www.colgate.edu/admission-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:b73d9af4e9442bec4e86255fe2864546bd8009d4a408398b149d5d997541af6b"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Рекомендация школьного консультанта — об академической и личной готовности к учёбе. Отправляет сотрудник школы.",
+      "evidence": "Guidance counselor recommendation The guidance counselor recommendation should detail academic and personal preparedness for post-secondary education. Must be submitted by a school official.",
+      "source": {
+        "url": "https://www.colgate.edu/admission-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:b73d9af4e9442bec4e86255fe2864546bd8009d4a408398b149d5d997541af6b"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "По желанию — портфолио в SlideRoom: изобразительное искусство и медиа, музыка, театр, танец.",
+      "evidence": "You may submit an optional SlideRoom portfolio to highlight your accomplishments in: visual art and media, music (instrument and vocal performance, and composition), theater, and dance.",
+      "source": {
+        "url": "https://www.colgate.edu/admission-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:b73d9af4e9442bec4e86255fe2864546bd8009d4a408398b149d5d997541af6b"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Только тем, для кого английский не родной: советуют пройти собеседование через InitialView или Vericant. Отправить до 15 января.",
+      "evidence": "Our most successful applicants whose native language is not English are encouraged to submit interviews via InitialView or Vericant . Submissions must be sent before the January 15 deadline or before November 1 for Early Decision I.",
+      "source": {
+        "url": "https://www.colgate.edu/admission-aid/apply/international-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:a9bdce4fa843829d8804408d3e3d40b10ae41a0f11d2b76054b5b79b452ecf86"
+      }
+    },
+    {
+      "type": "other",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "По желанию — ссылка на онлайн-материалы о себе: творческие работы, профили в соцсетях, выступления, магазины, сообщества.",
+      "evidence": "Applicants may share online materials showcasing their unique background, talents, or creativity. This is an opportunity to share work that falls outside of traditional portfolios, such as: Creative works Social media profiles Performances Online boutiques Community pages",
+      "source": {
+        "url": "https://www.colgate.edu/admission-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:b73d9af4e9442bec4e86255fe2864546bd8009d4a408398b149d5d997541af6b"
+      }
+    },
+    {
+      "type": "other",
+      "need": "some",
+      "count": null,
+      "limit": {"unit": "minutes", "max": 10},
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Только для тех, кто вёл формальный исследовательский проект: VIVA — загрузить работу и ответить на короткие вопросы о ней, около 10 минут.",
+      "evidence": "Colgate invites students who have conducted formal research projects to submit a VIVA . VIVA allows you to submit an academic project (paper, research project, etc.) and answer brief, ungraded questions about your project, which takes around 10 minutes.",
+      "source": {
+        "url": "https://www.colgate.edu/admission-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:b73d9af4e9442bec4e86255fe2864546bd8009d4a408398b149d5d997541af6b"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "awards",
+    "studyPlan",
+    "certificates"
+  ],
+  "note": "Колледж не даёт своего вопроса эссе: в заявке Common App, Coalition или QuestBridge используется общее личное заявление. Видео Glimpse на странице только для школьников из США, международным предлагают InitialView. Эссе и список активностей Common App сюда не входят."
+}
