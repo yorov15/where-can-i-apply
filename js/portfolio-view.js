@@ -1,4 +1,5 @@
-import { EXPERIENCE_KINDS, EXPERIENCE_SKILLS, MAX_SKILLS, PROOF_KINDS, portfolioOf } from './portfolio.js';
+import { EXPERIENCE_KINDS, EXPERIENCE_SKILLS, MAX_SKILLS, PROOF_KINDS, LEVELS, portfolioOf } from './portfolio.js';
+import { LEVEL_LABELS } from './materials-plan.js';
 import { safeHttpUrl } from './lib/url.js';
 import { formatDate } from './lib/format.js';
 import { renderWorkPicker, renderWorkPlan, clearWorkDrafts } from './portfolio-work-view.js';
@@ -41,7 +42,34 @@ function selectField(form,title,name,options,value) {
 
 function readFields(form) {
   const data=new FormData(form);
-  return Object.fromEntries([...data].filter(([name])=>!name.startsWith('goal:')&&!name.startsWith('why:')&&name!=='skill'));
+  return Object.fromEntries([...data].filter(([name])=>!name.startsWith('goal:')&&!name.startsWith('why:')&&name!=='skill'&&name!=='grade'));
+}
+
+const LANGUAGES=[['','Не указан'],['ru','русский'],['en','английский'],['tg','таджикский'],['uz','узбекский'],['kk','казахский'],['ky','киргизский'],
+  ['tr','турецкий'],['ko','корейский'],['ja','японский'],['zh','китайский'],['de','немецкий'],['fr','французский']];
+const number=value=>value===''||value==null?'':Number(value);
+
+// Поля, которые спрашивают формы вузов: классы, часы, уровень награды.
+// Свёрнуты: черновику они не нужны, а строка активности без них честно скажет, чего нет.
+function formDetails(form,value,id) {
+  const box=el('details','journey-edit');box.append(el('summary',null,'Для форм вузов · необязательно'));
+  rememberOpen(box,`details:${id}`);
+  box.append(el('p','route-detail','Common App и похожие формы спрашивают это отдельными полями. Заполни, когда дойдёшь до упаковки.'));
+  const grades=el('fieldset','proof-pick');grades.append(el('legend',null,'В каких классах'));
+  for(const grade of [8,9,10,11,12]){
+    const label=el('label','chip'),check=el('input');check.type='checkbox';check.name='grade';check.value=String(grade);check.checked=Boolean(value.grades?.includes(grade));
+    label.append(check,document.createTextNode(`${grade}`));grades.append(label);
+  }
+  box.append(grades);
+  const hours=field(box,'Часов в неделю','hoursPerWeek',value.hoursPerWeek,{type:'number'});hours.min='0';hours.max='80';hours.step='0.5';hours.inputMode='decimal';
+  const weeks=field(box,'Недель в году','weeksPerYear',value.weeksPerYear,{type:'number'});weeks.min='0';weeks.max='52';weeks.step='1';weeks.inputMode='numeric';
+  const level=selectField(box,'Это награда? Уровень','level',[['','Не награда'],...LEVELS.map(code=>[code,LEVEL_LABELS.find(([id])=>id===code)[1]])],value.level);
+  const place=field(box,'Место или итог','place',value.place,{type:'text',max:60});place.placeholder='Например: 2 место, финалист';
+  const by=field(box,'Кто подтвердит','proofBy',value.proofBy,{type:'text',max:160});by.placeholder='Имя и роль: учитель информатики';
+  selectField(box,'Язык подтверждения','proofLanguage',LANGUAGES,value.proofLanguage);
+  const sync=()=>{place.parentElement.hidden=!level.value;by.parentElement.hidden=form.elements.proof?.value!=='person';};
+  form.addEventListener('change',sync);queueMicrotask(sync);
+  form.append(box);
 }
 
 function showLink(parent,value,label='Открыть работу') {
@@ -75,6 +103,7 @@ export function experienceForm(entry,props,onSaved) {
   field(form,'Что понял и что изменил бы?','reflection',value.reflection);
   selectField(form,'Чем подтвердить? · необязательно','proof',[['','Не указано'],...PROOF_KINDS],value.proof);
   field(form,'Ссылка на работу · необязательно','url',value.url,{type:'url'});
+  formDetails(form,value,id);
   const links=el('details','journey-edit');links.append(el('summary',null,'Связать с целями'));
   rememberOpen(links,`goals:${id}`);
   links.append(el('p','route-detail','Объясни своими словами, чем опыт полезен для цели. Это твоя заметка, а не оценка комиссии.'));
@@ -91,7 +120,8 @@ export function experienceForm(entry,props,onSaved) {
   if(!goalIds.length)links.append(el('p','route-detail','Сначала сохрани опыт. Когда выберешь программу, сможешь связать его с целью.'));
   form.append(links);
   const say=status(),save=el('button','button','Сохранить опыт');save.type='submit';form.append(save,say);
-  const read=()=>({...readFields(form),skills:skills.filter(item=>item.checked).map(item=>item.value),goals:controls.filter(item=>item.check.checked).map(item=>({goalId:item.goalId,why:item.why.value}))});
+  const read=()=>({...readFields(form),hoursPerWeek:number(form.elements.hoursPerWeek.value),weeksPerYear:number(form.elements.weeksPerYear.value),
+    grades:[...form.querySelectorAll('input[name=grade]:checked')].map(item=>Number(item.value)),skills:skills.filter(item=>item.checked).map(item=>item.value),goals:controls.filter(item=>item.check.checked).map(item=>({goalId:item.goalId,why:item.why.value}))});
   const remember=()=>drafts.set(draftKey,read());form.addEventListener('input',remember);form.addEventListener('change',remember);
   form.addEventListener('submit',event=>{
     event.preventDefault();

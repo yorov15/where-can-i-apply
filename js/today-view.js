@@ -284,7 +284,7 @@ export function renderToday(root, props) {
   }
   const head = el('header', 'today-head');
   if (model.nearest) {
-    const count = el('p', 'today-count');
+    const count = el('p', 'pill');
     count.append(el('b', null, `${model.daysToNearest} ${plural(model.daysToNearest, 'день', 'дня', 'дней')}`), ` до подачи в ${shortName(model.nearest.name)}`);
     head.append(count);
   }
@@ -297,11 +297,11 @@ export function renderToday(root, props) {
   if (model.week?.tasks.length) root.append(nowCard(model, props));
   else if(!model.offerActions.length)root.append(el('p','route-detail','Дел в плане недели нет. Материалы и ответы доступны в «Моём пути».'));
   if (model.week?.tasks.length) {
-    const week = el('details', 'today-more');
+    const week = el('details', 'fold');
     week.append(el('summary', null, `Вся неделя · ${model.doneCount} из ${model.tasks.length}`), weekList(model, props));root.append(week);
   }
   if(props.weekly?.workBacklog)root.append(el('p','route-detail',`Шагов работ вне плана недели: ${props.weekly.workBacklog}. Проверь доступное время и выбранные дни; лишние работы можно поставить на паузу в «Моём пути».`));
-  const reference = el('details', 'today-more');reference.append(el('summary', null, 'Уровень, даты и заявки'));
+  const reference = el('details', 'fold');reference.append(el('summary', null, 'Уровень, даты и заявки'));
   for(const block of [levelBlock(model), datesBlock(model), applicationsBlock(model)])if(block)reference.append(block);
   if(reference.children.length>1)root.append(reference);
   const more = el('button', 'button button-quiet', 'Открыть весь путь');

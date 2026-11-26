@@ -11,6 +11,8 @@ const button = (text, cls, run) => { const node = el('button', cls, text); node.
 const skipped = new Set();
 let saying = null;
 let opened = null;
+// Кнопка «Открыть запись» с шага 3 ведёт на шаг 1 и сразу раскрывает нужную запись.
+export function openRecord(id) { opened = id; }
 
 function input(form, title, name, { max, required = false, placeholder = '' }) {
   const label = el('label', null, title), field = el('input');

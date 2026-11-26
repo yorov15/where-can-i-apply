@@ -1,4 +1,4 @@
-import { WORK_TEMPLATES, WORK_REVIEW_FIELDS, WORK_FORMATS, workFormatLabel } from './portfolio-work.js';
+import { WORK_TEMPLATES, WORK_REVIEW_ASKED, WORK_FORMATS, workFormatLabel } from './portfolio-work.js';
 import { formatDate } from './lib/format.js';
 import { renderPortfolioLearning, clearLearningDrafts } from './portfolio-learning-view.js';
 import { pendingPractice } from './portfolio-learning.js';
@@ -127,9 +127,9 @@ export function renderWorkPlan(entry,props,onSaved){
   editor.append(briefForm,pause);box.append(editor);
   const reviewKey=`review:${entry.id}`,review=details(reviewKey,'Самопроверка работы'),reviewForm=el('form','journey-form');
   const reflection=drafts.get(reviewKey)??plan.review??{};
-  review.append(el('p','route-detail','Ответь по своей работе. Можно написать «пока не знаю» или «не применимо» и выбрать, что проверить дальше.'));
+  review.append(el('p','route-detail','Три вопроса по своей работе. Можно ответить «пока не знаю»: это заметка для тебя, а не оценка.'));
   if(plan.review)review.append(el('p','route-detail',`Сохранено ${formatDate(plan.review.checkedOn)}`));
-  for(const [name,title] of WORK_REVIEW_FIELDS)field(reviewForm,title,name,reflection[name]);
+  for(const [name,title] of WORK_REVIEW_ASKED)field(reviewForm,title,name,reflection[name]);
   const check=el('button','button button-quiet','Сохранить самопроверку');check.type='submit';reviewForm.append(check);
   bindForm(reviewForm,reviewKey,data=>props.handlers.onSavePortfolioReview(entry.id,data),response=>onSaved(entry.id,response.message));
   review.append(reviewForm);box.append(review,status);return box;

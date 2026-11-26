@@ -51,6 +51,9 @@ export const workFormatLabel = plan => WORK_FORMATS.find(([id])=>id===plan?.form
 export const WORK_REVIEW_FIELDS = [['ownership','Что сделал лично ты?'],['method','Почему выбрал такой способ?'],
   ['evidence','Чем подтверждён результат?'],['changes','Что изменил после проверки?'],
   ['limits','Чего результат не показывает?'],['relevance','Как работа связана с твоим интересом или целью?']];
+// Экран спрашивает три вопроса из шести (решение Мурода 26.11.2026, раздел 10 сценария).
+// Остальные три ответа старых записей не теряются: их хранит и переносит файл маршрута.
+export const WORK_REVIEW_ASKED = [['ownership','Что сделал именно ты?'],['evidence','Чем это подтверждается?'],['changes','Что изменил после отзыва или проверки?']];
 
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const identifier = value => typeof value === 'string' && /^[a-zA-Z0-9_-]{1,80}$/.test(value);

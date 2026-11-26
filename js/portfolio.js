@@ -16,6 +16,10 @@ export const MAX_SKILLS = 3;
 export const PROOF_KINDS = [['certificate','Грамота или сертификат'],['link','Ссылка или файл'],['person','Человек, который подтвердит'],['none','Пока ничего']];
 // Ответы опроса «Что у меня уже есть»: «да» уже стало записью, «нет» убирает вопрос.
 const SURVEY_ANSWERS = ['yes','no'];
+// Поля для форм активностей и наград (docs/A2-CONTRACT.md, §2). Все необязательные;
+// уровень делает запись наградой.
+export const LEVELS = ['school','district','national','international'];
+const MAX_ORDER_GOALS = 20;
 const MAX_SURVEY = 30;
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const key = value => typeof value === 'string' && value.length > 0 && value.length <= 200
@@ -54,8 +58,55 @@ function experience(value) {
     if(skills.length)entry.skills=[...skills];
   }
   if(value.proof!=null&&value.proof!==''){if(!PROOF_KINDS.some(([code])=>code===value.proof))return null;entry.proof=value.proof;}
+  if(!details(value,entry))return null;
   if(Object.hasOwn(value,'workPlan')){entry.workPlan=normalizeWorkPlan(value.workPlan);if(!entry.workPlan)return null;}
   return entry;
+}
+
+const given = value => value != null && value !== '';
+// Пустое значение — поля нет. Неверное — запись не проходит, как и прочие поля.
+function details(value, entry) {
+  if(given(value.grades)){
+    const grades=value.grades;
+    if(!Array.isArray(grades)||grades.length>4||!unique(grades)||grades.some(grade=>!Number.isInteger(grade)||grade<1||grade>12))return false;
+    if(grades.length)entry.grades=[...grades].sort((a,b)=>a-b);
+  }
+  if(given(value.hoursPerWeek)){
+    const hours=value.hoursPerWeek;
+    if(typeof hours!=='number'||!Number.isInteger(hours*2)||hours<0||hours>80)return false;
+    entry.hoursPerWeek=hours;
+  }
+  if(given(value.weeksPerYear)){
+    const weeks=value.weeksPerYear;
+    if(!Number.isInteger(weeks)||weeks<0||weeks>52)return false;
+    entry.weeksPerYear=weeks;
+  }
+  if(given(value.level)){if(!LEVELS.includes(value.level))return false;entry.level=value.level;}
+  for(const [name,max] of [['place',60],['proofBy',160]]){
+    const field=text(value[name],max);
+    if(field===null)return false;
+    if(field)entry[name]=field;
+  }
+  if(given(value.proofLanguage)){
+    if(typeof value.proofLanguage!=='string'||!/^[a-z]{2,3}$/.test(value.proofLanguage))return false;
+    entry.proofLanguage=value.proofLanguage;
+  }
+  return true;
+}
+
+// Порядок записей под цель для шага 4б. Удалённые записи из него выпадают молча:
+// иначе удаление записи ломало бы всё портфолио.
+function order(value, experiences) {
+  if(!object(value))return null;
+  const entries=Object.entries(value);
+  if(entries.length>MAX_ORDER_GOALS)return null;
+  const ids=new Set(experiences.map(item=>item.id)),next={};
+  for(const [goalId,list] of entries){
+    if(!key(goalId)||!Array.isArray(list)||list.length>40||list.some(id=>!key(id))||!unique(list))return null;
+    const kept=list.filter(id=>ids.has(id));
+    if(kept.length)next[goalId]=kept;
+  }
+  return next;
 }
 
 function outcome(value) {
@@ -81,6 +132,11 @@ export function normalizePortfolio(value) {
     if (!answers || answers.length > MAX_SURVEY || answers.some(([id,answer]) => !key(id) || !SURVEY_ANSWERS.includes(answer))) return null;
     if (answers.length) next.survey = Object.fromEntries(answers);
   }
+  if (value.order != null) {
+    const sorted = order(value.order, experiences);
+    if (!sorted) return null;
+    if (Object.keys(sorted).length) next.order = sorted;
+  }
   return new TextEncoder().encode(JSON.stringify(next)).length <= 300_000 ? next : null;
 }
 
@@ -92,6 +148,17 @@ export function saveExperience(state, input, today) {
   const entry = experience({...old,...input,createdOn:old?.createdOn ?? today,updatedOn:today});
   if (!entry) return null;
   portfolio.experiences = old ? portfolio.experiences.map(item => item.id === entry.id ? entry : item) : [...portfolio.experiences,entry];
+  const checked = normalizePortfolio(portfolio);
+  return checked ? {...state,portfolio:checked} : null;
+}
+
+// Порядок записей под цель. Пустой список убирает порядок этой цели.
+export function setEntryOrder(state, goalId, ids) {
+  if (!key(goalId) || !Array.isArray(ids)) return null;
+  const portfolio = portfolioOf(state);
+  const next = {...portfolio.order};
+  if (ids.length) next[goalId] = [...ids]; else delete next[goalId];
+  portfolio.order = next;
   const checked = normalizePortfolio(portfolio);
   return checked ? {...state,portfolio:checked} : null;
 }
@@ -228,7 +295,7 @@ export function updatePortfolioLearning(state,id,action,input,today){
 export function savePortfolioReview(state,id,input,today) {
   if(!object(input))return null;
   return updateWorkPlan(state,id,today,plan=>{
-    const fields=Object.fromEntries(WORK_REVIEW_FIELDS.map(([name])=>[name,input[name]??'']));
+    const fields=Object.fromEntries(WORK_REVIEW_FIELDS.map(([name])=>[name,input[name]??plan.review?.[name]??'']));
     if(Object.values(fields).some(value=>typeof value!=='string'||value.length>1000))return false;
     if(Object.values(fields).some(value=>value.trim()))plan.review={...fields,checkedOn:today};else delete plan.review;
   });

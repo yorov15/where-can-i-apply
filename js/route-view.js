@@ -395,39 +395,42 @@ function actionsBlock(route, handlers, statusText, applyUrl) {
     if (site) box.append(site);
   }
 
+  // Две карточки вместо россыпи кнопок: что отдать наружу и как сохранить своё.
   if (route) {
+  const share = el('div', 'file-card');
+  share.append(el('h4', null, 'Отчёт и календарь'), el('p', 'journey-meta', 'Сроки — в календарь телефона, отчёт — родителю текстом или PDF.'));
+  box.append(share);
   const calendar = el('button', 'button button-quiet', 'Обновить календарь');
   calendar.type = 'button';
   calendar.addEventListener('click', () => say(handlers.onCalendar()));
-  box.append(calendar);
+  share.append(calendar);
 
   const parent = el('button', 'button button-quiet', 'Скопировать отчёт родителю');
   parent.type = 'button';
   parent.addEventListener('click', async () => {
     try { say(await handlers.onParent(route.parentReport)); } catch { say('Не получилось подготовить текст.'); }
   });
-  box.append(parent);
+  share.append(parent);
 
   const parentPrint=el('button','button button-quiet','Отчёт в PDF');
   parentPrint.type='button';
   parentPrint.addEventListener('click',()=>handlers.onParentPrint(route.parentReport));
-  box.append(parentPrint);
+  share.append(parentPrint);
 
   const preview=el('details','route-more');
   preview.dataset.parentReport='';
   preview.append(el('summary',null,'Что войдёт в отчёт'));
   for(const line of (route.parentReport??'').split('\n')) preview.append(el('p','route-detail',line));
-  box.append(preview);
+  share.append(preview);
 
   const print = el('button', 'button button-quiet', 'Печать или PDF');
   print.type = 'button';
   print.addEventListener('click', () => handlers.onPrint());
-  box.append(print);
+  share.append(print);
   }
 
-  const more = el('details', 'route-more');
-  more.open = true;
-  more.append(el('summary', null, 'Резервная копия и перенос'));
+  const more = el('div', 'file-card');
+  more.append(el('h4', null, 'Резервная копия'), el('p', 'journey-meta', 'Скачай файл перед сменой устройства и загрузи его на новом.'));
   const save = el('button', 'button button-quiet', 'Скачать маршрут');
   save.type = 'button';
   save.addEventListener('click', () => say(handlers.onExport()));
