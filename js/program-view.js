@@ -222,8 +222,8 @@ export function renderProgram(root, props) {
   const next = el('section', 'program-plan');
   next.append(el('h3', 'program-section', 'Добавь в свой путь'));
   next.append(el('p', 'route-detail', plan.ids.includes(id)
-    ? 'Программа в твоём пути. Сроки и дела — на вкладках «Сегодня» и «Мой путь».'
-    : 'Срок и дела по этой программе появятся на вкладках «Сегодня» и «Мой путь».'));
+    ? 'Программа в твоём пути. Сроки и дела — в «Моём пути», первым разделом «Сегодня».'
+    : 'Срок и дела по этой программе появятся в «Моём пути».'));
   if (plan.ids.includes(id) && route?.goals.some(goal => goal.id === id)) {
     next.append(el('p', 'route-goal-meta', progressLine(goalProgress(route, id), statusOf(routeState, id))));
   }

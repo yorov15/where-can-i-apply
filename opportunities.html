@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" id="app">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
@@ -23,11 +23,11 @@
 <a class="skip-link" href="#main">К содержимому</a>
 <div class="topbar">
   <a class="brand" href="index.html">Nerio</a>
-  <nav aria-label="Разделы"><a href="faq.html">Помощь</a></nav>
+  <nav class="tabbar" aria-label="Разделы сайта"><a class="tab" href="index.html#profile">Подобрать</a><a class="tab" href="index.html#programs" aria-current="page">Каталог</a><a class="tab" href="index.html#today">Мой путь</a><a class="tab" href="faq.html">Справка</a></nav>
   <button type="button" id="theme-toggle" class="theme-toggle" hidden>Тёмная</button>
 </div>
 <header class="hero hero-page">
-  <p class="back"><a href="index.html#route">← К моим работам</a></p>
+  <nav class="path-nav" aria-label="Разделы каталога"><a href="index.html#programs">Программы</a><a href="opportunities.html" aria-current="page">Конкурсы и олимпиады</a></nav>
   <h1>Конкурсы и олимпиады</h1>
 </header>
 <main id="main" class="prose">

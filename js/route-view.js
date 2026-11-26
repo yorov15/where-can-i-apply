@@ -477,6 +477,23 @@ function emptyNotice({ prepared, failed, onRetry }) {
   return box;
 }
 
+// Разделы «Моего пути». «Сегодня» — отдельный экран (#today), но для человека
+// это первый раздел пути: одна строка вкладок на обоих экранах.
+const PATH_SECTIONS = [['today', 'Сегодня', '#today'], ['preparation', 'Подготовка', '#route/preparation'],
+  ['applications', 'Заявки', '#route/applications'], ['works', 'Портфолио', '#route'],
+  ['interview', 'Собеседование', '#route/interview'], ['files', 'Файл и данные', '#route/files']];
+export function pathNav(current) {
+  const navigation = el('nav', 'path-nav');
+  navigation.setAttribute('aria-label', 'Разделы моего пути');
+  for (const [id, title, href] of PATH_SECTIONS) {
+    const link = el('a', null, title);
+    link.href = href;
+    if (id === current) link.setAttribute('aria-current', 'page');
+    navigation.append(link);
+  }
+  return navigation;
+}
+
 const openedGoals = new Set();
 export function routeSection(hash) {
   const section = hash.split('/')[1];
@@ -493,15 +510,7 @@ export function renderRoute(root, props) {
   root.textContent = '';
   const section = routeSection(location.hash);
   root.dataset.layer = section;
-  const navigation = el('nav', 'path-nav');
-  navigation.setAttribute('aria-label', 'Разделы моего пути');
-  for (const [id, title] of [['preparation', 'Подготовка'], ['applications', 'Заявки'], ['works', 'Портфолио'], ['interview', 'Собеседование'], ['files', 'Файл и данные']]) {
-    const link = el('a', null, title);
-    link.href = id === 'works' ? '#route' : `#route/${id}`;
-    if (id === section) link.setAttribute('aria-current', 'page');
-    navigation.append(link);
-  }
-  root.append(navigation);
+  root.append(pathNav(section));
   if(section==='preparation') {
     const materials=el('section','route-phase');materials.append(el('h3',null,'Собери факты для заявки'));
     for(const [id,title,description] of [['stories','Банк историй','Случаи для эссе, рекомендаций и интервью.'],['school','Сведения о школе','Шкала оценок, выпуск и другие факты для форм.']]) {

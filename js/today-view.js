@@ -12,7 +12,7 @@ import { renderOfferActions } from './application-view.js';
 import { pendingPractice } from './portfolio-learning.js';
 import { valueTitle, VALUE_LEAD } from './start-view.js';
 import { renderRecommenderToday } from './recommenders-view.js';
-import { stepRow } from './route-view.js';
+import { stepRow, pathNav } from './route-view.js';
 
 const DAYS = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 const shift = (day, n) => new Date(Date.parse(`${day}T00:00:00Z`) + n * 86400000).toISOString().slice(0, 10);
@@ -315,17 +315,29 @@ export function renderToday(root, props) {
       quiet(done ? 'Смотреть весь каталог' : 'Смотреть каталог без анкеты', handlers.onExploreCatalog),
       hasWorks ? quiet('Продолжить подготовку', handlers.onBeginPreparation) : quiet('Начать с портфолио', handlers.onStartWork),
       el('p', 'start-note', 'Бесплатно, без регистрации. Анкета остаётся на этом устройстве.'));
+    // Человек пришёл в «Мой путь → Сегодня», а целей ещё нет: шапку и вкладки раздела не прячем.
+    if (props.inPath) {
+      const page = el('header', 'page-heading');
+      page.append(el('h2', null, 'Мой путь'));
+      root.append(page, pathNav('today'),
+        el('p', 'empty', 'Здесь появятся ближайшие дела и сроки, когда в пути будет хотя бы одна программа.'), entry);
+      return;
+    }
     box.append(statement, entry);
     root.append(box);
     return;
   }
+  // «Сегодня» — первый раздел «Моего пути»: тот же заголовок и та же строка вкладок.
+  const page = el('header', 'page-heading');
+  page.append(el('h2', null, 'Мой путь'));
+  root.append(page, pathNav('today'));
   const head = el('header', 'today-head');
   if (model.nearest) {
     const count = el('p', 'pill');
     count.append(el('b', null, `${model.daysToNearest} ${plural(model.daysToNearest, 'день', 'дня', 'дней')}`), ` до подачи в ${shortName(model.nearest.name)}`);
     head.append(count);
   }
-  head.append(el('h2', 'today-title', 'Что сделать сегодня'));
+  head.append(el('h3', 'today-title', 'Что сделать сегодня'));
   root.append(head);
   const offers=renderOfferActions(model.offerActions,props);if(offers)root.append(offers);
   const letters=renderRecommenderToday(props);if(letters)root.append(letters);

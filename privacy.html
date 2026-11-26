@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" id="app">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
@@ -29,11 +29,11 @@
 <a class="skip-link" href="#main">К содержимому</a>
 <div class="topbar">
   <a class="brand" href="index.html">Nerio</a>
-  <nav aria-label="Разделы"><a href="faq.html">Вопросы</a></nav>
+  <nav class="tabbar" aria-label="Разделы сайта"><a class="tab" href="index.html#profile">Подобрать</a><a class="tab" href="index.html#programs">Каталог</a><a class="tab" href="index.html#today">Мой путь</a><a class="tab" href="faq.html" aria-current="page">Справка</a></nav>
   <button type="button" id="theme-toggle" class="theme-toggle" hidden>Тёмная</button>
 </div>
 <header class="hero hero-page">
-  <p class="back"><a href="index.html">← К анкете</a></p>
+  <nav class="path-nav" aria-label="Разделы справки"><a href="faq.html">Вопросы и ответы</a><a href="glossary.html">Словарь</a><a href="privacy.html" aria-current="page">Конфиденциальность</a><a href="https://github.com/yorov15/where-can-i-apply/issues" target="_blank" rel="noopener">Сообщить об ошибке</a></nav>
   <h1>Конфиденциальность</h1>
   <p class="lead">Коротко: твоя анкета остаётся на твоём телефоне. Ниже — что именно и где, без юридических слов.</p>
 </header>

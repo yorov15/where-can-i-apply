@@ -178,10 +178,11 @@ const tabbar = setupTabbar({
   bar: document.getElementById('tabbar'),
   hash: () => location.hash,
   watch: document.getElementById('catalog-tools'),
+  // С выбранной целью «Мой путь» открывается на «Сегодня», без цели — на портфолио.
+  home: () => (plan.ids.length ? 'route' : null),
   go(name) {
-    // С выбранной целью «Мой путь» открывается на делах подачи, а не на портфолио.
-    if (name === 'route') location.hash = plan.ids.length ? 'route/preparation' : 'route';
-    else if (name === 'today') location.hash = name;
+    if (name === 'route') location.hash = plan.ids.length ? 'today' : 'route';
+    else if (name === 'profile') location.hash = 'profile';
     else location.hash = 'programs';
     window.scrollTo({ top: 0 });
   },
@@ -443,6 +444,7 @@ function renderRouteView() {
     guidedStart,
     focusExperience: portfolioFocus,
     todayFocus,
+    inPath: location.hash.startsWith('#today'),
     profileDone: profileReady(readForm(form)),
     profile: readForm(form),
     study: route ? buildStudyPlan({ steps:hasPreparationGoals(route,routeState)?route.steps:[], tracks:routeTracks, plans, state:routeState, today }) : null,

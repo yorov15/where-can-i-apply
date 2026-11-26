@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { activeTab } from '../js/tabbar.js';
 import { routeSection } from '../js/route-view.js';
 
-test('«Куда можно» активна на итоге и в каталоге', () => {
+test('«Каталог» активен на итоге и в каталоге', () => {
   assert.equal(activeTab('#programs'), 'answer');
   assert.equal(activeTab('#programs-x'), 'answer');
 });
@@ -13,11 +13,16 @@ test('на экране маршрута активен «Мой путь»', ()
   assert.equal(activeTab('#route/applications'), 'route');
 });
 
-test('на экране «Сегодня» активна «Сегодня»', () => {
-  assert.equal(activeTab('#today'), 'today');
-  assert.equal(activeTab(''), 'today');
-  assert.equal(activeTab('#start'), 'today');
-  assert.equal(activeTab('#today/work/test-id'), 'today');
+test('«Сегодня» — часть «Моего пути»', () => {
+  assert.equal(activeTab('#today'), 'route');
+  assert.equal(activeTab('#start'), 'route');
+  assert.equal(activeTab('#today/work/test-id'), 'route');
+});
+
+test('на главной вкладка горит, только если у человека есть цели', () => {
+  assert.equal(activeTab(''), null);
+  assert.equal(activeTab('', 'route'), 'route');
+  assert.equal(activeTab('#program/x'), 'answer');
 });
 
 test('анкета не выдаётся за открытую вкладку каталога', () => {

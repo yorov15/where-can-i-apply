@@ -120,11 +120,11 @@
 <div class="topbar">
   <a class="brand" href="./">Nerio</a>
   <nav id="tabbar" class="tabbar" aria-label="Разделы сайта">
-  <button type="button" class="tab" data-tab="today">Сегодня</button>
-  <button type="button" class="tab" data-tab="answer">Куда можно</button>
-  <button type="button" class="tab" data-tab="route">Мой путь <span class="tab-count"></span></button>
+  <a class="tab" data-tab="profile" href="#profile">Подобрать</a>
+  <a class="tab" data-tab="answer" href="#programs">Каталог</a>
+  <a class="tab" data-tab="route" href="#today">Мой путь <span class="tab-count"></span></a>
+  <a class="tab" data-tab="help" href="faq.html">Справка</a>
 </nav>
-  <nav aria-label="Анкета и справка"><a href="#profile">Моя анкета</a><a href="faq.html">Помощь</a></nav>
   <button type="button" id="theme-toggle" class="theme-toggle" hidden>Тёмная</button>
 </div>
 <header class="hero sr-only">
@@ -312,7 +312,8 @@
     </form>
   </details>
 
-  <section id="answer" aria-label="Куда можно" hidden>
+  <section id="answer" aria-label="Каталог" hidden>
+    <nav class="path-nav" aria-label="Разделы каталога"><a href="#programs" aria-current="page">Программы</a><a href="opportunities.html">Конкурсы и олимпиады</a></nav>
     <header class="page-heading"><h2>Найди свою программу</h2><p>Выбери страну, изучи условия и сохрани интересное в свой путь.</p><a class="button button-quiet" href="#profile">Проверить по моей анкете</a></header>
     <div id="summary" class="summary" aria-live="polite" aria-atomic="true"></div>
 
