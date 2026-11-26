@@ -8,4 +8,4 @@ export const EXPLAIN_URL = 'https://nerio-app.vercel.app/api/explain';
 
 // Наставник на «Сегодня» (режим mentor-week той же функции). Включать только
 // после экзамена tools/mentor-exam.mjs на живой функции: 0 выдумок, не меньше 9 из 10.
-export const MENTOR_ON = false;
+export const MENTOR_ON = true;
