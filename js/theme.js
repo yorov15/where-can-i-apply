@@ -4,7 +4,6 @@
 (function () {
   var KEY = 'theme';
   var root = document.documentElement;
-  var dark = matchMedia('(prefers-color-scheme: dark)');
 
   function stored() {
     try {
@@ -16,7 +15,8 @@
   }
 
   function current() {
-    return root.getAttribute('data-theme') || (dark.matches ? 'dark' : 'light');
+    // По умолчанию светлая (решение Мурода 26.11.2026), тёмная — только по кнопке.
+    return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
   }
 
   var saved = stored();
@@ -40,7 +40,6 @@
       try { localStorage.setItem(KEY, next); } catch (e) { /* режим без хранилища: тема живёт до закрытия вкладки */ }
       paint();
     });
-    dark.addEventListener('change', paint);
     button.hidden = false;
     paint();
   });

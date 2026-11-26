@@ -114,10 +114,10 @@ test('палитра: токены поверхностей заданы, вер
   }
   for (const verdict of ['yes', 'likely', 'check', 'no']) {
     const count = css.split(`--${verdict}:`).length - 1;
-    // светлая, тёмная по системе, тёмная по ручному выбору
-    assert.equal(count, 3, `--${verdict} должен быть в светлой и в обеих тёмных записях`);
+    // светлая по умолчанию и тёмная по кнопке (системная тема не переключает, решение 26.11.2026)
+    assert.equal(count, 2, `--${verdict} должен быть в светлой и в тёмной записи`);
   }
-  assert.match(css, /prefers-color-scheme:\s*dark/);
+  assert.doesNotMatch(css, /prefers-color-scheme:\s*dark/);
   assert.match(css, /:root\[data-theme=(?:"dark"|'dark'|dark)\]/);
 });
 
