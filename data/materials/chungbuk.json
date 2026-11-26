@@ -6,10 +6,7 @@
       "type": "portfolio",
       "need": "some",
       "count": null,
-      "limit": {
-        "unit": "items",
-        "max": 10
-      },
+      "limit": {"unit": "items", "max": 10},
       "prompt": null,
       "who": null,
       "language": null,
@@ -40,30 +37,23 @@
       }
     },
     {
-      "type": "certificates",
-      "need": "required",
+      "type": "recommendation",
+      "need": "some",
       "count": null,
       "limit": null,
       "prompt": null,
       "who": null,
       "language": null,
       "via": null,
-      "ru": "Нужен сертификат TOPIK 3-го уровня или выше либо справка об окончании 4-го уровня корейского курса CBNU (KLP).",
-      "evidence": "Must submit either 1) or 2) 1) TOPIK Level 3 or higher 2) CBNU Korean Language Program(KLP) level 4 completion",
+      "ru": "Для магистратуры: отзыв [Form 3-1] пишет предполагаемый научный руководитель — преподаватель кафедры CBNU, с которым вы связались заранее. Это не школьная рекомендация.",
+      "evidence": "▪ [Form 3-1] Reference by CBNU prospective academic advisor.",
       "source": {
-        "url": "https://oia.cbnu.ac.kr/home/sub.do?menukey=7867",
+        "url": "https://oia.cbnu.ac.kr/home/main.do",
         "lastVerified": "2026-10-01",
-        "contentHash": "sha256:f049556d61916d3daf3ece4875e247560a4c9760b72f245dabe3978022f8f425"
+        "contentHash": "sha256:6f322410375772abb2a6b5b082daff51a76ef0aadf23f7c678e5c6fed6fa3abf"
       }
     }
   ],
-  "notStated": [
-    "essay",
-    "activities",
-    "cv",
-    "awards",
-    "studyPlan",
-    "video"
-  ],
-  "note": "На странице бакалавриата рекомендаций нет: [Form 3-1] Reference by CBNU prospective academic advisor — отзыв научного руководителя из объявления магистратуры в том же снимке. Даты и форма интервью — из объявления 2027 Spring. Отзыв научрука (Form 3-1) есть только для магистратуры — в файл не вносил."
+  "notStated": ["essay", "activities", "cv", "awards", "studyPlan", "video", "certificates"],
+  "note": "На странице бакалавриата рекомендаций нет: [Form 3-1] Reference by CBNU prospective academic advisor — отзыв научного руководителя из объявления магистратуры в том же снимке. Даты и форма интервью — из объявления 2027 Spring."
 }
