@@ -8,16 +8,16 @@
 
 | id | статус | найдено (типы) | notStated | причина пропуска / что частично |
 |---|---|---|---|---|
-| nottingham | — | | | |
-| tohoku-gateway-college | — | | | |
-| carleton-college | — | | | |
-| denison-university | — | | | |
-| kth | — | | | |
-| oberlin | — | | | |
-| soka | — | | | |
-| ubc | — | | | |
-| ntu-singapore | — | | | |
-| bocconi | — | | | |
+| nottingham | готово | essay, recommendation, interview, other | activities, cv, awards, portfolio, studyPlan, video, certificates | — |
+| tohoku-gateway-college | готово | essay, interview | recommendation, activities, cv, awards, portfolio, studyPlan, video | — |
+| carleton-college | готово | recommendation, interview, portfolio, video | essay, activities, cv, awards, studyPlan, certificates | — |
+| denison-university | готово | recommendation, interview, portfolio | activities, cv, awards, studyPlan, video, certificates | — |
+| kth | готово | other | activities, cv, awards, portfolio, studyPlan, video, interview | — |
+| oberlin | готово | recommendation, cv, portfolio, studyPlan, interview | activities, awards, video | — |
+| soka | частично | essay, recommendation, activities | cv, awards, portfolio, studyPlan, video, interview, certificates | не скачана страница вопроса эссе admissions.soka.edu/portal/essays: секция на manual-файлах, которых нет в worktree, fetch падает; вопроса и объёма в снимке нет |
+| ubc | готово | essay, activities, recommendation | cv, awards, portfolio, studyPlan, video, interview, certificates | — |
+| ntu-singapore | готово | essay, recommendation, portfolio, interview | activities, cv, awards, studyPlan, video, certificates | — |
+| bocconi | готово | — (писать нечего) | essay, activities, awards, portfolio, studyPlan, video, interview | рекомендации, мотивационные письма, CV не рассматриваются; отбор — тест и GPA |
 | nthu | — | | | |
 | uca | — | | | |
 | turkiye-burslari | — | | | |
@@ -149,6 +149,13 @@
 - `[ajou]` — https://www.ajou.ac.kr/iadmissions_en/undergraduate/guideline.do
 - `[jagiellonian-university]` — https://welcome.uj.edu.pl/en_GB/admission/how-to-apply,
   https://welcome.uj.edu.pl/en_GB/admission/documents/undergraduate
+- `[uiuc]` — https://www.admissions.illinois.edu/essays/
+- `[university-of-warsaw]` — https://rekrutacja.uw.edu.pl/en/how-to-apply/,
+  https://rekrutacja.uw.edu.pl/en/required-documents/
+- `[slovak-university-of-technology]` — https://www.stuba.sk/en/applicants/how-to-start-to-study/admission-process,
+  https://www.fiit.stuba.sk/en/applicants/how-to-start-studying/admission-to-study/admission-for-bachelors-studies/admission-procedure-for-bachelor-studies-in-english-language
+- `[unist]` — https://admu-intl.unist.ac.kr/admission-eng/admissions/admissions.do,
+  https://admu-intl.unist.ac.kr/admission-eng/contact/faq.do
 
 Не добавлены:
 - `[soka]` — http://admissions.soka.edu/portal/essays найден, но секция собрана из `files`
@@ -156,10 +163,14 @@
   `manual/soka/00.html`. Файл материалов будет частичным.
 - `[tsinghua-university]` — https://international.join-tsinghua.edu.cn/List.pdf найден, но
   секция тоже на `files` без manual-файлов в worktree; fetch невозможен.
+- `[unist]` и `[slovak-university-of-technology]` — адреса добавлены, но `tools.fetch`
+  26.11 не снял: таймаут соединения (WinError 10060). Старые снимки целы; файлы будут
+  частичными с причиной.
 
 ## Команды
 
-пока нет.
+После первой десятки (26.11): `tools.materials --check` → 73 файла, 0 ошибок;
+`validate` → 15 с ошибками (11 в начале + 4 разобранных выше); `node --test` → 834, 0 упавших.
 
 ## Ветка и коммиты
 

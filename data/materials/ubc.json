@@ -1,0 +1,107 @@
+{
+  "id": "ubc",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "chars",
+        "max": 2100
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "form",
+      "ru": "Несколько коротких ответов на вопросы personal profile: о себе, о том, что важно, об активностях и планах. Каждый — от 500 до 2100 знаков (около 50–500 слов); набор вопросов зависит от программы.",
+      "evidence": "Each of the personal profile questions requires short essay responses (500 - 2100 characters, approximately 50 - 500 words)",
+      "source": {
+        "url": "https://you.ubc.ca/applying-ubc/how-to-apply/personal-profile/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:f0b10b80e76419af2c0ff453bcb00dd798597fd7e8e0f7c001f75f68147a9fb4"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "items",
+        "max": 5
+      },
+      "prompt": "Describe up to five activities that you have pursued or accomplishments achieved in one or more of the following areas. Please outline the nature of your responsibilities within these activities:",
+      "who": null,
+      "language": "en",
+      "via": "form",
+      "ru": "Список до пяти занятий или достижений с описанием своей роли: клуб, семья, творчество, работа, спорт, волонтёрство, другое.",
+      "evidence": "Describe up to five activities that you have pursued or accomplishments achieved in one or more of the following areas.",
+      "source": {
+        "url": "https://you.ubc.ca/applying-ubc/how-to-apply/personal-profile/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:f0b10b80e76419af2c0ff453bcb00dd798597fd7e8e0f7c001f75f68147a9fb4"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "form",
+      "ru": "Нужно указать имена и контакты двух поручителей, которые хорошо знают ученика. Подойдёт работодатель, человек из сообщества, тренер, учитель — любой, кто его хорошо знает.",
+      "evidence": "Please submit the names and contact information of two referees who know you well and can comment on your preparedness for study at UBC. Examples of referees include an employer, a community member, a coach, a teacher/instructor, or anyone who knows you well.",
+      "source": {
+        "url": "https://you.ubc.ca/applying-ubc/how-to-apply/personal-profile/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:f0b10b80e76419af2c0ff453bcb00dd798597fd7e8e0f7c001f75f68147a9fb4"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": "Why do you want to become a teacher? Describe the kind of teacher you want to be. Give examples.",
+      "who": null,
+      "language": "en",
+      "via": "form",
+      "ru": "Отдельные вопросы personal profile для Bachelor of Education: почему хотите стать учителем, каким учителем быть, пример работы с молодёжью из разных сред и что дал этот опыт.",
+      "evidence": "For the Bachelor of Education personal profile only: Why do you want to become a teacher? Describe the kind of teacher you want to be. Give examples. Equity, Diversity, Inclusion and Decolonization are integral to the teaching profession. Give one or more examples from your experience with youth that demonstrates work with individuals from varied backgrounds, perspectives, identities, and needs. Explain what you learned from the experience(s), and how this will prepare you to be an equitable educator.",
+      "source": {
+        "url": "https://you.ubc.ca/applying-ubc/how-to-apply/personal-profile/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:f0b10b80e76419af2c0ff453bcb00dd798597fd7e8e0f7c001f75f68147a9fb4"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": "Explain how you responded to a problem and/or an unfamiliar situation. What did you do, what was the outcome, and what did you learn from the experience?",
+      "who": null,
+      "language": "en",
+      "via": "form",
+      "ru": "Отдельные вопросы personal profile для Bachelor of Commerce (UBC Vancouver): как вышли из проблемы или незнакомой ситуации, что сделали и поняли; как влияете на сообщество и как усилит это Sauder.",
+      "evidence": "For the Bachelor of Commerce (UBC Vancouver) personal profile only: Explain how you responded to a problem and/or an unfamiliar situation. What did you do, what was the outcome, and what did you learn from the experience? How are you positively impacting your community? How do you plan to leverage your UBC Sauder experience to enhance these efforts?",
+      "source": {
+        "url": "https://you.ubc.ca/applying-ubc/how-to-apply/personal-profile/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:f0b10b80e76419af2c0ff453bcb00dd798597fd7e8e0f7c001f75f68147a9fb4"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "interview",
+    "certificates"
+  ],
+  "note": "Снимок 30.09.2026, набор 2027/28. Personal profile обязателен школьникам на все программы, кроме Bachelor of Design (Architecture, Landscape Architecture, Urbanism), Dental Hygiene и Music. Для школьника один из двух поручителей — из школы (консультант, учитель или IB-координатор), не родня, не друг и не агент; UBC пишет им сам после рассылки предложений о зачислении. Портфолио и прослушивание упомянуты только для переводящихся из вуза; отдельного списка наград и CV в снимке нет."
+}

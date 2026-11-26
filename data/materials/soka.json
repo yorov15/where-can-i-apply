@@ -1,0 +1,67 @@
+{
+  "id": "soka",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "form",
+      "ru": "Одно обязательное эссе: нужно показать свой настоящий голос; текст, написанный с помощью ИИ, этого шанса лишает.",
+      "evidence": "Essay (1 required) - Your essay is an opportunity for you to present us with your genuine, authentic voice.",
+      "source": {
+        "url": "https://www.soka.edu/admissions-aid/how-apply",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:9cca0fc42befecb78b00b97b671db38ab1e979d5a6cf6d03fbe922953c6c5f81"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "form",
+      "ru": "Две рекомендации; предпочитают академические — от директора, завуча, школьного консультанта или учителя. Пишут на официальном бланке Soka Application или Common App.",
+      "evidence": "Letters of recommendation ( 2 required )- Academic recommendations (from a principal, headmaster, school counselor, or teacher) are preferred. We ask that recommender's use the official form provided in the Soka Application or the Common Application (School Report with recommendation, Teacher Evaluation, Counselor Recommendation, Other Recommendation).",
+      "source": {
+        "url": "https://www.soka.edu/admissions-aid/how-apply",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:9cca0fc42befecb78b00b97b671db38ab1e979d5a6cf6d03fbe922953c6c5f81"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "form",
+      "ru": "Нужен список внеучебных активностей или талантов: интересы вне учёбы и опыт лидерства. Раздел активностей в Soka Application или Common App закрывает требование.",
+      "evidence": "List of extracurricular activities - we require a list of extracurricular activities or talents demonstrating outside interests and leadership experience. The activities section of the Soka application and Common Application fulfills this requirement when filled out fully",
+      "source": {
+        "url": "https://www.soka.edu/admissions-aid/how-apply",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:9cca0fc42befecb78b00b97b671db38ab1e979d5a6cf6d03fbe922953c6c5f81"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "interview",
+    "certificates"
+  ],
+  "note": "Вопрос эссе и объём — на отдельной странице, в снимке её нет. How to Apply называет одно эссе, каталог soka.edu — два обязательных. Требования магистратуры с той же страницы (CV, personal statement, writing sample) не внесены. Результаты TOEFL/Duolingo приходят от агентства напрямую — это не материал ученика."
+}
