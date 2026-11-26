@@ -68,7 +68,7 @@ export async function askMentor({ week, dates, today, hoursPerWeek, programsOf }
   if (!write(storage, { ...saved, deviceId, day: today, count: count + 1 })) fail('off');
   let response;
   try {
-    response = await fetchImpl(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(request), signal: AbortSignal.timeout(40000) });
+    response = await fetchImpl(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(request), signal: AbortSignal.timeout(50000) });
   } catch { fail('network'); }
   let value = null;
   try { value = await response.json(); } catch { /* разбор ниже */ }

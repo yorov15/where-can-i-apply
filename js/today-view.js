@@ -191,7 +191,7 @@ function mentorBlock(model, props) {
   box.append(el('h3', 'route-phase-title', 'Наставник'));
   const status = el('p', 'route-detail');
   status.setAttribute('role', 'status');
-  const ask = el('button', 'button button-quiet', mentor.busy ? 'Наставник думает…' : mentor.plan ? 'Спросить заново' : 'Спросить наставника');
+  const ask = el('button', 'button button-quiet', mentor.busy ? 'Наставник думает, до минуты…' : mentor.plan ? 'Спросить заново' : 'Спросить наставника');
   ask.type = 'button';
   ask.disabled = mentor.busy || mentor.left <= 0;
   ask.addEventListener('click', () => handlers.onMentorAsk(model.week, model.dates));

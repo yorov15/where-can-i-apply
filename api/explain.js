@@ -197,8 +197,8 @@ async function askOnce(models, { system, user, mode, check }, timeoutMs) {
 }
 
 const callModel = (prompt, trace) => callWithFallback(modelGroups(), (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 30000, perGroupMs: 9000 });
-// Наставник пишет план на всю неделю (до 8 дел): модели нужно 6–20 секунд, 9 мало.
-const callMentorModel = (prompt, trace) => callWithFallback(modelGroups(), (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 30000, perGroupMs: 28000 });
+// Наставник пишет план на всю неделю (до 8 дел): модели нужно 6–30 секунд; функция живёт до 50 (vercel.json).
+const callMentorModel = (prompt, trace) => callWithFallback(modelGroups(), (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 44000, perGroupMs: 42000 });
 // The essay path never selects Go or a paid configured model. Privacy and
 // zero-price constraints are not relaxed when a free provider is unavailable.
 const callEssayModel = (prompt, trace) => callWithFallback([['openrouter/free']],
