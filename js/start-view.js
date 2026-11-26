@@ -13,13 +13,23 @@ export function startStage(state) {
 const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!=null)node.textContent=text;return node;};
 function button(text,run,primary=false){const node=el('button',primary?'button':'button button-quiet',text);node.type='button';node.addEventListener('click',run);return node;}
 
-// Суть сайта одной фразой. Число берём из данных: каталог растёт, а цифра в тексте не должна устаревать.
-export function valueTitle(count) {
-  const n = Number(count);
-  if (!Number.isInteger(n) || n <= 0) return 'Проверь, в какие программы ты можешь подать документы';
-  return `Проверь, в какие из ${n} ${plural(n, 'программы', 'программ', 'программ')} ты можешь подать документы`;
+// Суть сайта одной фразой, объём каталога — строкой ниже. Числа берём из
+// данных: каталог растёт, а цифра в тексте не должна устаревать.
+export const VALUE_TITLE = 'Узнай, куда за границу ты можешь подать документы';
+export function catalogLine(programs) {
+  const n = programs?.length ?? 0;
+  const tail = 'Условия и сроки — с официальных сайтов программ.';
+  if (!n) return `Университеты и стипендии за границей. ${tail}`;
+  const c = new Set(programs.map((program) => program.hostCountry).filter(Boolean)).size;
+  return `${n} ${plural(n, 'программа', 'программы', 'программ')} — университеты и стипендии в ${c} ${plural(c, 'стране', 'странах', 'странах')}. ${tail}`;
 }
-export const VALUE_LEAD = 'Ответь на вопросы о школе и экзаменах. Сверим известные условия и подскажем, что уточнить и сделать до срока.';
+// Что человек получит, сколько это займёт и что держать под рукой —
+// до кнопки, а не после (образец — стартовые страницы GOV.UK).
+export const ENTRY_STEPS = [
+  ['5 шагов, 2–3 минуты.', 'Школа, оценки, экзамены.'],
+  ['Получишь', 'список: куда уже можно подать и до какого срока.'],
+  ['Баллов не знаешь —', 'пропусти, ответ всё равно будет.'],
+];
 
 const link = (text, run) => { const node = button(text, run); node.className = 'link-button'; return node; };
 
@@ -32,8 +42,8 @@ export function renderStart(root,{state,programs,hasTask,handlers}) {
   if(number)box.append(el('p','route-detail',`Шаг ${number} из 2`));
   const more=el('div','start-more');
   if(stage==='goal'){
-    box.append(el('h2',null,valueTitle(programs?.length)),el('p',null,VALUE_LEAD),
-      button('Ответить на вопросы',handlers.onProfile,true));
+    box.append(el('h2',null,VALUE_TITLE),el('p',null,catalogLine(programs)),
+      button('Начать проверку',handlers.onProfile,true));
     more.append(link('Я уже знаю программу',handlers.onCatalog),link('Начать с портфолио',handlers.onWork));
   }else if(stage==='work'){
     const names=state.goals.map(id=>{const name=programs.find(item=>item.id===id)?.name;return name?.ru??(typeof name==='string'?name:id);});

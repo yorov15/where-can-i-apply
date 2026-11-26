@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { startStage, valueTitle } from '../js/start-view.js';
+import { startStage, catalogLine, VALUE_TITLE } from '../js/start-view.js';
 import { todayModel } from '../js/today-view.js';
 
 test('первый вход предлагает выбрать цель; обычный опыт не подменяет учебную работу',()=>{
@@ -28,9 +28,11 @@ test('переход из работы открывает её реальное 
   assert.deepEqual(tasks.map(task=>task.taskId),['apply','work']);
 });
 
-test('заголовок входа называет суть сайта и берёт число программ из данных',()=>{
-  assert.equal(valueTitle(323),'Проверь, в какие из 323 программ ты можешь подать документы');
-  assert.equal(valueTitle(21),'Проверь, в какие из 21 программы ты можешь подать документы');
-  assert.equal(valueTitle(0),'Проверь, в какие программы ты можешь подать документы');
-  assert.equal(valueTitle(undefined),'Проверь, в какие программы ты можешь подать документы');
+test('вход называет суть сайта, а объём каталога берёт из данных',()=>{
+  assert.equal(VALUE_TITLE,'Узнай, куда за границу ты можешь подать документы');
+  const p=(hostCountry)=>({hostCountry});
+  assert.equal(catalogLine([p('KR'),p('KR'),p('JP')]),'3 программы — университеты и стипендии в 2 странах. Условия и сроки — с официальных сайтов программ.');
+  assert.equal(catalogLine([p('KR')]),'1 программа — университеты и стипендии в 1 стране. Условия и сроки — с официальных сайтов программ.');
+  assert.equal(catalogLine([]),'Университеты и стипендии за границей. Условия и сроки — с официальных сайтов программ.');
+  assert.equal(catalogLine(undefined),'Университеты и стипендии за границей. Условия и сроки — с официальных сайтов программ.');
 });

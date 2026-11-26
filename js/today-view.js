@@ -10,7 +10,7 @@ import { renderTaskOutcome } from './portfolio-view.js';
 import { applicationActions } from './application.js';
 import { renderOfferActions } from './application-view.js';
 import { pendingPractice } from './portfolio-learning.js';
-import { valueTitle, VALUE_LEAD } from './start-view.js';
+import { VALUE_TITLE, ENTRY_STEPS, catalogLine } from './start-view.js';
 import { renderRecommenderToday } from './recommenders-view.js';
 import { stepRow, pathNav } from './route-view.js';
 
@@ -305,16 +305,29 @@ export function renderToday(root, props) {
     const quiet = (text, run) => { const node = el('button', 'link-button', text); node.type = 'button'; node.addEventListener('click', run); return node; };
     const box = el('div', 'start-space');
     const statement = el('div', 'start-statement');
-    statement.append(el('h2', null, valueTitle(props.programs?.length)),
-      el('p', null, done ? 'Анкета заполнена. Открой результаты: по каждой программе видно, что можно подавать и чего не хватает.' : VALUE_LEAD));
+    statement.append(el('h2', null, VALUE_TITLE), el('p', null, catalogLine(props.programs)));
+    // Одна главная кнопка — первой, чтобы на телефоне 360×640 её не закрывала
+    // нижняя панель. Под ней — сколько займёт и что получишь; другие входы —
+    // тихой строкой в конце, чтобы не спорили с главным.
     const entry = el('section', 'start-entry');
-    const path = el('button', 'button', done ? 'Открыть результаты' : 'Узнать, куда можно подать');
+    const path = el('button', 'button', done ? 'Открыть результаты' : 'Начать проверку');
     path.type = 'button';
     path.addEventListener('click', done ? handlers.onOpenResults : handlers.onStartProfile);
-    entry.append(path,
-      quiet(done ? 'Смотреть весь каталог' : 'Смотреть каталог без анкеты', handlers.onExploreCatalog),
-      hasWorks ? quiet('Продолжить подготовку', handlers.onBeginPreparation) : quiet('Начать с портфолио', handlers.onStartWork),
-      el('p', 'start-note', 'Бесплатно, без регистрации. Анкета остаётся на этом устройстве.'));
+    entry.append(path, el('p', 'start-note', 'Бесплатно и без регистрации. Ответы остаются на этом устройстве.'));
+    if (done) entry.append(el('p', null, 'Анкета заполнена. В результатах по каждой программе видно, можно ли подавать и чего не хватает.'));
+    else {
+      const steps = el('ul', 'start-steps');
+      for (const [lead, text] of ENTRY_STEPS) {
+        const item = el('li');
+        item.append(el('b', null, lead), ` ${text}`);
+        steps.append(item);
+      }
+      entry.append(steps);
+    }
+    const more = el('div', 'start-more');
+    more.append(quiet(done ? 'Весь каталог' : 'Сразу в каталог', handlers.onExploreCatalog),
+      hasWorks ? quiet('Продолжить подготовку', handlers.onBeginPreparation) : quiet('Начать с портфолио', handlers.onStartWork));
+    entry.append(more);
     // Человек пришёл в «Мой путь → Сегодня», а целей ещё нет: шапку и вкладки раздела не прячем.
     if (props.inPath) {
       const page = el('header', 'page-heading');
