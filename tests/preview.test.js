@@ -56,3 +56,8 @@ test('строка короткая и не говорит «подходишь�
   assert.match(previewLine(0), /программ нет/);
   for (const n of [0, 1, 140]) assert.doesNotMatch(previewLine(n), /подходишь|шанс|вероятн/i);
 });
+
+test('preview names the catalogue total so 253 and 323 do not look like two answers', () => {
+  assert.equal(previewLine(253, 323), 'Пока ничего не мешает: 253 из 323.');
+  assert.equal(previewLine(5, 5), 'Пока ничего не мешает: 5 программ.');
+});

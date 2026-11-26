@@ -67,3 +67,18 @@ test('без маршрута и недели модель пустая, а не
   assert.equal(model.next, null);
   assert.deepEqual(model.dates, []);
 });
+
+test('empty week still shows the three nearest goal steps by due date', () => {
+  const steps = [
+    { id: 'apply', kind: 'apply', title: 'Подать', due: '2027-01-01', done: false },
+    { id: 'money', kind: 'action', title: 'Деньги', due: '2026-12-20', done: false },
+    { id: 'ask', kind: 'action', title: 'Уточнить у вуза', due: '2026-12-01', done: false },
+    { id: 'done', kind: 'action', title: 'Сделано', due: '2026-11-01', done: true },
+    { id: 'nodate', kind: 'action', title: 'Без даты', done: false },
+    { id: 'docs', kind: 'document', title: 'Аттестат', due: '2026-12-20', done: false },
+  ];
+  const model = todayModel({ route: { goals: [goal('a', '2027-01-01')], steps }, today });
+  assert.deepEqual(model.upcoming.map(step => step.id), ['ask', 'money', 'docs']);
+  assert.equal(model.openSteps, 4);
+  assert.deepEqual(todayModel({ route: null, today }).upcoming, []);
+});

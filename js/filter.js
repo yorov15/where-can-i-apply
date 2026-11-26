@@ -189,7 +189,7 @@ function apply() {
         });
         group.append(more);
       }
-      more.textContent = `Показать ещё ${Math.min(rest, PAGE * 2)} из ${rest}`;
+      more.textContent = rest <= PAGE * 2 ? `Показать остальные ${rest}` : `Показать ещё ${PAGE * 2} из ${rest}`;
     } else if (more) {
       more.remove();
     }

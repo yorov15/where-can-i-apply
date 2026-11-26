@@ -179,7 +179,9 @@ const tabbar = setupTabbar({
   hash: () => location.hash,
   watch: document.getElementById('catalog-tools'),
   go(name) {
-    if (name === 'route' || name === 'today') location.hash = name;
+    // С выбранной целью «Мой путь» открывается на делах подачи, а не на портфолио.
+    if (name === 'route') location.hash = plan.ids.length ? 'route/preparation' : 'route';
+    else if (name === 'today') location.hash = name;
     else location.hash = 'programs';
     window.scrollTo({ top: 0 });
   },
@@ -678,7 +680,7 @@ function renderRouteView() {
         openProgram(programId);
       },
       onOpenRoute() {
-        location.hash = 'route';
+        location.hash = plan.ids.length ? 'route/preparation' : 'route';
       },
       onStartWork() { location.hash = 'route/new'; },
       onBeginPreparation(){location.hash='start';},
@@ -830,7 +832,7 @@ function updatePreview() {
   const show = wizard.active && programs.length > 0 && hasAnswers(profile);
   preview.hidden = !show;
   if (!show) return;
-  document.getElementById('wizard-preview-text').textContent = previewLine(previewCount(profile, programs, today));
+  document.getElementById('wizard-preview-text').textContent = previewLine(previewCount(profile, programs, today), programs.length);
   document.getElementById('wizard-preview-open').hidden = wizard.last || !profileReady(profile);
 }
 let previewTimer = 0;

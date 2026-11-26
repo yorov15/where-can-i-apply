@@ -12,6 +12,7 @@ import { renderOfferActions } from './application-view.js';
 import { pendingPractice } from './portfolio-learning.js';
 import { valueTitle, VALUE_LEAD } from './start-view.js';
 import { renderRecommenderToday } from './recommenders-view.js';
+import { stepRow } from './route-view.js';
 
 const DAYS = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 const shift = (day, n) => new Date(Date.parse(`${day}T00:00:00Z`) + n * 86400000).toISOString().slice(0, 10);
@@ -75,7 +76,19 @@ export function todayModel({ route, routeState, weekly, study, today, todayFocus
       line: progressLine(goalProgress(route, goal.id), entry) };
   });
 
+  // Когда в плане недели пусто, «Сегодня» не должен говорить «дел нет»:
+  // у цели есть дела со сроками (документы, деньги, вопросы вузу), просто
+  // ни одно не попало в неделю. Показываем три ближайших по сроку.
+  const upcoming = (route?.steps ?? [])
+    .filter(step => !step.done && step.kind !== 'apply')
+    .map((step, order) => ({ step, order }))
+    .sort((a, b) => (a.step.due ?? '9999').localeCompare(b.step.due ?? '9999') || a.order - b.order)
+    .slice(0, 3)
+    .map(item => item.step);
+
   return {
+    upcoming,
+    openSteps: (route?.steps ?? []).filter(step => !step.done && step.kind !== 'apply').length,
     offerActions:applicationActions(routeState,today),
     nearest,
     daysToNearest: nearest ? daysBetween(today, nearest.deadline.closes) : null,
@@ -252,6 +265,30 @@ function applicationsBlock(model) {
   return box;
 }
 
+function upcomingBlock(model, handlers) {
+  const box = el('section', 'route-week');
+  box.dataset.upcoming = '';
+  if (!model.upcoming.length) {
+    box.append(el('p', 'route-detail', 'Все дела по целям отмечены. Осталось подать заявку до срока.'));
+    return box;
+  }
+  box.append(el('h3', 'route-phase-title', 'Ближайшие дела'),
+    el('p', 'route-detail', 'Взяты по срокам твоих целей. Отметь галочкой, когда сделаешь.'));
+  const list = el('ol', 'route-week-list');
+  model.upcoming.forEach((step, index) => {
+    const item = el('li', index === 0 ? 'route-week-item route-week-now' : 'route-week-item');
+    item.append(stepRow(step, `today-${index}`, { tracks: null, onToggle: handlers.onToggle, compact: true }));
+    list.append(item);
+  });
+  box.append(list);
+  if (model.openSteps > model.upcoming.length) {
+    const all = el('a', 'link-button', `Все дела (${model.openSteps}) — в «Подготовке»`);
+    all.href = '#route/preparation';
+    box.append(all);
+  }
+  return box;
+}
+
 export function renderToday(root, props) {
   const { handlers, loading, route } = props;
   // Первый экран уже есть в HTML: не заменяем его ожиданием загрузки данных.
@@ -295,7 +332,7 @@ export function renderToday(root, props) {
   const review = props.weekly ? renderWeekReview(props.weekly.review, handlers) : null;
   if (review) root.append(review);
   if (model.week?.tasks.length) root.append(nowCard(model, props));
-  else if(!model.offerActions.length)root.append(el('p','route-detail','Дел в плане недели нет. Материалы и ответы доступны в «Моём пути».'));
+  else if(!model.offerActions.length)root.append(upcomingBlock(model, handlers));
   if (model.week?.tasks.length) {
     const week = el('details', 'fold');
     week.append(el('summary', null, `Вся неделя · ${model.doneCount} из ${model.tasks.length}`), weekList(model, props));root.append(week);

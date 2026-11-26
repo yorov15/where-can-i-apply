@@ -21,13 +21,18 @@ const NAME = { countries: 'priorityCountry', majors: 'priorityMajor' };
 const countryLabel = (value, count) => {
   const name = countryName(value);
   if (!count) return { name, note: '' };
+  // «1 программа · 0 вузов» читалось как ошибка. Второе число теперь —
+  // стипендии страны (не одного вуза), и только когда они есть.
   const { programs, universities } = count;
+  const national = Math.max(0, programs - universities);
   const many = `${programs} ${plural(programs, 'программа', 'программы', 'программ')}`;
+  const note = !national ? many
+    : national === programs ? `${many} на всю страну`
+      : `${many} · ${national} на всю страну`;
   return {
     name,
-    note: `${many} · ${universities} ${plural(universities, 'вуз', 'вуза', 'вузов')}`,
-    // Пояснение к двум числам — на самой кнопке, а не абзацем над списком.
-    title: `${many}, из них в конкретном вузе — ${universities}`,
+    note,
+    title: national ? `${many}, из них ${national} — стипендии страны, не одного вуза` : `${many} в конкретных вузах`,
   };
 };
 
@@ -144,7 +149,9 @@ export function setupPriority({ countriesNode, majorsNode, countries, onPick }) 
         if (program.kind === 'university' || program.kind === 'need-aid') current.universities += 1;
         counts.set(program.hostCountry, current);
       }
-      pickers.countries.build(values, counts);
+      // По алфавиту на русском: человек ищет «Япония» глазами, а не код JP.
+      const sorted = [...values].sort((a, b) => countryName(a).localeCompare(countryName(b), 'ru'));
+      pickers.countries.build(sorted, counts);
     },
     // Запись «любое направление» покрывает вуз целиком, поэтому идёт в счёт
     // каждого направления; записи с названным направлением — в своё.

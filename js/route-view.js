@@ -266,7 +266,7 @@ function examPlanningBlock(step, track, plan, onChange) {
   return box;
 }
 
-function stepRow(step, index, { tracks, onToggle, getExamPlan, onExamPlan, compact = false }) {
+export function stepRow(step, index, { tracks, onToggle, getExamPlan, onExamPlan, compact = false }) {
   const row = el('div', step.done ? 'route-step is-done' : 'route-step');
   const check = el('input', 'route-check');
   check.type = 'checkbox';
@@ -495,7 +495,7 @@ export function renderRoute(root, props) {
   root.dataset.layer = section;
   const navigation = el('nav', 'path-nav');
   navigation.setAttribute('aria-label', 'Разделы моего пути');
-  for (const [id, title] of [['works', 'Портфолио'], ['preparation', 'Подготовка'], ['applications', 'Заявки'], ['interview', 'Собеседование'], ['files', 'Файл и данные']]) {
+  for (const [id, title] of [['preparation', 'Подготовка'], ['applications', 'Заявки'], ['works', 'Портфолио'], ['interview', 'Собеседование'], ['files', 'Файл и данные']]) {
     const link = el('a', null, title);
     link.href = id === 'works' ? '#route' : `#route/${id}`;
     if (id === section) link.setAttribute('aria-current', 'page');

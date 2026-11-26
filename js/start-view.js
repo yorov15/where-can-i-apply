@@ -52,10 +52,10 @@ export function renderStart(root,{state,programs,hasTask,handlers}) {
 }
 
 export function renderStartGuide(root,{active,screen,workPath,onExit}){
-  root.replaceChildren();root.hidden=!active||screen==='start'||screen==='today'||(screen==='route'&&!workPath);
+  root.replaceChildren();root.hidden=!active||screen==='start'||screen==='today'||screen==='profile'||(screen==='route'&&!workPath);
   if(root.hidden)return;
   const work=screen==='route';
-  root.append(el('strong',null,work?'Добавим твою первую работу':'Выберем цель поступления'),
-    el('p',null,work?'Выбери тип работы и тему. После сохранения мы покажем, с какого действия начать.':screen==='profile'?'Ответь на вопросы о школе и гражданстве. Затем выбери программу из каталога.':'Найди интересную программу и нажми «Выбрать эту цель». После этого покажем дела поступления.'));
-  const exit=button('Продолжить без подсказок',onExit);exit.className='link-button';root.append(exit);
+  root.append(el('strong',null,work?'Добавим твою первую работу':'Шаг 1 из 2. Выбери программу'),
+    el('p',null,work?'Выбери тип работы и тему. После сохранения мы покажем, с какого действия начать.':'Нажми «В мой путь» у программы, которая тебе интересна. Потом покажем, что делать и к какому сроку.'));
+  const exit=button('Скрыть подсказку',onExit);exit.className='link-button';root.append(exit);
 }

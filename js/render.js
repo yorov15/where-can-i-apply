@@ -436,8 +436,12 @@ export function countLine(rows) {
   const yes = open.filter((row) => bucketOf(row.verdict) === 'yes').length;
   const rest = open.filter((row) => ['likely', 'check'].includes(bucketOf(row.verdict))).length;
   const line = el('p', 'summary-count');
-  line.append(el('strong', null, String(yes)), ` ${plural(yes, 'подходит', 'подходят', 'подходят')} по условиям`);
+  // Закрытые «подходят» тоже есть в фильтре «Можно подавать»: называем их
+  // отдельно, иначе 22 здесь и 29 на кнопке фильтра выглядят как ошибка.
+  const closedYes = rows.filter((row) => row.deadline === 'closed' && bucketOf(row.verdict) === 'yes').length;
+  line.append(el('strong', null, String(yes)), ` ${plural(yes, 'подходит', 'подходят', 'подходят')} по условиям, приём открыт`);
   if (rest) line.append(' · ', el('strong', null, String(rest)), ' нужно проверить или доделать');
+  if (closedYes) line.append(' · ещё ', el('strong', null, String(closedYes)), ` ${plural(closedYes, 'подходит', 'подходят', 'подходят')}, но приём сейчас закрыт`);
   return line;
 }
 
@@ -543,7 +547,7 @@ export const programHref = (id) => `#program/${encodeURIComponent(id)}`;
 // фокус возвращаем на ту же кнопку: иначе с клавиатуры человек оказывается в начале.
 export function planButton(id, plan) {
   const inPlan = plan.ids.includes(id);
-  const mark = el('button', 'button button-small button-quiet plan-toggle', inPlan ? '✓ В моём пути' : plan.guided?'Выбрать эту цель':'В мой путь');
+  const mark = el('button', 'button button-small button-quiet plan-toggle', inPlan ? '✓ В моём пути' : 'В мой путь');
   mark.type = 'button';
   mark.setAttribute('aria-pressed', String(inPlan));
   if (!inPlan && plan.ids.length >= plan.limit) {
