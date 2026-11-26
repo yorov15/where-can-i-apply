@@ -20,11 +20,11 @@
 | brunei-bdgs | готово | certificates, interview, other, recommendation | essay, cv, activities, awards, portfolio, studyPlan, video | — |
 | icu-japan | готово | activities, awards, certificates, essay, interview, other, recommendation | cv, portfolio, studyPlan, video | — |
 | alberta | готово | certificates | activities, awards, cv, essay, interview, portfolio, recommendation, studyPlan, video | — |
-| ncku | готово | certificates, cv, essay, interview, portfolio, recommendation, studyPlan | activities, awards, video | — |
+| ncku | готово | certificates, essay, interview, portfolio, recommendation, studyPlan | activities, awards, video | — |
 | eth-zurich | готово | certificates | essay, recommendation, interview, activities, cv, awards, portfolio, studyPlan, video | — |
-| sjtu | — | | | не начато |
-| sophia-spsf | — | | | не начато |
-| kyungpook | — | | | не начато |
+| sjtu | готово | certificates, cv, essay, interview, recommendation | activities, awards, portfolio, studyPlan, video | — |
+| sophia-spsf | готово | certificates, essay, recommendation | interview, activities, cv, awards, portfolio, studyPlan, video | — |
+| kyungpook | готово | certificates, interview, studyPlan | essay, recommendation, activities, cv, awards, portfolio, video | — |
 | utwente | готово | certificates, cv | essay, recommendation, activities, awards, portfolio, studyPlan, video, interview | — |
 | university-of-debrecen | готово | cv, interview, other | essay, activities, awards, portfolio, studyPlan, video | — |
 | tianjin-university | готово | awards, certificates, cv, studyPlan | essay, recommendation, activities, portfolio, video, interview | — |
@@ -37,12 +37,12 @@
 | apu-japan | готово | activities, certificates, essay, interview, recommendation | cv, awards, portfolio, studyPlan | — |
 | barnard-college | готово | essay, interview, portfolio, recommendation, video | cv, awards, studyPlan, certificates | — |
 | bme-budapest | готово | certificates, cv, essay, interview, other | activities, awards, portfolio, studyPlan, video | — |
-| cau | готово | certificates, interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | — |
-| chungbuk | готово | certificates, interview, portfolio | essay, activities, cv, awards, studyPlan, video | — |
+| cau | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates | — |
+| chungbuk | готово | interview, portfolio, recommendation | essay, activities, cv, awards, studyPlan, video, certificates | — |
 | comenius-university | готово | cv, essay, interview | activities, awards, portfolio, studyPlan, video | — |
-| czech-public | готово | cv, essay, interview, portfolio, recommendation | activities, awards, studyPlan, video | — |
-| enu | готово | essay, recommendation | cv, activities, awards, portfolio, video | — |
-| estonia-study | готово | cv, essay, interview, portfolio, recommendation | activities, awards, studyPlan, video | — |
+| czech-public | готово | cv, essay, interview, portfolio, recommendation | activities, awards, studyPlan, video, certificates | — |
+| enu | готово | essay, recommendation, studyPlan | cv, activities, awards, portfolio, video, certificates | — |
+| estonia-study | готово | cv, essay, interview, portfolio, recommendation | activities, awards, studyPlan, video, certificates | — |
 | fudan-university | готово | awards, certificates, essay, interview, other, recommendation | cv, activities, portfolio, studyPlan, video | — |
 | handong | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | — |
 | hkbu-hongkong | готово | activities, certificates, essay, interview, portfolio, recommendation | cv, studyPlan, video | — |
@@ -78,16 +78,16 @@
 | unsw | готово | essay | recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | — |
 | ustc | готово | recommendation | essay, activities, cv, awards, portfolio, studyPlan, video | — |
 | uwashington | готово | essay | activities, recommendation, interview, portfolio, cv, awards, studyPlan, video, certificates | — |
-| webster-tashkent | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | — |
+| webster-tashkent | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | — |
 | yonsei-uic | готово | activities, awards, interview | essay, recommendation, cv, portfolio, studyPlan, video, certificates | — |
 | zhejiang-university | готово | certificates, essay, interview, recommendation | activities, cv, portfolio, studyPlan, video | — |
 | xmu | готово | awards, essay, interview, portfolio, recommendation | activities, cv | — |
 | scu | готово | awards, essay, recommendation | activities, cv, portfolio, video | — |
 | bit | готово | essay, interview, portfolio | recommendation, activities, cv, awards, video, certificates | — |
 | beihang | готово | awards, other, portfolio | essay, recommendation, activities, cv, studyPlan, video | — |
-| xian-jiaotong-university | готово | interview, portfolio, recommendation, studyPlan | essay, activities, cv, awards, video | — |
-| mipt | готово | awards, interview | essay, recommendation, cv, activities, portfolio, studyPlan, video | — |
-| warsaw-university-of-technology | готово | certificates, interview | essay, recommendation, cv, activities, awards, portfolio, studyPlan, video | — |
+| xian-jiaotong-university | готово | interview, portfolio, recommendation, studyPlan | essay, activities, cv, awards, video, certificates | — |
+| mipt | готово | awards, interview | essay, recommendation, cv, activities, portfolio, studyPlan, video, certificates | — |
+| warsaw-university-of-technology | готово | interview | essay, recommendation, cv, activities, awards, portfolio, studyPlan, video, certificates | — |
 | king-abdulaziz | пропуск | | | пропуск: для бакалавриата английские страницы — пустые JS-заглушки, требований нет; рекомендации только для стипендий магистратуры/PhD |
 | cambridge | готово | essay, interview, other, portfolio | recommendation, activities, cv, awards, studyPlan, video, certificates | — |
 | urfu | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview | — |

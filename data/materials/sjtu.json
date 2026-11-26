@@ -1,0 +1,99 @@
+{
+  "id": "sjtu",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Personal statement в пакете заявки. Вопроса и объёма страница не называет — пишите на английском вместе с CV.",
+      "evidence": "3. Curriculum Vitae and Personal Statement 4. Two Recommendation Letters One from a high school counselor One from a core academic subject teacher",
+      "source": {
+        "url": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/778",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:0f303dc933d4a15ffbab1b512aec6ef7d51be8c8dcc78451bc677fcd5bab6ab3"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "CV подаётся вместе с personal statement; отдельных требований к нему страница не даёт.",
+      "evidence": "3. Curriculum Vitae and Personal Statement",
+      "source": {
+        "url": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/778",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:0f303dc933d4a15ffbab1b512aec6ef7d51be8c8dcc78451bc677fcd5bab6ab3"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Два письма: одно от школьного консультанта, второе от учителя основного предмета.",
+      "evidence": "Two recommendation letters are required: one from your high school counselor and one from a core academic teacher.",
+      "source": {
+        "url": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/278",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:90924e37362c260aed0b2a0a2593bb5eff2860ac22e311fa473814cdc5b7f35a"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Онлайн-собеседование — для тех, кто прошёл первичную проверку документов; проводят раундами по мере поступления заявок.",
+      "evidence": "Applicants who pass the initial document review will be invited to participate in an online interview. Interviews will be organized in multiple rounds on a rolling basis, according to the time when a complete set of application materials is submitted.",
+      "source": {
+        "url": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/778",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:0f303dc933d4a15ffbab1b512aec6ef7d51be8c8dcc78451bc677fcd5bab6ab3"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Не-носителям английского нужен TOEFL iBT (от 90), IELTS (от 6.0) или Duolingo; при высоком SAT Reading & Writing могут освободить.",
+      "evidence": "For non-native speakers of English, either TOEFL (iBT, code: 6210), IELTS, or Duolingo score is required.",
+      "source": {
+        "url": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/278",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:90924e37362c260aed0b2a0a2593bb5eff2860ac22e311fa473814cdc5b7f35a"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "278 — Engineering Cluster, набор 2027: CV и personal statement там не перечислены, зато заявка идёт сначала через Common App. CV, personal statement и онлайн-интервью — со страницы 778 (BEng Civil Engineering, набор 2026); 794 — GIFT, тоже набор 2026."
+}

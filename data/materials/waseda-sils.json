@@ -1,0 +1,85 @@
+{
+  "id": "waseda-sils",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Одно эссе на английском прямо в системе TAO. Вопрос и условия объявят на сайте школы позже; объёма страница не называет.",
+      "evidence": "Write an essay in English in the given space on TAO. The essay question and other instructions will be posted on the School website as follows.",
+      "source": {
+        "url": "https://www.waseda.jp/fire/sils/assets/uploads/2026/09/2027_September_Guide.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:9f2a3cdb5fb4d0d1ccae4c23c6f0e31ebe37a3b8c22f82f9586d04cf4c17d73e"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "optional",
+      "count": 3,
+      "limit": {
+        "unit": "words",
+        "max": 150
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "До трёх наград и внешкольных занятий после средней школы, по значимости. Каждое — около 100–150 слов и PDF-подтверждение.",
+      "evidence": "Choose up to three honors/activities as you think the best in order. The experiences mentioned here must be acquired after graduating from junior high school or completing the first half of secondary schooling. Describe them in the given spaces on TAO (around 100 -150 words) and upload a PDF version of a certificate, brochure, article or other document to prove your activities.",
+      "source": {
+        "url": "https://www.waseda.jp/fire/sils/assets/uploads/2026/09/2027_September_Guide.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:9f2a3cdb5fb4d0d1ccae4c23c6f0e31ebe37a3b8c22f82f9586d04cf4c17d73e"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Собеседование онлайн — только если вуз решит, что ему нужны дополнительные сведения. Дату назначает школа, перенести нельзя.",
+      "evidence": "An interview will be required only when we judge that we need further information in addition to the application documents. The interview will be conducted through an online interview system.",
+      "source": {
+        "url": "https://www.waseda.jp/fire/sils/assets/uploads/2026/09/2027_September_Guide.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:9f2a3cdb5fb4d0d1ccae4c23c6f0e31ebe37a3b8c22f82f9586d04cf4c17d73e"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Балл TOEFL iBT или IELTS (Academic) за тест, сданный не раньше 1 февраля 2025 года; отправляет тест-центр напрямую в Waseda.",
+      "evidence": "5. English Language Proficiency Test Score Submit the results of the following tests. Only the tests taken on or after the following date are deemed as being valid: February 1, 2025.",
+      "source": {
+        "url": "https://www.waseda.jp/fire/sils/assets/uploads/2026/09/2027_September_Guide.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:9f2a3cdb5fb4d0d1ccae4c23c6f0e31ebe37a3b8c22f82f9586d04cf4c17d73e"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "cv",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Вопросы эссе для September 2027 на странице приёма — TBA: Early Admission объявят 22 декабря 2026, Regular — 13 января 2027. Рекомендации по FAQ не нужны: даже если пришлют, их не учитывают в оценке."
+}
