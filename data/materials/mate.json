@@ -1,0 +1,67 @@
+{
+  "id": "mate",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Мотивационное письмо: почему вы выбрали эту программу. Загружается в DreamApply.",
+      "evidence": "Upload a letter of motivation outlining your reasons for choosing the course",
+      "source": {
+        "url": "https://en.uni-mate.hu/application-procedure-for-bsc-msc",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:eff5e23719700c137020a6a16e62fe2447459efd8ef5967f93485724c3ecddb1"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Краткое резюме (CV) прикладывается к заявке в DreamApply.",
+      "evidence": "Attach a brief Curriculum Vitae",
+      "source": {
+        "url": "https://en.uni-mate.hu/application-procedure-for-bsc-msc",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:eff5e23719700c137020a6a16e62fe2447459efd8ef5967f93485724c3ecddb1"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "После проверки полностью поданной заявки вас пригласят на собеседование.",
+      "evidence": "After the revision of your fully submitted Application Package, you will be contacted for an interview.",
+      "source": {
+        "url": "https://en.uni-mate.hu/application-procedure-for-bsc-msc",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:eff5e23719700c137020a6a16e62fe2447459efd8ef5967f93485724c3ecddb1"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Страница описывает платный набор 2026/2027 (последняя правка 25.06.2026); требований на 2027/2028 в снимке нет — они могут измениться. В общем FAQ вуз называет рекомендательные письма среди критериев отбора, но в списке документов для BSc их нет."
+}

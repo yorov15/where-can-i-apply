@@ -1,0 +1,35 @@
+{
+  "id": "ozyegin-university",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "pages", "max": 2},
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Statement of Purpose: почему вы хотите учиться в Özyeğin и какие у вас академические и карьерные цели. Не больше двух страниц, Word или PDF.",
+      "evidence": "Statement of Purpose: A document explaining why you want to study at Özyeğin University and your academic and career goals. The statement should not exceed two pages and can be uploaded in Word or PDF format.",
+      "source": {
+        "url": "https://admissions.ozyegin.edu.tr/en/admission-process-draft/",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:51cc0e76c55357b6fc94621e80e7073e774fed4dadd20b312f5ab7c414c5bc5e"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "interview",
+    "certificates"
+  ],
+  "note": "Страница — набор на осень 2026/2027, дедлайн 15 ноября 2026. В списке документов Statement of Purpose не помечен «(required)», но в критериях оценки вуз называет мотивационное письмо."
+}

@@ -88,14 +88,14 @@
 | obuda | готово | essay, cv, portfolio, other | activities, awards, studyPlan, video, interview, certificates | рекомендации и портфолио Architecture — только MSc |
 | ecnu | готово | essay, recommendation, portfolio, video, other, interview | activities, cv, awards, studyPlan, certificates | гайд обновлён под сентябрь 2027; саморекомендация 500–800 слов |
 | nankai | готово | essay, recommendation, interview, other | activities, cv, awards, portfolio, studyPlan, video, certificates |  |
-| mate | — | | | |
-| fu-berlin | — | | | |
-| uni-due | — | | | |
-| study-in-saudi | — | | | |
-| oxford-reach | — | | | |
-| ritsumeikan | — | | | |
-| ozyegin-university | — | | | |
-| nagoya-g30 | — | | | |
+| mate | готово | essay, cv, interview | recommendation, activities, awards, portfolio, studyPlan, video, certificates | набор 2026/2027; рекомендации только в общем FAQ, в списке BSc их нет |
+| fu-berlin | готово | essay | recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | обоснование только для второй программы (need some) |
+| uni-due | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | письменных материалов нет: только аттестат, язык, документы для зачисления |
+| study-in-saudi | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | портал принимает заявку и визу; документы — по требованиям вуза |
+| oxford-reach | частично | essay, recommendation, other, interview | activities, cv, awards, portfolio, studyPlan, video, certificates | только календарь этапов без объёмов; guide-for-applicants не скачались (сеть) |
+| ritsumeikan | готово | essay, recommendation, interview | activities, cv, awards, portfolio, studyPlan, video, certificates | Application Handbook не в снимке: тем и числа эссе нет; интервью не у всех программ |
+| ozyegin-university | готово | essay | recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | Statement of Purpose до 2 страниц |
+| nagoya-g30 | готово | essay, recommendation, interview | activities, cv, awards, portfolio, studyPlan, video, certificates | два эссе (200–300 и 400–500 слов), Referee A + Referee B |
 
 ## Ошибки validate
 
