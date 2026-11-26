@@ -439,9 +439,12 @@ export function countLine(rows) {
   // Закрытые «подходят» тоже есть в фильтре «Можно подавать»: называем их
   // отдельно, иначе 22 здесь и 29 на кнопке фильтра выглядят как ошибка.
   const closedYes = rows.filter((row) => row.deadline === 'closed' && bucketOf(row.verdict) === 'yes').length;
-  line.append(el('strong', null, String(yes)), ` ${plural(yes, 'подходит', 'подходят', 'подходят')} по условиям, приём открыт`);
+  // Первым — то же число, что на фильтре «Можно подавать» и в заголовке группы;
+  // сразу за ним — сколько из них открыто сейчас.
+  const all = yes + closedYes;
+  line.append(el('strong', null, String(all)), ` ${plural(all, 'подходит', 'подходят', 'подходят')} по условиям`);
+  line.append(closedYes ? `: у ${yes} приём открыт, у ${closedYes} сейчас закрыт` : ', приём открыт');
   if (rest) line.append(' · ', el('strong', null, String(rest)), ' нужно проверить или доделать');
-  if (closedYes) line.append(' · ещё ', el('strong', null, String(closedYes)), ` ${plural(closedYes, 'подходит', 'подходят', 'подходят')}, но приём сейчас закрыт`);
   return line;
 }
 

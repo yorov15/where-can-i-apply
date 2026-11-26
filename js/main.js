@@ -7,6 +7,7 @@ import { setupTabbar } from './tabbar.js';
 import { setupPriority } from './priority.js';
 import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocument, loadEssaySpec, forgetConditions } from './data.js';
 import { renderResults } from './render.js';
+import { countStep, COUNT_KEY } from './lib/count.js';
 import { PLAN_KEY, DONE_KEY, buildEventsIcs } from './plan.js';
 import { scheduleRoute, routeCalendarEvents } from './agenda.js';
 import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask, setGoalStatus, toggleDismissed, hideBalance } from './route-state.js';
@@ -216,6 +217,7 @@ const plan = {
       ? plan.ids.filter(goal => goal !== id) : [...plan.ids, id]);
     // Выбранная цель не может оставаться в «Отложено».
     if (adding && routeState.goals.includes(id) && routeState.dismissed?.includes(id)) routeState = toggleDismissed(routeState, id);
+    if (adding) countStep('plan-added');
     persistRoute();
     refresh();
     // План показывает дела и плату за подачу — и то и другое берётся из
@@ -799,6 +801,7 @@ finishButton.addEventListener('click', (event) => {
   }
   wizard.end();
   finished = true;
+  countStep('check-done');
   location.hash = 'programs';
   syncScreen();
 }, true);
@@ -883,6 +886,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
     localStorage.removeItem(PLAN_KEY);
     localStorage.removeItem(DONE_KEY);
     localStorage.removeItem(ROUTE_STATE_KEY);
+    localStorage.removeItem(COUNT_KEY);
   } catch { /* приватный режим: стирать нечего */ }
   routeState = loadRouteState(localStorage);
   weeklySnapshot=null;

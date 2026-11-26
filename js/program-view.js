@@ -18,6 +18,7 @@ import { MATERIAL_TYPES, NEED_LABELS } from './materials-plan.js';
 import { countryHref } from './country-view.js';
 import { plural } from './lib/format.js';
 import { countryName } from './filter.js';
+import { countStep } from './lib/count.js';
 import {
   splitHeadline, kindLine, explainBlock, skeleton, reasonItem, planButton, bulletList, makeNode as el,
 } from './render.js';
@@ -167,6 +168,7 @@ function shareButton(title, id) {
     try {
       if (navigator.share) await navigator.share({ title, url });
       else { await navigator.clipboard.writeText(url); button.textContent = 'Ссылка скопирована'; }
+      countStep('link-shared');
     } catch (error) {
       // Закрыл меню сам — молчим. Буфер недоступен — показываем ссылку,
       // чтобы её можно было скопировать руками, а не жать кнопку впустую.
@@ -255,8 +257,13 @@ export function renderProgram(root, props) {
     }
   }
 
+  // «В мой путь» — главное действие экрана, поэтому и наверху, а не только
+  // в конце длинной страницы: на телефоне до конца пять экранов прокрутки.
   const links = el('div', 'today-actions');
-  const site = link(model.applyUrl, 'Открыть сайт программы', 'button');
+  const addTop = planButton(id, plan);
+  if (!plan.ids.includes(id)) addTop.classList.remove('button-quiet');
+  links.append(addTop);
+  const site = link(model.applyUrl, 'Открыть сайт программы', 'button button-quiet');
   if (site) links.append(site);
   const code = row.program.hostCountry;
   if (code && props.countryTotal) {
