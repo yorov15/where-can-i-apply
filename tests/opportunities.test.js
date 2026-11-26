@@ -8,9 +8,9 @@ const read = path => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8'
 const items = JSON.parse(read('data/opportunities.json'));
 const today = '2026-11-04';
 
-test('по умолчанию показываются только пять подтверждённых открытых бесплатных конкурсов', () => {
+test('по умолчанию показываются только подтверждённые открытые бесплатные конкурсы', () => {
   const visible = selectOpportunities(items, { today });
-  assert.equal(visible.length, 5);
+  assert.equal(visible.length, 11);
   assert.equal(visible[0].id, 'aldevere-question');
   assert.ok(visible.every(item => item.cost === 'free' && item.deadline && item.state === 'confirmed'));
 });
@@ -18,8 +18,8 @@ test('по умолчанию показываются только пять п�
 test('закрытый набор и национальная олимпиада без даты не становятся открытыми', () => {
   assert.equal(opportunityStatus(items.find(i => i.id === 'immerse-essay'), today), 'closed');
   assert.equal(opportunityStatus(items.find(i => i.id === 'tajikistan-biology'), today), 'unknown');
-  assert.equal(selectOpportunities(items, { today, type: 'olympiad' }).length, 0);
-  assert.equal(selectOpportunities(items, { today, type: 'olympiad', openOnly: false, freeOnly: false }).length, 2);
+  assert.equal(selectOpportunities(items, { today, type: 'olympiad' }).length, 1);
+  assert.equal(selectOpportunities(items, { today, type: 'olympiad', openOnly: false, freeOnly: false }).length, 3);
 });
 
 test('срок бесплатной регистрации отделён от срока подачи и перестаёт обещать бесплатность', () => {
@@ -53,7 +53,7 @@ test('поиск работает по русскому описанию и на
 test('у опубликованных записей источник одобрен, цитаты совпадают со снимком и его хешем', () => {
   const registry = JSON.parse(read('tools/opportunity-sources.json'));
   assert.equal(registry.approvedBy, 'human');
-  assert.equal(registry.sources.length, 10);
+  assert.equal(registry.sources.length, 16);
   assert.equal(new Set(items.map(i => i.id)).size, items.length);
   for (const item of items) {
     const source = item.source;
