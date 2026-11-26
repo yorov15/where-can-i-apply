@@ -1,0 +1,66 @@
+{
+  "id": "seoultech",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Собеседование — этап приёма для всех: после проверки документов, онлайн или лично. Формат и язык интервью страница не описывает.",
+      "evidence": "Submission of Original Documents (by post or in person) Documents Review Interview (Online or in person) Announcement of Admissions Result",
+      "source": {
+        "url": "https://global.seoultech.ac.kr/apply/undergraduate",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:005d4a0c2de066f12270a4a5aadea0eb014e2ec8a9fc7d07d36b629dd3b8ed81"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Портфолио нужно только тем, кто поступает в College of Art and Design: больше 10 страниц.",
+      "evidence": "(Applicants for college of Art and Design)Portfolio more than 10pages",
+      "source": {
+        "url": "https://global.seoultech.ac.kr/apply/undergraduate",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:005d4a0c2de066f12270a4a5aadea0eb014e2ec8a9fc7d07d36b629dd3b8ed81"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "principal",
+      "language": null,
+      "via": null,
+      "ru": "Одна рекомендация от руководителя учебного заведения, где получена предыдущая степень. Только для стипендии Key Partner (страны-получатели помощи Кореи). Документы на другом языке — с заверенным переводом.",
+      "evidence": "Documents All documents for freshman + One letter of recommendation issued by the president of institute of previous degree program(Documents in another language should be accompanied by a notarized English or Korean translation)",
+      "source": {
+        "url": "https://global.seoultech.ac.kr/apply/scholar",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:0cfcc1d56fff26677c1c925796ca315b4b2c106716a76603937fe525540bf002"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Год набора страница не называет: сроки даны по семестрам без года (снимок 28.09.2026). Эссе, мотивации, CV и списка активностей на страницах нет. Рекомендация — только в разделе стипендии Key Partner. Портфолио «больше 10 страниц» — минимум, поэтому в limit не внесено. TOPIK/TOEFL — языковые документы, не материалы. Третья страница — общий FAQ Минобразования Кореи, не о SeoulTech."
+}

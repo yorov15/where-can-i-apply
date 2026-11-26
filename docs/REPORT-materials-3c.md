@@ -68,16 +68,16 @@
 | psl | готово | essay, cv, recommendation, interview | portfolio, awards, studyPlan, video, certificates | требования только у I-BE³, IBSAI и Sustainability; набор 2026/27 |
 | russia-quota | готово | interview, other (испытания) | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates | набор 2026; собеседование и испытания — в зависимости от страны |
 | sapienza-italy | готово | recommendation | essay, activities, cv, awards, portfolio, studyPlan, video, interview | набор 2026/27 прошёл; рекомендация опциональна, программные PDF вне снимка |
-| seoultech | — | | | |
-| slovak-university-of-technology | — | | | |
-| sookmyung | — | | | |
-| sweden-study | — | | | |
-| tiu-japan | — | | | |
-| tudelft | — | | | |
-| uba | — | | | |
-| uiuc | — | | | |
-| unist | — | | | |
-| university-of-warsaw | — | | | |
+| seoultech | готово | interview, portfolio, recommendation | essay, activities, cv, awards, studyPlan, video | год набора не назван; рекомендация — только стипендия Key Partner |
+| slovak-university-of-technology | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | страницы факультетов не скачались (fetch — таймаут); в снимке только условия и плата |
+| sookmyung | готово | essay, recommendation, portfolio, interview | activities, awards, cv, studyPlan, video | приём Spring 2027; портфолио и интервью — только искусства |
+| sweden-study | частично | essay | recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | страновой портал: требования программ на Universityadmissions.se, домен не одобрен |
+| tiu-japan | готово | essay, recommendation, activities, interview | cv, awards, portfolio, studyPlan, video, certificates | набор April & September 2027 |
+| tudelft | готово | cv | essay, recommendation, activities, awards, portfolio, studyPlan, video, interview, certificates | регламент numerus clausus вне снимка |
+| uba | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | письменных материалов нет: только порядок записи; C1 по испанскому — язык |
+| uiuc | готово | essay, portfolio, interview, other | recommendation, activities, cv, awards, studyPlan, video, certificates | набор осень 2027; общий раздел активностей Common App не внесён |
+| unist | частично | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | FAQ и PDF Guidelines не скачались (таймаут fetch) |
+| university-of-warsaw | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | набор 2026/27 прошёл; экзамен и собеседование — только отдельные программы, правила в IRK |
 | usm | — | | | |
 | uts | — | | | |
 | wcu | — | | | |

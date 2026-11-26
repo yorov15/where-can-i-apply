@@ -1,0 +1,34 @@
+{
+  "id": "unist",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Поступление решают проверка документов и собеседование — так сказано на общей странице приёма UNIST. Кого приглашают, на каком языке и в каком формате проходит интервью, страница не уточняет.",
+      "evidence": "서류 및 면접 전형을 통해 인재를 선발하며, 모든 신입생에게 입학금과 등록금을 100% 지원합니다.",
+      "source": {
+        "url": "https://www.unist.ac.kr/unist/admissions/admissions.do",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:6a67a0d8edcabbc8f52413f6413e9c04305256eb713769fdbbe391222553104d"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "recommendation",
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Снимок 27.09.2026: только лендинг приёма UNIST и FAQ минобразования Кореи. Собеседование названо одной строкой на общей странице приёма, года набора она не называет. Требований к эссе, плану учёбы и рекомендациям в снимке нет, перечня документов тоже: они в FAQ приёма на admu-intl.unist.ac.kr и в PDF Guidelines, а эти страницы не скачались (tools.fetch — таймаут)."
+}
