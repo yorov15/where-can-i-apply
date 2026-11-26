@@ -78,16 +78,16 @@
 | uiuc | готово | essay, portfolio, interview, other | recommendation, activities, cv, awards, studyPlan, video, certificates | набор осень 2027; общий раздел активностей Common App не внесён |
 | unist | частично | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | FAQ и PDF Guidelines не скачались (таймаут fetch) |
 | university-of-warsaw | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | набор 2026/27 прошёл; экзамен и собеседование — только отдельные программы, правила в IRK |
-| usm | — | | | |
-| uts | — | | | |
-| wcu | — | | | |
-| yonsei | — | | | |
-| spbu | — | | | |
-| tongji | — | | | |
-| islamic-university-madinah | — | | | |
-| renmin | — | | | |
-| itu | — | | | |
-| wuhan-university | — | | | |
+| usm | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | снимок — заглушка с чек-листом документов; письменных материалов нет |
+| uts | готово | essay, portfolio | recommendation, activities, cv, awards, studyPlan, video, interview, certificates | форма Sept 2026 — прошлый набор |
+| wcu | готово | interview, certificates | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | год набора и дедлайны не названы |
+| yonsei | готово | essay, awards, certificates | recommendation, activities, cv, portfolio, studyPlan, video, interview | гид Fall 2026 — прошлый набор |
+| spbu | частично | portfolio | essay, recommendation, activities, cv, awards, studyPlan, video, interview, certificates | олимпиада 2025/26; состав портфолио в Положении вне снимка |
+| tongji | готово | essay, portfolio, interview | recommendation, activities, cv, awards, studyPlan, video, certificates | гайд 2026 — прошлый набор |
+| islamic-university-madinah | готово | recommendation, interview, other | essay, cv, activities, awards, portfolio, studyPlan, video | набор 1448 AH прошёл |
+| renmin | пропуск | — | — | в снимке все 11 адресов http, валидатор требует https; секция на manual-файлах, которых нет в worktree, переснять нельзя |
+| itu | готово | essay, portfolio, interview | activities, awards, studyPlan, video | набор 2026/27 |
+| wuhan-university | готово | interview, other (экзамен) | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates | гайд 2026 — прошлый набор |
 | mephi | — | | | |
 | harbin-institute-of-technology | — | | | |
 | ibn-haldun | — | | | |
