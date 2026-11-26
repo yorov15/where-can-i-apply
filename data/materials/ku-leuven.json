@@ -1,0 +1,54 @@
+{
+  "id": "ku-leuven",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "pages",
+        "max": 1
+      },
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Мотивационное письмо — рекомендуемая длина одна страница A4.",
+      "evidence": "Motivation letter (recommended length: one A4-page)",
+      "source": {
+        "url": "https://www.kuleuven.be/english/apply/requested-documents",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:d0d3117af0f7a6b8a3c4b993b75437b02df7def78bc87a477097a080f1383336"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Резюме (CV) — в списке основных документов заявки на бакалавриат.",
+      "evidence": "Curriculum Vitae (CV)",
+      "source": {
+        "url": "https://www.kuleuven.be/english/apply/requested-documents",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:d0d3117af0f7a6b8a3c4b993b75437b02df7def78bc87a477097a080f1383336"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "interview",
+    "certificates"
+  ],
+  "note": "Страница запрашиваемых документов для бакалаврской заявки, снимок 2026-09-30. Отдельные программы могут просить дополнительные документы и тесты — вуз отсылает к странице программы, в снимке их нет."
+}

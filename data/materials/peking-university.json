@@ -1,0 +1,116 @@
+{
+  "id": "peking-university",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Personal statement — в списке материалов заявки; вопрос и объём на странице не указаны.",
+      "evidence": "Personal statement.",
+      "source": {
+        "url": "https://isd.pku.edu.cn/en/detail.php?id=818",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:74ad0df1976f7e412eb795db908ea8b502c64c90e03952918d5577d10c528a2b"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Два письма-рекомендации — только на маршруте без вступительного экзамена.",
+      "evidence": "Two written letters of recommendation.",
+      "source": {
+        "url": "https://isd.pku.edu.cn/en/detail.php?id=813",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:9f04b178aeecf47b36591a42b55df85c97d6c146a26a4233668d3861d3dcaa1a"
+      }
+    },
+    {
+      "type": "video",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Видео о себе для кандидата; шаблон и указания скачиваются на странице.",
+      "evidence": "Self introduction video for candidates (click to download) .",
+      "source": {
+        "url": "https://isd.pku.edu.cn/en/detail.php?id=818",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:74ad0df1976f7e412eb795db908ea8b502c64c90e03952918d5577d10c528a2b"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Сертификаты о наградах и подтверждающие документы — если они есть.",
+      "evidence": "Certificates of award and relevant supporting documents (if any)",
+      "source": {
+        "url": "https://isd.pku.edu.cn/en/detail.php?id=818",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:74ad0df1976f7e412eb795db908ea8b502c64c90e03952918d5577d10c528a2b"
+      }
+    },
+    {
+      "type": "other",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Commitment Letter for Applicants — бланк скачивается на странице. Без него заявку не примут.",
+      "evidence": "Commitment Letter for Applicants (click to download) . Applications without a commitment letter will not be accepted.",
+      "source": {
+        "url": "https://isd.pku.edu.cn/en/detail.php?id=818",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:74ad0df1976f7e412eb795db908ea8b502c64c90e03952918d5577d10c528a2b"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Собеседование — только для кандидатов на стипендию правительства Китая, которых направил CSC, до предзачисления.",
+      "evidence": "Chinese government scholarship candidates recommended by the China Scholarship Council to our school must pass our school's qualification review and interview before being eligible for pre-admission.",
+      "source": {
+        "url": "https://isd.pku.edu.cn/en/detail.php?id=818",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:74ad0df1976f7e412eb795db908ea8b502c64c90e03952918d5577d10c528a2b"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "portfolio",
+    "studyPlan",
+    "certificates"
+  ],
+  "note": "Набор 2026: письменный экзамен в конце марта 2026, второй этап — в середине апреля 2026. В снимке две страницы — с экзаменом (id=818) и без экзамена (id=813); письма-рекомендации только на второй. Все материалы принимают на китайском или английском."
+}

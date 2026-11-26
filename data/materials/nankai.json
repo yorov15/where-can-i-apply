@@ -1,0 +1,84 @@
+{
+  "id": "nankai",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Personal statement на китайском или английском; объём вуз не указывает.",
+      "evidence": "Personal statement (in Chinese or English).",
+      "source": {
+        "url": "https://ensie.nankai.edu.cn/info/1089/1167.htm",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:681d6063fa22aef14c5becf8c217b6310390272b32d92f3c533f6667b762b1c1"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Одно рекомендательное письмо — в списке обязательных документов.",
+      "evidence": "One recommendation letter.",
+      "source": {
+        "url": "https://ensie.nankai.edu.cn/info/1089/1167.htm",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:681d6063fa22aef14c5becf8c217b6310390272b32d92f3c533f6667b762b1c1"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "После проверки документов прошедших приглашают на собеседование; даты сообщают отдельно.",
+      "evidence": "Applicants who pass the preliminary document review will proceed to the interview stage. Specific interview dates will be notified separately.",
+      "source": {
+        "url": "https://ensie.nankai.edu.cn/info/1089/1167.htm",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:681d6063fa22aef14c5becf8c217b6310390272b32d92f3c533f6667b762b1c1"
+      }
+    },
+    {
+      "type": "other",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Дополнительные материалы о ваших сильных сторонах; что именно приложить, вуз не уточняет.",
+      "evidence": "Supplementary materials demonstrating comprehensive abilities.",
+      "source": {
+        "url": "https://ensie.nankai.edu.cn/info/1089/1167.htm",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:681d6063fa22aef14c5becf8c217b6310390272b32d92f3c533f6667b762b1c1"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Снимок от 01.10.2026, набор 2026; для 2027 могут измениться. CSCA и HSK — экзамены, они в data/prep. Что входит в дополнительные материалы, вуз не уточняет."
+}

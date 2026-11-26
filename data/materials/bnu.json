@@ -1,0 +1,84 @@
+{
+  "id": "bnu",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": null,
+      "via": "platform",
+      "ru": "Письмо от учителя, классного руководителя или руководителя школы. Форма свободная, но нужна подпись того, кто пишет.",
+      "evidence": "A letter of recommendation from a teacher, head teacher, or school leader of the high school. It has no fixed format, but signature of the referee is required.",
+      "source": {
+        "url": "https://admission-is.bnu.edu.cn/english/admissionprogram/bachelordegreeprogram/admissionbrochure/index.html",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:db8754e1695f8ee055dfc3ef5b0aa7091014954ab1bef1e5cbc8b9a35fbaa8ca"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "zh",
+      "via": "platform",
+      "ru": "Personal statement: скачать форму в системе BNU, распечатать и заполнить от руки по-китайски. Печатный вариант не принимают.",
+      "evidence": "Personal Statement. Please download the format from the BNU online application system. Print and fill out the form in Chinese. The personal statement should be handwritten; print version will not be accepted.",
+      "source": {
+        "url": "https://admission-is.bnu.edu.cn/english/admissionprogram/bachelordegreeprogram/admissionbrochure/index.html",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:db8754e1695f8ee055dfc3ef5b0aa7091014954ab1bef1e5cbc8b9a35fbaa8ca"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "По желанию можно приложить награды, сертификаты и другие подтверждения — одним PDF или Word.",
+      "evidence": "(Optional) Photocopies of other supplementary materials and certificates, such as award certificates, standardized test scores, and other relevant documents, should be scanned and combined into a single PDF or Word file for upload.",
+      "source": {
+        "url": "https://admission-is.bnu.edu.cn/english/admissionprogram/bachelordegreeprogram/admissionbrochure/index.html",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:db8754e1695f8ee055dfc3ef5b0aa7091014954ab1bef1e5cbc8b9a35fbaa8ca"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Собеседование проводит BNU; при подаче на две специальности проходят собеседование по обеим.",
+      "evidence": "Interview will be held by BNU. Applicants applying for two majors will have to take the interviews of both majors.",
+      "source": {
+        "url": "https://admission-is.bnu.edu.cn/english/admissionprogram/bachelordegreeprogram/admissionbrochure/index.html",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:db8754e1695f8ee055dfc3ef5b0aa7091014954ab1bef1e5cbc8b9a35fbaa8ca"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates",
+    "other"
+  ],
+  "note": "Брошюра набора 2026, снимок 01.10.2026; для 2027 требования могут измениться. Personal statement заполняют от руки по-китайски. Стипендия BNU требует те же материалы, что и приём. CSCA и HSK — экзамены, они в data/prep."
+}

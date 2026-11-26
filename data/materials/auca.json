@@ -1,0 +1,51 @@
+{
+  "id": "auca",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "words", "max": 700},
+      "prompt": "Please state your reasons for applying to the chosen program of the American University of Central Asia, and how your studies at AUCA will contribute toward your life goals; also tell us what you feel most enthusiastic about and whether this has influenced your life in any way.",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Statement of Purpose: почему выбрали программу в AUCA, как учёба поможет вашим целям, что увлекает больше всего и как это влияло на жизнь. До 700 слов, прикладывается к заявке.",
+      "evidence": "Limit your statement of purpose to 700 words. Please attach your statement of purpose to this application.",
+      "source": {
+        "url": "https://www.auca.kg/en/freshman_applicants/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:6f47e8b5861b70fbe4f0d73ab6eefbd26841ac9bffc9971e16d29900c4fe782d"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Гражданам Кыргызстана и стран СНГ: копии всех дипломов республиканских и международных олимпиад по предметам.",
+      "evidence": "Any and all Republic and International Olympiad Diplomas on specific subjects (FOR KYRGYZ CITIZENS & CIS APPLICANTS ONLY)",
+      "source": {
+        "url": "https://www.auca.kg/en/freshman_applicants/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:6f47e8b5861b70fbe4f0d73ab6eefbd26841ac9bffc9971e16d29900c4fe782d"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "cv",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "interview",
+    "certificates"
+  ],
+  "note": "Страница не называет год набора; снимок от 25 ноября 2026. В чек-листе, кроме Statement of Purpose, только документы, результаты тестов, паспорт с фото и сертификат ОРТ для граждан Кыргызстана."
+}

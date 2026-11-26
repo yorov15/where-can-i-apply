@@ -1,0 +1,93 @@
+{
+  "id": "ewha",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Личное заявление по форме 2-1 — только для бакалавриата, печатают прямо на сайте заявки.",
+      "evidence": "Personal Statement [Form 2-1] • Required for undergraduate program applicants only • Must be typed on the online application website.",
+      "source": {
+        "url": "https://isa.ewha.ac.kr/sites/oisa/file/ag_english.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:f2843b1ecc83e3439a4f24c2086ff6ba2ea7f0c6f06b3e0426b46ecccb8cf91c"
+      }
+    },
+    {
+      "type": "other",
+      "need": "optional",
+      "count": null,
+      "limit": {"unit": "items", "max": 10},
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "По желанию можно приложить дополнительные материалы, не больше 10.",
+      "evidence": "If you would like other supplemental materials to be considered during the evaluation process, you may submit them. (Maximum number of materials: 10, not mandatory)",
+      "source": {
+        "url": "https://isa.ewha.ac.kr/sites/oisa/file/ag_english.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:f2843b1ecc83e3439a4f24c2086ff6ba2ea7f0c6f06b3e0426b46ecccb8cf91c"
+      }
+    },
+    {
+      "type": "other",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Только для тех, кто просит стипендию Ewha: заполнить официальную форму 4 на корейском или английском и загрузить PDF.",
+      "evidence": "Scholarship Application [Form 4] • For applicants applying for Ewha scholarships only • Applicants must fill out the university's official form in either Korean or English and upload it in PDF format.",
+      "source": {
+        "url": "https://isa.ewha.ac.kr/sites/oisa/file/ag_english.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:f2843b1ecc83e3439a4f24c2086ff6ba2ea7f0c6f06b3e0426b46ecccb8cf91c"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Только для College of Music (кроме отделения Voice), College of Art & Design и Division of Kinesiology & Sports Studies: материалы творческих или спортивных способностей.",
+      "evidence": "Must be submitted by applicants who fall under one of the two cases below. ① Undergraduate Program: Applicants to the College of Music (excluding Undergraduate Department of Voice), College of Art & Design, Division of Kinesiology & Sports Studies",
+      "source": {
+        "url": "https://isa.ewha.ac.kr/sites/oisa/file/ag_english.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:f2843b1ecc83e3439a4f24c2086ff6ba2ea7f0c6f06b3e0426b46ecccb8cf91c"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Некоторых поступающих могут отдельно пригласить на телефонное или видеоинтервью; на отделение Voice — очное интервью и практический экзамен.",
+      "evidence": "※ Some applicants may be contacted individually for a phone or video interview if necessary. ※ However, applicants to the undergraduate Department of Voice and graduate Voice majors (Voice and Choral Conducting) must attend the in-person interview and practical examination.",
+      "source": {
+        "url": "https://isa.ewha.ac.kr/sites/oisa/file/ag_english.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:f2843b1ecc83e3439a4f24c2086ff6ba2ea7f0c6f06b3e0426b46ecccb8cf91c"
+      }
+    }
+  ],
+  "notStated": ["recommendation", "cv", "studyPlan"],
+  "note": "Рекомендательное письмо и учебный план в гайде — только для магистратуры, бакалаврам их не просят. Гайд набора Spring 2027."
+}

@@ -1,0 +1,83 @@
+{
+  "id": "hbku",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": "why the applicant is applying for the program, and how it will contribute to their future goals",
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Personal statement of interest: почему вы подаётесь на эту программу и как она поможет вашим целям. На этой странице ограничения по объёму нет.",
+      "evidence": "Personal statement of interest A personal statement explaining why the applicant is applying for the program, and how it will contribute to their future goals (no word limit).",
+      "source": {
+        "url": "https://www.hbku.edu.qa/en/cse/bs-programs/admission-requirements?tabid=programs_and_requirements",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:a2b1fca2dd6829c941b75a8c0d290b52bef9311b4417118327e86d4de38ef9bf"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Два письма-рекомендации: одно от школьного консультанта, второе — от учителя математики или естественных наук.",
+      "evidence": "Two recommendation letters, including one from the school counselor, and one from a mathematics or science teacher.",
+      "source": {
+        "url": "https://www.hbku.edu.qa/en/cse/bs-programs/admission-requirements?tabid=programs_and_requirements",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:a2b1fca2dd6829c941b75a8c0d290b52bef9311b4417118327e86d4de38ef9bf"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Резюме или CV: учёба и внеучебные достижения — награды, лидерство, волонтёрство, спорт.",
+      "evidence": "A resume or CV including academic and extracurricular achievements such as honors, awards, leadership, volunteer work, athletic involvement, or other relevant activities.",
+      "source": {
+        "url": "https://www.hbku.edu.qa/en/cse/bs-programs/admission-requirements?tabid=programs_and_requirements",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:a2b1fca2dd6829c941b75a8c0d290b52bef9311b4417118327e86d4de38ef9bf"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Заявку могут поставить на паузу и запросить собеседование — если приёмной комиссии нужно больше сведений о кандидате.",
+      "evidence": "Some applicants who demonstrate strong potential but for whom the admissions committee requires further information will have their applications placed on hold until the applicant has provided that information. Some examples may include: interviews, retaking a standardized test, and providing additional information regarding significant changes in the academic record.",
+      "source": {
+        "url": "https://www.hbku.edu.qa/sites/default/files/academics/ac-u-01.v01.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:3f23842139cf86a7062e36e90a894f5304fb49597a653328f4310ebd29d5aa7d"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Набор 2027: заявки с 1 сентября 2026 до 1 марта 2027. Объём личного заявления разный: на странице CSE — «no word limit», на странице Mechanical Engineering — минимум 300 и максимум 500 слов, в политике приёма — 500 слов. Все документы загружают только в PDF."
+}
