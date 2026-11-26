@@ -1,7 +1,7 @@
 # DS-1, партия 3A: что программа просит написать или собрать
 
 26.11.2026. Ветка `deepseek/materials-3a`, папка `C:/Users/ORYX/dev/nerio-mat-a`.
-Работа идёт группами по 10 программ в порядке списка.
+Список пройден целиком: 85 файлов, 4 пропуска, 3 частично.
 
 | id | статус | найдено (типы) | notStated | причина пропуска / что частично |
 |---|---|---|---|---|
@@ -38,10 +38,10 @@
 | barnard-college | готово | essay, interview, portfolio, recommendation, video | cv, awards, studyPlan, certificates | — |
 | bme-budapest | готово | certificates, cv, essay, interview, other | activities, awards, portfolio, studyPlan, video | — |
 | cau | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates | — |
-| chungbuk | готово | interview, portfolio, recommendation | essay, activities, cv, awards, studyPlan, video, certificates | — |
+| chungbuk | готово | interview, portfolio | essay, activities, cv, awards, studyPlan, video, certificates | — |
 | comenius-university | готово | cv, essay, interview | activities, awards, portfolio, studyPlan, video | — |
 | czech-public | готово | cv, essay, interview, portfolio, recommendation | activities, awards, studyPlan, video, certificates | — |
-| enu | готово | essay, recommendation, studyPlan | cv, activities, awards, portfolio, video, certificates | — |
+| enu | готово | essay, recommendation | cv, activities, awards, portfolio, video, certificates | — |
 | estonia-study | готово | cv, essay, interview, portfolio, recommendation | activities, awards, studyPlan, video, certificates | — |
 | fudan-university | готово | awards, certificates, essay, interview, other, recommendation | cv, activities, portfolio, studyPlan, video | — |
 | handong | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | — |
@@ -101,12 +101,11 @@
 
 - В начале работы: с ошибками 11 (auca, cornell, fudan-university, hkbu-hongkong, nazarbayev, ntu-singapore,
   polimi, tianjin-university, utwente, vanderbilt-university, vassar-college).
-- Сейчас: 14. Ниже — все места, где новый снимок разошёлся со старой цитатой в `data/programs/`.
-  `data/programs/` не трогал.
+- Сейчас: 14. `data/programs/` не трогал; ниже все места, где новый снимок разошёлся со старой цитатой.
 
 Новые из-за пересъёмки 26.11.2026:
 
-- `university-of-debrecen`, условие 4. Было: `all other programs: 15th June 2026` — в снимке 2026-11-26
+- `university-of-debrecen`, условие 4. Было: `all other programs: 15th June 2026`. В снимке 2026-11-26
   этого текста нет: «Application deadlines for January/February 2027 intake (all programs): 1st November 2026
   for September 2027 intake (all programs): 15th May 2027».
 - `university-of-debrecen`, условие 8. Было: `the final application deadline will be May 15, 2027` —
@@ -119,26 +118,26 @@
 - `polyu-hongkong`, условие 5. Было: `Application Deadline: 17 Nov 2026` — в новом снимке у программ стоит
   `Application Deadline: 11 Feb 2027`.
 
-Эти две программы ошибались и до партии, цитаты в них тоже поменялись:
+Эти программы ошибались и до партии, цитаты в них тоже поменялись:
 
 - `fudan-university`, условие 1. Было: `2026 List of English-taught Undergraduate Programs of Fudan` —
   в новом PDF: «Fudan University 2027 English-taught Undergraduate Programs». Условие 4 (Dean's Scholarship)
   в новом снимке не найдено.
 - `hkbu-hongkong`, условия 6–9. Старые цитаты про music qualifications, portfolio и aptitude test
-  в новом снимке 2026-11-26 не найдены — формулировки переписаны.
+  в снимке 2026-11-26 не найдены — формулировки переписаны.
 
 ## Домены, ждущие «да»
 
-- `prosveta.gov.rs` — условия конкурса «Свет у Србији» для `serbia-world`; на `welcometoserbia.gov.rs`
+- `prosveta.gov.rs` — условия конкурса «Свет у Србији» для `serbia-world`: на `welcometoserbia.gov.rs`
   только обзор программы.
 - `dreamapply.com` — на нём конкретика вступительных испытаний у эстонских вузов (`estonia-study`).
 - `ucas.com` — по-прежнему не одобрен, не использовался.
-- `go.pusan.ac.kr` — поддомен уже одобренного `pusan.ac.kr`; добавлен как страница `pusan-national`.
+- `go.pusan.ac.kr` — поддомен уже одобренного `pusan.ac.kr`, добавлен как страница `pusan-national`.
   Если это считается новым доменом — строку убрать.
 
 ## Адреса, добавленные в tools/sources.toml
 
-Только страницы на уже одобренных доменах, по одной строке на программу:
+Только страницы на уже одобренных доменах:
 
 - `aalto-finland` — admission-to-bachelors-programme-in-design-and-media…
 - `amherst-college` — /admission/apply/firstyear, /writingsupplement, /arts
@@ -146,9 +145,9 @@
 - `bme-budapest` — xplore.bme.hu/admission/
 - `brown-university` — application-checklist, supplementary-materials, video-introduction
 - `cambridge` — ucas-personal-statement, written-work-portfolio, cambridge-interviews
-- `columbia-university` — /apply/process/columbia-questions, /apply/process (fetch не снял)
+- `columbia-university` — /apply/process/columbia-questions, /apply/process
 - `comenius-university` — fm.uniba.sk documents-needed-for-application, how-to-apply-step-by-step
-- `fudan-university` — PDF с требованиями (2027)
+- `fudan-university` — PDF с требованиями набора 2027
 - `handong` — объявление с Admission Guideline
 - `hkbu-hongkong` — /faq.html
 - `ljubljana-slovenia` — брошюра 2026-ANG и страница про интервью
@@ -164,26 +163,54 @@
 - `university-of-economics-bratislava` — navod-na-vyplnenie-e-prihlasky-1-stupen
 - `urfu` — entry-requirements
 
+Сняты обратно, потому что адрес не работает: `ncku` — проспект 2027/2028 отдаёт 404;
+`alberta` — обе стипендиальные страницы отдают 403. Секции остались как были.
+
 ## Скачивание
 
 - Снято 26.11.2026: sheffield, hkbu-hongkong, ljubljana-slovenia, tmu-japan, tum,
   university-of-economics-bratislava, barnard-college, bme-budapest, comenius-university, fudan-university,
   handong, oxford, pusan-national, ustc, uwashington, cambridge, urfu, polyu-hongkong, brown-university, jhu,
-  metu-turkey, university-of-debrecen, pomona-college, aalto-finland, hkbu.
+  metu-turkey, university-of-debrecen, pomona-college, aalto-finland.
 - Не снято: `columbia-university` (SSL handshake timeout), `amherst-college` (HTTP 405),
-  `serbia-world` (таймаут `welcometoserbia.gov.rs`).
+  `serbia-world` (таймаут welcometoserbia.gov.rs), `ncku` (404), `alberta` (403).
 - Секции, собранные из `manual/`, в worktree отсутствуют (gitignore). Чтобы скачать новые страницы,
-  недостающие файлы восстановлены из прошлого снимка (тот же текст, `html_to_text` возвращает его байт-в-байт).
-  В коммиты `manual/` не попадает.
+  недостающие файлы восстановлены из прошлого снимка (тот же текст: `html_to_text` возвращает его
+  байт-в-байт). В коммиты `manual/` не попадает.
+
+## Чистота файлов
+
+- Пункты, которые вуз просит только у магистратуры или докторантуры, из бакалаврских карточек убраны
+  (`chungbuk`, `comenius-university`, `university-of-debrecen`, `bme-budapest`, `enu`, `ncku`); в note
+  сказано, что для бакалавриата они не нужны.
+- Языковые сертификаты внесены как `certificates` только там, где страница перечисляет их среди
+  подаваемых материалов; иначе тип ушёл в `notStated` (как в партии 2).
 
 ## Команды
 
+- `python -m tools.materials --check` → проверено 141, с ошибками 0.
 - `python -m tools.validate` → в начале 11, после пересъёмки 14 (разбор выше).
-- `python -m tools.materials --check` → с ошибками 0.
-- `node --test` → 834 теста, 0 упали (до работы).
-- `PYTHONUTF8=1 python -m unittest discover -s tools/tests -t .` → см. ниже.
-- `python -m tools.build` → см. ниже; вывод сборки откачен, в коммиты не попал.
+- `node --test` → 848 тестов, 848 прошли, 0 упали.
+- `PYTHONUTF8=1 python -m unittest discover -s tools/tests -t .` → 537 тестов, OK, если рабочая копия
+  `raw/apply-channels/2026-11-25/` в LF. При CRLF (core.autocrlf=true) падают 29 тестов
+  `test_saved_quotes_links_utf8_and_byte_hashes` на байтовых хешах — это свойство worktree, к партии
+  не относится, файлы в git не менялись.
+- `python -m tools.build` → 323 программы; индекс 97 322 байта по проводу, детали 78 241. Вывод сборки
+  откачен, в коммиты не попал.
 
 ## Ветка и коммиты
 
-`deepseek/materials-3a`.
+`deepseek/materials-3a`, запушена. Коммиты:
+
+- `ee55cd4` — utwente, Debrecen, Tianjin, Pecs, METU, LMU, Inha, SDU, Adelaide, APU + страницы в sources.toml
+- `1bddaaf` — Barnard, BME, CAU, Chungbuk, Comenius, Czech, ENU, Estonia, Fudan, Handong
+- `81c0e1d` — note BME
+- `d9c93c9` — Bard, Sheffield, Grinnell, Macalester, Pomona, Stipendium, Uppsala, Aalto
+- `6bc9663` — уточнения в шести файлах
+- `518d759` — Waseda, Polytechnique, Brunei, ICU, Alberta, NCKU, ETH, SJTU, Sophia, Kyungpook
+- `92c1eb9` — HKBU, HUFS, Inha, Universitaly, JBNU, KBTU, KIMEP, Koç, Korea University, Ljubljana
+- `0035d3a` — Masaryk, MEXT, Nanjing, Nottingham Ningbo, NUCB, Oxford, Penn State, PoliTo, RWTH
+- `94a5327` — Science Tokyo, SNU, Sorbonne, Sydney, TMU, TUM, UBB Cluj, Umm Al-Qura, EUB
+- `6e6551d` — UNSW, USTC, UW, Webster, Yonsei UIC, Zhejiang, XMU, SCU, BIT, Beihang
+- `b300851` — XJTU, МФТИ, PW, Cambridge, УрФУ, Tsukuba IDE
+- `0d7a8d8` — PolyU, Brown, JHU
