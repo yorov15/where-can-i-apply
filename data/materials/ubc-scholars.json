@@ -1,0 +1,119 @@
+{
+  "id": "ubc-scholars",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": 4,
+      "limit": {
+        "unit": "words",
+        "max": 250
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Четыре вопроса-эссе, каждое примерно 150–250 слов.",
+      "evidence": "4 essay questions (approximately 150-250 words)",
+      "source": {
+        "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:03e92b25ffcab8ffeb82021c1a11b7ecc922ad86bfd368179ec77b6f658e795e"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Нужен один номинатор — школьный консультант, директор или администратор. Он и учитель-референт должны быть разными людьми.",
+      "evidence": "You'll need one nominator (guidance counsellor, principal, administrator, etc.) and one teacher referee . The nominator and teacher referee must be different people.",
+      "source": {
+        "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:03e92b25ffcab8ffeb82021c1a11b7ecc922ad86bfd368179ec77b6f658e795e"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Учитель-референт должен знать вас и вашу работу по выбранной специальности.",
+      "evidence": "Teacher referee: Your referee should be someone who is familiar with you and your work in your chosen area of study.",
+      "source": {
+        "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:03e92b25ffcab8ffeb82021c1a11b7ecc922ad86bfd368179ec77b6f658e795e"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "В заявке есть раздел о внеучебных занятиях.",
+      "evidence": "Extra curricular information",
+      "source": {
+        "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:03e92b25ffcab8ffeb82021c1a11b7ecc922ad86bfd368179ec77b6f658e795e"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "В заявке есть раздел о наградах.",
+      "evidence": "Extra curricular information Awards",
+      "source": {
+        "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:03e92b25ffcab8ffeb82021c1a11b7ecc922ad86bfd368179ec77b6f658e795e"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Видео-интервью только по приглашению: записать ответы нужно за одну неделю в онлайн-системе заявки.",
+      "evidence": "Applicants may be invited to complete a video interview. You will have one week to complete this step and record your video responses using the online application platform.",
+      "source": {
+        "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:03e92b25ffcab8ffeb82021c1a11b7ecc922ad86bfd368179ec77b6f658e795e"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Набор September 2027 (цикл 2027): приём заявок закрылся 15 ноября 2026. Вопросы четырёх эссе на странице не опубликованы — prompt пустой. Номинатор и teacher referee — разные люди, обе формы заполняются онлайн. Финансовые сведения семьи и документы сюда не входят."
+}

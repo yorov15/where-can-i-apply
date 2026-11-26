@@ -88,14 +88,14 @@
 | renmin | пропуск | — | — | в снимке все 11 адресов http, валидатор требует https; секция на manual-файлах, которых нет в worktree, переснять нельзя |
 | itu | готово | essay, portfolio, interview | activities, awards, studyPlan, video | набор 2026/27 |
 | wuhan-university | готово | interview, other (экзамен) | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates | гайд 2026 — прошлый набор |
-| mephi | — | | | |
-| harbin-institute-of-technology | — | | | |
-| ibn-haldun | — | | | |
-| utoronto-pearson | — | | | |
-| od | — | | | |
-| hokkaido-mjsp | — | | | |
-| ubc-scholars | — | | | |
-| hokkaido-isp | — | | | |
+| mephi | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | материалов нет: квота через Россотрудничество, документы и экзамены |
+| harbin-institute-of-technology | готово | cv, awards, studyPlan, recommendation | essay, portfolio, video, interview, certificates | набор сентябрь 2026 — прошлый цикл; учебный план и рекомендации — магистратура/PhD (some) |
+| ibn-haldun | готово | cv, recommendation, essay | activities, awards, portfolio, studyPlan, video, interview | список только в FAQ, сроки 2023–2024 |
+| utoronto-pearson | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | состав формы стипендии не публикуется: приходит личная ссылка после номинации |
+| od | готово | portfolio, essay, interview | recommendation, activities, cv, studyPlan, video | сезон 2026/2027; интервью только doctoral/postdoc |
+| hokkaido-mjsp | готово | essay, recommendation, interview | activities, cv, awards, portfolio, studyPlan, video | набор 2028; первый поток регистрации прошёл |
+| ubc-scholars | готово | essay, recommendation, activities, awards, interview | cv, portfolio, studyPlan, video, certificates | цикл 2027; вопросы эссе не публикуются |
+| hokkaido-isp | готово | essay, recommendation, interview | activities, cv, awards, portfolio, studyPlan, video | Guidelines 2027 |
 
 ## Проверки
 
@@ -169,9 +169,35 @@
 
 ## Команды
 
-После первой десятки (26.11): `tools.materials --check` → 73 файла, 0 ошибок;
-`validate` → 15 с ошибками (11 в начале + 4 разобранных выше); `node --test` → 834, 0 упавших.
+Итог 26.11, после всех 88 программ:
+
+- `python -m tools.materials --check` → проверено 143, с ошибками 0 (56 прежних + 87 новых;
+  renmin не создан, причина в таблице).
+- `PYTHONUTF8=1 python -m tools.validate` → 323 программы, с ошибками 15: 11 было в начале
+  (auca, cornell, fudan-university, hkbu-hongkong, nazarbayev, ntu-singapore, polimi,
+  tianjin-university, utwente, vanderbilt-university, vassar-college) плюс 4 от новых снимков
+  26.11 (carleton-college, erasmus, sapienza-italy, uca) — цитаты и новые формулировки выше.
+- `node --test` → 834 теста, 0 упавших.
+- `PYTHONUTF8=1 python -m unittest discover -s tools/tests -t .` → 537 тестов, OK.
+  Перед прогоном пришлось вернуть LF в 26 файлах `raw/apply-channels/2026-11-25/`
+  (core.autocrlf=true ломает байтовые хеши) — в коммиты эти файлы не попали.
+- `python -m tools.build` → записано программ 323; индекс 97 322 из 98 304 байт по проводу,
+  детали 78 241. Вывод сборки откачен, в коммиты не попал.
 
 ## Ветка и коммиты
 
-`deepseek/materials-3c`, коммитов пока нет.
+Ветка `deepseek/materials-3c`, запушена. Коммиты:
+
+- `446fc71` — журнал партии на 88 программ;
+- `3ae1de7` — адреса и снимки 26.11 для 10 программ;
+- `550e2f1` — первая десятка;
+- `70812d7` — возврат отборочных тестов в tohoku и bocconi;
+- `ff9cb38` — вторая десятка;
+- `e8f9d4f` — третья десятка;
+- `c12edb1` — четвёртая десятка;
+- `8a578b7` — пятая десятка;
+- `bce776d` — шестая десятка;
+- `9ba50aef` — седьмая десятка;
+- `206e3cc0` — восьмая десятка;
+- последний — девятая десятка (mephi, harbin, ibn-haldun, utoronto-pearson, od,
+  hokkaido-mjsp, ubc-scholars, hokkaido-isp).

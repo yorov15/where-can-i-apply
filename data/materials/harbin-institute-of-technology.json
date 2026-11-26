@@ -1,0 +1,82 @@
+{
+  "id": "harbin-institute-of-technology",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Резюме (CV) — девятый пункт списка документов для бакалавриата.",
+      "evidence": "⑨ Curriculum Vitae.",
+      "source": {
+        "url": "https://studyathit.hit.edu.cn/18337/list.htm",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:043b50cb75e6d29491778a86ba2eabc9859bcde0f5d5222ad143a37fc7fc79fd"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Необязательно: подтверждения выдающихся достижений — учёба, спорт, искусство, культурный обмен, общественная деятельность.",
+      "evidence": "Proof of outstanding academic achievements, sports, art, cultural exchanges, public welfare activities, etc. (optional).",
+      "source": {
+        "url": "https://studyathit.hit.edu.cn/18337/list.htm",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:043b50cb75e6d29491778a86ba2eabc9859bcde0f5d5222ad143a37fc7fc79fd"
+      }
+    },
+    {
+      "type": "studyPlan",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Только для магистратуры и PhD: план учёбы больше 1500 слов.",
+      "evidence": "A study plan (more than 1,500 words).",
+      "source": {
+        "url": "https://studyathit.hit.edu.cn/18367/list.htm",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:89eda7ba4fecab4371d366610a72becfb486db1582a7f49c830c8f1064dadda8"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": null,
+      "via": "upload",
+      "ru": "Только для магистратуры и PhD: два рекомендательных письма от профессоров или доцентов.",
+      "evidence": "Two recommendation letters from professors or associate professors.",
+      "source": {
+        "url": "https://studyathit.hit.edu.cn/18367/list.htm",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:89eda7ba4fecab4371d366610a72becfb486db1582a7f49c830c8f1064dadda8"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "portfolio",
+    "video",
+    "interview",
+    "certificates"
+  ],
+  "note": "Данные прошлого набора: сентябрь 2026, дедлайн 15 июля 2026; стипендия HIT — приём с 1 октября 2025, дедлайн 15 июля 2026. Набор 2027 на странице не описан, требования могут измениться. План учёбы и рекомендации — из разделов магистратуры и PhD на странице стипендии HIT; бакалавриату их не задают."
+}

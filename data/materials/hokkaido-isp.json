@@ -1,0 +1,66 @@
+{
+  "id": "hokkaido-isp",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Personal statement по форме Form 4: скачать форму на сайте программы, вписать запрошенные данные и загрузить заполненную. Профессиональная вычитка строго запрещена.",
+      "evidence": "Personal statement (Form 4) Download the form from the Integrated Science Program website, enter requested information and upload the completed form. Professional proofreading is strictly prohibited for these documents.",
+      "source": {
+        "url": "https://www.oia.hokudai.ac.jp/isp/wp-content/uploads/2026/09/ISP-Application-Guidelines-for-2027-Enrollment.pdf",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:b7ddef77a26ecb7b660fb8a767412691ac21879964349e44ddaa8ac949cb3060"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": null,
+      "via": "mail",
+      "ru": "Только по форме Form 5, другие форматы не примут. Рекомендация одна — от рекомендателя, указанного при онлайн-регистрации.",
+      "evidence": "The Letter of Recommendation must be written in the designated format (Form 5). No other formats will be accepted. 2. Only one Letter of Recommendation from the recommender registered on the Online Registration Site will be accepted as an Application Document.",
+      "source": {
+        "url": "https://www.oia.hokudai.ac.jp/isp/wp-content/uploads/2026/09/ISP-Application-Guidelines-for-2027-Enrollment.pdf",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:b7ddef77a26ecb7b660fb8a767412691ac21879964349e44ddaa8ac949cb3060"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Второй этап отбора — онлайн-собеседование; дату и время в промежутке 16 февраля — 2 марта 2027 назначает сам университет.",
+      "evidence": "Second Stage Selection (online interview) Date and time designated by Hokkaido University between February 16, 2027 (Tue.) - March 2, 2027 (Tue.)",
+      "source": {
+        "url": "https://www.oia.hokudai.ac.jp/isp/wp-content/uploads/2026/09/ISP-Application-Guidelines-for-2027-Enrollment.pdf",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:b7ddef77a26ecb7b660fb8a767412691ac21879964349e44ddaa8ac949cb3060"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Данные — Application Guidelines for 2027 Enrollment. Документы принимают на английском или японском, поэтому язык у пунктов не указан. Формы 1–3 (чек-лист, образование, справка школы) — документы, не материалы."
+}
