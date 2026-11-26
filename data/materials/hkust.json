@@ -1,0 +1,35 @@
+{
+  "id": "hkust",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Собеседование обязательно не на всех программах: например, на BBA in Global Business — да, на BBA in Finance Mathematics — нет.",
+      "evidence": "BBA in Finance Mathematics * Click here for the requirement details. Interview is not compulsory BBA in Global Business No specific subject requirements Interview is compulsory",
+      "source": {
+        "url": "https://join.hkust.edu.hk/admissions/international-qualifications?general_requirement=46180",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:53608a8beab9cf9ac2463544ce9af56fea51ac7217beee59c044acff891b0673"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "recommendation",
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Снимок неполный: блок Application Procedures есть только ссылкой, страница процедур не скачана (join.hkust.edu.hk отдаёт 403). Поэтому эссе, рекомендации, CV и портфолио в notStated — это «в снимке не сказано», а не «не нужно»."
+}

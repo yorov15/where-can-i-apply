@@ -28,16 +28,16 @@
 | sophia-fla | готово | essay, recommendation | activities, cv, awards, portfolio, studyPlan, video, interview, certificates | буклет подписан «for 2026 Entry», внутри набор 2027 |
 | tartu-estonia | готово | essay, other (тесты), interview, awards | recommendation, cv, activities, portfolio, studyPlan, video, certificates | набор 2026, требования 2027 обещают до конца декабря |
 | rug | готово | cv, essay, video | activities, awards, interview, portfolio, studyPlan, certificates | — |
-| vilnius | — | | | |
-| kazakhstan-grant | — | | | |
-| hkust | — | | | |
-| bilkent | — | | | |
-| germany-public | — | | | |
-| wiut | — | | | |
-| kiut | — | | | |
-| austria-study | — | | | |
-| ajou | — | | | |
-| aus-uae | — | | | |
+| vilnius | готово | essay, interview | recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates | интервью описано только у двух программ из снимка |
+| kazakhstan-grant | готово | essay, recommendation, studyPlan | cv, interview, activities, awards, portfolio, video, certificates | набор 30.03–31.05.2026 прошёл |
+| hkust | частично | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates | страница Application Procedures не скачана: join.hkust.edu.hk отдаёт 403 |
+| bilkent | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | отбор по баллам SAT/IB/A-Level; набор 2026–2027 прошёл |
+| germany-public | готово | essay, interview, portfolio | recommendation, cv, activities, awards, studyPlan, video, certificates | страновой портал DAAD: общие правила, конкретику задаёт вуз |
+| wiut | готово | interview, cv, essay, studyPlan | recommendation, activities, awards, portfolio, video | CV, personal statement, research proposal — только магистратура; набор 2026/27 |
+| kiut | готово | essay, recommendation, interview | cv, activities, awards, portfolio, studyPlan, video | набор 2026 прошёл |
+| austria-study | готово | interview, studyPlan | essay, recommendation, activities, cv, awards, portfolio, video, certificates | страновой портал: общие правила, research proposal — PhD |
+| ajou | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | требования только в PDF Application Guideline, которого нет в снимке; набор 2026 Fall |
+| aus-uae | готово | essay, portfolio, video, recommendation | cv, interview, studyPlan, certificates | материалы только для стипендий President’s и Chancellor’s; набор Fall 2026 прошёл |
 | bhos | — | | | |
 | boston-university | — | | | |
 | chung-ang | — | | | |
