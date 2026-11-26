@@ -18,16 +18,16 @@
 | toronto | готово | essay, other | activities, cv, awards, portfolio, studyPlan, video, interview, certificates | детали допзаявок вуз раскрывает только в портале после подачи |
 | ntu-taiwan | частично | recommendation, interview | cv, awards, portfolio, video, activities, certificates | требования отделений (эссе, учебный план) в Admission Guidelines PDF, которого нет в снимке |
 | gist-korea | готово | recommendation, awards, interview, other | essay, cv, portfolio, studyPlan, video, certificates, activities | данные набора 2026, для 2027 могут измениться |
-| um-malaya | — | | | |
-| kfupm | — | | | |
-| durakshondagon | — | | | |
-| peking-university | — | | | |
-| hbku | — | | | |
-| trento | — | | | |
-| moe-taiwan | — | | | |
-| keio-pearl | — | | | |
-| azerbaijan-aliyev | — | | | |
-| netherlands-study | — | | | |
+| um-malaya | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates |  |
+| kfupm | готово | essay, recommendation, interview | activities, cv, awards, portfolio, studyPlan, video, certificates |  |
+| durakshondagon | частично | recommendation, certificates | essay, activities, cv, awards, portfolio, studyPlan, video, interview | перечень документов из сообщения asia+; официальный раздел 6 Правил за платным доступом |
+| peking-university | готово | essay, recommendation, video, awards, other, interview | activities, cv, portfolio, studyPlan, certificates |  |
+| hbku | готово | essay, recommendation, cv, interview | activities, awards, portfolio, studyPlan, video, certificates | на странице CSE «no word limit», у Mechanical Engineering 300–500, в политике 500 — limit null, расхождение в note |
+| trento | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates |  |
+| moe-taiwan | готово | recommendation, certificates, other, interview | essay, activities, cv, awards, portfolio, studyPlan, video |  |
+| keio-pearl | готово | essay, cv, recommendation, video, certificates | activities, awards, portfolio, studyPlan | набор September 2027; интервью нет — его заменяет видео |
+| azerbaijan-aliyev | готово | essay, cv, awards | recommendation, activities, portfolio, studyPlan, video, interview, certificates |  |
+| netherlands-study | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | портал называет только диплом и языковой тест, состав материалов оставляет вузу |
 | uva-amsterdam | — | | | |
 | slovakia-gov | — | | | |
 | xjtlu | — | | | |
