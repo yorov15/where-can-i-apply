@@ -197,6 +197,8 @@ async function askOnce(models, { system, user, mode, check }, timeoutMs) {
 }
 
 const callModel = (prompt, trace) => callWithFallback(modelGroups(), (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 30000, perGroupMs: 9000 });
+// Наставник пишет план на всю неделю (до 8 дел): модели нужно 6–20 секунд, 9 мало.
+const callMentorModel = (prompt, trace) => callWithFallback(modelGroups(), (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 30000, perGroupMs: 28000 });
 // The essay path never selects Go or a paid configured model. Privacy and
 // zero-price constraints are not relaxed when a free provider is unavailable.
 const callEssayModel = (prompt, trace) => callWithFallback([['openrouter/free']],
@@ -251,7 +253,7 @@ async function handle(req, res, cors) {
   if(body?.mode==='mentor-week'){
     const trace=[];
     const result=await mentorWeek({body,ip:clientIp(req),today:new Date().toISOString().slice(0,10)},
-      {limiter:mentorLimiter,deviceLimiter:mentorDevices,cache:mentorCache,callModel:prompt=>callModel(prompt,trace)});
+      {limiter:mentorLimiter,deviceLimiter:mentorDevices,cache:mentorCache,callModel:prompt=>callMentorModel(prompt,trace)});
     return send(res,result.status,req.headers['x-explain-trace']==='1'?{...result.json,trace}:result.json,cors);
   }
 
