@@ -38,16 +38,16 @@
 | hku | готово | essay, cv, certificates, awards, recommendation, interview | activities, portfolio, studyPlan, video | cv/сертификаты/награды — один пункт чек-листа «CV, certificates and awards» |
 | aiu-japan | готово | essay, interview | recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates |  |
 | auca | готово | essay, awards | recommendation, activities, cv, portfolio, studyPlan, video, interview, certificates | награды — только гражданам Кыргызстана и СНГ |
-| bauman | — | | | |
-| bologna-italy | — | | | |
-| charles-university | — | | | |
-| cmu | — | | | |
-| copenhagen | — | | | |
-| dgist | — | | | |
-| epfl | — | | | |
-| ewha | — | | | |
-| gks-korea | — | | | |
-| hanyang | — | | | |
+| bauman | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | материалов нет: приём по ЕГЭ или внутренним экзаменам; творческий конкурс у «Дизайна» — вступительный экзамен |
+| bologna-italy | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | в снимке только предзачисление и виза для не-ЕС; требования задаёт каждая программа |
+| charles-university | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | материалы задаёт факультет: на How to apply только аттестат, перевод, нострификация и экзамены |
+| cmu | готово | essay, recommendation, interview, portfolio, video, certificates | awards, studyPlan | вопросы своего дополнения (3 short answers) на сайте не опубликованы; общее эссе Common App не вносил |
+| copenhagen | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates, other | не-ЕС только через квоту 2: тест на датском, затем собеседование |
+| dgist | готово | recommendation, awards, interview | essay, activities, cv, portfolio, studyPlan, video, certificates, other | год набора на страницах не указан |
+| epfl | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | заявка — форма и сканы; отбор по документам и при необходимости вступительному экзамену |
+| ewha | готово | essay, other, portfolio, interview | recommendation, cv, studyPlan | гайд Spring 2027; рекомендация и учебный план в нём только для магистратуры |
+| gks-korea | готово | essay, studyPlan, recommendation, awards, interview | cv, portfolio, video | гайд 2027 GKS-U (English, 0914); вопросы Personal Statement в PDF не приведены |
+| hanyang | пропуск | — | — | fetch: HTTP 403 и таймауты; в снимке 2026-09-27 только навигация, гайд бакалавриата — PDF, скачать не удалось |
 | hongik | — | | | |
 | iccr-india | — | | | |
 | inu | — | | | |
