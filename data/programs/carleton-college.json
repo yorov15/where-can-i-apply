@@ -16,7 +16,7 @@
     "living": true,
     "travel": null,
     "note": {
-      "ru": "Колледж заявляет, что закрывает 100% нужды каждого студента, но сразу же пишет, что денег на иностранцев ограниченное количество и стипендий по нужде им дают «несколько». Оценка полной стоимости года — 99 580 долларов (обучение, жильё, питание, сборы, книги, личные расходы, дорога, страховка); стоимость растёт на 4–5% в год. С 2027–28 учебного года кредиты в пакетах помощи заменят грантами"
+      "ru": "Колледж закрывает 100% доказанной нужды без кредитов, но пишет, что денег на иностранцев ограниченное количество. Оценка полной стоимости 2026–2027 года — 104 746 долларов (обучение, жильё, питание, сборы, книги, личные расходы, дорога, страховка); стоимость растёт на 4–5% в год."
     }
   },
   "eligibility": {
@@ -88,8 +88,8 @@
   },
   "textConditions": [
     {
-      "ru": "Колледж пишет, что закрывает 100% нужды каждого студента, а верхнего предела дохода для помощи нет.",
-      "evidence": "we meet 100% of demonstrated need for every student.",
+      "ru": "Колледж закрывает 100% доказанной нужды без кредитов, а верхнего предела дохода для помощи нет.",
+      "evidence": "Carleton meets 100% of your demonstrated financial need, without loans.",
       "field": null,
       "kind": "money"
     },
@@ -100,8 +100,8 @@
       "kind": "note"
     },
     {
-      "ru": "Оценка полной стоимости года на 2025–2026 — 99 580 долларов: обучение, жильё, питание, сборы, книги, личные расходы, дорога, страховка и расходы на каникулы. Ожидай роста на 4–5% в год.",
-      "evidence": "The estimated cost of attendance for the 2025-2026 academic year is $99,580 .",
+      "ru": "Оценка полной стоимости года на 2026–2027 — 104 746 долларов: обучение, жильё, питание, сборы, книги, личные расходы, дорога, страховка и расходы на каникулы. Ожидай роста на 4–5% в год.",
+      "evidence": "The estimated cost of attendance for the 2026-2027 academic year is $104,746 .",
       "field": null,
       "kind": "money"
     },
@@ -118,8 +118,8 @@
       "kind": "must"
     },
     {
-      "ru": "Для помощи подают CSS Profile (код колледжа 6081, взнос 25 долларов) или бесплатную международную анкету колледжа, которую отправляют прямо в приёмную комиссию.",
-      "evidence": "You can provide either: the free International Student Application for Financial Assistance (you submit this directly to Admissions), or the CSS/Profile (you submit this through the College Board website)",
+      "ru": "Для помощи подают CSS Profile на 2027–28 (код колледжа 6081, взнос 25 долларов) или бесплатную международную анкету колледжа, которую отправляют прямо в приёмную комиссию.",
+      "evidence": "You can provide either: the free International Student Application for Financial Assistance (you submit this directly to Admissions), or the 2027-28 CSS/Profile (you submit this through the College Board website)",
       "field": null,
       "kind": "steps"
     },
@@ -128,12 +128,6 @@
       "evidence": "All international students must submit a Certification of Finances (CoF) with their application materials. This includes students who do not apply for aid.",
       "field": null,
       "kind": "must"
-    },
-    {
-      "ru": "Если подал на помощь, тебя автоматически рассматривают на три стипендии для иностранцев: Starr Foundation (для студентов из Азии), Kellogg (для высококвалифицированных не граждан США) и Underbrink Fund (без ограничений по регионам).",
-      "evidence": "If you apply for financial aid, you are automatically considered for these scholarships: Starr Foundation Grants: Scholarship opportunities for students from Asia",
-      "field": null,
-      "kind": "money"
     },
     {
       "ru": "Ранний тур обязывает поступить: при принятии предложения надо отозвать все остальные заявки. Иностранцам в раннем туре дают очень мало стипендий, большинство отдают в обычном туре.",
@@ -196,8 +190,8 @@
       "kind": "documents"
     },
     {
-      "ru": "Для помощи подают на выбор либо бесплатную International Student Application for Financial Assistance (напрямую в приёмную комиссию), либо CSS Profile через College Board.",
-      "evidence": "You can provide either: the free International Student Application for Financial Assistance (you submit this directly to Admissions), or the CSS/Profile (you submit this through the College Board website)",
+      "ru": "Для помощи подают на выбор либо бесплатную International Student Application for Financial Assistance (напрямую в приёмную комиссию), либо CSS Profile на 2027–28 через College Board.",
+      "evidence": "You can provide either: the free International Student Application for Financial Assistance (you submit this directly to Admissions), or the 2027-28 CSS/Profile (you submit this through the College Board website)",
       "field": null,
       "kind": "documents"
     },
@@ -239,14 +233,18 @@
     "pages": [
       {
         "url": "https://www.carleton.edu/admissions/apply/steps/international/",
-        "contentHash": "sha256:8f4bd7d93a71fc8196a8a6d458342f97839953471f52fee27275da3e5a560d15"
+        "contentHash": "sha256:b6aac4d5ec27956b49e43c9e548c8d7621428b88c44961333fedc3c627bd4b87"
       },
       {
         "url": "https://www.carleton.edu/financial-aid/apply-for-aid/international-students/",
-        "contentHash": "sha256:9dbe18cc9854b823db1f660f764cb07c028cb5e953c2dc7b128f421fe05964f7"
+        "contentHash": "sha256:284ca5f7278df92259833b9afeafa8115fb8aaf9c9e3fb2ee6f054cc21a2519f"
+      },
+      {
+        "url": "https://www.carleton.edu/admissions/apply/steps/materials",
+        "contentHash": "sha256:a73ec2e80ed9f18099e370fc7215334e74af7f0bfe9b52714ddc3b55f387e4ad"
       }
     ],
-    "lastVerified": "2026-10-17",
+    "lastVerified": "2026-11-26",
     "humanChecked": false
   }
 }
