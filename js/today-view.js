@@ -188,7 +188,7 @@ function mentorBlock(model, props) {
   if (!mentor || !open.length) return null;
   const box = el('section', 'route-week');
   box.dataset.mentor = '';
-  box.append(el('h3', 'route-step-title', 'Наставник'));
+  box.append(el('h3', 'route-phase-title', 'Наставник'));
   const status = el('p', 'route-detail');
   status.setAttribute('role', 'status');
   const ask = el('button', 'button button-quiet', mentor.busy ? 'Наставник думает…' : mentor.plan ? 'Спросить заново' : 'Спросить наставника');
