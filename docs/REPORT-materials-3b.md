@@ -28,16 +28,16 @@
 | keio-pearl | готово | essay, cv, recommendation, video, certificates | activities, awards, portfolio, studyPlan | набор September 2027; интервью нет — его заменяет видео |
 | azerbaijan-aliyev | готово | essay, cv, awards | recommendation, activities, portfolio, studyPlan, video, interview, certificates |  |
 | netherlands-study | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | портал называет только диплом и языковой тест, состав материалов оставляет вузу |
-| uva-amsterdam | — | | | |
-| slovakia-gov | — | | | |
-| xjtlu | — | | | |
-| ada-university | — | | | |
-| constructor-university | — | | | |
-| tu-berlin | — | | | |
-| kfu | — | | | |
-| hku | — | | | |
-| aiu-japan | — | | | |
-| auca | — | | | |
+| uva-amsterdam | готово | cv | essay, recommendation, activities, awards, portfolio, studyPlan, video, interview, certificates | общая страница заявки перечисляет только документы; PPLE и AUC — на страницах программ, которые не берутся в снимок |
+| slovakia-gov | готово | recommendation, essay, cv | activities, awards, portfolio, studyPlan, video, interview, certificates |  |
+| xjtlu | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | how to apply перечисляет только документы, писать нечего |
+| ada-university | готово | essay, cv, interview | recommendation, activities, awards, portfolio, studyPlan, video, certificates |  |
+| constructor-university | готово | essay, cv, recommendation, portfolio, interview, certificates | activities, awards, studyPlan, video | собеседование и сертификаты — только для стипендий |
+| tu-berlin | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | чек-лист бакалавриата: VPD, немецкий, аттестат — текстов нет |
+| kfu | пропуск | — | — | в снимке только оплата и стипендии; страницы требований нет, адрес в секцию files не добавить — см. отчёт |
+| hku | готово | essay, cv, certificates, awards, recommendation, interview | activities, portfolio, studyPlan, video | cv/сертификаты/награды — один пункт чек-листа «CV, certificates and awards» |
+| aiu-japan | готово | essay, interview | recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates |  |
+| auca | готово | essay, awards | recommendation, activities, cv, portfolio, studyPlan, video, interview, certificates | награды — только гражданам Кыргызстана и СНГ |
 | bauman | — | | | |
 | bologna-italy | — | | | |
 | charles-university | — | | | |

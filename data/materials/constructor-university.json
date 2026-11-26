@@ -1,0 +1,132 @@
+{
+  "id": "constructor-university",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Motivation Statement: эссе о своих интересах и о том, почему выбрали программу Constructor, чем она совпадает с вашими увлечениями и что вы дадите кампусу.",
+      "evidence": "At Constructor University, we believe in getting to know our applicants on a more personal level through a comprehensive essay. The essay should delve into your interests and motivation for choosing our university program.",
+      "source": {
+        "url": "https://constructor.university/admission-aid/application-information-undergraduate",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:c19be548166fcbe632c716c65606041d8d15ab24518422821c241518ec6775cc"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Кроме эссе нужно ответить на вопросы колледжа — например, «What do you find interesting?» или «Why Constructor University?».",
+      "evidence": "Next to a written essay we ask you to answer College-specific questions such as \"What do you find interesting?\" or \"Why Constructor University?\" etc.",
+      "source": {
+        "url": "https://constructor.university/admission-aid/application-information-undergraduate",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:c19be548166fcbe632c716c65606041d8d15ab24518422821c241518ec6775cc"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "CV одним PDF: квалификации, достижения, навыки; обязательно внеучебные и волонтёрские занятия.",
+      "evidence": "Please use the CV to provide a comprehensive overview of your qualifications, achievements, and skills. Make sure your CV includes extracurricular and voluntary activities.",
+      "source": {
+        "url": "https://constructor.university/admission-aid/application-information-undergraduate",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:c19be548166fcbe632c716c65606041d8d15ab24518422821c241518ec6775cc"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": null,
+      "via": "upload",
+      "ru": "Письмо-рекомендация — по желанию или по запросу вуза. Его пишет работник школы: учитель, консультант, директор или завуч.",
+      "evidence": "A recommendation letter is optional/upon request. This should ideally come from a school official, such as a teacher, career/guidance counselor, head of school or principal.",
+      "source": {
+        "url": "https://constructor.university/admission-aid/application-information-undergraduate",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:c19be548166fcbe632c716c65606041d8d15ab24518422821c241518ec6775cc"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Можно добавить профиль ZeeMee: короткие видео, фото и документы о своих интересах, достижениях и преодолённых трудностях.",
+      "evidence": "We have partnered with ZeeMee, a free service which lets you easily add personalized items including short videos, photos, and/or documents to your application. Through the ZeeMee platform, you can digitally showcase your interests, accomplishments, and challenges you have overcome both inside and outside the classroom.",
+      "source": {
+        "url": "https://constructor.university/admission-aid/application-information-undergraduate",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:c19be548166fcbe632c716c65606041d8d15ab24518422821c241518ec6775cc"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Кого выдвинули на стипендию, приглашают на собеседование с командой Constructor; по заявке и собеседованию решают окончательно.",
+      "evidence": "Selected students are informed about their nomination via email and will be invited to pass an interview with the Talent Recruitment Team of Constructor University. Final selection is determined by the Talent Recruitment Team and university faculty based on the application and interview.",
+      "source": {
+        "url": "https://constructor.university/scholarships",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:5af48f2a1a412c6a957d2029b64f10d78ed982a27d46ba12bfc44eca1ecdcb61"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Тем, кто просит стипендию: приложите сертификаты об олимпиадах, конкурсах и других подходящих внеучебных занятиях.",
+      "evidence": "Remember to upload and mention certificates for any relevant extracurricular activities to strengthen your application!",
+      "source": {
+        "url": "https://constructor.university/scholarships",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:5af48f2a1a412c6a957d2029b64f10d78ed982a27d46ba12bfc44eca1ecdcb61"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Резюме вуз просит вместе с внеучебными занятиями — отдельного списка активностей в требованиях нет. Собеседование и сертификаты упоминаются только в связи со стипендиями."
+}
