@@ -106,7 +106,27 @@
 
 ## Новые ошибки validate
 
-пока нет.
+После `tools.fetch` 26.11 число выросло с 11 до 15. data/programs не трогал. Что сломалось:
+
+- `carleton-college` — снимок 26.11 заменил 26.09; 5 условий:
+  - было «we meet 100% of demonstrated need for every student.» → на новой странице
+    «Carleton meets 100% of your demonstrated financial need, without loans.»;
+  - было «The estimated cost of attendance for the 2025-2026 academic year is $99,580 .» →
+    «The estimated cost of attendance for the 2026-2027 academic year is $104,746 .»;
+  - было «…or the CSS/Profile (you submit this through the College Board website)» →
+    «…or the 2027-28 CSS/Profile (you submit this through the College Board website)»
+    (условия 6 и 19, цитата одна и та же);
+  - было «…automatically considered for these scholarships: Starr Foundation Grants:
+    Scholarship opportunities for students from Asia» → слов «Starr» на новой странице нет.
+- `erasmus` — снимок 26.11: «Scholarship for Chinese students who wish to fund their Bachelor
+  or Master at EUR.» на странице стипендий больше нет; остались China Scholarship Council
+  (PhD) и Entrepreneurial Spirit Scholarship.
+- `sapienza-italy` — снимок 26.11: итальянской фразы «Le informazioni per l'anno accademico
+  2026-2027 saranno pubblicate dopo il 30 settembre» больше нет; английская страница уже
+  описывает 2026-2027 (TOLC, взносы, сроки).
+- `uca` — снимок 26.11: «No student is denied admission to UCA on financial grounds, and once
+  admitted, financial assistance is guaranteed.» на новых страницах нет; остался только этап
+  «Stage 4 Fees and Financial Assistance».
 
 ## Домены, ждущие «да»
 
@@ -114,7 +134,28 @@
 
 ## Адреса, добавленные в tools/sources.toml
 
-пока нет.
+Все — на доменах, которые уже стояли в секциях. Снимки 26.11 в `raw/<id>/2026-11-26/`.
+
+- `[carleton-college]` — https://www.carleton.edu/admissions/apply/steps/materials
+- `[heidelberg]` — https://www.uni-heidelberg.de/en/study/application-enrolment/starting-the-first-academic-semester-of-your-degree-programme,
+  https://www.uni-heidelberg.de/en/study/application-enrolment/study-requirements
+- `[erasmus]` — https://www.eur.nl/en/bachelor/bachelor-international-business-administration/admission
+- `[sapienza-italy]` — https://www.uniroma1.it/en/pagina/international-admissions-2026-2027
+- `[uca]` — https://admissions.ucentralasia.org/apply/stage-3/
+- `[turkiye-burslari]` — https://turkiyeburslari.gov.tr/evaluationandselectionprocess,
+  https://turkiyeburslari.gov.tr/applysteps
+- `[nccu]` — https://nccuadmission.nccu.edu.tw/Post/204
+- `[rug]` — https://www.rug.nl/education/application-enrolment-tuition-fees/admission/non-dutch-qualification/bachelor/bachelor-application-documents
+- `[ajou]` — https://www.ajou.ac.kr/iadmissions_en/undergraduate/guideline.do
+- `[jagiellonian-university]` — https://welcome.uj.edu.pl/en_GB/admission/how-to-apply,
+  https://welcome.uj.edu.pl/en_GB/admission/documents/undergraduate
+
+Не добавлены:
+- `[soka]` — http://admissions.soka.edu/portal/essays найден, но секция собрана из `files`
+  (manual-файлы, которых нет в worktree): `tools.fetch soka` падает на отсутствующем
+  `manual/soka/00.html`. Файл материалов будет частичным.
+- `[tsinghua-university]` — https://international.join-tsinghua.edu.cn/List.pdf найден, но
+  секция тоже на `files` без manual-файлов в worktree; fetch невозможен.
 
 ## Команды
 
