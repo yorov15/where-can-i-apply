@@ -1,0 +1,67 @@
+{
+  "id": "tongji",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Личное заявление по шаблону вуза для бакалавриата, на языке программы: для китайской программы — по-китайски, для английской — по-английски. Вопросы и объём — в шаблоне, которого в снимке нет.",
+      "evidence": "Please write your introduction according to the personal statement template (undergraduate) （本科）in the teaching language of the professional program (for example, the statement for a program taught in Chinese should be written in Chinese, and the statement for a program taught in English should be written in English).",
+      "source": {
+        "url": "https://study.tongji.edu.cn/__local/6/AE/A6/66E0A7D71A250672DFF40ED4048_3682FBF2_3762E.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:ca1fc5be00f0a631befbeed9bd4721cda282347f0b87b012a65d75db5e4c3235"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Портфолио только для College of Design and Innovation и College of Architecture and Urban Planning: заполнить 《Supplementary Professional Materials》 и загрузить документы в колонку Portfolio. Требования — по внешней ссылке, в снимке их нет.",
+      "evidence": "Fill in the 《Supplementary Professional Materials》as required and upload any documents to the \"Portfolio\" column of the online application system.",
+      "source": {
+        "url": "https://study.tongji.edu.cn/__local/6/AE/A6/66E0A7D71A250672DFF40ED4048_3682FBF2_3762E.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:ca1fc5be00f0a631befbeed9bd4721cda282347f0b87b012a65d75db5e4c3235"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Онлайн-собеседование после предварительного отбора: колледж проверяет язык, академическую подготовку и другие способности.",
+      "evidence": "The relevant college will organize online interviews for applicants who meet the college's professional study requirements to assess the students' language, academic, and other comprehensive abilities.",
+      "source": {
+        "url": "https://study.tongji.edu.cn/__local/6/AE/A6/66E0A7D71A250672DFF40ED4048_3682FBF2_3762E.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:ca1fc5be00f0a631befbeed9bd4721cda282347f0b87b012a65d75db5e4c3235"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Гайд набора 2026 — прошлый цикл (подача 10.01–31.03.2026), требования могут измениться. Вопросов и объёма личного заявления в снимке нет: вуз даёт отдельный шаблон, поэтому prompt и limit пустые. Состав портфолио для дизайна и архитектуры — по внешней ссылке, в снимке только требование загрузить его в колонку Portfolio. Рекомендаций, CV, наград, видео и плана учёбы гайд не упоминает; языковые сертификаты — не материалы."
+}

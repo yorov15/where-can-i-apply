@@ -1,0 +1,65 @@
+{
+  "id": "od",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "portfolio",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Портфолио: личные достижения по выбранному треку и направлению, вступительный тест и мотивационное письмо.",
+      "evidence": "To take part in the competition, participants are required to: register on the Open Doors website; select a track and Subject area; compile a portfolio that includes individual achievements relevant to the selected track and Subject area, an entry test, and a motivation letter.",
+      "source": {
+        "url": "https://od.globaluni.ru/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:4ea2466bdacb0931d490e3a3b9f4c30ef4c409e86fba74d7e3d0b7ee775a706a"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "form",
+      "ru": "Мотивационное письмо: научные и карьерные цели, профессиональные достижения, почему выбрано направление и зачем учиться в России.",
+      "evidence": "The letter should include information about your scientific and career goals, professional achievements, reasons for choosing a subject area within the Russian Scholarship Project, and your motivation to study in Russia.",
+      "source": {
+        "url": "https://od.globaluni.ru/",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:4ea2466bdacb0931d490e3a3b9f4c30ef4c409e86fba74d7e3d0b7ee775a706a"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "У doctoral и postdoctoral треков третий этап — собеседование: у doctoral с потенциальными научными руководителями, у postdoctoral с руководителями исследовательских проектов.",
+      "evidence": "The Third stage for the Doctoral track is an interview with potential research supervisors, and for the Postdoctoral track - an interview with the leaders of research projects.",
+      "source": {
+        "url": "https://od.globaluni.ru/about",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:99013daf13812c705422b7030d0ba6dfbe677085ab72c2ec96da444ab0562fd7"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "cv",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Сезон 2026/2027 (снимок 01.10.2026): регистрация закрылась 1 ноября, первый этап — до 13 ноября; на следующий сезон требования могут измениться. У бакалавриата два этапа: портфолио с личными достижениями, вступительным тестом и мотивационным письмом, затем задания олимпиады. Интервью, видео и план исследования — только doctoral/postdoc. Награды входят в портфолио; языковые сертификаты необязательны и лишь повышают баллы; паспорт, аттестат и переводы — документы, не материалы."
+}

@@ -1,0 +1,120 @@
+{
+  "id": "carleton-college",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Рекомендация школьного консультанта — она же School Report.",
+      "evidence": "High School Counselor Recommendation (also known as \"School Report\")",
+      "source": {
+        "url": "https://www.carleton.edu/admissions/apply/steps/materials",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:a73ec2e80ed9f18099e370fc7215334e74af7f0bfe9b52714ddc3b55f387e4ad"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации от учителей академических предметов.",
+      "evidence": "Two academic teacher recommendations",
+      "source": {
+        "url": "https://www.carleton.edu/admissions/apply/steps/materials",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:a73ec2e80ed9f18099e370fc7215334e74af7f0bfe9b52714ddc3b55f387e4ad"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Собеседование не обязательно; проводят с начала июня до 15 января выпускного года.",
+      "evidence": "We do not require an interview. We interview high school students from early June through January 15 of senior year.",
+      "source": {
+        "url": "https://www.carleton.edu/admissions/apply/steps/materials",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:a73ec2e80ed9f18099e370fc7215334e74af7f0bfe9b52714ddc3b55f387e4ad"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Если уже проходил собеседование InitialView или Vericant, запись можно прислать.",
+      "evidence": "If you have already conducted an interview with InitialView or Vericant",
+      "source": {
+        "url": "https://www.carleton.edu/admissions/apply/steps/international/",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:b6aac4d5ec27956b49e43c9e548c8d7621428b88c44961333fedc3c627bd4b87"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Можно приложить портфолио по визуальному искусству, музыке, театру, танцу или кино; creative writing не принимают.",
+      "evidence": "We allow applicants to submit arts supplements in the visual arts, music, theater, dance, and film . We do not accept creative writing portfolios.",
+      "source": {
+        "url": "https://www.carleton.edu/admissions/apply/steps/materials",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:a73ec2e80ed9f18099e370fc7215334e74af7f0bfe9b52714ddc3b55f387e4ad"
+      }
+    },
+    {
+      "type": "video",
+      "need": "optional",
+      "count": null,
+      "limit": {
+        "unit": "items",
+        "max": 5
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "В портфолио для видео и аудио желательно 3–5 полных записей без монтажа, размер файла — до 5 ГБ.",
+      "evidence": "Video and audio samples: ideally submit 3-5 full, un-edited samples. The length of the piece(s) does not matter, but individual file size can not exceed 5GB.",
+      "source": {
+        "url": "https://www.carleton.edu/admissions/apply/steps/materials",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:a73ec2e80ed9f18099e370fc7215334e74af7f0bfe9b52714ddc3b55f387e4ad"
+      }
+    }
+  ],
+  "notStated": [
+    "essay",
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "certificates"
+  ],
+  "note": "Общее эссе и список активностей Common App общие, не внесены. Портфолио не обязательно; для визуального искусства — не больше 20 изображений. Creative writing портфолио не принимают. Резюме упоминается только как пример для портфолио. Английский тест сдают по требованию вуза, он в разделе экзаменов."
+}

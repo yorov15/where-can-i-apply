@@ -1,0 +1,235 @@
+{
+  "id": "nthu",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "studyPlan",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Один документ о цели учёбы: в правилах он называется statement of purpose, по-китайски 讀書計畫. Бакалавр пишет его на китайском или английском по файлу-инструкции.",
+      "evidence": "E) 讀書計畫一份 One copy of statement of purpose ■學士班：請參考讀書計畫檔案以中文或英文撰寫。",
+      "source": {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": null,
+      "via": "platform",
+      "ru": "Две рекомендации: в системе указывают двух рекомендующих, лучше — учителя, который может оценить учёбу и потенциал. Письма заполняют онлайн до дедлайна, иначе заявку не отправить.",
+      "evidence": "Complete the information for two recommenders on the online application sys tem. Preferably, recommenders are teachers who can evaluate your academic qualifications and research potential. Fill out your recommenders and click \"Send Notice\" to proceed. Please ensure that your recommenders complete your recommendations before the ap plication deadline or you can not submit your application.",
+      "source": {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Личное эссе (personal statement) отдельно требует математика, группа A (Division A).",
+      "evidence": "3. 自傳 Personal Statement 4. 讀書計畫：1000 字內 Study Plan: written in 1000 words",
+      "source": {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      }
+    },
+    {
+      "type": "studyPlan",
+      "need": "some",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 1000
+      },
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Математика, группа A, отдельно ограничивает учебный план: до 1000 слов (в китайском тексте — 1000 字).",
+      "evidence": "4. 讀書計畫：1000 字內 Study Plan: written in 1000 words",
+      "source": {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Личное эссе (personal statement) отдельно требует факультет инженерии и системных наук (Engineering and System Science).",
+      "evidence": "3. 自傳 Personal Statement 4. 個人資料表 Personal Profile",
+      "source": {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "zh",
+      "via": "upload",
+      "ru": "Личное эссе нужно китайской литературе (Chinese Literature), и писать его на китайском.",
+      "evidence": "1. 中文撰寫自傳 Personal Statement in Chinese",
+      "source": {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Портфолио (作品集) обязательно для бакалавриата художественного колледжа (Interdisciplinary Program of Technology and Art).",
+      "evidence": "藝術學院學士班 Interdisciplinary Program of Technology and Art 2. 作品集 Portfolio",
+      "source": {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Портфолио (作品集) обязательно для дизайнерской группы Arts and Design (Design).",
+      "evidence": "4. 作品集 Portfolio",
+      "source": {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      }
+    },
+    {
+      "type": "video",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Музыка (Department of Music) требует видео: запись исполнения для исполнителей или партитуру для композиторов выложить на YouTube и дать ссылку.",
+      "evidence": "3. 請上傳一段演奏錄音 (演奏主修 )/作品樂譜 (作曲主修 )影片至 YouTube頻道並註明影片連結) Please upload a video introducing your Performance or Composition majors to the YouTube channel and provide the link.",
+      "source": {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Часть программ считает награды и внеучебные дела обязательными — например, Power Mechanical Engineering: клубы, конкурсы, руководство, награды за работы.",
+      "evidence": "6. 獲獎證明或其他有利申請資料 (例如：社團參與、競賽 成果、學生幹部、作品獲獎證明)。 Awards or other supporting materials (school club participation, competition, student leadership…etc.) are required.",
+      "source": {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Отбор по документам. Письменные, устные тесты или собеседование возможны, только если так решит факультет; тогда он сам свяжется с абитуриентом.",
+      "evidence": "All application materials are reviewed in the selection process. Additional written tests, oral tests or interviews are dependent upon the department/program policy. If additional tests or interviews are required, the department/program will contact the applicant directly.",
+      "source": {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      }
+    },
+    {
+      "type": "other",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Часть программ просит анкету школы (Secondary School Report): её заполняет школьный консультант, а если его нет — учитель или сотрудник школы. Например, Materials Science and Engineering.",
+      "evidence": "Secondary School Report: This form is developed for, and is to be used by, the secondary high school counselors. If you do not have a secondary school counselor, a teacher or school administrator may fill out the Secondary School Report and transcript instead.",
+      "source": {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      }
+    },
+    {
+      "type": "other",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Часть факультетов просит заполнить личную анкету (Personal Profile), например Materials Science and Engineering и Power Mechanical Engineering.",
+      "evidence": "3. 個人資料表 Personal Profile",
+      "source": {
+        "url": "https://oga.site.nthu.edu.tw/var/file/524/1524/img/4520/140282968.pdf",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:260cd5a1f65777e02b9023787709b77896788dc6f05a9b3bebdb1ed23d766e6e"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv"
+  ],
+  "note": "Данные из правил набора Spring 2027 (115學年度春季班): подача закрывалась 30.09.2026, требований следующего набора в снимке нет. Набор документов зависит от факультета — полный список в разделе V правил. Отдельного списка активностей нет: клубы и конкурсы идут в дополнительных материалах. Personal Profile — анкета, не CV. Для Arts and Design (Studio Art, 創作組) требования в правилах не расписаны. Требования магистратуры и докторантуры из этого PDF не брал."
+}

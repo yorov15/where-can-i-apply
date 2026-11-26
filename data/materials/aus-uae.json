@@ -1,0 +1,84 @@
+{
+  "id": "aus-uae",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Эссе об активностях, талантах, общественной жизни и том, какой вклад вы внесёте в AUS. Нужно только для стипендий President's Scholarship и Chancellor's Scholarship.",
+      "evidence": "an essay detailing extracurricular activities, talents, social activities and anticipated contribution to AUS",
+      "source": {
+        "url": "https://www.aus.edu/admissions/financial-grants-and-scholarships",
+        "lastVerified": "2026-09-29",
+        "contentHash": "sha256:65cf640cf63a5cfc7a1134cc1f4d31def75a0013cd032e213d81df6bdd0cd829"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Портфолио для стипендий President's и Chancellor's: эссе, доказательства лидерских качеств в школе и сообществе, научные или литературные вклады, школьные награды, волонтёрство и активности, видео и две рекомендации.",
+      "evidence": "Applicants must submit a portfolio that includes: an essay detailing extracurricular activities, talents, social activities and anticipated contribution to AUS evidence of outstanding personal qualities and leadership abilities in schools/community evidence of scientific or literary contributions to the community school honors/awards, community service and extracurricular activities a three minute video describing why they should be considered for the scholarship two letters of recommendation",
+      "source": {
+        "url": "https://www.aus.edu/admissions/financial-grants-and-scholarships",
+        "lastVerified": "2026-09-29",
+        "contentHash": "sha256:65cf640cf63a5cfc7a1134cc1f4d31def75a0013cd032e213d81df6bdd0cd829"
+      }
+    },
+    {
+      "type": "video",
+      "need": "some",
+      "count": null,
+      "limit": {
+        "unit": "minutes",
+        "max": 3
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Трёхминутное видео о том, почему вас стоит рассматривать на стипендию. Только для President's Scholarship и Chancellor's Scholarship.",
+      "evidence": "a three minute video describing why they should be considered for the scholarship",
+      "source": {
+        "url": "https://www.aus.edu/admissions/financial-grants-and-scholarships",
+        "lastVerified": "2026-09-29",
+        "contentHash": "sha256:65cf640cf63a5cfc7a1134cc1f4d31def75a0013cd032e213d81df6bdd0cd829"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации в составе портфолио для стипендий President's и Chancellor's; кто именно их пишет, на странице не указано.",
+      "evidence": "two letters of recommendation",
+      "source": {
+        "url": "https://www.aus.edu/admissions/financial-grants-and-scholarships",
+        "lastVerified": "2026-09-29",
+        "contentHash": "sha256:65cf640cf63a5cfc7a1134cc1f4d31def75a0013cd032e213d81df6bdd0cd829"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "interview",
+    "studyPlan",
+    "certificates"
+  ],
+  "note": "Набор Fall 2026: дедлайн 19.03.2026 уже прошёл, требования могут измениться. President's Scholarship — для окончивших школу вне ОАЭ, Chancellor's — для школ в ОАЭ. Материалы нужны только для этих стипендий; для поступления и Merit Scholarship отдельных материалов не нужно. Награды и активности отдельным списком не просят — они входят в портфолио."
+}

@@ -1,0 +1,123 @@
+{
+  "id": "rug",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "cv",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "На многих факультетах CV можно приложить по желанию — он не обязателен.",
+      "evidence": "Providing a CV is optional.",
+      "source": {
+        "url": "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/non-dutch-qualification/bachelor/bachelor-application-documents",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:83eb2bdcc3ff9bec6a87741cd40258ad031d6b910459e7cb793b15ee2cfeef98"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Campus Fryslân, Global Responsibility & Leadership (BSc Global Politics and Sustainability): CV входит в обязательные документы.",
+      "evidence": "CV Letter/video of motivation",
+      "source": {
+        "url": "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/non-dutch-qualification/bachelor/bachelor-application-documents",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:83eb2bdcc3ff9bec6a87741cd40258ad031d6b910459e7cb793b15ee2cfeef98"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 500
+      },
+      "prompt": "What motivates you to apply to UCF? - How do you envision your role in the UCF community?",
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Campus Fryslân, Global Responsibility & Leadership: мотивационное письмо до 500 слов или видео до 3 минут; ответить на два вопроса — о мотивации и о роли в UCF.",
+      "evidence": "Upload your motivation letter (maximum of 500 words) in PDF form or upload a pdf with the link to your video (maximum of 3 minutes) in which you, at least, respond to the questions",
+      "source": {
+        "url": "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/non-dutch-qualification/bachelor/bachelor-application-documents",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:83eb2bdcc3ff9bec6a87741cd40258ad031d6b910459e7cb793b15ee2cfeef98"
+      }
+    },
+    {
+      "type": "video",
+      "need": "some",
+      "count": null,
+      "limit": {
+        "unit": "minutes",
+        "max": 3
+      },
+      "prompt": "What motivates you to apply to UCF? - How do you envision your role in the UCF community?",
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Campus Fryslân, Global Responsibility & Leadership: вместо письма можно приложить ссылку на видео до 3 минут с ответами на те же два вопроса.",
+      "evidence": "upload a pdf with the link to your video (maximum of 3 minutes) in which you, at least, respond to the questions",
+      "source": {
+        "url": "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/non-dutch-qualification/bachelor/bachelor-application-documents",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:83eb2bdcc3ff9bec6a87741cd40258ad031d6b910459e7cb793b15ee2cfeef98"
+      }
+    },
+    {
+      "type": "cv",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "University College Groningen (Liberal Arts & Sciences): CV входит в обязательные документы.",
+      "evidence": "Proof of English proficiency CV Motivation video",
+      "source": {
+        "url": "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/non-dutch-qualification/bachelor/bachelor-application-documents",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:83eb2bdcc3ff9bec6a87741cd40258ad031d6b910459e7cb793b15ee2cfeef98"
+      }
+    },
+    {
+      "type": "video",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "University College Groningen (Liberal Arts & Sciences): мотивационное видео обязательно; инструкцию пришлют на почту. Письмо о мотивации не рассматривают.",
+      "evidence": "Proof of English proficiency CV Motivation video (follow the instructions you will receive from the faculty by email) Note : letters of motivation are not considered in the application procedure for admission to the Bachelor in Liberal Arts & Sciences.",
+      "source": {
+        "url": "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/non-dutch-qualification/bachelor/bachelor-application-documents",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:83eb2bdcc3ff9bec6a87741cd40258ad031d6b910459e7cb793b15ee2cfeef98"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "interview",
+    "portfolio",
+    "studyPlan",
+    "certificates"
+  ],
+  "note": "Прошлый набор (снимок 27.09.2026) страницы документов не содержал. На большинстве факультетов мотивационные и рекомендательные письма не рассматривают; на отборе некоторых программ рекомендации всё же могут понадобиться. CV часто необязателен. CV обязателен для Global Responsibility & Leadership (Campus Fryslân) и Liberal Arts & Sciences (University College Groningen); письмо или видео — у первой, видео — у второй. Отдельного эссе и собеседования страница не упоминает."
+}

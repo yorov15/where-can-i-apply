@@ -1,0 +1,66 @@
+{
+  "id": "ibn-haldun",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "В списке документов к заявке — резюме (C.V). Форма и объём не указаны.",
+      "evidence": "What documents do I need to submit along with my application? · Passport · Photograph · High school Diploma in English or Turkish · High School Transcript in English or Turkish · C.V · 1 Reference letter · Intent Letter · Language certificates if you have any.",
+      "source": {
+        "url": "https://international.ihu.edu.tr/en/faq",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:79d93fb0bf6e6a7c25c0b86ce9bbbefec7bca031964d26e2219f95c4034d0377"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "В списке документов к заявке — одно рекомендательное письмо. Кто его пишет, не указано.",
+      "evidence": "What documents do I need to submit along with my application? · Passport · Photograph · High school Diploma in English or Turkish · High School Transcript in English or Turkish · C.V · 1 Reference letter · Intent Letter · Language certificates if you have any.",
+      "source": {
+        "url": "https://international.ihu.edu.tr/en/faq",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:79d93fb0bf6e6a7c25c0b86ce9bbbefec7bca031964d26e2219f95c4034d0377"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "В списке документов к заявке — письмо о намерениях (Intent Letter). Форма, объём и вопрос не указаны.",
+      "evidence": "What documents do I need to submit along with my application? · Passport · Photograph · High school Diploma in English or Turkish · High School Transcript in English or Turkish · C.V · 1 Reference letter · Intent Letter · Language certificates if you have any.",
+      "source": {
+        "url": "https://international.ihu.edu.tr/en/faq",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:79d93fb0bf6e6a7c25c0b86ce9bbbefec7bca031964d26e2219f95c4034d0377"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "interview"
+  ],
+  "note": "Список документов — только в FAQ (вопрос 3), без форм, объёмов и вопросов; сроки в FAQ устаревшие: набор 2023–2024. Языковые сертификаты — документ, не материал. Собеседование в снимке упоминается только для магистратуры."
+}

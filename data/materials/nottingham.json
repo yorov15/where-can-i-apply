@@ -1,0 +1,87 @@
+{
+  "id": "nottingham",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": 3,
+      "limit": {
+        "unit": "chars",
+        "max": 4000
+      },
+      "prompt": "Why do you want to study this course or subject? How have your qualifications and studies helped you to prepare for this course or subject? What else have you done to prepare outside of formal education, and why are these experiences useful?",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Личное заявление в UCAS — три ответа на вопросы: почему этот курс, как подготовила учёба и что делал вне её. Всего до 4000 знаков, минимум 350 на каждый ответ.",
+      "evidence": "You have 4,000 characters in total to split across the three answers, with a minimum of 350 characters per answer.",
+      "source": {
+        "url": "https://www.nottingham.ac.uk/studywithus/ugstudy/applying.html",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:0b924668deb6711caf9ecfeb5b6503bd552f51ea8e4684c308b324f01461a64d"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Отзыв (reference) пишет кто-то из твоей последней школы, колледжа или программы Foundation Year; в нём должны быть предсказанные оценки (predicted grades).",
+      "evidence": "Your reference should come from someone at your most recent school, college or Foundation Year provider, and should include your predicted grades.",
+      "source": {
+        "url": "https://www.nottingham.ac.uk/studywithus/ugstudy/applying.html",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:0b924668deb6711caf9ecfeb5b6503bd552f51ea8e4684c308b324f01461a64d"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Интервью бывает только на курсах, где оно предусмотрено. Приглашение пришлют на email — следи за почтой и другими папками.",
+      "evidence": "We'll then assess your application and either make a decision or invite you to an interview, if your chosen course requires one. (Interview invitations are sent by email, so keep an eye on your inbox and any other folders to make sure you don't miss any updates.)",
+      "source": {
+        "url": "https://www.nottingham.ac.uk/studywithus/ugstudy/applying.html",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:0b924668deb6711caf9ecfeb5b6503bd552f51ea8e4684c308b324f01461a64d"
+      }
+    },
+    {
+      "type": "other",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Некоторые курсы могут попросить примеры твоих письменных работ.",
+      "evidence": "Some courses may ask for examples of written work.",
+      "source": {
+        "url": "https://www.nottingham.ac.uk/studywithus/ugstudy/applying/entry-requirements.html",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:1a9a08dfa29eff5a7fce7ddb550082d49f2dbae54bca83c19996d17854e8eca5"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Активности и опыт входят в третий вопрос личного заявления — отдельного списка вуз не просит. Интервью, тесты и примеры письменных работ бывают только на отдельных курсах: вуз присылает инструкции, если это твой случай. Отдельных страниц о личном заявлении и reference в снимке нет."
+}

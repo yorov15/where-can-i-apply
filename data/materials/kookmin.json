@@ -1,0 +1,66 @@
+{
+  "id": "kookmin",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Собственный бланк вуза: 자기소개서 (рассказ о себе) в списке обязательных документов вместе с 학업계획서. Тема и объём на странице не названы.",
+      "evidence": "본교서식 서류심사신청서 자기소개서 및 학업계획서 학력조회동의서",
+      "source": {
+        "url": "https://iat.kookmin.ac.kr/admission/apply/freshman",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:ef819583dbe37f4d90ed8d47fe99cbf1b5552b100939f7079e01193bf09913f9"
+      }
+    },
+    {
+      "type": "studyPlan",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Собственный бланк вуза: 학업계획서 (план учёбы) в списке обязательных документов, одной строкой с 자기소개서. Тема и объём на странице не названы.",
+      "evidence": "본교서식 서류심사신청서 자기소개서 및 학업계획서 학력조회동의서",
+      "source": {
+        "url": "https://iat.kookmin.ac.kr/admission/apply/freshman",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:ef819583dbe37f4d90ed8d47fe99cbf1b5552b100939f7079e01193bf09913f9"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Собеседование-экзамен (면접고사) даёт 100% оценки для 조형대학 и 예술대학: дизайн и искусство. На гуманитарных, естественных и спортивных направлениях собеседования нет, только документы.",
+      "evidence": "인문 · 자연 · 체능계 평가 요소별 반영 비율 서류평가 100% 면접고사 - 실기고사 - 계 100% 조형대학 및 예술대학 평가 요소별 반영 비율 서류평가 - 면접고사 100% 실기고사 - 계 100%",
+      "source": {
+        "url": "https://iat.kookmin.ac.kr/admission/apply/freshman",
+        "lastVerified": "2026-09-27",
+        "contentHash": "sha256:ef819583dbe37f4d90ed8d47fe99cbf1b5552b100939f7079e01193bf09913f9"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "video"
+  ],
+  "note": "Года набора страница не называет: сроки даны по семестрам без года (снимок 27.09.2026); в объявлениях — прошлый набор Fall 2026 (2026-2) и проект графика 2027-1. 자기소개서 и 학업계획서 стоят одной строкой — возможно, один бланк. Темы и объёмы — в 모집요강, которого в снимке нет. 실기고사 — экзамен, а не материал. Портфолио упомянуто только в объявлении GKS-U (Embassy Track). TOPIK/IELTS — языковые документы, не материалы."
+}

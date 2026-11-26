@@ -1,0 +1,83 @@
+{
+  "id": "denison-university",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Обязательны рекомендация консультанта и школьный отчёт: консультант отправляет их сам. Если консультанта в школе нет, можно попросить учителя или другого сотрудника школы.",
+      "evidence": "Counselor Recommendation & School Report (required): Your counselor will submit these directly to us. If you do not have a counselor at your school, you may ask a teacher or another school official to do so instead.",
+      "source": {
+        "url": "https://denison.edu/campus/admission/international-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:cbe30e8bc35908884f90cfbea57c4fa14f5e3830a8da6ce64a2d897c9b30368d"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Обязательна оценка минимум от одного учителя основного предмета: он заполняет форму оценки. Пригласить учителя можно онлайн — так он отправит её нам.",
+      "evidence": "Teacher Evaluation (required): At least one teacher of a core course must submit a teacher evaluation form for you. You can invite your teachers to do this online, which is how they will submit the evaluation to us.",
+      "source": {
+        "url": "https://denison.edu/campus/admission/international-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:cbe30e8bc35908884f90cfbea57c4fa14f5e3830a8da6ce64a2d897c9b30368d"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Интервью не обязательно, но большинство поступивших его проходят. Университет советует пройти интервью тем, кто серьёзно настроен на Denison.",
+      "evidence": "Interview (recommended): While interviews are not required to be admitted, the majority of successful applicants complete an interview. If you are serious about Denison, we recommend sitting for an interview.",
+      "source": {
+        "url": "https://denison.edu/campus/admission/international-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:cbe30e8bc35908884f90cfbea57c4fa14f5e3830a8da6ce64a2d897c9b30368d"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Если интересуетесь кино, литературным творчеством, танцем, музыкой, изобразительным искусством или театром, можно приложить творческие материалы на оценку преподавателям. Подача — в портале абитуриента; она даёт право на кафедральную стипендию.",
+      "evidence": "Students who have an interest in cinema, creative writing, dance, music, studio art, or theatre may submit supplementary arts materials for faculty evaluation. If submitted, students will be eligible to receive a departmental scholarship. This is done through the Denison Applicant Portal , which is available once the Common or Coalition Application has been submitted.",
+      "source": {
+        "url": "https://denison.edu/campus/admission/international-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:cbe30e8bc35908884f90cfbea57c4fa14f5e3830a8da6ce64a2d897c9b30368d"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Дополнительного эссе Denison не требует: личное эссе входит в заявку Common App или Coalition. Общий список активностей Common App не внесён."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "tohoku-gateway-college",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 400
+      },
+      "prompt": "Describe your reasons for applying in relation to what you want to study at Tohoku University, your desired academic pathway, and what you have been passionate about in the past.",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Эссе о цели: почему подаёшь, что хочешь изучать в Tohoku, какой путь выбираешь и чем увлекался. До 400 слов на английском, вводится прямо в поле TAO.",
+      "evidence": "② Statement of Purpose • Describe your reasons for applying in relation to what you want to study at Tohoku University, your desired academic pathway, and what you have been passionate about in the past. (Max. 400 words in English) • Input your Statement of Purpose directly into the dedicated field in TAO.",
+      "source": {
+        "url": "https://admissions.tohoku.ac.jp/en/adcms/wp-content/uploads/2026/08/ApplicationGuideGWC2027Fall.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:32e5da227c9bab8cf9a4a72f5792d00ffb66ddfab4f9118cc80693a00f41020c"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Второй этап отбора: после проверки документов — письменный экзамен и собеседование, всё онлайн и на английском.",
+      "evidence": "1st Stage (Document Screening) 2nd Stage Screening (Written Exam + Interview) entirely in English, all online",
+      "source": {
+        "url": "https://admissions.tohoku.ac.jp/en/admissions/undergraduate/gateway_college/",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:657e6dacc6e3bd5f5224779ff803618f35d8fe915327e899a8c38f984f9ccede"
+      }
+    },
+    {
+      "type": "other",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Второй этап включает письменный экзамен; он проходит онлайн, как и собеседование.",
+      "evidence": "2nd Stage Screening written exam and interview will be conducted online.",
+      "source": {
+        "url": "https://admissions.tohoku.ac.jp/en/adcms/wp-content/uploads/2026/08/ApplicationGuideGWC2027Fall.pdf",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:32e5da227c9bab8cf9a4a72f5792d00ffb66ddfab4f9118cc80693a00f41020c"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Данные по осеннему набору 2027 (Term II, зачисление в октябре 2027). Весенний набор отбирают иначе: экзамен и собеседование на японском, очно. В требованиях осеннего набора нет рекомендаций, списка активностей, CV, наград, портфолио и видео. Отдельного учебного плана нет: путь учёбы входит в Statement of Purpose."
+}

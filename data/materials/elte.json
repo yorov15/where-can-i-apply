@@ -1,0 +1,51 @@
+{
+  "id": "elte",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "cv",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "CV пишут заранее: оно входит в пакет заявки вместе с мотивационным письмом.",
+      "evidence": "It takes time to carefully prepare your application package, draft your CV and motivation letter, and to collect all required documents.",
+      "source": {
+        "url": "https://www.elte.hu/en/how-to-apply",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:f78aae73f5e70aa1ac388bde68af8a83d688fb83bc3d4ac24c92496bae1abc55"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Мотивационное письмо тоже входит в пакет заявки: его готовят заранее, как и CV.",
+      "evidence": "It takes time to carefully prepare your application package, draft your CV and motivation letter, and to collect all required documents.",
+      "source": {
+        "url": "https://www.elte.hu/en/how-to-apply",
+        "lastVerified": "2026-10-01",
+        "contentHash": "sha256:f78aae73f5e70aa1ac388bde68af8a83d688fb83bc3d4ac24c92496bae1abc55"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "interview",
+    "certificates"
+  ],
+  "note": "Данные прошлого набора: на странице стипендии набор 2026/2027 закрыт, дедлайн был 15 января. Требований по программам в снимке нет — страницы требований на elte.hu не открылись (404 и таймаут), полный список документов в Call for Applications (PDF, в снимке его нет). CV и мотивационное письмо — только общее упоминание на how-to-apply."
+}

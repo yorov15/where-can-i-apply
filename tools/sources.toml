@@ -54,6 +54,9 @@ urls = [
   "https://turkiyeburslari.gov.tr/scholarshipsprograms",
   "https://turkiyeburslari.gov.tr/calendar",
   "https://turkiyeburslari.gov.tr/fulltimeprograms",
+  # Партия 3C: этапы заявки и отбор — письмо о намерениях, тест, интервью.
+  "https://turkiyeburslari.gov.tr/evaluationandselectionprocess",
+  "https://turkiyeburslari.gov.tr/applysteps",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-03"
@@ -517,6 +520,8 @@ urls = [
   "https://ucentralasia.org/schools/school-of-arts-and-sciences/undergraduate-programme/frequently-asked-questions",
   "https://ucentralasia.org/admissions/undergraduate/how-to-applyeur",
   "https://admissions.ucentralasia.org/wp-content/uploads/2026/04/UCA-FA-Application-Package-INT-for-2026-27.pdf",
+  # Партия 3C: Stage 3 — форма и интервью (эссе, вопросы).
+  "https://admissions.ucentralasia.org/apply/stage-3/",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-11"
@@ -1370,6 +1375,8 @@ name = "Carleton College (США): помощь иностранцам"
 urls = [
   "https://www.carleton.edu/admissions/apply/steps/international/",
   "https://www.carleton.edu/financial-aid/apply-for-aid/international-students/",
+  # Партия 3C: требования к заявке (материалы, рекомендации).
+  "https://www.carleton.edu/admissions/apply/steps/materials",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-26"
@@ -2117,6 +2124,8 @@ urls = [
   # так и будет написано, а общая картина по Нидерландам лежит в
   # netherlands-study.
   "https://www.rug.nl/education/scholarships/",
+  # Партия 3C: документы заявки бакалавра с нерумышленным дипломом (CV, письмо).
+  "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/non-dutch-qualification/bachelor/bachelor-application-documents",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-27"
@@ -2140,6 +2149,8 @@ urls = [
   # гражданству. Вторая бакалаврская, G&D Europe, — только для граждан
   # Китая, поэтому её в источники не берём.
   "https://www.eur.nl/en/scholarship/entrepreneurial-spirit-scholarship",
+  # Партия 3C: страница программы IBA — мотивационные вопросы и отбор.
+  "https://www.eur.nl/en/bachelor/bachelor-international-business-administration/admission",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-27"
@@ -2179,6 +2190,9 @@ urls = [
   "https://www.uni-heidelberg.de/en/study/management-of-studies/semester-fees",
   "https://www.uni-heidelberg.de/en/study/international-studies/study-in-heidelberg",
   "https://www.uni-heidelberg.de/en/study/management-of-studies/semester-fees/tuition-fees-for-international-students",
+  # Партия 3C: порядок подачи и требования к поступающим (материалы заявки).
+  "https://www.uni-heidelberg.de/en/study/application-enrolment/starting-the-first-academic-semester-of-your-degree-programme",
+  "https://www.uni-heidelberg.de/en/study/application-enrolment/study-requirements",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-27"
@@ -2290,6 +2304,8 @@ urls = [
   "https://www.ajou.ac.kr/iadmissions_en/undergraduate/tuition.do",
   "https://www.ajou.ac.kr/iadmissions_en/undergraduate/scholarship.do",
   "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+  # Партия 3C: страница руководства по приёму (требования в PDF).
+  "https://www.ajou.ac.kr/iadmissions_en/undergraduate/guideline.do",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-27"
@@ -2374,6 +2390,9 @@ urls = [
   "https://www.unist.ac.kr/en/admissions/",
   "https://www.unist.ac.kr/unist/admissions/admissions.do",
   "https://english.moe.go.kr/sub/infoRenewal.do?m=0703&page=0703&s=english",
+  # Партия 3C: приём иностранцев — требования и вопросы personal statement/study plan.
+  "https://admu-intl.unist.ac.kr/admission-eng/admissions/admissions.do",
+  "https://admu-intl.unist.ac.kr/admission-eng/contact/faq.do",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-27"
@@ -2916,6 +2935,9 @@ name = "Slovak University of Technology in Bratislava (Словакия): бак
 urls = [
   "https://www.stuba.sk/admission-process/bachelor-study-admission-conditions.html?page_id=17324",
   "https://www.stuba.sk/english/applicants-1/how-to-start-to-study/tuition-and-fees.html?page_id=16567",
+  # Партия 3C: порядок приёма и требования FIIT (экзамен, интервью).
+  "https://www.stuba.sk/en/applicants/how-to-start-to-study/admission-process",
+  "https://www.fiit.stuba.sk/en/applicants/how-to-start-studying/admission-to-study/admission-for-bachelors-studies/admission-procedure-for-bachelor-studies-in-english-language",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
@@ -2938,6 +2960,9 @@ urls = [
   "https://rekrutacja.uw.edu.pl/en/admission-rules-and-application-deadlines-for-studies-provided-in-english-for-the-academic-year-2026-2027",
   "https://rekrutacja.uw.edu.pl/en/application-and-tuition-fees",
   "https://rekrutacja.uw.edu.pl/en/scholarships",
+  # Партия 3C: как подавать и required documents (квалификация по программам).
+  "https://rekrutacja.uw.edu.pl/en/how-to-apply/",
+  "https://rekrutacja.uw.edu.pl/en/required-documents/",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
@@ -2948,6 +2973,9 @@ urls = [
   "https://welcome.uj.edu.pl/en_GB/admission",
   "https://internationalstudents.uj.edu.pl/en-GB/studenci/oplaty",
   "https://internationalstudents.uj.edu.pl/en/studenci/stypendia",
+  # Партия 3C: как подавать и документы бакалавриата.
+  "https://welcome.uj.edu.pl/en_GB/admission/how-to-apply",
+  "https://welcome.uj.edu.pl/en_GB/admission/documents/undergraduate",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
@@ -3036,6 +3064,8 @@ urls = [
   "https://www.uniroma1.it/en/pagina/applying-sapienza-international-student",
   "https://www.uniroma1.it/en/pagina/tuition-fees-and-benefits",
   "https://www.uniroma1.it/en/pagina/scholarships",
+  # Партия 3C: международный приём 2026/27 — документы, рекомендательное письмо.
+  "https://www.uniroma1.it/en/pagina/international-admissions-2026-2027",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-28"
@@ -3602,6 +3632,8 @@ urls = [
   "https://www.admissions.illinois.edu/financial-aid/",
   "https://www.admissions.illinois.edu/scholarships/",
   "https://osfa.illinois.edu/types-of-aid/other-aid/international-students/",
+  # Партия 3C: вопросы эссе и требования к ним.
+  "https://www.admissions.illinois.edu/essays/",
 ]
 approvedBy = "human"
 approvedAt = "2026-09-29"
@@ -5234,6 +5266,8 @@ urls = [
   "https://oic.nccu.edu.tw/Upload/FileManager/ecf8752e-9af9-4bf7-91df-d23221e53223.pdf",
   "https://oic.nccu.edu.tw/Post/1074",
   "https://oic.nccu.edu.tw/Post/15404",
+  # Партия 3C: список документов для иностранцев (общий).
+  "https://nccuadmission.nccu.edu.tw/Post/204",
 ]
 approvedBy = "human"
 approvedAt = "2026-10-01"
