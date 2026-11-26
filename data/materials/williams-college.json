@@ -1,0 +1,59 @@
+{
+  "id": "williams-college",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Рекомендация школьного консультанта.",
+      "evidence": "Recommendations from your school counselor",
+      "source": {
+        "url": "https://www.williams.edu/admission-aid/how-to-apply/first-year/",
+        "lastVerified": "2026-09-19",
+        "contentHash": "sha256:5e63f36e38014aba90913cc83729b3b2499d910616f050cda48272b1f18d2e69"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации от учителей.",
+      "evidence": "two teachers",
+      "source": {
+        "url": "https://www.williams.edu/admission-aid/how-to-apply/first-year/",
+        "lastVerified": "2026-09-19",
+        "contentHash": "sha256:5e63f36e38014aba90913cc83729b3b2499d910616f050cda48272b1f18d2e69"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Своих интервью Williams не проводит; можно прислать интервью InitialView.",
+      "evidence": "Williams does not conduct interviews with prospective students, but if you have an interview with InitialView you'd like to share, you are welcome to send it to us.",
+      "source": {
+        "url": "https://www.williams.edu/admission-aid/how-to-apply/additional-applicant-information/international/",
+        "lastVerified": "2026-09-19",
+        "contentHash": "sha256:01ae2c69058582fac1ba62ab3271b95672d8692bb30173f141f5212fb542e868"
+      }
+    }
+  ],
+  "notStated": ["essay", "cv", "awards", "portfolio", "studyPlan", "video", "certificates"],
+  "note": "Дополнительных эссе на странице нет; общее эссе Common App общее. Список активностей Common App общий. Своих интервью Williams не проводит."
+}

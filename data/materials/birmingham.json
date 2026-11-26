@@ -1,0 +1,70 @@
+{
+  "id": "birmingham",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": 3,
+      "limit": {
+        "unit": "chars",
+        "max": 4000
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Личное заявление в UCAS теперь из трёх отдельных вопросов; вместе до 4000 знаков с пробелами, каждый раздел не короче 350 знаков.",
+      "evidence": "For 2026 entry, the format has changed. Instead of one long essay, you'll now answer three questions, each in its own section. Together, your answers can be up to 4,000 characters (including spaces), and each section must be at least 350 characters.",
+      "source": {
+        "url": "https://www.birmingham.ac.uk/study/undergraduate/apply",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:2846499798d4638336eb7f0816e6ba3fba299d6bb08e3d9c9578890f5e1de1c5"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Рекомендацию добавляет школа или колледж, к которым привязана заявка в UCAS Hub.",
+      "evidence": "this will link your application to your school/college so that they can provide support, including adding your reference.",
+      "source": {
+        "url": "https://www.birmingham.ac.uk/study/undergraduate/apply",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:2846499798d4638336eb7f0816e6ba3fba299d6bb08e3d9c9578890f5e1de1c5"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "На некоторых курсах нужно собеседование или прослушивание; вуз сам напишет, если это ваш случай.",
+      "evidence": "Some courses will require an interview or an audition as part of the application process. We'll be in touch if this applies to you and you're invited to an interview/audition.",
+      "source": {
+        "url": "https://www.birmingham.ac.uk/study/undergraduate/apply",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:2846499798d4638336eb7f0816e6ba3fba299d6bb08e3d9c9578890f5e1de1c5"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Формат заявления вуз описывает для набора 2026; сроки на странице — для сентября 2027. Активности и работа входят в личное заявление, отдельного списка нет."
+}

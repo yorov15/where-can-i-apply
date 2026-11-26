@@ -1,0 +1,110 @@
+{
+  "id": "wellesley-college",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "words", "max": 400},
+      "prompt": "Wellesley students actively seek ways to build bridges and to change the world for the better. Tell us about an experience working with and alongside people of different backgrounds and/or perspectives from your own. Why was this important to you, and what lessons from this will you bring with you to Wellesley?",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Дополнительное эссе Wellesley: про опыт работы вместе с людьми другого происхождения или взглядов и чему он научил. 250–400 слов.",
+      "evidence": "For the Wellesley-specific essay we ask you to respond to the following prompt in 250 to 400 words:",
+      "source": {
+        "url": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:72392683e7042121938e44dcce0782f67bd7064621e89fd8c77b4c92fbecef64"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации от преподавателей; хотя бы одна — с оценкой уровня английского: чтение, письмо, речь.",
+      "evidence": "Wellesley requires two letters of recommendation from academic instructors. At least one recommendation must include an evaluation of your proficiency in reading, writing, and speaking English.",
+      "source": {
+        "url": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:72392683e7042121938e44dcce0782f67bd7064621e89fd8c77b4c92fbecef64"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Школьный консультант отправляет School Report с последними оценками через Common App или Coalition.",
+      "evidence": "Your school counselor should submit your transcript(s) through the Common Application or the Coalition Application. Your counselor must also complete and submit the School Report (with your most recent grades).",
+      "source": {
+        "url": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:72392683e7042121938e44dcce0782f67bd7064621e89fd8c77b4c92fbecef64"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Если английский не родной и учились на нём меньше 4 лет, советуют тест или интервью InitialView/Vericant.",
+      "evidence": "If English is not your native language and you have been studying in an English-based curriculum for fewer than four years, we strongly recommend that you take one of the following English-proficiency tests or use one of the interview tools: TOEFL (iBT or Essentials) Duolingo English Test IELTS Cambridge Assessment English Qualifications (C1 Advanced, C2 Proficiency, or C1 Business Higher accepted) InitialView Vericant (Standard Interview, which includes a writing sample) GTEC CBT (Global Test of English Communication Computer Based Testing)",
+      "source": {
+        "url": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:72392683e7042121938e44dcce0782f67bd7064621e89fd8c77b4c92fbecef64"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Необязательное портфолио по искусству, музыке или театру, если есть особый талант в этих областях.",
+      "evidence": "Visual arts, music, and theatre portfolios (optional) If you have a special talent in the arts, you might want to submit an Arts Portfolio",
+      "source": {
+        "url": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:72392683e7042121938e44dcce0782f67bd7064621e89fd8c77b4c92fbecef64"
+      }
+    },
+    {
+      "type": "other",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Если хочешь выступать в спортивной команде Wellesley (Division III), отправь recruiting form тренеру.",
+      "evidence": "If you are interested in competing in varsity athletics at Wellesley (Division III), submit a recruiting form to the head coach of your sport.",
+      "source": {
+        "url": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:72392683e7042121938e44dcce0782f67bd7064621e89fd8c77b4c92fbecef64"
+      }
+    }
+  ],
+  "notStated": ["video", "cv", "awards", "studyPlan"],
+  "note": "Общее эссе и список активностей Common App общие, не внесены; дополнительное эссе Wellesley — выше."
+}

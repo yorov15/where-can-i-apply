@@ -1,0 +1,178 @@
+{
+  "id": "washu",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": {"unit": "words", "max": 250},
+      "prompt": "Please tell us what you are interested in studying at college and why.",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Ответ до 250 слов на вопрос, что вы хотите изучать в колледже и почему.",
+      "evidence": "A 250-word response to the question \"Please tell us what you are interested in studying at college and why.\"",
+      "source": {
+        "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:5e4892961a7cb9ff37be0447082adf62ec762a911e8077e9d3e9b1343c371f2e"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "some",
+      "count": null,
+      "limit": {"unit": "words", "max": 250},
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Тем, кто подаёт на Signature Scholar Programs, нужно ответить на короткий вопрос (250 слов) по каждой программе.",
+      "evidence": "After submitting your application for admission, you will gain access to the Pathway where you'll be asked to respond to a short answer question (250 words) for each Signature Scholar Program you apply to.",
+      "source": {
+        "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:5e4892961a7cb9ff37be0447082adf62ec762a911e8077e9d3e9b1343c371f2e"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Одна оценка от учителя.",
+      "evidence": "Counselor recommendation and one teacher evaluation",
+      "source": {
+        "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:5e4892961a7cb9ff37be0447082adf62ec762a911e8077e9d3e9b1343c371f2e"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Рекомендация школьного консультанта.",
+      "evidence": "Completing materials include School Report and Official Transcript, Teacher Evaluation, and Counselor Recommendation",
+      "source": {
+        "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:5e4892961a7cb9ff37be0447082adf62ec762a911e8077e9d3e9b1343c371f2e"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Для заявки на стипендию можно добавить третье письмо о вкладе в сообщество.",
+      "evidence": "The scholarship committee(s) will review the required counselor and teacher letters of recommendation submitted with your application. You may submit an optional third letter of recommendation to invite someone who can speak to your contributions and commitment to the community.",
+      "source": {
+        "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:5e4892961a7cb9ff37be0447082adf62ec762a911e8077e9d3e9b1343c371f2e"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Список внеучебных и общественных занятий.",
+      "evidence": "Extracurricular and community activities",
+      "source": {
+        "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:5e4892961a7cb9ff37be0447082adf62ec762a911e8077e9d3e9b1343c371f2e"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Портфолио обязательно для College of Art и очень рекомендуется для College of Architecture.",
+      "evidence": "A portfolio is required for applicants to the College of Art. Portfolios are strongly encouraged for applicants to the College of Architecture.",
+      "source": {
+        "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:5e4892961a7cb9ff37be0447082adf62ec762a911e8077e9d3e9b1343c371f2e"
+      }
+    },
+    {
+      "type": "video",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "По желанию можно отправить видео до 90 секунд.",
+      "evidence": "Instructions for submitting an optional 90-second video",
+      "source": {
+        "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:5e4892961a7cb9ff37be0447082adf62ec762a911e8077e9d3e9b1343c371f2e"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "По желанию можно приложить сертификаты Schoolhouse.world.",
+      "evidence": "Schoolhouse.world certifications",
+      "source": {
+        "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:5e4892961a7cb9ff37be0447082adf62ec762a911e8077e9d3e9b1343c371f2e"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Собеседования WashU не проводит; по желанию можно приложить стороннее интервью, например InitialView.",
+      "evidence": "While WashU does not conduct nor offer evaluative interviews for admission, students are strongly encouraged to submit third-party interview supplements, such as InitialView , to further demonstrate their English proficiency. Students who choose not to submit an interview supplement will not be disadvantaged in our review process.",
+      "source": {
+        "url": "https://admissions.wustl.edu/how-to-apply/english-testing-requirements/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:9c69e13fc87f7e4e3ee56fb0de67b5c1acc33cf0f1068cf74cc6a43e088537a9"
+      }
+    }
+  ],
+  "notStated": ["cv", "awards", "studyPlan"],
+  "note": "Общее эссе Common App/Coalition не внесено. Портфолио обязательно только для College of Art, для Architecture — рекомендуется."
+}

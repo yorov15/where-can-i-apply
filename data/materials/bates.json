@@ -1,0 +1,93 @@
+{
+  "id": "bates",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Одна рекомендация школьного консультанта; форма входит в Common App или Coalition.",
+      "evidence": "1 counselor recommendation Recommendation forms are included in the Common Application or Coalition Application.",
+      "source": {
+        "url": "https://www.bates.edu/admission/apply/apply/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:67e4ea73e994e346744386d358d96cc5f4cba624bd35623bc2a565722e1a47a7"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Нужна одна рекомендация учителя; можно добавить вторую.",
+      "evidence": "Applicants are required to submit 1 teacher recommendation and may submit up to 2.",
+      "source": {
+        "url": "https://www.bates.edu/admission/apply/apply/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:67e4ea73e994e346744386d358d96cc5f4cba624bd35623bc2a565722e1a47a7"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "По желанию можно добавить одну рекомендацию о внеучебном опыте — активности или работе.",
+      "evidence": "Applicants may wish to submit an additional recommendation from a non-academic experience, such as an extracurricular activity or employment. Please note that Bates will only accept one additional recommendation.",
+      "source": {
+        "url": "https://www.bates.edu/admission/apply/apply/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:67e4ea73e994e346744386d358d96cc5f4cba624bd35623bc2a565722e1a47a7"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Записанное интервью InitialView или Vericant приветствуется, но не обязательно.",
+      "evidence": "An InitialView or Vericant interview is encouraged, though not required, as part of an international student's application materials.",
+      "source": {
+        "url": "https://www.bates.edu/admission/apply/international-students/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:942b6d59ebbe59706edaeada0762cc37f2fbb384763630f448d35d6d1b43800b"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Необязательное портфолио по музыке, театру, искусству, танцу, кино или creative writing.",
+      "evidence": "Music, theater , art, dance, film, and creative writing supplements may be included in your application portfolio.",
+      "source": {
+        "url": "https://www.bates.edu/admission/apply/apply/",
+        "lastVerified": "2026-10-02",
+        "contentHash": "sha256:67e4ea73e994e346744386d358d96cc5f4cba624bd35623bc2a565722e1a47a7"
+      }
+    }
+  ],
+  "notStated": ["video", "cv", "awards", "studyPlan"],
+  "note": "Дополнительного эссе Bates не требует. Общее эссе и список активностей Common App не внесены."
+}

@@ -1,0 +1,161 @@
+{
+  "id": "uchicago",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Развёрнутое эссе на выбор из нескольких вопросов UChicago.",
+      "evidence": "requires one extended essay of your choice from our list of several prompts",
+      "source": {
+        "url": "https://collegeadmissions.uchicago.edu/apply/application/required-materials/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:e7053965682bee68a312947e8815c03e0e636d78f6e89a118ce7fc291c7f7a8f"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Короткое эссе о том, почему вы хотите учиться в UChicago.",
+      "evidence": "one short essay on why you would like to attend the University of Chicago.",
+      "source": {
+        "url": "https://collegeadmissions.uchicago.edu/apply/application/required-materials/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:e7053965682bee68a312947e8815c03e0e636d78f6e89a118ce7fc291c7f7a8f"
+      }
+    },
+    {
+      "type": "activities",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Список занятий вне класса: всё, на что вы тратите время помимо учёбы.",
+      "evidence": "In your list of extracurricular activities, you should include whatever it is that you spend your time doing outside of class.",
+      "source": {
+        "url": "https://collegeadmissions.uchicago.edu/apply/application/required-materials/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:e7053965682bee68a312947e8815c03e0e636d78f6e89a118ce7fc291c7f7a8f"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации от учителей, которые преподавали вам академический предмет.",
+      "evidence": "We require two recommendations from teachers who have taught you in an academic subject: high school teachers for first-year applicants and college instructors for transfer applicants.",
+      "source": {
+        "url": "https://collegeadmissions.uchicago.edu/apply/application/required-materials/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:e7053965682bee68a312947e8815c03e0e636d78f6e89a118ce7fc291c7f7a8f"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "По желанию можно добавить одно письмо от другого учителя, работодателя, наставника, руководителя или друга.",
+      "evidence": "If you feel that we won't be able get a full picture of who you are without a third letter of recommendation from another teacher, an employer, role model, youth leader, or friend, you may submit one additional letter.",
+      "source": {
+        "url": "https://collegeadmissions.uchicago.edu/apply/application/required-materials/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:e7053965682bee68a312947e8815c03e0e636d78f6e89a118ce7fc291c7f7a8f"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Школьный консультант может по желанию приложить письмо-рекомендацию.",
+      "evidence": "All secondary school counselors have the option of submitting letters of recommendation and school forms online",
+      "source": {
+        "url": "https://collegeadmissions.uchicago.edu/apply/application/required-materials/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:e7053965682bee68a312947e8815c03e0e636d78f6e89a118ce7fc291c7f7a8f"
+      }
+    },
+    {
+      "type": "video",
+      "need": "optional",
+      "count": null,
+      "limit": {"unit": "minutes", "max": 2},
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "По желанию можно записать двухминутное видео-знакомство вместо собеседования и загрузить в UChicago Account.",
+      "evidence": "If you would like to add your voice to your application, you have the option to submit a two-minute video introduction in lieu of the traditional college interview, which is not part of our application process.",
+      "source": {
+        "url": "https://collegeadmissions.uchicago.edu/apply/application/optional-materials/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:474e6e362e6dff5ac0d6747bf774672cc9465129c7442adf1949d81ded0dddab"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "По желанию можно загрузить в UChicago Account работы, показывающие значимый талант или достижение: творческое письмо, выступления, исследовательские проекты и другое.",
+      "evidence": "Students may submit supplemental material representing a significant talent, passion, or achievement by self-upload through their UChicago Account. These materials include, but are not limited to, creative writing projects, highlights from music/dance/visual art/theater performance, school capstone projects such as AP Capstone or the equivalent, research projects, business plans, or other work of note.",
+      "source": {
+        "url": "https://collegeadmissions.uchicago.edu/apply/application/optional-materials/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:474e6e362e6dff5ac0d6747bf774672cc9465129c7442adf1949d81ded0dddab"
+      }
+    },
+    {
+      "type": "certificates",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "По желанию можно приложить сертификат schoolhouse.world по предмету и загрузить PDF в UChicago Account.",
+      "evidence": "Students are welcome to submit schoolhouse.world certification to their application. Once you've completed certification in a specific subject area, you'll be able to download a PDF document verifying your completion.",
+      "source": {
+        "url": "https://collegeadmissions.uchicago.edu/apply/application/optional-materials/",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:474e6e362e6dff5ac0d6747bf774672cc9465129c7442adf1949d81ded0dddab"
+      }
+    }
+  ],
+  "notStated": ["cv", "awards", "studyPlan"],
+  "note": "Собеседования нет — вместо него можно записать видео. Сертификаты участия в активностях не требуют. Общее эссе Common App не внесено. Страница вопросов эссе в снимке — заглушка, поэтому вопросы не заполнены."
+}
