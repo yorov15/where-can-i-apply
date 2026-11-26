@@ -1,0 +1,119 @@
+{
+  "id": "grinnell-college",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "optional",
+      "count": null,
+      "limit": {
+        "unit": "words",
+        "max": 450
+      },
+      "prompt": "Grinnell's core values include supporting a diverse community that is respectful, egalitarian, and committed to the common good. How might your background, respect for the lived experiences of others, and/or eagerness to be exposed to new perspectives equip you to thrive at Grinnell and serve the common good?",
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Необязательный короткий ответ: от 200 до 450 слов о том, как твой опыт и готовность видеть чужой опыт помогут тебе в Grinnell и общему благу.",
+      "evidence": "Your response should be a minimum of 200 words and no more than 450 words. This prompt is optional , but recommended.",
+      "source": {
+        "url": "https://www.grinnell.edu/admission/apply/first-year/requirements",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:71ea207cbba4b06f5e884436129ee696ee0d292a3e6d58b8b6440d61f76ed647"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две оценки от учителей; предпочтительна форма Teacher Recommendation из Common App.",
+      "evidence": "2 teacher evaluations (we prefer the Common Application Teacher Recommendation forms)",
+      "source": {
+        "url": "https://www.grinnell.edu/admission/apply/first-year/requirements",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:71ea207cbba4b06f5e884436129ee696ee0d292a3e6d58b8b6440d61f76ed647"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Рекомендация школьного консультанта; предпочтительна форма Counselor Recommendation из Common App.",
+      "evidence": "Secondary/high school counselor recommendation (we prefer the Common Application Counselor Recommendation form).",
+      "source": {
+        "url": "https://www.grinnell.edu/admission/apply/first-year/requirements",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:71ea207cbba4b06f5e884436129ee696ee0d292a3e6d58b8b6440d61f76ed647"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Прослушивания и просмотр портфолио для творческих специальностей не обязательны, но работу можно прислать на рассмотрение приёмной комиссии.",
+      "evidence": "Grinnell does not require auditions or portfolio reviews for students planning to pursue a degree in the arts. However, you are welcome to submit your work for review by the admission staff.",
+      "source": {
+        "url": "https://www.grinnell.edu/admission/apply/first-year/requirements",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:71ea207cbba4b06f5e884436129ee696ee0d292a3e6d58b8b6440d61f76ed647"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Личное интервью не требуется и преимущества не даёт. Можно прислать интервью InitialView, Vericant или Duolingo, если оно есть.",
+      "evidence": "Grinnell accepts InitialView , Vericant , and Duolingo interviews from students who have these to submit. Note: Grinnell College does not require personal interviews nor do we give special preference to an international student who participates in on- or off-campus interviews.",
+      "source": {
+        "url": "https://www.grinnell.edu/admission/apply/international",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:189eb952506995eb0e27eec26c061564572467f064a3b20b35d25a6c9f22abc3"
+      }
+    },
+    {
+      "type": "other",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Отдельного обязательного эссе нет; примем дополнительные рекомендации, письменные работы, эссе и другие материалы, если они усилят заявку.",
+      "evidence": "While Grinnell does not have a required supplementary essay / application, we will accept additional letters of recommendation, writing samples, essays, and other appropriate documents if you feel that they will enhance your application.",
+      "source": {
+        "url": "https://www.grinnell.edu/admission/apply/international",
+        "lastVerified": "2026-09-26",
+        "contentHash": "sha256:189eb952506995eb0e27eec26c061564572467f064a3b20b35d25a6c9f22abc3"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "awards",
+    "video",
+    "studyPlan",
+    "certificates"
+  ],
+  "note": "Общее эссе и список активностей Common App не внесены. Короткий ответ необязателен, его вопрос меняется по годам."
+}

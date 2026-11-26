@@ -1,0 +1,67 @@
+{
+  "id": "sheffield",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Личное заявление в заявке UCAS: вуз читает его при оценке вместе с оценками, прогнозом баллов и характеристикой поручителя. Вопросов и объёма на странице нет.",
+      "evidence": "The information in your personal statement",
+      "source": {
+        "url": "https://www.sheffield.ac.uk/undergraduate/apply/assess",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:541986f98a845756ba570edd49adf357f967e19893343bd4b7bcbbc3b29792f1"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Характеристика поручителя (referee's statement) подтверждает учебный потенциал и личные качества; вуз учитывает её при оценке заявки.",
+      "evidence": "Your referee's statement, for confirmation of your academic potential and personal qualities",
+      "source": {
+        "url": "https://www.sheffield.ac.uk/undergraduate/apply/assess",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:541986f98a845756ba570edd49adf357f967e19893343bd4b7bcbbc3b29792f1"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Собеседование не на всех курсах: большинству оно не нужно, но некоторые школы приглашают — Medicine, Dentistry, Nursing, Orthoptics, Pharmacy, Speech and Language Therapy.",
+      "evidence": "For most courses interviews aren't a prerequisite for admission, but some academic schools interview to further assess the motivation and personal qualities of applicants. Courses which interview include Medicine, Dentistry, Nursing, Orthoptics, Pharmacy and Speech and Language Therapy.",
+      "source": {
+        "url": "https://www.sheffield.ac.uk/undergraduate/apply/assess",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:541986f98a845756ba570edd49adf357f967e19893343bd4b7bcbbc3b29792f1"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "awards",
+    "certificates",
+    "cv",
+    "portfolio",
+    "studyPlan",
+    "video"
+  ],
+  "note": "Снимок описывает набор сентября 2027. Оценка заявки: личное заявление и характеристика поручителя; интервью — только на части курсов. Объём заявления и вопросы вуз не указывает."
+}
