@@ -1,0 +1,76 @@
+{
+  "id": "sabanci-university",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "activities",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Внеучебные занятия учитывают при оценке стипендии.",
+      "evidence": "Scholarship evaluation is made based on applicants' academic success, extracurricular activities, and scholarship quota.",
+      "source": {
+        "url": "https://iro.sabanciuniv.edu/en/application-requirements",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:7b622ab947d273f4219286e208c67ff97f3d593c9378f5e51dc732289fb99764"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Письма рекомендаций комиссия учитывает при оценке стипендии.",
+      "evidence": "The Scholarship Committee takes several factors into account when reviewing scholarship eligibility: • Academic background • Reference letters • Exam results • Transcripts • Interview results • Documents showcasing academic achievements, such as awards in competitions or Olympiad certificates",
+      "source": {
+        "url": "https://iro.sabanciuniv.edu/en/scholarships",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:91100560b82de842624a430ae6dbf90bf577481e9b699b75d73764119757fbc2"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "При оценке стипендии комиссия учитывает результаты собеседования.",
+      "evidence": "The Scholarship Committee takes several factors into account when reviewing scholarship eligibility: • Academic background • Reference letters • Exam results • Transcripts • Interview results • Documents showcasing academic achievements, such as awards in competitions or Olympiad certificates",
+      "source": {
+        "url": "https://iro.sabanciuniv.edu/en/scholarships",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:91100560b82de842624a430ae6dbf90bf577481e9b699b75d73764119757fbc2"
+      }
+    },
+    {
+      "type": "awards",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Для стипендии просят загрузить документы об академических достижениях: награды в конкурсах, сертификаты олимпиад.",
+      "evidence": "The Scholarship Committee takes several factors into account when reviewing scholarship eligibility: • Academic background • Reference letters • Exam results • Transcripts • Interview results • Documents showcasing academic achievements, such as awards in competitions or Olympiad certificates",
+      "source": {
+        "url": "https://iro.sabanciuniv.edu/en/scholarships",
+        "lastVerified": "2026-09-28",
+        "contentHash": "sha256:91100560b82de842624a430ae6dbf90bf577481e9b699b75d73764119757fbc2"
+      }
+    }
+  ],
+  "notStated": ["essay", "cv", "portfolio", "studyPlan", "video"],
+  "note": "Снимок 2026-09-28, набор 2026-2027. В пакете документов на бакалавриат нет ни эссе, ни рекомендаций: нужны результат экзамена или диплом, школьный аттестат и язык. Письма рекомендаций, собеседование и награды учитывают в оценке стипендии."
+}

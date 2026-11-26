@@ -1,0 +1,42 @@
+{
+  "id": "nyu",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": "en",
+      "via": "platform",
+      "ru": "Одно письмо от учителя, школьного консультанта, тренера, руководителя или другого человека с полномочиями; в форме можно указать до трёх рекомендателей.",
+      "evidence": "Contact information for one person (or, optionally, up to three maximum) who will complete a letter of recommendation. NYU requires one letter of recommendation from a teacher, counselor, coach, supervisor, or anyone else in a position of authority.",
+      "source": {
+        "url": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:f16567d19ff447e2e5a2616e3984bfd27a617e09bf0b4745b9b6044ee1270a1c"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Только для Music Department и Studio Art в Steinhardt и для всех программ Tisch: нужно прослушивание или портфолио, его можно подать вместо теста.",
+      "evidence": "Steinhardt requires an audition or portfolio for all applicants to the Music Department and a portfolio for those applying to Studio Art. Tisch requires an audition or portfolio for applicants to all programs.",
+      "source": {
+        "url": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:f16567d19ff447e2e5a2616e3984bfd27a617e09bf0b4745b9b6044ee1270a1c"
+      }
+    }
+  ],
+  "notStated": ["cv", "awards", "studyPlan", "video", "interview", "certificates"],
+  "note": "Снимок 2026-09-30: How to Apply, тесты, стоимость, финпомощь. Интервью NYU не проводит: «NYU does not offer interviews to any candidates». Своей страницы вопросов эссе в снимке нет, поэтому эссе не внесено ни в items, ни в notStated; общее эссе и список активностей Common App по правилу партии тоже не внесены."
+}

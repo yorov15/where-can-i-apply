@@ -58,16 +58,16 @@
 | konkuk | готово | portfolio, video, awards, activities, other | cv, studyPlan, interview, certificates | Fall 2026; эссе и рекомендации вуз не принимает — в note |
 | ku-leuven | готово | essay, cv | recommendation, activities, awards, portfolio, studyPlan, video, interview, certificates |  |
 | lund-sweden | готово | portfolio, other | activities, awards, studyPlan, video, interview, certificates | statement of purpose, CV и рекомендации вуз относит только к магистратуре — в note |
-| mcgill | — | | | |
-| michigan | — | | | |
-| nazarbayev | — | | | |
-| nsu | — | | | |
-| nyu | — | | | |
-| palacky-university | — | | | |
-| poland-study | — | | | |
-| postech | — | | | |
-| rudn | — | | | |
-| sabanci-university | — | | | |
+| mcgill | готово | essay, activities, recommendation, other, interview | cv, awards, portfolio, studyPlan, video, certificates | всё условное: материалы только у отдельных программ и категорий |
+| michigan | частично | recommendation, other | cv, awards, portfolio, studyPlan, video, interview, certificates | нет страницы essay-questions, свежий снимок недоступен; эссе не внесено — в note |
+| nazarbayev | готово | recommendation, interview, certificates | essay, activities, cv, awards, portfolio, studyPlan, video | на обычном пути писать нечего; письма и собеседование — международным кандидатам и в заявке на финподдержку |
+| nsu | готово | recommendation, certificates | essay, activities, cv, awards, portfolio, studyPlan, video, interview | материалы только как «прочие документы» к госстипендии |
+| nyu | частично | recommendation, portfolio | cv, awards, studyPlan, video, interview, certificates | нет страницы NYU Questions, свежий снимок недоступен; интервью вуз не проводит |
+| palacky-university | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | на страницах вуза нет ни одного материала; файл без items |
+| poland-study | готово | other, certificates, interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | общенациональный гид: вступительный экзамен, язык B2, собеседование в консульстве |
+| postech | готово | essay, recommendation, activities, other | cv, portfolio, studyPlan, video, interview, certificates | личное заявление из 4 вопросов, одно письмо, список достижений |
+| rudn | готово | interview, portfolio, recommendation, awards, certificates | essay, activities, cv, studyPlan, video | мотивационное письмо только у магистрантов |
+| sabanci-university | готово | activities, recommendation, interview, awards | essay, cv, portfolio, studyPlan, video | эссе в пакете нет; письма, собеседование и награды — в оценке стипендии |
 | sejong | — | | | |
 | skku | — | | | |
 | sogang | — | | | |
