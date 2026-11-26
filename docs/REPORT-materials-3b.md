@@ -68,16 +68,16 @@
 | postech | готово | essay, recommendation, activities, other | cv, portfolio, studyPlan, video, interview, certificates | личное заявление из 4 вопросов, одно письмо, список достижений |
 | rudn | готово | interview, portfolio, recommendation, awards, certificates | essay, activities, cv, studyPlan, video | мотивационное письмо только у магистрантов |
 | sabanci-university | готово | activities, recommendation, interview, awards | essay, cv, portfolio, studyPlan, video | эссе в пакете нет; письма, собеседование и награды — в оценке стипендии |
-| sejong | — | | | |
-| skku | — | | | |
-| sogang | — | | | |
-| stanford-university | — | | | |
-| tiu | — | | | |
-| tsu | — | | | |
-| uaeu-uae | — | | | |
-| ucl | — | | | |
-| unipd | — | | | |
-| university-of-szeged | — | | | |
+| sejong | готово | studyPlan, portfolio, recommendation, interview | essay, activities, cv, awards, video, certificates |  |
+| skku | готово | essay, activities, video | recommendation, cv, studyPlan, interview, awards, portfolio, certificates |  |
+| sogang | пропуск | — | — | в снимке только условия приёма и сроки (1598 знаков); guide.asp 404; документ требований — PDF 64,6 МБ, fetch не скачал |
+| stanford-university | пропуск | — | — | в снимке только FAQ для иностранцев и финпомощь; apply.html не скачался (TLS/таймаут) |
+| tiu | готово | essay | recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates |  |
+| tsu | готово | awards | essay, recommendation, activities, cv, portfolio, studyPlan, video, interview, certificates |  |
+| uaeu-uae | готово | awards, recommendation, interview | essay, activities, cv, portfolio, studyPlan, video, certificates | материалы только к стипендии Chancellor's; для зачисления письменных нет |
+| ucl | частично | essay | recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | в снимке только дополнительное личное заявление UCL; how-we-assess не скачалась (403/таймаут) |
+| unipd | готово | essay, cv | recommendation, activities, awards, portfolio, studyPlan, video, interview, certificates |  |
+| university-of-szeged | готово | essay, interview | recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates | мотивационное письмо и собеседование только на части факультетов — need some |
 | upm | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | письменных материалов вуз не просит: онлайн-заявка, взнос и доп. документы |
 | utm | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates, other |  |
 | warwick | частично | essay, recommendation, interview, other | activities, cv, awards, portfolio, studyPlan, video, certificates | не скачались Personal statement, Your reference, Admissions Tests; лимит заявления и детали рекомендации не подтверждены |
