@@ -58,16 +58,16 @@
 | kookmin | готово | essay, studyPlan, interview | recommendation, activities, cv, awards, portfolio, video | год набора не назван; темы и объёмы в 모집요강 вне снимка |
 | kyung-hee | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | перечень материалов только в PDF 모집요강, хост не открылся (DNS) |
 | manas | готово | other (экзамен), interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | даты 2024 — прошлый набор |
-| medipol | — | | | |
-| monash | — | | | |
-| newuu | — | | | |
-| ntut | — | | | |
-| osh-state | — | | | |
-| paris-saclay | — | | | |
-| polimi | — | | | |
-| psl | — | | | |
-| russia-quota | — | | | |
-| sapienza-italy | — | | | |
+| medipol | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | писать нечего: только анкета и документы; набор 2026–2027 |
+| monash | частично | essay, portfolio, interview | recommendation, activities, cv, awards, studyPlan, video, certificates | только общая фраза «some courses have extra requirements»; детали на страницах курсов вне снимка |
+| newuu | готово | interview, awards | essay, recommendation, cv, activities, portfolio, studyPlan, video, certificates | набор Fall 2026 — прошлый цикл |
+| ntut | готово | studyPlan, cv, recommendation, video, portfolio, awards, certificates, interview | activities, essay | справочник весеннего набора 2027; заявки закрылись 30.09.2026 |
+| osh-state | готово | other (заявление) | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | письменных материалов нет; правила приёма 2020/2025 |
+| paris-saclay | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | в снимке только процедуры Parcoursup/EEF/DAP и регистрация, списка материалов нет |
+| polimi | готово | — | essay, recommendation, cv, interview, video, activities, awards, studyPlan | материалов для бакалавриата нет: отбор по тесту; портфолио только для merit-стипендии магистратуры |
+| psl | готово | essay, cv, recommendation, interview | portfolio, awards, studyPlan, video, certificates | требования только у I-BE³, IBSAI и Sustainability; набор 2026/27 |
+| russia-quota | готово | interview, other (испытания) | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates | набор 2026; собеседование и испытания — в зависимости от страны |
+| sapienza-italy | готово | recommendation | essay, activities, cv, awards, portfolio, studyPlan, video, interview | набор 2026/27 прошёл; рекомендация опциональна, программные PDF вне снимка |
 | seoultech | — | | | |
 | slovak-university-of-technology | — | | | |
 | sookmyung | — | | | |
