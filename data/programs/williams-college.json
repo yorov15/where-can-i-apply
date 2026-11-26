@@ -220,5 +220,45 @@
       "on": "2026-09-24",
       "reason": "Все 3 страницы источника отдали автоматическому клиенту HTTP 403; страницы сохранял человек. Записанные цитаты сверены только со снимком от 2026-09-19."
     }
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common App",
+        "url": "https://www.commonapp.org/explore/williams-college",
+        "note": "",
+        "evidence": "First-year and transfer students can apply using the Common App.",
+        "source": {
+          "url": "https://www.williams.edu/admission-aid/how-to-apply/first-year/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:a205ba9a3be35f6f2619891e9c21d3c023bb4307023a0558c7225a01750242da"
+        }
+      },
+      {
+        "type": "platform",
+        "name": "Coalition on Scoir",
+        "url": "https://www.coalitionforcollegeaccess.org/apply-coalition-on-scoir",
+        "note": "",
+        "evidence": "First-year students can also apply using Coalition on Scoir",
+        "source": {
+          "url": "https://www.williams.edu/admission-aid/how-to-apply/first-year/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:a205ba9a3be35f6f2619891e9c21d3c023bb4307023a0558c7225a01750242da"
+        }
+      },
+      {
+        "type": "platform",
+        "name": "QuestBridge Application",
+        "url": "https://www.questbridge.org/partners/college-partners/williams-college",
+        "note": "",
+        "evidence": "QuestBridge is an option for high-achieving students from low-income backgrounds applying as first-year students.",
+        "source": {
+          "url": "https://www.williams.edu/admission-aid/how-to-apply/first-year/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:a205ba9a3be35f6f2619891e9c21d3c023bb4307023a0558c7225a01750242da"
+        }
+      }
+    ]
   }
 }

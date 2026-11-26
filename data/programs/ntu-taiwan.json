@@ -339,5 +339,21 @@
     "lastVerified": "2026-09-30",
     "humanChecked": false,
     "approvedBy": "assistant"
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "NTU online application system",
+        "url": "https://oiasystem.ntu.edu.tw/globaladmission/foreign/index/index/id/xa24yoi5De3z?lang=en",
+        "note": "",
+        "evidence": "Create an account in our online application system.",
+        "source": {
+          "url": "https://admissions.ntu.edu.tw/apply/degree-students/international-students/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:7656694946dcb7ff903723cf6fef6a0826e05c343120649cb01e6be52e670944"
+        }
+      }
+    ]
   }
 }

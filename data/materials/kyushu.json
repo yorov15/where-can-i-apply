@@ -1,0 +1,51 @@
+{
+  "id": "kyushu",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "mail",
+      "ru": "Эссе — часть Application Form. Писать только самому, без ИИ; шрифт не меньше 16 pt. Форму отправляют почтой.",
+      "evidence": "For essays, the font size must be 16pt or larger , and it is not acceptable for anyone other than the applicant (including generative AI tools) to write it.",
+      "source": {
+        "url": "https://www.kyushu-u.ac.jp/f/66827/ENG_2027_Application%20Instruction.pdf",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:4d916371b2e8a3f466271e5ecc0ce6548fd094e7ba5d2f52a1fd21f93d9b94f9"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Второй этап — собеседование онлайн в Zoom, 24 февраля — 4 марта 2027. Записывать его нельзя.",
+      "evidence": "The applicants who have successfully passed the preliminary screening will proceed to the secondary screening, which consists of a comprehensive evaluation of submitted documents and an interview.",
+      "source": {
+        "url": "https://www.kyushu-u.ac.jp/f/66827/ENG_2027_Application%20Instruction.pdf",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:4d916371b2e8a3f466271e5ecc0ce6548fd094e7ba5d2f52a1fd21f93d9b94f9"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Эссе входят в Application Form; их число и объём в инструкции не названы."
+}

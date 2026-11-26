@@ -296,5 +296,21 @@
         "contentHash": "sha256:eb2ccf52dc137854236ced4283a771cae75d627b6ad5fd0c8f99ef365d61e92e"
       }
     ]
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common Application, Coalition on Scoir, QuestBridge",
+        "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+        "note": "",
+        "evidence": "Bowdoin accepts the Common Application, the Coalition on Scoir application, and is a QuestBridge partner.",
+        "source": {
+          "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:81652e4051a7857ec3f36b92c42dc74c03cb7000472ff61c95259ffd649acfa2"
+        }
+      }
+    ]
   }
 }

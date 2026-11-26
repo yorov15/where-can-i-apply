@@ -316,5 +316,21 @@
     ],
     "lastVerified": "2026-09-30",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "APPLY NOW",
+        "url": "https://apply.um.edu.my",
+        "note": "",
+        "evidence": "APPLY NOW",
+        "source": {
+          "url": "https://study.um.edu.my/how-to-apply",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:8f2933ee3dd0c92b0a37692fd0a7df090d18a0dc821f451adeddef65b134aa3e"
+        }
+      }
+    ]
   }
 }

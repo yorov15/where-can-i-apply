@@ -1,0 +1,610 @@
+[
+ {
+  "id": "nyu-shanghai",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common Application",
+    "url": "https://apply.commonapp.org/Login",
+    "note": "",
+    "evidence": "Step 1: Start and Complete the Common Application Online",
+    "source": {
+     "url": "https://shanghai.nyu.edu/page/how-apply",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:48b116ff95849c5c47e975bb1fcd047f559f649f684a03942875a30c451ce68b"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/nyu-shanghai-48b116ff9584.txt"
+   }
+  ]
+ },
+ {
+  "id": "aalto-finland",
+  "routes": [
+   {
+    "type": "government",
+    "name": "Studyinfo.fi",
+    "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english",
+    "note": "",
+    "evidence": "filling out the application form in the Studyinfo.fi service.",
+    "source": {
+     "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:b5ddc07c506176aa40676b160af10bd7ea394c623c4765e5edfde64cc8962901"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/aalto-finland-b5ddc07c5061.txt"
+   }
+  ]
+ },
+ {
+  "id": "bocconi",
+  "routes": [
+   {
+    "type": "university",
+    "name": "Bocconi online application",
+    "url": "https://apply.unibocconi.it/",
+    "note": "",
+    "evidence": "Apply now",
+    "source": {
+     "url": "https://www.unibocconi.it/en/applying-bocconi/bachelor-and-law-programs/application-and-admissions",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:bad8321305cee9cc9e31cc0989282d8db8f65bfc0e1ad4d4ca03897d88bf0ec7"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/bocconi-bad8321305ce.txt"
+   }
+  ]
+ },
+ {
+  "id": "osaka-iudp",
+  "routes": [
+   {
+    "type": "university",
+    "name": "Application Registration website",
+    "url": "https://e-apply.jp/n/osaka-u-inter",
+    "note": "",
+    "evidence": "Applicants should visit the Application Registration website",
+    "source": {
+     "url": "https://iudp.hus.osaka-u.ac.jp/admissions/",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:918a8884137256e76bf7509c9213dc3215684d70a6c333ab4bc9f37f5673c7b3"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/osaka-iudp-918a88841372.txt"
+   }
+  ]
+ },
+ {
+  "id": "tohoku-gateway-college",
+  "routes": [
+   {
+    "type": "university",
+    "name": "TAO",
+    "url": "https://admissions-office.net/en/portal",
+    "note": "",
+    "evidence": "How to submit your application via TAO",
+    "source": {
+     "url": "https://admissions.tohoku.ac.jp/en/admissions/undergraduate/gateway_college/",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:d05b042e83f74a67514a55f65db629815377fc8e864958ba9920411cf7d43562"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/tohoku-gateway-college-d05b042e83f7.txt"
+   }
+  ]
+ },
+ {
+  "id": "waseda-sils",
+  "routes": [
+   {
+    "type": "university",
+    "name": "Online Application System",
+    "url": "https://admissions-office.net/en/portal",
+    "note": "",
+    "evidence": "Online Application System",
+    "source": {
+     "url": "https://www.waseda.jp/fire/sils/en/applicants/admission/",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:faf54caffbcf77b4ddbcdd714e966d85fb775e559a9ef6d2ea63583bb2fcf5df"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/waseda-sils-faf54caffbcf.txt"
+   }
+  ]
+ },
+ {
+  "id": "um-malaya",
+  "routes": [
+   {
+    "type": "university",
+    "name": "APPLY NOW",
+    "url": "https://apply.um.edu.my",
+    "note": "",
+    "evidence": "APPLY NOW",
+    "source": {
+     "url": "https://study.um.edu.my/how-to-apply",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:8f2933ee3dd0c92b0a37692fd0a7df090d18a0dc821f451adeddef65b134aa3e"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/um-malaya-8f2933ee3dd0.txt"
+   }
+  ]
+ },
+ {
+  "id": "ntu-singapore",
+  "routes": [
+   {
+    "type": "university",
+    "name": "NTU application portal",
+    "url": "https://wis.ntu.edu.sg/pls/webexe/adm_fore_appl.login",
+    "note": "",
+    "evidence": "Select the portal that corresponds to the qualifications you will be applying to NTU with:",
+    "source": {
+     "url": "https://www.ntu.edu.sg/admissions/undergraduate/admissions/application-process",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:514c5e407dceacb01f42c88353163d885806c3b538c08965550f0b4cc6cc94a4"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/ntu-singapore-514c5e407dce.txt"
+   }
+  ]
+ },
+ {
+  "id": "ntu-taiwan",
+  "routes": [
+   {
+    "type": "university",
+    "name": "NTU online application system",
+    "url": "https://oiasystem.ntu.edu.tw/globaladmission/foreign/index/index/id/xa24yoi5De3z?lang=en",
+    "note": "",
+    "evidence": "Create an account in our online application system.",
+    "source": {
+     "url": "https://admissions.ntu.edu.tw/apply/degree-students/international-students/",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:7656694946dcb7ff903723cf6fef6a0826e05c343120649cb01e6be52e670944"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/ntu-taiwan-7656694946dc.txt"
+   }
+  ]
+ },
+ {
+  "id": "bates",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common Application",
+    "url": "https://apply.commonapp.org/Login?ma=29",
+    "note": "",
+    "evidence": "Bates uses the Common Application and the Coalition Application, Powered by Scoir.",
+    "source": {
+     "url": "https://www.bates.edu/admission/apply/application-options/",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:397467b84c1b54f184ee4066cd282b5cbfefb6d148a995dfea4fcf063fb80a2b"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/bates-397467b84c1b.txt"
+   },
+   {
+    "type": "platform",
+    "name": "Coalition Application, Powered by Scoir",
+    "url": "https://app.scoir.com/signin",
+    "note": "",
+    "evidence": "Bates uses the Common Application and the Coalition Application, Powered by Scoir.",
+    "source": {
+     "url": "https://www.bates.edu/admission/apply/application-options/",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:397467b84c1b54f184ee4066cd282b5cbfefb6d148a995dfea4fcf063fb80a2b"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/bates-397467b84c1b.txt"
+   }
+  ]
+ },
+ {
+  "id": "bowdoin-college",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common Application, Coalition on Scoir, QuestBridge",
+    "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+    "note": "",
+    "evidence": "Bowdoin accepts the Common Application, the Coalition on Scoir application, and is a QuestBridge partner.",
+    "source": {
+     "url": "https://www.bowdoin.edu/admissions/apply/index.html",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:81652e4051a7857ec3f36b92c42dc74c03cb7000472ff61c95259ffd649acfa2"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/bowdoin-college-81652e4051a7.txt"
+   }
+  ]
+ },
+ {
+  "id": "colgate-university",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common Application, Coalition Application on Scoir, QuestBridge",
+    "url": "https://www.colgate.edu/admission-aid/apply",
+    "note": "",
+    "evidence": "Colgate accepts the Common Application, Coalition Application on Scoir, and QuestBridge Application.",
+    "source": {
+     "url": "https://www.colgate.edu/admission-aid/apply/first-year-applicants",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:31311a3b7975d41b67bc27e9a45c9a4b760d3613c28545c319a5bc3be10bc07e"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/colgate-university-31311a3b7975.txt"
+   }
+  ]
+ },
+ {
+  "id": "davidson-college",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common App",
+    "url": "https://www.commonapp.org/explore/davidson-college",
+    "note": "",
+    "evidence": "Common App",
+    "source": {
+     "url": "https://www.davidson.edu/admission-and-financial-aid/apply/first-year-applicants",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:5e8afb9c2cdd54938fb7b5897e55fc0012cdabf3a338b868b48d3b9e1aff5ddd"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/davidson-college-5e8afb9c2cdd.txt"
+   },
+   {
+    "type": "platform",
+    "name": "Coalition",
+    "url": "https://www.coalitionforcollegeaccess.org/",
+    "note": "",
+    "evidence": "Coalition",
+    "source": {
+     "url": "https://www.davidson.edu/admission-and-financial-aid/apply/first-year-applicants",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:5e8afb9c2cdd54938fb7b5897e55fc0012cdabf3a338b868b48d3b9e1aff5ddd"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/davidson-college-5e8afb9c2cdd.txt"
+   },
+   {
+    "type": "platform",
+    "name": "QuestBridge",
+    "url": "https://www.questbridge.org/college-partners/davidson-college/",
+    "note": "",
+    "evidence": "QuestBridge",
+    "source": {
+     "url": "https://www.davidson.edu/admission-and-financial-aid/apply/first-year-applicants",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:5e8afb9c2cdd54938fb7b5897e55fc0012cdabf3a338b868b48d3b9e1aff5ddd"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/davidson-college-5e8afb9c2cdd.txt"
+   }
+  ]
+ },
+ {
+  "id": "denison-university",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common Application",
+    "url": "https://apply.commonapp.org/Login?ma=77&tref=W1002",
+    "note": "",
+    "evidence": "must submit an application through the Common Application or the Coalition Application.",
+    "source": {
+     "url": "https://denison.edu/campus/admission/international-applicants",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:bfd54ec363c8914f7eb15ab217aa5ff9687aef66838465f9195533c424919f09"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/denison-university-bfd54ec363c8.txt"
+   }
+  ]
+ },
+ {
+  "id": "grinnell-college",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common Application, QuestBridge",
+    "url": "https://www.grinnell.edu/admission/apply",
+    "note": "",
+    "evidence": "a Common Application and QuestBridge School with no fee to apply and no required supplement",
+    "source": {
+     "url": "https://www.grinnell.edu/admission/apply/first-year/requirements",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:b4ab387da557a550bc1eba0bf452899896f981a56c1fb1a84aceda62d7d1861b"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/grinnell-college-b4ab387da557.txt"
+   }
+  ]
+ },
+ {
+  "id": "haverford",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common Application, QuestBridge, Apply Coalition with Scoir",
+    "url": "https://www.commonapp.org/",
+    "note": "",
+    "evidence": "we accept the Common Application, Questbridge Application, or the Apply Coalition with Scoir",
+    "source": {
+     "url": "https://www.haverford.edu/admission/applying/application-instructions",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:ded4c89896c8fcbae29752f9df6c24c34ed5eb3858810b6e83befe6099eff13e"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/haverford-ded4c89896c8.txt"
+   }
+  ]
+ },
+ {
+  "id": "mit",
+  "routes": [
+   {
+    "type": "university",
+    "name": "MIT application portal",
+    "url": "https://apply.mitadmissions.org/portal/apply",
+    "note": "",
+    "evidence": "The first-year application is open in the MIT application portal.",
+    "source": {
+     "url": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:ce1759f1cb2efb8e6589e419cc193814c06a6d6f81de6007ab1731b345e39994"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/mit-ce1759f1cb2e.txt"
+   }
+  ]
+ },
+ {
+  "id": "mount-holyoke-college",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common Application",
+    "url": "https://apply.commonapp.org/Login?ma=171",
+    "note": "",
+    "evidence": "Common Application or Coalition Application on Scoir. Please only submit one application.",
+    "source": {
+     "url": "https://www.mtholyoke.edu/admission/apply-undergraduate-first-year/application-process/international-admission",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:52454c6eb26266089d24d9483d018ca75d6eb0fcf8cd7622d2711ffd292bbdce"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/mount-holyoke-college-52454c6eb262.txt"
+   },
+   {
+    "type": "platform",
+    "name": "Coalition Application on Scoir",
+    "url": "https://app.scoir.com/app/signup/1100323",
+    "note": "",
+    "evidence": "Common Application or Coalition Application on Scoir. Please only submit one application.",
+    "source": {
+     "url": "https://www.mtholyoke.edu/admission/apply-undergraduate-first-year/application-process/international-admission",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:52454c6eb26266089d24d9483d018ca75d6eb0fcf8cd7622d2711ffd292bbdce"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/mount-holyoke-college-52454c6eb262.txt"
+   }
+  ]
+ },
+ {
+  "id": "northwestern-university",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common Application, Apply Coalition with Scoir",
+    "url": "https://admissions.northwestern.edu/apply/index.html",
+    "note": "",
+    "evidence": "Common Application or Apply Coalition with Scoir*",
+    "source": {
+     "url": "https://admissions.northwestern.edu/apply/index.html",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:4a8911e014a176f710d9fc20e4de5b928de867754c3cd9992c838705972ff7f5"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/northwestern-university-4a8911e014a1.txt"
+   }
+  ]
+ },
+ {
+  "id": "oberlin",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common App",
+    "url": "https://apply.commonapp.org/Login?ma=187",
+    "note": "",
+    "evidence": "You can apply to Oberlin College through the Common App or the Coalition/Scoir Application.",
+    "source": {
+     "url": "https://www.oberlin.edu/admissions-and-aid/arts-and-sciences/first-year-applicants",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:3a66f89790682eb5c7e848832d1eb534c9aad1904634edaa0f2a701879fcf028"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/oberlin-3a66f8979068.txt"
+   },
+   {
+    "type": "platform",
+    "name": "Coalition/Scoir Application",
+    "url": "http://app.scoir.com/app/signup/2800096",
+    "note": "",
+    "evidence": "You can apply to Oberlin College through the Common App or the Coalition/Scoir Application.",
+    "source": {
+     "url": "https://www.oberlin.edu/admissions-and-aid/arts-and-sciences/first-year-applicants",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:3a66f89790682eb5c7e848832d1eb534c9aad1904634edaa0f2a701879fcf028"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/oberlin-3a66f8979068.txt"
+   }
+  ]
+ },
+ {
+  "id": "rice-university",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common App",
+    "url": "https://www.commonapp.org/explore/rice-university",
+    "note": "",
+    "evidence": "Common App and Rice writing supplement",
+    "source": {
+     "url": "https://admission.rice.edu/apply/first-year-international-applicants",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:fa151ff2d71cb246ae4ac112af6048e9e93a0c4ddde203dfc4596421be3dd788"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/rice-university-fa151ff2d71c.txt"
+   }
+  ]
+ },
+ {
+  "id": "smith-college",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common Application",
+    "url": "https://apply.commonapp.org/Login?ma=247",
+    "note": "",
+    "evidence": "Smith accepts two applications for first-year admission—the Coalition Application and the Common Application.",
+    "source": {
+     "url": "https://www.smith.edu/admission-aid/apply-smith/first-year-applicants",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:a955c06a82fef4583c4a4b18a3833b1756152f67068eb39252179a5cb8a87e7a"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/smith-college-a955c06a82fe.txt"
+   },
+   {
+    "type": "platform",
+    "name": "Coalition Application",
+    "url": "http://app.scoir.com/app/signup/1100103",
+    "note": "",
+    "evidence": "Smith accepts two applications for first-year admission—the Coalition Application and the Common Application.",
+    "source": {
+     "url": "https://www.smith.edu/admission-aid/apply-smith/first-year-applicants",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:a955c06a82fef4583c4a4b18a3833b1756152f67068eb39252179a5cb8a87e7a"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/smith-college-a955c06a82fe.txt"
+   }
+  ]
+ },
+ {
+  "id": "soka",
+  "routes": [
+   {
+    "type": "university",
+    "name": "Soka Application",
+    "url": "https://admissions.soka.edu/portal/apply",
+    "note": "",
+    "evidence": "you can apply at soka.edu/apply using the Soka Application or the Common Application.",
+    "source": {
+     "url": "https://www.soka.edu/admissions-aid/how-apply",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:38dc4f8bb1cd5e09af0e36a7a2b42853a717a736ad7a5bbf7b65404b7d017cda"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/soka-38dc4f8bb1cd.txt"
+   }
+  ]
+ },
+ {
+  "id": "swarthmore-college",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common Application, Coalition on Scoir, QuestBridge",
+    "url": "https://www.swarthmore.edu/admissions-aid/apply-a-first-year-student",
+    "note": "",
+    "evidence": "First-year applicants may apply to Swarthmore via the Common Application, Coalition on Scoir Application, or QuestBridge",
+    "source": {
+     "url": "https://www.swarthmore.edu/admissions-aid/application-materials-deadlines",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:f31db307c6ba4555b14a45dfac33eaec8df19ed5f7408b1529859d78968b39f8"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/swarthmore-college-f31db307c6ba.txt"
+   }
+  ]
+ },
+ {
+  "id": "upenn",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common App, Coalition Application",
+    "url": "https://www.commonapp.org/",
+    "note": "",
+    "evidence": "Penn accepts applications from the Common App and Coalition Application.",
+    "source": {
+     "url": "https://admissions.upenn.edu/how-to-apply/first-year-applicants/application-requirements",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:70543170c8b705458818534fb3358df9f22555c8b155af0ee99f8b7ecd07537e"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/upenn-70543170c8b7.txt"
+   }
+  ]
+ },
+ {
+  "id": "washu",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common Application, Coalition Application",
+    "url": "https://www.commonapp.org/",
+    "note": "",
+    "evidence": "To apply, use either the Common Application or Coalition Application.",
+    "source": {
+     "url": "https://admissions.wustl.edu/how-to-apply/first-year-international-applicants/",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:e7f67246bfa261e7a408a485f711e5417d7f00e367a12068997be80f16251016"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/washu-e7f67246bfa2.txt"
+   }
+  ]
+ },
+ {
+  "id": "wellesley-college",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common Application, QuestBridge, Coalition Application",
+    "url": "https://www.wellesley.edu/admission-aid/apply",
+    "note": "",
+    "evidence": "Wellesley accepts the Common Application, the QuestBridge Application, and the Coalition Application.",
+    "source": {
+     "url": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:496c2ee1ba493bf5ac3ef250885bc14b96469d789a14caefd58118a3efe1ab92"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/wellesley-college-496c2ee1ba49.txt"
+   }
+  ]
+ },
+ {
+  "id": "williams-college",
+  "routes": [
+   {
+    "type": "platform",
+    "name": "Common App",
+    "url": "https://www.commonapp.org/explore/williams-college",
+    "note": "",
+    "evidence": "First-year and transfer students can apply using the Common App.",
+    "source": {
+     "url": "https://www.williams.edu/admission-aid/how-to-apply/first-year/",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:a205ba9a3be35f6f2619891e9c21d3c023bb4307023a0558c7225a01750242da"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/williams-college-a205ba9a3be3.txt"
+   },
+   {
+    "type": "platform",
+    "name": "Coalition on Scoir",
+    "url": "https://www.coalitionforcollegeaccess.org/apply-coalition-on-scoir",
+    "note": "",
+    "evidence": "First-year students can also apply using Coalition on Scoir",
+    "source": {
+     "url": "https://www.williams.edu/admission-aid/how-to-apply/first-year/",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:a205ba9a3be35f6f2619891e9c21d3c023bb4307023a0558c7225a01750242da"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/williams-college-a205ba9a3be3.txt"
+   },
+   {
+    "type": "platform",
+    "name": "QuestBridge Application",
+    "url": "https://www.questbridge.org/partners/college-partners/williams-college",
+    "note": "",
+    "evidence": "QuestBridge is an option for high-achieving students from low-income backgrounds applying as first-year students.",
+    "source": {
+     "url": "https://www.williams.edu/admission-aid/how-to-apply/first-year/",
+     "lastVerified": "2026-11-25",
+     "contentHash": "sha256:a205ba9a3be35f6f2619891e9c21d3c023bb4307023a0558c7225a01750242da"
+    },
+    "snapshot": "raw/apply-channels/2026-11-25/williams-college-a205ba9a3be3.txt"
+   }
+  ]
+ }
+]

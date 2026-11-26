@@ -225,6 +225,22 @@
       "evidence": "Translated copy of prior-prior year's tax documents or statement of earnings.",
       "field": null,
       "kind": "documents"
+    },
+    {
+      "ru": "Взнос за подачу - 80 долларов США, разовый и невозвратный.",
+      "evidence": "There is a one-time, non-refundable application fee of $80.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 80,
+        "currency": "USD",
+        "evidence": "There is a one-time, non-refundable application fee of $80.",
+        "source": {
+          "url": "https://www.pomona.edu/admissions/apply/first-year-applicants",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:15e3f8fa3c6e8ccabf9d7c8e4f8c73dd3932214743eb1a2269a1403fb835b6e6"
+        }
+      }
     }
   ],
   "deadline": {

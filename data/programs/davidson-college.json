@@ -311,5 +311,45 @@
     ],
     "lastVerified": "2026-11-15",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common App",
+        "url": "https://www.commonapp.org/explore/davidson-college",
+        "note": "",
+        "evidence": "Common App",
+        "source": {
+          "url": "https://www.davidson.edu/admission-and-financial-aid/apply/first-year-applicants",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:5e8afb9c2cdd54938fb7b5897e55fc0012cdabf3a338b868b48d3b9e1aff5ddd"
+        }
+      },
+      {
+        "type": "platform",
+        "name": "Coalition",
+        "url": "https://www.coalitionforcollegeaccess.org/",
+        "note": "",
+        "evidence": "Coalition",
+        "source": {
+          "url": "https://www.davidson.edu/admission-and-financial-aid/apply/first-year-applicants",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:5e8afb9c2cdd54938fb7b5897e55fc0012cdabf3a338b868b48d3b9e1aff5ddd"
+        }
+      },
+      {
+        "type": "platform",
+        "name": "QuestBridge",
+        "url": "https://www.questbridge.org/college-partners/davidson-college/",
+        "note": "",
+        "evidence": "QuestBridge",
+        "source": {
+          "url": "https://www.davidson.edu/admission-and-financial-aid/apply/first-year-applicants",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:5e8afb9c2cdd54938fb7b5897e55fc0012cdabf3a338b868b48d3b9e1aff5ddd"
+        }
+      }
+    ]
   }
 }

@@ -143,7 +143,17 @@
       "ru": "Плата за подачу для граждан вне ЕС/ЕЭЗ — SEK 900; оплатить нужно до конца января, иначе заявку не рассматривают.",
       "evidence": "For non-EU/EEA citizens, there is an application fee of SEK 900.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 900,
+        "currency": "SEK",
+        "evidence": "Students required to pay tuition fees also need to pay an application fee for this programme, and all other programmes applied for through University Admissions, of SEK 900.",
+        "source": {
+          "url": "https://www.kth.se/en/studies/bachelor/information-communication-technology/fees-1.646274",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:88d2ca316c798860c14873383c657738e74d6284ba2749920750232cd51eec56"
+        }
+      }
     },
     {
       "ru": "Полная стоимость обучения для граждан вне ЕС/ЕЭЗ/Швейцарии — SEK 423 000 за программу; плата вносится авансом за каждый семестр.",

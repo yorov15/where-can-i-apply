@@ -343,5 +343,21 @@
         "contentHash": "sha256:82ecf2753a95333d00a6b21f8c3d14f02556862e0db48dc6309e1a309b52d4cd"
       }
     ]
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common App, Coalition Application",
+        "url": "https://www.commonapp.org/",
+        "note": "",
+        "evidence": "Penn accepts applications from the Common App and Coalition Application.",
+        "source": {
+          "url": "https://admissions.upenn.edu/how-to-apply/first-year-applicants/application-requirements",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:70543170c8b705458818534fb3358df9f22555c8b155af0ee99f8b7ecd07537e"
+        }
+      }
+    ]
   }
 }

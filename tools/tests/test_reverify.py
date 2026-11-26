@@ -162,5 +162,47 @@ class TestPruneIdentical(unittest.TestCase):
             self.assertTrue((root / "raw" / "primer" / "2026-09-24").exists())
 
 
+class TestSideSnapshots(unittest.TestCase):
+    """Цитата канала подачи стоит в своём снимке raw/apply-channels/, не в снимке программы."""
+
+    PAGE = "Apply through the Common App: https://apply.example.edu/start\n"
+
+    def program(self, root: Path, content_hash: str) -> dict:
+        quote = "Applicants must hold a secondary school certificate."
+        program = program_with(quote, write_snapshot(root, "primer", "2026-09-19", quote))
+        program["applyChannel"] = {"routes": [{
+            "type": "university", "name": "Портал", "url": "https://apply.example.edu/start", "note": "",
+            "evidence": "Apply through the Common App",
+            "source": {"url": "https://example.edu/apply", "lastVerified": "2026-11-25", "contentHash": content_hash},
+        }]}
+        return program
+
+    def write_side(self, root: Path, data: bytes) -> None:
+        folder = root / "raw" / "apply-channels" / "2026-11-25"
+        folder.mkdir(parents=True)
+        (folder / "primer-1.txt").write_bytes(data)
+
+    def test_channel_quote_found_in_its_own_snapshot(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write_side(root, self.PAGE.encode())
+            result = report_for(root, self.program(root, sha256_of_text(self.PAGE)))
+            self.assertEqual(result["problems"], [])
+
+    def test_crlf_copy_after_checkout_still_matches(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write_side(root, self.PAGE.replace("\n", "\r\n").encode())
+            result = report_for(root, self.program(root, sha256_of_text(self.PAGE)))
+            self.assertEqual(result["problems"], [])
+
+    def test_other_hash_does_not_lend_its_text(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write_side(root, self.PAGE.encode())
+            result = report_for(root, self.program(root, sha256_of_text("другая страница")))
+            self.assertTrue(any("applyChannel" in p for p in result["problems"]))
+
+
 if __name__ == "__main__":
     unittest.main()

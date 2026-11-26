@@ -1,0 +1,83 @@
+{
+  "id": "princeton",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "other",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Нужна проверенная письменная работа (graded written paper) на английском, лучше по английскому или истории.",
+      "evidence": "A graded written paper is required, preferably in the subjects of English or history.",
+      "source": {
+        "url": "https://admission.princeton.edu/apply/application-checklist",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:2081ef19baf6db7c5b44dac1fb8a5513e9e13a28538ce95f24bc6b33faaff54a"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Рекомендация школьного консультанта — отдельно от School Report.",
+      "evidence": "Please note that the SR and the Counselor Recommendation are separate items.",
+      "source": {
+        "url": "https://admission.princeton.edu/apply/application-checklist",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:2081ef19baf6db7c5b44dac1fb8a5513e9e13a28538ce95f24bc6b33faaff54a"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации от учителей продвинутых курсов по разным основным предметам.",
+      "evidence": "Please ask two of your teachers who have taught you in higher level courses (e.g., AP, IB Higher/Standard Level, A-Levels, etc.) in different academic areas of study to complete and send the teacher recommendation forms, available on the Common Application website.",
+      "source": {
+        "url": "https://admission.princeton.edu/apply/application-checklist",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:2081ef19baf6db7c5b44dac1fb8a5513e9e13a28538ce95f24bc6b33faaff54a"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Интервью с выпускником по желанию; можно отказаться без последствий. Приглашают не всех.",
+      "evidence": "Princeton offers optional alumni interviews.",
+      "source": {
+        "url": "https://admission.princeton.edu/apply/application-checklist",
+        "lastVerified": "2026-09-24",
+        "contentHash": "sha256:2081ef19baf6db7c5b44dac1fb8a5513e9e13a28538ce95f24bc6b33faaff54a"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Вопросы Princeton-specific и Arts Supplement описаны на отдельных страницах, их нет в снимке."
+}

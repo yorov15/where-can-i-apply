@@ -309,5 +309,21 @@
     ],
     "lastVerified": "2026-09-26",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "Online Application System",
+        "url": "https://admissions-office.net/en/portal",
+        "note": "",
+        "evidence": "Online Application System",
+        "source": {
+          "url": "https://www.waseda.jp/fire/sils/en/applicants/admission/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:faf54caffbcf77b4ddbcdd714e966d85fb775e559a9ef6d2ea63583bb2fcf5df"
+        }
+      }
+    ]
   }
 }

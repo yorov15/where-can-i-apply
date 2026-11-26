@@ -20,6 +20,7 @@
 """
 
 import difflib
+import hashlib
 import json
 import re
 import shutil
@@ -60,6 +61,31 @@ def snapshots_of(root: Path, program_id: str) -> list[Path]:
         for path in sorted(folder.iterdir())
         if path.is_dir() and (path / "meta.json").exists()
     ]
+
+
+def side_texts(root: Path, program: dict) -> list[str]:
+    """Тексты отдельных снимков, на которых стоят каналы подачи и взносы.
+
+    Их цитаты живут не в снимке программы, а в raw/apply-channels/<дата>/
+    и raw/application-fees/<партия>/ — снимок находят по contentHash из
+    source маршрута или взноса. Хеш считается по байтам файла; копия с CRLF
+    после checkout на Windows сверяется и в виде с LF.
+    """
+    sources = [route.get("source") for route in (program.get("applyChannel") or {}).get("routes") or []]
+    sources += [(c.get("fee") or {}).get("source") for c in program.get("textConditions") or []]
+    wanted = {(source or {}).get("contentHash") for source in sources}
+    wanted.discard(None)
+    if not wanted:
+        return []
+    found = []
+    folders = ("apply-channels", "application-fees")
+    for path in sorted(p for folder in folders for p in (root / "raw" / folder).glob("*/*.txt")):
+        data = path.read_bytes()
+        hashes = {"sha256:" + hashlib.sha256(data).hexdigest()}
+        hashes.add("sha256:" + hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest())
+        if hashes & wanted:
+            found.append(data.decode("utf-8"))
+    return found
 
 
 def joined(texts: dict) -> str:
@@ -157,7 +183,8 @@ def report_for(root: Path, program: dict) -> dict:
 
     meta, texts = snapshot_texts(shots[-1])
     result["fetchedAt"] = meta["fetchedAt"]
-    result["problems"] = validate_program(program, joined(texts))
+    haystack = "\n\n".join([joined(texts), *side_texts(root, program)])
+    result["problems"] = validate_program(program, haystack)
 
     recorded = {
         page["url"]: page.get("contentHash")

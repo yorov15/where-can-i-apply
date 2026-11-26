@@ -268,6 +268,22 @@
       "evidence": "Some courses may ask for examples of written work.",
       "field": null,
       "kind": "documents"
+    },
+    {
+      "ru": "Взнос UCAS за заявку 2027 года - 34,50 фунта; один и тот же для одной заявки и для пяти выборов.",
+      "evidence": "For 2027, the UCAS application fee is £34.50. You pay this whether you apply to a single course or use all five choices.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 34.5,
+        "currency": "GBP",
+        "evidence": "For 2027, the UCAS application fee is £34.50. You pay this whether you apply to a single course or use all five choices.",
+        "source": {
+          "url": "https://www.nottingham.ac.uk/studywithus/ugstudy/applying.html",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:da70c83b8cc826e4a6cf9608779ff4ac0c98e6c0010d054529da9e602174b209"
+        }
+      }
     }
   ],
   "deadline": {

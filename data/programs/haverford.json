@@ -346,5 +346,21 @@
     ],
     "lastVerified": "2026-10-02",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "platform",
+        "name": "Common Application, QuestBridge, Apply Coalition with Scoir",
+        "url": "https://www.commonapp.org/",
+        "note": "",
+        "evidence": "we accept the Common Application, Questbridge Application, or the Apply Coalition with Scoir",
+        "source": {
+          "url": "https://www.haverford.edu/admission/applying/application-instructions",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:ded4c89896c8fcbae29752f9df6c24c34ed5eb3858810b6e83befe6099eff13e"
+        }
+      }
+    ]
   }
 }

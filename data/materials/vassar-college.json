@@ -1,0 +1,100 @@
+{
+  "id": "vassar-college",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "School Report с рекомендацией школьного консультанта и аттестатом; отправляет школа.",
+      "evidence": "School Report with the Counselor Recommendation and High School Transcript: To be completed and sent by your school counselor.",
+      "source": {
+        "url": "https://www.vassar.edu/admission/apply/requirements/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:442ec2ba511b78701aeeb1c6ce9e7742d59bb8e2fded8fb4204d39f861e85968"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Одна оценка от учителя входит в список материалов заявки.",
+      "evidence": "A Teacher Evaluation Mid-year Report: Your school counselor or another school official must submit your mid-year grades to us.",
+      "source": {
+        "url": "https://www.vassar.edu/admission/apply/requirements/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:442ec2ba511b78701aeeb1c6ce9e7742d59bb8e2fded8fb4204d39f861e85968"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Интервью с выпускником или студентом — информационное, не оценивается и не обязательно.",
+      "evidence": "These interviews are not evaluative and are not a required part of the application process.",
+      "source": {
+        "url": "https://www.vassar.edu/admission/apply/requirements/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:442ec2ba511b78701aeeb1c6ce9e7742d59bb8e2fded8fb4204d39f861e85968"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Vassar принимает интервью InitialView и Vericant.",
+      "evidence": "Vassar also accepts interviews from InitialView and Vericant .",
+      "source": {
+        "url": "https://www.vassar.edu/admission/apply/international/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:6ab6f17d79602b5ba4ff32a6dc7c9ae87a8bf24a61fd9f1b75cf0ee5ec518f19"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Портфолио по музыке, искусству или танцу можно подать на оценку преподавателям. Не обязательно.",
+      "evidence": "If you have a well-developed talent or significant accomplishment in music, art, or dance, you may submit a portfolio to be evaluated by our faculty.",
+      "source": {
+        "url": "https://www.vassar.edu/admission/apply/requirements/",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:442ec2ba511b78701aeeb1c6ce9e7742d59bb8e2fded8fb4204d39f861e85968"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Эссе Vassar в снимке нет — не внесено."
+}

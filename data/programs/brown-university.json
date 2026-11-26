@@ -210,6 +210,22 @@
       "evidence": "For students enrolling in the fall of 2027, those official score reports will be required in May of 2027.",
       "field": "language",
       "kind": "steps"
+    },
+    {
+      "ru": "Взнос за подачу - 80 долларов США, невозвратный; вместо него можно оформить снятие по условиям вуза.",
+      "evidence": "To apply to Brown you must submit an $80 non-refundable application fee, or a fee waiver.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 80,
+        "currency": "USD",
+        "evidence": "To apply to Brown you must submit an $80 non-refundable application fee, or a fee waiver.",
+        "source": {
+          "url": "https://admission.brown.edu/apply/how-apply",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:fb2315d64e7e56a8ff06f9d75aab945741f1e4b31424bc24e9191cce9b451d91"
+        }
+      }
     }
   ],
   "deadline": {

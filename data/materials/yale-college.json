@@ -1,0 +1,67 @@
+{
+  "id": "yale-college",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две рекомендации от учителей, которые недавно преподавали основные предметы.",
+      "evidence": "Request letters of recommendation from two teachers who have taught you recently in core academic subjects.",
+      "source": {
+        "url": "https://admissions.yale.edu/requirements",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:08ad3ea9f0df9848117f83505b32b816fcbd93b33b6dd040d1e53d6def63c124"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 1,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "Одна рекомендация от школьного консультанта. Если консультанта нет — от администратора школы.",
+      "evidence": "Letters of recommendation from two teachers and one counselor School Report with transcript Standardized test results (ACT or SAT) Learn more below.",
+      "source": {
+        "url": "https://admissions.yale.edu/requirements",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:08ad3ea9f0df9848117f83505b32b816fcbd93b33b6dd040d1e53d6def63c124"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Можно приложить интервью InitialView — живую запись без сценария. Не обязательно.",
+      "evidence": "InitialView provides live, unscripted video interviews that candidates may submit to colleges for consideration with other application materials.",
+      "source": {
+        "url": "https://admissions.yale.edu/standardized-testing",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:eec28aba14ce236a993bea5373de4067182765738436010033dbf53280ab0d3d"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Короткие ответы Yale и общее эссе Common App в снимке не описаны — не внесены."
+}

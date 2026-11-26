@@ -1,0 +1,113 @@
+{
+  "note": "Все имена, школы, клубы, проекты и события вымышлены. Совпадения случайны.",
+  "students": [
+    {
+      "id": "01-rural-tajik",
+      "name": "Зарина Рахимова",
+      "scenario": "Сельская таджикская школа, кружков нет; одна цель и мало часов на подготовку.",
+      "profile": "01-rural-tajik/profile.json",
+      "route": "01-rural-tajik/route.json"
+    },
+    {
+      "id": "02-dushanbe-russian",
+      "name": "Далер Назаров",
+      "scenario": "Русская школа в Душанбе, IELTS 6.5, школьный проект.",
+      "profile": "02-dushanbe-russian/profile.json",
+      "route": "02-dushanbe-russian/route.json"
+    },
+    {
+      "id": "03-lyceum-olympiad",
+      "name": "Мехрангез Сафарова",
+      "scenario": "Лицей для одарённых, призёр олимпиад, высокий средний балл.",
+      "profile": "03-lyceum-olympiad/profile.json",
+      "route": "03-lyceum-olympiad/route.json"
+    },
+    {
+      "id": "04-work-and-siblings",
+      "name": "Фирдавс Холов",
+      "scenario": "Подработка на рынке и уход за двумя младшими сёстрами, мало часов.",
+      "profile": "04-work-and-siblings/profile.json",
+      "route": "04-work-and-siblings/route.json"
+    },
+    {
+      "id": "05-self-taught-programmer",
+      "name": "Азиз Каримов",
+      "scenario": "Самоучка-программист: проект, работа, проба, материалы цели, собеседование и рекомендатель.",
+      "profile": "05-self-taught-programmer/profile.json",
+      "route": "05-self-taught-programmer/route.json"
+    },
+    {
+      "id": "06-creative",
+      "name": "Нилуфар Юсупова",
+      "scenario": "Творческий ученик: рисунок, серия афиш для школьного концерта, учебная проба и подборка под цель.",
+      "profile": "06-creative/profile.json",
+      "route": "06-creative/route.json"
+    },
+    {
+      "id": "07-athlete",
+      "name": "Рустам Шарипов",
+      "scenario": "Спортсмен: капитан школьной команды, тренировки шесть раз в неделю.",
+      "profile": "07-athlete/profile.json",
+      "route": "07-athlete/route.json"
+    },
+    {
+      "id": "08-ninth-grade-no-goals",
+      "name": "Мадина Азизова",
+      "scenario": "9 класс, целей пока нет: только анкета и пустой маршрут.",
+      "profile": "08-ninth-grade-no-goals/profile.json",
+      "route": "08-ninth-grade-no-goals/route.json"
+    },
+    {
+      "id": "09-eleventh-three-goals",
+      "name": "Парвиз Давлатов",
+      "scenario": "11 класс, три цели, контрольная дата через 6 недель (2027-01-06).",
+      "profile": "09-eleventh-three-goals/profile.json",
+      "route": "09-eleventh-three-goals/route.json"
+    },
+    {
+      "id": "10-uzbekistan-ielts",
+      "name": "Дилноза Абдуллаева",
+      "scenario": "Ученица из Узбекистана, IELTS 7.0, две цели.",
+      "profile": "10-uzbekistan-ielts/profile.json",
+      "route": "10-uzbekistan-ielts/route.json"
+    }
+  ],
+  "history": [
+    {
+      "file": "history/01-before-portfolio.json",
+      "commit": "0b0a438",
+      "date": "2026-10-28",
+      "era": "до портфолио"
+    },
+    {
+      "file": "history/02-portfolio-v1.json",
+      "commit": "09e6377",
+      "date": "2026-10-28",
+      "era": "портфолио v1: опыт и результаты заданий"
+    },
+    {
+      "file": "history/03-with-works.json",
+      "commit": "8a02266",
+      "date": "2026-10-29",
+      "era": "с работами: учебный план работы и шаги"
+    },
+    {
+      "file": "history/04-with-practices.json",
+      "commit": "c19a4f8",
+      "date": "2026-10-30",
+      "era": "с пробами: учебная проба в работе"
+    },
+    {
+      "file": "history/05-with-goal-materials.json",
+      "commit": "db6c475",
+      "date": "2026-11-05",
+      "era": "с материалами цели: истории, сведения о школе, материалы заявки"
+    },
+    {
+      "file": "history/06-current.json",
+      "commit": "b3d5974",
+      "date": "2026-11-25",
+      "era": "текущий формат: собеседование, рекомендатели, подборка, скрытые записи"
+    }
+  ]
+}

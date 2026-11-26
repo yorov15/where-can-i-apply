@@ -1,0 +1,102 @@
+{
+  "id": "harvard-college",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": 5,
+      "limit": {
+        "unit": "words",
+        "max": 150
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Пять коротких ответов на вопросы Harvard в дополнение к общему эссе Common App, каждый до 150 слов.",
+      "evidence": "There are five required short-answer questions with 150 word limits for each",
+      "source": {
+        "url": "https://college.harvard.edu/admissions/apply/first-year-applicants",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:1ec3fa4bc2297eb6dd5cfe30e28b910f01cf266b74f554cb456f303930a938be"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Две оценки от учителей разных предметов, которые хорошо знают ученика.",
+      "evidence": "Ask two teachers in different academic subjects who know you well to complete the Teacher Recommendation forms (which includes an evaluation form and a letter of recommendation).",
+      "source": {
+        "url": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:9949ea530c5e85f4fee7291ebcd441f57452479701f511000d8ca3cc4a6876ac"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "counselor",
+      "language": "en",
+      "via": "platform",
+      "ru": "School report от школьного консультанта или другого руководителя школы; в него входит письмо-рекомендация.",
+      "evidence": "The secondary school report is a required form that is submitted by your school counselor or another school leader.",
+      "source": {
+        "url": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:9949ea530c5e85f4fee7291ebcd441f57452479701f511000d8ca3cc4a6876ac"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Интервью с выпускником стараются предложить всем, но приглашают не каждого. Отсутствие интервью не вредит заявке.",
+      "evidence": "While we try to make alumni interviews as widely available as possible, we are unable to interview all applicants.",
+      "source": {
+        "url": "https://college.harvard.edu/admissions/apply/international-applicants",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:b4e29157a6a13cf25247f25bd261c53bf94b541d736443f039635ab6cdebbae2"
+      }
+    },
+    {
+      "type": "video",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Можно дополнительно приложить видео, аудио или изображения через Slideroom. Не обязательно.",
+      "evidence": "How to submit media (video, audio, or images) You may submit optional supplementary media materials (e.g.",
+      "source": {
+        "url": "https://college.harvard.edu/admissions/apply/application-requirements",
+        "lastVerified": "2026-11-25",
+        "contentHash": "sha256:9949ea530c5e85f4fee7291ebcd441f57452479701f511000d8ca3cc4a6876ac"
+      }
+    }
+  ],
+  "notStated": [
+    "cv",
+    "awards",
+    "portfolio",
+    "studyPlan",
+    "certificates"
+  ],
+  "note": "Общее эссе и список активностей Common App одинаковы для всех — не внесены."
+}

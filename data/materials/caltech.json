@@ -1,0 +1,66 @@
+{
+  "id": "caltech",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "recommendation",
+      "need": "required",
+      "count": 2,
+      "limit": null,
+      "prompt": null,
+      "who": "teacher",
+      "language": "en",
+      "via": "platform",
+      "ru": "Два письма от учителей: одно от преподавателя STEM (математика, физика, химия, биология), второе — гуманитарных или общественных наук.",
+      "evidence": "We require letters of recommendation from two secondary school teachers:",
+      "source": {
+        "url": "https://www.admissions.caltech.edu/apply/first-year-applicants/international-applicants",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:24ab7176284e0c83f242a02147051682634e1ea634a62f7174eaf9993e8b5a9a"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Внешнее портфолио можно подать через портал Beaver Breakroom. Дополнительно, не обязательно.",
+      "evidence": "Submit your external portfolio through the Beaver Breakroom, the application portal.",
+      "source": {
+        "url": "https://www.admissions.caltech.edu/apply/first-year-applicants/international-applicants",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:24ab7176284e0c83f242a02147051682634e1ea634a62f7174eaf9993e8b5a9a"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Caltech рекомендует иностранным абитуриентам записать интервью InitialView. Это не обязательное условие.",
+      "evidence": "We recommend InitialView for all international applicants.",
+      "source": {
+        "url": "https://www.admissions.caltech.edu/apply/first-year-applicants/international-applicants",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:24ab7176284e0c83f242a02147051682634e1ea634a62f7174eaf9993e8b5a9a"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Дополнительные эссе есть на отдельной странице, её нет в снимке — число и лимит не внесены."
+}

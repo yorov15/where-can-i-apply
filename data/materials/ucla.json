@@ -1,0 +1,52 @@
+{
+  "id": "ucla",
+  "checkedAt": "2026-11-25",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": 4,
+      "limit": {
+        "unit": "words",
+        "max": 350
+      },
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Четыре ответа на personal insight questions из восьми. Каждый — не больше 350 слов. Вопросы в заявке UC.",
+      "evidence": "As a first-year applicant, you may respond to four of eight questions. Each response is limited to a maximum of 350 words.",
+      "source": {
+        "url": "https://admission.ucla.edu/apply/first-year/first-year-requirements",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:6bba437a464e877420f5ad0b5c30b7e5468ae8de41c0baea56ab6d8d007190e2"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "form",
+      "ru": "Некоторые профессиональные школы просят дополнительную заявку: прослушивание, портфолио или рекомендации.",
+      "evidence": "Supplemental applications may involve an audition, portfolio submission and/or letters of recommendation.",
+      "source": {
+        "url": "https://admission.ucla.edu/apply/first-year/first-year-requirements",
+        "lastVerified": "2026-09-30",
+        "contentHash": "sha256:6bba437a464e877420f5ad0b5c30b7e5468ae8de41c0baea56ab6d8d007190e2"
+      }
+    }
+  ],
+  "notStated": [
+    "activities",
+    "cv",
+    "awards",
+    "studyPlan",
+    "video",
+    "certificates"
+  ],
+  "note": "Рекомендации и собеседования UCLA не принимает: в файле их нет."
+}

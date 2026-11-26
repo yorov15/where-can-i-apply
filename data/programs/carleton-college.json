@@ -200,6 +200,23 @@
       "evidence": "You can provide either: the free International Student Application for Financial Assistance (you submit this directly to Admissions), or the CSS/Profile (you submit this through the College Board website)",
       "field": null,
       "kind": "documents"
+    },
+    {
+      "ru": "Взноса за подачу нет.",
+      "evidence": "No application fee",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": null,
+        "evidence": "No application fee",
+        "source": {
+          "url": "https://www.carleton.edu/admissions/apply/steps/materials/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:a73ec2e80ed9f18099e370fc7215334e74af7f0bfe9b52714ddc3b55f387e4ad"
+        },
+        "unconditional": true
+      }
     }
   ],
   "deadline": {

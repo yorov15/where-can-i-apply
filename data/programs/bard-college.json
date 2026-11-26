@@ -208,6 +208,23 @@
       "evidence": "Completed Bard International Financial Aid Application (BISFAA).",
       "field": null,
       "kind": "documents"
+    },
+    {
+      "ru": "Взноса за подачу в Bard College нет.",
+      "evidence": "There is no application fee to apply to Bard College",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 0,
+        "currency": null,
+        "evidence": "There is no application fee to apply to Bard College",
+        "source": {
+          "url": "https://www.bard.edu/admission/applying/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:99841b67334cbc0a2bbcd683510bebb4057a8e3b893284037da51543fbeae9c7"
+        },
+        "unconditional": true
+      }
     }
   ],
   "deadline": {

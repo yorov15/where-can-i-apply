@@ -8,6 +8,7 @@
 
 Первые партии (не пересекаются):
 - DS-1, партия 1 (30 ближайших сроков): melbourne anu uwa csc-china duke-kunshan campus-france kyoto-iup tokyo kyushu auckland bahcesehir berea-college uc-berkeley ucla ucsd ut-austin columbia-university dartmouth-college emory harvard-college princeton vanderbilt-university vassar-college wesleyan cornell jhu yale-college caltech colby-college duke-university
+- DS-1, партия 2 (сроки 04–13.01.2027): mit uchicago washu middlebury-college northwestern-university rice-university swarthmore-college tufts-university williams-college amherst-college bowdoin-college brown-university nyu-shanghai nyuad osaka-iudp upenn cuhk wellesley-college bates haverford davidson-college birmingham bristol durham edinburgh glasgow imperial-college-london kcl leeds lse. Следующие на очереди: manchester nottingham sheffield (тоже 13.01).
 - DS-3, партия 4: nyuad toronto ubc birmingham bristol durham edinburgh glasgow imperial-college-london kcl leeds lse manchester nottingham sheffield cityu-hk cuhk stipendium-hungaricum kth uppsala amherst-college bard-college brown-university bryn-mawr-college carleton-college kenyon-college macalester-college middlebury-college pomona-college tufts-university
 - DS-4, партия 2: nyu-shanghai aalto-finland bocconi osaka-iudp tohoku-gateway-college waseda-sils gist-korea um-malaya ntu-singapore ntu-taiwan bates bowdoin-college colgate-university davidson-college denison-university grinnell-college haverford mit mount-holyoke-college northwestern-university oberlin rice-university smith-college soka swarthmore-college uchicago upenn washu wellesley-college williams-college
 
@@ -185,6 +186,26 @@ docs/deadline-review-<дата>.json. Вносить будет Claude посл�
    портфолио v1, с работами, с пробами, с материалами цели, текущий) —
    собери настоящими функциями экспорта из соответствующих коммитов, не руками.
 Проверка задачи: тест, который импортирует каждый файл текущим кодом без ошибок.
+```
+
+---
+
+## DS-10. Цитаты, которых нет в снимках
+
+**Зачем:** `python -m tools.validate` должен быть зелёным, иначе он ничего не ловит. 25.11 Claude переснял 12 программ, 4 прошли; у 11 записей 40 цитат не совпадают с текущими страницами. Рабочий список с ближайшим текстом свежего снимка: `docs/QUOTE-FIXES-2026-11-25.md`. Ветка от `origin/claude/quote-fixes` (там свежие снимки).
+
+```
+Задача DS-10. Для каждой цитаты из docs/QUOTE-FIXES-2026-11-25.md найди в свежем снимке
+raw/<id>/2026-11-25/ (у cornell, vanderbilt, vassar — тоже 2026-11-25) текущий текст об этом же:
+- смысл тот же, слова другие → evidence заменить дословным текстом страницы; ru не трогать;
+- факт другой (число, дата, балл) → evidence и ru по новому тексту, структурное значение
+  (минимумы экзаменов, суммы) по новому тексту; каждую такую правку — строкой «было → стало»;
+- текста больше нет → условие textConditions удалить; поле eligibility не трогать, только в отчёт;
+- страница не отдаёт текст (JS, заглушка) → не трогать, в отчёт.
+Поле deadline не менять: сроки ждут решения Мурода (очередь DS-5).
+Цитату не выдумывать и не собирать из кусков разных мест страницы.
+Проверка задачи: python -m tools.validate без ошибок по 11 программам или каждая оставшаяся —
+в отчёте с причиной; после правок python -m tools.reverify <id> --write только для прошедших.
 ```
 
 ---

@@ -7,11 +7,13 @@
 | Кто | Ветка | Папка worktree |
 |---|---|---|
 | DS-1 материалы, партия 1 | `deepseek/materials-1` | `C:\Users\ORYX\dev\nerio-ds1` |
+| DS-1 материалы, партия 2 | `deepseek/materials-2` | `C:\Users\ORYX\dev\nerio-ds1b` |
 | DS-2 конкурсы | `deepseek/opportunities` | `C:\Users\ORYX\dev\nerio-ds2` |
 | DS-3 взносы, партия 4 | `deepseek/fees-4` | `C:\Users\ORYX\dev\nerio-ds3` |
 | DS-4 applyChannel, партия 2 | `deepseek/apply-channel-2` | `C:\Users\ORYX\dev\nerio-ds4` |
 | DS-5 истёкшие сроки | `deepseek/deadlines` | `C:\Users\ORYX\dev\nerio-ds5` |
 | DS-6 вымышленные ученики | `deepseek/test-students` | `C:\Users\ORYX\dev\nerio-ds6` |
+| DS-10 цитаты без снимков | `deepseek/quote-fixes` от `origin/claude/quote-fixes` | `C:\Users\ORYX\dev\nerio-ds10` |
 | Claude, редизайн | `claude/redesign-portfolio` | своя, от origin/main |
 | Claude, архитектура | `claude/<задача>` | `C:\Users\ORYX\dev\nerio-portfolio` и другие |
 
@@ -31,6 +33,7 @@
 | `raw/apply-channels/<дата>/` | DS-4 |
 | `docs/deadline-review-<дата>.json`, `raw/deadline-review/` | DS-5 (`data/programs/` не трогает) |
 | `tests/fixtures/students/`, `tests/students.test.js` | DS-6 |
+| `evidence`/`ru` условий и `eligibility` в `data/programs/<id>.json` 11 программ из `docs/QUOTE-FIXES-2026-11-25.md` (кроме `deadline`, `fee`, `applyChannel`); их `raw/<id>/<дата>/` | DS-10 |
 | `css/`, `index.html`, `*-view.js`, `js/portfolio*.js`, новые экраны | Claude, редизайн |
 | `tools/*.py`, схемы `docs/*-SCHEMA.md`, `js/materials-plan.js`, `js/formats/` | Claude, архитектура (A2 может перейти в чат редизайна — тогда строку здесь меняет он) |
 | `AGENTS.md`, `docs/WORK-SPLIT.md`, `docs/DEEPSEEK-TASKS.md` | Claude, архитектура |

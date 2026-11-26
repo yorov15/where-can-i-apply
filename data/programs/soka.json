@@ -334,5 +334,21 @@
     ],
     "lastVerified": "2026-10-02",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "Soka Application",
+        "url": "https://admissions.soka.edu/portal/apply",
+        "note": "",
+        "evidence": "you can apply at soka.edu/apply using the Soka Application or the Common Application.",
+        "source": {
+          "url": "https://www.soka.edu/admissions-aid/how-apply",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:38dc4f8bb1cd5e09af0e36a7a2b42853a717a736ad7a5bbf7b65404b7d017cda"
+        }
+      }
+    ]
   }
 }

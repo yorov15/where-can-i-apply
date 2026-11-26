@@ -322,5 +322,21 @@
     ],
     "lastVerified": "2026-10-10",
     "humanChecked": false
+  },
+  "applyChannel": {
+    "routes": [
+      {
+        "type": "university",
+        "name": "TAO",
+        "url": "https://admissions-office.net/en/portal",
+        "note": "",
+        "evidence": "How to submit your application via TAO",
+        "source": {
+          "url": "https://admissions.tohoku.ac.jp/en/admissions/undergraduate/gateway_college/",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:d05b042e83f74a67514a55f65db629815377fc8e864958ba9920411cf7d43562"
+        }
+      }
+    ]
   }
 }

@@ -195,6 +195,22 @@
       "evidence": "The Common Application",
       "field": null,
       "kind": "documents"
+    },
+    {
+      "ru": "Взнос за подачу в бакалавриат NYU (кампус Абу-Даби) - 85 долларов США; при финансовой трудности можно запросить снятие.",
+      "evidence": "The NYU application includes a non-refundable application fee of USD 85, which can be paid online by credit card or by check or money order.",
+      "field": null,
+      "kind": "money",
+      "fee": {
+        "amount": 85,
+        "currency": "USD",
+        "evidence": "The NYU application includes a non-refundable application fee of USD 85, which can be paid online by credit card or by check or money order.",
+        "source": {
+          "url": "https://nyuad.nyu.edu/en/apply/undergraduate/apply/application-fee.html",
+          "lastVerified": "2026-11-25",
+          "contentHash": "sha256:56ae5b1049c9948a87e0f34dfcd85f9d0bd14311f36f17e675a51ac08d947058"
+        }
+      }
     }
   ],
   "deadline": {
