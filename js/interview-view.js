@@ -332,7 +332,7 @@ function questionItem(question, programId, state) {
   }
   const count = answersFor(state, question.id).length;
   const actions = el('div', 'today-actions');
-  const train = button('Тренировать', 'button button-small', () => begin(question, programId));
+  const train = button('Тренировать', 'button button-small button-quiet', () => begin(question, programId));
   train.setAttribute('aria-label', `Тренировать: ${question.ru}`);
   actions.append(train);
   if (question.from === 'custom') {
