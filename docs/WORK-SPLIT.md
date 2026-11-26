@@ -17,6 +17,9 @@
 | DS-5 истёкшие сроки | `deepseek/deadlines` | `C:\Users\ORYX\dev\nerio-ds5` |
 | DS-6 вымышленные ученики | `deepseek/test-students` | `C:\Users\ORYX\dev\nerio-ds6` |
 | DS-10 цитаты без снимков | `deepseek/quote-fixes` от `origin/claude/quote-fixes` | `C:\Users\ORYX\dev\nerio-ds10` |
+| DS-11A/B сроки цикла 2027 | `deepseek/deadlines-2027-a`, `-b` | `C:\Users\ORYX\dev\nerio-dl-a`, `nerio-dl-b` |
+| DS-12A/B покрытие | `deepseek/coverage-a`, `-b` | `C:\Users\ORYX\dev\nerio-cov-a`, `nerio-cov-b` |
+| DS-3 UCAS | `deepseek/fees-ucas` | `C:\Users\ORYX\dev\nerio-ds3-ucas` |
 | Claude, редизайн | `claude/redesign-portfolio` | своя, от origin/main |
 | Claude, архитектура | `claude/<задача>` | `C:\Users\ORYX\dev\nerio-portfolio` и другие |
 
@@ -36,6 +39,9 @@
 | `raw/apply-channels/<дата>/` | DS-4 |
 | `docs/deadline-review-<дата>.json`, `raw/deadline-review/` | DS-5 (`data/programs/` не трогает) |
 | `tests/fixtures/students/`, `tests/students.test.js` | DS-6 |
+| `docs/deadline-review-2027-cycle-a.json` / `-b.json`, `raw/deadline-review/2026-11-26-a/` / `-b/` | DS-11A/B (`data/programs/` не трогают) |
+| `docs/coverage-review-2026-11-a.json` / `-b.json`, `raw/coverage-review/2026-11-a/` / `-b/` | DS-12A/B (`data/programs/` не трогают) |
+| `raw/application-fees/2026-11-26-ucas/` | DS-3 UCAS (`data/programs/` не трогает) |
 | `evidence`/`ru` условий и `eligibility` в `data/programs/<id>.json` 11 программ из `docs/QUOTE-FIXES-2026-11-25.md` (кроме `deadline`, `fee`, `applyChannel`); их `raw/<id>/<дата>/` | DS-10 |
 | `css/`, `index.html`, `*-view.js`, `js/portfolio*.js`, новые экраны | Claude, редизайн |
 | `tools/*.py`, схемы `docs/*-SCHEMA.md`, `js/materials-plan.js`, `js/formats/` | Claude, архитектура (A2 может перейти в чат редизайна — тогда строку здесь меняет он) |
