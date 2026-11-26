@@ -1,0 +1,59 @@
+{
+  "id": "polyu-hongkong",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "other",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "К заявке загружают сканы документов об образовании и любые дополнительные документы, которые отдельно требует выбранная программа; без них заявку могут отклонить или рассмотрение затянется.",
+      "evidence": "Applicants are required to upload scanned copies of the academic certificate(s)/ transcript(s) for qualifications as claimed in their application, as well as any supporting document(s) specifically required for the applying scheme / programme. Failure to upload the required documents may affect your chances of admission or prolong the application process.",
+      "source": {
+        "url": "https://www.polyu.edu.hk/study/ug/admissions/international-other-qualifications/international-other-qualifications-application-0",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:01f7fcd0c5c94b88b2664374356aa9f2d6a57f310446a779d064377230af22eb"
+      }
+    },
+    {
+      "type": "recommendation",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": "any",
+      "language": null,
+      "via": "platform",
+      "ru": "Если программа просит рекомендацию или прогноз оценок, их не загружают сами: в разделе Academic Referee указывают консультанта или поручителя, и система пишет ему письмо.",
+      "evidence": "For documents like \"Predicted Score Report\" or \"reference letter\" which are considered as \"confidential\" by your school / institution, please (1) Fill in \"Academic Referee\" section under eAdmission and then a system generated email will be sent to your designated school counselor or referee.",
+      "source": {
+        "url": "https://www.polyu.edu.hk/study/ug/admissions/international-other-qualifications/international-other-qualifications-application-0",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:01f7fcd0c5c94b88b2664374356aa9f2d6a57f310446a779d064377230af22eb"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Интервью в целом не обязательно: кафедры сами приглашают отобранных кандидатов письмом. Приглашённым советуют прийти — перенести может не получиться.",
+      "evidence": "While interviews are generally not mandatory, Academic departments may notify shortlisted applicants of the interview arrangement individually by email. Applicants are advised to attend the interviews as scheduled since re-arrangement may not be possible.",
+      "source": {
+        "url": "https://www.polyu.edu.hk/study/ug/admissions/international-other-qualifications/international-other-qualifications-application-0",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:01f7fcd0c5c94b88b2664374356aa9f2d6a57f310446a779d064377230af22eb"
+      }
+    }
+  ],
+  "notStated": ["essay", "activities", "cv", "awards", "portfolio", "studyPlan", "video", "certificates"],
+  "note": "Бакалавриат, набор September 2027; даты и дедлайны не внесены. В таблице дополнительных документов у всех программ только Transcript / Certificate Required — отдельных эссе, портфолио и CV нет. Интервью в той же таблице своё у каждой программы: формат и длительность разные. Требований TOEFL/IELTS на снятых страницах нет."
+}
