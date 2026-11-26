@@ -1,0 +1,93 @@
+{
+  "id": "cambridge",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "Нужно написать личное заявление в заявке UCAS — один текст на все выбранные вузы; Кембридж читает его целиком.",
+      "evidence": "You will need to write a personal statement for your UCAS application",
+      "source": {
+        "url": "https://www.undergraduate.study.cam.ac.uk/apply/how/ucas-personal-statement",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:163897b852b154f9ebf8de0d13488a04abd67755f6e76320eda1b79ffe1803a1"
+      }
+    },
+    {
+      "type": "essay",
+      "need": "optional",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "platform",
+      "ru": "В My Cambridge Application можно написать отдельное заявление для Кембриджа — оно гораздо короче основного, в UCAS.",
+      "evidence": "You will have the opportunity to write a Cambridge specific personal statement in My Cambridge Application . This is much shorter than your UCAS personal statement.",
+      "source": {
+        "url": "https://www.undergraduate.study.cam.ac.uk/apply/how/ucas-personal-statement",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:163897b852b154f9ebf8de0d13488a04abd67755f6e76320eda1b79ffe1803a1"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": null,
+      "ru": "Интервью проходят не все: приглашают многих, но не каждого. Зато каждый, кто получил оффер, был на интервью.",
+      "evidence": "We invite many applicants to interview. Not everyone interviewed will be offered a place, but everyone who is made an offer will have been interviewed.",
+      "source": {
+        "url": "https://www.undergraduate.study.cam.ac.uk/apply/after/cambridge-interviews",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:72f642819f94cd3ed7bd9b972debe344db25aca278d3bdb76572a3c1c6eb75e1"
+      }
+    },
+    {
+      "type": "other",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "У части курсов — обычно искусства и социальных наук — просят одну-две письменные работы: эссе или портфолио.",
+      "evidence": "We may ask you to submit one or two examples of your written work, such as an essay or a portfolio. This is usually if you've applied to study an arts or a social sciences course.",
+      "source": {
+        "url": "https://www.undergraduate.study.cam.ac.uk/apply/after/written-work-portfolio",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:9e478d8fbd2547a904882dd212e2b5ab0c016b66116d6ff7cc1c9b498e785966"
+      }
+    },
+    {
+      "type": "portfolio",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": "en",
+      "via": "upload",
+      "ru": "Колледж сам укажет, что именно прислать — эссе или портфолио.",
+      "evidence": "Check what the College is asking you to submit. For example, is it an essay or a portfolio.",
+      "source": {
+        "url": "https://www.undergraduate.study.cam.ac.uk/apply/after/written-work-portfolio",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:9e478d8fbd2547a904882dd212e2b5ab0c016b66116d6ff7cc1c9b498e785966"
+      }
+    }
+  ],
+  "notStated": ["recommendation", "activities", "cv", "awards", "studyPlan", "video", "certificates"],
+  "note": "Бакалавриат, приём 2027. Личное заявление — общее для UCAS, поэтому одно на все выбранные вузы. Страниц про UCAS-рекомендацию и требований к английскому в снимке нет — эти типы в notStated. Письменные работы и портфолио нужны только части курсов."
+}
