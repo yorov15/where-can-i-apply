@@ -11,7 +11,7 @@
       "who": null,
       "language": null,
       "via": "platform",
-      "ru": "Личное заявление — форма 2, в списке документов, которые заполняет сам заявитель.",
+      "ru": "Личное заявление — отдельная форма в списке документов; можно на английском или корейском.",
       "evidence": "Documents to complete : Application Form, Personal Statement, Study Plan, Recommendation Letter, GKS Applicant Agreement, Personal Medical Assessment, Consent to Collect and Use Personal Information",
       "source": {
         "url": "https://www.studyinkorea.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000673717&fileSn=1",
@@ -28,7 +28,7 @@
       "who": null,
       "language": null,
       "via": "platform",
-      "ru": "План учёбы — форма 3; можно на английском или корейском.",
+      "ru": "План учёбы: можно на английском или корейском.",
       "evidence": "The Application Form must be written in English. The Personal Statement and Study Plan may be written in English or Korean.",
       "source": {
         "url": "https://www.studyinkorea.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000673717&fileSn=1",
@@ -57,7 +57,10 @@
       "type": "awards",
       "need": "optional",
       "count": null,
-      "limit": {"unit": "items", "max": 5},
+      "limit": {
+        "unit": "items",
+        "max": 5
+      },
       "prompt": null,
       "who": null,
       "language": null,
@@ -88,6 +91,10 @@
       }
     }
   ],
-  "notStated": ["cv", "portfolio", "video"],
+  "notStated": [
+    "cv",
+    "portfolio",
+    "video"
+  ],
   "note": "Гайд 2027 GKS-U (English, 0914): формы 2 и 3, одно письмо-рекомендация, устное собеседование на втором этапе. Вопросы личного заявления в PDF не приведены."
 }

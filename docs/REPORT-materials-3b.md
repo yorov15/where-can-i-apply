@@ -85,7 +85,7 @@
 | zurich | частично | other | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | страница Documents to Submit в снимке не раскрыта; письменных материалов вуз не просит |
 | bnu | готово | recommendation, essay, awards, interview | activities, cv, portfolio, studyPlan, video, certificates, other | личное заявление заполняют от руки по-китайски |
 | sysu | готово | interview, recommendation, studyPlan, awards | essay, activities, cv, portfolio, video, certificates, other | SYSU-стипендия: письмо агентства, два письма, план учёбы |
-| obuda | готово | essay, cv, portfolio, other | activities, awards, studyPlan, video, interview, certificates | рекомендации и портфолио Architecture — только MSc |
+| obuda | готово | essay, cv, portfolio, other, interview | activities, awards, studyPlan, video, certificates | рекомендации и портфолио Architecture — только MSc |
 | ecnu | готово | essay, recommendation, portfolio, video, other, interview | activities, cv, awards, studyPlan, certificates | гайд обновлён под сентябрь 2027; саморекомендация 500–800 слов |
 | nankai | готово | essay, recommendation, interview, other | activities, cv, awards, portfolio, studyPlan, video, certificates |  |
 | mate | готово | essay, cv, interview | recommendation, activities, awards, portfolio, studyPlan, video, certificates | набор 2026/2027; рекомендации только в общем FAQ, в списке BSc их нет |
@@ -99,23 +99,100 @@
 
 ## Ошибки validate
 
-- В начале работы: «проверено 323, с ошибками 11» — auca, cornell,
-  fudan-university, hkbu-hongkong, nazarbayev, ntu-singapore, polimi,
-  tianjin-university, utwente, vanderbilt-university, vassar-college.
-- После снимков 26.11: (заполняется).
+- В начале работы: «проверено 323, с ошибками 11» — auca, cornell, fudan-university,
+  hkbu-hongkong, nazarbayev, ntu-singapore, polimi, tianjin-university, utwente,
+  vanderbilt-university, vassar-college.
+- Сейчас: «проверено 323, с ошибками 14». data/programs/ не трогал. Новые ошибки —
+  от свежих снимков 26.11; старые цитаты и как это место звучит теперь:
+  - `manchester`, условие 20. Было: «There are currently no awards open for application.»
+    В новом снимке страницы финансирования наград уже нет: «We're proud to offer awards
+    totalling more than £6 million to international students starting their studies in
+    September 2027.»
+  - `lund-sweden`, условие 2. Было: «The tuition fee for a specific programme or course
+    can be found on the programme and course webpages.» В новом снимке такой фразы нет;
+    на её месте — «Students who pay tuition fees (generally all non-EU/EEA students) need
+    to pay their first tuition fee instalment - for the first semester of studies - before
+    they arrive at Lund University.»
+  - `ecnu`, 8 цитат (citizenship, schoolYears, language, условия 1–2). Страница переписана
+    под 2027: было «High school qualification or above with valid foreign passport.» —
+    стало «Non-Chinese citizens holding valid foreign ordinary passports with high school
+    graduate qualifications or above.»; было «IELTS (6.0 or above) / TOFEL (85 or above) /
+    Cambridge English (B2 or above)» — стало «IELTS 6.0, TOEFL 85 (0~120 scale) or
+    TOEFL iBT 4.0 (0~6 scale), or Cambridge English B2 First»; было «HSK-4 with a passing
+    score of 180 or above» — стало: School of Design — HSK Level 4, 180+, остальные
+    специальности — HSK Level 5, 180+. Цитата про эмигрантов переписана: «Students who
+    emigrate from the Chinese mainland, Hong Kong, China; Macao, China; and Taiwan, China
+    and obtain foreign nationality».
 
 ## Домены, ждущие «да»
 
-Новых доменов не подключал. (заполняется)
+Новых доменов не подключал: все адреса — на доменах, которые уже есть в секциях.
 
 ## Адреса в sources.toml
 
-(заполняется)
+Добавлено 14 адресов в 11 секциях, все скачались (снимки 26.11):
+- `gks-korea` — PDF-форма заявления 2027 (studyinkorea.go.kr).
+- `unipd` — how-apply и документы заявки.
+- `hku` — пошаговый гид 2027 (PDF).
+- `netherlands-study` — admission-requirements.
+- `tu-berlin` — чек-лист заявки и регистрации.
+- `aiu-japan` — чек-лист Statement of Purpose 2027 (PDF).
+- `charles-university` — ADM-18, ADM-13.
+- `inu` — руководство Spring 2027 (PDF).
+- `palacky-university` — информация для иностранцев 2026/27 (PDF).
+- `lund-sweden` — documentation и application-steps.
+- `manchester` — before-you-apply.
+
+Пробовал добавить и убрал после ошибки (в отчёте остаются как кандидаты):
+- `hanyang` — PDF гайда на oia.hanyang.ac.kr: curl 35 (SSL), fetch не снял.
+- `kfu` — eng.kpfu.ru/bachelor-specialist/step-1-applying/: URLError, таймаут.
+- `stanford-university` — admission.stanford.edu/apply/first-year/apply.html: TLS/таймаут.
+- `ucl` — how-we-assess-your-application: HTTP 403 и таймаут.
+- `warwick` — personal-statement, your-reference, admissions-tests: таймаут.
+
+## Пропуски и частичные
+
+Пропуски (файла нет, причина в таблице):
+- `kfu` — в снимке только оплата и стипендии; страница требований не скачалась.
+- `hanyang` — снимок 2026-09-27 только навигация; гайд PDF не скачался (403/SSL).
+- `sogang` — в снимке 1598 знаков без требований; guide.asp 404; гайд — PDF 64,6 МБ,
+  fetch не скачал.
+- `stanford-university` — в снимке только FAQ для иностранцев и финпомощь; apply.html
+  не скачался (TLS/таймаут).
+
+Частичные (14): durakshondagon, mount-holyoke-college, ntu-taiwan, netherlands-study,
+bologna-italy, charles-university, hongik, michigan, nyu, palacky-university, warwick,
+zurich, ucl, oxford-reach. Причины — в таблице.
+
+Файлы без items (11): bauman, bologna-italy, charles-university, epfl, palacky-university,
+tu-berlin, xjtlu, uni-due, study-in-saudi, upm, netherlands-study — вуз на снятых страницах
+письменных материалов не просит; у bauman, bologna, charles, palacky это частично,
+причина в note. Это ответ «писать нечего», а не пробел.
+
+Ограничение окружения: у 35 программ секции собраны из `files` (manual/…), а папка
+`manual/` в worktree пуста (только README, остальное в .gitignore). `python -m tools.fetch`
+для них падает на отсутствующих файлах. Снимки для таких секций делал обходным путём:
+адрес → `urls` через `add_source.py`, затем снимок только по `urls` (тот же
+`save_snapshots`, те же хеши). Так сделан `ecnu`; остальные files-секции работают на
+старых снимках, потому что их сайты из этой сети недоступны (umich.edu, nyu.edu,
+utoronto.ca, ntu.edu.tw, uzh.ch, ac.uk — 000/403).
 
 ## Команды
 
-(заполняется)
+- `python -m tools.materials --check` → «проверено 140, с ошибками 0».
+- `PYTHONUTF8=1 python -m tools.validate` → «проверено 323, с ошибками 14» (в начале 11,
+  новые описаны выше).
+- `node --test` → 834 теста, 834 прошли, 0 упали.
+- `PYTHONUTF8=1 python -m unittest discover -s tools/tests -t .` → 537 тестов, OK.
+- `python -m tools.build` → индекс 97 322 из 98 304 байт, детали 78 241; вывод сборки
+  откачен, в коммиты не попал.
+- Замечание: 28 файлов `raw/apply-channels/` в рабочей копии переведены CRLF→LF, иначе
+  падают байтовые хеши в `test_apply_channel_audit` (в коммиты не попали).
+- Перед коммитами `git status --short`, `git add` только явными путями.
 
 ## Ветка и коммиты
 
-(заполняется)
+- Ветка `deepseek/materials-3b`, запушена.
+- Коммиты: c38f2ce (1–10), 3c27cee (11–20), 89ea12c (21–30), faba29a (31–40),
+  91448bc (41–50), 3ad78f6 (51–60), b5d206e (61–70), 5c409d0 (71–80), 5d0b017 (81–88).
+- Последний коммит перед отчётом: правки obuda, aiu, kenyon, gks и адресов sources.toml.
