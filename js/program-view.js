@@ -167,7 +167,18 @@ function shareButton(title, id) {
     try {
       if (navigator.share) await navigator.share({ title, url });
       else { await navigator.clipboard.writeText(url); button.textContent = 'Ссылка скопирована'; }
-    } catch { /* человек закрыл меню или буфер недоступен: ничего не ломаем */ }
+    } catch (error) {
+      // Закрыл меню сам — молчим. Буфер недоступен — показываем ссылку,
+      // чтобы её можно было скопировать руками, а не жать кнопку впустую.
+      if (error?.name === 'AbortError') return;
+      const field = document.createElement('input');
+      field.readOnly = true;
+      field.value = url;
+      field.setAttribute('aria-label', 'Ссылка на программу — скопируй её');
+      button.replaceWith(field);
+      field.focus();
+      field.select();
+    }
   });
   return button;
 }

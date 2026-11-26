@@ -95,6 +95,9 @@ function showScreen(name) {
     setGuidedStart(true);renderStartView();
     if(routeState.goals.length||startWork(routeState))openRoute().then(()=>{if(!startScreen.hidden)renderStartView();});
   }
+  // В «Мой путь» с целью в плане можно прийти и нижней панелью, минуя кнопку
+  // «Перейти к делам»: подсказка «Шаг 1 — выбери программу» тогда уже неправда.
+  if(name==='today'&&guidedStart&&routeState.goals.length)setGuidedStart(false);
   updateStartGuide();
   // Уходя на экран программы, запоминаем место в списке: назад человек
   // возвращается к тому же вузу, а не в начало трёхсот строк.
@@ -645,7 +648,7 @@ function renderRouteView() {
       onParent(text) {
         return navigator.clipboard.writeText(text).then(
           () => 'Скопировано. Можно вставить в мессенджер.',
-          () => 'Браузер не дал скопировать.',
+          () => 'Браузер не дал скопировать. Открой «Что войдёт в отчёт» ниже и скопируй текст оттуда или сохрани «Отчёт в PDF».',
         );
       },
       onExport() {
