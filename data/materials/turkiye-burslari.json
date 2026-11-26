@@ -1,0 +1,89 @@
+{
+  "id": "turkiye-burslari",
+  "checkedAt": "2026-11-26",
+  "items": [
+    {
+      "type": "essay",
+      "need": "required",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "platform",
+      "ru": "Мотивационное письмо (letter of intent): комитет экспертов оценивает его содержание вместе с успеваемостью, прежней подготовкой, интересами, карьерными целями и общественной активностью.",
+      "evidence": "Applications from eligible candidates; are considered by the Expert Committee in terms of various criteria such as academic status, previous qualifications, academic interests, career goals, consistency of preferences, content of the letter of intent, and participation in social activities.",
+      "source": {
+        "url": "https://turkiyeburslari.gov.tr/evaluationandselectionprocess",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:92d44bd18367bba5ef6566bc208d0cf628a5688676da1baa34c849801364ae02"
+      }
+    },
+    {
+      "type": "other",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "minutes",
+        "max": 60
+      },
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Перед собеседованием абитуриенты проходят тест: 30 вопросов, на выполнение дают 60 минут.",
+      "evidence": "Candidates will have 60 minutes to complete the 30-question test.",
+      "source": {
+        "url": "https://turkiyeburslari.gov.tr/evaluationandselectionprocess",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:92d44bd18367bba5ef6566bc208d0cf628a5688676da1baa34c849801364ae02"
+      }
+    },
+    {
+      "type": "interview",
+      "need": "required",
+      "count": null,
+      "limit": {
+        "unit": "minutes",
+        "max": 30
+      },
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": null,
+      "ru": "Собеседование обычно длится 15–30 минут: знакомство, проверка документов, зачем подаёшь заявку, знания и карьерные цели, вопросы комиссии.",
+      "evidence": "The interview, which usually lasts 15-30 minutes, is carried out in the following format: Welcome and entrance Check of documents Purpose of the candidate's application Academic knowledge and career goals Closing and candidate questions to the committee",
+      "source": {
+        "url": "https://turkiyeburslari.gov.tr/evaluationandselectionprocess",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:92d44bd18367bba5ef6566bc208d0cf628a5688676da1baa34c849801364ae02"
+      }
+    },
+    {
+      "type": "studyPlan",
+      "need": "some",
+      "count": null,
+      "limit": null,
+      "prompt": null,
+      "who": null,
+      "language": null,
+      "via": "upload",
+      "ru": "Только для PhD: предложение темы исследования и пример проведённой работы, загружаются в систему вместе с остальными документами.",
+      "evidence": "A proposal for a research topic and a written example of the research you have carried out (only for PhD applications)",
+      "source": {
+        "url": "https://turkiyeburslari.gov.tr/applysteps",
+        "lastVerified": "2026-11-26",
+        "contentHash": "sha256:07963aacf2f7af749dbf8f4becb4e104462452e5e42a31f66b99902436cc9ba0"
+      }
+    }
+  ],
+  "notStated": [
+    "recommendation",
+    "activities",
+    "cv",
+    "awards",
+    "portfolio",
+    "video"
+  ],
+  "note": "На тест дают 60 минут. Общественную активность комитет оценивает по заявке, но отдельного списка страница не называет. Паспорт, аттестат и переводы — уже собранные документы, не внесены."
+}

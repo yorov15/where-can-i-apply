@@ -17,17 +17,17 @@
 | soka | частично | essay, recommendation, activities | cv, awards, portfolio, studyPlan, video, interview, certificates | не скачана страница вопроса эссе admissions.soka.edu/portal/essays: секция на manual-файлах, которых нет в worktree, fetch падает; вопроса и объёма в снимке нет |
 | ubc | готово | essay, activities, recommendation | cv, awards, portfolio, studyPlan, video, interview, certificates | — |
 | ntu-singapore | готово | essay, recommendation, portfolio, interview | activities, cv, awards, studyPlan, video, certificates | — |
-| bocconi | готово | — (писать нечего) | essay, activities, awards, portfolio, studyPlan, video, interview | рекомендации, мотивационные письма, CV не рассматриваются; отбор — тест и GPA |
-| nthu | — | | | |
-| uca | — | | | |
-| turkiye-burslari | — | | | |
-| tsinghua-university | — | | | |
-| nccu | — | | | |
-| qatar-university | — | | | |
-| romania-gov | — | | | |
-| sophia-fla | — | | | |
-| tartu-estonia | — | | | |
-| rug | — | | | |
+| bocconi | готово | other (отборочный тест) | essay, activities, awards, portfolio, studyPlan, video, interview | рекомендации, мотивационные письма, CV не рассматриваются; отбор — тест и GPA |
+| nthu | готово | studyPlan, recommendation, essay, portfolio, video, awards, interview, other | activities, cv | — |
+| uca | готово | awards, activities, interview, certificates | essay, cv, portfolio, studyPlan, video | форма Stage 3 описана для набора 2026 — прошлый цикл |
+| turkiye-burslari | готово | essay, other (тест), interview, studyPlan | recommendation, activities, cv, awards, portfolio, video | — |
+| tsinghua-university | частично | portfolio, interview, awards | essay, recommendation, activities, cv, studyPlan, video, certificates | перечень документов (personal statement, 2 рекомендации, CV, видео) только в PDF List.pdf; секция на manual-файлах, которых нет в worktree, fetch невозможен |
+| nccu | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | письменных материалов в снимках нет; требования факультетов — в брошюре на Google Drive, домен не одобрен |
+| qatar-university | готово | recommendation, portfolio, video, interview | essay, activities, cv, studyPlan, certificates | всё только для Talent Scholarship; набор Fall 2026 — прошлый |
+| romania-gov | готово | cv, essay, other, interview | recommendation, activities, awards, portfolio, studyPlan, video, certificates | набор 2026/2027 прошёл; письмо, согласие руководителя и интервью — только докторантура |
+| sophia-fla | готово | essay, recommendation | activities, cv, awards, portfolio, studyPlan, video, interview, certificates | буклет подписан «for 2026 Entry», внутри набор 2027 |
+| tartu-estonia | готово | essay, other (тесты), interview, awards | recommendation, cv, activities, portfolio, studyPlan, video, certificates | набор 2026, требования 2027 обещают до конца декабря |
+| rug | готово | cv, essay, video | activities, awards, interview, portfolio, studyPlan, certificates | — |
 | vilnius | — | | | |
 | kazakhstan-grant | — | | | |
 | hkust | — | | | |
