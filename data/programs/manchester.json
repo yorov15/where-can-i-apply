@@ -23,7 +23,7 @@
     "living": false,
     "travel": false,
     "note": {
-      "ru": "Обучение платное, и суммы для иностранца эти страницы не называют: ставка на первый год лежит на странице каждого курса, а дальше вуз оставляет за собой право поднимать плату до 7% в год. Помощь есть, но узкая: merit-стипендия Global Futures открыта только для граждан из списка стран, и Таджикистана в нём нет; стипендия для беженцев (Humanitarian) сейчас закрыта. Поэтому помощь в карточке не отмечена"
+      "ru": "Обучение платное, и суммы для иностранца эти страницы не называют: ставка на первый год лежит на странице каждого курса, а дальше вуз оставляет за собой право поднимать плату до 7% в год. Помощь есть, но узкая: merit-стипендия Global Futures открыта только для граждан из списка стран, и Таджикистана в нём нет; стипендий Humanitarian на 2027 год всего две, и они только для тех, кого война заставила покинуть дом. Поэтому помощь в карточке не отмечена"
     }
   },
   "eligibility": {
@@ -195,8 +195,8 @@
       "kind": "money"
     },
     {
-      "ru": "Отдельная стипендия для тех, кто был вынужден покинуть дом из-за конфликта (Humanitarian), сейчас закрыта: новых награда не открыто, о будущих обещают сообщить на странице.",
-      "evidence": "There are currently no awards open for application.",
+      "ru": "Стипендия Humanitarian на 2027 год — для тех, кому пришлось покинуть дом из-за войны или конфликта. Их две, только на трёхлетний бакалавриат; покрывают обучение, жильё с питанием и визу. Подают с 3 по 30 июня 2027, уже имея безусловный оффер.",
+      "evidence": "For 2027 entry, two scholarships are available for three-year undergraduate degree programmes only",
       "field": null,
       "kind": "money"
     },
@@ -238,46 +238,50 @@
     "pages": [
       {
         "url": "https://www.manchester.ac.uk/study/international/admissions/undergraduate-application-process/undergraduate-entry-requirements/",
-        "contentHash": "sha256:2adfbcf51ec98cfd21e085fde57e4e25e82f30d3ee689d4bcd08d19984b368a5"
+        "contentHash": "sha256:cf04cea3648869299db8ebb774a355c2f677feb0b662b24bacfdd0f046241ca0"
       },
       {
         "url": "https://www.manchester.ac.uk/study/international/admissions/undergraduate-application-process/",
-        "contentHash": "sha256:6f4ac14025cc8e6c51f0e130bba823ba37dc9864e20545e56e116f647b9871ff"
+        "contentHash": "sha256:55084b8f9a3fe27f0c27ecf44135fc3e4cb0556266a140fee4f16ae88a802d39"
       },
       {
         "url": "https://www.manchester.ac.uk/study/international/admissions/language-requirements/",
-        "contentHash": "sha256:9fdf69c9f7c223f61c2ad3798a524f26e19e79d858d42af67854c23e080e40a6"
+        "contentHash": "sha256:7176f318b0d83dd5ce42a666756da3a9f1f9fc6fb65ae67c7a023f96670d2a34"
       },
       {
         "url": "https://www.manchester.ac.uk/study/international/finance-and-scholarships/",
-        "contentHash": "sha256:72946501274c7882a69703910165d20324b49c8fbc1948be63bb091a62127bc5"
+        "contentHash": "sha256:d4048e56b93ede96dd7fb1a0dc89783f0bb1f3fc7097eee90b7cd307de3d3d2d"
       },
       {
         "url": "https://www.manchester.ac.uk/study/international/finance-and-scholarships/fees/",
-        "contentHash": "sha256:19260b727955ca450a0897af2fee7795e2dca3971177777c1f7419d9497430c2"
+        "contentHash": "sha256:1edf05baf25ad2d7a0b5ae2f5fbbb669146287329315229a696735964475042a"
       },
       {
         "url": "https://www.manchester.ac.uk/study/international/finance-and-scholarships/funding/",
-        "contentHash": "sha256:965020940b0a4f64c0703fffd3bc43ff0f67f2ae803f4d729ea312502c259351"
+        "contentHash": "sha256:9b3c1ce2a5474a0b87105b25fdf31bcfdc617d0b4966e7d4c773a3ece2fc960d"
       },
       {
         "url": "https://www.manchester.ac.uk/study/international/finance-and-scholarships/funding/global-futures-scholarship/",
-        "contentHash": "sha256:c0e1257abc07a0e95b4fac52cf2bdd9162a6bd444771100dffb6f0a4a4c435eb"
+        "contentHash": "sha256:06cf9d048db46bf349682d007a5e996fab18656bc4549b8e1f18f5cef9e2356f"
       },
       {
         "url": "https://www.manchester.ac.uk/study/international/finance-and-scholarships/funding/humanitarian-scholarship/",
-        "contentHash": "sha256:20fdd10275ff8ab98a04e30dab2443dafff7d1caca5303422116fe80a1d6c399"
+        "contentHash": "sha256:2d94f28964e8fa22f03c880f1a2ee43d9ef60e10871eac46ce78c2fd1404d614"
       },
       {
         "url": "https://www.manchester.ac.uk/study/undergraduate/fees-and-funding/",
-        "contentHash": "sha256:95cb9d3e930342f872d3ea57847fb8b42c9b322905c53016205605f5d6bd7d77"
+        "contentHash": "sha256:031ea781c5b521fdc813260ca21890dd6c36ac8f6ab6cb17c4b25c982e110883"
       },
       {
         "url": "https://www.manchester.ac.uk/study/undergraduate/applying/",
-        "contentHash": "sha256:e05dc37795f7782c7377278fad6b219a6e52070548b76b8e6ecb8415b5ff82a9"
+        "contentHash": "sha256:9d21bdddbcbc4ca12c2d0564918f7aae282e1e58b8d784e5a4c187be50a16bf6"
+      },
+      {
+        "url": "https://www.manchester.ac.uk/study/undergraduate/applying/before-you-apply/",
+        "contentHash": "sha256:3ae7f72f1dca0fe3e2b8bd68e92e7d16577110aabb6c04663006fdad1f51c2b2"
       }
     ],
-    "lastVerified": "2026-09-30",
+    "lastVerified": "2026-11-26",
     "humanChecked": false,
     "approvedBy": "assistant"
   }

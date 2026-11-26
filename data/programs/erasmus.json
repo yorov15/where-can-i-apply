@@ -16,7 +16,7 @@
     "living": false,
     "travel": false,
     "note": {
-      "ru": "Стипендий для иностранца на бакалавриате нет: обе бакалаврские стипендии вуза закрыты — одна только для граждан ЕЭС, вторая только для граждан Китая. Обучение для не-ЕС стоит 13 500–32 200 евро в год, и это без жизни в Роттердаме."
+      "ru": "Стипендий для иностранца на бакалавриате не найдено: Entrepreneurial Spirit — только для граждан ЕЭС, остальные стипендии на странице вуза — для магистратуры и докторантуры. Обучение для не-ЕС стоит 13 500–32 200 евро в год, и это без жизни в Роттердаме."
     }
   },
   "eligibility": {
@@ -107,14 +107,8 @@
       "kind": "note"
     },
     {
-      "ru": "Первая из двух бакалаврских стипендий Эразмуса — Entrepreneurial Spirit Scholarship — открыта только гражданам ЕЭС. Иностранцу с таджикским паспортом она не положена.",
+      "ru": "Бакалаврская стипендия Эразмуса Entrepreneurial Spirit Scholarship открыта только гражданам ЕЭС. Иностранцу с таджикским паспортом она не положена.",
       "evidence": "Nationalities: EU/EEA",
-      "field": null,
-      "kind": "note"
-    },
-    {
-      "ru": "Вторая бакалаврская стипендия, G&D Europe, — только для граждан Китая. Остальные стипендии в списке вуза — магистратура и докторантура.",
-      "evidence": "Scholarship for Chinese students who wish to fund their Bachelor or Master at EUR.",
       "field": null,
       "kind": "note"
     },
@@ -173,26 +167,30 @@
     "pages": [
       {
         "url": "https://www.eur.nl/en/education/practical-matters/bachelor-admission-and-application",
-        "contentHash": "sha256:9f09665848a910a064f3c13cd4bf91c3e2205f09547f9055809c42955919f780"
+        "contentHash": "sha256:93bbdc37168ee89ba2439beb5746ddd1114f6b4392e1f9182abe455a3e0128e2"
       },
       {
         "url": "https://www.eur.nl/en/education/practical-matters/registration/tuition-fee",
-        "contentHash": "sha256:80fb313719fc716a05adf7f84925197f8f0ce644452a0e38480e920815c17abb"
+        "contentHash": "sha256:fe558be1ecf3cc3d6a20e3d51b0a819c6eb4585878d0521c0f4c7db4eccfb38b"
       },
       {
         "url": "https://www.eur.nl/en/education/practical-matters/scholarships-grants/students-coming-rotterdam",
-        "contentHash": "sha256:4cb542383f411218066a7a556c503e6b2cd9b19b20f1ce8c41b30cfaf9a4e546"
+        "contentHash": "sha256:7fb32ac7fe0bbe6e044848270c4c90b2be8221604f0a91f400fda091e8d42755"
       },
       {
         "url": "https://www.eur.nl/en/education/practical-matters/registration/tuition-fee/tuition-fee-2026-2027",
-        "contentHash": "sha256:ed008cf48fff49ff821328e68ed5fb9a9806506e5edfed250b3bb26e86c88b48"
+        "contentHash": "sha256:e36455cbcf46fd32ada89b472487b09201de107bafcbc6b24b91d3d8b50d1162"
       },
       {
         "url": "https://www.eur.nl/en/scholarship/entrepreneurial-spirit-scholarship",
-        "contentHash": "sha256:930a598e5ccf7b12637071cea89580cc7eaccc6b44beffd078955287c6fae84d"
+        "contentHash": "sha256:c885cbe9528eaf4361e0b4f6c4bdffc3e0a08f25d1ca7fb22ac8e157f5c8f67a"
+      },
+      {
+        "url": "https://www.eur.nl/en/bachelor/bachelor-international-business-administration/admission",
+        "contentHash": "sha256:38f44305c830aaec4f646ed1dc2651b6dc85a3601e2caf043b7b190a331f7e6f"
       }
     ],
-    "lastVerified": "2026-10-10",
+    "lastVerified": "2026-11-26",
     "humanChecked": false,
     "approvedBy": "assistant"
   }

@@ -16,7 +16,7 @@
     "living": null,
     "travel": null,
     "note": {
-      "ru": "Плата за обучение считается по доходу семьи (ISEE): чем ниже доход, тем меньше платят. Точные суммы на 2026/27 вуз обещал опубликовать после 30 сентября, поэтому на снятых страницах их нет. Для иностранцев есть Foundation Year — подготовительный год. Есть стипендии и льготы. Жильё и дорога не покрываются"
+      "ru": "Плата за обучение считается по доходу семьи (ISEE): чем ниже доход, тем меньше платят. Предельные суммы на 2026/27 остались прежними, но чисел на снятых страницах нет: они в положении о студентах. Для иностранцев есть Foundation Year — подготовительный год. Есть стипендии и льготы. Жильё и дорога не покрываются"
     }
   },
   "eligibility": {
@@ -67,8 +67,8 @@
       "kind": "steps"
     },
     {
-      "ru": "Плата зависит от дохода семьи (ISEE); точные суммы на 2026/27 вуз публикует после 30 сентября.",
-      "evidence": "Le informazioni per l'anno accademico 2026-2027 saranno pubblicate dopo il 30 settembre",
+      "ru": "Плата зависит от дохода семьи (ISEE). Предельные суммы на 2026/27 остались прежними; для дохода из-за рубежа суммы отдельные, они в положении о студентах.",
+      "evidence": "Tuition Fees depend on Personal Financial Standing (ISEE)",
       "field": null,
       "kind": "money"
     },
@@ -104,18 +104,22 @@
     "pages": [
       {
         "url": "https://www.uniroma1.it/en/pagina/applying-sapienza-international-student",
-        "contentHash": "sha256:bc54da72aa3dab5e8f4c1e4ac2e1f73e9394db047d0e35db137d38a1382491a1"
+        "contentHash": "sha256:41fa6efd67580535b8c081c7c5af45b9afa21dc451f3d85338628fcc7191f716"
       },
       {
         "url": "https://www.uniroma1.it/en/pagina/tuition-fees-and-benefits",
-        "contentHash": "sha256:5c85214a80f4fb21cf38f9e86b1ee9463ac60f10353de958be9080a0852537d4"
+        "contentHash": "sha256:0434b6a56122859f205780ad09a065b09a3513bc69b58b618b9446984f571a75"
       },
       {
         "url": "https://www.uniroma1.it/en/pagina/scholarships",
-        "contentHash": "sha256:1d73eb88c77cebc2c89a893d112bd55eb08fc945cb2edb69851b52ce12760324"
+        "contentHash": "sha256:af3644147d1f898f698724e592a20e636b327cd6aab7aeb3dd4166ee51d9ef83"
+      },
+      {
+        "url": "https://www.uniroma1.it/en/pagina/international-admissions-2026-2027",
+        "contentHash": "sha256:5a5cf905f500d19bdea64d30e3c968e3452f8dbf27555c7c6a7925ca16e51c92"
       }
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-11-26",
     "humanChecked": false,
     "approvedBy": "assistant"
   },

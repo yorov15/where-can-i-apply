@@ -16,13 +16,13 @@
     "living": false,
     "travel": false,
     "note": {
-      "ru": "Обучение платное: бакалавриат для иностранцев стоит 22 000 (гуманитарные), 24 000 (естественные и бизнес) или 28 000 (искусство и физкультура) юаней за год; BBA AEBS — 54 000 за одну степень и 108 000 за двойную, англоязычная Школа дизайна — 50 000. Сбор за заявку 800 юаней, невозвратный. Есть стипендии, которые снимают плату за обучение и часто дают общежитие, страховку и 2 500 юаней в месяц на жизнь: государственная стипендия Китая (CSC Type A, оформляется через посольство), стипендия правительства Шанхая (полная или частичная) и ECNU Excellent Freshmen; отдельная стипендия — для будущих преподавателей китайского языка. Без стипендии жильё и дорога — за свой счёт."
+      "ru": "Обучение платное, но таблицу платы вуз со страницы убрал, и сумм на 2027 год в источнике нет. Сбор за заявку 800 юаней, невозвратный. Есть стипендии, которые снимают плату за обучение и часто дают общежитие, страховку и 2 500 юаней в месяц на жизнь: государственная стипендия Китая (CSC Type A, оформляется через посольство), стипендия правительства Шанхая (полная или частичная) и ECNU Excellent Freshmen; отдельная стипендия — для будущих преподавателей китайского языка. Без стипендии жильё и дорога — за свой счёт."
     }
   },
   "eligibility": {
     "citizenship": {
       "allow": "*",
-      "evidence": "High school qualification or above with valid foreign passport."
+      "evidence": "Non-Chinese citizens holding valid foreign ordinary passports with high school graduate qualifications or above."
     },
     "schoolCountry": {
       "noLimit": true,
@@ -33,7 +33,7 @@
     },
     "schoolYears": {
       "notMeasured": true,
-      "evidence": "High school qualification or above with valid foreign passport."
+      "evidence": "Non-Chinese citizens holding valid foreign ordinary passports with high school graduate qualifications or above."
     },
     "graduationYear": {
       "noLimit": true,
@@ -53,41 +53,46 @@
       "noLimit": true,
       "evidence": null,
       "checkedBy": "assistant",
-      "checkedAt": "2026-10-01",
-      "note": "Числового минимума по среднему баллу аттестата вуз не называет: в требованиях стоит лишь «High school qualification or above with valid foreign passport», а в комплекте документов — полный школьный табель за все годы (Complete High School Transcript). Вступительный CSCA-тест тоже без минимального порога балла, его учитывают как один из ориентиров. Всё это смотрели на странице Undergraduate program."
+      "checkedAt": "2026-11-26",
+      "note": "Числового минимума по среднему баллу аттестата вуз не называет: нужен аттестат и табели за все годы старшей школы (Transcripts of All Grades/Semesters of Your Higher Secondary School). Балл CSCA учитывают как один из ориентиров при общей оценке. Смотрели страницу Undergraduate program."
     },
     "language": {
       "anyOf": [
         {
           "test": "IELTS",
           "min": 6,
-          "evidence": "IELTS (6.0 or above)"
+          "evidence": "IELTS 6.0"
         },
         {
           "test": "TOEFL_IBT",
           "min": 85,
-          "evidence": "TOFEL (85 or above)"
+          "evidence": "TOEFL 85 (0~120 scale)"
+        },
+        {
+          "test": "TOEFL_IBT_2026",
+          "min": 4,
+          "evidence": "TOEFL iBT 4.0 (0~6 scale)"
         },
         {
           "test": "HSK",
           "min": 4,
-          "evidence": "HSK-4 with a passing score of 180 or above"
+          "evidence": "a valid HSK Level 4 certificate with a score of 180 or above"
         }
       ],
-      "evidence": "Applicants of English-taught programs from non-English native speaking countries should have IELTS (6.0 or above) / TOFEL (85 or above) / Cambridge English (B2 or above) certificate."
+      "evidence": "A valid (within 2 years) English proficiency certificate: IELTS 6.0, TOEFL 85 (0~120 scale) or TOEFL iBT 4.0 (0~6 scale), or Cambridge English B2 First or above"
     },
     "exam": null
   },
   "textConditions": [
     {
       "ru": "Подать может иностранец с действующим зарубежным паспортом и полным средним образованием. Гражданство Таджикистана требованию соответствует, отказа по стране нет.",
-      "evidence": "High school qualification or above with valid foreign passport.",
+      "evidence": "Non-Chinese citizens holding valid foreign ordinary passports with high school graduate qualifications or above.",
       "field": "citizenship",
       "kind": "must"
     },
     {
       "ru": "Отдельное условие для тех, кто родился за границей в семье китайских граждан или сам раньше имел гражданство материкового Китая, Гонконга, Макао, Тайваня и получил иностранное: надо подтвердить гражданство по правилам Document No. 12 (2020) Минобразования КНР. Таджикского абитуриента это не касается.",
-      "evidence": "(1) Students who emigrate from Mainland China, Hong Kong, Macao and Taiwan and obtain the foreign nationality; (2) Students, whose parents (either or both) hold Chinese nationality and reside abroad, acquire foreign nationality at the time of birth.",
+      "evidence": "(1) Students who emigrate from the Chinese mainland, Hong Kong, China; Macao, China; and Taiwan, China and obtain foreign nationality; (2) Students whose parents (either or both) hold Chinese nationality and reside abroad, acquire foreign nationality at the time of birth.",
       "field": "citizenship",
       "kind": "note"
     },
@@ -99,13 +104,13 @@
     },
     {
       "ru": "Число лет школьного обучения вуз прямо не называет — требуется лишь аттестат о полном среднем образовании. Аттестат Таджикистана (11 классов) подходит по типу, но эквивалентность уточнять в приёмной.",
-      "evidence": "High school qualification or above with valid foreign passport.",
+      "evidence": "Non-Chinese citizens holding valid foreign ordinary passports with high school graduate qualifications or above.",
       "field": "schoolYears",
       "kind": "note"
     },
     {
       "ru": "Аттестат должен быть получен не позже 31 августа, иначе зачисление отменят; при регистрации нужен оригинал.",
-      "evidence": "The expected time to obtain the degree certificate should be earlier than August 31, and the graduation certificate must be submitted when registering.",
+      "evidence": "The expected time to obtain the graduation certificate should be earlier than August 31, and the graduation certificate must be submitted upon enrollment.",
       "field": "graduationYear",
       "kind": "note"
     },
@@ -116,46 +121,40 @@
       "kind": "must"
     },
     {
-      "ru": "Для китайскоязычных программ требуется HSK: HSK-4 (180+) — для англоязычных программ, программ Института международных исследований Китая и китайскоязычных программ Школы дизайна; HSK-5 (180+) — для остальных китайскоязычных программ; HSK-6 (180+) — для программ Школы коммуникаций.",
-      "evidence": "The students who apply for the program of English or programs in the School of International Chinese Studies or Chinese-taught programs in the School of Design should have HSK-4 with a passing score of 180 or above,and HSK-5 with a passing score of 180 or above is required for other Chinese-taught programs(programs in the School of Communication require HSK-6 with a passing score of 180 or above).",
+      "ru": "Для программ на китайском нужен HSK: уровень 4 (180+) — для программы «Английский язык», китайскоязычных программ Школы международных китаеведческих исследований и Школы дизайна; уровень 5 (180+) — для остальных. Нужный уровень по программе — в каталоге программ.",
+      "evidence": "Applicants for English, Chinese-taught programs at the School of International Chinese Studies and the School of Design are required to submit a valid HSK Level 4 certificate with a score of 180 or above; and applicants for other majors must submit an HSK Level 5 score of 180 or above.",
       "field": "language",
       "kind": "must"
     },
     {
-      "ru": "Для англоязычных программ абитуриенты из неанглоязычных стран сдают IELTS 6.0, TOEFL 85 или Cambridge English B2. Сертификат должен быть действующим (не старше 2 лет).",
-      "evidence": "Applicants of English-taught programs from non-English native speaking countries should have IELTS (6.0 or above) / TOFEL (85 or above) / Cambridge English (B2 or above) certificate.",
+      "ru": "Для англоязычных программ нужен действующий (не старше 2 лет) сертификат: IELTS 6.0, TOEFL 85 по старой шкале или TOEFL iBT 4.0 по новой (0–6), либо Cambridge English B2 First и выше. Вместо него можно приложить справку школы, что вся старшая школа шла на английском; её должен одобрить вуз.",
+      "evidence": "IELTS 6.0, TOEFL 85 (0~120 scale) or TOEFL iBT 4.0 (0~6 scale), or Cambridge English B2 First or above",
       "field": "language",
       "kind": "must"
     },
     {
       "ru": "Английский сертификат можно не сдавать, если английский родной или официальный язык страны либо есть другой равнозначный сертификат (его должен одобрить ECNU).",
-      "evidence": "Exemption of English Proficiency Certificate: (1) English is native language or official language (2) Other equivalent English proficiency certificates (must be reviewed and approved by ECNU)",
+      "evidence": "Exemption of English Proficiency Certificate: (1) English is the native language or an official language; (2) Other equivalent English proficiency certificates (must be reviewed and approved by ECNU).",
       "field": "language",
       "kind": "note"
     },
     {
-      "ru": "Нужен результат China Scholastic Competency Assessment (CSCA); набор предметов зависит от выбранной программы, смотреть в каталоге программ.",
-      "evidence": "Applicants should have China Scholastic Competency Assessment test result (CSCA) test result. Required test subjects vary by program. Please refer to the program catalog for details.",
+      "ru": "Нужен действующий результат China Scholastic Competency Assessment (CSCA). Предметы и балл зависят от программы — смотреть в каталоге программ.",
+      "evidence": "Have a valid China Scholastic Competency Assessment (CSCA) test result. Please refer to the program catalog for the required test subjects & score.",
       "field": "exam",
       "kind": "must"
     },
     {
-      "ru": "Минимального порога балла CSCA на приём 2026 нет: балл учитывают лишь как один из ориентиров академической оценки.",
-      "evidence": "There is no minimum score threshold for 2026 admission applications. The CSCA score is considered one of the references in the university's academic review and comprehensive evaluation.",
+      "ru": "Балл CSCA — один из ориентиров при общей оценке заявки. Общего порога на странице нет: нужный балл, если он есть, указан в каталоге программ.",
+      "evidence": "The CSCA score is considered one of the references in the university's academic review and comprehensive evaluation.",
       "field": "exam",
       "kind": "note"
     },
     {
-      "ru": "Числового минимума по среднему баллу аттестата вуз не называет: нужен полный школьный табель за все годы, оценку смотрят в комплексе.",
-      "evidence": "Complete High School Transcript",
+      "ru": "Числового минимума по среднему баллу аттестата вуз не называет: нужны табели за все годы старшей школы, оценки смотрят в комплексе.",
+      "evidence": "Transcripts of All Grades/Semesters of Your Higher Secondary School",
       "field": "gpa",
       "kind": "note"
-    },
-    {
-      "ru": "Плата за обучение на бакалавриате за учебный год: гуманитарные — 22 000, естественные и бизнес — 24 000, искусство и физкультура — 28 000 юаней; сбор за заявку — 800 юаней.",
-      "evidence": "Liberal Arts Science & Business Arts & PE Undergraduate Student & Visiting Student 22,000 24,000 28,000 800",
-      "field": null,
-      "kind": "money"
     },
     {
       "ru": "Заявка — 800 юаней, вносится онлайн при отправке и не возвращается.",
@@ -169,13 +168,13 @@
       }
     },
     {
-      "ru": "Стипендия правительства Шанхая: тип A — полная (освобождение от платы за обучение, общежитие, 2 500 юаней в месяц на жизнь, страховка 800 юаней в год); тип B — частичная (освобождение от обучения и страховка). Университет сам номинирует отличившихся, отдельная заявка не нужна; срок — 30 апреля 2026.",
+      "ru": "Стипендия правительства Шанхая: тип A — полная (освобождение от платы за обучение, общежитие, 2 500 юаней в месяц на жизнь, страховка 800 юаней в год); тип B — частичная (освобождение от обучения и страховка). Университет сам номинирует отличившихся, отдельная заявка не нужна; срок — 30 апреля 2027.",
       "evidence": "Shanghai Government Scholarship Type A: Full Scholarship Tuition exemption On-campus accommodation is provided Monthly stipend is provided (RMB 2,500/month for Undergraduate students) Comprehensive medical insurance for international students is provided (RMB 800 per person per year)",
       "field": null,
       "kind": "money"
     },
     {
-      "ru": "Стипендия ECNU Excellent Freshmen: прожиточные 2 500 юаней в месяц в течение 12 месяцев первого учебного года. Недоступна для совместных и англоязычных программ. Срок — 30 апреля 2026.",
+      "ru": "Стипендия ECNU Excellent Freshmen: прожиточные 2 500 юаней в месяц в течение 12 месяцев первого учебного года. Недоступна для совместных и англоязычных программ. На странице стипендии пока стоит срок прошлого цикла — 30 апреля 2026.",
       "evidence": "University will provide the scholarship winners living allowance of 2500RMB/month for 12 months of the first academic year.",
       "field": null,
       "kind": "money"
@@ -193,14 +192,14 @@
       "kind": "money"
     },
     {
-      "ru": "Стипендия для будущих преподавателей китайского языка (ICLC): освобождение от платы за обучение, общежитие, 2 500 юаней в месяц и медстраховка; отдельные требования HSK/HSKK. Срок — 15 мая 2026.",
+      "ru": "Стипендия для будущих преподавателей китайского языка (ICLC): освобождение от платы за обучение, общежитие, 2 500 юаней в месяц и медстраховка; отдельные требования HSK/HSKK. Срок — 15 мая (для начала учёбы в сентябре).",
       "evidence": "Tuition exemption On-campus accommodation is provided Monthly stipend is provided (RMB 2,500/month for Undergraduate students) Comprehensive medical insurance for international students is provided (RMB 800 per person per year)",
       "field": null,
       "kind": "money"
     },
     {
-      "ru": "Сроки набора на сентябрь 2026: CSC Type A — через посольство/консульство своей страны; стипендии правительства Шанхая и ECNU Excellent Freshmen — до 30 апреля 2026; стипендия ICLC — до 15 мая 2026; платный путь (self-financed) — до 1 июня 2026.",
-      "evidence": "Chinese Government Scholarship Type A Please consult the Chinese Embassy/Consulate in your home country for detailed info Shanghai Government Scholarship ECNU Excellent Freshmen Scholarship April 30th, 2026 International Chinese Language Teachers Scholarship May 15th, 2026 (Subject to the official announcements issued by Center for Language Education and Cooperation) Self-financed June 1st, 2026",
+      "ru": "Сроки набора на сентябрь 2027: CSC Type A — через посольство или консульство Китая в своей стране; стипендия правительства Шанхая — до 30 апреля 2027 (вуз сам выдвигает сильных, отдельной заявки нет); стипендия ICLC — до 15 мая 2027; платный путь — до 1 июня 2027.",
+      "evidence": "Shanghai Government Scholarship April 30th, 2027 The University will nominate outstanding students for the Shanghai Government Scholarship. No separate application for the scholarship is required. International Chinese Language Teachers Scholarship May 15th, 2027 Subject to the official announcements issued by Center for Language Education and Cooperation. Self-funded June 1st, 2027",
       "field": null,
       "kind": "steps"
     },
@@ -217,14 +216,14 @@
       "kind": "must"
     },
     {
-      "ru": "Самостоятельные (платные) студенты платят за обучение до 31 июля.",
-      "evidence": "For self-funded students, please pay tuition fee before July 31.",
+      "ru": "Платные студенты вносят плату за обучение до 15 июля.",
+      "evidence": "For self-funded students, please pay the tuition fee before July 15.",
       "field": null,
       "kind": "money"
     },
     {
-      "ru": "Заявка ECNU International Students Application Form: заполняется в онлайн-системе http://lxsapply.ecnu.edu.cn, при отправке оплачивается сбор 800 юаней.",
-      "evidence": "ECNU International Students Application Form Please log into the online application system at http://lxsapply.ecnu.edu.cn to fill in and pay the application fee RMB 800 online.",
+      "ru": "Заявка ECNU International Students Application Form: заполняется в онлайн-системе https://lxsapply.ecnu.edu.cn, при отправке оплачивается сбор 800 юаней.",
+      "evidence": "ECNU International Students Application Form Please log in to the online application system at https://lxsapply.ecnu.edu.cn to fill in and pay the application fee of RMB 800 online.",
       "field": null,
       "kind": "documents"
     },
@@ -235,47 +234,47 @@
       "kind": "documents"
     },
     {
-      "ru": "Полный школьный табель за все годы обучения (Complete High School Transcript).",
-      "evidence": "Complete High School Transcript",
+      "ru": "Табели за все годы или семестры старшей школы.",
+      "evidence": "Transcripts of All Grades/Semesters of Your Higher Secondary School",
       "field": null,
       "kind": "documents"
     },
     {
-      "ru": "Языковой сертификат (Language Proficiency Certificate): копия действующего (не старше 2 лет) сертификата HSK для китайскоязычных программ, либо IELTS/TOEFL/Cambridge English для англоязычных.",
-      "evidence": "Language Proficiency Certificate *For Chinese-taught programs: copy of the effective (within 2 yrs) HSK certificate.",
+      "ru": "Языковой сертификат: для программ на китайском — копия действующего (не старше 2 лет) HSK, для англоязычных — IELTS, TOEFL или Cambridge English. Вместо сертификата можно справку школы об обучении на этом языке, если вуз её одобрит.",
+      "evidence": "Language Proficiency Certificate *For Chinese-taught programs: ① A copy of the effective (within 2 years) HSK certificate.",
       "field": null,
       "kind": "documents"
     },
     {
       "ru": "Результат China Scholastic Competency Assessment (CSCA).",
-      "evidence": "China Scholastic Competency Assessment test result (CSCA)",
+      "evidence": "China Scholastic Competency Assessment (CSCA) Test Result",
       "field": null,
       "kind": "documents"
     },
     {
-      "ru": "Письмо-саморекомендация (Letter of self-recommendation) объёмом 500–800 слов с рассказом о себе, мотивации и учебном плане.",
-      "evidence": "Letter of self-recommendation Length: 500-800 words",
+      "ru": "Личное заявление (Personal Statement) на 500–800 слов на языке программы: учёба, планы и почему подаёшь в ECNU.",
+      "evidence": "Personal Statement Word count: 500-800 words",
       "field": null,
       "kind": "documents"
     },
     {
-      "ru": "Копия паспорта, включая страницу с личными данными и страницы китайской визы.",
-      "evidence": "Photocopy of passport (including personal information page and Chinese visa pages)",
+      "ru": "Страница паспорта с личными данными. Паспорт должен действовать ещё не меньше года, менять его до зачисления нельзя. Кто бывал в Китае, прикладывает копии виз и отметок о въезде.",
+      "evidence": "Valid Passport Identification Page Minimum passport validity is no less than 1 year.",
       "field": null,
       "kind": "documents"
     },
     {
-      "ru": "Гарантийное письмо опекуна (Guardian's Letter of Guarantee) — для абитуриентов младше 18 лет.",
-      "evidence": "Guardian's Letter of Guarantee is required for applicants under 18 years old.",
+      "ru": "Заявление опекуна (Guardian Statement) — для абитуриентов младше 18 лет. Бланк берут в системе заявки; опекун — гражданин Китая или иностранец, живущий в Китае.",
+      "evidence": "Guardian Statement is Required For Applicants Under 18 years old",
       "field": null,
       "kind": "documents"
     }
   ],
   "deadline": {
     "opens": null,
-    "closes": "2026-06-01",
+    "closes": "2027-06-01",
     "recurring": "annual",
-    "confidence": "expected"
+    "confidence": "confirmed"
   },
   "applyUrl": "http://lxsapply.ecnu.edu.cn/",
   "coversInstitutions": {
@@ -286,47 +285,47 @@
     }
   },
   "source": {
-    "url": "http://lxs.ecnu.edu.cn/en/admission/list.htm",
+    "url": "https://lxs.ecnu.edu.cn/en/admission/list.htm",
     "approvedBy": "assistant",
     "pages": [
       {
-        "url": "http://lxs.ecnu.edu.cn/en/admission/list.htm",
-        "contentHash": "sha256:2b09bbdcb230b2c2058ded1edf84afde6ced068dbf75bca62803d8460a946cc0"
+        "url": "https://lxs.ecnu.edu.cn/en/admission/list.htm",
+        "contentHash": "sha256:9e0b8c9a2d1e7a9d5688dc75e99d9a7ea769792ddb95f01981c3f3bbe2fa3396"
       },
       {
-        "url": "http://lxs.ecnu.edu.cn/en_admission_degree_programs_undergraduate_program/list.htm",
-        "contentHash": "sha256:fb0a88617ea3bdcfb3645bdab2aecfc75864248104b4299c415f78938d17e244"
+        "url": "https://lxs.ecnu.edu.cn/en_admission_degree_programs_undergraduate_program/list.htm",
+        "contentHash": "sha256:71c118d19813b17eddaad9d095be03bed23e1bf330a84b751747f9adc0bfda6c"
       },
       {
-        "url": "http://lxs.ecnu.edu.cn/en/scholarship/list.htm",
-        "contentHash": "sha256:0665afc5b5e7acea5a84e10045c45fccad09f634461aac59a1d271e1067a6d21"
+        "url": "https://lxs.ecnu.edu.cn/en/scholarship/list.htm",
+        "contentHash": "sha256:371b6bedc40bcf7fcc15fbb5ec30e1bd345de09f7e6d4436f5f32a9e046e6716"
       },
       {
-        "url": "http://lxs.ecnu.edu.cn/en_scholarship_undergraduate/list.htm",
-        "contentHash": "sha256:fa535aa89f907a15a5525bf112fb18e90a1bd71063c7ced4577c0589acce2332"
+        "url": "https://lxs.ecnu.edu.cn/en_scholarship_undergraduate/list.htm",
+        "contentHash": "sha256:779783eba4153eac1790b72b36b28bee979533f2b84b07244a1cdc33c0c4602b"
       },
       {
-        "url": "http://lxs.ecnu.edu.cn/en_feespayment_feelist/list.htm",
-        "contentHash": "sha256:97ac408f97a5dfa850eb83259d76434665756ee0b6a03551712b8eff96a4b15e"
+        "url": "https://lxs.ecnu.edu.cn/en_feespayment_feelist/list.htm",
+        "contentHash": "sha256:a870a31012dda51e61383f27016089be02d00125e224b4c08a6d0f6ca9215d74"
       },
       {
-        "url": "http://lxs.ecnu.edu.cn/en_scholarship_undergraduate_chinese_government_scholarship_type_a/list.htm",
-        "contentHash": "sha256:112c67568a7a7c5b997eb2af43160f70d091d9d1b6d29bfb6f2f972acbc77a92"
+        "url": "https://lxs.ecnu.edu.cn/en_scholarship_undergraduate_chinese_government_scholarship_type_a/list.htm",
+        "contentHash": "sha256:1b1e26eecc4367f6cb6fb489978fee45eb483fb5d10db247fc10133a280ceac4"
       },
       {
-        "url": "http://lxs.ecnu.edu.cn/en_scholarship_undergraduate_shanghai_government_scholarship/list.htm",
-        "contentHash": "sha256:9b7b0aa27e99d2358a85b0e5ef8a4ec1daca7cf6bda86696d2f74bd59538aefe"
+        "url": "https://lxs.ecnu.edu.cn/en_scholarship_undergraduate_shanghai_government_scholarship/list.htm",
+        "contentHash": "sha256:ea1bd59d2af67218d677abf0cc05a46a4444b8db850c93500214c9abda64691b"
       },
       {
-        "url": "http://lxs.ecnu.edu.cn/en_scholarship_undergraduate_excellent_freshmen_scholarship/list.htm",
-        "contentHash": "sha256:254916cc70dc316f072f1a5dc414d3c73d643475f61af43d61b6c584e010fe40"
+        "url": "https://lxs.ecnu.edu.cn/en_scholarship_undergraduate_excellent_freshmen_scholarship/list.htm",
+        "contentHash": "sha256:e85939c25d991480a825ec09d6a18b121ee629426fa40ab5f6e64c9499a83918"
       },
       {
-        "url": "http://lxs.ecnu.edu.cn/en_scholarship_undergraduate_international_chinese_language_teachers_scholarship/list.htm",
-        "contentHash": "sha256:cd50d6aad3e49a02770652d35b098d7f37fe9e077105c6b88d2d7bc470771ce0"
+        "url": "https://lxs.ecnu.edu.cn/en_scholarship_undergraduate_international_chinese_language_teachers_scholarship/list.htm",
+        "contentHash": "sha256:5830972a16290e1f605d62e1f0f67f3d68c4b30f0880116cb94513ebe6062f86"
       }
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-11-26",
     "humanChecked": false
   }
 }
