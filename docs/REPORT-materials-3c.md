@@ -48,16 +48,16 @@
 | finland-study | частично | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates | страновой портал: требования программ на Studyinfo.fi, домен не одобрен |
 | gyeongsang | готово | studyPlan, interview | essay, recommendation, activities, cv, awards, portfolio, video | гайд Fall 2026 — прошлый цикл |
 | heidelberg | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | требования по специальностям в Study Programme Finder, его в снимке нет |
-| hse | — | | | |
-| imd-tajikistan | — | | | |
-| istanbul-bilgi | — | | | |
-| jagiellonian-university | — | | | |
-| kangwon | — | | | |
-| khazar | — | | | |
-| kit | — | | | |
-| kookmin | — | | | |
-| kyung-hee | — | | | |
-| manas | — | | | |
+| hse | готово | other (экзамены), awards | essay, recommendation, cv, activities, portfolio, studyPlan, video, interview | набор 2026 закрыт |
+| imd-tajikistan | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | материалов не просят; набор 2026/27 прошёл |
+| istanbul-bilgi | готово | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | приём по аттестату и баллам; набор 2026–2027 прошёл |
+| jagiellonian-university | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | год набора не назван; собеседование на большинстве программ |
+| kangwon | частично | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | personal statement и учебный план только в PDF-гайде, которого нет в снимке |
+| khazar | готово | essay, cv, interview | activities, awards, portfolio, recommendation, studyPlan, video | эссе и интервью — только стипендия Nailekhanim (магистратура/докторантура); набор 2026–2027 прошёл |
+| kit | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | перечень документов только в PDF-флаере, которого нет в снимке |
+| kookmin | готово | essay, studyPlan, interview | recommendation, activities, cv, awards, portfolio, video | год набора не назван; темы и объёмы в 모집요강 вне снимка |
+| kyung-hee | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | перечень материалов только в PDF 모집요강, хост не открылся (DNS) |
+| manas | готово | other (экзамен), interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | даты 2024 — прошлый набор |
 | medipol | — | | | |
 | monash | — | | | |
 | newuu | — | | | |
