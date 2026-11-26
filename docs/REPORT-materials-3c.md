@@ -38,16 +38,16 @@
 | austria-study | готово | interview, studyPlan | essay, recommendation, activities, cv, awards, portfolio, video, certificates | страновой портал: общие правила, research proposal — PhD |
 | ajou | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | требования только в PDF Application Guideline, которого нет в снимке; набор 2026 Fall |
 | aus-uae | готово | essay, portfolio, video, recommendation | cv, interview, studyPlan, certificates | материалы только для стипендий President’s и Chancellor’s; набор Fall 2026 прошёл |
-| bhos | — | | | |
-| boston-university | — | | | |
-| chung-ang | — | | | |
-| cnu | — | | | |
-| corvinus | — | | | |
-| elte | — | | | |
-| erasmus | — | | | |
-| finland-study | — | | | |
-| gyeongsang | — | | | |
-| heidelberg | — | | | |
+| bhos | готово | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video | UG-страница — набор 2025/2026; экзамен SEC не материал |
+| boston-university | готово | essay, recommendation, interview, portfolio, video | activities, cv, awards, studyPlan, certificates | — |
+| chung-ang | готово | portfolio, essay, studyPlan, interview, video, cv, activities | recommendation, awards | гайд 2027 Spring; портфолио и видео — только Arts/Sport Sciences |
+| cnu | готово | essay, studyPlan, interview | recommendation, activities, cv, awards, portfolio, video | год набора не назван; темы и объёмы в Admissions Guide вне снимка |
+| corvinus | готово | essay, interview | recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates | мотивационное письмо только стипендиатам; собеседование — 3 BA-программы |
+| elte | частично | cv, essay | recommendation, activities, awards, portfolio, studyPlan, video, interview, certificates | только общая фраза how-to-apply; страницы требований программ 404/таймаут, Call for Applications вне снимка |
+| erasmus | частично | essay | recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates | в снимке только программа IBA; остальные программы не проверены |
+| finland-study | частично | interview | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, certificates | страновой портал: требования программ на Studyinfo.fi, домен не одобрен |
+| gyeongsang | готово | studyPlan, interview | essay, recommendation, activities, cv, awards, portfolio, video | гайд Fall 2026 — прошлый цикл |
+| heidelberg | частично | — | essay, recommendation, activities, cv, awards, portfolio, studyPlan, video, interview, certificates, other | требования по специальностям в Study Programme Finder, его в снимке нет |
 | hse | — | | | |
 | imd-tajikistan | — | | | |
 | istanbul-bilgi | — | | | |
