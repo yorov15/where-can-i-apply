@@ -21,6 +21,7 @@ import { renderApplications } from './application-view.js';
 import { renderInterview, interviewEntry } from './interview-view.js';
 import { balanceWarnings, visibleBalance } from './balance.js';
 import { renderApplicationNotes } from './application-notes-view.js';
+import { renderNero } from './mentor-view.js';
 
 const PHASES = [
   ['tests', 'Экзамены'],
@@ -508,7 +509,7 @@ function emptyNotice({ prepared, failed, onRetry }) {
 
 // Разделы «Моего пути». «Сегодня» — отдельный экран (#today), но для человека
 // это первый раздел пути: одна строка вкладок на обоих экранах.
-const PATH_SECTIONS = [['today', 'Сегодня', '#today'], ['preparation', 'Подготовка', '#route/preparation'],
+const PATH_SECTIONS = [['today', 'Сегодня', '#today'], ['nero', 'Nero', '#route/nero'], ['preparation', 'Подготовка', '#route/preparation'],
   ['applications', 'Заявки', '#route/applications'], ['works', 'Портфолио', '#route'],
   ['interview', 'Собеседование', '#route/interview'], ['files', 'Файл и данные', '#route/files']];
 export function pathNav(current) {
@@ -526,7 +527,7 @@ export function pathNav(current) {
 const openedGoals = new Set();
 export function routeSection(hash) {
   const section = hash.split('/')[1];
-  return ['preparation', 'applications', 'interview', 'files'].includes(section) ? section : 'works';
+  return ['nero', 'preparation', 'applications', 'interview', 'files'].includes(section) ? section : 'works';
 }
 
 export function renderRoute(root, props) {
@@ -540,6 +541,11 @@ export function renderRoute(root, props) {
   const section = routeSection(location.hash);
   root.dataset.layer = section;
   root.append(pathNav(section));
+  // Вкладка Nero: наставник недели, чат и куда ещё зовут Nero (js/mentor-view.js).
+  if (section === 'nero') {
+    renderNero(root, props);
+    return;
+  }
   // «Собери факты» — справочник: в «Подготовке» он стоит после дел, чтобы первый шаг был на первом экране.
   let materials=null;
   if(section==='preparation') {

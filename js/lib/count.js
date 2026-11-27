@@ -7,7 +7,7 @@
 // число людей, а не нажатий. Отметка «уже посчитан» лежит здесь же, в
 // localStorage, и личного в ней ничего нет.
 export const COUNT_KEY = 'nerio-counted';
-export const COUNTED_STEPS = ['check-done', 'plan-added', 'link-shared', 'mentor-asked', 'mentor-step', 'returned-7d'];
+export const COUNTED_STEPS = ['check-done', 'plan-added', 'link-shared', 'mentor-asked', 'mentor-step', 'nero-chat', 'returned-7d'];
 // День первой проверки (только дата, без времени) — чтобы понять, вернулся ли
 // человек через неделю. Лежит рядом с отметкой счёта, личного в нём нет.
 export const COUNT_SINCE_KEY = 'nerio-counted-since';
