@@ -97,7 +97,7 @@ function lineProblem(line,input,allowed,sources){
   for(const match of text.matchAll(QUOTE)){
     const quoted=match[1]??match[2]??match[3]??match[4]??'',words=wordCount(quoted),norm=plain(quoted);
     const fromDraft=Boolean(norm)&&sources.draft.includes(norm),fromPrompt=Boolean(norm)&&sources.prompt.includes(norm);
-    if(!fromDraft&&!fromPrompt&&words>=ESSAY_LIMITS.quoteWords)return `rewrite quote ${words} words: ${quoted.slice(0,60)}`;
+    if(!fromDraft&&!fromPrompt&&words>ESSAY_LIMITS.quoteWords)return `rewrite quote ${words} words: ${quoted.slice(0,60)}`;
     if(fromDraft&&!fromPrompt&&words>ESSAY_LIMITS.draftQuoteWords)return `long draft quote ${words} words`;
     if(fromDraft||fromPrompt)own=own.replace(match[0],' ');
   }
@@ -115,6 +115,18 @@ function lineProblem(line,input,allowed,sources){
   }
   return '';
 }
+
+// Имя автора из «меня зовут…» / «my name is…»: отзыв не должен его повторять,
+// даже когда советует убрать его из черновика. Найденное заменяем многоточием.
+const NAME_INTRO=/(?:меня зовут|моё имя|мое имя|my name is|i am|i'm)\s+((?:[A-ZА-ЯЁ][\p{L}'-]+\s*){1,3})/giu;
+export function draftNames(draft){
+  const names=new Set();
+  for(const match of String(draft??'').matchAll(NAME_INTRO))
+    for(const word of match[1].trim().split(/\s+/))if(/^[A-ZА-ЯЁ]/u.test(word)&&word.length>=3)names.add(word.replace(/['-]+$/,''));
+  return [...names];
+}
+const LETTER=String.raw`\p{L}`;
+const hideNames=(line,names)=>names.reduce((text,name)=>text.replace(new RegExp(`(?<!${LETTER})${name}(?!${LETTER})`,'giu'),'…'),line);
 
 // Разбор ответа модели: { feedback } или { reason } — почему ответ не годится.
 // input — то же, что ушло модели (essayInput). Без него разрешены только
@@ -144,7 +156,8 @@ export function inspectEssayFeedback(text,input={}){
       const norm=plain(line);if(seen.has(norm))return no(`${key}: repeated line`);seen.add(norm);
     }
   }
-  return {feedback:Object.fromEntries(keys.map(key=>[key,value[key].map(line=>line.trim())])),reason:''};
+  const names=draftNames(input.draft);
+  return {feedback:Object.fromEntries(keys.map(key=>[key,value[key].map(line=>hideNames(line.trim(),names))])),reason:''};
 }
 
 export const parseEssayFeedback=(text,input)=>inspectEssayFeedback(text,input).feedback;

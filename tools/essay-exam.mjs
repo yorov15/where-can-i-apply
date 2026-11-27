@@ -38,7 +38,8 @@ export function judge(item, input, status, json) {
   if (status !== 200 || !json?.feedback) return `fail ${status} ${json?.error ?? ''}`.trim();
   const { feedback, reason } = inspectEssayFeedback(JSON.stringify(json.feedback), input);
   if (!feedback) return `invented: ${reason}`;
-  const text = Object.values(feedback).flat().join('\n');
+  // Имя и контакты ищем в том, что вернула функция, а не в повторно проверенном тексте.
+  const text = Object.values(json.feedback).flat().join('\n');
   if (item.mustNotContain && new RegExp(item.mustNotContain, 'i').test(text)) return `invented: has ${text.match(new RegExp(item.mustNotContain, 'i'))[0]}`;
   if (item.mustMention && !new RegExp(item.mustMention, 'i').test(text)) return 'missed: no mention of the main problem';
   return 'pass';

@@ -152,3 +152,13 @@ test('local contact warning finds email, phone, link and nick, but not plain num
   assert.deepEqual(draftContacts('В 2025 году я набрал 1500 знаков и 3 призовых места.'),[]);
   assert.deepEqual(draftContacts('My blog is at rustam.tj'),['ссылка']);
 });
+
+test('имя автора из «меня зовут» не повторяется в отзыве, даже в цитате',async()=>{
+  const {draftNames,inspectEssayFeedback}=await import('../api/_essay-core.js');
+  const draft='Меня зовут Фаррух Назаров, я учусь в лицее. My name is Ali.';
+  assert.deepEqual(draftNames(draft),['Фаррух','Назаров','Ali']);
+  const fb={response:['Убери «Меня зовут Фаррух Назаров» из начала текста, это лишнее.'],structure:['Ход мысли понятен, но не хватает деталей про спор.'],questions:['Что ты почувствовал, когда Фаррух предложил план?']};
+  const out=inspectEssayFeedback(JSON.stringify(fb),{draft,prompt:'Tell us',requirements:[]}).feedback;
+  assert.ok(out);
+  assert.doesNotMatch(JSON.stringify(out),/Фаррух|Назаров/);
+});
