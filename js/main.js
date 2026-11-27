@@ -7,7 +7,7 @@ import { setupTabbar } from './tabbar.js';
 import { setupPriority } from './priority.js';
 import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocument, loadEssaySpec, forgetConditions } from './data.js';
 import { renderResults } from './render.js';
-import { countStep, COUNT_KEY } from './lib/count.js';
+import { countStep, countReturn, COUNT_KEY, COUNT_SINCE_KEY } from './lib/count.js';
 import { TIPS_KEY, readSeen, markSeen, tipFor, renderTip } from './screen-tips.js';
 import { MENTOR_KEY, MENTOR_PER_DAY, MENTOR_ERRORS, askMentor, mentorUsage, savedMentorPlan } from './mentor.js';
 import { STEP_KEY, STEP_PER_DAY, STEP_ERRORS, askStepMentor, stepUsage, stepRequest, savedStepAnswer } from './mentor-step.js';
@@ -855,7 +855,7 @@ finishButton.addEventListener('click', (event) => {
   }
   wizard.end();
   finished = true;
-  countStep('check-done');
+  countStep('check-done', { today });
   location.hash = 'programs';
   syncScreen();
 }, true);
@@ -941,6 +941,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
     localStorage.removeItem(DONE_KEY);
     localStorage.removeItem(ROUTE_STATE_KEY);
     localStorage.removeItem(COUNT_KEY);
+    localStorage.removeItem(COUNT_SINCE_KEY);
     localStorage.removeItem(TIPS_KEY);
     localStorage.removeItem(MENTOR_KEY);
     localStorage.removeItem(STEP_KEY);
@@ -1024,3 +1025,7 @@ loadIndex()
     showLoadError();
     if (/^#(route|today)(\/|$)/.test(location.hash)) renderRouteView();
   });
+
+// Счёт «вернулся через неделю»: скрипт статистики Vercel грузится после этого
+// модуля, поэтому ждём загрузки страницы.
+window.addEventListener('load', () => countReturn({ today }), { once: true });
