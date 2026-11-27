@@ -3,8 +3,9 @@
 
 // screen — document.body.dataset.screen; landing — на «Сегодня» стоит первый экран.
 // На анкете и на первом экране кнопка мешала бы главному действию.
-export function fabShown({ screen, landing = false, enabled = true }) {
-  if (!enabled || !screen || screen === 'profile' || screen === 'start') return false;
+// nero — открыта вкладка Nero: чат уже на экране, а кнопка закрывала бы «Отправить».
+export function fabShown({ screen, landing = false, enabled = true, nero = false }) {
+  if (!enabled || nero || !screen || screen === 'profile' || screen === 'start') return false;
   return !(screen === 'today' && landing);
 }
 

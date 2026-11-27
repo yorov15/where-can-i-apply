@@ -7,6 +7,7 @@ test('кнопки нет на анкете, на первом экране и �
   assert.equal(fabShown({ screen: 'start' }), false);
   assert.equal(fabShown({ screen: 'today', landing: true }), false);
   assert.equal(fabShown({ screen: undefined }), false);
+  assert.equal(fabShown({ screen: 'route', nero: true }), false, 'the Nero tab has the chat itself');
 });
 
 test('кнопка есть в каталоге, на программе, на «Сегодня» и в «Моём пути»', () => {

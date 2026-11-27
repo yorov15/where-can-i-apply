@@ -100,7 +100,7 @@ export function setupAiFab({ fab, panel, programBody, todayBody, routeBody, enab
 
   function sync() {
     const screen = document.body.dataset.screen;
-    const shown = fabShown({ screen, landing: Boolean(todayBody.querySelector('.start-space')), enabled });
+    const shown = fabShown({ screen, landing: Boolean(todayBody.querySelector('.start-space')), enabled, nero: screen === 'route' && location.hash === NERO_HASH });
     fab.hidden = !shown;
     if (!shown && panel.open) hide();
     if (!pending) return;

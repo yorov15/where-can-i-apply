@@ -16,4 +16,4 @@ export const MENTOR_STEP_ON = true;
 // вкладке Nero. Пока false, поля ввода нет: вместо него «Чат с Nero скоро
 // заработает», быстрые кнопки работают. Включать после того, как серверная
 // ветка выложит режим chat и пройдёт свой экзамен.
-export const CHAT_ON = false;
+export const CHAT_ON = true;

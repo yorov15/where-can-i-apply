@@ -72,9 +72,9 @@ test('chat goes to Go deepseek-v4.1-flash in JSON mode with facts from data and 
   assert.doesNotMatch(JSON.stringify(sent.body), /deviceId|0000-4000|paid-test-model/);
 });
 
-test('chat-status: off by default, on with CHAT_ENABLED=1 and the Go key; extra fields rejected; never calls a model', async () => {
+test('chat-status: on with the Go key (CHAT_PUBLIC), off without it; extra fields rejected; never calls a model', async () => {
   const before = requests.length;
-  assert.deepEqual((await call({ mode: 'chat-status' })).json, { available: false });
+  assert.deepEqual((await call({ mode: 'chat-status' })).json, { available: true });
   process.env.CHAT_ENABLED = '1';
   try {
     assert.deepEqual((await call({ mode: 'chat-status' })).json, { available: true });

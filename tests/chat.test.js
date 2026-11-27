@@ -18,8 +18,8 @@ const inputFor = (over = {}) => { const req = chatInput(body(over)); return buil
 const reply = (answer) => JSON.stringify({ answer });
 const inspect = (answer, input = inputFor()) => inspectChatAnswer(reply(answer), input);
 
-test('the switch for people is off until the exam passes', () => {
-  assert.equal(CHAT_PUBLIC, false);
+test('the switch for people is on: the live exam passed 12 of 12 with nothing invented (27.11.2026)', () => {
+  assert.equal(CHAT_PUBLIC, true);
 });
 
 test('chatInput accepts the contract and rejects extra or broken fields', () => {

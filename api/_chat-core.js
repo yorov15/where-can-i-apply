@@ -15,7 +15,7 @@ import { draftNames } from './_essay-core.js';
 // Чат выключен для людей, пока экзамен (tools/chat-exam.mjs) не дал EXAM-OK:
 // chat-status скажет «да», только когда здесь true (или в Vercel CHAT_ENABLED=1)
 // и подключён ключ Go. Сам режим chat отвечает при ключе Go — для экзамена.
-export const CHAT_PUBLIC = false;
+export const CHAT_PUBLIC = true;
 
 // perDevice — 20 вопросов в сутки на устройство; perIp — за 10 минут с одного
 // адреса (класс за одним NAT); daily — на экземпляр функции (CHAT_DAILY_LIMIT).
