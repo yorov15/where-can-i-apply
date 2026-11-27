@@ -4,6 +4,7 @@ import { setupWizard } from './steps.js';
 import { setupCatalogFilter } from './filter.js';
 import { setupBarHide } from './barscroll.js';
 import { setupTabbar } from './tabbar.js';
+import { setupAiFab } from './ai-fab.js';
 import { setupPriority } from './priority.js';
 import { loadIndex, loadDetails, loadConditions, loadRoute, loadTrack, loadDocument, loadEssaySpec, forgetConditions } from './data.js';
 import { renderResults } from './render.js';
@@ -215,6 +216,9 @@ const tabbar = setupTabbar({
     window.scrollTo({ top: 0 });
   },
 });
+
+// «Спросить ИИ»: одна кнопка на оба режима, сама следит за экраном.
+setupAiFab({ fab: document.getElementById('ai-fab'), panel: document.getElementById('ai-panel'), programBody, todayBody, enabled: Boolean(EXPLAIN_URL), mentorOn: MENTOR_ON });
 
 // План живёт отдельно от анкеты: анкету можно поправить, не потеряв отмеченное.
 let routeState = loadRouteState(localStorage);

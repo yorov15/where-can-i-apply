@@ -31,6 +31,8 @@
 <link rel="modulepreload" href="js/lib/kinds.js">
 <link rel="modulepreload" href="js/barscroll.js">
 <link rel="modulepreload" href="js/tabbar.js">
+<link rel="modulepreload" href="js/ai-fab.js">
+<link rel="modulepreload" href="js/lib/ai-fab.js">
 <link rel="modulepreload" href="js/start-view.js">
 <link rel="modulepreload" href="js/today-view.js">
 <link rel="modulepreload" href="js/priority.js">
@@ -407,6 +409,16 @@
   </section>
 <noscript><p>Проверке анкеты нужен JavaScript. <a href="programs/">Открой каталог университетов и стипендий без JavaScript</a>.</p></noscript>
 </main>
+
+<button type="button" id="ai-fab" class="button button-small ai-fab" aria-haspopup="dialog" aria-expanded="false" aria-controls="ai-panel" hidden>Спросить ИИ</button>
+<dialog id="ai-panel" class="ai-panel" aria-labelledby="ai-panel-title">
+  <div class="ask-actions"><h2 id="ai-panel-title">Спросить ИИ</h2><button type="button" class="button button-quiet button-small" data-ai-close>Закрыть</button></div>
+  <fieldset class="proof-pick"><legend class="sr-only">Режим</legend>
+    <label class="chip"><input type="radio" name="ai-mode" value="explain">Объяснить</label>
+    <label class="chip"><input type="radio" name="ai-mode" value="mentor">Наставник</label>
+  </fieldset>
+  <div data-ai-body></div>
+</dialog>
 
 <footer class="site-footer">
   <nav aria-label="О сайте">
