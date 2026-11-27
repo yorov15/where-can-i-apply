@@ -1,9 +1,9 @@
 import { plural } from './lib/format.js';
 export const ESSAY_USAGE_KEY='nerio-essay-usage';
 export const ESSAY_DEVICE_KEY='nerio-essay-device';
-export const ESSAY_ERRORS={rate:'Лимит проверок исчерпан. Попробуй завтра.',off:'Бесплатная проверка сейчас недоступна. Пользуйся чек-листом.',
-  model:'Модель не вернула пригодный отзыв. Черновик остался в поле.',network:'Не получилось связаться. Черновик остался в поле.',
-  storage:'В этом браузере ИИ-проверка недоступна. Чек-лист работает.',restricted:'У этой программы есть ограничения на такую проверку.',invalid:'Вставь черновик длиной от 40 до 10 000 знаков.'};
+export const ESSAY_ERRORS={rate:'Лимит проверок исчерпан. Попробуй завтра.',off:'Проверка наставником сейчас недоступна. Пользуйся чек-листом.',
+  model:'Наставник не дал отзыва, который прошёл проверку. Черновик остался в поле.',network:'Не получилось связаться. Черновик остался в поле.',
+  storage:'В этом браузере проверка наставником недоступна. Чек-лист работает.',restricted:'У этой программы есть ограничения на такую проверку.',invalid:'Вставь черновик длиной от 40 до 10 000 знаков.'};
 const localDay=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
 export async function essayAvailable(url,fetchImpl=fetch){
   if(!url)return false;
@@ -12,6 +12,18 @@ export async function essayAvailable(url,fetchImpl=fetch){
 }
 export function essayUsage(storage=localStorage,today=localDay()) {
   try{const raw=JSON.parse(storage.getItem(ESSAY_USAGE_KEY)??'null');return raw?.day===today&&Number.isInteger(raw.count)&&raw.count>=0?Math.min(3,raw.count):0;}catch{return 0;}
+}
+// Дешёвая проверка перед отправкой: почта, телефон, ссылка или ник в тексте.
+// Имена так не найти, поэтому о них просто напоминаем.
+export function draftContacts(text) {
+  const mail=/[^\s@]+@[^\s@]+\.[^\s@]{2,}/g,found=[];
+  let value=String(text??'');
+  if(mail.test(value))found.push('почта');
+  value=value.replace(mail,' ');
+  if((value.match(/\+?\d[\d\s().-]{7,}\d/g)??[]).some(match=>(match.match(/\d/g)??[]).length>=9))found.push('телефон');
+  if(/https?:\/\/|www\.|\b[a-z0-9-]+\.(?:com|ru|org|net|edu|tj|io|me|uz|kz|kg|info)\b/i.test(value))found.push('ссылка');
+  if(/(?:^|\s)@[a-z0-9_]{4,}/i.test(value))found.push('ник');
+  return found;
 }
 export function draftSize(text) {return {words:text.trim()?text.trim().split(/\s+/u).length:0,characters:Array.from(text).length,bytes:new TextEncoder().encode(text).length};}
 // Границы берём только из данных программы: words/characters/bytes проверены
@@ -45,7 +57,8 @@ export async function askEssay({programId,essayId,draft},{url,storage=localStora
       const value=JSON.stringify({day:today,count:count+1});storage.setItem(ESSAY_USAGE_KEY,value);
       if(storage.getItem(ESSAY_USAGE_KEY)!==value)fail('storage');
     }catch(error){if(error.kind)throw error;fail('storage');}
-    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),45000);
+    // Функция ждёт модель до 42 с и живёт до 50 (vercel.json): браузер ждёт столько же.
+    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),50000);
     try{
       const response=await fetchImpl(url,{method:'POST',headers:{'Content-Type':'application/json'},signal:controller.signal,
         body:JSON.stringify({mode:'essay',programId,essayId,draft,deviceId})});
