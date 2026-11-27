@@ -93,7 +93,7 @@ test('a grounded Russian review passes: draft quotes, numbers from size and limi
   const result=verdict(good);assert.equal(result.reason,'');assert.deepEqual(result.feedback,good);
   assert.deepEqual(parseEssayFeedback(JSON.stringify(good),englishInput),good);
   assert.ok(verdict('```json\n'+JSON.stringify(good)+'\n```').feedback,'json fence is tolerated');
-  assert.equal(ESSAY_PUBLIC,false,'switch-on only after the exam, see docs/ESSAY-SWITCH-ON.md');
+  assert.equal(ESSAY_PUBLIC,true,'switched on 27.11.2026 after the live exam: 10 of 10, 0 invented');
 });
 test('rewrites and ready paragraphs are rejected with a reason',()=>{
   assert.match(reasonFor({structure:['Начало лучше сделать живым: «Когда я впервые собрал робота, я понял, что инженерия — это терпение».']}),/rewrite quote|first person/);
@@ -161,4 +161,13 @@ test('имя автора из «меня зовут» не повторяетс
   const out=inspectEssayFeedback(JSON.stringify(fb),{draft,prompt:'Tell us',requirements:[]}).feedback;
   assert.ok(out);
   assert.doesNotMatch(JSON.stringify(out),/Фаррух|Назаров/);
+});
+
+test('«I am sure that AUCA» и название вуза из вопроса — не имя автора',async()=>{
+  const {draftNames,inspectEssayFeedback}=await import('../api/_essay-core.js');
+  assert.deepEqual(draftNames('I am sure that AUCA will help me. I am Bakhtiyor.'),[]);
+  const draft='Меня зовут Азиз. Я хочу учиться в AUCA.';
+  const fb={response:['Почему именно AUCA, в черновике сказано общими словами.'],structure:['Ход мысли понятен, но не хватает деталей про цели.'],questions:['Что ты будешь делать в AUCA в первый год?']};
+  const out=inspectEssayFeedback(JSON.stringify(fb),{draft,prompt:'Why AUCA?',requirements:[]}).feedback;
+  assert.match(out.response[0],/AUCA/);
 });

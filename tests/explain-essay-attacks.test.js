@@ -34,10 +34,10 @@ const withKeys=async(keys,fn)=>{const saved={go:process.env.OPENCODE_API_KEY,rou
   if(keys.router)process.env.OPENROUTER_API_KEY=keys.router;else delete process.env.OPENROUTER_API_KEY;
   try{return await fn();}finally{process.env.OPENCODE_API_KEY=saved.go;process.env.OPENROUTER_API_KEY=saved.router;}};
 
-test('the code switch is off: essay-status says no to people, yet the essay mode answers for the exam',async()=>{
-  assert.equal(ESSAY_PUBLIC,false);
+test('the code switch is on: essay-status offers the mode with the Go key and the essay mode answers',async()=>{
+  assert.equal(ESSAY_PUBLIC,true);
   const before=modelCalls;
-  assert.deepEqual((await call({mode:'essay-status'})).json,{available:false});
+  assert.deepEqual((await call({mode:'essay-status'})).json,{available:true});
   assert.equal(modelCalls,before,'status never calls a model');
   const result=await call(input());
   assert.equal(result.status,200);assert.deepEqual(result.json,{feedback});

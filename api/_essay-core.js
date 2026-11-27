@@ -11,7 +11,7 @@
 // кнопку показывает только «essay-status», а он скажет «да», лишь когда здесь
 // true (или в Vercel ESSAY_REVIEW_ENABLED=1). Переключать после экзамена,
 // см. docs/ESSAY-SWITCH-ON.md.
-export const ESSAY_PUBLIC=false;
+export const ESSAY_PUBLIC=true;
 
 // perIp — на 10 минут; 12, чтобы экзамен из 10 черновиков прошёл с одного адреса,
 // а люди за одним NAT не мешали друг другу. На устройство всё равно 3 в день.
@@ -118,7 +118,8 @@ function lineProblem(line,input,allowed,sources){
 
 // Имя автора из «меня зовут…» / «my name is…»: отзыв не должен его повторять,
 // даже когда советует убрать его из черновика. Найденное заменяем многоточием.
-const NAME_INTRO=/(?:меня зовут|моё имя|мое имя|my name is|i am|i'm)\s+((?:[A-ZА-ЯЁ][\p{L}'-]+\s*){1,3})/giu;
+// Без флага i: имя — только слова с заглавной. «I am sure that AUCA» не годится как признак.
+const NAME_INTRO=/(?:[Мм]еня зовут|[Мм]о[её] имя|[Mm]y name is)\s+((?:[A-ZА-ЯЁ][\p{L}'-]+\s*){1,3})/gu;
 export function draftNames(draft){
   const names=new Set();
   for(const match of String(draft??'').matchAll(NAME_INTRO))
@@ -156,7 +157,8 @@ export function inspectEssayFeedback(text,input={}){
       const norm=plain(line);if(seen.has(norm))return no(`${key}: repeated line`);seen.add(norm);
     }
   }
-  const names=draftNames(input.draft);
+  // Слово из вопроса программы (название вуза и т. п.) — не имя автора.
+  const names=draftNames(input.draft).filter(name=>!` ${sources.prompt} `.includes(` ${plain(name)} `));
   return {feedback:Object.fromEntries(keys.map(key=>[key,value[key].map(line=>hideNames(line.trim(),names))])),reason:''};
 }
 
