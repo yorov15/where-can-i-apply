@@ -13,6 +13,7 @@ import { pendingPractice } from './portfolio-learning.js';
 import { VALUE_TITLE, ENTRY_STEPS, catalogLine } from './start-view.js';
 import { renderRecommenderToday } from './recommenders-view.js';
 import { stepRow, pathNav } from './route-view.js';
+import { countryName } from './filter.js';
 
 const DAYS = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 const shift = (day, n) => new Date(Date.parse(`${day}T00:00:00Z`) + n * 86400000).toISOString().slice(0, 10);
@@ -79,15 +80,26 @@ export function todayModel({ route, routeState, weekly, study, today, todayFocus
   // Когда в плане недели пусто, «Сегодня» не должен говорить «дел нет»:
   // у цели есть дела со сроками (документы, деньги, вопросы вузу), просто
   // ни одно не попало в неделю. Показываем три ближайших по сроку.
-  const upcoming = (route?.steps ?? [])
+  const byDue = (route?.steps ?? [])
     .filter(step => !step.done && step.kind !== 'apply')
     .map((step, order) => ({ step, order }))
     .sort((a, b) => (a.step.due ?? '9999').localeCompare(b.step.due ?? '9999') || a.order - b.order)
-    .slice(0, 3)
     .map(item => item.step);
+  const upcoming = byDue.slice(0, 3);
+  // Очередь — одна на все цели: дела по сроку, кроме того, что уже стоит «Сейчас».
+  const queue = byDue.filter(step => step.id !== next?.routeId).slice(0, 4);
+
+  // Цели — по строке: страна, срок подачи и сколько дел осталось. Подробности — в «Заявках».
+  const goals = (route?.goals ?? []).map(goal => {
+    const entry = statusOf(routeState, goal.id), progress = goalProgress(route, goal.id);
+    const closes = goal.deadline?.closes && goal.deadline.state !== 'closed' ? goal.deadline.closes : null;
+    return { id: goal.id, name: shortName(goal.name), country: goal.country ? countryName(goal.country) : null,
+      closes, days: closes ? daysBetween(today, closes) : null, expected: goal.deadline?.confidence !== 'confirmed', left: progress.missing.length,
+      sent: isSent(entry.status), status: entry.status, line: progressLine(progress, entry) };
+  }).sort((a, b) => Number(a.sent) - Number(b.sent) || (a.closes ?? '9999').localeCompare(b.closes ?? '9999'));
 
   return {
-    upcoming,
+    upcoming, queue, goals,
     openSteps: (route?.steps ?? []).filter(step => !step.done && step.kind !== 'apply').length,
     offerActions:applicationActions(routeState,today),
     nearest,
@@ -313,26 +325,48 @@ function applicationsBlock(model) {
   return box;
 }
 
-function upcomingBlock(model, handlers) {
+function queueBlock(model, handlers, first) {
   const box = el('section', 'route-week');
   box.dataset.upcoming = '';
-  if (!model.upcoming.length) {
+  if (!model.queue.length) {
     box.append(el('p', 'route-detail', 'Все дела по целям отмечены. Осталось подать заявку до срока.'));
     return box;
   }
-  box.append(el('h3', 'route-phase-title', 'Ближайшие дела'),
-    el('p', 'route-detail', 'Взяты по срокам твоих целей. Отметь галочкой, когда сделаешь.'));
+  box.append(el('h3', 'route-phase-title', first ? 'Ближайшие дела' : 'Дальше по срокам'),
+    el('p', 'route-detail', 'Одна очередь на все цели, по сроку. Отметь галочкой, когда сделаешь.'));
   const list = el('ol', 'route-week-list');
-  model.upcoming.forEach((step, index) => {
-    const item = el('li', index === 0 ? 'route-week-item route-week-now' : 'route-week-item');
+  model.queue.forEach((step, index) => {
+    const item = el('li', first && index === 0 ? 'route-week-item route-week-now' : 'route-week-item');
     item.append(stepRow(step, `today-${index}`, { tracks: null, onToggle: handlers.onToggle, compact: true }));
     list.append(item);
   });
   box.append(list);
-  if (model.openSteps > model.upcoming.length) {
+  if (model.openSteps > model.queue.length) {
     const all = el('a', 'link-button', `Все дела (${model.openSteps}) — в «Подготовке»`);
     all.href = '#route/preparation';
     box.append(all);
+  }
+  return box;
+}
+
+// Цели свёрнутыми строками: раскрыл — увидел, что осталось, и ссылку на заявку.
+function goalsBlock(model) {
+  if (!model.goals.length) return null;
+  const box = el('section', 'route-week');
+  box.dataset.goals = '';
+  box.append(el('h3', 'route-phase-title', `Мои цели (${model.goals.length})`));
+  for (const goal of model.goals) {
+    const row = el('details', 'fold');
+    row.dataset.goal = goal.id;
+    const when = goal.sent ? GOAL_STATUSES.find(([code]) => code === goal.status)[1]
+      : goal.closes ? `подача до ${formatDate(goal.closes)}${goal.expected ? ' (ожидаемо)' : ''}, через ${goal.days} ${plural(goal.days, 'день', 'дня', 'дней')}` : 'срок не назван';
+    const left = goal.sent ? '' : ` · осталось ${goal.left} ${plural(goal.left, 'дело', 'дела', 'дел')}`;
+    row.append(el('summary', null, [goal.name, goal.country, when].filter(Boolean).join(' · ') + left),
+      el('p', 'route-goal-meta', goal.line));
+    const open = el('a', 'link-button', 'Материалы и статус — в «Заявках»');
+    open.href = '#route/applications';
+    row.append(open, el('p'));
+    box.append(row);
   }
   return box;
 }
@@ -392,29 +426,29 @@ export function renderToday(root, props) {
   const page = el('header', 'page-heading');
   page.append(el('h2', null, 'Мой путь'));
   root.append(page, pathNav('today'));
+  // Счёт дней до подачи живёт в строках целей ниже: над делом он отодвигал само дело.
   const head = el('header', 'today-head');
-  if (model.nearest) {
-    const count = el('p', 'pill');
-    count.append(el('b', null, `${model.daysToNearest} ${plural(model.daysToNearest, 'день', 'дня', 'дней')}`), ` до подачи в ${shortName(model.nearest.name)}`);
-    head.append(count);
-  }
   head.append(el('h3', 'today-title', 'Что сделать сегодня'));
   root.append(head);
   const offers=renderOfferActions(model.offerActions,props);if(offers)root.append(offers);
   const letters=renderRecommenderToday(props);if(letters)root.append(letters);
   const review = props.weekly ? renderWeekReview(props.weekly.review, handlers) : null;
   if (review) root.append(review);
-  if (model.week?.tasks.length) root.append(nowCard(model, props));
+  const now = Boolean(model.week?.tasks.length);
+  if (now) root.append(nowCard(model, props));
+  if (route && (!model.offerActions.length || model.queue.length)) root.append(queueBlock(model, handlers, !now));
   const mentor = model.week ? mentorBlock(model, props) : null;
   if (mentor) root.append(mentor);
-  else if(!model.offerActions.length)root.append(upcomingBlock(model, handlers));
+  const goals = goalsBlock(model);
+  if (goals) root.append(goals);
   if (model.week?.tasks.length) {
     const week = el('details', 'fold');
     week.append(el('summary', null, `Вся неделя · ${model.doneCount} из ${model.tasks.length}`), weekList(model, props));root.append(week);
   }
   if(props.weekly?.workBacklog)root.append(el('p','route-detail',`Шагов работ вне плана недели: ${props.weekly.workBacklog}. Проверь доступное время и выбранные дни; лишние работы можно поставить на паузу в «Моём пути».`));
-  const reference = el('details', 'fold');reference.append(el('summary', null, 'Уровень, даты и заявки'));
-  for(const block of [levelBlock(model), datesBlock(model), applicationsBlock(model)])if(block)reference.append(block);
+  // Статус заявок уже в строках целей; здесь — уровень экзаменов и все даты.
+  const reference = el('details', 'fold');reference.append(el('summary', null, 'Уровень и даты'));
+  for(const block of [levelBlock(model), datesBlock(model), model.goals.length ? null : applicationsBlock(model)])if(block)reference.append(block);
   if(reference.children.length>1)root.append(reference);
   const more = el('button', 'button button-quiet', 'Открыть весь путь');
   more.type = 'button';

@@ -68,7 +68,13 @@ function updateStartGuide(){
   renderStartGuide(guide,{active:guidedStart,screen:document.body.dataset.screen,workPath:location.hash==='#route/new',onExit:()=>setGuidedStart(false)});
   const tip=document.getElementById('screen-tip');
   if(tip)renderTip(tip,tipFor(document.body.dataset.screen,{hasPlan:routeState.goals.length>0,guided:!guide.hidden,seen:readSeen()}),(key)=>markSeen(key));
+  placeTip();
 }
+// В «Моём пути» подсказка стоит под первым делом (на «Сегодня») или под
+// плитками этапов (в «Подготовке»), а не над ними: первое дело должно быть на первом экране. Перед перерисовкой её возвращаем на место,
+// иначе она удалилась бы вместе со старым содержимым.
+function parkTip(){const tip=document.getElementById('screen-tip');if(tip&&(todayBody.contains(tip)||routeBody.contains(tip)))document.getElementById('start-guide').after(tip);}
+function placeTip(){const tip=document.getElementById('screen-tip'),slot=todayScreen.hidden?routeBody.querySelector('.route-phases'):todayBody.querySelector('.today-now');if(!tip)return;if(slot)slot.after(tip);else parkTip();}
 function renderStartView(){
   const work=startWork(routeState);
   renderStart(startScreen,{state:routeState,programs,hasTask:Boolean(work&&weeklySnapshot?.week.tasks.some(task=>!task.done&&task.experienceId===work.id)),handlers:{
@@ -477,6 +483,7 @@ function renderRouteView() {
   let todayFocus=null;
   if(location.hash.startsWith('#today/work/')){try{todayFocus=decodeURIComponent(location.hash.slice('#today/work/'.length))||null;}catch{ /* повреждённая ссылка возвращает общий план */ }}
   const plans = Object.fromEntries((route?.steps ?? []).filter(step => routeTracks[step.track]).map(step => [step.id, examForStep(step)]));
+  parkTip();
   (todayScreen.hidden ? renderRoute : renderToday)(todayScreen.hidden ? routeBody : todayBody, {
     guidedStart,
     focusExperience: portfolioFocus,
@@ -784,6 +791,7 @@ function renderRouteView() {
     },
   });
   // В «Моём пути» — только строки из данных маршрута, не тексты самого ученика.
+  placeTip();
   if (todayScreen.hidden) annotateTerms(routeBody, '.route-step, .route-detail, .route-warn');
   if(applicationFocus&&!routeLoading&&!routeScreen.hidden){
     const goal=routeBody.querySelector(`[data-application-goal="${CSS.escape(applicationFocus)}"]`);

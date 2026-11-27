@@ -540,12 +540,13 @@ export function renderRoute(root, props) {
   const section = routeSection(location.hash);
   root.dataset.layer = section;
   root.append(pathNav(section));
+  // «Собери факты» — справочник: в «Подготовке» он стоит после дел, чтобы первый шаг был на первом экране.
+  let materials=null;
   if(section==='preparation') {
-    const materials=el('section','route-phase');materials.append(el('h3',null,'Собери факты для заявки'));
+    materials=el('section','route-phase');materials.append(el('h3',null,'Собери факты для заявки'));
     for(const [id,title,description] of [['stories','Банк историй','Случаи для эссе, рекомендаций и интервью.'],['school','Сведения о школе','Шкала оценок, выпуск и другие факты для форм.']]) {
       const line=el('p','route-detail'),link=el('a',null,title);link.href=`#route/${id}`;line.append(link,` · ${description}`);materials.append(line);
     }
-    root.append(materials);
   }
   if (section === 'works') {
     root.append(renderPortfolioSteps(props));
@@ -580,6 +581,7 @@ export function renderRoute(root, props) {
   if (!route) {
     if(section === 'applications') { const applications=renderApplications(props);if(applications)root.append(applications); }
     root.append(emptyNotice({ prepared: [], failed: planIds.length > 0, onRetry: handlers.onRetry }));
+    if (materials) root.append(materials);
     const choose = el('button', 'button', 'Выбрать программы');
     choose.type = 'button';
     choose.addEventListener('click', handlers.onChooseGoals);
@@ -693,6 +695,7 @@ export function renderRoute(root, props) {
   const essays=renderEssays(route.goals,props.essays??{},handlers.onRetry,handlers.onSaveEssayVersion,handlers.onEssayVersionSaved,handlers);
   if(essays)side.append(essays);
   const recommenders=renderRecommenders(props);if(recommenders)side.append(recommenders);
+  if (materials) side.append(materials);
   root.append(side);
 
 }
