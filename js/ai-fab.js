@@ -70,19 +70,19 @@ export function setupAiFab({ fab, panel, programBody, todayBody, enabled, mentor
     });
     body.append(el('p', null, 'Разложит дела этой недели по дням и подскажет, с чего начать каждое.'));
     if (state === 'run' || state === 'go') {
-      body.append(el('p', 'explain-note', MENTOR_SENDS), action('Спросить Неро', state === 'run'
+      body.append(el('p', 'explain-note', MENTOR_SENDS), action('Спросить Nero', state === 'run'
         ? () => { ask.click(); show(box); }
         : () => { pending = Date.now() + 10000; location.hash = 'today'; }));
     } else if (state === 'shown') {
-      body.append(el('p', null, 'Ответ Неро — на «Сегодня», в блоке «Неро, ИИ-наставник».'), action('Показать', () => show(box)));
+      body.append(el('p', null, 'Ответ Nero — на «Сегодня», в блоке «Nero, ИИ-наставник».'), action('Показать', () => show(box)));
     } else if (state === 'empty') {
-      body.append(el('p', null, 'Неро появится на «Сегодня», когда в плане недели будут дела.'));
+      body.append(el('p', null, 'Nero появится на «Сегодня», когда в плане недели будут дела.'));
     } else if (state === 'today') {
-      body.append(el('p', null, 'Неро работает в «Моём пути», на «Сегодня».'), link('Открыть «Сегодня»', '#today'));
+      body.append(el('p', null, 'Nero работает в «Моём пути», на «Сегодня».'), link('Открыть «Сегодня»', '#today'));
     } else {
-      body.append(el('p', null, 'Неро сейчас выключен.'));
+      body.append(el('p', null, 'Nero сейчас выключен.'));
     }
-    body.append(el('p', 'fineprint', 'У шага и у черновика свои кнопки: «Спросить Неро» и «Проверить черновик».'));
+    body.append(el('p', 'fineprint', 'У шага и у черновика свои кнопки: «Спросить Nero» и «Проверить черновик».'));
   }
 
   function render() {

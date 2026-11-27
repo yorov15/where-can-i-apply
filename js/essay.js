@@ -1,9 +1,9 @@
 import { plural } from './lib/format.js';
 export const ESSAY_USAGE_KEY='nerio-essay-usage';
 export const ESSAY_DEVICE_KEY='nerio-essay-device';
-export const ESSAY_ERRORS={rate:'Лимит проверок исчерпан. Попробуй завтра.',off:'Проверка у Неро сейчас недоступна. Пользуйся чек-листом.',
-  model:'Неро не дал отзыва, который прошёл проверку. Черновик остался в поле.',network:'Не получилось связаться. Черновик остался в поле.',
-  storage:'В этом браузере проверка у Неро недоступна. Чек-лист работает.',restricted:'У этой программы есть ограничения на такую проверку.',invalid:'Вставь черновик длиной от 40 до 10 000 знаков.'};
+export const ESSAY_ERRORS={rate:'Лимит проверок исчерпан. Попробуй завтра.',off:'Проверка у Nero сейчас недоступна. Пользуйся чек-листом.',
+  model:'Nero не дал отзыва, который прошёл проверку. Черновик остался в поле.',network:'Не получилось связаться. Черновик остался в поле.',
+  storage:'В этом браузере проверка у Nero недоступна. Чек-лист работает.',restricted:'У этой программы есть ограничения на такую проверку.',invalid:'Вставь черновик длиной от 40 до 10 000 знаков.'};
 const localDay=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
 export async function essayAvailable(url,fetchImpl=fetch){
   if(!url)return false;
