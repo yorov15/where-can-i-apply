@@ -7,7 +7,7 @@
 // число людей, а не нажатий. Отметка «уже посчитан» лежит здесь же, в
 // localStorage, и личного в ней ничего нет.
 export const COUNT_KEY = 'nerio-counted';
-export const COUNTED_STEPS = ['check-done', 'plan-added', 'link-shared', 'mentor-asked'];
+export const COUNTED_STEPS = ['check-done', 'plan-added', 'link-shared', 'mentor-asked', 'mentor-step'];
 
 export function countStep(name, { storage = globalThis.localStorage, send = globalThis.window?.va } = {}) {
   if (!COUNTED_STEPS.includes(name) || typeof send !== 'function') return false;

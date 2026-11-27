@@ -266,7 +266,35 @@ function examPlanningBlock(step, track, plan, onChange) {
   return box;
 }
 
-export function stepRow(step, index, { tracks, onToggle, getExamPlan, onExamPlan, compact = false }) {
+// Наставник у шага (М2): тихая кнопка, ответ под шагом, ошибка — одной строкой.
+// Шаг и условия выше остаются как есть: наставник их только объясняет.
+function stepMentorBlock(step, mentor) {
+  const box = el('div');
+  box.dataset.stepMentor = step.id;
+  const status = el('p', 'route-detail');
+  status.setAttribute('role', 'status');
+  const answer = mentor.answerFor(step);
+  if (answer) {
+    const text = el('p');
+    text.tabIndex = -1;
+    text.append(el('b', null, 'Наставник: '), answer.explain);
+    box.append(text);
+    if (answer.question) box.append(el('p', 'route-detail', `Подумай: ${answer.question}`));
+  } else {
+    const busy = mentor.busyId === step.id;
+    const ask = el('button', 'button button-quiet', busy ? 'Наставник думает, до минуты…' : 'Спросить наставника');
+    ask.type = 'button';
+    ask.disabled = Boolean(mentor.busyId) || mentor.left <= 0;
+    ask.addEventListener('click', () => mentor.onAsk(step));
+    box.append(ask);
+    if (mentor.errors[step.id]) status.textContent = mentor.errors[step.id];
+    else if (mentor.left <= 0) status.textContent = 'На сегодня вопросы к наставнику закончились.';
+  }
+  box.append(status);
+  return box;
+}
+
+export function stepRow(step, index, { tracks, onToggle, getExamPlan, onExamPlan, stepMentor = null, compact = false }) {
   const row = el('div', step.done ? 'route-step is-done' : 'route-step');
   const check = el('input', 'route-check');
   check.type = 'checkbox';
@@ -306,6 +334,7 @@ export function stepRow(step, index, { tracks, onToggle, getExamPlan, onExamPlan
     }
     const track = step.track ? trackBlock(step, tracks) : null;
     if (track) body.append(track);
+    if (stepMentor && !step.done) body.append(stepMentorBlock(step, stepMentor));
   }
   row.append(check, body);
   return row;

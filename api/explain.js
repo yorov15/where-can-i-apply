@@ -25,6 +25,7 @@ import {
 } from './_explain-core.js';
 import { reviewEssay,createEssayLimiter,parseEssayFeedback,ESSAY_LIMITS } from './_essay-core.js';
 import { mentorWeek, createDeviceLimiter, MENTOR_LIMITS } from './_mentor-core.js';
+import { mentorStep, STEP_LIMITS } from './_step-core.js';
 
 // Данные берутся с живого сайта, а не лежат внутри функции: карточки
 // обновляются каждый день, и передеплоить прокси при каждой правке было
@@ -110,6 +111,8 @@ const essayDeviceLimiter=createEssayLimiter();
 const mentorLimiter = createLimiter({ daily: Number(process.env.MENTOR_DAILY_LIMIT) || MENTOR_LIMITS.daily, perIp: MENTOR_LIMITS.perIp });
 const mentorDevices = createDeviceLimiter();
 const mentorCache = createCache({ max: 300 });
+// Наставник у шага маршрута (М2): тот же суточный счёт и кэш, свой счёт на устройство.
+const stepDevices = createDeviceLimiter({ perDay: STEP_LIMITS.perDevice });
 // Сайт стоит на GitHub Pages, то есть на другом адресе, чем функция:
 // без списка разрешённых адресов браузер запретил бы ему сюда ходить.
 const configured = (process.env.ALLOWED_ORIGINS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
@@ -161,7 +164,7 @@ async function askGroup(models, prompt, timeoutMs, trace) {
 }
 
 async function askOnce(models, { system, user, mode, check }, timeoutMs) {
-  const json = mode === 'essay' || mode === 'mentor-week';
+  const json = mode === 'essay' || mode === 'mentor-week' || mode === 'mentor-step';
   // Подписка Go отвечает по тому же протоколу, но берёт одну модель за запрос.
   const go = models[0].startsWith('go/');
   const res = await fetch(go ? 'https://opencode.ai/zen/go/v1/chat/completions' : 'https://openrouter.ai/api/v1/chat/completions', {
@@ -180,7 +183,7 @@ async function askOnce(models, { system, user, mode, check }, timeoutMs) {
         { role: 'system', content: system },
         { role: 'user', content: user },
       ],
-      max_tokens: mode==='essay'?2200:mode==='mentor-week'?3000:1200,
+      max_tokens: mode==='essay'?2200:mode==='mentor-week'?3000:mode==='mentor-step'?1500:1200,
       temperature: 0.3,
       ...(mode==='essay'?{provider:{data_collection:'deny',zdr:true,max_price:{prompt:0,completion:0}}}:{}),
       ...(json?{response_format:{type:'json_object'}}:{}),
@@ -243,7 +246,7 @@ async function handle(req, res, cors) {
   } catch {
     return send(res,Buffer.byteLength(raw)>LIMITS.bodyBytes?413:400,{error:Buffer.byteLength(raw)>LIMITS.bodyBytes?'too-big':'bad-request'},cors);
   }
-  const cap=body?.mode==='mentor-week'?MENTOR_LIMITS.bodyBytes:LIMITS.bodyBytes;
+  const cap=body?.mode==='mentor-week'?MENTOR_LIMITS.bodyBytes:body?.mode==='mentor-step'?STEP_LIMITS.bodyBytes:LIMITS.bodyBytes;
   if(body?.mode!=='essay'&&Math.max(Buffer.byteLength(raw),Number(req.headers['content-length'])||0)>cap)return send(res,413,{error:'too-big'},cors);
   if(body?.mode==='essay-status'){
     if(Object.keys(body).length!==1)return send(res,400,{error:'bad-request'},cors);
@@ -254,6 +257,12 @@ async function handle(req, res, cors) {
     const trace=[];
     const result=await mentorWeek({body,ip:clientIp(req),today:new Date().toISOString().slice(0,10)},
       {limiter:mentorLimiter,deviceLimiter:mentorDevices,cache:mentorCache,callModel:prompt=>callMentorModel(prompt,trace),onReject:reason=>trace.push({reject:reason})});
+    return send(res,result.status,req.headers['x-explain-trace']==='1'?{...result.json,trace}:result.json,cors);
+  }
+  if(body?.mode==='mentor-step'){
+    const trace=[];
+    const result=await mentorStep({body,ip:clientIp(req)},
+      {limiter:mentorLimiter,deviceLimiter:stepDevices,cache:mentorCache,callModel:prompt=>callMentorModel(prompt,trace),onReject:reason=>trace.push({reject:reason})});
     return send(res,result.status,req.headers['x-explain-trace']==='1'?{...result.json,trace}:result.json,cors);
   }
 

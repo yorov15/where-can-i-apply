@@ -10,6 +10,7 @@ import { renderResults } from './render.js';
 import { countStep, COUNT_KEY } from './lib/count.js';
 import { TIPS_KEY, readSeen, markSeen, tipFor, renderTip } from './screen-tips.js';
 import { MENTOR_KEY, MENTOR_PER_DAY, MENTOR_ERRORS, askMentor, mentorUsage, savedMentorPlan } from './mentor.js';
+import { STEP_KEY, STEP_PER_DAY, STEP_ERRORS, askStepMentor, stepUsage, stepRequest, savedStepAnswer } from './mentor-step.js';
 import { PLAN_KEY, DONE_KEY, buildEventsIcs } from './plan.js';
 import { scheduleRoute, routeCalendarEvents } from './agenda.js';
 import { loadRouteState, saveRouteState, setGoals, toggleStep, clearProgress, exportState, importState, ROUTE_STATE_KEY, reconcileProgress, MAX_GOALS, setExamPlan, setStudyHours, recordMock, toggleStudyTask, setGoalStatus, toggleDismissed, hideBalance } from './route-state.js';
@@ -21,7 +22,7 @@ import { planCost } from './cost.js';
 import { buildCombinedRoute } from './route-combined.js';
 import { renderRoute } from './route-view.js';
 import { interviewLive } from './interview-view.js';
-import { EXPLAIN_URL, MENTOR_ON } from './config.js';
+import { EXPLAIN_URL, MENTOR_ON, MENTOR_STEP_ON } from './config.js';
 import { renderToday } from './today-view.js';
 import { renderProgram, programRow } from './program-view.js';
 import { annotateTerms } from './glossary-view.js';
@@ -214,6 +215,8 @@ let routeState = loadRouteState(localStorage);
 let weeklySnapshot=null;
 // Наставник: идёт ли вопрос и чем кончился последний. Сам ответ лежит в localStorage.
 let mentorAsk={busy:false,error:''};
+// Наставник у шага маршрута: какой шаг сейчас спрашивают и ошибка по шагу.
+let stepAsk={busyId:null,errors:{}};
 let routeEssays={};
 const plan = {
   ids: [...routeState.goals],
@@ -456,6 +459,12 @@ function examForStep(step) {
   return examPlan({ step, track: routeTracks[step.track], state: routeState, profile: readForm(form), today, deadline });
 }
 
+// Для наставника у шага: имя программы, её источник и условия — то, что сайт уже показал.
+function stepProgramsOf(step) {
+  return (step.programIds ?? []).map(id => ({ name: programs.find(program => program.id === id)?.name?.ru ?? '',
+    sourceUrl: details.programs[id]?.source?.url, conditions: details.conditions[id] ?? [] }));
+}
+
 function renderRouteView() {
   // Условия программы догружаются в фоне. Они не должны заменять открытую
   // форму новой работы между вводом и нажатием кнопки сохранения.
@@ -560,6 +569,21 @@ function renderRouteView() {
       // «Сегодня» после закрытия шага работы: показать следующее дело.
       onRedraw() { renderRouteView(); },
       getExamPlan: examForStep,
+      stepMentor:MENTOR_STEP_ON&&EXPLAIN_URL?{
+        busyId:stepAsk.busyId,errors:stepAsk.errors,left:STEP_PER_DAY-stepUsage(localStorage,today),
+        answerFor:step=>savedStepAnswer(localStorage,step.id,stepRequest({step,programs:stepProgramsOf(step),profile:readForm(form),deviceId:''})),
+        async onAsk(step){
+          if(stepAsk.busyId)return;
+          stepAsk={busyId:step.id,errors:{}};renderRouteView();
+          try{
+            await askStepMentor({step,programs:stepProgramsOf(step),profile:readForm(form),today},{url:EXPLAIN_URL});
+            stepAsk={busyId:null,errors:{}};countStep('mentor-step');
+          }catch(error){stepAsk={busyId:null,errors:{[step.id]:STEP_ERRORS[error.kind]??STEP_ERRORS.model}};}
+          renderRouteView();
+          const box=activeBody().querySelector(`[data-step-mentor="${CSS.escape(step.id)}"]`);
+          (box?.querySelector('button')??box?.querySelector('[tabindex="-1"]'))?.focus();
+        },
+      }:null,
       onStudyToggle(week, taskId) {
         routeState=toggleStudyTask(routeState,week,taskId,today);persistRoute();rebuildRoute();renderRouteView();
         const section=activeBody().querySelector(`[data-study-week="${CSS.escape(week)}"]`);
@@ -919,6 +943,7 @@ document.getElementById('clear-profile').addEventListener('click', () => {
     localStorage.removeItem(COUNT_KEY);
     localStorage.removeItem(TIPS_KEY);
     localStorage.removeItem(MENTOR_KEY);
+    localStorage.removeItem(STEP_KEY);
   } catch { /* приватный режим: стирать нечего */ }
   routeState = loadRouteState(localStorage);
   weeklySnapshot=null;

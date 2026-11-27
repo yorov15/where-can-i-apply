@@ -13,15 +13,15 @@ export const MENTOR_LIMITS ={ bodyBytes: 8000, tasks: 8, deadlines: 6, titleChar
 
 const UUID = /^[a-f0-9]{8}-(?:[a-f0-9]{4}-){3}[a-f0-9]{12}$/i;
 const DAY = /^\d{4}-\d{2}-\d{2}$/;
-const CONTROL = /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/;
+export const CONTROL = /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/;
 const WEEKDAYS = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
 
-const realDay = (day) => typeof day === 'string' && DAY.test(day) && Number.isFinite(Date.parse(`${day}T00:00:00Z`))
+export const realDay = (day) => typeof day === 'string' && DAY.test(day) && Number.isFinite(Date.parse(`${day}T00:00:00Z`))
   && new Date(`${day}T00:00:00Z`).toISOString().slice(0, 10) === day;
 const shift = (day, n) => new Date(Date.parse(`${day}T00:00:00Z`) + n * 86400000).toISOString().slice(0, 10);
 const mondayOf = (day) => shift(day, -((new Date(`${day}T00:00:00Z`).getUTCDay() + 6) % 7));
-const cleanText = (value, max) => typeof value === 'string' && value.trim().length >= 2 && value.length <= max && !CONTROL.test(value);
-const onlyKeys = (value, keys) => value && typeof value === 'object' && !Array.isArray(value) && Object.keys(value).every((key) => keys.includes(key));
+export const cleanText = (value, max) => typeof value === 'string' && value.trim().length >= 2 && value.length <= max && !CONTROL.test(value);
+export const onlyKeys = (value, keys) => value && typeof value === 'object' && !Array.isArray(value) && Object.keys(value).every((key) => keys.includes(key));
 
 // Запрос собирает браузер из того, что уже посчитал движок. Принимаем только
 // эту форму: без анкеты, имени, баллов и чего-либо, по чему узнают человека.
@@ -89,7 +89,7 @@ export function buildMentorPrompt(req) {
 // - минуты дел — только как «N минут», часы недели — только как «N часов»;
 // - дни из входа — только как дата: «28.11» или «28 ноября»; год — как есть;
 // - «15 минут», любой кусок до часа в минутах и счёт от 1 до 5.
-const MONTHS = ['январ', 'феврал', 'март', 'апрел', 'ма[йя]', 'июн', 'июл', 'август', 'сентябр', 'октябр', 'ноябр', 'декабр'];
+export const MONTHS = ['январ', 'феврал', 'март', 'апрел', 'ма[йя]', 'июн', 'июл', 'август', 'сентябр', 'октябр', 'ноябр', 'декабр'];
 function allowedNumbers(req) {
   const words = new Set(['1', '2', '3', '4', '5']);
   const dates = new Set();
@@ -113,7 +113,7 @@ function numberOk(value, after, allowed) {
   return false;
 }
 
-const FORBIDDEN = /https?:|www\.|\S+@\S+\.\S|\.(?:com|ru|org|net|edu|tj|io)\b|<\/?[a-z][^>]*>|%|процент|гарантир|шанс|точно (?:возьм|прим|поступ)|наверняка поступ|напишу за тебя|за тебя напиш|готов(?:ое|ый) (?:эссе|текст|письм)|как (?:ИИ|языковая модель)|```/i;
+export const FORBIDDEN = /https?:|www\.|\S+@\S+\.\S|\.(?:com|ru|org|net|edu|tj|io)\b|<\/?[a-z][^>]*>|%|процент|гарантир|шанс|точно (?:возьм|прим|поступ)|наверняка поступ|напишу за тебя|за тебя напиш|готов(?:ое|ый) (?:эссе|текст|письм)|как (?:ИИ|языковая модель)|```/i;
 
 // Что не так со строкой ответа; пустая строка — всё в порядке.
 function textProblem(line, req, allowed) {
