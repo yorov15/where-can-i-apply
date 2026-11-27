@@ -123,3 +123,10 @@ test('exam cases are valid requests built from real conditions', () => {
     assert.doesNotMatch(JSON.stringify(item.request), /score|birthDate|gpa|citizenship/, item.id);
   }
 });
+
+test('в подсказку уходит сегодняшняя дата по Душанбе, чтобы модель не советовала прошедшие сроки', () => {
+  const req = validateStepRequest(body());
+  // 21:00 UTC 26 ноября — в Душанбе уже 27-е.
+  assert.equal(JSON.parse(buildStepPrompt(req, new Date('2026-11-26T21:00:00Z'))).today, '2026-11-27');
+  assert.match(STEP_SYSTEM, /раньше today/);
+});
