@@ -20,12 +20,16 @@
 //   DAILY_LIMIT        — потолок обращений к модели в сутки на один
 //                        экземпляр функции (по умолчанию 40: у бесплатных
 //                        моделей OpenRouter свой суточный предел)
+//   CHAT_ENABLED       — 1: предлагать людям чат с Nero (chat-status) до смены
+//                        CHAT_PUBLIC в api/_chat-core.js; только после EXAM-OK
+//   CHAT_DAILY_LIMIT   — потолок вопросов чата в сутки на экземпляр (по умолчанию 500)
 import {
   explain, createCache, createLimiter, originAllowed, corsHeaders, parseCompletion, isUsableAnswer, grounded, chunk, callWithFallback, LIMITS,
 } from './_explain-core.js';
 import { reviewEssay,createEssayLimiter,parseEssayFeedback,ESSAY_LIMITS,ESSAY_PUBLIC } from './_essay-core.js';
 import { mentorWeek, createDeviceLimiter, MENTOR_LIMITS } from './_mentor-core.js';
 import { mentorStep, STEP_LIMITS } from './_step-core.js';
+import { chat, CHAT_LIMITS, CHAT_PUBLIC } from './_chat-core.js';
 
 // Данные берутся с живого сайта, а не лежат внутри функции: карточки
 // обновляются каждый день, и передеплоить прокси при каждой правке было
@@ -86,6 +90,28 @@ async function conditionsFor(id) {
   }
 }
 
+// Документы заявки (data/materials/<id>.json) — для чата: «какие документы нужны».
+// Нет файла или не ответил — чат работает без них.
+const materials = new Map();
+async function materialsFor(id) {
+  const hit = materials.get(id);
+  if (hit && Date.now() - hit.at < DATA_TTL_MS) return hit.list;
+  try {
+    const res = await fetch(`${DATA_BASE}materials/${encodeURIComponent(id)}.json`, { signal: AbortSignal.timeout(8_000) });
+    if (!res.ok) throw new Error(String(res.status));
+    const items = (await res.json()).items;
+    const list = Array.isArray(items) ? items : [];
+    materials.set(id, { at: Date.now(), list });
+    return list;
+  } catch {
+    return hit ? hit.list : [];
+  }
+}
+const chatExtraFor = async (id) => {
+  const [list, items] = await Promise.all([conditionsFor(id), materialsFor(id)]);
+  return { conditions: list ?? [], materials: items };
+};
+
 // Детали программы вместе с её условиями — то, что раньше лежало в общем
 // файле. Чужой id сюда не проходит: неизвестной программы в details нет.
 async function withConditions(details, body) {
@@ -115,6 +141,9 @@ const mentorDevices = createDeviceLimiter();
 const mentorCache = createCache({ max: 300 });
 // Наставник у шага маршрута (М2): тот же суточный счёт и кэш, свой счёт на устройство.
 const stepDevices = createDeviceLimiter({ perDay: STEP_LIMITS.perDevice });
+// Чат с Nero (М4): свой счёт на адрес и в сутки, 20 вопросов в день на устройство.
+const chatLimiter = createLimiter({ daily: Number(process.env.CHAT_DAILY_LIMIT) || CHAT_LIMITS.daily, perIp: CHAT_LIMITS.perIp });
+const chatDevices = createDeviceLimiter({ perDay: CHAT_LIMITS.perDevice });
 // Сайт стоит на GitHub Pages, то есть на другом адресе, чем функция:
 // без списка разрешённых адресов браузер запретил бы ему сюда ходить.
 const configured = (process.env.ALLOWED_ORIGINS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
@@ -155,6 +184,11 @@ const essayModels = () => (goKey() ? [['go/deepseek-v4.1-flash'], ['go/deepseek-
 // Режим работает при любой модели (для экзамена); людям его предлагает только essay-status,
 // и только с Go: экран перед отправкой говорит человеку, что черновик уйдёт в OpenCode Go.
 const essayOffered = () => (ESSAY_PUBLIC || process.env.ESSAY_REVIEW_ENABLED === '1') && Boolean(goKey());
+// Чат (М4, 27.11.2026): только Go deepseek-v4.1-flash (хранение 0 дней), две попытки
+// той же модели. Без ключа Go чат выключен: в бесплатный OpenRouter вопросы людей не идут.
+// Людям его предлагает chat-status — после экзамена (CHAT_PUBLIC или CHAT_ENABLED=1).
+const chatModels = () => (goKey() ? [['go/deepseek-v4.1-flash'], ['go/deepseek-v4.1-flash']] : []);
+const chatOffered = () => (CHAT_PUBLIC || process.env.CHAT_ENABLED === '1') && Boolean(goKey());
 const usable = (name) => (name.startsWith('go/') ? Boolean(goKey()) : Boolean(routerKey()));
 const pickModels = () => (CONFIGURED.length ? CONFIGURED : goKey() ? GO_MODELS : FREE_MODELS).filter(usable).slice(0, 9);
 const modelGroups = () => chunk(pickModels(), 1);
@@ -176,7 +210,7 @@ async function askGroup(models, prompt, timeoutMs, trace) {
 }
 
 async function askOnce(models, { system, user, mode, check }, timeoutMs) {
-  const json = mode === 'essay' || mode === 'mentor-week' || mode === 'mentor-step';
+  const json = mode === 'essay' || mode === 'mentor-week' || mode === 'mentor-step' || mode === 'chat';
   // Подписка Go отвечает по тому же протоколу, но берёт одну модель за запрос.
   const go = models[0].startsWith('go/');
   const res = await fetch(go ? 'https://opencode.ai/zen/go/v1/chat/completions' : 'https://openrouter.ai/api/v1/chat/completions', {
@@ -196,7 +230,8 @@ async function askOnce(models, { system, user, mode, check }, timeoutMs) {
         { role: 'user', content: user },
       ],
       // Эссе: девять пунктов по-русски плюс запас, если рассуждения модели считаются в предел.
-      max_tokens: mode==='essay'?3000:mode==='mentor-week'?3000:mode==='mentor-step'?1500:1200,
+      // Чат и объяснялка — 1200: ответ до 900 знаков плюс запас.
+      max_tokens: mode==='essay'?3000:mode==='mentor-week'?3000:mode==='mentor-step'?1500:mode==='chat'?2000:1200,
       temperature: 0.3,
       // Блок provider понимает только OpenRouter; Go получает модель без него.
       ...(mode==='essay'&&!go?{provider:{data_collection:'deny',zdr:true,max_price:{prompt:0,completion:0}}}:{}),
@@ -224,6 +259,10 @@ const callEssayModel = (prompt, trace) => {
   return callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace),
     go ? { budgetMs: 44000, perGroupMs: 30000 } : { budgetMs: 30000, perGroupMs: 28000 });
 };
+
+// Чат: две попытки Go в пределах 44 с, как у наставника; на одну — до 30 с,
+// чтобы после забракованного первого ответа на второй хватило времени.
+const callChatModel = (prompt, trace) => callWithFallback(chatModels(), (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 44000, perGroupMs: 30000 });
 
 function send(res, status, json, headers = {}) {
   res.statusCode = status;
@@ -264,11 +303,22 @@ async function handle(req, res, cors) {
   } catch {
     return send(res,Buffer.byteLength(raw)>LIMITS.bodyBytes?413:400,{error:Buffer.byteLength(raw)>LIMITS.bodyBytes?'too-big':'bad-request'},cors);
   }
-  const cap=body?.mode==='mentor-week'?MENTOR_LIMITS.bodyBytes:body?.mode==='mentor-step'?STEP_LIMITS.bodyBytes:LIMITS.bodyBytes;
+  const cap=body?.mode==='mentor-week'?MENTOR_LIMITS.bodyBytes:body?.mode==='mentor-step'?STEP_LIMITS.bodyBytes:body?.mode==='chat'?CHAT_LIMITS.bodyBytes:LIMITS.bodyBytes;
   if(body?.mode!=='essay'&&Math.max(Buffer.byteLength(raw),Number(req.headers['content-length'])||0)>cap)return send(res,413,{error:'too-big'},cors);
   if(body?.mode==='essay-status'){
     if(Object.keys(body).length!==1)return send(res,400,{error:'bad-request'},cors);
     return send(res,200,{available:essayOffered()},cors);
+  }
+  if(body?.mode==='chat-status'){
+    if(Object.keys(body).length!==1)return send(res,400,{error:'bad-request'},cors);
+    return send(res,200,{available:chatOffered()},cors);
+  }
+  if(body?.mode==='chat'){
+    // Факты о программах сервер берёт сам из data/ по id; модель — только Go.
+    const trace=[];
+    const result=await chat({body,ip:clientIp(req)},{loadData,extraFor:chatExtraFor,limiter:chatLimiter,deviceLimiter:chatDevices,
+      available:chatModels().length>0,callModel:prompt=>callChatModel(prompt,trace),onReject:reason=>trace.push({reject:reason})});
+    return send(res,result.status,req.headers['x-explain-trace']==='1'?{...result.json,trace}:result.json,cors);
   }
   if(body?.mode!=='essay'&&!pickModels().length)return send(res,503,{error:'off'},cors);
   if(body?.mode==='mentor-week'){
