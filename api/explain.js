@@ -231,7 +231,7 @@ async function askOnce(models, { system, user, mode, check }, timeoutMs) {
       ],
       // Эссе: девять пунктов по-русски плюс запас, если рассуждения модели считаются в предел.
       // Чат и объяснялка — 1200: ответ до 900 знаков плюс запас.
-      max_tokens: mode==='essay'?3000:mode==='mentor-week'?3000:mode==='mentor-step'?1500:1200,
+      max_tokens: mode==='essay'?3000:mode==='mentor-week'?3000:mode==='mentor-step'?1500:mode==='chat'?2000:1200,
       temperature: 0.3,
       // Блок provider понимает только OpenRouter; Go получает модель без него.
       ...(mode==='essay'&&!go?{provider:{data_collection:'deny',zdr:true,max_price:{prompt:0,completion:0}}}:{}),

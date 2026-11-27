@@ -22,7 +22,7 @@ export const CHAT_PUBLIC = false;
 export const CHAT_LIMITS = {
   bodyBytes: 20000, questionMin: 3, questionChars: 500, goals: 10, week: 12, titleChars: 160, history: 3, historyQ: 500, historyA: 1200,
   perDevice: 20, perIp: 40, daily: 500, detailed: 3, conditions: 25, conditionChars: 400, materials: 12, materialChars: 300,
-  answerMin: 20, answerMax: 900,
+  answerMin: 20, answerMax: 1100,
 };
 
 const UUID_V4 = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;

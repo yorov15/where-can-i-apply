@@ -61,7 +61,7 @@ test('chat goes to Go deepseek-v4.1-flash in JSON mode with facts from data and 
   assert.equal(sent.url, 'https://opencode.ai/zen/go/v1/chat/completions');
   assert.equal(sent.headers.Authorization, `Bearer ${GO_KEY}`);
   assert.equal(sent.body.model, 'deepseek-v4.1-flash');
-  assert.equal(sent.body.max_tokens, 1200);
+  assert.equal(sent.body.max_tokens, 2000);
   assert.equal(sent.body.response_format.type, 'json_object');
   assert.equal(Object.hasOwn(sent.body, 'provider'), false);
   const user = JSON.parse(sent.body.messages[1].content);
