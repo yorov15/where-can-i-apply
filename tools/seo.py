@@ -8,6 +8,7 @@ import html
 import json
 import re
 from collections import defaultdict
+from datetime import date
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -69,7 +70,7 @@ def page(title, description, path, body, crumbs):
 <link rel="stylesheet" href="../css/catalog.css">{schema}
 </head><body>{MARKER}
 <a class="skip" href="#main">К содержимому</a>
-<header><a class="brand" href="../"><img src="../icons/logo.svg" width="25" height="30" alt="">Nerio</a><nav aria-label="Разделы"><a href="./">Все программы</a><a href="../faq.html">Вопросы и ответы</a></nav></header>
+<header><a class="brand" href="../"><img src="../icons/logo.svg" width="25" height="30" alt="">Nerio</a><nav aria-label="Разделы"><a href="../programs/">Все программы</a><a href="../countries/">Страны</a><a href="../faq.html">Вопросы и ответы</a></nav></header>
 <main id="main">{body}</main>
 <footer><span>Nerio (Нерио) — бесплатный инструмент для поступления за границу</span><a href="../privacy.html">Конфиденциальность</a><a href="../#profile">Проверить по своей анкете</a></footer>
 </body></html>
@@ -117,16 +118,21 @@ def program_html(program, countries):
     return page(name + " — Nerio", description, program_path(program), body, [("Nerio", ORIGIN + "/"), ("Программы", ORIGIN + "/programs/"), (name, ORIGIN + "/" + program_path(program))])
 
 
-def catalog_html(programs, countries):
+def catalog_html(programs, countries, country_pages=(), topic_pages=()):
     groups = defaultdict(list)
     for program in programs:
         groups[program.get("hostCountry") or "other"].append(program)
     ordered = sorted(groups, key=lambda code: countries.get(code, code))
     body = '<h1>Университеты и стипендии за рубежом</h1><p class="intro">Программы для поступления после школы: условия, документы, финансирование и официальные источники. Каталог открыт без анкеты и регистрации.</p>'
     body += f'<p class="meta">Программ в каталоге: {len(programs)}. Соответствие требованиям зависит от твоей анкеты.</p><p><a class="primary" href="../#profile">Проверить, куда могу подать</a></p>'
+    if topic_pages:
+        body += '<nav class="countries" aria-label="Подборки">' + ''.join(f'<a href="../{esc(topic_path(slug))}">{esc(TOPICS[slug]["short"])}</a>' for slug in topic_pages) + '</nav>'
     body += '<nav class="countries" aria-label="Страны">' + ''.join(f'<a href="#country-{esc(code)}">{esc(countries.get(code, code))}</a>' for code in ordered) + '</nav>'
     for code in ordered:
-        body += f'<section id="country-{esc(code)}"><h2>{esc(countries.get(code, code))}</h2><ul class="program-list">'
+        body += f'<section id="country-{esc(code)}"><h2>{esc(countries.get(code, code))}</h2>'
+        if code in country_pages:
+            body += f'<p><a href="../{esc(country_path(code))}">Учёба {esc(LOCATIVE[code])}: сроки и финансирование</a></p>'
+        body += '<ul class="program-list">'
         for program in sorted(groups[code], key=lambda p: (p.get("name") or {}).get("ru", p["id"])):
             name = (program.get("name") or {}).get("ru") or program["id"]
             body += f'<li><a href="{esc(program_path(program).split("/", 1)[1])}">{esc(name)}</a></li>'
@@ -134,24 +140,234 @@ def catalog_html(programs, countries):
     return page("Университеты и стипендии за рубежом — каталог Nerio", "Открытый каталог программ для поступления после школы: условия, документы, финансирование и официальные источники. Бесплатно, без регистрации.", "programs/", body, [("Nerio", ORIGIN + "/"), ("Программы", ORIGIN + "/programs/")])
 
 
-def write_public_pages(root: Path, programs: list[dict]):
+# «Учёба в …»: предложный падеж для заголовков. Нет формы — нет страницы страны.
+LOCATIVE = {
+    "US": "в США", "KR": "в Южной Корее", "CN": "в Китае", "JP": "в Японии", "GB": "в Великобритании",
+    "TR": "в Турции", "RU": "в России", "DE": "в Германии", "HU": "в Венгрии", "AU": "в Австралии",
+    "IT": "в Италии", "UZ": "в Узбекистане", "CA": "в Канаде", "HK": "в Гонконге", "KZ": "в Казахстане",
+    "NL": "в Нидерландах", "SA": "в Саудовской Аравии", "TW": "на Тайване", "AZ": "в Азербайджане",
+    "FR": "во Франции", "AE": "в ОАЭ", "CZ": "в Чехии", "SK": "в Словакии", "PL": "в Польше",
+    "SE": "в Швеции", "MY": "в Малайзии", "KG": "в Кыргызстане", "CH": "в Швейцарии",
+    "FI": "в Финляндии", "EE": "в Эстонии", "QA": "в Катаре", "RO": "в Румынии", "NZ": "в Новой Зеландии",
+    "AT": "в Австрии", "BN": "в Брунее", "DK": "в Дании", "IN": "в Индии", "BE": "в Бельгии",
+    "SI": "в Словении", "SG": "в Сингапуре", "RS": "в Сербии", "AR": "в Аргентине", "LT": "в Литве",
+}
+# Таджикистан у нас — страна, откуда едут: «учёба в Таджикистане» была бы неправдой.
+NO_COUNTRY_PAGE = {"TJ"}
+MIN_COUNTRY_PROGRAMS = 3
+MONTHS = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"]
+
+
+def iso_day(value):
+    return value if isinstance(value, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", value) else None
+
+
+def ru_date(value):
+    year, month, day = value.split("-")
+    return f"{int(day)} {MONTHS[int(month) - 1]} {year}"
+
+
+def open_deadline(program, today):
+    """Только подтверждённый срок, который ещё не прошёл; ожидаемые даты не показываем как текущие."""
+    deadline = program.get("deadline") or {}
+    closes = iso_day(deadline.get("closes"))
+    return closes if deadline.get("confidence") == "confirmed" and closes and closes >= today else None
+
+
+def coverage_label(program):
+    coverage = program.get("coverage") or {}
+    if coverage.get("tuition") is True and coverage.get("living") is True:
+        return "Учёба и проживание покрыты"
+    if coverage.get("tuition") is True:
+        return "Учёба покрыта"
+    if coverage.get("tuition") is False:
+        return "Учёба платная или покрыта частично"
+    return "Покрытие уточняется"
+
+
+def full_funding(program):
+    coverage = program.get("coverage") or {}
+    return coverage.get("tuition") is True and coverage.get("living") is True
+
+
+def free_tuition(program):
+    return (program.get("coverage") or {}).get("tuition") is True
+
+
+def no_language_certificate(program):
+    return bool(((program.get("eligibility") or {}).get("language") or {}).get("noLimit"))
+
+
+TOPICS = {
+    "polnoe-finansirovanie": {
+        "short": "Полное финансирование",
+        "title": "Стипендии с полным финансированием за рубежом: учёба и проживание",
+        "h1": "Полное финансирование: оплачены учёба и проживание",
+        "intro": "Программы, где по официальным источникам покрыты и плата за учёбу, и проживание. Дорогу, страховку и сборы за заявку проверяй на странице программы: они покрыты не везде.",
+        "test": full_funding,
+    },
+    "besplatnoe-obuchenie": {
+        "short": "Бесплатная учёба",
+        "title": "Бесплатное обучение за рубежом после школы: университеты и стипендии",
+        "h1": "Бесплатное обучение за рубежом",
+        "intro": "Программы, где плата за учёбу покрыта полностью: стипендией, грантом или потому, что учёба бесплатна. Проживание покрыто не везде — это указано у каждой программы.",
+        "test": free_tuition,
+    },
+    "bez-ielts": {
+        "short": "Без обязательного IELTS",
+        "title": "Поступить за рубеж без IELTS и TOEFL: где не требуют сертификат",
+        "h1": "Без обязательного языкового сертификата",
+        "intro": "Программы, где для подачи не требуют конкретного сертификата вроде IELTS или TOEFL. Уровень языка всё равно проверяют — по аттестату, интервью или другим документам. Подробности на странице программы.",
+        "test": no_language_certificate,
+    },
+    "gosudarstvennye-stipendii": {
+        "short": "Государственные стипендии",
+        "title": "Государственные стипендии для иностранцев: CSC, GKS, MEXT, Türkiye Bursları и другие",
+        "h1": "Государственные стипендии для иностранцев",
+        "intro": "Стипендии и квоты, которые дают правительства стран. Что именно покрыто и как подавать, указано у каждой программы.",
+        "test": lambda program: program.get("kind") == "government",
+    },
+    "sroki-podachi": {
+        "short": "Сроки подачи",
+        "title": "Сроки подачи документов в зарубежные вузы и на стипендии",
+        "h1": "Сроки подачи: подтверждённые даты",
+        "intro": "Программы, у которых срок подачи на ближайший набор подтверждён официальным источником и ещё не прошёл. Список отсортирован по дате.",
+        "test": None,
+    },
+}
+
+
+def country_path(code):
+    if not re.fullmatch(r"[A-Z]{2}", code or ""):
+        raise ValueError("Unsafe country code")
+    return f"countries/{code.lower()}.html"
+
+
+def topic_path(slug):
+    return f"topics/{slug}.html"
+
+
+def newest(programs):
+    days = [iso_day((p.get("source") or {}).get("lastVerified")) for p in programs]
+    days = [day for day in days if day]
+    return max(days) if days else None
+
+
+def program_name(program):
+    return (program.get("name") or {}).get("ru") or program["id"]
+
+
+def program_rows(programs, countries, today, show_country):
+    rows = '<ul class="program-list">'
+    for program in programs:
+        facts = [coverage_label(program)]
+        closes = open_deadline(program, today)
+        facts.append(f'подача до <time datetime="{closes}">{ru_date(closes)}</time>' if closes else "срок уточняется")
+        if show_country:
+            facts.insert(0, esc(countries.get(program.get("hostCountry"), program.get("hostCountry") or "")))
+        rows += f'<li><a href="../{esc(program_path(program))}">{esc(program_name(program))}</a><br><span class="meta">{" · ".join(facts)}</span></li>'
+    return rows + '</ul>'
+
+
+def by_name(program):
+    return program_name(program)
+
+
+def country_html(code, programs, countries, today, topic_pages):
+    country = countries.get(code, code)
+    where = LOCATIVE[code]
+    full = sum(full_funding(p) for p in programs)
+    free = sum(free_tuition(p) for p in programs)
+    dated = sum(bool(open_deadline(p, today)) for p in programs)
+    title = f"Учёба {where} для иностранцев: университеты и стипендии"
+    description = f"Учёба {where} после школы: {len(programs)} программ в Nerio, условия, финансирование и сроки подачи по официальным источникам. Бесплатно, без регистрации."
+    body = f'<nav class="breadcrumbs" aria-label="Путь"><a href="../">Nerio</a><span>/</span><a href="./">Страны</a></nav><h1>Учёба {esc(where)}: университеты и стипендии</h1>'
+    body += f'<p class="intro">Программ {esc(where)} в Nerio: {len(programs)}. Учёба покрыта полностью — {free}, из них вместе с проживанием — {full}. Подтверждённый срок подачи, который ещё не прошёл, — у {dated}.</p>'
+    body += '<p class="notice">Условия могли измениться. Проверь официальный источник перед подачей. Эта страница не определяет, подходишь ли ты программе.</p>'
+    body += '<p><a class="primary" href="../#profile">Проверить по моей анкете</a></p>'
+    body += f'<section><h2>Программы {esc(where)}</h2>' + program_rows(sorted(programs, key=by_name), countries, today, False) + '</section>'
+    if topic_pages:
+        body += '<section><h2>Подборки по всем странам</h2><ul>' + ''.join(f'<li><a href="../{esc(topic_path(slug))}">{esc(TOPICS[slug]["short"])}</a></li>' for slug in topic_pages) + '</ul></section>'
+    body += '<section class="next"><h2>Что проверить дальше</h2><p>Гражданство, страну и годы школы, возраст, оценки и экзамены. Заполни анкету: Nerio покажет, какие условия подходят, а что нужно уточнить.</p><a class="primary" href="../#profile">Открыть анкету Nerio</a></section>'
+    return page(title + " — Nerio", description, country_path(code), body, [("Nerio", ORIGIN + "/"), ("Страны", ORIGIN + "/countries/"), (country, ORIGIN + "/" + country_path(code))])
+
+
+def countries_index_html(groups, countries, topic_pages):
+    ordered = sorted(groups, key=lambda code: countries.get(code, code))
+    body = '<h1>Учёба за рубежом по странам</h1><p class="intro">Университеты и стипендии для поступления после школы, собранные по странам: финансирование и сроки подачи по официальным источникам.</p>'
+    body += '<ul class="program-list">' + ''.join(f'<li><a href="{esc(country_path(code).split("/", 1)[1])}">{esc(countries.get(code, code))}</a> <span class="meta">· программ: {len(groups[code])}</span></li>' for code in ordered) + '</ul>'
+    if topic_pages:
+        body += '<section><h2>Подборки</h2><ul>' + ''.join(f'<li><a href="../{esc(topic_path(slug))}">{esc(TOPICS[slug]["short"])}</a></li>' for slug in topic_pages) + '</ul></section>'
+    body += '<p><a href="../programs/">Все программы одним списком</a></p>'
+    return page("Учёба за рубежом по странам — Nerio", "Университеты и стипендии за рубежом по странам: финансирование и сроки подачи по официальным источникам. Бесплатно, без регистрации.", "countries/", body, [("Nerio", ORIGIN + "/"), ("Страны", ORIGIN + "/countries/")])
+
+
+def topic_programs(slug, programs, today):
+    if slug == "sroki-podachi":
+        return sorted((p for p in programs if open_deadline(p, today)), key=lambda p: (open_deadline(p, today), by_name(p)))
+    return sorted((p for p in programs if TOPICS[slug]["test"](p)), key=lambda p: (by_name(p)))
+
+
+def topic_html(slug, programs, countries, today, topic_pages):
+    topic = TOPICS[slug]
+    description = f'{topic["intro"].split(".")[0]}. Программ: {len(programs)}. Бесплатный каталог Nerio.'
+    description = description[:157].rsplit(" ", 1)[0] + "…" if len(description) > 160 else description
+    body = f'<nav class="breadcrumbs" aria-label="Путь"><a href="../">Nerio</a><span>/</span><a href="../programs/">Программы</a></nav><h1>{esc(topic["h1"])}</h1>'
+    body += f'<p class="intro">{esc(topic["intro"])}</p><p class="meta">Программ: {len(programs)}.</p>'
+    body += '<p class="notice">Условия могли измениться. Проверь официальный источник перед подачей. Эта страница не определяет, подходишь ли ты программе.</p>'
+    body += '<p><a class="primary" href="../#profile">Проверить по моей анкете</a></p>'
+    body += program_rows(programs, countries, today, True)
+    others = [other for other in topic_pages if other != slug]
+    if others:
+        body += '<section><h2>Другие подборки</h2><ul>' + ''.join(f'<li><a href="{esc(other)}.html">{esc(TOPICS[other]["short"])}</a></li>' for other in others) + '</ul></section>'
+    body += '<p><a href="../countries/">Программы по странам</a></p>'
+    return page(topic["title"] + " — Nerio", description, topic_path(slug), body, [("Nerio", ORIGIN + "/"), ("Программы", ORIGIN + "/programs/"), (topic["short"], ORIGIN + "/" + topic_path(slug))])
+
+
+def remove_stale(folder, expected):
+    for old in folder.glob("*.html"):
+        if old.name not in expected and MARKER in old.read_text(encoding="utf-8"):
+            old.unlink()
+
+
+def write_public_pages(root: Path, programs: list[dict], today: str | None = None):
     """Caller passes publishable(programs), the app's existing publication gate."""
+    today = today or date.today().isoformat()
     folder = root / "programs"
     folder.mkdir(exist_ok=True)
     countries = country_names(root)
     # Validate every filename before mutating the generated set.
     expected = {program_path(p).split("/", 1)[1] for p in programs} | {"index.html"}
+    groups = defaultdict(list)
+    for program in programs:
+        code = program.get("hostCountry")
+        if code in LOCATIVE and code not in NO_COUNTRY_PAGE:
+            groups[code].append(program)
+    groups = {code: items for code, items in groups.items() if len(items) >= MIN_COUNTRY_PROGRAMS}
+    country_expected = {country_path(code).split("/", 1)[1] for code in groups} | {"index.html"}
+    topics = {slug: topic_programs(slug, programs, today) for slug in TOPICS}
+    topic_pages = [slug for slug, items in topics.items() if items]
     for program in programs:
         (root / program_path(program)).write_text(program_html(program, countries), encoding="utf-8")
-    (folder / "index.html").write_text(catalog_html(programs, countries), encoding="utf-8")
-    for old in folder.glob("*.html"):
-        if old.name not in expected and MARKER in old.read_text(encoding="utf-8"):
-            old.unlink()
-    entries = [(path, None) for path in ["", "faq.html", "glossary.html", "opportunities.html", "privacy.html", "programs/"]]
+    (folder / "index.html").write_text(catalog_html(programs, countries, groups, topic_pages), encoding="utf-8")
+    remove_stale(folder, expected)
+    (root / "countries").mkdir(exist_ok=True)
+    for code, items in groups.items():
+        (root / country_path(code)).write_text(country_html(code, items, countries, today, topic_pages), encoding="utf-8")
+    (root / "countries" / "index.html").write_text(countries_index_html(groups, countries, topic_pages), encoding="utf-8")
+    remove_stale(root / "countries", country_expected)
+    (root / "topics").mkdir(exist_ok=True)
+    for slug in topic_pages:
+        (root / topic_path(slug)).write_text(topic_html(slug, topics[slug], countries, today, topic_pages), encoding="utf-8")
+    remove_stale(root / "topics", {f"{slug}.html" for slug in topic_pages})
+    entries = [(path, None) for path in ["", "faq.html", "glossary.html", "opportunities.html", "privacy.html", "programs/", "countries/"]]
+    for code in sorted(groups):
+        entries.append((country_path(code), newest(groups[code])))
+    for slug in topic_pages:
+        entries.append((topic_path(slug), newest(topics[slug])))
     # lastmod — дата проверки данных: страница собрана из них, раньше этой даты она меняться не могла.
     for program in programs:
-        checked = (program.get("source") or {}).get("lastVerified")
-        entries.append((program_path(program), checked if isinstance(checked, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", checked) else None))
+        entries.append((program_path(program), iso_day((program.get("source") or {}).get("lastVerified"))))
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     for path, lastmod in entries:
         sitemap += f'  <url><loc>{esc(ORIGIN + "/" + path)}</loc>'
