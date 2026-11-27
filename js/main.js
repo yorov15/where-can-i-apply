@@ -217,8 +217,10 @@ const tabbar = setupTabbar({
   },
 });
 
-// «Спросить ИИ»: одна кнопка на оба режима, сама следит за экраном.
-setupAiFab({ fab: document.getElementById('ai-fab'), panel: document.getElementById('ai-panel'), programBody, todayBody, enabled: Boolean(EXPLAIN_URL), mentorOn: MENTOR_ON });
+// «Спросить Nero»: одна кнопка с чатом и быстрыми кнопками, сама следит за экраном.
+// Чату нужны только id целей и дела недели; анкета, имя и баллы не уходят.
+setupAiFab({ fab: document.getElementById('ai-fab'), panel: document.getElementById('ai-panel'), programBody, todayBody, routeBody,
+  enabled: Boolean(EXPLAIN_URL), mentorOn: MENTOR_ON, chatContext: () => ({ goalIds: routeState.goals, week: weeklySnapshot?.week ?? null, today }) });
 
 // План живёт отдельно от анкеты: анкету можно поправить, не потеряв отмеченное.
 let routeState = loadRouteState(localStorage);
@@ -487,6 +489,8 @@ function renderRouteView() {
   let todayFocus=null;
   if(location.hash.startsWith('#today/work/')){try{todayFocus=decodeURIComponent(location.hash.slice('#today/work/'.length))||null;}catch{ /* повреждённая ссылка возвращает общий план */ }}
   const plans = Object.fromEntries((route?.steps ?? []).filter(step => routeTracks[step.track]).map(step => [step.id, examForStep(step)]));
+  // Вопрос к Nero на вкладке Nero: фоновая перерисовка не должна выбивать курсор из поля.
+  const typing=document.activeElement?.matches?.('#route-body [data-nero-chat] textarea')?[document.activeElement.selectionStart,document.activeElement.selectionEnd]:null;
   parkTip();
   (todayScreen.hidden ? renderRoute : renderToday)(todayScreen.hidden ? routeBody : todayBody, {
     guidedStart,
@@ -794,6 +798,7 @@ function renderRouteView() {
       onStatus: showRouteStatus,
     },
   });
+  if(typing){const input=routeBody.querySelector('[data-nero-chat] textarea');if(input){input.focus({preventScroll:true});input.setSelectionRange(...typing);}}
   // В «Моём пути» — только строки из данных маршрута, не тексты самого ученика.
   placeTip();
   if (todayScreen.hidden) annotateTerms(routeBody, '.route-step, .route-detail, .route-warn');

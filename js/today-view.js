@@ -14,8 +14,8 @@ import { VALUE_TITLE, ENTRY_STEPS, catalogLine } from './start-view.js';
 import { renderRecommenderToday } from './recommenders-view.js';
 import { stepRow, pathNav } from './route-view.js';
 import { countryName } from './filter.js';
+import { DAYS, weekDates, neroLink } from './mentor-view.js';
 
-const DAYS = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 const shift = (day, n) => new Date(Date.parse(`${day}T00:00:00Z`) + n * 86400000).toISOString().slice(0, 10);
 const shortName = (name) => String(name ?? '').split(' — ')[0];
 
@@ -53,24 +53,6 @@ export function todayModel({ route, routeState, weekly, study, today, todayFocus
     expectedDeadline: plan.expectedDeadline,
   }));
 
-  const dates = [];
-  for (const task of tasks) {
-    if (task.day && task.day >= today && !task.done) dates.push({ date: task.day, title: task.title, note: 'Выбранный день' });
-  }
-  for (const level of levels) {
-    if (level.lastDate && level.lastDate >= today) {
-      dates.push({ date: level.lastDate, title: `Последний день сдать ${level.name || level.test}`, note: 'Расчёт Nerio от срока подачи' });
-    }
-  }
-  for (const goal of open) {
-    dates.push({
-      date: goal.deadline.closes,
-      title: `Подача в ${shortName(goal.name)}`,
-      note: goal.deadline.confidence === 'confirmed' ? 'Подтверждённый срок' : 'Ожидаемый срок',
-    });
-  }
-  dates.sort((a, b) => a.date.localeCompare(b.date));
-
   const applications = (route?.goals ?? []).map(goal => {
     const entry = statusOf(routeState, goal.id);
     return { id: goal.id, name: shortName(goal.name), status: entry.status,
@@ -107,7 +89,8 @@ export function todayModel({ route, routeState, weekly, study, today, todayFocus
     week, tasks, next, doneCount,
     doneMinutes: tasks.filter(task => task.done).reduce((sum, task) => sum + task.minutes, 0),
     levels,
-    dates: dates.slice(0, 4),
+    // Те же даты получает наставник на вкладке Nero (js/mentor-view.js).
+    dates: weekDates({ route, routeState, weekly, study, today }),
     applications: applications.some(goal => goal.status !== 'thinking') ? applications : [],
   };
 }
@@ -189,54 +172,6 @@ function nowCard(model, props) {
   if(finish)prerequisite.hidden=!practice;
   card.append(row,prerequisite);
   return card;
-}
-
-// Наставник: раскладка дел недели по дням с «зачем» и «первым шагом».
-// Сами дела, минуты и сроки здесь те же, что в списке ниже: ответ модели
-// прошёл проверку на сервере, а дни ставятся только по кнопке человека.
-function mentorBlock(model, props) {
-  const { mentor, handlers } = props;
-  const open = model.tasks.filter((task) => !task.done);
-  if (!mentor || !open.length) return null;
-  const box = el('section', 'route-week');
-  box.dataset.mentor = '';
-  box.append(el('h3', 'route-phase-title', 'Nero, ИИ-наставник'));
-  const status = el('p', 'route-detail');
-  status.setAttribute('role', 'status');
-  const ask = el('button', 'button button-quiet', mentor.busy ? 'Nero думает, до минуты…' : mentor.plan ? 'Спросить заново' : 'Спросить Nero');
-  ask.type = 'button';
-  ask.disabled = mentor.busy || mentor.left <= 0;
-  ask.addEventListener('click', () => handlers.onMentorAsk(model.week, model.dates));
-  if (!mentor.plan) {
-    box.append(el('p', 'route-detail', 'Разложит дела этой недели по дням и подскажет, с чего начать каждое. Дела и сроки считает сайт, Nero их не меняет.'), ask);
-  } else {
-    box.append(el('p', null, mentor.plan.focus));
-    const list = el('ul', 'route-week-list');
-    for (const item of mentor.plan.days) {
-      const row = el('li', 'route-week-item');
-      row.append(el('p', 'today-tag', `${DAYS[(new Date(`${item.day}T00:00:00Z`).getUTCDay() + 6) % 7]} · ${formatDate(item.day)}`),
-        el('p', 'route-step-title', item.title), el('p', 'route-detail', item.why));
-      const first = el('p');
-      first.append(el('b', null, 'Первые 15 минут: '), item.firstStep);
-      row.append(first);
-      list.append(row);
-    }
-    box.append(list);
-    const row = el('div', 'today-actions');
-    const current = new Map(model.tasks.map((task) => [task.taskId, task.day ?? '']));
-    if (mentor.plan.days.some((item) => current.get(item.taskId) !== item.day)) {
-      const apply = el('button', 'button', 'Поставить эти дни');
-      apply.type = 'button';
-      apply.addEventListener('click', () => handlers.onMentorApply(model.week.key, mentor.plan.days));
-      row.append(apply);
-    } else status.textContent = 'Дни из совета стоят в плане недели.';
-    row.append(ask);
-    box.append(row);
-  }
-  if (mentor.error) status.textContent = mentor.error;
-  else if (mentor.left <= 0) status.textContent = 'На сегодня вопросы к Nero закончились.';
-  box.append(status);
-  return box;
 }
 
 function weekList(model, props) {
@@ -437,8 +372,9 @@ export function renderToday(root, props) {
   const now = Boolean(model.week?.tasks.length);
   if (now) root.append(nowCard(model, props));
   if (route && (!model.offerActions.length || model.queue.length)) root.append(queueBlock(model, handlers, !now));
-  const mentor = model.week ? mentorBlock(model, props) : null;
-  if (mentor) root.append(mentor);
+  // Сам наставник — на вкладке Nero; здесь одна строка-ссылка туда.
+  const nero = model.week ? neroLink(model, props) : null;
+  if (nero) root.append(nero);
   const goals = goalsBlock(model);
   if (goals) root.append(goals);
   if (model.week?.tasks.length) {

@@ -35,5 +35,6 @@ test('ссылки на разделы пути открывают нужный 
   assert.equal(routeSection('#route/preparation'), 'preparation');
   assert.equal(routeSection('#route/applications'), 'applications');
   assert.equal(routeSection('#route/files'), 'files');
+  assert.equal(routeSection('#route/nero'), 'nero');
   assert.equal(routeSection('#route/unknown'), 'works');
 });

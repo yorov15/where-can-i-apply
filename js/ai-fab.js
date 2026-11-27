@@ -1,9 +1,14 @@
-// Кнопка «Спросить ИИ» справа внизу и панель с двумя режимами. Своего запроса
-// у неё нет: «Объяснить» нажимает кнопку объяснения на странице программы
-// (js/render.js, explainBlock), «Наставник» — «Спросить наставника» на
-// «Сегодня» (js/today-view.js). Что уходит на сервер, панель говорит до нажатия.
-// Когда показывать кнопку и какой режим открыть — js/lib/ai-fab.js.
-import { fabShown, fabMode, explainState, mentorState } from './lib/ai-fab.js';
+// Кнопка «Спросить Nero» справа внизу и панель-чат. В панели: быстрые кнопки
+// по экрану, разговор с Nero (js/nero-chat-view.js, тот же, что на вкладке
+// Nero) и ссылка на вкладку. Быстрые кнопки своего запроса не шлют:
+// «Объясни мне эту программу» нажимает кнопку объяснения на странице
+// программы (js/render.js, explainBlock), «Разложи мою неделю» открывает
+// вкладку Nero и нажимает «Спросить Nero» у наставника (js/mentor-view.js).
+// Когда показывать кнопку и какие быстрые кнопки дать — js/lib/ai-fab.js.
+import { fabShown, quickActions, explainState, weekState } from './lib/ai-fab.js';
+import { chatScreen } from './lib/nero-chat.js';
+import { neroChat } from './nero-chat-view.js';
+import { NERO_HASH } from './mentor-view.js';
 
 const el = (tag, className, text) => {
   const node = document.createElement(tag);
@@ -12,83 +17,85 @@ const el = (tag, className, text) => {
   return node;
 };
 
-const MENTOR_SENDS = 'Уйдут несделанные дела этой недели, ближайшие сроки, сколько часов в неделю ты готов заниматься, и случайный код устройства. Анкета, баллы и имя не уходят.';
+const PROGRAM = '#program/';
 
-export function setupAiFab({ fab, panel, programBody, todayBody, enabled, mentorOn }) {
+// chatContext() → { goalIds, week, today } из состояния сайта в момент вопроса.
+export function setupAiFab({ fab, panel, programBody, todayBody, routeBody, enabled, mentorOn, chatContext }) {
   if (!fab || !panel) return { sync() {} };
   const body = panel.querySelector('[data-ai-body]');
-  const radios = [...panel.querySelectorAll('input[name="ai-mode"]')];
-  // «Спросить» из «Моего пути»: ждём, пока «Сегодня» нарисует блок наставника.
+  // «Разложи мою неделю» не с вкладки Nero: ждём, пока вкладка нарисует наставника.
+  // fresh — вкладка перерисовалась после нажатия: старый блок с прошлого захода не годится.
   let pending = 0;
+  let fresh = false;
 
-  const mentorBlock = () => todayBody.querySelector('[data-mentor]');
-  const lastButton = (box) => [...box.querySelectorAll('button')].pop() ?? null;
   const show = (box) => box?.scrollIntoView({ block: 'center' });
   // Фокус на кнопку возвращает сам <dialog>; aria-expanded меняем сразу, не дожидаясь события close.
   const hide = () => { panel.close(); fab.setAttribute('aria-expanded', 'false'); };
-  const action = (text, run) => {
-    const node = el('button', 'button', text);
+  const quick = (text, run) => {
+    const node = el('button', 'button button-quiet', text);
     node.type = 'button';
     node.addEventListener('click', () => { hide(); run(); });
     return node;
   };
   const link = (text, href) => {
-    const node = el('a', 'button', text);
+    const node = el('a', 'link-button', text);
     node.href = href;
     node.addEventListener('click', hide);
     return node;
   };
+  const programId = () => {
+    if (!location.hash.startsWith(PROGRAM)) return '';
+    try { return decodeURIComponent(location.hash.slice(PROGRAM.length)); } catch { return ''; }
+  };
 
-  function explainBody() {
+  // Блок наставника на вкладке Nero. Пока вкладка грузится, его нет — ждём.
+  const mentorBox = () => routeBody?.querySelector('[data-mentor]') ?? null;
+  const runWeek = () => {
+    const box = mentorBox();
+    const ask = box?.querySelector('[data-mentor-ask]');
+    const state = weekState(box && { button: Boolean(ask), disabled: Boolean(ask?.disabled), answer: Boolean(box.querySelector('.route-week-list')) });
+    if (state === 'wait') return false;
+    if (state === 'run') ask.click();
+    show(mentorBox());
+    return true;
+  };
+
+  function explainAction(row, notes) {
     const box = programBody.querySelector('.explain');
     const ask = box?.querySelector('button');
     const state = explainState({
-      program: document.body.dataset.screen === 'program' && location.hash.startsWith('#program/'),
+      program: true,
       block: box ? { button: Boolean(ask), disabled: Boolean(ask?.disabled), answer: Boolean(box.querySelector('.explain-answer')) } : null,
     });
-    body.append(el('p', null, 'Объяснит простыми словами ответ по программе: почему так и что сделать сейчас.'));
-    if (state === 'run') {
-      // Та же строка «что уйдёт», что стоит под кнопкой на странице.
-      body.append(el('p', 'explain-note', box.querySelector('.explain-note')?.textContent ?? ''),
-        action('Объяснить', () => { ask.click(); show(box); }));
-    } else if (state === 'shown') {
-      body.append(el('p', null, 'Объяснение уже на странице программы.'), action('Показать', () => show(box)));
-    } else if (state === 'profile') {
-      body.append(el('p', null, 'Объяснение строится по твоей анкете. Заполни её — и кнопка появится.'), link('Заполнить анкету', '#profile'));
-    } else {
-      body.append(el('p', null, 'Объяснение работает на странице программы. Открой любую программу в каталоге.'), link('Открыть каталог', '#programs'));
+    if (state === 'profile') {
+      notes.append(el('p', 'fineprint', 'Объяснение строится по твоей анкете. Заполни её — и Nero объяснит эту программу.'), link('Заполнить анкету', '#profile'));
+      return;
     }
-  }
-
-  function mentorBody() {
-    const box = mentorBlock();
-    const ask = box && lastButton(box);
-    const state = mentorState({
-      screen: document.body.dataset.screen,
-      on: mentorOn,
-      block: box ? { button: Boolean(ask), disabled: Boolean(ask?.disabled), answer: Boolean(box.querySelector('.route-week-list')) } : null,
-    });
-    body.append(el('p', null, 'Разложит дела этой недели по дням и подскажет, с чего начать каждое.'));
-    if (state === 'run' || state === 'go') {
-      body.append(el('p', 'explain-note', MENTOR_SENDS), action('Спросить Nero', state === 'run'
-        ? () => { ask.click(); show(box); }
-        : () => { pending = Date.now() + 10000; location.hash = 'today'; }));
-    } else if (state === 'shown') {
-      body.append(el('p', null, 'Ответ Nero — на «Сегодня», в блоке «Nero, ИИ-наставник».'), action('Показать', () => show(box)));
-    } else if (state === 'empty') {
-      body.append(el('p', null, 'Nero появится на «Сегодня», когда в плане недели будут дела.'));
-    } else if (state === 'today') {
-      body.append(el('p', null, 'Nero работает в «Моём пути», на «Сегодня».'), link('Открыть «Сегодня»', '#today'));
-    } else {
-      body.append(el('p', null, 'Nero сейчас выключен.'));
-    }
-    body.append(el('p', 'fineprint', 'У шага и у черновика свои кнопки: «Спросить Nero» и «Проверить черновик».'));
+    row.append(quick('Объясни мне эту программу', state === 'run' ? () => { ask.click(); show(box); } : () => show(box)));
+    // Та же строка «что уйдёт», что стоит под кнопкой на странице.
+    if (state === 'run') notes.append(el('p', 'fineprint', `Для объяснения: ${box.querySelector('.explain-note')?.textContent ?? ''}`));
   }
 
   function render() {
     body.textContent = '';
-    if (radios.find((radio) => radio.checked)?.value === 'mentor') mentorBody();
-    else explainBody();
+    const screen = document.body.dataset.screen;
+    const row = el('div', 'ask-actions');
+    const notes = el('div');
+    for (const action of quickActions({ screen, program: screen === 'program' && location.hash.startsWith(PROGRAM), mentorOn })) {
+      if (action === 'explain') explainAction(row, notes);
+      if (action === 'week') {
+        row.append(quick('Разложи мою неделю', () => {
+          if (location.hash === NERO_HASH && runWeek()) return;
+          pending = Date.now() + 10000;
+          fresh = false;
+          if (location.hash !== NERO_HASH) location.hash = NERO_HASH.slice(1);
+        }));
+      }
+    }
+    if (row.children.length) body.append(row);
+    if (notes.children.length) body.append(notes);
+    body.append(neroChat({ context: () => ({ ...chatContext(), screen: chatScreen(document.body.dataset.screen), programId: programId() }) }));
+    if (location.hash !== NERO_HASH) body.append(link('Открыть вкладку Nero', NERO_HASH));
   }
 
   function sync() {
@@ -97,26 +104,20 @@ export function setupAiFab({ fab, panel, programBody, todayBody, enabled, mentor
     fab.hidden = !shown;
     if (!shown && panel.open) hide();
     if (!pending) return;
-    if (Date.now() > pending || (screen !== 'today' && screen !== 'route')) pending = 0;
-    if (!pending || screen !== 'today') return;
-    const box = mentorBlock();
-    const ask = box && lastButton(box);
-    if (!ask) return;
-    pending = 0;
-    // Готовый ответ не спрашиваем заново: это съело бы вопрос из дневного предела.
-    if (!box.querySelector('.route-week-list') && !ask.disabled) ask.click();
-    show(mentorBlock());
+    if (Date.now() > pending) { pending = 0; return; }
+    // Адрес ещё не сменился — ждём; ушли с вкладки на другой раздел — забываем.
+    if (screen !== 'route') return;
+    if (location.hash !== NERO_HASH) { pending = 0; return; }
+    if (fresh && runWeek()) pending = 0;
   }
 
   fab.addEventListener('click', () => {
-    const mode = fabMode(document.body.dataset.screen);
-    for (const radio of radios) radio.checked = radio.value === mode;
     render();
     panel.showModal();
     fab.setAttribute('aria-expanded', 'true');
-    radios.find((radio) => radio.checked)?.focus();
+    // Фокус — на первую быструю кнопку, иначе в поле вопроса, иначе на первую ссылку или «Закрыть».
+    (body.querySelector('.ask-actions button, textarea, a') ?? panel.querySelector('[data-ai-close]'))?.focus();
   });
-  for (const radio of radios) radio.addEventListener('change', render);
   panel.querySelector('[data-ai-close]').addEventListener('click', hide);
   // Нажатие мимо панели, по затемнению, тоже закрывает её. Esc закрывает сам <dialog>.
   panel.addEventListener('click', (event) => {
@@ -132,6 +133,7 @@ export function setupAiFab({ fab, panel, programBody, todayBody, enabled, mentor
 
   new MutationObserver(sync).observe(document.body, { attributes: true, attributeFilter: ['data-screen'] });
   new MutationObserver(sync).observe(todayBody, { childList: true });
+  if (routeBody) new MutationObserver(() => { fresh = true; sync(); }).observe(routeBody, { childList: true });
   sync();
   return { sync };
 }
