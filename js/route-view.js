@@ -277,18 +277,18 @@ function stepMentorBlock(step, mentor) {
   if (answer) {
     const text = el('p');
     text.tabIndex = -1;
-    text.append(el('b', null, 'Наставник: '), answer.explain);
+    text.append(el('b', null, 'Неро: '), answer.explain);
     box.append(text);
     if (answer.question) box.append(el('p', 'route-detail', `Подумай: ${answer.question}`));
   } else {
     const busy = mentor.busyId === step.id;
-    const ask = el('button', 'button button-quiet', busy ? 'Наставник думает, до минуты…' : 'Спросить наставника');
+    const ask = el('button', 'button button-quiet', busy ? 'Неро думает, до минуты…' : 'Спросить Неро');
     ask.type = 'button';
     ask.disabled = Boolean(mentor.busyId) || mentor.left <= 0;
     ask.addEventListener('click', () => mentor.onAsk(step));
     box.append(ask);
     if (mentor.errors[step.id]) status.textContent = mentor.errors[step.id];
-    else if (mentor.left <= 0) status.textContent = 'На сегодня вопросы к наставнику закончились.';
+    else if (mentor.left <= 0) status.textContent = 'На сегодня вопросы к Неро закончились.';
   }
   box.append(status);
   return box;

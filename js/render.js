@@ -378,7 +378,7 @@ export function explainBlock(model) {
     wrap.append(answerNodes(cached));
     return wrap;
   }
-  const button = el('button', 'button button-small', 'Объяснить простыми словами (ИИ)');
+  const button = el('button', 'button button-small', 'Неро: объяснить простыми словами');
   button.type = 'button';
   const status = el('p', 'explain-note');
   wrap.append(

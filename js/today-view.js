@@ -200,15 +200,15 @@ function mentorBlock(model, props) {
   if (!mentor || !open.length) return null;
   const box = el('section', 'route-week');
   box.dataset.mentor = '';
-  box.append(el('h3', 'route-phase-title', 'Наставник'));
+  box.append(el('h3', 'route-phase-title', 'Неро, ИИ-наставник'));
   const status = el('p', 'route-detail');
   status.setAttribute('role', 'status');
-  const ask = el('button', 'button button-quiet', mentor.busy ? 'Наставник думает, до минуты…' : mentor.plan ? 'Спросить заново' : 'Спросить наставника');
+  const ask = el('button', 'button button-quiet', mentor.busy ? 'Неро думает, до минуты…' : mentor.plan ? 'Спросить заново' : 'Спросить Неро');
   ask.type = 'button';
   ask.disabled = mentor.busy || mentor.left <= 0;
   ask.addEventListener('click', () => handlers.onMentorAsk(model.week, model.dates));
   if (!mentor.plan) {
-    box.append(el('p', 'route-detail', 'Разложит дела этой недели по дням и подскажет, с чего начать каждое. Дела и сроки считает сайт, наставник их не меняет.'), ask);
+    box.append(el('p', 'route-detail', 'Разложит дела этой недели по дням и подскажет, с чего начать каждое. Дела и сроки считает сайт, Неро их не меняет.'), ask);
   } else {
     box.append(el('p', null, mentor.plan.focus));
     const list = el('ul', 'route-week-list');
@@ -234,7 +234,7 @@ function mentorBlock(model, props) {
     box.append(row);
   }
   if (mentor.error) status.textContent = mentor.error;
-  else if (mentor.left <= 0) status.textContent = 'На сегодня вопросы к наставнику закончились.';
+  else if (mentor.left <= 0) status.textContent = 'На сегодня вопросы к Неро закончились.';
   box.append(status);
   return box;
 }
