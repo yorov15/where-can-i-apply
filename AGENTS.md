@@ -190,6 +190,9 @@ python -m tools.build               # индекс, детали, route.json, л
   строка `modulepreload` в `index.html`.
 - Выкладка: GitHub Pages обновляется сам от `main`; **Vercel сам не пересобирается** — после пуша
   `vercel deploy --prod --yes --scope ym-2559` (проект `where-can-i-apply`).
+  Новые и изменённые публичные страницы после выкладки отправить в IndexNow (Bing, Яндекс):
+  `python -m tools.indexnow --since <дата> --send` или `--prefix countries/`; без `--send` только список.
+  Страницы стран (`countries/`) и подборок (`topics/`) собирает `tools/seo.py` из тех же записей.
 
 ## Жёсткие правила данных
 

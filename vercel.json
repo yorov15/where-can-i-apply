@@ -17,6 +17,17 @@
       "permanent": true
     },
     {
+      "source": "/:section(countries|topics)/:path*",
+      "has": [{ "type": "host", "value": "(?:kuda-podat|where-can-i-apply)\\.vercel\\.app" }],
+      "destination": "https://nerio-app.vercel.app/:section/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/countries/index.html",
+      "destination": "/countries/",
+      "permanent": true
+    },
+    {
       "source": "/:page(faq|privacy|glossary|opportunities).html",
       "has": [{ "type": "host", "value": "(?:kuda-podat|where-can-i-apply)\\.vercel\\.app" }],
       "destination": "https://nerio-app.vercel.app/:page.html",
