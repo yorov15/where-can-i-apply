@@ -23,7 +23,7 @@
 import {
   explain, createCache, createLimiter, originAllowed, corsHeaders, parseCompletion, isUsableAnswer, grounded, chunk, callWithFallback, LIMITS,
 } from './_explain-core.js';
-import { reviewEssay,createEssayLimiter,parseEssayFeedback,ESSAY_LIMITS } from './_essay-core.js';
+import { reviewEssay,createEssayLimiter,parseEssayFeedback,ESSAY_LIMITS,ESSAY_PUBLIC } from './_essay-core.js';
 import { mentorWeek, createDeviceLimiter, MENTOR_LIMITS } from './_mentor-core.js';
 
 // Данные берутся с живого сайта, а не лежат внутри функции: карточки
@@ -106,6 +106,8 @@ const cache = createCache();
 const inflight = new Map();
 const limiter = createLimiter({ daily: Number(process.env.DAILY_LIMIT) || LIMITS.dailyCalls });
 const essayDeviceLimiter=createEssayLimiter();
+// Отзыв на эссе считает свои обращения: 10 черновиков экзамена не должны упираться в 6 объяснений на адрес.
+const essayLimiter=createLimiter({daily:Number(process.env.ESSAY_DAILY_LIMIT)||ESSAY_LIMITS.daily,perIp:ESSAY_LIMITS.perIp});
 // Наставник считает свои обращения отдельно, чтобы не съедать объяснялку и наоборот.
 const mentorLimiter = createLimiter({ daily: Number(process.env.MENTOR_DAILY_LIMIT) || MENTOR_LIMITS.daily, perIp: MENTOR_LIMITS.perIp });
 const mentorDevices = createDeviceLimiter();
@@ -139,7 +141,15 @@ const CONFIGURED = (process.env.EXPLAIN_MODELS ?? '').split(',').map((s) => s.tr
 const isGoKey = (key) => typeof key === 'string' && key.startsWith('oc_sk_');
 const goKey = () => [process.env.OPENCODE_API_KEY, process.env.OPENROUTER_API_KEY].find(isGoKey) ?? '';
 const routerKey = () => (isGoKey(process.env.OPENROUTER_API_KEY) ? '' : process.env.OPENROUTER_API_KEY ?? '');
-const essayEnabled = () => process.env.ESSAY_REVIEW_ENABLED==='1'&&Boolean(routerKey());
+// Эссе (решение 27.11.2026): при ключе Go — только go/deepseek-v4.1-flash. В таблице
+// приватности Go (opencode.ai/docs/go) у неё 0 дней хранения, а поставщики, которые
+// учатся на запросах, там выключены по умолчанию. EXPLAIN_MODELS эссе не меняет: другую
+// модель — только правкой здесь и новым экзаменом. Без ключа Go — бесплатная модель
+// OpenRouter с запретом хранения и сбора данных (provider в askOnce), иначе выключено.
+const essayModels = () => (goKey() ? [['go/deepseek-v4.1-flash']] : routerKey() ? [['openrouter/free']] : []);
+// Режим работает при любой модели (для экзамена); людям его предлагает только essay-status,
+// и только с Go: экран перед отправкой говорит человеку, что черновик уйдёт в OpenCode Go.
+const essayOffered = () => (ESSAY_PUBLIC || process.env.ESSAY_REVIEW_ENABLED === '1') && Boolean(goKey());
 const usable = (name) => (name.startsWith('go/') ? Boolean(goKey()) : Boolean(routerKey()));
 const pickModels = () => (CONFIGURED.length ? CONFIGURED : goKey() ? GO_MODELS : FREE_MODELS).filter(usable).slice(0, 9);
 const modelGroups = () => chunk(pickModels(), 1);
@@ -180,9 +190,11 @@ async function askOnce(models, { system, user, mode, check }, timeoutMs) {
         { role: 'system', content: system },
         { role: 'user', content: user },
       ],
-      max_tokens: mode==='essay'?2200:mode==='mentor-week'?3000:1200,
+      // Эссе: девять пунктов по-русски плюс запас, если рассуждения модели считаются в предел.
+      max_tokens: mode==='essay'?3000:mode==='mentor-week'?3000:1200,
       temperature: 0.3,
-      ...(mode==='essay'?{provider:{data_collection:'deny',zdr:true,max_price:{prompt:0,completion:0}}}:{}),
+      // Блок provider понимает только OpenRouter; Go получает модель без него.
+      ...(mode==='essay'&&!go?{provider:{data_collection:'deny',zdr:true,max_price:{prompt:0,completion:0}}}:{}),
       ...(json?{response_format:{type:'json_object'}}:{}),
     }),
     signal: AbortSignal.timeout(timeoutMs),
@@ -199,10 +211,14 @@ async function askOnce(models, { system, user, mode, check }, timeoutMs) {
 const callModel = (prompt, trace) => callWithFallback(modelGroups(), (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 30000, perGroupMs: 9000 });
 // Наставник пишет план на всю неделю (до 8 дел): модели нужно 6–30 секунд; функция живёт до 50 (vercel.json).
 const callMentorModel = (prompt, trace) => callWithFallback(modelGroups(), (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace), { budgetMs: 44000, perGroupMs: 42000 });
-// The essay path never selects Go or a paid configured model. Privacy and
-// zero-price constraints are not relaxed when a free provider is unavailable.
-const callEssayModel = (prompt, trace) => callWithFallback([['openrouter/free']],
-  (group,timeoutMs)=>askGroup(group,prompt,timeoutMs,trace),{budgetMs:30000,perGroupMs:28000});
+// Модель для эссе выбирает essayModels(), а не EXPLAIN_MODELS. Go читает черновик до
+// 1500 знаков и пишет девять пунктов: как у недели, ждём до 42 с из 50 (vercel.json).
+// Бесплатный OpenRouter — прежние 28 с. Ограничения приватности при сбое не ослабляются.
+const callEssayModel = (prompt, trace) => {
+  const groups = essayModels(), go = groups[0]?.[0]?.startsWith('go/');
+  return callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace),
+    go ? { budgetMs: 44000, perGroupMs: 42000 } : { budgetMs: 30000, perGroupMs: 28000 });
+};
 
 function send(res, status, json, headers = {}) {
   res.statusCode = status;
@@ -247,7 +263,7 @@ async function handle(req, res, cors) {
   if(body?.mode!=='essay'&&Math.max(Buffer.byteLength(raw),Number(req.headers['content-length'])||0)>cap)return send(res,413,{error:'too-big'},cors);
   if(body?.mode==='essay-status'){
     if(Object.keys(body).length!==1)return send(res,400,{error:'bad-request'},cors);
-    return send(res,200,{available:essayEnabled()},cors);
+    return send(res,200,{available:essayOffered()},cors);
   }
   if(body?.mode!=='essay'&&!pickModels().length)return send(res,503,{error:'off'},cors);
   if(body?.mode==='mentor-week'){
@@ -263,9 +279,10 @@ async function handle(req, res, cors) {
   if(body?.mode==='essay'){
     const program=typeof body.programId==='string'?data.index.programs.find(item=>item.id===body.programId):null;
     const spec=program?await essaySpecFor(program.id):null;
-    const result=await reviewEssay({body,ip:clientIp(req)},{program,spec,limiter,deviceLimiter:essayDeviceLimiter,
-      available:essayEnabled(),callModel:prompt=>callEssayModel(prompt,trace)});
-    return send(res,result.status,result.json,cors);
+    const result=await reviewEssay({body,ip:clientIp(req)},{program,spec,limiter:essayLimiter,deviceLimiter:essayDeviceLimiter,
+      available:essayModels().length>0,callModel:prompt=>callEssayModel(prompt,trace),onReject:reason=>trace.push({reject:reason})});
+    // След (модель, время, почему отбракован ответ) — только по заголовку, для экзамена tools/essay-exam.mjs.
+    return send(res,result.status,req.headers['x-explain-trace']==='1'?{...result.json,trace}:result.json,cors);
   }
   const { status, json } = await explain(
     { body, ip: clientIp(req), today: new Date().toISOString().slice(0, 10) },

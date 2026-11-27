@@ -1,4 +1,4 @@
-import { askEssay,essayCount,essayUsage,essayAvailable,ESSAY_ERRORS } from './essay.js';
+import { askEssay,essayCount,essayUsage,essayAvailable,draftContacts,ESSAY_ERRORS } from './essay.js';
 import { experiencesBySkill } from './portfolio.js';
 import { safeHttpUrl } from './lib/url.js';
 import { EXPLAIN_URL } from './config.js';
@@ -42,11 +42,11 @@ export function renderEssays(goals,specs,onRetry,onSaveVersion,onVersionSaved,ha
     if(!spec){box.append(el('p','route-warn','Требования к эссе не загрузились.'));const retry=el('button','button button-quiet','Повторить загрузку эссе');retry.type='button';retry.addEventListener('click',onRetry);box.append(retry);section.append(box);continue;}
     const blocked=spec.essayPolicy?.review==='blocked';
     if(blocked){box.append(el('p','route-warn',spec.essayPolicy.note),sourceLink(spec.essayPolicy.source,'Правило программы'));
-      box.append(el('p','route-detail','ИИ-проверка здесь отключена. Используй требования и собственные примеры.'));}
+      box.append(el('p','route-detail','Проверка наставником здесь отключена. Используй требования и собственные примеры.'));}
     for(const item of spec.essays??[]){
       const field=el('details','route-more');field.dataset.essayField=item.id;field.append(el('summary',null,item.title));
       if(item.prompt)field.append(el('p','route-detail',item.prompt));
-      else field.append(el('p','route-detail','Точная формулировка вопроса пока не разобрана. Открой форму в источнике; ИИ-проверка этого поля недоступна.'));
+      else field.append(el('p','route-detail','Точная формулировка вопроса пока не разобрана. Открой форму в источнике; наставник это поле не проверяет.'));
       const key=`${goal.id}:${item.id}`,saved=drafts.get(key)??{text:'',feedback:null,busy:false,status:'',checks:[]};drafts.set(key,saved);
       const list=el('div');for(const [index,requirement] of item.requirements.entries()){
         const row=el('label','row'),check=el('input');check.type='checkbox';check.checked=saved.checks[index]===true;
@@ -59,7 +59,9 @@ export function renderEssays(goals,specs,onRetry,onSaveVersion,onVersionSaved,ha
       input.autocomplete='off';input.spellcheck=false;input.readOnly=saved.busy;label.append(input);field.append(label);
       const count=el('p','route-detail'),size=()=>{const result=essayCount(input.value,item);
         count.textContent=result.text;count.className=result.over||result.under?'route-warn':'route-detail';
-      };count.dataset.essayCount='';size();input.addEventListener('input',()=>{saved.text=input.value;saved.feedback=null;saved.status='';feedback.replaceChildren();status.textContent='';size();});field.append(count);
+      };count.dataset.essayCount='';size();input.addEventListener('input',()=>{saved.text=input.value;saved.feedback=null;saved.status='';feedback.replaceChildren();status.textContent='';size();
+        // Текст поменялся — показанное «что уйдёт» устарело, пусть человек посмотрит заново.
+        if(saved.preview){saved.preview=false;saved.update?.();}});field.append(count);
       const feedback=el('div'),status=el('p','route-status');status.setAttribute('role','status');status.textContent=saved.status;
       field.append(el('p','route-detail','Черновик исчезнет после перезагрузки. Сохрани свою копию.'));
       if(onSaveVersion){
@@ -71,20 +73,39 @@ export function renderEssays(goals,specs,onRetry,onSaveVersion,onVersionSaved,ha
         if(!saved.feedback?.[name])continue;feedback.append(el('h4',null,title));for(const line of saved.feedback[name])feedback.append(el('p','route-detail',line));}};show();
       if(!blocked&&item.prompt){
         const aiBox=el('div');aiBox.hidden=true;
-        const availabilityNote=el('p','route-detail','ИИ-проверку включим позже. Сейчас используй чек-лист и счётчик объёма.');field.append(availabilityNote);
-        aiBox.append(el('p','route-detail','Правило об ИИ в собранных источниках не найдено. Сверь действующие правила программы. Для проверки черновик уйдёт через Vercel и OpenRouter к бесплатной модели; убери имена и контакты.'));
-        const consentLabel=el('label','row'),consent=el('input');consent.type='checkbox';consentLabel.append(consent,document.createTextNode('Я сверил правила программы и разрешаю отправить этот черновик на ИИ-проверку.'));aiBox.append(consentLabel);
+        const availabilityNote=el('p','route-detail','Проверку наставником включим позже. Сейчас используй чек-лист и счётчик объёма.');field.append(availabilityNote);
+        aiBox.append(el('p','route-detail','Правило об ИИ в собранных источниках не найдено. Сверь действующие правила программы. Наставник не пишет и не переписывает текст: он задаёт вопросы и показывает, где мысль неясна.'));
+        const consentLabel=el('label','row'),consent=el('input');consent.type='checkbox';consentLabel.append(consent,document.createTextNode('Я сверил правила программы и разрешаю отправить этот черновик наставнику.'));aiBox.append(consentLabel);
         const quota=el('p','route-detail'),updateQuota=()=>{quota.textContent=`Сегодня осталось ${3-essayUsage()} из 3 попыток на этот браузер. Ошибка запроса тоже расходует попытку.`;};updateQuota();aiBox.append(quota);
-        const check=el('button','button button-quiet',saved.busy?'Проверяю…':'Проверить черновик');check.type='button';check.disabled=saved.busy;
-        saved.update=()=>{show();status.textContent=saved.status;check.disabled=saved.busy;input.readOnly=saved.busy;check.textContent=saved.busy?'Проверяю…':'Проверить черновик';updateQuota();};saved.update();
-        check.addEventListener('click',async()=>{
+        const check=el('button','button button-quiet','Проверить черновик');check.type='button';
+        // Перед отправкой человек видит ровно то, что уйдёт: вопрос программы и черновик целиком.
+        const preview=el('div'),outgoing=el('textarea'),contacts=el('p','route-warn'),actions=el('div','route-actions');
+        outgoing.readOnly=true;outgoing.rows=5;outgoing.setAttribute('aria-label','Черновик, который уйдёт на проверку');
+        const send=el('button','button','Отправить наставнику'),cancel=el('button','button button-quiet','Не отправлять');send.type='button';cancel.type='button';actions.append(send,cancel);
+        preview.append(el('h4',null,'Что уйдёт на проверку'),
+          el('p','route-detail',`Уйдёт весь черновик ниже и выбор вопроса: «${item.title}», ${goal.name.split(' — ')[0]}. Ещё — случайный номер браузера, по нему считаем 3 проверки в день. Анкета и другие черновики не уходят. Путь: Vercel, затем OpenCode Go и модель DeepSeek; по правилам Go она не хранит запросы. Наша функция черновик не записывает.`),
+          outgoing,contacts,el('p','route-detail','Перечитай и убери имена, почту, телефон и ссылки. Поправить можно в поле «Твой черновик».'),actions);
+        saved.update=()=>{show();status.textContent=saved.status;input.readOnly=saved.busy;
+          check.disabled=saved.busy;check.textContent=saved.busy?'Проверяю…':'Проверить черновик';check.hidden=Boolean(saved.preview);
+          preview.hidden=!saved.preview;outgoing.value=saved.preview?input.value:'';
+          const found=saved.preview?draftContacts(input.value):[];contacts.hidden=!found.length;
+          contacts.textContent=found.length?`Похоже, в тексте есть: ${found.join(', ')}. Убери это перед отправкой.`:'';
+          updateQuota();};saved.update();
+        check.addEventListener('click',()=>{
           if(!consent.checked){status.textContent='Сначала сверь правила программы и разреши отправку.';return;}
           if(saved.busy)return;
-          saved.busy=true;saved.status='Проверяю…';saved.update();
-          try{saved.feedback=await askEssay({programId:goal.id,essayId:item.id,draft:input.value},{url:EXPLAIN_URL});saved.status='Отзыв ИИ. Проверь его и реши сам, что менять.';}
+          if(input.value.trim().length<40||input.value.length>10000){status.textContent=ESSAY_ERRORS.invalid;return;}
+          saved.preview=true;saved.status='';saved.update();outgoing.focus();
+        });
+        cancel.addEventListener('click',()=>{saved.preview=false;saved.update();check.focus();});
+        send.addEventListener('click',async()=>{
+          if(saved.busy||!saved.preview)return;
+          const draft=outgoing.value;
+          saved.preview=false;saved.busy=true;saved.status='Наставник читает черновик. Это до минуты.';saved.update();
+          try{saved.feedback=await askEssay({programId:goal.id,essayId:item.id,draft},{url:EXPLAIN_URL});saved.status='Отзыв наставника. Проверь его и реши сам, что менять.';}
           catch(error){saved.status=ESSAY_ERRORS[error.kind]??ESSAY_ERRORS.model;}
           finally{saved.busy=false;saved.update();}
-        });aiBox.append(check);field.append(aiBox);
+        });aiBox.append(check,preview);field.append(aiBox);
         availabilityRequest??=essayAvailable(EXPLAIN_URL);
         availabilityRequest.then(available=>{aiBox.hidden=!available;availabilityNote.hidden=available;});
       }
