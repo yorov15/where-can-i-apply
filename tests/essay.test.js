@@ -121,7 +121,8 @@ test('strict shape: exact keys, 1-3 lines each, lengths, questions are questions
   assert.equal(verdict({...good,rewrite:['Полный текст эссе для вставки в форму.']}).reason,'wrong keys');
   assert.equal(verdict({response:good.response,structure:good.structure}).reason,'wrong keys');
   assert.match(reasonFor({questions:[]}),/need 1-3/);
-  assert.match(reasonFor({questions:['Что ты сделал дальше?','Почему ты выбрал роботов?','Кто помог тебе в кружке?','Где ты брал детали?']}),/need 1-3/);
+  // Четвёртый вопрос отрезается, а не губит весь отзыв.
+  assert.equal(reasonFor({questions:['Что ты сделал дальше?','Почему ты выбрал роботов?','Кто помог тебе в кружке?','Где ты брал детали?']}),'');
   assert.match(reasonFor({response:['Коротко.']}),/length/);
   assert.match(reasonFor({response:['а'.repeat(351)]}),/length/);
   assert.match(reasonFor({questions:['Расскажи подробнее, что ты сделал с роботом после неудачи.']}),/not a question/);

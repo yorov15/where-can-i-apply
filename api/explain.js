@@ -149,7 +149,9 @@ const routerKey = () => (isGoKey(process.env.OPENROUTER_API_KEY) ? '' : process.
 // учатся на запросах, там выключены по умолчанию. EXPLAIN_MODELS эссе не меняет: другую
 // модель — только правкой здесь и новым экзаменом. Без ключа Go — бесплатная модель
 // OpenRouter с запретом хранения и сбора данных (provider в askOnce), иначе выключено.
-const essayModels = () => (goKey() ? [['go/deepseek-v4.1-flash']] : routerKey() ? [['openrouter/free']] : []);
+// У Go две попытки той же модели: если самопроверка забраковала первый ответ,
+// на второй хватает времени (один отзыв — около 10 с).
+const essayModels = () => (goKey() ? [['go/deepseek-v4.1-flash'], ['go/deepseek-v4.1-flash']] : routerKey() ? [['openrouter/free']] : []);
 // Режим работает при любой модели (для экзамена); людям его предлагает только essay-status,
 // и только с Go: экран перед отправкой говорит человеку, что черновик уйдёт в OpenCode Go.
 const essayOffered = () => (ESSAY_PUBLIC || process.env.ESSAY_REVIEW_ENABLED === '1') && Boolean(goKey());
@@ -220,7 +222,7 @@ const callMentorModel = (prompt, trace) => callWithFallback(modelGroups(), (grou
 const callEssayModel = (prompt, trace) => {
   const groups = essayModels(), go = groups[0]?.[0]?.startsWith('go/');
   return callWithFallback(groups, (group, timeoutMs) => askGroup(group, prompt, timeoutMs, trace),
-    go ? { budgetMs: 44000, perGroupMs: 42000 } : { budgetMs: 30000, perGroupMs: 28000 });
+    go ? { budgetMs: 44000, perGroupMs: 30000 } : { budgetMs: 30000, perGroupMs: 28000 });
 };
 
 function send(res, status, json, headers = {}) {

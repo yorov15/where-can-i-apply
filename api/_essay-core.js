@@ -34,7 +34,7 @@ export const ESSAY_SYSTEM=`Ты — Наставник: даёшь школьн�
 - повторять имена и контакты из черновика;
 - выдумывать биографию автора и то, что «ценит вуз», сверх текста вопроса.
 
-В каждом массиве от одного до трёх пунктов, каждый до 300 знаков. Верни только json такой формы, без текста вокруг:
+В каждом массиве от одного до трёх пунктов (пустой массив нельзя, больше трёх нельзя), каждый до 300 знаков. Верни только json такой формы, без текста вокруг:
 {"response":["…"],"structure":["…"],"questions":["…?"]}`;
 
 const CONTROL=/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/;
@@ -133,7 +133,9 @@ export function inspectEssayFeedback(text,input={}){
     months:new Set((monthsText.match(MONTH)??[]).map(monthIndex))};
   const seen=new Set();
   for(const key of keys){
-    if(!Array.isArray(value[key])||value[key].length<1||value[key].length>3)return no(`${key}: need 1-3 items`);
+    // Четвёртый пункт ничего не выдумывает, он просто лишний: берём первые три.
+    if(Array.isArray(value[key])&&value[key].length>3)value[key]=value[key].slice(0,3);
+    if(!Array.isArray(value[key])||value[key].length<1)return no(`${key}: need 1-3 items`);
     for(const line of value[key]){
       const problem=lineProblem(line,input,allowed,sources);
       if(problem)return no(`${key}: ${problem}`);
