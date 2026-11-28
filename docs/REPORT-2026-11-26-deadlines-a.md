@@ -1,0 +1,99 @@
+# Сроки Nerio — цикл 2027, партия A
+
+Проверено 15 из 112 программ списка DS-11A. Дата проверки — 2026-11-28. Данные каталога не изменены: это очередь решений для сверки цитат владельцем.
+
+Цитата попадает в JSON только после того, как она буквально нашлась в выдержке `raw/deadline-review/2026-11-26-a/<id>.txt`. У таких цитат `freshFetch` и `exactQuoteMatched` равны `true`, в выдержке указан sha256 ответа. Где сайт закрыт для прямой загрузки, стоит `freshFetch: false` и `exactQuoteMatched: false` — такую цитату нужно сверять руками.
+
+## По статусам
+
+- `closed_correctly` — 6 (срок прошёл, нового цикла нет)
+- `blocked` — 4 (страница не отдалась)
+- `update` — 2 (новая дата найдена)
+- `wrong_track` — 1 (дата для другой программы)
+- `no_new_announcement` — 1 (только прошлый цикл)
+- `imprecise_new_cycle` — 1 (2027 объявлен без дня)
+
+## Программы
+
+| Программа | В данных сейчас | Статус | Что нашёл |
+|---|---|---|---|
+| `cambridge` | — → 2026-10-15 (confirmed) | closed_correctly | Набор 2027 (старт осенью 2027): заявка UCAS закрыта 15.10.2026 в 18:00 по UK. Дат набора 2028 на странице нет. |
+| `hokkaido-isp` | 2026-11-12 → 2026-11-20 (confirmed) | closed_correctly | Набор октябрь 2027: онлайн-регистрация 12–20.11.2026 (JST, 10:00–17:00), рекомендация должна прийти до 04.12.2026. Окно закрыто, набор 2028 не объявлен. |
+| `king-abdulaziz` | 2026-09-16 → 2026-10-06 (confirmed) | closed_correctly | Объявление от 08.09.2026: приём несаудовцев 16.09–06.10.2026 через Study in Saudi. Окно закрыто, объявления на 2027 нет. |
+| `mipt` | 2026-06-20 → 2026-07-10 (expected) | blocked | Страницы правил приёма 2027 (mipt.ru/pk, pk.mipt.ru) отдают пустой текст, внешняя читалка — ошибку сертификата. Дат 2027 не подтверждаю. |
+| `oxford-reach` | — → 2026-10-15 (confirmed) | closed_correctly | Сайт ox.ac.uk закрыт для прямой загрузки (403). В читалке: для 2027 entry крайний срок 15.10.2026, 18:00 UK; дат 2028 нет. Цитату нужно сверить руками. |
+| `renmin` | 2026-01-01 → 2026-05-31 (expected) | wrong_track | Общего приёма на 2027 на iso.ruc.edu.cn нет, PDF от 2026-07 отдаёт 404. Единственные даты 2027 — Global BBA бизнес-школы: 05.11.2026–30.04.2027 17:00 по Пекину. Это отдельная программа, не общий бакалавриат. |
+| `study-in-saudi` | 2026-09-16 → 2026-10-06 (confirmed) | no_new_announcement | Прямая загрузка закрыта (403); в читалке — только Second Semester Academic Calendar 2026 с приёмом 16.09–06.10.2026. Объявления 2027 нет. |
+| `tsukuba-ide` | 2026-10-01 → 2026-11-04 (confirmed) | closed_correctly | Набор сентябрь 2027: приём заявок начало октября — начало ноября 2026 (точные дни на сайте программы закрыты скриптом), результаты 26.03.2027. Окно закрыто, набор 2028 не объявлен. |
+| `urfu` | 2026-08-20 → 2026-11-01 (expected) | closed_correctly | Open Doors 2026/27: регистрация и портфолио 20.08–01.11.2026. Окно закрыто, следующего конкурса на странице нет. |
+| `warsaw-university-of-technology` | — → 2026-07-21 (expected) | imprecise_new_cycle | Страница B.Sc. уже про 2027/28, но дни не объявлены: регистрация — начало мая 2027 (to be updated), заявку создать до середины июля 2027, документы загрузить до середины августа 2027. Точных дат не ставлю. |
+| `zhejiang-university` | — → 2026-02-28 (expected) | blocked | Страница приёма отдаёт пустой текст (данные грузятся скриптом). В читалке на iczu.zju.edu.cn дат бакалавриата 2027 нет — только график стипендий для магистратуры и докторантуры. |
+| `aiu-japan` | — → — (expected) | update | Набор сентябрь 2027: онлайн-заявка 01–09.10.2026 (JST, до 23:00), документы до 26.10.2026, зачисление сентябрь 2027. Окно закрыто; набор 2028 не объявлен. |
+| `apu-japan` | — → — (expected) | blocked | Сроки на admissions.apu.ac.jp подгружаются скриптом: в HTML только заголовок «2027 ENTRY Next application deadline». Адрес перенаправляет на apu-admissions.jp — другой домен, без «да» Мурода не подключаю. |
+| `aus-uae` | — → — (expected) | update | Осень 2027: заявка до 01.04.2027; онлайн-формы закрываются в 16:00 в день срока. Фраза стоит на странице стипендий и названа общим сроком Fall 2027. |
+| `bauman` | — → — (expected) | blocked | bmstu.ru отдаёт пустой текст на всех страницах приёма иностранцев, внешняя читалка — 403. Дат 2027 не подтверждаю. |
+
+## Окна по программам
+
+### cambridge
+
+- UCAS, набор 2027: — → 2026-10-15; пояс/время: UK time, 18:00
+- цитата: «Are you planning to start an undergraduate course at Cambridge in 2027?» — https://www.undergraduate.study.cam.ac.uk/apply/application-dates-deadlines
+- цитата: «15 October 2026 Deadline to submit your UCAS application (6pm UK time).» — https://www.undergraduate.study.cam.ac.uk/apply/application-dates-deadlines
+
+### hokkaido-isp
+
+- 2027 enrollment, online registration: 2026-11-12 → 2026-11-20; пояс/время: JST, 10:00–17:00
+- 2027 enrollment, рекомендация должна прийти: — → 2026-12-04; пояс/время: JST, до 17:00
+- цитата: «Application Schedule and Deadline Date and Time/Period (JST) Online Registration Period November 12, 2026 (Thu.) at 10:00 a.m. - November 20, 2026 (Fri.) at 5:00 p.m.» — https://www.oia.hokudai.ac.jp/isp/wp-content/uploads/2026/09/ISP-Application-Guidelines-for-2027-Enrollment.pdf
+- цитата: «Deadline for Arrival of Letter of Recommendation at University (Form 5) No later than 5:00 p.m. on December 4, 2026 (Fri.)» — https://www.oia.hokudai.ac.jp/isp/wp-content/uploads/2026/09/ISP-Application-Guidelines-for-2027-Enrollment.pdf
+
+### king-abdulaziz
+
+- несаудовцы, бакалавриат и магистратура: 2026-09-16 → 2026-10-06
+- цитата: «Application period: September 16-October 6, 2026» — https://www.kau.edu.sa/en/announcement/the-date-for-opening-admission-applications-for-non-saudi-students-residing-both-inside-and-outside-the-kingdom-for-undergraduate-and-postgraduate-programs
+- цитата: «Announcement Period From 16 September 2026 To 6 October 2026» — https://www.kau.edu.sa/en/announcement/the-date-for-opening-admission-applications-for-non-saudi-students-residing-both-inside-and-outside-the-kingdom-for-undergraduate-and-postgraduate-programs
+
+### oxford-reach
+
+- UCAS, набор 2027: — → 2026-10-15; пояс/время: UK time, 18:00
+- цитата (не сверено): «Final deadline 6pm (UK time) on 15 October» — https://www.ox.ac.uk/admissions/undergraduate/applying/admissions-timeline
+
+### renmin
+
+- Global BBA (School of Business), не общий приём: 2026-11-05 → 2027-04-30; пояс/время: Beijing Time, 17:00
+- цитата: «The application window is November 5, 2026, 00:00 - April 30, 2027, 17:00 (Beijing Time).» — http://globalbba.rmbs.ruc.edu.cn/Admissions/KeyTimelines/index.htm
+
+### urfu
+
+- Open Doors, регистрация и портфолио: 2026-08-20 → 2026-11-01
+- цитата: «Registration period: August 20 - November 1, 2026.» — https://urfu.ru/en/open-doors-russian-scholarship-project/
+
+### aiu-japan
+
+- International Examination, сентябрь 2027: 2026-10-01 → 2026-10-09; пояс/время: JST, до 23:00
+- документы после онлайн-заявки: 2026-10-01 → 2026-10-26; пояс/время: JST
+- цитата: «Enrollment Date September 2027» — https://admission.aiu.ac.jp/wp/wp-content/uploads/2026/08/2027-International-Admissions-Examination-Guide.pdf
+- цитата: «Period for online application and payment of the application fee October 1, 2026, 10:00 a.m. - October 9, 2026, 11:00 p.m.» — https://admission.aiu.ac.jp/wp/wp-content/uploads/2026/08/2027-International-Admissions-Examination-Guide.pdf
+- цитата: «Deadline for submission of required documents after online application October 1, 2026 - October 26, 2026» — https://admission.aiu.ac.jp/wp/wp-content/uploads/2026/08/2027-International-Admissions-Examination-Guide.pdf
+
+### aus-uae
+
+- Fall 2027: — → 2027-04-01
+- цитата: «Fall 2027 application deadline: April 01, 2027» — https://www.aus.edu/admissions/financial-grants-and-scholarships
+- цитата: «Online applications are due by 4:00 p.m. on the day of the deadline.» — https://www.aus.edu/admissions/financial-grants-and-scholarships
+
+## Домены, которые ждут «да» Мурода
+
+Новых доменов не понадобилось: все цитаты с уже одобренных страниц программ.
+
+## Что прогнано
+
+```
+node --test                                          — pass, fail 0
+PYTHONUTF8=1 python -m unittest discover -s tools/tests -t .   — Ran 547 tests, OK
+python -m tools.build                                — 323 программы, индекс 97 229 Б по проводу
+```
+Вывод сборки в коммиты не попадал. Рабочая копия в этом worktree переведена в LF: байтовые хеши `raw/apply-channels` сверяются по байтам, с CRLF падают 29 тестов аудита. Эти переводы строк не закоммичены.
+
+Ветка `deepseek/deadlines-2027-a`, последний коммит `c9565f6d Сроки 2027: партия 1 из 8, 15 программ`.
