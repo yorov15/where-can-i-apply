@@ -111,13 +111,25 @@
           "contentHash": "sha256:b71bc79bf6191af81e3cb75487dfcd2e6efd1f53ba69461e87e3cbe76e610ac6"
         }
       }
+    },
+    {
+      "ru": "Подача на 2027 год в два круга: первый — с 1 декабря 2026 по 26 февраля 2027, второй — с 1 по 15 апреля 2027.",
+      "evidence": "Round 1: December 1, 2026 - February 26, 2027 Round 2: April 1 - April 15, 2027",
+      "field": null,
+      "kind": "steps"
+    },
+    {
+      "ru": "Сначала нужно сдать экзамен CSCA (China Scholastic Competency Assessment) и получить результаты. Его проводит China Scholarship Council по поручению Минобразования Китая; даты — на csca.cn.",
+      "evidence": "Take the China Scholastic Competency Assessment (CSCA). This assessment is organized by the China Scholarship Council on behalf of the Ministry of Education of China. Students must take the assessment in advance and obtain the score report.",
+      "field": null,
+      "kind": "must"
     }
   ],
   "deadline": {
-    "opens": null,
-    "closes": null,
+    "opens": "2026-12-01",
+    "closes": "2027-04-15",
     "recurring": "annual",
-    "confidence": "expected"
+    "confidence": "confirmed"
   },
   "applyUrl": "https://iso.fudan.edu.cn/isoenglish/16199/list.htm",
   "coversInstitutions": {

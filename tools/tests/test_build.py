@@ -145,7 +145,10 @@ class TestIndexEntry(unittest.TestCase):
         }
         entry = index_entry(program)
         self.assertIs(entry["eligibility"]["age"]["noLimit"], True)
-        self.assertEqual(entry["eligibility"]["age"]["checkedAt"], "2026-09-03")
+        # Кто подписал — сайту нужно («проверил ассистент»), дата подписи — нет:
+        # её не читают ни карточка, ни чат, а в индексе она стоила 3 КБ.
+        self.assertEqual(entry["eligibility"]["age"]["checkedBy"], "human")
+        self.assertNotIn("checkedAt", entry["eligibility"]["age"])
         # Заметка — это и есть информация: без неё карточка говорила
         # «не ограничивает: возраст», и человек читал это как «данных нет».
         self.assertEqual(entry["eligibility"]["age"]["note"], "длинная заметка человека")
