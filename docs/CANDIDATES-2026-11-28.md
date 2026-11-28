@@ -81,108 +81,108 @@
 ## Кого рассматривал и отбросил
 
 ### Россия
-- - Siberian Federal University — ошибка TLS-сертификата на всех проверенных адресах.
-- - North-Caucasus Federal University — ошибка TLS-сертификата.
-- - Moscow Aviation Institute — ошибка TLS-сертификата.
-- - LETI — сервер закрывает соединение без ответа.
-- - Kuban State University — страница сохраняется пустой.
-- - Tula State University — таймаут соединения.
-- - Perm State University — таймаут соединения.
-- - Belgorod State University — домен не разрешается.
-- - Saratov State University — цены только в PDF-приказах, в тексте страниц сумм нет.
-- - Voronezh State University — стоимость только приказами, страницы для иностранцев нет.
-- - Kazan National Research Technical University — страница «Иностранным абитуриентам» из одних ссылок.
-- - Immanuel Kant Baltic Federal University — приём описан, про деньги ничего.
-- - Don State Technical University — страница про студенческую жизнь, не про приём.
-- - Orenburg State University, Chelyabinsk State University — на страницах приёма нет ни текста об иностранцах, ни сумм.
-- - Novosibirsk State Technical University — стипендия без покрытия и сумм.
-- - Tomsk Polytechnic University — плата по договору, сумма не названа.
+- Siberian Federal University — ошибка TLS-сертификата на всех проверенных адресах.
+- North-Caucasus Federal University — ошибка TLS-сертификата.
+- Moscow Aviation Institute — ошибка TLS-сертификата.
+- LETI — сервер закрывает соединение без ответа.
+- Kuban State University — страница сохраняется пустой.
+- Tula State University — таймаут соединения.
+- Perm State University — таймаут соединения.
+- Belgorod State University — домен не разрешается.
+- Saratov State University — цены только в PDF-приказах, в тексте страниц сумм нет.
+- Voronezh State University — стоимость только приказами, страницы для иностранцев нет.
+- Kazan National Research Technical University — страница «Иностранным абитуриентам» из одних ссылок.
+- Immanuel Kant Baltic Federal University — приём описан, про деньги ничего.
+- Don State Technical University — страница про студенческую жизнь, не про приём.
+- Orenburg State University, Chelyabinsk State University — на страницах приёма нет ни текста об иностранцах, ни сумм.
+- Novosibirsk State Technical University — стипендия без покрытия и сумм.
+- Tomsk Polytechnic University — плата по договору, сумма не названа.
 ### Турция
-- - Fenerbahçe University — стипендии на странице только по ÖSYM, для граждан Турции.
-- - Haliç University — приём иностранцев есть, но ни сумм, ни помощи.
-- - Beykent University — английские страницы приёма и платы отдают пустой каркас.
-- - Doğuş University — «International Prospective Students» оказалась контактной формой.
-- - Istanbul Kültür University — 403 на www, uib и oidb.
-- - Istanbul Aydın University — 403 на главной.
-- - Boğaziçi University — страница без текста (JS-каркас).
-- - İzmir University of Economics — страницы отдают 0 символов.
-- - Marmara University — international.marmara.edu.tr про Erasmus, не приём.
-- - Gebze Technical University — страница стипендий пустая, приёма иностранцев нет.
-- - Karadeniz Technical University — в тексте нет ни бакалавриата, ни плат.
-- - Istanbul Ticaret University — раздел International Students только по-турецки и без содержания.
-- - Çukurova, Akdeniz, Yıldız — только меню, ссылок на приём иностранцев нет.
-- - Sakarya University — сервер закрыл соединение.
-- - Kocaeli University — ошибка TLS.
-- - Ege, Selçuk, Erciyes — 404.
+- Fenerbahçe University — стипендии на странице только по ÖSYM, для граждан Турции.
+- Haliç University — приём иностранцев есть, но ни сумм, ни помощи.
+- Beykent University — английские страницы приёма и платы отдают пустой каркас.
+- Doğuş University — «International Prospective Students» оказалась контактной формой.
+- Istanbul Kültür University — 403 на www, uib и oidb.
+- Istanbul Aydın University — 403 на главной.
+- Boğaziçi University — страница без текста (JS-каркас).
+- İzmir University of Economics — страницы отдают 0 символов.
+- Marmara University — international.marmara.edu.tr про Erasmus, не приём.
+- Gebze Technical University — страница стипендий пустая, приёма иностранцев нет.
+- Karadeniz Technical University — в тексте нет ни бакалавриата, ни плат.
+- Istanbul Ticaret University — раздел International Students только по-турецки и без содержания.
+- Çukurova, Akdeniz, Yıldız — только меню, ссылок на приём иностранцев нет.
+- Sakarya University — сервер закрыл соединение.
+- Kocaeli University — ошибка TLS.
+- Ege, Selçuk, Erciyes — 404.
 ### Малайзия и залив
-- - Universiti Kebangsaan Malaysia — бакалавриат для иностранцев есть, но ни платы, ни стипендий на страницах UKMShape.
-- - IIUM — страница undergraduate-international «under maintenance», вузовской помощи нет.
-- - UUM — справочная страница про EMGS, ни приёма, ни платы.
-- - UMS — страница приёма без международного блока, страниц с платой нет.
-- - UMT — страница есть, но табы с платой не отдаются текстом.
-- - UMK, UniKL — страница приёма только меню, плата 404.
-- - MMU — таблица платы без пометки «international», страницы приёма иностранцев нет.
-- - UPSI — международная страница без сумм и без слова scholarship.
-- - UMP — TLS hostname mismatch.
-- - Nottingham Malaysia — нет внятной формулировки про бакалавриат для иностранцев.
-- - UCSI — 403.
-- - Sunway College — домен не резолвится.
-- - University of Sharjah — сайт на JS, раздел Admissions не отдаётся.
-- - Abu Dhabi University — помощь ограничена резидентами ОАЭ и гражданами GCC.
-- - Sultan Qaboos University — «Admissions with fees» только для детей иностранных сотрудников вуза.
-- - University of Bahrain — приём есть, страниц с платой и стипендией для иностранцев не нашёл.
-- - GUST — 403.
-- - Ahlia University — только mobility и study abroad, не бакалавриат.
+- Universiti Kebangsaan Malaysia — бакалавриат для иностранцев есть, но ни платы, ни стипендий на страницах UKMShape.
+- IIUM — страница undergraduate-international «under maintenance», вузовской помощи нет.
+- UUM — справочная страница про EMGS, ни приёма, ни платы.
+- UMS — страница приёма без международного блока, страниц с платой нет.
+- UMT — страница есть, но табы с платой не отдаются текстом.
+- UMK, UniKL — страница приёма только меню, плата 404.
+- MMU — таблица платы без пометки «international», страницы приёма иностранцев нет.
+- UPSI — международная страница без сумм и без слова scholarship.
+- UMP — TLS hostname mismatch.
+- Nottingham Malaysia — нет внятной формулировки про бакалавриат для иностранцев.
+- UCSI — 403.
+- Sunway College — домен не резолвится.
+- University of Sharjah — сайт на JS, раздел Admissions не отдаётся.
+- Abu Dhabi University — помощь ограничена резидентами ОАЭ и гражданами GCC.
+- Sultan Qaboos University — «Admissions with fees» только для детей иностранных сотрудников вуза.
+- University of Bahrain — приём есть, страниц с платой и стипендией для иностранцев не нашёл.
+- GUST — 403.
+- Ahlia University — только mobility и study abroad, не бакалавриат.
 ### Центральная Азия
-- - Al-Farabi Kazakh National University — приём иностранцев есть, цены только в PDF за JS-кнопкой.
-- - AlmaU — блок условий для иностранцев есть, сумм и скидок нет.
-- - Karaganda Buketov University — только языковые программы для иностранцев, цен нет.
-- - IITU — в разделе приёма вместо суммы заглушка «[answer to be specified]».
-- - Turan University — JS-каркас, текста нет.
-- - KazNAU — домен занят посторонним сайтом (казино), вуза там нет.
-- - KazNARU, KSU (Костанай), Торайгыров, Abai, IUK — страницы для иностранцев без цен; у KSU прайс только PDF-сканами.
-- - Jalal-Abad State University — сайт медфакультета с MBBS-маркетингом для индийцев, официальность неясна.
-- - BHU, BSU, KSUCTA (410), KNAU (403), OSTU (TLS) — не открылись или пустые.
-- - MDIS Tashkent, AKFA, TTPU — ошибка TLS.
-- - TDTU, TSUE, TSUOS, KARSU, TSTU, TKTI, TDPU, TDIU — пустой JS-каркас.
-- - ADU — 403; FDU, SamMU, TashPMI, MTI — DNS/TLS.
-- - BuxDU, NUU, TSUL, UzSWLU, Gulistan, SIES, TIIAME, UWS — страницы приёма и цен без сумм в тексте.
+- Al-Farabi Kazakh National University — приём иностранцев есть, цены только в PDF за JS-кнопкой.
+- AlmaU — блок условий для иностранцев есть, сумм и скидок нет.
+- Karaganda Buketov University — только языковые программы для иностранцев, цен нет.
+- IITU — в разделе приёма вместо суммы заглушка «[answer to be specified]».
+- Turan University — JS-каркас, текста нет.
+- KazNAU — домен занят посторонним сайтом (казино), вуза там нет.
+- KazNARU, KSU (Костанай), Торайгыров, Abai, IUK — страницы для иностранцев без цен; у KSU прайс только PDF-сканами.
+- Jalal-Abad State University — сайт медфакультета с MBBS-маркетингом для индийцев, официальность неясна.
+- BHU, BSU, KSUCTA (410), KNAU (403), OSTU (TLS) — не открылись или пустые.
+- MDIS Tashkent, AKFA, TTPU — ошибка TLS.
+- TDTU, TSUE, TSUOS, KARSU, TSTU, TKTI, TDPU, TDIU — пустой JS-каркас.
+- ADU — 403; FDU, SamMU, TashPMI, MTI — DNS/TLS.
+- BuxDU, NUU, TSUL, UzSWLU, Gulistan, SIES, TIIAME, UWS — страницы приёма и цен без сумм в тексте.
 ### Европа
-- - TU Dresden — нет прямой фразы, что платы за обучение нет; только «некоторые студенты обязаны платить».
-- - University of Bonn — страницы приёма и стоимости отдают 403.
-- - TU Darmstadt — страница стоимости 404, сумм на страницах приёма нет.
-- - Leipzig University — англоязычных страниц приёма и платы не нашёл.
-- - Friedrich Schiller University Jena — страница отдаётся сжатой, текст не читается.
-- - Freiburg, Tübingen, Stuttgart — Баден-Вюртемберг берёт с не-ЕС 1500 €/семестр, это не бесплатно.
-- - CTU Prague — нет ни фразы о бесплатном обучении, ни таблицы платы.
-- - Prague University of Economics (VŠE) — английский бакалавриат 6000 €/год, стипендий нет.
-- - Czech University of Life Sciences — фразы о бесплатном обучении на чешском на страницах нет.
-- - University of Ostrava — только чешские страницы, англоязычного приёма и платы нет.
-- - Gdańsk University of Technology — не-ЕС 9500–10 000 злотых за семестр, помощи нет.
-- - Poznań University of Technology — бесплатно только ЕС и с сертификатом C1, иначе 1850 € плюс 6800 злотых.
-- - Marburg, Giessen — страниц с платой или её отсутствием не нашёл.
+- TU Dresden — нет прямой фразы, что платы за обучение нет; только «некоторые студенты обязаны платить».
+- University of Bonn — страницы приёма и стоимости отдают 403.
+- TU Darmstadt — страница стоимости 404, сумм на страницах приёма нет.
+- Leipzig University — англоязычных страниц приёма и платы не нашёл.
+- Friedrich Schiller University Jena — страница отдаётся сжатой, текст не читается.
+- Freiburg, Tübingen, Stuttgart — Баден-Вюртемберг берёт с не-ЕС 1500 €/семестр, это не бесплатно.
+- CTU Prague — нет ни фразы о бесплатном обучении, ни таблицы платы.
+- Prague University of Economics (VŠE) — английский бакалавриат 6000 €/год, стипендий нет.
+- Czech University of Life Sciences — фразы о бесплатном обучении на чешском на страницах нет.
+- University of Ostrava — только чешские страницы, англоязычного приёма и платы нет.
+- Gdańsk University of Technology — не-ЕС 9500–10 000 злотых за семестр, помощи нет.
+- Poznań University of Technology — бесплатно только ЕС и с сертификатом C1, иначе 1850 € плюс 6800 злотых.
+- Marburg, Giessen — страниц с платой или её отсутствием не нашёл.
 ### Китай, Корея, Япония
-- - Chongqing University — study.cqu.edu.cn и english.cqu.edu.cn отдают 412 (антибот).
-- - Zhengzhou University — international.zzu.edu.cn не отвечает, английский сайт только с новостями.
-- - Shandong University — страница бакалавриата для иностранцев это PDF-заглушка, платы и стипендий нет.
-- - Soochow University — только английская главная, страницы приёма иностранцев нет.
-- - Jinan University — страница бакалавриата пустая.
-- - Hunan University — english.hnu.edu.cn оказался китайским сайтом колледжа.
-- - Southeast University, Northeast Normal University — домены не разрешаются в DNS.
-- - Lanzhou University — 412; Shanghai University — connection refused; Jiangsu University — JS-портал без текста.
-- - Yunnan University — английский буклет лежит на chinadaily, не на сайте вуза.
-- - Wenzhou-Kean — 404 и обрыв соединения; GTIIT — приём только на китайском; CUHK-Shenzhen — SSL handshake failure.
-- - KoreaTech — таймаут и пустой каркас.
-- - Chosun, Changwon, Mokpo, Andong, Hanbat, Kunsan, Soonchunhyang — JS-каркас или ошибка TLS.
-- - Dong-A — английской версии нет; Inje, Sunchon — ошибка TLS; Kumoh — английский сайт уводит на SSO.
-- - Hiroshima — страниц с платой и waiver нет; Okayama, Kumamoto, Saitama, Yokohama National — 404; Chiba — SSL.
-- - Chuo, Hosei, Rikkyo — английские страницы приёма без содержания или 404.
-- - Ehime, Kanazawa, Kagoshima — только навигация без цифр.
-- - Miyazaki International College — домен mic.ac.jp не разрешается в DNS.
-- - Qassim University — международный приём есть, но ни помощи, ни платы на английских страницах.
-- - King Khalid University — поддомен istudents.kku.edu.sa не отвечает, на основном сайте только меню.
-- - Imam Abdulrahman Bin Faisal, Jazan — таймаут или 403.
-- - University of Hail, Prince Sattam — страниц для иностранцев с деньгами нет; PSAU отправляет в Study in Saudi.
-- - Bahrain Polytechnic — сайт отдаёт пустой каркас.
-- - Taylor's University — пустой JS-каркас; Monash Malaysia — 403; UCSI — 403.
+- Chongqing University — study.cqu.edu.cn и english.cqu.edu.cn отдают 412 (антибот).
+- Zhengzhou University — international.zzu.edu.cn не отвечает, английский сайт только с новостями.
+- Shandong University — страница бакалавриата для иностранцев это PDF-заглушка, платы и стипендий нет.
+- Soochow University — только английская главная, страницы приёма иностранцев нет.
+- Jinan University — страница бакалавриата пустая.
+- Hunan University — english.hnu.edu.cn оказался китайским сайтом колледжа.
+- Southeast University, Northeast Normal University — домены не разрешаются в DNS.
+- Lanzhou University — 412; Shanghai University — connection refused; Jiangsu University — JS-портал без текста.
+- Yunnan University — английский буклет лежит на chinadaily, не на сайте вуза.
+- Wenzhou-Kean — 404 и обрыв соединения; GTIIT — приём только на китайском; CUHK-Shenzhen — SSL handshake failure.
+- KoreaTech — таймаут и пустой каркас.
+- Chosun, Changwon, Mokpo, Andong, Hanbat, Kunsan, Soonchunhyang — JS-каркас или ошибка TLS.
+- Dong-A — английской версии нет; Inje, Sunchon — ошибка TLS; Kumoh — английский сайт уводит на SSO.
+- Hiroshima — страниц с платой и waiver нет; Okayama, Kumamoto, Saitama, Yokohama National — 404; Chiba — SSL.
+- Chuo, Hosei, Rikkyo — английские страницы приёма без содержания или 404.
+- Ehime, Kanazawa, Kagoshima — только навигация без цифр.
+- Miyazaki International College — домен mic.ac.jp не разрешается в DNS.
+- Qassim University — международный приём есть, но ни помощи, ни платы на английских страницах.
+- King Khalid University — поддомен istudents.kku.edu.sa не отвечает, на основном сайте только меню.
+- Imam Abdulrahman Bin Faisal, Jazan — таймаут или 403.
+- University of Hail, Prince Sattam — страниц для иностранцев с деньгами нет; PSAU отправляет в Study in Saudi.
+- Bahrain Polytechnic — сайт отдаёт пустой каркас.
+- Taylor's University — пустой JS-каркас; Monash Malaysia — 403; UCSI — 403.
 
