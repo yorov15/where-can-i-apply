@@ -872,6 +872,144 @@
    "status": "update"
   },
   {
+   "id": "davidson-college",
+   "current": {
+    "tuition": null,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": true,
+    "living": true,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://www.davidson.edu/admission-and-financial-aid/financial-aid/applying-aid/international-students",
+     "quote": "Davidson is committed to meeting 100 percent of the calculated financial need for those admitted, with the exception of recruited athletes, who are eligible for dedicated athletic funding.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://www.davidson.edu/admission-and-financial-aid/admission-process-help/frequently-asked-questions/international-admission-aid-faqs",
+     "quote": "While we consider financial need during the admission process and are need-aware for applicants who are not citizens of the United States, we meet 100% of the calculated need for all admitted students.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://www.davidson.edu/admission-and-financial-aid/admission-process-help/frequently-asked-questions/international-admission-aid-faqs",
+     "quote": "International applicants are also eligible to be nominated for or apply to the small number of scholarships we award.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://www.davidson.edu/admission-and-financial-aid/admission-process-help/frequently-asked-questions/international-admission-aid-faqs",
+     "quote": "We do not offer general merit scholarships.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://www.davidson.edu/admission-and-financial-aid/financial-aid/applying-aid/international-students",
+     "quote": "Please be aware that financial aid for international students is limited and competitive, and students interested in seeking financial assistance must apply for aid at the time of applying for admission",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [],
+   "noteRu": "Колледж закрывает 100% рассчитанной финансовой потребности всех принятых; исключение — приглашённые спортсмены, у них отдельное спортивное финансирование. Помощь иностранцам ограничена и конкурсна, заявку на неё подают одновременно с заявлением о приёме, позже её не принимают. Общих стипендий за заслуги колледж не даёт, но иностранцев могут номинировать на небольшое число его стипендий.",
+   "status": "update"
+  },
+  {
+   "id": "dgist",
+   "current": {
+    "tuition": true,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": true,
+    "living": null,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://www.dgist.ac.kr/iuadm/sub04_01.do",
+     "quote": "Tuition fee is fully waived, and will not be refunded individually",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://www.dgist.ac.kr/iuadm/sub04_01.do",
+     "quote": "Tuition Fee Fully Waived - 3,967,000 KRW / Semester For all international students without special conditions Granted for 8 semesters only",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://www.dgist.ac.kr/iuadm/sub04_01.do",
+     "quote": "1. Financial Aid - 328,500KRW / Month Granted for 8 semesters only, excluding vacation periods Granted when gained credit is more than 10 credits Not granted during school disciplinary periods due to improper behavior, etc. Not granted if academic probation is granted for the previous semester",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://www.dgist.ac.kr/iuadm/sub04_01.do",
+     "quote": "2. Int.Student Scholarship(DGISTep) - 330,000KRW / Month Granted for 8 semesters only, including vacation periods Not granted when gained credit is below 10 credits or granted with academic probation for the previous semester",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://www.dgist.ac.kr/iuadm/sub04_01.do",
+     "quote": "Settlement subsidy 500,000KRW Granted for one time only Granted to all international undergraduates",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://www.dgist.ac.kr/iuadm/sub02_03.do",
+     "quote": "Application fee : 50,000 KRW The application fee is for document screening only No application fee is charged for interview evaluation The application fee is non-refundable and cannot be waived",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [
+    {
+     "what": "tuition",
+     "value": 7934000,
+     "currency": "KRW",
+     "period": "year",
+     "quote": "Waived Total Amount (Tuition Fee)7,934,000KRW / Year (Around 5,400USD / Year)"
+    },
+    {
+     "what": "stipend",
+     "value": 328500,
+     "currency": "KRW",
+     "period": "month",
+     "quote": "1. Financial Aid - 328,500KRW / Month"
+    },
+    {
+     "what": "stipend",
+     "value": 330000,
+     "currency": "KRW",
+     "period": "month",
+     "quote": "2. Int.Student Scholarship(DGISTep) - 330,000KRW / Month"
+    },
+    {
+     "what": "other",
+     "value": 500000,
+     "currency": "KRW",
+     "period": "once",
+     "quote": "Settlement subsidy 500,000KRW Granted for one time only"
+    },
+    {
+     "what": "other",
+     "value": 50000,
+     "currency": "KRW",
+     "period": "once",
+     "quote": "Application fee : 50,000 KRW"
+    }
+   ],
+   "noteRu": "Обучение полностью бесплатно для всех иностранных бакалавров: плата 3 967 000 вон за семестр не взимается, за год это 7 934 000 вон, бесплатно 8 семестров. Ежемесячно платят 328 500 вон финансовой помощи и 330 000 вон стипендии DGISTep, плюс разовое пособие на обустройство 500 000 вон. Сбор за заявку — 50 000 вон, он невозвратный и не отменяется.",
+   "status": "same"
+  },
+  {
    "id": "estonia-study",
    "current": {
     "tuition": false,
@@ -1026,6 +1164,84 @@
    ],
    "noteRu": "За бакалавриат в государственных вузах платы обычно нет; исключение — Баден-Вюртемберг, где с граждан не из ЕС берут 1500 евро за семестр, и часть вузов Баварии. Семестровый взнос — от 70 до 430 евро. На жизнь нужно 900–1200 евро в месяц, для визы надо показать 992 евро в месяц.",
    "status": "update"
+  },
+  {
+   "id": "grinnell-college",
+   "current": {
+    "tuition": null,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": true,
+    "living": true,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://www.grinnell.edu/admission/financial-aid/apply-aid/prospective-students",
+     "quote": "Grinnell meets 100% of each student's demonstrated need with grants, scholarships, and work-study.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://www.grinnell.edu/admission/financial-aid/apply-aid/prospective-students",
+     "quote": "Grinnell meets 100% of each student's demonstrated need with grants, scholarships, and work-study.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://www.grinnell.edu/admission/apply/international",
+     "quote": "Grinnell is committed to meeting 100% of institutionally determined need for all admitted international students who complete a financial aid application by the deadline associated with their application term.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://www.grinnell.edu/admission/apply/first-year/requirements",
+     "quote": "International students are also considered for merit scholarships ranging up to $28,000, though this process is extremely competitive.",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [],
+   "noteRu": "Колледж закрывает 100% рассчитанной нужды принятого студента грантами, стипендиями и работой в кампусе. Иностранцам, подавшим заявку на помощь в срок, обещают 100% институционально определённой нужды. Есть и стипендии за заслуги — до 28 000 долларов, но конкурс на них крайне высокий.",
+   "status": "update"
+  },
+  {
+   "id": "hanyang",
+   "current": {
+    "tuition": null,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": null,
+    "living": null,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://www.hanyang.ac.kr/web/eng/scholarships",
+     "quote": "International Students who have a TOPIK level certificate and achieved a minimum GPA of 3.0 for the previous semester.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://www.hanyang.ac.kr/web/eng/scholarships",
+     "quote": "Award amount: Recipients will receive 70%, 50% or 30% tuition reduction according to the evaluation results.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://www.hanyang.ac.kr/web/eng/scholarships",
+     "quote": "Foreign student who is currently enrolled for a degree program and obtained a TOPIK certificate after the admission.",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [],
+   "noteRu": "Плату за обучение первокурсника-иностранца эти страницы не называют. Обе стипендии вуза — только для уже зачисленных: Hanyang International Excellence Awards требует TOPIK и GPA 3.0 за предыдущий семестр и даёт скидку на обучение 70, 50 или 30%, а TOPIK Scholarship — для тех, кто сдал TOPIK уже после поступления. Жильё и дорога не описаны.",
+   "status": "same"
   },
   {
    "id": "hkust",
@@ -1223,6 +1439,95 @@
    "status": "update"
   },
   {
+   "id": "iccr-india",
+   "current": {
+    "tuition": true,
+    "living": true,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": true,
+    "living": true,
+    "travel": false
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://a2ascholarships.iccr.gov.in/assets/site/docs/Policy_Guidelines.pdf",
+     "quote": "Student must note that the student is entitled to scholarship allowances and the admissible charges of the University/Institution for the duration of the course, subject to regular promotion to the next level each year on a regular basis.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://a2ascholarships.iccr.gov.in/assets/site/docs/Policy_Guidelines.pdf",
+     "quote": "No scholarship allowances, tuition fee or any other fees to be charged by the University/Institution will be paid by ICCR for the repeat academic year.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://a2ascholarships.iccr.gov.in/assets/site/docs/Policy_Guidelines.pdf",
+     "quote": "scholarship allowances (Stipend and House Rent Allowance) shall be disbursed on the basis of academic progress in his/her course.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://a2ascholarships.iccr.gov.in/assets/site/docs/Policy_Guidelines.pdf",
+     "quote": "Monthly Stipend Monthly House Rent Allowance Annual Contingent Allowance One time thesis/ dissertation allowance Grade I Cities Other Cities UG INR 18000 INR 6500 INR 5500 INR 5000",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://a2ascholarships.iccr.gov.in/assets/site/docs/Policy_Guidelines.pdf",
+     "quote": "UG INR 18000 INR 6500 INR 5500 INR 5000",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "travel",
+     "url": "https://a2ascholarships.iccr.gov.in/assets/site/docs/Policy_Guidelines.pdf",
+     "quote": "Airfare and other related travel expenses are not covered unless specifically stated under the scholarship scheme.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://a2ascholarships.iccr.gov.in/assets/site/docs/Policy_Guidelines.pdf",
+     "quote": "For such expenses, students are advised to carry self-financial support of around USD 1500.",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [
+    {
+     "what": "tuition",
+     "value": 18000,
+     "currency": "INR",
+     "period": "month",
+     "quote": "UG INR 18000 INR 6500 INR 5500 INR 5000"
+    },
+    {
+     "what": "stipend",
+     "value": 18000,
+     "currency": "INR",
+     "period": "month",
+     "quote": "UG INR 18000 INR 6500 INR 5500 INR 5000"
+    },
+    {
+     "what": "living-cost",
+     "value": 6500,
+     "currency": "INR",
+     "period": "month",
+     "quote": "UG INR 18000 INR 6500 INR 5500 INR 5000"
+    },
+    {
+     "what": "other",
+     "value": 1500,
+     "currency": "USD",
+     "period": "once",
+     "quote": "For such expenses, students are advised to carry self-financial support of around USD 1500."
+    }
+   ],
+   "noteRu": "ICCR оплачивает положенные платежи вуза и платит стипендию 18 000 рупий в месяц на бакалавриате; жилищные — 6 500 рупий в городах первой категории и 5 500 в остальных, плюс 5 000 рупий в год на расходы. Если студент провалил год, за повторный год ICCR не платит ничего. Перелёт не покрывают, если этого нет в конкретной схеме; на первое обустройство советуют привезти около 1500 долларов.",
+   "status": "update"
+  },
+  {
    "id": "istanbul-bilgi",
    "current": {
     "tuition": false,
@@ -1327,6 +1632,145 @@
     }
    ],
    "noteRu": "Студент сам оплачивает обучение, авиабилеты, жильё и проживание, а также медицинскую страховку. По программе AI360 годовая плата — 679 000 ₽. По странице, студенту в Санкт-Петербурге нужно от 20 000 до 30 000 рублей в месяц.",
+   "status": "update"
+  },
+  {
+   "id": "jbnu",
+   "current": {
+    "tuition": false,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": false,
+    "living": false,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://www.jbnu.ac.kr/en/admission/undergradute/tuition.do",
+     "quote": "Tuition is paid once per semester, and twice a year.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://www.jbnu.ac.kr/en/admission/undergradute/scholarships.do",
+     "quote": "Type 1 Scholarship 100% tuition exemption TOPIK level 6 or IELTS 8 or higher",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://top.jbnu.ac.kr/sites/ioffice/file/2-1%20English.pdf",
+     "quote": "Dorm fee (/semester) Chambit Compulsory 3Meals (5-day week) Korean/Western style Jeonju Triple room, Desk, Chair, Closet, Air conditioner, Bathroom, Washroom 1,404,630 KRW",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://www.jbnu.ac.kr/en/admission/undergradute/tuition.do",
+     "quote": "College of Business Administration, College of Social Sciences, College of Humanities 2,016,000 won (approx. $1,420) College of Engineering 2,704,000 won (approx. $1,900)",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://top.jbnu.ac.kr/sites/ioffice/file/2-1%20English.pdf",
+     "quote": "Monthly fee : 76,390KRW",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [
+    {
+     "what": "other",
+     "value": 76390,
+     "currency": "KRW",
+     "period": "month",
+     "quote": "Monthly fee : 76,390KRW"
+    }
+   ],
+   "noteRu": "Обучение платное: плата вносится раз в семестр, дважды в год — 2 016 000 вон за семестр на гуманитарных, экономических и социальных направлениях и 2 704 000 вон на инженерных. За TOPIK 6 или IELTS 8 от платы за обучение освобождают полностью. Общежитие платное — Chambit стоит 1 404 630 вон за семестр, медицинская страховка — 76 390 вон в месяц.",
+   "status": "update"
+  },
+  {
+   "id": "kaist",
+   "current": {
+    "tuition": true,
+    "living": true,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": true,
+    "living": false,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://admission.kaist.ac.kr/intl-undergraduate/support",
+     "quote": "KAIST Scholarship covering entire tution fee for 4 years once admitted",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://admission.kaist.ac.kr/intl-undergraduate/support",
+     "quote": "Housing 664,000 664,000 1,328,000 KRW 166,000/M * 4 Months per semester (based on Hee Mang Hall (2 ppl share))",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://admission.kaist.ac.kr/intl-undergraduate/support",
+     "quote": "Total((A+B)-C)) 1,679,500 1,679,500 3,359,000 KRW 279,917/M",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://admission.kaist.ac.kr/wz/api/common/files/download/intl-undergraduate/pdf/Admissions_Guide_for_2027_admission.pdf",
+     "quote": "All international students receive full financial support, including tuition and living expenses.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://admission.kaist.ac.kr/intl-undergraduate/support",
+     "quote": "Tuition Fees 3,433,000 3,433,000 6,866,000",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://admission.kaist.ac.kr/intl-undergraduate/support",
+     "quote": "Monthly Stipend 2,100,000 2,100,000 4,200,000 KRW 350,000 * 12 Months",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [
+    {
+     "what": "tuition",
+     "value": 6866000,
+     "currency": "KRW",
+     "period": "year",
+     "quote": "Tuition Fees 3,433,000 3,433,000 6,866,000"
+    },
+    {
+     "what": "stipend",
+     "value": 350000,
+     "currency": "KRW",
+     "period": "month",
+     "quote": "Monthly Stipend 2,100,000 2,100,000 4,200,000 KRW 350,000 * 12 Months"
+    },
+    {
+     "what": "living-cost",
+     "value": 166000,
+     "currency": "KRW",
+     "period": "month",
+     "quote": "Housing 664,000 664,000 1,328,000 KRW 166,000/M * 4 Months per semester (based on Hee Mang Hall (2 ppl share))"
+    },
+    {
+     "what": "other",
+     "value": 279917,
+     "currency": "KRW",
+     "period": "month",
+     "quote": "Total((A+B)-C)) 1,679,500 1,679,500 3,359,000 KRW 279,917/M"
+    }
+   ],
+   "noteRu": "Стипендия KAIST покрывает всю плату за обучение на четыре года и платит 350 000 вон в месяц. Жильё и еда остаются за студентом: общежитие — 166 000 вон в месяц, а по итоговой таблице после стипендии остаётся 279 917 вон в месяц. При этом в общем описании вуз пишет, что все иностранные студенты получают полное финансирование, включая обучение и проживание.",
    "status": "update"
   },
   {
@@ -1456,6 +1900,90 @@
    "status": "update"
   },
   {
+   "id": "konkuk",
+   "current": {
+    "tuition": null,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": false,
+    "living": false,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://ciss.konkuk.ac.kr/sites/ciss/files/260205_Fall_Semester_Admission_Guidelines_pc_en.pdf",
+     "quote": "Scholarship Program for Newly Admitted Students (First Semester)",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://ciss.konkuk.ac.kr/sites/ciss/files/260205_Fall_Semester_Admission_Guidelines_pc_en.pdf",
+     "quote": "ㆍThe scholarship amount will already be reflected on your invoice, and you only need to pay the actual payable amount shown.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://ciss.konkuk.ac.kr/sites/ciss/files/260205_Fall_Semester_Admission_Guidelines_pc_en.pdf",
+     "quote": "Rent (B) KRW 2,847 ,000 KRW 2,114,000 Total (A+B) KRW 3,047 ,000",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://ciss.konkuk.ac.kr/sites/ciss/files/260205_Fall_Semester_Admission_Guidelines_pc_en.pdf",
+     "quote": "Meals provided in the dormitory are optional and charged separately.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "travel",
+     "url": "https://ciss.konkuk.ac.kr/ciss/18391/subview.do",
+     "quote": "NIIED Airfare Entry to Korea: economy class flight ticket from the scholar's home country Return: economy class flight ticket to the scholar's home country",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [],
+   "noteRu": "Скидка на обучение даётся только на первый семестр: от 30% до 100% платы, остаток студент платит по счёту. Общежитие платное: депозит 200 000 вон, аренда 1 914 000 вон за семестр и 2 847 000 вон за шесть месяцев, питание оплачивается отдельно. Авиабилеты названы только в государственной стипендии GKS (NIIED Airfare).",
+   "status": "update"
+  },
+  {
+   "id": "korea-university",
+   "current": {
+    "tuition": null,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": false,
+    "living": null,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://oia.korea.ac.kr/_res/oia/etc/Application_Guide_for_Fall_2026_Freshman(ENG).pdf",
+     "quote": "Tuition fees for Fall 2026 must be paid in full via bank transfer",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://oia.korea.ac.kr/_res/oia/etc/Application_Guide_for_Fall_2026_Freshman(ENG).pdf",
+     "quote": "Anam Global Scholarship awarded to the top-ranked admitted student in each academic track Full tuition fee (8 semesters)",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://oia.korea.ac.kr/_res/oia/etc/Application_Guide_for_Fall_2026_Freshman(ENG).pdf",
+     "quote": "KU STEM Overseas scholarship for top-tier outstanding students in STEM (Science, Technology, Engineering, Mathematics) fields Full tuition fee (4 semesters)",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [],
+   "noteRu": "Плату за обучение студент вносит полностью при регистрации. Полную плату дают только лучшим по конкурсу: Anam Global — за 8 семестров лучшему в своём треке, KU STEM — за 4 семестра. Про жильё и дорогу страница не говорит.",
+   "status": "update"
+  },
+  {
    "id": "lund-sweden",
    "current": {
     "tuition": false,
@@ -1520,6 +2048,62 @@
    "amounts": [],
    "noteRu": "Обучение бесплатное — вуз прямо пишет «Tuition is free». Общежития есть, места на 1 450 студентов, но платное ли проживание, страница не говорит. Есть бесплатные карточки на питание для нуждающихся и бесплатный транспорт до аэропорта Манас по запросу; про оплату дороги вуз ничего не пишет.",
    "status": "same"
+  },
+  {
+   "id": "mate",
+   "current": {
+    "tuition": false,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": false,
+    "living": false,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://en.uni-mate.hu/bsc-and-msc-programmes-in-english",
+     "quote": "The tuition fees listed in the table below apply to students beginning their studies in the 2026-2027 academic year.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://en.uni-mate.hu/bsc-and-msc-programmes-in-english",
+     "quote": "Tuition fees for the first two semesters of the programme shall be paid before admission and entering Hungary.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://en.uni-mate.hu/application-procedure-for-bsc-msc",
+     "quote": "Payment of 100 EUR Application Fee via SimplePay on the application platform .",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://en.uni-mate.hu/welcome-information",
+     "quote": "In case you are a Stipendium Hungaricum / SCYP / FAO / Diaspora scholarship holder, your accommodation in the dorm will be covered by the scholarship programme.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://en.uni-mate.hu/accommodation",
+     "quote": "Please note that, since the dormitory has limited places, newcoming scholarship holders have priority.",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [
+    {
+     "what": "other",
+     "value": 100,
+     "currency": "EUR",
+     "period": "once",
+     "quote": "Payment of 100 EUR Application Fee via SimplePay on the application platform ."
+    }
+   ],
+   "noteRu": "Для платных мест обучение в бакалавриате стоит от 1500 до 2500 евро за семестр, и первые два семестра надо оплатить до зачисления и въезда в Венгрию. Жильё в общежитии покрывает только стипендия (Stipendium Hungaricum, SCYP, FAO или Diaspora), мест в общежитии мало и приоритет у стипендиатов. Заявка стоит 100 евро и не возвращается.",
+   "status": "update"
   },
   {
    "id": "nagoya-g30",
@@ -1623,6 +2207,189 @@
    "status": "update"
   },
   {
+   "id": "northwestern-university",
+   "current": {
+    "tuition": true,
+    "living": true,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": true,
+    "living": true,
+    "travel": true
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://admissions.northwestern.edu/tuition-aid/international-student-aid/",
+     "quote": "These packages: Meet 100% of a student's demonstrated financial need",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://admissions.northwestern.edu/tuition-aid/international-student-aid/",
+     "quote": "Consider the full cost of attendance (tuition, room and board, fees, health insurance, books and supplies, personal expenses, visa renewal costs and travel allowance)",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "travel",
+     "url": "https://admissions.northwestern.edu/tuition-aid/international-student-aid/",
+     "quote": "Consider the full cost of attendance (tuition, room and board, fees, health insurance, books and supplies, personal expenses, visa renewal costs and travel allowance)",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://admissions.northwestern.edu/tuition-aid/international-student-aid/",
+     "quote": "Each year, a small group of first-year international students receive need-based aid.",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [],
+   "noteRu": "Пакет помощи покрывает 100% подтверждённой нужды и состоит только из грантов и стипендий, без кредитов и работы. В расчёт полной стоимости года входят обучение, жильё и питание, сборы, страховка, книги, личные расходы, расходы на визу и дорога (travel allowance). Но такую помощь по нужде получает небольшая группа иностранцев-первокурсников в год, и просьба о помощи учитывается при приёме.",
+   "status": "update"
+  },
+  {
+   "id": "oberlin",
+   "current": {
+    "tuition": true,
+    "living": true,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": true,
+    "living": true,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://www.oberlin.edu/admissions-and-aid/financial-aid/applying-aid-international-students",
+     "quote": "Oberlin provides grants, scholarships, loans, and on-campus employment to meet 100% of calculated financial need for all international students who apply for financial aid.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://www.oberlin.edu/admissions-and-aid/financial-aid/applying-aid-international-students",
+     "quote": "Oberlin provides grants, scholarships, loans, and on-campus employment to meet 100% of calculated financial need for all international students who apply for financial aid.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://www.oberlin.edu/admissions-and-aid/international-students",
+     "quote": "Oberlin meets 100 percent of demonstrated financial need, making an Oberlin education accessible to students from all financial backgrounds.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://www.oberlin.edu/admissions-and-aid/international-students",
+     "quote": "Oberlin meets 100 percent of demonstrated financial need, making an Oberlin education accessible to students from all financial backgrounds.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://www.oberlin.edu/admissions-and-aid/financial-aid",
+     "quote": "Oberlin's financial aid packages meet 100 percent of demonstrated need for every admitted student, as calculated by the Office of Financial Aid.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://www.oberlin.edu/admissions-and-aid/financial-aid",
+     "quote": "Oberlin's financial aid packages meet 100 percent of demonstrated need for every admitted student, as calculated by the Office of Financial Aid.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://www.oberlin.edu/admissions-and-aid/tuition-and-fees",
+     "quote": "Oberlin College Costs 2026-27 Tuition $70,320 Housing $10,270 Meal Plan $10,430 Fees $1,142 Total $92,162",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [
+    {
+     "what": "tuition",
+     "value": 70320,
+     "currency": "USD",
+     "period": "year",
+     "quote": "Oberlin College Costs 2026-27 Tuition $70,320 Housing $10,270 Meal Plan $10,430 Fees $1,142 Total $92,162"
+    },
+    {
+     "what": "living-cost",
+     "value": 10270,
+     "currency": "USD",
+     "period": "year",
+     "quote": "Oberlin College Costs 2026-27 Tuition $70,320 Housing $10,270 Meal Plan $10,430 Fees $1,142 Total $92,162"
+    }
+   ],
+   "noteRu": "Oberlin прямо пишет, что закрывает 100% рассчитанной финансовой потребности всем принятым студентам, включая иностранцев, которые подают заявку на помощь. Полная стоимость 2026-27 — 92 162 доллара: обучение 70 320, жильё 10 270, питание 10 430, сборы 1 142.",
+   "status": "same"
+  },
+  {
+   "id": "od",
+   "current": {
+    "tuition": null,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": true,
+    "living": false,
+    "travel": false
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://od.globaluni.ru/",
+     "quote": "Will I have to pay a tuition fee? Your tuition fees will be covered by the Government of the Russian Federation.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://od.globaluni.ru/",
+     "quote": "The scholarship covers tuition fees and provides a monthly stipend. All other expenses - including transportation, food, accommodation, communication services, and medical insurance - must be covered by the student.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "travel",
+     "url": "https://od.globaluni.ru/",
+     "quote": "You will be responsible for covering travel and accommodation expenses, insurance, and personal costs.",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [],
+   "noteRu": "Победителю обучение оплачивает правительство России: «Your tuition fees will be covered by the Government of the Russian Federation». Стипендия ежемесячная, но транспорт, еда, жильё, связь и медстраховка — за счёт студента; сумму стипендии страница не называет.",
+   "status": "update"
+  },
+  {
+   "id": "osh-state",
+   "current": {
+    "tuition": false,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": false,
+    "living": null,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://oshsu.kg/ru/page/264",
+     "quote": "4. Могут ли иностранные студенты обучаться бесплатно в вузах КР? Да могут, только граждане государств России, Белоруссии, Казахстана и Таджикистана, с которыми подписан договор с Кыргызской Республикой на государственном уровне, для этого вы должны сдавать общереспубликанское тестирование (ОРТ), всю информации найдете по адресу https://2020.edu.gov.kg/vuz",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://oshsu.kg/ru/page/264",
+     "quote": "5. Оплачивается ли стипендия иностранным студентам? Да если вы поступили, через ОРТ (пункт 4.) на бюджетную форму обучения, а в остальных случаях иностранным студентам стипендия не предусмотрена.",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [],
+   "noteRu": "Бесплатное обучение в вузах КР страница обещает только гражданам России, Белоруссии, Казахстана и Таджикистана, если они сдают общереспубликанское тестирование (ОРТ). Стипендия тоже только поступившим через ОРТ на бюджетную форму, в остальных случаях иностранцам её не предусмотрено.",
+   "status": "same"
+  },
+  {
    "id": "pomona-college",
    "current": {
     "tuition": true,
@@ -1711,6 +2478,57 @@
    "status": "update"
   },
   {
+   "id": "ritsumeikan",
+   "current": {
+    "tuition": false,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": false,
+    "living": null,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://en.ritsumei.ac.jp/e-ug/financial_info/scholarships.html",
+     "quote": "Undergraduate Category III 20% Reduction Ex.) 1,469,200 JPY → 1,175,360 JPY All other admitted students not receiving a Category I or II reduction",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://en.ritsumei.ac.jp/e-ug/financial_info/scholarships.html",
+     "quote": "JASSO scholarship: 48,000 yen/month",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://en.ritsumei.ac.jp/e-ug/financial_info/scholarships.html",
+     "quote": "International Students Assistance Scholarship by RU Faculty/Staff: 250,000yen/year",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [
+    {
+     "what": "stipend",
+     "value": 48000,
+     "currency": "JPY",
+     "period": "month",
+     "quote": "JASSO scholarship: 48,000 yen/month"
+    },
+    {
+     "what": "stipend",
+     "value": 250000,
+     "currency": "JPY",
+     "period": "year",
+     "quote": "International Students Assistance Scholarship by RU Faculty/Staff: 250,000yen/year"
+    }
+   ],
+   "noteRu": "Обучение платное: скидку по конкурсу получают все — 100% лучшим 10% абитуриентов, 50% следующим 10%, остальным 20%. После зачисления доступны JASSO (48 000 иен в месяц) и стипендия вуза 250 000 иен в год, а также конкурсная полная стипендия MEXT. Жильё и дорога в помощи не названы.",
+   "status": "same"
+  },
+  {
    "id": "sejong",
    "current": {
     "tuition": null,
@@ -1789,6 +2607,56 @@
    "status": "same"
   },
   {
+   "id": "skku",
+   "current": {
+    "tuition": null,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": false,
+    "living": false,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://admission-global.skku.edu/eng/grad/scholarship_undergrad.html",
+     "quote": "Amount : 10-100% of Dues (including entrance fee) will be waived for remarkable freshmen",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://admission-global.skku.edu/eng/grad/scholarship_undergrad.html",
+     "quote": "50% tuition scholarship will be offered for 4 years(for 8 semesters)",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://admission-global.skku.edu/eng/grad/scholarship_undergrad.html",
+     "quote": "Living expenses provided : KRW 570,000 per month (KRW 3,400,000 per semester) Priority in assignment of dormitory and full dormitory fees provided if assigned",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://admission-global.skku.edu/eng/grad/scholarship_undergrad.html",
+     "quote": "Nomination will be held among remarkable freshmen based on admission evaluation results",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [
+    {
+     "what": "stipend",
+     "value": 570000,
+     "currency": "KRW",
+     "period": "month",
+     "quote": "Living expenses provided : KRW 570,000 per month (KRW 3,400,000 per semester)"
+    }
+   ],
+   "noteRu": "Полного покрытия нет: при поступлении плату снижают на 10–100% только выдающимся первокурсникам, за язык дают 100% или 50% платы на первый семестр, за оценки — 30–70%. Содержание и общежитие оплачивают только номинантам Samsung Global Sungkyun: 570 000 вон в месяц и полная плата за общежитие при распределении. Дорогу страница не упоминает.",
+   "status": "update"
+  },
+  {
    "id": "sophia-fla",
    "current": {
     "tuition": null,
@@ -1833,6 +2701,94 @@
     }
    ],
    "noteRu": "Обучение платное: суммарные взносы за первый год — 947 650 иен (2026). Стипендия Sophia University New Student Scholarship даёт полную, половину или треть платы только за первый год и только отобранным по конкурсу.",
+   "status": "update"
+  },
+  {
+   "id": "spbu",
+   "current": {
+    "tuition": true,
+    "living": null,
+    "travel": null,
+    "note": {
+     "ru": "Бесплатное обучение даёт квота правительства России (за счёт федерального бюджета), попасть в неё иностранцу можно через открытую международную олимпиаду СПбГУ. Жильё, стипендию и дорогу страницы приёма иностранцев не описывают. Без квоты — платное обучение по договору."
+    }
+   },
+   "proposed": {
+    "tuition": true,
+    "living": null,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://abiturient.spbu.ru/reception-foreign/budget/",
+     "quote": "на обучение за счет бюджетных ассигнований федерального бюджета на места в рамках квоты",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [],
+   "noteRu": "Обучение идёт за счёт бюджетных ассигнований федерального бюджета на местах в рамках квоты правительства России. Жильё и дорога на этих страницах не упомянуты.",
+   "status": "same"
+  },
+  {
+   "id": "stipendium-hungaricum",
+   "current": {
+    "tuition": true,
+    "living": true,
+    "travel": null,
+    "note": {
+     "ru": "Обучение бесплатное, ежемесячная стипендия 43 700 форинтов, место в общежитии или 40 000 форинтов на жильё, медстраховка. Программа сама предупреждает, что это вклад в расходы, а не полное покрытие. Про перелёт источники молчат"
+    }
+   },
+   "proposed": {
+    "tuition": true,
+    "living": false,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf",
+     "quote": "Tuition-free education - exemption from the payment of tuition fee",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf",
+     "quote": "Please bear in mind that these provisions are only a contribution to the living expenses of the Scholarship Holders. It means that it does not fully cover all the living costs",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf",
+     "quote": "monthly amount of HUF 43,700 (cca EUR 2 110) contribution to the living expenses in Hungary for 12 months a year until the completion of studies",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [
+    {
+     "what": "stipend",
+     "value": 43700,
+     "currency": "HUF",
+     "period": "month",
+     "quote": "monthly amount of HUF 43,700 (cca EUR 2 110) contribution to the living expenses in Hungary for 12 months a year until the completion of studies"
+    },
+    {
+     "what": "living-cost",
+     "value": 40000,
+     "currency": "HUF",
+     "period": "month",
+     "quote": "a contribution of HUF 40,000/month (cca EUR 100) to accommodation costs for the whole duration of the scholarship period"
+    },
+    {
+     "what": "other",
+     "value": 65000,
+     "currency": "HUF",
+     "period": "year",
+     "quote": "supplementary medical insurance for up to HUF 65,000 (cca EUR 165) a year/person"
+    }
+   ],
+   "noteRu": "Стипендия освобождает от платы за обучение целиком, даёт 43 700 форинтов в месяц, бесплатное место в общежитии при наличии мест или 40 000 форинтов в месяц на аренду и медстраховку. Жильё покрыто не полностью: в самом документе сказано, что это лишь вклад в расходы и полной стоимости жизни не покрывает.",
    "status": "update"
   },
   {
@@ -1966,6 +2922,76 @@
    ],
    "noteRu": "Вуз закрывает 100% доказанной нужды каждого принятого независимо от гражданства; нужду считают как разницу между годовой стоимостью учёбы (включая книги, личные расходы и дорогу до кампуса) и вкладом семьи. Стипендий за заслуги на бакалавриате нет, а денег для иностранцев выделяют ограниченно. Выпускникам UWC полагается грант по нужде до 10 000 долларов в год.",
    "status": "update"
+  },
+  {
+   "id": "ubbcluj-romania",
+   "current": {
+    "tuition": false,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": false,
+    "living": null,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://www.ubbcluj.ro/en/taxe/taxe_de_scolarizare",
+     "quote": "Tuition fees will be paid by students either in full, or in instalments.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://www.ubbcluj.ro/en/taxe/taxe_de_scolarizare",
+     "quote": "The instalment payment facility works as follows: until confirmation of place for the first year students, respectively by October 15 for students from other years of study, at least 25% of the annual tuition fee must be paid; by December 5 , at least 50% of the annual tuition fee; by March 15 , at least 75% of the annual tuition fee; by May 15 , 100% of the annual tuition fee to be paid.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://cci.ubbcluj.ro/admission-international-students/candidates-from-other-countries/bachelor",
+     "quote": "Mathematics for Computer Science (Faculty of Mathematics and Computer Science, 6 semesters, 7000 eur/year)",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://cci.ubbcluj.ro/admission-international-students/candidates-from-other-countries/bachelor",
+     "quote": "Environmental Engineering (Faculty of Environmental Science and Engineering, 8 semesters, 3000 eur/year)",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://cci.ubbcluj.ro/admission-international-students/candidates-from-other-countries/bachelor",
+     "quote": "receipt attesting the payment of the non-refundable of 50 EUR, processing fee; to be paid only after you filled out the application form.",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [
+    {
+     "what": "tuition",
+     "value": 7000,
+     "currency": "EUR",
+     "period": "year",
+     "quote": "Mathematics for Computer Science (Faculty of Mathematics and Computer Science, 6 semesters, 7000 eur/year)"
+    },
+    {
+     "what": "tuition",
+     "value": 3000,
+     "currency": "EUR",
+     "period": "year",
+     "quote": "Environmental Engineering (Faculty of Environmental Science and Engineering, 8 semesters, 3000 eur/year)"
+    },
+    {
+     "what": "other",
+     "value": 50,
+     "currency": "EUR",
+     "period": "once",
+     "quote": "receipt attesting the payment of the non-refundable of 50 EUR, processing fee; to be paid only after you filled out the application form."
+    }
+   ],
+   "noteRu": "Обучение платное: студенты вносят плату целиком или частями — первокурсники 25% до подтверждения места, остальные 25% к 15 октября, дальше 50% к 5 декабря, 75% к 15 марта и 100% к 15 мая. В описаниях программ на странице приёма указаны цены: 7 000 евро в год за Mathematics for Computer Science и 3 000 за Environmental Engineering. Сбор за рассмотрение заявки — 50 евро, невозвратный.",
+   "status": "same"
   },
   {
    "id": "university-of-szeged",
@@ -2112,6 +3138,42 @@
    ],
    "noteRu": "Стипендия USTC для бакалавриата двух уровней: уровень A даёт освобождение от платы за обучение, медицинскую страховку, ежемесячную стипендию 2 500 юаней и субсидию на жильё, уровень B — только освобождение от платы. Какой уровень дадут, вуз решает сам по совокупной оценке заявки, поэтому жильё лишь субсидируется. Дорогу страница не называет.",
    "status": "update"
+  },
+  {
+   "id": "utoronto-pearson",
+   "current": {
+    "tuition": true,
+    "living": true,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": true,
+    "living": true,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://future.utoronto.ca/pearson-scholarships",
+     "quote": "the Pearson Scholarships cover tuition, books, incidental fees, and full residence support for four years.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://future.utoronto.ca/pearson-scholarships",
+     "quote": "the Pearson Scholarships cover tuition, books, incidental fees, and full residence support for four years.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://future.utoronto.ca/pearson-scholarships",
+     "quote": "The Pearson International Student Scholarships cover tuition, books, incidental fees and full residence support for four years.",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [],
+   "noteRu": "Стипендия Пирсона покрывает обучение, книги, обязательные сборы и полное проживание в общежитии на четыре года. Дорога в этом перечне не названа, других упоминаний дороги в помощи на странице нет. Стипендию дают примерно 37 студентам в год по представлению школы.",
+   "status": "same"
   },
   {
    "id": "waseda-sils",
@@ -2322,6 +3384,131 @@
    ],
    "noteRu": "Обучение платное: для иностранцев 99 000 юаней за учебный год. Стипендия за успеваемость — до 50 % платы за год, конкурсная; есть также скидка 10 % за раннюю подачу. Депозит 10 000 юаней невозвратный, но входит в плату за обучение.",
    "status": "update"
+  },
+  {
+   "id": "yonsei-uic",
+   "current": {
+    "tuition": null,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": false,
+    "living": false,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://uic.yonsei.ac.kr/admission.php?mid=m04_03",
+     "quote": "Tuition Fee 8,202,000 * 7,398,000 * Miscellaneous Fees ** 56,000 56,000 Total 8,258,000 7,454,000",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://uic.yonsei.ac.kr/admission.php?mid=m04_03",
+     "quote": "Types : full tuition for 4 years",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://uic.yonsei.ac.kr/admission.php?mid=m04_03",
+     "quote": "Scholarship recipients are to be selected from admitted applicants according to their academic credentials.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "living",
+     "url": "https://uic.yonsei.ac.kr/admission.php?mid=m04_02_02",
+     "quote": "Yonsei University students can reside in both Sinchon and Songdo(International) Campus dormitories. Learn more about the dormitory application process, fee, and the residential college program.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://uic.yonsei.ac.kr/admission.php?mid=m04_02_02",
+     "quote": "Application Fee: KRW 150,000 (about USD 150)",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [
+    {
+     "what": "other",
+     "value": 150000,
+     "currency": "KRW",
+     "period": "once",
+     "quote": "Application Fee: KRW 150,000 (about USD 150)"
+    }
+   ],
+   "noteRu": "Обучение платное: 8 202 000 вон за семестр, с прочими сборами 8 258 000; первый семестр 8 416 000 вон. Admissions Scholarship даёт полную плату за 4 года, но получателей отбирают среди принятых по академическим данным, то есть стипендия конкурсная. Общежитие предоставляют за отдельную плату.",
+   "status": "update"
+  },
+  {
+   "id": "zhejiang-university",
+   "current": {
+    "tuition": false,
+    "living": null,
+    "travel": null
+   },
+   "proposed": {
+    "tuition": false,
+    "living": null,
+    "travel": null
+   },
+   "quotes": [
+    {
+     "field": "tuition",
+     "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+     "quote": "Tuition fees paid by self-funded international students are non-refundable in principle.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+     "quote": "To find the tuition fee of a specific program, please refer to the catalog of undergraduate programs.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+     "quote": "Chinese Government Scholarship-Bilateral Program (CSC Type A) ( Link ) Only open to Chinese-taught programs.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "tuition",
+     "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+     "quote": "Zhejiang Government Scholarship ( Link ) Only open to Chinese-taught programs.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+     "quote": "Application Fee: RMB 800 yuan, non-refundable.",
+     "exactQuoteMatched": true
+    },
+    {
+     "field": "amount",
+     "url": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+     "quote": "IX. Medical Insurance Fee: 800 RMB yuan/academic year",
+     "exactQuoteMatched": true
+    }
+   ],
+   "amounts": [
+    {
+     "what": "other",
+     "value": 800,
+     "currency": "CNY",
+     "period": "once",
+     "quote": "Application Fee: RMB 800 yuan, non-refundable."
+    },
+    {
+     "what": "other",
+     "value": 800,
+     "currency": "CNY",
+     "period": "year",
+     "quote": "IX. Medical Insurance Fee: 800 RMB yuan/academic year"
+    }
+   ],
+   "noteRu": "Обучение платное: цену смотрят в каталоге программ, для самофинансируемых иностранцев плата невозвратна; сбор за заявку 800 юаней. Медстраховка стоит 800 юаней за учебный год. Стипендия CSC (Type A) и стипендия провинции Чжэцзян открыты только для программ на китайском языке.",
+   "status": "same"
   }
  ]
 }
