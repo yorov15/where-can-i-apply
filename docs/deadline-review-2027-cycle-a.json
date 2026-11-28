@@ -457,6 +457,699 @@
    "sources": [],
    "windows": [],
    "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "germany-public",
+   "country": "DE",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-07-15",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://www.daad.de/en/studying-in-germany/living-in-germany/finances/",
+   "status": "annual_windows_only",
+   "note": "DAAD даёт общее правило для вузов: приём на зимний семестр идёт с начала мая до 15 июля, но год на странице не указан, поэтому дату 2027 не ставлю. Для зимнего семестра 2027/28 это ориентировочно 15 июля 2027, официально не подтверждено.",
+   "sources": [
+    {
+     "url": "https://www.daad.de/en/studying-in-germany/requirements/application-process/",
+     "quote": "At most higher education institutions, the application phase for the winter semester starting in September/October begins in early May and ends on 15 July.",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:367bf9deb38603d106e8f08b9137f21674faad4cf287f9f41120d02b2eace82b"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "grinnell-college",
+   "country": "US",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://www.grinnell.edu/admission/apply/international",
+   "status": "update",
+   "note": "Страница называет цикл 2026-27, то есть приём осенью 2027: ED I 15.11.2026, ED II 5.01.2027, RD 15.01.2027; основной — RD. ED I уже прошёл.",
+   "sources": [
+    {
+     "url": "https://www.grinnell.edu/admission/apply/first-year/requirements",
+     "quote": "Application Deadlines 2026-27 Early Decision I Early Decision II Regular Decision Application Deadline Nov. 15 Jan. 5 Jan. 15",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:771aefe8a6bcbd055e156811f5284179963937afd823d30eea3f4e12f538baa1"
+    }
+   ],
+   "windows": [
+    {
+     "track": "Early Decision I",
+     "opens": null,
+     "closes": "2026-11-15",
+     "zone": null
+    },
+    {
+     "track": "Early Decision II",
+     "opens": null,
+     "closes": "2027-01-05",
+     "zone": null
+    },
+    {
+     "track": "Regular Decision",
+     "opens": null,
+     "closes": "2027-01-15",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "jhu",
+   "country": "US",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-01-02",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://apply.jhu.edu/international-applicants/",
+   "status": "update",
+   "note": "Таблица сроков прямо на цикл 2026-27: ED I 1.11.2026, ED II и RD 2.01.2027, перевод 1.03.2027. Основной срок для иностранца — RD 2 января 2027.",
+   "sources": [
+    {
+     "url": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+     "quote": "Early Decision I Early Decision II Regular Decision Transfer Application Deadline November 1, 2026 January 2, 2027 January 2, 2027 March 1, 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:abaec97424952770bc7b56f8bc4d266ea33d2d47e8ccb2d2a4e50c445451ebb9"
+    }
+   ],
+   "windows": [
+    {
+     "track": "Early Decision I",
+     "opens": null,
+     "closes": "2026-11-01",
+     "zone": null
+    },
+    {
+     "track": "Early Decision II",
+     "opens": null,
+     "closes": "2027-01-02",
+     "zone": null
+    },
+    {
+     "track": "Regular Decision",
+     "opens": null,
+     "closes": "2027-01-02",
+     "zone": null
+    },
+    {
+     "track": "Transfer",
+     "opens": null,
+     "closes": "2027-03-01",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "kenyon-college",
+   "country": "US",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://www.kenyon.edu/admissions-aid/how-to-apply/international-students/",
+   "status": "annual_windows_only",
+   "note": "На странице сроков приёма только месяцы без года (ED1 15 ноября, ED2/RD 15 января), год цикла не указан, поэтому дату 2027 не ставлю. 2027 упоминается только в связи с CSS Profile 2027-28 на странице финпомощи.",
+   "sources": [
+    {
+     "url": "https://www.kenyon.edu/admissions-aid/how-to-apply/international-students/",
+     "quote": "Early Decision Option 1 Application Due: November 15 Decision Released: Mid-December Early Decision Option 2 Application Due: January 15 Decision Released: Mid-February Regular Decision Application Due: January 15",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:f76ee61f323cf1426a7ba0dcb8fbe12cdf43ffbef64875272429a0b6594887ca"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "kiut",
+   "country": "UZ",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-07-31",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://kiut.uz/en/admissions/international-students",
+   "status": "annual_windows_only",
+   "note": "Страница про приём 2026/2027: осенний поток — 31 июля, весенний — 31 декабря. Года у самих дат нет, поэтому 2027 не ставлю; для 2027/2028 объявления нет.",
+   "sources": [
+    {
+     "url": "https://kiut.uz/en/admissions/international-admission/",
+     "quote": "Fall Intake Studies begin in September Application deadline July 31 Spring Intake Studies begin in February Application deadline December 31",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:a6cd87666702a81b0fdb6ddb07006284f80e2f24201772252b4c68ad201a71f0"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "lmu",
+   "country": "DE",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-07-15",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://www.lmu.de/en/study/degree-students/steps-to-studying-at-lmu/",
+   "status": "annual_windows_only",
+   "note": "LMU называет только общее правило: 15 января для летнего и 15 июля для зимнего семестра, год к этим срокам не привязан. Для зимнего семестра 2027/28 это ориентировочно 15 июля 2027; портал приёма меняется с лета 2027, точных дат на странице нет.",
+   "sources": [
+    {
+     "url": "https://www.lmu.de/en/study/degree-students/applications-for-admission/",
+     "quote": "In many cases the following deadlines apply for international applicants: 15 January for the summer semester 15 July for the winter semester",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:c8cb28b8654d57e9f2701b89b00b5020c599df476ca95a91acd7728d15f9ab47"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "metu-turkey",
+   "country": "TR",
+   "deadline": {
+    "opens": "2027-06-01",
+    "closes": "2027-07-12",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://iso.metu.edu.tr/en/who-can-apply",
+   "status": "no_new_announcement",
+   "note": "На странице только прошедший приём на 2026-2027 учебный год (1 июня - 12 июля 2026). Приём на 2027-2028 не объявлен.",
+   "sources": [
+    {
+     "url": "https://iso.metu.edu.tr/en/application-dates",
+     "quote": "Application Period for the 2026-2027 Academic Year: June 1-July 12, 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:29f07996eb71c1d7968993170a28384de021d970e428ea60eb215f7f8a68ca76"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "moe-taiwan",
+   "country": "TW",
+   "deadline": {
+    "opens": "2027-02-01",
+    "closes": "2027-03-31",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://english.moe.gov.tw/fp-24-16833-23C09-1.html",
+   "status": "annual_windows_only",
+   "note": "На страницах MOE дат нет: заявку подают в представительство Тайваня за рубежом, и срок устанавливает само представительство. Для 2027 года срок на сайте не опубликован.",
+   "sources": [
+    {
+     "url": "https://taiwanscholarship.moe.gov.tw/web/pages.aspx?p=7",
+     "quote": "All scholarship applications must be submitted to the local Taiwan Representative Office.",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:40fcb8167a0630b47b43f604c2027e1b0a0a512036955d0c0598053bb92666f8"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "ncku",
+   "country": "TW",
+   "deadline": {
+    "opens": "2026-12-20",
+    "closes": "2027-03-15",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://oia.ncku.edu.tw/p/404-1032-232639.php?Lang=en",
+   "status": "no_new_announcement",
+   "note": "Сейчас на странице только приём на весну 2027 (23.09-13.10.2026), он уже закрыт. Приём на осень 2027 не объявлен.",
+   "sources": [
+    {
+     "url": "https://management.oia.ncku.edu.tw/intladmission",
+     "quote": "Application period for Spring 2027: September 23 - October 13, 2026 (Taiwan Time, GMT+8).",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:49ad4fccad852a2caf1d46e0f7337f52ae1bd8b9f43adf87f4e4ee17d74a91e5"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "northwestern-university",
+   "country": "US",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-01-04",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://admissions.northwestern.edu/apply/identities/international.html",
+   "status": "update",
+   "note": "Таблица сроков на цикл 2026-27: QuestBridge 1.10.2026, ED 1.11.2026, RD 4.01.2027, перевод 1.04.2027. Основной для иностранца — RD 4 января 2027.",
+   "sources": [
+    {
+     "url": "https://admissions.northwestern.edu/apply/application-deadlines.html",
+     "quote": "Application Due Date October 1, 2026 November 1, 2026 January 4, 2027 March 1, 2027* April 1, 2027*",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:5a9f196c697161acf9cdf1c96b67e791e7d25687eb07b47ada407f03fbe4f407"
+    }
+   ],
+   "windows": [
+    {
+     "track": "QuestBridge",
+     "opens": null,
+     "closes": "2026-10-01",
+     "zone": null
+    },
+    {
+     "track": "Early Decision",
+     "opens": null,
+     "closes": "2026-11-01",
+     "zone": null
+    },
+    {
+     "track": "Regular Decision",
+     "opens": null,
+     "closes": "2027-01-04",
+     "zone": null
+    },
+    {
+     "track": "Transfer",
+     "opens": null,
+     "closes": "2027-04-01",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "peking-university",
+   "country": "CN",
+   "deadline": {
+    "opens": "2026-01-01",
+    "closes": "2027-02-28",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://isd.pku.edu.cn/en/detail.php?id=818",
+   "status": "no_new_announcement",
+   "note": "На сайте только цикл 2026: два раунда 19.12.2025-28.02.2026 и 12.06-10.07.2026. Для 2027 опубликованы лишь требования к баллам, сроков подачи на бакалавриат 2027 нет.",
+   "sources": [
+    {
+     "url": "https://isd.pku.edu.cn/en/detail.php?id=813",
+     "quote": "Round 1: The online application system will be open from 12:00 on 19 December 2025 (Friday) to 23:59 on 28 February 2026 (Saturday)",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:0680727f8efc9ac19bdd82ca8c777999d208b63ea20576af980da1b6d42590b4"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "qatar-university",
+   "country": "QA",
+   "deadline": {
+    "opens": "2027-03-01",
+    "closes": "2027-03-25",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://www.qu.edu.qa/students/admission/scholarships/types",
+   "status": "blocked",
+   "note": "Все три страницы qu.edu.qa отдают только навигацию и новости, содержимое раздела приёма подгружается скриптом, текста со сроками нет.",
+   "sources": [],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "romania-gov",
+   "country": "RO",
+   "deadline": {
+    "opens": "2027-02-16",
+    "closes": "2027-03-31",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://scholarships.studyinromania.gov.ro/scholarship-about",
+   "status": "no_new_announcement",
+   "note": "На сайте действующий конкурс 2026 года: подача 16.02-31.03.2026, результаты около 15.07.2026. Конкурс на 2027 год ещё не объявлен.",
+   "sources": [
+    {
+     "url": "https://scholarships.studyinromania.gov.ro/scholarship-about",
+     "quote": "Applications can be submitted only via the online platform, between 16 February 2026 and 31 March 2026, with the selection results being announced around 15 July 2026.",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:3340c68ce28fa9e2f21066d3477d9299f0659c167bb0226e150f920ffe875b4a"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "sjtu",
+   "country": "CN",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-03-31",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/278",
+   "status": "update",
+   "note": "Это страница программы Undergraduate Engineering Cluster Program in English: Early Action 1.11.2026 (прошёл), обычный раунд 31.03.2027. Основной срок — 31 марта 2027, время Пекина.",
+   "sources": [
+    {
+     "url": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/278",
+     "quote": "Application Deadlines for 2027 Admission Early Action: November 1 , 2026 (Beijing Time, GMT+8)",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:089960c7bbd06f64d42543c768f0a65cebb605ad7b6289446ba6500ec079d634"
+    },
+    {
+     "url": "https://global.sjtu.edu.cn/en/study-sjtu/prospective/degree-programs/278",
+     "quote": "Regular Application: March 31, 202 7 (Beijing Time, GMT+8)",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:089960c7bbd06f64d42543c768f0a65cebb605ad7b6289446ba6500ec079d634"
+    }
+   ],
+   "windows": [
+    {
+     "track": "Early Action",
+     "opens": null,
+     "closes": "2026-11-01",
+     "zone": "Beijing Time, GMT+8"
+    },
+    {
+     "track": "Regular Application",
+     "opens": null,
+     "closes": "2027-03-31",
+     "zone": "Beijing Time, GMT+8"
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "smith-college",
+   "country": "US",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-01-15",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://www.smith.edu/admission-aid/tuition-aid-applicants/international-applicants",
+   "status": "annual_windows_only",
+   "note": "На странице приёма сроки без года: ED I 15 ноября, ED II 5 января, RD 15 января. Год цикла не указан (2027-28 есть только на странице финпомощи), поэтому дату 2027 не ставлю.",
+   "sources": [
+    {
+     "url": "https://www.smith.edu/admission-aid/apply-smith/first-year-applicants",
+     "quote": "Regular Decision Decision mailings are sent in late March. Item Deadline Common Application or Coalition Application January 15",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:07b6bc4b2986e753df48ab3612921b323e876abc3eedc642271923452d64604e"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "swarthmore-college",
+   "country": "US",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-01-04",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://www.swarthmore.edu/admissions-aid/international-students",
+   "status": "update",
+   "note": "Страница прямо называет цикл 2026-2027: Fall ED 15.11, Winter ED 4.01, RD 4.01. Основной для иностранца — RD 4 января 2027.",
+   "sources": [
+    {
+     "url": "https://www.swarthmore.edu/admissions-aid/application-materials-deadlines",
+     "quote": "For the 2026-2027 admissions cycle",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:254dd3410d176a9850cb40a8cfb34ecfb6a4707dabe2acdd7036924372172c6a"
+    },
+    {
+     "url": "https://www.swarthmore.edu/admissions-aid/application-materials-deadlines",
+     "quote": "Winter Early Decision Application Deadline: January 4",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:254dd3410d176a9850cb40a8cfb34ecfb6a4707dabe2acdd7036924372172c6a"
+    },
+    {
+     "url": "https://www.swarthmore.edu/admissions-aid/application-materials-deadlines",
+     "quote": "Regular Decision Application Deadline: January 4",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:254dd3410d176a9850cb40a8cfb34ecfb6a4707dabe2acdd7036924372172c6a"
+    }
+   ],
+   "windows": [
+    {
+     "track": "Fall Early Decision",
+     "opens": null,
+     "closes": "2026-11-15",
+     "zone": null
+    },
+    {
+     "track": "Winter Early Decision",
+     "opens": null,
+     "closes": "2027-01-04",
+     "zone": null
+    },
+    {
+     "track": "Regular Decision",
+     "opens": null,
+     "closes": "2027-01-04",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "trento",
+   "country": "IT",
+   "deadline": {
+    "opens": "2026-12-01",
+    "closes": "2027-03-23",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://www.unitn.it/en/international/coming-unitrento/degree-seeking-student/admission-requirements-international-qualifications",
+   "status": "blocked",
+   "note": "Все страницы unitn.it отдают 403 Forbidden, обходить не стал.",
+   "sources": [],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "tufts-university",
+   "country": "US",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-01-04",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://admissions.tufts.edu/tuition-and-aid/applying-for-aid/international-student-aid/",
+   "status": "update",
+   "note": "Таблица на цикл 2026-27: ED I 2.11.2026, ED II 4.01.2027, RD 4.01.2027. Основной — RD 4 января 2027.",
+   "sources": [
+    {
+     "url": "https://admissions.tufts.edu/apply/first-year-students/",
+     "quote": "Early Decision I November 2, 2026 Mid-December Early Decision II January 4, 2027 Early February Regular Decision January 4, 2027 By April 1",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:ffdfc6bc43b3d67b029eb5fcf461b8564c4797b9bfc117bc81a7295f179f6121"
+    }
+   ],
+   "windows": [
+    {
+     "track": "Early Decision I",
+     "opens": null,
+     "closes": "2026-11-02",
+     "zone": null
+    },
+    {
+     "track": "Early Decision II",
+     "opens": null,
+     "closes": "2027-01-04",
+     "zone": null
+    },
+    {
+     "track": "Regular Decision",
+     "opens": null,
+     "closes": "2027-01-04",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "uca",
+   "country": "TJ",
+   "deadline": {
+    "opens": "2026-10-01",
+    "closes": "2027-02-14",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://admissions.ucentralasia.org/apply/admission-overview/",
+   "status": "update",
+   "note": "Приём 2027 года уже идёт: открыт 15.10.2026, дедлайн 15.02.2027 в 18:00 (GMT+6), тест 6-7 марта 2027. Дедлайн одинаков для кампусов Нарын и Хорог.",
+   "sources": [
+    {
+     "url": "https://ucentralasia.org/admissions/undergraduate/how-to-applyeur",
+     "quote": "Important Dates 15 October 2026 Applications open 15 February 2027 Application deadline 6-7 March 2027 Admissions test April-May 2027 Interviews and financial aid application form",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:9c047c34636e71239eb2ad0e5d13472065abab279aec766ab96e9ba37c4e4567"
+    },
+    {
+     "url": "https://ucentralasia.org/admissions/undergraduate/how-to-applyeur",
+     "quote": "before the application deadline on 15 February, 2027 at 18:00 (GMT +6)",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:9c047c34636e71239eb2ad0e5d13472065abab279aec766ab96e9ba37c4e4567"
+    }
+   ],
+   "windows": [
+    {
+     "track": "Undergraduate (Khorog/Naryn)",
+     "opens": "2026-10-15",
+     "closes": "2027-02-15",
+     "zone": "GMT+6"
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "uva-amsterdam",
+   "country": "NL",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-05-01",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://www.uva.nl/en/education/admissions/bachelors/applying-for-a-bachelors-programme.html",
+   "status": "annual_windows_only",
+   "note": "UvA указывает общий срок 1 мая для бакалавриата с началом 1 сентября, но год к сроку не привязан. 2027-2028 упоминается только на странице оценки дипломов, поэтому дату 2027 не ставлю.",
+   "sources": [
+    {
+     "url": "https://www.uva.nl/en/education/bachelor-s/application-after-1-may/application-after-1-may.html",
+     "quote": "The enrolment deadline for bachelor programmes starting on 1 September is 1 May.",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:917c0799e97ef8f76f5cffd62f6fbe9c2ee1230152524d572b8ccf7142c3cc06"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "wellesley-college",
+   "country": "US",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-01-08",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants/international-applicants",
+   "status": "update",
+   "note": "Страница прямо про приём осенью 2027: ED I 1.11.2026 (прошёл), ED II 5.01.2027, RD 8.01.2027. Основной — RD 8 января 2027.",
+   "sources": [
+    {
+     "url": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants",
+     "quote": "Wellesley College will continue to be test optional for those applying for entry in fall 2027.",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:a7db052aee4c93f9e509e6d3065bfcc67815a3d5d4d00059b38461e2c9d96565"
+    },
+    {
+     "url": "https://www.wellesley.edu/admission-aid/apply/first-year-applicants",
+     "quote": "Materials and Notifications Early Decision I Early Decision II Regular Decision Application November 1 January 5 January 8",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:a7db052aee4c93f9e509e6d3065bfcc67815a3d5d4d00059b38461e2c9d96565"
+    }
+   ],
+   "windows": [
+    {
+     "track": "Early Decision I",
+     "opens": null,
+     "closes": "2026-11-01",
+     "zone": null
+    },
+    {
+     "track": "Early Decision II",
+     "opens": null,
+     "closes": "2027-01-05",
+     "zone": null
+    },
+    {
+     "track": "Regular Decision",
+     "opens": null,
+     "closes": "2027-01-08",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "wiut",
+   "country": "UZ",
+   "deadline": {
+    "opens": null,
+    "closes": "2027-07-15",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://www.wiut.uz/certificate-international-foundation-studies",
+   "status": "no_new_announcement",
+   "note": "Портал называет сроки для 2026-2027 учебного года: CIFS 15.07.2026, бакалавриат/direct entry 17.08.2026, они прошли. Для следующего года на странице direct entry стоит «TBA».",
+   "sources": [
+    {
+     "url": "https://admission.wiut.uz/Manual/OverView",
+     "quote": "Deadlines Certificate of International Foundation Studies - Wednesday, July 15, 2026 Undergraduate/Direct Entry (transfer) programmes - Monday, August 17, 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:65b88ac5ad3c4b2c5b73b3f27b9806c0dd73f4fee487a10e2017bad50386cb0b"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
   }
  ]
 }
