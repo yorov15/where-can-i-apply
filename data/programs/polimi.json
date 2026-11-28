@@ -22,7 +22,7 @@
   "eligibility": {
     "citizenship": {
       "allow": "*",
-      "evidence": "regardless of their nationality or place of residence"
+      "evidence": "regardless of your nationality or country of residence"
     },
     "schoolCountry": {
       "noLimit": true,
@@ -33,7 +33,7 @@
     },
     "schoolYears": {
       "min": 12,
-      "evidence": "you must hold a secondary school qualification obtained after a minimum of 12/13 years of schooling, overall"
+      "evidence": "you must hold a secondary school qualification obtained after completing at least a total number of 12 or 13 years of schooling completed."
     },
     "graduationYear": {
       "noLimit": true,
@@ -51,65 +51,59 @@
     },
     "gpa": {
       "notMeasured": true,
-      "evidence": "These may relate to the total number of years of schooling completed, the final diploma grade/score, or the successful passing an academic suitability test."
+      "evidence": "These requirements may relate to: the total number of years of schooling the successful passing an academic suitability test"
     },
     "language": {
       "notMeasured": true,
-      "evidence": "have an appropriate B2 level certification of proficiency in the Italian language issued by the CLIQ"
+      "evidence": "To enrol in a programme taught in Italian , you must demonstrate adequate Italian-language proficiency; to enrol in a programme taught in English , you must demonstrate adequate English-language proficiency."
     }
   },
   "textConditions": [
     {
       "ru": "Двенадцать лет школы — жёсткое требование, а не пожелание. В Таджикистане школа одиннадцать, значит прямая дорога закрыта. Выход есть: университет засчитывает подготовительный курс длиной не меньше учебного года.",
-      "evidence": "Politecnico di Milano accepts the successful passing of a foundation course of at least one academic year",
+      "evidence": "For this purpose, Politecnico di Milano also accepts the successful completion of a foundation course lasting at least one academic year.",
       "field": "schoolYears",
       "kind": "workaround"
     },
     {
-      "ru": "Университет пишет, что требования к иностранному аттестату могут зависеть от числа лет школы, итогового балла аттестата или вступительного теста — какой из трёх пунктов применят к тебе, решают правила Министерства для конкретной страны, а не сама страница. Проходного балла аттестата на этих страницах не названо, но и гарантии, что его нет именно для Таджикистана, тоже нет — уточняй в приёмной комиссии.",
-      "evidence": "These may relate to the total number of years of schooling completed, the final diploma grade/score, or the successful passing an academic suitability test.",
+      "ru": "Университет пишет, что требования к иностранному аттестату могут зависеть от числа лет школы или от вступительного теста — какой из пунктов применят к тебе, решают правила Министерства для конкретной страны, а не сама страница. Проходного балла аттестата на этих страницах не названо, но и гарантии, что его нет именно для Таджикистана, тоже нет — уточняй в приёмной комиссии.",
+      "evidence": "These requirements may relate to: the total number of years of schooling the successful passing an academic suitability test",
       "field": "gpa",
       "kind": "note"
     },
     {
-      "ru": "Язык зависит от того, на каком языке идёт программа. На итальянском нужен итальянский уровня B2 — сертификат CLIQ или аттестат, полученный на итальянском. Английский при поступлении на такую программу не требуют, но без него диплом не закончить.",
-      "evidence": "have an appropriate B2 level certification of proficiency in the Italian language issued by the CLIQ",
+      "ru": "Язык зависит от того, на каком языке идёт программа: до зачисления надо подтвердить знание языка обучения признанным сертификатом. Вместо сертификата подойдёт гражданство страны, где итальянский или английский — официальный язык, либо аттестат школы, где учили на языке программы; язык обучения должен быть прямо указан в школьных документах. Какие сертификаты и уровни принимают, эти страницы не называют.",
+      "evidence": "To enrol in a programme taught in Italian , you must demonstrate adequate Italian-language proficiency; to enrol in a programme taught in English , you must demonstrate adequate English-language proficiency. You can demonstrate that you meet this requirement by uploading one of the accepted language certificates to Politecnico di Milano's Online Services, either during the test registration process or when you enrol. To find out which certificates are accepted, see the following pages: Italian language certificates English language certificates Alternatively, the requirement is considered met if: you are a citizen of a country where Italian or English is an official language, depending on the language of the programme you obtained a secondary school qualification after completing a course of study taught in the language of the programme",
       "field": "language",
       "kind": "note"
     },
     {
-      "ru": "Бакалавриат на английском тоже есть. На такие программы английский нужен до зачисления — сертификат из списка университета или аттестат на английском, а итальянский B2 надо получить до выпуска. Какой балл нужен, страница прячет в раскрывающийся блок: смотри раздел языковых требований на сайте.",
-      "evidence": "In order to be admitted to Bachelor of Science programmes held in English, you must demonstrate: proficiency in English prior to enrolment.",
+      "ru": "Бакалавриат на английском тоже есть. На такие программы надо подтвердить английский до зачисления: признанный сертификат в Online Services или школьное обучение на английском. Каких баллов хватит, эти страницы не говорят — список сертификатов на отдельной странице.",
+      "evidence": "to enrol in a programme taught in English , you must demonstrate adequate English-language proficiency.",
       "field": "language",
       "kind": "workaround"
     },
     {
       "ru": "Вступительный тест обязателен, но вместо итальянского TOL можно сдать SAT — его принимают напрямую и проводят на английском. Есть ещё CEnT-S на английском.",
-      "evidence": "SAT (provided by The College Board www.collegeboard.org), test administered in English",
+      "evidence": "SAT The test provided by the College Board (online, in English)",
       "field": "gpa",
       "kind": "workaround"
     },
     {
       "ru": "Иностранцам выделяют отдельные места, число которых устанавливают каждый год. То есть конкурс идёт не со всеми подряд, а внутри своей квоты — это может быть и легче, и тяжелее.",
-      "evidence": "Certain categories of international students are allocated a specific number of places, referred to as RESERVED PLACES.",
+      "evidence": "Some categories of international students have a specific number of places allocated to them, known as \"reserved places\".",
       "field": "citizenship",
       "kind": "note"
     },
     {
       "ru": "Правила для иностранных аттестатов устанавливает не университет, а министерство, и переиздаёт их каждый год отдельным документом. Значит перед подачей надо смотреть свежую редакцию, а не прошлогодние пересказы.",
-      "evidence": "issued each year by the Ministry of University and Research",
+      "evidence": "The requirements are set each year by the Italian Ministry of University and Research.",
       "field": null,
       "kind": "steps"
     },
     {
       "ru": "Документы: табели за три последних года школы с печатью и подписью, плюс аттестат или справка о том, что ты в выпускном классе. Проверяет их отдельная служба, и до её проверки зачисление не считается завершённым.",
-      "evidence": "report cards from the last three years of secondary school, stamped and signed by the competent authority/office",
-      "field": null,
-      "kind": "steps"
-    },
-    {
-      "ru": "Даты сессий вступительного теста на этих страницах не выводятся — они лежат за раскрывающимися блоками, которые инструмент не читает. Сроки смотри на сайте.",
-      "evidence": "When to register for the tests",
+      "evidence": "Detailed grades from the last three years of school, with the stamp and signature of the competent office",
       "field": null,
       "kind": "steps"
     },
@@ -139,31 +133,25 @@
     },
     {
       "ru": "Табели успеваемости за три последних года средней школы, с печатью и подписью уполномоченного органа.",
-      "evidence": "report cards from the last three years of secondary school, stamped and signed by the competent authority/office",
+      "evidence": "Detailed grades from the last three years of school, with the stamp and signature of the competent office",
       "field": null,
       "kind": "documents"
     },
     {
       "ru": "Аттестат о среднем образовании, если он уже получен, либо справка о том, что ты учишься в выпускном классе школы, — с печатью и подписью уполномоченного органа.",
-      "evidence": "the final secondary school diploma, if already obtained, or a letter confirming enrolment in the final year of secondary school, stamped and signed by the competent authority/office",
+      "evidence": "Letter issued by the school confirming the enrolment in the final year, with the stamp and signature of the competent office, if the qualification has not yet been obtained, or the final secondary school diploma",
       "field": null,
       "kind": "documents"
     },
     {
       "ru": "Транскрипт сданных экзаменов и описания отдельных курсов — если просишь зачесть уже пройденную в вузе программу.",
-      "evidence": "must upload the transcript of the exams passed and the course descriptions of the individual courses in the dedicated application",
+      "evidence": "To request the evaluation, upload the following documents to the dedicated application: your transcript of examinations passed the description of each course",
       "field": null,
       "kind": "documents"
     },
     {
-      "ru": "Удостоверение личности: загружается в Online Services и по нему проверяют гражданство (например, для языковой льготы).",
-      "evidence": "the information will be verified through the document of identification you uploaded to Online Services",
-      "field": null,
-      "kind": "documents"
-    },
-    {
-      "ru": "Языковой сертификат — итальянский B2 от CLIQ или признанный сертификат английского в зависимости от языка программы.",
-      "evidence": "Proficiency can be demonstrated by uploading a valid language certification in the language in which the course is taught.",
+      "ru": "Языковой сертификат: признанный сертификат языка программы, загружается в Online Services при регистрации на тест или при зачислении.",
+      "evidence": "You can demonstrate that you meet this requirement by uploading one of the accepted language certificates to Politecnico di Milano's Online Services, either during the test registration process or when you enrol.",
       "field": null,
       "kind": "documents"
     }
@@ -184,32 +172,36 @@
   },
   "source": {
     "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/students-with-a-foreign-degree",
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-11-28",
     "humanChecked": false,
     "pages": [
       {
         "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/students-with-a-foreign-degree",
-        "contentHash": "sha256:a8545dd5da511220dc626994359f77fe6946a9c6e13701c8024c4d392f90b72f"
+        "contentHash": "sha256:22bd0c1cd0bf4dc62805a0b33fa70883ea915811c11bfbde37f489c931229916"
       },
       {
         "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/requirements-to-participate-in-the-admission-test",
-        "contentHash": "sha256:769dd0d86052cbde32a7cf18c18c28f78c9b0e5bd3130d783e5ec8e7c335ff46"
+        "contentHash": "sha256:22bd0c1cd0bf4dc62805a0b33fa70883ea915811c11bfbde37f489c931229916"
       },
       {
         "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/engineering",
-        "contentHash": "sha256:3a2ac920903c19bb838f36749d45cd22586e3d34325c9149537de85183c15548"
+        "contentHash": "sha256:b05ddc0dcd80eb8f06c508c810cd2d6e73ab3ae3ee5e7d639dec9d739b745ce8"
       },
       {
         "url": "https://www.polimi.it/en/students/language-requirements",
-        "contentHash": "sha256:0d88dc6076371df70896d3a030d0370837f0ac0bd904d7c5f858202b35a036cd"
+        "contentHash": "sha256:4c436a85cef72a707f204de103bf96024c369775d41f88f586405b22cf1f1cd1"
+      },
+      {
+        "url": "https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-programmes/students-with-non-italian-qualification/documents",
+        "contentHash": "sha256:dc0c1fc3a054045683c00544c3eec7de8c3f9ec9fd30312b6a6a0805e5457c19"
       },
       {
         "url": "https://www.polimi.it/en/prospective-students/how-much-does-it-cost/scholarships",
-        "contentHash": "sha256:76952e90739045ab9841ba6c69eb9535c8525389609a0596eb614afce955a18f"
+        "contentHash": "sha256:9317961f73a927266c4ad13a7a9cb6e05dd19268c5a83b98cb16ccffbbad8189"
       },
       {
         "url": "https://www.polimi.it/en/prospective-students/how-much-does-it-cost/laurea-laurea-magistrale-and-single-cycle-programmes",
-        "contentHash": "sha256:235029a6272c9e1cdc86616876f39a0e9baa2ae0c0397eb137c8f39f1501e091"
+        "contentHash": "sha256:360f5dde444b8f151b44e0a75dbcaf7220d813931c89ed6ac2e391bfa3ac88de"
       }
     ],
     "approvedBy": "assistant"
