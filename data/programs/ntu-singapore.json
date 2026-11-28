@@ -72,7 +72,7 @@
           "evidence": "IELTS Academic; IELTS UKAI Academic Overall score - 6.5 Writing - 6.5, Speaking - 6.5 TOEFL / TOEFL iBT Home Edition Total Score - 90 or 4.5 Writing - 25 or 4.5 Verbal/Speaking - 25 or 4.5"
         }
       ],
-      "evidence": "Applicants who did not take English language in Junior and Senior High School or who have taken English language only as a second language"
+      "evidence": "Any qualification where English was not studied at both junior and senior high school levels, or where English was offered only as a second language."
     }
   },
   "textConditions": [
@@ -114,13 +114,13 @@
     },
     {
       "ru": "Экзамен по английскому обязателен тем, кто не учил английский в школе вовсе или учил его только как второй язык, — в таджикской школе это так. Нужен IELTS от 6.5, причём письмо и речь не ниже 6.5 каждое, либо TOEFL iBT от 90 по старой шкале или 4.5 по новой, с письмом и речью не ниже 25 (старая) или 4.5 (новая).",
-      "evidence": "Applicants who did not take English language in Junior and Senior High School or who have taken English language only as a second language",
+      "evidence": "Any qualification where English was not studied at both junior and senior high school levels, or where English was offered only as a second language.",
       "field": "language",
       "kind": "must"
     },
     {
-      "ru": "Вместо IELTS или TOEFL подойдёт другой экзамен: PTE Academic от 55 с речью 55 и письмом 59; SAT от 1250, из них чтение и письмо от 60; ACT с письмом за одну сдачу — общий балл 30, английский 30, письмо 7; кембриджский C1 Advanced от 170 с письмом и речью от 170; Aptitude Scholastic Test (AST) от 220.",
-      "evidence": "Pearson Test of English (PTE) Academic Overall score - 55 Speaking - 55, Writing - 59 C1 Advanced (formerly Cambridge English Advanced (CAE)) Overall score - 170 Writing - 170 Speaking - 170 SAT Total score - 1250 Reading and Writing - 60 ACT with Writing in a single sitting Composite - 30 English - 30 Writing - 7 Aptitude Scholastic Test (AST) English Score - 220",
+      "ru": "Вместо IELTS или TOEFL подойдёт другой экзамен: PTE Academic от 55 с речью 55 и письмом 59; SAT от 1250, из них чтение и письмо от 600; ACT с письмом за одну сдачу — общий балл 30, английский 30, письмо 7; кембриджский C1 Advanced от 170 с письмом и речью от 170; Aptitude Scholastic Test (AST) от 220.",
+      "evidence": "Pearson Test of English (PTE) Academic Overall score - 55 Speaking - 55, Writing - 59 C1 Advanced (formerly Cambridge English Advanced (CAE)) Overall score - 170 Writing - 170 Speaking - 170 SAT Total score - 1250 Reading and Writing - 600 ACT with Writing in a single sitting Composite - 30 English - 30 Writing - 7 Aptitude Scholastic Test (AST) English Score - 220",
       "field": "language",
       "kind": "workaround"
     },
@@ -150,7 +150,7 @@
     },
     {
       "ru": "Кроме общих требований, у каждой программы есть свои обязательные предметы — их проверяют отдельно.",
-      "evidence": "Some of our programmes have specific subject requirements. Check the minimum subject requirements of the programmes you wish to apply for.",
+      "evidence": "Check the minimum subject requirements and 'A-Level' cut-off grades of the programmes you wish to apply for.",
       "field": null,
       "kind": "must"
     },
@@ -179,7 +179,7 @@
     },
     {
       "ru": "Результаты языкового экзамена (IELTS, TOEFL и подобные) надо приложить к сроку подачи — позже их не принимают.",
-      "evidence": "We require that you submit your English-language proficiency scores by the stated deadline of your application window. No late submission is allowed.",
+      "evidence": "English language proficiency test results must be submitted by the application deadline for the relevant admission exercise. Late submissions will not be considered.",
       "field": null,
       "kind": "documents"
     },
@@ -212,37 +212,37 @@
   },
   "source": {
     "url": "https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications",
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-11-25",
     "humanChecked": false,
     "approvedBy": "assistant",
     "pages": [
       {
         "url": "https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications",
-        "contentHash": "sha256:915f2f914afc710a0c73c5404be82a4586a8949eb793590f442e6af6a031d818"
+        "contentHash": "sha256:cc8c6e07ae7c86b3dcdcbd6d4708669dfb0abad680dbc40c8b5ac05c7a8b4552"
       },
       {
         "url": "https://www.ntu.edu.sg/admissions/undergraduate/financial-matters/tuition-grants",
-        "contentHash": "sha256:6026aea9af67bd309eabf5dc7bc5c7a471520437223f3db0c4558a78a4c35685"
+        "contentHash": "sha256:4fc100b50b73cdf839be11f0ec27de04a84e2c29a93fe2e694a74a2d6d6ad543"
       },
       {
         "url": "https://www.ntu.edu.sg/admissions/undergraduate/financial-matters/tuition-fees",
-        "contentHash": "sha256:6026aea9af67bd309eabf5dc7bc5c7a471520437223f3db0c4558a78a4c35685"
+        "contentHash": "sha256:4fc100b50b73cdf839be11f0ec27de04a84e2c29a93fe2e694a74a2d6d6ad543"
       },
       {
         "url": "https://www.ntu.edu.sg/admissions/undergraduate/scholarships",
-        "contentHash": "sha256:605ad3780317f593c32a6f320e90eedc4957ca99a655e503e223783d0feddd68"
+        "contentHash": "sha256:26d3fa0b963d23792c0322f7d529e4330a547bc10a28fcc386ea681d1f24c279"
       },
       {
         "url": "https://www.moe.gov.sg/financial-matters/tuition-grant-scheme",
-        "contentHash": "sha256:70a0c6c5b3aa62d9cccaa666b71222a8c731b03fcb16b64f8b279ccbb5bf7057"
+        "contentHash": "sha256:930919f6656564b2074de8c8ca4c566604e6590d885ef5b3188f5bbc933f16dd"
       },
       {
         "url": "https://www.moe.gov.sg/financial-matters/tuition-grant-scheme/overview",
-        "contentHash": "sha256:9ce3d6494c0cc22be2e75f0f43453c5b63bafbbe3e7204856665795c79ba4d8e"
+        "contentHash": "sha256:bacbec547b68f7534e3ec002e53873119253c13c2ab4a6ef2788f2ad346443e3"
       },
       {
         "url": "https://www.ntu.edu.sg/admissions/undergraduate/admissions/application-process",
-        "contentHash": "sha256:b36a803ef17773f8d11dedc904a82d11df773f81e21a6034aae5ba89bcf09f4e"
+        "contentHash": "sha256:bd50b08ed9856afe29ef647ed1c299784438499100f510b84dcb46aea8eebdd9"
       }
     ]
   },
