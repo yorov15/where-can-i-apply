@@ -490,6 +490,466 @@
    "approval": "pending owner quote review; canonical data unchanged"
   },
   {
+   "id": "cau",
+   "country": "UZ",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "update",
+   "note": "Приём 2027/28 открывается 1 февраля 2027, тогда же обещают объявить даты экзаменов; срок закрытия не опубликован. Год взят из фразы самой страницы про 2027-2028 academic year.",
+   "sources": [
+    {
+     "url": "https://centralasian.uz/admissionregulations",
+     "quote": "will be announced when admission opens on \n1 February 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "general",
+     "opens": "2027-02-01",
+     "closes": null,
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "chung-ang",
+   "country": "KR",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "blocked",
+   "note": "Страница бакалаврского приёма (MENU_ID=410) отдаёт пустой блок null; остальные страницы про обмен и магистратуру, PDF — магистерский гайд. Дат цикла 2027 нет.",
+   "sources": [
+    {
+     "url": "https://neweng.cau.ac.kr/cms/FR_CON/index.do?MENU_ID=410",
+     "quote": "Undergraduate Admission | Admissions - CHUNG-ANG UNIVERSITY",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "cmu",
+   "country": "US",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "annual_windows_only",
+   "note": "Сроки на странице без года: Early Decision — 2 ноября, Regular Decision — 4 января (Drama/Music — 1 декабря). Повторяются ежегодно, привязки к 2027 на странице нет.",
+   "sources": [
+    {
+     "url": "https://www.cmu.edu/admission/admission/application-plans-deadlines",
+     "quote": "Deadline: November 2",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.cmu.edu/admission/admission/application-plans-deadlines",
+     "quote": "Deadline: January 4",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "comenius-university",
+   "country": "SK",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "update",
+   "note": "Бакалавриат Faculty of Management (Am21, 2027/2028): раунд 1 — до 28.02.2027, раунд 2 — до 31.03.2027. У факультета естественных наук свой график 15.01–15.03.2027 (стр. 2), дат открытия раундов нет.",
+   "sources": [
+    {
+     "url": "https://www.fm.uniba.sk/en/study",
+     "quote": "Round 2 by 31 March 2027 (subject to interest and capacity)",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.fm.uniba.sk/en/study",
+     "quote": "Round 1 by 28 February 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "bachelor, round 2",
+     "opens": null,
+     "closes": "2027-03-31",
+     "zone": null
+    },
+    {
+     "track": "bachelor, round 1",
+     "opens": null,
+     "closes": "2027-02-28",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "corvinus",
+   "country": "HU",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "update",
+   "note": "Self-funded приём на сентябрь 2027: early bird — 20.01.2027, визовые страны — 24.05.2027, безвизовые — 12.08.2027. Для Узбекистана применим визовый срок.",
+   "sources": [
+    {
+     "url": "https://www.uni-corvinus.hu/post/landing-page/application/application-information/?lang=en",
+     "quote": "Visa-bearing nationals final deadline: 24 May 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.uni-corvinus.hu/post/landing-page/application/application-information/?lang=en",
+     "quote": "Non-visa bearing nationals final deadline: 12 August 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.uni-corvinus.hu/post/landing-page/application/application-information/?lang=en",
+     "quote": "Early bird applications: 20 January 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "self-funded, visa-bearing",
+     "opens": null,
+     "closes": "2027-05-24",
+     "zone": null
+    },
+    {
+     "track": "self-funded, non-visa",
+     "opens": null,
+     "closes": "2027-08-12",
+     "zone": null
+    },
+    {
+     "track": "early bird",
+     "opens": null,
+     "closes": "2027-01-20",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "dgist",
+   "country": "KR",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "blocked",
+   "note": "Все страницы приёма (dgist.ac.kr/iuadm/, начиная с sub04_01.do) не скачались: хост рвёт соединение (ConnectionReset), повтор 28.11.2026 — тот же результат. Содержимое проверить не удалось; новый домен не нужен, нужен другой маршрут к тому же хосту.",
+   "sources": [],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "enu",
+   "country": "KZ",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "annual_windows_only",
+   "note": "Окна для иностранцев «с 1 по 31 марта / с 15 июня по 25 июля» без года; страница — версия приёма 2026 г., объявления на 2027 нет.",
+   "sources": [
+    {
+     "url": "https://enu.kz/ru/page/applicants/for-foreign-citizens",
+     "quote": "Прием документов – с 1 по 31 марта / с 15 июня по 25 июля",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "erasmus",
+   "country": "NL",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "wrong_track",
+   "note": "Сроков бакалаврского приёма на страницах нет — у каждой программы свои. Единственная дата с годом — стипендия RSM Entrepreneurial Spirit (IBA) 01.10.2026–31.01.2027, только для граждан EU/EEA.",
+   "sources": [
+    {
+     "url": "https://www.eur.nl/en/scholarship/entrepreneurial-spirit-scholarship",
+     "quote": "Students can apply from 1 October 2026 until \n31 January 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "scholarship RSM (EU/EEA only)",
+     "opens": "2026-10-01",
+     "closes": "2027-01-31",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "ewha",
+   "country": "KR",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "closed_correctly",
+   "note": "Гайд Spring 2027: онлайн-заявка 02.09–08.10.2026 (KST, до 17:00), срок уже прошёл. Осеннего набора 2027 на странице нет.",
+   "sources": [
+    {
+     "url": "https://isa.ewha.ac.kr/sites/oisa/file/ag_english.pdf",
+     "quote": "SPRING 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://isa.ewha.ac.kr/sites/oisa/file/ag_english.pdf",
+     "quote": "October 8, 2026 17:00",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "general (Spring 2027)",
+     "opens": "2026-09-02",
+     "closes": "2026-10-08",
+     "zone": "KST"
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "fudan-university",
+   "country": "CN",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "blocked",
+   "note": "Объявление 2027 Undergraduate Admission Information (опубл. 03.11.2026) отдаётся пустой страницей без текста; на остальных страницах только стоимость (RMB 100 000 с набора 2027) и формы. Сроков нет.",
+   "sources": [
+    {
+     "url": "https://iso.fudan.edu.cn/isoenglish/2c/a9/c51327a797865/page.htm",
+     "quote": "Fudan University 2027 Undergraduate Admission Information for English-taught Programs",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "gyeongsang",
+   "country": "KR",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "closed_correctly",
+   "note": "Приём Spring 2027 (2027 academic year, spring): приём документов 02.11–25.11.2026, уже закрыт. Следующего набора на странице нет.",
+   "sources": [
+    {
+     "url": "https://www.gnu.ac.kr/international/cm/cntnts/cntntsView.do?cntntsId=4367&mi=8327",
+     "quote": "Announcement on Undergraduate Program Admission Spring 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=95943",
+     "quote": "2026. 11. 2. - 11. 25.",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "general (Spring 2027)",
+     "opens": "2026-11-02",
+     "closes": "2026-11-25",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "hanyang",
+   "country": "KR",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "blocked",
+   "note": "www.hanyang.ac.kr отдаёт 403 на все страницы; страница OIA открылась, но в ней только объявления 2026 года и ссылки; PDF-путеводитель не скачался.",
+   "sources": [
+    {
+     "url": "https://oia.hanyang.ac.kr/admission",
+     "quote": "한양대 국제처 - Regular Admission Guide",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "hkbu-hongkong",
+   "country": "HK",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "blocked",
+   "note": "Блок Important Dates подгружается скриптом и в тексте пуст. Есть только даты объявления результатов (конец декабря 2026 / конец января 2027), не сроки подачи.",
+   "sources": [
+    {
+     "url": "https://admissions.hkbu.edu.hk/admissions/international-qualifications.html",
+     "quote": "Applications received in early round will be shortlisted for advance assessment. Admission offers are released from late December 2026 onwards. Applicants who do not receive offers by late January 2027 will be considered together with Main Round applicants.",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "hse",
+   "country": "RU",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "update",
+   "note": "Трек полной стипендии по олимпиадам: регистрация 01.11.2026–02.02.2027; далее тестирование 25.01–12.02.2027, документы победителей 19.02–23.03.2027, учёба с 01.09.2027. Сроков платного трека на странице нет.",
+   "sources": [
+    {
+     "url": "https://admissions.hse.ru/en/undergraduate-apply/",
+     "quote": "November 1, 2026 – February 2, 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://admissions.hse.ru/en/undergraduate-apply/",
+     "quote": "September 1, 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "scholarship (olympiad registration)",
+     "opens": "2026-11-01",
+     "closes": "2027-02-02",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "iccr-india",
+   "country": "IN",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "no_new_announcement",
+   "note": "PDF — правила для AY 2026-27 (возраст на 01.07.2026), сроков подачи в нём нет. Объявления AY 2027-28 нет.",
+   "sources": [
+    {
+     "url": "https://a2ascholarships.iccr.gov.in/assets/site/docs/Policy_Guidelines.pdf",
+     "quote": "ICCR Scholarships Academic Year 2026-27",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "inha-univ",
+   "country": "KR",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "annual_windows_only",
+   "note": "Окна повторяются ежегодно: март — середина октября–начало ноября, сентябрь — середина апреля–середина мая; годов на странице нет.",
+   "sources": [
+    {
+     "url": "https://eng.inha.ac.kr/eng/3713/subview.do",
+     "quote": "Admission for March (Spring semester): mid-October ~ early November of previous year",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://eng.inha.ac.kr/eng/3713/subview.do",
+     "quote": "Admission for September (Fall semester): mid-April ~ mid-May",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
    "id": "istanbul-bilgi",
    "country": "TR",
    "deadline": {
