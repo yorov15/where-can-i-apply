@@ -490,6 +490,522 @@
    "approval": "pending owner quote review; canonical data unchanged"
   },
   {
+   "id": "istanbul-bilgi",
+   "country": "TR",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "blocked",
+   "note": "Сайт bilgi.edu.tr не отвечает с этого адреса: соединение сбрасывается (curl тоже без ответа), ни одна страница не скачалась. Дат нет, других страниц того же домена получить не удалось.",
+   "sources": [],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "itmo",
+   "country": "RU",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "closed_correctly",
+   "note": "На странице приёма только набор 2026: заявки на бюджет 20.06-10.07 (внутренние экзамены) и до 25.07 (ЕГЭ), платный приём до 18.08.2026. Набора 2027 нет; Open Doors (20.08-21.12.2026) — другой трек и в окна не включён.",
+   "sources": [
+    {
+     "url": "https://int.ifmo.ru/en/bachelors_programs",
+     "quote": "The 2026 application period for tuition-free positions will start on",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://int.ifmo.ru/en/bachelors_programs",
+     "quote": "until August 18",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://abit.itmo.ru/en/program/bachelor/ai",
+     "quote": "18 august 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "jagiellonian-university",
+   "country": "PL",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "no_new_announcement",
+   "note": "На странице расписания бакалавриата — приём 2026/27: 1-й раунд 23.02-09.03, 2-й до 11.05, школьный аттестат нужен не позднее 09.09.2026 (год взят из этих строк). Расписания на 2027/28 вуз ещё не опубликовал.",
+   "sources": [
+    {
+     "url": "https://welcome.uj.edu.pl/en/admission/schedule/schedule-undergraduate-programs",
+     "quote": "first application round (basic) - from 23 February to 9 March",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://welcome.uj.edu.pl/en/admission/schedule/schedule-undergraduate-programs",
+     "quote": "9 September 2026.",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "kadir-has",
+   "country": "TR",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "no_new_announcement",
+   "note": "На страницах приёма иностранцев дат нет вообще: только шаги подачи, требования и порог TOEFL с 21.01.2026. Объявления о наборе 2027-2028 на сайте не опубликовано.",
+   "sources": [
+    {
+     "url": "https://www.khas.edu.tr/en/inter-how-to-apply-for-undergraduate-programs",
+     "quote": "Submit an Online Application.",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.khas.edu.tr/en/inter-application-requirements-for-undergraduate-programs",
+     "quote": "*The minimum total score accepted for the former TOEFL-IBT test, taken before 21 January 2026, is 72.",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "kbtu",
+   "country": "KZ",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "annual_windows_only",
+   "note": "Приём идёт годовым циклом без указания года: документы 01.03-01.05, собеседование 02.05-31.05. Отдельного объявления на 2027 на странице нет.",
+   "sources": [
+    {
+     "url": "https://kbtu.edu.kz/en/internationalization/international-admissions-internationalization",
+     "quote": "Document Submission: March 1 – May 1",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://kbtu.edu.kz/en/internationalization/international-admissions-internationalization",
+     "quote": "Interview with the Admissions Committee: May 2 – May 31",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "khazar",
+   "country": "AZ",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "no_new_announcement",
+   "note": "На странице оплаты — только Early Bird 2026/2027: 09.01.2026-01.06.2026 (прошёл). Набора 2027/28 нет; стипендия Nailekhanim — 2026-2027 и только для магистратуры/докторантуры.",
+   "sources": [
+    {
+     "url": "https://international.khazar.org/en/page/fees-and-funding",
+     "quote": "Early Bird cycle",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://international.khazar.org/en/page/fees-and-funding",
+     "quote": "(09.01.2026 09:00 Baku tike – 01.06.2026 18:00 Baku time), the annual tuition fee across all programmes is USD 4,500 (for BS Veterinary Medicine, the annual tuition fee is USD 5,400).",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "king-saud",
+   "country": "SA",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "no_new_announcement",
+   "note": "Стипендиальный приём: на странице действует только гид приёма на 2026/2027, во флаере сроки 18.08-18.09.2024. Объявления о наборе 2027/28 у KSU нет.",
+   "sources": [
+    {
+     "url": "https://dar.ksu.edu.sa/sites/dar.ksu.edu.sa/files/2026-06/admgen.pdf",
+     "quote": "Guide for Undergraduate Programs for the academic year 2026/2027. This guide",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://faculty.ksu.edu.sa/sites/default/files/KSU%20Scholarship%20Flyer%20EN.pdf",
+     "quote": "start form 18/8/2024 to 18/9/2024",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "koc-university",
+   "country": "TR",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "closed_correctly",
+   "note": "На странице только Fall 2026: ранний приём 01.01-01.03.2026, обычный 02.03-31.05.2026, поздний до 15.07.2026 с продлением до 05.08.2026. Приёма на 2027 вуз не объявил.",
+   "sources": [
+    {
+     "url": "https://international.ku.edu.tr/undergraduate-programs/how-to-apply/",
+     "quote": "Fall 2026 Application Dates",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://international.ku.edu.tr/undergraduate-programs/how-to-apply/",
+     "quote": "Early Application: 01 January 2026 – 01 March 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://international.ku.edu.tr/undergraduate-programs/how-to-apply/",
+     "quote": "Regular Application: 02 March 2026 – 31 May 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "kookmin",
+   "country": "KR",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "update",
+   "note": "Весенний набор 2027 (2027-1) для иностранцев: три раунда, третий 07.12-29.12.2026 (KST) ещё открыт; набор на осень 2027 не объявлен. Год взят из объявления о приёме на весну 2027.",
+   "sources": [
+    {
+     "url": "https://iat.kookmin.ac.kr/admission/community/notice/666",
+     "quote": "for the Spring semester 2027 Intake as follows.",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://iat.kookmin.ac.kr/admission/community/notice/666",
+     "quote": "▶ 신입학3차 Freshman 3rd Application :",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://iat.kookmin.ac.kr/admission/community/notice/666",
+     "quote": "2026.10.06.(화) 10:00",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://iat.kookmin.ac.kr/admission/community/notice/666",
+     "quote": "2026.11.09.(월) 10:00",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://iat.kookmin.ac.kr/admission/community/notice/666",
+     "quote": "~ 2026.12.29.(화) 16:00까지",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "spring 2027 (2027-1), round 3",
+     "opens": "2026-12-07",
+     "closes": "2026-12-29",
+     "zone": "KST"
+    },
+    {
+     "track": "spring 2027 (2027-1), round 2",
+     "opens": "2026-11-09",
+     "closes": "2026-11-26",
+     "zone": "KST"
+    },
+    {
+     "track": "spring 2027 (2027-1), round 1",
+     "opens": "2026-10-06",
+     "closes": "2026-10-22",
+     "zone": "KST"
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "ku-leuven",
+   "country": "BE",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "update",
+   "note": "Год со страницы инструкций: абсолютный крайний срок подачи на 2027-2028 — 22.09.2027 (регистрационный, для всех программ). У англоязычных бакалаврских программ срок свой в application window tool, у нидерландских для не-EEA — 1 февраля без года.",
+   "sources": [
+    {
+     "url": "https://www.kuleuven.be/english/apply/application-instructions/apply-to-kuleuven",
+     "quote": "If no strict deadline is mentioned, please be informed that applying as early as possible is still recommended to assure an efficient evaluation process. Please note that the registration deadline for the upcoming academic year (22/09/2027) constitutes the absolute final deadline to submit an application. Applications can no longer be accepted after this date.",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.kuleuven.be/english/apply/application-instructions/apply-to-kuleuven",
+     "quote": "For Dutch-taught programmes, the deadline for non-EEA applicants is",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "2027-2028, absolute final application/registration deadline",
+     "opens": null,
+     "closes": "2027-09-22",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "ljubljana-slovenia",
+   "country": "SI",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "imprecise_new_cycle",
+   "note": "Объявление от 03.11.2026: приём 2026/27 закрыт, первый период подачи ожидается в феврале 2027 — точного дня нет. Набор 2027/28 ещё не опубликован.",
+   "sources": [
+    {
+     "url": "https://www.uni-lj.si/en/study/bachelors-and-single-cycle-masters-study/call-for-enrolment",
+     "quote": "3 November 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.uni-lj.si/en/study/bachelors-and-single-cycle-masters-study/call-for-enrolment",
+     "quote": "The application periods for enrolment in the first year of bachelor’s and single-cycle master’s degree programmes at the University of Ljubljana for the 2026/2027 academic year have closed. The first application period is expected to open in February 2027.",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "first application period 2027/2028, announced for February 2027 (no exact day)",
+     "opens": null,
+     "closes": null,
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "manas",
+   "country": "KG",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "no_new_announcement",
+   "note": "На странице приёма — только цикл 2024: заявки до 17.07.2024, письменный экзамен 23.07.2024. Объявления на 2027 нет.",
+   "sources": [
+    {
+     "url": "https://manas.edu.kg/en/students/admission",
+     "quote": "Deadline for submission of the application: June 10 July 17,2024",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://manas.edu.kg/en/students/admission",
+     "quote": "Written Examination: July 23, 2024",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "mcgill",
+   "country": "CA",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "annual_windows_only",
+   "note": "Сроки на странице без года: заявка 15 января, документы 1 марта, стипендия 21 января. Приём на сентябрь 2027 объявлен (график решений), но года у самих сроков нет, поэтому окна не заполнены.",
+   "sources": [
+    {
+     "url": "https://www.mcgill.ca/undergraduate-admissions/apply/requirements/international/other",
+     "quote": "Application for admission",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.mcgill.ca/undergraduate-admissions/apply/requirements/international/other",
+     "quote": "January 15",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.mcgill.ca/undergraduate-admissions/apply/requirements/international/other",
+     "quote": "March 1",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.mcgill.ca/undergraduate-admissions/apply/requirements/international/other",
+     "quote": "January 21",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.mcgill.ca/undergraduate-admissions/apply/admission-decision-dates",
+     "quote": "September 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "mext-japan",
+   "country": "JP",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "no_new_announcement",
+   "note": "На странице о стипендии MEXT — только описание типов и порядка подачи, дат нет. Объявления о наборе 2027 на studyinjapan.go.jp нет; сроки объявляют посольства в каждой стране.",
+   "sources": [
+    {
+     "url": "https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/",
+     "quote": "1. Embassy recommendation",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/",
+     "quote": "There are two ways to apply for a Japanese Government Scholarship: by applying to the Ministry of Education, Culture, Sports, Science and Technology (MEXT) with a recommendation from a Japanese embassy or other Japanese diplomatic mission in your country, or by applying to the MEXT with a recommendation from a Japanese university.",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "monash",
+   "country": "AU",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "blocked",
+   "note": "monash.edu отдаёт 403 на все страницы приёма (в том числе при повторной загрузке через extra.py), дат получить не удалось.",
+   "sources": [],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "nazarbayev",
+   "country": "KZ",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "imprecise_new_cycle",
+   "note": "На 2027-2028 приём заявок объявлен как октябрь 2026 - август 2027 без точных дней (для граждан РК и стран с визой по прибытии; для визовых — to be announced later). Точная дата есть только для результатов IELTS/TOEFL: 01.06.2027 (Astana time).",
+   "sources": [
+    {
+     "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
+     "quote": "October 2026 – August 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
+     "quote": "Deadline for submitting IELTS/TOEFL results to NU: June 1, 2027 (until 2 p.m Astana time)",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "2027-2028 application period, October 2026 - August 2027 (no exact days)",
+     "opens": null,
+     "closes": null,
+     "zone": null
+    },
+    {
+     "track": "2027-2028 IELTS/TOEFL results deadline",
+     "opens": null,
+     "closes": "2027-06-01",
+     "zone": "Astana time"
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
    "id": "nottingham-ningbo",
    "country": "CN",
    "deadline": {
@@ -791,7 +1307,7 @@
    ],
    "windows": [
     {
-     "track": "general",
+     "track": "2026 cycle, general",
      "opens": "2026-06-20",
      "closes": "2026-08-10",
      "zone": null
@@ -854,7 +1370,7 @@
    ],
    "windows": [
     {
-     "track": "general",
+     "track": "2026/27 cycle, preselection",
      "opens": "2025-12-22",
      "closes": "2026-05-15",
      "zone": null
@@ -895,13 +1411,13 @@
    ],
    "windows": [
     {
-     "track": "general",
+     "track": "Fall 2026, round 2",
      "opens": "2026-04-27",
      "closes": "2026-05-15",
      "zone": null
     },
     {
-     "track": "general",
+     "track": "Fall 2026, round 1",
      "opens": "2026-03-09",
      "closes": "2026-03-24",
      "zone": null
@@ -1056,13 +1572,13 @@
    ],
    "windows": [
     {
-     "track": "dap",
+     "track": "2026/27 cycle, DAP",
      "opens": null,
      "closes": "2026-03-15",
      "zone": null
     },
     {
-     "track": "general",
+     "track": "2026/27 cycle, general",
      "opens": "2025-10-01",
      "closes": "2025-12-15",
      "zone": null
@@ -1178,7 +1694,7 @@
    ],
    "windows": [
     {
-     "track": "general",
+     "track": "April 2027 enrollment (AY2027 guide, T-GLIPs)",
      "opens": "2026-09-01",
      "closes": "2026-09-03",
      "zone": null
