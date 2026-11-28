@@ -7,10 +7,12 @@
   },
   "hostCountry": "AE",
   "kind": "university",
-  "majors": ["any"],
+  "majors": [
+    "any"
+  ],
   "level": "bachelor",
   "coverage": {
-    "tuition": null,
+    "tuition": false,
     "living": false,
     "travel": false,
     "note": {
@@ -134,7 +136,7 @@
       "kind": "note"
     },
     {
-      "ru": "Приём на осень 2026 закрыт, а даты на осень 2027 вуз ещё не вывесил — поэтому срок в карточке пустой. Следи за страницей приёма.",
+      "ru": "Приём на осень 2027 открыт, заявки принимают до 1 февраля 2027. Стипендию оценивают в рамках приёма: отдельную заявку на неё подавать не нужно.",
       "evidence": "Undergraduate admissions for Fall 2026 are closed.",
       "field": null,
       "kind": "steps"
@@ -142,9 +144,9 @@
   ],
   "deadline": {
     "opens": null,
-    "closes": null,
+    "closes": "2027-02-01",
     "recurring": "annual",
-    "confidence": "expected"
+    "confidence": "confirmed"
   },
   "applyUrl": "https://www.ku.ac.ae/undergraduate-admissions",
   "coversInstitutions": {

@@ -12,8 +12,8 @@
   "hostCountry": "TW",
   "level": "bachelor",
   "coverage": {
-    "tuition": true,
-    "living": true,
+    "tuition": false,
+    "living": false,
     "travel": null,
     "note": {
       "ru": "Своя стипендия President Award новому иностранному первокурснику полностью снимает плату за обучение и платит NT$8 000 или NT$15 000 в месяц первый год; за успехи платят и дальше (до 3 лет). Общежитие и сборы студент оплачивает сам."
@@ -100,7 +100,7 @@
       "kind": "money"
     },
     {
-      "ru": "Заявку подают онлайн через систему Taipei Tech. В справочнике на 2027 год указано окно подачи на весенний семестр — с 1 августа по 30 сентября 2026; на осенний приём (открыт для всех программ) окно — февраль–апрель.",
+      "ru": "Заявку подают онлайн через систему Taipei Tech. На осенний семестр 2027 заявки принимают с 1 декабря 2026 по 10 марта 2027. Окно на весенний семестр 2027 (1 августа — 30 сентября 2026) уже закрыто.",
       "evidence": "Please complete online application at Taipei Tech Online Application System between Aug. 1, 2026 to Sep. 30, 2026.",
       "field": null,
       "kind": "steps"
@@ -167,10 +167,10 @@
     }
   ],
   "deadline": {
-    "opens": null,
-    "closes": null,
+    "opens": "2026-12-01",
+    "closes": "2027-03-10",
     "recurring": "annual",
-    "confidence": "expected"
+    "confidence": "confirmed"
   },
   "applyUrl": "https://taipeitech.oia.ntut.edu.tw/foreign/index/index/lang/en",
   "coversInstitutions": {

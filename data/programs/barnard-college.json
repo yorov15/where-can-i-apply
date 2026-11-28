@@ -12,8 +12,8 @@
   "hostCountry": "US",
   "level": "bachelor",
   "coverage": {
-    "tuition": null,
-    "living": null,
+    "tuition": true,
+    "living": true,
     "travel": null,
     "note": {
       "ru": "Колледж обещает закрыть 100% нужды принятых, но иностранцам стипендий по нужде даёт небольшое число на каждый набор первокурсников. Пакет для иностранцев по страницам колледжа не описан: что входит и есть ли кредиты, там не сказано. Иностранцев оценивают need-aware: просьба о помощи может повлиять на решение о приёме"
@@ -177,9 +177,9 @@
   ],
   "deadline": {
     "opens": null,
-    "closes": null,
+    "closes": "2027-01-01",
     "recurring": "annual",
-    "confidence": "expected"
+    "confidence": "confirmed"
   },
   "applyUrl": "https://barnard.edu/admissions/internationalstudents",
   "coversInstitutions": {

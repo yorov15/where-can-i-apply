@@ -174,10 +174,20 @@
       "kind": "steps"
     },
     {
-      "ru": "Сам UCAS берёт небольшую плату за подачу, но King's своего дополнительного взноса за рассмотрение не берёт.",
+      "ru": "Взнос UCAS за заявку 2027 года — 34,50 фунта, одна заявка покрывает до пяти выборов. Своего дополнительного взноса King's не берёт.",
       "evidence": "UCAS charges a small fee to apply, but King's will not charge UCAS applicants an additional application fee for your application to be considered.",
       "field": null,
-      "kind": "money"
+      "kind": "money",
+      "fee": {
+        "amount": 34.5,
+        "currency": "GBP",
+        "evidence": "For 2027 entry, the application fee is £34.50 for up to five choices.",
+        "source": {
+          "url": "https://www.ucas.com/applying/applying-to-university/filling-in-your-ucas-application",
+          "lastVerified": "2026-11-28",
+          "contentHash": "sha256:50a90934489e917c8753cd88790714c884aa8bc83258d8b0e86ff832cb510c6a"
+        }
+      }
     },
     {
       "ru": "Суммы обучения для иностранца эти страницы не называют: на странице платы стоит только домашняя ставка £9 790, а конкретная ставка — на странице каждого курса. Складывать число не из чего, поэтому в карточке его нет.",

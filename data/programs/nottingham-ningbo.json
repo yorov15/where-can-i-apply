@@ -12,7 +12,7 @@
   "hostCountry": "CN",
   "level": "bachelor",
   "coverage": {
-    "tuition": null,
+    "tuition": false,
     "living": false,
     "travel": false,
     "note": {
@@ -133,7 +133,7 @@
       "kind": "workaround"
     },
     {
-      "ru": "СРОК ПОДАЧИ НА СЕНТЯБРЬ 2027 НА САЙТЕ ЕЩЁ НЕ ОБЪЯВЛЕН. На прошлый цикл, сентябрь 2026, срок был 30 июня 2026, но набор закрыли досрочно — 21 июня 2026, а кто подал позже, попал в лист ожидания. Значит, и на этот цикл закрытие может произойти раньше объявленной даты, и подавать надо заранее. Заявку принимают только через собственную систему вуза — Application Hub, письма и почта не принимаются.",
+      "ru": "СРОК ПОДАЧИ НА СЕНТЯБРЬ 2027 — 30 ИЮНЯ 2027. В прошлом цикле срок тоже был 30 июня, но набор закрыли досрочно — 21 июня 2026, а кто подал позже, попал в лист ожидания. Значит, и в этот раз закрыть могут раньше объявленной даты, и подавать надо заранее. Заявку принимают только через собственную систему вуза — Application Hub, письма и почта не принимаются.",
       "evidence": "Application deadline for September 2026 entry: 30 June 2026",
       "field": "graduationYear",
       "kind": "steps"
@@ -207,9 +207,9 @@
   ],
   "deadline": {
     "opens": null,
-    "closes": null,
+    "closes": "2027-06-30",
     "recurring": "annual",
-    "confidence": "expected"
+    "confidence": "confirmed"
   },
   "applyUrl": "https://www.nottingham.edu.cn/en/study-with-us/undergraduate/how-to-apply.aspx",
   "coversInstitutions": {

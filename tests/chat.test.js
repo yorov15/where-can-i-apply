@@ -50,7 +50,7 @@ test('facts come from data only: unknown ids are dropped, three programs get det
   assert.equal(kaist.country, 'Южная Корея');
   assert.deepEqual({ closes: kaist.deadline.closes, confidence: kaist.deadline.confidence }, { closes: '2027-01-14', confidence: 'подтверждена' });
   assert.match(kaist.deadline.line, /14 января 2027/);
-  assert.equal(aalto.deadline.confidence, 'ожидаемая');
+  assert.equal(aalto.deadline.confidence, 'подтверждена');
   assert.equal(auca.deadline.closes, undefined);
   assert.match(kaist.money, /350 000 вон/);
   assert.ok(kaist.links.includes('https://admission.kaist.ac.kr/intl-undergraduate/before/sub02'));

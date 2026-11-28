@@ -12,8 +12,8 @@
   "hostCountry": "US",
   "level": "bachelor",
   "coverage": {
-    "tuition": null,
-    "living": null,
+    "tuition": true,
+    "living": true,
     "travel": null,
     "note": {
       "ru": "Полного покрытия университет иностранцам не обещает: стипендии по нужде получает ограниченное число первокурсников-иностранцев. Для поступивших на осень 2026 года суммы были от 16 815 до 99 998 долларов в год на четыре года (это и помощь по нужде, и стипендии за заслуги). Отбор иностранцев, которые просят помощь, ведут с учётом денег: политика need-aware"
@@ -226,7 +226,7 @@
     "opens": null,
     "closes": "2027-01-01",
     "recurring": "annual",
-    "confidence": "expected"
+    "confidence": "confirmed"
   },
   "applyUrl": "https://admissions.vanderbilt.edu/apply/first-year-process/",
   "coversInstitutions": {

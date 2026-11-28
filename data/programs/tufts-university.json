@@ -12,9 +12,9 @@
   "hostCountry": "US",
   "level": "bachelor",
   "coverage": {
-    "tuition": null,
-    "living": null,
-    "travel": null,
+    "tuition": true,
+    "living": true,
+    "travel": true,
     "note": {
       "ru": "Нужду принятого закрывают на 100%, а нужду считают от полной стоимости года, включая книги, личные расходы и дорогу до кампуса. Но денег для иностранцев в университете ограниченное количество; стипендий за заслуги на бакалавриате нет. Из чего состоит пакет (гранты, займы, работа), эти страницы не называют"
     }
@@ -254,7 +254,7 @@
     "opens": null,
     "closes": "2027-01-04",
     "recurring": "annual",
-    "confidence": "expected"
+    "confidence": "confirmed"
   },
   "applyUrl": "https://admissions.tufts.edu/apply/applying-as-an-international-s/",
   "coversInstitutions": {

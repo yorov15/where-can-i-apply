@@ -12,8 +12,8 @@
   "hostCountry": "US",
   "level": "bachelor",
   "coverage": {
-    "tuition": null,
-    "living": null,
+    "tuition": false,
+    "living": false,
     "travel": null,
     "note": {
       "ru": "Тем иностранцам, кому помощь по нужде дали, нужду закрывают на 100% грантами университета (программа Rice Investment на них не распространяется). Но помощь получает лишь ограниченное число первокурсников-иностранцев, и при отборе деньги учитывают: политика need-aware. Ещё около 20% принятых получают стипендии за заслуги без отдельной заявки"
@@ -248,7 +248,7 @@
     "opens": null,
     "closes": "2027-01-04",
     "recurring": "annual",
-    "confidence": "expected"
+    "confidence": "confirmed"
   },
   "applyUrl": "https://admission.rice.edu/apply/first-year-international-applicants",
   "coversInstitutions": {
