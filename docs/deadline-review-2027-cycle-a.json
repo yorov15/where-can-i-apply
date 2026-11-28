@@ -1,0 +1,462 @@
+{
+ "checkedOn": "2026-11-28",
+ "cycle": "2027",
+ "records": [
+  {
+   "id": "cambridge",
+   "country": "GB",
+   "deadline": {
+    "opens": null,
+    "closes": "2026-10-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+   },
+   "source": "https://www.undergraduate.study.cam.ac.uk/international-students",
+   "status": "closed_correctly",
+   "note": "Набор 2027 (старт осенью 2027): заявка UCAS закрыта 15.10.2026 в 18:00 по UK. Дат набора 2028 на странице нет.",
+   "sources": [
+    {
+     "url": "https://www.undergraduate.study.cam.ac.uk/apply/application-dates-deadlines",
+     "quote": "Are you planning to start an undergraduate course at Cambridge in 2027?",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:bc522f8aed16273403b963f79adca03385a52b533fabf89dd22c37dd32af1271"
+    },
+    {
+     "url": "https://www.undergraduate.study.cam.ac.uk/apply/application-dates-deadlines",
+     "quote": "15 October 2026 Deadline to submit your UCAS application (6pm UK time).",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:bc522f8aed16273403b963f79adca03385a52b533fabf89dd22c37dd32af1271"
+    }
+   ],
+   "windows": [
+    {
+     "track": "UCAS, набор 2027",
+     "opens": null,
+     "closes": "2026-10-15",
+     "zone": "UK time, 18:00"
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "hokkaido-isp",
+   "country": "JP",
+   "deadline": {
+    "opens": "2026-11-12",
+    "closes": "2026-11-20",
+    "recurring": "annual",
+    "confidence": "confirmed"
+   },
+   "source": "https://www.oia.hokudai.ac.jp/isp/prospective-students/how-to-apply/",
+   "status": "closed_correctly",
+   "note": "Набор октябрь 2027: онлайн-регистрация 12–20.11.2026 (JST, 10:00–17:00), рекомендация должна прийти до 04.12.2026. Окно закрыто, набор 2028 не объявлен.",
+   "sources": [
+    {
+     "url": "https://www.oia.hokudai.ac.jp/isp/wp-content/uploads/2026/09/ISP-Application-Guidelines-for-2027-Enrollment.pdf",
+     "quote": "Application Schedule and Deadline Date and Time/Period (JST) Online Registration Period November 12, 2026 (Thu.) at 10:00 a.m. - November 20, 2026 (Fri.) at 5:00 p.m.",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:b74d25b8703140e1e38c84284bc71586d88febb94d862a1e907bb8feb76d43f9"
+    },
+    {
+     "url": "https://www.oia.hokudai.ac.jp/isp/wp-content/uploads/2026/09/ISP-Application-Guidelines-for-2027-Enrollment.pdf",
+     "quote": "Deadline for Arrival of Letter of Recommendation at University (Form 5) No later than 5:00 p.m. on December 4, 2026 (Fri.)",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:b74d25b8703140e1e38c84284bc71586d88febb94d862a1e907bb8feb76d43f9"
+    }
+   ],
+   "windows": [
+    {
+     "track": "2027 enrollment, online registration",
+     "opens": "2026-11-12",
+     "closes": "2026-11-20",
+     "zone": "JST, 10:00–17:00"
+    },
+    {
+     "track": "2027 enrollment, рекомендация должна прийти",
+     "opens": null,
+     "closes": "2026-12-04",
+     "zone": "JST, до 17:00"
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "king-abdulaziz",
+   "country": "SA",
+   "deadline": {
+    "opens": "2026-09-16",
+    "closes": "2026-10-06",
+    "recurring": "annual",
+    "confidence": "confirmed"
+   },
+   "source": "https://www.kau.edu.sa/en/page/undergraduate-admission",
+   "status": "closed_correctly",
+   "note": "Объявление от 08.09.2026: приём несаудовцев 16.09–06.10.2026 через Study in Saudi. Окно закрыто, объявления на 2027 нет.",
+   "sources": [
+    {
+     "url": "https://www.kau.edu.sa/en/announcement/the-date-for-opening-admission-applications-for-non-saudi-students-residing-both-inside-and-outside-the-kingdom-for-undergraduate-and-postgraduate-programs",
+     "quote": "Application period: September 16-October 6, 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:df61d4719f826a8034008602498dbe5f783218ee316fa28d82ef22da63fc4f36"
+    },
+    {
+     "url": "https://www.kau.edu.sa/en/announcement/the-date-for-opening-admission-applications-for-non-saudi-students-residing-both-inside-and-outside-the-kingdom-for-undergraduate-and-postgraduate-programs",
+     "quote": "Announcement Period From 16 September 2026 To 6 October 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:df61d4719f826a8034008602498dbe5f783218ee316fa28d82ef22da63fc4f36"
+    }
+   ],
+   "windows": [
+    {
+     "track": "несаудовцы, бакалавриат и магистратура",
+     "opens": "2026-09-16",
+     "closes": "2026-10-06",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "mipt",
+   "country": "RU",
+   "deadline": {
+    "opens": "2026-06-20",
+    "closes": "2026-07-10",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://pk.mipt.ru/foreign/",
+   "status": "blocked",
+   "note": "Страницы правил приёма 2027 (mipt.ru/pk, pk.mipt.ru) отдают пустой текст, внешняя читалка — ошибку сертификата. Дат 2027 не подтверждаю.",
+   "sources": [],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "oxford-reach",
+   "country": "GB",
+   "deadline": {
+    "opens": null,
+    "closes": "2026-10-15",
+    "recurring": "annual",
+    "confidence": "confirmed"
+   },
+   "source": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-support/reach-oxford-scholarship",
+   "status": "closed_correctly",
+   "note": "Сайт ox.ac.uk закрыт для прямой загрузки (403). В читалке: для 2027 entry крайний срок 15.10.2026, 18:00 UK; дат 2028 нет. Цитату нужно сверить руками.",
+   "sources": [
+    {
+     "url": "https://www.ox.ac.uk/admissions/undergraduate/applying/admissions-timeline",
+     "quote": "Final deadline 6pm (UK time) on 15 October",
+     "freshFetch": false,
+     "exactQuoteMatched": false
+    }
+   ],
+   "windows": [
+    {
+     "track": "UCAS, набор 2027",
+     "opens": null,
+     "closes": "2026-10-15",
+     "zone": "UK time, 18:00"
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "renmin",
+   "country": "CN",
+   "deadline": {
+    "opens": "2026-01-01",
+    "closes": "2026-05-31",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "http://iso.ruc.edu.cn/docs/2025-11/759ddbbb34f44a8583a7223a0015753e.pdf",
+   "status": "wrong_track",
+   "note": "Общего приёма на 2027 на iso.ruc.edu.cn нет, PDF от 2026-07 отдаёт 404. Единственные даты 2027 — Global BBA бизнес-школы: 05.11.2026–30.04.2027 17:00 по Пекину. Это отдельная программа, не общий бакалавриат.",
+   "sources": [
+    {
+     "url": "http://globalbba.rmbs.ruc.edu.cn/Admissions/KeyTimelines/index.htm",
+     "quote": "The application window is November 5, 2026, 00:00 - April 30, 2027, 17:00 (Beijing Time).",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:e042a9d97ffa5d9b4baa4e9e8bd5303dd0605fd6f11dd2eecd02d44a7d0e74c1"
+    }
+   ],
+   "windows": [
+    {
+     "track": "Global BBA (School of Business), не общий приём",
+     "opens": "2026-11-05",
+     "closes": "2027-04-30",
+     "zone": "Beijing Time, 17:00"
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "study-in-saudi",
+   "country": "SA",
+   "deadline": {
+    "opens": "2026-09-16",
+    "closes": "2026-10-06",
+    "recurring": "annual",
+    "confidence": "confirmed"
+   },
+   "source": "https://studyinsaudi.sa/en",
+   "status": "no_new_announcement",
+   "note": "Прямая загрузка закрыта (403); в читалке — только Second Semester Academic Calendar 2026 с приёмом 16.09–06.10.2026. Объявления 2027 нет.",
+   "sources": [
+    {
+     "url": "https://studyinsaudi.sa/en",
+     "quote": "Second Semester Academic Calendar 2026",
+     "freshFetch": false,
+     "exactQuoteMatched": false
+    },
+    {
+     "url": "https://studyinsaudi.sa/en",
+     "quote": "Start of application period for international and resident students",
+     "freshFetch": false,
+     "exactQuoteMatched": false
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "tsukuba-ide",
+   "country": "JP",
+   "deadline": {
+    "opens": "2026-10-01",
+    "closes": "2026-11-04",
+    "recurring": "annual",
+    "confidence": "confirmed"
+   },
+   "source": "https://www.ide.tsukuba.ac.jp/application-information",
+   "status": "closed_correctly",
+   "note": "Набор сентябрь 2027: приём заявок начало октября — начало ноября 2026 (точные дни на сайте программы закрыты скриптом), результаты 26.03.2027. Окно закрыто, набор 2028 не объявлен.",
+   "sources": [
+    {
+     "url": "https://www.tsukuba.ac.jp/en/admissions/guidebook-enrollment/pdf/EnrollmentGuidebook.pdf",
+     "quote": "Bachelor's Program in Interdisciplinary Engineering 13 Late July 2026 Early October 2026 - Early November 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:5690f5e074464ac5206b9cd136d1104811b87bb0d3a28ce8cbcef26c23743437"
+    },
+    {
+     "url": "https://www.tsukuba.ac.jp/en/admissions/guidebook-enrollment/pdf/EnrollmentGuidebook.pdf",
+     "quote": "UNIVERSITY OF TSUKUBA 2027-2028 Enrollment Guidebook for International Students",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:5690f5e074464ac5206b9cd136d1104811b87bb0d3a28ce8cbcef26c23743437"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "urfu",
+   "country": "RU",
+   "deadline": {
+    "opens": "2026-08-20",
+    "closes": "2026-11-01",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://urfu.ru/en/scholarships-for-foreigners/",
+   "status": "closed_correctly",
+   "note": "Open Doors 2026/27: регистрация и портфолио 20.08–01.11.2026. Окно закрыто, следующего конкурса на странице нет.",
+   "sources": [
+    {
+     "url": "https://urfu.ru/en/open-doors-russian-scholarship-project/",
+     "quote": "Registration period: August 20 - November 1, 2026.",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:1a608ee4b622efbf30061665cb4b5b2d6be6ff2c906e07ddccfd1d6557cec118"
+    }
+   ],
+   "windows": [
+    {
+     "track": "Open Doors, регистрация и портфолио",
+     "opens": "2026-08-20",
+     "closes": "2026-11-01",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "warsaw-university-of-technology",
+   "country": "PL",
+   "deadline": {
+    "opens": null,
+    "closes": "2026-07-21",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://www.students.pw.edu.pl/How-to-Apply/Admission-to-B.Sc",
+   "status": "imprecise_new_cycle",
+   "note": "Страница B.Sc. уже про 2027/28, но дни не объявлены: регистрация — начало мая 2027 (to be updated), заявку создать до середины июля 2027, документы загрузить до середины августа 2027. Точных дат не ставлю.",
+   "sources": [
+    {
+     "url": "https://www.students.pw.edu.pl/How-to-Apply/Admission-to-B.Sc",
+     "quote": "Starting date for registration: beginning of May 2027 (to be updated) Deadline to create a new application : middle of July 2027 (to be updated)",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:90d0797200ce3d3c98af209660396e659a76349ab21902668f09747d05423b0d"
+    },
+    {
+     "url": "https://www.students.pw.edu.pl/How-to-Apply/Admission-to-B.Sc",
+     "quote": "Deadline to upload the Admission Documents (for qualified candidates): middle of August 2027 (to be updated)",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:90d0797200ce3d3c98af209660396e659a76349ab21902668f09747d05423b0d"
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "zhejiang-university",
+   "country": "CN",
+   "deadline": {
+    "opens": null,
+    "closes": "2026-02-28",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68988a2981659/page.htm",
+   "status": "blocked",
+   "note": "Страница приёма отдаёт пустой текст (данные грузятся скриптом). В читалке на iczu.zju.edu.cn дат бакалавриата 2027 нет — только график стипендий для магистратуры и докторантуры.",
+   "sources": [],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "aiu-japan",
+   "country": "JP",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://admission.aiu.ac.jp/en/ug/international/",
+   "status": "update",
+   "note": "Набор сентябрь 2027: онлайн-заявка 01–09.10.2026 (JST, до 23:00), документы до 26.10.2026, зачисление сентябрь 2027. Окно закрыто; набор 2028 не объявлен.",
+   "sources": [
+    {
+     "url": "https://admission.aiu.ac.jp/wp/wp-content/uploads/2026/08/2027-International-Admissions-Examination-Guide.pdf",
+     "quote": "Enrollment Date September 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:521b155b176f1fc62956f5b0d2e66be319d022ad86944ecf447bc40c631417f8"
+    },
+    {
+     "url": "https://admission.aiu.ac.jp/wp/wp-content/uploads/2026/08/2027-International-Admissions-Examination-Guide.pdf",
+     "quote": "Period for online application and payment of the application fee October 1, 2026, 10:00 a.m. - October 9, 2026, 11:00 p.m.",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:521b155b176f1fc62956f5b0d2e66be319d022ad86944ecf447bc40c631417f8"
+    },
+    {
+     "url": "https://admission.aiu.ac.jp/wp/wp-content/uploads/2026/08/2027-International-Admissions-Examination-Guide.pdf",
+     "quote": "Deadline for submission of required documents after online application October 1, 2026 - October 26, 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:521b155b176f1fc62956f5b0d2e66be319d022ad86944ecf447bc40c631417f8"
+    }
+   ],
+   "windows": [
+    {
+     "track": "International Examination, сентябрь 2027",
+     "opens": "2026-10-01",
+     "closes": "2026-10-09",
+     "zone": "JST, до 23:00"
+    },
+    {
+     "track": "документы после онлайн-заявки",
+     "opens": "2026-10-01",
+     "closes": "2026-10-26",
+     "zone": "JST"
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "apu-japan",
+   "country": "JP",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://admissions.apu.ac.jp/admissions/application_eligibility/",
+   "status": "blocked",
+   "note": "Сроки на admissions.apu.ac.jp подгружаются скриптом: в HTML только заголовок «2027 ENTRY Next application deadline». Адрес перенаправляет на apu-admissions.jp — другой домен, без «да» Мурода не подключаю.",
+   "sources": [],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "aus-uae",
+   "country": "AE",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://www.aus.edu/admissions/bachelors-degrees/application-requirements",
+   "status": "update",
+   "note": "Осень 2027: заявка до 01.04.2027; онлайн-формы закрываются в 16:00 в день срока. Фраза стоит на странице стипендий и названа общим сроком Fall 2027.",
+   "sources": [
+    {
+     "url": "https://www.aus.edu/admissions/financial-grants-and-scholarships",
+     "quote": "Fall 2027 application deadline: April 01, 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:8a9a134fe9836a67cb9251744907027fb9a386e7098aae7f9e64f09c5fc87074"
+    },
+    {
+     "url": "https://www.aus.edu/admissions/financial-grants-and-scholarships",
+     "quote": "Online applications are due by 4:00 p.m. on the day of the deadline.",
+     "freshFetch": true,
+     "exactQuoteMatched": true,
+     "responseHash": "sha256:8a9a134fe9836a67cb9251744907027fb9a386e7098aae7f9e64f09c5fc87074"
+    }
+   ],
+   "windows": [
+    {
+     "track": "Fall 2027",
+     "opens": null,
+     "closes": "2027-04-01",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "bauman",
+   "country": "RU",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "source": "https://bmstu.ru/foreigners-bachelor",
+   "status": "blocked",
+   "note": "bmstu.ru отдаёт пустой текст на всех страницах приёма иностранцев, внешняя читалка — 403. Дат 2027 не подтверждаю.",
+   "sources": [],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  }
+ ]
+}
