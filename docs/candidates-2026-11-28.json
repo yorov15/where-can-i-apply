@@ -1,0 +1,897 @@
+[
+  {
+    "id": "kaznu",
+    "name": "Al-Farabi Kazakh National University",
+    "country": "KZ",
+    "domain": "farabi.university",
+    "admissionUrl": "https://farabi.university/foreign-applicants/",
+    "moneyUrl": "https://farabi.university/foreign-applicants/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "unknown",
+    "quoteForeigners": "Главная Иностранным абитуриентам Иностранным абитуриентам 5 шагов к поступлению в КазНУ им. аль-Фараби Подать онлайн 5 шагов к поступлению Понятный процесс для иностранных абитуриентов.",
+    "quoteMoney": "Договор и оплата После одобрения: подписание договора и 100% оплата.",
+    "snapshot": [
+      "kaznu-1.txt"
+    ],
+    "language": "Russian, Kazakh, English",
+    "notes": "Страница для иностранных абитуриентов: 5 шагов, бакалавриат отбирается тестированием и собеседованием, после одобрения договор и 100% оплата. Сумма обучения на странице не названа, только PDF-прайс."
+  },
+  {
+    "id": "almau",
+    "name": "Almaty Management University (AlmaU)",
+    "country": "KZ",
+    "domain": "almau.edu.kz",
+    "admissionUrl": "https://almau.edu.kz/en/admission-conditions/",
+    "moneyUrl": "https://almau.edu.kz/en/admission-conditions/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "unknown",
+    "quoteForeigners": "Admission conditions for foreign citizens: During the summer admission period (18 June - 25 August).",
+    "quoteMoney": "Payment for tuition (the first tranche until August 25);",
+    "snapshot": [
+      "almau-1.txt"
+    ],
+    "language": "English",
+    "notes": "Отдельный блок условий приёма для иностранных граждан: онлайн-интервью со школой, затем оригиналы документов. Оплата обучения траншами, суммы на странице нет."
+  },
+  {
+    "id": "kazguu",
+    "name": "Maqsut Narikbayev University (KAZGUU)",
+    "country": "KZ",
+    "domain": "mnu.kz",
+    "admissionUrl": "https://admission.mnu.kz/international",
+    "moneyUrl": "https://intl.mnu.kz/en/undergraduate",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "Maqsut Narikbayev University invites international students to receive high-quality education in Kazakhstan. Learn about the admission process, requirements, and scholarship opportunities.",
+    "quoteMoney": "MNU Scholarship Olympiad Win up to 99% tuition discount A unique opportunity for international applicants to study at MNU with a 20-99% scholarship based on your academic potential and motivation.",
+    "snapshot": [
+      "kazguu-2.txt",
+      "kazguu-3.txt"
+    ],
+    "language": "English",
+    "notes": "Олимпиада IATS для иностранцев даёт скидку 20-99% на обучение, есть программа на бакалавриат на английском. Платное обучение считается по кредитам (55 000 тенге за кредит)."
+  },
+  {
+    "id": "satbayev",
+    "name": "Satbayev University",
+    "country": "KZ",
+    "domain": "satbayev.university",
+    "admissionUrl": "https://satbayev.university/en/",
+    "moneyUrl": "https://satbayev.university/en/",
+    "fetch": "blocked",
+    "blockedReason": "TLS: сайт отдаёт неполную цепочку сертификатов (unable to get local issuer certificate), страница не открывается ни по https, ни по http.",
+    "aid": "unknown",
+    "quoteForeigners": "",
+    "quoteMoney": "",
+    "snapshot": [],
+    "language": null,
+    "notes": "Сайт не открылся из-за ошибки сертификата, содержимое приёмной страницы проверить не удалось."
+  },
+  {
+    "id": "astana-it",
+    "name": "Astana IT University",
+    "country": "KZ",
+    "domain": "astanait.edu.kz",
+    "admissionUrl": "https://astanait.edu.kz/en/for-inter-students/",
+    "moneyUrl": "https://astanait.edu.kz/en/for-inter-students/",
+    "fetch": "blocked",
+    "blockedReason": "Разделы для иностранных абитуриентов (/en/for-inter-students/, /en/international/, /en/applicant/) отдают 404, открывается только главная страница.",
+    "aid": "unknown",
+    "quoteForeigners": "",
+    "quoteMoney": "",
+    "snapshot": [],
+    "language": null,
+    "notes": "Главная открывается, но страницы приёма иностранцев на сайте недоступны (404)."
+  },
+  {
+    "id": "krsu",
+    "name": "Kyrgyz-Russian Slavic University",
+    "country": "KG",
+    "domain": "krsu.edu.kg",
+    "admissionUrl": "https://krsu.edu.kg/en/mezhdunarodnaya-deyatelnost/otdel-po-rabote-s-inostrannymi-studentami/",
+    "moneyUrl": "https://krsu.edu.kg/en/obuchayushhimsya/platnye-obrazovatelnye-uslugi/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "cheap",
+    "quoteForeigners": "List of documents required for foreign citizens when entering training at KRSU: Document on secondary (complete) general education - original and 2 copies;",
+    "quoteMoney": "Cost of paid educational services for the 2026-2027 academic year Bachelor's degree, Specialty, Master's degree Direction Cost (som) Faculty of Science and Technology For undergraduate educational programs Applied Mathematics and Computer Science 130,000",
+    "snapshot": [
+      "krsu-2.txt",
+      "krsu-3.txt"
+    ],
+    "language": null,
+    "notes": "Для иностранных граждан отдельный список документов и статистика приёма по факультетам. Платный бакалавриат 130 000-150 000 сомов в год, язык обучения на странице не указан."
+  },
+  {
+    "id": "jasu",
+    "name": "Jalal-Abad State University",
+    "country": "KG",
+    "domain": "jasu.kg",
+    "admissionUrl": "https://jasu.kg/admission/",
+    "moneyUrl": "https://jasu.kg/jasu-scholarship-program/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "The Common Application is required for students applying to JASU degree. You will need : School certificate (HSC/FSC) scan copy. NEET score card scan copy (for Indian Student).",
+    "quoteMoney": "Successful applicants are awarded scholarships that help cover tuition fees, books, and other educational expenses.",
+    "snapshot": [
+      "jasu-2.txt",
+      "jasu-3.txt"
+    ],
+    "language": null,
+    "notes": "Медицинский вуз, принимает иностранных студентов (для индийцев нужен NEET). Стипендии с фондом покрывают часть платы за обучение; сумма обучения на странице не названа."
+  },
+  {
+    "id": "arabaev",
+    "name": "Arabaev Kyrgyz State University",
+    "country": "KG",
+    "domain": "arabaev.kg",
+    "admissionUrl": "https://arabaev.kg/en/",
+    "moneyUrl": "https://arabaev.kg/en/",
+    "fetch": "blocked",
+    "blockedReason": "Cloudflare 522 (origin connection timed out): сервер вуза не отвечает, страница не открылась.",
+    "aid": "unknown",
+    "quoteForeigners": "",
+    "quoteMoney": "",
+    "snapshot": [],
+    "language": null,
+    "notes": "Сайт не отвечает (522), содержимое страниц приёма проверить не удалось."
+  },
+  {
+    "id": "knu",
+    "name": "Kyrgyz National University",
+    "country": "KG",
+    "domain": "knu.kg",
+    "admissionUrl": "https://knu.kg/en/",
+    "moneyUrl": "https://knu.kg/en/",
+    "fetch": "blocked",
+    "blockedReason": "TLS: сертификат сайта не проходит проверку (certificate verify failed), соединение не устанавливается.",
+    "aid": "unknown",
+    "quoteForeigners": "",
+    "quoteMoney": "",
+    "snapshot": [],
+    "language": null,
+    "notes": "Сайт не открылся из-за ошибки TLS, страницы приёма проверить не удалось."
+  },
+  {
+    "id": "tuit",
+    "name": "Tashkent University of Information Technologies",
+    "country": "UZ",
+    "domain": "tuit.uz",
+    "admissionUrl": "https://tuit.uz/en/xorijiy-fuqarolar-qabuli",
+    "moneyUrl": "https://tuit.uz/en/tolov-kontrakt-miqdorlari",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "cheap",
+    "quoteForeigners": "Information for International Student Admission (2026-2027 Academic Year) TUIT welcomes you to join one of the leading technological universities in Central Asia.",
+    "quoteMoney": "Kunduzgi bakalavriatning barcha ta'lim yo'nalishlarida 1 500 USD",
+    "snapshot": [
+      "tuit-1.txt",
+      "tuit-2.txt"
+    ],
+    "language": "Uzbek, Russian, English",
+    "notes": "Отдельная страница приёма иностранцев: онлайн-интервью, IELTS 5.5 или TOEFL 71. Очный бакалавриат 1 500 USD в год, заочный 1 300 USD (PDF с тарифами для иностранцев)."
+  },
+  {
+    "id": "samdu",
+    "name": "Samarkand State University",
+    "country": "UZ",
+    "domain": "samdu.uz",
+    "admissionUrl": "https://samdu.uz/en/pages/foreign-students",
+    "moneyUrl": "https://samdu.uz/en/pages/talaba_xorijiy_kontrakt",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "cheap",
+    "quoteForeigners": "REQUREMENT FOR ADMISSION INTERNATIONAL STUDENT Apply for Bachelor's Degree Apply for Master's Degree List of Bachelors program",
+    "quoteMoney": "1 Bachelor's degree (full-time) Study on a contract basis (without scholarship)* 14x amount (14 700 000)",
+    "snapshot": [
+      "samdu-1.txt",
+      "samdu-2.txt"
+    ],
+    "language": null,
+    "notes": "Есть отдельные заявки для иностранцев на бакалавриат и магистратуру. Контракт для иностранцев 14,7 млн сумов в год (данные 2023/24 учебного года)."
+  },
+  {
+    "id": "buxdu",
+    "name": "Bukhara State University",
+    "country": "UZ",
+    "domain": "buxdu.uz",
+    "admissionUrl": "https://buxdu.uz/en/99-international-students/3709/3709-information-about-international-students/",
+    "moneyUrl": "https://buxdu.uz/en/99-international-students/7324/7324-the-amount-of-payment-and-contract-for-foreign-students/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "unknown",
+    "quoteForeigners": "a total of 286 international students were admitted to Bukhara State University. Of these, 270 students began their studies in the full-time bachelor's education format",
+    "quoteMoney": "The amount of contract payment for international students differs from that of local students and also varies depending on the field of study.",
+    "snapshot": [
+      "buxdu-1.txt",
+      "buxdu-2.txt"
+    ],
+    "language": null,
+    "notes": "270 иностранцев приняты на очный бакалавриат, для них отдельный контракт в сумах или USD. Конкретная сумма на странице не названа."
+  },
+  {
+    "id": "ted-university",
+    "name": "TED University",
+    "country": "TR",
+    "domain": "tedu.edu.tr",
+    "admissionUrl": "https://ipo.tedu.edu.tr/en/",
+    "moneyUrl": "https://ipo.tedu.edu.tr/en/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "International Easy Application International prospective students can easily apply to TED University by uploading their diplomas, transcripts, passports, and other documents to the Admissions Portal.",
+    "quoteMoney": "International prospective students may qualify for tuition fee exemptions ranging from 25% to 75% based on their diploma grades and performance in SAT or ACT exams.",
+    "snapshot": [
+      "ted-university-1.txt",
+      "ted-university-2.txt",
+      "ted-university-3.txt"
+    ],
+    "language": "English",
+    "notes": "Прайс бакалавриата — 11 800 USD в год у большинства программ, 7 500 USD у педагогических (отдельная страница). Скидка-стипендия 25-75% за балл аттестата и SAT/ACT; обучение на английском."
+  },
+  {
+    "id": "altinbas-university",
+    "name": "Altinbas University",
+    "country": "TR",
+    "domain": "altinbas.edu.tr",
+    "admissionUrl": "https://international.altinbas.edu.tr/en/page/entry-requirements",
+    "moneyUrl": "https://international.altinbas.edu.tr/en/page/tuition-and-fees",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "Confirm that you are eligible to apply through the international-student admission route. Academic Qualification Your previous education must satisfy the academic requirements of your selected degree. Language Proficiency English, Turkish or German requirements depend on the program and degree level. ELIGIBILITY Who Can Apply? Undergraduate & Associate Degree Applicants must be in the final year of high school or have graduated from high school and must satisfy the current YÖK principles governing admission of students from abroad.",
+    "quoteMoney": "Lisans Bilgisayar Mühendisliği (İngilizce) Computer Engineering (in English) İngilizce $6.000 $5.100 $4.800",
+    "snapshot": [
+      "altinbas-university-2.txt",
+      "altinbas-university-3.txt",
+      "altinbas-university-4.txt",
+      "altinbas-university-5.txt"
+    ],
+    "language": "English",
+    "notes": "Прайс 2025-2026 в USD: инженерия 6 000, право 6 500, экономика 5 000; колонки скидок 10% и 15% при предоплате, условия не расписаны. Приём иностранцев на бакалавриат — по аттестату и принципам YÖK, депозит 1 000 USD."
+  },
+  {
+    "id": "istanbul-arel-university",
+    "name": "Istanbul Arel University",
+    "country": "TR",
+    "domain": "arel.edu.tr",
+    "admissionUrl": "https://international.arel.edu.tr/",
+    "moneyUrl": "https://international.arel.edu.tr/scholarships/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "International Office has accepted international students since 2009. As for the distribution of students who choose us, our students are mainly from Middle East, Caucasia, Central Asia and Africa.",
+    "quoteMoney": "The university provides various scholarships and discounts to support the academic success and financial needs of international students. These include: Sibling Tuition Discount",
+    "snapshot": [
+      "istanbul-arel-university-1.txt",
+      "istanbul-arel-university-2.txt"
+    ],
+    "language": null,
+    "notes": "Скидки для иностранцев: sibling, инвалидность, за успеваемость; проценты на странице не названы. Стоимость обучения не опубликована, офис предлагает писать на почту."
+  },
+  {
+    "id": "antalya-bilim-university",
+    "name": "Antalya Bilim University",
+    "country": "TR",
+    "domain": "antalya.edu.tr",
+    "admissionUrl": "https://www.antalya.edu.tr/en/departments/international-student-office/content/about-us-13/admission-criteria-1",
+    "moneyUrl": "https://www.antalya.edu.tr/en/idari-birimler/uluslararasi-ogrenci-ofisi/bilgi-belge-12/courses-and-tuition-fees",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "ANTALYA BİLİM UNIVERSITY INTERNATIONAL STUDENT ADMISSION CRITERIA (UNDERGRADUATE) COUNTRY DIPLOMA - CERTIFICATE - EXAM MINIMUM REQUIRED SCORES International SAT Minimum 1000/1600 for \"Math\" and \"Critical Reading\" and minimum 600/800 for Engineering, Business and Economics Departments in the SAT Reasoning Exam.",
+    "quoteMoney": "ANTALYA BILIM UNIVERSITY 2026 TUITION FEES FOR INTERNATIONAL STUDENTS Programs Tuition Fee (USD) Tuition Fee with Scholarship (USD) (1 January - 1 July) Tuition Fee with Scholarship (USD) (2 July - 25 August) Tuition Fee with Scholarship (USD) (26 August - 1 November) FACULTY OF DENTISTRY Dentistry (Turkish) 14000 11900 11900 14000 FACULTY OF ENGINEERING AND NATURAL SCIENCES Computer Engineering (English) 8300 3735 3735 4150",
+    "snapshot": [
+      "antalya-bilim-university-1.txt",
+      "antalya-bilim-university-2.txt",
+      "antalya-bilim-university-4.txt",
+      "antalya-bilim-university-5.txt"
+    ],
+    "language": "English",
+    "notes": "Прайс 2026 для иностранцев: Computer Engineering 8 300 USD, со стипендией 3 320-4 150 USD. Критерии приёма иностранцев на бакалавриат — по аттестату/SAT; часть программ на английском."
+  },
+  {
+    "id": "ondokuz-mayis-university",
+    "name": "Ondokuz Mayis University",
+    "country": "TR",
+    "domain": "omu.edu.tr",
+    "admissionUrl": "https://www.omu.edu.tr/en/icerik/announcement/apply-now-final-call-international-students-omu-2025-2026",
+    "moneyUrl": "https://onlineiso.omu.edu.tr/pdf/U%C3%96%C3%96%C3%9C.pdf",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "cheap",
+    "quoteForeigners": "The third and final application period for international students wishing to enroll in Associate and Undergraduate Degree Programs at Ondokuz Mayıs University (OMU) for the 2025-2026 academic year will begin on September 22, 2025.",
+    "quoteMoney": "2026 YILI KAYITLANACAK ULUSLARARASI ÖĞRENCİ ÖĞRENİM ÜCRETLERİ FAKÜLTE/YÜKSEKOKUL/MESLEKYÜKSEKOKULU 2026-2027 YILLIK ÖĞRENİM ÜCRETİ 2026-2027 DÖNEMLİK ÖĞRENİM ÜCRETİ TIP FAKÜLTESİ 397.000,00 TIP FAKÜLTESİ (İngilizce) 477.000,00 DİŞ HEKİMLİĞİ FAKÜLTESİ 318.000,00 ALİ FUAD BAŞGİL HUKUK FAKÜLTESİ 69.000,00 VETERİNER FAKÜLTESİ 121.000,00 60.500,00 MÜHENDİSLİK FAKÜLTESİ 74.000,00 37.000,00",
+    "snapshot": [
+      "ondokuz-mayis-university-3.txt",
+      "ondokuz-mayis-university-8.txt",
+      "ondokuz-mayis-university-9.txt"
+    ],
+    "language": null,
+    "notes": "Госвуз: плата для иностранцев на 2026-2027 в лирах — инженерия 74 000 TRY в год, гуманитарные 48 000; в доллары на странице не пересчитано. Приём по аттестату, часть программ помечена как İngilizce."
+  },
+  {
+    "id": "yasar-university",
+    "name": "Yasar University",
+    "country": "TR",
+    "domain": "yasar.edu.tr",
+    "admissionUrl": "https://www.yasar.edu.tr/en/",
+    "moneyUrl": "https://www.yasar.edu.tr/en/",
+    "fetch": "blocked",
+    "blockedReason": "HTTP 403 Forbidden на главной странице и на /en/; страницы приёма и стипендий не открылись.",
+    "aid": "unknown",
+    "quoteForeigners": "",
+    "quoteMoney": "",
+    "snapshot": [],
+    "language": null,
+    "notes": "Сайт не отдал ни одной страницы (403), приём иностранцев и условия помощи проверить не удалось."
+  },
+  {
+    "id": "misis",
+    "name": "NUST MISIS",
+    "country": "RU",
+    "domain": "misis.ru",
+    "admissionUrl": "https://misis.ru/en/applicants/algorithm/",
+    "moneyUrl": "https://misis.ru/en/applicants/algorithm/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "Along with Russian citizens, the following categories of foreign citizens are eligible to participate in the budget competition: Citizens of Belarus, Kyrgyzstan, and Tajikistan",
+    "quoteMoney": "State funding within the quota covers the full cost of education for the entire period, including the cost of training in the preparatory department for foreign citizens who do not speak Russian.",
+    "snapshot": [
+      "misis-1.txt",
+      "misis-2.txt"
+    ],
+    "language": "Russian",
+    "notes": "Иностранцы поступают на бюджет и на платные места; граждане Таджикистана (как и Беларуси, Кыргызстана) участвуют в бюджетном конкурсе наравне с россиянами. Квота Правительства РФ покрывает всё обучение, но не жизнь: общежитие платное (1 900-3 500 руб./мес.) плюс академическая стипендия. Платное обучение дорогое: 386 000-510 000 руб. в год. Бакалавриат на странице программ - на русском языке."
+  },
+  {
+    "id": "susu",
+    "name": "South Ural State University",
+    "country": "RU",
+    "domain": "susu.ru",
+    "admissionUrl": "https://www.susu.ru/en/programs/education-programs-foreign-students/government-scholarship",
+    "moneyUrl": "https://www.susu.ru/en/programs/education-programs-foreign-students/government-scholarship",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "Each year 15 000 international students receive state scholarships to study in Russia. South Ural State University is among the university destinations you can choose. You can study for a Bachelor's, Specialist, Master's or PhD level degree, and also learn Russian.",
+    "quoteMoney": "The government scholarship includes: free tuition for the entire duration of the chosen programme; maintenance allowance (for the entire duration of study); dormitory accommodation (if available).",
+    "snapshot": [
+      "susu-2.txt"
+    ],
+    "language": null,
+    "notes": "Стипендия Правительства РФ: бесплатное обучение на весь срок, ежемесячная выплата и общежитие (при наличии). Уровни названы, включая бакалавриат/специалитет. Отбор ведут Россотрудничество и посольство РФ в стране абитуриента, заявка через education-in-russia.com. Своих скидок или цен на странице нет; страница списка программ для иностранцев отдаёт 403."
+  },
+  {
+    "id": "dvfu",
+    "name": "Far Eastern Federal University",
+    "country": "RU",
+    "domain": "dvfu.ru",
+    "admissionUrl": "https://www.dvfu.ru/en/admission/undergraduate/",
+    "moneyUrl": "https://www.dvfu.ru/en/admission/scholarships/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "All foreign citizens applying to Far Eastern Federal University have the right to apply for a quota of the Russian Government for free education in Russia. The quota can be obtained for study in the chosen field of study (scientific specialty) at the following levels of higher education: Bachelor's/Specialist Degree",
+    "quoteMoney": "The study quota includes: 1. Exemption from tuition fees for the selected educational program (for the entire period of study). 2. Payment of a monthly scholarship.",
+    "snapshot": [
+      "dvfu-1.txt",
+      "dvfu-2.txt"
+    ],
+    "language": null,
+    "notes": "Квота Правительства РФ: обучение бесплатно весь срок плюс стипендия 3 000-9 000 руб./мес. на бакалавриате (подготовительный факультет - 2 400 руб./мес.). Общежитие, страховка, проезд и визовые расходы в квоту не входят. Есть отдельный конкурс для иностранцев и олимпиада «Океан знаний» (только на русском). Цены платного обучения на страницах нет."
+  },
+  {
+    "id": "ssau",
+    "name": "Samara National Research University",
+    "country": "RU",
+    "domain": "ssau.ru",
+    "admissionUrl": "https://priemsamara.ru/english",
+    "moneyUrl": "https://priemsamara.ru/english",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "Yes, Samara University offers one bachelor's programs in English. In 2025, the available program is: 24.03.05 Design and Maintenance of Aircraft Engines",
+    "quoteMoney": "On a state-funded basis through the general competition: citizens of Belarus, Kazakhstan, Kyrgyzstan, Tajikistan, and compatriots living abroad (people historically or culturally connected to Russia, e.g., former USSR citizens) can apply for state-funded places in Russian universities under the same conditions as Russian applicants.",
+    "snapshot": [
+      "ssau-1.txt"
+    ],
+    "language": "Russian",
+    "notes": "Граждане Таджикистана (и Беларуси, Казахстана, Кыргызстана) могут поступать на бюджетные места по общему конкурсу, как россияне; отдельно есть квота Минобрнауки и олимпиада Open Doors с бесплатным обучением. Бакалавриат в основном на русском, одна программа на английском (24.03.05 Design and Maintenance of Aircraft Engines, набор 2025). Сумм обучения на странице нет, только общежитие 770-5 100 руб./мес."
+  },
+  {
+    "id": "mpei",
+    "name": "National Research University Moscow Power Engineering Institute",
+    "country": "RU",
+    "domain": "mpei.ru",
+    "admissionUrl": "https://international.mpei.ru/international_abiturients/admissions",
+    "moneyUrl": "https://international.mpei.ru/international_abiturients/tuition",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "На бюджетной основе могут обучаться: 1. Граждане всех стран - по квоте , распределяемой Минобрнауки России через представительства Россотрудничества или посольства/консульства Российской Федерации в стране проживания абитуриента, на основании конкурсного отбора.",
+    "quoteMoney": "Победители и призеры ежегодной международной студенческой олимпиады «Надежда энергетики» получают право бесплатного обучения на программах бакалавриата и магистратуры.",
+    "snapshot": [
+      "mpei-1.txt",
+      "mpei-2.txt"
+    ],
+    "language": null,
+    "notes": "Бесплатно: квота Минобрнауки для граждан всех стран (отбор через Россотрудничество/посольство), плюс победители олимпиады «Надежда энергетики» учатся на бакалавриате бесплатно. Остальные - по контракту; на странице оплаты сумм нет, только порядок оплаты по семестрам и отсылка к приказу о стоимости. Язык обучения на страницах не назван."
+  },
+  {
+    "id": "spbstu",
+    "name": "Peter the Great St. Petersburg Polytechnic University",
+    "country": "RU",
+    "domain": "spbstu.ru",
+    "admissionUrl": "https://www.spbstu.ru/applicants/admission-of-foreign-citizens/",
+    "moneyUrl": "https://www.spbstu.ru/applicants/admission-of-foreign-citizens/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "Прием абитуриентов в СПбПУ, поступающих как иностранные граждане (через Отделение приемной комиссии для иностранных граждан, Отдел по работе с иностранными студентами), осуществляется на основании правил приема СПбПУ на бюджетной основе и на основании договора об образовании на обучение.",
+    "quoteMoney": "Поступление иностранных граждан по направлению Министерства науки и высшего образования РФ (бесплатное обучение)",
+    "snapshot": [
+      "spbstu-1.txt",
+      "spbstu-2.txt"
+    ],
+    "language": null,
+    "notes": "Иностранцев принимают на бюджет и по договору; отдельный раздел - поступление по направлению Минобрнауки (бесплатное обучение) и по Open Doors. Стоимость обучения вынесена в приказ (PDF), суммы на страницах не названы. Английская страница стипендии описывает шаги по государственной стипендии и отмечает, что общежитие в неё не входит."
+  },
+  {
+    "id": "utmn",
+    "name": "University of Tyumen",
+    "country": "RU",
+    "domain": "utmn.ru",
+    "admissionUrl": "https://www.utmn.ru/abiturient/dlya-inostrannykh-grazhdan/",
+    "moneyUrl": "https://www.utmn.ru/abiturient/dlya-inostrannykh-grazhdan/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "Иностранные граждане и лица без гражданства имеют право на получение высшего образования за счет бюджетных ассигнований в соответствии с международными договорами Российской Федерации, федеральными законами или установленной Правительством Российской Федерации квотой на образование иностранных граждан и лиц без гражданства, а также за счет средств физических лиц и юридических лиц в соответствии с договорами об оказании платных образовательных услуг.",
+    "quoteMoney": "Граждане Беларуси, Казахстана, Кыргызстана и Таджикистана имеют право поступать на бюджетные места на общих основаниях в соответствии с Соглашением от 24.11.1998 \"О предоставлении равных прав гражданам государств участников Договора об углублении интеграции в экономической и гуманитарной областях от 29 марта 1996 г. на поступление в учебные заведения\".",
+    "snapshot": [
+      "utmn-1.txt"
+    ],
+    "language": null,
+    "notes": "Граждане Таджикистана могут поступать на бюджетные места на общих основаниях по Соглашению 1998 года (поступление по гражданству). Остальные иностранцы - по квоте Правительства РФ или платно. Страница говорит про «высшее образование» вообще, бакалавриат отдельно не выделен; сумм обучения нет, стоимость - в приказах-файлах."
+  },
+  {
+    "id": "asu",
+    "name": "Altai State University",
+    "country": "RU",
+    "domain": "asu.ru",
+    "admissionUrl": "http://abiturient.asu.ru/international/",
+    "moneyUrl": "https://www.asu.ru/inter_change/inter_admit/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "Университет начинает принимать документы 20 июня 2026 года Подробнее о сроках подачи документов на программы бакалавриата и специалитета, магистратуры и аспирантуры можно узнать в разделах: Бакалавриат и специалитет",
+    "quoteMoney": "К сведению: иностранные граждане Республики Киргизия, Республики Беларусь, Республики Казахстан и Республики Таджикистан на основании межправительственных соглашений с РФ имеют право на конкурсной основе подавать документы на обучение на бюджетной основе.",
+    "snapshot": [
+      "asu-1.txt",
+      "asu-2.txt"
+    ],
+    "language": null,
+    "notes": "Граждане Кыргызстана, Беларуси, Казахстана и Таджикистана могут подавать документы на бюджет на конкурсной основе по межправительственным соглашениям. На сайте абитуриента есть отдельная страница для иностранцев с чек-листом и приёмом с 20 июня 2026; цены обучения для иностранцев на этих страницах не названы."
+  },
+  {
+    "id": "nstu",
+    "name": "Novosibirsk State Technical University",
+    "country": "RU",
+    "domain": "nstu.ru",
+    "admissionUrl": "https://www.nstu.ru/en/education/admissions/application-guide-for-undergraduate-programs/",
+    "moneyUrl": "https://www.nstu.ru/en/education/admissions/scholarships/scholarships/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "unknown",
+    "quoteForeigners": "International citizens can get the scholarship to study at NSTU NETI under: The International Olympiad \"The Future of Siberia\" - for Bachelor's programs",
+    "quoteMoney": "NSTU NETI is a participant of the Governmental program for scholarship allocated by the Ministry of Higher Education and Science of Russia.",
+    "snapshot": [
+      "nstu-1.txt",
+      "nstu-2.txt"
+    ],
+    "language": null,
+    "notes": "Вуз участвует в государственной программе стипендий Минобрнауки; стипендию для бакалавриата давали по олимпиаде «The Future of Siberia», регистрация на неё на странице закрыта. Что именно покрывает стипендия, не сказано; приём платного обучения идёт по договору, суммы обучения не названы. Страница ведёт на гайд абитуриента с 20 июня по 12 августа."
+  },
+  {
+    "id": "tpu",
+    "name": "Tomsk Polytechnic University",
+    "country": "RU",
+    "domain": "tpu.ru",
+    "admissionUrl": "https://tpu.ru/en/education/admission",
+    "moneyUrl": "https://tpu.ru/en/education/admission",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "unknown",
+    "quoteForeigners": "Bachelor's Degree (4 academic years) / Specialist Program (5 academic years) To enter the university, an applicant shall submit the following documents by fax or e-mail: A copy of the Education Certificate that verifies the Secondary School level (including academic transcript: the list of studied subjects, grades and marks) in English or Russian. A copy of the international passport.",
+    "quoteMoney": "Sign the contract and pay the tuition fee for the first academic year to the university bank account.",
+    "snapshot": [
+      "tpu-1.txt",
+      "tpu-2.txt"
+    ],
+    "language": null,
+    "notes": "Английская страница Admission policy описывает приём иностранцев на бакалавриат (4 года) и специалитет (5 лет): документы, вступительные испытания, контракт. Обучение платное по договору, сумма ни на этой странице, ни на странице платных услуг не названа (там только ссылки на приказы и калькулятор). Про стипендии на страницах приёма ничего нет."
+  },
+  {
+    "id": "apu-malaysia",
+    "name": "Asia Pacific University of Technology & Innovation (APU)",
+    "country": "MY",
+    "domain": "apu.edu.my",
+    "admissionUrl": "https://www.apu.edu.my/international-students-application-procedures",
+    "moneyUrl": "https://www.apu.edu.my/apu-international-students-scholarships-merit-awards",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "Today, more than half of its students are international citizens, and come from 130 countries. The University has a long experience of recruiting, selecting and supporting international students.",
+    "quoteMoney": "APU Merit Awards A-Levels AAA 30% Discount A-Levels AAB 20% Discount A-Levels ABB/AAC 10% Discount O-Levels/IGCSE 8 - 9 As 30% Discount",
+    "snapshot": [
+      "apu-malaysia-1.txt",
+      "apu-malaysia-2.txt"
+    ],
+    "language": "English",
+    "notes": "Скидки за успеваемость 10-30% от платы за обучение (таблица для A-Levels, IB, O-Levels). Строки под 11-летний аттестат в таблице нет; сама плата за обучение на странице не названа, виден только сбор за рассмотрение RM 3,600."
+  },
+  {
+    "id": "uthm",
+    "name": "Universiti Tun Hussein Onn Malaysia (UTHM)",
+    "country": "MY",
+    "domain": "uthm.edu.my",
+    "admissionUrl": "https://www.uthm.edu.my/en/join-us/admission/international-students",
+    "moneyUrl": "https://io.uthm.edu.my/images/Tuition%20Fees/FAST/FAST.pdf",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "cheap",
+    "quoteForeigners": "UTHM receives all applications from international students.",
+    "quoteMoney": "ESTIMATED TOTAL TUITION FEES* 26,484.00 SST 6% 1,589.04 ESTIMATED TOTAL TUITION FEES INCLUDING SST* 28,073.04",
+    "snapshot": [
+      "uthm-1.txt",
+      "uthm-2.txt"
+    ],
+    "language": "English",
+    "notes": "В прайсе факультета прикладных наук за 3 года (6 семестров) ориентировочно RM 26,484 без SST и RM 28,073 с SST, то есть около RM 9 тыс. в год. Хостел (RM 15/день) и Personal Bond не входят."
+  },
+  {
+    "id": "unimap",
+    "name": "Universiti Malaysia Perlis (UniMAP)",
+    "country": "MY",
+    "domain": "unimap.edu.my",
+    "admissionUrl": "https://admission.unimap.edu.my/international.php",
+    "moneyUrl": "https://admission.unimap.edu.my/programme.php?id=UR6524003",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "cheap",
+    "quoteForeigners": "Explore 34 world-class Bachelor's Degree programmes officially open to global applicants.",
+    "quoteMoney": "Estimated Local Fees RM 12,070.00 Estimated Intl. Fees RM 24,747.60",
+    "snapshot": [
+      "unimap-1.txt",
+      "unimap-2.txt"
+    ],
+    "language": "English",
+    "notes": "Смета для иностранца RM 24,747.60 за 4 года бакалавриата (пример на программе сельскохозяйственной инженерии), примерно RM 6 тыс. в год. Сумма помечена как estimated, хостел не входит."
+  },
+  {
+    "id": "sunway-university",
+    "name": "Sunway University",
+    "country": "MY",
+    "domain": "sunwayuniversity.edu.my",
+    "admissionUrl": "https://sunwayuniversity.edu.my/international",
+    "moneyUrl": "https://scholarship.sunway.edu.my/scholarship/sunway-international-bursaries",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "Sunway University has dedicated itself to delivering exceptional education to both local Malaysians and students hailing from various corners of the globe. Immersing yourself in our campus means becoming a member of a diverse tapestry that spans over 80 countries and embraces over 2,000 international students.",
+    "quoteMoney": "VICTORIA UNIVERSITY, AUSTRALIA (BACHELOR OF BUSINESS) COUNTRY QUALIFICATION SCHOLARSHIP RM6,000 SCHOLARSHIP RM11,000",
+    "snapshot": [
+      "sunway-university-1.txt",
+      "sunway-university-2.txt"
+    ],
+    "language": "English",
+    "notes": "Бурсари для иностранцев выдаются по школьной квалификации страны: в бакалаврском разделе RM 6,000 и RM 11,000 (пример — программа Victoria University). Отдельной строки для таджикского аттестата я не нашёл, плата за обучение на странице не указана."
+  },
+  {
+    "id": "xmu-malaysia",
+    "name": "Xiamen University Malaysia",
+    "country": "MY",
+    "domain": "xmu.edu.my",
+    "admissionUrl": "https://www.xmu.edu.my/admissions/how-to-apply",
+    "moneyUrl": "https://www.xmu.edu.my/admissions/scholarships-financial-aid",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "Applying to Xiamen University Malaysia is a simple and guided process designed to accommodate both local and international applicants.",
+    "quoteMoney": "For international students' scholarships, please contact our International Student Recruitment Office",
+    "snapshot": [
+      "xmu-malaysia-1.txt",
+      "xmu-malaysia-2.txt"
+    ],
+    "language": "English",
+    "notes": "Про стипендии иностранцам сказано только «обращайтесь в International Student Recruitment Office» — ни суммы, ни условий. Льготы в таблице стипендий привязаны к SPM/UEC и гражданству Малайзии."
+  },
+  {
+    "id": "hamburg",
+    "name": "University of Hamburg",
+    "country": "DE",
+    "domain": "uni-hamburg.de",
+    "admissionUrl": "https://www.uni-hamburg.de/en/campuscenter/bewerbung/international/studium-mit-abschluss.html",
+    "moneyUrl": "https://www.uni-hamburg.de/en/campuscenter/studienorganisation/studienverlauf/beitraege-gebuehren.html",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "In the admission process for applicants from non-EU countries, the grade of your foreign higher education entrance qualification (recognition of foreign educational credentials), converted into the German system, is translated into a point value.",
+    "quoteMoney": "As of winter semester 2012/13, the University abolished these tuition fees. However, semester contribution payments are still mandatory.",
+    "snapshot": [
+      "hamburg-1.txt",
+      "hamburg-3.txt"
+    ],
+    "language": null,
+    "notes": "Обучения нет: плату отменили с зимы 2012/13, остаётся обязательный семестровый взнос (на лето 2026 — 384 евро). Бакалавриат в основном на немецком, для поступления нужен немецкий."
+  },
+  {
+    "id": "goettingen",
+    "name": "University of Göttingen",
+    "country": "DE",
+    "domain": "uni-goettingen.de",
+    "admissionUrl": "https://www.uni-goettingen.de/en/559448.html",
+    "moneyUrl": "https://www.uni-goettingen.de/en/40054.html",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "A step-by-step guide for applicants from Non-EU/EEA countries - Studienkolleg and External Assessment Test",
+    "quoteMoney": "The semester fees comprise administration fees, student body fees and a Studierendenwerk fee.",
+    "snapshot": [
+      "goettingen-1.txt",
+      "goettingen-2.txt"
+    ],
+    "language": null,
+    "notes": "Обучения нет, платится только семестровый взнос (484,18 евро за зимний семестр 2026/27); доплата только тем, кто сильно превысил срок учёбы. Страница — инструкция для абитуриентов из стран не-ЕС/ЕЭП, в том числе через Studienkolleg."
+  },
+  {
+    "id": "tu-dresden",
+    "name": "TU Dresden",
+    "country": "DE",
+    "domain": "tu-dresden.de",
+    "admissionUrl": "https://tu-dresden.de/studium/vor-dem-studium/internationales?set_language=en",
+    "moneyUrl": "https://tu-dresden.de/studium/im-studium/studienorganisation/semesterbeitrag-studiengebuehren?set_language=en",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "On these pages, you will find specific information for international applicants and students.",
+    "quoteMoney": "In addition to semester contribution, some students are obliged to pay tuition fees, pursuant to article 13 of the Saxon Higher Education Act ( Sächsisches Hochschulgesetz - SächsHSG ).",
+    "snapshot": [
+      "tu-dresden-1.txt",
+      "tu-dresden-2.txt"
+    ],
+    "language": "German",
+    "notes": "Обучения нет: в обычном случае только семестровый взнос, плата бывает за второе высшее, дистанционку и перебор семестров. Бакалавриат в основном на немецком."
+  },
+  {
+    "id": "vut",
+    "name": "Brno University of Technology",
+    "country": "CZ",
+    "domain": "vut.cz",
+    "admissionUrl": "https://www.vut.cz/en/study-options/degree-studies-en",
+    "moneyUrl": "https://www.vut.cz/en/study-options/degree-studies-cz",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "The programmes are open to applicants from all countries, however you might need a visa to stay in the Czech Republic.",
+    "quoteMoney": "As an international student, you can study in Czech language for free.",
+    "snapshot": [
+      "vut-1.txt",
+      "vut-2.txt"
+    ],
+    "language": "Czech",
+    "notes": "На чешском бесплатно для иностранцев, но нужно знание чешского (вуз предлагает годовой курс). Программы на английском платные."
+  },
+  {
+    "id": "mendelu",
+    "name": "Mendel University in Brno",
+    "country": "CZ",
+    "domain": "mendelu.cz",
+    "admissionUrl": "https://mendelu.cz/en/admissions/study-at-mendelu/",
+    "moneyUrl": "https://mendelu.cz/en/admissions/degree-programmes",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "Provide certified documents: certified copies of original certificates and transcript of records, proof of English proficiency, copy of passport.",
+    "quoteMoney": "All degree programmes taught in Czech and completed within the standard length of study are free of charge for all accepted students.",
+    "snapshot": [
+      "mendelu-1.txt",
+      "mendelu-2.txt"
+    ],
+    "language": "Czech",
+    "notes": "Бесплатно на чешском, если сдать вступительный экзамен по чешскому; на английском платно, сумма указана в анкете."
+  },
+  {
+    "id": "tul",
+    "name": "Technical University of Liberec",
+    "country": "CZ",
+    "domain": "tul.cz",
+    "admissionUrl": "https://www.tul.cz/en/admissions/admissions-to-programmes-taught-in-the-czech-language/",
+    "moneyUrl": "https://www.tul.cz/en/admissions/admissions-to-programmes-taught-in-the-czech-language/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "free-tuition",
+    "quoteForeigners": "International students can apply to study in almost 120 programmes and specializations which are carried out in the Czech language",
+    "quoteMoney": "The fees in these programmes are sponsored by the Czech government, which means that students don't pay any tuition fees.",
+    "snapshot": [
+      "tul-3.txt"
+    ],
+    "language": "Czech",
+    "notes": "Почти 120 программ на чешском бесплатны для иностранцев — платит государство; нужен чешский от B2. Английские программы 4 000–5 000 долларов в год."
+  },
+  {
+    "id": "miskolc",
+    "name": "University of Miskolc",
+    "country": "HU",
+    "domain": "uni-miskolc.hu",
+    "admissionUrl": "https://www.uni-miskolc.hu/en/admission/application-procedure/",
+    "moneyUrl": "https://www.uni-miskolc.hu/en/admission/scholarship-programmes/stipendium-hungaricum/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "full",
+    "quoteForeigners": "Step 1 Choose your study programme Undergraduate programmes Graduate Programmes Doctoral programmes Double Degree Programmes English Foundation Programme",
+    "quoteMoney": "Benefits for scholarship holders no tuition fee monthly stipend: for bachelor and master students HUF 43 700/ month, for PhD students HUF 140 000 /month for the first two years, and HUF 180 000 /month in the second two years after the complex exam 40 000 HUF/month worth of accommodation allowance medical insurance",
+    "snapshot": [
+      "miskolc-1.txt",
+      "miskolc-4.txt"
+    ],
+    "language": null,
+    "notes": "Стипендия Stipendium Hungaricum: без платы за обучение, месячная стипендия, жильё и страховка; нужна номинация от своей страны. Набор и на бакалавриат, и на магистратуру."
+  },
+  {
+    "id": "bge",
+    "name": "Budapest University of Economics and Business",
+    "country": "HU",
+    "domain": "uni-bge.hu",
+    "admissionUrl": "https://uni-bge.hu/en/bachelors-program",
+    "moneyUrl": "https://uni-bge.hu/en/stipendium-hungaricum-and-diaspora-scholarships",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "full",
+    "quoteForeigners": "You can apply for the following BA/BSc programmes at BGE: Business Administration and Management (Hungarian, English)",
+    "quoteMoney": "The scholarship covers: Full tuition fees throughout your studies Monthly stipend Housing allowance Private medical insurance and access to public healthcare",
+    "snapshot": [
+      "bge-1.txt",
+      "bge-3.txt"
+    ],
+    "language": "English",
+    "notes": "Stipendium Hungaricum покрывает обучение, стипендию, жильё и страховку, но нужна номинация министерства. Без стипендии английский бакалавриат — 3 000 евро за семестр."
+  },
+  {
+    "id": "pwr",
+    "name": "Wrocław University of Science and Technology",
+    "country": "PL",
+    "domain": "pwr.edu.pl",
+    "admissionUrl": "https://rekrutacja.pwr.edu.pl/en/for-foreigners",
+    "moneyUrl": "https://rekrutacja.pwr.edu.pl/en/for-foreigners/fee-paying-basis-of-studies-and-scholarship-holders/admission/scholarship-programs-and-tuition-free-studies/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "Stay up to date with the most important information about admissions, deadlines, and events related to studies for international applicants.",
+    "quoteMoney": "Scholarship of Polish Government Available for students who want to pursue studies in Polish or English, also in an option with one-year preparatory language course prior to the degree programme studies.",
+    "snapshot": [
+      "pwr-1.txt",
+      "pwr-4.txt"
+    ],
+    "language": "Polish",
+    "notes": "Стипендия польского правительства (NAWA) — на учёбу на польском или английском, есть годовой языковой курс. Отдельно вуз пишет, что обучение на польском бесплатно для обладателей сертификата C1; англопрограммы платные."
+  },
+  {
+    "id": "agh",
+    "name": "AGH University of Krakow",
+    "country": "PL",
+    "domain": "agh.edu.pl",
+    "admissionUrl": "https://www.international.agh.edu.pl/en/studies/education-offer-bachelor-studies",
+    "moneyUrl": "https://www.international.agh.edu.pl/en/studies/fees",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "Academic year 2026/2027 full-time studies in English part-time studies in English",
+    "quoteMoney": "If you are qualified for studies and you have a decision of the Polish National Agency for Academic Exchange (NAWA) , a decision of the minister or a letter from NAWA - your financial conditions at the AGH University will be determined in accordance with this decision (e.g. exemption from tuition fees).",
+    "snapshot": [
+      "agh-1.txt",
+      "agh-2.txt"
+    ],
+    "language": "English",
+    "notes": "Английские программы платные (2 000–3 000 евро за семестр), но решение NAWA освобождает от оплаты. Обучение на польском бесплатно при сертификате C1."
+  },
+  {
+    "id": "taibah-university",
+    "name": "Taibah University",
+    "country": "SA",
+    "domain": "taibahu.edu.sa",
+    "admissionUrl": "https://www.taibahu.edu.sa/en/admission-and-study/admission/international-student-admissions",
+    "moneyUrl": "https://www.taibahu.edu.sa/en/admission-and-study/admission/international-student-admissions",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "unknown",
+    "quoteForeigners": "Taibah University offers academic programs in a wide range of disciplines, allowing international students to choose the path that suits their academic and professional ambitions.",
+    "quoteMoney": "Committing to pay tuition fees before the start of each semester. Paying the administrative fees before issuing the university number, which amounts to (250) riyals, excluding VAT.",
+    "snapshot": [
+      "taibah-university-1.txt"
+    ],
+    "language": "English",
+    "notes": "Внешняя «стипендия» для нерезидентов — платная: нужен финансовый гарант, медстраховка и оплата обучения каждый семестр. Сумм обучения на странице нет, назван только админ. сбор 250 риалов."
+  },
+  {
+    "id": "ajman-university",
+    "name": "Ajman University",
+    "country": "AE",
+    "domain": "ajman.ac.ae",
+    "admissionUrl": "https://www.ajman.ac.ae/en/admissions/undergraduate/undergraduate-admission-process",
+    "moneyUrl": "https://www.ajman.ac.ae/en/admissions/office-of-scholarship-financial-aid",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "For International Students: Official secondary school certificate/transcripts certified by the authorized educational authority in the country of origin, the country's Ministry of Foreign Affairs, and the UAE Embassy.",
+    "quoteMoney": "Students admitted to any college, except the College of Medicine and College of Dentistry, who achieve a high school score of 90% or higher are eligible for a 20% tuition discount in their first semester of enrollment (Fall or Spring only).",
+    "snapshot": [
+      "ajman-university-1.txt",
+      "ajman-university-2.txt"
+    ],
+    "language": "English",
+    "notes": "Скидка 20% за школьный средний 90%+ (30% за 99%+) в первом семестре, без привязки к гражданству; стипендия для жителей эмирата Аджман — только своим. Иностранцу нужны аттестация документов и UAE equivalency."
+  },
+  {
+    "id": "aud-dubai",
+    "name": "American University in Dubai (AUD)",
+    "country": "AE",
+    "domain": "aud.edu",
+    "admissionUrl": "https://www.aud.edu/admissions/undergraduate/undergraduate-admissions/",
+    "moneyUrl": "https://www.aud.edu/admissions/scholarships/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "High school diplomas and grade 12 transcripts obtained abroad must be attested by: 1. Ministry of Education of home country 2. Ministry of Foreign Affairs of home country 3. U.A.E. Embassy in home country",
+    "quoteMoney": "Open to all nationalities Open to all undergraduate programs Coverage/Renewal The Scholarship entitles the recipient to a partial/full tuition waiver subject to the approval of the Scholarship Committee.",
+    "snapshot": [
+      "aud-dubai-1.txt",
+      "aud-dubai-2.txt"
+    ],
+    "language": "English",
+    "notes": "Стипендия им. шейха Мохаммеда: открыта для всех национальностей, частичное или полное покрытие обучения при среднем балле 90%+. Университет платный, суммы обучения в снимок не попали."
+  },
+  {
+    "id": "udst-qatar",
+    "name": "University of Doha for Science and Technology (UDST)",
+    "country": "QA",
+    "domain": "udst.edu.qa",
+    "admissionUrl": "https://www.udst.edu.qa/admissions/admissions-information/tuition-and-fees",
+    "moneyUrl": "https://www.udst.edu.qa/admissions/admissions-information/tuition-and-fees",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "unknown",
+    "quoteForeigners": "Bachelor's / Post-Diploma / Pre-Master Degree Programs COLLEGES Rate per credit (Qatar Residents) Rate per credit (international Students)",
+    "quoteMoney": "Rate per credit (Qatar Residents) Rate per credit (international Students) Business Management 975 QAR 1,463 QAR",
+    "snapshot": [
+      "udst-qatar-1.txt"
+    ],
+    "language": "English",
+    "notes": "Иностранцы на бакалавриате платят за кредит больше резидентов: 1,463 QAR против 975 QAR. Стипендий для иностранцев на снимке нет — раздел стипендий отдельный и в снимок не вошёл."
+  },
+  {
+    "id": "auk-kuwait",
+    "name": "American University of Kuwait (AUK)",
+    "country": "KW",
+    "domain": "auk.edu.kw",
+    "admissionUrl": "https://www.auk.edu.kw/admissions-aid/",
+    "moneyUrl": "https://www.auk.edu.kw/admissions-aid/auk-academic-scholarship-financial-aid/",
+    "fetch": "ok",
+    "blockedReason": null,
+    "aid": "partial",
+    "quoteForeigners": "International Students An international student is a student who is applying from outside Kuwait or you don't hold Kuwaiti residency.",
+    "quoteMoney": "A competitive, merit-based scholarship awarded to top-performing students. Eligibility: First-Time College Students: Minimum 3.75 high school GPA",
+    "snapshot": [
+      "auk-kuwait-1.txt",
+      "auk-kuwait-2.txt"
+    ],
+    "language": "English",
+    "notes": "Академическая стипендия по школьному GPA 3.75+ — гражданство в условиях не названо; государственные стипендии PUC отдельно оговорены только для кувейтцев. Размер скидки на странице не указан, плата за обучение не приведена."
+  }
+]
