@@ -1,0 +1,493 @@
+{
+ "checkedOn": "2026-11-28",
+ "task": "DS-11B",
+ "cycle": "2027 (набор осень 2027 / весна 2028)",
+ "source": "github.com/yorov15/where-can-i-apply, ветка deepseek/deadlines-2027-b",
+ "totalPrograms": 111,
+ "records": [
+  {
+   "id": "fu-berlin",
+   "country": "DE",
+   "deadline": {
+    "opens": null,
+    "closes": "2026-07-15",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "update",
+   "note": "Опубликованы сроки лета 2027: 01.12.2026–15.01.2027 (с ограничением) и 18.01–01.03.2027 (без ограничения). Зимний набор 2027/28 не объявлен; летний вход есть не у всех программ.",
+   "sources": [
+    {
+     "url": "https://www.fu-berlin.de/en/studium/beratung/kalender/2027sose/index.html",
+     "quote": "From December 1, 2026, through January 15, 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.fu-berlin.de/en/studium/beratung/kalender/2027sose/index.html",
+     "quote": "From January 18, 2027, through March 1, 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "summer 2027, limited admission",
+     "opens": "2026-12-01",
+     "closes": "2027-01-15",
+     "zone": null
+    },
+    {
+     "track": "summer 2027, unrestricted admission",
+     "opens": "2027-01-18",
+     "closes": "2027-03-01",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "islamic-university-madinah",
+   "country": "SA",
+   "deadline": {
+    "opens": "2026-04-19",
+    "closes": "2026-05-21",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "closed_correctly",
+   "note": "Последний объявленный приём — 1447 г. х.: 19.04–21.05.2026. Нового набора (1448/1449 г. х.) на странице нет.",
+   "sources": [
+    {
+     "url": "https://iu.edu.sa/%D8%A7%D9%84%D9%85%D9%88%D9%87%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B7%D9%84%D9%88%D8%A8%D8%A9-%D9%84%D9%84%D8%B7%D9%84%D8%A7%D8%A8-%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A%D9%8A%D9%86-0",
+     "quote": "Application Period:",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://iu.edu.sa/%D8%A7%D9%84%D9%85%D9%88%D9%87%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B7%D9%84%D9%88%D8%A8%D8%A9-%D9%84%D9%84%D8%B7%D9%84%D8%A7%D8%A8-%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A%D9%8A%D9%86-0",
+     "quote": "From 2-11-1447 AH corresponding to 19-4-2026 AD",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://iu.edu.sa/%D8%A7%D9%84%D9%85%D9%88%D9%87%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B7%D9%84%D9%88%D8%A8%D8%A9-%D9%84%D9%84%D8%B7%D9%84%D8%A7%D8%A8-%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A%D9%8A%D9%86-0",
+     "quote": "To 4-12-1447 AH corresponding to 21-5-2026 AD",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "mephi",
+   "country": "RU",
+   "deadline": {
+    "opens": "2026-06-20",
+    "closes": "2026-07-10",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "annual_windows_only",
+   "note": "В расписании приёма только дни без года: 20.06 старт, 10.07 и 25.07 — конец приёма документов. Объявления на 2027 нет; даты Open Doors — другой трек.",
+   "sources": [
+    {
+     "url": "https://eng.mephi.ru/academics/admissions",
+     "quote": "MEPhI admission terms",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://eng.mephi.ru/academics/admissions",
+     "quote": "End of document acceptance (without admission examinations)",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "od",
+   "country": "RU",
+   "deadline": {
+    "opens": "2026-08-20",
+    "closes": "2026-11-01",
+    "recurring": "annual",
+    "confidence": "confirmed"
+   },
+   "status": "closed_correctly",
+   "note": "Open Doors 2026/27: регистрация 20.08–01.11.2026 закрыта. Новый цикл 2027/28 не объявлен; этапы 2–3 2026/27 идут по графику прошлого набора.",
+   "sources": [
+    {
+     "url": "https://od.globaluni.ru/rules",
+     "quote": "Registration for the Bachelor’s, Master’s, Doctoral, and Postdoctoral tracks is open from August 20 to November 1, 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "ozyegin-university",
+   "country": "TR",
+   "deadline": {
+    "opens": null,
+    "closes": "2026-11-15",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "closed_correctly",
+   "note": "На странице по-прежнему срок набора 2026-2027: 15.11.2026. Набора 2027-2028 вуз ещё не объявил.",
+   "sources": [
+    {
+     "url": "https://admissions.ozyegin.edu.tr/en/admission-process-draft/",
+     "quote": "Fall 2026-2027 Application Deadline: November 15, 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "ritsumeikan",
+   "country": "JP",
+   "deadline": {
+    "opens": null,
+    "closes": "2026-11-02",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "update",
+   "note": "Для GLA/GS/CRPS набора сентября 2027 два окна: 02.12.2026–12.01.2027 и 17.02–09.03.2027; у GLA есть и первое окно 14.10–02.11.2026. JD и ISSE в сентябрьском наборе не участвуют.",
+   "sources": [
+    {
+     "url": "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+     "quote": "CRPS Major",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+     "quote": "2026/12/2 Wed - 2027/1/12 Tue",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://en.ritsumei.ac.jp/e-ug/apply/howto.html",
+     "quote": "2027/2/17 Wed - 2027/3/9 Tue",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "GLA September 2027, round 1",
+     "opens": "2026-10-14",
+     "closes": "2026-11-02",
+     "zone": null
+    },
+    {
+     "track": "GLA/GS/CRPS September 2027, round 2",
+     "opens": "2026-12-02",
+     "closes": "2027-01-12",
+     "zone": null
+    },
+    {
+     "track": "GLA/GS/CRPS September 2027, round 3",
+     "opens": "2027-02-17",
+     "closes": "2027-03-09",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "sysu",
+   "country": "CN",
+   "deadline": {
+    "opens": "2026-01-01",
+    "closes": "2026-04-30",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "no_new_announcement",
+   "note": "Действующие правила — набор 2026: 01.01–28.02 и 01.03–30.04.2026. Объявления на 2027 нет.",
+   "sources": [
+    {
+     "url": "https://iso.sysu.edu.cn/en/application/selffunded/1420575.htm",
+     "quote": "2026 Enrollment Guidelines for International Students at Sun Yat-sen University (Bachelor's Degree)",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://iso.sysu.edu.cn/en/application/selffunded/1420575.htm",
+     "quote": "First Round: January 1-February 28, 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://iso.sysu.edu.cn/en/application/selffunded/1420575.htm",
+     "quote": "Second Round: March 1-April 30, 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "uni-due",
+   "country": "DE",
+   "deadline": {
+    "opens": null,
+    "closes": "2026-07-31",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "annual_windows_only",
+   "note": "Окна повторяются каждый год без указания года: зима 01.05–15.06 (с ограничением) и до 31.07 (без), лето 01.11–15.12 и до 31.01. Отдельного объявления на 2027 нет.",
+   "sources": [
+    {
+     "url": "https://www.uni-due.de/international/international-admissions-en.php",
+     "quote": "For courses with admission restrictions (NC): 01 May – 15 June",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.uni-due.de/international/international-admissions-en.php",
+     "quote": "For courses without admission restrictions: 01 May – 31 July",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "utoronto-pearson",
+   "country": "CA",
+   "deadline": {
+    "opens": "2026-07-06",
+    "closes": "2026-10-09",
+    "recurring": "annual",
+    "confidence": "confirmed"
+   },
+   "status": "closed_correctly",
+   "note": "Сроки для поступления в сентябре 2027 закрыты: номинация 09.10.2026, заявка в U of T 16.10.2026, форма стипендии 06.11.2026. Цикл на сентябрь 2028 не объявлен.",
+   "sources": [
+    {
+     "url": "https://future.utoronto.ca/pearson-scholarships",
+     "quote": "October 9, 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://future.utoronto.ca/pearson-scholarships",
+     "quote": "October 16, 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://future.utoronto.ca/pearson-scholarships",
+     "quote": "November 6, 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "wuhan-university",
+   "country": "CN",
+   "deadline": {
+    "opens": null,
+    "closes": "2026-06-30",
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "imprecise_new_cycle",
+   "note": "Весна 2027: приём с октября по декабрь 2026, точного дня нет. Осенний набор 2027 не объявлен.",
+   "sources": [
+    {
+     "url": "https://admission.whu.edu.cn/info/1121/5802.htm",
+     "quote": "Spring semester 2027:",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://admission.whu.edu.cn/info/1121/5802.htm",
+     "quote": "October 2026 to December 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "spring 2027",
+     "opens": null,
+     "closes": null,
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "adelaide",
+   "country": "AU",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "no_new_announcement",
+   "note": "Общего срока подачи вуз не публикует: на странице «как подавать» сказано проверять дату закрытия у выбранной программы. Даты 2027 на страницах нет.",
+   "sources": [
+    {
+     "url": "https://adelaide.edu.au/study/international-students/how-to-apply/",
+     "quote": "Check the application closing date for your chosen degree. Some degrees have different deadlines, so we recommend reviewing the degree page to be sure.",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "ajou",
+   "country": "KR",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "no_new_announcement",
+   "note": "На главной международного приёма только бакалаврский набор осени 2026 (06.04–29.05.2026). Расписание на 2027 подгружается скриптом, в тексте страницы его нет.",
+   "sources": [
+    {
+     "url": "https://www.ajou.ac.kr/iadmissions_en/index.do",
+     "quote": "[Undergraduate] 2026 Fall Admission Application",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://www.ajou.ac.kr/iadmissions_en/index.do",
+     "quote": "Monday, April 6, 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "auca",
+   "country": "KG",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "no_new_announcement",
+   "note": "Свежих дат на страницах нет: последние опубликованные сроки финансовой помощи — 2024 (12.04 и 14.06.2024). Для иностранцев сказано подавать как можно раньше, без даты.",
+   "sources": [
+    {
+     "url": "https://auca.kg/en/p6088598350/",
+     "quote": "Financial aid application deadline April 12, 2024",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://auca.kg/en/p6088598350/",
+     "quote": "APPLICATION DEADLINES",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "barnard-college",
+   "country": "US",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "update",
+   "note": "Приём 2027: Early Decision до 01.11.2026 (прошёл), Regular Decision до 01.01.2027. Документы на финпомощь Regular Decision — до 15.01.2027.",
+   "sources": [
+    {
+     "url": "https://barnard.edu/admissions/application-rounds",
+     "quote": "November 1, 2026",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://barnard.edu/admissions/application-rounds",
+     "quote": "January 1, 2027",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    },
+    {
+     "url": "https://barnard.edu/finaid/apply-for-aid",
+     "quote": "January 15, 2027 (FAFSA, CSS Profile and supporting documents)",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [
+    {
+     "track": "Early Decision",
+     "opens": null,
+     "closes": "2026-11-01",
+     "zone": null
+    },
+    {
+     "track": "Regular Decision",
+     "opens": null,
+     "closes": "2027-01-01",
+     "zone": null
+    },
+    {
+     "track": "Regular Decision financial aid",
+     "opens": null,
+     "closes": "2027-01-15",
+     "zone": null
+    }
+   ],
+   "approval": "pending owner quote review; canonical data unchanged"
+  },
+  {
+   "id": "bhos",
+   "country": "AZ",
+   "deadline": {
+    "opens": null,
+    "closes": null,
+    "recurring": "annual",
+    "confidence": "expected"
+   },
+   "status": "annual_windows_only",
+   "note": "Приём иностранцев раз в год: с мая по август, без года и без точных дней. Объявления на 2027 нет.",
+   "sources": [
+    {
+     "url": "https://bhos.edu.az/en/page/216/Application",
+     "quote": "International student admission to \nBHOS\n takes place \nonce a year\n, starting in \nMay\n and ending in \nAugust",
+     "freshFetch": true,
+     "exactQuoteMatched": true
+    }
+   ],
+   "windows": [],
+   "approval": "pending owner quote review; canonical data unchanged"
+  }
+ ]
+}
